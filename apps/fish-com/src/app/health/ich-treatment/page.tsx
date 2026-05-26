@@ -1,63 +1,43 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ich Treatment Guide — Temperature, Salt & Medication Protocol | Fish.com', description: 'Complete ich (white spot disease) treatment guide. Why spots on fish are the wrong stage to kill, the temperature + salt protocol, and when to use medication.', path: '/health/ich-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Guide', description: 'Temperature, salt, and medication protocol for ich in freshwater aquariums.', url: 'https://fish.com/health/ich-treatment', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ich Treatment Guide — White Spots, Heat Method & Ich-X | Fish.com', description: 'Ich (white spot disease) is the most common fish disease. The heat method, salt treatment, and chemical treatments explained. Why treatment must continue 10-14 days minimum.', path: '/health/ich-treatment', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Guide', description: 'Heat method, salt, and chemical treatment for Ichthyophthirius multifiliis (ich) in aquarium fish.', url: 'https://fish.com/health/ich-treatment', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function IchTreatmentPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis (ich) is the most common aquarium disease. The white spots visible on fish are not what you are treating — they are a protected stage that medication cannot touch. This guide explains why and what to do.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis — "ich" or white spot disease — is the most common disease in aquarium fish. The characteristic white salt-grain spots are visible on the body and fins. Treatment is straightforward once you understand the parasite\'s life cycle: only one stage can be killed by treatment, and that window must be exploited for 10-14 days minimum.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Ich Treatment', href: '/health/ich-treatment' }]}
       schema={schema}
       sidebar={<>
-        <TableOfContents items={[{ label: 'The Lifecycle (Why It\'s Hard)', href: '#lifecycle' }, { label: 'Heat Treatment Protocol', href: '#heat' }, { label: 'Salt Protocol', href: '#salt' }, { label: 'Medication', href: '#medication' }, { label: 'After Treatment', href: '#after' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Water Chemistry', href: '/water' }, { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }]} />
+        <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Ich Life Cycle</div>
+          {[['Trophont (on fish)', 'White spot — NOT killable with medication · 5–7 days'], ['Tomont (substrate)', 'Fallen off fish, reproducing · NOT killable · 3–10 days'], ['Theront (free-swimming)', 'Seeks new host · KILLABLE · 24-48 hours']].map(([s, d]) => (
+            <div key={s} className="py-2 border-b border-brand-border last:border-0">
+              <div className="text-xs font-bold text-brand-dark">{s}</div>
+              <div className="text-2xs text-brand-text-light">{d}</div>
+            </div>
+          ))}
+        </div>
+        <RelatedLinks title="Related Guides" links={[{ label: 'Velvet Disease', href: '/health/velvet-disease' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-ich" />
       </>}
     >
       <div className="carloOS-article">
-        <h2 id="lifecycle">The Lifecycle — Why Ich Is Hard to Treat</h2>
-        <p>Ich has a three-stage lifecycle, and only one stage is vulnerable to most treatments:</p>
-        <ol>
-          <li><strong>Trophozoite (on the fish):</strong> The white spots you see. The parasite is embedded in the fish&apos;s skin with a protective membrane. This stage is largely invulnerable to medication and immune to salt. This is what most people try to treat — and why many treatments fail.</li>
-          <li><strong>Tomont (off the fish, on substrate):</strong> The trophozoite drops off the fish and forms a cyst on substrate. Inside, it divides into 200–2,000 daughter cells. Also largely invulnerable at this stage.</li>
-          <li><strong>Theront (free-swimming):</strong> Daughter cells break free and swim to find a new host. This is the only vulnerable stage. Heat speeds the lifecycle, producing more vulnerable theronts per day. Most treatments target this stage.</li>
-        </ol>
-        <p>This is why you must treat for at least 7–10 days after the last visible spot — the visible spots are just the early stage of a cycle that will produce another round of free-swimmers even after the fish appear clear.</p>
+        <h2>The Life Cycle — Why Treatment Takes 10-14 Days</h2>
+        <p>Ich has three life stages: the trophont (attached to the fish — the visible white spots), the tomont (fallen to the substrate, dividing to produce new parasites), and the theront (free-swimming infective stage, seeking a new host). Medications only kill the free-swimming theront stage — the parasite cannot be killed while attached to the fish or while encysted in the substrate tomont stage. The treatment strategy is therefore: maintain effective medication concentration continuously until all tomonts have completed their division cycle and released theronts, and all theronts have been exposed to the medication. This cycle takes 10-14 days at 72-76°F, or as little as 4-5 days at 82-84°F (the heat method).</p>
+        <p>Stopping treatment when the white spots disappear is the most common treatment failure. The spots disappearing means the trophonts have fallen off and become tomonts — the tank is full of parasites that haven't yet released their infective theronts. Treatment stopped at this point leads to complete reinfestation within days.</p>
 
-        <h2 id="heat">Heat Treatment Protocol (Recommended First-Line)</h2>
-        <p>Raising temperature shortens the lifecycle, producing vulnerable theronts faster and in greater numbers — significantly increasing treatment effectiveness. This is the preferred first-line treatment for most freshwater tropical fish.</p>
-        <ol>
-          <li><strong>Raise temperature to 86°F (30°C)</strong> — increase by no more than 2°F per hour to avoid stressing fish. Most tropical fish tolerate 86°F; scaleless fish (cory catfish, loaches) are more sensitive — go to 82–84°F for these.</li>
-          <li><strong>Add increased aeration</strong> — warm water holds less oxygen. Add an air stone or increase surface agitation.</li>
-          <li><strong>Add aquarium salt (optional but effective):</strong> 1 tablespoon per 5 gallons of freshwater. Salt stresses the theront stage. Do not use with scaleless fish or plants.</li>
-          <li><strong>Maintain 86°F for 10–14 days</strong> after the last visible spot. The temperature cannot be dropped early — remnants of the cycle are still in the substrate.</li>
-          <li><strong>Daily water changes of 25%</strong> during treatment — vacuuming the substrate removes tomonts and theronts from the water column before they can reinfect.</li>
-        </ol>
+        <h2>The Heat Method</h2>
+        <p>Raising temperature to 82-86°F (if the species tolerates it) accelerates the ich life cycle dramatically — the entire cycle from trophont to theront is completed in 3-4 days rather than 10-14 days, and the theront's viability window at high temperature is reduced. Maintain the elevated temperature for a minimum of 10 days after the last visible spot to ensure all life cycle stages are complete. Increase aeration — warmer water holds less oxygen. Not appropriate for cold-water fish (goldfish, white clouds) or temperature-sensitive species (discus tolerate high temps; delicate species may not).</p>
 
-        <h2 id="salt">Salt-Only Protocol (for temperature-sensitive fish)</h2>
-        <p>For coldwater fish (goldfish, some loaches) or scaleless fish that cannot tolerate 86°F:</p>
-        <ul>
-          <li>Aquarium salt at 1 tablespoon per gallon — this concentration kills theronts and stresses ich at all stages</li>
-          <li>Raise temperature as high as the fish safely tolerates (72–78°F for goldfish)</li>
-          <li>Daily 25% water changes with replacement salt to maintain concentration</li>
-          <li>Continue 10–14 days after last visible spot</li>
-        </ul>
+        <h2>Chemical Treatments</h2>
+        <p><strong>Ich-X (Hikari, formerly Fritz Ich-X):</strong> A formaldehyde and malachite green-based treatment considered one of the safest and most effective for ich. Dye-free formula is safer for scaleless fish and some sensitive species. Follow label dosing; remove activated carbon. Repeat every 24 hours with a 25-30% water change before each dose for 10 days minimum.</p>
+        <p><strong>API Super Ick Cure:</strong> Malachite green plus other active ingredients. Effective but stronger — some sensitivity in scaleless fish (clown loaches, cory catfish), which may require half-dose. Not safe for invertebrates.</p>
+        <p><strong>Salt (aquarium salt, not marine):</strong> Sodium chloride at 1-3 tablespoons per 5 gallons inhibits theront survival and reduces osmotic stress on fish during infection. Not curative alone but useful as a supportive treatment combined with heat or chemical treatment. Safe for most freshwater fish; not safe for plants or invertebrates at higher concentrations.</p>
 
-        <h2 id="medication">When to Use Medication</h2>
-        <p>Medication is indicated when: heat treatment is not producing results after 7 days, fish are severely infected (heavy spot load, fish are in distress), or the fish cannot tolerate temperature treatment.</p>
-        <ul>
-          <li><strong>API Super Ick Cure (malachite green + formalin):</strong> Most widely available, fast-acting. Remove carbon from filter before use (carbon removes medication). Follow dosing instructions exactly — overdose is toxic.</li>
-          <li><strong>Seachem ParaGuard:</strong> Safer than malachite green for sensitive fish and scaleless species. Slightly slower acting.</li>
-          <li><strong>Copper-based medications (Copper Power, Cupramine):</strong> Most effective — copper is acutely toxic to ich at all stages. Requires careful dosing (copper is toxic to fish at overdose) and a copper test kit. Not safe for invertebrates or planted tanks.</li>
-        </ul>
-        <p>Always remove activated carbon before adding any medication. Carbon removes medication from the water within hours, rendering treatment ineffective.</p>
-
-        <h2 id="after">After Treatment — Preventing Recurrence</h2>
-        <p>Ich is nearly always introduced by: new fish, plants, or decorations from infected tanks. Prevention: 4-week quarantine for all new fish in a separate tank. Dip new plants in potassium permanganate or bleach solution. Never share equipment (nets, siphons) between tanks without sterilization.</p>
-        <p>Ich is present in small numbers in most aquariums — fish with strong immune function do not develop clinical ich even when exposed. An ich outbreak is almost always triggered by immune compromise from: temperature swings, poor water quality, overcrowding, or stress from transportation. Maintain stable temperatures, excellent water quality, and appropriate stocking — these are the real long-term prevention.</p>
+        <h2>After Treatment — Prevention</h2>
+        <p>Ich enters tanks from: new fish (quarantine all new fish — the most reliable prevention), aquatic plants from infected systems, water from pet store bags, and equipment moved between tanks. Once successfully treated, the tank is ich-free — but there is no lasting immunity. New introductions restart the risk. The parasite cannot survive in an established tank without a fish host for more than 48 hours at room temperature — a fish-out "fallow" period of 4-6 weeks in the display tank (all fish moved to a hospital tank for treatment) reliably clears ich from the display environment.</p>
       </div>
     </ArticleLayout>
   )

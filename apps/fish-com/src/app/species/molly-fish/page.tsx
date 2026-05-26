@@ -18,7 +18,7 @@ export default function MollyPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species' links={[{ label: 'Platy Fish', href: '/species/platy-fish' }, { label: 'Guppy Care', href: '/species/guppy' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }]} />
+        <RelatedLinks title="Related Species" links={[{ label: 'Platy Fish', href: '/species/platy-fish' }, { label: 'Guppy Care', href: '/species/guppy' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-molly" />
       </>}
     >

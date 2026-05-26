@@ -169,24 +169,12 @@ export async function getMembership(userId: string, siteId: SiteId) {
 }
 
 /** Log an analytics event (fire and forget) */
+/** Log an analytics event — no-op until Supabase is connected (Path A static launch) */
 export async function logEvent(
-  siteId: SiteId,
-  eventType: string,
-  eventData: Record<string, unknown> = {},
-  options: { postId?: string; productId?: string; userId?: string } = {}
+  _siteId: SiteId,
+  _eventType: string,
+  _eventData: Record<string, unknown> = {},
+  _options: { postId?: string; productId?: string; userId?: string } = {}
 ) {
-  // Use browser client for client-side events, server for server-side
-  try {
-    const supabase = createBrowserClient()
-    await supabase.from('events').insert({
-      site_id: siteId,
-      event_type: eventType,
-      event_data: eventData,
-      post_id: options.postId ?? null,
-      product_id: options.productId ?? null,
-      user_id: options.userId ?? null,
-    })
-  } catch {
-    // Analytics failures are silent
-  }
+  // Stubbed for static-first launch. Restore Supabase insert when DB is connected.
 }

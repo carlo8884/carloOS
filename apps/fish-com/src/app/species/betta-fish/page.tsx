@@ -1,72 +1,47 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Tank Size, Water Parameters & Tankmates | Fish.com', description: 'Complete betta fish care. Why 2.5+ gallon heated tanks are required, water parameters, diet, tankmates, fin health, and the biggest beginner mistakes.', path: '/species/betta-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Tank size, water, diet, tankmates, and health for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Carnivore Diet, Fin Types & Heater Requirement | Fish.com', description: 'Bettas are carnivores that need protein-rich pellets, not flake food. They need a heater — room temperature is too cold. Complete guide to fins, tankmates, and enrichment.', path: '/species/betta-fish', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BettaFishPage() {
   return (
-    <ArticleLayout
-      siteId="fish-com"
-      hero={{ title: 'Betta Fish Care Guide', subtitle: 'Betta fish are not cup fish. They are intelligent, interactive labyrinth fish that require heated, filtered tanks of at least 2.5 gallons — preferably 5+. Here\'s how to keep them well.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+    <ArticleLayout siteId="fish-com"
+      hero={{ title: 'Betta Fish Care Guide', subtitle: 'Betta splendens — the Siamese fighting fish is one of the most commonly purchased aquarium fish and one of the most commonly mistreated. The bowls, vases, and tiny containers sold for betta fish do not constitute adequate housing. A heated, filtered tank of at least 5 gallons is the minimum for a betta to thrive rather than survive.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Betta Fish', href: '/species/betta-fish' }]}
       schema={schema}
       sidebar={<>
-        <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '12px', padding: '16px' }}>
-          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '12px' }}>Quick Stats</div>
-          {[['Scientific name', 'Betta splendens'], ['Difficulty', 'Beginner'], ['Min tank size', '5 gallons (2.5 absolute minimum)'], ['Temperature', '76–82°F — heated tank required'], ['pH', '6.5–7.5'], ['Tankmates', 'Limited — no fin-nippers, no other male bettas'], ['Lifespan', '2–4 years'], ['Diet', 'Carnivore — protein-rich pellets']].map(([k, v]) => (
-            <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid var(--brand-border)', fontSize: '13px' }}>
-              <span style={{ color: 'var(--brand-text-light)' }}>{k}</span>
-              <span style={{ color: 'var(--brand-dark)', fontWeight: 600, textAlign: 'right', maxWidth: '58%' }}>{v}</span>
+        <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
+          {[['Min tank', '5 gallons — 10 gallons is better'], ['Temperature', '76–82°F — heater required'], ['pH', '6.5–7.5'], ['Diet', 'Carnivore — pellets + frozen protein'], ['Filter', 'Gentle flow — sponge filter ideal'], ['Males together', 'Never — fatal fights'], ['Lifespan', '3–5 years with proper care']].map(([k, v]) => (
+            <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species" links={[{ label: 'Neon Tetra Care', href: '/species/neon-tetra' }, { label: 'Goldfish Care', href: '/species/goldfish' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-betta" />
       </>}
     >
       <div className="carloOS-article">
-        <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
-          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>The Cup Myth</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Bettas sold in small cups in pet stores are not comfortable there — they are in transit containers, not living environments. The small cup is marketing-enabled cruelty, not evidence that bettas thrive in small spaces. A betta in a cup lives days to weeks. A betta in a proper 5-gallon heated, filtered tank lives 3–5 years.</p>
-        </div>
+        <h2>The Bowl Myth — Why Bettas Die Young</h2>
+        <p>The betta in a small unheated bowl or vase is not thriving — it is surviving, slowly, in conditions that compromise immune function and lifespan. The misconception originates from wild bettas living in shallow rice paddies and puddles — technically true, but those environments are large, warm (Thailand's climate keeps water at 78–82°F naturally), and subject to rain dilution that provides regular partial water changes. A 1-gallon unheated bowl in an air-conditioned room provides none of these. Room temperature in most US homes (68–72°F) is below betta's optimal range — cold enough to suppress immune function and promote disease.</p>
+        <p>Minimum correct housing: 5-gallon tank with a gentle filter (sponge filter or low-flow internal filter — bettas' long fins are damaged by strong currents) and a heater maintaining 76–82°F. A 10-gallon tank allows planting, more stable water parameters, and more enrichment options. Bettas in appropriately sized, heated, filtered, planted tanks live 3–5 years and display vivid colors and active, curious behavior. The same fish in a bowl rarely reaches 2 years.</p>
 
-        <h2>Tank Requirements</h2>
-        <p><strong>Minimum:</strong> 2.5 gallons. <strong>Recommended:</strong> 5 gallons. More is always better. Bettas need horizontal swimming space, not tall narrow columns. A long, shallow tank is better than a tall, narrow one. Surface access is critical — bettas are labyrinth fish that breathe air from the surface and drown without access to it.</p>
-        <p><strong>Heater required.</strong> Bettas are tropical fish from Southeast Asia. They cannot survive long-term at room temperature in most homes. Target 78–80°F. Below 72°F, bettas become lethargic and immune-compromised. Below 65°F, they die. A small, adjustable heater (Aqueon Pro 50W for 5-gallon tanks) is a $20 investment that is non-negotiable.</p>
-        <p><strong>Filter required — but gentle flow.</strong> Bettas have long fins that are damaged by strong current, and they come from slow-moving water. Use a sponge filter (ideal) or a hang-on-back filter with a baffle to reduce flow. No powerheads, no strong wave makers.</p>
+        <h2>Bettas Are Carnivores — Feed Accordingly</h2>
+        <p>Bettas are insectivores/carnivores that feed on insects, larvae, and small invertebrates in the wild. Their digestive system is not adapted to a plant-heavy diet. Standard tropical fish flake — a staple diet for many community fish — is too low in protein and too high in carbohydrate for optimal betta health. Signs of poor diet over time: fading color, bloating from carbohydrate fermentation in the gut, and reduced immune function.</p>
+        <p>Correct betta diet: a high-quality betta-specific pellet (Northfin Betta Bits, Repashy Spawn and Grow, New Life Spectrum Betta Formula — all high-protein with named protein sources) as the primary staple. Supplement with frozen protein 3-4 times weekly: frozen bloodworms (their favorite and excellent conditioning food), frozen daphnia (natural laxative properties — excellent for preventing constipation), frozen mysis shrimp. Feed small amounts twice daily — bettas have stomachs roughly the size of their eye and are prone to overfeeding.</p>
 
-        <h2>Water Parameters</h2>
-        <ul>
-          <li><strong>Temperature:</strong> 76–82°F. Stability more important than exact value.</li>
-          <li><strong>pH:</strong> 6.5–7.5. Most tap water falls within this range.</li>
-          <li><strong>Ammonia:</strong> 0 ppm always. Cycle the tank before adding the betta — see nitrogen cycle guide.</li>
-          <li><strong>Nitrite:</strong> 0 ppm always.</li>
-          <li><strong>Nitrate:</strong> Under 20 ppm. Weekly 25–30% water changes.</li>
-        </ul>
+        <h2>Fin Types and Their Care Implications</h2>
+        <p><strong>Veil tail:</strong> The most common pet store betta — long, flowing, asymmetrical tail. Prone to fin rot and fin biting (bettas sometimes bite their own fins, apparently from boredom or stress). Requires careful tankmate selection — no fin-nippers.</p>
+        <p><strong>Halfmoon:</strong> 180-degree tail spread. Popular show type. The large fins create significant drag — swimming is effortful. Provide resting spots near the surface (floating plants, betta hammocks) so the fish can rest without expending energy to stay near the air they breathe through their labyrinth organ.</p>
+        <p><strong>Crowntail:</strong> Spiky, webbing-reduced fins giving a crown-like appearance. Less prone to fin tears than halfmoon but the spikes can catch on rough decorations — keep decor smooth.</p>
+        <p><strong>Plakat:</strong> Short-finned — resembling wild-type bettas. More agile, better swimmers, less susceptible to fin damage. Often more aggressive than long-finned varieties. Many experienced betta keepers prefer plakats for their natural behavior and robustness.</p>
 
-        <h2>Diet</h2>
-        <p>Bettas are carnivores — their upturned mouth is designed for surface-feeding on insects and larvae. High-protein diet is essential; generic tropical flakes are nutritionally inadequate and cause bloating.</p>
-        <ul>
-          <li><strong>Primary:</strong> High-quality betta-specific pellets (Omega One Betta Buffet, Northfin Betta Bits, New Life Spectrum Betta). Feed 2–4 pellets twice daily.</li>
-          <li><strong>Supplemental:</strong> Frozen bloodworms, frozen daphnia, brine shrimp — 2–3 times weekly.</li>
-          <li><strong>Fast one day per week</strong> — prevents constipation and bloating, which are common in bettas overfed pellets.</li>
-          <li><strong>Remove uneaten food within 5 minutes</strong> — decomposing food in small tanks spikes ammonia rapidly.</li>
-        </ul>
+        <h2>Intelligence and Enrichment</h2>
+        <p>Bettas are among the most intelligent fish commonly kept — they recognize their owners, follow movement at the glass, investigate new objects, and can be trained to swim through hoops and push balls through goals using positive reinforcement (pellet reward). A bored betta in a bare tank develops lethargy, glass-surfing, and sometimes self-harm (fin biting). Enrichment: live or silk plants (bettas rest on broad leaves — silk plants don't tear fins like plastic can), a mirror shown briefly 1-2 times weekly stimulates display behavior and activity (don't overdo it — sustained mirror exposure is stressful), novel objects added to the tank periodically. Bettas genuinely benefit from environmental complexity.</p>
 
-        <h2>Tankmates</h2>
-        <p>Male bettas cannot be housed together — they will fight. Female bettas can be housed together in groups of 5+ in a well-planted 20+ gallon tank (a "sorority"), though aggression still occurs.</p>
-        <p><strong>Compatible tankmates</strong> in 10+ gallon tanks: small peaceful bottom-dwellers (Corydoras catfish, pygmy Corydoras), snails (nerite, mystery snails — bettas occasionally attack snails but most tolerate them), African dwarf frogs, small peaceful schoolers (neon tetras in larger tanks — note: some bettas attack them).</p>
-        <p><strong>Avoid:</strong> Any fish with colorful, flowing fins (bettas attack them, seeing a threat). Tiger barbs (fin nippers). Goldfish (incompatible temperature and parameter needs). Other bettas. Gouramis (same family — aggression likely).</p>
-
-        <h2>Common Health Issues</h2>
-        <ul>
-          <li><strong>Fin rot:</strong> Fraying, discoloration of fins — almost always water quality. Test water, do water changes, improve filtration. Antibiotics if bacterial secondary infection is severe.</li>
-          <li><strong>Ich:</strong> White spots — standard freshwater ich protocol at 82–84°F with aquarium salt.</li>
-          <li><strong>Swim bladder disorder:</strong> Floating sideways or inability to maintain buoyancy — fast 48 hours, feed a single blanched, shelled frozen pea.</li>
-          <li><strong>Velvet:</strong> Gold dust on fins — turn off lights, copper-based medication.</li>
-        </ul>
+        <h2>Tankmates — What Actually Works</h2>
+        <p>Male bettas cannot be kept together — they fight to the death. Female bettas can sometimes be kept in a "sorority" (5+ females in a 20+ gallon heavily planted tank) but aggression is unpredictable and requires monitoring. With other species: bottom dwellers they tend to ignore (small corydoras, kuhli loaches, otocinclus), small peaceful mid-water fish that don't resemble other bettas or have flowing fins (ember tetras, endler's livebearers, small rasboras in larger tanks). Avoid: guppies (male guppies' flowing fins trigger betta aggression), tiger barbs (fin-nippers), any fish with red coloration that resembles a rival male. Individual betta personality varies significantly — the same species that coexists peacefully in one betta's tank may be attacked in another's.</p>
       </div>
     </ArticleLayout>
   )

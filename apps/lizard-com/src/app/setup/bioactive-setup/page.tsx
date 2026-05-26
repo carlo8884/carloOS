@@ -1,64 +1,47 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Reptile Enclosure Setup Guide — CUC, Plants & Substrate | Lizard.com', description: 'How to build a bioactive reptile enclosure. Drainage layer, substrate mix, cleanup crew (isopods + springtails), and live plants — step by step for desert and tropical species.', path: '/setup/bioactive-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Reptile Enclosure Setup Guide', description: 'Step-by-step bioactive enclosure build for reptiles — drainage, substrate, cleanup crew, and plants.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const howTo = buildHowToSchema({ name: 'How to Build a Bioactive Reptile Enclosure', description: 'Step-by-step guide to building a self-maintaining bioactive reptile setup.', url: 'https://lizard.com/setup/bioactive-setup', totalTime: 'P1D', steps: [
-  { name: 'Add drainage layer', text: 'Place 2-3 inches of drainage material (hydroballs, lava rock, or coarse gravel) at the bottom. This prevents the substrate from becoming waterlogged.' },
-  { name: 'Add substrate separator', text: 'Place a layer of weed barrier fabric, window screen, or reptile mesh over the drainage layer. This prevents substrate from falling into the drainage layer while allowing water to pass through.' },
-  { name: 'Add substrate mix', text: 'Add 4-6 inches of appropriate substrate mix — 60/30/10 topsoil/sand/clay for desert species, or ABG/tropical mix for humid species. Pack lightly; do not compress.' },
-  { name: 'Plant and hardscape', text: 'Add live plants and hardscape (cork bark, branches, rocks). Plants root into the substrate and become part of the living system. Allow 2-4 weeks for plants to establish before adding the reptile.' },
-  { name: 'Introduce cleanup crew', text: 'Add isopods (Porcellionides pruinosus or Armadillidium for desert; Trichorhina tomentosa for tropical) and springtails (Collembola). Start with 50-100 isopods and a culture of springtails. These will establish and multiply.' },
-  { name: 'Cycle before adding the reptile', text: 'Allow the system to run for 2-4 weeks with the lights and temperatures at target levels before adding the reptile. This allows microbial populations to establish and plants to root.' },
-]})
-const combined = combineSchemas(schema, howTo)
+import { buildArticleSchema } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide — Substrate, CUC & Plant Selection | Lizard.com', description: 'Bioactive vivariums use a living substrate, plants, and a cleanup crew (springtails + isopods) to self-maintain. Setup guide for tropical and desert bioactive enclosures.', path: '/setup/bioactive-setup', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BioactiveSetupPage() {
   return (
-    <>
-      <SchemaScript schema={combined} />
-      <ArticleLayout siteId="lizard-com"
-        hero={{ title: 'Bioactive Reptile Enclosure Setup Guide', subtitle: 'A bioactive enclosure is a self-sustaining micro-ecosystem — live substrate, live plants, and a cleanup crew (CUC) of isopods and springtails that process waste. Less frequent cleaning, more natural behavior, and genuinely beautiful enclosures. Here\'s how to build one.', category: 'Setup Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
-        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Bioactive Setup', href: '/setup/bioactive-setup' }]}
-        sidebar={<>
-          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
-            <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>What You Need</div>
-            {['Drainage material (hydroballs/lava rock)', 'Substrate separator mesh', 'Species-appropriate substrate mix', 'Live plants', 'Isopods (species-appropriate)', 'Springtails (Collembola culture)', 'UVB and grow light', 'Automatic mister or drip (tropical)'].map(i => (
-              <div key={i} style={{ display: 'flex', gap: '8px', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '12px', color: 'rgba(238,240,228,0.6)', alignItems: 'center' }}>
-                <span style={{ color: '#4CAF50' }}>✓</span>{i}
-              </div>
-            ))}
-          </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates' }, { label: 'Substrate Guide', href: '/setup/substrate-guide' }, { label: 'Humidity Guide', href: '/setup/humidity-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="setup-bioactive" ctaText="Download Free" />
-        </>}
-      >
-        <div className="carloOS-article">
-          <h2>Why Bioactive?</h2>
-          <p>A functioning bioactive enclosure is self-maintaining in a way that a paper towel and tile enclosure is not. The isopods and springtails consume shed skin, feces, dead plant matter, and uneaten food — processing it into nutrients that feed the plants. The microbial community in the soil further breaks down waste. The plants absorb these nutrients and grow. In a balanced system, deep substrate cleans may only be needed annually or less — compared to the regular spot-cleaning required in inert substrate setups.</p>
-          <p>For the reptile, the benefits are behavioral: natural substrate to burrow, dig, and forage; humidity buffering from the living substrate; and environmental complexity that encourages natural behaviors. Enriched environments produce more active, less stressed reptiles.</p>
-
-          <h2>Step 1 — Drainage Layer</h2>
-          <p>The drainage layer prevents the substrate from becoming anaerobic (waterlogged and oxygen-deprived), which kills beneficial microbes and produces foul odors. 2–3 inches of hydroballs (clay aggregate pellets — LECA), lava rock, or large gravel. Hydroballs are the most popular choice — lightweight, reusable, and ideal. Add a false bottom/drainage insert in larger enclosures for the best results.</p>
-
-          <h2>Step 2 — Substrate Separator</h2>
-          <p>A layer of window screen, reptile mesh, or landscape fabric between the drainage layer and substrate prevents the substrate from falling into drainage while allowing water to pass through freely. Cut to size and place directly on top of the drainage layer before adding substrate.</p>
-
-          <h2>Step 3 — Substrate Mix</h2>
-          <p><strong>Desert species</strong> (bearded dragon, leopard gecko, uromastyx): 60% organic topsoil (no fertilizers/perlite), 30% play sand, 10% bentonite clay. 4–6 inches deep — enough for burrowing. This mix retains minimal moisture (appropriate for desert species) while supporting microbial life and plant roots.</p>
-          <p><strong>Tropical species</strong> (crested gecko, day gecko, chameleon): ABG mix (Atlanta Botanical Garden mix: fir bark, tree fern fiber, peat, long fiber sphagnum, charcoal) or a mix of coconut fiber, organic topsoil, and orchid bark. 3–4 inches. Retains moisture and supports tropical plant roots.</p>
-
-          <h2>Step 4 — Plants and Hardscape</h2>
-          <p><strong>Desert plants:</strong> Haworthia, Aloe (many species), Echeveria, Gasteria, Agave. Avoid succulents with sharp spines. Cork bark flats, sandblasted grapevine, and slate create natural hardscape.</p>
-          <p><strong>Tropical plants:</strong> Pothos (indestructible and fast-growing), Bromeliads (naturalistic + water storage for dart frogs and smaller species), Ficus, Peperomia, Epipremnum. Avoid plants treated with pesticides — rinse and quarantine new plants before placing in a bioactive system.</p>
-
-          <h2>Step 5 — Cleanup Crew</h2>
-          <p><strong>Isopods:</strong> The primary waste processors. For desert: Porcellionides pruinosus ("powder orange" or "powder blue") — active in drier conditions. Armadillidium vulgare (pill bug) — slightly more moisture-tolerant. For tropical: Trichorhina tomentosa ("dwarf white isopod") — small enough to not disturb small reptiles, thrive in humidity. Start with 50–100 and allow the colony to establish over several weeks.</p>
-          <p><strong>Springtails:</strong> Tiny (1mm) hexapods that consume mold, fungal growth, and microscopic organic matter. Essential for preventing mold in tropical setups. Temperate springtails (Folsomia candida) for any setup; tropical springtails for warm humid conditions. Establish before adding isopods in tropical builds — springtails colonize the mold layer that would otherwise grow.</p>
-
-          <h2>Timeline and Establishment</h2>
-          <p>Allow 2–4 weeks for the system to establish before adding the reptile. During this time: water plants as needed, verify temperatures and humidity are at target, and observe the CUC colony establishing. The system will look a bit raw initially — plants will settle and begin growing, and the CUC will spread through the substrate. By week 4–6, the system is biologically active and ready for the reptile.</p>
+    <ArticleLayout siteId="lizard-com"
+      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Bioactive Setup', href: '/setup/bioactive-setup' }]}
+      schema={schema}
+      sidebar={<>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Cleanup Crew (CUC)</div>
+          {[['Tropical springtails', 'Folsomia candida — primary detritivore · Thrive in moist conditions'], ['Temperate springtails', 'Orchesella — more robust · Wider humidity range'], ['Dwarf white isopods', 'Trichorhina tomentosa — harmless · Good for reptile tanks'], ['Porcellio scaber', 'Larger isopod · Better for drier conditions'], ['Armadillidium sp.', 'Pill bugs — excellent burrowers · Drier setups']].map(([n, d]) => (
+            <div key={n} style={{ padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '12px' }}>
+              <div style={{ color: 'var(--brand-white)', fontWeight: 600, fontSize: '11px' }}>{n}</div>
+              <div style={{ color: 'rgba(238,240,228,0.45)', fontSize: '11px' }}>{d}</div>
+            </div>
+          ))}
         </div>
-      </ArticleLayout>
-    </>
+        <RelatedLinks title="Related Guides" links={[{ label: 'Substrate Guide', href: '/setup/substrate-guide' }, { label: 'Crested Gecko Care', href: '/species/crested-gecko' }, { label: 'Day Gecko Care', href: '/species/day-gecko' }]} />
+        <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="setup-bioactive" ctaText="Download Free" />
+      </>}
+    >
+      <div className="carloOS-article">
+        <h2>How Bioactive Systems Work</h2>
+        <p>A bioactive vivarium functions like a miniature ecosystem: the reptile produces waste (feces, shed skin, uneaten food), the cleanup crew (CUC) — springtails and isopods — consume and break down the waste, beneficial soil microorganisms continue the decomposition into nutrients, and plants uptake those nutrients while roots stabilize the substrate structure. This closed-loop waste processing is why a functioning bioactive setup can go months without substrate changes.</p>
+        <p>The key word: functioning. A bioactive setup that does not have an established CUC, sufficient substrate depth for microbial activity, or appropriate moisture conditions does not self-process waste — it is just a decorated tank. The biological system takes time to establish (typically 2-4 months after setup for the CUC to reach working population density) and requires appropriate conditions to maintain. Bioactive is not "set it and forget it" — it is a different kind of ongoing management compared to traditional spot-cleaning setups.</p>
+
+        <h2>Tropical vs Desert Bioactive</h2>
+        <p><strong>Tropical bioactive</strong> (crested geckos, day geckos, chameleons, dart frogs) is the more established and easier to maintain of the two types. Consistently moist substrate supports a thriving springtail and isopod population. Tropical plants grow readily, root systems stabilize substrate, and the system establishes quickly. The Josh's Frogs ABG (Atlanta Botanical Garden) substrate mix — or commercial equivalent — is the standard: orchid bark, long-fiber sphagnum moss, coco fiber, charcoal, and organic topsoil in a layered or mixed system.</p>
+        <p><strong>Desert bioactive</strong> (bearded dragons, uromastyx, leopard geckos) is more challenging because the dry conditions that reptiles require are also conditions where springtails struggle. Solutions: maintain a "dry desert" surface while providing moisture deeper in the substrate through occasional deep watering, use desert-adapted CUC species (certain Porcellio isopods, buffalo beetles), and accept a slower decomposition rate than tropical setups. The substrate mix for desert bioactive: 60-70% organic topsoil, 30-40% coarse sand, with no peat (holds too much moisture).</p>
+
+        <h2>Drainage Layer</h2>
+        <p>The drainage layer prevents waterlogging of the substrate in tropical setups — essential for plant health and preventing anaerobic conditions that kill the CUC. Build the drainage layer before the substrate: 2-3 inches of lava rock, hydroballs/LECA (lightweight expanded clay aggregate), or coarse gravel at the tank's base. A mesh or screen layer (window screen, plastic mesh) separates the drainage layer from the substrate above, preventing mixing. The drainage layer holds excess water below the root zone while keeping the substrate moist but not saturated.</p>
+
+        <h2>Plant Selection</h2>
+        <p><strong>Tropical vivarium:</strong> Pothos (Epipremnum aureum) is the universal standard — grows aggressively, roots quickly, tolerates shade, and is non-toxic. Bromeliads hold water in their cups (natural water sources for arboreal species). Ficus benjamina and F. pumila (creeping fig) for climbing surface coverage. Sansevieria for structural interest. Ferns (Boston, bird's nest) for ground cover. Avoid plants with sharp edges or toxic species.</p>
+        <p><strong>Desert vivarium:</strong> Succulents and cacti can be used but need protection from active digging species. Haworthia and Gasteria are robust and low-light tolerant. Tillandsia (air plants) add texture without needing substrate rooting. Most plants in desert bioactive setups need to be in protected areas or elevated out of the reptile's digging zone to survive.</p>
+
+        <h2>Establishing the System Before Adding the Reptile</h2>
+        <p>Build the bioactive setup and allow it to run without the reptile for 4–8 weeks. This establishment period: allows plants to root, the CUC to colonize the substrate and establish breeding populations, and the microbial community to develop. Adding the reptile immediately after building the setup disrupts the establishment phase and typically results in the CUC being wiped out by the waste load before populations are sufficient to handle it. A patient establishment period produces a dramatically better long-term outcome.</p>
+      </div>
+    </ArticleLayout>
   )
 }

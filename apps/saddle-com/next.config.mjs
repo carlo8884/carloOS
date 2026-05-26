@@ -1,5 +1,5 @@
-import type { NextConfig } from 'next'
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   transpilePackages: ['@carloOS/ui', '@carloOS/config', '@carloOS/db'],
   images: {
     remotePatterns: [
@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   reactStrictMode: true,
-  env: { NEXT_PUBLIC_SITE_ID: 'saddle-com' },
+  env: {
+    NEXT_PUBLIC_SITE_ID: 'saddle-com',
+  },
 }
+
 export default nextConfig

@@ -18,7 +18,19 @@ export {
 } from './client'
 
 // Types
-export type { Post, Species, Product, Membership, UserInteraction, EmailSubscription } from './types'
+export type {
+  Post,
+  PostExtended,
+  Product,
+  Species,
+  Membership,
+  EmailSubscription,
+  Event,
+} from './types'
 
-// Schema and indexes (SQL files - for reference)
-// Run packages/db/src/schema.sql then packages/db/src/indexes.sql in Supabase SQL Editor
+export type {
+  SiteIdEnum,
+  ContentTypeEnum,
+  MembershipTierEnum,
+  SubscriptionStatusEnum,
+} from './types'

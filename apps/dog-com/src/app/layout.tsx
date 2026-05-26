@@ -1,25 +1,9 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
 import { Nav, Footer } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
@@ -46,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable}`}
+      className="font-vars"
     >
       <head>
         {/* GA4 — only loads in production with a real ID */}

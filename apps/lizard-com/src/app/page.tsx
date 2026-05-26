@@ -139,10 +139,8 @@ export default function LizardHomePage() {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {CONTENT_CATEGORIES.map((c) => (
             <Link key={c.href} href={c.href}
-              className="block rounded-lg p-6 no-underline transition-all duration-200 hover:-translate-y-1"
-              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
-              onMouseOver={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(122,181,42,0.07)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(122,181,42,0.2)' }}
-              onMouseOut={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)' }}>
+              className="block rounded-lg p-6 no-underline transition-all duration-200 hover:-translate-y-1 hover:bg-brand-primary-pale hover:border-brand-primary/20"
+              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
               <span className="text-2xl mb-3 block">{c.icon}</span>
               <div className="font-display font-bold text-brand-white text-sm mb-1.5">{c.title}</div>
               <div className="text-xs" style={{ color: 'rgba(238,240,228,0.4)' }}>{c.desc}</div>

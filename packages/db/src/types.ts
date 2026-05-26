@@ -207,7 +207,16 @@ export interface Database {
   }
 }
 
-// Extended Post type with dvm_reviewed flag
-export interface PostExtended extends Post {
-  dvm_reviewed?: boolean
-}
+
+// ── Convenience type aliases ──────────────────────────────────────────────────
+// These give callers clean named types instead of Database['public']['Tables']['x']['Row']
+
+export type Post              = Database['public']['Tables']['posts']['Row']
+export type Product           = Database['public']['Tables']['products']['Row']
+export type Species           = Database['public']['Tables']['species']['Row']
+export type Membership        = Database['public']['Tables']['memberships']['Row']
+export type EmailSubscription = Database['public']['Tables']['email_subscriptions']['Row']
+export type Event             = Database['public']['Tables']['events']['Row']
+
+// PostExtended adds a convenience alias for dvm_reviewed (already in Post, but explicit here)
+export type PostExtended      = Post & { dvm_reviewed: boolean }

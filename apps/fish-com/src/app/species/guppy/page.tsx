@@ -18,7 +18,7 @@ export default function GuppyPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species' links={[{ label: 'Platy Fish', href: '/species/guppy' }, { label: 'Endler\'s Livebearer', href: '/species/guppy' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }]} />
+        <RelatedLinks title="Related Species" links={[{ label: 'Platy Fish', href: '/species/guppy' }, { label: 'Endler\'s Livebearer', href: '/species/guppy' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-guppy" />
       </>}
     >

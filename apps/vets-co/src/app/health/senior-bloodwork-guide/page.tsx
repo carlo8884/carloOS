@@ -40,7 +40,7 @@ export default function SeniorBloodworkPage() {
 
           <h2>Urinalysis — What the Urine Tells You</h2>
           <p><strong>Urine specific gravity (USG):</strong> Measures the kidney's ability to concentrate urine. Normal dog: USG 1.025–1.040. Isosthenuria (USG 1.007–1.013 — urine dilute as plasma) in a senior dog is a significant finding suggesting reduced renal concentrating ability — often the first sign of CKD detectable on urinalysis, before bloodwork abnormalities appear.</p>
-          <p><strong>Protein in urine (proteinuria):</strong> Small amounts are normal. Significant proteinuria (urine protein:creatinine ratio > 0.5) indicates protein loss through damaged glomeruli — glomerular disease, hypertension, or early CKD. Persistent proteinuria in a senior dog warrants further investigation.</p>
+          <p><strong>Protein in urine (proteinuria):</strong> Small amounts are normal. Significant proteinuria (urine protein:creatinine ratio &gt; 0.5) indicates protein loss through damaged glomeruli — glomerular disease, hypertension, or early CKD. Persistent proteinuria in a senior dog warrants further investigation.</p>
           <p><strong>Glucose in urine (glucosuria):</strong> Glucose should not be in urine. Glucosuria indicates either blood glucose above the renal threshold (diabetes) or — in the absence of hyperglycemia — primary renal glucosuria (renal tubular disease).</p>
           <p><strong>Bacteria and white cells:</strong> Urinary tract infection. Culture and sensitivity testing should be performed on any urine showing bacterial growth to guide antibiotic selection — empirical antibiotic treatment without culture misses resistant organisms.</p>
         </div>

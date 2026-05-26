@@ -50,3 +50,10 @@ img { max-width: 100%; height: auto; display: block; }
 .carloOS-article strong { color: var(--brand-text-dark); font-weight: 600; }
 .carloOS-article a { color: var(--brand-primary); }
 ::selection { background: rgba(10,138,122,0.18); color: var(--brand-text-dark); }
+
+/* Font CSS variables — fonts loaded via Google Fonts CDN */
+.font-vars,
+:root {
+  --font-baskerville: Georgia, "Times New Roman", serif;
+  --font-manrope: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

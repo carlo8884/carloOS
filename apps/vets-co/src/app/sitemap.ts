@@ -1,14 +1,12 @@
 import { MetadataRoute } from 'next'
-import { getPosts } from '@carloOS/db'
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://vets.co'
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
+  const now = new Date()
+  return [
+    { url: baseUrl, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${baseUrl}/health`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/setup`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/reviews`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
   ]
-  let dynamicRoutes: MetadataRoute.Sitemap = []
-  try {
-    const posts = await getPosts('vets-co', undefined, 200)
-    dynamicRoutes = posts.map(p => ({ url: `${baseUrl}${p.path}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.75 }))
-  } catch { }
-  return [...staticRoutes, ...dynamicRoutes]
 }

@@ -16,7 +16,7 @@ export default function DysecdysisPage() {
             <div key={s} style={{ padding: '5px 0', borderBottom: '1px solid rgba(220,38,38,0.15)', fontSize: '12px', color: 'rgba(238,240,228,0.7)' }}>{s}</div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { name: 'Ball Python Care', href: '/species/ball-python' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Ball Python Care', href: '/species/ball-python' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-dysecdysis" ctaText="Download Free" />
       </>}
     >

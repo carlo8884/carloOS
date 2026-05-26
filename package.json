@@ -1,9 +1,8 @@
 {
   "name": "carloOS",
-  "packageManager": "npm@11.13.0",
   "version": "1.0.0",
   "private": true,
-  "description": "CarloOS — Premium domain portfolio monorepo. dog.com · fish.com · lizard.com · saddle.com · vets.co",
+  "description": "CarloOS \u2014 Premium domain portfolio monorepo. dog.com \u00b7 fish.com \u00b7 lizard.com \u00b7 saddle.com \u00b7 vets.co",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
@@ -32,5 +31,6 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "packageManager": "npm@11.3.0"
 }

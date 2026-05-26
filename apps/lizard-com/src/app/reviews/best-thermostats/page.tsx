@@ -48,7 +48,7 @@ export default function BestThermostatsPage() {
               description={<p>The Herpstat 1 is the gold standard for pulse proportional reptile thermostats. Pulse proportional technology maintains temperatures within ±0.2°F by sending rapid on/off pulses to the heat source rather than switching it fully on and off — this eliminates the temperature swings of basic on/off thermostats and extends heat mat lifespan. Built in the US by Spyder Robotics with a decade of track record in the reptile keeping community. The probe is accurate, the housing is durable, and the safety record is excellent. Compatible with heat mats (UTH), radiant heat panels (RHP), and ceramic heat emitters (CHE) — not for incandescent or halogen bulbs (use dimming thermostat for these).</p>}
               specs={[{ label: 'Type', value: 'Pulse proportional', highlight: 'good' }, { label: 'Accuracy', value: '±0.2°F', highlight: 'good' }, { label: 'Compatible', value: 'UTH, RHP, CHE' }, { label: 'Made In', value: 'USA', highlight: 'good' }]}
               pros={['Best temperature accuracy available', 'Pulse tech extends heat mat life', 'US-made, reliable', 'Decade of keeper track record']}
-              cons={['Not for bulbs (use dimming thermostat)', 'More expensive than budget options ($65-85)'])
+              cons={['Not for bulbs (use dimming thermostat)', 'More expensive than budget options ($65-85)']}
               price="$65–85"
               ctaText="Shop Herpstat 1 →"
               ctaHref="https://www.amazon.com/s?k=herpstat+1+thermostat"

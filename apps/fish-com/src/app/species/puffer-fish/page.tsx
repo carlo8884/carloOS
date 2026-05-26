@@ -1,44 +1,42 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Dwarf, Congo & Figure Eight | Fish.com', description: 'Puffer fish are intelligent, aggressive, and bite through everything. Dwarf puffer, Congo puffer, and figure eight compared. Hard-shelled food required to wear down teeth.', path: '/species/puffer-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Dwarf, Congo, and figure eight puffer care — intelligence, aggression, and dietary needs.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression & Species Comparison | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared. Not community fish — experienced keepers only.', path: '/species/puffer-fish', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PufferFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Puffer fish are the dogs of the aquarium world — they recognize their owners, beg for food, and have distinct personalities. They are also intensely aggressive toward tankmates and require hard-shelled prey to wear down their continuously growing teeth.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Puffer Fish', href: '/species/puffer-fish' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Species Comparison</div>
-          {[['Dwarf Puffer', '1 inch · FW · Species-only', 'Easiest · 10 gal min'], ['Figure Eight', '3 inches · Brackish', 'Beginner-friendly'], ['Congo Puffer', '6 inches · FW · Benthic', 'Intermediate'], ['Fahaka Nile', '18 inches · FW', 'Expert only · 125 gal+'], ['Mbu Giant', '30 inches · FW', 'Public aquarium level']].map(([name, info, note]) => (
-            <div key={name} className="py-2 border-b border-brand-border last:border-0">
-              <div className="text-xs font-bold text-brand-dark">{name}</div>
-              <div className="text-2xs text-brand-text-light">{info}</div>
-              <div className="text-2xs text-brand-primary">{note}</div>
+          {[['Dwarf puffer (C. travancoricus)', '1" · 5-10 gal · Freshwater · Some community possible'], ['Figure 8 puffer (T. biocellatus)', '3" · 30+ gal · Brackish · Mostly species-only'], ['South American puffer (C. asellus)', '3.5" · 30+ gal · Freshwater · Semi-community'], ['Fahaka puffer (T. fahaka)', '18" · 200+ gal · Freshwater · Strict species-only']].map(([s, d]) => (
+            <div key={s} className="py-2 border-b border-brand-border last:border-0">
+              <div className="text-xs font-bold text-brand-dark">{s}</div>
+              <div className="text-2xs text-brand-text-light">{d}</div>
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species" links={[{ label: 'Oscar Care', href: '/species/oscar' }, { label: 'African Cichlid', href: '/species/african-cichlid' }, { label: 'Best Canister Filters', href: '/reviews/best-canister-filters' }]} />
+        <RelatedLinks title="Related Species" links={[{ label: 'Oscar Fish', href: '/species/oscar' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }, { label: 'Quarantine Tank', href: '/setup/quarantine-tank-guide' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-puffer" />
       </>}
     >
       <div className="carloOS-article">
-        <h2>Teeth — The Non-Negotiable Feeding Requirement</h2>
-        <p>Puffer fish have a beak-like dental plate that grows continuously throughout their lives. In the wild, they use this beak to crush hard-shelled prey — snails, crustaceans, hard-cased invertebrates — which wears the teeth down. In captivity without hard-shelled prey, the teeth overgrow and eventually prevent the fish from eating. Overgrown teeth are the most common fatal management failure in captive puffers.</p>
-        <p>Hard-shelled food sources that wear puffer teeth: live or frozen snails (ramshorn, pond snails, bladder snails), frozen clams on the half shell, frozen mussels, frozen crab legs, hard-shelled shrimp. Feed hard-shelled prey at minimum weekly — more frequently is better. Some fish stores sell "feeder snails" specifically for puffer keepers. Breeding your own snail colony in a separate tank ensures a sustainable supply.</p>
+        <h2>The Beak — Why It Matters</h2>
+        <p>Puffer fish have fused beak-like teeth (technically a beak of dental plates) that grow continuously throughout their lives. In the wild, they grind snails, crustaceans, and other hard-shelled prey that naturally wear the beak to an appropriate length. In captivity, a puffer fed only soft foods (bloodworms, soft pellets) develops an overgrown beak — the upper and lower plates grow to the point where the fish cannot close its mouth or eat normally. This is painful and eventually fatal without intervention.</p>
+        <p>Prevention: feed hard-shelled foods regularly — snails are the gold standard (trumpet snails, mystery snails, pond snails — puffers demolish them enthusiastically). Unshelled shrimp, clam on the half shell, and frozen krill with shells also help. The crunch is necessary. Every puffer diet should include hard foods at multiple feedings weekly. Overgrown beaks can be trimmed by a fish veterinarian under anesthesia (MS-222) — an uncomfortable but necessary procedure when diet management has failed.</p>
 
-        <h2>Aggression — Almost Always a Species-Only Fish</h2>
-        <p>Puffer fish bite. They bite fins, they bite tankmates, and they bite things out of curiosity. Most puffer species are best kept as species-only fish — one puffer per tank. The Dwarf Puffer (Carinotetraodon travancoricus) can sometimes be kept with fast-moving fish in a heavily planted tank, but fin-nipping incidents are common and tankmates are always at risk. Plan for a single puffer in a single species setup.</p>
+        <h2>Personality — The Reason People Keep Them</h2>
+        <p>Puffers are remarkably personable fish. They recognize their owners — their binocular vision gives them a face-forward focus unlike most fish — and approach the glass when their keeper is present, follow fingers across the glass, and actively beg for food. Their eyes move independently and their expressions are more legible than typical fish. Fahaka puffers (the largest freshwater species, reaching 18 inches) are particularly famous for their personality — long-term keepers describe bonds with these fish that approach those with dogs in terms of individual recognition and interaction. The investment in their specific care requirements pays back in interaction quality.</p>
 
-        <h2>Popular Freshwater Species</h2>
-        <p><strong>Dwarf Puffer (Carinotetraodon travancoricus):</strong> 1 inch. Fully freshwater. The most appropriate species for most home aquariums — 10-gallon minimum for one puffer (one per tank). Endlessly entertaining personality. Eats snails voraciously. Requires live snails as dietary staple.</p>
-        <p><strong>Congo Puffer (Tetraodon miurus):</strong> 6 inches. Fully freshwater. An ambush predator that buries itself in substrate and lunges at prey. Fascinating behavioral repertoire. Requires a deep sand substrate. Eats earthworms, shrimp, and appropriately sized live prey. 30+ gallons.</p>
-        <p><strong>Figure Eight Puffer (Dichotomyctere ocellatus):</strong> 3 inches. Brackish water (specific gravity 1.005–1.010). More tolerant of tankmates than most puffers. Popular and widely available. Requires brackish water that most community fish cannot tolerate — another reason for species-only keeping.</p>
+        <h2>Aggression — The Management Reality</h2>
+        <p>Puffers bite. They bite other fish (fins, scales, sometimes fatally), they bite snails (intentionally — it is their food), they bite decorations, they bite the glass, and they occasionally bite their keeper's fingers during tank maintenance. This biting behavior is not trainable away — it is predatory instinct in an animal that hunts by biting through shells. The bite of a dwarf puffer (1 inch) is a pinch; the bite of a fahaka puffer (18 inches) breaks skin and can cause injury requiring medical attention.</p>
+        <p>Community compatibility: dwarf puffers can sometimes be kept with fast-moving fish that are difficult to catch (danios, fast tetras) in heavily planted tanks — not guaranteed, but possible with appropriate species selection. All other puffers are essentially incompatible with community fish — the bite damage and stress they cause to tankmates makes species-only or carefully researched companion species the appropriate approach.</p>
 
-        <h2>Intelligence and Enrichment</h2>
-        <p>Puffer fish are genuinely intelligent — they learn feeding schedules, recognize individual owners, and can become bored in barren setups. Provide environmental enrichment: rearrange decorations periodically, feed live prey that they must hunt, add caves and complex structure. A bored puffer develops repetitive behaviors (glass surfing, pacing). Mental stimulation is a welfare requirement, not a luxury.</p>
+        <h2>The Dwarf Puffer — The Entry Point</h2>
+        <p>Carinotetraodon travancoricus (dwarf puffer / pea puffer) at 1 inch is the most accessible puffer for aquarists who want the personality in a more manageable package. They are true freshwater (no brackish needed unlike figure 8), manageable in a 10-gallon species tank for a small group (1 male to 2-3 females in a heavily planted setup), and some hobbyists successfully keep them with fast, robust community fish. They are carnivores requiring live or frozen foods (bloodworms, daphnia, small snails) and will not accept dry foods. Their beak care requirements are the same as larger species — snails regularly.</p>
       </div>
     </ArticleLayout>
   )

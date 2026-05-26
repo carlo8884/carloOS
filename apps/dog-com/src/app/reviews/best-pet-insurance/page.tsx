@@ -46,7 +46,7 @@ const PICKS = [
 export default function BestPetInsurancePage() {
   return (
     <>
-      <SchemaScript schema={faqSchema} />
+      <SchemaScript schema={combinedSchema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 DVM-Reviewed · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
