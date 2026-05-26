@@ -1,5 +1,6 @@
 {
   "name": "carloOS",
+  "packageManager": "npm@11.13.0",
   "version": "1.0.0",
   "private": true,
   "description": "CarloOS — Premium domain portfolio monorepo. dog.com · fish.com · lizard.com · saddle.com · vets.co",
