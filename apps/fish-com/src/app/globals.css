@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   FISH.COM THEME TOKENS
+   Ocean blue palette. Deep-water aesthetic.
+   ───────────────────────────────────────────── */
+
+:root {
+  --brand-primary: #0E6B8A;
+  --brand-primary-light: #1490B8;
+  --brand-primary-pale: #E6F4F9;
+  --brand-primary-dark: #0A5470;
+  --brand-dark: #050E14;
+  --brand-surface: #F4F9FC;
+  --brand-white: #FFFFFF;
+  --brand-text-dark: #050E14;
+  --brand-text-mid: #1E3D50;
+  --brand-text-light: #6A90A8;
+  --brand-border: #C8DDE8;
+  --brand-success: #1A7A44;
+  --brand-warning: #C8952A;
+  --brand-danger: #C84A2A;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; border-radius: 4px; }
+
+/* Article typography */
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--brand-text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--brand-border);
+  padding-bottom: 0.625rem;
+  letter-spacing: -0.025em;
+}
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brand-text-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+.carloOS-article p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--brand-text-mid);
+  margin-bottom: 1rem;
+}
+.carloOS-article ul, .carloOS-article ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.carloOS-article li { font-size: 1rem; line-height: 1.75; color: var(--brand-text-mid); margin-bottom: 0.5rem; }
+.carloOS-article strong { color: var(--brand-text-dark); font-weight: 600; }
+.carloOS-article a { color: var(--brand-primary); }
+
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+::selection { background: rgba(14,107,138,0.2); color: var(--brand-text-dark); }

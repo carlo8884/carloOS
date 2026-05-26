@@ -1,0 +1,45 @@
+import type { Metadata } from 'next'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water & Nano Tanks | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export default function WhiteCloudPage() {
+  return (
+    <ArticleLayout siteId="fish-com"
+      hero={{ title: 'White Cloud Mountain Minnow', subtitle: 'Tanichthys albonubes — the "poor man\'s neon tetra," though the nickname sells them short. These 1.5-inch fish from the mountain streams of southern China are hardier than neons, tolerant of cold water that most tropical fish cannot handle, and in peak condition display iridescent red tails and a brilliant lateral stripe. They are the ideal fish for unheated indoor tanks.', category: 'Species Guide — Cold Water', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }]}
+      schema={schema}
+      sidebar={<>
+        <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
+          {[['Scientific name', 'Tanichthys albonubes'], ['Adult size', '1.5 inches'], ['Temperature', '60–72°F — cold water preferred'], ['Max temp', '75°F — above this stresses them'], ['pH', '6.0–8.0 — very adaptable'], ['Group', '8+ recommended'], ['Lifespan', '5–7 years in cool water']].map(([k, v]) => (
+            <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+            </div>
+          ))}
+        </div>
+        <RelatedLinks title="Related Species" links={[{ label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Axolotl Care', href: '/species/axolotl' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-white-cloud" />
+      </>}
+    >
+      <div className="carloOS-article">
+        <h2>The Cold Water Advantage</h2>
+        <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
+        <p>At tropical temperatures (78°F+), white clouds decline: their lifespan shortens significantly, their immune function is compromised, and they are less active and less colorful than at their preferred range. If you are running a heated tropical tank at 78°F, white clouds are not appropriate tankmates — keep them in their preferred temperature range where they thrive.</p>
+
+        <h2>Color and Conditioning</h2>
+        <p>White clouds in fish stores often appear pale and unimpressive — they have been kept in conditions that suppress their coloration. In a well-maintained tank at appropriate temperature with high-quality varied diet, the lateral line brightens to a vivid gold or silver iridescence, the tail develops rich crimson coloration, and the body shows a clear metallic sheen. Males in breeding condition display to each other with fins flared, intensifying all their colors.</p>
+        <p>Diet makes a significant difference: frozen daphnia (their natural prey in mountain streams) intensifies red coloration dramatically. Supplement their staple diet (quality small flake or micro pellet) with frozen daphnia 3-4 times weekly for the best color. Bloodworms and baby brine shrimp also work well.</p>
+
+        <h2>Breeding — Self-Sustaining Colonies</h2>
+        <p>White clouds breed readily at cool temperatures without special intervention — eggs are scattered among plants and hatch in 2–3 days. Unlike many egg-scattering fish, white clouds show little interest in eating their own eggs or fry in a densely planted tank. A school of white clouds in a well-planted unheated tank often establishes a self-sustaining colony — fry are periodically noticed swimming with the adults, growing to full size over 6–8 weeks. Java moss and hornwort provide ideal spawning and fry refuge habitat.</p>
+
+        <h2>Varieties</h2>
+        <p>The standard wild-type white cloud has green-gold body coloration with the distinctive lateral stripe and red tail. Several cultivated varieties are available: the golden white cloud (warm yellow-gold body replacing the typical green), the long-fin white cloud (extended, flowing fins on both male and female — particularly striking at feeding time when fins are flared), and occasionally albino variants. All have identical care requirements.</p>
+
+        <h2>Compatibility</h2>
+        <p>Peaceful with all species of similar size that tolerate the same temperature range. Natural tankmates in the cold-water aquarium: other white clouds (same species colonies are especially active), Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches (love the same cool, oxygenated conditions), and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F+ — the temperature mismatch creates a chronic welfare problem for one or both species.</p>
+      </div>
+    </ArticleLayout>
+  )
+}

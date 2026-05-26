@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #7AB52A;
+  --brand-primary-light: #9AD040;
+  --brand-primary-pale: #F0F7E6;
+  --brand-primary-dark: #5C8A1A;
+  --brand-dark: #080C08;
+  --brand-surface: #0D1A0D;
+  --brand-white: #EEF0E4;
+  --brand-text-dark: #EEF0E4;
+  --brand-text-mid: rgba(238,240,228,0.85);
+  --brand-text-light: rgba(238,240,228,0.4);
+  --brand-border: rgba(255,255,255,0.07);
+  --brand-success: #2AC87A;
+  --brand-warning: #C8A840;
+  --brand-danger: #E05A3A;
+  --font-display: var(--font-zilla), serif;
+  --font-body: var(--font-raleway), system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--brand-dark);
+  color: var(--brand-white);
+  font-family: var(--font-body);
+  line-height: 1.6; overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grid dot pattern */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(122,181,42,0.05) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none; z-index: 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; border-radius: 4px; }
+
+.carloOS-article {
+  position: relative; z-index: 2;
+}
+.carloOS-article h2 {
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+  color: var(--brand-white); margin-top: 2.5rem; margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--brand-border); padding-bottom: 0.6rem;
+}
+.carloOS-article h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--brand-white); margin-top: 1.75rem; margin-bottom: 0.6rem; }
+.carloOS-article p { font-size: 1rem; line-height: 1.85; color: var(--brand-text-mid); margin-bottom: 1rem; }
+.carloOS-article ul, .carloOS-article ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.carloOS-article li { font-size: 1rem; line-height: 1.75; color: var(--brand-text-mid); margin-bottom: 0.5rem; }
+.carloOS-article strong { color: var(--brand-white); font-weight: 600; }
+.carloOS-article a { color: var(--brand-primary); }
+.carloOS-article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+.carloOS-article th { background: rgba(122,181,42,0.1); color: var(--brand-primary); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(122,181,42,0.15); }
+.carloOS-article td { padding: 10px 12px; border-bottom: 1px solid var(--brand-border); color: var(--brand-text-mid); }
+::selection { background: rgba(122,181,42,0.2); color: var(--brand-white); }

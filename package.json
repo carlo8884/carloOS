@@ -1,0 +1,35 @@
+{
+  "name": "carloOS",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CarloOS — Premium domain portfolio monorepo. dog.com · fish.com · lizard.com · saddle.com · vets.co",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "type-check": "turbo type-check",
+    "lint": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules",
+    "seed": "tsx scripts/seed.ts --all && tsx scripts/seed-fish.ts",
+    "seed:fish": "tsx scripts/seed-fish.ts",
+    "generate": "tsx scripts/generate-site-files.ts",
+    "seo-audit": "tsx scripts/seo-audit.ts",
+    "content-check": "tsx scripts/content-check.ts",
+    "dev:dog": "cd apps/dog-com && npm run dev",
+    "dev:vets": "cd apps/vets-co && PORT=3001 npm run dev",
+    "dev:fish": "cd apps/fish-com && PORT=3002 npm run dev",
+    "dev:saddle": "cd apps/saddle-com && PORT=3003 npm run dev",
+    "dev:lizard": "cd apps/lizard-com && PORT=3004 npm run dev"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

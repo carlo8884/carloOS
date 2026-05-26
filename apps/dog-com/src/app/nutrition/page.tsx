@@ -1,0 +1,107 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { buildMetadata, EmailCapture } from '@carloOS/ui'
+
+export const metadata: Metadata = buildMetadata({
+  siteId: 'dog-com',
+  title: 'Dog Nutrition Guide — What to Feed, What to Avoid | Dog.com',
+  description: 'DVM-reviewed dog nutrition guides. What to feed, what\'s toxic, how much, WSAVA-compliant brands, raw vs cooked, puppy vs senior — all the nutrition content in one place.',
+  path: '/nutrition',
+})
+
+const GUIDES = [
+  {
+    category: 'Choosing Food',
+    items: [
+      { title: 'Best Dry Dog Food 2025', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: '🏆 Top Picks' },
+      { title: 'WSAVA Guidelines Explained', desc: 'What "meets WSAVA standards" actually means and why it matters', href: '/nutrition/wsava-explained' },
+      { title: 'Grain-Free Dog Food — The DCM Risk', desc: 'FDA investigation findings and what to avoid', href: '/nutrition/grain-free-dcm-risk' },
+      { title: 'Raw Diet Pros & Cons', desc: 'What veterinary nutritionists actually say', href: '/nutrition/raw-diet' },
+    ],
+  },
+  {
+    category: 'Feeding Basics',
+    items: [
+      { title: 'How Much to Feed Your Dog', desc: 'By weight, age, and activity level — with body condition scoring', href: '/nutrition/how-much-to-feed' },
+      { title: 'How Often to Feed', desc: 'Meal frequency by life stage', href: '/nutrition/feeding-frequency' },
+      { title: 'Reading a Dog Food Label', desc: 'Ingredient list, guaranteed analysis, and AAFCO statements decoded', href: '/nutrition/reading-food-labels' },
+      { title: 'Puppy Nutrition', desc: 'Large breed puppy formula, growth rates, when to switch to adult', href: '/nutrition/puppy-nutrition' },
+    ],
+  },
+  {
+    category: 'What Dogs Can & Cannot Eat',
+    items: [
+      { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
+      { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
+      { title: 'Supplements That Work', desc: 'Fish oil, joint supplements, probiotics — evidence graded', href: '/nutrition/dog-supplements' },
+    ],
+  },
+  {
+    category: 'Life Stage & Condition',
+    items: [
+      { title: 'Senior Dog Nutrition', desc: 'Metabolic slowdown, protein needs, kidney-supporting diets', href: '/health/senior-dog-care' },
+      { title: 'Weight Management for Dogs', desc: 'Body condition scoring, calorie restriction, exercise', href: '/nutrition/weight-management' },
+      { title: 'Prescription Diets Explained', desc: 'Kidney, liver, urinary, joint — when prescription food matters', href: '/nutrition/prescription-diets' },
+    ],
+  },
+]
+
+export default function NutritionHubPage() {
+  return (
+    <>
+      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+        <div className="flex items-center gap-2.5 mb-5">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Nutrition</span>
+        </div>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}>
+          Dog Nutrition Guide
+        </h1>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
+          DVM-reviewed nutrition content — from choosing between WSAVA-compliant brands to understanding what&apos;s actually toxic and what the grain-free DCM concern means for your dog.
+        </p>
+      </div>
+
+      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
+        <span className="text-brand-text-mid font-medium">Nutrition</span>
+      </nav>
+
+      <div className="px-container sm:px-container-sm py-14 max-w-container-wide mx-auto">
+        {GUIDES.map((section) => (
+          <div key={section.category} className="mb-12">
+            <h2 className="font-display text-2xl font-bold text-brand-dark mb-5 pb-3 border-b border-brand-border">
+              {section.category}
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {section.items.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+                >
+                  {item.badge && (
+                    <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{item.badge}</div>
+                  )}
+                  <div className="font-display font-bold text-brand-dark text-base mb-1.5 leading-tight">{item.title}</div>
+                  <div className="text-xs text-brand-text-light leading-relaxed">{item.desc}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+        <EmailCapture
+          variant="section" siteId="dog-com"
+          title="Free Dog Health & Nutrition Tips"
+          subtitle="DVM-reviewed nutrition guidance, product picks, and breed health alerts every Tuesday."
+          source="nutrition-hub" ctaText="Subscribe Free"
+          perks={['🥩 Nutrition guidance', '⚠️ Toxin alerts', '🏆 Product picks', '🚫 No spam']}
+        />
+      </div>
+    </>
+  )
+}

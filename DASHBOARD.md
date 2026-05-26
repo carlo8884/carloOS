@@ -1,0 +1,55 @@
+# CarloOS Dashboard — Sprint 35
+**409 files · 294 pages**
+
+## QUICK START
+```
+You are the technical build operator for Carlo Tabibi's domain portfolio (CarloOS monorepo).
+Working directory: /home/claude/carloOS/
+Do not ask for context. Do not recap. Check DASHBOARD.md priorities and build immediately.
+```
+
+## PAGES
+dog-com: 121 | fish-com: 65 | lizard-com: 43 | saddle-com: 35 | vets-co: 30
+
+## MILESTONES
+- vets-co hit 30 pages ✓
+- fish-com hit 65 pages ✓
+- 294 total pages ✓
+
+## THIS SESSION BUILT
+dog-com: labrador-retriever (expanded — POMC gene, exercise caveats, English vs American types)
+fish-com: african-cichlid (expanded), molly-fish, ball-python (expanded)
+lizard-com: dehydration-reptiles
+vets-co: intestinal-parasites (roundworms zoonotic risk, Giardia assemblage specifics)
+
+## NEXT PRIORITIES — targeting 300 pages
+P1 fish-com — push to 68:
+  - `/species/betta-fish` at 7.9KB — expand with bettas as carnivores, flare training, etc.
+  - New: `/species/swordtail-fish`
+  - New: `/setup/aquarium-cycling-guide` — check depth
+
+P2 lizard-com — push to 46:
+  - New: `/species/leopard-gecko` — check depth (9.7KB — could go deeper on impaction)
+  - New: `/health/hypocalcemia` or expand MBD
+  - New: `/species/veiled-chameleon` — check depth (6.4KB — expand)
+
+P3 dog-com — push to 124:
+  - New: `/health/dog-allergies` — atopic + food + contact
+  - New: `/breeds/golden-retriever` — check depth (11.7KB — good, skip)
+  - New: `/nutrition/raw-diet-risks` — check depth
+  - New: `/health/dog-seizures` — check depth
+
+P4 saddle-com — push to 37:
+  - New: `/guides/horse-nutrition-guide` — check depth (12KB — good)
+  - New: `/reviews/best-english-saddles` — check depth (10.3KB — good)
+  - New: `/reviews/best-riding-boots` — check depth
+
+P5 vets-co — push to 32:
+  - New: `/health/leptospirosis`
+  - New: `/health/dog-eye-conditions`
+
+## GITHUB REMINDER (Carlo)
+cd "/Users/carlotabibi/Documents/Claude/Projects/Domains - Bolton Properties LL:C/home/claude/carloOS"
+git init && git add . && git commit -m "CarloOS 294 pages"
+git branch -M main && git remote add origin https://github.com/carlo8884/carloOS.git
+git push -u origin main

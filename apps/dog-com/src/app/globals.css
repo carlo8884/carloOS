@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   DOG.COM THEME TOKENS
+   Sets CSS variables consumed by Tailwind utilities.
+   Change these values here; Tailwind picks them up automatically.
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Brand */
+  --brand-primary: #E8622A;
+  --brand-primary-light: #F07840;
+  --brand-primary-pale: #FEF3EE;
+  --brand-primary-dark: #C44E18;
+
+  /* Backgrounds */
+  --brand-dark: #1A0E08;
+  --brand-surface: #FBF7F4;
+  --brand-white: #FFFFFF;
+
+  /* Text */
+  --brand-text-dark: #1A0E08;
+  --brand-text-mid: #4A2E18;
+  --brand-text-light: #9A7A68;
+
+  /* Borders */
+  --brand-border: #EDE0D8;
+
+  /* Semantic */
+  --brand-success: #2A6A3A;
+  --brand-warning: #C8952A;
+  --brand-danger: #C84A2A;
+
+  /* Typography (loaded via next/font — variable names set there) */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+
+  /* Layout */
+  --nav-height: 68px;
+}
+
+/* ─── BASE ─────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── FOCUS VISIBLE ──────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── ARTICLE BODY TYPOGRAPHY ─────────────────────────────────
+   Applied to .carloOS-article elements — long-form content.
+   Uses Tailwind Typography as base with brand overrides.
+   ────────────────────────────────────────────────────────────── */
+
+.carloOS-article {
+  /* Override prose defaults with brand typography */
+  --tw-prose-body: var(--brand-text-mid);
+  --tw-prose-headings: var(--brand-text-dark);
+  --tw-prose-links: var(--brand-primary);
+  --tw-prose-bold: var(--brand-text-dark);
+  --tw-prose-counters: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-text-light);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-primary);
+  --tw-prose-code: var(--brand-text-dark);
+  --tw-prose-th-borders: var(--brand-border);
+  --tw-prose-td-borders: var(--brand-border);
+}
+
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--brand-border);
+  padding-bottom: 0.625rem;
+  letter-spacing: -0.025em;
+}
+
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.carloOS-article p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--brand-text-mid);
+  margin-bottom: 1rem;
+}
+
+.carloOS-article ul, .carloOS-article ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.carloOS-article li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--brand-text-mid);
+  margin-bottom: 0.5rem;
+}
+
+.carloOS-article strong {
+  color: var(--brand-text-dark);
+  font-weight: 600;
+}
+
+.carloOS-article a {
+  color: var(--brand-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 98, 42, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+
+.carloOS-article a:hover {
+  text-decoration-color: var(--brand-primary);
+}
+
+/* ─── CALLOUT BLOCKS ──────────────────────────────────────────── */
+
+.callout-primary {
+  background: var(--brand-primary-pale);
+  border-left: 4px solid var(--brand-primary);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+
+.callout-danger {
+  background: rgba(200, 74, 42, 0.05);
+  border: 1px solid rgba(200, 74, 42, 0.2);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+
+.callout-success {
+  background: rgba(42, 106, 58, 0.04);
+  border: 1px solid rgba(42, 106, 58, 0.15);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+
+/* ─── SCROLL ANIMATIONS ───────────────────────────────────────── */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── SELECTION ───────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(232, 98, 42, 0.2);
+  color: var(--brand-text-dark);
+}

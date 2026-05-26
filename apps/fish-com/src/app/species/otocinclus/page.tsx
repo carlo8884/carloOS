@@ -1,0 +1,44 @@
+import type { Metadata } from 'next'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Algae, Starvation Risk & Group Requirements | Fish.com', description: 'Otocinclus are the best algae eaters for small planted tanks but starve easily without established algae growth. Groups of 6+, established tanks only. Complete care guide.', path: '/species/otocinclus', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Care Guide', description: 'Algae requirements, starvation prevention, and group care for otocinclus catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export default function OtocinclsPage() {
+  return (
+    <ArticleLayout siteId="fish-com"
+      hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus vittatus — the best algae eater for small and nano planted tanks. At 1.5 inches they work glass and leaves without damaging plants, are completely peaceful, and are safe with shrimp. The challenge: they require an established tank with algae growth and starve easily in newly set up aquariums.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Otocinclus', href: '/species/otocinclus' }]}
+      schema={schema}
+      sidebar={<>
+        <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
+          {[['Size', '1.5 inches'], ['Group', '6+ — social species'], ['Tank age', 'Established only (3+ months)'], ['Temperature', '72–82°F'], ['pH', '6.0–7.5'], ['Diet', 'Soft algae — must supplement'], ['Lifespan', '3–5 years']].map(([k, v]) => (
+            <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+            </div>
+          ))}
+        </div>
+        <RelatedLinks title="Related Species" links={[{ label: 'Pleco Care', href: '/species/pleco' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Corydoras', href: '/species/corydoras' }]} />
+        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-otocinclus" />
+      </>}
+    >
+      <div className="carloOS-article">
+        <h2>The Starvation Problem — The Most Common Cause of Death</h2>
+        <p>Otocinclus die from starvation more than any other cause. They are obligate soft algae eaters — their mouth is designed specifically to graze soft green algae (diatoms, green dust algae, green film algae) from smooth surfaces. They cannot eat hair algae, hard algae, or most commercial foods readily. In a new tank with no established algae growth, or in a tank that is kept spotlessly clean, otocinclus have nothing to eat and starve within weeks.</p>
+        <p><strong>Requirements before adding otocinclus:</strong> The tank must be at least 2–3 months old with visible algae on the glass and plants. If you cannot see green film or a brownish diatom coating on surfaces, the tank is not ready. Otocinclus are not appropriate for new tanks, heavily cleaned tanks, or tanks without established algae growth.</p>
+
+        <h2>Supplemental Feeding — Essential</h2>
+        <p>Even in algae-rich tanks, otocinclus should receive supplemental feeding. Blanched vegetables weighted to the bottom: zucchini slices and cucumber rounds are the most accepted. Drop a slice into the tank after lights out and remove after 24 hours. Many otocinclus accept algae wafers and soft sinking foods — offer these regularly and observe whether they eat. A fat, rounded belly indicates adequate nutrition; a concave, sunken belly is a starvation warning requiring immediate dietary intervention.</p>
+
+        <h2>Groups and Social Requirements</h2>
+        <p>Otocinclus are social fish that congregate in groups in the wild. Single or paired otocinclus are stressed — they hide, decline to feed, and die faster than group-kept fish. Minimum 6 for wellbeing; 8–10 in a planted tank is ideal. In a group, they actively feed together on plant leaves and glass, rest in clusters, and show the normal behavior that indicates a healthy animal.</p>
+
+        <h2>Acclimation — Higher Sensitivity Than Most Fish</h2>
+        <p>Most wild-caught otocinclus (the majority in the trade come from South America) are stressed from collection and shipping and arrive in suboptimal condition. Drip acclimation (slow drip of tank water into the bag over 45–60 minutes) reduces osmotic shock from transport water chemistry. Quarantine for 2 weeks in a tank with established algae before introducing to the display tank. Avoid purchasing otocinclus that look thin or have sunken bellies — they will be very difficult to save.</p>
+
+        <h2>Compatibility</h2>
+        <p>Completely peaceful — compatible with all community fish, nano fish, dwarf shrimp (cherry shrimp, amano shrimp), and snails. They will not bother snail eggs, shrimp fry, or other small invertebrates. One of the few fish appropriate for shrimp tanks where most other species pose a risk. They share tank space with betta fish successfully in most cases — bettas typically ignore them due to their small size and rapid movement along surfaces.</p>
+      </div>
+    </ArticleLayout>
+  )
+}

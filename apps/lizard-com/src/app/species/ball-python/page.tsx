@@ -1,0 +1,45 @@
+import type { Metadata } from 'next'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes & Humidity | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies. Complete care guide.', path: '/species/ball-python', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export default function BallPythonPage() {
+  return (
+    <ArticleLayout siteId="lizard-com"
+      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ball Python', href: '/species/ball-python' }]}
+      schema={schema}
+      sidebar={<>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
+          {[['Adult size', '3–5 feet (females larger)'], ['Enclosure (adult)', '4×2×2 ft minimum'], ['Hot spot', '88–92°F surface'], ['Warm ambient', '80–85°F'], ['Cool side', '76–80°F'], ['Humidity', '60–80% — critical'], ['Feeding', 'Frozen/thawed rats — every 7-14 days'], ['Lifespan', '20–30 years']].map(([k, v]) => (
+            <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '12px' }}>
+              <span style={{ color: 'rgba(238,240,228,0.45)' }}>{k}</span>
+              <span style={{ color: 'var(--brand-white)', fontWeight: 600, textAlign: 'right', maxWidth: '55%' }}>{v}</span>
+            </div>
+          ))}
+        </div>
+        <RelatedLinks title="Related Species" links={[{ label: 'Corn Snake', href: '/species/corn-snake' }, { label: 'Boa Constrictor', href: '/species/boa-constrictor' }, { label: 'Dysecdysis Guide', href: '/health/dysecdysis' }]} />
+        <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-ball-python" ctaText="Download Free" />
+      </>}
+    >
+      <div className="carloOS-article">
+        <h2>Feeding Refusals — The Biggest Beginner Fear</h2>
+        <p>Ball pythons are notorious for feeding strikes — periods of weeks to months where they refuse food entirely. This behavior is normal and rooted in their biology: in the wild, West African ball pythons may not eat for 3–6 months during dry season when prey is scarce. A healthy, well-maintained adult ball python refusing food for 4–8 weeks is not cause for panic — it is normal seasonal behavior.</p>
+        <p>Common triggers for feeding refusals: seasonal (late fall and winter — even captive snakes respond to changing day length and temperature), shedding cycle (snakes often refuse food while in the blue/opaque pre-shed phase), reproductive season in females, stress from handling or enclosure changes, and recent cage cleaning. When a ball python refuses food, the first step is not medication — it is asking what has changed and whether the husbandry parameters are correct.</p>
+        <p><strong>When to actually be concerned:</strong> A feeding refusal combined with weight loss (weigh monthly — a scale is essential), mucus discharge, respiratory sounds, or visible illness warrants veterinary evaluation. A feeding refusal in an otherwise healthy-appearing snake that is maintaining or gaining weight over months is almost never medically urgent. A healthy adult ball python can safely fast for 6 months or more.</p>
+
+        <h2>Humidity — More Important Than Most Think</h2>
+        <p>Ball pythons come from the humid forests and grasslands of West and Central Africa where relative humidity averages 60–80%. Inadequate humidity is the most common husbandry problem in ball python keeping — and the most common cause of dysecdysis (incomplete shed), respiratory infections, and skin condition problems. In screen-top enclosures (the standard decade ago), maintaining 60-80% humidity is nearly impossible without covering most of the screen. PVC or glass enclosures with limited ventilation maintain humidity far more reliably and are now the standard recommendation.</p>
+        <p>Measure humidity with a digital hygrometer placed at the substrate level. Target 60–80% ambient, rising to 80–90% in the hide. A humid hide (a hide box with moist sphagnum moss inside) is essential — the snake retreats to it during shedding for the moisture needed to complete a clean shed. Substrate that holds humidity (coco fiber, organic topsoil, a bioactive blend) outperforms paper towels and newspaper, which do not contribute to humidity and require constant misting.</p>
+
+        <h2>Morphs — 400+ and Growing</h2>
+        <p>Ball python morphs represent the most extensive color and pattern mutation library of any reptile species. Key base mutations that combine to produce most of the designer morphs: Pastel (reduces black pigment, brightens yellows), Spider (reduces pattern, adds head stamp — controversial due to neurological wobble association in some lines), Piebald (random white patches on normal patterning), Banana/Coral Glow (vivid yellow-orange), Albino (removes black pigment entirely), Axanthic (removes yellow, leaves black/white/grey), Clown (reduced pattern, unique dorsal striping), GHI (Ghost Het Ivory — darkens base color), Lesser/Butter (lightens color — produces Blue Eyed Leucistic in combination).</p>
+        <p>Combo morphs multiply the possibilities — a Banana Pastel Clown combines three mutations, a Blue Eyed Leucistic (BEL) requires a Lesser or Butter combined with another co-dominant morph. Entry-level morphs (Pastel, Cinnamon, Spotnose) are affordable; designer combos with 3-4 mutations command hundreds to thousands of dollars.</p>
+
+        <h2>Enclosure — Tub vs Tank vs PVC</html></h2>
+        <p>Ball pythons do best in secure, humid, snug enclosures — not large open spaces. Counter-intuitively, a massive tank with lots of open space stresses ball pythons. They are ambush predators that feel secure in tight-fitting hides that touch their body on all sides. Three enclosure options: (1) Plastic tubs (the breeder standard — cheap, secure, hold humidity, easy to clean; aesthetically plain), (2) PVC enclosures (Reptile Sciences, Boamaster — expensive but retain humidity excellently and look good; recommended), (3) Glass tanks (poor humidity retention with screen tops; require partial screen covering). Minimum adult dimensions: 4×2 feet floor space. A 4×2×2 PVC with front-opening sliding doors is the widely regarded ideal adult ball python enclosure.</p>
+      </div>
+    </ArticleLayout>
+  )
+}
