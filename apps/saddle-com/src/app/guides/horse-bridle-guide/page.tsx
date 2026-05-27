@@ -5,7 +5,7 @@ import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } fr
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Horse Bridle Guide 2025 — Types, Fitting & Discipline Selection | Saddle.com',
+  title: 'Horse Bridle Guide 2025 — Types, Fitting | Saddle.com',
   description: 'Complete horse bridle guide. Snaffle vs double bridle, bitless options, correct fit by discipline, and how to check bridle fit on your horse.',
   path: '/guides/horse-bridle-guide',
   type: 'article',

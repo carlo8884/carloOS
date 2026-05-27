@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Angelfish Care Guide — Cichlid Behavior, Tank Height & Pairs | Fish.com', description: 'Angelfish are cichlids with cichlid behavior — pairs bond for life, defend territory, and may attack tankmates during breeding. Tall tanks required. Complete care guide.', path: '/species/angelfish', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Angelfish Care Guide — Cichlid Behavior, Tank Height | Fish.com', description: 'Angelfish are cichlids with cichlid behavior — pairs bond for life, defend territory, and may attack tankmates during breeding. Tall tanks required.', path: '/species/angelfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Angelfish Care Guide', description: 'Cichlid behavior, bonding, territory, and tall tank requirements for freshwater angelfish.', url: 'https://fish.com/species/angelfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AngelfishPage() {
   return (

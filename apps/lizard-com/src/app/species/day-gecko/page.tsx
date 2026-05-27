@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Day Gecko Care Guide — Phelsuma Species, Vivarium & Handling | Lizard.com', description: 'Day geckos (Phelsuma) are vivid green display animals — they are not handling geckos. Giant day gecko, gold dust, and standing\'s guide. Bioactive vivarium setup.', path: '/species/day-gecko', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Day Gecko Care Guide — Phelsuma Species, Vivarium | Lizard.com', description: 'Day geckos (Phelsuma) are vivid green display animals — they are not handling geckos. Giant day gecko, gold dust, and standing\'s guide.', path: '/species/day-gecko', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Day Gecko Care Guide', description: 'Species overview, bioactive vivarium, and care for Phelsuma day geckos.', url: 'https://lizard.com/species/day-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function DayGeckoPage() {

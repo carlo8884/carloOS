@@ -5,8 +5,8 @@ import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Labrador Retriever Health Guide — Obesity, Hip Dysplasia & EIC | Dog.com',
-  description: 'A genetic mutation makes Labs unable to feel full. Complete guide to obesity, hip and elbow dysplasia, exercise-induced collapse, PRA, and the preventive care schedule that maximizes Lab lifespan.',
+  title: 'Labrador Retriever Health Guide — Obesity | Dog.com',
+  description: 'A genetic mutation makes Labs unable to feel full.',
   path: '/health/labrador-health',
   type: 'article',
 })

@@ -4,8 +4,8 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Training Guide — Positive Reinforcement & Puppy Basics | Dog.com',
-  description: 'Science-based dog training guides. Positive reinforcement principles, puppy socialization windows, common behavior problems, and how to find a qualified trainer.',
+  title: 'Dog Training Guide — Positive Reinforcement | Dog.com',
+  description: 'Science-based dog training guides.',
   path: '/training',
 })
 

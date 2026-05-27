@@ -12,7 +12,7 @@ import { buildFAQSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Find a Veterinary Specialist — Near You',
-  description: 'Find board-certified veterinary specialists near you. Neurology, orthopedics, oncology, cardiology, ophthalmology, emergency and critical care — search by specialty and location.',
+  description: 'Find board-certified veterinary specialists near you.',
   path: '/find-a-vet',
 })
 

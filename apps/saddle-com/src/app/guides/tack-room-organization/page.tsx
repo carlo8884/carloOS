@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Room Organization — Storage, Humidity & Leather Care | Saddle.com', description: 'How to organize a tack room for efficiency and leather longevity. Saddle racks, bridle hooks, humidity control, and the storage mistakes that ruin expensive tack.', path: '/guides/tack-room-organization', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Room Organization — Storage, Humidity | Saddle.com', description: 'How to organize a tack room for efficiency and leather longevity.', path: '/guides/tack-room-organization', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Tack Room Organization Guide', description: 'Saddle storage, bridle hooks, humidity control, and leather care in the tack room.', url: 'https://saddle.com/guides/tack-room-organization', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function TackRoomPage() {

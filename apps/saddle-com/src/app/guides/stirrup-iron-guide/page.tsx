@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Stirrup Iron Guide 2025 — Safety Stirrups, Sizing & Discipline Selection | Saddle.com', description: 'Complete stirrup iron guide. Why safety stirrups matter, correct sizing (1 inch wider than boot), and which irons work for dressage, jumping, and trail riding.', path: '/guides/stirrup-iron-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Stirrup Iron Guide 2025 — Safety Stirrups, Sizing | Saddle.com', description: 'Complete stirrup iron guide. Why safety stirrups matter, correct sizing (1 inch wider than boot), and which irons work for dressage, jumping, and trail riding.', path: '/guides/stirrup-iron-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Stirrup Iron Guide', description: 'Safety stirrups, sizing, and discipline selection for riders.', url: 'https://saddle.com/guides/stirrup-iron-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function StirrupIronGuidePage() {
   return (

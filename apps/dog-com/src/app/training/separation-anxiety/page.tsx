@@ -4,8 +4,8 @@ import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } fr
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Separation Anxiety — True SA vs Boredom & What Actually Works | Dog.com',
-  description: 'Most dogs with "separation anxiety" actually have boredom, under-stimulation, or a habit problem — not true separation anxiety. This guide distinguishes them and gives the correct protocol for each.',
+  title: 'Dog Separation Anxiety — True SA vs Boredom | Dog.com',
+  description: 'Most dogs with "separation anxiety" actually have boredom, under-stimulation, or a habit problem — not true separation anxiety.',
   path: '/training/separation-anxiety',
   type: 'article',
 })

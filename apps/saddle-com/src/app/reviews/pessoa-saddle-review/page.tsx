@@ -4,8 +4,8 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy & Optimum Ranked | Saddle.com',
-  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports — close contact geometry, Top-tier competition use, and who each model suits.',
+  title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy | Saddle.com',
+  description: 'Complete Pessoa saddle review.',
   path: '/reviews/pessoa-saddle-review',
   type: 'article',
 })

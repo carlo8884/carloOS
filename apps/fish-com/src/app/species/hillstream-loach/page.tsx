@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide — Fast Flow, High O2 & Algae Diet | Fish.com', description: 'Hillstream loaches need very high water flow and oxygenation — they come from fast-moving streams. They are algae eaters that starve in tanks without established biofilm. Care guide.', path: '/species/hillstream-loach', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide — Fast Flow, High O2 | Fish.com', description: 'Hillstream loaches need very high water flow and oxygenation — they come from fast-moving streams.', path: '/species/hillstream-loach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide', description: 'Fast-flowing water requirements, algae diet, and care for hillstream loaches (Sewellia, Beaufortia, Gastromyzon).', url: 'https://fish.com/species/hillstream-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function HillstreamLoachPage() {

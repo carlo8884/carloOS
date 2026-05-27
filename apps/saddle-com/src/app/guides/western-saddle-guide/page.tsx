@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Saddle Guide — Tree Fit, Disciplines & Cinch Selection | Saddle.com', description: 'Western saddle guide. How to fit a western saddle to your horse, the differences between roping, barrel, cutting, and trail saddles, and cinch selection.', path: '/guides/western-saddle-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Saddle Guide — Tree Fit, Disciplines | Saddle.com', description: 'Western saddle guide. How to fit a western saddle to your horse, the differences between roping, barrel, cutting, and trail saddles, and cinch selection.', path: '/guides/western-saddle-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Western Saddle Guide', description: 'Tree fit, discipline selection, and cinch guide for western saddles.', url: 'https://saddle.com/guides/western-saddle-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WesternSaddleGuidePage() {
   return (

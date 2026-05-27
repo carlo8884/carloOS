@@ -5,7 +5,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Puppy Food 2025 — Large Breed & Small Breed Formulas Ranked | Dog.com',
+  title: 'Best Puppy Food 2025 — Large Breed | Dog.com',
   description: 'WSAVA-compliant puppy foods ranked for 2025. Royal Canin, Purina Pro Plan, Hill\'s Science Diet compared for large breed puppies, small breeds, and all sizes.',
   path: '/reviews/best-dog-food-for-puppies',
   category: 'Nutrition Reviews',

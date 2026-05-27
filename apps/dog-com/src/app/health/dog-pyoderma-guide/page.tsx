@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Dog Pyoderma — Bacterial Skin Infections, Hot Spots & Deep Pyoderma | Dog.com", description: 'Pyoderma is bacterial skin infection in dogs — from superficial hot spots to deep tissue infections. Underlying allergies drive recurrence. Diagnosis, treatment, and prevention.', path: '/health/dog-pyoderma', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Dog Pyoderma — Bacterial Skin Infections, Hot Spots | Dog.com", description: 'Pyoderma is bacterial skin infection in dogs — from superficial hot spots to deep tissue infections. Underlying allergies drive recurrence.', path: '/health/dog-pyoderma', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: "Dog Pyoderma Guide", description: 'Superficial and deep bacterial skin infections in dogs — causes, treatment, and recurrence prevention.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: "Dog Pyoderma", description: "Canine bacterial skin infections — classification, treatment, and management of recurrent pyoderma.", url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

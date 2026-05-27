@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Molly Fish Care Guide — Brackish Tolerance, Black Molly & Poecilia Species | Fish.com', description: 'Mollies are livebearers that tolerate salt — adding 1 tablespoon per 5 gallons reduces disease and stress. Black molly, sailfin molly, and Dalmatian varieties compared.', path: '/species/molly-fish', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Molly Fish Care Guide — Brackish Tolerance | Fish.com', description: 'Mollies are livebearers that tolerate salt — adding 1 tablespoon per 5 gallons reduces disease and stress.', path: '/species/molly-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Molly Fish Care Guide', description: 'Brackish tolerance, varieties, and care for Poecilia sphenops and Poecilia latipinna mollies.', url: 'https://fish.com/species/molly-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MollyPage() {
   return (

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Trainer Credentials — CPDT-KA, CBCC-KA & What They Mean | Dog.com', description: 'How to evaluate a dog trainer\'s qualifications. CPDT-KA, CBCC-KA, CAAB, DACVB — what each credential means, what it requires, and red flags to avoid.', path: '/training/trainer-credentials', category: 'Finding a Trainer', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Trainer Credentials — CPDT-KA, CBCC-KA | Dog.com', description: 'How to evaluate a dog trainer\'s qualifications. CPDT-KA, CBCC-KA, CAAB, DACVB — what each credential means, what it requires, and red flags to avoid.', path: '/training/trainer-credentials', category: 'Finding a Trainer', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Trainer Credentials Explained', description: 'CPDT-KA, CBCC-KA, CAAB, DACVB — what each means and how to choose.', url: 'https://dog.com/training/trainer-credentials', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const CREDENTIALS = [

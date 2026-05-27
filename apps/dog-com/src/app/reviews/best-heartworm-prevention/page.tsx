@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025 — Heartgard, Interceptor & More | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage, and breed warnings.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
 
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025', description: 'Heartgard, Interceptor, Simparica Trio compared for heartworm prevention.', url: 'https://dog.com/reviews/best-heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const hgSchema = buildProductSchema({ name: 'Heartgard Plus', description: 'Monthly heartworm, roundworm, and hookworm prevention chew for dogs.', url: 'https://heartgard.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })

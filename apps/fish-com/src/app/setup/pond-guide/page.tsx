@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing, and the most common setup mistakes that lead to failed ponds.', path: '/setup/pond-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond.', path: '/setup/pond-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
   { name: 'Determine size based on planned fish', text: 'Before digging: decide how many and what size fish you want at maturity. Koi need 250+ gallons per fish. Goldfish need 100+ gallons per fish. A 4-koi pond needs 1,000+ gallons minimum. Build larger than you think you need — you will want more fish.' },

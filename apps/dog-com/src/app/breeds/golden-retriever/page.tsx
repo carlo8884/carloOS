@@ -13,7 +13,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Golden Retriever — Breed Guide, Temperament & Health | Dog.com',
-  description: 'Complete Golden Retriever breed profile. Temperament scores, size, lifespan, health conditions, exercise needs, grooming, training, and whether a Golden is right for you. research-based.',
+  description: 'Complete Golden Retriever breed profile.',
   path: '/breeds/golden-retriever',
   type: 'article',
   ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',

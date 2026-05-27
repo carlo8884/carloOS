@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'The Puppy Socialization Window — 3 to 14 Weeks Explained | Dog.com', description: 'The socialization window closes at 14 weeks. What happens before then shapes the dog\'s emotional responses for life. What to expose puppies to and how to do it correctly.', path: '/training/socialization-window', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'The Puppy Socialization Window — 3 to 14 Weeks Explained | Dog.com', description: 'The socialization window closes at 14 weeks. What happens before then shapes the dog\'s emotional responses for life.', path: '/training/socialization-window', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'The Puppy Socialization Window', description: 'The 3-14 week socialization critical period — what to expose puppies to and how.', url: 'https://dog.com/training/socialization-window', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SocializationWindowPage() {
   return (

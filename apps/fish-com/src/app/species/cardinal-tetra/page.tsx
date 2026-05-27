@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cardinal Tetra Care Guide — vs Neon Tetra, Blackwater & School Size | Fish.com', description: 'Cardinal tetras vs neon tetras — different requirements. Cardinals need soft, warm, acidic blackwater conditions and larger schools. The most stunning schooling fish available.', path: '/species/cardinal-tetra', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cardinal Tetra Care Guide — vs Neon Tetra, Blackwater | Fish.com', description: 'Cardinal tetras vs neon tetras — different requirements. Cardinals need soft, warm, acidic blackwater conditions and larger schools.', path: '/species/cardinal-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cardinal Tetra Care Guide', description: 'Cardinal vs neon tetra, blackwater conditions, and schooling for Paracheirodon axelrodi.', url: 'https://fish.com/species/cardinal-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CardinalTetraPage() {
   return (

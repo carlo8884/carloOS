@@ -5,7 +5,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Nutrition Guide — What to Feed, What to Avoid | Dog.com',
-  description: 'research-based dog nutrition guides. What to feed, what\'s toxic, how much, WSAVA-compliant brands, raw vs cooked, puppy vs senior — all the nutrition content in one place.',
+  description: 'research-based dog nutrition guides.',
   path: '/nutrition',
 })
 

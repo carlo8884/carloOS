@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Salmonella, Nutritional Imbalance & WSAVA Position | Dog.com', description: 'Raw diets carry Salmonella risk to dogs and humans, nutritional imbalance concerns, and are not recommended by WSAVA. The evidence-based case for and against raw feeding.', path: '/nutrition/raw-diet-risks', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Salmonella | Dog.com', description: 'Raw diets carry Salmonella risk to dogs and humans, nutritional imbalance concerns, and are not recommended by WSAVA.', path: '/nutrition/raw-diet-risks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs', description: 'Salmonella contamination, nutritional imbalance, and WSAVA position on raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence-based assessment of risks associated with raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

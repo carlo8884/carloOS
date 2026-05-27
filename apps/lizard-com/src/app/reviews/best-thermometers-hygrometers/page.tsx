@@ -4,8 +4,8 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best Reptile Thermometers & Hygrometers 2025 — Tested for Accuracy | Lizard.com',
-  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers. Govee, Inkbird, and Zoo Med ranked by actual accuracy — not manufacturer specs.',
+  title: 'Best Reptile Thermometers | Lizard.com',
+  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers.',
   path: '/reviews/best-thermometers-hygrometers',
   type: 'article',
 })

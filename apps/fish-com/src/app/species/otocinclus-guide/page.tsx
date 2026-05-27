@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Acclimation, Starvation Risk & Algae Requirements | Fish.com', description: 'Otocinclus are delicate — most die within a week of purchase from starvation. They need a mature tank with established algae before purchase. How to keep them alive.', path: '/species/otocinclus', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Acclimation, Starvation Risk | Fish.com', description: 'Otocinclus are delicate — most die within a week of purchase from starvation. They need a mature tank with established algae before purchase.', path: '/species/otocinclus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Catfish Care Guide', description: 'Acclimation stress, starvation prevention, and algae requirements for Otocinclus dwarf catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function OtocinclasPage() {
   return (

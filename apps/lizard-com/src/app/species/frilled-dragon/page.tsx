@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing & Diet | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets. The frill is communication, not aggression.', path: '/species/frilled-dragon', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets.', path: '/species/frilled-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FrilledDragonPage() {
   return (

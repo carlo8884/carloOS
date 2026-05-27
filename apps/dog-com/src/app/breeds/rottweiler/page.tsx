@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Rottweiler Breed Guide — Osteosarcoma Risk, Cardiac Screening & Health Testing | Dog.com', description: 'Rottweilers have elevated osteosarcoma (bone cancer) and subaortic stenosis (SAS) rates. Annual cardiac screening and bone cancer awareness are essential. Complete health guide.', path: '/breeds/rottweiler', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Rottweiler Breed Guide — Osteosarcoma Risk | Dog.com', description: 'Rottweilers have elevated osteosarcoma (bone cancer) and subaortic stenosis (SAS) rates. Annual cardiac screening and bone cancer awareness are essential.', path: '/breeds/rottweiler', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Rottweiler Breed Guide', description: 'Osteosarcoma risk, subaortic stenosis, hip dysplasia, and health screening for Rottweilers.', url: 'https://dog.com/breeds/rottweiler', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function RottweilerPage() {

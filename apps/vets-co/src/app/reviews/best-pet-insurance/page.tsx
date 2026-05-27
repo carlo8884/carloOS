@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective | Vets.co',
-  description: 'Pet insurance ranked from a veterinarian\'s perspective — which plans actually pay when your pet needs care, how direct payment works, and what the fine print means.',
+  description: 'Pet insurance ranked from a veterinarian\'s perspective — which plans actually pay when your pet needs care, how direct payment works, and what the fine…',
   path: '/reviews/best-pet-insurance',
   type: 'article',
 })

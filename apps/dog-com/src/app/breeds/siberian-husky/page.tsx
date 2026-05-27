@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention & Eye Conditions | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency, and why they run if they get loose.', path: '/breeds/siberian-husky', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs.', path: '/breeds/siberian-husky', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Siberian Husky Breed Guide', description: 'Exercise requirements, escape prevention, eye conditions, and zinc deficiency in Siberian Huskies.', url: 'https://dog.com/breeds/siberian-husky', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function SiberianHuskyPage() {

@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'A Reference for Dog Owners',
   description:
-    'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take their dog\'s wellbeing seriously.',
+    'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take…',
   path: '/',
   type: 'website',
   ogImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80&auto=format&fit=crop',

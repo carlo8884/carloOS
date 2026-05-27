@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Marker Training (Clicker Training) for Dogs — How to Start | Dog.com', description: 'Marker training uses a precise signal (click or verbal "yes") to mark the exact moment of correct behavior. The most powerful positive reinforcement tool available. How to start.', path: '/training/marker-training', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Marker Training for Dogs — How to Start | Dog.com', description: 'Marker training uses a precise signal (click or verbal "yes") to mark the exact moment of correct behavior.', path: '/training/marker-training', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Marker Training for Dogs', description: 'Clicker training and verbal marker protocol for dogs.', url: 'https://dog.com/training/marker-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Start Marker Training Your Dog', description: 'Building a conditioned reinforcer and using it to mark behavior.', url: 'https://dog.com/training/marker-training', totalTime: 'P7D', steps: [
   { name: 'Charge the marker', text: 'Click (or say "yes") and immediately deliver a treat — repeat 20 times. No behavior required yet. The dog learns: that sound means food is coming. This creates the conditioned reinforcer — the click becomes meaningful on its own.' },

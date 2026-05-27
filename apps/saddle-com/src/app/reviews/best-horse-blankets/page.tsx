@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025 — Turnout, Stable & Denier Guide | Saddle.com', description: 'Horse blankets ranked by denier rating, fill weight, and waterproofing. When horses actually need blankets (most don\'t in moderate climates) and how to measure correctly.', path: '/reviews/best-horse-blankets', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025 — Turnout, Stable | Saddle.com', description: 'Horse blankets ranked by denier rating, fill weight, and waterproofing.', path: '/reviews/best-horse-blankets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025', description: 'Turnout and stable blankets ranked for denier, waterproofing, and value.', url: 'https://saddle.com/reviews/best-horse-blankets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const PICKS = [
   { label: 'Best Overall Turnout', emoji: '🏆', name: 'Rambo Wug Turnout', subtitle: '1200D · Waterproof · Ergonomic neck cut', href: '#rambo' },

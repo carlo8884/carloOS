@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Burrows, Dry Diet & Cold Tolerance | Lizard.com', description: 'Russian tortoises (Horsfield\'s tortoise) are cold-tolerant, active, and long-lived (50+ years). They need deep burrow opportunities and a dry, fibrous diet. No wet foods.', path: '/species/russian-tortoise', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Burrows, Dry Diet | Lizard.com', description: 'Russian tortoises (Horsfield\'s tortoise) are cold-tolerant, active, and long-lived (50+ years).', path: '/species/russian-tortoise', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide', description: 'Burrow requirements, dry fibrous diet, and care for Testudo horsfieldii Russian tortoises.', url: 'https://lizard.com/species/russian-tortoise', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function RussianTortoisePage() {

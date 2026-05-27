@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Helmets 2025 — MIPS, Safety Ratings & Top Brands | Saddle.com', description: 'Best equestrian helmets ranked by safety certifications, MIPS technology, and discipline requirements. Tipperary, Charles Owen, and Troxel compared.', path: '/reviews/best-riding-helmets', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Helmets 2025 — MIPS, Safety Ratings | Saddle.com', description: 'Best equestrian helmets ranked by safety certifications, MIPS technology, and discipline requirements. Tipperary, Charles Owen, and Troxel compared.', path: '/reviews/best-riding-helmets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Helmets 2025', description: 'Equestrian helmets ranked by safety certifications, MIPS technology, and discipline.', url: 'https://saddle.com/reviews/best-riding-helmets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const charlesSchema = buildProductSchema({ name: 'Charles Owen AYR8 Plus', description: 'Premium MIPS equestrian helmet with ASTM/SEI certification and ventilation.', url: 'https://charlesowen.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, charlesSchema)

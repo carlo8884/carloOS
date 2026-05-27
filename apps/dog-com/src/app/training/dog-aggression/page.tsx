@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Aggression — Types, Causes & When to Get Professional Help | Dog.com', description: 'Dog aggression types: fear-based, resource guarding, redirected, pain-related, and inter-dog. Warning signals, what never to do, and when a veterinary behaviorist is required.', path: '/training/dog-aggression', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Aggression — Types, Causes | Dog.com', description: 'Dog aggression types: fear-based, resource guarding, redirected, pain-related, and inter-dog.', path: '/training/dog-aggression', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Aggression', description: 'Types, causes, warning signals, and professional intervention for dog aggression.', url: 'https://dog.com/training/dog-aggression', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DogAggressionPage() {
   return (

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025 — Safety, INOX & Offset for Knee Pain | Saddle.com', description: 'Best stirrup irons ranked — Sprenger Bow Balance, MDC International, and safety stirrups compared. Offset irons for knee pain, safety stirrups for trail and cross-country.', path: '/reviews/best-stirrup-irons', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025 — Safety, INOX | Saddle.com', description: 'Best stirrup irons ranked — Sprenger Bow Balance, MDC International, and safety stirrups compared.', path: '/reviews/best-stirrup-irons', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025', description: 'Safety, offset, and standard stirrup irons ranked for English riding disciplines.', url: 'https://saddle.com/reviews/best-stirrup-irons', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const sprSchema = buildProductSchema({ name: 'Sprenger Bow Balance Stirrup', description: 'Offset eye design reduces knee and hip stress in the two-point and jumping position.', url: 'https://sprenger.de', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, sprSchema)

@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
-  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting, and Pilbeam et al.) at standardised distances, not manufacturer claims. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
+  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
 })

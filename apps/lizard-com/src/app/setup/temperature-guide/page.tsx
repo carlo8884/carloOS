@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide — Gradients, Thermostats & Measuring | Lizard.com', description: 'How to create a proper thermal gradient, select the right heat sources, use thermostats, and measure temperatures accurately for reptiles.', path: '/setup/temperature-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide — Gradients | Lizard.com', description: 'How to create a proper thermal gradient, select the right heat sources, use thermostats, and measure temperatures accurately for reptiles.', path: '/setup/temperature-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide', description: 'Thermal gradients, heat sources, thermostats, and accurate measurement.', url: 'https://lizard.com/setup/temperature-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const HEAT_SOURCES = [

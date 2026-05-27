@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle & Tile Compared | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Substrate Guide', description: 'Bioactive, loose particle, tile, and paper substrates — impaction risk and best choices by species.', url: 'https://lizard.com/setup/substrate-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function SubstrateGuidePage() {

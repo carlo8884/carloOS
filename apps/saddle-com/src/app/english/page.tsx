@@ -6,7 +6,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Best English Saddles 2025 — By Discipline & Budget | Saddle.com',
-  description: 'English saddles ranked by discipline: dressage, show jumping, eventing, all-purpose, and close contact. Certified fitter tested with brand comparisons and price guides.',
+  description: 'English saddles ranked by discipline: dressage, show jumping, eventing, all-purpose, and close contact.',
   path: '/english',
 })
 

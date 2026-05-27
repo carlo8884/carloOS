@@ -4,8 +4,8 @@ import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'WSAVA Dog Food Guidelines Explained — What They Mean & Why They Matter | Dog.com',
-  description: 'WSAVA guidelines are the gold standard for evaluating dog food manufacturers. This guide explains what WSAVA compliance means, what questions to ask, and which brands pass.',
+  title: 'WSAVA Dog Food Guidelines Explained — What They Mean | Dog.com',
+  description: 'WSAVA guidelines are the gold standard for evaluating dog food manufacturers.',
   path: '/nutrition/wsava-explained',
   category: 'Nutrition Guide',
   type: 'article',

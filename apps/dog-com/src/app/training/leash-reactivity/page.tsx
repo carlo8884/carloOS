@@ -4,8 +4,8 @@ import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } fr
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Leash Reactivity in Dogs — Why It Happens & How to Reduce It | Dog.com',
-  description: 'Leash reactivity (barking, lunging at other dogs on leash) is one of the most common behavior problems. This guide explains why it happens and the systematic protocol that reduces it.',
+  title: 'Leash Reactivity in Dogs — Why It Happens | Dog.com',
+  description: 'Leash reactivity (barking, lunging at other dogs on leash) is one of the most common behavior problems.',
   path: '/training/leash-reactivity',
   category: 'Behavior Problems',
   type: 'article',
