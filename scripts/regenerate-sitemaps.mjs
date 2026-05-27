@@ -12,13 +12,18 @@
  * Priority is assigned by depth and section. Higher priority for the home page
  * and category indexes; lower for legal pages.
  *
- * Run: node scripts/regenerate-sitemaps.mjs
+ * Run: node scripts/regenerate-sitemaps.mjs           — writes sitemaps
+ *      node scripts/regenerate-sitemaps.mjs --check   — verifies sitemaps are
+ *                                                       in sync with routes;
+ *                                                       exits 1 on drift.
  */
 
-import { readdirSync, writeFileSync, statSync } from 'node:fs'
-import { join } from 'node:path'
+import { readdirSync, writeFileSync, readFileSync, statSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = '/home/user/carloOS'
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
+const CHECK_MODE = process.argv.includes('--check')
 
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
@@ -103,11 +108,44 @@ ${lines.join('\n')}
 }
 
 let totalRoutes = 0
+let driftCount = 0
+const driftDetails = []
+
 for (const site of SITES) {
   const routes = listRoutes(site.id)
   totalRoutes += routes.length
   const sitemapPath = join(ROOT, 'apps', site.id, 'src/app/sitemap.ts')
-  writeFileSync(sitemapPath, generateSitemap(site, routes))
-  console.log(`${site.id}: ${routes.length} routes → ${sitemapPath}`)
+  const generated = generateSitemap(site, routes)
+
+  if (CHECK_MODE) {
+    let current = ''
+    try {
+      current = readFileSync(sitemapPath, 'utf8')
+    } catch {
+      current = ''
+    }
+    if (current !== generated) {
+      driftCount++
+      driftDetails.push({ site: site.id, path: sitemapPath })
+      console.log(`${site.id}: DRIFT (${routes.length} routes scanned; checked-in sitemap is stale)`)
+    } else {
+      console.log(`${site.id}: in sync (${routes.length} routes)`)
+    }
+  } else {
+    writeFileSync(sitemapPath, generated)
+    console.log(`${site.id}: ${routes.length} routes → ${sitemapPath}`)
+  }
 }
-console.log(`\nTotal: ${totalRoutes} routes across ${SITES.length} sites`)
+
+if (CHECK_MODE) {
+  if (driftCount > 0) {
+    console.error(`\nFAIL: ${driftCount} of ${SITES.length} sitemaps are out of sync with the app router.`)
+    console.error('Run: node scripts/regenerate-sitemaps.mjs')
+    console.error('Then commit the updated sitemap.ts files.')
+    for (const d of driftDetails) console.error(`  - ${d.path}`)
+    process.exit(1)
+  }
+  console.log(`\nPASS: ${totalRoutes} routes across ${SITES.length} sites — all sitemaps in sync.`)
+} else {
+  console.log(`\nTotal: ${totalRoutes} routes across ${SITES.length} sites`)
+}
