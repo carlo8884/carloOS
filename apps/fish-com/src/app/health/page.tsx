@@ -34,6 +34,25 @@ export default function FishHealthPage() {
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
         <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Water chemistry tips and fishkeeping guides every Thursday." source="health-hub" ctaText="Subscribe Free" perks={['🧪 Water chemistry', '🐠 Species guides', '🚫 No spam']} />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Fish Health Topics</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="columnaris" href="/health/columnaris" className="text-sm text-brand-primary no-underline hover:underline">Columnaris</Link>
+        <Link key="dropsy-treatment" href="/health/dropsy-treatment" className="text-sm text-brand-primary no-underline hover:underline">Dropsy Treatment</Link>
+        <Link key="fin-rot" href="/health/fin-rot" className="text-sm text-brand-primary no-underline hover:underline">Fin Rot</Link>
+        <Link key="fish-disease-guide" href="/health/fish-disease-guide" className="text-sm text-brand-primary no-underline hover:underline">Fish Disease Guide</Link>
+        <Link key="fish-lice-anchor-worm" href="/health/fish-lice-anchor-worm" className="text-sm text-brand-primary no-underline hover:underline">Fish Lice Anchor Worm</Link>
+        <Link key="gill-flukes" href="/health/gill-flukes" className="text-sm text-brand-primary no-underline hover:underline">Gill Flukes</Link>
+        <Link key="ich-treatment" href="/health/ich-treatment" className="text-sm text-brand-primary no-underline hover:underline">Ich Treatment</Link>
+        <Link key="new-tank-syndrome" href="/health/new-tank-syndrome" className="text-sm text-brand-primary no-underline hover:underline">New Tank Syndrome</Link>
+        <Link key="nitrogen-cycle-explained" href="/health/nitrogen-cycle-explained" className="text-sm text-brand-primary no-underline hover:underline">Nitrogen Cycle Explained</Link>
+        <Link key="pop-eye" href="/health/pop-eye" className="text-sm text-brand-primary no-underline hover:underline">Pop Eye</Link>
+        <Link key="swim-bladder-disease" href="/health/swim-bladder-disease" className="text-sm text-brand-primary no-underline hover:underline">Swim Bladder Disease</Link>
+        <Link key="velvet-disease" href="/health/velvet-disease" className="text-sm text-brand-primary no-underline hover:underline">Velvet Disease</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

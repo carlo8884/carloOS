@@ -114,6 +114,30 @@ export default function TrainingHubPage() {
           perks={['🐕 Positive methods only', '📚 Science-based', '🚫 No spam']}
         />
       </div>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Training Guides</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="basic-commands" href="/training/basic-commands" className="text-sm text-brand-primary no-underline hover:underline">Basic Commands</Link>
+        <Link key="crate-training" href="/training/crate-training" className="text-sm text-brand-primary no-underline hover:underline">Crate Training</Link>
+        <Link key="dog-aggression" href="/training/dog-aggression" className="text-sm text-brand-primary no-underline hover:underline">Dog Aggression</Link>
+        <Link key="excessive-barking" href="/training/excessive-barking" className="text-sm text-brand-primary no-underline hover:underline">Excessive Barking</Link>
+        <Link key="house-training" href="/training/house-training" className="text-sm text-brand-primary no-underline hover:underline">House Training</Link>
+        <Link key="leash-reactivity" href="/training/leash-reactivity" className="text-sm text-brand-primary no-underline hover:underline">Leash Reactivity</Link>
+        <Link key="loose-leash-walking" href="/training/loose-leash-walking" className="text-sm text-brand-primary no-underline hover:underline">Loose Leash Walking</Link>
+        <Link key="marker-training" href="/training/marker-training" className="text-sm text-brand-primary no-underline hover:underline">Marker Training</Link>
+        <Link key="off-leash-training" href="/training/off-leash-training" className="text-sm text-brand-primary no-underline hover:underline">Off Leash Training</Link>
+        <Link key="positive-reinforcement" href="/training/positive-reinforcement" className="text-sm text-brand-primary no-underline hover:underline">Positive Reinforcement</Link>
+        <Link key="puppy-biting" href="/training/puppy-biting" className="text-sm text-brand-primary no-underline hover:underline">Puppy Biting</Link>
+        <Link key="puppy-schedule" href="/training/puppy-schedule" className="text-sm text-brand-primary no-underline hover:underline">Puppy Schedule</Link>
+        <Link key="resource-guarding" href="/training/resource-guarding" className="text-sm text-brand-primary no-underline hover:underline">Resource Guarding</Link>
+        <Link key="separation-anxiety" href="/training/separation-anxiety" className="text-sm text-brand-primary no-underline hover:underline">Separation Anxiety</Link>
+        <Link key="socialization-window" href="/training/socialization-window" className="text-sm text-brand-primary no-underline hover:underline">Socialization Window</Link>
+        <Link key="trainer-credentials" href="/training/trainer-credentials" className="text-sm text-brand-primary no-underline hover:underline">Trainer Credentials</Link>
+        <Link key="training-red-flags" href="/training/training-red-flags" className="text-sm text-brand-primary no-underline hover:underline">Training Red Flags</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
     </>
   )
 }

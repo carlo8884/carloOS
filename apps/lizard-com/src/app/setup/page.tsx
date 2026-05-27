@@ -36,6 +36,19 @@ export default function LizardSetupHubPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-12" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="setup-hub" />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="bioactive-setup" href="/setup/bioactive-setup" className="text-sm text-brand-primary no-underline hover:underline">Bioactive Setup</Link>
+        <Link key="humidity-guide" href="/setup/humidity-guide" className="text-sm text-brand-primary no-underline hover:underline">Humidity Guide</Link>
+        <Link key="lighting-guide" href="/setup/lighting-guide" className="text-sm text-brand-primary no-underline hover:underline">Lighting Guide</Link>
+        <Link key="substrate-guide" href="/setup/substrate-guide" className="text-sm text-brand-primary no-underline hover:underline">Substrate Guide</Link>
+        <Link key="temperature-guide" href="/setup/temperature-guide" className="text-sm text-brand-primary no-underline hover:underline">Temperature Guide</Link>
+        <Link key="uvb-lighting-guide" href="/setup/uvb-lighting-guide" className="text-sm text-brand-primary no-underline hover:underline">UVB Lighting Guide</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

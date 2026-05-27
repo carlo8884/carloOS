@@ -38,6 +38,29 @@ export default function DogReviewsPage() {
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
         <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Editor picks', '⚠️ What to avoid', '🚫 No spam']} />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-dental-chews" href="/reviews/best-dental-chews" className="text-sm text-brand-primary no-underline hover:underline">Best Dental Chews</Link>
+        <Link key="best-dog-beds" href="/reviews/best-dog-beds" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Beds</Link>
+        <Link key="best-dog-crates" href="/reviews/best-dog-crates" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Crates</Link>
+        <Link key="best-dog-food-for-puppies" href="/reviews/best-dog-food-for-puppies" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Food For Puppies</Link>
+        <Link key="best-dog-food-senior" href="/reviews/best-dog-food-senior" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Food Senior</Link>
+        <Link key="best-dog-food-sensitive-stomach" href="/reviews/best-dog-food-sensitive-stomach" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Food Sensitive Stomach</Link>
+        <Link key="best-dog-food-small-breed" href="/reviews/best-dog-food-small-breed" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Food Small Breed</Link>
+        <Link key="best-dog-gps-tracker" href="/reviews/best-dog-gps-tracker" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Gps Tracker</Link>
+        <Link key="best-dog-harnesses" href="/reviews/best-dog-harnesses" className="text-sm text-brand-primary no-underline hover:underline">Best Dog Harnesses</Link>
+        <Link key="best-dry-dog-food" href="/reviews/best-dry-dog-food" className="text-sm text-brand-primary no-underline hover:underline">Best Dry Dog Food</Link>
+        <Link key="best-flea-tick-prevention" href="/reviews/best-flea-tick-prevention" className="text-sm text-brand-primary no-underline hover:underline">Best Flea Tick Prevention</Link>
+        <Link key="best-heartworm-prevention" href="/reviews/best-heartworm-prevention" className="text-sm text-brand-primary no-underline hover:underline">Best Heartworm Prevention</Link>
+        <Link key="best-joint-supplements" href="/reviews/best-joint-supplements" className="text-sm text-brand-primary no-underline hover:underline">Best Joint Supplements</Link>
+        <Link key="best-large-breed-dog-food" href="/reviews/best-large-breed-dog-food" className="text-sm text-brand-primary no-underline hover:underline">Best Large Breed Dog Food</Link>
+        <Link key="best-pet-insurance" href="/reviews/best-pet-insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
+        <Link key="best-slow-feeder-bowls" href="/reviews/best-slow-feeder-bowls" className="text-sm text-brand-primary no-underline hover:underline">Best Slow Feeder Bowls</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

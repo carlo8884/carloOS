@@ -35,6 +35,24 @@ export default function SaddleReviewsPage() {
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
         <EmailCapture variant="section" siteId="saddle-com" title="Free Saddle Buyer's Guide" subtitle="Reviews and market intelligence every other week." source="reviews-hub" ctaText="Get Free Guide" perks={['📋 CSF-informed', '💰 Market pricing']} />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-english-saddles" href="/reviews/best-english-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best English Saddles</Link>
+        <Link key="best-horse-blankets" href="/reviews/best-horse-blankets" className="text-sm text-brand-primary no-underline hover:underline">Best Horse Blankets</Link>
+        <Link key="best-riding-boots" href="/reviews/best-riding-boots" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Boots</Link>
+        <Link key="best-riding-gloves" href="/reviews/best-riding-gloves" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Gloves</Link>
+        <Link key="best-riding-helmets" href="/reviews/best-riding-helmets" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Helmets</Link>
+        <Link key="best-saddle-pads" href="/reviews/best-saddle-pads" className="text-sm text-brand-primary no-underline hover:underline">Best Saddle Pads</Link>
+        <Link key="best-stirrup-irons" href="/reviews/best-stirrup-irons" className="text-sm text-brand-primary no-underline hover:underline">Best Stirrup Irons</Link>
+        <Link key="best-western-saddles" href="/reviews/best-western-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best Western Saddles</Link>
+        <Link key="collegiate-saddle-review" href="/reviews/collegiate-saddle-review" className="text-sm text-brand-primary no-underline hover:underline">Collegiate Saddle Review</Link>
+        <Link key="pessoa-saddle-review" href="/reviews/pessoa-saddle-review" className="text-sm text-brand-primary no-underline hover:underline">Pessoa Saddle Review</Link>
+        <Link key="stubben-saddle-review" href="/reviews/stubben-saddle-review" className="text-sm text-brand-primary no-underline hover:underline">Stubben Saddle Review</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }
