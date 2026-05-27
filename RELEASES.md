@@ -76,29 +76,44 @@ added to close the rule-level gap.
 
 ---
 
-## Pending — Phase 3 (decomposed)
-
-Not yet merged. Placeholders for each sub-PR so post-merge updates have a stable slot.
+## Phase 3 (decomposed)
 
 ### Phase 3a — Trust Hotfix
-- Status: not yet opened (planning)
-- Owner: Agent 1
-- Scope: Findings #1, #2, #3 from `audits/2026-05-27-morning.md` (eyebrow badges, lizard "vet-reviewed" homepage claim, saddle stat block)
-- Exit criteria: 0 BLOCKER / 0 HIGH; Agent 2 re-verification report
+
+- Status: shipped
+- Merge commit: `caead17` ("Merge pull request #5 from carlo8884/agent2/pr3a-trust-badges")
+- Date: 2026-05-27
+- GitHub PR #: 5
+- Branch that merged: `agent2/pr3a-trust-badges` (note: branch labeled `agent2/` but contained app-code commits — recorded as `BACKLOG.md` B-5; Carlo accepted as-shipped)
+- Closes: `F-1` (Blocker), `F-2` (Blocker), `F-3` (High) from `audits/2026-05-27-morning.md`
+
+Summary (single commit `b6ddae9`, "PR-3a: sweep credentialed-review badges PR #2 missed"):
+- F-1 — Replaced 18 credentialed-testing eyebrow badges on review pages with non-authority labels ("Buyer's Guide", "Brand Review"). Pattern Phase 2 missed: "Tested · May 2025", "CSF Tested", "CSF Reviewed", "Expert Reviewed", "Trainer Tested", "Keeper Tested", "PAR Tested" eyebrows.
+- F-2 — `apps/lizard-com/src/app/page.tsx:59` "Species profiles with vet-reviewed health sections" claim removed/rephrased.
+- F-3 — `apps/saddle-com/src/app/page.tsx:74` "CSF Certified Fitters / 30+ Brands Reviewed / Master Saddler Contributors" stat block replaced or removed.
+
+Verifications expected at merge time: Agent 2 re-audit (status: pending afternoon verify per `OPERATIONS.md` § What Each Agent Should Do Next).
+
+Permanent invariants newly enforced post-merge (already codified in `QC-STANDARDS.md` § 1.1.a / 1.1.b): no eyebrow-badge testing/review claims, no homepage long-form fabricated-authority copy. These were added pre-merge in the same docs PR that introduced the lifecycle.
 
 ### Phase 3b — SEO Infrastructure
-- Status: not yet opened
-- Owner: Agent 1 (Agent 2 sitemap commits to be rebased)
-- Scope: Findings #4-#9 (sitemap 404s, doubled title suffix, parasites canonical, superlatives, Breadcrumb migration)
+
+- Status: in progress on `agent1/pr4-seo-stabilization @ b28782b` (rebased onto post-3a `main`)
+- Open items: `F-4`, `F-5`, `F-6`, `F-7`, `F-8` (7 of 40 done), `F-9`
+
+When 3b merges, append a section here matching the shape of Phase 3a.
 
 ### Phase 3c — Schema Completeness
-- Status: not yet opened
-- Owner: Agent 1
-- Scope: Findings #11, #12 (FAQ page schema, 31 health pages missing `MedicalWebPage`)
 
-When a sub-PR merges, append a section here with:
-- Merge commit hash and date
-- Summary of changes
+- Status: TODO. Open items: `F-11`, `F-12`.
+
+### Convention for future Phase 3 sub-entries
+
+Each merge appends:
+- Merge commit hash, date, GitHub PR #
+- Branch that merged
+- Items closed (with severity)
+- Theme-by-theme or batch-by-batch summary
 - Verifications recorded
 - Any new permanent invariants added to `QC-STANDARDS.md`
 
@@ -129,8 +144,11 @@ history is self-contained.
 
 ## Conventions for Future Entries
 
+The full post-merge procedure is in `WORKFLOW.md` § Merge & Release
+Procedure. Short version:
+
 When a PR merges:
-1. Append a new section under the relevant Phase with merge commit hash, date, and a concise theme-by-theme summary.
+1. Append a new section under the relevant Phase with merge commit hash, GitHub PR #, branch, items closed, theme-by-theme summary.
 2. Record concrete verifications (what was actually run, what passed).
 3. Note any new permanent invariants added to `QC-STANDARDS.md`.
 4. Update `OPERATIONS.md` § Current Phase / Active Priorities / Active Branches.

@@ -190,20 +190,13 @@ For everything else, proceed on your own branch and document the decision in the
 
 ## Overnight Mode
 
-When Carlo is offline, an agent should keep moving rather than wait — **except** for the escalation list above and the emergency triggers below.
+Overnight rules, decision tree, and session-end checklist are in
+`WORKFLOW.md` § Overnight Workflow.
 
-Overnight rules:
-1. Stay on your assigned branch.
-2. If blocked on the current task, move to the next safe task in `BACKLOG.md` or `OPERATIONS.md` § Active Priorities.
-3. Record blockers in `OPERATIONS.md` § Blockers and create or update the corresponding `BACKLOG.md` item.
-4. Never merge to `main` overnight — even with a green build.
-5. Never push real keys or hit real third-party APIs overnight.
-6. Prefer documentation, audits, scoped fixes, and refactors over speculative new features.
-7. End the session by leaving the branch in a buildable, committed state with a clear PR description so Carlo can pick up cold in the morning.
-8. Produce a morning report appended to the PR description (or a separate `audits/` entry for Agent 2). The report covers: what was done, what was skipped and why, what is unresolved, what to do next.
-
-If an overnight blocker matches the escalation list, stop and leave a
-clearly labelled note in `OPERATIONS.md` § Blockers. Do not act.
+Summary: when Carlo is offline, keep moving on safe work; never merge to
+`main`; never touch live keys or third parties; record blockers in
+`OPERATIONS.md`; leave the branch buildable and the PR description
+truthful. The Emergency Stop triggers below supersede overnight mode.
 
 ---
 

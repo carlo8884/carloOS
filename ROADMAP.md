@@ -44,26 +44,25 @@ Known gap surfaced post-merge by the 2026-05-27 audit — see `RELEASES.md` § P
 
 ## 🟡 Phase 3 — SEO & Infrastructure Stabilization
 
-Status: in progress.
+Status: in progress. Phase 3a shipped (`caead17`); 3b and 3c remain.
 
-Decomposed into three sub-PRs to keep diffs reviewable and sequence the
-trust hotfix first. **Hard block:** Phase 3a must merge before 3b/3c go to
-`main` (see `OPERATIONS.md` § PR Sequencing).
+Decomposed into three sub-PRs to keep diffs reviewable. Phase 3a hard-blocked
+3b/3c until merge; that block lifted at `caead17`.
 
-### Phase 3a — Trust Hotfix (gating)
+### ✅ Phase 3a — Trust Hotfix
 
-Theme: close the highest-severity findings from the 2026-05-27 audit that
-the Phase 2 sweep missed.
+Status: shipped. Merge commit `caead17` (2026-05-27). See `RELEASES.md` § Phase 3a.
 
-In scope: trust badges, homepage long-form copy, fake-personnel stat blocks.
+Theme: closed the highest-severity findings (F-1, F-2, F-3) from the
+2026-05-27 audit that the Phase 2 sweep missed (eyebrow badges, homepage
+long-form copy, fake-personnel stat blocks).
 
-Out of scope: SEO infra, schema additions, visual polish.
+Permanent invariants newly enforced: `QC-STANDARDS.md` § 1.1.a (eyebrow
+badges) and § 1.1.b (homepage long-form fabricated authority).
 
-Exit criteria: Agent 2 re-audit reports 0 BLOCKER and 0 HIGH against `main`.
+### 🟡 Phase 3b — SEO Infrastructure
 
-Items: see `BACKLOG.md` § Phase 3a.
-
-### Phase 3b — SEO Infrastructure
+Status: in progress on `agent1/pr4-seo-stabilization @ b28782b`.
 
 Theme: title/description hygiene, sitemap correctness, canonical
 consistency, breadcrumb schema, residual unsourced superlatives.
@@ -80,7 +79,9 @@ review page.
 
 Items: see `BACKLOG.md` § Phase 3b.
 
-### Phase 3c — Schema Completeness
+### ⬜ Phase 3c — Schema Completeness
+
+Status: TODO.
 
 Theme: per-page schema matrix from `QC-STANDARDS.md` § 2.10 — fill the gaps.
 
