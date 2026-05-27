@@ -82,7 +82,7 @@ export default function GrainFreeDCMPage() {
         <h2>What to Do</h2>
         <p><strong>If your dog is currently eating a grain-free diet:</strong></p>
         <ul>
-          <li>Switch to a diet meeting WSAVA guidelines — Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, or Iams are the most commonly recommended brands. These companies employ veterinary nutritionists, conduct feeding trials, and invest in ongoing research.</li>
+          <li>Switch to a diet meeting WSAVA guidelines — Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, or Iams are the brands most commonly recommended by board-certified veterinary nutritionists. These companies employ veterinary nutritionists, conduct feeding trials, and invest in ongoing research.</li>
           <li>Grains (rice, corn, wheat, barley, oats) in dog food are not the problem the grain-free marketing suggests. Dogs digest grain well, and there is no evidence that grains cause the health problems the grain-free marketing implies.</li>
           <li>If your dog has been eating a high-legume grain-free diet for more than a year, discuss a cardiac evaluation with your veterinarian — particularly if you own a breed with higher DCM risk (Golden Retriever, Cocker Spaniel, Labrador, Doberman).</li>
         </ul>

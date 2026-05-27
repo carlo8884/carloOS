@@ -48,7 +48,7 @@ export default function SeniorDogNutritionPage() {
           </ul>
 
           <h2>Key Supplements for Senior Dogs</h2>
-          <p><strong>Omega-3 fatty acids (EPA/DHA):</strong> Marine omega-3s have the strongest evidence for joint inflammation, cognitive support, and cardiovascular health in senior dogs. Nordic Naturals Omega-3 Pet dosed at 20–55mg/kg combined EPA+DHA daily. This dose is higher than most fish oil products recommend — calculate from the EPA+DHA content on the label, not total fish oil volume.</p>
+          <p><strong>Omega-3 fatty acids (EPA/DHA):</strong> Marine omega-3s have the strongest published evidence (Roush et al., JAVMA 2010) for joint inflammation and growing evidence for cognitive and cardiovascular support in senior dogs. Nordic Naturals Omega-3 Pet dosed at 20–55mg/kg combined EPA+DHA daily. This dose is higher than most fish oil products recommend — calculate from the EPA+DHA content on the label, not total fish oil volume.</p>
           <p><strong>Glucosamine + chondroitin (Dasuquin with MSM):</strong> For dogs showing any joint stiffness or reluctance to exercise. Most effective when started before symptoms are severe. Allow 4–6 weeks for full effect.</p>
           <p><strong>Antioxidants — vitamin E, vitamin C, beta-carotene:</strong> Some senior dog foods add antioxidant complexes. Evidence for supplemental antioxidants in otherwise well-nourished dogs is modest but safe. Hill's Science Diet and Purina Pro Plan senior formulas both incorporate antioxidant blends.</p>
 
