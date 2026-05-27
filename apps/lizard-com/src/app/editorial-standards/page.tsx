@@ -49,11 +49,6 @@ export default function EditorialStandardsPage() {
         <h2>Animal Health Notice</h2>
         <p>Lizard.com content is general reference, not individual veterinary advice. If your animal is acutely ill, contact an experienced exotics vet. The ARAV directory (arav.org) is the best starting point for finding a qualified reptile vet near you.</p>
       </div>
-
-      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
-        <Link href="/legal/terms" className="text-brand-primary hover:underline">Terms of Use</Link>
-      </div>
     </div>
   )
 }

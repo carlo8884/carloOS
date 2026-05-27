@@ -49,11 +49,6 @@ export default function EditorialStandardsPage() {
         <h2>Medical Emergency Notice</h2>
         <p>Vets.co content is not a substitute for veterinary care. If your pet is experiencing a medical emergency, contact your veterinarian or an emergency animal hospital immediately. In the United States, the ASPCA Animal Poison Control Center is available 24/7 at 888-426-4435 for suspected poisoning.</p>
       </div>
-
-      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
-        <Link href="/legal/terms" className="text-brand-primary hover:underline">Terms of Use</Link>
-      </div>
     </div>
   )
 }

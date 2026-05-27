@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025',
-  description: 'Reptile terrariums tested and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
+  description: 'Reptile terrariums compared and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
   url: 'https://lizard.com/reviews/best-reptile-terrariums',
   imageUrl: '',
   authorName: 'Lizard.com Editorial',

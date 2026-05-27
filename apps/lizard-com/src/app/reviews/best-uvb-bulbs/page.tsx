@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output',
-  description: 'Solarmeter 6.5 tested UVB bulbs for reptiles — ranked by real UVI output.',
+  description: 'UVB bulbs for reptiles ranked using published Solarmeter 6.5 UVI data.',
   url: 'https://lizard.com/reviews/best-uvb-bulbs',
   imageUrl: '',
   authorName: 'Lizard.com Editorial',

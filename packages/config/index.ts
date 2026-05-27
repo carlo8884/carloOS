@@ -482,7 +482,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Saddle Fit', href: '/guides/saddle-fit-guide' },
           { label: 'Seat Size', href: '/guides/seat-size-guide' },
           { label: 'Used Saddle', href: '/guides/used-saddle-buying-guide' },
-          { label: 'All Guides', href: '/guides' },
+          { label: 'First Horse', href: '/guides/buying-first-horse' },
         ],
       },
       {

@@ -57,7 +57,7 @@ export default function GdvPage() {
           </ol>
 
           <h2>Risk Factors</h2>
-          <p><strong>Breed</strong> is the strongest risk factor — large, deep-chested breeds with a depth-to-width chest ratio greater than 1.4 are most at risk. Great Danes have a lifetime GDV risk of approximately 37%. Standard Poodles, Irish Setters, Gordon Setters, Weimaraners, Saint Bernards, and German Shepherds are all significantly elevated risk.</p>
+          <p><strong>Breed</strong> is the strongest risk factor — large, deep-chested breeds with a depth-to-width chest ratio greater than 1.4 are most at risk. Great Danes have a lifetime GDV risk of approximately 37% (Glickman et al., JAVMA 2000). Standard Poodles, Irish Setters, Gordon Setters, Weimaraners, Saint Bernards, and German Shepherds are all significantly elevated risk.</p>
           <p>Other risk factors with research support: eating once daily (twice daily feeding reduces risk), eating rapidly (use a slow feeder bowl), family history of GDV, prior splenic disease, anxious or fearful temperament. Exercise immediately after eating has been suggested but the evidence is less conclusive than breed and feeding frequency.</p>
 
           <h2>Treatment</h2>

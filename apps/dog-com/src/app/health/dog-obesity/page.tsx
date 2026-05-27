@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks, Causes & Weight Loss Plan | Dog.com', description: 'Over 50% of US dogs are overweight. Dog obesity causes arthritis, diabetes, cancer, and shortened lifespan. Reference guide to body condition scoring and safe weight loss.', path: '/health/dog-obesity', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks, Causes & Weight Loss Plan | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Dog obesity causes arthritis, diabetes, cancer, and shortened lifespan. Reference guide to body condition scoring and safe weight loss.', path: '/health/dog-obesity', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks and Weight Loss', description: 'Body condition scoring, health risks, and safe weight loss for overweight dogs.', url: 'https://dog.com/health/dog-obesity', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Obesity', description: 'Health risks and weight management for overweight dogs.', url: 'https://dog.com/health/dog-obesity', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

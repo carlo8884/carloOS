@@ -17,8 +17,6 @@ export default function PrivacyPolicyPage() {
       <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
-        <Link href="/legal" className="hover:text-brand-primary no-underline">Legal</Link>
-        <span>›</span>
         <span className="text-brand-text-mid">Privacy Policy</span>
       </nav>
 

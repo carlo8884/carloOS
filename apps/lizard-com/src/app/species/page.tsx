@@ -69,8 +69,8 @@ export default function SpeciesIndexPage() {
         <div className="grid sm:grid-cols-3 gap-4">
           {[
             { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', desc: 'Ferguson Zones, bulb selection, distances' },
-            { title: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs', desc: 'Solarmeter 6.5 tested rankings' },
-            { title: 'Best Terrariums 2025', href: '/reviews/best-reptile-terrariums', desc: 'PVC vs glass, tested by keepers' },
+            { title: 'Best UVB Bulbs 2025', href: '/reviews/best-uvb-bulbs', desc: 'Published Solarmeter 6.5 rankings' },
+            { title: 'Best Terrariums 2025', href: '/reviews/best-reptile-terrariums', desc: 'PVC vs glass, compared from keeper reports' },
           ].map(link => (
             <Link key={link.href} href={link.href}
               className="block rounded-xl p-5 no-underline hover:-translate-y-1 transition-all duration-200"

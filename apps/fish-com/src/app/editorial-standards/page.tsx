@@ -49,11 +49,6 @@ export default function EditorialStandardsPage() {
         <h2>Fish Health Notice</h2>
         <p>Fish.com content is general reference, not individual veterinary advice. If a fish is acutely ill, contact an aquatic veterinarian or your local aquarium store with an experienced staff member. The World Aquatic Veterinary Medical Association (wavma.org) maintains a worldwide directory of fish-experienced vets.</p>
       </div>
-
-      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
-        <Link href="/legal/terms" className="text-brand-primary hover:underline">Terms of Use</Link>
-      </div>
     </div>
   )
 }

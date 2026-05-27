@@ -31,7 +31,7 @@ export default function SpayNeuterPage() {
         <div className="carloOS-article">
           <h2>Benefits of Spaying (Females)</h2>
           <p><strong>Pyometra prevention:</strong> Pyometra — life-threatening uterine infection — affects approximately 25% of intact female dogs by age 10. It requires emergency surgery in most cases and carries significant mortality risk in older or ill dogs. Spaying eliminates this risk entirely.</p>
-          <p><strong>Mammary tumor reduction:</strong> Spaying before the first heat reduces mammary tumor risk by approximately 99.5%. Before the second heat, risk reduction is approximately 92%. After the third heat, the protective effect diminishes significantly. Mammary tumors are the most common tumors in intact female dogs, and approximately 50% are malignant. Early spay is the most effective prevention.</p>
+          <p><strong>Mammary tumor reduction:</strong> Spaying before the first heat is associated with very low subsequent mammary tumor risk in early observational work (Schneider et al., J Natl Cancer Inst 1969); later systematic reviews (Beauvais et al., J Small Anim Pract 2012) describe the evidence as weaker than the often-quoted ~99.5% figure but still consistent with meaningful risk reduction. After the third heat, the protective effect diminishes significantly. Mammary tumors are the most common tumors in intact female dogs, and approximately 50% are malignant. Early spay is the most effective prevention.</p>
           <p><strong>Eliminates estrus:</strong> Intact females cycle approximately every 6 months — attracting male dogs, vaginal bleeding, and behavioral changes. Spaying eliminates this entirely.</p>
 
           <h2>Benefits of Neutering (Males)</h2>

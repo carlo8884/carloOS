@@ -49,11 +49,6 @@ export default function EditorialStandardsPage() {
         <h2>Saddle Fit Notice</h2>
         <p>Saddle.com content is general reference, not individual fitting advice. Every horse and every rider is different. Before buying or making significant changes to a saddle, please consult a qualified independent fitter. The SMS (Society of Master Saddlers) directory at mastersaddlers.co.uk is the best starting point.</p>
       </div>
-
-      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
-        <Link href="/legal/terms" className="text-brand-primary hover:underline">Terms of Use</Link>
-      </div>
     </div>
   )
 }

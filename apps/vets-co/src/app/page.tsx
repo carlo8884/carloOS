@@ -156,7 +156,7 @@ export default function VetsHomePage() {
             <p className="text-base text-white/50 leading-relaxed mb-7 max-w-lg">
               Vetster, AskVet, and Chewy Connect offer licensed veterinarian consultations within minutes. We compared all three on availability, credentials, and cost.
             </p>
-            <Link href="/reviews/best-pet-telehealth"
+            <Link href="/telehealth"
               className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors">
               Compare Telehealth Options →
             </Link>
