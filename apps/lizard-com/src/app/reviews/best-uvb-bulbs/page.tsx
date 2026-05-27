@@ -172,7 +172,7 @@ export default function BestUVBBulbsPage() {
               ))}
             </div>
             <RelatedLinks title="Related" links={[
-              { label: 'UVB Lighting Guide', href: '/health/uvb-lighting-guide' },
+              { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' },
               { label: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums' },
               { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' },
             ]} />

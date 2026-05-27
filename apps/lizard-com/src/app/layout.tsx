@@ -1,6 +1,21 @@
 import type { Metadata } from 'next'
+import { Zilla_Slab, Raleway } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+const zillaSlab = Zilla_Slab({
+  variable: '--font-zilla',
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+})
+
+const raleway = Raleway({
+  variable: '--font-raleway',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '900'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -14,7 +29,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="font-vars">
+    <html lang="en" className={`font-vars ${zillaSlab.variable} ${raleway.variable}`}>
       <head>
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>

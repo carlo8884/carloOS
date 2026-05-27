@@ -52,7 +52,7 @@ export default function VetsHomePage() {
             <div className="flex gap-4 flex-wrap">
               <Link href="/find-a-vet"
                 className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors">
-                Find a Specialist →
+                Specialty Care Guide →
               </Link>
               <Link href="/health"
                 className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-7 py-3.5 rounded no-underline hover:border-white/40 hover:text-white transition-colors">
@@ -60,7 +60,7 @@ export default function VetsHomePage() {
               </Link>
             </div>
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
-              {[['100+', 'Sourced Articles'], ['8', 'Specialty Types'], ['All Breeds', 'Covered']].map(([num, label]) => (
+              {[['30+', 'Health Guides'], ['8', 'Specialty Types'], ['4 Breeds', 'Profiled']].map(([num, label]) => (
                 <div key={label}>
                   <div className="font-display text-xl font-bold text-white">{num}</div>
                   <div className="text-xs text-white/35 mt-0.5">{label}</div>
@@ -96,10 +96,10 @@ export default function VetsHomePage() {
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Specialty Care</span>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Find a Specialist</h2>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Specialty Care Types</h2>
           </div>
           <Link href="/find-a-vet" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
-            Search all specialists →
+            Guide to specialty care →
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

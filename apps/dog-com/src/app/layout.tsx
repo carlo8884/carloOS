@@ -1,17 +1,28 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, DM_Sans } from 'next/font/google'
 import { Nav, Footer } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import './globals.css'
 
-// ─── Fonts ──────────────────────────────────────────────────────────────────
+const playfairDisplay = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+})
 
-// ─── Metadata ───────────────────────────────────────────────────────────────
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'A Reference for Dog Owners',
   description:
-    'Dog.com — research-based reference for dog health, breed guides, training, and nutrition. 200+ breeds and the topics most owners want straight answers on.',
+    'Dog.com — research-based reference for dog health, breed guides, training, and nutrition. 30 detailed breed profiles and the health topics owners want straight answers on.',
   path: '/',
   type: 'website',
 })
@@ -30,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="font-vars"
+      className={`font-vars ${playfairDisplay.variable} ${dmSans.variable}`}
     >
       <head>
         {/* GA4 — only loads in production with a real ID */}

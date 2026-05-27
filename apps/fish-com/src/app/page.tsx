@@ -53,7 +53,7 @@ const FEATURED_SPECIES = [
 
 const GUIDE_CATEGORIES = [
   { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
-  { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
+  { icon: '🐠', title: 'Species Guides', desc: 'Freshwater and marine profiles', href: '/species' },
   { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
   { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
   { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
@@ -96,7 +96,7 @@ export default function FishHomePage() {
             </h1>
 
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Species guides for 200+ fish, water chemistry explained, honest equipment reviews,
+              Species guides for freshwater and marine fish, water chemistry explained, honest equipment reviews,
               and fish health content written with aquarists who know what they&apos;re talking about.
             </p>
 
@@ -114,9 +114,9 @@ export default function FishHomePage() {
             {/* Trust stats */}
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
               {[
-                { num: '200+', label: 'Species Profiles' },
+                { num: '35+', label: 'Species Profiles' },
                 { num: 'Expert', label: 'Reviewed Content' },
-                { num: '50+', label: 'Equipment Reviews' },
+                { num: '30+', label: 'Equipment Reviews' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-display text-2xl font-bold text-white">{stat.num}</div>
@@ -151,7 +151,7 @@ export default function FishHomePage() {
       <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
         {[
           '✓ Research-based content',
-          '✓ 200+ species profiles',
+          '✓ 35+ species profiles',
           '✓ Honest equipment reviews',
           '✓ No paid editorial placements',
         ].map((item) => (
@@ -172,7 +172,7 @@ export default function FishHomePage() {
             <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Popular Species</h2>
           </div>
           <Link href="/species" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
-            All 200+ species →
+            Browse all species →
           </Link>
         </div>
 

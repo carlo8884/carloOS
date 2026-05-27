@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'A Reference for Dog Owners',
   description:
-    'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take…',
+    '30 detailed dog breed guides, research-based health articles, honest product reviews, and training advice — built for dog owners who take their dog\'s wellbeing seriously.',
   path: '/',
   type: 'website',
   ogImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80&auto=format&fit=crop',
@@ -58,14 +58,14 @@ const FEATURED_BREEDS = [
 ]
 
 const HEALTH_CATEGORIES = [
-  { icon: '🔍', title: 'Symptoms & Signs', desc: 'When to worry, when to wait', href: '/health/symptoms' },
-  { icon: '🥩', title: 'Nutrition & Diet', desc: 'Food guides and what to avoid', href: '/health/nutrition' },
-  { icon: '💉', title: 'Preventive Care', desc: 'Vaccines, parasites, screening', href: '/health/preventive' },
-  { icon: '👴', title: 'Senior Dog Care', desc: 'What changes after age 7', href: '/health/senior' },
-  { icon: '🧬', title: 'Breed Conditions', desc: 'Health risks by breed', href: '/health/breeds' },
-  { icon: '🦷', title: 'Dental Health', desc: 'The most overlooked issue', href: '/health/dental' },
-  { icon: '⚖️', title: 'Weight & Obesity', desc: 'Assessment and management', href: '/health/weight' },
-  { icon: '🧠', title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear', href: '/health/mental' },
+  { icon: '🔍', title: 'Symptoms & Signs', desc: 'When to worry, when to wait', href: '/health/dog-symptoms-guide' },
+  { icon: '🥩', title: 'Nutrition & Diet', desc: 'Food guides and what to avoid', href: '/nutrition' },
+  { icon: '💉', title: 'Preventive Care', desc: 'Vaccines, parasites, screening', href: '/health/dog-vaccinations' },
+  { icon: '👴', title: 'Senior Dog Care', desc: 'What changes after age 7', href: '/health/senior-dog-care' },
+  { icon: '🧬', title: 'Breed Conditions', desc: 'Health risks by breed', href: '/breeds' },
+  { icon: '🦷', title: 'Dental Health', desc: 'The most overlooked issue', href: '/health/dog-dental-care' },
+  { icon: '⚖️', title: 'Weight & Obesity', desc: 'Assessment and management', href: '/health/dog-obesity' },
+  { icon: '🧠', title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear', href: '/health/dog-anxiety' },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -114,7 +114,7 @@ export default async function HomePage() {
             </h1>
 
             <p className="text-lg font-light text-white/60 leading-relaxed max-w-md mb-10">
-              Breed guides for 200+ breeds, research-based health articles, training that works,
+              30 detailed breed profiles, research-based health articles, training that works,
               and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
             </p>
 
@@ -156,9 +156,9 @@ export default async function HomePage() {
           {/* Stats */}
           <div className="absolute bottom-10 right-8 flex flex-col gap-3 z-10">
             {[
-              { icon: '📚', num: '200+', label: 'Breed Profiles' },
-              { icon: '📚', num: '100+', label: 'Sourced Articles' },
-              { icon: '⭐', num: '500+', label: 'Products Reviewed' },
+              { icon: '📚', num: '30', label: 'Breed Profiles' },
+              { icon: '📋', num: '70+', label: 'Sourced Articles' },
+              { icon: '⭐', num: '60+', label: 'Products Reviewed' },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -178,8 +178,8 @@ export default async function HomePage() {
       {/* ── TRUST BAR ──────────────────────────────────────────────── */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
         {[
-          '✓ research-based health content',
-          '✓ 200+ breed profiles',
+          '✓ Research-based health content',
+          '✓ 30 detailed breed guides',
           '✓ Honest product reviews',
           '✓ No paid editorial placements',
         ].map((item) => (
@@ -225,7 +225,7 @@ export default async function HomePage() {
             </h2>
           </div>
           <Link href="/breeds" className="text-sm font-bold text-brand-primary no-underline hover:underline">
-            All 200+ breeds →
+            Browse all breeds →
           </Link>
         </div>
 

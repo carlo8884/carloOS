@@ -22,7 +22,7 @@ export default function CushingsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Diabetes in Dogs', href: '/health/dog-diabetes' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }, { label: 'Weight Management', href: '/health/weight-management' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
         </>}
       >

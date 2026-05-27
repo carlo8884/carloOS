@@ -36,7 +36,7 @@ export default function PainSignsPage() {
               <div key={s} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid flex gap-2"><span className="text-brand-primary">→</span>{s}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Pain Management', href: '/health/pain-management-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-signs" />
         </>}
       >

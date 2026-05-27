@@ -51,7 +51,7 @@ export default function BestPetInsurancePage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Pet Insurance 2025 — Ranked by Vets & Owners
+          Best Pet Insurance 2025 — Which Plans Actually Pay
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           We compared 8 pet insurance companies on actual payout rates, fine-print exclusions, and claims experience — not marketing promises. The gap between top and bottom tier is significant.

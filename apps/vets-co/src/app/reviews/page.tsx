@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Product Reviews — Honest Comparisons | Vets.co', description: 'Pet product reviews from a veterinarian\'s perspective. Pet insurance, telehealth services ranked using public payout data and insurer disclosures.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Product Reviews — Honest Comparisons | Vets.co', description: 'Pet insurance and telehealth services ranked using public payout data, insurer disclosures, and contract analysis.', path: '/reviews' })
 
 const REVIEWS = [
   { title: 'Best Pet Insurance 2025 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
@@ -14,7 +14,7 @@ export default function VetsReviewsPage() {
     <>
       <div className="bg-brand-dark px-container sm:px-container-sm py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 4vw, 44px)' }}>Pet Product Reviews — Honest Comparisons</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Ranked from a veterinarian&apos;s perspective — what actually matters when your pet needs care.</p>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Ranked on payout data, contract terms, and what actually matters when your pet needs care.</p>
       </div>
       <div className="px-container sm:px-container-sm py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">

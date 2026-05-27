@@ -5,15 +5,15 @@ import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective | Vets.co',
-  description: 'Pet insurance ranked from a veterinarian\'s perspective — which plans actually pay when your pet needs care, how direct payment works, and what the fine…',
+  title: 'Best Pet Insurance 2025 — Which Plans Actually Pay | Vets.co',
+  description: 'Pet insurance ranked by payout data and contract terms — which plans actually pay when your pet needs care, how direct payment works, and what the fine print means.',
   path: '/reviews/best-pet-insurance',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective',
+  title: 'Best Pet Insurance 2025 — Which Plans Actually Pay',
   description: 'Pet insurance ranked using public payout data, contract terms, and what actually matters for owners.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',

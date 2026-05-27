@@ -71,7 +71,7 @@ export default function SaddleHomePage() {
               </Link>
             </div>
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
-              {[['30+', 'Brands Profiled'], ['All', 'Disciplines'], ['SMS', 'Referenced']].map(([n, l]) => (
+              {[['20+', 'Brands Profiled'], ['All', 'Disciplines'], ['SMS', 'Referenced']].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-display text-xl font-bold text-white">{n}</div>
                   <div className="text-xs text-white/35 mt-0.5">{l}</div>

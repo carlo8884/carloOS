@@ -1,6 +1,21 @@
 import type { Metadata } from 'next'
+import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+const libreBaskerville = Libre_Baskerville({
+  variable: '--font-baskerville',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+})
+
+const manrope = Manrope({
+  variable: '--font-manrope',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -14,7 +29,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="font-vars">
+    <html lang="en" className={`font-vars ${libreBaskerville.variable} ${manrope.variable}`}>
       <head>
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>

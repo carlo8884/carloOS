@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025 — Ranked by a Veterinary Nutritionist',
+  title: 'Best Dry Dog Food 2025 — WSAVA-Compliant Picks Ranked',
   description: 'We evaluated 12 dry dog foods on ingredient quality, nutritional adequacy, manufacturing standards, and WSAVA compliance.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
@@ -13,8 +13,8 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Dry Dog Food 2025 — Ranked by a Veterinary Nutritionist',
-  description: 'Veterinary nutritionist ranked the best dry dog foods on ingredient quality, WSAVA compliance, and real-world outcomes.',
+  title: 'Best Dry Dog Food 2025 — WSAVA-Compliant Picks Ranked',
+  description: 'Best dry dog foods ranked on ingredient quality, WSAVA compliance, and real-world outcomes.',
   url: 'https://dog.com/reviews/best-dry-dog-food',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -42,11 +42,11 @@ export default function BestDogFoodPage() {
       {/* Hero */}
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          🏆 Veterinary Nutritionist Ranked · May 2025
+          🏆 WSAVA-Criteria Ranked · May 2025
         </span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best Dry Dog Food 2025 — Ranked by a Veterinary Nutritionist
+          Best Dry Dog Food 2025 — WSAVA-Compliant Picks Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
           The dog food market is full of marketing. We cut through it: 12 foods evaluated on WSAVA compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.

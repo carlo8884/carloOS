@@ -14,13 +14,13 @@ const FEATURED_SPECIES = [
   { name: 'Bearded Dragon', type: 'Pogona vitticeps', level: 'Beginner', href: '/species/bearded-dragon', image: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop', imageAlt: 'Bearded dragon' },
   { name: 'Leopard Gecko', type: 'Eublepharis macularius', level: 'Beginner', href: '/species/leopard-gecko', image: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop', imageAlt: 'Leopard gecko' },
   { name: 'Ball Python', type: 'Python regius', level: 'Beginner', href: '/species/ball-python', image: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop', imageAlt: 'Ball python' },
-  { name: 'Blue-Tongue Skink', type: 'Tiliqua spp.', level: 'Intermediate', href: '/species/blue-tongue-skink', image: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop', imageAlt: 'Blue-tongue skink' },
+  { name: 'Blue-Tongue Skink', type: 'Tiliqua spp.', level: 'Intermediate', href: '/species/blue-tongued-skink', image: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop', imageAlt: 'Blue-tongue skink' },
   { name: 'Crested Gecko', type: 'Correlophus ciliatus', level: 'Beginner', href: '/species/crested-gecko', image: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop', imageAlt: 'Crested gecko' },
   { name: 'Corn Snake', type: 'Pantherophis guttatus', level: 'Beginner', href: '/species/corn-snake', image: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop', imageAlt: 'Corn snake' },
 ]
 
 const CONTENT_CATEGORIES = [
-  { icon: '🦎', title: 'Species Guides', desc: 'Complete care for 50+ species', href: '/species' },
+  { icon: '🦎', title: 'Species Guides', desc: 'Complete care guides by species', href: '/species' },
   { icon: '☀️', title: 'UVB Lighting', desc: 'Ferguson zones, T5 HO specs, meter testing', href: '/setup/uvb-lighting-guide' },
   { icon: '🌡️', title: 'Temperatures', desc: 'Gradient setup by species', href: '/setup' },
   { icon: '🍽️', title: 'Feeding Guide', desc: 'Prey size, frequency, gut-loading', href: '/health/reptile-feeding-guide' },
@@ -70,7 +70,7 @@ export default function LizardHomePage() {
               </Link>
             </div>
             <div className="flex gap-8 mt-12 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-              {[['50+', 'Species Guides'], ['Vet', 'Reviewed Health'], ['Meter', 'Tested UVB Data']].map(([n, l]) => (
+              {[['16', 'Species Guides'], ['Source', 'Cited Health'], ['Published', 'UVB Research']].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-display text-xl font-bold text-brand-white">{n}</div>
                   <div className="text-xs mt-0.5" style={{ color: 'rgba(238,240,228,0.35)' }}>{l}</div>
@@ -99,7 +99,7 @@ export default function LizardHomePage() {
       <div className="relative z-10 px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center" style={{ background: '#0A1408', borderTop: '1px solid rgba(122,181,42,0.18)' }}>
         {[
           '✓ Source-first husbandry',
-          '✓ 50+ species profiles',
+          '✓ 16 species guides',
           '✓ Honest equipment reviews',
           '✓ No paid editorial placements',
         ].map((item) => (
@@ -119,7 +119,7 @@ export default function LizardHomePage() {
             </div>
             <h2 className="font-display font-bold text-brand-white tracking-tight text-3xl">Popular Species</h2>
           </div>
-          <Link href="/species" className="text-sm font-semibold text-brand-primary no-underline hover:underline">All 50+ species →</Link>
+          <Link href="/species" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Browse all species →</Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {FEATURED_SPECIES.map((s) => (
