@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Environmental, Food & Flea Types Explained | Dog.com', description: 'Dog allergies have three types: environmental (atopy), food, and flea allergy dermatitis. Each presents differently and is treated differently. Reference guide to diagnosis and management.', path: '/health/dog-allergies', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Environmental, Food | Dog.com', description: 'Dog allergies have three types: environmental (atopy), food, and flea allergy dermatitis. Each presents differently and is treated differently.', path: '/health/dog-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergy dermatitis in dogs — diagnosis and management.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const medSchema = buildMedicalWebPageSchema({ name: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergies in dogs.', url: 'https://dog.com/health/dog-allergies', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, medSchema)

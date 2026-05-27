@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Lice & Anchor Worm — Visible Parasites & Treatment | Fish.com', description: 'Fish lice (Argulus) and anchor worm (Lernaea) are visible parasites attached to fish skin. Both enter ponds from wild-caught fish or infected feeders. Treatment and prevention.', path: '/health/fish-lice-anchor-worm', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Lice & Anchor Worm — Visible Parasites | Fish.com', description: 'Fish lice (Argulus) and anchor worm (Lernaea) are visible parasites attached to fish skin. Both enter ponds from wild-caught fish or infected feeders.', path: '/health/fish-lice-anchor-worm', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Lice and Anchor Worm', description: 'Identification, manual removal, and chemical treatment for Argulus fish lice and Lernaea anchor worm.', url: 'https://fish.com/health/fish-lice-anchor-worm', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FishLicePage() {
   return (

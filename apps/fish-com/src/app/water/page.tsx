@@ -4,8 +4,8 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Aquarium Water Chemistry — pH, Ammonia, Hardness Explained | Fish.com',
-  description: 'Complete aquarium water chemistry guide. pH, ammonia, nitrite, nitrate, hardness, KH, GH — what each parameter means, ideal ranges by fish type, and how to adjust them.',
+  title: 'Aquarium Water Chemistry — pH, Ammonia | Fish.com',
+  description: 'Complete aquarium water chemistry guide. pH, ammonia, nitrite, nitrate, hardness, KH, GH — what each parameter means, ideal ranges by fish type.',
   path: '/water',
 })
 

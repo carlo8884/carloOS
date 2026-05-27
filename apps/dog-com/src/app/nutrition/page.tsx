@@ -5,7 +5,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Nutrition Guide — What to Feed, What to Avoid | Dog.com',
-  description: 'research-based dog nutrition guides. What to feed, what\'s toxic, how much, WSAVA-compliant brands, raw vs cooked, puppy vs senior — all the nutrition content in one place.',
+  description: 'research-based dog nutrition guides. What to feed, what\'s toxic, how much, WSAVA-compliant brands, raw vs cooked, puppy vs senior',
   path: '/nutrition',
 })
 
@@ -102,6 +102,27 @@ export default function NutritionHubPage() {
           perks={['🥩 Nutrition guidance', '⚠️ Toxin alerts', '🏆 Product picks', '🚫 No spam']}
         />
       </div>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Nutrition Guides</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="dog-supplements" href="/nutrition/dog-supplements" className="text-sm text-brand-primary no-underline hover:underline">Dog Supplements</Link>
+        <Link key="elimination-diet" href="/nutrition/elimination-diet" className="text-sm text-brand-primary no-underline hover:underline">Elimination Diet</Link>
+        <Link key="feeding-frequency" href="/nutrition/feeding-frequency" className="text-sm text-brand-primary no-underline hover:underline">Feeding Frequency</Link>
+        <Link key="grain-free-dcm-risk" href="/nutrition/grain-free-dcm-risk" className="text-sm text-brand-primary no-underline hover:underline">Grain Free DCM Risk</Link>
+        <Link key="how-much-to-feed" href="/nutrition/how-much-to-feed" className="text-sm text-brand-primary no-underline hover:underline">How Much To Feed</Link>
+        <Link key="prescription-diets" href="/nutrition/prescription-diets" className="text-sm text-brand-primary no-underline hover:underline">Prescription Diets</Link>
+        <Link key="puppy-nutrition" href="/nutrition/puppy-nutrition" className="text-sm text-brand-primary no-underline hover:underline">Puppy Nutrition</Link>
+        <Link key="raw-diet-risks" href="/nutrition/raw-diet-risks" className="text-sm text-brand-primary no-underline hover:underline">Raw Diet Risks</Link>
+        <Link key="reading-food-labels" href="/nutrition/reading-food-labels" className="text-sm text-brand-primary no-underline hover:underline">Reading Food Labels</Link>
+        <Link key="safe-human-foods" href="/nutrition/safe-human-foods" className="text-sm text-brand-primary no-underline hover:underline">Safe Human Foods</Link>
+        <Link key="senior-dog-nutrition" href="/nutrition/senior-dog-nutrition" className="text-sm text-brand-primary no-underline hover:underline">Senior Dog Nutrition</Link>
+        <Link key="toxic-foods" href="/nutrition/toxic-foods" className="text-sm text-brand-primary no-underline hover:underline">Toxic Foods</Link>
+        <Link key="weight-management" href="/nutrition/weight-management" className="text-sm text-brand-primary no-underline hover:underline">Weight Management</Link>
+        <Link key="wsava-explained" href="/nutrition/wsava-explained" className="text-sm text-brand-primary no-underline hover:underline">WSAVA Explained</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
     </>
   )
 }

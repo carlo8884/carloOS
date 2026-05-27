@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard, Diet & Handling | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established, long-lived at 20+ years.', path: '/species/blue-tongued-skink', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established.', path: '/species/blue-tongued-skink', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BlueTonguedSkinkPage() {
   return (

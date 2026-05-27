@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pancreatitis in Dogs — High-Fat Triggers, Signs & Low-Fat Diet | Dog.com', description: 'Pancreatitis in dogs is often triggered by high-fat meals — holiday table scraps are the classic cause. Signs, hospitalization criteria, and lifelong low-fat diet management.', path: '/health/pancreatitis', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pancreatitis in Dogs — High-Fat Triggers, Signs | Dog.com', description: 'Pancreatitis in dogs is often triggered by high-fat meals — holiday table scraps are the classic cause. Signs, hospitalization criteria.', path: '/health/pancreatitis', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pancreatitis in Dogs', description: 'Triggers, signs, hospitalization, and low-fat diet management for canine pancreatitis.', url: 'https://dog.com/health/pancreatitis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Canine pancreatitis — triggers, acute management, and long-term dietary management.', url: 'https://dog.com/health/pancreatitis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

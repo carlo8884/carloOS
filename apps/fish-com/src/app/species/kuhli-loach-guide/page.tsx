@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Burrowing, Groups & Hiding Behavior | Fish.com', description: 'Kuhli loaches are nocturnal burrowers that disappear for days. Groups of 5+ are required — they hide alone but are active in groups. Fine sand substrate essential.', path: '/species/kuhli-loach', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Burrowing, Groups | Fish.com', description: 'Kuhli loaches are nocturnal burrowers that disappear for days. Groups of 5+ are required — they hide alone but are active in groups.', path: '/species/kuhli-loach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Burrowing behavior, group requirements, and sand substrate care for Pangio kuhlii kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function KuhliLoachPage() {

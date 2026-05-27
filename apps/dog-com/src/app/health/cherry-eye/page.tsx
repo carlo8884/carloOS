@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery & Why You Can't Push It Back | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction — not pushing it back in. Reference guide.", path: '/health/cherry-eye', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction", path: '/health/cherry-eye', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cherry Eye in Dogs', description: 'Prolapsed third eyelid gland — causes, surgical correction, and why manual replacement fails.', url: 'https://dog.com/health/cherry-eye', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Cherry Eye in Dogs', description: 'Prolapsed nictitating membrane gland — causes and surgical treatment.', url: 'https://dog.com/health/cherry-eye', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

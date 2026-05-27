@@ -5,7 +5,7 @@ import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality. One of the most medically complex breeds.', path: '/breeds/french-bulldog', type: 'article', ogImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article', ogImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function FrenchBulldogBreedPage() {

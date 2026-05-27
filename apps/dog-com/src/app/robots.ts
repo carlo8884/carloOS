@@ -6,10 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/legal/affiliate-disclosure'],
+        disallow: ['/api/', '/admin/'],
       },
     ],
     sitemap: 'https://dog.com/sitemap.xml',
-    host: 'https://dog.com',
   }
 }

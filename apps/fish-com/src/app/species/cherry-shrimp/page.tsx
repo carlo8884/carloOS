@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding & Colony Setup | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks — complete colony guide.', path: '/species/cherry-shrimp', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks', path: '/species/cherry-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryShrimpPage() {
   return (

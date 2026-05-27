@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Humidity Guide — Species Requirements, Misting & Moist Hides | Lizard.com', description: 'Humidity requirements by species, how to raise and lower humidity, misting schedules, and how to set up a proper moist hide for shedding.', path: '/setup/humidity-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Humidity Guide — Species Requirements | Lizard.com', description: 'Humidity requirements by species, how to raise and lower humidity, misting schedules, and how to set up a proper moist hide for shedding.', path: '/setup/humidity-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Humidity Guide', description: 'Species humidity requirements, misting schedules, and moist hides.', url: 'https://lizard.com/setup/humidity-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const SPECIES_HUMIDITY = [

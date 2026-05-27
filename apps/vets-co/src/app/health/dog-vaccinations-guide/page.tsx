@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing, and the puppy schedule by age.', path: '/health/dog-vaccinations-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing.', path: '/health/dog-vaccinations-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Guide', description: 'Core and non-core vaccines, titer testing, and puppy schedule.', url: 'https://vets.co/health/dog-vaccinations-guide', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

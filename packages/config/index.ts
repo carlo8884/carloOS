@@ -328,6 +328,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Flea & Tick', href: '/reviews/best-flea-tick-prevention' },
           { label: 'Dog Beds', href: '/reviews/best-dog-beds' },
           { label: 'All Reviews', href: '/reviews' },
+          { label: 'FAQ', href: '/faq' },
         ],
       },
     ],

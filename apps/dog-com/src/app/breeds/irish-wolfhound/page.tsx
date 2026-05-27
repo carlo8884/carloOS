@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma & DCM | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns. The gentle giant guide.', path: '/breeds/irish-wolfhound', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide', description: 'Osteosarcoma, DCM, GDV risk, and care for Irish Wolfhounds.', url: 'https://dog.com/breeds/irish-wolfhound', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function IrishWolfhoundPage() {

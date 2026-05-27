@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance. Regenerative vs non-regenerative anemia have very different causes and prognoses. Reference guide.', path: '/health/anemia-in-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

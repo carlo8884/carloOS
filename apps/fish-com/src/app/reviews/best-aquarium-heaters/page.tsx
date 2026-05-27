@@ -6,7 +6,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Best Aquarium Heaters 2025 — Calibrated for Accuracy | Fish.com',
-  description: 'Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports. Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked by temperature accuracy and reliability.',
+  description: 'Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports.',
   path: '/reviews/best-aquarium-heaters',
   type: 'article',
 })

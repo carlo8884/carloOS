@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Gill Flukes & Body Flukes in Fish — Praziquantel Treatment | Fish.com', description: 'Flukes (Gyrodactylus, Dactylogyrus) cause flashing, rapid breathing, and clamped fins. Praziquantel is the treatment — often given prophylactically to all new fish during quarantine.', path: '/health/gill-flukes', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Gill Flukes | Fish.com', description: 'Flukes (Gyrodactylus, Dactylogyrus) cause flashing, rapid breathing, and clamped fins. Praziquantel is the treatment', path: '/health/gill-flukes', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Gill Flukes and Body Flukes in Fish', description: 'Signs, praziquantel treatment, and quarantine protocol for Gyrodactylus and Dactylogyrus flukes.', url: 'https://fish.com/health/gill-flukes', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FlukesPage() {
   return (

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin & Multimodal Protocols | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. Reference guide.', path: '/health/pain-management-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. Reference guide.', path: '/health/pain-management-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

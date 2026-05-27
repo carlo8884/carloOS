@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture & Antibiotics | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance. Recurrent UTIs need underlying cause investigation.', path: '/health/urinary-tract-infection', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs — Weight Gain, Skin Changes & Levothyroxine | Dog.com', description: 'Hypothyroidism is the most common endocrine disorder in dogs. Weight gain without increased appetite, coat changes, and lethargy are the classic signs. Lifelong levothyroxine is the treatment.', path: '/health/hypothyroidism', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs — Weight Gain, Skin Changes | Dog.com', description: 'Hypothyroidism is the most common endocrine disorder in dogs. Weight gain without increased appetite, coat changes, and lethargy are the classic signs.', path: '/health/hypothyroidism', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

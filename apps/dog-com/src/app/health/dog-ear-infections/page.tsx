@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments. Reference guide to diagnosis and prevention.', path: '/health/dog-ear-infections', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments.', path: '/health/dog-ear-infections', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Ear Infections', description: 'Yeast, bacterial, and ear mite infections — diagnosis and treatment.', url: 'https://dog.com/health/dog-ear-infections', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Ear Infections', description: 'Types, diagnosis, and treatment of canine ear infections.', url: 'https://dog.com/health/dog-ear-infections', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

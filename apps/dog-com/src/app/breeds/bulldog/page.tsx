@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'English Bulldog Breed Guide — BOAS, Heat Risk & Health | Dog.com', description: 'English Bulldogs are brachycephalic — flat-faced breathing disorders, heat intolerance, and a list of structural health issues. What vets want you to know before buying.', path: '/breeds/bulldog', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'English Bulldog Breed Guide — BOAS, Heat Risk & Health | Dog.com', description: 'English Bulldogs are brachycephalic — flat-faced breathing disorders, heat intolerance, and a list of structural health issues.', path: '/breeds/bulldog', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'English Bulldog Breed Guide', description: 'BOAS, hip dysplasia, heat intolerance, and structural health issues in English Bulldogs.', url: 'https://dog.com/breeds/bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BulldogPage() {

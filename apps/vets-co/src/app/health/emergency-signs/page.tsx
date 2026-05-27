@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more — a Reference guide to knowing when to go now vs. wait.', path: '/health/emergency-signs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more', path: '/health/emergency-signs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: '14 Dog Emergency Signs', description: 'Signs requiring immediate emergency veterinary care.', url: 'https://vets.co/health/emergency-signs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

@@ -30,6 +30,20 @@ export default function FishReviewsPage() {
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
         <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Equipment picks and fishkeeping tips every Thursday." source="reviews-hub" ctaText="Subscribe Free" perks={['🐠 Species guides', '⚙️ Equipment picks']} />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-aquarium-filters" href="/reviews/best-aquarium-filters" className="text-sm text-brand-primary no-underline hover:underline">Best Aquarium Filters</Link>
+        <Link key="best-aquarium-heaters" href="/reviews/best-aquarium-heaters" className="text-sm text-brand-primary no-underline hover:underline">Best Aquarium Heaters</Link>
+        <Link key="best-aquarium-lighting" href="/reviews/best-aquarium-lighting" className="text-sm text-brand-primary no-underline hover:underline">Best Aquarium Lighting</Link>
+        <Link key="best-canister-filters" href="/reviews/best-canister-filters" className="text-sm text-brand-primary no-underline hover:underline">Best Canister Filters</Link>
+        <Link key="best-nano-tanks" href="/reviews/best-nano-tanks" className="text-sm text-brand-primary no-underline hover:underline">Best Nano Tanks</Link>
+        <Link key="best-planted-tank-fertilizers" href="/reviews/best-planted-tank-fertilizers" className="text-sm text-brand-primary no-underline hover:underline">Best Planted Tank Fertilizers</Link>
+        <Link key="best-water-test-kits" href="/reviews/best-water-test-kits" className="text-sm text-brand-primary no-underline hover:underline">Best Water Test Kits</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

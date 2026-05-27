@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'African Cichlid Care Guide — Malawi, Tanganyika & Aggressive Setup | Fish.com', description: 'African cichlids require hard alkaline water, overstocking to dilute aggression, and rockwork. Lake Malawi vs Tanganyika species have different care needs. Complete guide.', path: '/species/african-cichlid', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'African Cichlid Care Guide — Malawi, Tanganyika | Fish.com', description: 'African cichlids require hard alkaline water, overstocking to dilute aggression, and rockwork.', path: '/species/african-cichlid', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'African Cichlid Care Guide', description: 'Lake Malawi vs Tanganyika species, hard water requirements, and aggression management for African cichlids.', url: 'https://fish.com/species/african-cichlid', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AfricanCichlidPage() {
   return (

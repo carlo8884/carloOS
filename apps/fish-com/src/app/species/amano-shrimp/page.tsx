@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater & Breeding Impossibility | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AmanoShrimpPage() {
   return (

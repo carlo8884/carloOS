@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Platy Fish Care Guide — Color Varieties, Breeding Control & Hardiness | Fish.com', description: 'Platies are among the hardiest livebearers — tolerant of a wide range of water conditions. Available in dozens of color varieties. They reproduce relentlessly without management.', path: '/species/platy-fish', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Platy Fish Care Guide — Color Varieties | Fish.com', description: 'Platies are among the hardiest livebearers — tolerant of a wide range of water conditions. Available in dozens of color varieties.', path: '/species/platy-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Platy Fish Care Guide', description: 'Color varieties, breeding control, and community care for Xiphophorus maculatus platies.', url: 'https://fish.com/species/platy-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PlatyPage() {
   return (

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas, Feeding Schedule & Switching to Adult | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food. research-based.', path: '/nutrition/puppy-nutrition', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food.', path: '/nutrition/puppy-nutrition', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Nutrition Guide', description: 'Large breed formulas, feeding schedule, and when to switch to adult food.', url: 'https://dog.com/nutrition/puppy-nutrition', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function PuppyNutritionPage() {

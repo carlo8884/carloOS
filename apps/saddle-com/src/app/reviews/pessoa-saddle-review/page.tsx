@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy & Optimum Ranked | Saddle.com',
-  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports — close contact geometry, Top-tier competition use, and who each model suits.',
+  title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy | Saddle.com',
+  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports',
   path: '/reviews/pessoa-saddle-review',
   type: 'article',
 })
@@ -45,6 +45,7 @@ export default function PessoaReviewPage() {
       </div>
 
       <QuickPicks items={PICKS} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Pessoa Saddle" }]} />
 
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening & Quality of Life | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+, and how to assess and maintain quality of life in aging dogs.', path: '/health/senior-pet-care', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+.', path: '/health/senior-pet-care', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

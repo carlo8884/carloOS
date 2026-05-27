@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology, and ophthalmology.', path: '/find-a-vet', type: 'website' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
 const SPECIALISTS = [
   { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', icon: '🚨', color: '#C84A2A' },
   { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', icon: '🔬', color: '#2563EB' },

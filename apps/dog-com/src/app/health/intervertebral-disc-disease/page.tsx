@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'IVDD in Dogs — Intervertebral Disc Disease Signs, Surgery & Recovery | Dog.com', description: 'IVDD causes back pain to paralysis in chondrodystrophic dogs. The surgical window is 24-48 hours for best recovery. Signs, grades, and rehabilitation guide.', path: '/health/intervertebral-disc-disease', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'IVDD in Dogs — Intervertebral Disc Disease Signs | Dog.com', description: 'IVDD causes back pain to paralysis in chondrodystrophic dogs. The surgical window is 24-48 hours for best recovery. Signs, grades, and rehabilitation guide.', path: '/health/intervertebral-disc-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Intervertebral Disc Disease in Dogs', description: 'IVDD signs, grades, surgical indications, and rehabilitation.', url: 'https://dog.com/health/intervertebral-disc-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Riding Guide — Disciplines, One-Hand Neck Reining & Equipment | Saddle.com', description: 'Introduction to western riding. Reining, cutting, barrel racing, ranch, and trail disciplines compared. One-handed neck reining, western saddle fit, and essential equipment.', path: '/guides/western-riding-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Riding Guide — Disciplines | Saddle.com', description: 'Introduction to western riding. Reining, cutting, barrel racing, ranch, and trail disciplines compared. One-handed neck reining, western saddle fit.', path: '/guides/western-riding-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Western Riding Guide', description: 'Western disciplines, neck reining, equipment, and position fundamentals.', url: 'https://saddle.com/guides/western-riding-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WesternRidingGuidePage() {
   return (

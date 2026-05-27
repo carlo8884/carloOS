@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math & Prescription Diets | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight management diets.', path: '/health/weight-management', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight…', path: '/health/weight-management', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

@@ -33,6 +33,18 @@ export default function LizardReviewsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-10" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="reviews-index" />
       </div>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-bioactive-substrates" href="/reviews/best-bioactive-substrates" className="text-sm text-brand-primary no-underline hover:underline">Best Bioactive Substrates</Link>
+        <Link key="best-reptile-terrariums" href="/reviews/best-reptile-terrariums" className="text-sm text-brand-primary no-underline hover:underline">Best Reptile Terrariums</Link>
+        <Link key="best-thermometers-hygrometers" href="/reviews/best-thermometers-hygrometers" className="text-sm text-brand-primary no-underline hover:underline">Best Thermometers Hygrometers</Link>
+        <Link key="best-thermostats" href="/reviews/best-thermostats" className="text-sm text-brand-primary no-underline hover:underline">Best Thermostats</Link>
+        <Link key="best-uvb-bulbs" href="/reviews/best-uvb-bulbs" className="text-sm text-brand-primary no-underline hover:underline">Best UVB Bulbs</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
     </>
   )
 }

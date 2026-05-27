@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail & How to Cycle | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol, and how to know when it\'s done.', path: '/health/nitrogen-cycle-explained', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol.', path: '/health/nitrogen-cycle-explained', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function NitrogenCyclePage() {

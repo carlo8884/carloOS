@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Mange in Dogs — Sarcoptic vs Demodectic, Treatment & Contagion | Dog.com', description: 'Two types of mange in dogs: sarcoptic (scabies — highly contagious to humans) and demodectic (not contagious). Different causes, presentations, and treatments.', path: '/health/dog-mange', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Mange in Dogs — Sarcoptic vs Demodectic, Treatment | Dog.com', description: 'Two types of mange in dogs: sarcoptic (scabies — highly contagious to humans) and demodectic (not contagious). Different causes, presentations, and treatments.', path: '/health/dog-mange', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Mange in Dogs', description: 'Sarcoptic vs demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Mange in Dogs', description: 'Sarcoptic and demodectic mange — causes, diagnosis, and treatment.', url: 'https://dog.com/health/dog-mange', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

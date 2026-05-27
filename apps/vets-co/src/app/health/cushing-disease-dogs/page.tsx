@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly & Trilostane Treatment | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management. Reference guide.", path: '/health/cushing-disease-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

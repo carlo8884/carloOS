@@ -6,8 +6,8 @@ import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Golden Retriever Health — Cancer Risk, Monitoring Schedule & Insurance | Vets.co',
-  description: 'From a veterinarian\'s perspective: managing Golden Retriever cancer risk, what monitoring to do at each life stage, when to refer to a specialist, and how to choose the right insurance.',
+  title: 'Golden Retriever Health — Cancer Risk | Vets.co',
+  description: 'From a veterinarian\'s perspective: managing Golden Retriever cancer risk, what monitoring to do at each life stage, when to refer to a specialist, and…',
   path: '/breeds/golden-retriever-health',
   type: 'article',
 })

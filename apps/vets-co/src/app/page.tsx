@@ -5,8 +5,8 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Find the Right Vet. Get Trusted Answers.',
-  description: 'Find veterinary specialists, understand your pet\'s health, compare pet insurance, and get expert guidance grounded in published veterinary sources.',
+  title: 'Find a Vet. Read the Guidelines.',
+  description: 'Find veterinary specialists, understand your pet\'s health, and compare pet insurance — grounded in AVMA, AAHA, and ACVIM material.',
   path: '/',
 })
 

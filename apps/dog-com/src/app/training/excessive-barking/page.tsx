@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes & What Actually Works | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Excessive Barking in Dogs', description: 'Types of barking, causes, and evidence-based solutions for each.', url: 'https://dog.com/training/excessive-barking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const TYPES = [

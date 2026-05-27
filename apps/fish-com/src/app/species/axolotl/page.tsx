@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny & Limb Regeneration | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel), and remarkable limb regeneration ability.', path: '/species/axolotl', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel).', path: '/species/axolotl', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AxolotlPage() {
   return (

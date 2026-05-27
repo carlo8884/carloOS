@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Lighting Guide — UVB, Basking, Photoperiod & LED Myths | Lizard.com', description: 'Complete reptile lighting guide. UVB requirements by species, basking vs ambient heat, photoperiod for seasonal species, and why LED grow lights don\'t replace UVB.', path: '/setup/lighting-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Lighting Guide — UVB, Basking, Photoperiod | Lizard.com', description: 'Complete reptile lighting guide. UVB requirements by species, basking vs ambient heat, photoperiod for seasonal species.', path: '/setup/lighting-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Lighting Guide', description: 'UVB requirements, basking lights, photoperiod, and full-spectrum lighting for reptiles.', url: 'https://lizard.com/setup/lighting-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function LightingGuidePage() {
   return (

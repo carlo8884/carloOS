@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile & When It\'s an Emergency | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vomiting', description: 'Causes, home care, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

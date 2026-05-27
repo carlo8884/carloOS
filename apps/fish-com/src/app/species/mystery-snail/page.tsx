@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity & Breeding | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper — check all additives before adding to tanks.', path: '/species/mystery-snail', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper', path: '/species/mystery-snail', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MysterySnailPage() {
   return (

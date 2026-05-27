@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Carnivore Diet, Fin Types & Heater Requirement | Fish.com', description: 'Bettas are carnivores that need protein-rich pellets, not flake food. They need a heater — room temperature is too cold. Complete guide to fins, tankmates, and enrichment.', path: '/species/betta-fish', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Carnivore Diet, Fin Types | Fish.com', description: 'Bettas are carnivores that need protein-rich pellets, not flake food. They need a heater — room temperature is too cold.', path: '/species/betta-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BettaFishPage() {
   return (

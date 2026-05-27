@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Megaesophagus in Dogs — Upright Feeding, Bailey Chair & Aspiration Prevention | Dog.com', description: 'Megaesophagus causes regurgitation and life-threatening aspiration pneumonia. The Bailey Chair and upright feeding for 10-30 minutes after meals are the critical management tools.', path: '/health/megaesophagus', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Megaesophagus in Dogs — Upright Feeding, Bailey Chair | Dog.com', description: 'Megaesophagus causes regurgitation and life-threatening aspiration pneumonia.', path: '/health/megaesophagus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Megaesophagus in Dogs', description: 'Canine megaesophagus — management, upright feeding, and aspiration prevention.', url: 'https://dog.com/health/megaesophagus', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

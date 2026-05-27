@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care. research-based.', path: '/health/dog-diarrhea', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care.', path: '/health/dog-diarrhea', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

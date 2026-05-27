@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia & Drool Reality | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended. The drool is real and significant.', path: '/breeds/saint-bernard', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended.', path: '/breeds/saint-bernard', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SaintBernardPage() {
   return (

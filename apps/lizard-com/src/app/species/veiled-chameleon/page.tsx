@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages, Drip Systems & Stress | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling. But healthy ones are spectacular.', path: '/species/veiled-chameleon', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling.', path: '/species/veiled-chameleon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide', description: 'Screen cage requirements, hydration, diet, and stress management for Chamaeleo calyptratus veiled chameleons.', url: 'https://lizard.com/species/veiled-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function VeiledChameleonPage() {
   return (

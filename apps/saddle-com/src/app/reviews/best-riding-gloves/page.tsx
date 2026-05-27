@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025 — Summer, Winter & Show Gloves Ranked | Saddle.com', description: 'Best equestrian riding gloves by season. Roeckl, SSG, and Shires ranked for grip, feel, and durability in summer, winter, and competition use.', path: '/reviews/best-riding-gloves', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025 — Summer, Winter | Saddle.com', description: 'Best equestrian riding gloves by season. Roeckl, SSG, and Shires ranked for grip, feel, and durability in summer, winter, and competition use.', path: '/reviews/best-riding-gloves', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025', description: 'Roeckl, SSG, and Shires riding gloves ranked for summer, winter, and competition.', url: 'https://saddle.com/reviews/best-riding-gloves', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const roecklSchema = buildProductSchema({ name: 'Roeckl Chester Riding Glove', description: 'Premium European leather and mesh summer riding glove — superior rein feel.', url: 'https://roeckl.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, roecklSchema)

@@ -5,8 +5,8 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Best Aquarium Filters 2025 — HOB, Canister & Sponge Filters Ranked | Fish.com',
-  description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options. Hang-on-back, canister, and sponge filters ranked.',
+  title: 'Best Aquarium Filters 2025 — HOB, Canister | Fish.com',
+  description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options.',
   path: '/reviews/best-aquarium-filters',
   type: 'article',
 })

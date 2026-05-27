@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet & Floppy Tail Syndrome | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching. Complete care guide.', path: '/species/crested-gecko', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching.', path: '/species/crested-gecko', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide', description: 'MRP diet, floppy tail prevention, and care for Correlophus ciliatus crested geckos.', url: 'https://lizard.com/species/crested-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CrestedGeckoPage() {
   return (

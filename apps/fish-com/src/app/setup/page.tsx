@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -47,7 +48,20 @@ export default function AquariumSetupPage() {
           { label: 'Betta Fish Care', href: '/species/betta-fish' },
         ]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-guide" />
-      </>}
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="aquarium-cycling-guide" href="/setup/aquarium-cycling-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Cycling Guide</Link>
+        <Link key="planted-tank-setup" href="/setup/planted-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Planted Tank Setup</Link>
+        <Link key="pond-guide" href="/setup/pond-guide" className="text-sm text-brand-primary no-underline hover:underline">Pond Guide</Link>
+        <Link key="quarantine-tank-guide" href="/setup/quarantine-tank-guide" className="text-sm text-brand-primary no-underline hover:underline">Quarantine Tank Guide</Link>
+        <Link key="saltwater-tank-setup" href="/setup/saltwater-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Saltwater Tank Setup</Link>
+        <Link key="water-chemistry-guide" href="/setup/water-chemistry-guide" className="text-sm text-brand-primary no-underline hover:underline">Water Chemistry Guide</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>}
     >
       <div className="carloOS-article">
         <h2 id="size">Step 1 — Choose the Right Tank Size</h2>

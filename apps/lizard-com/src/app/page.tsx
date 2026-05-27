@@ -5,8 +5,8 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Reptile Care, Science-First',
-  description: 'Science-based reptile care guides. Species profiles, UVB setup, enclosures, feeding, and health — written by experienced keepers.',
+  title: 'Reptile Care, Source-First',
+  description: 'Source-first reptile care reference. Species profiles, UVB setup, enclosures, feeding, and health — grounded in published husbandry research.',
   path: '/',
 })
 

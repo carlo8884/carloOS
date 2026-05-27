@@ -12,7 +12,7 @@ import { createServerClient } from '@carloOS/db'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements, and research-based health guides for every breed.',
+  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
 
@@ -143,6 +143,43 @@ export default async function BreedsPage() {
           </div>
         </div>
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Dog Breeds</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="akita" href="/breeds/akita" className="text-sm text-brand-primary no-underline hover:underline">Akita</Link>
+        <Link key="australian-shepherd" href="/breeds/australian-shepherd" className="text-sm text-brand-primary no-underline hover:underline">Australian Shepherd</Link>
+        <Link key="beagle" href="/breeds/beagle" className="text-sm text-brand-primary no-underline hover:underline">Beagle</Link>
+        <Link key="bernese-mountain-dog" href="/breeds/bernese-mountain-dog" className="text-sm text-brand-primary no-underline hover:underline">Bernese Mountain Dog</Link>
+        <Link key="border-collie" href="/breeds/border-collie" className="text-sm text-brand-primary no-underline hover:underline">Border Collie</Link>
+        <Link key="boxer" href="/breeds/boxer" className="text-sm text-brand-primary no-underline hover:underline">Boxer</Link>
+        <Link key="bulldog" href="/breeds/bulldog" className="text-sm text-brand-primary no-underline hover:underline">Bulldog</Link>
+        <Link key="bullmastiff" href="/breeds/bullmastiff" className="text-sm text-brand-primary no-underline hover:underline">Bullmastiff</Link>
+        <Link key="cavalier-king-charles" href="/breeds/cavalier-king-charles" className="text-sm text-brand-primary no-underline hover:underline">Cavalier King Charles</Link>
+        <Link key="cocker-spaniel" href="/breeds/cocker-spaniel" className="text-sm text-brand-primary no-underline hover:underline">Cocker Spaniel</Link>
+        <Link key="dachshund" href="/breeds/dachshund" className="text-sm text-brand-primary no-underline hover:underline">Dachshund</Link>
+        <Link key="doberman-pinscher" href="/breeds/doberman-pinscher" className="text-sm text-brand-primary no-underline hover:underline">Doberman Pinscher</Link>
+        <Link key="french-bulldog" href="/breeds/french-bulldog" className="text-sm text-brand-primary no-underline hover:underline">French Bulldog</Link>
+        <Link key="german-shepherd" href="/breeds/german-shepherd" className="text-sm text-brand-primary no-underline hover:underline">German Shepherd</Link>
+        <Link key="golden-doodle" href="/breeds/golden-doodle" className="text-sm text-brand-primary no-underline hover:underline">Golden Doodle</Link>
+        <Link key="golden-retriever" href="/breeds/golden-retriever" className="text-sm text-brand-primary no-underline hover:underline">Golden Retriever</Link>
+        <Link key="great-dane" href="/breeds/great-dane" className="text-sm text-brand-primary no-underline hover:underline">Great Dane</Link>
+        <Link key="great-pyrenees" href="/breeds/great-pyrenees" className="text-sm text-brand-primary no-underline hover:underline">Great Pyrenees</Link>
+        <Link key="irish-setter" href="/breeds/irish-setter" className="text-sm text-brand-primary no-underline hover:underline">Irish Setter</Link>
+        <Link key="irish-wolfhound" href="/breeds/irish-wolfhound" className="text-sm text-brand-primary no-underline hover:underline">Irish Wolfhound</Link>
+        <Link key="labrador-retriever" href="/breeds/labrador-retriever" className="text-sm text-brand-primary no-underline hover:underline">Labrador Retriever</Link>
+        <Link key="poodle" href="/breeds/poodle" className="text-sm text-brand-primary no-underline hover:underline">Poodle</Link>
+        <Link key="rottweiler" href="/breeds/rottweiler" className="text-sm text-brand-primary no-underline hover:underline">Rottweiler</Link>
+        <Link key="saint-bernard" href="/breeds/saint-bernard" className="text-sm text-brand-primary no-underline hover:underline">Saint Bernard</Link>
+        <Link key="shiba-inu" href="/breeds/shiba-inu" className="text-sm text-brand-primary no-underline hover:underline">Shiba Inu</Link>
+        <Link key="shih-tzu" href="/breeds/shih-tzu" className="text-sm text-brand-primary no-underline hover:underline">Shih Tzu</Link>
+        <Link key="siberian-husky" href="/breeds/siberian-husky" className="text-sm text-brand-primary no-underline hover:underline">Siberian Husky</Link>
+        <Link key="vizsla" href="/breeds/vizsla" className="text-sm text-brand-primary no-underline hover:underline">Vizsla</Link>
+        <Link key="weimaraner" href="/breeds/weimaraner" className="text-sm text-brand-primary no-underline hover:underline">Weimaraner</Link>
+        <Link key="yorkshire-terrier" href="/breeds/yorkshire-terrier" className="text-sm text-brand-primary no-underline hover:underline">Yorkshire Terrier</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

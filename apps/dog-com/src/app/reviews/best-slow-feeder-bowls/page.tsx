@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025 — Anti-Bloat & Puzzle Feeders | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate, and Kong ranked for puzzle feeding and meal enrichment.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://outwardhound.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, outwardSchema)

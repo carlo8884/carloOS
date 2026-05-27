@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Body Condition Scoring (BCS) — Henneke Scale Explained | Saddle.com', description: 'The Henneke 1-9 Body Condition Score assesses fat deposits in 6 locations. How to score your horse, what score is ideal, and when BCS indicates metabolic concern.', path: '/guides/horse-body-condition-scoring', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Body Condition Scoring — Henneke Scale Explained | Saddle.com', description: 'The Henneke 1-9 Body Condition Score assesses fat deposits in 6 locations. How to score your horse, what score is ideal.', path: '/guides/horse-body-condition-scoring', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Body Condition Scoring Guide', description: 'The Henneke 1-9 BCS scale — assessing horse body condition by fat deposits.', url: 'https://saddle.com/guides/horse-body-condition-scoring', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseBCSPage() {
   return (

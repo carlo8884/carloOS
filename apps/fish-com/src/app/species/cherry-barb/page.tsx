@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size & Planted Tanks | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred. Full care guide.', path: '/species/cherry-barb', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred.', path: '/species/cherry-barb', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryBarbPage() {
   return (

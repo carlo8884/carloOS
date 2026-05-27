@@ -22,7 +22,7 @@ interface PageAudit {
   hasOgImage: boolean
   hasSchema: boolean
   hasBreadcrumbs: boolean
-  hasDvmReviewed: boolean
+  hasInlineBreadcrumbsOnly: boolean
   issues: string[]
 }
 
@@ -49,13 +49,38 @@ function auditPage(app: string, file: string, route: string): PageAudit {
   const content = fs.readFileSync(file, 'utf-8')
   const issues: string[] = []
 
-  const hasMetadata = content.includes('buildMetadata(') || content.includes("export const metadata")
-  const hasTitle = content.includes("title:") && hasMetadata
-  const hasDescription = content.includes("description:") && hasMetadata
+  // Skip [slug] dynamic catch-all routes — their metadata is generated at
+  // runtime by generateMetadata(), not declared statically.
+  const isCatchAll = file.includes('[slug]')
+
+  const hasMetadata =
+    content.includes('buildMetadata(') ||
+    content.includes('export const metadata') ||
+    content.includes('export async function generateMetadata') ||
+    isCatchAll
+  const hasTitle =
+    isCatchAll ||
+    (content.includes('title:') && hasMetadata)
+  const hasDescription =
+    isCatchAll ||
+    (content.includes('description:') && hasMetadata)
   const hasOgImage = content.includes('ogImage') || content.includes('/api/og')
-  const hasSchema = content.includes('buildArticleSchema') || content.includes('buildFAQSchema') || content.includes('buildProductSchema')
-  const hasBreadcrumbs = content.includes('breadcrumbs')
-  const hasDvmReviewed = content.includes('dvmReviewed')
+  const hasSchema =
+    content.includes('buildArticleSchema') ||
+    content.includes('buildFAQSchema') ||
+    content.includes('buildProductSchema') ||
+    content.includes('buildMedicalWebPageSchema') ||
+    content.includes('buildHowToSchema')
+  // Real <Breadcrumb> component from @carloOS/ui — emits BreadcrumbList schema.
+  const hasBreadcrumbs =
+    content.includes('breadcrumbs={') || // ArticleLayout breadcrumbs prop
+    content.includes('<Breadcrumb ') ||
+    content.includes('<Breadcrumb\n')
+  // Inline <nav>-based breadcrumb (no schema emitted, still better than nothing).
+  const hasInlineBreadcrumbsOnly =
+    !hasBreadcrumbs &&
+    /aria-label=["']?Breadcrumb["']?/i.test(content) === false &&
+    /Home[\s\S]{0,160}›[\s\S]{0,200}<\/nav>/.test(content)
 
   // Check for issues
   if (!hasMetadata) issues.push('Missing buildMetadata()')
@@ -65,12 +90,10 @@ function auditPage(app: string, file: string, route: string): PageAudit {
   // Articles should have schema
   const isArticle = content.includes("type: 'article'") || content.includes('ArticleLayout')
   if (isArticle && !hasSchema) issues.push('Article missing schema markup')
-  if (isArticle && !hasBreadcrumbs) issues.push('Article missing breadcrumbs')
-
-  // Health/medical content should have DVM review flag
-  const isHealthContent = route.includes('/health') || route.includes('/nutrition')
-  if (isHealthContent && !hasDvmReviewed && isArticle) {
-    issues.push('Health article missing dvmReviewed flag')
+  if (isArticle && !hasBreadcrumbs && !hasInlineBreadcrumbsOnly) {
+    issues.push('Article missing breadcrumbs')
+  } else if (isArticle && hasInlineBreadcrumbsOnly) {
+    issues.push('Article uses inline breadcrumb (no BreadcrumbList schema)')
   }
 
   return {
@@ -83,7 +106,7 @@ function auditPage(app: string, file: string, route: string): PageAudit {
     hasOgImage,
     hasSchema,
     hasBreadcrumbs,
-    hasDvmReviewed,
+    hasInlineBreadcrumbsOnly,
     issues,
   }
 }

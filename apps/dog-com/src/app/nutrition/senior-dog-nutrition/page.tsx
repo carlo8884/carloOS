@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Senior Dog Nutrition — When to Switch & What to Look For | Dog.com', description: 'Senior dog nutrition guide. When to switch to senior food, what "senior" formulas actually do, protein requirements in old age, and supplements that help aging dogs.', path: '/nutrition/senior-dog-nutrition', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Senior Dog Nutrition — When to Switch | Dog.com', description: 'Senior dog nutrition guide. When to switch to senior food, what "senior" formulas actually do, protein requirements in old age.', path: '/nutrition/senior-dog-nutrition', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Senior Dog Nutrition Guide', description: 'When to switch, what senior formulas do, protein needs, and supplements for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Nutrition', description: 'Nutrition guidance for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

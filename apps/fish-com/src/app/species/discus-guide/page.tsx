@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Fish Care Guide — Daily Water Changes, 86°F & Disease Management | Fish.com', description: 'Discus are the most demanding freshwater fish. Require 82-86°F, daily water changes, and pristine water quality. Not for beginners. Spectacular for experienced fishkeepers.', path: '/species/discus', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Fish Care Guide — Daily Water Changes, 86°F | Fish.com', description: 'Discus are the most demanding freshwater fish. Require 82-86°F, daily water changes, and pristine water quality. Not for beginners.', path: '/species/discus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Fish Care Guide', description: 'Water change frequency, temperature, disease management, and care for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function DiscusGuidePage() {

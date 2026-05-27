@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
-  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting, and Pilbeam et al.) at standardised distances, not manufacturer claims. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
+  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
 })
@@ -55,6 +55,7 @@ export default function BestUVBBulbsPage() {
       </div>
 
       <QuickPicks items={PICKS} title="Jump to Review" />
+      <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best UVB Bulbs" }]} />
 
       <div className="relative z-10 px-container sm:px-container-sm py-12">
         <div className="grid lg:grid-cols-[1fr_260px] gap-12">

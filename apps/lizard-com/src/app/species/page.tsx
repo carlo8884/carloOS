@@ -86,6 +86,29 @@ export default function SpeciesIndexPage() {
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="species-index" />
       </div>
-    </>
+      {/* agent1-browse-all-start */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reptile Species</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="ball-python" href="/species/ball-python" className="text-sm text-brand-primary no-underline hover:underline">Ball Python</Link>
+        <Link key="ball-python-morphs" href="/species/ball-python-morphs" className="text-sm text-brand-primary no-underline hover:underline">Ball Python Morphs</Link>
+        <Link key="bearded-dragon" href="/species/bearded-dragon" className="text-sm text-brand-primary no-underline hover:underline">Bearded Dragon</Link>
+        <Link key="blue-tongued-skink" href="/species/blue-tongued-skink" className="text-sm text-brand-primary no-underline hover:underline">Blue Tongued Skink</Link>
+        <Link key="boa-constrictor" href="/species/boa-constrictor" className="text-sm text-brand-primary no-underline hover:underline">Boa Constrictor</Link>
+        <Link key="corn-snake" href="/species/corn-snake" className="text-sm text-brand-primary no-underline hover:underline">Corn Snake</Link>
+        <Link key="crested-gecko" href="/species/crested-gecko" className="text-sm text-brand-primary no-underline hover:underline">Crested Gecko</Link>
+        <Link key="day-gecko" href="/species/day-gecko" className="text-sm text-brand-primary no-underline hover:underline">Day Gecko</Link>
+        <Link key="frilled-dragon" href="/species/frilled-dragon" className="text-sm text-brand-primary no-underline hover:underline">Frilled Dragon</Link>
+        <Link key="leopard-gecko" href="/species/leopard-gecko" className="text-sm text-brand-primary no-underline hover:underline">Leopard Gecko</Link>
+        <Link key="panther-chameleon" href="/species/panther-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Panther Chameleon</Link>
+        <Link key="russian-tortoise" href="/species/russian-tortoise" className="text-sm text-brand-primary no-underline hover:underline">Russian Tortoise</Link>
+        <Link key="sulcata-tortoise" href="/species/sulcata-tortoise" className="text-sm text-brand-primary no-underline hover:underline">Sulcata Tortoise</Link>
+        <Link key="tokay-gecko" href="/species/tokay-gecko" className="text-sm text-brand-primary no-underline hover:underline">Tokay Gecko</Link>
+        <Link key="uromastyx" href="/species/uromastyx" className="text-sm text-brand-primary no-underline hover:underline">Uromastyx</Link>
+        <Link key="veiled-chameleon" href="/species/veiled-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Veiled Chameleon</Link>
+        </div>
+      </section>
+      {/* agent1-browse-all-end */}
+</>
   )
 }

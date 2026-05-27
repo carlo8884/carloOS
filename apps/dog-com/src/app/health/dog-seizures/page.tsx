@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Seizures in Dogs — Types, Causes, Phenobarbital & Emergency Protocol | Dog.com', description: 'Dog seizures: what to do during one, idiopathic epilepsy vs symptomatic causes, when to start medication, and the phenobarbital monitoring protocol.', path: '/health/dog-seizures', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Seizures in Dogs — Types, Causes, Phenobarbital | Dog.com', description: 'Dog seizures: what to do during one, idiopathic epilepsy vs symptomatic causes, when to start medication, and the phenobarbital monitoring protocol.', path: '/health/dog-seizures', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, emergency protocol, and anticonvulsant management for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency response, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)

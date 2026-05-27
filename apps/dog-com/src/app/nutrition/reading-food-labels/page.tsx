@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO & Guaranteed Analysis | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean, and what to ignore.', path: '/nutrition/reading-food-labels', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How to Read a Dog Food Label', description: 'Ingredient list, AAFCO statements, and guaranteed analysis decoded.', url: 'https://dog.com/nutrition/reading-food-labels', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ReadingFoodLabelsPage() {

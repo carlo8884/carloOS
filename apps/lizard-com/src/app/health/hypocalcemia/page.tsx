@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany & Emergency Calcium | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) causes tremors, tetanic muscle contractions, and seizures. Emergency calcium gluconate injection required. Related to but distinct from MBD.', path: '/health/hypocalcemia', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) causes tremors, tetanic muscle contractions, and seizures. Emergency calcium gluconate injection required.', path: '/health/hypocalcemia', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles', description: 'Emergency treatment and prevention of acute hypocalcemia in reptiles.', url: 'https://lizard.com/health/hypocalcemia', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HypocalcemiaPage() {
   return (

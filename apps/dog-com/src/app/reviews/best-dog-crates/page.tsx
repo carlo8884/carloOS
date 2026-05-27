@@ -5,8 +5,8 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Dog Crates 2025 — Wire, Plastic & Heavy Duty Ranked | Dog.com',
-  description: 'Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly. Wire, plastic airline-approved, heavy duty, and furniture-style crates ranked.',
+  title: 'Best Dog Crates 2025 — Wire, Plastic | Dog.com',
+  description: 'Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly.',
   path: '/reviews/best-dog-crates',
   type: 'article',
 })

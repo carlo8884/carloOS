@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality, Prey Drive & The "Shiba Scream" | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry, and why they need experienced owners.', path: '/breeds/shiba-inu', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry.', path: '/breeds/shiba-inu', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide', description: 'Temperament, prey drive, escape behavior, and care for Shiba Inus.', url: 'https://dog.com/breeds/shiba-inu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ShibaInuPage() {

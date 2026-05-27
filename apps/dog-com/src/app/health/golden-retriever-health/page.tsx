@@ -6,8 +6,8 @@ import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Golden Retriever Health Guide — Cancer, Hip Dysplasia & Lifespan | Dog.com',
-  description: 'Over 60% of Golden Retrievers develop cancer (Morris Animal Foundation lifetime study). Complete guide to hemangiosarcoma, lymphoma, hip dysplasia, SAS, and the preventive care schedule that gives Goldens the best chance at a full lifespan.',
+  title: 'Golden Retriever Health Guide — Cancer, Hip Dysplasia | Dog.com',
+  description: 'Over 60% of Golden Retrievers develop cancer (Morris Animal Foundation lifetime study). Complete guide to hemangiosarcoma, lymphoma, hip dysplasia, SAS.',
   path: '/health/golden-retriever-health',
   type: 'article',
   ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Vizsla Breed Guide — Velcro Dog, Epilepsy & Exercise Requirements | Dog.com', description: 'Vizslas are the "velcro dog" — they attach themselves to their people and cannot be left alone for long. High exercise needs, epilepsy predisposition, and the "Vizsla tax" on attention.', path: '/breeds/vizsla', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Vizsla Breed Guide — Velcro Dog, Epilepsy | Dog.com', description: 'Vizslas are the "velcro dog" — they attach themselves to their people and cannot be left alone for long. High exercise needs, epilepsy predisposition.', path: '/breeds/vizsla', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Vizsla Breed Guide', description: 'Separation anxiety, epilepsy, exercise requirements, and care for Vizslas.', url: 'https://dog.com/breeds/vizsla', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function VizslaPage() {
   return (

@@ -4,7 +4,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Positive Reinforcement Dog Training — How It Works & Why Science Backs It | Dog.com',
+  title: 'Positive Reinforcement Dog Training — How It Works | Dog.com',
   description: 'How positive reinforcement training works, why it outperforms punishment-based methods, how to use markers and rewards effectively, and the science behind it.',
   path: '/training/positive-reinforcement',
   category: 'Training Fundamentals',

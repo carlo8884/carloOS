@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Clownfish Care Guide — Saltwater Tank Requirements & Anemone | Fish.com', description: 'Complete clownfish care guide. Saltwater tank requirements, FOWLR vs reef setup, whether they need anemones (no), tankmates, and feeding for Amphiprioninae.', path: '/species/clownfish', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Clownfish Care Guide — Saltwater Tank Requirements | Fish.com', description: 'Complete clownfish care guide. Saltwater tank requirements, FOWLR vs reef setup, whether they need anemones (no), tankmates, and feeding for Amphiprioninae.', path: '/species/clownfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Clownfish Care Guide', description: 'Saltwater setup, anemone question, tankmates, and feeding for clownfish.', url: 'https://fish.com/species/clownfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ClownfishPage() {

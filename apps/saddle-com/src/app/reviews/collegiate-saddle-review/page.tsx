@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Collegiate Saddle Review 2025 — Best Budget English Saddles | Saddle.com',
-  description: 'Collegiate Convertible AP, Diploma, and Apprentice reviewed. The best budget English saddles for recreational riders and beginners — what you get and what you give up.',
+  title: 'Collegiate Saddle Review 2025 — Budget English Saddles | Saddle.com',
+  description: 'Collegiate Convertible AP, Diploma, and Apprentice reviewed. The best budget English saddles for recreational riders and beginners',
   path: '/reviews/collegiate-saddle-review',
   type: 'article',
 })
@@ -45,6 +45,7 @@ export default function CollegiateReviewPage() {
       </div>
 
       <QuickPicks items={PICKS} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Collegiate Saddle" }]} />
 
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">

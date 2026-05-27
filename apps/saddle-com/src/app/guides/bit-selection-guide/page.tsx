@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Bit Selection Guide — Snaffle, Pelham & Double Bridle Explained | Saddle.com', description: 'How to choose the right bit. Snaffle vs curb action, mouthpiece thickness, ring type, and when to consult an equine dentist before changing bits.', path: '/guides/bit-selection-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Bit Selection Guide — Snaffle, Pelham | Saddle.com', description: 'How to choose the right bit. Snaffle vs curb action, mouthpiece thickness, ring type, and when to consult an equine dentist before changing bits.', path: '/guides/bit-selection-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Bit Selection Guide', description: 'Snaffle, pelham, and double bridle bit selection for English riding.', url: 'https://saddle.com/guides/bit-selection-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BitSelectionGuidePage() {
   return (

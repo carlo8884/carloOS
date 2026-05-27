@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works & What Doesn\'t | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works — and why "no pain no gain" and alpha rolls make it worse, not better.', path: '/training/puppy-biting', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works', path: '/training/puppy-biting', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition', description: 'Normal vs concerning biting, bite inhibition protocol, and what doesn\'t work.', url: 'https://dog.com/training/puppy-biting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function PuppyBitingPage() {

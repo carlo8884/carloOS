@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Beagle Dog Breed Guide — Health, Training & Care | Dog.com', description: 'Complete Beagle guide. Nose-driven escape artists with specific health concerns — epilepsy, hypothyroidism, and obesity. Training and care from breeders and vets.', path: '/breeds/beagle', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Beagle Dog Breed Guide — Health, Training & Care | Dog.com', description: 'Complete Beagle guide. Nose-driven escape artists with specific health concerns — epilepsy, hypothyroidism, and obesity.', path: '/breeds/beagle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BeaglePage() {

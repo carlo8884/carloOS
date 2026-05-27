@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ich Treatment Guide — White Spots, Heat Method & Ich-X | Fish.com', description: 'Ich (white spot disease) is the most common fish disease. The heat method, salt treatment, and chemical treatments explained. Why treatment must continue 10-14 days minimum.', path: '/health/ich-treatment', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ich Treatment Guide — White Spots, Heat Method & Ich-X | Fish.com', description: 'Ich (white spot disease) is the most common fish disease. The heat method, salt treatment, and chemical treatments explained.', path: '/health/ich-treatment', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Guide', description: 'Heat method, salt, and chemical treatment for Ichthyophthirius multifiliis (ich) in aquarium fish.', url: 'https://fish.com/health/ich-treatment', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function IchTreatmentPage() {
   return (

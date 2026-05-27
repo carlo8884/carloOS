@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'English Riding Guide — Disciplines, Equipment & Position Basics | Saddle.com', description: 'Introduction to English riding. Disciplines compared (dressage, hunter/jumper, eventing), essential equipment, and the fundamental position elements all English riders need.', path: '/guides/english-riding-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'English Riding Guide — Disciplines, Equipment | Saddle.com', description: 'Introduction to English riding. Disciplines compared (dressage, hunter/jumper, eventing), essential equipment.', path: '/guides/english-riding-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'English Riding Guide', description: 'English riding disciplines, equipment, and position fundamentals.', url: 'https://saddle.com/guides/english-riding-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EnglishRidingGuidePage() {
   return (

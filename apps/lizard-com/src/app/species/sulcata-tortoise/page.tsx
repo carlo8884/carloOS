@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs, Outdoor Living & Rehoming Crisis | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed. What you need to know.', path: '/species/sulcata-tortoise', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed.', path: '/species/sulcata-tortoise', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide', description: 'Adult size reality, outdoor enclosure requirements, and long-term commitment for Centrochelys sulcata.', url: 'https://lizard.com/species/sulcata-tortoise', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function SulcataTortoisePage() {

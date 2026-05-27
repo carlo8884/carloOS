@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics & Exo Terra Ranked',
-  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass, and wood enclosures ranked for different species and budgets.',
+  title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics',
+  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
 })
@@ -48,6 +48,7 @@ export default function BestTerrariumsPage() {
       </div>
 
       <QuickPicks items={PICKS} />
+      <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best Reptile Terrariums" }]} />
 
       {/* Methodology */}
       <div className="relative z-10 px-container sm:px-container-sm py-5"

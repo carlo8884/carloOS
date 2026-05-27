@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Saddle Seat Size Guide — Find Your Correct Size | Saddle.com',
-  description: 'Seat size is measured from seat bone width — not height or weight. The correct measurement method, plus how discipline and personal preference affect the choice.',
+  description: 'Seat size is measured from seat bone width — not height or weight.',
   path: '/guides/seat-size-guide',
   type: 'article',
 })

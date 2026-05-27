@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia) — Signs, Causes & Emergency Care | Lizard.com', description: 'Egg binding (dystocia) is a life-threatening emergency in female reptiles. Signs, causes, and why this requires immediate veterinary care — not home treatment.', path: '/health/egg-binding', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia) — Signs, Causes | Lizard.com', description: 'Egg binding (dystocia) is a life-threatening emergency in female reptiles. Signs, causes, and why this requires immediate veterinary care — not home treatment.', path: '/health/egg-binding', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia)', description: 'Signs, causes, and emergency treatment for egg binding in reptiles.', url: 'https://lizard.com/health/egg-binding', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EggBindingPage() {
   return (

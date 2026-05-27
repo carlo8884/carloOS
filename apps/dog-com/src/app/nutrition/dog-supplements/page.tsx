@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Supplements — What Works, What\'s Overhyped, What to Avoid | Dog.com', description: 'Evidence-graded guide to dog supplements. Fish oil, joint supplements, probiotics, and more — what the research actually shows and what\'s pure marketing.', path: '/nutrition/dog-supplements', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Supplements — What Works, What\'s Overhyped | Dog.com', description: 'Evidence-graded guide to dog supplements. Fish oil, joint supplements, probiotics, and more — what the research actually shows and what\'s pure marketing.', path: '/nutrition/dog-supplements', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Supplements — What the Evidence Shows', description: 'Evidence-graded dog supplement guide: fish oil, joint supplements, probiotics.', url: 'https://dog.com/nutrition/dog-supplements', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const SUPPLEMENTS = [

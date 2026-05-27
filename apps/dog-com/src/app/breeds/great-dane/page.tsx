@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM & 7-Year Lifespan | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended. Complete health guide.', path: '/breeds/great-dane', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Dane Breed Guide', description: 'GDV/bloat prevention, DCM cardiac disease, and nutrition for Great Danes.', url: 'https://dog.com/breeds/great-dane', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GreatDanePage() {

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best Reptile Thermometers & Hygrometers 2025 — Tested for Accuracy | Lizard.com',
-  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers. Govee, Inkbird, and Zoo Med ranked by actual accuracy — not manufacturer specs.',
+  title: 'Best Reptile Thermometers | Lizard.com',
+  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers. Govee, Inkbird, and Zoo Med ranked by actual accuracy',
   path: '/reviews/best-thermometers-hygrometers',
   type: 'article',
 })
@@ -43,6 +43,7 @@ export default function BestThermometersPage() {
       </div>
 
       <QuickPicks items={PICKS} />
+      <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best Thermometers & Hygrometers" }]} />
 
       <div className="relative z-10 px-container sm:px-container-sm py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
