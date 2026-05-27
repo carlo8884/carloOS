@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Reptile Feeding Guide — Prey Size, Frequency | Lizard.com',
-  description: 'Complete reptile feeding guide.',
+  description: 'Complete reptile feeding guide. Prey size charts by reptile size, feeding frequency by species, gut-loading protocols.',
   path: '/health/reptile-feeding-guide',
   type: 'article',
 })

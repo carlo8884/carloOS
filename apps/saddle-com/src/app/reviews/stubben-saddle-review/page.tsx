@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Stubben Saddle Review 2025 — Roxane, Portos | Saddle.com',
-  description: 'Complete Stubben saddle review.',
+  description: 'Complete Stubben saddle review. Roxane, Portos, and Aramis compared using CSF reviewer notes and rider reports',
   path: '/reviews/stubben-saddle-review',
   type: 'article',
 })

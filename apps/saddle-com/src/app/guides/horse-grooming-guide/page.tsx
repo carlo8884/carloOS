@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Grooming Guide — Tools, Sequence | Saddle.com', description: 'Complete horse grooming guide.', path: '/guides/horse-grooming-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Grooming Guide — Tools, Sequence | Saddle.com', description: 'Complete horse grooming guide. The correct grooming sequence, essential tools, how to identify skin problems during grooming.', path: '/guides/horse-grooming-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Grooming Guide', description: 'Grooming sequence, tools, and pre-ride routine for horses.', url: 'https://saddle.com/guides/horse-grooming-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Groom a Horse', description: 'Step-by-step horse grooming routine for pre-ride preparation.', url: 'https://saddle.com/guides/horse-grooming-guide', totalTime: 'PT30M', steps: [
   { name: 'Secure the horse', text: 'Cross-tie or tie to a secure hitching post. Work in a safe area where the horse is accustomed to being groomed.' },

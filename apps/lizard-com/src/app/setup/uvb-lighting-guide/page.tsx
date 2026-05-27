@@ -6,7 +6,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'UVB Lighting Guide for Reptiles — Ferguson Zones | Lizard.com',
-  description: 'Complete UVB lighting guide for reptiles.',
+  description: 'Complete UVB lighting guide for reptiles. Ferguson Zones explained, T5 HO vs compact bulbs, correct distances, bulb replacement schedule.',
   path: '/setup/uvb-lighting-guide',
   type: 'article',
 })

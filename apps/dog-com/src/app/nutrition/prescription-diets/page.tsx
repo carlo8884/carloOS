@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Prescription Dog Food Explained — Kidney, Liver | Dog.com', description: 'When prescription diet food matters and what each type does.', path: '/nutrition/prescription-diets', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Prescription Dog Food Explained — Kidney, Liver | Dog.com', description: 'When prescription diet food matters and what each type does. Kidney disease, liver disease, urinary health, weight management, allergies.', path: '/nutrition/prescription-diets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Prescription Dog Food Explained', description: 'Kidney, liver, urinary, and weight management prescription diets explained.', url: 'https://dog.com/nutrition/prescription-diets', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const DIETS = [

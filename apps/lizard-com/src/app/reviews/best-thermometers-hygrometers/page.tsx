@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best Reptile Thermometers | Lizard.com',
-  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers.',
+  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers. Govee, Inkbird, and Zoo Med ranked by actual accuracy',
   path: '/reviews/best-thermometers-hygrometers',
   type: 'article',
 })

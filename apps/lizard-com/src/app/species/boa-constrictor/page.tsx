@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide — Size Reality | Lizard.com', description: 'Boa constrictors reach 6-10 feet — not the beginner snake they\'re sometimes sold as.', path: '/species/boa-constrictor', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide — Size Reality | Lizard.com', description: 'Boa constrictors reach 6-10 feet — not the beginner snake they\'re sometimes sold as. Common boa (BCI) vs Colombian (BCC) differences, locality color variants.', path: '/species/boa-constrictor', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide', description: 'Size expectations, BCI vs BCC subspecies, locality colors, and adult enclosure requirements for boa constrictors.', url: 'https://lizard.com/species/boa-constrictor', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BoaPage() {
   return (

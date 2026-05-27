@@ -6,7 +6,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Labrador Retriever Health Guide — Obesity | Dog.com',
-  description: 'A genetic mutation makes Labs unable to feel full.',
+  description: 'A genetic mutation makes Labs unable to feel full. Complete guide to obesity, hip and elbow dysplasia, exercise-induced collapse, PRA.',
   path: '/health/labrador-health',
   type: 'article',
 })

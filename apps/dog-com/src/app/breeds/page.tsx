@@ -12,7 +12,7 @@ import { createServerClient } from '@carloOS/db'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds.',
+  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
 

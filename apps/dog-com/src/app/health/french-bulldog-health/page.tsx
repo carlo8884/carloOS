@@ -6,7 +6,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'French Bulldog Health Guide — BOAS, IVDD | Dog.com',
-  description: 'French Bulldogs are one of the most medically complex breeds.',
+  description: 'French Bulldogs are one of the most medically complex breeds. Complete guide to BOAS surgery, IVDD spine disease, heat danger, skin fold infections.',
   path: '/health/french-bulldog-health',
   type: 'article',
 })

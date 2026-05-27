@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Grain-Free Dog Food | Dog.com',
-  description: 'The FDA investigated a link between grain-free diets and dilated cardiomyopathy (DCM) in dogs.',
+  description: 'The FDA investigated a link between grain-free diets and dilated cardiomyopathy (DCM) in dogs. This guide explains what the data shows.',
   path: '/nutrition/grain-free-dcm-risk',
   category: 'Nutrition Science',
   type: 'article',

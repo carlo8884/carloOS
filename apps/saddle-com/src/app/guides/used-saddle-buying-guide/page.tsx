@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Buying a Used Saddle — Complete Inspection Checklist | Saddle.com',
-  description: 'A reference guide to buying a used saddle, drawing on Society of Master Saddlers inspection material.',
+  description: 'A reference guide to buying a used saddle, drawing on Society of Master Saddlers inspection material. Tree integrity test, billet inspection, panel assessment.',
   path: '/guides/used-saddle-buying-guide',
   type: 'article',
 })

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025 — Pulse, Dimming | Lizard.com', description: 'Every heat source needs a thermostat.', path: '/reviews/best-thermostats', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025 — Pulse, Dimming | Lizard.com', description: 'Every heat source needs a thermostat. Pulse proportional, dimming, and on-off thermostats ranked for reptile enclosures — Herpstat, Inkbird.', path: '/reviews/best-thermostats', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025', description: 'Pulse, dimming, and on-off reptile thermostats ranked.', url: 'https://lizard.com/reviews/best-thermostats', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const herpstatSchema = buildProductSchema({ name: 'Spyder Robotics Herpstat 1', description: 'Pulse proportional reptile thermostat — most accurate thermoregulation for heat mats and radiant heat panels.', url: 'https://spyderrobotics.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const inkbirdSchema = buildProductSchema({ name: 'Inkbird ITC-306A Thermostat', description: 'Budget-friendly on-off reptile thermostat with probe — reliable for lower-wattage heat sources.', url: 'https://inkbird.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })

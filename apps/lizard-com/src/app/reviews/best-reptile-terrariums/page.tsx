@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics',
-  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality.',
+  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
 })

@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Leather Saddle Care Guide — Cleaning, Conditioning & Storage',
-  description: 'A complete reference guide to leather saddle care.',
+  description: 'A complete reference guide to leather saddle care. The correct cleaning sequence, which products work and which destroy leather, conditioning frequency.',
   path: '/guides/leather-care-guide',
   type: 'article',
 })

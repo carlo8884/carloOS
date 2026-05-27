@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Velvet Disease in Fish — Gold Dust Appearance | Fish.com', description: 'Velvet (Oodinium) is a parasite that looks like gold dust on the fish surface. Highly contagious.', path: '/health/velvet-disease', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Velvet Disease in Fish — Gold Dust Appearance | Fish.com', description: 'Velvet (Oodinium) is a parasite that looks like gold dust on the fish surface. Highly contagious. Treat with copper or chloroquine phosphate', path: '/health/velvet-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Velvet Disease in Fish', description: 'Gold dust appearance, diagnosis, and copper treatment for Oodinium velvet disease.', url: 'https://fish.com/health/velvet-disease', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function VelvetDiseasePage() {
   return (

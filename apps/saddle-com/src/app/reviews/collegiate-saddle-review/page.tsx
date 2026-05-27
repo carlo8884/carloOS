@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Collegiate Saddle Review 2025 — Best Budget English Saddles | Saddle.com',
-  description: 'Collegiate Convertible AP, Diploma, and Apprentice reviewed.',
+  description: 'Collegiate Convertible AP, Diploma, and Apprentice reviewed. The best budget English saddles for recreational riders and beginners',
   path: '/reviews/collegiate-saddle-review',
   type: 'article',
 })

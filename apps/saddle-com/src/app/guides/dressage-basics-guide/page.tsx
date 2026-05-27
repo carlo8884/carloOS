@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Dressage Basics Guide — Training Scale, Tests | Saddle.com', description: 'Introduction to dressage.', path: '/guides/dressage-basics-guide', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Dressage Basics Guide — Training Scale, Tests | Saddle.com', description: 'Introduction to dressage. The Training Scale (Rhythm, Relaxation, Contact, Impulsion, Straightness, Collection), how dressage tests work.', path: '/guides/dressage-basics-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Dressage Basics Guide', description: 'Training scale, competition tests, and equipment for beginning dressage riders.', url: 'https://saddle.com/guides/dressage-basics-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DressageBasicsGuidePage() {
   return (

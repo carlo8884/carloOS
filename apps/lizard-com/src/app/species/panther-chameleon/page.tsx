@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide — Locale Colors | Lizard.com', description: 'Panther chameleons display stunning locale-specific colors. Arboreal, solitary, and stress-sensitive.', path: '/species/panther-chameleon', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide — Locale Colors | Lizard.com', description: 'Panther chameleons display stunning locale-specific colors. Arboreal, solitary, and stress-sensitive. Drip system required, no handling except necessity.', path: '/species/panther-chameleon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide', description: 'Locale color varieties, drip watering, and stress management for Furcifer pardalis panther chameleons.', url: 'https://lizard.com/species/panther-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PantherChameleonPage() {
   return (

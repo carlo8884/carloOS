@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Joint Supplements for Dogs 2025 — Cosequin | Dog.com',
-  description: 'Evidence-graded joint supplements for dogs.',
+  description: 'Evidence-graded joint supplements for dogs. Dasuquin, Cosequin DS, fish oil, and CBD ranked by the research',
   path: '/reviews/best-joint-supplements',
   category: 'Health Reviews',
   type: 'article',

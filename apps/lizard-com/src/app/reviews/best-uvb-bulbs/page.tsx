@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
-  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g.',
+  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
 })

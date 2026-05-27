@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Corydoras Care Guide — Species, Sand Substrate | Fish.com', description: 'Corydoras are the most popular bottom dwellers. Groups of 6+ same species required. Sand substrate essential.', path: '/species/corydoras', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Corydoras Care Guide — Species, Sand Substrate | Fish.com', description: 'Corydoras are the most popular bottom dwellers. Groups of 6+ same species required. Sand substrate essential. 150+ species compared — sterbai, panda, pygmy.', path: '/species/corydoras', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Corydoras Catfish Care Guide', description: 'Species overview, sand requirements, and group care for corydoras catfish.', url: 'https://fish.com/species/corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CorydorasPage() {
   return (

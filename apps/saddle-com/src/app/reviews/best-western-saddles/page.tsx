@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Best Western Saddles 2025 — Reining, Cutting | Saddle.com',
-  description: 'Best western saddles by discipline.',
+  description: 'Best western saddles by discipline. Circle Y, Billy Cook, and Martin Saddlery ranked for reining, cutting, barrel racing.',
   path: '/reviews/best-western-saddles',
   type: 'article',
 })

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Saddle Reviews 2025 — Compared & Ranked | Saddle.com', description: 'Saddle reviews drawing on CSF reviewer notes and published rider reports.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Saddle Reviews 2025 — Compared & Ranked | Saddle.com', description: 'Saddle reviews drawing on CSF reviewer notes and published rider reports. English, western.', path: '/reviews' })
 
 const REVIEWS = [
   { title: 'Best English Saddles 2025', desc: 'Stubben, Pessoa, Bates, Collegiate — dressage, jumping, AP ranked', href: '/reviews/best-english-saddles', badge: '🏆 Full Review' },
