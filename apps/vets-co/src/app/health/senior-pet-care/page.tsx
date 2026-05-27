@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening & Quality of Life | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+, and how to assess and maintain quality of life in aging dogs.', path: '/health/senior-pet-care', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function SeniorPetCarePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Senior Dog Care', subtitle: 'A dog is considered senior at 7 years for most breeds — earlier for giants (5–6 years), later for small breeds (9–10 years). Senior dogs have more to gain from regular veterinary care, not less. The goal is maximum quality of life for maximum time.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Senior Dog Care', subtitle: 'A dog is considered senior at 7 years for most breeds — earlier for giants (5–6 years), later for small breeds (9–10 years). Senior dogs have more to gain from regular veterinary care, not less. The goal is maximum quality of life for maximum time.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Senior Pet Care', href: '/health/senior-pet-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function SeniorPetCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-senior-care" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-senior-care" />
         </>}
       >
         <div className="carloOS-article">
@@ -45,7 +45,7 @@ export default function SeniorPetCarePage() {
           <p>Hypertension (high blood pressure) occurs in senior dogs — commonly secondary to kidney disease, hypothyroidism, Cushing's disease, or cardiac disease. Hypertension causes retinal detachment and blindness, progresses kidney disease, and affects cardiac function. It is detected only by measurement and is easily treated once identified. Blood pressure should be measured at every senior wellness visit using a Doppler or oscillometric device. A normal canine blood pressure is under 160 mmHg systolic.</p>
 
           <h2>Cognitive Dysfunction Syndrome</h2>
-          <p>Cognitive dysfunction syndrome (CDS) — the canine equivalent of dementia — affects approximately 22% of dogs 9–11 years and over 60% of dogs 15+ years. Signs: disorientation (getting stuck in corners, losing their way in familiar places), altered sleep-wake cycles (sleeping during day, awake and vocal at night), house soiling (forgetting trained behaviors), reduced interest in interaction, staring at walls.</p>
+          <p>Cognitive dysfunction syndrome (CDS) — the canine equivalent of dementia — affects approximately 22% of dogs 9–11 years and over 60% of dogs 15+ years (Madari et al., Appl Anim Behav Sci). Signs: disorientation (getting stuck in corners, losing their way in familiar places), altered sleep-wake cycles (sleeping during day, awake and vocal at night), house soiling (forgetting trained behaviors), reduced interest in interaction, staring at walls.</p>
           <p>The DISHAA scale (Disorientation, Interactions, Sleep/wake, Housetraining, Activity, Anxiety) standardizes CDS assessment. CDS is underdiagnosed — owners frequently attribute signs to "just getting old." While there is no cure, management helps: Purina Pro Plan Bright Mind (has clinical evidence), Anipryl (selegiline — FDA approved for CDS), environmental enrichment, regular exercise maintaining cognitive engagement, and Apoaequorin (Neutricks) which has some supporting evidence.</p>
 
           <h2>Quality of Life Assessment</h2>

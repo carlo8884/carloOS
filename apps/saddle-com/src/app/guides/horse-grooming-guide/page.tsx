@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Grooming Guide — Tools, Sequence & Pre-Ride Routine | Saddle.com', description: 'Complete horse grooming guide. The correct grooming sequence, essential tools, how to identify skin problems during grooming, and the pre-ride check that prevents tack accidents.', path: '/guides/horse-grooming-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Grooming Guide', description: 'Grooming sequence, tools, and pre-ride routine for horses.', url: 'https://saddle.com/guides/horse-grooming-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Grooming Guide', description: 'Grooming sequence, tools, and pre-ride routine for horses.', url: 'https://saddle.com/guides/horse-grooming-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Groom a Horse', description: 'Step-by-step horse grooming routine for pre-ride preparation.', url: 'https://saddle.com/guides/horse-grooming-guide', totalTime: 'PT30M', steps: [
   { name: 'Secure the horse', text: 'Cross-tie or tie to a secure hitching post. Work in a safe area where the horse is accustomed to being groomed.' },
   { name: 'Curry comb', text: 'Use a rubber curry comb in circular motions to loosen mud, dried sweat, and dead hair. Work from neck to hindquarters on both sides. Avoid bony areas (legs, face, spine). This step does most of the actual cleaning.' },
@@ -19,7 +19,7 @@ export default function HorseGroomingGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="saddle-com"
-        hero={{ title: 'Horse Grooming Guide', subtitle: 'Grooming is not cosmetic — it is the daily health inspection that keeps your horse safe to ride and allows you to detect developing problems before they become serious. A horse groomed correctly before riding is a horse whose tack area has been checked, whose feet have been picked, and whose skin has been assessed. This takes 20–30 minutes. Skipping it creates real risk.', category: 'Horse Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
+        hero={{ title: 'Horse Grooming Guide', subtitle: 'Grooming is not cosmetic — it is the daily health inspection that keeps your horse safe to ride and allows you to detect developing problems before they become serious. A horse groomed correctly before riding is a horse whose tack area has been checked, whose feet have been picked, and whose skin has been assessed. This takes 20–30 minutes. Skipping it creates real risk.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Grooming', href: '/guides/horse-grooming-guide' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

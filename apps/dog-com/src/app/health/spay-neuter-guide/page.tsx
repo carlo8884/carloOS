@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog — Timing by Breed & Size | Dog.com', description: 'The science on spay/neuter timing has changed. Large breeds benefit from waiting until 12-24 months. DVM guide to timing, benefits, risks, and what the research shows.', path: '/health/spay-neuter-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog', description: 'Updated spay/neuter timing guidance by breed size — what the research shows.', url: 'https://dog.com/health/spay-neuter-guide', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const medSchema = buildMedicalWebPageSchema({ name: 'When to Spay or Neuter Your Dog', description: 'Spay/neuter timing by breed and size.', url: 'https://dog.com/health/spay-neuter-guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog — Timing by Breed & Size | Dog.com', description: 'The science on spay/neuter timing has changed. Large breeds benefit from waiting until 12-24 months. Reference guide to timing, benefits, risks, and what the research shows.', path: '/health/spay-neuter-guide', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'When to Spay or Neuter Your Dog', description: 'Updated spay/neuter timing guidance by breed size — what the research shows.', url: 'https://dog.com/health/spay-neuter-guide', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const medSchema = buildMedicalWebPageSchema({ name: 'When to Spay or Neuter Your Dog', description: 'Spay/neuter timing by breed and size.', url: 'https://dog.com/health/spay-neuter-guide', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, medSchema)
 
 const FAQS = [
@@ -18,7 +18,7 @@ export default function SpayNeuterGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'When to Spay or Neuter Your Dog', subtitle: 'The standard advice of spay/neuter at 6 months is being revised by research. For large and giant breeds especially, the timing has meaningful health implications. Here\'s what the current evidence shows.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'When to Spay or Neuter Your Dog', subtitle: 'The standard advice of spay/neuter at 6 months is being revised by research. For large and giant breeds especially, the timing has meaningful health implications. Here\'s what the current evidence shows.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Spay/Neuter Guide', href: '/health/spay-neuter-guide' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -31,7 +31,7 @@ export default function SpayNeuterGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever Health', href: '/health/golden-retriever-health' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-spay-neuter" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
         </>}
       >
         <div className="carloOS-article">

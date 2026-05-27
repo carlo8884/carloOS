@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care — Galaxy Rasbora, Groups & Breeding | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required. Complete care guide.', path: '/species/celestial-pearl-danio', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CPDPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Celestial Pearl Danio', href: '/species/celestial-pearl-danio' }]}
       schema={schema}
       sidebar={<>

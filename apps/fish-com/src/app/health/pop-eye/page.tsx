@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pop-Eye in Fish — Exophthalmia Causes, Kanaplex Treatment | Fish.com', description: 'Pop-eye (exophthalmia) is fluid accumulation behind the eye causing it to bulge outward. Bacterial infection treated with Kanaplex. Unilateral vs bilateral indicates different severity.', path: '/health/pop-eye', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pop-Eye in Fish (Exophthalmia)', description: 'Causes, unilateral vs bilateral presentation, and Kanaplex treatment for pop-eye in fish.', url: 'https://fish.com/health/pop-eye', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pop-Eye in Fish (Exophthalmia)', description: 'Causes, unilateral vs bilateral presentation, and Kanaplex treatment for pop-eye in fish.', url: 'https://fish.com/health/pop-eye', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PopEyePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Pop-Eye in Fish', subtitle: 'Pop-eye (exophthalmia) is exactly what it sounds like — one or both eyes bulging outward from the normal position. The bulging is caused by fluid accumulation in the tissue behind the eye. Most cases are bacterial and treatable; some are signs of systemic disease with a more guarded prognosis.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Pop-Eye', href: '/health/pop-eye' }]}
       schema={schema}
       sidebar={<>

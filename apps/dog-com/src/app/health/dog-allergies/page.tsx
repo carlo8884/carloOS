@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Environmental, Food & Flea Types Explained | Dog.com', description: 'Dog allergies have three types: environmental (atopy), food, and flea allergy dermatitis. Each presents differently and is treated differently. DVM guide to diagnosis and management.', path: '/health/dog-allergies', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergy dermatitis in dogs — diagnosis and management.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const medSchema = buildMedicalWebPageSchema({ name: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergies in dogs.', url: 'https://dog.com/health/dog-allergies', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Environmental, Food & Flea Types Explained | Dog.com', description: 'Dog allergies have three types: environmental (atopy), food, and flea allergy dermatitis. Each presents differently and is treated differently. Reference guide to diagnosis and management.', path: '/health/dog-allergies', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergy dermatitis in dogs — diagnosis and management.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const medSchema = buildMedicalWebPageSchema({ name: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergies in dogs.', url: 'https://dog.com/health/dog-allergies', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, medSchema)
 
 const FAQS = [
@@ -18,12 +18,12 @@ export default function DogAllergiesPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Allergies — Types, Diagnosis & Treatment', subtitle: 'Allergies are among the most common chronic conditions in dogs — and among the most frequently mismanaged. The three types have different causes, different presentations, and require different treatments. Getting the diagnosis right is the first step.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Allergies — Types, Diagnosis & Treatment', subtitle: 'Allergies are among the most common chronic conditions in dogs — and among the most frequently mismanaged. The three types have different causes, different presentations, and require different treatments. Getting the diagnosis right is the first step.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Allergies', href: '/health/dog-allergies' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Environmental Allergies (Atopy)', href: '#atopy' }, { label: 'Food Allergies', href: '#food' }, { label: 'Flea Allergy Dermatitis', href: '#fad' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related" links={[{ label: 'Best Flea Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-allergies" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-allergies" />
         </>}
       >
         <div className="carloOS-article">

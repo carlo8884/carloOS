@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Trainer Credentials — CPDT-KA, CBCC-KA & What They Mean | Dog.com', description: 'How to evaluate a dog trainer\'s qualifications. CPDT-KA, CBCC-KA, CAAB, DACVB — what each credential means, what it requires, and red flags to avoid.', path: '/training/trainer-credentials', category: 'Finding a Trainer', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Trainer Credentials Explained', description: 'CPDT-KA, CBCC-KA, CAAB, DACVB — what each means and how to choose.', url: 'https://dog.com/training/trainer-credentials', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Trainer Credentials Explained', description: 'CPDT-KA, CBCC-KA, CAAB, DACVB — what each means and how to choose.', url: 'https://dog.com/training/trainer-credentials', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const CREDENTIALS = [
   { acronym: 'CPDT-KA', full: 'Certified Professional Dog Trainer — Knowledge Assessed', issuer: 'Certification Council for Professional Dog Trainers (CCPDT)', requirements: '300 hours of documented training experience, passing a written exam, veterinary reference required. Renewal every 3 years with continuing education.', what_it_means: 'The baseline professional credential for general obedience training. Knowledge-assessed (written exam) rather than skills-assessed — demonstrates knowledge of learning theory and training techniques.', best_for: 'General obedience, puppy training, basic to intermediate behavior issues.' },
@@ -26,7 +26,7 @@ export default function TrainerCredentialsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Dog Trainer Credentials — What They Mean', subtitle: 'Dog training is completely unregulated in the United States — anyone can hang a sign and call themselves a trainer. Understanding credentials is the only way to distinguish qualified professionals from those with no relevant education.', category: 'Finding a Trainer', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Dog Trainer Credentials — What They Mean', subtitle: 'Dog training is completely unregulated in the United States — anyone can hang a sign and call themselves a trainer. Understanding credentials is the only way to distinguish qualified professionals from those with no relevant education.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Trainer Credentials', href: '/training/trainer-credentials' }]}
       schema={schema}
       sidebar={<>

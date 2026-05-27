@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pancreatitis in Dogs — High-Fat Triggers, Signs & Low-Fat Diet | Dog.com', description: 'Pancreatitis in dogs is often triggered by high-fat meals — holiday table scraps are the classic cause. Signs, hospitalization criteria, and lifelong low-fat diet management.', path: '/health/pancreatitis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pancreatitis in Dogs', description: 'Triggers, signs, hospitalization, and low-fat diet management for canine pancreatitis.', url: 'https://dog.com/health/pancreatitis', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Canine pancreatitis — triggers, acute management, and long-term dietary management.', url: 'https://dog.com/health/pancreatitis', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pancreatitis in Dogs', description: 'Triggers, signs, hospitalization, and low-fat diet management for canine pancreatitis.', url: 'https://dog.com/health/pancreatitis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Canine pancreatitis — triggers, acute management, and long-term dietary management.', url: 'https://dog.com/health/pancreatitis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function PancreatitisPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Pancreatitis in Dogs', subtitle: 'Pancreatitis — inflammation of the pancreas — is one of the most common gastrointestinal emergencies in dogs. The pancreas produces digestive enzymes that, when activated prematurely due to inflammation, essentially begin digesting the pancreas itself. It ranges from mild and manageable to severe and life-threatening.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Pancreatitis in Dogs', subtitle: 'Pancreatitis — inflammation of the pancreas — is one of the most common gastrointestinal emergencies in dogs. The pancreas produces digestive enzymes that, when activated prematurely due to inflammation, essentially begin digesting the pancreas itself. It ranges from mild and manageable to severe and life-threatening.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Pancreatitis', href: '/health/pancreatitis' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function PancreatitisPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Liver Disease', href: '/health/dog-liver-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-pancreatitis" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pancreatitis" />
         </>}
       >
         <div className="carloOS-article">

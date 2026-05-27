@@ -3,18 +3,18 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Often to Feed Your Dog — Meal Frequency by Life Stage | Dog.com', description: 'How many times a day to feed your dog by age and size. Why twice daily is better than once, when to switch feeding schedules, and meal timing for housetraining.', path: '/nutrition/feeding-frequency', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How Often to Feed Your Dog', description: 'Meal frequency by life stage and why twice daily beats once daily.', url: 'https://dog.com/nutrition/feeding-frequency', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How Often to Feed Your Dog', description: 'Meal frequency by life stage and why twice daily beats once daily.', url: 'https://dog.com/nutrition/feeding-frequency', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function FeedingFrequencyPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'How Often to Feed Your Dog', subtitle: 'Meal frequency has real consequences for digestion, housetraining, bloat risk, and blood sugar regulation. Here\'s the evidence-based schedule for each life stage.', category: 'Nutrition Guide', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '6 min', dvmReviewed: true }}
+      hero={{ title: 'How Often to Feed Your Dog', subtitle: 'Meal frequency has real consequences for digestion, housetraining, bloat risk, and blood sugar regulation. Here\'s the evidence-based schedule for each life stage.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '6 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Feeding Frequency', href: '/nutrition/feeding-frequency' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-frequency" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-frequency" />
       </>}
     >
       <div className="carloOS-article">

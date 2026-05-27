@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals. DVM-reviewed.', path: '/health/dog-cancer-signs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: '12 Warning Signs of Cancer in Dogs', description: 'Cancer warning signs and early detection for dogs.', url: 'https://dog.com/health/dog-cancer-signs', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals. research-based.', path: '/health/dog-cancer-signs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: '12 Warning Signs of Cancer in Dogs', description: 'Cancer warning signs and early detection for dogs.', url: 'https://dog.com/health/dog-cancer-signs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const SIGNS = [
   { sign: 'Any new lump or bump — aspirate immediately', detail: 'Do not take a wait-and-see approach with new masses. Fine needle aspiration (FNA) is a quick, inexpensive procedure that identifies the cell type of most masses. Mast cell tumors — one of the most common and potentially dangerous dog cancers — can look benign externally. FNA before deciding to watch or remove is standard of care.' },
@@ -24,7 +24,7 @@ export default function DogCancerSignsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: '12 Warning Signs of Cancer in Dogs', subtitle: 'Cancer is the leading cause of death in dogs over 10 years — approximately 50% of dogs over 10 will develop cancer. Early detection significantly changes outcomes. These 12 warning signs are what veterinary oncologists ask about and owners should watch for.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: '12 Warning Signs of Cancer in Dogs', subtitle: 'Cancer is the leading cause of death in dogs over 10 years — approximately 50% of dogs over 10 will develop cancer (Morris Animal Foundation, Golden Retriever Lifetime Study cohort data). Early detection significantly changes outcomes. These 12 warning signs are what veterinary oncologists ask about and owners should watch for.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cancer Signs', href: '/health/dog-cancer-signs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -34,7 +34,7 @@ export default function DogCancerSignsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-cancer-signs" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-signs" />
         </>}
       >
         <div className="carloOS-article">

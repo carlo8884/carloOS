@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'African Cichlid Care Guide — Malawi, Tanganyika & Aggressive Setup | Fish.com', description: 'African cichlids require hard alkaline water, overstocking to dilute aggression, and rockwork. Lake Malawi vs Tanganyika species have different care needs. Complete guide.', path: '/species/african-cichlid', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'African Cichlid Care Guide', description: 'Lake Malawi vs Tanganyika species, hard water requirements, and aggression management for African cichlids.', url: 'https://fish.com/species/african-cichlid', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'African Cichlid Care Guide', description: 'Lake Malawi vs Tanganyika species, hard water requirements, and aggression management for African cichlids.', url: 'https://fish.com/species/african-cichlid', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AfricanCichlidPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'African Cichlid Care Guide', subtitle: 'African cichlids from Lakes Malawi, Tanganyika, and Victoria represent some of the most colorful freshwater fish in the world — and some of the most behaviorally complex. The same cichlid aggression that makes them challenging to keep also makes their social dynamics endlessly fascinating to observe.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'African Cichlid Care Guide', subtitle: 'African cichlids from Lakes Malawi, Tanganyika, and Victoria represent some of the most colorful freshwater fish in the world — and some of the most behaviorally complex. The same cichlid aggression that makes them challenging to keep also makes their social dynamics endlessly fascinating to observe.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'African Cichlid', href: '/species/african-cichlid' }]}
       schema={schema}
       sidebar={<>

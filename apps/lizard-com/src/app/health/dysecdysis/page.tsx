@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles — Retained Shed, Causes & Safe Removal | Lizard.com', description: 'Dysecdysis (retained shed) is almost always caused by low humidity or dehydration. Safe soaking protocol, how to remove stuck shed from toes and eyes, and prevention.', path: '/health/dysecdysis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DysecdysisPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Dysecdysis (Retained Shed)', subtitle: 'Dysecdysis is the failure to shed skin completely in a single, clean shed. Retained shed — old skin that did not release — is one of the most common health issues in captive reptiles. It is almost entirely preventable and almost entirely caused by inadequate humidity or dehydration during the pre-shed period.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Dysecdysis (Retained Shed)', subtitle: 'Dysecdysis is the failure to shed skin completely in a single, clean shed. Retained shed — old skin that did not release — is one of the most common health issues in captive reptiles. It is almost entirely preventable and almost entirely caused by inadequate humidity or dehydration during the pre-shed period.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Dysecdysis', href: '/health/dysecdysis' }]}
       schema={schema}
       sidebar={<>

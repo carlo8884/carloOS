@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Leather Saddle Care Guide — Cleaning, Conditioning & Storage',
-  description: 'Master saddler\'s complete guide to leather saddle care. The correct cleaning sequence, which products work and which destroy leather, conditioning frequency, and seasonal storage.',
+  description: 'A complete reference guide to leather saddle care. The correct cleaning sequence, which products work and which destroy leather, conditioning frequency, and seasonal storage.',
   path: '/guides/leather-care-guide',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Leather Saddle Care Guide — Cleaning, Conditioning & Storage',
-  description: 'Master saddler\'s complete guide to leather saddle care — cleaning, conditioning, and seasonal storage.',
+  description: 'A complete reference guide to leather saddle care — cleaning, conditioning, and seasonal storage.',
   url: 'https://saddle.com/guides/leather-care-guide',
   imageUrl: '',
-  authorName: 'James Whitfield, Master Saddler',
+  authorName: 'Saddle.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -27,16 +27,16 @@ export default function LeatherCareGuidePage() {
       siteId="saddle-com"
       hero={{
         title: 'Leather Saddle Care Guide',
-        subtitle: 'A master saddler\'s complete guide to cleaning, conditioning, and storing leather — the habits that extend saddle life by decades and the mistakes that cut it short.',
+        subtitle: 'A complete reference guide to cleaning, conditioning, and storing leather — the habits that extend saddle life by decades and the mistakes that cut it short.',
         category: 'Care Guide',
-        authorName: 'James Whitfield, Master Saddler',
+        authorName: 'Saddle.com Editorial',
         authorAvatar: '🐴',
         publishedAt: 'May 2025',
         readTime: '11 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides', href: '/guides' },
+        { name: 'Guides' },
         { name: 'Leather Care', href: '/guides/leather-care-guide' },
       ]}
       schema={schema}
@@ -104,7 +104,7 @@ export default function LeatherCareGuidePage() {
         </ul>
 
         <h2 id="conditioning">Conditioning — How Much is Too Much?</h2>
-        <p>Over-conditioning is a real problem that I see frequently. When leather is over-conditioned, the fibres become excessively soft and the leather loses structural integrity. Seat leather that should support the rider begins to feel spongy. Panel leather that should maintain its shape starts to deform. Flap leather loses its firmness and drapes rather than holding position.</p>
+        <p>Over-conditioning is a common and under-appreciated problem. When leather is over-conditioned, the fibres become excessively soft and the leather loses structural integrity. Seat leather that should support the rider begins to feel spongy. Panel leather that should maintain its shape starts to deform. Flap leather loses its firmness and drapes rather than holding position.</p>
         <p>The test: push your thumbnail gently against the leather. It should resist slightly and spring back. If it dents easily and stays dented, the leather is over-conditioned. At this point, the only remedy is time — stop conditioning and allow the leather to firm up naturally over several weeks.</p>
         <p>Monthly conditioning is correct for regularly used saddles. More frequent conditioning should only be used for very dry leather (cracking, stiff, pulls on contact) or leather that has been exposed to extreme wet conditions.</p>
 
@@ -120,7 +120,7 @@ export default function LeatherCareGuidePage() {
         </ul>
 
         <h2 id="new">Breaking In a New Saddle</h2>
-        <p>New saddles, particularly German-made leather saddles (Stubben, Passier), may feel stiff initially. The correct break-in process is patience combined with use — not aggressive conditioning. Applying excessive neatsfoot oil to speed softening is the single mistake I see most often with new saddles, and it consistently over-softens the leather before the tanning process has had a chance to marry the fibres to the rider&apos;s use pattern.</p>
+        <p>New saddles, particularly German-made leather saddles (Stubben, Passier), may feel stiff initially. The correct break-in process is patience combined with use — not aggressive conditioning. Applying excessive neatsfoot oil to speed softening is the single most common mistake with new saddles, and it consistently over-softens the leather before the tanning process has had a chance to marry the fibres to the rider&apos;s use pattern.</p>
         <p>For a new saddle: clean normally with glycerine soap, apply a modest amount of conditioner, and ride. Repeat the conditioning after the first few rides as the leather warms and opens. Within 20–30 rides, good leather will have softened naturally to a supple, rider-specific break-in. The result is far superior to forcing the process.</p>
       </div>
     </ArticleLayout>

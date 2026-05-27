@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dachshund Breed Guide — IVDD Risk, Ramps Required & Weight Control | Dog.com', description: 'Dachshunds have a 25% lifetime risk of IVDD spinal disc disease. Ramps are not optional — they prevent the jumping that herniated discs. Complete health and care guide.', path: '/breeds/dachshund', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dachshund Breed Guide', description: 'IVDD risk, ramp requirements, and weight management for Dachshunds.', url: 'https://dog.com/breeds/dachshund', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dachshund Breed Guide', description: 'IVDD risk, ramp requirements, and weight management for Dachshunds.', url: 'https://dog.com/breeds/dachshund', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DachshundPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Dachshund Breed Guide', subtitle: 'The long body and short legs that make Dachshunds distinctive also make their spine uniquely vulnerable. With a 25% lifetime risk of intervertebral disc disease (IVDD), spinal health management is not optional for Dachshund owners — it is a daily practice that begins day one.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Dachshund Breed Guide', subtitle: 'The long body and short legs that make Dachshunds distinctive also make their spine uniquely vulnerable. With a 25% lifetime risk of intervertebral disc disease (IVDD), spinal health management is not optional for Dachshund owners — it is a daily practice that begins day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Dachshund', href: '/breeds/dachshund' }]}
       schema={schema}
       sidebar={<>
@@ -17,7 +17,7 @@ export default function DachshundPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'IVDD Complete Guide', href: '/health/intervertebral-disc-disease' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-dachshund" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-dachshund" />
       </>}
     >
       <div className="carloOS-article">

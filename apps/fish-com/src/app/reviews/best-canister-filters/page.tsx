@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2025 — Fluval, Eheim & Marineland Ranked | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2025', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2025', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums with AquaStop valve.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://eheim.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fluvalSchema, eheimSchema)
@@ -30,6 +30,7 @@ export default function BestCanisterFiltersPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <ScoreMethodology />
             <ReviewCard id="fluval" badge="Best Overall" badgeEmoji="🏆" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" score={9.4} winner
               description={<p>The Fluval 307 is the current benchmark for canister filters in the 40–70 gallon range — near-silent operation, excellent media capacity with 4 separated baskets (mechanical, chemical, biological staged properly), and the AquaStop valve that allows media changes without disconnecting hoses. The sound dampening is genuinely impressive compared to older canister filters — you have to get very close to hear it running. Setup is straightforward for a canister. Impeller design is efficient — flow rates are real-world accurate rather than inflated marketing numbers. Lid design seals reliably. 5-year warranty.</p>}
               specs={[{ label: 'Tank size', value: '40–70 gallons' }, { label: 'Flow rate', value: '303 GPH (actual)', highlight: 'good' }, { label: 'Noise', value: 'Near-silent', highlight: 'good' }, { label: 'AquaStop', value: 'Yes — media change without disconnect', highlight: 'good' }, { label: 'Warranty', value: '5 years' }]}

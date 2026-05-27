@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs — Hives, Anaphylaxis & Vaccine Reactions | Vets.co', description: 'Hives, facial swelling, and vomiting after a bee sting or vaccine can progress to anaphylaxis. When to give Benadryl vs when to rush to the ER. DVM emergency guide.', path: '/health/allergic-reactions-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and emergency management of acute allergic reactions in dogs.', url: 'https://vets.co/health/allergic-reactions-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs — Hives, Anaphylaxis & Vaccine Reactions | Vets.co', description: 'Hives, facial swelling, and vomiting after a bee sting or vaccine can progress to anaphylaxis. When to give Benadryl vs when to rush to the ER. Emergency reference guide.', path: '/health/allergic-reactions-dogs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and emergency management of acute allergic reactions in dogs.', url: 'https://vets.co/health/allergic-reactions-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function AllergicReactionsPage() {
@@ -12,7 +12,7 @@ export default function AllergicReactionsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Allergic Reactions in Dogs', subtitle: 'Acute allergic reactions in dogs — from bee stings, vaccines, medications, or insect bites — range from mild hives (concerning but manageable) to anaphylaxis (life-threatening within minutes). Knowing which situation you are in, and what to do immediately, can be the difference between a vet visit and a fatality.', category: 'Veterinary Guide — Emergency', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Allergic Reactions in Dogs', subtitle: 'Acute allergic reactions in dogs — from bee stings, vaccines, medications, or insect bites — range from mild hives (concerning but manageable) to anaphylaxis (life-threatening within minutes). Knowing which situation you are in, and what to do immediately, can be the difference between a vet visit and a fatality.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Allergic Reactions', href: '/health/allergic-reactions-dogs' }]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
@@ -24,7 +24,7 @@ export default function AllergicReactionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs Guide', href: '/health/emergency-signs' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-allergic-rxn" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-allergic-rxn" />
         </>}
       >
         <div className="carloOS-article">

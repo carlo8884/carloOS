@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality, Prey Drive & The "Shiba Scream" | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry, and why they need experienced owners.', path: '/breeds/shiba-inu', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide', description: 'Temperament, prey drive, escape behavior, and care for Shiba Inus.', url: 'https://dog.com/breeds/shiba-inu', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide', description: 'Temperament, prey drive, escape behavior, and care for Shiba Inus.', url: 'https://dog.com/breeds/shiba-inu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ShibaInuPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Shiba Inu Breed Guide', subtitle: 'The Shiba Inu is a Japanese hunting breed — small (17-23 lbs), compact, foxy-faced, and independent in a way that surprises owners who expected a small, friendly dog. Shibas are not Labradors in a different body. They are a primitive breed that has been shaped by thousands of years as an independent hunting dog, and their personality reflects that heritage in ways that delight experienced owners and frustrate unprepared ones.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Shiba Inu Breed Guide', subtitle: 'The Shiba Inu is a Japanese hunting breed — small (17-23 lbs), compact, foxy-faced, and independent in a way that surprises owners who expected a small, friendly dog. Shibas are not Labradors in a different body. They are a primitive breed that has been shaped by thousands of years as an independent hunting dog, and their personality reflects that heritage in ways that delight experienced owners and frustrate unprepared ones.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shiba Inu', href: '/breeds/shiba-inu' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function ShibaInuPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }, { label: 'Resource Guarding', href: '/training/resource-guarding' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-shiba" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-shiba" />
       </>}
     >
       <div className="carloOS-article">

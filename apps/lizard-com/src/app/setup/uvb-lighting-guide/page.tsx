@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Ferguson Zones, T5 HO setup, and species-specific UVB requirements.',
   url: 'https://lizard.com/setup/uvb-lighting-guide',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -37,7 +37,7 @@ export default function UVBLightingGuidePage() {
         title: 'UVB Lighting Guide for Reptiles',
         subtitle: 'UVB is not optional for most reptile species. It is the difference between metabolic bone disease and skeletal health. This guide covers everything from Ferguson Zones to bulb selection to the replacement schedule most keepers miss.',
         category: 'Setup Guide',
-        authorName: 'Lizard.com Expert Team',
+        authorName: 'Lizard.com Editorial',
         authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '13 min',

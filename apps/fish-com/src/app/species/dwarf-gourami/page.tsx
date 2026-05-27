@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami & Tank Setup | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative. Complete guide.', path: '/species/dwarf-gourami', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DwarfGouramiPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Dwarf Gourami Care Guide', subtitle: 'Trichogaster lalius — the dwarf gourami\'s vivid coloration (powder blue and fiery orange in males) makes them one of the most sought-after community centerpiece fish. They are also, unfortunately, one of the most disease-prone fish widely sold in the hobby — primarily due to Dwarf Gourami Disease (DGD), a viral condition that has become endemic in mass-farmed dwarf gourami populations.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Dwarf Gourami Care Guide', subtitle: 'Trichogaster lalius — the dwarf gourami\'s vivid coloration (powder blue and fiery orange in males) makes them one of the most sought-after community centerpiece fish. They are also, unfortunately, one of the most disease-prone fish widely sold in the hobby — primarily due to Dwarf Gourami Disease (DGD), a viral condition that has become endemic in mass-farmed dwarf gourami populations.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Dwarf Gourami', href: '/species/dwarf-gourami' }]}
       schema={schema}
       sidebar={<>

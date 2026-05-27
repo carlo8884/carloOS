@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid & Prevention | Vets.co', description: 'Heat stroke kills dogs in minutes. Rectal temp above 104°F is an emergency. Active cooling with cool (not ice cold) water while driving to the vet. Never leave dogs in cars.', path: '/health/heat-stroke-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Heat Stroke in Dogs', description: 'Heat stroke emergency — recognition, first aid cooling, and veterinary treatment.', url: 'https://vets.co/health/heat-stroke-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Heat Stroke in Dogs', description: 'Heat stroke emergency — recognition, first aid cooling, and veterinary treatment.', url: 'https://vets.co/health/heat-stroke-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function HeatStrokePage() {
@@ -12,7 +12,7 @@ export default function HeatStrokePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Heat Stroke in Dogs', subtitle: 'Heat stroke is a life-threatening emergency where body temperature rises above the point where normal cellular function can be maintained. Brain damage begins at 106°F and is often irreversible. Dogs die from heat stroke every year — almost always preventably. Speed of recognition and first aid while transporting to the vet determines outcomes.', category: 'Veterinary Guide — Emergency', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Heat Stroke in Dogs', subtitle: 'Heat stroke is a life-threatening emergency where body temperature rises above the point where normal cellular function can be maintained. Brain damage begins at 106°F and is often irreversible. Dogs die from heat stroke every year — almost always preventably. Speed of recognition and first aid while transporting to the vet determines outcomes.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heat Stroke', href: '/health/heat-stroke-dogs' }]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
@@ -24,7 +24,7 @@ export default function HeatStrokePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dehydration', href: '/health/dehydration-in-dogs' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-heat-stroke" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-heat-stroke" />
         </>}
       >
         <div className="carloOS-article">

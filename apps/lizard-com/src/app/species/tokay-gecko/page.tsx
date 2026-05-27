@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide — Loud Calls, Biting, and Taming Protocol | Lizard.com', description: 'Tokay geckos are the most aggressive commonly kept gecko. Their "to-KAY" call is heard at night. Taming protocol works — but takes patience. Display only for most.', path: '/species/tokay-gecko', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function TokayGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Tokay Gecko', href: '/species/tokay-gecko' }]}
       schema={schema}
       sidebar={<>

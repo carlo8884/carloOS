@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Tank Mates — What Can Live with a Betta? | Fish.com', description: 'Can bettas live with other fish? The answer depends on the individual betta. Compatible tankmates, fish to always avoid, and how to introduce new tank mates safely.', path: '/species/betta-fish-tank-mates', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Tank Mates', description: 'Compatible and incompatible tankmates for betta fish — a practical guide.', url: 'https://fish.com/species/betta-fish-tank-mates', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Tank Mates', description: 'Compatible and incompatible tankmates for betta fish — a practical guide.', url: 'https://fish.com/species/betta-fish-tank-mates', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BettaTankMatesPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Betta Fish Tank Mates', subtitle: 'The question "what can I put with my betta?" depends entirely on the individual fish. Some bettas are highly tolerant; others will attack anything that moves. No compatibility list is universal — every betta is an individual. This guide covers the safest options and explains how to test compatibility.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Betta Fish Tank Mates', subtitle: 'The question "what can I put with my betta?" depends entirely on the individual fish. Some bettas are highly tolerant; others will attack anything that moves. No compatibility list is universal — every betta is an individual. This guide covers the safest options and explains how to test compatibility.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]}
       schema={schema}
       sidebar={<>

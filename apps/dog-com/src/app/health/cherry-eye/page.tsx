@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery & Why You Can't Push It Back | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction — not pushing it back in. DVM guide.", path: '/health/cherry-eye', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cherry Eye in Dogs', description: 'Prolapsed third eyelid gland — causes, surgical correction, and why manual replacement fails.', url: 'https://dog.com/health/cherry-eye', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Cherry Eye in Dogs', description: 'Prolapsed nictitating membrane gland — causes and surgical treatment.', url: 'https://dog.com/health/cherry-eye', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery & Why You Can't Push It Back | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction — not pushing it back in. Reference guide.", path: '/health/cherry-eye', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cherry Eye in Dogs', description: 'Prolapsed third eyelid gland — causes, surgical correction, and why manual replacement fails.', url: 'https://dog.com/health/cherry-eye', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Cherry Eye in Dogs', description: 'Prolapsed nictitating membrane gland — causes and surgical treatment.', url: 'https://dog.com/health/cherry-eye', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 const FAQS = [
@@ -18,7 +18,7 @@ export default function CherryEyePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Cherry Eye in Dogs', subtitle: 'That red mass appearing at the inner corner of your dog\'s eye is cherry eye — the prolapse of the third eyelid gland (nictitating membrane gland). It looks alarming but is not immediately painful. It does, however, require surgical correction — not manual replacement, which almost always fails.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Cherry Eye in Dogs', subtitle: 'That red mass appearing at the inner corner of your dog\'s eye is cherry eye — the prolapse of the third eyelid gland (nictitating membrane gland). It looks alarming but is not immediately painful. It does, however, require surgical correction — not manual replacement, which almost always fails.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cherry Eye', href: '/health/cherry-eye' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -28,7 +28,7 @@ export default function CherryEyePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Health', href: '/breeds/bulldog' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-cherry-eye" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cherry-eye" />
         </>}
       >
         <div className="carloOS-article">

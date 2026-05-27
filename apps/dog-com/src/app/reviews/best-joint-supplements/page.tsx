@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -18,7 +18,7 @@ const schema = buildArticleSchema({
   description: 'Dasuquin, Cosequin, fish oil ranked by evidence for canine joint disease.',
   url: 'https://dog.com/reviews/best-joint-supplements',
   imageUrl: '',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -40,7 +40,7 @@ export default function BestJointSupplementsPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ DVM-Reviewed · Evidence-Graded · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Joint Supplements for Dogs 2025
@@ -68,6 +68,7 @@ export default function BestJointSupplementsPage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
@@ -103,7 +104,7 @@ export default function BestJointSupplementsPage() {
               name="Nordic Naturals Omega-3 Pet"
               subtitle="Marine EPA + DHA · Anti-inflammatory · Skin, coat, cognitive benefit"
               score={9.3}
-              description={<p>Fish oil (EPA and DHA omega-3 fatty acids) has the strongest evidence of any supplement across veterinary medicine — for joint inflammation, skin and coat, cardiovascular support, and emerging cognitive benefit in senior dogs. The anti-inflammatory mechanism of EPA and DHA is well-established and clinically relevant for osteoarthritis management. Nordic Naturals uses third-party testing for heavy metals and is the most trusted marine omega-3 brand for pets. Dose for joint benefit: 20–55mg combined EPA/DHA per kg body weight daily — significantly more than most fish oil products suggest on the label. Calculate the dose based on EPA/DHA content, not total fish oil volume.</p>}
+              description={<p>Fish oil (EPA and DHA omega-3 fatty acids) has among the strongest published evidence of any joint supplement (Roush et al., JAVMA 2010; multiple ACVS-cited reviews) — for joint inflammation, skin and coat, cardiovascular support, and emerging cognitive benefit in senior dogs. The anti-inflammatory mechanism of EPA and DHA is well-established and clinically relevant for osteoarthritis management. Nordic Naturals publishes third-party heavy-metal testing and is widely recommended for pet omega-3 supplementation. Dose for joint benefit: 20–55mg combined EPA/DHA per kg body weight daily — significantly more than most fish oil products suggest on the label. Calculate the dose based on EPA/DHA content, not total fish oil volume.</p>}
               specs={[
                 { label: 'Active Ingredients', value: 'EPA + DHA (marine)', highlight: 'good' },
                 { label: 'Third-Party Tested', value: 'Yes (heavy metals)', highlight: 'good' },
@@ -190,7 +191,7 @@ export default function BestJointSupplementsPage() {
               { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
               { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             ]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="review-joint-supplements" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-joint-supplements" />
           </aside>
         </div>
       </div>

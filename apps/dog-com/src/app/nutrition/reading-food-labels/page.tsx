@@ -3,19 +3,19 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO & Guaranteed Analysis | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean, and what to ignore.', path: '/nutrition/reading-food-labels', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How to Read a Dog Food Label', description: 'Ingredient list, AAFCO statements, and guaranteed analysis decoded.', url: 'https://dog.com/nutrition/reading-food-labels', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How to Read a Dog Food Label', description: 'Ingredient list, AAFCO statements, and guaranteed analysis decoded.', url: 'https://dog.com/nutrition/reading-food-labels', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ReadingFoodLabelsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'How to Read a Dog Food Label', subtitle: 'The ingredient list is the least useful part of a dog food label. The AAFCO statement is the most important. Here\'s how to read what actually matters.', category: 'Nutrition Guide', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'How to Read a Dog Food Label', subtitle: 'The ingredient list is the least useful part of a dog food label. The AAFCO statement is the most important. Here\'s how to read what actually matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'AAFCO Statement — Most Important', href: '#aafco' }, { label: 'Ingredient List — What It Tells You', href: '#ingredients' }, { label: 'Ingredient List — What It Doesn\'t', href: '#what-it-doesnt' }, { label: 'Guaranteed Analysis', href: '#guaranteed-analysis' }, { label: 'Caloric Content', href: '#calories' }, { label: 'Marketing Claims to Ignore', href: '#marketing' }]} />
         <RelatedLinks title="Related" links={[{ label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-labels" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-labels" />
       </>}
     >
       <div className="carloOS-article">

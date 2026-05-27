@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes & Humidity | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies. Complete care guide.', path: '/species/ball-python', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BallPythonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ball Python', href: '/species/ball-python' }]}
       schema={schema}
       sidebar={<>

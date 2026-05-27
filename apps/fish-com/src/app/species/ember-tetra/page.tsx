@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ember Tetra Care Guide — Nano Glowing Orange Fish & Planted Tanks | Fish.com', description: 'Ember tetras are glowing orange 0.8-inch nano fish. Large schools in planted tanks create a stunning display. Hardy, peaceful, and compatible with shrimp. Complete guide.', path: '/species/ember-tetra', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ember Tetra Care Guide', description: 'School size, planted tank setup, and shrimp compatibility for Hyphessobrycon amandae ember tetras.', url: 'https://fish.com/species/ember-tetra', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ember Tetra Care Guide', description: 'School size, planted tank setup, and shrimp compatibility for Hyphessobrycon amandae ember tetras.', url: 'https://fish.com/species/ember-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EmberTetraPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Ember Tetra Care Guide', subtitle: 'Hyphessobrycon amandae — the fire ember tetra is a 0.8-inch Brazilian nano fish that glows amber-orange when healthy and well-lit. In groups of 20+ against a dark substrate and green plants, a school of ember tetras creates one of the most visually striking effects available in nano aquarium keeping.', category: 'Species Guide — Nano', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Ember Tetra Care Guide', subtitle: 'Hyphessobrycon amandae — the fire ember tetra is a 0.8-inch Brazilian nano fish that glows amber-orange when healthy and well-lit. In groups of 20+ against a dark substrate and green plants, a school of ember tetras creates one of the most visually striking effects available in nano aquarium keeping.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ember Tetra', href: '/species/ember-tetra' }]}
       schema={schema}
       sidebar={<>

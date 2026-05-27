@@ -11,7 +11,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'The Complete Aquarium Resource',
+  title: 'An Aquarium Reference',
   description: 'Species guides, tank setup, water chemistry, fish health, and honest equipment reviews — built for serious fishkeepers.',
   path: '/',
 })
@@ -55,11 +55,10 @@ const GUIDE_CATEGORIES = [
   { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
   { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
   { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
-  { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/planted' },
-  { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/saltwater' },
+  { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
+  { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
   { icon: '🏥', title: 'Fish Health', desc: 'Disease ID and treatment', href: '/health' },
   { icon: '⚙️', title: 'Equipment Reviews', desc: 'Filters, lights, heaters', href: '/reviews' },
-  { icon: '🐣', title: 'Breeding', desc: 'Spawning and raising fry', href: '/breeding' },
 ]
 
 export default function FishHomePage() {
@@ -148,6 +147,20 @@ export default function FishHomePage() {
         </div>
       </section>
 
+      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
+        {[
+          '✓ Research-based content',
+          '✓ 200+ species profiles',
+          '✓ Honest equipment reviews',
+          '✓ No paid editorial placements',
+        ].map((item) => (
+          <span key={item} className="text-xs font-semibold text-brand-primary">
+            {item}
+          </span>
+        ))}
+      </div>
+
       {/* ── FEATURED SPECIES ───────────────────────────────────────── */}
       <section className="bg-brand-surface px-container sm:px-container-sm py-section">
         <div className="flex items-end justify-between mb-9">
@@ -200,7 +213,7 @@ export default function FishHomePage() {
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Complete Library</span>
           </div>
           <h2 className="font-display font-bold text-white tracking-tight text-3xl mb-2">Everything You Need</h2>
-          <p className="text-base text-white/40 max-w-lg mb-10">Expert content across every aspect of fishkeeping.</p>
+          <p className="text-base text-white/40 max-w-lg mb-10">Reference content across every aspect of fishkeeping.</p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {GUIDE_CATEGORIES.map((cat) => (

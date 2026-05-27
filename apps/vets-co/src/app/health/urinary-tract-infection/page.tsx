@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture & Antibiotics | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance. Recurrent UTIs need underlying cause investigation.', path: '/health/urinary-tract-infection', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function UTIPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function UTIPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing\'s Disease', href: '/health/cushing-disease-dogs' }, { label: 'Diabetes in Dogs', href: '/health/dog-diabetes' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-uti" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-uti" />
         </>}
       >
         <div className="carloOS-article">

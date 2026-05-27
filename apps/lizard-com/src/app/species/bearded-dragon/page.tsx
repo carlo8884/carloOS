@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide — Enclosure, UVB, Diet & Health | Lizard.com', description: 'Complete bearded dragon care guide. 4x2x2 enclosure minimum, Arcadia 12% UVB required, calcium supplementation, diet ratios, and the most common health mistakes.', path: '/species/bearded-dragon', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BeardedDragonPage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Bearded Dragon Care Guide', subtitle: 'Pogona vitticeps — the most popular pet lizard in the US. Intelligent, interactive, and demanding. Here\'s what proper husbandry actually looks like — not what the pet store told you.', category: 'Species Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
+      hero={{ title: 'Bearded Dragon Care Guide', subtitle: 'Pogona vitticeps — the most popular pet lizard in the US. Intelligent, interactive, and demanding. Here\'s what proper husbandry actually looks like — not what the pet store told you.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bearded Dragon', href: '/species/bearded-dragon' }]}
       schema={schema}
       sidebar={<>

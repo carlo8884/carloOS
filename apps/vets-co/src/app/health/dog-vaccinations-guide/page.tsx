@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing, and the puppy schedule by age.', path: '/health/dog-vaccinations-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Guide', description: 'Core and non-core vaccines, titer testing, and puppy schedule.', url: 'https://vets.co/health/dog-vaccinations-guide', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Guide', description: 'Core and non-core vaccines, titer testing, and puppy schedule.', url: 'https://vets.co/health/dog-vaccinations-guide', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'How often does an adult dog need the DA2PP vaccine?', answer: 'After the initial puppy series and the 12-month booster, adult dogs with documented vaccination history can receive DA2PP every 3 years. This reflects the duration of immunity studies for modern vaccines. Some dogs receive it more frequently based on lifestyle, boarding requirements, or owner preference — but the WSAVA guidelines support 3-year intervals for adult dogs with documented prior vaccination.' },
@@ -15,7 +15,7 @@ export default function DogVaccinationsGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Vaccination Guide', subtitle: 'Vaccines are one of the most cost-effective interventions in veterinary medicine — preventing diseases that are far more expensive to treat and often fatal. Understanding which vaccines your dog actually needs (versus which are optional based on lifestyle) helps you make informed decisions with your veterinarian.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Vaccination Guide', subtitle: 'Vaccines are one of the most cost-effective interventions in veterinary medicine — preventing diseases that are far more expensive to treat and often fatal. Understanding which vaccines your dog actually needs (versus which are optional based on lifestyle) helps you make informed decisions with your veterinarian.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Vaccinations', href: '/health/dog-vaccinations-guide' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -29,7 +29,7 @@ export default function DogVaccinationsGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-vaccinations" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-vaccinations" />
         </>}
       >
         <div className="carloOS-article">

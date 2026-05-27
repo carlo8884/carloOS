@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cavalier King Charles Spaniel Guide — MVD, Syringomyelia & Heart Screening | Dog.com', description: 'CKCSs develop mitral valve disease — 100% will have a murmur by age 10. MVD Protocol cardiac screening, syringomyelia, and why buying from health-tested breeders matters enormously.', path: '/breeds/cavalier-king-charles', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cavalier King Charles Spaniel Breed Guide', description: 'MVD cardiac disease, syringomyelia, and health screening for Cavalier King Charles Spaniels.', url: 'https://dog.com/breeds/cavalier-king-charles', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cavalier King Charles Spaniel Breed Guide', description: 'MVD cardiac disease, syringomyelia, and health screening for Cavalier King Charles Spaniels.', url: 'https://dog.com/breeds/cavalier-king-charles', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function CavalierPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Cavalier King Charles Spaniel', subtitle: 'One of the most affectionate and gentle family dogs in existence — and one of the most health-compromised breeds due to decades of selective breeding without sufficient health screening. Understanding the health landscape before acquiring a Cavalier changes the experience of owning one.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+      hero={{ title: 'Cavalier King Charles Spaniel', subtitle: 'One of the most affectionate and gentle family dogs in existence — and one of the most health-compromised breeds due to decades of selective breeding without sufficient health screening. Understanding the health landscape before acquiring a Cavalier changes the experience of owning one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function CavalierPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-cavalier" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cavalier" />
       </>}
     >
       <div className="carloOS-article">

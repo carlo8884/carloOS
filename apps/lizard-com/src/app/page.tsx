@@ -24,7 +24,7 @@ const CONTENT_CATEGORIES = [
   { icon: '☀️', title: 'UVB Lighting', desc: 'Ferguson zones, T5 HO specs, meter testing', href: '/setup/uvb-lighting-guide' },
   { icon: '🌡️', title: 'Temperatures', desc: 'Gradient setup by species', href: '/setup' },
   { icon: '🍽️', title: 'Feeding Guide', desc: 'Prey size, frequency, gut-loading', href: '/health/reptile-feeding-guide' },
-  { icon: '🏥', title: 'Reptile Health', desc: 'Sick reptile signs and treatment', href: '/health' },
+  { icon: '🏥', title: 'Reptile Health', desc: 'Sick reptile signs and treatment', href: '/health/sick-reptile-signs' },
   { icon: '⚙️', title: 'Equipment', desc: 'Enclosures, thermostats, tested gear', href: '/reviews' },
 ]
 
@@ -47,7 +47,7 @@ export default function LizardHomePage() {
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Science-Based Reptile Care</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Source-First Reptile Care</span>
             </div>
             <h1 className="font-display font-bold text-brand-white leading-tight tracking-tight mb-5"
               style={{ fontSize: 'clamp(44px, 6vw, 80px)' }}>
@@ -94,6 +94,20 @@ export default function LizardHomePage() {
           ))}
         </div>
       </section>
+
+      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
+      <div className="relative z-10 px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center" style={{ background: '#0A1408', borderTop: '1px solid rgba(122,181,42,0.18)' }}>
+        {[
+          '✓ Source-first husbandry',
+          '✓ 50+ species profiles',
+          '✓ Honest equipment reviews',
+          '✓ No paid editorial placements',
+        ].map((item) => (
+          <span key={item} className="text-xs font-semibold text-brand-primary">
+            {item}
+          </span>
+        ))}
+      </div>
 
       {/* FEATURED SPECIES */}
       <section className="relative z-10 px-container sm:px-container-sm py-section" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(255,255,255,0.06)' }}>

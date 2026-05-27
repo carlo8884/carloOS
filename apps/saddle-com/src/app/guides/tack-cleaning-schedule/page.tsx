@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Cleaning Schedule — Saddle, Bridle & Leather Care | Saddle.com', description: 'Complete tack cleaning schedule and leather care guide. What to clean after every ride, weekly deep clean protocol, and annual conditioning for long-lasting leather.', path: '/guides/tack-cleaning-schedule', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Tack Cleaning Schedule', description: 'After-ride, weekly, and annual leather care for saddles and bridles.', url: 'https://saddle.com/guides/tack-cleaning-schedule', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Tack Cleaning Schedule', description: 'After-ride, weekly, and annual leather care for saddles and bridles.', url: 'https://saddle.com/guides/tack-cleaning-schedule', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Clean and Condition a Leather Saddle', description: 'Step-by-step leather saddle cleaning and conditioning process.', url: 'https://saddle.com/guides/tack-cleaning-schedule', steps: [
   { name: 'Remove loose dirt', text: 'Dry brush or wipe all leather surfaces with a dry cloth to remove loose dirt, hay, and debris before introducing any liquid.' },
   { name: 'Wipe with damp cloth', text: 'Wipe all leather with a slightly damp (not wet) cloth. Remove sweat, grime, and surface contamination. Do not soak leather — excess moisture damages grain structure.' },
@@ -19,7 +19,7 @@ export default function TackCleaningSchedulePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="saddle-com"
-        hero={{ title: 'Tack Cleaning Schedule', subtitle: 'Leather is a living material that degrades without care and lasts decades with it. A consistent cleaning and conditioning schedule is the difference between tack that lasts 30 years and tack that fails in 5.', category: 'Leather Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
+        hero={{ title: 'Tack Cleaning Schedule', subtitle: 'Leather is a living material that degrades without care and lasts decades with it. A consistent cleaning and conditioning schedule is the difference between tack that lasts 30 years and tack that fails in 5.', category: 'Leather Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'After Every Ride', href: '#after-ride' }, { label: 'Weekly Deep Clean', href: '#weekly' }, { label: 'Monthly', href: '#monthly' }, { label: 'Annual', href: '#annual' }, { label: 'Products', href: '#products' }]} />
@@ -63,7 +63,7 @@ export default function TackCleaningSchedulePage() {
             <li>Deep conditioning treatment — a full leather balsam treatment with 24-hour absorption time.</li>
           </ul>
 
-          <h2 id="products">Products We Recommend</h2>
+          <h2 id="products">Our Top Picks</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[['Effax Leather Soap', 'Cleaning', 'Gentle, pH appropriate, rinse-free. Best daily cleaner.'], ['Effax Leather Balsam', 'Conditioning', 'Deep conditioner for natural leather. Excellent absorption.'], ['Leather Therapy Conditioner', 'Conditioning', 'Water-based, restores suppleness. Good for heavily dry leather.'], ['Passier Lederbalsam', 'Annual conditioning', 'Premium German leather balsam. Long-lasting protection.'], ['Nevr-Dull/Brasso', 'Metal polish', 'Stirrup irons, bit rings. Not for the bit mouthpiece.'], ['Avoid: mink oil', 'Never use', 'Darkens leather, can cause delamination over time.']].map(([p, t, d]) => (
               <div key={p} className="bg-brand-white border border-brand-border rounded-lg p-4">

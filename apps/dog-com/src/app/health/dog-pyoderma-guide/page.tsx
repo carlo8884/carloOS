@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Dog Pyoderma — Bacterial Skin Infections, Hot Spots & Deep Pyoderma | Dog.com", description: 'Pyoderma is bacterial skin infection in dogs — from superficial hot spots to deep tissue infections. Underlying allergies drive recurrence. Diagnosis, treatment, and prevention.', path: '/health/dog-pyoderma', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Dog Pyoderma Guide", description: 'Superficial and deep bacterial skin infections in dogs — causes, treatment, and recurrence prevention.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: "Dog Pyoderma", description: "Canine bacterial skin infections — classification, treatment, and management of recurrent pyoderma.", url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Dog Pyoderma Guide", description: 'Superficial and deep bacterial skin infections in dogs — causes, treatment, and recurrence prevention.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: "Dog Pyoderma", description: "Canine bacterial skin infections — classification, treatment, and management of recurrent pyoderma.", url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogPyodermaPage() {
@@ -12,7 +12,7 @@ export default function DogPyodermaPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Pyoderma', subtitle: "Pyoderma — bacterial skin infection — is one of the most commonly diagnosed dermatological conditions in dogs. It ranges from superficial pustules and hot spots that resolve with topical treatment to deep tissue infections requiring extended systemic antibiotics. The critical question is not just how to treat the current infection but why it is occurring — because recurrent pyoderma is almost always driven by an underlying cause.", category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Pyoderma', subtitle: "Pyoderma — bacterial skin infection — is one of the most commonly diagnosed dermatological conditions in dogs. It ranges from superficial pustules and hot spots that resolve with topical treatment to deep tissue infections requiring extended systemic antibiotics. The critical question is not just how to treat the current infection but why it is occurring — because recurrent pyoderma is almost always driven by an underlying cause.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Pyoderma', href: '/health/dog-pyoderma' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -25,7 +25,7 @@ export default function DogPyodermaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Allergies', href: '/health/dog-allergies' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-pyoderma" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pyoderma" />
         </>}
       >
         <div className="carloOS-article">

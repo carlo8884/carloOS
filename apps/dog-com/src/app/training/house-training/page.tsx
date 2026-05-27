@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'House Training Guide — The Schedule Method That Works | Dog.com', description: 'Complete house training guide for puppies and adult dogs. The schedule method, accident protocol, common mistakes, and the realistic timeline for a fully housetrained dog.', path: '/training/house-training', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'House Training Guide', description: 'The schedule method, accident protocol, and realistic timeline.', url: 'https://dog.com/training/house-training', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'House Training Guide', description: 'The schedule method, accident protocol, and realistic timeline.', url: 'https://dog.com/training/house-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const howToSchema = buildHowToSchema({
   name: 'How to House Train a Dog',
@@ -27,7 +27,7 @@ export default function HouseTrainingPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'House Training Guide', subtitle: 'House training is not about punishing accidents — it\'s about setting the dog up to eliminate outside consistently enough that it becomes the habit. The schedule method does this faster and more reliably than any other approach.', category: 'Puppy Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'House Training Guide', subtitle: 'House training is not about punishing accidents — it\'s about setting the dog up to eliminate outside consistently enough that it becomes the habit. The schedule method does this faster and more reliably than any other approach.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'House Training', href: '/training/house-training' }]}
       schema={schema}
       sidebar={<>

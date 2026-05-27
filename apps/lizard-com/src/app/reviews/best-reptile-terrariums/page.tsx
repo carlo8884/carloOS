@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics & Exo Terra Ranked',
-  description: 'We tested reptile terrariums on temperature retention, humidity stability, ventilation, and build quality. PVC, glass, and wood enclosures ranked for different species and budgets.',
+  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass, and wood enclosures ranked for different species and budgets.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025',
-  description: 'Reptile terrariums tested and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
+  description: 'Reptile terrariums compared and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
   url: 'https://lizard.com/reviews/best-reptile-terrariums',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -35,16 +35,16 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Expert Tested · May 2025
+          ⚡ Editor Pick · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Reptile Terrariums 2025 — PVC, Glass & Custom Enclosures Ranked
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          We tested 8 enclosures across 6 months — measuring temperature gradients, humidity stability, ventilation, and how well they hold up in real keeper setups. Not marketing copy. Actual results.
+          Comparison of 8 commonly-stocked enclosures on the factors that decide a keeper&apos;s daily life: temperature retention, humidity stability, ventilation, and build quality. Drawn from manufacturer specifications and consolidated keeper reports.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Expert Team · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -55,7 +55,7 @@ export default function BestTerrariumsPage() {
         <div className="rounded-lg p-5" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
           <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>
-            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed through repeated panel removal and assembly cycles. Affiliate links below — rankings are independent.
+            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
           </p>
         </div>
       </div>
@@ -63,6 +63,7 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
+            <ScoreMethodology />
             <ReviewCard
               id="zen"
               badge="Best Overall PVC"
@@ -85,7 +86,7 @@ export default function BestTerrariumsPage() {
                 { label: 'Assembly', value: 'Flat-pack, ~45 min' },
                 { label: 'Best For', value: 'Terrestrial species' },
               ]}
-              pros={['Best temperature retention of any tested enclosure', 'Flat-pack ships economically', 'Front-opening — less stress for reptile', 'Multiple vent configurations', 'Good humidity retention for most species']}
+              pros={['Best-in-class temperature retention per manufacturer-published thermal specs', 'Flat-pack ships economically', 'Front-opening — less stress for reptile', 'Multiple vent configurations', 'Good humidity retention for most species']}
               cons={['Not ideal for high-humidity species (>80%)', 'PVC aesthetic divides keepers vs. glass', 'Requires wall anchor for stability if top-heavy']}
               price="$320–420"
               priceNote="Varies by size and configuration"

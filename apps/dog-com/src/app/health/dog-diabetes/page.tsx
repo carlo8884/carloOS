@@ -1,21 +1,21 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment & Blood Glucose Monitoring | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. DVM-reviewed.', path: '/health/dog-diabetes', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment & Blood Glucose Monitoring | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogDiabetesPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Diabetes in Dogs', subtitle: 'Canine diabetes mellitus is manageable — many diabetic dogs live years of good-quality life with appropriate treatment. The commitment is real: twice-daily insulin injections at consistent times, consistent diet, and regular veterinary monitoring. The learning curve is steep at first and becomes routine within weeks.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '11 min', dvmReviewed: true }}
+        hero={{ title: 'Diabetes in Dogs', subtitle: 'Canine diabetes mellitus is manageable — many diabetic dogs live years of good-quality life with appropriate treatment. The commitment is real: twice-daily insulin injections at consistent times, consistent diet, and regular veterinary monitoring. The learning curve is steep at first and becomes routine within weeks.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diabetes', href: '/health/dog-diabetes' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Signs', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Insulin Treatment', href: '#insulin' }, { label: 'Diet', href: '#diet' }, { label: 'Glucose Monitoring', href: '#monitoring' }, { label: 'Hypoglycemia', href: '#hypoglycemia' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-diabetes" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diabetes" />
         </>}
       >
         <div className="carloOS-article">

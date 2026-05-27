@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention & Eye Conditions | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency, and why they run if they get loose.', path: '/breeds/siberian-husky', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Siberian Husky Breed Guide', description: 'Exercise requirements, escape prevention, eye conditions, and zinc deficiency in Siberian Huskies.', url: 'https://dog.com/breeds/siberian-husky', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Siberian Husky Breed Guide', description: 'Exercise requirements, escape prevention, eye conditions, and zinc deficiency in Siberian Huskies.', url: 'https://dog.com/breeds/siberian-husky', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function SiberianHuskyPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Siberian Husky Breed Guide', subtitle: 'Working sled dogs bred for endurance in arctic conditions — Huskies are beautiful, energetic, and frequently misunderstood as family pets. They are not low-maintenance dogs. They require extraordinary exercise, secure containment, and owners who understand that a Husky running loose is a Husky in danger.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Siberian Husky Breed Guide', subtitle: 'Working sled dogs bred for endurance in arctic conditions — Huskies are beautiful, energetic, and frequently misunderstood as family pets. They are not low-maintenance dogs. They require extraordinary exercise, secure containment, and owners who understand that a Husky running loose is a Husky in danger.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Siberian Husky', href: '/breeds/siberian-husky' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function SiberianHuskyPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Socialization Window', href: '/training/socialization-window' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-husky" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-husky" />
       </>}
     >
       <div className="carloOS-article">

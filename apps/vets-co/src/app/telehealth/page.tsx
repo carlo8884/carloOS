@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025 — Vetster, AskVet & Chewy Connect Ranked | Vets.co', description: 'We compared pet telehealth services on veterinarian credentials, wait times, consultation quality, and cost. Find the right service for your pet\'s needs.', path: '/telehealth', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025', description: 'Vetster, AskVet, and Chewy Connect compared by veterinarians.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Medical Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025', description: 'Vetster, AskVet, and Chewy Connect compared by veterinarians.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
@@ -17,7 +17,7 @@ export default function TelehealthPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Compared by DVMs · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality.</p>
       </div>
@@ -29,6 +29,7 @@ export default function TelehealthPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="vetster" badge="Best Overall" badgeEmoji="🏆" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment" score={9.2}
               description={<p>Vetster is the most comprehensive pet telehealth platform — licensed veterinarians available by video or chat, typically within minutes during peak hours. Their credentialing standards are rigorous: all vets are licensed in the jurisdiction where the pet owner is located, making prescriptions legally valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). Pay per consultation — no monthly commitment required.</p>}
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: '< 15 min typical', highlight: 'good' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
@@ -54,7 +55,7 @@ export default function TelehealthPage() {
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
               <Link href="/find-a-vet" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
             </div>
-            <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance every Tuesday." source="telehealth-review" />
+            <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="telehealth-review" />
           </aside>
         </div>
       </div>

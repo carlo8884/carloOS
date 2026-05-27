@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles — Wheezing, Open-Mouth Breathing & Treatment | Lizard.com', description: 'Reptile respiratory infections: wheezing, mucus from nostrils, and open-mouth breathing. Almost always caused by incorrect temperatures or humidity. Requires antibiotics and husbandry correction.', path: '/health/respiratory-infection', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function RespiratoryInfectionPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Respiratory Infection', href: '/health/respiratory-infection' }]}
       schema={schema}
       sidebar={<>

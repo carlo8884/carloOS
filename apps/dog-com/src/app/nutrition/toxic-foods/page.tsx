@@ -5,7 +5,7 @@ import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Foods Toxic to Dogs — Complete List with Symptoms | Dog.com',
-  description: 'Complete list of foods toxic to dogs — symptoms, toxicity levels, and emergency protocols. Xylitol, chocolate, grapes, onions, and 20+ more. DVM-reviewed.',
+  description: 'Complete list of foods toxic to dogs — symptoms, toxicity levels, and emergency protocols. Xylitol, chocolate, grapes, onions, and 20+ more. research-based.',
   path: '/nutrition/toxic-foods',
   category: 'Nutrition Safety',
   type: 'article',
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Complete list of toxic foods for dogs with symptoms and emergency protocols.',
   url: 'https://dog.com/nutrition/toxic-foods',
   imageUrl: '',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -147,14 +147,12 @@ export default function ToxicFoodsPage() {
         siteId="dog-com"
         hero={{
           title: 'Foods Toxic to Dogs — Complete List',
-          subtitle: 'Xylitol, chocolate, grapes, onions, and 20+ more toxic foods — with toxicity levels, symptoms, and the emergency protocol for each. DVM-reviewed.',
+          subtitle: 'Xylitol, chocolate, grapes, onions, and 20+ more toxic foods — with toxicity levels, symptoms, and the emergency protocol for each. research-based.',
           category: 'Nutrition Safety',
-          authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-          authorCredentials: 'Internal Medicine Specialist · ASPCA Poison Control Consultant',
-          authorAvatar: '👩‍⚕️',
+          authorName: 'Dog.com Editorial',
+          authorAvatar: '🐾',
           publishedAt: 'May 2025',
           readTime: '10 min',
-          dvmReviewed: true,
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
@@ -180,7 +178,7 @@ export default function ToxicFoodsPage() {
             { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             { label: 'Nutrition Hub', href: '/nutrition' },
           ]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-toxic-foods" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-toxic-foods" />
         </>}
       >
         <div className="carloOS-article">

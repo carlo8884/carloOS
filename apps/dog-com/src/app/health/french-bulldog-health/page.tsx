@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'BOAS, IVDD, heat danger, skin folds — complete French Bulldog health guide.',
   url: 'https://dog.com/health/french-bulldog-health',
   imageUrl: '',
-  authorName: 'Dr. Sarah Kim, DVM, DACVS',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -30,12 +30,10 @@ export default function FrenchBulldogHealthPage() {
         title: 'French Bulldog Health Guide',
         subtitle: 'French Bulldogs are among the most popular dogs in the world — and among the most medically complex. Their anatomy creates near-inevitable health challenges every owner must understand before purchase and throughout the dog\'s life.',
         category: 'Breed Health Guide',
-        authorName: 'Dr. Sarah Kim, DVM, DACVS',
-        authorCredentials: 'Veterinary Surgeon · Brachycephalic Specialist',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '12 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -60,7 +58,7 @@ export default function FrenchBulldogHealthPage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="health-french-bulldog" />
       </>}
     >

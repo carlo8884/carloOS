@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',
   url: 'https://dog.com/health/labrador-health',
   imageUrl: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=1200&q=80&auto=format&fit=crop',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -30,12 +30,10 @@ export default function LabradorHealthPage() {
         title: 'Labrador Retriever Health Guide',
         subtitle: 'Labs have a genetic mutation that prevents normal satiety signaling — they don\'t feel full the way other dogs do. This single biological fact drives the most common health problems in America\'s most popular breed.',
         category: 'Breed Health Guide',
-        authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-        authorCredentials: 'Internal Medicine Specialist · 14 years practice',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '10 min',
-        dvmReviewed: true,
         image: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=1200&q=80&auto=format&fit=crop',
         imageAlt: 'Labrador Retriever',
       }}
@@ -64,7 +62,7 @@ export default function LabradorHealthPage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="health-labrador" />
       </>}
       relatedLinks={[

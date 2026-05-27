@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Goldendoodle Guide — F1 vs F1B, Coat Types & Health Testing | Dog.com', description: 'Goldendoodles: F1 (50% Golden/Poodle) vs F1B (75% Poodle) coat and shedding differences explained. Health testing requirements and why "hybrid vigor" is largely a myth.', path: '/breeds/golden-doodle', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Goldendoodle Breed Guide', description: 'F1 vs F1B generations, coat types, health testing, and realistic expectations for Goldendoodles.', url: 'https://dog.com/breeds/golden-doodle', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Goldendoodle Breed Guide', description: 'F1 vs F1B generations, coat types, health testing, and realistic expectations for Goldendoodles.', url: 'https://dog.com/breeds/golden-doodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function GoldendoodlePage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Goldendoodle Breed Guide', subtitle: 'The Goldendoodle (Golden Retriever × Poodle) is one of the most popular "designer breeds" in the US. They combine the Golden\'s temperament with Poodle intelligence and low-shedding coat potential. The key word: potential. Goldendoodles vary significantly in coat, shedding, and health — generation matters enormously.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Goldendoodle Breed Guide', subtitle: 'The Goldendoodle (Golden Retriever × Poodle) is one of the most popular "designer breeds" in the US. They combine the Golden\'s temperament with Poodle intelligence and low-shedding coat potential. The key word: potential. Goldendoodles vary significantly in coat, shedding, and health — generation matters enormously.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Goldendoodle', href: '/breeds/golden-doodle' }]}
       schema={schema}
       sidebar={<>

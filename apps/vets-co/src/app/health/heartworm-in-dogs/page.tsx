@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing & Treatment Stages | Vets.co', description: 'Heartworm disease is a life-threatening but preventable condition. Monthly prevention costs $5-10. Treatment costs $1,000-3,000. Annual testing, prevention options, and treatment stages explained.', path: '/health/heartworm-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Can I skip prevention in winter?', answer: 'Year-round prevention is recommended in most of the US. Mosquitoes can be active on warm winter days — temperatures above 57°F allow heartworm larvae to develop in mosquitoes. In warm climates (Southeast US, Florida, Gulf Coast, Hawaii), mosquitoes are active year-round. The American Heartworm Society recommends year-round prevention for all dogs regardless of climate, both because exposure risk is difficult to predict and because monthly heartworm preventives also control intestinal parasites (roundworms, hookworms) that are present year-round.' },
@@ -15,7 +15,7 @@ export default function HeartwormPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease — caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites — is one of the most important preventable conditions in veterinary medicine. Prevention costs approximately $5–15/month. Treatment costs $1,000–3,000 and is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease — caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites — is one of the most important preventable conditions in veterinary medicine. Prevention costs approximately $5–15/month. Treatment costs $1,000–3,000 and is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heartworm', href: '/health/heartworm-in-dogs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -28,7 +28,7 @@ export default function HeartwormPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-heartworm" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-heartworm" />
         </>}
       >
         <div className="carloOS-article">

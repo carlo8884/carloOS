@@ -29,7 +29,6 @@ interface ArticleHero {
   authorAvatar?: string     // emoji or image URL
   publishedAt?: string
   readTime?: string
-  dvmReviewed?: boolean
   image?: string
   imageAlt?: string
 }
@@ -37,7 +36,7 @@ interface ArticleHero {
 interface ArticleLayoutProps {
   siteId: SiteId
   hero: ArticleHero
-  breadcrumbs?: Array<{ name: string; href: string }>
+  breadcrumbs?: Array<{ name: string; href?: string }>
   children: ReactNode       // article body
   sidebar?: ReactNode       // right sidebar content
   schema?: Record<string, unknown>
@@ -76,16 +75,11 @@ export function ArticleLayout({
         />
 
         <div className="relative z-10 px-container sm:px-container-sm pb-0">
-          {/* Category + badges */}
+          {/* Category */}
           <div className="flex items-center gap-3 mb-5">
             {hero.category && (
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
                 {hero.category}
-              </span>
-            )}
-            {hero.dvmReviewed && (
-              <span className="text-2xs font-bold tracking-wider uppercase bg-amber-500/15 text-amber-300 px-3 py-1 rounded-pill">
-                ✓ DVM Reviewed
               </span>
             )}
           </div>

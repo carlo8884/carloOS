@@ -17,8 +17,6 @@ export default function PrivacyPolicyPage() {
       <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
-        <Link href="/legal" className="hover:text-brand-primary no-underline">Legal</Link>
-        <span>›</span>
         <span className="text-brand-text-mid">Privacy Policy</span>
       </nav>
 
@@ -55,7 +53,7 @@ export default function PrivacyPolicyPage() {
         <p>If you subscribe to our newsletter, we use Mailchimp to manage email delivery. Your email address is transferred to and stored by Mailchimp in accordance with their privacy policy. You can unsubscribe at any time via the unsubscribe link in any email. We do not sell, rent, or share your email address with third parties for their marketing purposes.</p>
 
         <h2>Affiliate Links</h2>
-        <p>Dog.com participates in affiliate programs including Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy.</p>
+        <p>Dog.com participates in affiliate programs including Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
 
         <h2>Analytics</h2>
         <p>We use Google Analytics to understand site traffic. Google Analytics uses cookies and collects anonymized usage data. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>. We also use internal Supabase-based analytics for page performance monitoring.</p>
@@ -81,6 +79,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
         <Link href="/legal/terms" className="text-brand-primary hover:underline">Terms of Use</Link>
+        <Link href="/legal/affiliate-disclosure" className="text-brand-primary hover:underline">Affiliate Disclosure</Link>
         <Link href="/editorial-standards" className="text-brand-primary hover:underline">Editorial Standards</Link>
       </div>
     </div>

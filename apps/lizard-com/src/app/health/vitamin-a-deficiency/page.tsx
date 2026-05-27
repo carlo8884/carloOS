@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles — Hypovitaminosis A & Eye Swelling | Lizard.com', description: 'Vitamin A deficiency (hypovitaminosis A) causes swollen eyes, retained shed, and respiratory symptoms in reptiles. Treatment: retinol supplementation — but overdose is equally dangerous.', path: '/health/vitamin-a-deficiency', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function VitAPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Vitamin A Deficiency in Reptiles', subtitle: 'Hypovitaminosis A (vitamin A deficiency) causes skin and epithelial tissue dysfunction in reptiles — swollen eyelids, poor skin quality, retained shed, respiratory symptoms, and in severe cases, immune failure. It is exclusively a husbandry problem: inadequate dietary vitamin A or insufficient vitamin A in feeder insects.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Vitamin A Deficiency in Reptiles', subtitle: 'Hypovitaminosis A (vitamin A deficiency) causes skin and epithelial tissue dysfunction in reptiles — swollen eyelids, poor skin quality, retained shed, respiratory symptoms, and in severe cases, immune failure. It is exclusively a husbandry problem: inadequate dietary vitamin A or insufficient vitamin A in feeder insects.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency' }]}
       schema={schema}
       sidebar={<>

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Acclimation, Starvation Risk & Algae Requirements | Fish.com', description: 'Otocinclus are delicate — most die within a week of purchase from starvation. They need a mature tank with established algae before purchase. How to keep them alive.', path: '/species/otocinclus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Catfish Care Guide', description: 'Acclimation stress, starvation prevention, and algae requirements for Otocinclus dwarf catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Catfish Care Guide', description: 'Acclimation stress, starvation prevention, and algae requirements for Otocinclus dwarf catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function OtocinclasPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus affinis and related species — the dwarf suckermouth catfish — are the most recommended small algae eaters for planted aquariums and one of the most commonly killed fish in the hobby. Most "otos" die within days to weeks of purchase, not from disease, but from starvation in tanks without enough algae to sustain them.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus affinis and related species — the dwarf suckermouth catfish — are the most recommended small algae eaters for planted aquariums and one of the most commonly killed fish in the hobby. Most "otos" die within days to weeks of purchase, not from disease, but from starvation in tanks without enough algae to sustain them.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Otocinclus', href: '/species/otocinclus' }]}
       schema={schema}
       sidebar={<>

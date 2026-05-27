@@ -20,7 +20,6 @@ export {
 // Types
 export type {
   Post,
-  PostExtended,
   Product,
   Species,
   Membership,

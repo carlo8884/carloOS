@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts, GDV & Containment | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits, not behavioral failures.', path: '/breeds/great-pyrenees', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Pyrenees Breed Guide', description: 'Livestock guardian instincts, GDV risk, hip dysplasia, and containment for Great Pyrenees.', url: 'https://dog.com/breeds/great-pyrenees', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Pyrenees Breed Guide', description: 'Livestock guardian instincts, GDV risk, hip dysplasia, and containment for Great Pyrenees.', url: 'https://dog.com/breeds/great-pyrenees', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GreatPyreneesPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Great Pyrenees Breed Guide', subtitle: 'Majestic, gentle, and deeply independent — Great Pyrenees were bred for thousands of years to guard livestock in remote mountain terrain without human supervision. The traits that made them exceptional livestock guardian dogs (LGDs) — independence, territorial behavior, nighttime activity, loud barking — are the same traits that make them challenging household pets without appropriate management.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Great Pyrenees Breed Guide', subtitle: 'Majestic, gentle, and deeply independent — Great Pyrenees were bred for thousands of years to guard livestock in remote mountain terrain without human supervision. The traits that made them exceptional livestock guardian dogs (LGDs) — independence, territorial behavior, nighttime activity, loud barking — are the same traits that make them challenging household pets without appropriate management.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Pyrenees', href: '/breeds/great-pyrenees' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function GreatPyreneesPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Great Dane Guide', href: '/breeds/great-dane' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-great-pyrenees" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-pyrenees" />
       </>}
     >
       <div className="carloOS-article">

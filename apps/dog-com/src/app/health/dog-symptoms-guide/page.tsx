@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Emergency vet explains which symptoms need immediate care vs. which can wait.',
   url: 'https://dog.com/health/dog-symptoms-guide',
   imageUrl: '',
-  authorName: 'Dr. James Callahan, DVM, DACVECC',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -94,8 +94,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   name: '15 Dog Symptoms That Need Immediate Vet Care',
   description: 'Emergency symptoms in dogs — when to go to the vet immediately.',
   url: 'https://dog.com/health/dog-symptoms-guide',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-  reviewedByName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
@@ -110,12 +109,10 @@ export default function DogSymptomsGuidePage() {
         title: '15 Dog Symptoms You Should Never Ignore',
         subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. A board-certified emergency and critical care veterinarian explains exactly what warrants a 2am ER visit.',
         category: 'Emergency Guide',
-        authorName: 'Dr. James Callahan, DVM, DACVECC',
-        authorCredentials: 'Emergency & Critical Care · 20 years practice',
-        authorAvatar: '👨‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '10 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -144,7 +141,7 @@ export default function DogSymptomsGuidePage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="health-symptoms" />
       </>}
     >

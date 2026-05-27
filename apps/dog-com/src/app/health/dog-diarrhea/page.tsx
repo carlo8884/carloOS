@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care. DVM-reviewed.', path: '/health/dog-diarrhea', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care. research-based.', path: '/health/dog-diarrhea', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Diarrhea', description: 'Causes, home care, and when to see a vet for dog diarrhea.', url: 'https://dog.com/health/dog-diarrhea', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogDiarrheaPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Diarrhea', subtitle: 'Diarrhea is one of the most common reasons dogs visit the vet — and also one of the most common conditions that resolves on its own. Knowing the difference between "wait and monitor" and "go to the vet now" saves unnecessary vet visits and prevents delayed care when urgency matters.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Diarrhea', subtitle: 'Diarrhea is one of the most common reasons dogs visit the vet — and also one of the most common conditions that resolves on its own. Knowing the difference between "wait and monitor" and "go to the vet now" saves unnecessary vet visits and prevents delayed care when urgency matters.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diarrhea', href: '/health/dog-diarrhea' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function DogDiarrheaPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-diarrhea" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diarrhea" />
         </>}
       >
         <div className="carloOS-article">

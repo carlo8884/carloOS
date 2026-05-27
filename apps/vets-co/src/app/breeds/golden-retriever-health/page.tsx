@@ -14,21 +14,20 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Golden Retriever Health — Veterinary Perspective',
-  description: 'Managing Golden Retriever health from a practicing DVM.',
+  title: 'Golden Retriever Health — Owner Guide',
+  description: 'Managing Golden Retriever health with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
   imageUrl: '',
-  authorName: 'Dr. Sarah Webb, DVM',
+  authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Golden Retriever Health',
-  description: 'Managing Golden Retriever cancer risk from a practicing DVM.',
+  description: 'Managing Golden Retriever cancer risk with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
-  authorName: 'Dr. Sarah Webb, DVM',
-  reviewedByName: 'Dr. Sarah Webb, DVM',
+  authorName: 'Vets.co Editorial',
   lastReviewed: '2025-05-01',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
@@ -40,19 +39,17 @@ export default function VetsGoldenRetrieverHealthPage() {
       <ArticleLayout
       siteId="vets-co"
       hero={{
-        title: 'Golden Retriever Health — A Veterinarian\'s Perspective',
-        subtitle: 'I see Golden Retrievers in my practice more than any other breed. Here\'s what I tell every Golden owner: the cancer statistics are real, the monitoring matters, and early detection is the single most impactful thing you can do.',
+        title: 'Golden Retriever Health — Owner Guide',
+        subtitle: 'Golden Retrievers are one of the most common breeds in general practice. The points most worth giving every Golden owner: the cancer statistics are real, the monitoring matters, and early detection is the single most impactful thing you can do.',
         category: 'Breed Health Guide',
-        authorName: 'Dr. Sarah Webb, DVM',
-        authorCredentials: 'General Practice · 14 years · Golden Retriever specialist interest',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Vets.co Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '10 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Breed Guides', href: '/breeds' },
+        { name: 'Breed Guides' },
         { name: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' },
       ]}
       schema={schema}
@@ -70,7 +67,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="vets-co"
           title="Free Pet Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="breeds-golden-retriever" />
       </>}
     >
@@ -115,9 +112,9 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>Use the <Link href="/find-a-vet">specialist finder</Link> to locate board-certified specialists near you.</p>
 
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
-        <p>I recommend pet insurance to every new Golden Retriever owner, for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
+        <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
-        <p>For Goldens specifically, I recommend Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fastest claims, no limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
+        <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fastest claims, no limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
       </div>
     </ArticleLayout>
     </>

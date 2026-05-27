@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu) — H3N8, H3N2 & When to Vaccinate | Vets.co', description: 'Canine influenza is caused by H3N8 and H3N2 strains. Highly contagious among dogs. Vaccine recommended for dogs that attend boarding, doggy daycare, or dog parks.', path: '/health/canine-influenza', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Canine Influenza', description: 'Dog flu — H3N8 and H3N2 strains, signs, and vaccination.', url: 'https://vets.co/health/canine-influenza', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Canine Influenza', description: 'Dog flu — H3N8 and H3N2 strains, signs, and vaccination.', url: 'https://vets.co/health/canine-influenza', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function CanineInfluenzaPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Canine Influenza (Dog Flu)', subtitle: 'Canine influenza is a highly contagious respiratory infection caused by influenza A viruses adapted to dogs. Two strains currently circulate in the US: H3N8 (identified 2004) and H3N2 (identified 2015 — more recently introduced from Asia). Most dogs exposed develop mild to moderate illness; a small percentage develop serious pneumonia.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '7 min', dvmReviewed: true }}
+        hero={{ title: 'Canine Influenza (Dog Flu)', subtitle: 'Canine influenza is a highly contagious respiratory infection caused by influenza A viruses adapted to dogs. Two strains currently circulate in the US: H3N8 (identified 2004) and H3N2 (identified 2015 — more recently introduced from Asia). Most dogs exposed develop mild to moderate illness; a small percentage develop serious pneumonia.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Canine Influenza', href: '/health/canine-influenza' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function CanineInfluenzaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Kennel Cough', href: '/health/dog-vaccinations-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-influenza" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-influenza" />
         </>}
       >
         <div className="carloOS-article">

@@ -16,7 +16,7 @@ const schema = buildArticleSchema({
   description: 'Prey size, feeding frequency, gut-loading, and supplementation for reptiles.',
   url: 'https://lizard.com/health/reptile-feeding-guide',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -39,14 +39,14 @@ export default function ReptileFeedingGuidePage() {
         title: 'Reptile Feeding Guide',
         subtitle: 'Prey size, feeding frequency, gut-loading protocols, and the supplementation schedule that prevents metabolic bone disease. Species-specific data for the most common captive reptiles.',
         category: 'Health & Husbandry',
-        authorName: 'Lizard.com Expert Team',
+        authorName: 'Lizard.com Editorial',
         authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '11 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Health', href: '/health' },
+        { name: 'Health' },
         { name: 'Feeding Guide', href: '/health/reptile-feeding-guide' },
       ]}
       schema={schema}

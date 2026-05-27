@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Training Red Flags — Dominance Theory, Shock Collars & What Science Says | Dog.com', description: 'What the behavioral science says about dominance theory, shock collars, prong collars, and alpha rolling — and what the alternatives actually accomplish.', path: '/training/training-red-flags', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Training Red Flags', description: 'Dominance theory, shock collars, and prong collars — what the science says.', url: 'https://dog.com/training/training-red-flags', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Training Red Flags', description: 'Dominance theory, shock collars, and prong collars — what the science says.', url: 'https://dog.com/training/training-red-flags', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const RED_FLAGS = [
   { flag: 'Dominance Theory / "Pack Leader" Training', detail: 'Dominance theory applied to dog training derives from 1970s wolf pack research on captive, unrelated wolves — which has since been thoroughly discredited even by its original author (David Mech publicly rejected it). Wild wolf packs are family units, not dominance hierarchies. Dogs are not attempting to "dominate" their owners. The behaviors labeled as "dominance" (pulling on leash, jumping up, counter-surfing) are trained behaviors maintained by reinforcement — they are solved by removing the reinforcement and teaching incompatible behaviors, not by establishing "pack hierarchy."' },
@@ -18,7 +18,7 @@ export default function TrainingRedFlagsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Dog Training Red Flags', subtitle: 'Dog training is unregulated — anyone can call themselves a trainer and use any method they choose. These are the approaches that behavioral science has consistently found harmful, and what the alternatives accomplish.', category: 'Finding a Trainer', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Dog Training Red Flags', subtitle: 'Dog training is unregulated — anyone can call themselves a trainer and use any method they choose. These are the approaches that behavioral science has consistently found harmful, and what the alternatives accomplish.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Red Flags', href: '/training/training-red-flags' }]}
       schema={schema}
       sidebar={<>

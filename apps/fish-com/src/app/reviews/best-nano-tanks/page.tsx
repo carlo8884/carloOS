@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2025 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp, and nano fish setups.', path: '/reviews/best-nano-tanks', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2025', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2025', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
@@ -35,6 +35,7 @@ export default function BestNanoTanksPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bigger Is More Forgiving</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Smaller tanks are less stable — ammonia spikes faster, temperature swings are larger, and mistakes have less margin. A 10-gallon is significantly easier to maintain than a 5-gallon. A 20-gallon long is the ideal beginner tank size. If budget allows, go bigger.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" badgeEmoji="🏆" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" score={9.2} winner
               description={<p>The Fluval Spec V is the standard recommendation for a betta tank or shrimp tank at 5 gallons. The integrated filtration is hidden behind a honeycomb baffle, the LED is plant-capable (adequate for low-light plants like Java fern, Anubias, mosses), and the rimless design looks clean on a desk or shelf. The flow from the filter should be baffled (rubber band a filter sponge over the outlet) to reduce current for betta fish. Comes complete — just add fish, substrate, and cycle the tank.</p>}
               specs={[{ label: 'Volume', value: '5 gallons' }, { label: 'Design', value: 'Rimless, all-in-one' }, { label: 'Filter', value: 'Integrated — 3-stage' }, { label: 'Light', value: 'LED — low-light plant capable', highlight: 'good' }, { label: 'Best for', value: 'Betta, shrimp, planted' }]}

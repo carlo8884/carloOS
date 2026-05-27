@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD & Planted Tank Display | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure — quarantine all new neons before adding to established tanks.', path: '/species/neon-tetra', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NeonTetraPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Neon Tetra', href: '/species/neon-tetra' }]}
       schema={schema}
       sidebar={<>

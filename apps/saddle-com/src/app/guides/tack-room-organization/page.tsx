@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Room Organization — Storage, Humidity & Leather Care | Saddle.com', description: 'How to organize a tack room for efficiency and leather longevity. Saddle racks, bridle hooks, humidity control, and the storage mistakes that ruin expensive tack.', path: '/guides/tack-room-organization', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Tack Room Organization Guide', description: 'Saddle storage, bridle hooks, humidity control, and leather care in the tack room.', url: 'https://saddle.com/guides/tack-room-organization', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Tack Room Organization Guide', description: 'Saddle storage, bridle hooks, humidity control, and leather care in the tack room.', url: 'https://saddle.com/guides/tack-room-organization', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function TackRoomPage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Tack Room Organization', subtitle: 'A well-organized tack room is not just about aesthetics — it directly affects the longevity of leather equipment that represents thousands of dollars of investment, the efficiency of your barn routine, and the ease of identifying when something needs maintenance or replacement before it fails during a ride.', category: 'Equestrian Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Tack Room Organization', subtitle: 'A well-organized tack room is not just about aesthetics — it directly affects the longevity of leather equipment that represents thousands of dollars of investment, the efficiency of your barn routine, and the ease of identifying when something needs maintenance or replacement before it fails during a ride.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Room Organization', href: '/guides/tack-room-organization' }]}
       schema={schema}
       sidebar={<>

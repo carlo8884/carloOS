@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'The science of positive reinforcement and how to use it effectively.',
   url: 'https://dog.com/training/positive-reinforcement',
   imageUrl: '',
-  authorName: 'Dog.com Training Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -36,7 +36,7 @@ export default function PositiveReinforcementPage() {
         title: 'Positive Reinforcement Training — How It Works',
         subtitle: 'Positive reinforcement is not a soft alternative to "real" training — it is the method with the strongest scientific support, the best outcomes, and the best effect on the human-dog relationship. Here\'s how it works and how to use it.',
         category: 'Training Fundamentals',
-        authorName: 'Dog.com Training Team',
+        authorName: 'Dog.com Editorial',
         authorAvatar: '🐕',
         publishedAt: 'May 2025',
         readTime: '9 min',

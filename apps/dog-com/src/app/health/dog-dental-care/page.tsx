@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products & Dental Disease | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3. Daily toothbrushing is the most effective intervention. VOHC-accepted products and why dental chews alone are insufficient.', path: '/health/dog-dental-care', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Dental Care Guide', description: 'Daily brushing, VOHC products, and periodontal disease prevention for dogs.', url: 'https://dog.com/health/dog-dental-care', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Dental Care Guide', description: 'Toothbrushing, VOHC products, and professional dental cleaning for dogs.', url: 'https://dog.com/health/dog-dental-care', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products & Dental Disease | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3 (AVDC/AAHA). Daily toothbrushing is the most effective intervention. VOHC-accepted products and why dental chews alone are insufficient.', path: '/health/dog-dental-care', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Dental Care Guide', description: 'Daily brushing, VOHC products, and periodontal disease prevention for dogs.', url: 'https://dog.com/health/dog-dental-care', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Dental Care Guide', description: 'Toothbrushing, VOHC products, and professional dental cleaning for dogs.', url: 'https://dog.com/health/dog-dental-care', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogDentalCarePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Dental Care Guide', subtitle: 'Periodontal disease — infection and destruction of the supporting structures around the teeth — affects over 80% of dogs by age 3. It is painful, it contributes to systemic inflammation (with implications for heart, kidney, and liver health), and it is almost entirely preventable. The tools are simple; the commitment is daily.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Dental Care Guide', subtitle: 'Periodontal disease — infection and destruction of the supporting structures around the teeth — affects over 80% of dogs by age 3. It is painful, it contributes to systemic inflammation (with implications for heart, kidney, and liver health), and it is almost entirely preventable. The tools are simple; the commitment is daily.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dental Care', href: '/health/dog-dental-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -24,14 +24,14 @@ export default function DogDentalCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dental Cleaning Guide', href: '/health/dog-dental-care' }, { label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-dental" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-dental" />
         </>}
       >
         <div className="carloOS-article">
           <h2>The Hierarchy of Dental Care Effectiveness</h2>
           <p>Not all dental interventions are equally effective. Evidence-based ranking from most to least effective:</p>
           <ol>
-            <li><strong>Daily toothbrushing</strong> — the gold standard. A soft-bristled toothbrush and enzymatic toothpaste (CET Enzymatic, Vetradent — never human fluoride toothpaste) physically disrupts plaque before it mineralizes to tartar. Studies consistently show daily brushing produces significantly better outcomes than any other home care intervention. The enzymatic action continues after brushing.</li>
+            <li><strong>Daily toothbrushing</strong> — the gold standard. A soft-bristled toothbrush and enzymatic toothpaste (CET Enzymatic, Vetradent — never human fluoride toothpaste) physically disrupts plaque before it mineralizes to tartar. Veterinary dental literature (AVDC, WSAVA Global Dental Guidelines) is consistent: daily brushing produces significantly better outcomes than any other home-care intervention. The enzymatic action continues after brushing.</li>
             <li><strong>VOHC-accepted dental chews</strong> — Greenies, Whimzees, and similar products carry the VOHC seal because they have published evidence of plaque or tartar reduction. They are meaningful supplements to brushing but not substitutes for it. Non-VOHC dental chews have no proven efficacy.</li>
             <li><strong>Water additives and dental gels</strong> — VOHC-accepted water additives provide some antimicrobial benefit. Convenient and easy to use as a supplement. Minimal effect used alone.</li>
             <li><strong>Dental diets</strong> — Hill's t/d (prescription) and other dental-formula foods use oversized kibble that the tooth sinks into, providing mechanical cleaning across a larger surface area. More effective than standard kibble for tartar control.</li>

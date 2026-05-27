@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide — DCM Screening, vWD & Wobbler Syndrome | Dog.com', description: 'Dobermans have the highest DCM rate of any breed (up to 58% by age 7). Annual Holter + echo is required. vWD bleeding disorder and cervical spondylomyelopathy (Wobbler) also covered.', path: '/breeds/doberman-pinscher', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide', description: 'DCM cardiac screening, von Willebrand disease, and Wobbler syndrome for Dobermans.', url: 'https://dog.com/breeds/doberman-pinscher', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide', description: 'DCM cardiac screening, von Willebrand disease, and Wobbler syndrome for Dobermans.', url: 'https://dog.com/breeds/doberman-pinscher', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function DobermanPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+      hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function DobermanPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'IVDD', href: '/health/intervertebral-disc-disease' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-doberman" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-doberman" />
       </>}
     >
       <div className="carloOS-article">

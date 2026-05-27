@@ -12,9 +12,9 @@ import { getPosts } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'The Complete Resource for Dog Owners',
+  title: 'A Reference for Dog Owners',
   description:
-    'Dog health guides for 200+ breeds, DVM-reviewed health articles, honest product reviews, and expert training advice — built for dog owners who take their dog\'s wellbeing seriously.',
+    'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take their dog\'s wellbeing seriously.',
   path: '/',
   type: 'website',
   ogImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80&auto=format&fit=crop',
@@ -99,7 +99,7 @@ export default async function HomePage() {
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                The Complete Dog Resource
+                A Dog Owner Reference
               </span>
             </div>
 
@@ -114,7 +114,7 @@ export default async function HomePage() {
             </h1>
 
             <p className="text-lg font-light text-white/60 leading-relaxed max-w-md mb-10">
-              Breed guides for 200+ breeds, DVM-reviewed health articles, training that works,
+              Breed guides for 200+ breeds, research-based health articles, training that works,
               and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
             </p>
 
@@ -157,7 +157,7 @@ export default async function HomePage() {
           <div className="absolute bottom-10 right-8 flex flex-col gap-3 z-10">
             {[
               { icon: '📚', num: '200+', label: 'Breed Profiles' },
-              { icon: '👩‍⚕️', num: 'DVM', label: 'Reviewed Content' },
+              { icon: '📚', num: '100+', label: 'Sourced Articles' },
               { icon: '⭐', num: '500+', label: 'Products Reviewed' },
             ].map((stat) => (
               <div
@@ -178,7 +178,7 @@ export default async function HomePage() {
       {/* ── TRUST BAR ──────────────────────────────────────────────── */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
         {[
-          '✓ DVM-reviewed health content',
+          '✓ research-based health content',
           '✓ 200+ breed profiles',
           '✓ Honest product reviews',
           '✓ No paid editorial placements',
@@ -283,7 +283,7 @@ export default async function HomePage() {
             <div className="p-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Health</span>
-                <span className="text-2xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-pill">✓ DVM Reviewed</span>
+                
               </div>
               <h3 className="font-display font-bold text-brand-dark text-xl leading-snug mb-2">
                 Golden Retriever Health Guide — Cancer Risk, Hip Dysplasia & What Owners Must Know
@@ -356,7 +356,7 @@ export default async function HomePage() {
             Find the Right Guide
           </h2>
           <p className="text-base text-white/45 max-w-lg mb-10">
-            DVM-reviewed content organized by condition, life stage, and body system.
+            research-based content organized by condition, life stage, and body system.
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -381,10 +381,10 @@ export default async function HomePage() {
           variant="section"
           siteId="dog-com"
           title="Dog Health Tips, Every Week"
-          subtitle="DVM-written guidance on dog health, breed spotlights, training tips, and honest product picks — every Tuesday morning."
+          subtitle="Practical guidance on dog health, breed spotlights, training tips, and honest product picks — every Tuesday morning."
           ctaText="Subscribe Free"
           source="homepage-section"
-          perks={['📋 DVM-written', '📬 Every Tuesday', '🐕 Breed-specific advice', '🚫 No spam']}
+          perks={['📋 Practical', '📬 Every Tuesday', '🐕 Breed-specific advice', '🚫 No spam']}
         />
       </section>
     </>

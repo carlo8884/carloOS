@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Tested with Solarmeter 6.5 | Lizard.com',
-  description: 'We tested 8 UVB bulbs with a calibrated Solarmeter 6.5 radiometer. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
+  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
+  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting, and Pilbeam et al.) at standardised distances, not manufacturer claims. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Tested with Solarmeter 6.5',
-  description: 'Solarmeter 6.5 tested UVB bulbs for reptiles — ranked by real UVI output.',
+  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output',
+  description: 'UVB bulbs for reptiles ranked using published Solarmeter 6.5 UVI data.',
   url: 'https://lizard.com/reviews/best-uvb-bulbs',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -40,17 +40,17 @@ export default function BestUVBBulbsPage() {
 
       <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Solarmeter 6.5 Tested · May 2025
+          ⚡ Solarmeter 6.5 Data · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best UVB Bulbs 2025 — Ranked by Real UVI Output
+          Best UVB Bulbs 2025 — Ranked by Published UVI Output
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          We tested 8 UVB bulbs with a calibrated Solarmeter 6.5 radiometer — the same meter used in the Ferguson Zone research. Rankings based on actual UVI measurements at standardized distances, not manufacturer claims.
+          Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which we cross-check against independent keeper testing.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>
-          Lizard.com Expert Team · Updated May 2025 · Affiliate disclosure applies
+          Lizard.com Editorial · Updated May 2025 · Affiliate disclosure applies
         </p>
       </div>
 
@@ -67,6 +67,7 @@ export default function BestUVBBulbsPage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="arcadia-12"
               badge="Best for Desert Species"
@@ -77,8 +78,8 @@ export default function BestUVBBulbsPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest UVI measurements of any bulb in our test. At 30cm with a reflector, new bulbs measured 7.2–8.1 UVI (center of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Output retention is the other standout: at 6 months, Arcadia 12% bulbs retained 85–90% of initial output. Most competitors dropped 20–30% by month 6. We still recommend replacing at 12 months regardless of visible output — UV degrades before visible light does, and only a radiometer can confirm output level.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest UVI measurements of any bulb in our test. At 30cm with a reflector, new bulbs are reported at 7.2–8.1 UVI in published Solarmeter 6.5 measurements (centre of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Output retention is the other standout: at 6 months, published Solarmeter measurements show Arcadia 12% bulbs retaining 85–90% of initial output. Most competitors are reported to drop 20–30% by month 6 in the same measurements. We still recommend replacing at 12 months regardless of visible output — UV degrades before visible light does, and only a radiometer can confirm output level.</p>
                 </div>
               }
               specs={[
@@ -89,7 +90,7 @@ export default function BestUVBBulbsPage() {
                 { label: 'Target Species', value: 'Desert lizards, tortoises' },
                 { label: 'Replacement', value: '12 months' },
               ]}
-              pros={['Highest measured UVI output of any tested bulb', 'Best 6-month output retention', 'Available in multiple lengths (22", 34", 46")', 'Ferguson Zone research validated']}
+              pros={['Highest published UVI output among the major T5 HO bulbs', 'Best 6-month output retention', 'Available in multiple lengths (22", 34", 46")', 'Ferguson Zone research validated']}
               cons={['Premium price vs Zoo Med', 'Requires T5 HO fixture (not included)']}
               price="$28–45"
               priceNote="Varies by length"
@@ -133,7 +134,7 @@ export default function BestUVBBulbsPage() {
               subtitle="Strong output · Widely available · More accessible price"
               score={8.9}
               description={
-                <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zoo Med&apos;s T5 HO 10.0 is the most widely available high-output UVB bulb and provides genuinely good UVI output — 5.8–6.8 UVI at 30cm for a new bulb. The gap vs Arcadia is meaningful but manageable: Zoo Med bulbs lose approximately 25–30% of output by 6 months (vs Arcadia&apos;s 10–15%), which means you should replace at 6 months rather than 12. At that replacement frequency, the lower unit price largely offsets the faster decline. Best choice when Arcadia availability is limited or budget is constrained.</p>
+                <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zoo Med&apos;s T5 HO 10.0 is the most widely available high-output UVB bulb and provides genuinely good published UVI output — 5.8–6.8 UVI at 30cm for a new bulb per Solarmeter 6.5 measurements in published reviews. The gap vs Arcadia is meaningful but manageable: Zoo Med bulbs lose approximately 25–30% of output by 6 months (vs Arcadia&apos;s 10–15%), which means you should replace at 6 months rather than 12. At that replacement frequency, the lower unit price largely offsets the faster decline. Best choice when Arcadia availability is limited or budget is constrained.</p>
               }
               specs={[
                 { label: 'UVI @ 30cm', value: '5.8–6.8 UVI' },

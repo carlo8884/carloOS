@@ -79,7 +79,6 @@ export interface Database {
           author_name: string | null
           author_credentials: string | null
           author_avatar: string | null
-          dvm_reviewed: boolean
           schema_type: string
           schema_data: Record<string, unknown>
           tags: string[]
@@ -217,6 +216,3 @@ export type Species           = Database['public']['Tables']['species']['Row']
 export type Membership        = Database['public']['Tables']['memberships']['Row']
 export type EmailSubscription = Database['public']['Tables']['email_subscriptions']['Row']
 export type Event             = Database['public']['Tables']['events']['Row']
-
-// PostExtended adds a convenience alias for dvm_reviewed (already in Post, but explicit here)
-export type PostExtended      = Post & { dvm_reviewed: boolean }

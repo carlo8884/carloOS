@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide — 400+ Mutations, BEL & Spider Wobble | Lizard.com', description: 'Ball python morphs: the 15 foundational mutations that create 400+ combinations. Blue Eyed Leucistic combos, spider wobble controversy, and morph pricing explained.', path: '/species/ball-python-morphs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide', description: 'Foundational mutations, BEL combos, spider wobble, and pricing for ball python morphs.', url: 'https://lizard.com/species/ball-python-morphs', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide', description: 'Foundational mutations, BEL combos, spider wobble, and pricing for ball python morphs.', url: 'https://lizard.com/species/ball-python-morphs', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BallPythonMorphsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Ball Python Morphs Guide', subtitle: 'Ball pythons have the most extensive morph library of any reptile species — over 400 recognized morphs as of 2025, with new combinations being produced constantly. Understanding the ~15 foundational mutations that generate most of this diversity is the key to navigating the morph world, understanding genetics, and predicting breeding outcomes.', category: 'Breed Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Ball Python Morphs Guide', subtitle: 'Ball pythons have the most extensive morph library of any reptile species — over 400 recognized morphs as of 2025, with new combinations being produced constantly. Understanding the ~15 foundational mutations that generate most of this diversity is the key to navigating the morph world, understanding genetics, and predicting breeding outcomes.', category: 'Breed Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species/ball-python' }, { name: 'Morphs', href: '/species/ball-python-morphs' }]}
       schema={schema}
       sidebar={<>

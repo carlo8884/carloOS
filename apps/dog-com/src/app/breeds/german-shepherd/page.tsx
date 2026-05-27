@@ -6,7 +6,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds — with significant degenerative disease predispositions.', path: '/breeds/german-shepherd', type: 'article', ogImage: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GermanShepherdBreedPage() {
   return (
@@ -21,7 +21,7 @@ export default function GermanShepherdBreedPage() {
           <div className="relative z-10">
             <div className="flex gap-3 mb-4">
               <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">Herding Group</span>
-              <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill" style={{ background: 'rgba(200,149,42,0.15)', color: '#E8C860' }}>✓ DVM Reviewed</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill" style={{ background: 'rgba(200,149,42,0.15)', color: '#E8C860' }}> </span>
             </div>
             <h1 className="font-display font-black text-white tracking-tighter leading-none mb-3" style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}>German Shepherd</h1>
             <p className="text-base font-light text-white/60 leading-relaxed max-w-sm">One of the world&apos;s most capable working breeds — police, military, search and rescue, guide dogs. Requires informed owners who understand the breed&apos;s significant degenerative disease predispositions, particularly DM and GDV.</p>
@@ -56,7 +56,7 @@ export default function GermanShepherdBreedPage() {
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="breed-german-shepherd" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-german-shepherd" />
           </aside>
         </div>
       </div>

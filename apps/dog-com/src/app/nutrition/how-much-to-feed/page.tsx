@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age & Activity Level | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. DVM-reviewed.', path: '/nutrition/how-much-to-feed', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How Much to Feed Your Dog', description: 'Feeding amounts by weight, age, and activity level.', url: 'https://dog.com/nutrition/how-much-to-feed', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age & Activity Level | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'How Much to Feed Your Dog', description: 'Feeding amounts by weight, age, and activity level.', url: 'https://dog.com/nutrition/how-much-to-feed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const BCS_DESCRIPTIONS = [
   { score: '1–2', label: 'Emaciated / Underweight', desc: 'Ribs, spine, and hip bones visible with no need to touch. Obvious muscle loss. Veterinary attention required.' },
@@ -17,13 +17,13 @@ export default function HowMuchToFeedPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'How Much to Feed Your Dog', subtitle: 'There is no universal feeding amount — caloric needs depend on weight, ideal weight, age, activity level, and whether your dog is spayed or neutered. This guide gives you the framework.', category: 'Nutrition Guide', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+      hero={{ title: 'How Much to Feed Your Dog', subtitle: 'There is no universal feeding amount — caloric needs depend on weight, ideal weight, age, activity level, and whether your dog is spayed or neutered. This guide gives you the framework.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Body Condition Scoring', href: '#bcs' }, { label: 'Using Package Guidelines', href: '#guidelines' }, { label: 'Calorie Calculator', href: '#calculator' }, { label: 'Adjusting for Activity', href: '#activity' }, { label: 'Puppies', href: '#puppies' }, { label: 'Senior Dogs', href: '#seniors' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-how-much" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-how-much" />
       </>}
     >
       <div className="carloOS-article">

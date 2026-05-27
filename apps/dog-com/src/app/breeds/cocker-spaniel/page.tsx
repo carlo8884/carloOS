@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cocker Spaniel Guide — Ear Infections, Eye Conditions & Grooming | Dog.com', description: 'Cocker Spaniels have the highest rate of ear infections of any breed — their ear structure creates a perfect warm, dark environment for yeast and bacteria.', path: '/breeds/cocker-spaniel', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CockerSpanielPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Cocker Spaniel Breed Guide', subtitle: 'The American Cocker Spaniel — originally bred as a hunting dog for woodcock, now primarily a companion and show dog. Gentle, affectionate, and beautiful, with a coat that requires significant maintenance and health predispositions that reward attentive owners who recognize the early warning signs.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Cocker Spaniel Breed Guide', subtitle: 'The American Cocker Spaniel — originally bred as a hunting dog for woodcock, now primarily a companion and show dog. Gentle, affectionate, and beautiful, with a coat that requires significant maintenance and health predispositions that reward attentive owners who recognize the early warning signs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cocker Spaniel', href: '/breeds/cocker-spaniel' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function CockerSpanielPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Anemia in Dogs', href: '/health/anemia-in-dogs' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-cocker" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cocker" />
       </>}
     >
       <div className="carloOS-article">

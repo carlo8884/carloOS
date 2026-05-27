@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 50+ DVM-Reviewed Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all DVM-reviewed.', path: '/health' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 50+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
 
 const SECTIONS = [
   { category: '🚨 Emergency', items: [{ title: '15 Dog Symptoms to Never Ignore', href: '/health/dog-symptoms-guide', badge: 'Essential' }, { title: 'Find an Emergency Vet', href: '/find-a-vet' }] },
@@ -16,8 +16,8 @@ export default function DogHealthHubPage() {
     <>
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health — DVM-Reviewed</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">50+ health guides reviewed by licensed veterinarians. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health Library</h1>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">50+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
       </div>
       <div className="px-container sm:px-container-sm py-14">
         {SECTIONS.map(section => (
@@ -35,7 +35,7 @@ export default function DogHealthHubPage() {
         ))}
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
-        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ DVM-reviewed', '📬 Weekly', '🐾 Breed-specific']} />
+        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 Breed-specific']} />
       </div>
     </>
   )

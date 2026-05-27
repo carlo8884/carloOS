@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Best Western Saddles 2025 — Reining, Cutting & Trail Ranked | Saddle.com',
-  description: 'Best western saddles by discipline. Circle Y, Billy Cook, and Martin Saddlery ranked for reining, cutting, barrel racing, and trail riding by our certified saddle fitter.',
+  description: 'Best western saddles by discipline. Circle Y, Billy Cook, and Martin Saddlery ranked for reining, cutting, barrel racing, and trail riding using CSF reviewer notes and rider reports.',
   path: '/reviews/best-western-saddles',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Circle Y, Billy Cook, and Martin ranked for reining, cutting, barrel, and trail.',
   url: 'https://saddle.com/reviews/best-western-saddles',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -46,7 +46,7 @@ export default function BestWesternSaddlesPage() {
             Best Western Saddles 2025
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, tested by a certified saddle fitter.
+            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using CSF reviewer notes and published rider reports.
           </p>
         </div>
       </div>
@@ -68,6 +68,7 @@ export default function BestWesternSaddlesPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Western saddle seat size is measured differently from English — the measurement runs from the base of the horn to the front of the cantle. Most adult riders fall between 14.5" and 17" depending on hip width and riding discipline. Disciplines that require deep-seat security (reining, cutting) typically use smaller seats; trail and pleasure riding can go slightly larger for comfort. See our <Link href="/guides/seat-size-guide" className="text-brand-primary no-underline hover:underline">seat size guide</Link> for measurements.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="martin"
               badge="Best Reining"

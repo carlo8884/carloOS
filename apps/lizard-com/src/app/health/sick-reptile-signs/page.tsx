@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: '12 signs requiring veterinary care in reptiles — what to watch for.',
   url: 'https://lizard.com/health/sick-reptile-signs',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -99,14 +99,14 @@ export default function SickReptileSignsPage() {
         title: '12 Signs Your Reptile Is Sick',
         subtitle: 'Reptiles are prey animals — they conceal illness as a survival mechanism. By the time obvious symptoms appear, disease is often advanced. These are the signs to watch for, and what to do about them.',
         category: 'Health Guide',
-        authorName: 'Lizard.com Expert Team',
+        authorName: 'Lizard.com Editorial',
         authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '9 min',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Health', href: '/health' },
+        { name: 'Health' },
         { name: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' },
       ]}
       schema={schema}

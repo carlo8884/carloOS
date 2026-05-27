@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Resource Guarding in Dogs — Trade Game & Safety Protocol | Dog.com', description: 'Resource guarding is normal dog behavior. How to manage it safely, teach the trade game, and when to involve a professional. Never punish resource guarding.', path: '/training/resource-guarding', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Resource Guarding in Dogs', description: 'The trade game, safety protocol, and management for canine resource guarding.', url: 'https://dog.com/training/resource-guarding', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Resource Guarding in Dogs', description: 'The trade game, safety protocol, and management for canine resource guarding.', url: 'https://dog.com/training/resource-guarding', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Teach the Trade Game for Resource Guarding', description: 'Step-by-step protocol to teach a dog to voluntarily give up items using positive reinforcement.', url: 'https://dog.com/training/resource-guarding', totalTime: 'P8W', steps: [
   { name: 'Never approach and take', text: 'Before training begins, stop all approach-and-take interactions. Every time you approach a guarding dog and take the item by force, you confirm that guarding works and teach the dog to guard more intensely next time.' },
   { name: 'Build positive associations with your approach', text: 'Start without a guarded item. Approach the dog, drop a high-value treat on the floor, and walk away. Repeat 20+ times. The dog learns: human approaching = good things happen.' },
@@ -16,7 +16,7 @@ export default function ResourceGuardingPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Resource Guarding in Dogs', subtitle: 'Resource guarding — growling, snapping, or biting when someone approaches food, toys, or resting spots — is a normal canine behavior. It becomes a problem when it creates safety risks. The solution is not punishment: it is teaching the dog that giving things up results in better things.', category: 'Dog Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+        hero={{ title: 'Resource Guarding in Dogs', subtitle: 'Resource guarding — growling, snapping, or biting when someone approaches food, toys, or resting spots — is a normal canine behavior. It becomes a problem when it creates safety risks. The solution is not punishment: it is teaching the dog that giving things up results in better things.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Resource Guarding', href: '/training/resource-guarding' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">

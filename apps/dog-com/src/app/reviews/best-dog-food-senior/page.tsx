@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025 — DVM-Recommended Formulas | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior, and Royal Canin Aging Care ranked by WSAVA compliance and clinical data.', path: '/reviews/best-dog-food-senior', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025', description: 'Top-rated senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior, and Royal Canin Aging Care ranked by WSAVA compliance and clinical data.', path: '/reviews/best-dog-food-senior', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025', description: 'Top-rated senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Bright Mind Adult 7+', description: 'Enhanced botanical oils formula with clinical trial data for cognitive support in aging dogs.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const hillsSchema = buildProductSchema({ name: "Hill's Science Diet Adult 7+ Senior", description: 'DVM-formulated senior formula with antioxidant blend and easy-to-digest proteins.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
+const hillsSchema = buildProductSchema({ name: "Hill's Science Diet Adult 7+ Senior", description: 'veterinarian-formulated senior formula with antioxidant blend and easy-to-digest proteins.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, ppSchema, hillsSchema)
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Purina Pro Plan Bright Mind 7+', subtitle: 'Clinical trial data · Cognitive support · WSAVA', href: '#bright-mind' },
-  { label: "Best Hill's", emoji: '⭐', name: "Hill's Science Diet Senior 7+", subtitle: 'Antioxidant blend · DVM-formulated · Widely available', href: '#hills' },
+  { label: "Best Hill's", emoji: '⭐', name: "Hill's Science Diet Senior 7+", subtitle: 'Antioxidant blend · veterinarian-formulated · Widely available', href: '#hills' },
   { label: 'Best Royal Canin', emoji: '🔬', name: 'Royal Canin Aging Care', subtitle: 'Research-backed · Small/medium/large versions', href: '#royal-canin' },
 ]
 export default function BestSeniorDogFoodPage() {
@@ -17,7 +17,7 @@ export default function BestSeniorDogFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs are considered senior at 7+ years for most breeds (5-6 for giant breeds). Their nutritional needs shift — but "senior dog food" as a category is largely unregulated. WSAVA-compliant formulas from research-backed manufacturers are the appropriate filter.</p>
       </div>
@@ -34,6 +34,7 @@ export default function BestSeniorDogFoodPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Senior Food ≠ Low Protein</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Older advice recommended reducing protein in senior dogs. Current consensus is the opposite: aging dogs often need more protein per kg body weight to maintain muscle mass (sarcopenia prevention). Protein restriction is only appropriate with documented kidney disease. Choose senior foods with protein levels at or above adult maintenance levels.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="bright-mind" badge="Best Overall" badgeEmoji="🏆" name="Purina Pro Plan Bright Mind Adult 7+" subtitle="Enhanced botanical oils · Cognitive clinical trial · WSAVA top tier" score={9.4} winner
               description={<p>Purina Pro Plan Bright Mind is the only senior dog food with published clinical trial data specifically demonstrating cognitive benefits in aging dogs. The formula contains enhanced botanical oils (including medium-chain triglycerides from coconut oil) that provide alternative fuel for aging neurons. In a blinded clinical trial, dogs fed Bright Mind showed significantly improved performance on cognitive assessments compared to control dogs after 30 days. For owners seeing cognitive changes in aging dogs — disorientation, altered sleep patterns, loss of housetraining — this is the most evidence-supported dietary intervention available. WSAVA-compliant with full veterinary nutritionist oversight and feeding trial data.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Clinical evidence', value: 'Cognitive trial — published data', highlight: 'good' }, { label: 'Key ingredient', value: 'Enhanced botanical oils / MCT' }, { label: 'Protein', value: 'Adequate — not reduced' }]}
@@ -69,7 +70,7 @@ export default function BestSeniorDogFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-senior-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-senior-food" />
           </aside>
         </div>
       </div>

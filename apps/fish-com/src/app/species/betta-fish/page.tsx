@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Carnivore Diet, Fin Types & Heater Requirement | Fish.com', description: 'Bettas are carnivores that need protein-rich pellets, not flake food. They need a heater — room temperature is too cold. Complete guide to fins, tankmates, and enrichment.', path: '/species/betta-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BettaFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Betta Fish Care Guide', subtitle: 'Betta splendens — the Siamese fighting fish is one of the most commonly purchased aquarium fish and one of the most commonly mistreated. The bowls, vases, and tiny containers sold for betta fish do not constitute adequate housing. A heated, filtered tank of at least 5 gallons is the minimum for a betta to thrive rather than survive.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Betta Fish Care Guide', subtitle: 'Betta splendens — the Siamese fighting fish is one of the most commonly purchased aquarium fish and one of the most commonly mistreated. The bowls, vases, and tiny containers sold for betta fish do not constitute adequate housing. A heated, filtered tank of at least 5 gallons is the minimum for a betta to thrive rather than survive.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Betta Fish', href: '/species/betta-fish' }]}
       schema={schema}
       sidebar={<>

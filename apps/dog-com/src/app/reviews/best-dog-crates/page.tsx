@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Dog Crates 2025 — Wire, Plastic & Heavy Duty Ranked | Dog.com',
-  description: 'We tested 9 dog crates for durability, escape resistance, ventilation, and ease of assembly. Wire, plastic airline-approved, heavy duty, and furniture-style crates ranked.',
+  description: 'Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly. Wire, plastic airline-approved, heavy duty, and furniture-style crates ranked.',
   path: '/reviews/best-dog-crates',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Dog crates tested for durability, escape resistance, and ease of use.',
   url: 'https://dog.com/reviews/best-dog-crates',
   imageUrl: '',
-  authorName: 'Dog.com Expert Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -39,7 +39,7 @@ export default function BestDogCratesPage() {
       <SchemaScript schema={allSchemas} />
 
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Expert Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Editor Pick · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2025 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
@@ -69,6 +69,7 @@ export default function BestDogCratesPage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -106,7 +107,7 @@ export default function BestDogCratesPage() {
               subtitle="Aircraft-grade aluminum · Escape-proof · Lifetime warranty"
               score={9.4}
               description={
-                <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the definitive answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
+                <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the best answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
               }
               specs={[
                 { label: 'Material', value: 'Aircraft-grade aluminum', highlight: 'good' },
@@ -201,7 +202,7 @@ export default function BestDogCratesPage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="DVM-written guidance every Tuesday."
+              subtitle="Practical guidance every Tuesday."
               source="review-dog-crates" />
           </aside>
         </div>

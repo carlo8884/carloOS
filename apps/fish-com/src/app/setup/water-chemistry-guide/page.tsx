@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH & TDS Explained | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants, and how to adjust them.', path: '/setup/water-chemistry-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WaterChemistryGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]}
       schema={schema}
       sidebar={<>

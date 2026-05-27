@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025 — Pulse, Dimming & On-Off Ranked | Lizard.com', description: 'Every heat source needs a thermostat. Pulse proportional, dimming, and on-off thermostats ranked for reptile enclosures — Herpstat, Inkbird, and Repti-Zoo reviewed.', path: '/reviews/best-thermostats', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025', description: 'Pulse, dimming, and on-off reptile thermostats ranked.', url: 'https://lizard.com/reviews/best-thermostats', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025', description: 'Pulse, dimming, and on-off reptile thermostats ranked.', url: 'https://lizard.com/reviews/best-thermostats', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const herpstatSchema = buildProductSchema({ name: 'Spyder Robotics Herpstat 1', description: 'Pulse proportional reptile thermostat — most accurate thermoregulation for heat mats and radiant heat panels.', url: 'https://spyderrobotics.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const inkbirdSchema = buildProductSchema({ name: 'Inkbird ITC-306A Thermostat', description: 'Budget-friendly on-off reptile thermostat with probe — reliable for lower-wattage heat sources.', url: 'https://inkbird.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, herpstatSchema, inkbirdSchema)
@@ -44,8 +44,9 @@ export default function BestThermostatsPage() {
                 ))}
               </div>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="herpstat" badge="Best Overall" badgeEmoji="🏆" name="Spyder Robotics Herpstat 1" subtitle="Pulse proportional · ±0.2°F accuracy · Heat mat + RHP compatible" score={9.5} winner
-              description={<p>The Herpstat 1 is the gold standard for pulse proportional reptile thermostats. Pulse proportional technology maintains temperatures within ±0.2°F by sending rapid on/off pulses to the heat source rather than switching it fully on and off — this eliminates the temperature swings of basic on/off thermostats and extends heat mat lifespan. Built in the US by Spyder Robotics with a decade of track record in the reptile keeping community. The probe is accurate, the housing is durable, and the safety record is excellent. Compatible with heat mats (UTH), radiant heat panels (RHP), and ceramic heat emitters (CHE) — not for incandescent or halogen bulbs (use dimming thermostat for these).</p>}
+              description={<p>The Herpstat 1 is widely considered the benchmark pulse proportional reptile thermostat. Pulse proportional technology maintains temperatures within ±0.2°F by sending rapid on/off pulses to the heat source rather than switching it fully on and off — this eliminates the temperature swings of basic on/off thermostats and extends heat mat lifespan. Built in the US by Spyder Robotics with a decade of track record in the reptile keeping community. The probe is accurate, the housing is durable, and the safety record is excellent. Compatible with heat mats (UTH), radiant heat panels (RHP), and ceramic heat emitters (CHE) — not for incandescent or halogen bulbs (use dimming thermostat for these).</p>}
               specs={[{ label: 'Type', value: 'Pulse proportional', highlight: 'good' }, { label: 'Accuracy', value: '±0.2°F', highlight: 'good' }, { label: 'Compatible', value: 'UTH, RHP, CHE' }, { label: 'Made In', value: 'USA', highlight: 'good' }]}
               pros={['Best temperature accuracy available', 'Pulse tech extends heat mat life', 'US-made, reliable', 'Decade of keeper track record']}
               cons={['Not for bulbs (use dimming thermostat)', 'More expensive than budget options ($65-85)']}

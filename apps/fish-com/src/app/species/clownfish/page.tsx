@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Clownfish Care Guide — Saltwater Tank Requirements & Anemone | Fish.com', description: 'Complete clownfish care guide. Saltwater tank requirements, FOWLR vs reef setup, whether they need anemones (no), tankmates, and feeding for Amphiprioninae.', path: '/species/clownfish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Clownfish Care Guide', description: 'Saltwater setup, anemone question, tankmates, and feeding for clownfish.', url: 'https://fish.com/species/clownfish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Clownfish Care Guide', description: 'Saltwater setup, anemone question, tankmates, and feeding for clownfish.', url: 'https://fish.com/species/clownfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ClownfishPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
-      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Clownfish', href: '/species/clownfish' }]}
       schema={schema}
       sidebar={<>

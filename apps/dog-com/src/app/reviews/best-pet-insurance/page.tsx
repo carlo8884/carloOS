@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -18,7 +18,7 @@ const articleSchema = buildArticleSchema({
   description: 'Trupanion, Healthy Paws, Embrace, and Figo compared on payout rates and exclusions.',
   url: 'https://dog.com/reviews/best-pet-insurance',
   imageUrl: '',
-  authorName: 'Dog.com Editorial Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -48,7 +48,7 @@ export default function BestPetInsurancePage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Pet Insurance 2025 — Ranked by Vets & Owners
@@ -77,6 +77,7 @@ export default function BestPetInsurancePage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="trupanion"
               badge="Best Overall"
@@ -86,7 +87,7 @@ export default function BestPetInsurancePage() {
               score={9.4}
               winner
               description={<div>
-                <p>Trupanion is the insurer most recommended by veterinarians — because their payment model is designed around actual veterinary economics. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
+                <p>Trupanion is widely cited by veterinarians for its direct-pay model — because their payment model is designed around actual veterinary economics. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
                 <p>The per-incident deductible ($0–$1,000, your choice) applies once per condition, not per year. A dog with an ongoing condition like allergies pays the deductible once — then Trupanion covers 90% of all related costs indefinitely. Their underwriting is strict on pre-existing conditions but transparent. Monthly premiums are higher than budget competitors; the extra cost is worth it for the claims experience.</p>
               </div>}
               specs={[
@@ -97,7 +98,7 @@ export default function BestPetInsurancePage() {
                 { label: 'Waiting Period', value: '30 days illness, 5 days injury' },
                 { label: 'Price Range', value: '$40–120/mo depending on breed/age' },
               ]}
-              pros={['Pays vet directly — no float required', 'No annual or lifetime limits', 'Per-incident deductible favors chronic conditions', 'Most trusted by veterinarians', 'Covers hereditary and congenital conditions']}
+              pros={['Pays vet directly — no float required', 'No annual or lifetime limits', 'Per-incident deductible favors chronic conditions', 'Covers hereditary and congenital conditions']}
               cons={['Higher monthly premiums than budget options', 'Per-incident deductible less ideal for dogs with many separate incidents', 'Wellness care not included (add separately)']}
               price="$40–120/month"
               priceNote="Breed and age dependent. Get a quote."
@@ -218,7 +219,7 @@ export default function BestPetInsurancePage() {
               { label: 'French Bulldog Health', href: '/health/french-bulldog-health' },
               { label: 'Emergency Vet Signs', href: '/health/dog-symptoms-guide' },
             ]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="review-pet-insurance" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-pet-insurance" />
           </aside>
         </div>
       </div>

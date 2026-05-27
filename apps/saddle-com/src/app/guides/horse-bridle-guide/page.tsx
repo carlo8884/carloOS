@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Bridle types, fit, and discipline selection — from snaffle to double bridle.',
   url: 'https://saddle.com/guides/horse-bridle-guide',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -83,8 +83,7 @@ export default function HorseBridleGuidePage() {
           title: 'Horse Bridle Guide 2025',
           subtitle: 'Bridle selection follows your discipline, your horse\'s training level, and the work you are doing — not personal preference or aesthetics. This guide covers what each bridle type does, who it is for, and how to fit it correctly.',
           category: 'Equipment Guide',
-          authorName: 'Victoria Marsh, CSF',
-          authorCredentials: 'Certified Saddle Fitter · Dressage Trainer',
+          authorName: 'Saddle.com Editorial',
           authorAvatar: '🐴',
           publishedAt: 'May 2025',
           readTime: '11 min',

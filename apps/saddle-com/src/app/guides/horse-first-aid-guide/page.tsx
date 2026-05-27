@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse First Aid Guide — Colic, Wounds, Lameness & When to Call the Vet | Saddle.com', description: 'Every horse owner needs basic first aid knowledge. Colic assessment, wound care, lameness evaluation, and the vital signs that tell you when to call the vet immediately.', path: '/guides/horse-first-aid-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse First Aid Guide', description: 'Colic assessment, wound care, lameness evaluation, and vital signs for horse owners.', url: 'https://saddle.com/guides/horse-first-aid-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse First Aid Guide', description: 'Colic assessment, wound care, lameness evaluation, and vital signs for horse owners.', url: 'https://saddle.com/guides/horse-first-aid-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseFirstAidPage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Horse First Aid Guide', subtitle: 'Basic first aid knowledge and the ability to take and interpret vital signs are essential for every horse owner. Knowing the difference between a situation you can manage at the barn and one requiring an immediate veterinary call can save your horse\'s life — and knowing your horse\'s normal baseline makes abnormalities obvious.', category: 'Horse Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Equine Professional', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Horse First Aid Guide', subtitle: 'Basic first aid knowledge and the ability to take and interpret vital signs are essential for every horse owner. Knowing the difference between a situation you can manage at the barn and one requiring an immediate veterinary call can save your horse\'s life — and knowing your horse\'s normal baseline makes abnormalities obvious.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse First Aid', href: '/guides/horse-first-aid-guide' }]}
       schema={schema}
       sidebar={<>

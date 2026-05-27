@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Grain-Free Dog Food & DCM Risk — What the FDA Actually Found | Dog.com',
-  description: 'The FDA investigated a link between grain-free diets and dilated cardiomyopathy (DCM) in dogs. DVM explains what the data shows, which diets are implicated, and what to feed instead.',
+  description: 'The FDA investigated a link between grain-free diets and dilated cardiomyopathy (DCM) in dogs. This guide explains what the data shows, which diets are implicated, and what to feed instead.',
   path: '/nutrition/grain-free-dcm-risk',
   category: 'Nutrition Science',
   type: 'article',
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'What the FDA investigation into grain-free diets and DCM actually found — and what to feed instead.',
   url: 'https://dog.com/nutrition/grain-free-dcm-risk',
   imageUrl: '',
-  authorName: 'Dr. Patricia Mills, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -30,11 +30,10 @@ export default function GrainFreeDCMPage() {
         title: 'Grain-Free Dog Food & DCM Risk — What the FDA Actually Found',
         subtitle: 'The FDA\'s investigation into dilated cardiomyopathy (DCM) and grain-free diets produced concerning findings that most dog food marketing ignores. Here\'s what the data actually shows.',
         category: 'Nutrition Science',
-        authorName: 'Dr. Patricia Mills, DVM, DACVIM · Dr. Darcy Ackerman, DVM, DACVIM (Cardiology)',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '9 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -48,7 +47,7 @@ export default function GrainFreeDCMPage() {
           { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
           { label: 'Find a Cardiologist', href: '/find-a-vet' },
         ]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-grain-free" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-grain-free" />
       </>}
     >
       <div className="carloOS-article">
@@ -83,7 +82,7 @@ export default function GrainFreeDCMPage() {
         <h2>What to Do</h2>
         <p><strong>If your dog is currently eating a grain-free diet:</strong></p>
         <ul>
-          <li>Switch to a diet meeting WSAVA guidelines — Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, or Iams are the most commonly recommended brands. These companies employ veterinary nutritionists, conduct feeding trials, and invest in ongoing research.</li>
+          <li>Switch to a diet meeting WSAVA guidelines — Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, or Iams are the brands most commonly recommended by board-certified veterinary nutritionists. These companies employ veterinary nutritionists, conduct feeding trials, and invest in ongoing research.</li>
           <li>Grains (rice, corn, wheat, barley, oats) in dog food are not the problem the grain-free marketing suggests. Dogs digest grain well, and there is no evidence that grains cause the health problems the grain-free marketing implies.</li>
           <li>If your dog has been eating a high-legume grain-free diet for more than a year, discuss a cardiac evaluation with your veterinarian — particularly if you own a breed with higher DCM risk (Golden Retriever, Cocker Spaniel, Labrador, Doberman).</li>
         </ul>

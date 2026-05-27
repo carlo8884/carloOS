@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025 — Safety, INOX & Offset for Knee Pain | Saddle.com', description: 'Best stirrup irons ranked — Sprenger Bow Balance, MDC International, and safety stirrups compared. Offset irons for knee pain, safety stirrups for trail and cross-country.', path: '/reviews/best-stirrup-irons', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025', description: 'Safety, offset, and standard stirrup irons ranked for English riding disciplines.', url: 'https://saddle.com/reviews/best-stirrup-irons', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Stirrup Irons 2025', description: 'Safety, offset, and standard stirrup irons ranked for English riding disciplines.', url: 'https://saddle.com/reviews/best-stirrup-irons', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const sprSchema = buildProductSchema({ name: 'Sprenger Bow Balance Stirrup', description: 'Offset eye design reduces knee and hip stress in the two-point and jumping position.', url: 'https://sprenger.de', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, sprSchema)
 const PICKS = [
@@ -35,6 +35,7 @@ export default function BestStirrupIronsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Sizing First</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Correct stirrup width is a safety issue: 1 inch of clearance on each side of the boot's widest point. Too narrow and a boot can jam if a rider falls (drag risk); too wide and the foot slides too far through. Measure your boot at its widest point and add 2 inches for correct stirrup tread width.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="sprenger" badge="Best Ergonomic" badgeEmoji="🏆" name="Sprenger Bow Balance" subtitle="Offset eye · Angled tread · INOX stainless · Show-legal" score={9.4} winner
               description={<p>The Sprenger Bow Balance is the ergonomic stirrup standard — the offset eye (angled upward from the conventional perpendicular position) shifts the rider's leg slightly forward, reducing the internal rotation at the hip and knee that flat-eye stirrups can produce. This alignment change is particularly beneficial for riders with knee pain, hip impingement, or those who spend significant time in two-point or jumping position. INOX stainless steel construction. Multiple tread options. Show-legal for all English disciplines. The design difference compared to conventional stirrups is subtle but the knee and hip relief many riders feel is significant — particularly after long schooling sessions. One of the most recommended stirrup upgrades in hunter/jumper barns.</p>}
               specs={[{ label: 'Eye design', value: 'Offset 45° — ergonomic', highlight: 'good' }, { label: 'Material', value: 'INOX stainless steel' }, { label: 'Tread', value: 'Rubber insert — multiple options' }, { label: 'Show legal', value: 'Yes — all English disciplines', highlight: 'good' }]}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Loose Leash Walking — Stop Pulling for Good | Dog.com', description: 'How to teach a dog to walk on a loose leash. The stop-and-wait method, the 180-degree turn, and why punishment-based corrections make pulling worse.', path: '/training/loose-leash-walking', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Loose Leash Walking', description: 'Stop pulling with the stop-and-wait and 180-degree turn methods.', url: 'https://dog.com/training/loose-leash-walking', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Loose Leash Walking', description: 'Stop pulling with the stop-and-wait and 180-degree turn methods.', url: 'https://dog.com/training/loose-leash-walking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Teach a Dog to Walk on a Loose Leash', description: 'Step-by-step protocol for teaching loose leash walking using positive reinforcement.', url: 'https://dog.com/training/loose-leash-walking', totalTime: 'P6W', steps: [
   { name: 'Start in zero-distraction environment', text: 'Begin in your home or backyard — not on the street. The dog must be able to focus. Introduce leash walking where the environment makes success easy.' },
   { name: 'Reward position before you move', text: 'With dog on your left side, reward heavily for standing next to you with the leash loose. The dog should associate being beside you with good things before you take a single step.' },
@@ -17,7 +17,7 @@ export default function LooseLeashPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Loose Leash Walking', subtitle: 'Pulling on leash is one of the most common reasons dogs are surrendered. It is also one of the most fixable. The method that works is simple: forward motion only happens when the leash is loose.', category: 'Dog Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+        hero={{ title: 'Loose Leash Walking', subtitle: 'Pulling on leash is one of the most common reasons dogs are surrendered. It is also one of the most fixable. The method that works is simple: forward motion only happens when the leash is loose.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Loose Leash Walking', href: '/training/loose-leash-walking' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Why Dogs Pull', href: '#why' }, { label: 'Stop-and-Wait Method', href: '#stop' }, { label: '180-Degree Turn', href: '#turn' }, { label: 'Equipment', href: '#equipment' }, { label: 'Common Mistakes', href: '#mistakes' }]} />

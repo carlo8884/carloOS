@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Tested & Ranked | Lizard.com', description: 'Reptile equipment reviews tested by experienced keepers. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
 
 const REVIEWS = [
-  { title: 'Best UVB Bulbs 2025', desc: 'Solarmeter 6.5 tested — Arcadia vs Zoo Med ranked', href: '/reviews/best-uvb-bulbs', badge: '☀️ Most Important' },
+  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: '☀️ Most Important' },
   { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: '🏠 Setup' },
   { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird tested for accuracy — calibration data included', href: '/reviews/best-thermometers-hygrometers' },
-  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — tested by species', href: '/reviews/best-reptile-substrates' },
+  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
 ]
 
 export default function LizardReviewsPage() {

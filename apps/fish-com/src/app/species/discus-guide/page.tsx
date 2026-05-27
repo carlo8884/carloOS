@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Fish Care Guide — Daily Water Changes, 86°F & Disease Management | Fish.com', description: 'Discus are the most demanding freshwater fish. Require 82-86°F, daily water changes, and pristine water quality. Not for beginners. Spectacular for experienced fishkeepers.', path: '/species/discus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Fish Care Guide', description: 'Water change frequency, temperature, disease management, and care for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Fish Care Guide', description: 'Water change frequency, temperature, disease management, and care for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function DiscusGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Discus Fish Care Guide', subtitle: 'Symphysodon discus — the "King of the Aquarium." Discus are the most demanding freshwater fish regularly kept in the hobby: specific temperature requirements, high water change frequency, sensitivity to water chemistry and quality, and susceptibility to a range of diseases make them a challenge that filters out casual keepers. For experienced aquarists who meet their requirements, discus deliver visual impact no other freshwater fish matches.', category: 'Species Guide — Expert', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Discus Fish Care Guide', subtitle: 'Symphysodon discus — the "King of the Aquarium." Discus are the most demanding freshwater fish regularly kept in the hobby: specific temperature requirements, high water change frequency, sensitivity to water chemistry and quality, and susceptibility to a range of diseases make them a challenge that filters out casual keepers. For experienced aquarists who meet their requirements, discus deliver visual impact no other freshwater fish matches.', category: 'Species Guide — Expert', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Discus', href: '/species/discus' }]}
       schema={schema}
       sidebar={<>

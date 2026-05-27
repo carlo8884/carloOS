@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef, Salinity & Cycling | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
   { name: 'Choose FOWLR or reef', text: 'FOWLR (Fish Only With Live Rock) is significantly easier and cheaper. Reef tanks add corals and invertebrates requiring precise water chemistry and stronger lighting. Start with FOWLR unless you have marine experience.' },
   { name: 'Mix saltwater to correct salinity', text: 'Use RO/DI water (reverse osmosis deionized — not tap water). Mix with marine salt mix (Instant Ocean, Red Sea). Target specific gravity 1.025 (or salinity 35 ppt) for most fish. Use a refractometer for accurate measurement.' },
@@ -17,7 +17,7 @@ export default function SaltwaterTankSetupPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '12 min' }}
+        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Saltwater Setup', href: '/setup/saltwater-tank-setup' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

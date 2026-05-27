@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Parasites — Mites, Pinworms & Coccidia | Lizard.com', description: 'Reptile parasites: mites (external), pinworms and coccidia (internal). Identification, treatment, and why quarantine prevents introduction. Vet treatment required for most.', path: '/health/parasites', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites', description: 'Mites, pinworms, and coccidia — identification and treatment for reptiles.', url: 'https://lizard.com/health/parasites', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function ParasitesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Reptile Parasites — Mites, Pinworms & Coccidia', subtitle: 'Parasites are common in wild-caught reptiles and in animals kept in suboptimal conditions. Most are treatable with appropriate medication, but treatment requires a veterinarian — do not attempt to deworm or treat parasites without professional guidance.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Parasites — Mites, Pinworms & Coccidia', subtitle: 'Parasites are common in wild-caught reptiles and in animals kept in suboptimal conditions. Most are treatable with appropriate medication, but treatment requires a veterinarian — do not attempt to deworm or treat parasites without professional guidance.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites' }]}
       schema={schema}
       sidebar={<>

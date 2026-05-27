@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis & Rocky Mountain Spotted Fever | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution, and doxycycline treatment.', path: '/health/tick-borne-diseases', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function TickBornePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Tick-Borne Diseases in Dogs', subtitle: 'Four major tick-borne diseases affect dogs in the US: Lyme disease, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever (RMSF). All are transmitted by ticks, all respond to doxycycline, and all are prevented by consistent tick prevention. The variation between them is geographic distribution, severity, and the speed of required treatment.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Tick-Borne Diseases in Dogs', subtitle: 'Four major tick-borne diseases affect dogs in the US: Lyme disease, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever (RMSF). All are transmitted by ticks, all respond to doxycycline, and all are prevented by consistent tick prevention. The variation between them is geographic distribution, severity, and the speed of required treatment.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -24,7 +24,7 @@ export default function TickBornePage() {
             <div className="text-2xs text-brand-text-light mt-2">Note: RMSF not detected by 4Dx — requires separate testing</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm in Dogs', href: '/health/heartworm-in-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-tick-borne" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-tick-borne" />
         </>}
       >
         <div className="carloOS-article">

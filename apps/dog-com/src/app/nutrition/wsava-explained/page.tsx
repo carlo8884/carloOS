@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'WSAVA Dog Food Guidelines Explained — What They Mean & Why They Matter | Dog.com',
-  description: 'WSAVA guidelines are the gold standard for evaluating dog food manufacturers. A DVM explains what WSAVA compliance means, what questions to ask, and which brands pass.',
+  description: 'WSAVA guidelines are the gold standard for evaluating dog food manufacturers. This guide explains what WSAVA compliance means, what questions to ask, and which brands pass.',
   path: '/nutrition/wsava-explained',
   category: 'Nutrition Guide',
   type: 'article',
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'What WSAVA compliance actually means and which brands meet the standard.',
   url: 'https://dog.com/nutrition/wsava-explained',
   imageUrl: '',
-  authorName: 'Dr. Patricia Mills, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -30,11 +30,10 @@ export default function WSAVAExplainedPage() {
         title: 'WSAVA Dog Food Guidelines Explained',
         subtitle: 'The World Small Animal Veterinary Association (WSAVA) published guidelines for evaluating pet food manufacturers — not ingredients, but the companies making the food. Here\'s what compliance actually means.',
         category: 'Nutrition Guide',
-        authorName: 'Dr. Patricia Mills, DVM, DACVIM',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '8 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -48,7 +47,7 @@ export default function WSAVAExplainedPage() {
           { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' },
           { label: 'Nutrition Hub', href: '/nutrition' },
         ]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-wsava" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-wsava" />
       </>}
     >
       <div className="carloOS-article">

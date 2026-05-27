@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more — a DVM guide to knowing when to go now vs. wait.', path: '/health/emergency-signs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — DVM guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: '14 Dog Emergency Signs', description: 'Signs requiring immediate emergency veterinary care.', url: 'https://vets.co/health/emergency-signs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more — a Reference guide to knowing when to go now vs. wait.', path: '/health/emergency-signs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: '14 Dog Emergency Signs', description: 'Signs requiring immediate emergency veterinary care.', url: 'https://vets.co/health/emergency-signs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const EMERGENCY_SIGNS = [
   { sign: 'Pale, white, blue, or gray gums', detail: 'Normal gum color is pink. Pale gums indicate cardiovascular shock, internal bleeding, or severe anemia. White or blue gums indicate oxygen deprivation. Any color other than pink-to-salmon requires immediate emergency evaluation — gum color is one of the fastest assessments of circulatory status.' },
@@ -27,7 +27,7 @@ export default function EmergencySignsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: '14 Dog Emergency Signs', subtitle: 'Some signs warrant waiting until your regular vet opens. These do not. Print this page and keep it accessible. In a true emergency, knowing these signs before they happen is the difference between a treatment outcome and a fatality.', category: 'Emergency Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: '14 Dog Emergency Signs', subtitle: 'Some signs warrant waiting until your regular vet opens. These do not. Print this page and keep it accessible. In a true emergency, knowing these signs before they happen is the difference between a treatment outcome and a fatality.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Emergency Signs', href: '/health/emergency-signs' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -36,7 +36,7 @@ export default function EmergencySignsPage() {
             <Link href="/find-a-vet" className="block w-full text-center bg-brand-danger text-white text-xs font-bold py-2.5 rounded-lg no-underline hover:opacity-90">Find Emergency Vet →</Link>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat Guide', href: '/health/dog-bloat-gvd' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-emergency" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-emergency" />
         </>}
       >
         <div className="carloOS-article">

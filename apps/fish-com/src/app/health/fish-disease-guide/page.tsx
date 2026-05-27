@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Common aquarium fish diseases — symptoms, causes, and treatment.',
   url: 'https://fish.com/health/fish-disease-guide',
   imageUrl: '',
-  authorName: 'Fish.com Expert Team',
+  authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -115,7 +115,7 @@ export default function FishDiseaseGuidePage() {
         title: 'Aquarium Fish Disease Guide',
         subtitle: 'Most fish disease is preventable — excellent water quality, proper quarantine, and stress reduction prevent the vast majority of common conditions. When disease does occur, early identification makes treatment faster and more effective.',
         category: 'Fish Health Guide',
-        authorName: 'Fish.com Expert Team',
+        authorName: 'Fish.com Editorial',
         authorAvatar: '🐠',
         publishedAt: 'May 2025',
         readTime: '12 min',

@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'IVDD in Dogs — Intervertebral Disc Disease Signs, Surgery & Recovery | Dog.com', description: 'IVDD causes back pain to paralysis in chondrodystrophic dogs. The surgical window is 24-48 hours for best recovery. Signs, grades, and rehabilitation guide.', path: '/health/intervertebral-disc-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Intervertebral Disc Disease in Dogs', description: 'IVDD signs, grades, surgical indications, and rehabilitation.', url: 'https://dog.com/health/intervertebral-disc-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Intervertebral Disc Disease in Dogs', description: 'IVDD signs, grades, surgical indications, and rehabilitation.', url: 'https://dog.com/health/intervertebral-disc-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function IVDDPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Intervertebral Disc Disease (IVDD)', subtitle: 'IVDD is the most serious orthopedic condition in chondrodystrophic breeds — Dachshunds, Corgis, Beagles, Basset Hounds, French Bulldogs, and others. When a disc herniates into the spinal canal, the neurological window for surgical recovery is 24–48 hours. Speed matters more than almost anything else in this condition.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Intervertebral Disc Disease (IVDD)', subtitle: 'IVDD is the most serious orthopedic condition in chondrodystrophic breeds — Dachshunds, Corgis, Beagles, Basset Hounds, French Bulldogs, and others. When a disc herniates into the spinal canal, the neurological window for surgical recovery is 24–48 hours. Speed matters more than almost anything else in this condition.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'IVDD', href: '/health/intervertebral-disc-disease' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function IVDDPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-ivdd" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ivdd" />
         </>}
       >
         <div className="carloOS-article">

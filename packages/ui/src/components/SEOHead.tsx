@@ -236,7 +236,7 @@ export function buildHowToSchema(params: HowToSchemaParams) {
 
 // ─────────────────────────────────────────────
 // MEDICAL WEB PAGE SCHEMA
-// For DVM-reviewed health content
+// For consumer-facing pet health reference content
 // ─────────────────────────────────────────────
 
 interface MedicalWebPageSchemaParams {
@@ -244,7 +244,6 @@ interface MedicalWebPageSchemaParams {
   description: string
   url: string
   authorName: string
-  reviewedByName?: string
   lastReviewed: string // ISO date
   medicalAudience?: 'Patient' | 'Caregiver' | 'Clinician'
 }
@@ -257,10 +256,7 @@ export function buildMedicalWebPageSchema(params: MedicalWebPageSchemaParams) {
     description: params.description,
     url: params.url,
     lastReviewed: params.lastReviewed,
-    author: { '@type': 'Person', name: params.authorName },
-    ...(params.reviewedByName ? {
-      reviewedBy: { '@type': 'Person', name: params.reviewedByName, jobTitle: 'Doctor of Veterinary Medicine' }
-    } : {}),
+    author: { '@type': 'Organization', name: params.authorName },
     audience: {
       '@type': 'MedicalAudience',
       audienceType: params.medicalAudience ?? 'Caregiver',

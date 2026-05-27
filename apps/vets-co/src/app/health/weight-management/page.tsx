@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math & Prescription Diets | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight management diets.', path: '/health/weight-management', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function WeightManagementPage() {
@@ -12,7 +12,7 @@ export default function WeightManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Weight Management', subtitle: 'Over 56% of US dogs are overweight or obese. Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average 1.8 years longer than the same dog overweight.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -25,7 +25,7 @@ export default function WeightManagementPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-weight-mgmt" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-weight-mgmt" />
         </>}
       >
         <div className="carloOS-article">

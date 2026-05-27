@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot) — Signs, Causes & Treatment | Lizard.com', description: 'Stomatitis (mouth rot) is a bacterial infection of the oral cavity in reptiles. Yellow-white exudate in the mouth, swollen gums, and difficulty eating. Requires veterinary antibiotics.', path: '/health/stomatitis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function StomatitisPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Stomatitis in Reptiles (Mouth Rot)', subtitle: 'Infectious stomatitis — commonly called mouth rot — is a bacterial infection of the oral cavity that affects all reptile species. It ranges from mild (superficial gum inflammation) to severe (deep tissue infection with bone involvement). Early treatment is critical — advanced cases can become systemic and fatal.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Stomatitis in Reptiles (Mouth Rot)', subtitle: 'Infectious stomatitis — commonly called mouth rot — is a bacterial infection of the oral cavity that affects all reptile species. It ranges from mild (superficial gum inflammation) to severe (deep tissue infection with bone involvement). Early treatment is critical — advanced cases can become systemic and fatal.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Stomatitis', href: '/health/stomatitis' }]}
       schema={schema}
       sidebar={<>

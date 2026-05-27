@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -14,10 +14,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective',
-  description: 'Pet insurance ranked from a practicing DVM\'s perspective.',
+  description: 'Pet insurance ranked using public payout data, contract terms, and what actually matters for owners.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',
-  authorName: 'Dr. Sarah Webb, DVM',
+  authorName: 'Vets.co Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -34,16 +34,16 @@ export default function VetsPetInsurancePage() {
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
-          DVM Perspective · May 2025
+          Owner Reference · May 2025
         </span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
           Best Pet Insurance 2025 — What Vets Actually Think
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          As a practicing DVM, I see the aftermath of uninsured emergencies daily. Here&apos;s which plans actually perform when your pet needs $5,000 of care at 11pm on a Saturday — from the other side of the exam table.
+          For owners, the pattern is clear: the aftermath of uninsured emergencies daily. Here&apos;s which plans actually perform when your pet needs $5,000 of care at 11pm on a Saturday.
         </p>
-        <div className="mt-4 text-xs text-white/30">Dr. Sarah Webb, DVM · General Practice · Updated May 2025 · Affiliate disclosure applies</div>
+        <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated May 2025 · Affiliate disclosure applies</div>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -62,10 +62,11 @@ export default function VetsPetInsurancePage() {
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">From the Vet Side</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                The most important thing I can tell you: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. I see owners try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only insurer where I, as your vet, can submit the claim and be paid directly while you&apos;re standing at my front desk. For major emergencies, this matters enormously.
+                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only insurer where the veterinarian can submit the claim and be paid directly while you&apos;re standing at my front desk. For major emergencies, this matters enormously.
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard id="trupanion" badge="Best Overall" badgeEmoji="🏆" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
               score={9.4}
@@ -104,7 +105,7 @@ export default function VetsPetInsurancePage() {
             <ReviewCard id="embrace" badge="Wellness Included" badgeEmoji="📋" name="Embrace"
               subtitle="Wellness add-on · Diminishing deductible · Customizable"
               score={8.8}
-              description={<p>Embrace is the best choice for owners who want routine and preventive care covered alongside illness and accident insurance. Their wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Most customizable plan structure of any major insurer — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}
+              description={<p>Embrace is the best choice for owners who want routine and preventive care covered alongside illness and accident insurance. Their wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Among the more customizable plan structures of the major insurers — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'Diminishing annual', highlight: 'good' },
@@ -127,7 +128,7 @@ export default function VetsPetInsurancePage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="vets-co"
               title="Free Pet Health Tips"
-              subtitle="DVM-written guidance every Tuesday." source="review-pet-insurance" />
+              subtitle="Practical guidance every Tuesday." source="review-pet-insurance" />
           </aside>
         </div>
       </div>

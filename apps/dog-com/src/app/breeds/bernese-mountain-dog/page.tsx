@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bernese Mountain Dog Guide — Cancer, 7-Year Lifespan & Histiocytic Sarcoma | Dog.com', description: 'Berners have the shortest lifespan of any breed (~7 years). Cancer causes ~50% of deaths, with histiocytic sarcoma a breed-specific malignancy. What every Berner owner must know.', path: '/breeds/bernese-mountain-dog', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bernese Mountain Dog Breed Guide', description: 'Cancer, histiocytic sarcoma, lifespan, and health screening for Bernese Mountain Dogs.', url: 'https://dog.com/breeds/bernese-mountain-dog', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Bernese Mountain Dog Breed Guide', description: 'Cancer, histiocytic sarcoma, lifespan, and health screening for Bernese Mountain Dogs.', url: 'https://dog.com/breeds/bernese-mountain-dog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BerneseMountainDogPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Bernese Mountain Dog Breed Guide', subtitle: 'Gentle, devoted, and extraordinarily beautiful — Bernese Mountain Dogs are among the most loved family breeds. They are also among the shortest-lived and most cancer-prone. The average lifespan is 7–8 years. Approximately 50% die from cancer. This is not meant to discourage ownership — it is information every prospective Berner owner deserves to have before falling in love.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Bernese Mountain Dog Breed Guide', subtitle: 'Gentle, devoted, and extraordinarily beautiful — Bernese Mountain Dogs are among the most loved family breeds. They are also among the shortest-lived and most cancer-prone. The average lifespan is 7–8 years. Approximately 50% die from cancer. This is not meant to discourage ownership — it is information every prospective Berner owner deserves to have before falling in love.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bernese Mountain Dog', href: '/breeds/bernese-mountain-dog' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function BerneseMountainDogPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-berner" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-berner" />
       </>}
     >
       <div className="carloOS-article">

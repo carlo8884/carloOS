@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs — Weight Gain, Skin Changes & Levothyroxine | Dog.com', description: 'Hypothyroidism is the most common endocrine disorder in dogs. Weight gain without increased appetite, coat changes, and lethargy are the classic signs. Lifelong levothyroxine is the treatment.', path: '/health/hypothyroidism', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and levothyroxine treatment for canine hypothyroidism.', url: 'https://dog.com/health/hypothyroidism', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function HypothyroidismPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — insufficient thyroid hormone production — is the most common endocrine disorder in dogs. It affects metabolism, energy, skin, and cognition. It is easily managed with once or twice daily medication and dramatically improves quality of life once treated.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — insufficient thyroid hormone production — is the most common endocrine disorder in dogs. It affects metabolism, energy, skin, and cognition. It is easily managed with once or twice daily medication and dramatically improves quality of life once treated.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Hypothyroidism', href: '/health/hypothyroidism' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function HypothyroidismPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-hypothyroidism" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hypothyroidism" />
         </>}
       >
         <div className="carloOS-article">

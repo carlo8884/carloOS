@@ -4,12 +4,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Beagle Dog Breed Guide — Health, Training & Care | Dog.com', description: 'Complete Beagle guide. Nose-driven escape artists with specific health concerns — epilepsy, hypothyroidism, and obesity. Training and care from breeders and vets.', path: '/breeds/beagle', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BeaglePage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Beagle Breed Guide', subtitle: 'One of the most popular breeds in America — for good reason. Beagles are sturdy, friendly, and endlessly curious. They are also motivated by their nose in ways that require specific management strategies.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Beagle Breed Guide', subtitle: 'One of the most popular breeds in America — for good reason. Beagles are sturdy, friendly, and endlessly curious. They are also motivated by their nose in ways that require specific management strategies.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Beagle', href: '/breeds/beagle' }]}
       schema={schema}
       sidebar={<>
@@ -22,7 +22,7 @@ export default function BeaglePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-beagle" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
     >
       <div className="carloOS-article">

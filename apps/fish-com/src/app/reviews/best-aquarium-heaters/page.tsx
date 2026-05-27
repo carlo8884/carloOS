@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Best Aquarium Heaters 2025 — Calibrated for Accuracy | Fish.com',
-  description: 'We tested 8 aquarium heaters with a calibrated reference thermometer. Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked by temperature accuracy and reliability.',
+  description: 'Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports. Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked by temperature accuracy and reliability.',
   path: '/reviews/best-aquarium-heaters',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Aquarium heaters calibrated for accuracy — Eheim, Fluval, Cobalt ranked.',
   url: 'https://fish.com/reviews/best-aquarium-heaters',
   imageUrl: '',
-  authorName: 'Fish.com Expert Team',
+  authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -56,6 +56,7 @@ export default function BestHeatersPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Every heater dial is an approximation. Even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer (Govee H5053 recommended). Set your heater, verify with the thermometer, adjust if needed. Check temperature daily for the first week, then weekly.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="eheim"
               badge="Best Overall"
@@ -93,7 +94,7 @@ export default function BestHeatersPage() {
               name="Cobalt Aquatics Neo-Therm Pro"
               subtitle="Slim flat design · LED color indicator · ±0.5°F accuracy"
               score={9.1}
-              description={<p>The Neo-Therm Pro matches the Eheim Jager in accuracy (±0.5°F in our testing) in a flat form factor that is significantly less obtrusive in planted tanks or display aquariums where a traditional cylindrical heater disrupts the aesthetic. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance.</p>}
+              description={<p>The Neo-Therm Pro matches the Eheim Jager in accuracy (±0.5°F per manufacturer-published accuracy) in a flat form factor that is significantly less obtrusive in planted tanks or display aquariums where a traditional cylindrical heater disrupts the aesthetic. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance.</p>}
               specs={[
                 { label: 'Accuracy', value: '±0.5°F', highlight: 'good' },
                 { label: 'Design', value: 'Flat / slim profile', highlight: 'good' },
@@ -140,7 +141,7 @@ export default function BestHeatersPage() {
               name="Aqueon Pro Adjustable Heater"
               subtitle="Shatterproof · Under $30 · Widely available"
               score={8.1}
-              description={<p>The Aqueon Pro is the best budget heater for beginners — shatterproof construction removes the main safety risk of the Eheim Jager, and it is available in every pet store. Accuracy is acceptable (±1–1.5°F in our testing — worse than the Eheim or Cobalt but usable for most freshwater setups). For sensitive species with tight temperature requirements (discus, cardinal tetras, certain invertebrates), invest in a more accurate heater. For robust community fish with 4–6°F tolerance ranges, the Aqueon Pro performs adequately at the best price.</p>}
+              description={<p>The Aqueon Pro is the best budget heater for beginners — shatterproof construction removes the main safety risk of the Eheim Jager, and it is available in every pet store. Accuracy is acceptable (±1–1.5°F per published reviews — worse than the Eheim or Cobalt but usable for most freshwater setups). For sensitive species with tight temperature requirements (discus, cardinal tetras, certain invertebrates), invest in a more accurate heater. For robust community fish with 4–6°F tolerance ranges, the Aqueon Pro performs adequately at the best price.</p>}
               specs={[
                 { label: 'Price', value: 'Under $30', highlight: 'good' },
                 { label: 'Accuracy', value: '±1–1.5°F', highlight: 'warn' },

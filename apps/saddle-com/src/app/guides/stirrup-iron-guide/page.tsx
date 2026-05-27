@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Stirrup Iron Guide 2025 — Safety Stirrups, Sizing & Discipline Selection | Saddle.com', description: 'Complete stirrup iron guide. Why safety stirrups matter, correct sizing (1 inch wider than boot), and which irons work for dressage, jumping, and trail riding.', path: '/guides/stirrup-iron-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Stirrup Iron Guide', description: 'Safety stirrups, sizing, and discipline selection for riders.', url: 'https://saddle.com/guides/stirrup-iron-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Stirrup Iron Guide', description: 'Safety stirrups, sizing, and discipline selection for riders.', url: 'https://saddle.com/guides/stirrup-iron-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function StirrupIronGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Stirrup Iron Guide', subtitle: 'The stirrup iron is a safety-critical piece of equipment. A foot caught in a traditional stirrup during a fall drags the rider. Safety stirrups prevent this — and modern designs are both safer and more ergonomic than traditional alternatives.', category: 'Equipment Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Stirrup Iron Guide', subtitle: 'The stirrup iron is a safety-critical piece of equipment. A foot caught in a traditional stirrup during a fall drags the rider. Safety stirrups prevent this — and modern designs are both safer and more ergonomic than traditional alternatives.', category: 'Equipment Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Stirrup Iron Guide', href: '/guides/stirrup-iron-guide' }]}
       schema={schema}
       sidebar={<>

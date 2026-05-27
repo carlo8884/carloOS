@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2025 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2025', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2025', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — most widely recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
@@ -16,7 +16,7 @@ export default function BestDentalChewsPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Only chews with the VOHC (Veterinary Oral Health Council) seal have clinical evidence for plaque and tartar reduction. Look for the VOHC seal — not just "dental" marketing claims.</p>
       </div>
@@ -33,6 +33,7 @@ export default function BestDentalChewsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The VOHC Standard</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The Veterinary Oral Health Council awards its seal to products that demonstrate plaque or tartar reduction in controlled clinical studies. This is the correct filter for dental products — not ingredient claims, not packaging promises. The full VOHC-accepted product list is at vohc.org. Dental chews supplement toothbrushing — they do not replace it, and they do not substitute for professional cleaning.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="greenies" badge="Best Overall" badgeEmoji="🏆" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Most widely recommended · All sizes from teenie to large" score={9.2} winner
               description={<p>Greenies are the most widely recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
@@ -67,7 +68,7 @@ export default function BestDentalChewsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Dental Cleaning Guide', href: '/health/dog-dental-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-dental-chews" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-dental-chews" />
           </aside>
         </div>
       </div>

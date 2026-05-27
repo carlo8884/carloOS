@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas, Feeding Schedule & Switching to Adult | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food. DVM-reviewed.', path: '/nutrition/puppy-nutrition', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Nutrition Guide', description: 'Large breed formulas, feeding schedule, and when to switch to adult food.', url: 'https://dog.com/nutrition/puppy-nutrition', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas, Feeding Schedule & Switching to Adult | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food. research-based.', path: '/nutrition/puppy-nutrition', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Nutrition Guide', description: 'Large breed formulas, feeding schedule, and when to switch to adult food.', url: 'https://dog.com/nutrition/puppy-nutrition', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function PuppyNutritionPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Puppy Nutrition Guide', subtitle: 'Puppies have fundamentally different nutritional needs than adults — especially large breed puppies, where overfeeding calcium drives orthopedic disease. What every new puppy owner needs to know.', category: 'Puppy Nutrition', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Puppy Nutrition Guide', subtitle: 'Puppies have fundamentally different nutritional needs than adults — especially large breed puppies, where overfeeding calcium drives orthopedic disease. What every new puppy owner needs to know.', category: 'Puppy Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Puppy vs Adult Formula', href: '#formulas' }, { label: 'Large Breed Puppies — Critical Difference', href: '#large-breed' }, { label: 'Feeding Schedule by Age', href: '#schedule' }, { label: 'How Much to Feed', href: '#amount' }, { label: 'When to Switch to Adult', href: '#switch' }, { label: 'What Not to Feed', href: '#avoid' }]} />
         <RelatedLinks title="Related" links={[{ label: 'How Much to Feed Your Dog', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-puppy" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-puppy" />
       </>}
     >
       <div className="carloOS-article">

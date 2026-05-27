@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025 — Dressage, Jump & Therapeutic | Saddle.com', description: 'Best saddle pads by discipline: Mattes half-pad for fit correction, Roma all-purpose for everyday use, and Toklat Coolback for sweat management. CSF-tested.', path: '/reviews/best-saddle-pads', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025', description: 'Dressage, jump, and therapeutic saddle pads ranked by a certified saddle fitter.', url: 'https://saddle.com/reviews/best-saddle-pads', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025', description: 'Dressage, jump, and therapeutic saddle pads compared using CSF reviewer notes and published rider reports.', url: 'https://saddle.com/reviews/best-saddle-pads', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const mattesSchema = buildProductSchema({ name: 'Mattes Correction Half-Pad', description: 'Sheepskin half-pad with shim pockets for saddle fit correction.', url: 'https://mattes.eu', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const romaSchema = buildProductSchema({ name: 'Roma All-Purpose Saddle Pad', description: 'Everyday all-purpose saddle pad with wicking material and secure fit.', url: 'https://romaequestrian.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, mattesSchema, romaSchema)
@@ -35,6 +35,7 @@ export default function BestSaddlePadsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">A Pad Cannot Fix a Badly Fitting Saddle</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Saddle pads cushion and wick sweat — they are not tools for correcting a saddle that does not fit. Using a thick pad to compensate for a narrow tree bridges the horse's back, creating pressure at the pommel and cantle. Have the saddle fit assessed by a CSF before investing in therapeutic pads.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="mattes" badge="Best Fit Correction" badgeEmoji="🏆" name="Mattes Eurofit Correction Half-Pad" subtitle="Sheepskin · Shim pockets front and rear · Professional fit tool" score={9.4} winner
               description={<p>The Mattes half-pad is the standard fit-correction tool used by certified saddle fitters worldwide. The shim pockets allow insertion of foam or wool shims at the front and/or rear to level a saddle that is sitting unevenly due to asymmetry in the horse's musculature or minor tree issues. Not a substitute for proper saddle fitting, but an adjunct that extends the usable fit between reflocking appointments. The sheepskin conforms to the horse's back and distributes pressure well. Expensive, but used correctly under professional guidance it is the most effective pad available for fit refinement.</p>}
               specs={[{ label: 'Material', value: 'Australian sheepskin', highlight: 'good' }, { label: 'Shim pockets', value: 'Front and rear, both sides', highlight: 'good' }, { label: 'Use case', value: 'Fit correction, asymmetric muscles' }, { label: 'Professional use', value: 'Standard CSF tool' }]}

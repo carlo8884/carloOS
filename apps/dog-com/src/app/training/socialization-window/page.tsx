@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'The Puppy Socialization Window — 3 to 14 Weeks Explained | Dog.com', description: 'The socialization window closes at 14 weeks. What happens before then shapes the dog\'s emotional responses for life. What to expose puppies to and how to do it correctly.', path: '/training/socialization-window', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'The Puppy Socialization Window', description: 'The 3-14 week socialization critical period — what to expose puppies to and how.', url: 'https://dog.com/training/socialization-window', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'The Puppy Socialization Window', description: 'The 3-14 week socialization critical period — what to expose puppies to and how.', url: 'https://dog.com/training/socialization-window', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SocializationWindowPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'The Puppy Socialization Window', subtitle: 'Between approximately 3 and 14 weeks, puppies have a unique neurological openness to new experiences. What they encounter during this window — handled positively — becomes normal. What they miss has a higher probability of becoming a fear. This window closes and does not reopen.', category: 'Dog Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'The Puppy Socialization Window', subtitle: 'Between approximately 3 and 14 weeks, puppies have a unique neurological openness to new experiences. What they encounter during this window — handled positively — becomes normal. What they miss has a higher probability of becoming a fear. This window closes and does not reopen.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Socialization Window', href: '/training/socialization-window' }]}
       schema={schema}
       sidebar={<>
@@ -38,7 +38,7 @@ export default function SocializationWindowPage() {
         <p><strong>Quality over quantity:</strong> Five positive exposures are worth more than fifty overwhelming ones. Never push past the puppy's comfort threshold.</p>
 
         <h2>What Happens When Socialization Is Missed</h2>
-        <p>Under-socialized dogs are the leading reason adult dogs are surrendered to shelters. Fear aggression, reactivity, noise phobia, separation anxiety, and inability to cope with novel environments are all associated with inadequate socialization during the critical period. These are not personality traits — they are behavioral outcomes of a biological window that closed without adequate experience. They can be improved with behavior modification, but they are significantly harder to address in adulthood than they would have been to prevent.</p>
+        <p>Behavioural issues, including under-socialisation, are repeatedly cited among the leading reasons adult dogs are surrendered to shelters (ASPCA, HSUS shelter intake studies). Fear aggression, reactivity, noise phobia, separation anxiety, and inability to cope with novel environments are all associated with inadequate socialization during the critical period. These are not personality traits — they are behavioral outcomes of a biological window that closed without adequate experience. They can be improved with behavior modification, but they are significantly harder to address in adulthood than they would have been to prevent.</p>
         <p>If you have an adult dog with these issues: a veterinary behaviorist (DACVB) or certified applied animal behaviorist (CAAB) is the appropriate resource. Behavioral modification works — it is just slower and more effortful than prevention would have been.</p>
       </div>
     </ArticleLayout>

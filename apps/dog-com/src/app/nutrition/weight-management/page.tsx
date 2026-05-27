@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Over 50% of US dogs are overweight. Safe caloric reduction, body condition scoring, exercise protocols, and prescription weight management options for dogs.', path: '/nutrition/weight-management', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Weight Management', description: 'Safe weight loss protocol, caloric reduction, and prescription diet options.', url: 'https://dog.com/nutrition/weight-management', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols, and prescription weight management options for dogs.', path: '/nutrition/weight-management', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Weight Management', description: 'Safe weight loss protocol, caloric reduction, and prescription diet options.', url: 'https://dog.com/nutrition/weight-management', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function WeightManagementPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Dog Weight Management', subtitle: 'Over 50% of US dogs are overweight or obese — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey) — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Weight Management', href: '/nutrition/weight-management' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Is My Dog Overweight?', href: '#assess' }, { label: 'Why Weight Matters', href: '#why' }, { label: 'Safe Caloric Reduction', href: '#reduction' }, { label: 'Weight Management Diets', href: '#diets' }, { label: 'Exercise Protocol', href: '#exercise' }, { label: 'Tracking Progress', href: '#tracking' }]} />
         <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-weight" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-weight" />
       </>}
     >
       <div className="carloOS-article">

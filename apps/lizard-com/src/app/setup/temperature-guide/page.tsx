@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide — Gradients, Thermostats & Measuring | Lizard.com', description: 'How to create a proper thermal gradient, select the right heat sources, use thermostats, and measure temperatures accurately for reptiles.', path: '/setup/temperature-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide', description: 'Thermal gradients, heat sources, thermostats, and accurate measurement.', url: 'https://lizard.com/setup/temperature-guide', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide', description: 'Thermal gradients, heat sources, thermostats, and accurate measurement.', url: 'https://lizard.com/setup/temperature-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const HEAT_SOURCES = [
   { name: 'Basking Bulb (incandescent)', best: 'Diurnal species (bearded dragons, blue-tongue skinks)', pros: 'Creates directional heat spot; combined with UVB for daytime setup; mimics solar radiation pattern', cons: 'Produces light — cannot use overnight; burns out regularly', notes: 'Wattage selected by distance to achieve target basking temperature; use a dimmer thermostat' },
   { name: 'Ceramic Heat Emitter (CHE)', best: 'Overnight ambient heat; supplemental heat without light', pros: 'No light — does not disrupt photoperiod; long-lasting (6–12 months)', cons: 'Does not create focused basking spot — ambient only', notes: 'Connect to pulse proportional thermostat for accurate ambient control' },
-  { name: 'Deep Heat Projector (DHP)', best: 'All tropical and subtropical species; best overnight heat source', pros: 'Produces infra-red C — penetrates tissue like solar radiation; superior to CHE for thermoregulation benefit; no light', cons: 'More expensive than CHE', notes: 'Arcadia DHP is the leading product; connects to pulse proportional thermostat' },
+  { name: 'Deep Heat Projector (DHP)', best: 'All tropical and subtropical species; best overnight heat source', pros: 'Produces infra-red C — penetrates tissue like solar radiation; superior to CHE for thermoregulation benefit; no light', cons: 'More expensive than CHE', notes: 'Arcadia DHP is the most widely recommended example; connects to pulse proportional thermostat' },
   { name: 'Radiant Heat Panel (RHP)', best: 'Large enclosures; arboreal species', pros: 'Mounted inside roof; heats from above (natural direction); covers large area', cons: 'Expensive; installation required; not suitable for small enclosures', notes: 'Reptile Basics RHPs for large PVC enclosures' },
   { name: 'Under-Tank Heater (UTH)', best: 'None for most species — largely obsolete', pros: 'Inexpensive', cons: 'Heats substrate surface, not ambient air — does not create a thermal gradient; causes dangerous burns if thermostat fails; not suitable for substrate-dwelling species', notes: 'Use DHP or CHE instead; UTH may only be appropriate for nocturnal species requiring belly heat specifically' },
 ]
@@ -23,7 +23,7 @@ export default function TemperatureGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Temperature Setup Guide', subtitle: 'Reptiles are ectotherms — they regulate body temperature by moving between warm and cool areas. Providing a proper thermal gradient is not optional; it is fundamental to every metabolic process the animal depends on.', category: 'Enclosure Setup', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Reptile Temperature Setup Guide', subtitle: 'Reptiles are ectotherms — they regulate body temperature by moving between warm and cool areas. Providing a proper thermal gradient is not optional; it is fundamental to every metabolic process the animal depends on.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Temperature Guide', href: '/setup/temperature-guide' }]}
       schema={schema}
       sidebar={<>

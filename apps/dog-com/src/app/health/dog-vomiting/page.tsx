@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile & When It\'s an Emergency | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Vomiting', description: 'Causes, home care, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Vomiting', description: 'Causes, home care, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogVomitingPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Vomiting', subtitle: 'Dogs vomit. Most of the time it is not serious. But vomiting is also a sign of some of the most serious conditions in veterinary medicine — GDV, pancreatitis, toxin ingestion, intestinal obstruction. Knowing which signs escalate to emergency is essential.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Vomiting', subtitle: 'Dogs vomit. Most of the time it is not serious. But vomiting is also a sign of some of the most serious conditions in veterinary medicine — GDV, pancreatitis, toxin ingestion, intestinal obstruction. Knowing which signs escalate to emergency is essential.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Vomiting', href: '/health/dog-vomiting' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function DogVomitingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Pancreatitis', href: '/health/dog-symptoms-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-vomiting" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vomiting" />
         </>}
       >
         <div className="carloOS-article">

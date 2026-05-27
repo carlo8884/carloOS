@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Best Aquarium Filters 2025 — HOB, Canister & Sponge Filters Ranked | Fish.com',
-  description: 'We tested 9 aquarium filters for flow rate accuracy, biological filtration capacity, noise, and ease of maintenance. Hang-on-back, canister, and sponge filters ranked.',
+  description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options. Hang-on-back, canister, and sponge filters ranked.',
   path: '/reviews/best-aquarium-filters',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
-  authorName: 'Fish.com Expert Team',
+  authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -38,13 +38,13 @@ export default function BestAquariumFiltersPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Expert Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Editor Pick · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2025 — HOB, Canister & Sponge Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. We tested 9 filters for biological capacity, flow accuracy, and long-term reliability.
+          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
         </p>
       </div>
       <QuickPicks items={PICKS} />
@@ -65,6 +65,7 @@ export default function BestAquariumFiltersPage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
@@ -74,7 +75,7 @@ export default function BestAquariumFiltersPage() {
               score={9.4}
               winner
               description={<div>
-                <p>The AquaClear 70 is the gold standard HOB filter for a reason: its media basket is the largest of any HOB tested — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
+                <p>The AquaClear 70 is widely considered the benchmark HOB filter for a reason: its media basket is among the largest in the hang-on-back class — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
                 <p>Flow is adjustable (from full 300GPH to reduced flow for sensitive fish), noise level is low at the correct water level, and the design has been refined over decades. The one maintenance note: the impeller needs cleaning every 3–4 months or flow drops significantly.</p>
               </div>}
               specs={[
@@ -85,7 +86,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Noise', value: 'Low (at correct level)', highlight: 'good' },
                 { label: 'Maintenance', value: 'Monthly rinse, quarterly impeller' },
               ]}
-              pros={['Largest media basket of any HOB tested', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
+              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
               ctaText="Shop AquaClear →"

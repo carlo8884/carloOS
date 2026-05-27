@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025 — Summer, Winter & Show Gloves Ranked | Saddle.com', description: 'Best equestrian riding gloves by season. Roeckl, SSG, and Shires ranked for grip, feel, and durability in summer, winter, and competition use.', path: '/reviews/best-riding-gloves', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025', description: 'Roeckl, SSG, and Shires riding gloves ranked for summer, winter, and competition.', url: 'https://saddle.com/reviews/best-riding-gloves', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025', description: 'Roeckl, SSG, and Shires riding gloves ranked for summer, winter, and competition.', url: 'https://saddle.com/reviews/best-riding-gloves', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const roecklSchema = buildProductSchema({ name: 'Roeckl Chester Riding Glove', description: 'Premium European leather and mesh summer riding glove — superior rein feel.', url: 'https://roeckl.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, roecklSchema)
 const PICKS = [
@@ -29,6 +29,7 @@ export default function BestRidingGlovesPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <ScoreMethodology />
             <ReviewCard id="roeckl" badge="Best Summer" badgeEmoji="🏆" name="Roeckl Chester Riding Glove" subtitle="Leather palm · Breathable mesh back · Traditional feel · Competition approved" score={9.4} winner
               description={<p>Roeckl has been making equestrian gloves since 1839 — the Chester is their most popular model and the benchmark against which other summer riding gloves are measured. The Cabretta leather palm provides outstanding rein feel — you feel the subtle communications through the rein in a way that synthetic palms cannot replicate. The stretch mesh back keeps hands cool during warm weather work. The fit is precise — size according to the Roeckl size chart (different from standard glove sizing). These gloves are competition-appropriate in dressage and jumping at all levels. They last 1–3 seasons depending on use frequency. Worth the price for riders who spend significant time in the saddle.</p>}
               specs={[{ label: 'Palm', value: 'Cabretta leather', highlight: 'good' }, { label: 'Back', value: 'Stretch mesh — breathable', highlight: 'good' }, { label: 'Competition', value: 'Approved all disciplines', highlight: 'good' }, { label: 'Season', value: 'Spring through fall' }]}

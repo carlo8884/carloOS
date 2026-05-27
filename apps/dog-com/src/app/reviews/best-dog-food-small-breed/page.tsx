@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked. Dental health and calorie density compared.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin Small Adult', subtitle: 'Kibble-size designed · Dental formula · WSAVA top tier', href: '#royal-canin' },
-  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Most vets recommend', href: '#purina' },
+  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Widely recommended', href: '#purina' },
   { label: "Best Hill's", emoji: '🔬', name: "Hill's Science Diet Small Paws", subtitle: 'Antioxidant blend · Easy digestion · Widely available', href: '#hills' },
 ]
 
@@ -20,7 +20,7 @@ export default function BestSmallBreedFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
@@ -37,6 +37,7 @@ export default function BestSmallBreedFoodPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why Small Breed Formulas Matter</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Small dogs have faster metabolisms and higher calorie requirements per pound of body weight than large breeds. A 10-lb Yorkshre Terrier needs more calories per kg than a 70-lb Labrador. Small breed formulas provide higher calorie density and are sized for small mouths — large-breed kibble is too big for many small dogs to chew comfortably, contributing to dental disease by bypassing the mechanical cleaning action of chewing.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="royal-canin" badge="Best Overall" badgeEmoji="🏆" name="Royal Canin Small Adult" subtitle="Kibble-size engineered · Dental health formula · WSAVA top tier" score={9.3} winner
               description={<p>Royal Canin's small breed line is purpose-built in a way that competitors don't fully replicate — the kibble shape, size, and texture are engineered specifically for small-mouth dental health. The Small Adult formula (for dogs 9–22 lbs) has a specific kibble architecture that encourages the dog to chew rather than gulp, increasing the mechanical dental cleaning effect. Royal Canin is one of the three WSAVA-recommended manufacturers with full veterinary nutritionist oversight, multiple feeding trial protocols, and published nutritional research. The Small Adult provides appropriate caloric density for small breed metabolisms without excess fat. Widely recommended by veterinary dentists specifically for dental health support.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Kibble design', value: 'Small mouth optimized — dental benefit', highlight: 'good' }, { label: 'Size range', value: 'Dogs 9–22 lbs (Small Adult)' }, { label: 'Caloric density', value: 'Appropriate for small breed metabolism' }]}
@@ -71,7 +72,7 @@ export default function BestSmallBreedFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }, { label: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-small-breed-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-small-breed-food" />
           </aside>
         </div>
       </div>

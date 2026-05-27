@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide — Best Community Schooler | Fish.com', description: 'Harlequin rasboras are the benchmark community schooling fish — copper-orange with a black triangular patch, peaceful, hardy, and spectacular in groups of 15+.', path: '/species/harlequin-rasbora', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide', description: 'School size, planted tank setup, and community compatibility for Trigonostigma heteromorpha.', url: 'https://fish.com/species/harlequin-rasbora', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Harlequin Rasbora Care Guide', description: 'School size, planted tank setup, and community compatibility for Trigonostigma heteromorpha.', url: 'https://fish.com/species/harlequin-rasbora', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HarlequinPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Harlequin Rasbora', subtitle: 'Trigonostigma heteromorpha — the harlequin rasbora is the gold standard for community tank schooling fish. Peaceful, hardy, adaptable, and visually striking when kept in groups of 15+: the copper-orange body with the distinctive black triangular patch catches light from every angle as the school moves together.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Harlequin Rasbora', subtitle: 'Trigonostigma heteromorpha — the harlequin rasbora is the gold standard for community tank schooling fish. Peaceful, hardy, adaptable, and visually striking when kept in groups of 15+: the copper-orange body with the distinctive black triangular patch catches light from every angle as the school moves together.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Harlequin Rasbora', href: '/species/harlequin-rasbora' }]}
       schema={schema}
       sidebar={<>

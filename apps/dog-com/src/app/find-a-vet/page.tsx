@@ -185,9 +185,9 @@ export default function FindAVetPage() {
       <div className="bg-brand-primary-pale px-container sm:px-container-sm py-12">
         <EmailCapture variant="section" siteId="dog-com"
           title="Free Dog Health Newsletter"
-          subtitle="DVM-written breed health guides and specialist Q&A — every Tuesday."
+          subtitle="Breed health guides and specialist Q&A — every Tuesday."
           source="find-a-vet" ctaText="Subscribe Free"
-          perks={['✓ DVM-reviewed', '📬 Weekly', '🩺 Specialist advice']}
+          perks={['✓ Research-based', '📬 Weekly', '🩺 Specialist advice']}
         />
       </div>
     </>

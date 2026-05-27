@@ -128,7 +128,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Dog.com',
-    siteTagline: 'The Complete Resource for Dog Owners',
+    siteTagline: 'A Reference for Dog Owners',
     siteUrl: 'https://dog.com',
     logoText: 'Dog.com',
     twPrimary: 'orange',
@@ -154,7 +154,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Vets.co',
-    siteTagline: 'Find the Right Vet. Get Trusted Answers.',
+    siteTagline: 'Find a Vet. Read the Guidelines.',
     siteUrl: 'https://vets.co',
     logoText: 'Vets.co',
     twPrimary: 'teal',
@@ -180,7 +180,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 600, 700],
     fontBodyWeights: [300, 400, 500, 600],
     siteName: 'Fish.com',
-    siteTagline: 'The Complete Aquarium Resource',
+    siteTagline: 'An Aquarium Reference',
     siteUrl: 'https://fish.com',
     logoText: 'Fish.com',
     twPrimary: 'cyan',
@@ -206,7 +206,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Saddle.com',
-    siteTagline: 'The Authority on Saddles & Equestrian Equipment',
+    siteTagline: 'Saddles & Equestrian Equipment, Compared',
     siteUrl: 'https://saddle.com',
     logoText: 'SADDLE.com',
     twPrimary: 'amber',
@@ -232,7 +232,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 600, 700],
     fontBodyWeights: [300, 400, 500, 600, 700, 900],
     siteName: 'Lizard.com',
-    siteTagline: 'Reptile Care, Science-First',
+    siteTagline: 'Reptile Care, Source-First',
     siteUrl: 'https://lizard.com',
     logoText: 'Lizard.com',
     twPrimary: 'lime',
@@ -313,10 +313,10 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Health',
         links: [
-          { label: 'Symptom Guide', href: '/health/symptoms' },
-          { label: 'Dog Nutrition', href: '/health/nutrition' },
-          { label: 'Senior Dog Care', href: '/health/senior' },
-          { label: 'Dental Health', href: '/health/dental' },
+          { label: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
+          { label: 'Dog Nutrition', href: '/nutrition' },
+          { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
+          { label: 'Dental Health', href: '/health/dog-dental-care' },
           { label: 'Find a Vet', href: '/find-a-vet' },
         ],
       },
@@ -350,9 +350,8 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Find a Vet', href: '/find-a-vet' },
-      { label: 'Specialists', href: '/specialists' },
       { label: 'Pet Health', href: '/health' },
-      { label: 'Breed Guides', href: '/breeds' },
+      { label: 'Telehealth', href: '/telehealth' },
       { label: 'Pet Insurance', href: '/reviews/best-pet-insurance', highlight: true },
     ],
     footerLinks: [
@@ -360,25 +359,33 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Find Care',
         links: [
           { label: 'Find a Vet', href: '/find-a-vet' },
-          { label: 'Emergency Vets', href: '/emergency' },
-          { label: 'Specialists', href: '/specialists' },
-          { label: 'Telehealth', href: '/telehealth' },
+          { label: 'Telehealth Options', href: '/telehealth' },
+          { label: 'Emergency Signs', href: '/health/emergency-signs' },
         ],
       },
       {
         heading: 'Pet Health',
         links: [
-          { label: 'Dog Health', href: '/health/dogs' },
-          { label: 'Cat Health', href: '/health/cats' },
-          { label: 'Symptom Checker', href: '/symptoms' },
-          { label: 'FAQ', href: '/faq' },
+          { label: 'Pet Health Library', href: '/health' },
+          { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
+          { label: 'Vaccinations Guide', href: '/health/dog-vaccinations-guide' },
+          { label: 'Preventive Care', href: '/health/preventive-care-schedule' },
+        ],
+      },
+      {
+        heading: 'Breed Guides',
+        links: [
+          { label: 'Golden Retriever', href: '/breeds/golden-retriever-health' },
+          { label: 'Labrador', href: '/breeds/labrador-health' },
+          { label: 'French Bulldog', href: '/breeds/french-bulldog-health' },
+          { label: 'German Shepherd', href: '/breeds/german-shepherd-health' },
         ],
       },
       {
         heading: 'Insurance',
         links: [
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
-          { label: 'Telehealth Plans', href: '/reviews/best-pet-telehealth' },
+          { label: 'All Reviews', href: '/reviews' },
         ],
       },
     ],
@@ -405,7 +412,36 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Fish Health', href: '/health' },
       { label: 'Reviews', href: '/reviews' },
     ],
-    footerLinks: [],
+    footerLinks: [
+      {
+        heading: 'Species',
+        links: [
+          { label: 'Betta Fish', href: '/species/betta-fish' },
+          { label: 'Goldfish', href: '/species/goldfish' },
+          { label: 'Neon Tetra', href: '/species/neon-tetra' },
+          { label: 'Discus', href: '/species/discus' },
+          { label: 'All Species', href: '/species' },
+        ],
+      },
+      {
+        heading: 'Setup',
+        links: [
+          { label: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' },
+          { label: 'Planted Tank', href: '/setup/planted-tank-setup' },
+          { label: 'Saltwater Tank', href: '/setup/saltwater-tank-setup' },
+          { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' },
+        ],
+      },
+      {
+        heading: 'Reviews',
+        links: [
+          { label: 'Aquarium Filters', href: '/reviews/best-aquarium-filters' },
+          { label: 'Heaters', href: '/reviews/best-aquarium-heaters' },
+          { label: 'Lighting', href: '/reviews/best-aquarium-lighting' },
+          { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+    ],
     defaultOgImage: 'https://fish.com/og-default.jpg',
   },
 
@@ -423,13 +459,42 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     },
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
-      { label: 'English Saddles', href: '/english' },
-      { label: 'Western Saddles', href: '/western' },
-      { label: 'Buying Guides', href: '/guides' },
+      { label: 'English Saddles', href: '/reviews/best-english-saddles' },
+      { label: 'Western Saddles', href: '/reviews/best-western-saddles' },
+      { label: 'Buying Guides', href: '/guides/saddle-fit-guide' },
       { label: 'Brand Reviews', href: '/reviews' },
-      { label: 'Saddle Care', href: '/care' },
+      { label: 'Saddle Care', href: '/guides/leather-care-guide' },
     ],
-    footerLinks: [],
+    footerLinks: [
+      {
+        heading: 'Reviews',
+        links: [
+          { label: 'Best English Saddles', href: '/reviews/best-english-saddles' },
+          { label: 'Best Western Saddles', href: '/reviews/best-western-saddles' },
+          { label: 'Stubben Review', href: '/reviews/stubben-saddle-review' },
+          { label: 'Pessoa Review', href: '/reviews/pessoa-saddle-review' },
+          { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+      {
+        heading: 'Buying Guides',
+        links: [
+          { label: 'Saddle Fit', href: '/guides/saddle-fit-guide' },
+          { label: 'Seat Size', href: '/guides/seat-size-guide' },
+          { label: 'Used Saddle', href: '/guides/used-saddle-buying-guide' },
+          { label: 'First Horse', href: '/guides/buying-first-horse' },
+        ],
+      },
+      {
+        heading: 'Care & Tack',
+        links: [
+          { label: 'Leather Care', href: '/guides/leather-care-guide' },
+          { label: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' },
+          { label: 'Bit Selection', href: '/guides/bit-selection-guide' },
+          { label: 'Bridle Guide', href: '/guides/horse-bridle-guide' },
+        ],
+      },
+    ],
     defaultOgImage: 'https://saddle.com/og-default.jpg',
   },
 
@@ -448,12 +513,41 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Species Guides', href: '/species' },
-      { label: 'Reptile Health', href: '/health' },
+      { label: 'Reptile Health', href: '/health/sick-reptile-signs' },
       { label: 'Enclosure Setup', href: '/setup' },
       { label: 'Reviews', href: '/reviews' },
-      { label: 'FAQ', href: '/faq' },
     ],
-    footerLinks: [],
+    footerLinks: [
+      {
+        heading: 'Species',
+        links: [
+          { label: 'Bearded Dragon', href: '/species/bearded-dragon' },
+          { label: 'Leopard Gecko', href: '/species/leopard-gecko' },
+          { label: 'Ball Python', href: '/species/ball-python' },
+          { label: 'Crested Gecko', href: '/species/crested-gecko' },
+          { label: 'All Species', href: '/species' },
+        ],
+      },
+      {
+        heading: 'Setup',
+        links: [
+          { label: 'UVB Lighting', href: '/setup/uvb-lighting-guide' },
+          { label: 'Temperature', href: '/setup/temperature-guide' },
+          { label: 'Humidity', href: '/setup/humidity-guide' },
+          { label: 'Substrate', href: '/setup/substrate-guide' },
+          { label: 'Bioactive Setup', href: '/setup/bioactive-setup' },
+        ],
+      },
+      {
+        heading: 'Reviews',
+        links: [
+          { label: 'UVB Bulbs', href: '/reviews/best-uvb-bulbs' },
+          { label: 'Terrariums', href: '/reviews/best-reptile-terrariums' },
+          { label: 'Thermostats', href: '/reviews/best-thermostats' },
+          { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+    ],
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
 }

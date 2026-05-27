@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Schedule — Week by Week', description: 'Complete puppy schedule: sleep, feeding, training, and socialization.', url: 'https://dog.com/training/puppy-schedule', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Schedule — Week by Week', description: 'Complete puppy schedule: sleep, feeding, training, and socialization.', url: 'https://dog.com/training/puppy-schedule', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const SAMPLE_SCHEDULE = [
   { time: '6:30am', activity: 'Wake up → Immediately outside for potty' },
@@ -45,7 +45,7 @@ export default function PuppySchedulePage() {
       <SchemaScript schema={combinedTrainingSchema} />
       <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Puppy Schedule — Week by Week Guide', subtitle: 'A structured schedule is the single most effective puppy training tool. It sets the puppy up for success by making accidents nearly impossible and building reliable habits from day one.', category: 'Puppy Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Puppy Schedule — Week by Week Guide', subtitle: 'A structured schedule is the single most effective puppy training tool. It sets the puppy up for success by making accidents nearly impossible and building reliable habits from day one.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Schedule', href: '/training/puppy-schedule' }]}
       schema={schema}
       sidebar={<>

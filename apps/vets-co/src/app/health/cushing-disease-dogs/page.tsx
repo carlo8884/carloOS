@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly & Trilostane Treatment | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management. DVM guide.", path: '/health/cushing-disease-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly & Trilostane Treatment | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management. Reference guide.", path: '/health/cushing-disease-dogs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function CushingsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism (Cushing's disease) results from chronic excess cortisol. It is one of the most commonly diagnosed endocrine diseases in middle-aged to older dogs. The clinical signs are characteristic and slowly progressive — which is also why many owners attribute them to \"normal aging\" for a year or two before diagnosis.", category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism (Cushing's disease) results from chronic excess cortisol. It is one of the most commonly diagnosed endocrine diseases in middle-aged to older dogs. The clinical signs are characteristic and slowly progressive — which is also why many owners attribute them to \"normal aging\" for a year or two before diagnosis.", category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: "Cushing's Disease", href: '/health/cushing-disease-dogs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function CushingsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Diabetes in Dogs', href: '/health/dog-diabetes' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-cushings" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
         </>}
       >
         <div className="carloOS-article">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -18,20 +18,20 @@ const schema = buildArticleSchema({
   description: 'WSAVA-compliant puppy formulas ranked — large breed, small breed, all sizes.',
   url: 'https://dog.com/reviews/best-dog-food-for-puppies',
   imageUrl: '',
-  authorName: 'Dr. Patricia Mills, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
 
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large Breed', description: 'DVM-formulated large breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
+const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large Breed', description: 'veterinarian-formulated large breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
   { label: 'Best Large Breed', emoji: '🏆', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin' },
   { label: 'Best Overall Value', emoji: '⭐', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
-  { label: 'Best Small Breed', emoji: '🐾', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · DVM-formulated', href: '#hills-small' },
+  { label: 'Best Small Breed', emoji: '🐾', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
   { label: 'Best Budget', emoji: '💰', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · Under $40/bag', href: '#iams' },
 ]
 
@@ -40,7 +40,7 @@ export default function BestPuppyFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2025 — WSAVA-Compliant Formulas Ranked
@@ -68,6 +68,7 @@ export default function BestPuppyFoodPage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
@@ -196,7 +197,7 @@ export default function BestPuppyFoodPage() {
               { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
               { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
             ]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="review-puppy-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-puppy-food" />
           </aside>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025 — Front-Clip, Back-Clip & No-Pull Ranked | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs. Ruffwear, PetSafe, and Julius-K9 reviewed.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://petsafe.net', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://ruffwear.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
@@ -38,6 +38,7 @@ export default function BestDogHarnessesPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Front-Clip vs Back-Clip</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Front-clip harnesses attach the leash at the dog's chest — when the dog pulls forward, the leash redirects them to the side, interrupting the pulling motion without pain. Back-clip harnesses attach at the back — they allow full forward movement and are appropriate for dogs that already walk well on leash. For pullers: front-clip only.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="easy-walk" badge="Best No-Pull" badgeEmoji="🏆" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" score={9.3} winner
               description={<p>The Easy Walk is the most widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: 'Under $30', highlight: 'good' }]}
@@ -83,7 +84,7 @@ export default function BestDogHarnessesPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="DVM-written guidance weekly." source="review-harnesses" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-harnesses" />
           </aside>
         </div>
       </div>

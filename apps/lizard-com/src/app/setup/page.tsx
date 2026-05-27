@@ -9,9 +9,9 @@ const GUIDES = [
   { title: 'Temperature Setup Guide', desc: 'Gradient creation, thermostats, measuring correctly', href: '/setup/temperature-guide' },
   { title: 'Humidity Guide', desc: 'Species requirements, misting schedules, moist hides', href: '/setup/humidity-guide' },
   { title: 'Substrate Guide', desc: 'Bio-active, loose particle, tile — what works for each species', href: '/setup/substrate-guide' },
-  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra tested and ranked', href: '/reviews/best-reptile-terrariums', badge: '🏆 Reviewed' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird, Zoo Med tested with calibration data', href: '/reviews/best-thermometers-hygrometers', badge: '🏆 Reviewed' },
-  { title: 'Best UVB Bulbs 2025', desc: 'Solarmeter 6.5 tested — Arcadia vs Zoo Med ranked', href: '/reviews/best-uvb-bulbs', badge: '🏆 Reviewed' },
+  { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra compared and ranked', href: '/reviews/best-reptile-terrariums', badge: '🏆 Compared' },
+  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird, Zoo Med compared with published calibration data', href: '/reviews/best-thermometers-hygrometers', badge: '🏆 Compared' },
+  { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: '🏆 Compared' },
 ]
 
 export default function LizardSetupHubPage() {

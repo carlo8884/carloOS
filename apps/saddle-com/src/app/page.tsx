@@ -5,8 +5,8 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'The Authority on Saddles & Equestrian Equipment',
-  description: 'Expert saddle reviews, fitting guides, leather care, and brand comparisons — tested by certified saddle fitters.',
+  title: 'Saddles & Equestrian Equipment, Compared',
+  description: 'Saddle reviews, fitting guides, leather care, and brand comparisons — drawn from CSF reviewer write-ups, manufacturer specs, and published rider reports.',
   path: '/',
 })
 
@@ -50,7 +50,7 @@ export default function SaddleHomePage() {
           <div className="relative z-10">
             <div className="flex items-center gap-2.5 mb-7">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">The Saddle Authority</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Saddles, Compared</span>
             </div>
             <h1 className="font-display font-black text-white leading-none tracking-tighter mb-5"
               style={{ fontSize: 'clamp(44px, 6vw, 80px)' }}>
@@ -58,7 +58,7 @@ export default function SaddleHomePage() {
               <em className="not-italic text-brand-primary">Seriously.</em>
             </h1>
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Expert saddle reviews tested by certified fitters. Buying guides written by master saddlers. The resource serious equestrians rely on before spending $2,000–$5,000 on a saddle.
+              Saddle reviews drawing on CSF reviewer notes and published rider reports. Buying guides referenced against Society of Master Saddlers material. The resource serious equestrians can rely on before spending $2,000–$5,000 on a saddle.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link href="/english"
@@ -84,7 +84,7 @@ export default function SaddleHomePage() {
 
       {/* TRUST BAR */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2">
-        {['✓ Tested by Certified Saddle Fitters', '✓ Master Saddler reviewed', '✓ No paid brand placements', '✓ Used saddle market expertise'].map(t => (
+        {['✓ CSF-informed reviews', '✓ SMS-referenced guides', '✓ No paid brand placements', '✓ Used-saddle market guidance'].map(t => (
           <span key={t} className="text-xs font-semibold text-brand-primary">{t}</span>
         ))}
       </div>
@@ -134,7 +134,7 @@ export default function SaddleHomePage() {
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Expert Resources</span>
           </div>
           <h2 className="font-display font-bold text-white tracking-tight text-3xl mb-2">Buying & Care Guides</h2>
-          <p className="text-base text-white/40 max-w-lg mb-10">Written by certified fitters and master saddlers — the guides serious riders actually use.</p>
+          <p className="text-base text-white/40 max-w-lg mb-10">Guides built on CSF reviewer notes and Society of Master Saddlers reference material — the guides serious riders actually use.</p>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {GUIDE_CATEGORIES.map((g) => (
               <Link key={g.href} href={g.href}
@@ -157,7 +157,7 @@ export default function SaddleHomePage() {
           subtitle="New reviews, buying guides, and saddle market intelligence — every other week."
           ctaText="Get Free Guide"
           source="homepage-section"
-          perks={['📋 CSF-reviewed', '🏇 All disciplines', '💰 Used market tips', '🚫 No spam']}
+          perks={['📋 CSF-informed', '🏇 All disciplines', '💰 Used market tips', '🚫 No spam']}
         />
       </section>
     </>

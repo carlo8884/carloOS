@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works & What Doesn\'t | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works — and why "no pain no gain" and alpha rolls make it worse, not better.', path: '/training/puppy-biting', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition', description: 'Normal vs concerning biting, bite inhibition protocol, and what doesn\'t work.', url: 'https://dog.com/training/puppy-biting', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition', description: 'Normal vs concerning biting, bite inhibition protocol, and what doesn\'t work.', url: 'https://dog.com/training/puppy-biting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function PuppyBitingPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Puppy Biting & Bite Inhibition', subtitle: 'Puppies explore the world with their mouths. Biting during play is completely normal. The goal is not "stop all biting immediately" — it is to teach bite inhibition: a soft mouth that can distinguish between play and real bite pressure.', category: 'Puppy Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Puppy Biting & Bite Inhibition', subtitle: 'Puppies explore the world with their mouths. Biting during play is completely normal. The goal is not "stop all biting immediately" — it is to teach bite inhibition: a soft mouth that can distinguish between play and real bite pressure.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Biting', href: '/training/puppy-biting' }]}
       schema={schema}
       sidebar={<>

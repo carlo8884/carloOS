@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'New Tank Syndrome — Ammonia Spike, Cycling & Fish-In Rescue | Fish.com', description: 'New tank syndrome kills fish through ammonia poisoning. Fishless cycling with ammonia takes 4-6 weeks. Already have fish in? Emergency protocol and water change schedule.', path: '/health/new-tank-syndrome', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrome', description: 'Ammonia spikes, cycling protocol, and fish-in emergency management for new aquariums.', url: 'https://fish.com/health/new-tank-syndrome', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrome', description: 'Ammonia spikes, cycling protocol, and fish-in emergency management for new aquariums.', url: 'https://fish.com/health/new-tank-syndrome', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NewTankSyndromePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'New Tank Syndrome', subtitle: 'New tank syndrome describes the ammonia and nitrite toxicity that kills fish in an uncycled aquarium. The nitrogen cycle — the establishment of beneficial bacteria that convert fish waste to less harmful compounds — takes 4–8 weeks to complete in a new tank. Fish added before this cycle is established are poisoned by their own waste.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'New Tank Syndrome', subtitle: 'New tank syndrome describes the ammonia and nitrite toxicity that kills fish in an uncycled aquarium. The nitrogen cycle — the establishment of beneficial bacteria that convert fish waste to less harmful compounds — takes 4–8 weeks to complete in a new tank. Fish added before this cycle is established are poisoned by their own waste.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }]}
       schema={schema}
       sidebar={<>
