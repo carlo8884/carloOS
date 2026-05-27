@@ -9,7 +9,7 @@ import { getSiteConfig } from '@carloOS/config'
 
 interface BreadcrumbItem {
   name: string
-  href: string
+  href?: string
 }
 
 interface BreadcrumbProps {
@@ -20,10 +20,13 @@ interface BreadcrumbProps {
 export function Breadcrumb({ items, siteId }: BreadcrumbProps) {
   const config = siteId ? getSiteConfig(siteId) : null
 
-  const schemaItems = items.map((item) => ({
-    name: item.name,
-    url: config ? `${config.theme.siteUrl}${item.href}` : item.href,
-  }))
+  // BreadcrumbList schema only includes items that have a URL.
+  const schemaItems = items
+    .filter((item) => item.href)
+    .map((item) => ({
+      name: item.name,
+      url: config ? `${config.theme.siteUrl}${item.href}` : (item.href as string),
+    }))
 
   return (
     <>
@@ -37,12 +40,12 @@ export function Breadcrumb({ items, siteId }: BreadcrumbProps) {
           {items.map((item, i) => {
             const isLast = i === items.length - 1
             return (
-              <li key={item.href} className="flex items-center gap-2">
+              <li key={`${item.name}-${i}`} className="flex items-center gap-2">
                 {i > 0 && (
                   <span className="text-brand-border" aria-hidden="true">›</span>
                 )}
-                {isLast ? (
-                  <span className="text-brand-text-mid font-medium" aria-current="page">
+                {isLast || !item.href ? (
+                  <span className={isLast ? 'text-brand-text-mid font-medium' : 'text-brand-text-light'} aria-current={isLast ? 'page' : undefined}>
                     {item.name}
                   </span>
                 ) : (

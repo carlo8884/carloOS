@@ -49,7 +49,7 @@ export default function VetsGoldenRetrieverHealthPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Breed Guides', href: '/breeds' },
+        { name: 'Breed Guides' },
         { name: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' },
       ]}
       schema={schema}

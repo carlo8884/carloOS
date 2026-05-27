@@ -46,7 +46,7 @@ export default function ReptileFeedingGuidePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Health', href: '/health' },
+        { name: 'Health' },
         { name: 'Feeding Guide', href: '/health/reptile-feeding-guide' },
       ]}
       schema={schema}

@@ -24,7 +24,7 @@ const CONTENT_CATEGORIES = [
   { icon: '☀️', title: 'UVB Lighting', desc: 'Ferguson zones, T5 HO specs, meter testing', href: '/setup/uvb-lighting-guide' },
   { icon: '🌡️', title: 'Temperatures', desc: 'Gradient setup by species', href: '/setup' },
   { icon: '🍽️', title: 'Feeding Guide', desc: 'Prey size, frequency, gut-loading', href: '/health/reptile-feeding-guide' },
-  { icon: '🏥', title: 'Reptile Health', desc: 'Sick reptile signs and treatment', href: '/health' },
+  { icon: '🏥', title: 'Reptile Health', desc: 'Sick reptile signs and treatment', href: '/health/sick-reptile-signs' },
   { icon: '⚙️', title: 'Equipment', desc: 'Enclosures, thermostats, tested gear', href: '/reviews' },
 ]
 

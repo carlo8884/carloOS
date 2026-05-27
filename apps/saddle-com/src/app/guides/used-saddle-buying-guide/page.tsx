@@ -36,7 +36,7 @@ export default function UsedSaddleBuyingGuidePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides', href: '/guides' },
+        { name: 'Guides' },
         { name: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
       ]}
       schema={schema}

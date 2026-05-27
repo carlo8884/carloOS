@@ -22,7 +22,7 @@ export default function VetsFrenchBulldogHealthPage() {
       <ArticleLayout
       siteId="vets-co"
       hero={{ title: 'French Bulldog Health — A Veterinarian\'s Perspective', subtitle: 'French Bulldogs have the highest per-dog veterinary costs of any breed. The conditions are largely predictable, many are manageable, and some are preventable with early intervention. Here\'s what every Frenchie owner needs to know.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides', href: '/breeds' }, { name: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />

@@ -10,7 +10,7 @@ export default function GSHealthPage() {
   return (
     <ArticleLayout siteId="vets-co"
       hero={{ title: 'German Shepherd Health — A Veterinarian\'s Perspective', subtitle: 'German Shepherds are my most stoic patients — they mask pain remarkably well, which makes regular monitoring especially important. The breed predispositions are significant but manageable with early detection.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides', href: '/breeds' }, { name: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }]}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides' }, { name: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Neurologist', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Labrador Health', href: '/breeds/labrador-health' }]} />

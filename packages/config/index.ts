@@ -461,7 +461,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'English Saddles', href: '/reviews/best-english-saddles' },
       { label: 'Western Saddles', href: '/reviews/best-western-saddles' },
-      { label: 'Buying Guides', href: '/guides' },
+      { label: 'Buying Guides', href: '/guides/saddle-fit-guide' },
       { label: 'Brand Reviews', href: '/reviews' },
       { label: 'Saddle Care', href: '/guides/leather-care-guide' },
     ],
@@ -513,7 +513,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Species Guides', href: '/species' },
-      { label: 'Reptile Health', href: '/health' },
+      { label: 'Reptile Health', href: '/health/sick-reptile-signs' },
       { label: 'Enclosure Setup', href: '/setup' },
       { label: 'Reviews', href: '/reviews' },
     ],

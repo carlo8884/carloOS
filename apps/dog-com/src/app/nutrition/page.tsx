@@ -16,7 +16,7 @@ const GUIDES = [
       { title: 'Best Dry Dog Food 2025', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: '🏆 Top Picks' },
       { title: 'WSAVA Guidelines Explained', desc: 'What "meets WSAVA standards" actually means and why it matters', href: '/nutrition/wsava-explained' },
       { title: 'Grain-Free Dog Food — The DCM Risk', desc: 'FDA investigation findings and what to avoid', href: '/nutrition/grain-free-dcm-risk' },
-      { title: 'Raw Diet Pros & Cons', desc: 'What veterinary nutritionists actually say', href: '/nutrition/raw-diet' },
+      { title: 'Raw Diet Pros & Cons', desc: 'What veterinary nutritionists actually say', href: '/nutrition/raw-diet-risks' },
     ],
   },
   {

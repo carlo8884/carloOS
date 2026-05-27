@@ -106,7 +106,7 @@ export default function SickReptileSignsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Health', href: '/health' },
+        { name: 'Health' },
         { name: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' },
       ]}
       schema={schema}

@@ -36,7 +36,7 @@ interface ArticleHero {
 interface ArticleLayoutProps {
   siteId: SiteId
   hero: ArticleHero
-  breadcrumbs?: Array<{ name: string; href: string }>
+  breadcrumbs?: Array<{ name: string; href?: string }>
   children: ReactNode       // article body
   sidebar?: ReactNode       // right sidebar content
   schema?: Record<string, unknown>

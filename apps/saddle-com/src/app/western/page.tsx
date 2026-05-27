@@ -5,11 +5,11 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Western Saddles 2025 — By Discipline & Budget | Saddle.com', description: 'Western saddles ranked by discipline — barrel racing, roping, trail, reining, and general use. Expert tested with price guides and brand comparisons.', path: '/western' })
 
 const DISCIPLINES = [
-  { title: 'Barrel Racing Saddles', desc: 'High rise forks, free swing stirrups, lightweight construction — what actually matters', href: '/western/barrel-racing', badge: 'Performance' },
-  { title: 'Roping Saddles', desc: 'Horn strength, seat depth, tree construction for heading and heeling', href: '/western/roping', badge: 'Working' },
-  { title: 'Trail Saddles', desc: 'All-day comfort, weight distribution, storage options', href: '/western/trail', badge: 'Leisure' },
-  { title: 'Reining Saddles', desc: 'Slick seat, free motion, correct balance for spins and slides', href: '/western/reining', badge: 'Performance' },
-  { title: 'General Purpose / Ranch', desc: 'Versatile working saddles for ranch and casual riding', href: '/western/ranch', badge: 'Versatile' },
+  { title: 'Barrel Racing Saddles', desc: 'High rise forks, free swing stirrups, lightweight construction — what actually matters', href: '/reviews/best-western-saddles#barrel-racing', badge: 'Performance' },
+  { title: 'Roping Saddles', desc: 'Horn strength, seat depth, tree construction for heading and heeling', href: '/reviews/best-western-saddles#roping', badge: 'Working' },
+  { title: 'Trail Saddles', desc: 'All-day comfort, weight distribution, storage options', href: '/reviews/best-western-saddles#trail', badge: 'Leisure' },
+  { title: 'Reining Saddles', desc: 'Slick seat, free motion, correct balance for spins and slides', href: '/reviews/best-western-saddles#reining', badge: 'Performance' },
+  { title: 'General Purpose / Ranch', desc: 'Versatile working saddles for ranch and casual riding', href: '/reviews/best-western-saddles#ranch', badge: 'Versatile' },
 ]
 
 const TOP_BRANDS = [

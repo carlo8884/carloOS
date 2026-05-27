@@ -45,7 +45,7 @@ export default function SeatSizeGuidePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides', href: '/guides' },
+        { name: 'Guides' },
         { name: 'Seat Size Guide', href: '/guides/seat-size-guide' },
       ]}
       schema={schema}

@@ -55,11 +55,10 @@ const GUIDE_CATEGORIES = [
   { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
   { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
   { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
-  { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/planted' },
-  { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/saltwater' },
+  { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
+  { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
   { icon: '🏥', title: 'Fish Health', desc: 'Disease ID and treatment', href: '/health' },
   { icon: '⚙️', title: 'Equipment Reviews', desc: 'Filters, lights, heaters', href: '/reviews' },
-  { icon: '🐣', title: 'Breeding', desc: 'Spawning and raising fry', href: '/breeding' },
 ]
 
 export default function FishHomePage() {

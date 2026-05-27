@@ -8,7 +8,7 @@ const REVIEWS = [
   { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: '☀️ Most Important' },
   { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: '🏠 Setup' },
   { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird tested for accuracy — calibration data included', href: '/reviews/best-thermometers-hygrometers' },
-  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-reptile-substrates' },
+  { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
 ]
 
 export default function LizardReviewsPage() {

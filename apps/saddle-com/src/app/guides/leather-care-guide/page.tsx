@@ -36,7 +36,7 @@ export default function LeatherCareGuidePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides', href: '/guides' },
+        { name: 'Guides' },
         { name: 'Leather Care', href: '/guides/leather-care-guide' },
       ]}
       schema={schema}
