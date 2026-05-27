@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025 — Heartgard, Interceptor & More | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage, and breed warnings.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
@@ -39,6 +39,7 @@ export default function BestHeartwormPreventionPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">How Monthly Prevention Works</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Monthly preventives do not block infection in real time — they eliminate larvae exposed to during the previous month before they mature into adult worms. Missing one month creates a gap. Annual heartworm testing detects any breakthrough infection even in dogs on prevention.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="heartgard" badge="Best Standalone" badgeEmoji="🏆" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Most prescribed HW preventive" score={9.3} winner
               description={<p>Heartgard Plus is the most commonly prescribed standalone heartworm preventive in the US — ivermectin kills Dirofilaria immitis larvae while pyrantel pamoate covers roundworm and hookworm. Monthly beef-flavored chew with very high palatability. Suitable for all dogs except those with MDR1 gene mutation at higher doses — standard Heartgard dosing (6 mcg/kg ivermectin) is safe in MDR1-positive herding breeds. Not for flea/tick protection — pair with a separate isoxazoline for complete parasite coverage, or switch to Simparica Trio for combined coverage.</p>}
               specs={[{ label: 'Active Ingredients', value: 'Ivermectin + pyrantel', highlight: 'good' }, { label: 'Spectrum', value: 'HW + roundworm + hookworm' }, { label: 'Dosing', value: 'Monthly' }, { label: 'Rx required', value: 'Yes' }]}

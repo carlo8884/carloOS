@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -52,6 +52,7 @@ export default function BestThermometersPage() {
               <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>A thermometer that reads 10°F high means your bearded dragon&apos;s basking spot is actually 90°F when you think it&apos;s 100°F — significantly underheating for a species that needs 100–110°F basking temperatures. A thermometer that reads 10°F low means your enclosure is actually 120°F when you think you&apos;re at 110°F — potentially lethal. The analog dial gauges sold in most pet stores have ±10°F variance. That is unacceptable for reptile keeping.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="govee"
               badge="Best Overall"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025 — Turnout, Stable & Denier Guide | Saddle.com', description: 'Horse blankets ranked by denier rating, fill weight, and waterproofing. When horses actually need blankets (most don\'t in moderate climates) and how to measure correctly.', path: '/reviews/best-horse-blankets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025', description: 'Turnout and stable blankets ranked for denier, waterproofing, and value.', url: 'https://saddle.com/reviews/best-horse-blankets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -31,6 +31,7 @@ export default function HorseBlanketPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Denier Explained</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Denier measures outer shell thread thickness — higher denier is more tear-resistant. <strong>600D:</strong> light use, horses that don't tear blankets. <strong>1200D:</strong> standard for most horses. <strong>1680D+:</strong> horses that destroy blankets, turned out with other horses, rough use. Higher denier ≠ warmer — warmth is determined by fill weight (grams).</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="rambo" badge="Best Overall Turnout" badgeEmoji="🏆" name="Rambo Wug Turnout" subtitle="1200D poly/ripstop · Ergonomic Wug neck · Multiple fill weights · Horseware snap system" score={9.4} winner
               description={<p>The Rambo Wug is the most recognizable ergonomic turnout blanket in the market — the "Wug" refers to the extended neck piece that eliminates the need for a separate neck cover, covering the neck and wither area in one piece and preventing the shoulder rubs that traditional straight-neck blankets can cause. 1200D outer shell with reinforced critical areas (shoulders, haunches). Triple overlapping front closure using Horseware's proprietary snap system — secure and quick. Available in multiple fill weights (0g, 100g, 200g, 300g) to cover the full range from cool weather to hard freeze. The Horseware closure system is consistent across the brand — if you already use Horseware blankets, the hardware is interchangeable.</p>}
               specs={[{ label: 'Denier', value: '1200D ripstop polyester', highlight: 'good' }, { label: 'Neck design', value: 'Wug (neck attached)', highlight: 'good' }, { label: 'Closure', value: 'Horseware snap — triple front' }, { label: 'Fill options', value: '0g, 100g, 200g, 300g' }]}

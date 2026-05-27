@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025 — Anti-Bloat & Puzzle Feeders | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate, and Kong ranked for puzzle feeding and meal enrichment.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -37,6 +37,7 @@ export default function BestSlowFeederBowlsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bloat Risk and Fast Eating</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Feeding frequency and eating speed are modifiable GDV risk factors. Twice-daily feeding rather than once-daily reduces the single-meal volume that triggers distension. A slow feeder reduces air ingestion. Neither eliminates GDV risk — but both are low-cost, zero-downside interventions for at-risk breeds. See our full <Link href="/health/dog-bloat-gvd" className="text-brand-primary no-underline hover:underline">GDV guide</Link>.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="outward-hound" badge="Best Overall" badgeEmoji="🏆" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" score={9.2} winner
               description={<p>The Outward Hound Fun Feeder is the most widely sold slow feeder in the US and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
               specs={[{ label: 'Mealtime extension', value: '10x typical', highlight: 'good' }, { label: 'Sizes', value: '5 (mini to large breed)', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes — top rack', highlight: 'good' }, { label: 'Non-slip base', value: 'Yes' }]}

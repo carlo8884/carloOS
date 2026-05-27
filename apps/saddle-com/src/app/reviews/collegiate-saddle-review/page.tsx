@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,7 @@ export default function CollegiateReviewPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Collegiate saddles are the right choice for: recreational riders with modest budgets, a teenager&apos;s first saddle, horses that are still growing and will need a different saddle in 12–18 months, or riders who are not yet sure they will stay in the sport. For serious competition or long-term investment, look at used premium brand saddles (Stubben, Pessoa, Bates) in the same price range — they offer significantly better quality for comparable money on the used market.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="convertible"
               badge="Best Collegiate — Most Value"

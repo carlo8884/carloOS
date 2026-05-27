@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -54,6 +54,7 @@ export default function PessoaReviewPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Pessoa builds saddles for one primary purpose: to put the rider as close to the horse as possible in a jumping position. Minimal bulk, forward flap, close contact. The result is exceptional feel of distance and precision at speed. If you primarily school flatwork or dressage, the Stubben Roxane is a better choice. If your primary discipline is show jumping and you want to feel every stride, Pessoa is the answer.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="gen-x"
               badge="Best Show Jumping"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall Boots, Paddock Boots & Half Chaps | Saddle.com', description: 'Best riding boots by type — Ariat tall boots for all-day comfort, Dubarry for country, and Jodhpur + half chap combinations for value. CSF-tested.', path: '/reviews/best-riding-boots', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Boots 2025', description: 'Tall boots, paddock boots, and half chaps ranked by a certified equestrian professional.', url: 'https://saddle.com/reviews/best-riding-boots', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -29,6 +29,7 @@ export default function BestRidingBootsPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <ScoreMethodology />
             <ReviewCard id="ariat" badge="Best Tall Boot" badgeEmoji="🏆" name="Ariat Heritage Contour II Field Zip" subtitle="Full-length zip · ATS technology · Wide and regular calf options" score={9.3} winner
               description={<p>Ariat's Heritage Contour II is the standard all-day tall boot for serious amateur riders — the ATS (Advanced Torque Stability) footbed technology makes it significantly more comfortable for extended wear than traditional tall boots. The full-length inner zip means easy on and off without boot pulls or a boot jack. Available in multiple calf widths (regular, wide, extra wide), which is the critical fit issue for tall boots — calf fit matters more than foot size. The Heritage line has been Ariat's best-seller for good reason: it performs in the ring and is comfortable enough for a full day at a show.</p>}
               specs={[{ label: 'Closure', value: 'Full inner zip', highlight: 'good' }, { label: 'Calf widths', value: 'Multiple — regular to XW', highlight: 'good' }, { label: 'Technology', value: 'ATS footbed', highlight: 'good' }, { label: 'Best for', value: 'All disciplines, amateur competition' }]}

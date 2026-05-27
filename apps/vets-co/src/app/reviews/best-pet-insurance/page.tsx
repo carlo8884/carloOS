@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -66,6 +66,7 @@ export default function VetsPetInsurancePage() {
               </p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard id="trupanion" badge="Best Overall" badgeEmoji="🏆" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
               score={9.4}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2025 — Seachem Flourish, Easy Green & More | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -38,6 +38,7 @@ export default function BestPlantedFertilizersPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Macro vs Micro Nutrients</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth. Micros (iron, manganese, zinc, boron, etc.) drive color, health, and enzyme function. Most all-in-one fertilizers cover both. High-tech CO2 setups often need additional macro dosing as plants consume nutrients faster. Low-tech tanks with fish waste often have adequate macros — micros are what's missing.</p>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="easy-green" badge="Best Overall" badgeEmoji="🏆" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" score={9.4} winner
               description={<p>Easy Green from Aquarium Co-Op has become the most recommended all-in-one fertilizer in the planted tank hobby — for good reason. One pump per 10 gallons weekly covers most planted tanks from low-tech to medium-tech. Contains NPK macros plus a comprehensive micronutrient blend. The dosing simplicity eliminates the multiple-bottle approach of traditional fertilizer regimens (Seachem Flourish + Flourish Excel + Potassium separately). If you want a one-product solution that works for Java fern, Anubias, crypts, stem plants, and most common aquarium plants: Easy Green. Available exclusively from Aquarium Co-Op online.</p>}
               specs={[{ label: 'Type', value: 'All-in-one liquid', highlight: 'good' }, { label: 'Dosing', value: '1 pump / 10 gallons / week' }, { label: 'Covers', value: 'Macros + micros', highlight: 'good' }, { label: 'Best for', value: 'Low to medium-tech planted tanks' }]}

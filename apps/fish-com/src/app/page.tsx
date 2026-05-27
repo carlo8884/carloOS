@@ -147,6 +147,20 @@ export default function FishHomePage() {
         </div>
       </section>
 
+      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
+        {[
+          '✓ Research-based content',
+          '✓ 200+ species profiles',
+          '✓ Honest equipment reviews',
+          '✓ No paid editorial placements',
+        ].map((item) => (
+          <span key={item} className="text-xs font-semibold text-brand-primary">
+            {item}
+          </span>
+        ))}
+      </div>
+
       {/* ── FEATURED SPECIES ───────────────────────────────────────── */}
       <section className="bg-brand-surface px-container sm:px-container-sm py-section">
         <div className="flex items-end justify-between mb-9">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Reptile Thermostats 2025 — Pulse, Dimming & On-Off Ranked | Lizard.com', description: 'Every heat source needs a thermostat. Pulse proportional, dimming, and on-off thermostats ranked for reptile enclosures — Herpstat, Inkbird, and Repti-Zoo reviewed.', path: '/reviews/best-thermostats', type: 'article' })
@@ -44,6 +44,7 @@ export default function BestThermostatsPage() {
                 ))}
               </div>
             </div>
+            <ScoreMethodology />
             <ReviewCard id="herpstat" badge="Best Overall" badgeEmoji="🏆" name="Spyder Robotics Herpstat 1" subtitle="Pulse proportional · ±0.2°F accuracy · Heat mat + RHP compatible" score={9.5} winner
               description={<p>The Herpstat 1 is widely considered the benchmark pulse proportional reptile thermostat. Pulse proportional technology maintains temperatures within ±0.2°F by sending rapid on/off pulses to the heat source rather than switching it fully on and off — this eliminates the temperature swings of basic on/off thermostats and extends heat mat lifespan. Built in the US by Spyder Robotics with a decade of track record in the reptile keeping community. The probe is accurate, the housing is durable, and the safety record is excellent. Compatible with heat mats (UTH), radiant heat panels (RHP), and ceramic heat emitters (CHE) — not for incandescent or halogen bulbs (use dimming thermostat for these).</p>}
               specs={[{ label: 'Type', value: 'Pulse proportional', highlight: 'good' }, { label: 'Accuracy', value: '±0.2°F', highlight: 'good' }, { label: 'Compatible', value: 'UTH, RHP, CHE' }, { label: 'Made In', value: 'USA', highlight: 'good' }]}

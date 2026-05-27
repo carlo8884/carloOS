@@ -95,6 +95,20 @@ export default function LizardHomePage() {
         </div>
       </section>
 
+      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
+      <div className="relative z-10 px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center" style={{ background: '#0A1408', borderTop: '1px solid rgba(122,181,42,0.18)' }}>
+        {[
+          '✓ Source-first husbandry',
+          '✓ 50+ species profiles',
+          '✓ Honest equipment reviews',
+          '✓ No paid editorial placements',
+        ].map((item) => (
+          <span key={item} className="text-xs font-semibold text-brand-primary">
+            {item}
+          </span>
+        ))}
+      </div>
+
       {/* FEATURED SPECIES */}
       <section className="relative z-10 px-container sm:px-container-sm py-section" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="flex items-end justify-between mb-9">

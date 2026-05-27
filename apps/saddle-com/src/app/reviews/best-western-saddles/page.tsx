@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -68,6 +68,7 @@ export default function BestWesternSaddlesPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Western saddle seat size is measured differently from English — the measurement runs from the base of the horn to the front of the cantle. Most adult riders fall between 14.5" and 17" depending on hip width and riding discipline. Disciplines that require deep-seat security (reining, cutting) typically use smaller seats; trail and pleasure riding can go slightly larger for comfort. See our <Link href="/guides/seat-size-guide" className="text-brand-primary no-underline hover:underline">seat size guide</Link> for measurements.</p>
             </div>
 
+            <ScoreMethodology />
             <ReviewCard
               id="martin"
               badge="Best Reining"
