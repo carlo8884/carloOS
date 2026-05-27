@@ -49,6 +49,15 @@ const FORBIDDEN = [
   { pattern: /\bcertified\s+equestrian\s+professional\b/i, reason: 'Fake "certified equestrian professional" credential — removed in PR #3b' },
   { pattern: /\bRanked\s+by\s+(?:a\s+)?Veterinary\s+Nutritionist\b/i, reason: '"Ranked by a Veterinary Nutritionist" — removed in PR #3b' },
   { pattern: /\bRanked\s+by\s+Vets\b/i, reason: '"Ranked by Vets" — removed in PR #3b' },
+
+  // First-person hands-on testing claims (contradict every site's editorial-standards
+  // §"Honest scope" disclaimer). Cleared in PR #10 (saddle pessoa "in our test") and
+  // PR #19 (fish-com heater "we calibrated"). Locked into baseline here per
+  // QC-STANDARDS.md §1 trust-integrity contract.
+  { pattern: /\bwe\s+calibrated\b/i, reason: 'First-person calibration claim — contradicts editorial-standards "no hands-on testing"' },
+  { pattern: /\bwe\s+(?:tested|measured|benchmarked)\b/i, reason: 'First-person hands-on testing claim — contradicts editorial-standards' },
+  { pattern: /\bin\s+our\s+(?:test|testing|calibration|lab|laboratory)\b/i, reason: 'First-person in-house testing reference — contradicts editorial-standards' },
+  { pattern: /\bOlympic[- ]?proven\b/i, reason: '"Olympic-proven" — unsupportable performance claim, removed in PR #10' },
 ]
 
 // Files we scan: user-facing TSX in apps/* and shared UI components.
