@@ -12,6 +12,9 @@ const carloOSPreset: Partial<Config> = {
     extend: {
       // ── COLORS via CSS variables ──────────────────────────────────────
       // All site themes expose the same variable names — only values differ.
+      // Text tokens nest under `brand` (text-brand-text-dark / mid / light) to
+      // match the className usage throughout the apps; aliases at the top level
+      // are kept for any future refactor that prefers the shorter form.
       colors: {
         brand: {
           primary: 'var(--brand-primary)',
@@ -21,6 +24,10 @@ const carloOSPreset: Partial<Config> = {
           dark: 'var(--brand-dark)',
           surface: 'var(--brand-surface)',
           white: 'var(--brand-white)',
+          'text-dark': 'var(--brand-text-dark)',
+          'text-mid': 'var(--brand-text-mid)',
+          'text-light': 'var(--brand-text-light)',
+          border: 'var(--brand-border)',
         },
         text: {
           dark: 'var(--brand-text-dark)',
