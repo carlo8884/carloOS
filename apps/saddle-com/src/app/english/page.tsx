@@ -167,7 +167,7 @@ export default function EnglishSaddlesPage() {
           title="Free English Saddle Buying Guide"
           subtitle="Brand reviews, used market tips, and fitting guides."
           source="english-hub" ctaText="Get Free Guide"
-          perks={['📋 CSF-reviewed content', '💰 Used market pricing', '🏇 Discipline-specific advice']} />
+          perks={['📋 CSF-informed content', '💰 Used market pricing', '🏇 Discipline-specific advice']} />
       </div>
     </>
   )

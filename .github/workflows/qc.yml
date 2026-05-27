@@ -1,0 +1,48 @@
+name: QC
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: qc-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  link-check:
+    name: Internal link integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run link-check
+        run: node scripts/ci/link-check.mjs
+
+  metadata-policy:
+    name: Metadata policy (title ≤70, desc ≤160, no duplicates)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run metadata-policy
+        run: node scripts/ci/metadata-policy.mjs
+
+  trust-guard:
+    name: Trust-integrity guard (QC-STANDARDS.md §1)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run trust-guard
+        run: node scripts/ci/trust-guard.mjs
