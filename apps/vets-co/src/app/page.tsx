@@ -47,7 +47,7 @@ export default function VetsHomePage() {
               <span className="text-brand-primary">Get Trusted Answers.</span>
             </h1>
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Veterinary specialists near you, research-based health guides for every breed, honest pet insurance comparisons, and telehealth options — all in one place.
+              Veterinary specialists near you, research-based health guides, honest pet insurance comparisons, and telehealth options — all in one place.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link href="/find-a-vet"
@@ -60,7 +60,7 @@ export default function VetsHomePage() {
               </Link>
             </div>
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
-              {[['100+', 'Sourced Articles'], ['8', 'Specialty Types'], ['All Breeds', 'Covered']].map(([num, label]) => (
+              {[['22', 'Health Topics'], ['4', 'Breed Profiles'], ['8', 'Specialty Types']].map(([num, label]) => (
                 <div key={label}>
                   <div className="font-display text-xl font-bold text-white">{num}</div>
                   <div className="text-xs text-white/35 mt-0.5">{label}</div>
@@ -122,7 +122,7 @@ export default function VetsHomePage() {
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health Library</span>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Expert Guides</h2>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Featured Guides</h2>
           </div>
           <Link href="/health" className="text-sm font-semibold text-brand-primary no-underline hover:underline">All guides →</Link>
         </div>
