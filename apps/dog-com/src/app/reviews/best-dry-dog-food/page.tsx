@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Dry Dog Food 2025 — Royal Canin, Hill\'s & Purina Ranked',
-  description: 'We evaluated 12 dry dog foods on ingredient quality, nutritional adequacy, manufacturing standards, and WSAVA compliance. Royal Canin, Hill\'s, Purina Pro Plan, and more — ranked.',
+  description: 'We evaluated 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance. Royal Canin, Hill\'s, Purina Pro Plan, and more — ranked.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
 })
