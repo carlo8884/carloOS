@@ -53,7 +53,7 @@ const FEATURED_SPECIES = [
 
 const GUIDE_CATEGORIES = [
   { icon: '🧮', title: 'Calculators', desc: 'Volume, stocking, heater, CO2', href: '/tools' },
-  { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
+  { icon: '🐠', title: 'Species Guides', desc: 'Freshwater + saltwater fish profiles', href: '/species' },
   { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
   { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
   { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
@@ -84,7 +84,7 @@ export default function FishHomePage() {
             <div className="flex items-center gap-2.5 mb-8">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                The Complete Aquarium Resource
+                An Aquarium Reference
               </span>
             </div>
 
@@ -97,8 +97,8 @@ export default function FishHomePage() {
             </h1>
 
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Species guides for 200+ fish, water chemistry explained, honest equipment reviews,
-              and fish health content written with aquarists who know what they&apos;re talking about.
+              Species guides for freshwater and saltwater fish, water chemistry explained, free
+              aquarium calculators, honest equipment reviews, and fish-health reference.
             </p>
 
             <div className="flex gap-4 flex-wrap">
@@ -115,9 +115,9 @@ export default function FishHomePage() {
             {/* Trust stats */}
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
               {[
-                { num: '200+', label: 'Species Profiles' },
-                { num: 'Expert', label: 'Reviewed Content' },
-                { num: '50+', label: 'Equipment Reviews' },
+                { num: '37', label: 'Species Guides' },
+                { num: '6', label: 'Free Calculators' },
+                { num: '7', label: 'Equipment Reviews' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-display text-2xl font-bold text-white">{stat.num}</div>
