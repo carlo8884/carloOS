@@ -2,7 +2,9 @@
 
 **Five premium domain properties. One codebase. Shared infrastructure.**
 
-106 pages across 5 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co
+326 pages across 5 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co
+
+For live operating state see [STATUS.md](./STATUS.md). For the trust / SEO / legal contract see [QC-STANDARDS.md](./QC-STANDARDS.md).
 
 ---
 
@@ -14,11 +16,9 @@ Create the repo at github.com/new: name `carloOS`, private, no README, no .gitig
 
 Then push:
 ```bash
-cd ~/Downloads/carloOS
-git init
-git add .
-git commit -m "CarloOS foundation — 106 pages, 5 sites"
-git push -u https://carlo8884:YOUR_TOKEN@github.com/carlo8884/carloOS.git main
+git clone https://github.com/carlo8884/carloOS.git
+cd carloOS
+npm install
 ```
 
 ### Step 2 — Supabase
