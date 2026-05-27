@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav siteId="lizard-com" />
         <main className="relative z-10">{children}</main>
-        <Footer siteId="lizard-com" showAffiliateDisclosure={false} />
+        <Footer siteId="lizard-com" showAffiliateDisclosure />
       </body>
     </html>
   )
