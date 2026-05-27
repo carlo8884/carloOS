@@ -189,6 +189,27 @@ export default async function HomePage() {
         ))}
       </div>
 
+      {/* ── PUPPY SCHEDULE LEAD-MAGNET BANNER ──────────────────────── */}
+      <Link
+        href="/puppy-schedule"
+        className="block bg-brand-dark border-b border-brand-border px-container sm:px-container-sm py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
+      >
+        <div className="flex items-center justify-between gap-6 flex-wrap">
+          <div className="flex items-center gap-4">
+            <span className="text-2xl" aria-hidden="true">🐶</span>
+            <div>
+              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-0.5">Free for puppy owners</div>
+              <div className="text-sm sm:text-base text-white font-semibold">
+                Puppy Schedule, Weeks 8 to 16 — printable + 8-week email course
+              </div>
+            </div>
+          </div>
+          <span className="text-xs font-semibold text-brand-primary ml-auto sm:ml-0">
+            Get the schedule →
+          </span>
+        </div>
+      </Link>
+
       {/* ── BREED DIRECTORY ────────────────────────────────────────── */}
       <section className="bg-brand-surface px-container sm:px-container-sm py-section">
         <div className="flex items-end justify-between mb-9">

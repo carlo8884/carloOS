@@ -102,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/nutrition/toxic-foods', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/weight-management', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/nutrition/wsava-explained', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/puppy-schedule', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/reviews/best-dental-chews', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dog-beds', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
