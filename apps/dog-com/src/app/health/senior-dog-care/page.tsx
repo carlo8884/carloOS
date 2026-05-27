@@ -4,7 +4,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Senior Dog Care Guide — What Changes After 7 and How to Adapt | Dog.com',
+  title: 'Senior Dog Care — What Changes After 7 | Dog.com',
   description: 'The senior years can be the best years with your dog — if you know what\'s changing physically, what to monitor, and how to adapt care.',
   path: '/health/senior-dog-care',
   type: 'article',
