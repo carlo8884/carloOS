@@ -1,12 +1,9 @@
 name: content-quality
 
-# Runs seo-audit and content-check on every PR.
-# Both scripts currently report only — they do not exit non-zero.
-# Output appears in the PR check log so Carlo (or a reviewing bot) sees
-# trust/SEO regressions without running them locally.
-#
-# To convert to a hard gate later: have the scripts process.exit(1)
-# when issues exceed a threshold, then re-run this workflow.
+# Trust-guard: fails the PR if seo-audit or content-check counts INCREASE
+# beyond the checked-in baseline at ops/quality-baseline.json.
+# Existing issues do not force cleanup — only new regressions block.
+# To accept a new baseline: node scripts/quality-guard.mjs --write-baseline
 
 on:
   pull_request:
@@ -26,7 +23,5 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - name: SEO audit
-        run: npm run seo-audit
-      - name: Content check
-        run: npm run content-check
+      - name: Trust-guard
+        run: node scripts/quality-guard.mjs
