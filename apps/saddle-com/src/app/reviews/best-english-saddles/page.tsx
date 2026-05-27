@@ -8,13 +8,13 @@ const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English S
 
 const PICKS = [
   { label: 'Best Dressage', emoji: '🏆', name: 'Stubben Roxane', subtitle: '9.5 · Quick-Change · German leather', href: '#roxane' },
-  { label: 'Best Jumping', emoji: '⭐', name: 'Pessoa Gen X Pro', subtitle: '9.2 · Close contact · Olympic-proven', href: '#gen-x' },
+  { label: 'Best Jumping', emoji: '⭐', name: 'Pessoa Gen X Pro', subtitle: '9.2 · Close contact · Ridden at the top of the sport', href: '#gen-x' },
   { label: 'Best All-Purpose', emoji: '🐴', name: 'Bates Caprilli', subtitle: '9.0 · CAIR panels · Adjustable gullet', href: '#bates' },
   { label: 'Best Budget', emoji: '💰', name: 'Collegiate Convertible AP', subtitle: '8.4 · Adjustable · Under $800', href: '#collegiate' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Stubben Roxane', description: 'German-made dressage saddle with Quick-Change tree width adjustment.', url: 'https://stubben.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Pessoa Gen X Pro', description: 'Close-contact show jumping saddle with Olympic-proven geometry.', url: 'https://pessoaequestrian.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const productSchema1 = buildProductSchema({ name: 'Pessoa Gen X Pro', description: 'Close-contact show jumping saddle with top-level showjumping pedigree.', url: 'https://pessoaequestrian.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 export default function BestEnglishSaddlesPage() {
@@ -39,10 +39,10 @@ export default function BestEnglishSaddlesPage() {
               specs={[{ label: 'Tree', value: 'Quick-Change (5 widths)', highlight: 'good' }, { label: 'Made In', value: 'Germany', highlight: 'good' }, { label: 'Discipline', value: 'Dressage' }, { label: 'Resale', value: 'Excellent', highlight: 'good' }]}
               pros={['Quick-Change tree', 'Best-in-class German leather', 'Strong resale value']} cons={['$3,200–4,500 new — premium investment']}
               price="$3,200–$4,500" ctaText="Find a Stubben Dealer →" ctaHref="https://stubben.com" ctaAffiliateProgram="sharesale" ctaAffiliateProduct="stubben-roxane" />
-            <ReviewCard id="gen-x" badge="Best Show Jumping" badgeEmoji="⭐" name="Pessoa Gen X Pro" subtitle="Close contact · Forward flap · Olympic-proven geometry · Minimal bulk" score={9.2}
-              description={<p>The Gen X Pro is ridden by more Olympic show jumping medalists than any other saddle. Close-contact geometry — the most aggressive forward flap of any saddle tested — puts the rider as close to the horse as possible at speed. Transformative feel for serious jumpers. See the <Link href="/reviews/pessoa-saddle-review" className="text-brand-primary">full Pessoa review →</Link></p>}
-              specs={[{ label: 'Contact', value: 'Close contact', highlight: 'good' }, { label: 'Olympic credentials', value: 'Multiple medalists', highlight: 'good' }, { label: 'Flatwork', value: 'Not optimized', highlight: 'warn' }]}
-              pros={['Best close-contact geometry tested', 'Olympic-proven', 'Exceptional feel at speed']} cons={['Less suitable for extended flatwork', 'Premium price']}
+            <ReviewCard id="gen-x" badge="Best Show Jumping" badgeEmoji="⭐" name="Pessoa Gen X Pro" subtitle="Close contact · Forward flap · Top-level showjumping geometry · Minimal bulk" score={9.2}
+              description={<p>The Gen X Pro is widely ridden at the top of show jumping, including by multiple Olympic medalists. Close-contact geometry — one of the most aggressive forward flaps in production close-contact saddles — puts the rider as close to the horse as possible at speed. Transformative feel for serious jumpers. See the <Link href="/reviews/pessoa-saddle-review" className="text-brand-primary">full Pessoa review →</Link></p>}
+              specs={[{ label: 'Contact', value: 'Close contact', highlight: 'good' }, { label: 'Top-tier competition use', value: 'Documented Olympic riders', highlight: 'good' }, { label: 'Flatwork', value: 'Not optimized', highlight: 'warn' }]}
+              pros={['Among the closest-contact geometry in the close-contact category', 'Top-level showjumping pedigree', 'Exceptional feel at speed']} cons={['Less suitable for extended flatwork', 'Premium price']}
               price="$2,400–$3,200" ctaText="Find a Pessoa Dealer →" ctaHref="https://pessoaequestrian.com" ctaAffiliateProgram="sharesale" ctaAffiliateProduct="pessoa-gen-x-pro" />
             <ReviewCard id="bates" badge="Best All-Purpose" badgeEmoji="🐴" name="Bates Caprilli All-Purpose" subtitle="CAIR panel system · Adjustable gullet · Eventing and AP riding" score={9.0}
               description={<p>The Bates Caprilli is the most practical all-purpose English saddle — the CAIR (Computer Aided Intelligent Ride) panel system uses air panels that conform to the horse&apos;s back and maintain consistent pressure. Adjustable gullet allows width changes without a saddler. Good for eventing, hunter, and recreational riding where one saddle must do multiple jobs.</p>}

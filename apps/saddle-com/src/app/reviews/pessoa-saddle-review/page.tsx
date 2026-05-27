@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy & Optimum Ranked | Saddle.com',
-  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports — close contact geometry, Olympic credentials, and who each model suits.',
+  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports — close contact geometry, Top-tier competition use, and who each model suits.',
   path: '/reviews/pessoa-saddle-review',
   type: 'article',
 })
@@ -69,12 +69,12 @@ export default function PessoaReviewPage() {
               specs={[
                 { label: 'Contact', value: 'Close contact', highlight: 'good' },
                 { label: 'Flap', value: 'Forward-cut (most aggressive)', highlight: 'good' },
-                { label: 'Olympic Credentials', value: 'Multiple medalists', highlight: 'good' },
+                { label: 'Olympic Credentials', value: 'Documented Olympic riders', highlight: 'good' },
                 { label: 'Made In', value: 'Brazil' },
                 { label: 'Flatwork Use', value: 'Possible but not optimized', highlight: 'warn' },
                 { label: 'Resale', value: 'Strong in jumping market' },
               ]}
-              pros={['Best close-contact geometry tested', 'Olympic-proven design', 'Exceptional feel at speed', 'Strong resale in jumping market', 'Multiple fit options (narrow to wide tree)']}
+              pros={['Among the closest-contact geometry in the close-contact category', 'Olympic-proven design', 'Exceptional feel at speed', 'Strong resale in jumping market', 'Multiple fit options (narrow to wide tree)']}
               cons={['Less suitable for extended flatwork/dressage', 'Brazilian leather needs more conditioning than German', 'Premium price for a single-discipline saddle']}
               price="$2,400–$3,200"
               priceNote="Used: $900–$1,800"
