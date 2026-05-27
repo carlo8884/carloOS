@@ -36,6 +36,10 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 
+// Calculator / Tools infrastructure (shared across all portfolio sites)
+export { CalculatorShell } from './components/CalculatorShell'
+export { StatTile } from './components/StatTile'
+
 // Health condition cards
 export { BreedHealthCard, SpeciesHealthCard } from './components/BreedHealthCard'
 
