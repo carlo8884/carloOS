@@ -19,7 +19,7 @@ export default function TermsPage() {
         <h2>Not a Substitute for Professional Veterinary Advice</h2>
         <p><strong>Important:</strong> All content on Dog.com is for educational and informational purposes only. Nothing on this site constitutes veterinary advice, diagnosis, or treatment. Always consult a licensed veterinarian for any health concerns about your pet. In an emergency, contact your veterinarian or emergency veterinary clinic immediately. Dog.com is not responsible for actions taken based on information found on this site.</p>
         <h2>Affiliate Disclosure</h2>
-        <p>Dog.com participates in affiliate programs and earns commissions on qualifying purchases. This does not affect the editorial independence of our rankings and recommendations. See our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy.</p>
+        <p>Dog.com participates in affiliate programs and earns commissions on qualifying purchases. This does not affect the editorial independence of our rankings and recommendations. See our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement and our <Link href="/editorial-standards">Editorial Standards</Link> for the independence policy.</p>
         <h2>Intellectual Property</h2>
         <p>All content on Dog.com — text, images, graphics, and code — is owned by Bolton Properties, LLC or its content contributors and is protected by copyright law. You may not reproduce, distribute, or create derivative works without express written permission.</p>
         <h2>User Conduct</h2>
@@ -33,9 +33,10 @@ export default function TermsPage() {
         <h2>Contact</h2>
         <p>Legal questions: legal@dog.com</p>
       </div>
-      <div className="mt-12 pt-8 border-t border-brand-border">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline text-sm mr-6">Privacy Policy</Link>
-        <Link href="/editorial-standards" className="text-brand-primary hover:underline text-sm">Editorial Standards</Link>
+      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
+        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
+        <Link href="/legal/affiliate-disclosure" className="text-brand-primary hover:underline">Affiliate Disclosure</Link>
+        <Link href="/editorial-standards" className="text-brand-primary hover:underline">Editorial Standards</Link>
       </div>
     </div>
   )

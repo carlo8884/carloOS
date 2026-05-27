@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
-  siteId: 'dog-com',
-  title: 'Privacy Policy | Dog.com',
-  description: 'Dog.com privacy policy — how we collect, use, and protect your data.',
+  siteId: 'vets-co',
+  title: 'Privacy Policy | Vets.co',
+  description: 'Vets.co privacy policy — how we collect, use, and protect your data.',
   path: '/legal/privacy-policy',
 })
 
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="carloOS-article">
         <h2>Who We Are</h2>
-        <p>Dog.com is owned and operated by Bolton Properties, LLC. This privacy policy applies to dog.com and covers how we collect, use, and protect information from visitors to our site.</p>
+        <p>Vets.co is owned and operated by Bolton Properties, LLC. This privacy policy applies to vets.co and covers how we collect, use, and protect information from visitors to our site.</p>
 
         <h2>Information We Collect</h2>
         <h3>Information you provide</h3>
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
         <p>If you subscribe to our newsletter, we use Mailchimp to manage email delivery. Your email address is transferred to and stored by Mailchimp in accordance with their privacy policy. You can unsubscribe at any time via the unsubscribe link in any email. We do not sell, rent, or share your email address with third parties for their marketing purposes.</p>
 
         <h2>Affiliate Links</h2>
-        <p>Dog.com participates in affiliate programs including Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
+        <p>Vets.co participates in affiliate programs including Trupanion, Healthy Paws, Embrace, Chewy, and telehealth services including Vetster. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
 
         <h2>Analytics</h2>
         <p>We use Google Analytics to understand site traffic. Google Analytics uses cookies and collects anonymized usage data. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>. We also use internal Supabase-based analytics for page performance monitoring.</p>
@@ -65,16 +65,16 @@ export default function PrivacyPolicyPage() {
         <p>Email subscription data is retained until you unsubscribe. Analytics data is retained for 26 months per Google Analytics defaults. We do not retain personal data beyond what is necessary for the purposes described above.</p>
 
         <h2>Your Rights</h2>
-        <p>You may request access to, correction of, or deletion of your personal data by contacting us at privacy@dog.com. California residents have additional rights under CCPA, including the right to know what personal information is collected, the right to delete personal information, and the right to opt out of the sale of personal information (we do not sell personal information).</p>
+        <p>You may request access to, correction of, or deletion of your personal data by contacting us at privacy@vets.co. California residents have additional rights under CCPA, including the right to know what personal information is collected, the right to delete personal information, and the right to opt out of the sale of personal information (we do not sell personal information). EU/UK visitors have rights under GDPR/UK GDPR, including access, rectification, erasure, and the right to object to processing.</p>
 
         <h2>Children&apos;s Privacy</h2>
-        <p>Dog.com is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, contact us and we will delete it.</p>
+        <p>Vets.co is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, contact us and we will delete it.</p>
 
         <h2>Changes to This Policy</h2>
         <p>We may update this privacy policy periodically. We will note the date of the last update at the top of this page. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
 
         <h2>Contact</h2>
-        <p>Privacy questions: privacy@dog.com</p>
+        <p>Privacy questions: privacy@vets.co</p>
       </div>
 
       <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
