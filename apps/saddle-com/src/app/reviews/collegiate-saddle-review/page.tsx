@@ -34,7 +34,7 @@ export default function CollegiateReviewPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">CSF Reviewed · May 2025</span>
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Brand Review</span>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
             Collegiate Saddle Review 2025 — Best Budget English Saddles
           </h1>

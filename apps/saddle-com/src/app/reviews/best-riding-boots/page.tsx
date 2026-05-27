@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall Boots, Paddock Boots & Half Chaps | Saddle.com', description: 'Best riding boots by type — Ariat tall boots for all-day comfort, Dubarry for country, and Jodhpur + half chap combinations for value. CSF-tested.', path: '/reviews/best-riding-boots', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Boots 2025', description: 'Tall boots, paddock boots, and half chaps ranked by a certified equestrian professional.', url: 'https://saddle.com/reviews/best-riding-boots', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall Boots, Paddock Boots & Half Chaps | Saddle.com', description: 'Best riding boots by type — Ariat tall boots for all-day comfort, Dubarry for country, and Jodhpur + half chap combinations for value.', path: '/reviews/best-riding-boots', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Boots 2025', description: 'Tall boots, paddock boots, and half chaps ranked by discipline and use case.', url: 'https://saddle.com/reviews/best-riding-boots', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const ariatSchema = buildProductSchema({ name: 'Ariat Heritage Contour II Field Zip Boot', description: 'All-day comfort tall riding boot with ATS technology and full-length zip.', url: 'https://ariat.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, ariatSchema)
 const PICKS = [
@@ -16,7 +16,7 @@ export default function BestRidingBootsPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🥾 CSF Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🥾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Riding Boots 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right riding boot depends on discipline, budget, and how much time you spend in the saddle vs on the ground. Tall boots for competition and serious riding; paddock boots + half chaps for everyday versatility.</p>
       </div>

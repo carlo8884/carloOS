@@ -56,7 +56,7 @@ export default function LizardHomePage() {
             </h1>
             <p className="text-lg font-light leading-relaxed max-w-md mb-10"
               style={{ color: 'rgba(238,240,228,0.55)' }}>
-              Care guides grounded in current research. UVB lighting explained with actual measurements. Feeding guides with prey size charts. Species profiles with vet-reviewed health sections.
+              Care guides grounded in current research. UVB lighting explained with actual measurements. Feeding guides with prey size charts. Species profiles with sourced health information.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link href="/species"
