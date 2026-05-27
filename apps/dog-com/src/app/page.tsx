@@ -57,6 +57,14 @@ const FEATURED_BREEDS = [
   },
 ]
 
+// Stats shown in the hero — same numbers render twice (desktop floating
+// cards / mobile inline strip) so the data lives in one place.
+const HERO_STATS = [
+  { num: '30',  label: 'Breed Guides' },
+  { num: '70+', label: 'Sourced Articles' },
+  { num: '16',  label: 'Product Reviews' },
+] as const
+
 // ── Inline SVG icon set — single visual voice for category cards ────────────
 // 1.5px stroke geometric line icons, sized to a 24x24 viewBox. Kept inline
 // so the page stays a server component and ships zero icon-library JS.
@@ -169,83 +177,37 @@ export default async function HomePage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="min-h-[90vh] grid lg:grid-cols-2 bg-brand-dark relative overflow-hidden">
-        {/* Left */}
-        <div className="flex flex-col justify-center px-container sm:px-container-sm py-20 relative z-10">
-          <div
-            className="absolute inset-0 opacity-8"
-            style={{
-              backgroundImage: 'radial-gradient(ellipse at 20% 50%, rgba(232,98,42,0.12) 0%, transparent 60%)',
-            }}
-            aria-hidden="true"
-          />
-
-          <div className="relative z-10">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                A Dog Owner Reference
-              </span>
-            </div>
-
-            {/* Headline */}
-            <h1
-              className="font-display font-black text-white tracking-tighter leading-none mb-6"
-              style={{ fontSize: 'clamp(52px, 7vw, 88px)' }}
-            >
-              Everything<br />
-              Your Dog<br />
-              <em className="text-brand-primary not-italic">Deserves.</em>
-            </h1>
-
-            <p className="text-lg font-light text-white/60 leading-relaxed max-w-md mb-10">
-              Breed guides for 200+ breeds, research-based health articles, training that works,
-              and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex gap-4 flex-wrap">
-              <Link
-                href="/breeds"
-                className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200"
-              >
-                Browse Breed Guide →
-              </Link>
-              <Link
-                href="/health"
-                className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-7 py-3.5 rounded no-underline hover:border-white/40 hover:text-white transition-colors duration-200"
-              >
-                Dog Health Library
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Right — hero image */}
-        <div className="relative hidden lg:block">
+      <section className="bg-brand-dark relative overflow-hidden grid lg:grid-cols-2 lg:min-h-[88vh]">
+        {/* Image — visible on every viewport. Order flipped so mobile sees
+            the photograph first (editorial cover treatment), desktop reads
+            text-first on the left, image on the right. */}
+        <div className="relative order-1 lg:order-2 aspect-[5/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full">
           <Image
-            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80&auto=format&fit=crop"
-            alt="Happy dog enjoying outdoors"
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&q=85&auto=format&fit=crop"
+            alt="Golden retriever resting in warm afternoon light"
             fill
             className="object-cover object-center"
             priority
-            sizes="50vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
+          {/* Single moody vignette — bottom-to-top dark wash on mobile so the
+              transition into the text block reads clean; left-edge feather on
+              desktop so the side-by-side seam disappears. */}
           <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to right, #1A0E08 0%, transparent 15%), linear-gradient(to top, rgba(26,14,8,0.4) 0%, transparent 50%)',
-            }}
+            className="absolute inset-0 lg:hidden"
+            style={{ background: 'linear-gradient(to bottom, transparent 35%, #1A0E08 100%)' }}
             aria-hidden="true"
           />
-          {/* Stats */}
-          <div className="absolute bottom-10 right-8 z-10 flex flex-col gap-2.5">
-            {[
-              { num: '30',  label: 'Breed Guides' },
-              { num: '70+', label: 'Sourced Articles' },
-              { num: '16',  label: 'Product Reviews' },
-            ].map((stat) => (
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{ background: 'linear-gradient(to right, #1A0E08 0%, rgba(26,14,8,0.0) 22%)' }}
+            aria-hidden="true"
+          />
+
+          {/* Stats — desktop only; floating cards. Mobile gets an inline
+              version below the CTAs to avoid covering the image. */}
+          <div className="hidden lg:flex absolute bottom-10 right-8 z-10 flex-col gap-2.5">
+            {HERO_STATS.map((stat) => (
               <div
                 key={stat.label}
                 className="bg-white/95 backdrop-blur-sm rounded-md px-5 py-3 shadow-card min-w-[180px] border-l-2 border-brand-primary"
@@ -260,11 +222,81 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
+
+        {/* Text column */}
+        <div className="relative order-2 lg:order-1 flex flex-col justify-center px-container-sm sm:px-container py-14 lg:py-20">
+          <div
+            className="absolute inset-0 opacity-90 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(ellipse at 15% 50%, rgba(232,98,42,0.10) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 max-w-xl">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2.5 mb-5 lg:mb-6">
+              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                A Dog Owner Reference
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1
+              className="font-display font-black text-white tracking-tighter leading-[0.95] mb-5 lg:mb-7"
+              style={{ fontSize: 'clamp(42px, 7vw, 88px)' }}
+            >
+              Everything<br />
+              Your Dog<br />
+              <em className="text-brand-primary not-italic">Deserves.</em>
+            </h1>
+
+            <p className="text-base lg:text-lg font-light text-white/65 leading-relaxed max-w-md mb-8 lg:mb-10">
+              Breed guides for 200+ breeds, research-based health articles, training that works,
+              and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
+            </p>
+
+            {/* CTAs — primary solid, secondary as text-arrow link to keep
+                hierarchy unambiguous (was an outline button that competed
+                with the primary). */}
+            <div className="flex items-center gap-6 flex-wrap">
+              <Link
+                href="/breeds"
+                className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200"
+              >
+                Browse Breed Guide
+                <span aria-hidden="true" className="ml-2">→</span>
+              </Link>
+              <Link
+                href="/health"
+                className="group inline-flex items-center text-sm font-semibold text-white/85 no-underline hover:text-white transition-colors"
+              >
+                Dog Health Library
+                <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span>
+              </Link>
+            </div>
+
+            {/* Mobile stats strip — three-up inline, only renders <lg. */}
+            <div className="lg:hidden flex items-center gap-6 mt-10 pt-7 border-t border-white/10">
+              {HERO_STATS.map((stat) => (
+                <div key={stat.label}>
+                  <div className="font-display font-black text-white text-2xl leading-none tabular-display">
+                    {stat.num}
+                  </div>
+                  <div className="text-2xs text-white/55 font-semibold uppercase tracking-eyebrow mt-1.5">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ── TRUST BAR ──────────────────────────────────────────────── */}
-      <div className="bg-brand-dark border-b border-white/5 px-container sm:px-container-sm py-3">
-        <div className="flex flex-wrap items-center justify-center sm:justify-between gap-y-2 text-white/70">
+      <div className="bg-brand-dark border-b border-white/5 px-container-sm sm:px-container py-3">
+        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2 text-white/70">
           {[
             'Research-based health content',
             '200+ breed profiles',
@@ -287,39 +319,54 @@ export default async function HomePage() {
       {/* ── PUPPY SCHEDULE LEAD-MAGNET BANNER ──────────────────────── */}
       <Link
         href="/puppy-schedule"
-        className="block bg-brand-dark border-b border-brand-border px-container sm:px-container-sm py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
+        className="block bg-[#22150F] border-b border-white/5 px-container-sm sm:px-container py-4 hover:bg-[#291812] transition-colors duration-200 no-underline"
       >
-        <div className="flex items-center justify-between gap-6 flex-wrap">
-          <div className="flex items-center gap-4">
-            <span className="text-2xl" aria-hidden="true">🐶</span>
-            <div>
-              <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary mb-0.5">Free for puppy owners</div>
-              <div className="text-sm sm:text-base text-white font-semibold">
+        <div className="mx-auto max-w-container-wide flex items-center justify-between gap-6 flex-wrap">
+          <div className="flex items-center gap-4 min-w-0">
+            {/* Paw-mark line icon — replaces the 🐶 emoji to keep iconography
+                consistent with the rest of the homepage chrome. */}
+            <svg
+              width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="1.5"
+              strokeLinecap="round" strokeLinejoin="round"
+              aria-hidden="true"
+              className="text-brand-primary shrink-0"
+            >
+              <ellipse cx="5.5" cy="10" rx="1.6" ry="2.2" />
+              <ellipse cx="9" cy="6.5" rx="1.6" ry="2.2" />
+              <ellipse cx="15" cy="6.5" rx="1.6" ry="2.2" />
+              <ellipse cx="18.5" cy="10" rx="1.6" ry="2.2" />
+              <path d="M8 17.5c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.4-1 2.5-2.4 2.5h-3.2C9 20 8 18.9 8 17.5z" />
+            </svg>
+            <div className="min-w-0">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">Free for puppy owners</div>
+              <div className="text-sm sm:text-base text-white font-semibold leading-snug">
                 Puppy Schedule, Weeks 8 to 16 — printable + 8-week email course
               </div>
             </div>
           </div>
-          <span className="text-xs font-semibold text-brand-primary ml-auto sm:ml-0">
+          <span className="text-xs font-semibold text-brand-primary ml-auto sm:ml-0 whitespace-nowrap">
             Get the schedule →
           </span>
         </div>
       </Link>
 
       {/* ── BREED DIRECTORY ────────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
-        <div className="flex items-end justify-between mb-9">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="mx-auto max-w-container-wide">
+        <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
                 Breed Encyclopedia
               </span>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl sm:text-4xl">
               Find Your Breed
             </h2>
           </div>
-          <Link href="/breeds" className="text-sm font-bold text-brand-primary no-underline hover:underline">
+          <Link href="/breeds" className="text-sm font-semibold text-brand-primary no-underline hover:text-brand-primary-dark transition-colors">
             All 200+ breeds →
           </Link>
         </div>
@@ -329,22 +376,22 @@ export default async function HomePage() {
             <Link
               key={breed.name}
               href={breed.href}
-              className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
+              className="group block bg-brand-white border border-brand-border rounded-md overflow-hidden no-underline hover:border-brand-primary/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 ease-carloOS"
             >
-              <div className="relative h-40 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
                 <Image
                   src={breed.image}
                   alt={breed.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.04]"
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
               </div>
-              <div className="p-4">
-                <div className="font-display font-bold text-brand-dark text-base mb-1">
+              <div className="p-5">
+                <div className="font-display font-bold text-brand-dark text-base leading-snug mb-1">
                   {breed.name}
                 </div>
-                <div className="text-xs text-brand-text-light mb-2.5">{breed.type}</div>
+                <div className="text-xs text-brand-text-light mb-3">{breed.type}</div>
                 <div className="flex gap-1.5 flex-wrap">
                   {breed.tags.map((tag) => (
                     <span
@@ -359,23 +406,25 @@ export default async function HomePage() {
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ── HEALTH ARTICLES ────────────────────────────────────────── */}
-      <section className="bg-brand-white px-container sm:px-container-sm py-section">
-        <div className="flex items-end justify-between mb-9">
+      <section className="bg-brand-white px-container-sm sm:px-container py-section">
+        <div className="mx-auto max-w-container-wide">
+        <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
                 Dog Health Library
               </span>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl sm:text-4xl">
               Expert Health Guides
             </h2>
           </div>
-          <Link href="/health" className="text-sm font-bold text-brand-primary no-underline hover:underline">
+          <Link href="/health" className="text-sm font-semibold text-brand-primary no-underline hover:text-brand-primary-dark transition-colors">
             All health guides →
           </Link>
         </div>
@@ -385,26 +434,23 @@ export default async function HomePage() {
           {/* Featured */}
           <Link
             href="/health/golden-retriever-health"
-            className="block border border-brand-border rounded-lg overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200"
+            className="group block border border-brand-border rounded-md overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/30 transition-all duration-300 ease-carloOS"
           >
-            <div className="relative h-72 overflow-hidden">
+            <div className="relative aspect-[16/10] overflow-hidden bg-brand-surface">
               <Image
-                src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=700&q=80&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=900&q=85&auto=format&fit=crop"
                 alt="Veterinarian examining dog"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="p-5">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Health</span>
-                
-              </div>
-              <h3 className="font-display font-bold text-brand-dark text-xl leading-snug mb-2">
-                Golden Retriever Health Guide — Cancer Risk, Hip Dysplasia & What Owners Must Know
+            <div className="p-6">
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Health</span>
+              <h3 className="font-display font-bold text-brand-dark text-xl leading-snug mt-2 mb-2">
+                Golden Retriever Health Guide — Cancer Risk, Hip Dysplasia &amp; What Owners Must Know
               </h3>
-              <p className="text-sm text-brand-text-light line-clamp-2">
+              <p className="text-sm text-brand-text-light line-clamp-2 leading-relaxed">
                 More than 60% of Golden Retrievers develop cancer in their lifetime. Understanding the risks can add years to your dog&apos;s life.
               </p>
             </div>
@@ -416,63 +462,64 @@ export default async function HomePage() {
               href: '/health/dog-symptoms-guide',
               category: 'Emergency',
               title: '15 Dog Symptoms You Should Never Ignore',
-              image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=500&q=80&auto=format&fit=crop',
+              image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=700&q=85&auto=format&fit=crop',
             },
             {
               href: '/health/senior-dog-care',
               category: 'Senior Care',
               title: 'Senior Dog Care — What Changes at 7 Years',
-              image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=500&q=80&auto=format&fit=crop',
+              image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=700&q=85&auto=format&fit=crop',
             },
           ].map((article) => (
             <Link
               key={article.href}
               href={article.href}
-              className="block border border-brand-border rounded-lg overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200"
+              className="group block border border-brand-border rounded-md overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/30 transition-all duration-300 ease-carloOS"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.04]"
                   sizes="(max-width: 1024px) 100vw, 25vw"
                 />
               </div>
-              <div className="p-4">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              <div className="p-5">
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
                   {article.category}
-                </div>
-                <h3 className="font-display font-bold text-brand-dark text-base leading-snug">
+                </span>
+                <h3 className="font-display font-bold text-brand-dark text-base leading-snug mt-2">
                   {article.title}
                 </h3>
               </div>
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ── HEALTH CATEGORIES ──────────────────────────────────────── */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-50 pointer-events-none"
           style={{
-            backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(232,98,42,0.3) 0%, transparent 60%)',
+            backgroundImage: 'radial-gradient(ellipse at 75% 40%, rgba(232,98,42,0.10) 0%, transparent 55%)',
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10">
+        <div className="relative z-10 mx-auto max-w-container-wide">
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
               Health by Topic
             </span>
           </div>
-          <h2 className="font-display font-bold text-white tracking-tight text-3xl mb-2">
+          <h2 className="font-display font-bold text-white tracking-tight text-3xl sm:text-4xl mb-3">
             Find the Right Guide
           </h2>
-          <p className="text-base text-white/45 max-w-lg mb-10">
-            research-based content organized by condition, life stage, and body system.
+          <p className="text-base text-white/55 max-w-lg mb-10 leading-relaxed">
+            Research-based content organized by condition, life stage, and body system.
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
