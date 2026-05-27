@@ -5,9 +5,14 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Saddle Reviews 2025 — Compared & Ranked | Saddle.com', description: 'Saddle reviews drawing on CSF reviewer notes and published rider reports. English, western.', path: '/reviews' })
 
 const REVIEWS = [
-  { title: 'Best English Saddles 2025', desc: 'Stubben, Pessoa, Bates, Collegiate — dressage, jumping, AP ranked', href: '/reviews/best-english-saddles', badge: '🏆 Full Review' },
+  { title: 'Best Dressage Saddles 2025', desc: 'Training through FEI level ranked — Stubben, Custom Saddlery, Bates, Wintec', href: '/reviews/best-dressage-saddles', badge: '🎖️ New' },
+  { title: 'Best English Saddles 2025', desc: 'Stubben, Pessoa, Bates, Collegiate — dressage, jumping, AP ranked', href: '/reviews/best-english-saddles', badge: '🏆 Buyer\'s Guide' },
+  { title: 'Saddle Brand Directory', desc: '20+ brands compared — German, French, English, Western', href: '/brands', badge: '📋 Directory' },
+  { title: 'Stubben vs Pessoa', desc: 'Head-to-head: dressage vs jumping flagship comparison', href: '/guides/stubben-vs-pessoa', badge: '⚖️ Comparison' },
   { title: 'Stubben Saddle Review 2025', desc: 'Roxane, Portos, Aramis — complete lineup reviewed', href: '/reviews/stubben-saddle-review' },
   { title: 'Pessoa Saddle Review 2025', desc: 'Gen X Pro, Legacy, Optimum ranked', href: '/reviews/pessoa-saddle-review' },
+  { title: 'Bates Saddle Review 2025', desc: 'Caprilli, Innova, Elevation — CAIR & EASY-CHANGE explained', href: '/brands/bates' },
+  { title: 'Wintec Saddle Review 2025', desc: '500 AP, Pro Endurance, Wide AP, Pro Dressage — synthetic done right', href: '/brands/wintec' },
   { title: 'Collegiate Saddle Review 2025', desc: 'Best budget English saddles reviewed', href: '/reviews/collegiate-saddle-review' },
 ]
 
@@ -39,8 +44,13 @@ export default function SaddleReviewsPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-dressage-saddles" href="/reviews/best-dressage-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best Dressage Saddles</Link>
         <Link key="best-english-saddles" href="/reviews/best-english-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best English Saddles</Link>
         <Link key="best-horse-blankets" href="/reviews/best-horse-blankets" className="text-sm text-brand-primary no-underline hover:underline">Best Horse Blankets</Link>
+        <Link key="bates-review" href="/brands/bates" className="text-sm text-brand-primary no-underline hover:underline">Bates Review</Link>
+        <Link key="wintec-review" href="/brands/wintec" className="text-sm text-brand-primary no-underline hover:underline">Wintec Review</Link>
+        <Link key="brands-directory" href="/brands" className="text-sm text-brand-primary no-underline hover:underline">Brand Directory</Link>
+        <Link key="stubben-vs-pessoa" href="/guides/stubben-vs-pessoa" className="text-sm text-brand-primary no-underline hover:underline">Stubben vs Pessoa</Link>
         <Link key="best-riding-boots" href="/reviews/best-riding-boots" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Boots</Link>
         <Link key="best-riding-gloves" href="/reviews/best-riding-gloves" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Gloves</Link>
         <Link key="best-riding-helmets" href="/reviews/best-riding-helmets" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Helmets</Link>

@@ -460,21 +460,34 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     },
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
+      { label: 'Saddle Brands', href: '/brands', highlight: true },
       { label: 'English Saddles', href: '/reviews/best-english-saddles' },
       { label: 'Western Saddles', href: '/reviews/best-western-saddles' },
       { label: 'Buying Guides', href: '/guides/saddle-fit-guide' },
-      { label: 'Brand Reviews', href: '/reviews' },
-      { label: 'Saddle Care', href: '/guides/leather-care-guide' },
+      { label: 'Reviews', href: '/reviews' },
     ],
     footerLinks: [
       {
         heading: 'Reviews',
         links: [
+          { label: 'Best Dressage Saddles', href: '/reviews/best-dressage-saddles' },
           { label: 'Best English Saddles', href: '/reviews/best-english-saddles' },
           { label: 'Best Western Saddles', href: '/reviews/best-western-saddles' },
           { label: 'Stubben Review', href: '/reviews/stubben-saddle-review' },
-          { label: 'Pessoa Review', href: '/reviews/pessoa-saddle-review' },
+          { label: 'Bates Review', href: '/brands/bates' },
+          { label: 'Wintec Review', href: '/brands/wintec' },
           { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+      {
+        heading: 'Brands',
+        links: [
+          { label: 'Brand Directory', href: '/brands' },
+          { label: 'Stubben', href: '/reviews/stubben-saddle-review' },
+          { label: 'Pessoa', href: '/reviews/pessoa-saddle-review' },
+          { label: 'Bates', href: '/brands/bates' },
+          { label: 'Wintec', href: '/brands/wintec' },
+          { label: 'Stubben vs Pessoa', href: '/guides/stubben-vs-pessoa' },
         ],
       },
       {

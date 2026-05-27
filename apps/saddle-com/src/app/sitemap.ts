@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://saddle.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://saddle.com/brands', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/brands/bates', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://saddle.com/brands/wintec', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://saddle.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://saddle.com/english', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/guides/bit-selection-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -27,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/guides/saddle-fit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/seat-size-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/stirrup-iron-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/guides/stubben-vs-pessoa', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://saddle.com/guides/tack-cleaning-schedule', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/tack-room-organization', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/trailer-loading-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -37,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/legal/privacy-policy', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://saddle.com/legal/terms', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://saddle.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/reviews/best-dressage-saddles', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://saddle.com/reviews/best-english-saddles', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/reviews/best-horse-blankets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/reviews/best-riding-boots', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
