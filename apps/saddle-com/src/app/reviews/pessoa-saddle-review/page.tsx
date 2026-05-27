@@ -61,11 +61,11 @@ export default function PessoaReviewPage() {
               badge="Best Show Jumping"
               badgeEmoji="🏆"
               name="Pessoa Gen X Pro"
-              subtitle="Close contact · Forward flap · Olympic-proven geometry"
+              subtitle="Close contact · Forward flap · Top-level showjumping geometry"
               score={9.2}
               winner
               description={<div>
-                <p>The Gen X Pro is the saddle that put Pessoa on the Olympic podium — ridden by multiple medalists across multiple Olympic cycles. The close-contact geometry is the most aggressive in our test: the forward flap angle places the rider&apos;s knee further forward than any competitor, and the minimal bulk between thigh and horse creates a feel of immediacy that serious jumping riders describe as transformative.</p>
+                <p>The Gen X Pro is the saddle that put Pessoa on the Olympic podium — ridden by multiple medalists across multiple Olympic cycles. The close-contact geometry is the most aggressive in production close-contact saddles: the forward flap angle places the rider&apos;s knee further forward than any competitor, and the minimal bulk between thigh and horse creates a feel of immediacy that serious jumping riders describe as transformative.</p>
                 <p>This is not a subtle difference. In a Gen X Pro, you feel the horse&apos;s impulsion and engagement through your thigh in a way that is muted in bulkier alternatives. For riders competing at any level from amateur to grand prix, the feedback quality is genuinely better. The tradeoff: this geometry is specifically optimized for jumping position. Extended flatwork sessions are less comfortable than in saddles with a more neutral flap angle.</p>
               </div>}
               specs={[
@@ -76,7 +76,7 @@ export default function PessoaReviewPage() {
                 { label: 'Flatwork Use', value: 'Possible but not optimized', highlight: 'warn' },
                 { label: 'Resale', value: 'Strong in jumping market' },
               ]}
-              pros={['Among the closest-contact geometry in the close-contact category', 'Olympic-proven design', 'Exceptional feel at speed', 'Strong resale in jumping market', 'Multiple fit options (narrow to wide tree)']}
+              pros={['Among the closest-contact geometry in the close-contact category', 'Top-level showjumping pedigree', 'Exceptional feel at speed', 'Strong resale in jumping market', 'Multiple fit options (narrow to wide tree)']}
               cons={['Less suitable for extended flatwork/dressage', 'Brazilian leather needs more conditioning than German', 'Premium price for a single-discipline saddle']}
               price="$2,400–$3,200"
               priceNote="Used: $900–$1,800"
