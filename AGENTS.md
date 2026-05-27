@@ -27,7 +27,7 @@ Forbidden work:
 - Editing `QC-STANDARDS.md` to retroactively justify a shortcut
 - Merging to `main`
 - Going live with real Stripe / Mailchimp / domain DNS (Carlo only)
-- Touching `OPERATIONS.md` / `ROADMAP.md` / `AGENTS.md` / `RELEASES.md` / `BACKLOG.md` except to fix factual errors found while doing build work — and even then in a docs-only follow-up PR
+- Touching `OPERATIONS.md` / `ROADMAP.md` / `AGENTS.md` / `RELEASES.md` / `BACKLOG.md` / `QC-STANDARDS.md` except to fix factual errors found while doing build work — and even then in a docs-only follow-up PR
 
 ### Agent 2 — QC & SEO Audit
 
@@ -68,23 +68,50 @@ Forbidden work:
 - Going live with real Stripe / Mailchimp / domain DNS
 - Writing site content (no new posts, breed profiles, species profiles, reviews)
 - Modifying audit reports authored by Agent 2
+- Adjudicating inter-agent role disputes — those go to Carlo per § Escalation
 
 ---
 
 ## Branch Rules
 
-### Namespace Convention
+### Naming convention
 
+**Format:** `<agent>/phase-<N><letter>-<topic>`
+
+Components:
+- `<agent>` — one of: `agent1`, `agent2`, `agent3`. Lowercase. No `agent-1` / `Agent1` / etc.
+- `phase-<N><letter>` — the roadmap phase identifier from `ROADMAP.md`. Examples: `phase-3a`, `phase-3b`, `phase-4c`. **Never use GitHub PR numbers in branch names** (e.g. don't name a branch `pr4-…` — `pr` is bound to GitHub's autoincrement and breaks if the PR is closed and reopened, or if multiple PRs land before yours).
+- `<topic>` — kebab-case slug describing the scope. ≤30 chars. Examples: `trust-badges`, `sitemap-fix`, `faq-schema`.
+
+**Full examples:**
+- `agent1/phase-3a-trust-badges` ✓
+- `agent1/phase-3b-seo-infra` ✓
+- `agent2/phase-3a-verify` ✓
+- `agent3/governance-refresh` ✓
+- `agent1/pr4-seo-stabilization` ✗ (uses GitHub-PR-style numbering — tolerated mid-stream but should not be created going forward)
+- `agent2/trust-badges` ✗ (missing phase identifier)
+- `Agent1/Phase-3a` ✗ (case)
+
+**Special namespaces:**
 - `main` — protected trunk. No direct pushes.
-- `agent1/<phase-or-topic>` — Agent 1 build/fix branches (e.g. `agent1/phase-3a-trust-hotfix`)
-- `agent2/<topic>` — Agent 2 audit branches (e.g. `agent2/2026-05-27-morning`)
-- `agent3/<topic>` — Agent 3 docs branches (e.g. `agent3/ops-roadmap`)
-- `claude/*` — harness-generated branches (current default in this environment). Treat as agent-owned per the first commit author and the PR description; rename downstream where possible.
+- `claude/*` — harness-generated branches. Treat as agent-owned per the first commit author and PR description. Acceptable for short-lived work; longer-lived branches should adopt the standard convention.
 
-If you discover a branch you don't recognize, **investigate before
-deleting** — it may be another agent's in-progress work.
+### Lifecycle
 
-### One PR = One Scope
+- **Create:** branch from the most recent `main` unless cherry-picking an ancestor.
+- **Push early:** push the branch on first substantive commit so other agents can see it.
+- **Update the table:** add a row to `OPERATIONS.md` *Active Branches & PRs* when you push.
+- **Rebase forward:** if your phase is gated on another phase (per `OPERATIONS.md` § PR Sequencing), rebase onto the post-gate `main` after the gating PR merges. Don't merge backwards.
+- **Delete after merge:** once the branch merges to `main`, delete the remote branch — but only after the merge is confirmed in `main`'s log. Agent 3 / Carlo perform the deletion; agents do not unilaterally delete others' branches.
+
+### Renaming mid-stream
+
+If a branch is named in violation of the convention but already has commits:
+- **Keep it as-is until merge.** Renaming a branch that other agents may be referencing causes cross-reference rot in `OPERATIONS.md` and PR comments.
+- **Note the deviation in `BACKLOG.md` § Backlog-Only** so the lapse is visible.
+- **Use the correct convention on the next branch.**
+
+### One PR = one scope
 
 - One PR per scoped goal. If scope creeps, open a follow-up branch.
 - Never push directly to `main`.
@@ -93,9 +120,9 @@ deleting** — it may be another agent's in-progress work.
 ### Coordination
 
 - Before starting work, fetch all remotes and check `OPERATIONS.md` § Active Branches. If another agent is already working on the same scope, comment on their PR instead of opening a parallel one.
-- When closing a PR, update `OPERATIONS.md` § Active Branches and `BACKLOG.md` (mark items closed with the merge commit hash).
+- When closing a PR, update `OPERATIONS.md` § Active Branches and `BACKLOG.md` (mark items `Closed` with the merge commit hash).
 
-### Dependency on Unmerged Docs
+### Dependency on unmerged docs
 
 When `OPERATIONS.md` / `QC-STANDARDS.md` / `AGENTS.md` / `ROADMAP.md` /
 `BACKLOG.md` exist on an unmerged branch, treat them as **draft**.
@@ -109,8 +136,8 @@ When `OPERATIONS.md` / `QC-STANDARDS.md` / `AGENTS.md` / `ROADMAP.md` /
 
 Every PR must include:
 - A title naming the roadmap phase or work-item (e.g. `Phase 3a — Trust Hotfix` or `Audit — 2026-05-27 morning`).
-- A description with: **what changed**, **why**, **how it was verified**, **what is out of scope**.
-- A reference to the relevant `ROADMAP.md` phase and the `BACKLOG.md` items closed by the PR.
+- A description with: **what changed**, **why**, **how it was verified**, **what is out of scope**, **`BACKLOG.md` IDs closed**.
+- A reference to the relevant `ROADMAP.md` phase.
 - Evidence for any defect claims (see `QC-STANDARDS.md` § 6).
 - A "Risks / unknowns" section when uncertainty exists. Unknowns are flagged, not guessed.
 
@@ -139,9 +166,8 @@ and must be labelled `UNVERIFIED:` (or equivalent). Unverified findings
 cannot block a PR on their own.
 
 Self-corrections are welcome and expected — when an agent discovers its own
-prior report was wrong (e.g. measured against the wrong base commit),
-append a `## Self-Correction` section to the report; do not rewrite the
-original claim in place.
+prior report was wrong, append a `## Self-Correction` section to the
+report; do not rewrite the original claim in place.
 
 ---
 
@@ -156,6 +182,7 @@ Escalate to Carlo (do not act unilaterally) when any of:
 - **Changing legal / compliance posture** (FTC disclosure language, privacy policy, terms, editorial standards) — corrections to fabricated authority text are NOT in this category; those are explicitly required by `QC-STANDARDS.md`
 - **Irreversible architecture decisions** (changing the monorepo's deployment topology, swapping Supabase / Vercel, changing the data model in a non-additive way)
 - **Conflict between agent outputs** that cannot be reconciled via evidence
+- **Role-lane disputes** (e.g. one agent has done work outside their allowed scope) — Agent 3 records the observation in `BACKLOG.md` and does not adjudicate
 
 For everything else, proceed on your own branch and document the decision in the PR.
 
@@ -163,12 +190,12 @@ For everything else, proceed on your own branch and document the decision in the
 
 ## Overnight Mode
 
-When Carlo is offline, an agent should keep moving rather than wait — **except** for the escalation list above.
+When Carlo is offline, an agent should keep moving rather than wait — **except** for the escalation list above and the emergency triggers below.
 
 Overnight rules:
 1. Stay on your assigned branch.
 2. If blocked on the current task, move to the next safe task in `BACKLOG.md` or `OPERATIONS.md` § Active Priorities.
-3. Record blockers in `OPERATIONS.md` § Blockers with date, agent, what is blocked, and what is needed to unblock.
+3. Record blockers in `OPERATIONS.md` § Blockers and create or update the corresponding `BACKLOG.md` item.
 4. Never merge to `main` overnight — even with a green build.
 5. Never push real keys or hit real third-party APIs overnight.
 6. Prefer documentation, audits, scoped fixes, and refactors over speculative new features.
@@ -177,6 +204,59 @@ Overnight rules:
 
 If an overnight blocker matches the escalation list, stop and leave a
 clearly labelled note in `OPERATIONS.md` § Blockers. Do not act.
+
+---
+
+## Emergency Stop / Rollback
+
+A small set of conditions require **immediate halt** by any agent that
+detects them. These supersede overnight mode and any in-flight work.
+
+### Triggers
+
+Any of these triggers an Emergency Stop:
+
+- **Trust regression on `main`** — a fabricated-authority claim or schema reviewer (`QC-STANDARDS.md` § 1) is present on `main` or about to land via an open PR you can see.
+- **Secret leak** — a real Supabase / Stripe / Mailchimp key, admin password, or PII has been committed to any branch. Includes content in commit messages, not just files.
+- **Build broken on `main`** — `turbo build` or `turbo type-check` fails on the `main` tip.
+- **FTC disclosure removed** from a review-bearing page on `main` or in an open PR.
+- **Force-push or destructive overwrite** of another agent's branch with unmerged work.
+- **External signal** — Carlo, a CI check, a third-party (e.g. Vercel / Cloudflare) flags a production-affecting issue.
+
+### Stop procedure
+
+Any agent that detects a trigger:
+
+1. **Halt new commits to your own branch.** Do not push speculative fixes from an unrelated branch.
+2. **Record the stop in `OPERATIONS.md` § Blockers** with: date/time UTC, trigger, file/PR/commit evidence, who detected it. Severity = Blocker.
+3. **Create or update the matching `BACKLOG.md` item.** New `B-N` if no existing item fits.
+4. **Notify Carlo.** This is one of the few situations where waiting is wrong. Phrase the notification with: trigger, scope (does it affect live or just `main`?), and what you've done so far.
+5. **Do nothing destructive without Carlo's go-ahead.** Specifically: do not `git push --force`, do not `git reset --hard`, do not delete branches, do not delete files outside the scope of the rollback.
+
+### Rollback procedure
+
+Only after Carlo authorises a rollback (or it is unambiguously within an
+agent's lane — e.g. reverting your own un-shipped commit on your own
+branch):
+
+1. **Prefer `git revert`** over `git reset`. Revert produces a new commit that backs out a change while preserving history. Reset destroys history and breaks other agents' clones.
+2. **Never `--force` push to `main`.** A rollback that requires force-push is a Carlo decision.
+3. **For trust regressions on `main`:** `git revert <sha>` of the offending commit, push to a new `agent1/rollback-<topic>` branch, open a PR titled `Rollback — <topic>` with the original trigger as the rationale. Tag Agent 2 for verification before merge.
+4. **For secret leaks:** `git revert` is **not sufficient** — the secret is still in history. Carlo must rotate the secret AND decide whether to rewrite history (force-push to `main` is one of the rare cases this is acceptable, but only Carlo authorises it). `BACKLOG.md` records the secret rotation as a separate item.
+5. **After the rollback merges:** add an entry to `RELEASES.md` § Audit Log under a `Rollback — <date>` heading describing the trigger, action taken, and verification. Update `OPERATIONS.md` § Blockers (mark resolved).
+6. **Postmortem:** Agent 2 writes a postmortem under `audits/<date>-postmortem-<topic>.md` covering: what happened, why the existing guardrails didn't catch it, what new invariant (in `QC-STANDARDS.md`) or CI gate (Phase 7) would have caught it.
+
+### Authority matrix
+
+| Action | Who may authorize |
+|---|---|
+| Halt new commits / pause work | Any agent (records in OPERATIONS.md) |
+| Revert a commit on a feature branch | Branch owner |
+| Open a rollback PR | Any agent |
+| Merge a rollback PR | Carlo |
+| Force-push to `main` | Carlo (only after secret-leak rotation logic) |
+| Rotate live secrets | Carlo |
+| Take a site offline | Carlo |
 
 ---
 
