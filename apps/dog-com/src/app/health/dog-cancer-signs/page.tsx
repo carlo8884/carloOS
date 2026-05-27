@@ -24,7 +24,7 @@ export default function DogCancerSignsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: '12 Warning Signs of Cancer in Dogs', subtitle: 'Cancer is the leading cause of death in dogs over 10 years — approximately 50% of dogs over 10 will develop cancer. Early detection significantly changes outcomes. These 12 warning signs are what veterinary oncologists ask about and owners should watch for.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: '12 Warning Signs of Cancer in Dogs', subtitle: 'Cancer is the leading cause of death in dogs over 10 years — approximately 50% of dogs over 10 will develop cancer (Morris Animal Foundation, Golden Retriever Lifetime Study cohort data). Early detection significantly changes outcomes. These 12 warning signs are what veterinary oncologists ask about and owners should watch for.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cancer Signs', href: '/health/dog-cancer-signs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

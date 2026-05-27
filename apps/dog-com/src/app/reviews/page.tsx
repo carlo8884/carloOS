@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2025 — Expert Tested & Ranked | Dog.com', description: 'Dog product reviews tested by experts. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2025 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
 const REVIEWS = [
   { title: 'Best Pet Insurance 2025', desc: 'Trupanion, Healthy Paws, Embrace ranked by actual payout rates', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
@@ -36,7 +36,7 @@ export default function DogReviewsPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
-        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Expert picks', '⚠️ What to avoid', '🚫 No spam']} />
+        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Editor picks', '⚠️ What to avoid', '🚫 No spam']} />
       </div>
     </>
   )

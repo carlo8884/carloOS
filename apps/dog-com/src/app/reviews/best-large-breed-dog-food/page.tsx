@@ -9,7 +9,7 @@ const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult',
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin' },
-  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Most vets recommend', href: '#purina' },
+  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Widely recommended', href: '#purina' },
   { label: "Best Hill's", emoji: '🔬', name: "Hill's Science Diet Large Breed", subtitle: 'Glucosamine · Natural ingredients · Antioxidant blend', href: '#hills' },
 ]
 export default function BestLargeBreedFoodPage() {

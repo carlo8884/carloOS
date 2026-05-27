@@ -244,8 +244,6 @@ interface MedicalWebPageSchemaParams {
   description: string
   url: string
   authorName: string
-  /** @deprecated retained for back-compat; no reviewer is emitted into the schema */
-  reviewedByName?: string
   lastReviewed: string // ISO date
   medicalAudience?: 'Patient' | 'Caregiver' | 'Clinician'
 }

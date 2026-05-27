@@ -11,7 +11,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'The Complete Aquarium Resource',
+  title: 'An Aquarium Reference',
   description: 'Species guides, tank setup, water chemistry, fish health, and honest equipment reviews — built for serious fishkeepers.',
   path: '/',
 })
@@ -200,7 +200,7 @@ export default function FishHomePage() {
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Complete Library</span>
           </div>
           <h2 className="font-display font-bold text-white tracking-tight text-3xl mb-2">Everything You Need</h2>
-          <p className="text-base text-white/40 max-w-lg mb-10">Expert content across every aspect of fishkeeping.</p>
+          <p className="text-base text-white/40 max-w-lg mb-10">Reference content across every aspect of fishkeeping.</p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {GUIDE_CATEGORIES.map((cat) => (

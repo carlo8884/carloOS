@@ -69,6 +69,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: 'Affiliate Disclosure', href: '/legal/affiliate-disclosure' },
+              { label: 'Editorial Standards', href: '/editorial-standards' },
             ].map((link) => (
               <Link
                 key={link.href}

@@ -9,7 +9,7 @@ import './globals.css'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'The Complete Resource for Dog Owners',
+  title: 'A Reference for Dog Owners',
   description:
     'Dog.com — research-based reference for dog health, breed guides, training, and nutrition. 200+ breeds and the topics most owners want straight answers on.',
   path: '/',

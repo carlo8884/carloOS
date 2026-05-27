@@ -38,7 +38,7 @@ export default function BestAquariumFiltersPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Expert Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Editor Pick · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2025 — HOB, Canister & Sponge Ranked
@@ -74,7 +74,7 @@ export default function BestAquariumFiltersPage() {
               score={9.4}
               winner
               description={<div>
-                <p>The AquaClear 70 is the gold standard HOB filter for a reason: its media basket is the largest of any HOB tested — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
+                <p>The AquaClear 70 is widely considered the benchmark HOB filter for a reason: its media basket is among the largest in the hang-on-back class — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
                 <p>Flow is adjustable (from full 300GPH to reduced flow for sensitive fish), noise level is low at the correct water level, and the design has been refined over decades. The one maintenance note: the impeller needs cleaning every 3–4 months or flow drops significantly.</p>
               </div>}
               specs={[
@@ -85,7 +85,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Noise', value: 'Low (at correct level)', highlight: 'good' },
                 { label: 'Maintenance', value: 'Monthly rinse, quarterly impeller' },
               ]}
-              pros={['Largest media basket of any HOB tested', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
+              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
               ctaText="Shop AquaClear →"

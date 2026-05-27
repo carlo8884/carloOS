@@ -5,7 +5,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'The Authority on Saddles & Equestrian Equipment',
+  title: 'Saddles & Equestrian Equipment, Compared',
   description: 'Saddle reviews, fitting guides, leather care, and brand comparisons — drawn from CSF reviewer write-ups, manufacturer specs, and published rider reports.',
   path: '/',
 })
@@ -50,7 +50,7 @@ export default function SaddleHomePage() {
           <div className="relative z-10">
             <div className="flex items-center gap-2.5 mb-7">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">The Saddle Authority</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Saddles, Compared</span>
             </div>
             <h1 className="font-display font-black text-white leading-none tracking-tighter mb-5"
               style={{ fontSize: 'clamp(44px, 6vw, 80px)' }}>
@@ -157,7 +157,7 @@ export default function SaddleHomePage() {
           subtitle="New reviews, buying guides, and saddle market intelligence — every other week."
           ctaText="Get Free Guide"
           source="homepage-section"
-          perks={['📋 CSF-reviewed', '🏇 All disciplines', '💰 Used market tips', '🚫 No spam']}
+          perks={['📋 CSF-informed', '🏇 All disciplines', '💰 Used market tips', '🚫 No spam']}
         />
       </section>
     </>

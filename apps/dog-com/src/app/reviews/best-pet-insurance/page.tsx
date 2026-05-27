@@ -86,7 +86,7 @@ export default function BestPetInsurancePage() {
               score={9.4}
               winner
               description={<div>
-                <p>Trupanion is the insurer most recommended by veterinarians — because their payment model is designed around actual veterinary economics. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
+                <p>Trupanion is widely cited by veterinarians for its direct-pay model — because their payment model is designed around actual veterinary economics. Trupanion pays the veterinary clinic directly at checkout (no reimbursement waiting), no annual or lifetime payout limits, and 90% reimbursement after the deductible. For a major claim ($10,000 surgery), you pay approximately $1,200 at the clinic, not $10,000 followed by weeks of reimbursement paperwork.</p>
                 <p>The per-incident deductible ($0–$1,000, your choice) applies once per condition, not per year. A dog with an ongoing condition like allergies pays the deductible once — then Trupanion covers 90% of all related costs indefinitely. Their underwriting is strict on pre-existing conditions but transparent. Monthly premiums are higher than budget competitors; the extra cost is worth it for the claims experience.</p>
               </div>}
               specs={[

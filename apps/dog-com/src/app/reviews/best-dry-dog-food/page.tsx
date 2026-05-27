@@ -103,7 +103,7 @@ export default function BestDogFoodPage() {
               ]}
               pros={[
                 'Most research-backed brand in the industry',
-                'Full WSAVA compliance — gold standard transparency',
+                'Full WSAVA compliance — top-tier transparency',
                 'Breed-specific formulas with genuine nutritional differentiation',
                 'AAFCO feeding trials (not just formulation testing)',
                 'Widely available through vets, Chewy, Amazon',

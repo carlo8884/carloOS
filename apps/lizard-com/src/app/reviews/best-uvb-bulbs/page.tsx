@@ -77,8 +77,8 @@ export default function BestUVBBulbsPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest UVI measurements of any bulb in our test. At 30cm with a reflector, new bulbs measured 7.2–8.1 UVI (center of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Output retention is the other standout: at 6 months, Arcadia 12% bulbs retained 85–90% of initial output. Most competitors dropped 20–30% by month 6. We still recommend replacing at 12 months regardless of visible output — UV degrades before visible light does, and only a radiometer can confirm output level.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest UVI measurements of any bulb in our test. At 30cm with a reflector, new bulbs are reported at 7.2–8.1 UVI in published Solarmeter 6.5 measurements (centre of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Output retention is the other standout: at 6 months, published Solarmeter measurements show Arcadia 12% bulbs retaining 85–90% of initial output. Most competitors are reported to drop 20–30% by month 6 in the same measurements. We still recommend replacing at 12 months regardless of visible output — UV degrades before visible light does, and only a radiometer can confirm output level.</p>
                 </div>
               }
               specs={[
@@ -89,7 +89,7 @@ export default function BestUVBBulbsPage() {
                 { label: 'Target Species', value: 'Desert lizards, tortoises' },
                 { label: 'Replacement', value: '12 months' },
               ]}
-              pros={['Highest measured UVI output of any tested bulb', 'Best 6-month output retention', 'Available in multiple lengths (22", 34", 46")', 'Ferguson Zone research validated']}
+              pros={['Highest published UVI output among the major T5 HO bulbs', 'Best 6-month output retention', 'Available in multiple lengths (22", 34", 46")', 'Ferguson Zone research validated']}
               cons={['Premium price vs Zoo Med', 'Requires T5 HO fixture (not included)']}
               price="$28–45"
               priceNote="Varies by length"
@@ -133,7 +133,7 @@ export default function BestUVBBulbsPage() {
               subtitle="Strong output · Widely available · More accessible price"
               score={8.9}
               description={
-                <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zoo Med&apos;s T5 HO 10.0 is the most widely available high-output UVB bulb and provides genuinely good UVI output — 5.8–6.8 UVI at 30cm for a new bulb. The gap vs Arcadia is meaningful but manageable: Zoo Med bulbs lose approximately 25–30% of output by 6 months (vs Arcadia&apos;s 10–15%), which means you should replace at 6 months rather than 12. At that replacement frequency, the lower unit price largely offsets the faster decline. Best choice when Arcadia availability is limited or budget is constrained.</p>
+                <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zoo Med&apos;s T5 HO 10.0 is the most widely available high-output UVB bulb and provides genuinely good published UVI output — 5.8–6.8 UVI at 30cm for a new bulb per Solarmeter 6.5 measurements in published reviews. The gap vs Arcadia is meaningful but manageable: Zoo Med bulbs lose approximately 25–30% of output by 6 months (vs Arcadia&apos;s 10–15%), which means you should replace at 6 months rather than 12. At that replacement frequency, the lower unit price largely offsets the faster decline. Best choice when Arcadia availability is limited or budget is constrained.</p>
               }
               specs={[
                 { label: 'UVI @ 30cm', value: '5.8–6.8 UVI' },

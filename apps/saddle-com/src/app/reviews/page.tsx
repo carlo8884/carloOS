@@ -33,7 +33,7 @@ export default function SaddleReviewsPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
-        <EmailCapture variant="section" siteId="saddle-com" title="Free Saddle Buyer's Guide" subtitle="Reviews and market intelligence every other week." source="reviews-hub" ctaText="Get Free Guide" perks={['📋 CSF-reviewed', '💰 Market pricing']} />
+        <EmailCapture variant="section" siteId="saddle-com" title="Free Saddle Buyer's Guide" subtitle="Reviews and market intelligence every other week." source="reviews-hub" ctaText="Get Free Guide" perks={['📋 CSF-informed', '💰 Market pricing']} />
       </div>
     </>
   )

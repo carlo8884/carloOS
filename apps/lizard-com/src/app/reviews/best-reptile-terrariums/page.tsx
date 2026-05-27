@@ -35,7 +35,7 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Expert Tested · May 2025
+          ⚡ Editor Pick · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
@@ -55,7 +55,7 @@ export default function BestTerrariumsPage() {
         <div className="rounded-lg p-5" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
           <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>
-            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed through repeated panel removal and assembly cycles. Affiliate links below — rankings are independent.
+            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function BestTerrariumsPage() {
                 { label: 'Assembly', value: 'Flat-pack, ~45 min' },
                 { label: 'Best For', value: 'Terrestrial species' },
               ]}
-              pros={['Best temperature retention of any tested enclosure', 'Flat-pack ships economically', 'Front-opening — less stress for reptile', 'Multiple vent configurations', 'Good humidity retention for most species']}
+              pros={['Best-in-class temperature retention per manufacturer-published thermal specs', 'Flat-pack ships economically', 'Front-opening — less stress for reptile', 'Multiple vent configurations', 'Good humidity retention for most species']}
               cons={['Not ideal for high-humidity species (>80%)', 'PVC aesthetic divides keepers vs. glass', 'Requires wall anchor for stability if top-heavy']}
               price="$320–420"
               priceNote="Varies by size and configuration"

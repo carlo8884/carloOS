@@ -29,8 +29,6 @@ interface ArticleHero {
   authorAvatar?: string     // emoji or image URL
   publishedAt?: string
   readTime?: string
-  /** @deprecated retained for compatibility; no longer renders a badge */
-  dvmReviewed?: boolean
   image?: string
   imageAlt?: string
 }

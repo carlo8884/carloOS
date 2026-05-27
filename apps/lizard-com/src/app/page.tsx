@@ -47,7 +47,7 @@ export default function LizardHomePage() {
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Science-Based Reptile Care</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Source-First Reptile Care</span>
             </div>
             <h1 className="font-display font-bold text-brand-white leading-tight tracking-tight mb-5"
               style={{ fontSize: 'clamp(44px, 6vw, 80px)' }}>

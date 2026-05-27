@@ -11,14 +11,14 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SPECIALIST_TYPES = [
-  { icon: '🧠', title: 'Neurology', desc: 'Seizures, spinal disease, paralysis', href: '/specialists/neurology' },
-  { icon: '🦴', title: 'Orthopedics', desc: 'Hip dysplasia, fractures, TPLO', href: '/specialists/orthopedics' },
-  { icon: '❤️', title: 'Cardiology', desc: 'Heart disease, murmurs, arrhythmias', href: '/specialists/cardiology' },
-  { icon: '🔬', title: 'Oncology', desc: 'Cancer diagnosis and treatment', href: '/specialists/oncology' },
-  { icon: '👁️', title: 'Ophthalmology', desc: 'Eye disease, cataracts, PRA', href: '/specialists/ophthalmology' },
-  { icon: '🦷', title: 'Dentistry', desc: 'Periodontal disease, oral surgery', href: '/specialists/dentistry' },
-  { icon: '🩺', title: 'Internal Medicine', desc: 'Endocrine, GI, kidney disease', href: '/specialists/internal-medicine' },
-  { icon: '🚨', title: 'Emergency & Critical Care', desc: 'Trauma, ICU, 24-hour care', href: '/specialists/emergency' },
+  { icon: '🧠', title: 'Neurology', desc: 'Seizures, spinal disease, paralysis', href: '/find-a-vet' },
+  { icon: '🦴', title: 'Orthopedics', desc: 'Hip dysplasia, fractures, TPLO', href: '/find-a-vet' },
+  { icon: '❤️', title: 'Cardiology', desc: 'Heart disease, murmurs, arrhythmias', href: '/find-a-vet' },
+  { icon: '🔬', title: 'Oncology', desc: 'Cancer diagnosis and treatment', href: '/find-a-vet' },
+  { icon: '👁️', title: 'Ophthalmology', desc: 'Eye disease, cataracts, PRA', href: '/find-a-vet' },
+  { icon: '🦷', title: 'Dentistry', desc: 'Periodontal disease, oral surgery', href: '/find-a-vet' },
+  { icon: '🩺', title: 'Internal Medicine', desc: 'Endocrine, GI, kidney disease', href: '/find-a-vet' },
+  { icon: '🚨', title: 'Emergency & Critical Care', desc: 'Trauma, ICU, 24-hour care', href: '/find-a-vet' },
 ]
 
 const FEATURED_GUIDES = [

@@ -39,7 +39,7 @@ export default function BestDogCratesPage() {
       <SchemaScript schema={allSchemas} />
 
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Expert Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Editor Pick · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2025 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
@@ -106,7 +106,7 @@ export default function BestDogCratesPage() {
               subtitle="Aircraft-grade aluminum · Escape-proof · Lifetime warranty"
               score={9.4}
               description={
-                <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the definitive answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
+                <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the best answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
               }
               specs={[
                 { label: 'Material', value: 'Aircraft-grade aluminum', highlight: 'good' },

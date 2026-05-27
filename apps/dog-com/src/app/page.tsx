@@ -12,7 +12,7 @@ import { getPosts } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'The Complete Resource for Dog Owners',
+  title: 'A Reference for Dog Owners',
   description:
     'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take their dog\'s wellbeing seriously.',
   path: '/',
@@ -99,7 +99,7 @@ export default async function HomePage() {
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                The Complete Dog Resource
+                A Dog Owner Reference
               </span>
             </div>
 

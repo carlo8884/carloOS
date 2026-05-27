@@ -97,13 +97,12 @@ export async function getPosts(
   options?: {
     tags?: string[]
     search?: string
-    dvmReviewed?: boolean
   }
 ) {
   const supabase = createServerClient()
   let query = supabase
     .from('posts')
-    .select('id, slug, path, title, subtitle, excerpt, og_image, author_name, published_at, tags, content_type, dvm_reviewed')
+    .select('id, slug, path, title, subtitle, excerpt, og_image, author_name, published_at, tags, content_type')
     .eq('site_id', siteId)
     .eq('published', true)
     .order('published_at', { ascending: false })
@@ -118,9 +117,6 @@ export async function getPosts(
     query = query.contains('tags', options.tags)
   }
 
-  if (options?.dvmReviewed) {
-    query = query.eq('dvm_reviewed', true)
-  }
 
   if (options?.search) {
     query = query.textSearch('title', options.search, { type: 'websearch' })

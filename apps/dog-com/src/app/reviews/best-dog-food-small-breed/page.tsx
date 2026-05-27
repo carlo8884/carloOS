@@ -11,7 +11,7 @@ const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin Small Adult', subtitle: 'Kibble-size designed · Dental formula · WSAVA top tier', href: '#royal-canin' },
-  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Most vets recommend', href: '#purina' },
+  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Widely recommended', href: '#purina' },
   { label: "Best Hill's", emoji: '🔬', name: "Hill's Science Diet Small Paws", subtitle: 'Antioxidant blend · Easy digestion · Widely available', href: '#hills' },
 ]
 

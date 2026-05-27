@@ -12,7 +12,7 @@ export default function DogHeartDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Approximately 10% of dogs seen in veterinary practice have some form of cardiac disease. Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
+        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Roughly 10% of dogs seen in general practice have some form of cardiac disease (BSAVA Manual of Canine and Feline Cardiorespiratory Medicine). Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heart Disease', href: '/health/dog-heart-disease' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }]} />

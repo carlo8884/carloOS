@@ -97,7 +97,7 @@ export default function GoldenRetrieverHealthPage() {
 
         <p>The statistic that stops people: <strong>over 60% of Golden Retrievers will develop cancer in their lifetime</strong>, compared to approximately 25% of all dogs. This is the defining health challenge of the breed and the primary cause of their shortened lifespan relative to similar-sized dogs.</p>
 
-        <p>The Morris Animal Foundation&apos;s Golden Retriever Lifetime Study — the largest dog health study ever conducted — has been tracking over 3,000 Golden Retrievers since 2012, collecting data on genetics, environment, and disease. While definitive answers are still emerging, early findings have clarified which cancer types are most prevalent and which risk factors are modifiable.</p>
+        <p>The Morris Animal Foundation&apos;s Golden Retriever Lifetime Study — the largest dog health study ever conducted — has been tracking over 3,000 Golden Retrievers since 2012, collecting data on genetics, environment, and disease. While best answers are still emerging, early findings have clarified which cancer types are most prevalent and which risk factors are modifiable.</p>
 
         <p>The most common cancers in Goldens are hemangiosarcoma, lymphoma, osteosarcoma, and mast cell tumors. Each has a different presentation, prognosis, and screening approach.</p>
 

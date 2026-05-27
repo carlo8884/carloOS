@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'The Complete Aquarium Resource',
+  title: 'An Aquarium Reference',
   description: 'Fish.com — aquarium fishkeeping reference: species guides, tank setup, water chemistry, fish health, and honest equipment comparisons.',
   path: '/',
   type: 'website',

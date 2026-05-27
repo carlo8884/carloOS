@@ -62,7 +62,7 @@ export default function BestThermometersPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. ±0.54°F temperature accuracy tested against reference standards — the most accurate consumer device in our test. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. ±0.54°F temperature accuracy tested against reference standards — one of the most accurate consumer devices reviewed against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>The data logging function stores 2 years of readings, allowing you to audit temperature gradients and identify if your thermostat is cycling correctly. For enclosures with complex heating (CHE + basking + heat mat), the logging history is invaluable for diagnosing inconsistency. Buy multiple — place one at the basking zone, one at the cool side, one inside any humid hides.</p>
                 </div>
               }
@@ -111,7 +111,7 @@ export default function BestThermometersPage() {
 
             <div id="avoid" className="rounded-lg p-6 mt-4" style={{ background: 'rgba(224,90,58,0.07)', border: '1px solid rgba(224,90,58,0.2)' }}>
               <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#FF9980' }}>⚠️ Avoid — Analog Dial Gauges</div>
-              <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.7)' }}>The analog combo dial gauges sold in every pet store (Zoo Med, Exo Terra, Zilla) tested at ±8–12°F variance in our calibration testing. That is not a useful measurement for reptile keeping. They look like they work, but the readings are unreliable. We have seen them read 85°F in a 73°F room and 65°F in a 78°F room. Use a digital device. The $18 Govee H5053 is not optional for responsible keeping — it is the baseline.</p>
+              <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.7)' }}>The analog combo dial gauges sold in every pet store (Zoo Med, Exo Terra, Zilla) reported at ±8–12°F variance against reference standards by multiple keeper review threads. That is not a useful measurement for reptile keeping. They look like they work, but the readings are unreliable. Owner reports describe them reading 85°F in a 73°F room and 65°F in a 78°F room. Use a digital device. The $18 Govee H5053 is not optional for responsible keeping — it is the baseline.</p>
             </div>
           </div>
 
