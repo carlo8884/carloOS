@@ -6,6 +6,7 @@ on:
     paths:
       - 'apps/**/page.tsx'
       - 'scripts/dashboard.mjs'
+      - 'scripts/regenerate-sitemaps.mjs'
       - '.github/workflows/dashboard.yml'
 
 permissions:
@@ -21,12 +22,13 @@ jobs:
         with:
           node-version: '20'
       - run: node scripts/dashboard.mjs
+      - run: node scripts/regenerate-sitemaps.mjs
       - name: Commit if changed
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "carloos-stabilizer"
             git config user.email "stabilizer@carloos.local"
-            git add DASHBOARD.md README.md
-            git commit -m "chore(dashboard): sync page counts [skip dashboard]"
+            git add DASHBOARD.md README.md apps/*/src/app/sitemap.ts
+            git commit -m "chore(dashboard): sync page counts + sitemaps [skip dashboard]"
             git push
           fi
