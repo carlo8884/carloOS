@@ -57,15 +57,101 @@ const FEATURED_BREEDS = [
   },
 ]
 
-const HEALTH_CATEGORIES = [
-  { icon: '🔍', title: 'Symptoms & Signs', desc: 'When to worry, when to wait', href: '/health/dog-symptoms-guide' },
-  { icon: '🥩', title: 'Nutrition & Diet', desc: 'Food guides and what to avoid', href: '/nutrition' },
-  { icon: '💉', title: 'Preventive Care', desc: 'Vaccines, parasites, screening', href: '/health/dog-vaccinations' },
-  { icon: '👴', title: 'Senior Dog Care', desc: 'What changes after age 7', href: '/health/senior-dog-care' },
-  { icon: '🧬', title: 'Breed Conditions', desc: 'Health risks by breed', href: '/breeds' },
-  { icon: '🦷', title: 'Dental Health', desc: 'The most overlooked issue', href: '/health/dog-dental-care' },
-  { icon: '⚖️', title: 'Weight & Obesity', desc: 'Assessment and management', href: '/nutrition/weight-management' },
-  { icon: '🧠', title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear', href: '/health/dog-anxiety' },
+// ── Inline SVG icon set — single visual voice for category cards ────────────
+// 1.5px stroke geometric line icons, sized to a 24x24 viewBox. Kept inline
+// so the page stays a server component and ships zero icon-library JS.
+
+type IconName =
+  | 'symptoms' | 'nutrition' | 'preventive' | 'senior'
+  | 'breed' | 'dental' | 'weight' | 'behavior'
+
+function CategoryIcon({ name, className }: { name: IconName; className?: string }) {
+  const common = {
+    width: 28,
+    height: 28,
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.5,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    'aria-hidden': true,
+    className,
+  }
+  switch (name) {
+    case 'symptoms':   // pulse / heartbeat line
+      return (
+        <svg {...common}>
+          <path d="M3 12h3l2-5 4 10 2-5h3" />
+          <circle cx="20" cy="12" r="1.2" fill="currentColor" stroke="none" />
+        </svg>
+      )
+    case 'nutrition':  // food bowl
+      return (
+        <svg {...common}>
+          <path d="M3 11h18" />
+          <path d="M4 11a8 8 0 0 0 16 0" />
+          <path d="M2 11h20" />
+          <path d="M9 7c0-1 .5-2 1.5-2.5M13 7c0-1 .5-2 1.5-2.5" />
+        </svg>
+      )
+    case 'preventive': // shield
+      return (
+        <svg {...common}>
+          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+      )
+    case 'senior':     // clock / time
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2" />
+        </svg>
+      )
+    case 'breed':      // DNA double-helix abstract
+      return (
+        <svg {...common}>
+          <path d="M7 3c0 4 10 4 10 10s-10 6-10 10" />
+          <path d="M17 3c0 4-10 4-10 10s10 6 10 10" />
+          <path d="M8.5 7h7M8.5 17h7M7.7 10.5h8.6M7.7 13.5h8.6" />
+        </svg>
+      )
+    case 'dental':     // tooth
+      return (
+        <svg {...common}>
+          <path d="M7 3c-2 0-3 1.5-3 4 0 2 1 4 1.5 7 .4 2.5 1 6 2.5 6s1.5-3 2-5 .5-3 2-3 1.5 1 2 3 .5 5 2 5 2.1-3.5 2.5-6c.5-3 1.5-5 1.5-7 0-2.5-1-4-3-4-1.5 0-2.5 1-4 1s-2.5-1-4-1z" />
+        </svg>
+      )
+    case 'weight':     // balance scale
+      return (
+        <svg {...common}>
+          <path d="M12 4v16" />
+          <path d="M4 20h16" />
+          <path d="M7 9l-3 6h6l-3-6zM17 9l-3 6h6l-3-6z" />
+          <path d="M5 7l14-2" />
+        </svg>
+      )
+    case 'behavior':   // brain / mind abstract
+      return (
+        <svg {...common}>
+          <path d="M9 4c-2 0-3 1.5-3 3 0 .5.1 1 .3 1.4C5 9 4 10.3 4 12c0 1.5.8 2.7 2 3.4-.1 2.3 1.6 4.1 3.5 4.1 1 0 1.8-.4 2.5-1V4.5C11.3 4.2 10.7 4 9 4z" />
+          <path d="M15 4c2 0 3 1.5 3 3 0 .5-.1 1-.3 1.4C19 9 20 10.3 20 12c0 1.5-.8 2.7-2 3.4.1 2.3-1.6 4.1-3.5 4.1-1 0-1.8-.4-2.5-1V4.5c.7-.3 1.3-.5 3-.5z" />
+          <path d="M12 8v8" />
+        </svg>
+      )
+  }
+}
+
+const HEALTH_CATEGORIES: { icon: IconName; title: string; desc: string; href: string }[] = [
+  { icon: 'symptoms',   title: 'Symptoms & Signs',   desc: 'When to worry, when to wait',    href: '/health/dog-symptoms-guide' },
+  { icon: 'nutrition',  title: 'Nutrition & Diet',   desc: 'Food guides and what to avoid',  href: '/nutrition' },
+  { icon: 'preventive', title: 'Preventive Care',    desc: 'Vaccines, parasites, screening', href: '/health/dog-vaccinations' },
+  { icon: 'senior',     title: 'Senior Dog Care',    desc: 'What changes after age 7',       href: '/health/senior-dog-care' },
+  { icon: 'breed',      title: 'Breed Conditions',   desc: 'Health risks by breed',          href: '/breeds' },
+  { icon: 'dental',     title: 'Dental Health',      desc: 'The most overlooked issue',      href: '/health/dog-dental-care' },
+  { icon: 'weight',     title: 'Weight & Obesity',   desc: 'Assessment and management',      href: '/nutrition/weight-management' },
+  { icon: 'behavior',   title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear',    href: '/health/dog-anxiety' },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -154,20 +240,21 @@ export default async function HomePage() {
             aria-hidden="true"
           />
           {/* Stats */}
-          <div className="absolute bottom-10 right-8 flex flex-col gap-3 z-10">
+          <div className="absolute bottom-10 right-8 z-10 flex flex-col gap-2.5">
             {[
-              { icon: '📚', num: '30', label: 'Breed Guides' },
-              { icon: '📚', num: '70+', label: 'Sourced Articles' },
-              { icon: '⭐', num: '16', label: 'Product Reviews' },
+              { num: '30',  label: 'Breed Guides' },
+              { num: '70+', label: 'Sourced Articles' },
+              { num: '16',  label: 'Product Reviews' },
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="flex items-center gap-3 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-card"
+                className="bg-white/95 backdrop-blur-sm rounded-md px-5 py-3 shadow-card min-w-[180px] border-l-2 border-brand-primary"
               >
-                <span className="text-xl">{stat.icon}</span>
-                <div>
-                  <div className="font-display font-black text-brand-dark text-lg leading-none">{stat.num}</div>
-                  <div className="text-2xs text-brand-text-light font-semibold mt-0.5">{stat.label}</div>
+                <div className="font-display font-black text-brand-dark text-3xl leading-none tabular-display">
+                  {stat.num}
+                </div>
+                <div className="text-2xs text-brand-text-light font-semibold uppercase tracking-eyebrow mt-1.5">
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -176,17 +263,25 @@ export default async function HomePage() {
       </section>
 
       {/* ── TRUST BAR ──────────────────────────────────────────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
-        {[
-          '✓ research-based health content',
-          '✓ 200+ breed profiles',
-          '✓ Honest product reviews',
-          '✓ No paid editorial placements',
-        ].map((item) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary">
-            {item}
-          </span>
-        ))}
+      <div className="bg-brand-dark border-b border-white/5 px-container sm:px-container-sm py-3">
+        <div className="flex flex-wrap items-center justify-center sm:justify-between gap-y-2 text-white/70">
+          {[
+            'Research-based health content',
+            '200+ breed profiles',
+            'Honest product reviews',
+            'No paid editorial placements',
+          ].map((item, i, arr) => (
+            <span
+              key={item}
+              className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
+            >
+              {item}
+              {i < arr.length - 1 && (
+                <span aria-hidden="true" className="hidden sm:inline mx-5 h-3 w-px bg-white/15" />
+              )}
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* ── PUPPY SCHEDULE LEAD-MAGNET BANNER ──────────────────────── */}
@@ -385,11 +480,13 @@ export default async function HomePage() {
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="block bg-white/5 border border-white/8 rounded-lg p-6 text-center no-underline hover:bg-brand-primary/10 hover:border-brand-primary/25 hover:-translate-y-1 transition-all duration-200"
+                className="group block bg-white/[0.04] border border-white/[0.08] rounded-md p-6 no-underline hover:bg-brand-primary/10 hover:border-brand-primary/30 hover:-translate-y-1 transition-all duration-200"
               >
-                <span className="text-3xl mb-3 block">{cat.icon}</span>
-                <div className="font-display font-bold text-white text-sm mb-1.5">{cat.title}</div>
-                <div className="text-xs text-white/40">{cat.desc}</div>
+                <div className="text-brand-primary/85 group-hover:text-brand-primary mb-4 transition-colors">
+                  <CategoryIcon name={cat.icon} />
+                </div>
+                <div className="font-display font-bold text-white text-base leading-snug mb-1.5">{cat.title}</div>
+                <div className="text-xs text-white/45 leading-relaxed">{cat.desc}</div>
               </Link>
             ))}
           </div>
@@ -405,7 +502,7 @@ export default async function HomePage() {
           subtitle="Practical guidance on dog health, breed spotlights, training tips, and honest product picks — every Tuesday morning."
           ctaText="Subscribe Free"
           source="homepage-section"
-          perks={['📋 Practical', '📬 Every Tuesday', '🐕 Breed-specific advice', '🚫 No spam']}
+          perks={['Practical', 'Every Tuesday', 'Breed-specific advice', 'No spam']}
         />
       </section>
     </>
