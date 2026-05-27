@@ -1,0 +1,32 @@
+name: content-quality
+
+# Runs seo-audit and content-check on every PR.
+# Both scripts currently report only — they do not exit non-zero.
+# Output appears in the PR check log so Carlo (or a reviewing bot) sees
+# trust/SEO regressions without running them locally.
+#
+# To convert to a hard gate later: have the scripts process.exit(1)
+# when issues exceed a threshold, then re-run this workflow.
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: content-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: SEO audit
+        run: npm run seo-audit
+      - name: Content check
+        run: npm run content-check
