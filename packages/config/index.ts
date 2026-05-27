@@ -409,7 +409,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'Fish Species', href: '/species' },
       { label: 'Aquarium Setup', href: '/setup' },
-      { label: 'Water Chemistry', href: '/water' },
+      { label: 'Calculators', href: '/tools' },
       { label: 'Fish Health', href: '/health' },
       { label: 'Reviews', href: '/reviews' },
     ],
@@ -440,6 +440,16 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Heaters', href: '/reviews/best-aquarium-heaters' },
           { label: 'Lighting', href: '/reviews/best-aquarium-lighting' },
           { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+      {
+        heading: 'Calculators',
+        links: [
+          { label: 'Tank Volume', href: '/tools/aquarium-volume-calculator' },
+          { label: 'Stocking', href: '/tools/stocking-calculator' },
+          { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+          { label: 'Water Change', href: '/tools/water-change-calculator' },
+          { label: 'CO2 (KH/pH)', href: '/tools/co2-calculator' },
         ],
       },
     ],
