@@ -12,6 +12,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: content-quality-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   audit:
     runs-on: ubuntu-latest
