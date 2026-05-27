@@ -52,12 +52,13 @@ const FEATURED_SPECIES = [
 ]
 
 const GUIDE_CATEGORIES = [
-  { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
+  { icon: '🧮', title: 'Calculators', desc: 'Volume, stocking, heater, CO2', href: '/tools' },
   { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
   { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
   { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
   { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
   { icon: '🏥', title: 'Fish Health', desc: 'Disease ID and treatment', href: '/health' },
+  { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
   { icon: '⚙️', title: 'Equipment Reviews', desc: 'Filters, lights, heaters', href: '/reviews' },
 ]
 
