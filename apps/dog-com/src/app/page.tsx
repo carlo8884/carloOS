@@ -58,14 +58,14 @@ const FEATURED_BREEDS = [
 ]
 
 const HEALTH_CATEGORIES = [
-  { icon: '🔍', title: 'Symptoms & Signs', desc: 'When to worry, when to wait', href: '/health/symptoms' },
-  { icon: '🥩', title: 'Nutrition & Diet', desc: 'Food guides and what to avoid', href: '/health/nutrition' },
-  { icon: '💉', title: 'Preventive Care', desc: 'Vaccines, parasites, screening', href: '/health/preventive' },
-  { icon: '👴', title: 'Senior Dog Care', desc: 'What changes after age 7', href: '/health/senior' },
-  { icon: '🧬', title: 'Breed Conditions', desc: 'Health risks by breed', href: '/health/breeds' },
-  { icon: '🦷', title: 'Dental Health', desc: 'The most overlooked issue', href: '/health/dental' },
-  { icon: '⚖️', title: 'Weight & Obesity', desc: 'Assessment and management', href: '/health/weight' },
-  { icon: '🧠', title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear', href: '/health/mental' },
+  { icon: '🔍', title: 'Symptoms & Signs', desc: 'When to worry, when to wait', href: '/health/dog-symptoms-guide' },
+  { icon: '🥩', title: 'Nutrition & Diet', desc: 'Food guides and what to avoid', href: '/nutrition' },
+  { icon: '💉', title: 'Preventive Care', desc: 'Vaccines, parasites, screening', href: '/health/dog-vaccinations' },
+  { icon: '👴', title: 'Senior Dog Care', desc: 'What changes after age 7', href: '/health/senior-dog-care' },
+  { icon: '🧬', title: 'Breed Conditions', desc: 'Health risks by breed', href: '/breeds' },
+  { icon: '🦷', title: 'Dental Health', desc: 'The most overlooked issue', href: '/health/dog-dental-care' },
+  { icon: '⚖️', title: 'Weight & Obesity', desc: 'Assessment and management', href: '/nutrition/weight-management' },
+  { icon: '🧠', title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear', href: '/health/dog-anxiety' },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -156,9 +156,9 @@ export default async function HomePage() {
           {/* Stats */}
           <div className="absolute bottom-10 right-8 flex flex-col gap-3 z-10">
             {[
-              { icon: '📚', num: '200+', label: 'Breed Profiles' },
-              { icon: '📚', num: '100+', label: 'Sourced Articles' },
-              { icon: '⭐', num: '500+', label: 'Products Reviewed' },
+              { icon: '📚', num: '30', label: 'Breed Guides' },
+              { icon: '📚', num: '70+', label: 'Sourced Articles' },
+              { icon: '⭐', num: '16', label: 'Product Reviews' },
             ].map((stat) => (
               <div
                 key={stat.label}

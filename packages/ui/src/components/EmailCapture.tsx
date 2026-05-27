@@ -38,6 +38,12 @@ export function EmailCapture({
   leadMagnet,
   perks,
 }: EmailCaptureProps) {
+  // Gate: render nothing until the subscribe API is wired to a real ESP.
+  // Flip on by setting NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED=true in the deploy env.
+  if (process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED !== 'true') {
+    return null
+  }
+
   const id = useId()
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
