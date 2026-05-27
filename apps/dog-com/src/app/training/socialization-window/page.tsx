@@ -18,7 +18,7 @@ export default function SocializationWindowPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Puppy Biting', href: '/training/puppy-biting' }, { label: 'Crate Training', href: '/training/crate-training' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Free printable schedule + 8-week course', href: '/puppy-schedule' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Puppy Biting', href: '/training/puppy-biting' }, { label: 'Crate Training', href: '/training/crate-training' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Puppy Training Guide" subtitle="Week-by-week guide for new puppy owners." source="training-socialization" />
       </>}
     >

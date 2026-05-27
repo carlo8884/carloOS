@@ -50,7 +50,7 @@ export default function PuppySchedulePage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Schedule Matters', href: '#why' }, { label: 'Sleep Requirements', href: '#sleep' }, { label: 'Sample Daily Schedule', href: '#schedule' }, { label: 'The Socialization Window', href: '#socialization' }, { label: 'Week-by-Week Milestones', href: '#milestones' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Free printable schedule + 8-week course', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-schedule" />
       </>}
     >
