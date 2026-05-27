@@ -14,10 +14,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective',
-  description: 'Pet insurance ranked from a practicing DVM\'s perspective.',
+  description: 'Pet insurance ranked using public payout data, contract terms, and what actually matters for owners.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',
-  authorName: 'Dr. Sarah Webb, DVM',
+  authorName: 'Vets.co Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -34,16 +34,16 @@ export default function VetsPetInsurancePage() {
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
-          DVM Perspective · May 2025
+          Owner Reference · May 2025
         </span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
           Best Pet Insurance 2025 — What Vets Actually Think
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          As a practicing DVM, I see the aftermath of uninsured emergencies daily. Here&apos;s which plans actually perform when your pet needs $5,000 of care at 11pm on a Saturday — from the other side of the exam table.
+          For owners, the pattern is clear: the aftermath of uninsured emergencies daily. Here&apos;s which plans actually perform when your pet needs $5,000 of care at 11pm on a Saturday.
         </p>
-        <div className="mt-4 text-xs text-white/30">Dr. Sarah Webb, DVM · General Practice · Updated May 2025 · Affiliate disclosure applies</div>
+        <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated May 2025 · Affiliate disclosure applies</div>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -62,7 +62,7 @@ export default function VetsPetInsurancePage() {
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">From the Vet Side</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                The most important thing I can tell you: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. I see owners try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only insurer where I, as your vet, can submit the claim and be paid directly while you&apos;re standing at my front desk. For major emergencies, this matters enormously.
+                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only insurer where the veterinarian can submit the claim and be paid directly while you&apos;re standing at my front desk. For major emergencies, this matters enormously.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ export default function VetsPetInsurancePage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="vets-co"
               title="Free Pet Health Tips"
-              subtitle="DVM-written guidance every Tuesday." source="review-pet-insurance" />
+              subtitle="Practical guidance every Tuesday." source="review-pet-insurance" />
           </aside>
         </div>
       </div>

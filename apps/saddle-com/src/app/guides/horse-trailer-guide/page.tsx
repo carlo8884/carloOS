@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Trailer Guide — Buying, Types, Loading & Trailering Safety | Saddle.com', description: 'Horse trailer types (straight-load, slant-load, stock), what to inspect when buying used, loading a reluctant horse, and trailering safety for horse and driver.', path: '/guides/horse-trailer-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Trailer Guide', description: 'Buying, types, loading, and trailering safety for horse trailers.', url: 'https://saddle.com/guides/horse-trailer-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Trailer Guide', description: 'Buying, types, loading, and trailering safety for horse trailers.', url: 'https://saddle.com/guides/horse-trailer-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function HorseTrailerGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Horse Trailer Guide', subtitle: 'A horse trailer is one of the largest equipment investments an equestrian makes — and one of the most safety-critical. A reliable, well-maintained trailer is essential for veterinary emergencies, show travel, and trail riding access. Understanding the types, what to inspect when buying used, and how to operate safely makes the difference between a tool and a liability.', category: 'Equestrian Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Equine Professional', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Horse Trailer Guide', subtitle: 'A horse trailer is one of the largest equipment investments an equestrian makes — and one of the most safety-critical. A reliable, well-maintained trailer is essential for veterinary emergencies, show travel, and trail riding access. Understanding the types, what to inspect when buying used, and how to operate safely makes the difference between a tool and a liability.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Trailer Guide', href: '/guides/horse-trailer-guide' }]}
       schema={schema}
       sidebar={<>

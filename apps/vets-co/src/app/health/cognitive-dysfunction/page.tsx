@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs — Dog Dementia Signs & Treatment | Vets.co', description: 'CDS (dog dementia) affects 22% of dogs 9-11 years. Disorientation, sleep disruption, house soiling, and anxiety. Purina Bright Mind, Anipryl, and enrichment management.', path: '/health/cognitive-dysfunction', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function CognitiveDysfunctionPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+. Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+. Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function CognitiveDysfunctionPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-cds" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cds" />
         </>}
       >
         <div className="carloOS-article">

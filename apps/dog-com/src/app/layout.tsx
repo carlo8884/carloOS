@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'The Complete Resource for Dog Owners',
   description:
-    'Dog.com is the trusted source for dog health, breed guides, training, nutrition, and expert vet advice. Covering 200+ breeds with DVM-reviewed content.',
+    'Dog.com — research-based reference for dog health, breed guides, training, and nutrition. 200+ breeds and the topics most owners want straight answers on.',
   path: '/',
   type: 'website',
 })

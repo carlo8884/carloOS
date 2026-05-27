@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Algae, Starvation Risk & Group Requirements | Fish.com', description: 'Otocinclus are the best algae eaters for small planted tanks but starve easily without established algae growth. Groups of 6+, established tanks only. Complete care guide.', path: '/species/otocinclus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Care Guide', description: 'Algae requirements, starvation prevention, and group care for otocinclus catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Care Guide', description: 'Algae requirements, starvation prevention, and group care for otocinclus catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function OtocinclsPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus vittatus — the best algae eater for small and nano planted tanks. At 1.5 inches they work glass and leaves without damaging plants, are completely peaceful, and are safe with shrimp. The challenge: they require an established tank with algae growth and starve easily in newly set up aquariums.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus vittatus — the best algae eater for small and nano planted tanks. At 1.5 inches they work glass and leaves without damaging plants, are completely peaceful, and are safe with shrimp. The challenge: they require an established tank with algae growth and starve easily in newly set up aquariums.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Otocinclus', href: '/species/otocinclus' }]}
       schema={schema}
       sidebar={<>

@@ -5,7 +5,7 @@ import './globals.css'
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Find the Right Vet. Get Trusted Answers.',
-  description: 'Vets.co helps you find veterinary specialists, understand your pet\'s health, compare pet insurance, and get expert guidance written by licensed veterinarians.',
+  description: 'Vets.co — find veterinary specialists, understand your pet\'s health, and compare pet insurance. Guides grounded in AVMA, AAHA, and ACVIM material.',
   path: '/',
   type: 'website',
 })

@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture } from '@carloOS/ui
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025 — Vetster, AskVet & Chewy Connect Ranked | Vets.co', description: 'We compared pet telehealth services on veterinarian credentials, wait times, consultation quality, and cost. Find the right service for your pet\'s needs.', path: '/telehealth', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025', description: 'Vetster, AskVet, and Chewy Connect compared by veterinarians.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Medical Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025', description: 'Vetster, AskVet, and Chewy Connect compared by veterinarians.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
@@ -17,7 +17,7 @@ export default function TelehealthPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Compared by DVMs · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality.</p>
       </div>
@@ -54,7 +54,7 @@ export default function TelehealthPage() {
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
               <Link href="/find-a-vet" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
             </div>
-            <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance every Tuesday." source="telehealth-review" />
+            <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="telehealth-review" />
           </aside>
         </div>
       </div>

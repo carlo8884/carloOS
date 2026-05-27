@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide — Brachycephalic Health, Grooming & Eye Care | Dog.com', description: 'Shih Tzus are brachycephalic with prominent eyes prone to corneal injuries. Daily eye cleaning, professional grooming every 6-8 weeks, and dental disease prevention are the core health concerns.', path: '/breeds/shih-tzu', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function ShihTzuPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Shih Tzu Breed Guide', subtitle: 'Originally bred as companion dogs for Chinese royalty, Shih Tzus are adaptable, affectionate, and surprisingly sturdy for their size. Their flattened face and prominent eyes come with specific health management requirements that every Shih Tzu owner needs to understand.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Shih Tzu Breed Guide', subtitle: 'Originally bred as companion dogs for Chinese royalty, Shih Tzus are adaptable, affectionate, and surprisingly sturdy for their size. Their flattened face and prominent eyes come with specific health management requirements that every Shih Tzu owner needs to understand.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shih Tzu', href: '/breeds/shih-tzu' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function ShihTzuPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Cherry Eye', href: '/health/cherry-eye' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-shih-tzu" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-shih-tzu" />
       </>}
     >
       <div className="carloOS-article">

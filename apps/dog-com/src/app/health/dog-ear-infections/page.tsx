@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments. DVM guide to diagnosis and prevention.', path: '/health/dog-ear-infections', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Ear Infections', description: 'Yeast, bacterial, and ear mite infections — diagnosis and treatment.', url: 'https://dog.com/health/dog-ear-infections', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Ear Infections', description: 'Types, diagnosis, and treatment of canine ear infections.', url: 'https://dog.com/health/dog-ear-infections', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments. Reference guide to diagnosis and prevention.', path: '/health/dog-ear-infections', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Ear Infections', description: 'Yeast, bacterial, and ear mite infections — diagnosis and treatment.', url: 'https://dog.com/health/dog-ear-infections', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Ear Infections', description: 'Types, diagnosis, and treatment of canine ear infections.', url: 'https://dog.com/health/dog-ear-infections', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 const FAQS = [
@@ -18,7 +18,7 @@ export default function DogEarInfectionsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Ear Infections', subtitle: 'The most common reason dogs visit the vet. Three main types — yeast, bacterial, and ear mites — present differently and require different treatments. Getting the right diagnosis changes the outcome.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Ear Infections', subtitle: 'The most common reason dogs visit the vet. Three main types — yeast, bacterial, and ear mites — present differently and require different treatments. Getting the right diagnosis changes the outcome.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Ear Infections', href: '/health/dog-ear-infections' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -30,7 +30,7 @@ export default function DogEarInfectionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-ear-infections" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
         </>}
       >
         <div className="carloOS-article">

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Corydoras Care Guide — Species, Sand Substrate & Groups | Fish.com', description: 'Corydoras are the most popular bottom dwellers. Groups of 6+ same species required. Sand substrate essential. 150+ species compared — sterbai, panda, pygmy, and more.', path: '/species/corydoras', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Corydoras Catfish Care Guide', description: 'Species overview, sand requirements, and group care for corydoras catfish.', url: 'https://fish.com/species/corydoras', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Corydoras Catfish Care Guide', description: 'Species overview, sand requirements, and group care for corydoras catfish.', url: 'https://fish.com/species/corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CorydorasPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Corydoras Catfish Care Guide', subtitle: 'Corydoras are the most widely kept bottom-dwelling fish in the freshwater hobby — peaceful, active, fascinating to watch, and available in over 150 species ranging from the tiny pygmy cory at 1 inch to the emerald catfish at 3.5 inches. One rule applies to all: groups of 6+, same species, on sand.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Corydoras Catfish Care Guide', subtitle: 'Corydoras are the most widely kept bottom-dwelling fish in the freshwater hobby — peaceful, active, fascinating to watch, and available in over 150 species ranging from the tiny pygmy cory at 1 inch to the emerald catfish at 3.5 inches. One rule applies to all: groups of 6+, same species, on sand.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corydoras', href: '/species/corydoras' }]}
       schema={schema}
       sidebar={<>

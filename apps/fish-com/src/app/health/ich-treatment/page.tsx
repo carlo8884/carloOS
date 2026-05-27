@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ich Treatment Guide — White Spots, Heat Method & Ich-X | Fish.com', description: 'Ich (white spot disease) is the most common fish disease. The heat method, salt treatment, and chemical treatments explained. Why treatment must continue 10-14 days minimum.', path: '/health/ich-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Guide', description: 'Heat method, salt, and chemical treatment for Ichthyophthirius multifiliis (ich) in aquarium fish.', url: 'https://fish.com/health/ich-treatment', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Guide', description: 'Heat method, salt, and chemical treatment for Ichthyophthirius multifiliis (ich) in aquarium fish.', url: 'https://fish.com/health/ich-treatment', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function IchTreatmentPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis — "ich" or white spot disease — is the most common disease in aquarium fish. The characteristic white salt-grain spots are visible on the body and fins. Treatment is straightforward once you understand the parasite\'s life cycle: only one stage can be killed by treatment, and that window must be exploited for 10-14 days minimum.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis — "ich" or white spot disease — is the most common disease in aquarium fish. The characteristic white salt-grain spots are visible on the body and fins. Treatment is straightforward once you understand the parasite\'s life cycle: only one stage can be killed by treatment, and that window must be exploited for 10-14 days minimum.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Ich Treatment', href: '/health/ich-treatment' }]}
       schema={schema}
       sidebar={<>

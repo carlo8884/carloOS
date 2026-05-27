@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Poodle Breed Guide — Standard, Miniature & Toy, Addison\'s & Bloat | Dog.com', description: 'Poodles are the most intelligent dog breed. Three sizes with different health profiles — Standard Poodles at risk for GDV/bloat and Addison\'s disease. Complete health and training guide.', path: '/breeds/poodle', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Poodle Breed Guide', description: 'Standard, Miniature, and Toy Poodle health profiles — Addison\'s disease, bloat, and PRA.', url: 'https://dog.com/breeds/poodle', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Poodle Breed Guide', description: 'Standard, Miniature, and Toy Poodle health profiles — Addison\'s disease, bloat, and PRA.', url: 'https://dog.com/breeds/poodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PoodlePage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Poodle Breed Guide', subtitle: 'The most intelligent dog breed by most behavioral assessments — Poodles excel at every task they are trained for, from elite obedience to water retrieving to circus performance. They are also one of the few breeds with three distinctly different sizes (Standard, Miniature, Toy) that carry meaningfully different health profiles.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Poodle Breed Guide', subtitle: 'The most intelligent dog breed by most behavioral assessments — Poodles excel at every task they are trained for, from elite obedience to water retrieving to circus performance. They are also one of the few breeds with three distinctly different sizes (Standard, Miniature, Toy) that carry meaningfully different health profiles.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Poodle', href: '/breeds/poodle' }]}
       schema={schema}
       sidebar={<>
@@ -20,7 +20,7 @@ export default function PoodlePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Goldendoodle Guide', href: '/breeds/golden-doodle' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-poodle" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-poodle" />
       </>}
     >
       <div className="carloOS-article">

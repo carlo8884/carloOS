@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } fro
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025 — Front-Clip, Back-Clip & No-Pull Ranked | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs. Ruffwear, PetSafe, and Julius-K9 reviewed.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://petsafe.net', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://ruffwear.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
@@ -83,7 +83,7 @@ export default function BestDogHarnessesPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="DVM-written guidance weekly." source="review-harnesses" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-harnesses" />
           </aside>
         </div>
       </div>

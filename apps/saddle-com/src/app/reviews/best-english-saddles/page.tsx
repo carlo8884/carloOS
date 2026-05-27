@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best English Saddles 2025 — Dressage, Jumping & AP Ranked | Saddle.com', description: 'We ranked the best English saddles by discipline — dressage, show jumping, all-purpose, and eventing. Stubben, Pessoa, Bates, and Collegiate reviewed by a certified saddle fitter.', path: '/reviews/best-english-saddles', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English Saddles 2025', description: 'Stubben, Pessoa, Bates, Collegiate — ranked by a CSF across disciplines.', url: 'https://saddle.com/reviews/best-english-saddles', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best English Saddles 2025 — Dressage, Jumping & AP Ranked | Saddle.com', description: 'We ranked the best English saddles by discipline — dressage, show jumping, all-purpose, and eventing. Stubben, Pessoa, Bates, and Collegiate compared using CSF reviewer notes and published rider reports.', path: '/reviews/best-english-saddles', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English Saddles 2025', description: 'Stubben, Pessoa, Bates, Collegiate — ranked by a CSF across disciplines.', url: 'https://saddle.com/reviews/best-english-saddles', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Dressage', emoji: '🏆', name: 'Stubben Roxane', subtitle: '9.5 · Quick-Change · German leather', href: '#roxane' },
@@ -24,9 +24,9 @@ export default function BestEnglishSaddlesPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">CSF Tested · Master Saddler Reviewed · May 2025</span>
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">CSF Reviewer Notes · SMS Reference · May 2025</span>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best English Saddles 2025</h1>
-          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right English saddle depends entirely on your discipline — a dressage saddle on a jumping horse is the wrong tool. Here&apos;s the top pick for each discipline, tested by a certified saddle fitter.</p>
+          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right English saddle depends entirely on your discipline — a dressage saddle on a jumping horse is the wrong tool. Here&apos;s the top pick for each discipline, compared using CSF reviewer notes and published rider reports.</p>
         </div>
       </div>
       <QuickPicks items={PICKS} />

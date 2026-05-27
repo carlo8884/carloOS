@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Counter-conditioning and desensitization protocol for leash-reactive dogs.',
   url: 'https://dog.com/training/leash-reactivity',
   imageUrl: '',
-  authorName: 'Dog.com Training Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -47,7 +47,7 @@ export default function LeashReactivityPage() {
         title: 'Leash Reactivity — Why It Happens & How to Reduce It',
         subtitle: 'Leash reactivity (barking, lunging, or snapping at other dogs while on leash) is the most common behavior complaint from dog owners. Understanding why it happens makes the solution logical and achievable.',
         category: 'Behavior Problems',
-        authorName: 'Dog.com Training Team',
+        authorName: 'Dog.com Editorial',
         authorAvatar: '🐕',
         publishedAt: 'May 2025',
         readTime: '11 min',

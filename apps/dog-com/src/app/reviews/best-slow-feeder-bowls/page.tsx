@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } fro
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025 — Anti-Bloat & Puzzle Feeders | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate, and Kong ranked for puzzle feeding and meal enrichment.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://outwardhound.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, outwardSchema)
 
@@ -82,7 +82,7 @@ export default function BestSlowFeederBowlsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat Guide', href: '/health/dog-bloat-gvd' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="DVM-written guidance weekly." source="review-slow-feeders" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-slow-feeders" />
           </aside>
         </div>
       </div>

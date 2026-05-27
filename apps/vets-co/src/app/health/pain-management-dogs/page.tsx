@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin & Multimodal Protocols | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. DVM guide.', path: '/health/pain-management-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin & Multimodal Protocols | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. Reference guide.', path: '/health/pain-management-dogs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function PainManagementPage() {
@@ -12,7 +12,7 @@ export default function PainManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Management', href: '/health/pain-management-dogs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -22,7 +22,7 @@ export default function PainManagementPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-pain-mgmt" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-mgmt" />
         </>}
       >
         <div className="carloOS-article">

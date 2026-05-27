@@ -13,7 +13,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Golden Retriever — Breed Guide, Temperament & Health | Dog.com',
-  description: 'Complete Golden Retriever breed profile. Temperament scores, size, lifespan, health conditions, exercise needs, grooming, training, and whether a Golden is right for you. DVM-reviewed.',
+  description: 'Complete Golden Retriever breed profile. Temperament scores, size, lifespan, health conditions, exercise needs, grooming, training, and whether a Golden is right for you. research-based.',
   path: '/breeds/golden-retriever',
   type: 'article',
   ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
   description: 'Complete Golden Retriever breed profile.',
   url: 'https://dog.com/breeds/golden-retriever',
   imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
-  authorName: 'Dog.com Expert Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -57,7 +57,7 @@ export default function GoldenRetrieverBreedPage() {
           <div className="relative z-10">
             <div className="flex gap-3 mb-4">
               <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">Sporting Group</span>
-              <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill" style={{ background: 'rgba(200,149,42,0.15)', color: '#E8C860' }}>✓ DVM Reviewed</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill" style={{ background: 'rgba(200,149,42,0.15)', color: '#E8C860' }}> </span>
             </div>
             <h1 className="font-display font-black text-white tracking-tighter leading-none mb-2" style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}>Golden Retriever</h1>
             <div className="font-display italic text-white/35 text-lg mb-4">Canis lupus familiaris</div>
@@ -175,7 +175,7 @@ export default function GoldenRetrieverBreedPage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="DVM-written guidance every Tuesday."
+              subtitle="Practical guidance every Tuesday."
               source="breed-golden-retriever" />
           </aside>
         </div>

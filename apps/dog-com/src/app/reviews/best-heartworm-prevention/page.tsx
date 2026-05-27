@@ -5,7 +5,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025 — Heartgard, Interceptor & More | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage, and breed warnings.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025', description: 'Heartgard, Interceptor, Simparica Trio compared for heartworm prevention.', url: 'https://dog.com/reviews/best-heartworm-prevention', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025', description: 'Heartgard, Interceptor, Simparica Trio compared for heartworm prevention.', url: 'https://dog.com/reviews/best-heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const hgSchema = buildProductSchema({ name: 'Heartgard Plus', description: 'Monthly heartworm, roundworm, and hookworm prevention chew for dogs.', url: 'https://heartgard.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const intSchema = buildProductSchema({ name: 'Interceptor Plus', description: 'Monthly heartworm, roundworm, hookworm, whipworm, and tapeworm prevention for dogs.', url: 'https://interceptorplus.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, hgSchema, intSchema)
@@ -22,7 +22,7 @@ export default function BestHeartwormPreventionPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Heartworm Prevention for Dogs 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Heartworm prevention costs $8–15/month. Treatment costs $1,000–2,000+ and requires months of strict rest. All options listed here require a prescription — your vet will recommend one based on your dog's risk profile and region.</p>
       </div>
@@ -95,7 +95,7 @@ export default function BestHeartwormPreventionPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Heartworm Prevention Guide', href: '/health/heartworm-prevention' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="review-heartworm" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-heartworm" />
           </aside>
         </div>
       </div>

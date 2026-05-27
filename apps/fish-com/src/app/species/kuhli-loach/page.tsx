@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Sand Substrate, Groups & Hiding | Fish.com', description: 'Kuhli loaches are eel-shaped bottom fish that require sand, groups of 6+, and dense hiding spots. Nocturnal scavengers that vanish during the day — care guide.', path: '/species/kuhli-loach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Sand substrate, group size, and hiding requirements for kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Sand substrate, group size, and hiding requirements for kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function KuhliLoachPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Kuhli Loach Care Guide', subtitle: 'Pangio kuhlii — the eel-shaped, tiger-banded loach that spends most of its life invisible under substrate, inside decorations, or tangled in a pile with other kuhli loaches. They are real fish, they are alive, and they are wonderful — you just rarely see them until the lights go out.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Kuhli Loach Care Guide', subtitle: 'Pangio kuhlii — the eel-shaped, tiger-banded loach that spends most of its life invisible under substrate, inside decorations, or tangled in a pile with other kuhli loaches. They are real fish, they are alive, and they are wonderful — you just rarely see them until the lights go out.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Kuhli Loach', href: '/species/kuhli-loach' }]}
       schema={schema}
       sidebar={<>

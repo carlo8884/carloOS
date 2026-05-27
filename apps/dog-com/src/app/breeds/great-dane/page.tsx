@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM & 7-Year Lifespan | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended. Complete health guide.', path: '/breeds/great-dane', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Dane Breed Guide', description: 'GDV/bloat prevention, DCM cardiac disease, and nutrition for Great Danes.', url: 'https://dog.com/breeds/great-dane', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Great Dane Breed Guide', description: 'GDV/bloat prevention, DCM cardiac disease, and nutrition for Great Danes.', url: 'https://dog.com/breeds/great-dane', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GreatDanePage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Great Dane Breed Guide', subtitle: 'The largest dog breed — "Apollo of dogs." Great Danes are gentle giants with an unfortunately short lifespan of 7–10 years, driven primarily by their susceptibility to GDV/bloat and cardiac disease. Understanding these risks before acquiring a Great Dane changes how you manage their health from day one.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Great Dane Breed Guide', subtitle: 'The largest dog breed — "Apollo of dogs." Great Danes are gentle giants with an unfortunately short lifespan of 7–10 years, driven primarily by their susceptibility to GDV/bloat and cardiac disease. Understanding these risks before acquiring a Great Dane changes how you manage their health from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Dane', href: '/breeds/great-dane' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function GreatDanePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-great-dane" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-dane" />
       </>}
     >
       <div className="carloOS-article">

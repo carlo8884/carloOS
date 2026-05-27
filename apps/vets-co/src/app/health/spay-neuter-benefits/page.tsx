@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Spay & Neuter — Benefits, Timing & Breed-Specific Considerations | Vets.co', description: 'Spay and neuter benefits, optimal timing, and why the answer is more nuanced for large breeds. Pyometra prevention, cancer risk reduction, and the current evidence on early vs late neutering.', path: '/health/spay-neuter-benefits', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Does neutering cause obesity in dogs?', answer: 'Neutering reduces resting metabolic rate by approximately 20-30%. Dogs on the same diet after neutering will gain weight unless portion is reduced. Neutering causes weight gain only if food intake is not adjusted — the surgery itself does not cause obesity. Reduce food by 20-25% after spay/neuter and monitor body condition monthly.' },
@@ -15,7 +15,7 @@ export default function SpayNeuterPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Spay & Neuter', href: '/health/spay-neuter-benefits' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -25,7 +25,7 @@ export default function SpayNeuterPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-spay-neuter" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
         </>}
       >
         <div className="carloOS-article">

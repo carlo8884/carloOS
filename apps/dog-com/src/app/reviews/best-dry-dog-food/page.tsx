@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Veterinary nutritionist ranked the best dry dog foods on ingredient quality, WSAVA compliance, and real-world outcomes.',
   url: 'https://dog.com/reviews/best-dry-dog-food',
   imageUrl: '',
-  authorName: 'Dr. Patricia Mills, DVM, DACVN',
+  authorName: 'Dog.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -31,7 +31,7 @@ const PICKS = [
 
 const productSchema0 = buildProductSchema({ name: 'Purina Pro Plan Adult Large Breed', description: 'WSAVA-compliant dry dog food with chicken as primary protein and 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const productSchema1 = buildProductSchema({ name: 'Royal Canin Breed Health Nutrition', description: 'Research-backed breed-specific dry dog food formulas for adult dogs.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const productSchema2 = buildProductSchema({ name: "Hill's Science Diet Adult Large Breed", description: 'DVM-formulated large breed adult dry dog food.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
+const productSchema2 = buildProductSchema({ name: "Hill's Science Diet Adult Large Breed", description: 'veterinarian-formulated large breed adult dry dog food.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
 export default function BestDogFoodPage() {
@@ -52,7 +52,7 @@ export default function BestDogFoodPage() {
           The dog food market is full of marketing. We cut through it: 12 foods evaluated on WSAVA compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.
         </p>
         <div className="text-xs text-white/30">
-          Dr. Patricia Mills, DVM, DACVN · Veterinary Nutritionist · Updated May 2025 ·{' '}
+          Updated May 2025 ·{' '}
           <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
         </div>
       </div>
@@ -242,7 +242,7 @@ export default function BestDogFoodPage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="DVM-written guidance every Tuesday."
+              subtitle="Practical guidance every Tuesday."
               source="review-best-dry-dog-food" />
           </aside>
         </div>

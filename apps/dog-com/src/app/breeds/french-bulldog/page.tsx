@@ -6,7 +6,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality. One of the most medically complex breeds.', path: '/breeds/french-bulldog', type: 'article', ogImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function FrenchBulldogBreedPage() {
   return (
@@ -60,7 +60,7 @@ export default function FrenchBulldogBreedPage() {
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="breed-french-bulldog" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-french-bulldog" />
           </aside>
         </div>
       </div>

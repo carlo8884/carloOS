@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia & Drool Reality | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended. The drool is real and significant.', path: '/breeds/saint-bernard', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SaintBernardPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Saint Bernard Breed Guide', subtitle: 'The Alpine rescue dogs of the Great St. Bernard Pass — Saint Bernards are among the most massive dogs in existence, combining legendary gentleness with significant health considerations that prospective owners must understand before acquisition. At 120–180+ pounds, the decisions made about their health management have outsized consequences.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Saint Bernard Breed Guide', subtitle: 'The Alpine rescue dogs of the Great St. Bernard Pass — Saint Bernards are among the most massive dogs in existence, combining legendary gentleness with significant health considerations that prospective owners must understand before acquisition. At 120–180+ pounds, the decisions made about their health management have outsized consequences.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Saint Bernard', href: '/breeds/saint-bernard' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function SaintBernardPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Great Dane Guide', href: '/breeds/great-dane' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-saint-bernard" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-saint-bernard" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance. Regenerative vs non-regenerative anemia have very different causes and prognoses. DVM guide.', path: '/health/anemia-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance. Regenerative vs non-regenerative anemia have very different causes and prognoses. Reference guide.', path: '/health/anemia-in-dogs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogAnemiaPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Anemia in Dogs', subtitle: 'Anemia — an abnormally low red blood cell count or hemoglobin concentration — causes the tissues to receive insufficient oxygen. The clinical signs reflect this: pale gums, lethargy, exercise intolerance, and in severe cases, rapid breathing at rest. Anemia is always secondary to an underlying cause, and the cause determines the treatment.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Anemia in Dogs', subtitle: 'Anemia — an abnormally low red blood cell count or hemoglobin concentration — causes the tissues to receive insufficient oxygen. The clinical signs reflect this: pale gums, lethargy, exercise intolerance, and in severe cases, rapid breathing at rest. Anemia is always secondary to an underlying cause, and the cause determines the treatment.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Anemia', href: '/health/anemia-in-dogs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function DogAnemiaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/dog-symptoms-guide' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-anemia" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anemia" />
         </>}
       >
         <div className="carloOS-article">

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Columnaris in Fish — Saddle Patch, Mouth Rot & Treatment | Fish.com', description: 'Columnaris (Flavobacterium columnare) causes cotton-like patches, saddle patches, and mouth rot in freshwater fish. Often mistaken for fungus — requires antibiotics, not antifungals.', path: '/health/columnaris', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fish', description: 'Signs, misdiagnosis risks, and antibiotic treatment for Flavobacterium columnare (columnaris) in aquarium fish.', url: 'https://fish.com/health/columnaris', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fish', description: 'Signs, misdiagnosis risks, and antibiotic treatment for Flavobacterium columnare (columnaris) in aquarium fish.', url: 'https://fish.com/health/columnaris', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function ColumnarisguidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Columnaris', href: '/health/columnaris' }]}
       schema={schema}
       sidebar={<>

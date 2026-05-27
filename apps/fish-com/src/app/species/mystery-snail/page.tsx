@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity & Breeding | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper — check all additives before adding to tanks.', path: '/species/mystery-snail', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MysterySnailPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Mystery Snail Care Guide', subtitle: 'Pomacea bridgesii — the mystery snail, named for appearing to give birth to live young (actually they lay eggs above the waterline, and the hatchlings mysteriously appear in the tank). Available in stunning color varieties — gold, blue, ivory, purple, magenta — and completely peaceful with all community fish.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Mystery Snail Care Guide', subtitle: 'Pomacea bridgesii — the mystery snail, named for appearing to give birth to live young (actually they lay eggs above the waterline, and the hatchlings mysteriously appear in the tank). Available in stunning color varieties — gold, blue, ivory, purple, magenta — and completely peaceful with all community fish.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Mystery Snail', href: '/species/mystery-snail' }]}
       schema={schema}
       sidebar={<>

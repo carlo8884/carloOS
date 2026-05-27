@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Koi Fish Care Guide — Pond Size, Filtration & Varieties | Fish.com', description: 'Koi need 250+ gallons per fish, heavy pond filtration, and regular water changes. Kohaku, Taisho Sanke, Showa, and other varieties. Can live 30+ years with proper care.', path: '/species/koi', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function KoiPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Koi', href: '/species/koi' }]}
       schema={schema}
       sidebar={<>

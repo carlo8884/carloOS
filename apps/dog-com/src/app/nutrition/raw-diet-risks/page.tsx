@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Salmonella, Nutritional Imbalance & WSAVA Position | Dog.com', description: 'Raw diets carry Salmonella risk to dogs and humans, nutritional imbalance concerns, and are not recommended by WSAVA. The evidence-based case for and against raw feeding.', path: '/nutrition/raw-diet-risks', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs', description: 'Salmonella contamination, nutritional imbalance, and WSAVA position on raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence-based assessment of risks associated with raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs', description: 'Salmonella contamination, nutritional imbalance, and WSAVA position on raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence-based assessment of risks associated with raw dog food diets.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function RawDietRisksPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Raw Diet Risks for Dogs', subtitle: 'Raw diets — whether commercial frozen raw, freeze-dried raw, or home-prepared — are popular with a subset of dog owners who believe they are more biologically appropriate. Veterinary nutritionists and the WSAVA do not recommend them. This page presents what the evidence actually shows — both concerns and context.', category: 'Dog Nutrition', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Raw Diet Risks for Dogs', subtitle: 'Raw diets — whether commercial frozen raw, freeze-dried raw, or home-prepared — are popular with a subset of dog owners who believe they are more biologically appropriate. Veterinary nutritionists and the WSAVA do not recommend them. This page presents what the evidence actually shows — both concerns and context.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Raw Diet Risks', href: '/nutrition/raw-diet-risks' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

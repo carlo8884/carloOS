@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Vizsla Breed Guide — Velcro Dog, Epilepsy & Exercise Requirements | Dog.com', description: 'Vizslas are the "velcro dog" — they attach themselves to their people and cannot be left alone for long. High exercise needs, epilepsy predisposition, and the "Vizsla tax" on attention.', path: '/breeds/vizsla', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Vizsla Breed Guide', description: 'Separation anxiety, epilepsy, exercise requirements, and care for Vizslas.', url: 'https://dog.com/breeds/vizsla', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Vizsla Breed Guide', description: 'Separation anxiety, epilepsy, exercise requirements, and care for Vizslas.', url: 'https://dog.com/breeds/vizsla', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function VizslaPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Vizsla Breed Guide', subtitle: 'The Hungarian pointing dog — lean, golden-rust, and deeply attached to their people. Vizslas are called the "velcro dog" by their owners because they are physically attached to their person from the moment they wake up to the moment they sleep. This is not metaphorical — they follow from room to room, sleep pressed against their person, and are genuinely distressed by extended separation.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Vizsla Breed Guide', subtitle: 'The Hungarian pointing dog — lean, golden-rust, and deeply attached to their people. Vizslas are called the "velcro dog" by their owners because they are physically attached to their person from the moment they wake up to the moment they sleep. This is not metaphorical — they follow from room to room, sleep pressed against their person, and are genuinely distressed by extended separation.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Vizsla', href: '/breeds/vizsla' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function VizslaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Dog Seizures', href: '/health/dog-seizures' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-vizsla" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-vizsla" />
       </>}
     >
       <div className="carloOS-article">

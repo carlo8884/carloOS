@@ -206,7 +206,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Saddle.com',
-    siteTagline: 'The Authority on Saddles & Equestrian Equipment',
+    siteTagline: 'Saddles & Equestrian Equipment, Compared',
     siteUrl: 'https://saddle.com',
     logoText: 'SADDLE.com',
     twPrimary: 'amber',

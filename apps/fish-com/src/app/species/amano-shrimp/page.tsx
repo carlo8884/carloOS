@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater & Breeding Impossibility | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AmanoShrimpPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Amano Shrimp Care Guide', subtitle: 'Caridina multidentata — named for Takashi Amano who popularized their use in aquascaping — are the most effective algae-eating invertebrates available for freshwater aquariums. At 2 inches, they tackle algae that smaller cherry shrimp and otocinclus ignore, and they do it visibly and actively in the foreground of the tank.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Amano Shrimp Care Guide', subtitle: 'Caridina multidentata — named for Takashi Amano who popularized their use in aquascaping — are the most effective algae-eating invertebrates available for freshwater aquariums. At 2 inches, they tackle algae that smaller cherry shrimp and otocinclus ignore, and they do it visibly and actively in the foreground of the tank.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Amano Shrimp', href: '/species/amano-shrimp' }]}
       schema={schema}
       sidebar={<>

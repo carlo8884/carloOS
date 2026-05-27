@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Senior Dog Nutrition — When to Switch & What to Look For | Dog.com', description: 'Senior dog nutrition guide. When to switch to senior food, what "senior" formulas actually do, protein requirements in old age, and supplements that help aging dogs.', path: '/nutrition/senior-dog-nutrition', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Senior Dog Nutrition Guide', description: 'When to switch, what senior formulas do, protein needs, and supplements for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Senior Dog Nutrition', description: 'Nutrition guidance for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Senior Dog Nutrition Guide', description: 'When to switch, what senior formulas do, protein needs, and supplements for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Senior Dog Nutrition', description: 'Nutrition guidance for aging dogs.', url: 'https://dog.com/nutrition/senior-dog-nutrition', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function SeniorDogNutritionPage() {
@@ -12,7 +12,7 @@ export default function SeniorDogNutritionPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Senior Dog Nutrition', subtitle: 'Dogs age faster than humans and their nutritional needs change with age — but "senior dog food" as a category is less well-defined than many owners realize. Here\'s what the research says about feeding aging dogs well.', category: 'Dog Nutrition', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Senior Dog Nutrition', subtitle: 'Dogs age faster than humans and their nutritional needs change with age — but "senior dog food" as a category is less well-defined than many owners realize. Here\'s what the research says about feeding aging dogs well.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -25,7 +25,7 @@ export default function SeniorDogNutritionPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="nutrition-senior" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-senior" />
         </>}
       >
         <div className="carloOS-article">

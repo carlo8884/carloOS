@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } fro
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked. Dental health and calorie density compared.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2025', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
@@ -20,7 +20,7 @@ export default function BestSmallBreedFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
@@ -71,7 +71,7 @@ export default function BestSmallBreedFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }, { label: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-small-breed-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-small-breed-food" />
           </aside>
         </div>
       </div>

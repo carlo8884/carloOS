@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention 2025 — Bravecto, NexGard & Simparica Ranked | Dog.com', description: 'Best flea and tick prevention for dogs — Bravecto, NexGard, and Simparica compared by coverage, duration, and safety profile. DVM-reviewed.', path: '/reviews/best-flea-tick-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention for Dogs 2025', description: 'Bravecto, NexGard, and Simparica ranked by coverage and safety.', url: 'https://dog.com/reviews/best-flea-tick-prevention', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention 2025 — Bravecto, NexGard & Simparica Ranked | Dog.com', description: 'Best flea and tick prevention for dogs — Bravecto, NexGard, and Simparica compared by coverage, duration, and safety profile. research-based.', path: '/reviews/best-flea-tick-prevention', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention for Dogs 2025', description: 'Bravecto, NexGard, and Simparica ranked by coverage and safety.', url: 'https://dog.com/reviews/best-flea-tick-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const bravecto = buildProductSchema({ name: 'Bravecto Chew for Dogs', description: '12-week oral flea and tick prevention — fluralaner isoxazoline class.', url: 'https://bravecto.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const nexgard = buildProductSchema({ name: 'NexGard Chew for Dogs', description: 'Monthly oral flea and tick prevention — afoxolaner isoxazoline class.', url: 'https://nexgard.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, bravecto, nexgard)
@@ -17,7 +17,7 @@ export default function FleaTickPreventionPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Flea & Tick Prevention 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
@@ -68,7 +68,7 @@ export default function FleaTickPreventionPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-flea-tick" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-flea-tick" />
           </aside>
         </div>
       </div>

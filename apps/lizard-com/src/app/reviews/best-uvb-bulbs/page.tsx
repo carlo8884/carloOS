@@ -5,19 +5,19 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Tested with Solarmeter 6.5 | Lizard.com',
-  description: 'We tested 8 UVB bulbs with a calibrated Solarmeter 6.5 radiometer. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
+  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output | Lizard.com',
+  description: 'UVB bulbs ranked using published Solarmeter 6.5 spectroradiometric measurements (e.g. Arcadia Reptile, Reptile Lighting, and Pilbeam et al.) at standardised distances, not manufacturer claims. Arcadia, Zoo Med, and Exo Terra T5 HO bulbs ranked by real UVI output, consistency, and longevity.',
   path: '/reviews/best-uvb-bulbs',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
-  title: 'Best UVB Bulbs 2025 — Tested with Solarmeter 6.5',
+  title: 'Best UVB Bulbs 2025 — Compared on Real UVI Output',
   description: 'Solarmeter 6.5 tested UVB bulbs for reptiles — ranked by real UVI output.',
   url: 'https://lizard.com/reviews/best-uvb-bulbs',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -40,17 +40,17 @@ export default function BestUVBBulbsPage() {
 
       <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Solarmeter 6.5 Tested · May 2025
+          ⚡ Solarmeter 6.5 Data · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best UVB Bulbs 2025 — Ranked by Real UVI Output
+          Best UVB Bulbs 2025 — Ranked by Published UVI Output
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          We tested 8 UVB bulbs with a calibrated Solarmeter 6.5 radiometer — the same meter used in the Ferguson Zone research. Rankings based on actual UVI measurements at standardized distances, not manufacturer claims.
+          Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which we cross-check against independent keeper testing.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>
-          Lizard.com Expert Team · Updated May 2025 · Affiliate disclosure applies
+          Lizard.com Editorial · Updated May 2025 · Affiliate disclosure applies
         </p>
       </div>
 

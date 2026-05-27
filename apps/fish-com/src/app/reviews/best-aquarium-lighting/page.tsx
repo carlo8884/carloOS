@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } fro
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Best aquarium lights tested for PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef, and fish-only tanks.', path: '/reviews/best-aquarium-lighting', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025', description: 'PAR-tested aquarium lights for planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025', description: 'PAR-tested aquarium lights for planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Planted (Budget)', emoji: '🌿', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · Under $60', href: '#hygger' },
@@ -20,7 +20,7 @@ export default function BestAquariumLightingPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">⚡ PAR Tested · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2025</h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. We tested with a PAR meter.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"><Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span><Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span><span className="text-brand-text-mid">Best Aquarium Lighting</span></nav>

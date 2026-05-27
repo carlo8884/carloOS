@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pleco Care Guide — Bristlenose vs Common Pleco, Driftwood & Diet | Fish.com', description: 'Plecos: the common pleco grows to 24 inches and does not belong in most tanks. Bristlenose plecos stay at 5 inches and are ideal community fish. Complete care guide.', path: '/species/pleco', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PlecoPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pleco Care Guide', subtitle: '"Pleco" encompasses hundreds of Loricariidae species ranging from 2-inch nano plecos to 24-inch commons. The fish stores sell mostly common plecos (Hypostomus plecostomus) as algae eaters for community tanks — but they grow to 24 inches and produce enormous waste. The bristlenose pleco (Ancistrus sp.) is what most community tanks actually need.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Pleco Care Guide', subtitle: '"Pleco" encompasses hundreds of Loricariidae species ranging from 2-inch nano plecos to 24-inch commons. The fish stores sell mostly common plecos (Hypostomus plecostomus) as algae eaters for community tanks — but they grow to 24 inches and produce enormous waste. The bristlenose pleco (Ancistrus sp.) is what most community tanks actually need.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Pleco', href: '/species/pleco' }]}
       schema={schema}
       sidebar={<>

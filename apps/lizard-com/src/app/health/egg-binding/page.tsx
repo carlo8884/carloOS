@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia) — Signs, Causes & Emergency Care | Lizard.com', description: 'Egg binding (dystocia) is a life-threatening emergency in female reptiles. Signs, causes, and why this requires immediate veterinary care — not home treatment.', path: '/health/egg-binding', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia)', description: 'Signs, causes, and emergency treatment for egg binding in reptiles.', url: 'https://lizard.com/health/egg-binding', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia)', description: 'Signs, causes, and emergency treatment for egg binding in reptiles.', url: 'https://lizard.com/health/egg-binding', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EggBindingPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Egg Binding in Reptiles (Dystocia)', subtitle: 'Dystocia — the inability to lay eggs normally — is one of the most common life-threatening emergencies in female reptiles. It affects all oviparous (egg-laying) species and can occur even in unmated females producing infertile clutches. It requires veterinary intervention — not waiting, not home remedies.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Egg Binding in Reptiles (Dystocia)', subtitle: 'Dystocia — the inability to lay eggs normally — is one of the most common life-threatening emergencies in female reptiles. It affects all oviparous (egg-laying) species and can occur even in unmated females producing infertile clutches. It requires veterinary intervention — not waiting, not home remedies.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Egg Binding', href: '/health/egg-binding' }]}
       schema={schema}
       sidebar={<>

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany & Emergency Calcium | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) causes tremors, tetanic muscle contractions, and seizures. Emergency calcium gluconate injection required. Related to but distinct from MBD.', path: '/health/hypocalcemia', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles', description: 'Emergency treatment and prevention of acute hypocalcemia in reptiles.', url: 'https://lizard.com/health/hypocalcemia', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles', description: 'Emergency treatment and prevention of acute hypocalcemia in reptiles.', url: 'https://lizard.com/health/hypocalcemia', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HypocalcemiaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Hypocalcemia in Reptiles', subtitle: 'Hypocalcemia — abnormally low blood calcium — is an acute emergency distinct from the chronic skeletal changes of MBD. When blood calcium drops below critical thresholds, the neuromuscular system becomes hyperexcitable: muscles contract without voluntary control (tetany), tremors develop, and in severe cases, seizures occur. Emergency veterinary calcium administration is required.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Hypocalcemia in Reptiles', subtitle: 'Hypocalcemia — abnormally low blood calcium — is an acute emergency distinct from the chronic skeletal changes of MBD. When blood calcium drops below critical thresholds, the neuromuscular system becomes hyperexcitable: muscles contract without voluntary control (tetany), tremors develop, and in severe cases, seizures occur. Emergency veterinary calcium administration is required.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Hypocalcemia', href: '/health/hypocalcemia' }]}
       schema={schema}
       sidebar={<>

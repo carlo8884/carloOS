@@ -16,7 +16,7 @@ const schema = buildArticleSchema({
   description: 'True separation anxiety vs boredom — and what actually works for each.',
   url: 'https://dog.com/training/separation-anxiety',
   imageUrl: '',
-  authorName: 'Dog.com Training Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -46,7 +46,7 @@ export default function SeparationAnxietyPage() {
         title: 'Dog Separation Anxiety — What Actually Works',
         subtitle: 'Most dogs labeled with "separation anxiety" are bored, under-exercised, or have a habit of destructive behavior when unsupervised — not clinically anxious. Distinguishing these is the first step to the correct protocol.',
         category: 'Behavior Problems',
-        authorName: 'Dog.com Training Team',
+        authorName: 'Dog.com Editorial',
         authorAvatar: '🐕',
         publishedAt: 'May 2025',
         readTime: '10 min',

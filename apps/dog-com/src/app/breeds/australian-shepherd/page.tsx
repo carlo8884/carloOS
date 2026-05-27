@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive & Exercise Needs | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts, and the list of drugs that require dose adjustment.', path: '/breeds/australian-shepherd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AustralianShepherdPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Australian Shepherd Breed Guide', subtitle: 'Working herding dogs bred for intelligence, endurance, and problem-solving ability. In a family home with inadequate exercise and mental stimulation, these traits produce a dog that herds children, destroys furniture, and creates challenges. In an active home that channels the breed\'s capabilities appropriately, Aussies are extraordinary companions.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Australian Shepherd Breed Guide', subtitle: 'Working herding dogs bred for intelligence, endurance, and problem-solving ability. In a family home with inadequate exercise and mental stimulation, these traits produce a dog that herds children, destroys furniture, and creates challenges. In an active home that channels the breed\'s capabilities appropriately, Aussies are extraordinary companions.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Australian Shepherd', href: '/breeds/australian-shepherd' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function AustralianShepherdPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Socialization Window', href: '/training/socialization-window' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-aussie" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-aussie" />
       </>}
     >
       <div className="carloOS-article">

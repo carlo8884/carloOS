@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Burrows, Dry Diet & Cold Tolerance | Lizard.com', description: 'Russian tortoises (Horsfield\'s tortoise) are cold-tolerant, active, and long-lived (50+ years). They need deep burrow opportunities and a dry, fibrous diet. No wet foods.', path: '/species/russian-tortoise', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide', description: 'Burrow requirements, dry fibrous diet, and care for Testudo horsfieldii Russian tortoises.', url: 'https://lizard.com/species/russian-tortoise', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide', description: 'Burrow requirements, dry fibrous diet, and care for Testudo horsfieldii Russian tortoises.', url: 'https://lizard.com/species/russian-tortoise', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function RussianTortoisePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian tortoise (also called Horsfield\'s tortoise) is one of the most popular tortoise species in the hobby and one of the best-suited to captivity among the tortoises. Smaller than most common tortoise species (4–8 inches), active and personable, cold-tolerant enough for outdoor keeping in many climates, and long-lived — the tortoise in a child\'s home may still be there when the child has grandchildren.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian tortoise (also called Horsfield\'s tortoise) is one of the most popular tortoise species in the hobby and one of the best-suited to captivity among the tortoises. Smaller than most common tortoise species (4–8 inches), active and personable, cold-tolerant enough for outdoor keeping in many climates, and long-lived — the tortoise in a child\'s home may still be there when the child has grandchildren.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Russian Tortoise', href: '/species/russian-tortoise' }]}
       schema={schema}
       sidebar={<>

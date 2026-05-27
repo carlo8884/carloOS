@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Liver Disease in Dogs — ALT, ALP, Portosystemic Shunts & Diet | Dog.com', description: 'Liver disease in dogs ranges from reversible elevation of liver enzymes to cirrhosis and portosystemic shunts. What elevated ALT and ALP mean and when it requires action.', path: '/health/dog-liver-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Liver Disease in Dogs', description: 'ALT, ALP, portosystemic shunts, and dietary management for canine liver disease.', url: 'https://dog.com/health/dog-liver-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Liver Disease in Dogs', description: 'Canine liver disease — enzyme interpretation, portosystemic shunts, and management.', url: 'https://dog.com/health/dog-liver-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Liver Disease in Dogs', description: 'ALT, ALP, portosystemic shunts, and dietary management for canine liver disease.', url: 'https://dog.com/health/dog-liver-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Liver Disease in Dogs', description: 'Canine liver disease — enzyme interpretation, portosystemic shunts, and management.', url: 'https://dog.com/health/dog-liver-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogLiverDiseasePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Liver Disease in Dogs', subtitle: 'The liver performs over 500 functions — from detoxification and protein synthesis to glucose regulation and bile production. Liver disease in dogs spans a spectrum from mildly elevated enzymes on routine bloodwork (often reversible) to advanced cirrhosis and congenital shunts (complex management challenges).', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Liver Disease in Dogs', subtitle: 'The liver performs over 500 functions — from detoxification and protein synthesis to glucose regulation and bile production. Liver disease in dogs spans a spectrum from mildly elevated enzymes on routine bloodwork (often reversible) to advanced cirrhosis and congenital shunts (complex management challenges).', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Liver Disease', href: '/health/dog-liver-disease' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Enzyme Interpretation', href: '#enzymes' }, { label: 'Hepatitis', href: '#hepatitis' }, { label: 'Portosystemic Shunts', href: '#shunts' }, { label: 'Cirrhosis', href: '#cirrhosis' }, { label: 'Dietary Management', href: '#diet' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Pancreatitis', href: '/health/pancreatitis' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-liver" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-liver" />
         </>}
       >
         <div className="carloOS-article">

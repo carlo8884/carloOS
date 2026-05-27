@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Stubben Saddle Review 2025 — Roxane, Portos & Aramis Tested | Saddle.com',
-  description: 'Complete Stubben saddle review. Roxane, Portos, and Aramis tested by a certified saddle fitter — Quick-Change tree system, leather quality, resale value, and who each saddle suits.',
+  description: 'Complete Stubben saddle review. Roxane, Portos, and Aramis compared using CSF reviewer notes and rider reports — Quick-Change tree system, leather quality, resale value, and who each saddle suits.',
   path: '/reviews/stubben-saddle-review',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Stubben Saddle Review 2025',
-  description: 'Stubben Roxane, Portos, and Aramis reviewed by a certified saddle fitter.',
+  description: 'Stubben Roxane, Portos, and Aramis compared using CSF reviewer notes and published rider reports.',
   url: 'https://saddle.com/reviews/stubben-saddle-review',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF · James Whitfield, Master Saddler',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -34,14 +34,14 @@ export default function StubbenReviewPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">CSF Tested · Master Saddler Reviewed · May 2025</span>
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">CSF Reviewer Notes · SMS Reference · May 2025</span>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
             Stubben Saddle Review 2025 — Roxane, Portos & Aramis
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
             Stubben has been making saddles in Germany since 1894. We reviewed their three flagship models — the Quick-Change tree system, leather quality, and who each model suits.
           </p>
-          <div className="mt-4 text-xs text-white/30">Victoria Marsh, CSF · James Whitfield, Master Saddler · Updated May 2025</div>
+          <div className="mt-4 text-xs text-white/30">Saddle.com Editorial · Updated May 2025</div>
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Humidity Guide — Species Requirements, Misting & Moist Hides | Lizard.com', description: 'Humidity requirements by species, how to raise and lower humidity, misting schedules, and how to set up a proper moist hide for shedding.', path: '/setup/humidity-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Humidity Guide', description: 'Species humidity requirements, misting schedules, and moist hides.', url: 'https://lizard.com/setup/humidity-guide', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Humidity Guide', description: 'Species humidity requirements, misting schedules, and moist hides.', url: 'https://lizard.com/setup/humidity-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const SPECIES_HUMIDITY = [
   { species: 'Bearded Dragon', range: '30–40%', notes: 'Desert species. Keep dry. Moist hide optional but beneficial during shed. High humidity causes respiratory infections.' },
@@ -20,7 +20,7 @@ export default function HumidityGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Humidity Guide', href: '/setup/humidity-guide' }]}
       schema={schema}
       sidebar={<>

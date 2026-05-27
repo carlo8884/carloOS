@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Dressage Basics Guide — Training Scale, Tests & Equipment | Saddle.com', description: 'Introduction to dressage. The Training Scale (Rhythm, Relaxation, Contact, Impulsion, Straightness, Collection), how dressage tests work, and essential equipment.', path: '/guides/dressage-basics-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Dressage Basics Guide', description: 'Training scale, competition tests, and equipment for beginning dressage riders.', url: 'https://saddle.com/guides/dressage-basics-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Dressage Basics Guide', description: 'Training scale, competition tests, and equipment for beginning dressage riders.', url: 'https://saddle.com/guides/dressage-basics-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DressageBasicsGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Dressage Basics Guide', subtitle: 'Dressage — from the French "dresser," to train — is the art of riding and training horses in a way that develops the horse\'s natural athletic ability and willingness to perform. At its core, dressage is correct, harmonious horsemanship. Every English rider benefits from dressage principles regardless of their primary discipline.', category: 'Equestrian Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Dressage Basics Guide', subtitle: 'Dressage — from the French "dresser," to train — is the art of riding and training horses in a way that develops the horse\'s natural athletic ability and willingness to perform. At its core, dressage is correct, harmonious horsemanship. Every English rider benefits from dressage principles regardless of their primary discipline.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Dressage Basics', href: '/guides/dressage-basics-guide' }]}
       schema={schema}
       sidebar={<>

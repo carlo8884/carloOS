@@ -6,7 +6,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Find the Right Vet. Get Trusted Answers.',
-  description: 'Find veterinary specialists, understand your pet\'s health, compare pet insurance, and get expert guidance from licensed DVMs.',
+  description: 'Find veterinary specialists, understand your pet\'s health, compare pet insurance, and get expert guidance grounded in published veterinary sources.',
   path: '/',
 })
 
@@ -39,7 +39,7 @@ export default function VetsHomePage() {
           <div className="relative z-10">
             <div className="flex items-center gap-2.5 mb-7">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Trusted Veterinary Guidance</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health, Sourced</span>
             </div>
             <h1 className="font-display font-bold text-white leading-tight tracking-tight mb-5"
               style={{ fontSize: 'clamp(40px, 5.5vw, 72px)' }}>
@@ -47,7 +47,7 @@ export default function VetsHomePage() {
               <span className="text-brand-primary">Get Trusted Answers.</span>
             </h1>
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Veterinary specialists near you, DVM-reviewed health guides for every breed, honest pet insurance comparisons, and telehealth options — all in one place.
+              Veterinary specialists near you, research-based health guides for every breed, honest pet insurance comparisons, and telehealth options — all in one place.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link href="/find-a-vet"
@@ -60,7 +60,7 @@ export default function VetsHomePage() {
               </Link>
             </div>
             <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
-              {[['DVM', 'Reviewed Content'], ['8', 'Specialty Types'], ['All Breeds', 'Covered']].map(([num, label]) => (
+              {[['100+', 'Sourced Articles'], ['8', 'Specialty Types'], ['All Breeds', 'Covered']].map(([num, label]) => (
                 <div key={label}>
                   <div className="font-display text-xl font-bold text-white">{num}</div>
                   <div className="text-xs text-white/35 mt-0.5">{label}</div>
@@ -83,7 +83,7 @@ export default function VetsHomePage() {
 
       {/* TRUST BAR */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2">
-        {['✓ All content DVM-reviewed', '✓ Board-certified specialist guides', '✓ Honest insurance comparisons', '✓ No paid referrals'].map(t => (
+        {['✓ All content research-based', '✓ Specialist-focused guides', '✓ Honest insurance comparisons', '✓ No paid referrals'].map(t => (
           <span key={t} className="text-xs font-semibold text-brand-primary">{t}</span>
         ))}
       </div>
@@ -171,7 +171,7 @@ export default function VetsHomePage() {
                 <div className="font-display font-bold text-white text-base mb-1">{t.name}</div>
                 <div className="text-xs text-white/40 mb-3">{t.feature}</div>
                 <div className="font-display text-2xl font-bold text-brand-primary">{t.score}</div>
-                <div className="text-2xs text-white/30 mt-0.5">Expert Score</div>
+                <div className="text-2xs text-white/30 mt-0.5">Editor Score</div>
               </div>
             ))}
           </div>
@@ -184,10 +184,10 @@ export default function VetsHomePage() {
           variant="section"
           siteId="vets-co"
           title="Free Pet Health Newsletter"
-          subtitle="DVM-reviewed health alerts, breed spotlights, and veterinary news — every Tuesday."
+          subtitle="research-based health alerts, breed spotlights, and veterinary news — every Tuesday."
           ctaText="Subscribe Free"
           source="homepage-section"
-          perks={['✓ DVM-reviewed', '📬 Weekly', '🐾 All species', '🚫 No spam']}
+          perks={['✓ Research-based', '📬 Weekly', '🐾 All species', '🚫 No spam']}
         />
       </section>
     </>

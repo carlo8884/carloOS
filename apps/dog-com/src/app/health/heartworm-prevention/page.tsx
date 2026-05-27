@@ -3,14 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs — Monthly Preventives & Testing | Dog.com', description: 'Heartworm disease is preventable and expensive to treat. Monthly preventives, annual testing, and what to do if your dog tests positive.', path: '/health/heartworm-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Heartworm Prevention for Dogs',
   description: 'Monthly preventives and annual testing for heartworm disease.',
   url: 'https://dog.com/health/heartworm-prevention',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-  reviewedByName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
@@ -21,12 +20,12 @@ export default function HeartwormPreventionPage() {
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'Heartworm disease is preventable with a monthly chew that costs $8–15/month. Treatment when disease is established costs $1,000–2,000 and requires months of strict rest. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '7 min', dvmReviewed: true }}
+      hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'Heartworm disease is preventable with a monthly chew that costs $8–15/month. Treatment when disease is established costs $1,000–2,000 and requires months of strict rest. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heartworm Prevention', href: '/health/heartworm-prevention' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="health-heartworm" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="health-heartworm" />
       </>}
     >
       <div className="carloOS-article">

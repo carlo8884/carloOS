@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Prescription Dog Food Explained — Kidney, Liver, Urinary & More | Dog.com', description: 'When prescription diet food matters and what each type does. Kidney disease, liver disease, urinary health, weight management, allergies, and joint support diets explained.', path: '/nutrition/prescription-diets', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Prescription Dog Food Explained', description: 'Kidney, liver, urinary, and weight management prescription diets explained.', url: 'https://dog.com/nutrition/prescription-diets', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Prescription Dog Food Explained', description: 'Kidney, liver, urinary, and weight management prescription diets explained.', url: 'https://dog.com/nutrition/prescription-diets', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const DIETS = [
   { name: 'Kidney Disease (Renal)', condition: 'Chronic Kidney Disease (CKD)', brands: "Hill's k/d, Royal Canin Renal Support, Purina NF Kidney Function", how: 'Reduced phosphorus (slows disease progression by reducing kidney workload). Reduced protein quantity but high quality. Controlled sodium. Increased water intake. Omega-3 fatty acids (anti-inflammatory for kidneys). Alkalinizing to reduce metabolic acidosis.', when: 'CKD stages 2–4. Earlier dietary intervention may slow progression. This is the most evidence-backed dietary intervention in canine medicine — renal diets demonstrably slow CKD progression in clinical studies.' },
@@ -19,13 +19,13 @@ export default function PrescriptionDietsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Prescription Dog Food Explained', subtitle: 'Prescription diets are not premium marketing — they are clinically formulated foods for specific medical conditions, with meaningful research behind them. Here\'s when each type matters.', category: 'Nutrition Guide', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+      hero={{ title: 'Prescription Dog Food Explained', subtitle: 'Prescription diets are not premium marketing — they are clinically formulated foods for specific medical conditions, with meaningful research behind them. Here\'s when each type matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Prescription Diets', href: '/nutrition/prescription-diets' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={DIETS.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s\/&,()]/g, '-').replace(/-+/g, '-')}` }))} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-prescription" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-prescription" />
       </>}
     >
       <div className="carloOS-article">

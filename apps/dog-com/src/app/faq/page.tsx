@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Health FAQ — Common Questions Answered by DVMs',
-  description: 'Answers to the most common dog health questions — symptoms, nutrition, vet visits, insurance, breed health, and preventive care. DVM-reviewed.',
+  title: 'Dog Health FAQ — Common Questions, Sourced Answers',
+  description: 'Answers to the most common dog health questions — symptoms, nutrition, vet visits, insurance, breed health, and preventive care. research-based.',
   path: '/faq',
 })
 
@@ -99,14 +99,14 @@ export default function FAQPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">DVM-Reviewed Answers</span>
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Researched Answers</span>
         </div>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4"
           style={{ fontSize: 'clamp(30px, 4vw, 52px)' }}>
           Dog Health FAQ
         </h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Answers to the most common dog health questions — reviewed by licensed veterinarians. Updated regularly as guidelines change.
+          Answers to the most common dog health questions, drawn from current AVMA, ACVIM, and WSAVA guidance. Updated as guidelines change.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default function FAQPage() {
         <div className="mt-10 p-7 bg-brand-primary-pale border border-brand-border rounded-lg text-center">
           <h3 className="font-display font-bold text-brand-dark text-xl mb-2">Still have questions?</h3>
           <p className="text-sm text-brand-text-mid mb-5 max-w-md mx-auto">
-            Browse our full health library — 50+ DVM-reviewed guides covering every major condition, breed, and life stage.
+            Browse our full health library — 50+ research-based guides covering every major condition, breed, and life stage.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/health"
@@ -159,9 +159,9 @@ export default function FAQPage() {
       <div className="bg-brand-surface border-t border-brand-border px-container sm:px-container-sm py-12">
         <EmailCapture variant="section" siteId="dog-com"
           title="Weekly Dog Health Tips"
-          subtitle="DVM-written answers, breed spotlights, and health alerts — every Tuesday."
+          subtitle="Answers, breed spotlights, and health alerts — every Tuesday."
           source="faq-page" ctaText="Subscribe Free"
-          perks={['✓ DVM-reviewed', '📬 Every Tuesday', '🚫 No spam']}
+          perks={['✓ Research-based', '📬 Every Tuesday', '🚫 No spam']}
         />
       </div>
     </>

@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Collegiate Saddle Review 2025',
-  description: 'Collegiate Convertible, Diploma, and Apprentice reviewed by a certified saddle fitter.',
+  description: 'Collegiate Convertible, Diploma, and Apprentice compared using CSF reviewer notes and published rider reports.',
   url: 'https://saddle.com/reviews/collegiate-saddle-review',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })

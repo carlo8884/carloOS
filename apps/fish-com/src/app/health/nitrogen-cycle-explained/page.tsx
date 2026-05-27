@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail & How to Cycle | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol, and how to know when it\'s done.', path: '/health/nitrogen-cycle-explained', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function NitrogenCyclePage() {
   return (
     <ArticleLayout
       siteId="fish-com"
-      hero={{ title: 'The Nitrogen Cycle Explained', subtitle: '"New tank syndrome" kills more fish than disease. It is entirely preventable — if you understand what the nitrogen cycle is and why cycling a tank before adding fish is not optional.', category: 'Fishkeeping Fundamentals', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '11 min' }}
+      hero={{ title: 'The Nitrogen Cycle Explained', subtitle: '"New tank syndrome" kills more fish than disease. It is entirely preventable — if you understand what the nitrogen cycle is and why cycling a tank before adding fish is not optional.', category: 'Fishkeeping Fundamentals', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '11 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }]}
       schema={schema}
       sidebar={<>

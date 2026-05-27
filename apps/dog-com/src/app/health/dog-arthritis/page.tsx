@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment & Living Well with Joint Disease | Dog.com', description: 'Arthritis affects 1 in 5 dogs. Signs owners miss, proven treatments (weight loss + NSAIDs + rehabilitation), and the management approach that keeps arthritic dogs comfortable for years.', path: '/health/dog-arthritis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Diagnosis and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Diagnosis and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogArthritisPage() {
@@ -12,12 +12,12 @@ export default function DogArthritisPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis affects approximately 1 in 5 adult dogs and is the most common cause of chronic pain in the species. Most arthritic dogs are not treated — owners attribute the signs to normal aging. Effective, long-term management exists and dramatically improves quality of life.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '11 min', dvmReviewed: true }}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis affects approximately 1 in 5 adult dogs and is the most common cause of chronic pain in the species. Most arthritic dogs are not treated — owners attribute the signs to normal aging. Effective, long-term management exists and dramatically improves quality of life.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Arthritis', href: '/health/dog-arthritis' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-arthritis" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-arthritis" />
         </>}
       >
         <div className="carloOS-article">

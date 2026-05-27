@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Nutrition Guide — Hay, Grain, Supplements & Forage First | Saddle.com', description: 'Complete horse nutrition guide. Forage-first feeding, how much hay a horse needs, when to add grain, essential supplements, and the most common nutritional mistakes.', path: '/guides/horse-nutrition-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Nutrition Guide', description: 'Hay, grain, and supplement guide for horse owners — forage-first approach.', url: 'https://saddle.com/guides/horse-nutrition-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Nutrition Guide', description: 'Hay, grain, and supplement guide for horse owners — forage-first approach.', url: 'https://saddle.com/guides/horse-nutrition-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseNutritionGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Horse Nutrition Guide', subtitle: 'Horses evolved as continuous grazers — their digestive systems are designed for small, frequent meals of forage, not large grain meals twice daily. Modern horse management often inverts this, with consequences for health. Forage first, grain second, supplements third.', category: 'Horse Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Equine Professional', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '11 min' }}
+      hero={{ title: 'Horse Nutrition Guide', subtitle: 'Horses evolved as continuous grazers — their digestive systems are designed for small, frequent meals of forage, not large grain meals twice daily. Modern horse management often inverts this, with consequences for health. Forage first, grain second, supplements third.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '11 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Nutrition', href: '/guides/horse-nutrition-guide' }]}
       schema={schema}
       sidebar={<>

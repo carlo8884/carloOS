@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2025 — Orthopedic, Washable & Crate Beds Ranked | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2025', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2025', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const bigBarkerSchema = buildProductSchema({ name: 'Big Barker 7" Orthopedic Dog Bed', description: 'Therapeutic memory foam bed for large and giant breeds — clinically shown to reduce joint pain.', url: 'https://bigbarker.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: 'Premium foam dog bed with removable washable cover for medium to large breeds.', url: 'https://casper.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema)
@@ -65,7 +65,7 @@ export default function BestDogBedsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="DVM-written guidance weekly." source="review-dog-beds" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-dog-beds" />
           </aside>
         </div>
       </div>

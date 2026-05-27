@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide — Warm Hide, Diet & Shedding | Lizard.com', description: 'Complete leopard gecko care. Why they need a warm hide (not a basking spot), belly heat, diet of dubia and crickets, and how to prevent stuck shed on toes.', path: '/species/leopard-gecko', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide', description: 'Warm hide setup, diet, supplementation, and shedding for leopard geckos.', url: 'https://lizard.com/species/leopard-gecko', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide', description: 'Warm hide setup, diet, supplementation, and shedding for leopard geckos.', url: 'https://lizard.com/species/leopard-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function LeopardGeckoPage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Leopard Gecko Care Guide', subtitle: 'Eublepharis macularius — the most forgiving gecko and a genuine beginner reptile. But "beginner" doesn\'t mean low-maintenance: warm hides, correct belly heat, and moist hides for shedding are non-negotiable.', category: 'Species Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Leopard Gecko Care Guide', subtitle: 'Eublepharis macularius — the most forgiving gecko and a genuine beginner reptile. But "beginner" doesn\'t mean low-maintenance: warm hides, correct belly heat, and moist hides for shedding are non-negotiable.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Leopard Gecko', href: '/species/leopard-gecko' }]}
       schema={schema}
       sidebar={<>

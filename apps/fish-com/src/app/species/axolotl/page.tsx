@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny & Limb Regeneration | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel), and remarkable limb regeneration ability.', path: '/species/axolotl', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AxolotlPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Axolotl Care Guide', subtitle: 'Ambystoma mexicanum — the axolotl is one of the most scientifically significant animals kept as a pet. A neotenic salamander that permanently retains larval characteristics, it never undergoes the metamorphosis of related species. Native only to Lake Xochimilco in Mexico (critically endangered in the wild), the aquarium population is large, captive-bred, and genetically distant from the tiny wild population.', category: 'Species Guide — Aquatic', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Axolotl Care Guide', subtitle: 'Ambystoma mexicanum — the axolotl is one of the most scientifically significant animals kept as a pet. A neotenic salamander that permanently retains larval characteristics, it never undergoes the metamorphosis of related species. Native only to Lake Xochimilco in Mexico (critically endangered in the wild), the aquarium population is large, captive-bred, and genetically distant from the tiny wild population.', category: 'Species Guide — Aquatic', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Axolotl', href: '/species/axolotl' }]}
       schema={schema}
       sidebar={<>

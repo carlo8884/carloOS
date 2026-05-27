@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Senior Dog Care Guide — What Changes After 7 and How to Adapt | Dog.com',
-  description: 'The senior years can be the best years with your dog — if you know what\'s changing physically, what to monitor, and how to adapt care. DVM-reviewed guide for dogs age 7 and up.',
+  description: 'The senior years can be the best years with your dog — if you know what\'s changing physically, what to monitor, and how to adapt care. research-based guide for dogs age 7 and up.',
   path: '/health/senior-dog-care',
   type: 'article',
 })
@@ -16,7 +16,7 @@ const schema = buildArticleSchema({
   description: 'What changes after 7 and how to adapt care for maximum quality of life.',
   url: 'https://dog.com/health/senior-dog-care',
   imageUrl: '',
-  authorName: 'Dr. Patricia Mills, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -57,12 +57,10 @@ export default function SeniorDogCarePage() {
         title: 'Senior Dog Care Guide',
         subtitle: 'The senior years can be some of the best years with your dog — if you know what\'s changing physically, what to watch for, and how to adapt care and expectations for maximum quality of life.',
         category: 'Senior Health Guide',
-        authorName: 'Dr. Patricia Mills, DVM, DACVIM',
-        authorCredentials: 'Geriatric Medicine · 18 years practice',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '11 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -91,7 +89,7 @@ export default function SeniorDogCarePage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="health-senior-dog" />
       </>}
     >

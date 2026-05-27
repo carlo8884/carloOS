@@ -95,7 +95,7 @@ export function ReviewCard({
           <span className="font-display text-4xl font-bold text-brand-primary leading-none block">
             {score.toFixed(1)}
           </span>
-          <span className="text-2xs text-brand-text-light mt-1 block">Expert Score</span>
+          <span className="text-2xs text-brand-text-light mt-1 block">Editor Score</span>
         </div>
       </div>
 

@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Akita Breed Guide — Same-Sex Aggression, Loyalty & Primitive Instincts | Dog.com', description: 'Akitas are fiercely loyal to their family and potentially dangerous to other dogs. Same-sex aggression is strong in the breed. The Hachiko story, health priorities, and what real ownership involves.', path: '/breeds/akita', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Akita Breed Guide', description: 'Same-sex aggression, loyalty, health priorities, and care for Akitas.', url: 'https://dog.com/breeds/akita', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Akita Breed Guide', description: 'Same-sex aggression, loyalty, health priorities, and care for Akitas.', url: 'https://dog.com/breeds/akita', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function AkitaPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Akita Breed Guide', subtitle: "The Akita is a large Japanese spitz-type breed — national dog of Japan, subject of the famous Hachikō loyalty story, and a breed that demands experienced, committed ownership. They form intense bonds with their immediate family and can be deeply suspicious of strangers and dangerously aggressive toward other dogs of the same sex. The same loyalty that makes them extraordinary companions makes them a liability in the wrong hands.", category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Akita Breed Guide', subtitle: "The Akita is a large Japanese spitz-type breed — national dog of Japan, subject of the famous Hachikō loyalty story, and a breed that demands experienced, committed ownership. They form intense bonds with their immediate family and can be deeply suspicious of strangers and dangerously aggressive toward other dogs of the same sex. The same loyalty that makes them extraordinary companions makes them a liability in the wrong hands.", category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Akita', href: '/breeds/akita' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function AkitaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Sebaceous Adenitis', href: '/health/dog-skin-allergies' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-akita" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-akita" />
       </>}
     >
       <div className="carloOS-article">

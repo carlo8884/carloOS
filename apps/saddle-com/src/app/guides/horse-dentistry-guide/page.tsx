@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Dentistry Guide — Floating, Signs of Dental Pain & Schedule | Saddle.com', description: 'Horses need annual dental floating — power tools under sedation are the current standard. Signs of dental pain, wolf teeth extraction, and why diet affects dental wear.', path: '/guides/horse-dentistry-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Dentistry Guide', description: 'Annual floating schedule, signs of dental pain, and equine dental care.', url: 'https://saddle.com/guides/horse-dentistry-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Dentistry Guide', description: 'Annual floating schedule, signs of dental pain, and equine dental care.', url: 'https://saddle.com/guides/horse-dentistry-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseDentistryPage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Horse Dentistry Guide', subtitle: 'Horses\' teeth grow continuously throughout their lives and wear unevenly — creating sharp points on the outer edges of upper teeth and inner edges of lower teeth that lacerate the cheeks and tongue. Annual dental floating (filing these points smooth) under sedation by a veterinarian or equine dental technician is standard preventive care.', category: 'Horse Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Equine Professional', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Horse Dentistry Guide', subtitle: 'Horses\' teeth grow continuously throughout their lives and wear unevenly — creating sharp points on the outer edges of upper teeth and inner edges of lower teeth that lacerate the cheeks and tongue. Annual dental floating (filing these points smooth) under sedation by a veterinarian or equine dental technician is standard preventive care.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Dentistry', href: '/guides/horse-dentistry-guide' }]}
       schema={schema}
       sidebar={<>

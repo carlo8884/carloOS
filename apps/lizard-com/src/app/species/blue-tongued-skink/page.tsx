@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard, Diet & Handling | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established, long-lived at 20+ years.', path: '/species/blue-tongued-skink', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BlueTonguedSkinkPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Blue-Tongued Skink', href: '/species/blue-tongued-skink' }]}
       schema={schema}
       sidebar={<>

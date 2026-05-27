@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Best Western Saddles 2025 — Reining, Cutting & Trail Ranked | Saddle.com',
-  description: 'Best western saddles by discipline. Circle Y, Billy Cook, and Martin Saddlery ranked for reining, cutting, barrel racing, and trail riding by our certified saddle fitter.',
+  description: 'Best western saddles by discipline. Circle Y, Billy Cook, and Martin Saddlery ranked for reining, cutting, barrel racing, and trail riding using CSF reviewer notes and rider reports.',
   path: '/reviews/best-western-saddles',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Circle Y, Billy Cook, and Martin ranked for reining, cutting, barrel, and trail.',
   url: 'https://saddle.com/reviews/best-western-saddles',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -46,7 +46,7 @@ export default function BestWesternSaddlesPage() {
             Best Western Saddles 2025
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, tested by a certified saddle fitter.
+            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using CSF reviewer notes and published rider reports.
           </p>
         </div>
       </div>

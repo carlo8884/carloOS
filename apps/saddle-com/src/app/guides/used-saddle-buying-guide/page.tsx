@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Buying a Used Saddle — Complete Inspection Checklist | Saddle.com',
-  description: 'A master saddler\'s guide to buying a used saddle. Tree integrity test, billet inspection, panel assessment, leather condition, price guide, and the red flags that should end a viewing.',
+  description: 'A reference guide to buying a used saddle, drawing on Society of Master Saddlers inspection material. Tree integrity test, billet inspection, panel assessment, leather condition, price guide, and the red flags that should end a viewing.',
   path: '/guides/used-saddle-buying-guide',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Buying a Used Saddle — Complete Inspection Checklist',
-  description: 'Master saddler\'s complete guide to buying a used saddle.',
+  description: 'A reference guide to buying a used saddle, drawing on Society of Master Saddlers material.',
   url: 'https://saddle.com/guides/used-saddle-buying-guide',
   imageUrl: '',
-  authorName: 'James Whitfield, Master Saddler',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -27,9 +27,9 @@ export default function UsedSaddleBuyingGuidePage() {
       siteId="saddle-com"
       hero={{
         title: 'Buying a Used Saddle — Complete Inspection Checklist',
-        subtitle: 'A used saddle from a reputable brand can deliver exceptional value — or a structural problem that injures your horse and costs more to repair than a new saddle. This guide covers every inspection point, in the order a master saddler would conduct them.',
+        subtitle: 'A used saddle from a reputable brand can deliver exceptional value — or a structural problem that injures your horse and costs more to repair than a new saddle. This guide covers every inspection point, in the order the Society of Master Saddlers recommends for an inspection.',
         category: 'Buying Guide',
-        authorName: 'James Whitfield, Master Saddler',
+        authorName: 'Saddle.com Editorial',
         authorAvatar: '🐴',
         publishedAt: 'May 2025',
         readTime: '13 min',

@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test & When to Get IV Fluids | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed). DVM guide.', path: '/health/dehydration-in-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test & When to Get IV Fluids | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed). Reference guide.', path: '/health/dehydration-in-dogs', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DehydrationPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dehydration in Dogs', subtitle: 'Dehydration occurs when fluid loss exceeds fluid intake — from vomiting, diarrhea, heat exposure, inadequate water intake, or kidney disease. Mild dehydration can be managed at home; moderate to severe dehydration requires veterinary fluid therapy. Knowing which situation you are in is the key skill.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '7 min', dvmReviewed: true }}
+        hero={{ title: 'Dehydration in Dogs', subtitle: 'Dehydration occurs when fluid loss exceeds fluid intake — from vomiting, diarrhea, heat exposure, inadequate water intake, or kidney disease. Mild dehydration can be managed at home; moderate to severe dehydration requires veterinary fluid therapy. Knowing which situation you are in is the key skill.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Dehydration', href: '/health/dehydration-in-dogs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function DehydrationPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-dehydration" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dehydration" />
         </>}
       >
         <div className="carloOS-article">

@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks,
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Skin Allergies — Environmental, Food & Flea Allergy Guide | Dog.com', description: 'Dog skin allergies: environmental (atopy), food allergy, and flea allergy dermatitis. How to distinguish them, the correct diagnostic approach, and evidence-based treatments including Apoquel and Cytopoint.', path: '/health/dog-skin-allergies', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Skin Allergies', description: 'Environmental atopy, food allergy, and flea allergy dermatitis in dogs.', url: 'https://dog.com/health/dog-skin-allergies', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Skin Allergies', description: 'Environmental atopy, food allergy, and flea allergy dermatitis in dogs.', url: 'https://dog.com/health/dog-skin-allergies', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 const FAQS = [
@@ -18,7 +18,7 @@ export default function DogSkinAllergiesPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Skin Allergies', subtitle: 'Allergic skin disease is the most common dermatological condition in dogs and one of the most common reasons for veterinary visits. Three types account for most cases: environmental allergy (atopy), food allergy, and flea allergy dermatitis. They overlap, coexist, and require different management approaches.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '12 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Skin Allergies', subtitle: 'Allergic skin disease is the most common dermatological condition in dogs and one of the most common reasons for veterinary visits. Three types account for most cases: environmental allergy (atopy), food allergy, and flea allergy dermatitis. They overlap, coexist, and require different management approaches.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '12 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Skin Allergies', href: '/health/dog-skin-allergies' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'The Three Types', href: '#types' }, { label: 'Atopy (Environmental)', href: '#atopy' }, { label: 'Food Allergy', href: '#food' }, { label: 'Flea Allergy', href: '#flea' }, { label: 'Apoquel & Cytopoint', href: '#medications' }, { label: 'Immunotherapy', href: '#immunotherapy' }]} />
@@ -29,7 +29,7 @@ export default function DogSkinAllergiesPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet Protocol', href: '/nutrition/elimination-diet' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-skin-allergies" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-skin-allergies" />
         </>}
       >
         <div className="carloOS-article">

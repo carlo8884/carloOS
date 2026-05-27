@@ -4,8 +4,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs — Signs, Emergency Response & Prevention | Dog.com', description: 'Gastric dilatation-volvulus (GDV) kills within hours without surgery. Know the signs — unproductive retching, distended abdomen — and act immediately. Prevention via prophylactic gastropexy.', path: '/health/dog-bloat-gvd', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'GDV (Bloat) in Dogs', description: 'Emergency signs and prevention for canine gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'GDV (Bloat) in Dogs', description: 'Signs, emergency response, and prevention for gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'GDV (Bloat) in Dogs', description: 'Emergency signs and prevention for canine gastric dilatation-volvulus.', url: 'https://dog.com/health/dog-bloat-gvd', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 const HIGH_RISK_BREEDS = ['Great Dane (highest risk)', 'Standard Poodle', 'German Shepherd', 'Irish Setter', 'Gordon Setter', 'Weimaraner', 'Saint Bernard', 'Irish Wolfhound', 'Bloodhound', 'Doberman Pinscher', 'Rottweiler', 'Labrador Retriever', 'Old English Sheepdog', 'Basset Hound']
@@ -15,7 +15,7 @@ export default function GdvPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'GDV (Bloat) in Dogs — Emergency Guide', subtitle: 'Gastric dilatation-volvulus is fatal without emergency surgery, typically within 4–6 hours of onset. The signs are specific. Knowing them in advance is the difference between life and death.', category: 'Emergency Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'GDV (Bloat) in Dogs — Emergency Guide', subtitle: 'Gastric dilatation-volvulus is fatal without emergency surgery, typically within 4–6 hours of onset. The signs are specific. Knowing them in advance is the difference between life and death.', category: 'Emergency Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -34,7 +34,7 @@ export default function GdvPage() {
             </div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-gdv" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-gdv" />
         </>}
       >
         <div className="carloOS-article">

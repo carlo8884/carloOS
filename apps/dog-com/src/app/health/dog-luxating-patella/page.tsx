@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Luxating Patella in Dogs — Grades, Surgery & Small Breed Guide | Dog.com', description: 'Luxating patella (slipping kneecap) is the most common orthopedic condition in small dogs. Grades 1-4, when surgery is needed, and which breeds are most affected.', path: '/health/dog-luxating-patella', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Luxating Patella in Dogs', description: 'Grades, surgical indications, and breed predisposition for luxating patella in dogs.', url: 'https://dog.com/health/dog-luxating-patella', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Luxating Patella in Dogs', description: 'Grading system, surgical indications, and treatment for patellar luxation.', url: 'https://dog.com/health/dog-luxating-patella', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Luxating Patella in Dogs', description: 'Grades, surgical indications, and breed predisposition for luxating patella in dogs.', url: 'https://dog.com/health/dog-luxating-patella', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Luxating Patella in Dogs', description: 'Grading system, surgical indications, and treatment for patellar luxation.', url: 'https://dog.com/health/dog-luxating-patella', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function LuxatingPatellaPage() {
@@ -12,7 +12,7 @@ export default function LuxatingPatellaPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Luxating Patella in Dogs', subtitle: 'The patella (kneecap) normally sits in a groove (trochlear groove) at the end of the femur. In dogs with luxating patella, the kneecap slips out of this groove — medially (inward) in most small dogs. The classic presentation: a small dog that skips on three legs for a few steps, then returns to normal.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Luxating Patella in Dogs', subtitle: 'The patella (kneecap) normally sits in a groove (trochlear groove) at the end of the femur. In dogs with luxating patella, the kneecap slips out of this groove — medially (inward) in most small dogs. The classic presentation: a small dog that skips on three legs for a few steps, then returns to normal.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Luxating Patella', href: '/health/dog-luxating-patella' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -22,7 +22,7 @@ export default function LuxatingPatellaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-luxating-patella" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-luxating-patella" />
         </>}
       >
         <div className="carloOS-article">

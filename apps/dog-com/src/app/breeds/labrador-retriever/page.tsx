@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Labrador Retriever Guide — POMC Gene, Hip Dysplasia & Exercise | Dog.com', description: 'Labradors have a specific genetic mutation (POMC) causing food obsession and obesity. Hip and elbow dysplasia common. One of the most trainable breeds — needs a job.', path: '/breeds/labrador-retriever', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Labrador Retriever Breed Guide', description: 'POMC gene food obsession, hip dysplasia, elbow dysplasia, and exercise for Labradors.', url: 'https://dog.com/breeds/labrador-retriever', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Labrador Retriever Breed Guide', description: 'POMC gene food obsession, hip dysplasia, elbow dysplasia, and exercise for Labradors.', url: 'https://dog.com/breeds/labrador-retriever', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function LabradorPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Labrador Retriever Breed Guide', subtitle: 'The most popular dog breed in the US for over 30 consecutive years. Labradors are working retrievers — bred for stamina, trainability, and a soft mouth. Their food motivation (which has a genetic basis) makes them among the most trainable dogs in existence, and among the most prone to obesity.', category: 'Breed Guide', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'Labrador Retriever Breed Guide', subtitle: 'The most popular dog breed in the US for over 30 consecutive years. Labradors are working retrievers — bred for stamina, trainability, and a soft mouth. Their food motivation (which has a genetic basis) makes them among the most trainable dogs in existence, and among the most prone to obesity.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Labrador Retriever', href: '/breeds/labrador-retriever' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function LabradorPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-lab" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-lab" />
       </>}
     >
       <div className="carloOS-article">

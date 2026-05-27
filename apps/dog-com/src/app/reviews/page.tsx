@@ -36,7 +36,7 @@ export default function DogReviewsPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
-        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and DVM-written advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Expert picks', '⚠️ What to avoid', '🚫 No spam']} />
+        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Expert picks', '⚠️ What to avoid', '🚫 No spam']} />
       </div>
     </>
   )

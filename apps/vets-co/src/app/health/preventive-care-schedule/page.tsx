@@ -1,20 +1,20 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult & Senior Timelines | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+. DVM-reviewed.', path: '/health/preventive-care-schedule', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult & Senior Timelines | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+. research-based.', path: '/health/preventive-care-schedule', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function PreventiveCareSchedulePage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Preventive Care Schedule', subtitle: 'Preventive care is the most cost-effective investment in a dog\'s health. Catching conditions early — before clinical signs develop — allows more treatment options, better outcomes, and lower total cost of care over the dog\'s lifetime.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Preventive Care Schedule', subtitle: 'Preventive care is the most cost-effective investment in a dog\'s health. Catching conditions early — before clinical signs develop — allows more treatment options, better outcomes, and lower total cost of care over the dog\'s lifetime.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Preventive Care', href: '/health/preventive-care-schedule' }]}
         sidebar={<>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-preventive-care" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-preventive-care" />
         </>}
       >
         <div className="carloOS-article">

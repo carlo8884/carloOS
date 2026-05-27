@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure. DVM-reviewed.', path: '/health/dog-heart-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heart Disease in Dogs', description: 'Mitral valve disease, DCM, murmur grading, and CHF management in dogs.', url: 'https://dog.com/health/dog-heart-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Heart Disease in Dogs', description: 'MMVD, DCM, murmur grading, and congestive heart failure management.', url: 'https://dog.com/health/dog-heart-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure. research-based.', path: '/health/dog-heart-disease', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heart Disease in Dogs', description: 'Mitral valve disease, DCM, murmur grading, and CHF management in dogs.', url: 'https://dog.com/health/dog-heart-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Heart Disease in Dogs', description: 'MMVD, DCM, murmur grading, and congestive heart failure management.', url: 'https://dog.com/health/dog-heart-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogHeartDiseasePage() {
@@ -12,12 +12,12 @@ export default function DogHeartDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Approximately 10% of dogs seen in veterinary practice have some form of cardiac disease. Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '11 min', dvmReviewed: true }}
+        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Approximately 10% of dogs seen in veterinary practice have some form of cardiac disease. Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heart Disease', href: '/health/dog-heart-disease' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }, { label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-heart-disease" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-heart-disease" />
         </>}
       >
         <div className="carloOS-article">

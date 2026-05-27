@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Supplements — What Works, What\'s Overhyped, What to Avoid | Dog.com', description: 'Evidence-graded guide to dog supplements. Fish oil, joint supplements, probiotics, and more — what the research actually shows and what\'s pure marketing.', path: '/nutrition/dog-supplements', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Supplements — What the Evidence Shows', description: 'Evidence-graded dog supplement guide: fish oil, joint supplements, probiotics.', url: 'https://dog.com/nutrition/dog-supplements', imageUrl: '', authorName: 'Dr. Patricia Mills, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Supplements — What the Evidence Shows', description: 'Evidence-graded dog supplement guide: fish oil, joint supplements, probiotics.', url: 'https://dog.com/nutrition/dog-supplements', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const SUPPLEMENTS = [
   { name: 'Fish Oil (EPA/DHA Omega-3)', evidence: 'strong' as const, dose: '20–55 mg combined EPA/DHA per kg body weight daily', brands: 'Nordic Naturals, Grizzly Salmon Oil, plain fish oil capsules', summary: 'The best-evidenced supplement in veterinary medicine. Documented benefits: anti-inflammatory for arthritis, skin and coat improvement, potential cardiovascular benefit, and emerging evidence for cognitive support in senior dogs. Use marine-source fish oil (EPA and DHA), not flaxseed oil (ALA — dogs convert this inefficiently). Quality matters: look for third-party tested products for heavy metal content. Do not exceed recommended dose — fish oil is a blood thinner at high doses.' },
@@ -20,7 +20,7 @@ export default function DogSupplementsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Dog Supplements — What the Evidence Actually Shows', subtitle: 'The pet supplement market is largely unregulated and full of products with minimal evidence. Here\'s an honest, evidence-graded assessment of what works, what\'s overhyped, and what to skip.', category: 'Nutrition Science', authorName: 'Dr. Patricia Mills, DVM, DACVIM', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+      hero={{ title: 'Dog Supplements — What the Evidence Actually Shows', subtitle: 'The pet supplement market is largely unregulated and full of products with minimal evidence. Here\'s an honest, evidence-graded assessment of what works, what\'s overhyped, and what to skip.', category: 'Nutrition Science', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Dog Supplements', href: '/nutrition/dog-supplements' }]}
       schema={schema}
       sidebar={<>
@@ -33,7 +33,7 @@ export default function DogSupplementsPage() {
           ))}
         </div>
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance every Tuesday." source="nutrition-supplements" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-supplements" />
       </>}
     >
       <div className="carloOS-article">

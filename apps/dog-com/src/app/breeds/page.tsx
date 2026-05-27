@@ -12,7 +12,7 @@ import { createServerClient } from '@carloOS/db'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements, and DVM-reviewed health guides for every breed.',
+  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements, and research-based health guides for every breed.',
   path: '/breeds',
 })
 
@@ -72,7 +72,7 @@ export default async function BreedsPage() {
           Dog Breed Guide
         </h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          DVM-reviewed profiles for 200+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
+          research-based profiles for 200+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
         </p>
       </div>
 

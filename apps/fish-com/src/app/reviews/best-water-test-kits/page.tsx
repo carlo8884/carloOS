@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2025 — API Master Kit & More | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2025', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2025', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [

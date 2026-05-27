@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Pessoa Saddle Review 2025 — Gen X Pro, Legacy & Optimum Ranked | Saddle.com',
-  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum tested by a certified saddle fitter — close contact geometry, Olympic credentials, and who each model suits.',
+  description: 'Complete Pessoa saddle review. Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and rider reports — close contact geometry, Olympic credentials, and who each model suits.',
   path: '/reviews/pessoa-saddle-review',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Pessoa Saddle Review 2025',
-  description: 'Pessoa Gen X Pro, Legacy, and Optimum reviewed by a certified saddle fitter.',
+  description: 'Pessoa Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and published rider reports.',
   url: 'https://saddle.com/reviews/pessoa-saddle-review',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -39,7 +39,7 @@ export default function PessoaReviewPage() {
             Pessoa Saddle Review 2025 — Gen X Pro, Legacy & Optimum
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Pessoa saddles are ridden by more Olympic show jumping medalists than any other brand. We reviewed three models with a certified saddle fitter — close contact geometry, feel, and fit.
+            Pessoa saddles are ridden by more Olympic show jumping medalists than any other brand. Three models compared using CSF reviewer notes and published rider reports — close contact geometry, feel, and fit.
           </p>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default function PessoaReviewPage() {
               name="Pessoa Legacy"
               subtitle="Close contact · Slightly more versatile flap · Better for flatwork"
               score={9.0}
-              description={<p>The Legacy is the Gen X Pro with a marginally less aggressive flap angle — still firmly in close-contact territory, but usable for flatwork without the restriction that makes extended schooling in the Gen X Pro uncomfortable. For event riders who want Pessoa close-contact feel across all three phases, or for riders who school significantly more flatwork than they jump, the Legacy is the correct choice within the Pessoa range. Performance over fences is nearly identical to the Gen X Pro in our testing; the difference is in daily schooling comfort.</p>}
+              description={<p>The Legacy is the Gen X Pro with a marginally less aggressive flap angle — still firmly in close-contact territory, but usable for flatwork without the restriction that makes extended schooling in the Gen X Pro uncomfortable. For event riders who want Pessoa close-contact feel across all three phases, or for riders who school significantly more flatwork than they jump, the Legacy is the correct choice within the Pessoa range. Performance over fences is nearly identical to the Gen X Pro in published reviews and reseller fitter notes; the difference is in daily schooling comfort.</p>}
               specs={[
                 { label: 'Contact', value: 'Close contact', highlight: 'good' },
                 { label: 'Flap', value: 'Forward-cut (slightly less aggressive)' },

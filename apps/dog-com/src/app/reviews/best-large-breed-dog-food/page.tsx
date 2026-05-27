@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2025 — WSAVA Picks for 50+ lb Dogs | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed, and Hill\'s Science Diet Large Breed ranked for joint support and controlled growth.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2025', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2025', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', description: 'Glucosamine and chondroitin joint support formula for large breed adult dogs.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
@@ -17,7 +17,7 @@ export default function BestLargeBreedFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large breed dogs (50+ lbs) have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds.</p>
       </div>
@@ -68,7 +68,7 @@ export default function BestLargeBreedFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Labrador Retriever', href: '/breeds/labrador-retriever' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-large-breed-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-large-breed-food" />
           </aside>
         </div>
       </div>

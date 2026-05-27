@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression & Species Comparison | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared. Not community fish — experienced keepers only.', path: '/species/puffer-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PufferFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Puffer Fish', href: '/species/puffer-fish' }]}
       schema={schema}
       sidebar={<>

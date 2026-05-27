@@ -3,15 +3,14 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. A DVM explains BOAS surgery, IVDD risk, skin fold management, and why French Bulldogs need pet insurance.', path: '/breeds/french-bulldog-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Veterinary Perspective', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from a DVM.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. This guide explains BOAS surgery, IVDD risk, skin fold management, and why French Bulldogs need pet insurance.', path: '/breeds/french-bulldog-health', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'French Bulldog Health',
   description: 'BOAS, IVDD, and heat stroke risk in French Bulldogs.',
   url: 'https://vets.co/breeds/french-bulldog-health',
-  authorName: 'Dr. Sarah Webb, DVM',
-  reviewedByName: 'Dr. Sarah Webb, DVM',
+  authorName: 'Vets.co Editorial',
   lastReviewed: '2025-05-01',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
@@ -22,12 +21,12 @@ export default function VetsFrenchBulldogHealthPage() {
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
       siteId="vets-co"
-      hero={{ title: 'French Bulldog Health — A Veterinarian\'s Perspective', subtitle: 'French Bulldogs have the highest per-dog veterinary costs of any breed I see. The conditions are largely predictable, many are manageable, and some are preventable with early intervention. Here\'s what every Frenchie owner needs to know.', category: 'Breed Health Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+      hero={{ title: 'French Bulldog Health — A Veterinarian\'s Perspective', subtitle: 'French Bulldogs have the highest per-dog veterinary costs of any breed. The conditions are largely predictable, many are manageable, and some are preventable with early intervention. Here\'s what every Frenchie owner needs to know.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides', href: '/breeds' }, { name: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-        <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance every Tuesday." source="breeds-french-bulldog" />
+        <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-french-bulldog" />
       </>}
     >
       <div className="carloOS-article">
@@ -45,7 +44,7 @@ export default function VetsFrenchBulldogHealthPage() {
         <BreedHealthCard name="Heat Stroke" riskLevel="very-high" description="French Bulldogs cannot thermoregulate effectively. BOAS restricts airflow — panting (the primary canine cooling mechanism) is impaired in proportion to the severity of airway compromise. Heat stroke can occur at ambient temperatures where other breeds are comfortable. This is a genuine life-threatening emergency." signs={['Excessive panting or labored breathing', 'Drooling, bright red gums', 'Glassy eyes, disorientation', 'Collapse (late sign — critical emergency)']} management="Never leave in a car, even briefly. Limit outdoor time in temperatures above 70°F, particularly if humid. Walk in early morning or after sunset in summer. If heat stroke suspected: wet dog with cool (not cold) water, fan, get to emergency vet immediately. Do not wait." />
 
         <h2>The Surgical Decision — My Honest Advice</h2>
-        <p>I advise most French Bulldog owners to at minimum have their dog BOAS-graded by a soft tissue surgeon. Many dogs with Grade II–III BOAS are significantly more comfortable and have longer, healthier lives after surgical correction. I see too many owners believe the noisy breathing is &quot;just how Frenchies are&quot; — it is, but it doesn&apos;t mean it can&apos;t be improved.</p>
+        <p>Most French Bulldog owners are advised to at minimum have their dog BOAS-graded by a soft tissue surgeon. Many dogs with Grade II–III BOAS are significantly more comfortable and have longer, healthier lives after surgical correction. Too many owners believe the noisy breathing is &quot;just how Frenchies are&quot; — it is, but it doesn&apos;t mean it can&apos;t be improved.</p>
         <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. If your Frenchie is still young: get the assessment now.</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>

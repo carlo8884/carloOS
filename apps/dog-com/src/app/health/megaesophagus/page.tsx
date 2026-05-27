@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Megaesophagus in Dogs — Upright Feeding, Bailey Chair & Aspiration Prevention | Dog.com', description: 'Megaesophagus causes regurgitation and life-threatening aspiration pneumonia. The Bailey Chair and upright feeding for 10-30 minutes after meals are the critical management tools.', path: '/health/megaesophagus', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Megaesophagus in Dogs', description: 'Canine megaesophagus — management, upright feeding, and aspiration prevention.', url: 'https://dog.com/health/megaesophagus', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Megaesophagus in Dogs', description: 'Upright feeding, Bailey chair, and aspiration pneumonia prevention for dogs with megaesophagus.', url: 'https://dog.com/health/megaesophagus', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Megaesophagus in Dogs', description: 'Canine megaesophagus — management, upright feeding, and aspiration prevention.', url: 'https://dog.com/health/megaesophagus', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function MegaesophagusPage() {
@@ -12,7 +12,7 @@ export default function MegaesophagusPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Megaesophagus in Dogs', subtitle: 'Megaesophagus is dilation and reduced motility of the esophagus — the tube connecting the mouth to the stomach. A normal esophagus moves food downward through coordinated muscle contractions (peristalsis). In megaesophagus, the esophagus dilates and loses this coordinated movement, causing food to pool rather than transit to the stomach. The result: regurgitation, and the life-threatening risk of aspiration pneumonia.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Megaesophagus in Dogs', subtitle: 'Megaesophagus is dilation and reduced motility of the esophagus — the tube connecting the mouth to the stomach. A normal esophagus moves food downward through coordinated muscle contractions (peristalsis). In megaesophagus, the esophagus dilates and loses this coordinated movement, causing food to pool rather than transit to the stomach. The result: regurgitation, and the life-threatening risk of aspiration pneumonia.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Megaesophagus', href: '/health/megaesophagus' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -22,7 +22,7 @@ export default function MegaesophagusPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Pneumonia', href: '/health/dog-symptoms-guide' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-megaesophagus" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-megaesophagus" />
         </>}
       >
         <div className="carloOS-article">

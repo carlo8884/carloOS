@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Uromastyx Care Guide — High Heat, Seed Diet & Desert Setup | Lizard.com', description: 'Uromastyx (spiny-tailed lizards) need extreme heat (120°F basking), a dry desert setup, and a primarily seed-based herbivore diet. Surprisingly personable lizards once established.', path: '/species/uromastyx', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function UromastcyxPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Uromastyx', href: '/species/uromastyx' }]}
       schema={schema}
       sidebar={<>

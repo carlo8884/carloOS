@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts, Glaucoma & PRA | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic). What each condition looks like and urgency level.', path: '/health/dog-eye-conditions', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogEyeConditionsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Eye Conditions in Dogs', subtitle: 'The eye conditions most commonly seen in dogs range from minor irritations to sight-threatening emergencies requiring same-day treatment. Knowing which situation you are looking at — and which ones cannot wait — is the essential skill for any dog owner.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Eye Conditions in Dogs', subtitle: 'The eye conditions most commonly seen in dogs range from minor irritations to sight-threatening emergencies requiring same-day treatment. Knowing which situation you are looking at — and which ones cannot wait — is the essential skill for any dog owner.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Eye Conditions', href: '/health/dog-eye-conditions' }]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
@@ -22,7 +22,7 @@ export default function DogEyeConditionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Cocker Spaniel Guide', href: '/health/preventive-care-schedule' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-eye-conditions" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-eye-conditions" />
         </>}
       >
         <div className="carloOS-article">

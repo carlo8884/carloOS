@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Burrowing, Groups & Hiding Behavior | Fish.com', description: 'Kuhli loaches are nocturnal burrowers that disappear for days. Groups of 5+ are required — they hide alone but are active in groups. Fine sand substrate essential.', path: '/species/kuhli-loach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Burrowing behavior, group requirements, and sand substrate care for Pangio kuhlii kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Burrowing behavior, group requirements, and sand substrate care for Pangio kuhlii kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function KuhliLoachPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Kuhli Loach Care Guide', subtitle: 'Pangio kuhlii — the kuhli loach is a snake-like, eel-bodied loach from Southeast Asia. Banded in orange and dark brown, they spend most of their time hidden in substrate, under decorations, and crammed into the smallest available spaces. In groups, they become more active and visible. A single kuhli loach in a bare tank will disappear and be presumed dead within a week.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Kuhli Loach Care Guide', subtitle: 'Pangio kuhlii — the kuhli loach is a snake-like, eel-bodied loach from Southeast Asia. Banded in orange and dark brown, they spend most of their time hidden in substrate, under decorations, and crammed into the smallest available spaces. In groups, they become more active and visible. A single kuhli loach in a bare tank will disappear and be presumed dead within a week.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Kuhli Loach', href: '/species/kuhli-loach' }]}
       schema={schema}
       sidebar={<>

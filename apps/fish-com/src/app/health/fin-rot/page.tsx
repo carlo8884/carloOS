@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fin Rot in Fish — Causes, Bacterial vs Fungal & Treatment | Fish.com', description: 'Fin rot is almost always caused by poor water quality. Fraying, ragged edges progressing toward the body. Treatment: water quality first, then antibiotics if bacterial.', path: '/health/fin-rot', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fin Rot in Fish', description: 'Causes, bacterial vs fungal distinction, and treatment for fin rot in aquarium fish.', url: 'https://fish.com/health/fin-rot', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fin Rot in Fish', description: 'Causes, bacterial vs fungal distinction, and treatment for fin rot in aquarium fish.', url: 'https://fish.com/health/fin-rot', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FinRotPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Fin Rot in Fish', subtitle: 'Fin rot is the most common disease in aquarium fish — fraying, ragged, or deteriorating fins caused by bacterial or fungal infection of damaged fin tissue. Almost every case of fin rot is preventable. Water quality is both the cause and the treatment foundation.', category: 'Fish Health', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Fin Rot in Fish', subtitle: 'Fin rot is the most common disease in aquarium fish — fraying, ragged, or deteriorating fins caused by bacterial or fungal infection of damaged fin tissue. Almost every case of fin rot is preventable. Water quality is both the cause and the treatment foundation.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Fin Rot', href: '/health/fin-rot' }]}
       schema={schema}
       sidebar={<>

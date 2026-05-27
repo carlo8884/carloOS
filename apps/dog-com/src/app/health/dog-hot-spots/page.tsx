@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hot Spots in Dogs (Pyotraumatic Dermatitis) — Causes, Shaving & Treatment | Dog.com', description: 'Hot spots are acute moist dermatitis — a rapidly spreading bacterial skin infection triggered by self-trauma. How to treat, why shaving the area matters, and what causes them to recur.', path: '/health/dog-hot-spots', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hot Spots in Dogs', description: 'Causes, shaving protocol, and treatment for canine pyotraumatic dermatitis (hot spots).', url: 'https://dog.com/health/dog-hot-spots', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Hot Spots in Dogs', description: 'Pyotraumatic dermatitis — causes and treatment.', url: 'https://dog.com/health/dog-hot-spots', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hot Spots in Dogs', description: 'Causes, shaving protocol, and treatment for canine pyotraumatic dermatitis (hot spots).', url: 'https://dog.com/health/dog-hot-spots', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Hot Spots in Dogs', description: 'Pyotraumatic dermatitis — causes and treatment.', url: 'https://dog.com/health/dog-hot-spots', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogHotSpotsPage() {
@@ -12,7 +12,7 @@ export default function DogHotSpotsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Hot Spots in Dogs', subtitle: 'A hot spot appears suddenly — a wet, red, raw, painful lesion that can grow from dime-sized to palm-sized within hours. Formally called pyotraumatic dermatitis or acute moist dermatitis, hot spots develop when a dog scratches, licks, or bites a specific area intensely enough to break the skin, allowing surface bacteria to establish a localized infection.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '8 min', dvmReviewed: true }}
+        hero={{ title: 'Hot Spots in Dogs', subtitle: 'A hot spot appears suddenly — a wet, red, raw, painful lesion that can grow from dime-sized to palm-sized within hours. Formally called pyotraumatic dermatitis or acute moist dermatitis, hot spots develop when a dog scratches, licks, or bites a specific area intensely enough to break the skin, allowing surface bacteria to establish a localized infection.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Hot Spots', href: '/health/dog-hot-spots' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function DogHotSpotsPage() {
             <div className="text-2xs text-brand-text-light mt-2">Thick-coated breeds trap moisture — highest risk</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-hot-spots" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hot-spots" />
         </>}
       >
         <div className="carloOS-article">

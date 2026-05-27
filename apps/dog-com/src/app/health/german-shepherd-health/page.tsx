@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'DM, hip dysplasia, bloat, EPI and preventive care for German Shepherds.',
   url: 'https://dog.com/health/german-shepherd-health',
   imageUrl: '',
-  authorName: 'Dr. Marcus Webb, DVM, DACVN',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -30,12 +30,10 @@ export default function GermanShepherdHealthPage() {
         title: 'German Shepherd Health Guide',
         subtitle: 'German Shepherds are one of the most capable working breeds in the world — and one of the most predisposed to serious degenerative conditions. Here\'s what every GSD owner must understand.',
         category: 'Breed Health Guide',
-        authorName: 'Dr. Marcus Webb, DVM, DACVN',
-        authorCredentials: 'Neurology & Internal Medicine · 16 years',
-        authorAvatar: '👨‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '11 min',
-        dvmReviewed: true,
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -59,7 +57,7 @@ export default function GermanShepherdHealthPage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
-          subtitle="DVM-written guidance every Tuesday."
+          subtitle="Practical guidance every Tuesday."
           source="health-german-shepherd" />
       </>}
     >

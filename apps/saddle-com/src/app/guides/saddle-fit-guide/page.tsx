@@ -5,16 +5,16 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Saddle Fit Guide — How to Check Fit for Horse and Rider | Saddle.com',
-  description: 'A certified saddle fitter explains the 4-point fit check, how to identify poor fit from your horse\'s behavior and back, and when to call a professional fitter.',
+  description: 'The 4-point fit check explained, how to identify poor fit from your horse\'s behavior and back, and when to call a professional fitter.',
   path: '/guides/saddle-fit-guide',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'saddle-com', title: 'Saddle Fit Guide',
-  description: 'Certified saddle fitter explains the 4-point check for horse and rider.',
+  description: 'The 4-point check for horse and rider, explained.',
   url: 'https://saddle.com/guides/saddle-fit-guide', imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z',
 })
 
@@ -22,7 +22,7 @@ export default function SaddleFitGuidePage() {
   return (
     <ArticleLayout
       siteId="saddle-com"
-      hero={{ title: 'Saddle Fit Guide — For Horse and Rider', subtitle: 'A poorly fitting saddle is the most common cause of back pain, resistance, and behavior problems in ridden horses. A certified saddle fitter explains what correct fit looks like and how to check it.', category: 'Fitting Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter · 17 years experience', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '12 min' }}
+      hero={{ title: 'Saddle Fit Guide — For Horse and Rider', subtitle: 'A poorly fitting saddle is the most common cause of back pain, resistance, and behavior problems in ridden horses. A reference guide to what correct fit looks like and how to check it.', category: 'Fitting Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '12 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }]}
       schema={schema}
       sidebar={<>

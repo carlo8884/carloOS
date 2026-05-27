@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks, Causes & Weight Loss Plan | Dog.com', description: 'Over 50% of US dogs are overweight. Dog obesity causes arthritis, diabetes, cancer, and shortened lifespan. DVM guide to body condition scoring and safe weight loss.', path: '/health/dog-obesity', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks and Weight Loss', description: 'Body condition scoring, health risks, and safe weight loss for overweight dogs.', url: 'https://dog.com/health/dog-obesity', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Obesity', description: 'Health risks and weight management for overweight dogs.', url: 'https://dog.com/health/dog-obesity', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks, Causes & Weight Loss Plan | Dog.com', description: 'Over 50% of US dogs are overweight. Dog obesity causes arthritis, diabetes, cancer, and shortened lifespan. Reference guide to body condition scoring and safe weight loss.', path: '/health/dog-obesity', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Obesity — Health Risks and Weight Loss', description: 'Body condition scoring, health risks, and safe weight loss for overweight dogs.', url: 'https://dog.com/health/dog-obesity', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Obesity', description: 'Health risks and weight management for overweight dogs.', url: 'https://dog.com/health/dog-obesity', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogObesityPage() {
@@ -12,12 +12,12 @@ export default function DogObesityPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Obesity — Health Risks & Weight Loss Plan', subtitle: 'Over half of dogs in the US are overweight or obese — and most owners do not realize it because overweight has become the visual norm. Excess weight is not cosmetic. It shortens lifespan and causes or worsens arthritis, diabetes, cancer, and cardiac disease.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Obesity — Health Risks & Weight Loss Plan', subtitle: 'Over half of dogs in the US are overweight or obese — and most owners do not realize it because overweight has become the visual norm. Excess weight is not cosmetic. It shortens lifespan and causes or worsens arthritis, diabetes, cancer, and cardiac disease.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Obesity', href: '/health/dog-obesity' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Body Condition Scoring', href: '#bcs' }, { label: 'Health Consequences', href: '#risks' }, { label: 'Causes', href: '#causes' }, { label: 'Weight Loss Plan', href: '#plan' }, { label: 'Breeds at Risk', href: '#breeds' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Weight Management', href: '/nutrition/weight-management' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-obesity" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-obesity" />
         </>}
       >
         <div className="carloOS-article">

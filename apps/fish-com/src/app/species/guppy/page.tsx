@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Guppy Care Guide — Strains, Breeding & "Guppy Disease" | Fish.com', description: 'Guppies breed constantly and are remarkably hardy — but cheap store guppies often carry disease. Fancy guppy strains, selective breeding basics, and why quality matters.', path: '/species/guppy', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Guppy Care Guide', description: 'Strains, breeding, disease prevention, and care for fancy guppies.', url: 'https://fish.com/species/guppy', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Guppy Care Guide', description: 'Strains, breeding, disease prevention, and care for fancy guppies.', url: 'https://fish.com/species/guppy', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function GuppyPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Guppy Care Guide', subtitle: 'Poecilia reticulata — the most common aquarium fish in the world, and one of the most misunderstood. Guppies have an undeserved reputation as simple, expendable beginner fish. Quality fancy guppies from reputable breeders are genuinely beautiful, complex, and engaging to keep and breed. Pet store guppies are a different situation.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Guppy Care Guide', subtitle: 'Poecilia reticulata — the most common aquarium fish in the world, and one of the most misunderstood. Guppies have an undeserved reputation as simple, expendable beginner fish. Quality fancy guppies from reputable breeders are genuinely beautiful, complex, and engaging to keep and breed. Pet store guppies are a different situation.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Guppy', href: '/species/guppy' }]}
       schema={schema}
       sidebar={<>

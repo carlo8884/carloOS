@@ -69,7 +69,6 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: 'Affiliate Disclosure', href: '/legal/affiliate-disclosure' },
-              { label: 'Editorial Standards', href: '/editorial-standards' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -86,10 +85,10 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
         {showAffiliateDisclosure && (
           <p className="mt-6 pt-5 border-t border-white/5 text-xs text-white/20 leading-relaxed">
             {config.theme.siteName} participates in affiliate marketing programs including
-            Amazon Associates, Chewy, and veterinary insurance referral programs. When you
-            purchase through links on this site, we may earn a commission at no extra cost
-            to you. Our editorial recommendations are independent — we do not accept payment
-            for product placements or rankings.
+            Amazon Associates, Chewy, and pet insurance referral programs. When you
+            purchase through links on this site, we may earn a commission at no extra
+            cost to you. Content is for general information only and is not a substitute
+            for advice from a licensed veterinarian.
           </p>
         )}
       </div>

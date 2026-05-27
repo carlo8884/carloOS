@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide — Substrate, CUC & Plant Selection | Lizard.com', description: 'Bioactive vivariums use a living substrate, plants, and a cleanup crew (springtails + isopods) to self-maintain. Setup guide for tropical and desert bioactive enclosures.', path: '/setup/bioactive-setup', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BioactiveSetupPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Bioactive Setup', href: '/setup/bioactive-setup' }]}
       schema={schema}
       sidebar={<>

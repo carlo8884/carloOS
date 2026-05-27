@@ -13,7 +13,7 @@ const schema = buildArticleSchema({
   siteId: 'fish-com', title: 'Aquarium Setup Guide',
   description: 'Step-by-step aquarium setup for beginners.',
   url: 'https://fish.com/setup', imageUrl: '',
-  authorName: 'Fish.com Expert Team',
+  authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z',
 })
 

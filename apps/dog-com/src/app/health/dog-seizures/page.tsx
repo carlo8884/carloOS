@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Seizures in Dogs — Types, Causes, Phenobarbital & Emergency Protocol | Dog.com', description: 'Dog seizures: what to do during one, idiopathic epilepsy vs symptomatic causes, when to start medication, and the phenobarbital monitoring protocol.', path: '/health/dog-seizures', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, emergency protocol, and anticonvulsant management for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency response, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, emergency protocol, and anticonvulsant management for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency response, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'My dog just had a first seizure — what do I do now?', answer: 'After the seizure ends, keep the dog quiet and calm in a darkened room — the post-ictal period (recovery phase) can last minutes to hours, during which the dog may be disoriented, temporarily blind, or unsteady. Contact your vet the same day for a first seizure. The workup typically includes bloodwork, urinalysis, and possibly an MRI and CSF tap to determine the cause.' },
@@ -15,7 +15,7 @@ export default function DogSeizuresPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Seizures in Dogs', subtitle: 'Witnessing a dog seizure is frightening. Most seizures are brief and self-limiting — the priority during a seizure is safety, not intervention. Understanding what is happening and having a response plan in place before a seizure occurs makes an enormous difference.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Seizures in Dogs', subtitle: 'Witnessing a dog seizure is frightening. Most seizures are brief and self-limiting — the priority during a seizure is safety, not intervention. Understanding what is happening and having a response plan in place before a seizure occurs makes an enormous difference.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Seizures', href: '/health/dog-seizures' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -25,7 +25,7 @@ export default function DogSeizuresPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-seizures" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
         </>}
       >
         <div className="carloOS-article">

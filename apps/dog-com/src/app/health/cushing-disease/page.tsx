@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing & Trilostane Treatment | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test — not a routine panel. DVM guide.", path: '/health/cushing-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Hyperadrenocorticism — diagnosis and treatment.", url: 'https://dog.com/health/cushing-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing & Trilostane Treatment | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test — not a routine panel. Reference guide.", path: '/health/cushing-disease', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Hyperadrenocorticism — diagnosis and treatment.", url: 'https://dog.com/health/cushing-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function CushingDiseasePage() {
@@ -12,7 +12,7 @@ export default function CushingDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism — Cushing's syndrome — is caused by chronic cortisol excess. It is one of the most commonly misdiagnosed conditions in middle-aged and older dogs because its signs resemble normal aging. The classic presentation: a middle-aged dog that is drinking more, has a pot belly, is losing hair, and seems lethargic.", category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism — Cushing's syndrome — is caused by chronic cortisol excess. It is one of the most commonly misdiagnosed conditions in middle-aged and older dogs because its signs resemble normal aging. The classic presentation: a middle-aged dog that is drinking more, has a pot belly, is losing hair, and seems lethargic.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Cushing's Disease", href: '/health/cushing-disease' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Classic Signs', href: '#signs' }, { label: 'PDH vs ADH', href: '#types' }, { label: 'Diagnostic Tests', href: '#tests' }, { label: 'Treatment', href: '#treatment' }, { label: 'Monitoring', href: '#monitoring' }]} />
@@ -23,7 +23,7 @@ export default function CushingDiseasePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Diabetes', href: '/health/dog-diabetes' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-cushings" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
         </>}
       >
         <div className="carloOS-article">

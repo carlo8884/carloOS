@@ -1,21 +1,21 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Anxiety — Types, Signs & Evidence-Based Treatment | Dog.com', description: 'Dog anxiety types: separation, noise phobia, and generalized. Signs, behavioral modification, and when medication makes a significant difference. DVM-reviewed.', path: '/health/dog-anxiety', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Anxiety', description: 'Types and treatment of anxiety in dogs.', url: 'https://dog.com/health/dog-anxiety', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Anxiety — Types, Signs & Evidence-Based Treatment | Dog.com', description: 'Dog anxiety types: separation, noise phobia, and generalized. Signs, behavioral modification, and when medication makes a significant difference. research-based.', path: '/health/dog-anxiety', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Anxiety', description: 'Types, signs, and evidence-based treatment for canine anxiety.', url: 'https://dog.com/health/dog-anxiety', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Anxiety', description: 'Types and treatment of anxiety in dogs.', url: 'https://dog.com/health/dog-anxiety', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogAnxietyPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Anxiety — Types, Signs & Treatment', subtitle: 'Anxiety is one of the most common behavioral presentations in veterinary practice — and one of the most undertreated. Many anxious dogs live in chronic distress that owners attribute to personality rather than a treatable condition. Effective treatment exists.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Anxiety — Types, Signs & Treatment', subtitle: 'Anxiety is one of the most common behavioral presentations in veterinary practice — and one of the most undertreated. Many anxious dogs live in chronic distress that owners attribute to personality rather than a treatable condition. Effective treatment exists.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Anxiety', href: '/health/dog-anxiety' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-anxiety" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
         </>}
       >
         <div className="carloOS-article">

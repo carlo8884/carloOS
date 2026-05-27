@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pyoderma in Dogs — Bacterial Skin Infections, Causes & Antibiotics | Dog.com', description: 'Pyoderma (bacterial skin infection) is the most common skin disease in dogs. Surface, superficial, and deep pyoderma differ in treatment duration. Allergy is the root cause in 80%+ of cases.', path: '/health/dog-pyoderma', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Pyoderma in Dogs', description: 'Bacterial skin infections — types, antibiotic treatment, and root cause identification.', url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Pyoderma in Dogs', description: 'Bacterial skin infections — types, antibiotic treatment, and root cause identification.', url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogPyodermaPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Pyoderma in Dogs', subtitle: 'Pyoderma — bacterial skin infection — is the most common skin disease seen in veterinary practice. Staphylococcus pseudintermedius is responsible for the vast majority of cases. The critical insight: pyoderma in most dogs is a secondary condition, not a primary disease. Treating the infection without identifying and managing the underlying cause results in recurrence.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Pyoderma in Dogs', subtitle: 'Pyoderma — bacterial skin infection — is the most common skin disease seen in veterinary practice. Staphylococcus pseudintermedius is responsible for the vast majority of cases. The critical insight: pyoderma in most dogs is a secondary condition, not a primary disease. Treating the infection without identifying and managing the underlying cause results in recurrence.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Pyoderma', href: '/health/dog-pyoderma' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -20,7 +20,7 @@ export default function DogPyodermaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Mange', href: '/health/dog-mange' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-pyoderma" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pyoderma" />
         </>}
       >
         <div className="carloOS-article">

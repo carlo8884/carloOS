@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Cancer Treatment — Chemotherapy, Surgery, Radiation & Palliative Care | Dog.com', description: 'How cancer is treated in dogs. Chemotherapy in dogs is different from human chemo — most dogs tolerate it well. Surgery, radiation, immunotherapy, and palliative care compared.', path: '/health/dog-cancer-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Dog Cancer Treatment', description: 'Canine cancer treatment — chemotherapy, surgery, radiation, and palliative care.', url: 'https://dog.com/health/dog-cancer-treatment', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Cancer Treatment', description: 'Canine cancer treatment — chemotherapy, surgery, radiation, and palliative care.', url: 'https://dog.com/health/dog-cancer-treatment', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function DogCancerTreatmentPage() {
@@ -12,12 +12,12 @@ export default function DogCancerTreatmentPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Dog Cancer Treatment', subtitle: 'A cancer diagnosis in a dog is devastating — and the decisions that follow are among the most difficult owners face. Understanding what each treatment modality actually involves, what it realistically achieves, and how dogs typically tolerate it provides the foundation for informed conversations with a veterinary oncologist.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '11 min', dvmReviewed: true }}
+        hero={{ title: 'Dog Cancer Treatment', subtitle: 'A cancer diagnosis in a dog is devastating — and the decisions that follow are among the most difficult owners face. Understanding what each treatment modality actually involves, what it realistically achieves, and how dogs typically tolerate it provides the foundation for informed conversations with a veterinary oncologist.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cancer Treatment', href: '/health/dog-cancer-treatment' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Chemotherapy', href: '#chemo' }, { label: 'Surgery', href: '#surgery' }, { label: 'Radiation', href: '#radiation' }, { label: 'Immunotherapy', href: '#immunotherapy' }, { label: 'Palliative Care', href: '#palliative' }, { label: 'The Oncologist Role', href: '#oncologist' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cancer Warning Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-cancer-treatment" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-treatment" />
         </>}
       >
         <div className="carloOS-article">

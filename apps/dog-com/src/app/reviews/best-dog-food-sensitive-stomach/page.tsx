@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025 — Vet-Recommended Picks | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025', description: 'Vet-recommended sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025', description: 'Vet-recommended sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Sensitive Skin & Stomach', description: 'Single salmon protein, no corn/wheat/soy, live probiotics — the standard vet recommendation for sensitive stomachs.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, ppSchema)
 const PICKS = [
@@ -16,7 +16,7 @@ export default function SensitiveStomachFoodPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 DVM-Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet WSAVA guidelines.</p>
       </div>
@@ -56,7 +56,7 @@ export default function SensitiveStomachFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Elimination Diet', href: '/nutrition/elimination-diet' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="review-sensitive-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-sensitive-food" />
           </aside>
         </div>
       </div>

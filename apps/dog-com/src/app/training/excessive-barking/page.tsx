@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes & What Actually Works | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Excessive Barking in Dogs', description: 'Types of barking, causes, and evidence-based solutions for each.', url: 'https://dog.com/training/excessive-barking', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Excessive Barking in Dogs', description: 'Types of barking, causes, and evidence-based solutions for each.', url: 'https://dog.com/training/excessive-barking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const TYPES = [
   { type: 'Alert / Territorial Barking', cause: 'Stranger, animal, or vehicle approaching the territory. The dog is performing its function.', solution: 'Management: block visual access to triggers (window film on lower panes, keep dog away from front windows). Training: "thank you" interruption — acknowledge the bark ("thank you"), then redirect to a mat or settle behavior. Do not punish the bark; you lose the early warning function and the dog\'s trust.' },
@@ -18,7 +18,7 @@ export default function ExcessiveBarkingPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Excessive Barking — Types, Causes & What Works', subtitle: 'Barking is not a monolithic behavior with one solution. There are six distinct types of excessive barking, each with a different cause and a different appropriate response. Treating them the same way is why most barking interventions fail.', category: 'Behavior Problems', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Excessive Barking — Types, Causes & What Works', subtitle: 'Barking is not a monolithic behavior with one solution. There are six distinct types of excessive barking, each with a different cause and a different appropriate response. Treating them the same way is why most barking interventions fail.', category: 'Behavior Problems', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Excessive Barking', href: '/training/excessive-barking' }]}
       schema={schema}
       sidebar={<>

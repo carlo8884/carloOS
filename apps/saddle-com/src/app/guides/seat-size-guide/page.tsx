@@ -5,7 +5,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Saddle Seat Size Guide — Find Your Correct Size | Saddle.com',
-  description: 'Seat size is measured from seat bone width — not height or weight. A certified saddle fitter explains the correct measurement method and how discipline and personal preference affect the choice.',
+  description: 'Seat size is measured from seat bone width — not height or weight. The correct measurement method, plus how discipline and personal preference affect the choice.',
   path: '/guides/seat-size-guide',
   type: 'article',
 })
@@ -13,10 +13,10 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Saddle Seat Size Guide',
-  description: 'Certified saddle fitter explains seat bone measurement and seat size selection.',
+  description: 'A reference guide to seat bone measurement and seat size selection.',
   url: 'https://saddle.com/guides/seat-size-guide',
   imageUrl: '',
-  authorName: 'Victoria Marsh, CSF',
+  authorName: 'Saddle.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -38,8 +38,7 @@ export default function SeatSizeGuidePage() {
         title: 'Saddle Seat Size Guide — Find Your Correct Size',
         subtitle: 'Seat size has nothing to do with how tall you are or how much you weigh. The correct size is determined by one measurement: the distance between your seat bones. Everything else follows from that.',
         category: 'Fitting Guide',
-        authorName: 'Victoria Marsh, CSF',
-        authorCredentials: 'Certified Saddle Fitter · 17 years experience',
+        authorName: 'Saddle.com Editorial',
         authorAvatar: '🐴',
         publishedAt: 'May 2025',
         readTime: '8 min',

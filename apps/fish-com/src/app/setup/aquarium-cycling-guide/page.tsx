@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle Guide — How to Cycle a Fish Tank Fast | Fish.com', description: 'The nitrogen cycle is the most important concept in fishkeeping. How to cycle a tank correctly (with and without fish), how to speed it up, and how to know when it\'s done.', path: '/setup/aquarium-cycling-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle Guide', description: 'How to cycle a fish tank — fishless cycling, seeded media, and completing the nitrogen cycle.', url: 'https://fish.com/setup/aquarium-cycling-guide', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle Guide', description: 'How to cycle a fish tank — fishless cycling, seeded media, and completing the nitrogen cycle.', url: 'https://fish.com/setup/aquarium-cycling-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Cycle a Fish Tank (Fishless Cycling)', description: 'Step-by-step guide to establishing the nitrogen cycle in a new aquarium.', url: 'https://fish.com/setup/aquarium-cycling-guide', totalTime: 'P5W', steps: [
   { name: 'Set up the tank and add dechlorinated water', text: 'Fill the tank with tap water treated with a dechlorinator (Seachem Prime). Run the filter, heater, and any air pumps. Do not add fish.' },
   { name: 'Add an ammonia source', text: 'For fishless cycling: add ammonia to reach 2 ppm. Use pure ammonia drops (Dr. Tim\'s Ammonium Chloride) or add a pinch of fish food and wait for it to decompose. Test with an API ammonia test kit to confirm 2 ppm.' },
@@ -16,7 +16,7 @@ export default function CyclingGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Aquarium Nitrogen Cycle — Complete Cycling Guide', subtitle: 'The nitrogen cycle is the foundation of every aquarium. Without it, fish die within days of ammonia poisoning. With it, fish live for years in stable, healthy water. Every fishkeeper needs to understand this process — it is not optional knowledge.', category: 'Tank Setup', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+        hero={{ title: 'Aquarium Nitrogen Cycle — Complete Cycling Guide', subtitle: 'The nitrogen cycle is the foundation of every aquarium. Without it, fish die within days of ammonia poisoning. With it, fish live for years in stable, healthy water. Every fishkeeper needs to understand this process — it is not optional knowledge.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

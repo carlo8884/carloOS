@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide — Fast Flow, High O2 & Algae Diet | Fish.com', description: 'Hillstream loaches need very high water flow and oxygenation — they come from fast-moving streams. They are algae eaters that starve in tanks without established biofilm. Care guide.', path: '/species/hillstream-loach', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide', description: 'Fast-flowing water requirements, algae diet, and care for hillstream loaches (Sewellia, Beaufortia, Gastromyzon).', url: 'https://fish.com/species/hillstream-loach', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide', description: 'Fast-flowing water requirements, algae diet, and care for hillstream loaches (Sewellia, Beaufortia, Gastromyzon).', url: 'https://fish.com/species/hillstream-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function HillstreamLoachPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Hillstream Loach Care Guide', subtitle: 'Hillstream loaches — genera including Sewellia, Beaufortia, Gastromyzon, and Pseudogastromyzon — are among the most visually striking small fish available for the hobby. Flattened bodies, intricate spotted patterns, and the unique ability to cling to glass and rocks in high-flow environments make them fascinating. They also have strict requirements that match their natural habitat: fast-moving, highly oxygenated, cool streams.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Hillstream Loach Care Guide', subtitle: 'Hillstream loaches — genera including Sewellia, Beaufortia, Gastromyzon, and Pseudogastromyzon — are among the most visually striking small fish available for the hobby. Flattened bodies, intricate spotted patterns, and the unique ability to cling to glass and rocks in high-flow environments make them fascinating. They also have strict requirements that match their natural habitat: fast-moving, highly oxygenated, cool streams.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Hillstream Loach', href: '/species/hillstream-loach' }]}
       schema={schema}
       sidebar={<>

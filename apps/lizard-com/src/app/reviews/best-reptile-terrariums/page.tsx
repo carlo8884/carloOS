@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025 — Zen Habitats, Animal Plastics & Exo Terra Ranked',
-  description: 'We tested reptile terrariums on temperature retention, humidity stability, ventilation, and build quality. PVC, glass, and wood enclosures ranked for different species and budgets.',
+  description: 'Reptile terrariums compared on temperature retention, humidity stability, ventilation, and build quality. PVC, glass, and wood enclosures ranked for different species and budgets.',
   path: '/reviews/best-reptile-terrariums',
   type: 'article',
 })
@@ -16,7 +16,7 @@ const schema = buildArticleSchema({
   description: 'Reptile terrariums tested and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
   url: 'https://lizard.com/reviews/best-reptile-terrariums',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
   modifiedAt: new Date().toISOString(),
 })
@@ -42,9 +42,9 @@ export default function BestTerrariumsPage() {
           Best Reptile Terrariums 2025 — PVC, Glass & Custom Enclosures Ranked
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          We tested 8 enclosures across 6 months — measuring temperature gradients, humidity stability, ventilation, and how well they hold up in real keeper setups. Not marketing copy. Actual results.
+          Comparison of 8 commonly-stocked enclosures on the factors that decide a keeper&apos;s daily life: temperature retention, humidity stability, ventilation, and build quality. Drawn from manufacturer specifications and consolidated keeper reports.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Expert Team · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />

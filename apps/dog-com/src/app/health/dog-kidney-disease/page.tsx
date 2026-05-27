@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Kidney Disease in Dogs — IRIS Staging, SDMA & Management | Dog.com', description: 'Chronic kidney disease in dogs: IRIS staging system, SDMA early detection, phosphorus restriction, and why 75% of kidney function is lost before bloodwork shows it. DVM guide.', path: '/health/dog-kidney-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Kidney Disease in Dogs', description: 'IRIS staging, SDMA, phosphorus restriction, and management of canine chronic kidney disease.', url: 'https://dog.com/health/dog-kidney-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Kidney Disease in Dogs', description: 'Chronic kidney disease — IRIS staging, early detection, and management.', url: 'https://dog.com/health/dog-kidney-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Kidney Disease in Dogs — IRIS Staging, SDMA & Management | Dog.com', description: 'Chronic kidney disease in dogs: IRIS staging system, SDMA early detection, phosphorus restriction, and why 75% of kidney function is lost before bloodwork shows it. Reference guide.', path: '/health/dog-kidney-disease', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Kidney Disease in Dogs', description: 'IRIS staging, SDMA, phosphorus restriction, and management of canine chronic kidney disease.', url: 'https://dog.com/health/dog-kidney-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Kidney Disease in Dogs', description: 'Chronic kidney disease — IRIS staging, early detection, and management.', url: 'https://dog.com/health/dog-kidney-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function DogKidneyPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Kidney Disease in Dogs', subtitle: 'Chronic kidney disease (CKD) is one of the most common conditions in older dogs. The kidneys have enormous reserve capacity — 75% of function must be lost before creatinine rises on a standard blood panel. This delay between disease onset and detection is why SDMA testing and urine specific gravity monitoring are now standard in senior wellness care.', category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '10 min', dvmReviewed: true }}
+        hero={{ title: 'Kidney Disease in Dogs', subtitle: 'Chronic kidney disease (CKD) is one of the most common conditions in older dogs. The kidneys have enormous reserve capacity — 75% of function must be lost before creatinine rises on a standard blood panel. This delay between disease onset and detection is why SDMA testing and urine specific gravity monitoring are now standard in senior wellness care.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Kidney Disease', href: '/health/dog-kidney-disease' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'IRIS Staging', href: '#iris' }, { label: 'SDMA Early Detection', href: '#sdma' }, { label: 'Phosphorus Restriction', href: '#phosphorus' }, { label: 'Hydration', href: '#hydration' }, { label: 'Monitoring', href: '#monitoring' }]} />
@@ -21,7 +21,7 @@ export default function DogKidneyPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-kidney" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-kidney" />
         </>}
       >
         <div className="carloOS-article">

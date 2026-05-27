@@ -16,7 +16,7 @@ const schema = buildArticleSchema({
   description: 'Calibrated against reference thermometers — actual accuracy rankings.',
   url: 'https://lizard.com/reviews/best-thermometers-hygrometers',
   imageUrl: '',
-  authorName: 'Lizard.com Expert Team',
+  authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -39,7 +39,7 @@ export default function BestThermometersPage() {
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Inaccurate temperature readings kill reptiles. We calibrated 7 thermometers against NIST-traceable reference standards. Here&apos;s what actually reads accurately.
         </p>
-        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Expert Team · May 2025 · Affiliate disclosure applies</p>
+        <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -92,7 +92,7 @@ export default function BestThermometersPage() {
               subtitle="Bluetooth · Good accuracy · Lower cost than Govee"
               score={8.8}
               description={
-                <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Inkbird IBS-TH2 delivers good accuracy (±1°F in our testing — better than most alternatives) at a lower price than the Govee H5053. Bluetooth-only means you need to be in range for real-time monitoring, which limits remote monitoring capability. For keepers who check their enclosures daily and don&apos;t need remote alerts, the Inkbird is a solid, budget-friendly choice. For enclosures requiring close temperature management (thermostat accuracy auditing, species with tight temperature requirements), upgrade to the WiFi-capable Govee.</p>
+                <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Inkbird IBS-TH2 delivers good accuracy (rated ±1°F by the manufacturer — better than most alternatives in published comparisons) at a lower price than the Govee H5053. Bluetooth-only means you need to be in range for real-time monitoring, which limits remote monitoring capability. For keepers who check their enclosures daily and don&apos;t need remote alerts, the Inkbird is a solid, budget-friendly choice. For enclosures requiring close temperature management (thermostat accuracy auditing, species with tight temperature requirements), upgrade to the WiFi-capable Govee.</p>
               }
               specs={[
                 { label: 'Temp Accuracy', value: '±1°F', highlight: 'good' },

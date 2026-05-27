@@ -3,7 +3,7 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Crate Training Guide — How to Make the Crate a Good Place | Dog.com', description: 'Step-by-step crate training guide. Introduction protocol, how long is too long, night training, and how to use the crate without it feeling like punishment.', path: '/training/crate-training', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Crate Training Guide', description: 'Introduction protocol, duration limits, and night training for crates.', url: 'https://dog.com/training/crate-training', imageUrl: '', authorName: 'Dog.com Training Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Crate Training Guide', description: 'Introduction protocol, duration limits, and night training for crates.', url: 'https://dog.com/training/crate-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 const howToSchema = buildHowToSchema({
   name: 'How to Crate Train a Dog',
@@ -27,7 +27,7 @@ export default function CrateTrainingPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
       siteId="dog-com"
-      hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Training Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Crate Training', href: '/training/crate-training' }]}
       schema={schema}
       sidebar={<>

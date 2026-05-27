@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'English Riding Guide — Disciplines, Equipment & Position Basics | Saddle.com', description: 'Introduction to English riding. Disciplines compared (dressage, hunter/jumper, eventing), essential equipment, and the fundamental position elements all English riders need.', path: '/guides/english-riding-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'English Riding Guide', description: 'English riding disciplines, equipment, and position fundamentals.', url: 'https://saddle.com/guides/english-riding-guide', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'English Riding Guide', description: 'English riding disciplines, equipment, and position fundamentals.', url: 'https://saddle.com/guides/english-riding-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EnglishRidingGuidePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'English Riding Guide', subtitle: '"English riding" encompasses a broad family of equestrian disciplines — from the precise geometry of dressage to the athleticism of show jumping to the three-phase demands of eventing. What they share: a close-contact saddle, two-handed rein contact, and a riding position built around balance, following the horse\'s movement.', category: 'Equestrian Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Saddle Fitter', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'English Riding Guide', subtitle: '"English riding" encompasses a broad family of equestrian disciplines — from the precise geometry of dressage to the athleticism of show jumping to the three-phase demands of eventing. What they share: a close-contact saddle, two-handed rein contact, and a riding position built around balance, following the horse\'s movement.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'English Riding Guide', href: '/guides/english-riding-guide' }]}
       schema={schema}
       sidebar={<>

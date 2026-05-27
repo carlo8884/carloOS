@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs | Dog.com', description: 'How to run a proper 8-12 week food allergy elimination diet in dogs. Novel protein selection, what to avoid, how to confirm food allergy, and interpreting results.', path: '/nutrition/elimination-diet', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Run a Dog Food Allergy Elimination Diet', description: 'Step-by-step protocol for a diagnostic food elimination trial in dogs.', url: 'https://dog.com/nutrition/elimination-diet', totalTime: 'P12W', steps: [
   { name: 'Choose the right diet', text: 'Select a prescription hydrolyzed protein diet (Royal Canin HP, Hill\'s z/d, Purina HA) or a veterinary novel protein diet. The protein must be one the dog has never eaten. Document every protein the dog has consumed in their lifetime.' },
   { name: 'Eliminate all other food sources', text: 'The trial diet must be the ONLY food. No treats, no chews, no flavored medications, no table scraps. One accidental exposure restarts the 8-week clock. Use plain pieces of the trial food as treats.' },
@@ -21,12 +21,12 @@ export default function EliminationDietPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Food Allergy Elimination Diet Protocol', subtitle: 'Diagnosing food allergy in dogs requires an 8–12 week strict dietary elimination trial followed by a confirmatory food challenge. There are no shortcuts. Blood tests for food allergy are not validated. This is the only reliable protocol.', category: 'Dog Nutrition', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Food Allergy Elimination Diet Protocol', subtitle: 'Diagnosing food allergy in dogs requires an 8–12 week strict dietary elimination trial followed by a confirmatory food challenge. There are no shortcuts. Blood tests for food allergy are not validated. This is the only reliable protocol.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Elimination Diet', href: '/nutrition/elimination-diet' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Choosing the Diet', href: '#diet-choice' }, { label: 'What to Eliminate', href: '#eliminate' }, { label: 'Duration', href: '#duration' }, { label: 'Food Challenge', href: '#challenge' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies Guide', href: '/health/dog-allergies' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="nutrition-elimination" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-elimination" />
         </>}
       >
         <div className="carloOS-article">

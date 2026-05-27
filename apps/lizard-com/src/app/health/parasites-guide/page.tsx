@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Parasites — Mites, Pinworms, Crypto & Treatment | Lizard.com', description: 'External parasites (mites) and internal parasites (pinworms, coccidia, Cryptosporidium) in reptiles. Fecal testing, treatment, and which parasites are veterinary emergencies.', path: '/health/parasites-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function ParasiteGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Reptile Parasites', subtitle: 'Parasites are ubiquitous in reptiles — wild-caught animals in particular carry parasite burdens as a normal feature of their biology. The question is not whether parasites are present but whether they are causing harm. Fecal testing of all new reptiles and annual fecal tests for established animals is the standard of care.', category: 'Reptile Health', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Parasites', subtitle: 'Parasites are ubiquitous in reptiles — wild-caught animals in particular carry parasite burdens as a normal feature of their biology. The question is not whether parasites are present but whether they are causing harm. Fecal testing of all new reptiles and annual fecal tests for established animals is the standard of care.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites-guide' }]}
       schema={schema}
       sidebar={<>

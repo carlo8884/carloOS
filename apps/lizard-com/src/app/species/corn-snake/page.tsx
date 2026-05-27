@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Corn Snake Care Guide — Morphs, Feeding & Escape Prevention | Lizard.com', description: 'Corn snakes are the best beginner snake. 100+ morphs from red wild-type to lavender. Frozen/thawed mice only — no live prey. Expert escape artists requiring secure lids.', path: '/species/corn-snake', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CornSnakePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corn Snake', href: '/species/corn-snake' }]}
       schema={schema}
       sidebar={<>

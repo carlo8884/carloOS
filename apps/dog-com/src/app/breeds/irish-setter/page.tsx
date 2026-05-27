@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Setter Breed Guide — Epilepsy, PRA & Exuberant Energy | Dog.com', description: 'Irish Setters are exuberantly energetic sporting dogs. Progressive retinal atrophy (PRA) and epilepsy are the primary health concerns. Gluten sensitivity also documented in the breed.', path: '/breeds/irish-setter', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function IrishSetterPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'Irish Setter Breed Guide', subtitle: 'The mahogany-red Irish Setter is one of the most instantly recognizable dog breeds — and one of the most energetic. Bred for all-day upland bird hunting across Irish terrain, they combine a beautiful flowing coat with an exuberance and energy level that requires an active household to channel properly.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Irish Setter Breed Guide', subtitle: 'The mahogany-red Irish Setter is one of the most instantly recognizable dog breeds — and one of the most energetic. Bred for all-day upland bird hunting across Irish terrain, they combine a beautiful flowing coat with an exuberance and energy level that requires an active household to channel properly.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Setter', href: '/breeds/irish-setter' }]}
       schema={schema}
       sidebar={<>
@@ -19,7 +19,7 @@ export default function IrishSetterPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Seizures', href: '/health/dog-seizures' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-irish-setter" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-irish-setter" />
       </>}
     >
       <div className="carloOS-article">

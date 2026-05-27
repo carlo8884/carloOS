@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   description: 'Complete Golden Retriever health guide covering cancer risk, hip dysplasia, SAS, and preventive care.',
   url: 'https://dog.com/health/golden-retriever-health',
   imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -28,8 +28,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   name: 'Golden Retriever Health Guide',
   description: 'Cancer risk, monitoring, and specialist referral for Golden Retrievers.',
   url: 'https://dog.com/health/golden-retriever-health',
-  authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-  reviewedByName: 'Dr. Amanda Reyes, DVM, DACVIM',
+  authorName: 'Dog.com Editorial',
   lastReviewed: '2025-05-01',
 })
 const combinedSchemaAll = combineSchemas(schema, medicalSchema)
@@ -44,12 +43,10 @@ export default function GoldenRetrieverHealthPage() {
         title: 'Golden Retriever Health Guide',
         subtitle: 'More than 60% of Golden Retrievers develop cancer in their lifetime. Understanding the conditions they\'re prone to — and the monitoring schedule that catches problems early — is the most important thing a Golden owner can do.',
         category: 'Breed Health Guide',
-        authorName: 'Dr. Amanda Reyes, DVM, DACVIM',
-        authorCredentials: 'Internal Medicine Specialist · 14 years practice',
-        authorAvatar: '👩‍⚕️',
+        authorName: 'Dog.com Editorial',
+        authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '12 min',
-        dvmReviewed: true,
         image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1200&q=80&auto=format&fit=crop',
         imageAlt: 'Veterinarian examining a Golden Retriever',
       }}
@@ -80,7 +77,7 @@ export default function GoldenRetrieverHealthPage() {
           ]} />
           <EmailCapture variant="sidebar" siteId="dog-com"
             title="Free Dog Health Tips"
-            subtitle="DVM-written breed spotlights and health alerts every Tuesday."
+            subtitle="Breed spotlights and health alerts every Tuesday."
             source="health-golden-retriever" />
         </>
       }

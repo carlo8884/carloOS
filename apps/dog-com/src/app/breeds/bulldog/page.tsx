@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLin
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'English Bulldog Breed Guide — BOAS, Heat Risk & Health | Dog.com', description: 'English Bulldogs are brachycephalic — flat-faced breathing disorders, heat intolerance, and a list of structural health issues. What vets want you to know before buying.', path: '/breeds/bulldog', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'English Bulldog Breed Guide', description: 'BOAS, hip dysplasia, heat intolerance, and structural health issues in English Bulldogs.', url: 'https://dog.com/breeds/bulldog', imageUrl: '', authorName: 'Dog.com Editorial Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'English Bulldog Breed Guide', description: 'BOAS, hip dysplasia, heat intolerance, and structural health issues in English Bulldogs.', url: 'https://dog.com/breeds/bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function BulldogPage() {
   return (
     <ArticleLayout siteId="dog-com"
-      hero={{ title: 'English Bulldog Breed Guide', subtitle: 'The English Bulldog\'s conformation — flat face, compacted airways, compact body, heavy skin folds — causes a cascade of health issues that are important to understand before acquiring one. They are affectionate dogs with significant veterinary costs.', category: 'Breed Guide', authorName: 'Dog.com Editorial Team', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'English Bulldog Breed Guide', subtitle: 'The English Bulldog\'s conformation — flat face, compacted airways, compact body, heavy skin folds — causes a cascade of health issues that are important to understand before acquiring one. They are affectionate dogs with significant veterinary costs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bulldog', href: '/breeds/bulldog' }]}
       schema={schema}
       sidebar={<>
@@ -21,7 +21,7 @@ export default function BulldogPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="breed-bulldog" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-bulldog" />
       </>}
     >
       <div className="carloOS-article">

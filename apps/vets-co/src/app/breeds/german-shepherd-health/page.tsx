@@ -3,18 +3,18 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'German Shepherd Health — DM, Hip Dysplasia & GDV | Vets.co', description: 'German Shepherds have specific health predispositions: degenerative myelopathy, hip dysplasia, and GDV. A DVM explains monitoring, screening, and when to refer.', path: '/breeds/german-shepherd-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Veterinary Perspective', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from a DVM.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'German Shepherd Health — DM, Hip Dysplasia & GDV | Vets.co', description: 'German Shepherds have specific health predispositions: degenerative myelopathy, hip dysplasia, and GDV. This guide explains monitoring, screening, and when to refer.', path: '/breeds/german-shepherd-health', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GSHealthPage() {
   return (
     <ArticleLayout siteId="vets-co"
-      hero={{ title: 'German Shepherd Health — A Veterinarian\'s Perspective', subtitle: 'German Shepherds are my most stoic patients — they mask pain remarkably well, which makes regular monitoring especially important. The breed predispositions are significant but manageable with early detection.', category: 'Breed Health Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+      hero={{ title: 'German Shepherd Health — A Veterinarian\'s Perspective', subtitle: 'German Shepherds are my most stoic patients — they mask pain remarkably well, which makes regular monitoring especially important. The breed predispositions are significant but manageable with early detection.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breed Guides', href: '/breeds' }, { name: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Neurologist', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Labrador Health', href: '/breeds/labrador-health' }]} />
-        <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance every Tuesday." source="breeds-german-shepherd" />
+        <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-german-shepherd" />
       </>}
     >
       <div className="carloOS-article">

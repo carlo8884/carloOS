@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms, Giardia & Testing | Vets.co', description: 'Annual fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease. Zoonotic risk, treatment, and prevention protocol.', path: '/health/intestinal-parasites', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Dr. Sarah Webb, DVM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Intestinal Parasites in Dogs', description: 'Diagnosis and treatment of common intestinal parasites in dogs.', url: 'https://vets.co/health/intestinal-parasites', authorName: 'Dr. Sarah Webb, DVM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Intestinal Parasites in Dogs', description: 'Diagnosis and treatment of common intestinal parasites in dogs.', url: 'https://vets.co/health/intestinal-parasites', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 export default function IntestinalParasitesPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Annual fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Dr. Sarah Webb, DVM', authorCredentials: 'General Practice · 14 years', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Annual fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Intestinal Parasites', href: '/health/intestinal-parasites' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -23,7 +23,7 @@ export default function IntestinalParasitesPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm Prevention', href: '/health/heartworm-in-dogs' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="DVM-written guidance weekly." source="health-parasites" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-parasites" />
         </>}
       >
         <div className="carloOS-article">

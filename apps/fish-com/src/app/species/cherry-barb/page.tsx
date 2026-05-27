@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size & Planted Tanks | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred. Full care guide.', path: '/species/cherry-barb', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryBarbPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Expert Team', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Barb', href: '/species/cherry-barb' }]}
       schema={schema}
       sidebar={<>

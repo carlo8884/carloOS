@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Best Aquarium Filters 2025 — HOB, Canister & Sponge Filters Ranked | Fish.com',
-  description: 'We tested 9 aquarium filters for flow rate accuracy, biological filtration capacity, noise, and ease of maintenance. Hang-on-back, canister, and sponge filters ranked.',
+  description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options. Hang-on-back, canister, and sponge filters ranked.',
   path: '/reviews/best-aquarium-filters',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
-  authorName: 'Fish.com Expert Team',
+  authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -44,7 +44,7 @@ export default function BestAquariumFiltersPage() {
           Best Aquarium Filters 2025 — HOB, Canister & Sponge Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. We tested 9 filters for biological capacity, flow accuracy, and long-term reliability.
+          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
         </p>
       </div>
       <QuickPicks items={PICKS} />

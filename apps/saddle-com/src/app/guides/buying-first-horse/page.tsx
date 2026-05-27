@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Buying Your First Horse — Pre-Purchase Exam, Budget & Breed Selection | Saddle.com', description: 'First horse buying guide. The pre-purchase exam is non-negotiable. True cost breakdown, breed considerations for beginners, and what to ask before purchase.', path: '/guides/buying-first-horse', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Buying Your First Horse Guide', description: 'Pre-purchase exam, true cost, and breed selection for buying a first horse.', url: 'https://saddle.com/guides/buying-first-horse', imageUrl: '', authorName: 'Victoria Marsh, CSF', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Buying Your First Horse Guide', description: 'Pre-purchase exam, true cost, and breed selection for buying a first horse.', url: 'https://saddle.com/guides/buying-first-horse', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BuyingFirstHorsePage() {
   return (
     <ArticleLayout siteId="saddle-com"
-      hero={{ title: 'Buying Your First Horse', subtitle: 'The purchase price is the smallest expense of horse ownership. The monthly cost of keeping a horse is significant and ongoing for the animal\'s 25–35 year lifespan. Understanding the true cost before acquisition — and getting a veterinary pre-purchase examination — are the two most important steps in responsible first-horse purchase.', category: 'Horse Care Guide', authorName: 'Victoria Marsh, CSF', authorCredentials: 'Certified Equine Professional', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Buying Your First Horse', subtitle: 'The purchase price is the smallest expense of horse ownership. The monthly cost of keeping a horse is significant and ongoing for the animal\'s 25–35 year lifespan. Understanding the true cost before acquisition — and getting a veterinary pre-purchase examination — are the two most important steps in responsible first-horse purchase.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Buying First Horse', href: '/guides/buying-first-horse' }]}
       schema={schema}
       sidebar={<>

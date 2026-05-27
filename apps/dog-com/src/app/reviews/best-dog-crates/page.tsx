@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Dog Crates 2025 — Wire, Plastic & Heavy Duty Ranked | Dog.com',
-  description: 'We tested 9 dog crates for durability, escape resistance, ventilation, and ease of assembly. Wire, plastic airline-approved, heavy duty, and furniture-style crates ranked.',
+  description: 'Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly. Wire, plastic airline-approved, heavy duty, and furniture-style crates ranked.',
   path: '/reviews/best-dog-crates',
   type: 'article',
 })
@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Dog crates tested for durability, escape resistance, and ease of use.',
   url: 'https://dog.com/reviews/best-dog-crates',
   imageUrl: '',
-  authorName: 'Dog.com Expert Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -201,7 +201,7 @@ export default function BestDogCratesPage() {
             ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="DVM-written guidance every Tuesday."
+              subtitle="Practical guidance every Tuesday."
               source="review-dog-crates" />
           </aside>
         </div>

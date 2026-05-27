@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle & Tile Compared | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Substrate Guide', description: 'Bioactive, loose particle, tile, and paper substrates — impaction risk and best choices by species.', url: 'https://lizard.com/setup/substrate-guide', imageUrl: '', authorName: 'Lizard.com Expert Team', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Substrate Guide', description: 'Bioactive, loose particle, tile, and paper substrates — impaction risk and best choices by species.', url: 'https://lizard.com/setup/substrate-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function SubstrateGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Substrate Guide', subtitle: 'Substrate choice affects humidity, thermoregulation, psychological wellbeing, and — critically — impaction risk. The range of options spans from bioactive living soil to bare tile.', category: 'Enclosure Setup', authorName: 'Lizard.com Expert Team', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Substrate Guide', subtitle: 'Substrate choice affects humidity, thermoregulation, psychological wellbeing, and — critically — impaction risk. The range of options spans from bioactive living soil to bare tile.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Substrate Guide', href: '/setup/substrate-guide' }]}
       schema={schema}
       sidebar={<>

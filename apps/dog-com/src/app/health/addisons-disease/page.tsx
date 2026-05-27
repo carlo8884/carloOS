@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Addison's Disease in Dogs — Vague Signs, Addisonian Crisis & DOCP Treatment | Dog.com", description: "Addison's disease (hypoadrenocorticism) is the 'great imitator' — vague signs mimic many conditions. Addisonian crisis is life-threatening. Lifelong DOCP or fludrocortisone management.", path: '/health/addisons-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: "Addison's Disease in Dogs", description: "Hypoadrenocorticism — diagnosis, Addisonian crisis management, and DOCP treatment.", url: 'https://dog.com/health/addisons-disease', imageUrl: '', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: "Addison's Disease in Dogs", description: "Canine hypoadrenocorticism — signs, diagnosis, crisis management, and lifelong treatment.", url: 'https://dog.com/health/addisons-disease', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: "Addison's Disease in Dogs", description: "Hypoadrenocorticism — diagnosis, Addisonian crisis management, and DOCP treatment.", url: 'https://dog.com/health/addisons-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: "Addison's Disease in Dogs", description: "Canine hypoadrenocorticism — signs, diagnosis, crisis management, and lifelong treatment.", url: 'https://dog.com/health/addisons-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 
 export default function AddisonsDiseaseePage() {
@@ -12,7 +12,7 @@ export default function AddisonsDiseaseePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: "Addison's Disease in Dogs", subtitle: "Hypoadrenocorticism (Addison's disease) results from insufficient production of adrenal cortex hormones — glucocorticoids (primarily cortisol) and mineralocorticoids (primarily aldosterone). It is sometimes called 'the great imitator' because its signs are vague and non-specific, leading to misdiagnosis for months or years before the characteristic electrolyte changes point to the diagnosis.", category: 'Dog Health', authorName: 'Dr. Amanda Reyes, DVM, DACVIM', authorCredentials: 'Internal Medicine Specialist', authorAvatar: '👩‍⚕️', publishedAt: 'May 2025', readTime: '9 min', dvmReviewed: true }}
+        hero={{ title: "Addison's Disease in Dogs", subtitle: "Hypoadrenocorticism (Addison's disease) results from insufficient production of adrenal cortex hormones — glucocorticoids (primarily cortisol) and mineralocorticoids (primarily aldosterone). It is sometimes called 'the great imitator' because its signs are vague and non-specific, leading to misdiagnosis for months or years before the characteristic electrolyte changes point to the diagnosis.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Addison's Disease", href: '/health/addisons-disease' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -22,7 +22,7 @@ export default function AddisonsDiseaseePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Megaesophagus', href: '/health/megaesophagus' }]} />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="DVM-written guidance weekly." source="health-addisons" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-addisons" />
         </>}
       >
         <div className="carloOS-article">

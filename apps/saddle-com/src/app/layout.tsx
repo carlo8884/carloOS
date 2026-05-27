@@ -4,8 +4,8 @@ import './globals.css'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'The Authority on Saddles & Equestrian Equipment',
-  description: 'Saddle.com — expert saddle reviews, buying guides, fitting tutorials, leather care, and brand comparisons. Tested by certified saddle fitters and master saddlers.',
+  title: 'Saddles & Equestrian Equipment, Compared',
+  description: 'Saddle.com — expert saddle reviews, buying guides, fitting tutorials, leather care, and brand comparisons. Drawing on CSF reviewer notes and Society of Master Saddlers reference material.',
   path: '/',
   type: 'website',
 })

@@ -17,7 +17,7 @@ const schema = buildArticleSchema({
   description: 'Step-by-step protocol for the 5 essential commands in correct teaching order.',
   url: 'https://dog.com/training/basic-commands',
   imageUrl: '',
-  authorName: 'Dog.com Training Team',
+  authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
@@ -116,7 +116,7 @@ export default function BasicCommandsPage() {
         title: 'Basic Dog Commands — The 5 Every Dog Must Know',
         subtitle: 'Sit, down, stay, come, and leave it — taught in this order, with the correct protocol. Teaching order matters: each behavior builds on the last, and stay is not a separate cue from sit.',
         category: 'Training Fundamentals',
-        authorName: 'Dog.com Training Team',
+        authorName: 'Dog.com Editorial',
         authorAvatar: '🐕',
         publishedAt: 'May 2025',
         readTime: '12 min',
