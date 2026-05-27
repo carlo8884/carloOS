@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025 — Dressage, Jump & Therapeutic | Saddle.com', description: 'Best saddle pads by discipline: Mattes half-pad for fit correction, Roma all-purpose for everyday use, and Toklat Coolback for sweat management. CSF-tested.', path: '/reviews/best-saddle-pads', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025 — Dressage, Jump & Therapeutic | Saddle.com', description: 'Best saddle pads by discipline: Mattes half-pad for fit correction, Roma all-purpose for everyday use, and Toklat Coolback for sweat management.', path: '/reviews/best-saddle-pads', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Saddle Pads 2025', description: 'Dressage, jump, and therapeutic saddle pads compared using CSF reviewer notes and published rider reports.', url: 'https://saddle.com/reviews/best-saddle-pads', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const mattesSchema = buildProductSchema({ name: 'Mattes Correction Half-Pad', description: 'Sheepskin half-pad with shim pockets for saddle fit correction.', url: 'https://mattes.eu', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const romaSchema = buildProductSchema({ name: 'Roma All-Purpose Saddle Pad', description: 'Everyday all-purpose saddle pad with wicking material and secure fit.', url: 'https://romaequestrian.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
@@ -18,7 +18,7 @@ export default function BestSaddlePadsPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">CSF Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Saddle Pads 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right saddle pad protects the horse's back, manages sweat, and can help fine-tune fit. The wrong one creates pressure points regardless of how well the saddle fits.</p>
       </div>

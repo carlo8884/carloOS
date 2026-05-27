@@ -18,7 +18,7 @@ export default function BestNanoTanksPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌊 Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌊 Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Nano tanks (5–20 gallons) are ideal for betta fish, shrimp colonies, planted tanks, and small community setups. Bigger is more forgiving — but these small tanks are manageable and rewarding when set up correctly.</p>
       </div>

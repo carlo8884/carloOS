@@ -16,7 +16,7 @@ export default function BestRidingGlovesPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🧤 CSF Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🧤 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Riding Gloves 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Riding gloves protect your hands, improve rein grip, and in many disciplines are required for competition. The right glove gives rein feel without sacrificing grip or comfort over hours of riding.</p>
       </div>

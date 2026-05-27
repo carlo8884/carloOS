@@ -21,7 +21,7 @@ export default function BestDogHarnessesPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Trainer Tested · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right harness depends on why you need it — pulling management, outdoor activity, or escape prevention. These are three fundamentally different tools.</p>
       </div>

@@ -18,7 +18,7 @@ export default function BestStirrupIronsPage() {
     <>
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⛑️ Expert Reviewed · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⛑️ Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Stirrup Irons 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Stirrup irons are a safety-critical piece of equipment — correct width (1 inch clearance on each side of the boot), appropriate material, and optional safety release mechanisms all affect rider safety in the event of a fall.</p>
       </div>
