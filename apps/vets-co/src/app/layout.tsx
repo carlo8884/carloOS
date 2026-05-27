@@ -1,6 +1,25 @@
 import type { Metadata } from 'next'
+import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+// Libre Baskerville: medical-authority serif for headlines + eyebrows.
+// Manrope: clean neutral sans for body, UI, and meta.
+// Self-hosted via next/font; CSS variables consumed in globals.css.
+const baskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-baskerville',
+  display: 'swap',
+})
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -14,7 +33,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="font-vars">
+    <html lang="en" className={`${baskerville.variable} ${manrope.variable} font-vars`}>
       <head>
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>
