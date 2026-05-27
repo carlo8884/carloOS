@@ -58,7 +58,16 @@ export function buildMetadata(params: BuildMetadataParams): Metadata {
   const generatedOgImage = `${config.theme.siteUrl}/api/og?title=${encodeURIComponent(title)}&site=${siteId}${params.category ? `&category=${encodeURIComponent(params.category)}` : ''}`
   const ogImage = params.ogImage ?? generatedOgImage
   const canonicalUrl = `${config.theme.siteUrl}${path}`
-  const fullTitle = `${title} | ${config.theme.siteName}`
+
+  // Title handling: pages may pass a title that already ends with the site
+  // name (e.g. "Privacy Policy | Dog.com"). Detect any common separator+brand
+  // suffix and skip the append so we don't render duplicates like
+  // "Privacy Policy | Dog.com | Dog.com".
+  const siteName = config.theme.siteName
+  const alreadySuffixed = [' | ', ' — ', ' - '].some((sep) =>
+    title.endsWith(`${sep}${siteName}`),
+  )
+  const fullTitle = alreadySuffixed ? title : `${title} | ${siteName}`
 
   return {
     title: fullTitle,

@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Reptile Care, Science-First',
+  title: 'Reptile Care, Source-First',
   description: 'Lizard.com — research-based care guides for reptiles and amphibians. Species profiles, UVB lighting, enclosure setup, feeding, and health, drawn from peer-reviewed husbandry literature and Ferguson Zone research.',
   path: '/',
   type: 'website',
