@@ -81,5 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/species/swordtail-fish', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/species/white-cloud-mountain-minnow', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/water', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://fish.com/tools/equipment-recommender', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
