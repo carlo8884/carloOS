@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'petfoods-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -236,6 +236,36 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://lizard.com',
     logoText: 'Lizard.com',
     twPrimary: 'lime',
+  },
+
+  'petfoods-com': {
+    // Catalog / database voice — deep moss green, utilitarian.
+    // Sister site to PetFood.com (commercial brand); this is the
+    // content-engine / per-SKU directory. JetBrains Mono available
+    // for ingredient/nutrition tables.
+    primary: '#3F5C3A',
+    primaryLight: '#557454',
+    primaryPale: '#EBF0E8',
+    primaryDark: '#2A3E26',
+    dark: '#161C15',
+    surface: '#F6F7F4',
+    white: '#FFFFFF',
+    textDark: '#161C15',
+    textMid: '#3A4438',
+    textLight: '#7A8278',
+    border: '#DDE2D8',
+    success: '#2A7A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFoods.com',
+    siteTagline: 'The Catalog: Every Commercial Pet Food, Scored',
+    siteUrl: 'https://petfoods.com',
+    logoText: 'PetFoods.com',
+    twPrimary: 'emerald',
   },
 }
 
@@ -560,6 +590,33 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://lizard.com/og-default.jpg',
+  },
+
+  'petfoods-com': {
+    id: 'petfoods-com',
+    theme: themes['petfoods-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'PetFoods.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://petfoods.com/og-default.jpg',
   },
 }
 
