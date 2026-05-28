@@ -46,7 +46,7 @@ export default function DogAllergiesPage() {
           <p>Blood allergy testing for environmental allergies (serology) is less reliable than intradermal skin testing performed by a dermatologist. It is used clinically for immunotherapy formulation but should not be used as a screening test for food allergies — food allergy testing by serology is not validated.</p>
 
           <h2 id="faq">FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
