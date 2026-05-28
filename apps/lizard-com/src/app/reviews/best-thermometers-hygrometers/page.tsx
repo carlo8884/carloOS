@@ -5,7 +5,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Best Reptile Thermometers | Lizard.com',
-  description: 'We calibrated 7 reptile thermometers against NIST-traceable reference thermometers. Govee, Inkbird, and Zoo Med ranked by actual accuracy',
+  description: 'We compared 7 leading reptile thermometers on published accuracy specs and keeper-reported drift. Govee, Inkbird, and Zoo Med ranked by published accuracy',
   path: '/reviews/best-thermometers-hygrometers',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best Reptile Thermometers & Hygrometers 2025',
-  description: 'Calibrated against reference thermometers — actual accuracy rankings.',
+  description: 'Compared on published accuracy specs and keeper-reported drift — accuracy rankings.',
   url: 'https://lizard.com/reviews/best-thermometers-hygrometers',
   imageUrl: '',
   authorName: 'Lizard.com Editorial',
@@ -32,12 +32,12 @@ export default function BestThermometersPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Calibrated Testing · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Reptile Thermometers & Hygrometers 2025 — Accuracy Tested
+          Best Reptile Thermometers & Hygrometers 2025 — Ranked by Published Accuracy
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          Inaccurate temperature readings kill reptiles. We calibrated 7 thermometers against NIST-traceable reference standards. Here&apos;s what actually reads accurately.
+          Inaccurate temperature readings kill reptiles. According to published accuracy specifications and aggregated keeper reports, we compared 7 leading thermometers. Here&apos;s what actually reads accurately.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>Lizard.com Editorial · May 2025 · Affiliate disclosure applies</p>
       </div>
@@ -64,7 +64,7 @@ export default function BestThermometersPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. ±0.54°F temperature accuracy tested against reference standards — one of the most accurate consumer devices reviewed against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. Published ±0.54°F temperature accuracy against reference standards — one of the most accurate consumer devices reported against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>The data logging function stores 2 years of readings, allowing you to audit temperature gradients and identify if your thermostat is cycling correctly. For enclosures with complex heating (CHE + basking + heat mat), the logging history is invaluable for diagnosing inconsistency. Buy multiple — place one at the basking zone, one at the cool side, one inside any humid hides.</p>
                 </div>
               }
@@ -76,7 +76,7 @@ export default function BestThermometersPage() {
                 { label: 'Alerts', value: 'Push notifications', highlight: 'good' },
                 { label: 'Price', value: '$18–25' },
               ]}
-              pros={['Most accurate consumer device tested', 'Real-time WiFi monitoring', '2-year data logging', 'Push alerts for temp/humidity excursions', 'Multiple units for comprehensive monitoring']}
+              pros={['Among the most accurate consumer devices per published specs', 'Real-time WiFi monitoring', '2-year data logging', 'Push alerts for temp/humidity excursions', 'Multiple units for comprehensive monitoring']}
               cons={['Requires WiFi setup', 'App has minor quirks', 'Battery-powered — check periodically']}
               price="$18–25"
               priceNote="Often on sale — buy 3–4"
