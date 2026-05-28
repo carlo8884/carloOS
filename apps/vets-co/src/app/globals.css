@@ -2,58 +2,145 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────
+   VETS.CO THEME TOKENS — clinical-authority
+   Deep teal primary, navy masthead, warm ivory paper.
+   Sits between AAHA (institutional) and PetMeds (commercial):
+   research-anchored, owner-friendly.
+   ───────────────────────────────────────────── */
+
 :root {
-  --brand-primary: #0A8A7A;
-  --brand-primary-light: #12B09C;
-  --brand-primary-pale: #E6F5F3;
-  --brand-primary-dark: #076B5E;
-  --brand-dark: #0D2535;
-  --brand-surface: #F8FAFB;
+  /* Primary — deep clinical teal */
+  --brand-primary: #0A6B5E;
+  --brand-primary-light: #0F8A78;
+  --brand-primary-pale: #E8F2F0;
+  --brand-primary-dark: #054C42;
+
+  /* Accent — restrained antique brass for editorial moments (rules, eyebrows) */
+  --brand-accent: #B68830;
+  --brand-accent-light: #D6A14A;
+
+  /* Backgrounds */
+  --brand-dark: #0C1F2C;          /* deep navy masthead */
+  --brand-surface: #F6F4EE;       /* warm ivory paper */
   --brand-white: #FFFFFF;
-  --brand-text-dark: #0D2535;
-  --brand-text-mid: #3A5A6A;
-  --brand-text-light: #7A9AAA;
-  --brand-border: #DDE8EE;
+
+  /* Text */
+  --brand-text-dark: #0C1F2C;
+  --brand-text-mid: #3A4F5C;
+  --brand-text-light: #7A8C97;
+
+  /* Borders */
+  --brand-border: #DDE3E5;
+
+  /* Semantic */
   --brand-success: #1E8A4A;
   --brand-warning: #C8952A;
   --brand-danger: #C84A2A;
-  --font-display: var(--font-baskerville), Georgia, serif;
-  --font-body: var(--font-manrope), system-ui, sans-serif;
+
+  /* Typography — wired by next/font in layout.tsx */
+  --font-display: var(--font-baskerville), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --nav-height: 68px;
 }
 
+/* ─── BASE ─────────────────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+}
+
 body {
-  @apply bg-brand-white text-brand-text-dark;
+  background: var(--brand-white);
+  color: var(--brand-text-dark);
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+
+.tabular-display { font-variant-numeric: lining-nums tabular-nums; }
+
 img { max-width: 100%; height: auto; display: block; }
-:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; border-radius: 4px; }
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── ARTICLE BODY TYPOGRAPHY ───────────────────────────────── */
+
+.carloOS-article {
+  --tw-prose-body: var(--brand-text-mid);
+  --tw-prose-headings: var(--brand-text-dark);
+  --tw-prose-links: var(--brand-primary);
+  --tw-prose-bold: var(--brand-text-dark);
+  --tw-prose-counters: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-primary);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-accent);
+  --tw-prose-code: var(--brand-text-dark);
+  --tw-prose-th-borders: var(--brand-border);
+  --tw-prose-td-borders: var(--brand-border);
+}
 
 .carloOS-article h2 {
   font-family: var(--font-display);
-  font-size: 1.55rem; font-weight: 700; color: var(--brand-text-dark);
-  margin-top: 2.5rem; margin-bottom: 0.875rem;
-  border-bottom: 1px solid var(--brand-border); padding-bottom: 0.6rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--brand-border);
+  padding-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
+
 .carloOS-article h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem; font-weight: 700; color: var(--brand-text-dark);
-  margin-top: 1.75rem; margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
 }
-.carloOS-article p { font-size: 1rem; line-height: 1.85; color: var(--brand-text-mid); margin-bottom: 1rem; }
+
+.carloOS-article p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--brand-text-mid);
+  margin-bottom: 1rem;
+}
+
 .carloOS-article ul, .carloOS-article ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 .carloOS-article li { font-size: 1rem; line-height: 1.75; color: var(--brand-text-mid); margin-bottom: 0.5rem; }
 .carloOS-article strong { color: var(--brand-text-dark); font-weight: 600; }
 .carloOS-article a { color: var(--brand-primary); }
-::selection { background: rgba(10,138,122,0.18); color: var(--brand-text-dark); }
 
-/* Font CSS variables — fonts loaded via Google Fonts CDN */
+::selection {
+  background: rgba(10, 107, 94, 0.18);
+  color: var(--brand-text-dark);
+}
+
+/* Font CSS variables — fallbacks if next/font fails. layout.tsx sets the real
+   --font-baskerville and --font-manrope values. */
 .font-vars,
 :root {
-  --font-baskerville: Georgia, "Times New Roman", serif;
-  --font-manrope: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-baskerville: Georgia, 'Times New Roman', serif;
+  --font-manrope: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
