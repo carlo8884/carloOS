@@ -35,7 +35,7 @@ export default function DogVaccinationsPage() {
       >
         <div className="carloOS-article">
           <h2>Core Vaccines — Every Dog</h2>
-          <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The WSAVA guidelines define four core canine vaccines:</p>
+          <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The <a href="https://wsava.org/committees/vaccination-guidelines-group/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines define four core canine vaccines:</p>
           <ul>
             <li><strong>Rabies:</strong> Required by law in virtually all US states. Fatal in dogs and humans. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1–3 years per state law and product label.</li>
             <li><strong>DA2PP (Distemper/Adenovirus/Parvovirus/Parainfluenza):</strong> A combination vaccine protecting against four diseases. Distemper causes severe neurological disease. Parvovirus causes fatal hemorrhagic gastroenteritis, particularly in puppies. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 1 year, then every 3 years in adult dogs with documented prior vaccination.</li>

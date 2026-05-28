@@ -100,7 +100,7 @@ export default function SaddleFitGuidePage() {
           <li>After a horse returns from an injury or long-term rest</li>
           <li>When a young horse is growing rapidly (topline changes significantly in young horses)</li>
         </ul>
-        <p>Look for a Certified Saddle Fitter (CSF, from the Society of Master Saddlers) or a qualified independent fitter with verifiable credentials. Fitters employed by specific brands may have genuine expertise, but their conflict of interest in recommending their brand should be acknowledged.</p>
+        <p>Look for a Certified Saddle Fitter (CSF, from the <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Society of Master Saddlers</a>) or a qualified independent fitter with verifiable credentials. Fitters employed by specific brands may have genuine expertise, but their conflict of interest in recommending their brand should be acknowledged.</p>
       </div>
     </ArticleLayout>
   )

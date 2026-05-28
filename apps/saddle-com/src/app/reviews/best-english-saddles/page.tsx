@@ -26,7 +26,7 @@ export default function BestEnglishSaddlesPage() {
         <div className="relative z-10">
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best English Saddles 2025</h1>
-          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right English saddle depends entirely on your discipline — a dressage saddle on a jumping horse is the wrong tool. Here&apos;s the top pick for each discipline, compared using CSF reviewer notes and published rider reports.</p>
+          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right English saddle depends entirely on your discipline — a dressage saddle on a jumping horse is the wrong tool. Here&apos;s the top pick for each discipline, compared using <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">CSF</a> reviewer notes and published rider reports.</p>
         </div>
       </div>
       <QuickPicks items={PICKS} />
@@ -36,7 +36,7 @@ export default function BestEnglishSaddlesPage() {
           <div>
             <ScoreMethodology />
             <ReviewCard id="roxane" badge="Best Dressage" badgeEmoji="🏆" name="Stubben Roxane" subtitle="Deep seat · Quick-Change tree (5 widths) · Hand-finished German leather" score={9.5} winner
-              description={<p>The Roxane is the benchmark dressage saddle — Quick-Change tree width adjustment, 130 years of German craftsmanship, and a deep seat geometry developed alongside FEI-level dressage riders. Panel construction is supple and fits a wider range of horses than most competitors. Resale value is excellent. See the <Link href="/reviews/stubben-saddle-review" className="text-brand-primary">full Stubben review →</Link></p>}
+              description={<p>The Roxane is the benchmark dressage saddle — Quick-Change tree width adjustment, 130 years of German craftsmanship, and a deep seat geometry developed alongside <a href="https://fei.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FEI</a>-level dressage riders. Panel construction is supple and fits a wider range of horses than most competitors. Resale value is excellent. See the <Link href="/reviews/stubben-saddle-review" className="text-brand-primary">full Stubben review →</Link></p>}
               specs={[{ label: 'Tree', value: 'Quick-Change (5 widths)', highlight: 'good' }, { label: 'Made In', value: 'Germany', highlight: 'good' }, { label: 'Discipline', value: 'Dressage' }, { label: 'Resale', value: 'Excellent', highlight: 'good' }]}
               pros={['Quick-Change tree', 'Best-in-class German leather', 'Strong resale value']} cons={['$3,200–4,500 new — premium investment']}
               price="$3,200–$4,500" ctaText="Find a Stubben Dealer →" ctaHref="https://stubben.com" ctaAffiliateProgram="sharesale" ctaAffiliateProduct="stubben-roxane" />

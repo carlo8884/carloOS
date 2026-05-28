@@ -47,7 +47,7 @@ export default function BestUVBBulbsPage() {
           Best UVB Bulbs 2025 — Ranked by Published UVI Output
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which we cross-check against independent keeper testing.
+          Rankings draw on published <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as <a href="https://www.arcadiareptile.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Arcadia Reptile</a> and Reptile Systems publish their own measured outputs, which we cross-check against independent keeper testing.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>
           Lizard.com Editorial · Updated May 2025 · Affiliate disclosure applies
