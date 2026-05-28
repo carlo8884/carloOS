@@ -16,9 +16,12 @@
  */
 
 import { readdirSync, writeFileSync, statSync } from 'node:fs'
-import { join } from 'node:path'
+import { join, dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = '/home/user/carloOS'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const ROOT = resolve(__dirname, '..')
 
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
