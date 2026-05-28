@@ -12,5 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferret.com/care/diet-basics', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://ferret.com/health/insulinoma', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://ferret.com/care/cage-setup', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
+    { url: 'https://ferret.com/first-year-schedule', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
