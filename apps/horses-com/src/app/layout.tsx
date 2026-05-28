@@ -1,11 +1,4 @@
 import type { Metadata } from 'next'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
@@ -29,55 +22,13 @@ const sourceSans = Source_Sans_3({
   display: 'swap',
 })
 
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-import { Nav, Footer } from '@carloOS/ui'
-import { buildMetadata } from '@carloOS/ui'
-import './globals.css'
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-<<<<<<< HEAD
-  title: 'A Reference for Horse Owners',
-  description:
-    'Horses.com — research-based reference for horse owners. Site coming soon.',
-=======
-<<<<<<< HEAD
-  title: 'A Reference for Horse Owners',
-  description:
-    'Horses.com — research-based reference for horse owners. Site coming soon.',
-=======
-<<<<<<< HEAD
-  title: 'A Reference for Horse Owners',
-  description:
-    'Horses.com — research-based reference for horse owners. Site coming soon.',
-=======
-<<<<<<< HEAD
   title: 'The Reference for Horse Owners',
   description:
     'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
-=======
-  title: 'A Reference for Horse Owners',
-  description:
-    'Horses.com — research-based reference for horse owners. Site coming soon.',
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
   path: '/',
   type: 'website',
 })
@@ -96,23 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-<<<<<<< HEAD
-      className="font-vars"
-=======
-<<<<<<< HEAD
-      className="font-vars"
-=======
-<<<<<<< HEAD
-      className="font-vars"
-=======
-<<<<<<< HEAD
       className={`${playfair.variable} ${sourceSans.variable} font-vars`}
-=======
-      className="font-vars"
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
     >
       <head>
         {/* GA4 — only loads in production with a real ID */}
