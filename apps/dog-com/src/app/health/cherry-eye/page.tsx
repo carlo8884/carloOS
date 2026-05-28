@@ -48,7 +48,7 @@ export default function CherryEyePage() {
           <p>Cherry eye surgery can be performed by general practice veterinarians with appropriate training, but referral to a board-certified veterinary ophthalmologist (DACVO) produces better outcomes — lower re-prolapse rates, better preservation of glandular function. For brachycephalic breeds (Bulldogs, French Bulldogs) where re-prolapse rates are higher and ocular complications are more common, ophthalmologist referral is particularly advisable. Pet insurance typically covers cherry eye surgery as it is a medical condition rather than cosmetic.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

@@ -239,37 +239,30 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'horses-com': {
-    // Refined equestrian palette — deep forest green primary, saddle-leather tan
-    // secondary, unbleached cream surface, brass accent. Per 2026-05-28 brand brief.
-    // Primary: hunt-coat deep green (think Hermès equestrian catalog spine).
-    primary: '#1F3A2F',
-    primaryLight: '#2E5444',
-    primaryPale: '#E8EDE6',
-    primaryDark: '#142820',
-    // dark masthead — green-black, not pure black
-    dark: '#13241C',
-    // unbleached cream / warm paper — never pure white
-    surface: '#F4EFE6',
+    // Warm equestrian palette — saddle leather browns, cream, dark green accents.
+    primary: '#6E4A28',
+    primaryLight: '#8C6238',
+    primaryPale: '#F4ECDF',
+    primaryDark: '#523618',
+    dark: '#1F2B1E',
+    surface: '#FAF4E8',
     white: '#FFFFFF',
-    // off-black with green-warmth, reads as printed not web-default
-    textDark: '#13241C',
-    textMid: '#3F3A2E',
-    textLight: '#7A6E5C',
-    border: '#D9D0BE',
-    // semantic — dark green for success aligns with primary family
-    success: '#1F3A2F',
-    warning: '#B68830',
-    danger: '#9A3A22',
+    textDark: '#1F2B1E',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D6C2',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
     fontDisplay: 'Playfair Display',
     fontBody: 'Source Sans 3',
-    fontDisplayWeights: [400, 600, 700, 900],
+    fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Horses.com',
-    siteTagline: 'The Reference for Horse Owners',
+    siteTagline: 'A Reference for Horse Owners',
     siteUrl: 'https://horses.com',
     logoText: 'Horses.com',
-    // closest tailwind preset to deep forest green — used for any preset-keyed UI
-    twPrimary: 'emerald',
+    twPrimary: 'amber',
   },
 
   'petfood-com': {

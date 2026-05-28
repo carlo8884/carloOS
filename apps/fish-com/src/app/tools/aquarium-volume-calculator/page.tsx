@@ -16,7 +16,7 @@ const URL = 'https://fish.com/tools/aquarium-volume-calculator'
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Aquarium Volume Calculator — Gallons & Liters from L×W×H | Fish.com',
-  description: 'Free aquarium volume calculator. Convert tank length, width, height to US gallons, UK gallons, and liters. Supports rectangular, cube, bow-front, hexagonal, and cylinder tanks.',
+  description: 'Free aquarium volume calculator. Convert L×W×H to US gallons, UK gallons, and liters. Supports rectangular, cube, bow-front, hexagonal, and cylinder tanks.',
   path: '/tools/aquarium-volume-calculator',
 })
 
