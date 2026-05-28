@@ -123,6 +123,57 @@ export default function NutritionHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      {/* Programmatic per-topic nutrition pages — generated from src/data/nutrition-topics.ts */}
+      <section className="border-t border-brand-border px-container sm:px-container-sm py-10">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Can My Dog Eat…?</span>
+        </div>
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">Per-Topic Nutrition Answers</h2>
+        <p className="text-sm text-brand-text-light max-w-2xl mb-5">
+          Quick, evidence-based answers to the most-asked &ldquo;can dogs eat …&rdquo; questions, plus per-topic deep dives for puppies, seniors, and prescription diets.
+        </p>
+
+        <div className="mb-6">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-red-700 mb-2">⚠️ Toxic — Do Not Feed</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-2">
+            <Link href="/nutrition/can-dogs-eat-chocolate" className="text-sm text-brand-primary no-underline hover:underline">Chocolate</Link>
+            <Link href="/nutrition/can-dogs-eat-grapes-and-raisins" className="text-sm text-brand-primary no-underline hover:underline">Grapes &amp; Raisins</Link>
+            <Link href="/nutrition/can-dogs-eat-onions-and-garlic" className="text-sm text-brand-primary no-underline hover:underline">Onions &amp; Garlic</Link>
+            <Link href="/nutrition/xylitol-poisoning-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Xylitol</Link>
+            <Link href="/nutrition/can-dogs-eat-macadamia-nuts" className="text-sm text-brand-primary no-underline hover:underline">Macadamia Nuts</Link>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-green-700 mb-2">✓ Safe in Moderation</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+            <Link href="/nutrition/can-dogs-eat-peanut-butter" className="text-sm text-brand-primary no-underline hover:underline">Peanut Butter</Link>
+            <Link href="/nutrition/can-dogs-eat-carrots" className="text-sm text-brand-primary no-underline hover:underline">Carrots</Link>
+            <Link href="/nutrition/can-dogs-eat-blueberries" className="text-sm text-brand-primary no-underline hover:underline">Blueberries</Link>
+            <Link href="/nutrition/can-dogs-eat-plain-chicken" className="text-sm text-brand-primary no-underline hover:underline">Plain Cooked Chicken</Link>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-mid mb-2">Common Questions</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-2">
+            <Link href="/nutrition/can-dogs-eat-ice-cream" className="text-sm text-brand-primary no-underline hover:underline">Ice Cream &amp; Dairy</Link>
+            <Link href="/nutrition/can-dogs-eat-eggs" className="text-sm text-brand-primary no-underline hover:underline">Eggs (Raw vs Cooked)</Link>
+            <Link href="/nutrition/can-dogs-eat-bread" className="text-sm text-brand-primary no-underline hover:underline">Bread</Link>
+          </div>
+        </div>
+
+        <div>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-mid mb-2">Special Diet Deep Dives</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-2">
+            <Link href="/nutrition/senior-dog-nutrition-guide" className="text-sm text-brand-primary no-underline hover:underline">Senior Dog Nutrition</Link>
+            <Link href="/nutrition/puppy-weaning-nutrition" className="text-sm text-brand-primary no-underline hover:underline">Puppy Weaning</Link>
+            <Link href="/nutrition/choosing-a-prescription-diet" className="text-sm text-brand-primary no-underline hover:underline">Choosing a Prescription Diet</Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
