@@ -3,7 +3,7 @@
 Single prioritized queue of deferred work. Replaces ad-hoc lists
 scattered across PR descriptions and STATUS.md.
 
-**Last updated:** 2026-05-27
+**Last updated:** 2026-05-29
 
 **Rules:**
 - Anything in this file is deferred by design — listed here means
@@ -33,18 +33,45 @@ listed here for queue visibility.
 
 ## P1 — Engineering, post-launch (no rush)
 
+### Vercel project bootstrap for 5 new sites (Carlo-only)
+horses-com · petfood-com · petfoods-com · ferret-com · ferrets-com
+all have repo scaffolds, content, lead magnets, and visual polish — but
+no live Vercel project. Carlo runs `scripts/vercel-bootstrap.sh` per
+site (creates project, sets env vars, links to repo). Each ~5 min.
+
+### Photo sourcing follow-up
+Real Unsplash photography shipped for homepage heroes + key feature
+slots on 8 sites. Per-site photo sourcing playbook is in
+`ops/handoffs/2026-05-29-photo-sourcing-playbook.md`. Sandbox cannot
+verify final image render at scale — needs browser-driven Unsplash
+work to cover remaining article pages (breed profiles, disease pages).
+
+### AI care assistant `/ask` route — MVP (Phase 1)
+Per the #67 brief. Phase 1 is `/ask` route on dog-com that takes a
+question and returns a cited answer pulled from the existing health +
+breed + nutrition content. Stripe paywall layered later (see P3).
+
+### Per-city Ferrets.com directory expansion
+`/find-a-vet/[state]` programmatic SEO is live (52 states). Next layer
+is `/find-a-vet/[state]/[city]` — pulls from the top-N metro per state
+(~250-400 city pages). Same template pattern as the state directory.
+
+### Per-SKU PetFoods.com catalog
+`/brands/[slug]` programmatic SEO is live (38 brands). Next layer is
+per-SKU pages within each brand (Hill's Science Diet Adult, Royal
+Canin German Shepherd, etc). Estimated 200-400 SKU pages from a
+single template + structured data file.
+
 ### Inline-breadcrumb migration (37 pages)
 37 review pages use inline `<nav>` breadcrumbs without `BreadcrumbList`
 JSON-LD schema. Migrate to the shared `<Breadcrumb>` component so all
-review pages emit proper schema for SERP rich results.
-- Mechanical change, low risk.
-- Deploy-heavy (37 file diffs across all 5 sites) — defer until
-  Vercel rate-limit window resets OR Pro upgrade.
+review pages emit proper schema for SERP rich results. Mechanical
+change, low risk. Cost reduced post-turbo-ignore landing.
 
-### Missing category-index pages (3 pages)
+### Missing category-index pages (2 pages)
 - `apps/lizard-com/src/app/health/page.tsx` — closes 5 lizard `/health/*` orphans
 - `apps/saddle-com/src/app/guides/page.tsx` — closes 6 saddle `/guides/*` orphans
-- `apps/vets-co/src/app/breeds/page.tsx` — improves vets-co breed-health UX
+(vets-co `/breeds/page.tsx` now exists.)
 Pattern exists in dog-com `/training/page.tsx`, `/health/page.tsx` —
 follow that.
 
@@ -67,11 +94,6 @@ roadmap, this is the slot.
 ---
 
 ## P2 — Polish, post-Dog.com 7-day metrics
-
-### Visual / brand polish (PR #5)
-Blocked on A4 visual direction proposal. Deadline set: 2026-05-29
-(end of this week). If A4 delivers, scope a tight PR. If not, defer
-indefinitely.
 
 ### Custom fonts via `next/font/google`
 Currently fonts load via Google Fonts CSS link. Migrate to
@@ -97,30 +119,32 @@ for in-card discoverability.
 
 ## P3 — Strategy, post-traction
 
-### PetFood.com / Ferret.com / Horses.com positioning
-Strategy work. Requires confirmation Carlo owns the domains + a
-positioning brief per domain. Pull forward when Dog.com hits Week-1
-metrics.
+Strategy direction for the new sites is now confirmed in repo —
+revenue/affiliate playbook, Stripe membership spec, sponsorship sales
+kit, acquirer pitch framework, per-site Stitch + photo briefs all live
+in `ops/handoffs/`. P3 below is execution against those briefs once
+Dog.com has Week-1 metrics.
 
-### Vets.co disposition
-Currently in priority list but no specific direction. Options when
-revisited: standalone site / sister of Dog.com / trust hub for the
-whole portfolio.
+### Monetization wiring (Stripe webhook live, Mailchimp segmentation)
+Stripe membership spec is written (`ops/handoffs/2026-05-29-stripe-
+membership-spec.md`). `/api/checkout` scaffold exists; `STRIPE_WEBHOOK_
+SECRET` not yet referenced. Mailchimp basic flow lands in P0; advanced
+segmentation post-launch.
 
-### Monetization wiring (Stripe webhook, real Mailchimp segmentation)
-`/api/checkout` scaffold exists; `STRIPE_WEBHOOK_SECRET` not yet
-referenced. Mailchimp basic flow lands in P0; advanced segmentation
-post-launch.
+### Sponsorship sales motion
+Pitch deck framework + sales kit in `ops/handoffs/2026-05-29-
+sponsorship-sales-kit.md`. Execute against the partner shortlist once
+Dog.com has Week-1 traffic to anchor pitches.
+
+### Acquirer pitch (10-domain portfolio)
+Framework in `ops/handoffs/2026-05-29-acquirer-pitch-framework.md`.
+Premature until traffic + email list size + revenue are real numbers.
+Revisit at 90-day milestone.
 
 ### Deal / partnership outreach
-Top 10 strategic-partner shortlist was drafted in an earlier
-orchestrator cycle: Chewy, Trupanion, Embrace, Healthy Paws, Rover,
-AKC, Banfield, BarkBox, Wagmo, VIN. No outreach until Dog.com has
-Week-1 data to anchor the pitch.
-
-### Investor / $100M narrative
-Premature until revenue + traffic + email list size are real numbers.
-Revisit at 90-day post-launch milestone.
+Top 10 strategic-partner shortlist: Chewy, Trupanion, Embrace, Healthy
+Paws, Rover, AKC, Banfield, BarkBox, Wagmo, VIN. No outreach until
+Dog.com has Week-1 data.
 
 ---
 
@@ -129,14 +153,18 @@ Revisit at 90-day post-launch milestone.
 ### Sitemap regeneration as pre-commit hook (Stabilizer Phase 2)
 Currently `scripts/regenerate-sitemaps.mjs` runs manually. Adding
 husky + a pre-commit hook would ensure sitemap matches filesystem
-on every commit.
+on every commit. (Programmatic SEO pages on horses-com, vets-co,
+ferrets-com, petfoods-com are not yet in their sitemap.ts files —
+addressed by regeneration.)
+
+### Dashboard.mjs — extend to 10 sites
+`scripts/dashboard.mjs` hardcodes the 5 original sites. Extend to
+include horses, petfood, petfoods, ferret, ferrets. Auto-detect
+programmatic-route contributions from `src/data/*.ts` to remove the
+manual route-count math from DASHBOARD.md.
 
 ### Orphan-count baseline warn (Stabilizer Phase 2)
 CI warning (not failure) if PR introduces a new orphan page.
-
-### DASHBOARD.md staleness
-Still claims 106 pages (actual: 327). Quick refresh; lower priority
-than STATUS.md and README which are already current.
 
 ### Real corrections inbox setup
 Legal pages reference `privacy@<domain>` and `legal@<domain>`. Need
@@ -154,9 +182,10 @@ and updates with dates.
 
 These were considered and explicitly declined or descoped:
 
-- **PR #4 (governance docs) merging** — superseded by PR #8
-  (docs consolidation). Recommendation: close PR #4 without
-  merging once PR #8 lands.
+- **PR #4 (governance docs) merging** — superseded by docs
+  consolidation. Closed without merge.
+- **PRs #19–#30** — superseded by the 2026-05-28 → 2026-05-29
+  merge wave. Close not merge.
 - **Three-pod parallelism** (activating Fish Pod + Saddle Pod
   before Dog.com is live) — held per "operational simplicity"
   principle; revisit after Dog.com hits 7-day metrics.
