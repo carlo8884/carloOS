@@ -62,6 +62,3 @@ coverage/
 # Misc
 *.pem
 .cache/
-
-# Claude Code session-local state (subagent worktrees)
-.claude/
