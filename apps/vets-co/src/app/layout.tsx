@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Nav, Footer, buildMetadata } from '@carloOS/ui'
+import { Nav, Footer, CrossPortfolioCard, buildMetadata } from '@carloOS/ui'
 import './globals.css'
 
 export const metadata: Metadata = buildMetadata({
@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav siteId="vets-co" />
         <main>{children}</main>
+        <CrossPortfolioCard currentSite="vets-co" contentType="general" variant="footer" />
         <Footer siteId="vets-co" showAffiliateDisclosure />
       </body>
     </html>

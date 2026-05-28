@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Nav, Footer } from '@carloOS/ui'
+import { Nav, Footer, CrossPortfolioCard } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import './globals.css'
 
@@ -65,6 +65,9 @@ export default function RootLayout({
 
         {/* Page content */}
         <main>{children}</main>
+
+        {/* Sister-site recommendations — portfolio-wide */}
+        <CrossPortfolioCard currentSite="dog-com" contentType="general" variant="footer" />
 
         {/* Shared Footer */}
         <Footer siteId="dog-com" showAffiliateDisclosure />
