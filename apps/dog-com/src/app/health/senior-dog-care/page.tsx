@@ -144,7 +144,7 @@ export default function SeniorDogCarePage() {
         </ul>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQ_ITEMS} includeSchema={false} allowMultiple />
+        <FAQAccordion items={FAQ_ITEMS} allowMultiple />
       </div>
     </ArticleLayout>
   )
