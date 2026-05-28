@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Guides — Disease, Chemistry & Disease | Fish.com', description: 'Aquarium health guides — the nitrogen cycle, water chemistry, fish disease identification and treatment.', path: '/health' })
 
@@ -53,6 +54,15 @@ export default function FishHealthPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <section className="border-t border-brand-border bg-brand-white px-container sm:px-container-sm py-10">
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-2">Disease Reference Catalog</h2>
+        <p className="text-xs text-brand-text-light max-w-content-wide mb-4">25 common aquarium fish diseases with symptoms, diagnostic approach, treatment ladder, and prevention. Sourced from Noga, Roberts, WAVMA, UF/IFAS, and WOAH references.</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 max-w-content-wide">
+          {Diseases.filter(d => !RESERVED_HEALTH_SLUGS.has(d.slug)).map(d => (
+            <Link key={d.slug} href={`/health/${d.slug}`} className="text-sm text-brand-primary no-underline hover:underline">{d.name}</Link>
+          ))}
+        </div>
+      </section>
 </>
   )
 }
