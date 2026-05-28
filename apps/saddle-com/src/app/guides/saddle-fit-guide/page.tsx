@@ -15,7 +15,7 @@ const schema = buildArticleSchema({
   description: 'The 4-point check for horse and rider, explained.',
   url: 'https://saddle.com/guides/saddle-fit-guide', imageUrl: '',
   authorName: 'Saddle.com Editorial',
-  publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z',
+  publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z',
 })
 
 export default function SaddleFitGuidePage() {
@@ -45,6 +45,15 @@ export default function SaddleFitGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
+          Correct saddle fit comes down to a 4-point check: 2–3 fingers of wither
+          clearance, even panel contact along the full bearing surface, full spinal
+          channel clearance (no contact along the spinous processes), and a level
+          balance point so the rider sits in the deepest part. Reassess fit annually
+          and after major fitness or seasonal changes — horses change shape, and a
+          poorly fitting saddle is the most overlooked cause of back pain, resistance,
+          and behavior problems under saddle.
+        </p>
         <h2 id="why">Why Saddle Fit Is Non-Negotiable</h2>
         <p>The saddle is the interface between rider and horse — when it fits correctly, communication is clear and movement is free. When it fits poorly, every aid is distorted through a structure that is causing pain, restricting movement, or both.</p>
         <p>Poor saddle fit is the most commonly overlooked cause of behavioral problems in ridden horses. A horse that is reluctant to go forward, bucks when asked to canter, pins ears when saddled, or is stiff on one rein may simply be in pain. Before addressing behavior with training, rule out pain from saddle fit.</p>
