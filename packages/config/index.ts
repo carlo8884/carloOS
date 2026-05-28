@@ -135,17 +135,20 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'vets-co': {
-    primary: '#0A8A7A',
-    primaryLight: '#12B09C',
-    primaryPale: '#E6F5F3',
-    primaryDark: '#076B5E',
-    dark: '#0D2535',
-    surface: '#F8FAFB',
+    // Clinical authority palette — deep teal primary, dark navy masthead,
+    // warm ivory paper surface. Sits between AAHA/AVMA (institutional) and
+    // 1-800-PetMeds (commercial) — research-anchored, owner-friendly.
+    primary: '#0A6B5E',          // deepened, more clinical
+    primaryLight: '#0F8A78',
+    primaryPale: '#E8F2F0',
+    primaryDark: '#054C42',
+    dark: '#0C1F2C',             // deeper navy — masthead authority
+    surface: '#F6F4EE',          // warm ivory paper (not cool grey)
     white: '#FFFFFF',
-    textDark: '#0D2535',
-    textMid: '#3A5A6A',
-    textLight: '#7A9AAA',
-    border: '#DDE8EE',
+    textDark: '#0C1F2C',
+    textMid: '#3A4F5C',
+    textLight: '#7A8C97',
+    border: '#DDE3E5',
     success: '#1E8A4A',
     warning: '#C8952A',
     danger: '#C84A2A',
@@ -154,31 +157,34 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Vets.co',
-    siteTagline: 'Find a Vet. Read the Guidelines.',
+    siteTagline: 'Find a vet. Read the guidelines.',
     siteUrl: 'https://vets.co',
     logoText: 'Vets.co',
     twPrimary: 'teal',
   },
 
   'fish-com': {
-    primary: '#0E6B8A',
-    primaryLight: '#1490B8',
-    primaryPale: '#E6F4F9',
-    primaryDark: '#0A5470',
-    dark: '#050E14',
-    surface: '#F4F9FC',
+    // Aquarium-magazine palette — refined deep teal-blue, cool whites, restrained
+    // accents. Aquatic but editorial; competes against Aquarium Co-Op (community)
+    // and Practical Fishkeeping (UK magazine) on visual seriousness.
+    primary: '#0E5F7E',          // deep aquarium teal — slightly darker, more editorial
+    primaryLight: '#1A85AE',     // refraction blue — links / hover
+    primaryPale: '#EAF3F8',      // cool wash — section bands
+    primaryDark: '#084A66',      // hyper-deep, accents on dark
+    dark: '#06121B',             // near-black blue, deep-water masthead
+    surface: '#F3F8FB',          // cool magazine off-white
     white: '#FFFFFF',
-    textDark: '#050E14',
-    textMid: '#1E3D50',
-    textLight: '#6A90A8',
-    border: '#C8DDE8',
+    textDark: '#06121B',
+    textMid: '#21465B',          // mid teal-grey, body on light surfaces
+    textLight: '#6E92A8',
+    border: '#CADDE8',
     success: '#1A7A44',
     warning: '#C8952A',
     danger: '#C84A2A',
     fontDisplay: 'Cormorant Garamond',
     fontBody: 'Inter',
     fontDisplayWeights: [400, 600, 700],
-    fontBodyWeights: [300, 400, 500, 600],
+    fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Fish.com',
     siteTagline: 'An Aquarium Reference',
     siteUrl: 'https://fish.com',
@@ -187,17 +193,20 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'saddle-com': {
-    primary: '#A07840',
-    primaryLight: '#C8A060',
-    primaryPale: '#F2EBE0',
-    primaryDark: '#7A5C28',
-    dark: '#1A1208',
-    surface: '#FAF6EF',
+    // Luxury-equestrian palette — saddle-leather brown primary, brass accent,
+    // bone-cream surface, near-black masthead. Hermès / Stubben / Pessoa
+    // adjacency, never barn-rustic.
+    primary: '#8C5A2A',       // saddle leather, deepened from #A07840 for serif contrast
+    primaryLight: '#B07A3E',
+    primaryPale: '#F3ECE0',
+    primaryDark: '#5E3B15',
+    dark: '#100A04',          // near-black masthead, deeper than the previous warm brown
+    surface: '#F7F1E7',       // bone / unbleached cream
     white: '#FFFFFF',
     textDark: '#1A1208',
     textMid: '#4A3018',
     textLight: '#8A6848',
-    border: '#DDD0BC',
+    border: '#DBCDB6',
     success: '#2A6A3A',
     warning: '#C8952A',
     danger: '#C84A2A',
@@ -213,24 +222,28 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'lizard-com': {
-    primary: '#7AB52A',
-    primaryLight: '#9AD040',
+    // Dark-mode-first field-guide palette. Lime/herp accent lifted toward the
+    // brighter end (#9AD140) so small UI text passes WCAG AA against the
+    // green-black backgrounds the masthead leans on. Zilla Slab + Raleway
+    // pairing for magazine-quality field-guide-cover typography.
+    primary: '#9AD140',
+    primaryLight: '#B4E368',
     primaryPale: '#F0F7E6',
-    primaryDark: '#5C8A1A',
-    dark: '#080C08',
+    primaryDark: '#6E9F1F',
+    dark: '#060A06',
     surface: '#0D1A0D',
     white: '#EEF0E4',
     textDark: '#EEF0E4',
-    textMid: 'rgba(238,240,228,0.85)',
-    textLight: 'rgba(238,240,228,0.4)',
+    textMid: 'rgba(238,240,228,0.78)',
+    textLight: 'rgba(238,240,228,0.45)',
     border: 'rgba(255,255,255,0.07)',
-    success: '#2AC87A',
-    warning: '#C8A840',
-    danger: '#E05A3A',
+    success: '#4FD18A',
+    warning: '#D6BE52',
+    danger: '#E87060',
     fontDisplay: 'Zilla Slab',
     fontBody: 'Raleway',
     fontDisplayWeights: [400, 600, 700],
-    fontBodyWeights: [300, 400, 500, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Lizard.com',
     siteTagline: 'Reptile Care, Source-First',
     siteUrl: 'https://lizard.com',
