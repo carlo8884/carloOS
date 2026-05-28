@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,12 @@ import {
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { Ingredients } from '../../data/ingredients'
+
+// Slug set for the 15 ingredient deep-dive pages live under /ingredients/[slug].
+// Used to render real <Link>s for those entries and to fall back to an anchor
+// for the remaining catalog entries that have not yet been built out.
+const DEEP_DIVE_SLUGS = new Set(Ingredients.map((i) => i.slug))
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
@@ -60,10 +67,10 @@ const GROUPS: IngredientGroup[] = [
       { name: 'Chicken (whole, fresh)', note: 'Wet-weight muscle tissue. High moisture; relative ingredient-panel position is misleading without dry-matter conversion. AAFCO Official Publication 2025 ingredient definitions.', href: '/ingredients/chicken' },
       { name: 'Chicken meal', note: 'Rendered, dried chicken; concentrated protein on a dry-matter basis. Named-species meal is a specific AAFCO-defined ingredient and carries more disclosure than generic “meat meal.”', href: '/ingredients/chicken-meal' },
       { name: 'Chicken by-product meal', note: 'AAFCO-defined: ground rendered parts of slaughtered chicken (organs, feet, viscera) excluding feathers. Nutrient-dense; the “by-product” label is an industry term, not a quality signal.', href: '/ingredients/chicken-by-product-meal' },
-      { name: 'Salmon (named fish)', note: 'Named-species fish ingredient. Contributes long-chain omega-3 fatty acids (EPA/DHA). Sourcing transparency varies sharply across brands.', href: '/ingredients/salmon' },
-      { name: 'Salmon meal / fish meal', note: 'Rendered fish protein. Named (“salmon meal”) carries species disclosure; generic “fish meal” does not. Ethoxyquin preservation status is a separate disclosure question.', href: '/ingredients/fish-meal' },
+      { name: 'Salmon meal', note: 'Named-species rendered fish protein. Carries species disclosure (unlike generic “fish meal”). Contributes long-chain omega-3 fatty acids (EPA/DHA). Ethoxyquin supplier-side preservation is a separate disclosure question.', href: '/ingredients/salmon-meal' },
+      { name: 'Whitefish meal', note: 'Named-species fish meal. Species coverage of “whitefish” is supplier-dependent; more disclosure than generic “fish meal,” less than a single-species name.', href: '/ingredients/whitefish-meal' },
       { name: 'Lamb, lamb meal', note: 'Common alternative-protein source for elimination or sensitive-diet formulations. AAFCO-defined.', href: '/ingredients/lamb' },
-      { name: 'Beef, beef meal, beef by-product meal', note: 'AAFCO-defined named-species ingredients. Beef is a less-common primary protein in modern North American formulas.', href: '/ingredients/beef' },
+      { name: 'Beef meal', note: 'AAFCO-defined named-species rendered mammalian meal. Less common as a primary protein in modern North American formulas than chicken or fish meals.', href: '/ingredients/beef-meal' },
       { name: 'Meat meal / meat and bone meal', note: 'Generic, unspecified mammalian rendered material. AAFCO permits the term but it does not identify species — the lowest tier of protein disclosure in a commercial formula.', href: '/ingredients/meat-and-bone-meal' },
       { name: 'Animal digest', note: 'AAFCO-defined: hydrolyzed animal tissue used primarily as a palatant. Common in cat food and kibble coatings; unspecified species.', href: '/ingredients/animal-digest' },
       { name: 'Pea protein, potato protein, soy protein concentrate', note: 'Plant-protein isolates used to raise crude protein on the guaranteed analysis. Concentration of plant protein in dog food is one of the factors flagged in the FDA CVM 2018 grain-free / DCM investigation.', href: 'https://petfood.com/ingredients/grain-free-dcm-risk', external: true },
@@ -75,13 +82,13 @@ const GROUPS: IngredientGroup[] = [
     intro:
       'Carbohydrate sources contribute energy, fiber, and binding properties in kibble. Grain-inclusive and grain-free are categorical labels, not quality labels; the relevant questions are sourcing, glycemic profile, and (for legume-heavy diets) the open FDA CVM investigation into dilated cardiomyopathy.',
     items: [
-      { name: 'Rice (brown, white, brewer’s)', note: 'Common, well-digested cereal. Brewer’s rice is the broken kernel fraction left after milling; nutritionally similar to whole rice but lower-cost.', href: '/ingredients/rice' },
+      { name: 'Brown rice', note: 'Whole-grain cereal with the bran layer intact, milled only to remove the inedible hull. AAFCO §9.16. Highly digestible, well-tolerated, predictable nutritional contribution.', href: '/ingredients/brown-rice' },
       { name: 'Oatmeal, oat groats', note: 'Whole-grain oat. Source of soluble fiber (beta-glucan). Generally well-tolerated; rare grain trigger compared to wheat.', href: '/ingredients/oatmeal' },
       { name: 'Corn (whole, ground, gluten meal)', note: 'Common cereal. Often vilified in pet-food marketing without nutritional basis; corn is a digestible energy and protein contributor when properly milled. Corn gluten meal is a concentrated protein fraction.', href: '/ingredients/corn' },
       { name: 'Wheat (whole, gluten, middlings)', note: 'Cereal grain. Source of digestible energy. Most common cereal allergen in dogs, though true grain allergy is rarer than commonly assumed.', href: '/ingredients/wheat' },
       { name: 'Barley, sorghum, millet', note: 'Alternative cereal grains, lower-glycemic than corn or rice in some formulations.', href: '/ingredients/alternative-grains' },
       { name: 'Peas, lentils, chickpeas, faba beans (pulses / legumes)', note: 'Concentrated plant-protein and fiber sources. Legume-heavy grain-free diets are a focus of the open FDA CVM investigation into atypical canine dilated cardiomyopathy. See the PetFood.com record on grain-free and DCM.', href: 'https://petfood.com/ingredients/grain-free-dcm-risk', external: true },
-      { name: 'Potato, sweet potato', note: 'Tuber-derived carbohydrate. Sweet potato is higher in fiber and provitamin A. Often featured in grain-free formulations; not implicated in the DCM investigation in the way pulses are.', href: '/ingredients/potatoes' },
+      { name: 'Sweet potato', note: 'Tuber-derived starchy carbohydrate. Higher in fiber and provitamin A than common cereals. Often featured in grain-free formulations; not implicated in the FDA CVM DCM investigation in the way pulses are.', href: '/ingredients/sweet-potato' },
       { name: 'Tapioca / cassava', note: 'Starchy root, used as a grain-free binder. Low in protein; nutritionally a near-pure carbohydrate.', href: '/ingredients/tapioca' },
     ],
   },
@@ -92,7 +99,7 @@ const GROUPS: IngredientGroup[] = [
       'Fats supply concentrated energy and essential fatty acids. The relevant question is named source (chicken fat is named; “animal fat” is generic) and preservation method (mixed tocopherols vs ethoxyquin vs BHA/BHT).',
     items: [
       { name: 'Chicken fat', note: 'Named-species rendered fat. Highly digestible; primary fat source in many dry formulas. Often preserved with mixed tocopherols (natural vitamin E).', href: '/ingredients/chicken-fat' },
-      { name: 'Fish oil, salmon oil, menhaden oil', note: 'Source of long-chain omega-3 fatty acids (EPA, DHA). Listed dose and stability matter more than mere presence; oxidation is a real concern in stored kibble.', href: '/ingredients/fish-oil' },
+      { name: 'Salmon oil', note: 'Named-species fish oil. Source of EPA and DHA. Inclusion at meaningful levels — and stability against oxidation in stored kibble — matter more than mere ingredient-panel presence.', href: '/ingredients/salmon-oil' },
       { name: 'Flaxseed, flaxseed oil', note: 'Plant source of short-chain omega-3 (ALA). Dogs convert ALA to EPA/DHA inefficiently; flaxseed alone is not equivalent to a marine omega-3 source.', href: '/ingredients/flaxseed' },
       { name: 'Sunflower oil, canola oil, soybean oil', note: 'Plant oils. Energy contributors; profile is primarily omega-6 (linoleic acid). Not interchangeable with marine omega-3 sources.', href: '/ingredients/vegetable-oils' },
       { name: 'Animal fat (unspecified)', note: 'Generic, unspecified mammalian fat. Lowest tier of fat disclosure; AAFCO permits the term.', href: '/ingredients/animal-fat' },
@@ -118,8 +125,8 @@ const GROUPS: IngredientGroup[] = [
     items: [
       { name: 'Mixed tocopherols (vitamin E)', note: 'Natural-source preservative. Shorter shelf life than BHA/BHT but no regulatory concerns. Common in “naturally preserved” marketed formulas.', href: '/ingredients/tocopherols' },
       { name: 'Rosemary extract', note: 'Botanical antioxidant. Generally recognized as safe (GRAS) for the use level in pet food. Anecdotally implicated in seizure threshold in epileptic dogs at high inclusion; the clinical evidence is thin.', href: '/ingredients/rosemary-extract' },
-      { name: 'BHA (butylated hydroxyanisole)', note: 'Synthetic phenolic antioxidant. Approved by FDA and AAFCO for use in pet food at specified limits. Classified by the U.S. National Toxicology Program as “reasonably anticipated to be a human carcinogen” at high doses; the AAFCO/FDA position is that approved use levels in pet food are safe. The two positions are not in direct conflict but readers should understand which one is being cited.', href: '/ingredients/bha-bht' },
-      { name: 'BHT (butylated hydroxytoluene)', note: 'Synthetic preservative often paired with BHA. Same regulatory posture; similar evidence picture.', href: '/ingredients/bha-bht' },
+      { name: 'BHA (butylated hydroxyanisole)', note: 'Synthetic phenolic antioxidant. Approved by FDA and AAFCO at specified limits (21 CFR 582.3169). Classified by the US National Toxicology Program at high doses as “reasonably anticipated to be a human carcinogen.” Regulatory and toxicology positions concern different exposure levels.', href: '/ingredients/bha' },
+      { name: 'BHT (butylated hydroxytoluene)', note: 'Synthetic preservative often paired with BHA (21 CFR 582.3173). Same regulatory posture and a similar toxicology evidence picture at high doses.', href: '/ingredients/bht' },
       { name: 'Ethoxyquin', note: 'Synthetic preservative historically common in fish meal. FDA-CVM voluntary industry agreement (1997) lowered maximum allowable levels in finished pet food. Some manufacturers source ethoxyquin-preserved fish meal; the finished product label does not always list it because it can be a carryover.', href: '/ingredients/ethoxyquin' },
       { name: 'Propylene glycol', note: 'Soft-moist texture and humectant agent. FDA-approved for use in dog food, but prohibited in cat food since 1996 because of Heinz body anemia risk in cats.', href: '/ingredients/propylene-glycol' },
       { name: 'Sodium tripolyphosphate, citric acid', note: 'Auxiliary preservatives / processing aids. Generally low-concern at typical inclusion.', href: '/ingredients/auxiliary-preservatives' },
@@ -291,43 +298,74 @@ export default function IngredientsHubPage() {
                 margin: '18px 0 24px',
               }}
             >
-              {group.items.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}
-                  style={{
-                    display: 'block',
-                    padding: '14px 16px',
-                    border: '1px solid var(--brand-border)',
-                    borderRadius: '6px',
-                    background: 'var(--brand-white)',
-                    color: 'var(--brand-text-dark)',
-                    textDecoration: 'none',
-                    lineHeight: 1.45,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '14px',
-                      fontWeight: 700,
-                      color: 'var(--brand-text-dark)',
-                      marginBottom: '6px',
-                    }}
-                  >
-                    {item.name}
-                  </div>
-                  <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)' }}>
-                    {item.note}
-                  </div>
-                  {item.external && (
-                    <div style={{ fontSize: '11px', color: 'var(--brand-success)', fontWeight: 600, marginTop: '8px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                      Full record → PetFood.com
+              {group.items.map((item) => {
+                // Detect whether the href maps to a live /ingredients/[slug] page in
+                // this app. If so, render as Next <Link> (client-side routing) and
+                // surface a "Deep dive" pill. Otherwise fall back to <a>.
+                const localSlug = item.href.startsWith('/ingredients/')
+                  ? item.href.replace('/ingredients/', '')
+                  : null
+                const hasDeepDive = localSlug !== null && DEEP_DIVE_SLUGS.has(localSlug)
+
+                const cardStyle = {
+                  display: 'block',
+                  padding: '14px 16px',
+                  border: '1px solid var(--brand-border)',
+                  borderRadius: '6px',
+                  background: 'var(--brand-white)',
+                  color: 'var(--brand-text-dark)',
+                  textDecoration: 'none',
+                  lineHeight: 1.45,
+                } as const
+
+                const inner = (
+                  <>
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '14px',
+                        fontWeight: 700,
+                        color: 'var(--brand-text-dark)',
+                        marginBottom: '6px',
+                      }}
+                    >
+                      {item.name}
                     </div>
-                  )}
-                </a>
-              ))}
+                    <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)' }}>
+                      {item.note}
+                    </div>
+                    {item.external && (
+                      <div style={{ fontSize: '11px', color: 'var(--brand-success)', fontWeight: 600, marginTop: '8px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                        Full record → PetFood.com
+                      </div>
+                    )}
+                    {hasDeepDive && (
+                      <div style={{ fontSize: '11px', color: 'var(--brand-success)', fontWeight: 600, marginTop: '8px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                        Deep dive →
+                      </div>
+                    )}
+                  </>
+                )
+
+                if (hasDeepDive) {
+                  return (
+                    <Link key={item.name} href={item.href} style={cardStyle}>
+                      {inner}
+                    </Link>
+                  )
+                }
+
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}
+                    style={cardStyle}
+                  >
+                    {inner}
+                  </a>
+                )
+              })}
             </div>
           </section>
         ))}
