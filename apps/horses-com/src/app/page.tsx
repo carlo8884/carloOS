@@ -1,5 +1,8 @@
 /**
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
  * Horses.com — placeholder homepage.
  * Skeleton only: real content arrives in a later sprint.
  */
@@ -12,6 +15,8 @@ export const metadata: Metadata = buildMetadata({
   title: 'Horses.com',
   description:
     'Premium domain. Site coming soon — research-based reference for horse owners.',
+<<<<<<< HEAD
+=======
 =======
  * Horses.com Homepage — /
  * Server component. Shared CarloOS components for all UI.
@@ -29,11 +34,15 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
 >>>>>>> origin/main
+>>>>>>> origin/main
   path: '/',
   type: 'website',
 })
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 export default function HomePage() {
   const year = new Date().getFullYear()
 
@@ -77,6 +86,8 @@ export default function HomePage() {
         © {year} Horses.com
       </footer>
     </div>
+<<<<<<< HEAD
+=======
 =======
 // ── Inline SVG icon set — restrained line illustration, no emoji ────────────
 
@@ -654,6 +665,7 @@ export default function HomePage() {
         />
       </section>
     </>
+>>>>>>> origin/main
 >>>>>>> origin/main
   )
 }
