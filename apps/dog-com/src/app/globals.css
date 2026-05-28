@@ -33,9 +33,10 @@
   --brand-warning: #C8952A;
   --brand-danger: #C84A2A;
 
-  /* Typography (loaded via next/font — variable names set there) */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  /* Typography — actual font families set by next/font in layout.tsx,
+     which writes --font-playfair and --font-dm-sans onto <html>. */
+  --font-display: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Layout */
   --nav-height: 68px;
@@ -199,9 +200,22 @@ img {
   color: var(--brand-text-dark);
 }
 
-/* Font CSS variables — fonts loaded via Google Fonts CDN */
-.font-vars,
-:root {
-  --font-playfair: Georgia, "Times New Roman", serif;
-  --font-dm-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* ─── TYPE FEATURE FLAGS ──────────────────────────────────────
+   Real type deserves real OpenType: kerning, ligatures, contextual
+   alternates. Set globally so every headline and body line benefits.
+   ────────────────────────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+
+/* Lining figures for stat numerals — keeps "200+" / "100+" aligned at the baseline. */
+.tabular-display {
+  font-variant-numeric: lining-nums tabular-nums;
 }

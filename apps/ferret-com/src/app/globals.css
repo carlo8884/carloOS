@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   FERRET.COM THEME TOKENS
+   Sets CSS variables consumed by Tailwind utilities.
+   Change these values here; Tailwind picks them up automatically.
+   ───────────────────────────────────────────── */
+
+:root {
+<<<<<<< HEAD
+  /* Brand — rich chocolate brown primary, warm amber accent, warm cream surface */
+  --brand-primary: #5C3A1E;
+  --brand-primary-light: #C99D5F;   /* warm amber — CTAs, accents, eyebrows */
+  --brand-primary-pale: #FBF5E8;    /* warm cream */
+  --brand-primary-dark: #3F2710;
+
+  /* Brand secondary — amber */
+  --brand-amber: #C99D5F;
+  --brand-amber-light: #E0BC85;
+  --brand-amber-dark: #A77D44;
+
+=======
+  /* Brand — rich chocolate brown + warm cream + soft amber accent */
+  --brand-primary: #5C3A1E;
+  --brand-primary-light: #7A4F2C;
+  --brand-primary-pale: #F5EBDC;
+  --brand-primary-dark: #3F2710;
+
+>>>>>>> origin/main
+  /* Backgrounds */
+  --brand-dark: #1E140A;
+  --brand-surface: #FBF5E8;
+  --brand-white: #FFFFFF;
+
+  /* Text */
+  --brand-text-dark: #1E140A;
+  --brand-text-mid: #4A3220;
+  --brand-text-light: #8A7058;
+
+  /* Borders */
+  --brand-border: #E6D6BE;
+
+  /* Semantic */
+  --brand-success: #3A6A2A;
+<<<<<<< HEAD
+  --brand-warning: #C99D5F;
+  --brand-danger: #C84A2A;
+
+  /* Typography (loaded via next/font in layout.tsx) */
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+=======
+  --brand-warning: #D6A22A;
+  --brand-danger: #C84A2A;
+
+  /* Typography (loaded via next/font — variable names set there) */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-source-sans), system-ui, sans-serif;
+>>>>>>> origin/main
+
+  /* Layout */
+  --nav-height: 68px;
+}
+
+/* ─── BASE ─────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── FOCUS VISIBLE ──────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── ARTICLE BODY TYPOGRAPHY ───────────────────────────────── */
+
+.carloOS-article {
+  --tw-prose-body: var(--brand-text-mid);
+  --tw-prose-headings: var(--brand-text-dark);
+  --tw-prose-links: var(--brand-primary);
+  --tw-prose-bold: var(--brand-text-dark);
+  --tw-prose-counters: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-text-light);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-primary);
+  --tw-prose-code: var(--brand-text-dark);
+  --tw-prose-th-borders: var(--brand-border);
+  --tw-prose-td-borders: var(--brand-border);
+}
+
+/* ─── SELECTION ───────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(92, 58, 30, 0.2);
+  color: var(--brand-text-dark);
+}
+
+<<<<<<< HEAD
+/* Font CSS variables — next/font/google injects these on <html> via layout.tsx.
+   Fallback declarations here so utility classes resolve when next/font is unavailable
+   (offline dev / CI without remote font fetch). */
+=======
+/* Font CSS variables — fonts loaded via Google Fonts CDN */
+>>>>>>> origin/main
+.font-vars,
+:root {
+  --font-playfair: Georgia, "Times New Roman", serif;
+  --font-source-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+<<<<<<< HEAD
+
+/* ─── EDITORIAL DISPLAY UTILITIES ───────────────────────────────── */
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-amber);
+}
+
+.eyebrow-rule {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--brand-amber);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.amber-link {
+  color: var(--brand-amber-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.amber-link:hover {
+  color: var(--brand-primary);
+}
+=======
+>>>>>>> origin/main

@@ -111,7 +111,7 @@ export default function UVBLightingGuidePage() {
 
         <p>T5 HO (High Output) tubes produce consistent UVB across the tube length and penetrate 30–60cm — enough to create a meaningful UVB gradient across the enclosure. They are also more consistent in their output decline over time.</p>
 
-        <p>Top T5 HO UVB bulbs ranked by Solarmeter 6.5 testing:</p>
+        <p>Top T5 HO UVB bulbs ranked by <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> testing:</p>
         <ul>
           <li><strong>Arcadia T5 HO 12% Desert</strong> — highest measured UVI, best output retention (85–90% at 6 months). Zone 4 species. See <Link href="/reviews/best-uvb-bulbs">our full review →</Link></li>
           <li><strong>Arcadia T5 HO 6% Forest</strong> — Zone 2–3 species. Same exceptional build quality as the 12%.</li>
