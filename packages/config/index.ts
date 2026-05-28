@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'ferrets-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -238,35 +238,58 @@ export const themes: Record<SiteId, SiteTheme> = {
     twPrimary: 'lime',
   },
 
-  'ferrets-com': {
-    // Lighter chocolate brown + paper-cream — sister to ferret.com (the
-    // premium store brand). Ferrets.com is the content engine / library:
-    // care guides + directories of vets, rescues, breeders. Slightly
-    // lighter palette to evoke "reference / library" vs ferret.com's
-    // "premium boutique."
+  'horses-com': {
+    // Warm equestrian palette — saddle leather browns, cream, dark green accents.
     primary: '#6E4A28',
-    primaryLight: '#8A6240',
-    primaryPale: '#F8F1E2',
-    primaryDark: '#4E331A',
-    dark: '#2A1E12',
-    surface: '#FBF6EA',
-    white: '#FFFDF7',
-    textDark: '#2A1E12',
-    textMid: '#5A4230',
-    textLight: '#957E62',
-    border: '#EADDC4',
+    primaryLight: '#8C6238',
+    primaryPale: '#F4ECDF',
+    primaryDark: '#523618',
+    dark: '#1F2B1E',
+    surface: '#FAF4E8',
+    white: '#FFFFFF',
+    textDark: '#1F2B1E',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D6C2',
     success: '#3A6A2A',
-    warning: '#D6A22A',
+    warning: '#C8952A',
     danger: '#C84A2A',
     fontDisplay: 'Playfair Display',
     fontBody: 'Source Sans 3',
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
-    siteName: 'Ferrets.com',
-    siteTagline: 'The Ferret Owner\'s Library',
-    siteUrl: 'https://ferrets.com',
-    logoText: 'Ferrets.com',
+    siteName: 'Horses.com',
+    siteTagline: 'A Reference for Horse Owners',
+    siteUrl: 'https://horses.com',
+    logoText: 'Horses.com',
     twPrimary: 'amber',
+  },
+
+  'petfood-com': {
+    // Clean food-brand palette — warm white background with a single warm accent.
+    primary: '#D9622A',
+    primaryLight: '#E87A40',
+    primaryPale: '#FBEEE3',
+    primaryDark: '#B04A18',
+    dark: '#1F1A14',
+    surface: '#FBF8F2',
+    white: '#FFFFFF',
+    textDark: '#1F1A14',
+    textMid: '#4A3E30',
+    textLight: '#8A7E68',
+    border: '#ECE4D6',
+    success: '#2A7A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Cormorant Garamond',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFood.com',
+    siteTagline: 'A Reference for Pet Nutrition',
+    siteUrl: 'https://petfood.com',
+    logoText: 'PetFood.com',
+    twPrimary: 'orange',
   },
 }
 
@@ -593,9 +616,36 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
 
-  'ferrets-com': {
-    id: 'ferrets-com',
-    theme: themes['ferrets-com'],
+  'horses-com': {
+    id: 'horses-com',
+    theme: themes['horses-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Horses.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://horses.com/og-default.jpg',
+  },
+
+  'petfood-com': {
+    id: 'petfood-com',
+    theme: themes['petfood-com'],
     gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
     affiliates: {
       amazon: true,
@@ -611,13 +661,13 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     ],
     footerLinks: [
       {
-        heading: 'Ferrets.com',
+        heading: 'PetFood.com',
         links: [
           { label: 'Home', href: '/' },
         ],
       },
     ],
-    defaultOgImage: 'https://ferrets.com/og-default.jpg',
+    defaultOgImage: 'https://petfood.com/og-default.jpg',
   },
 }
 

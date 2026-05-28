@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: 'https://lizard.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
     { url: 'https://lizard.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
+    { url: 'https://lizard.com/first-year-care-schedule', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://lizard.com/health/dehydration-reptiles', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/health/dysecdysis', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/health/egg-binding', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
