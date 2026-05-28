@@ -187,17 +187,20 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'saddle-com': {
-    primary: '#A07840',
-    primaryLight: '#C8A060',
-    primaryPale: '#F2EBE0',
-    primaryDark: '#7A5C28',
-    dark: '#1A1208',
-    surface: '#FAF6EF',
+    // Luxury-equestrian palette — saddle-leather brown primary, brass accent,
+    // bone-cream surface, near-black masthead. Hermès / Stubben / Pessoa
+    // adjacency, never barn-rustic.
+    primary: '#8C5A2A',       // saddle leather, deepened from #A07840 for serif contrast
+    primaryLight: '#B07A3E',
+    primaryPale: '#F3ECE0',
+    primaryDark: '#5E3B15',
+    dark: '#100A04',          // near-black masthead, deeper than the previous warm brown
+    surface: '#F7F1E7',       // bone / unbleached cream
     white: '#FFFFFF',
     textDark: '#1A1208',
     textMid: '#4A3018',
     textLight: '#8A6848',
-    border: '#DDD0BC',
+    border: '#DBCDB6',
     success: '#2A6A3A',
     warning: '#C8952A',
     danger: '#C84A2A',
