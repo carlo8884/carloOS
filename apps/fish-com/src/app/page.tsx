@@ -1,245 +1,658 @@
 /**
  * Fish.com Homepage — /
- * Premium aquarium resource. Ocean editorial aesthetic.
- * Server component — pulls featured content from Supabase once seeded.
+ * Aquarium-magazine reference. Server component. CSS-only visuals (no
+ * photography until image strategy ships). Shared CarloOS components for
+ * navigation, footer, and email capture.
+ *
+ * Visual brief: Cormorant Garamond display + Inter body; deep teal-blue
+ * masthead; restrained refraction-blue accent; magazine-quality layout
+ * that reads as confidently as Practical Fishkeeping looks in print.
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'An Aquarium Reference',
-  description: 'Species guides, tank setup, water chemistry, fish health, and honest equipment reviews — built for serious fishkeepers.',
+  description:
+    'Research-based reference for aquarists — species profiles, tank cycling, water chemistry, fish health, and honest equipment comparisons.',
   path: '/',
 })
 
-const FEATURED_SPECIES = [
+// ── Inline SVG icon set ────────────────────────────────────────────────────
+// 1.4px stroke, 24×24 grid, the same illustration voice used on Dog.com /
+// Vets.co / Horses.com. No emoji on the homepage — the brief is magazine,
+// not app store.
+
+type CategoryIcon =
+  | 'species'
+  | 'setup'
+  | 'chemistry'
+  | 'health'
+  | 'reviews'
+  | 'tools'
+
+function CategoryIconSvg({ name }: { name: CategoryIcon }) {
+  const common = {
+    width: 28,
+    height: 28,
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.4,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    'aria-hidden': true,
+  }
+  switch (name) {
+    case 'species':
+      // Side-on fish silhouette in line — restrained, not cartoonish
+      return (
+        <svg {...common}>
+          <path d="M3 12c2-4 6-6 10-6 3 0 5.5 1 7 2.5L22 6v12l-2-2.5C18.5 17 16 18 13 18c-4 0-8-2-10-6z" />
+          <path d="M18 11.5c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" fill="currentColor" stroke="none" />
+          <path d="M9 9.5l-2-1M9 14.5l-2 1" />
+        </svg>
+      )
+    case 'setup':
+      // Aquarium tank silhouette with substrate line + waterline
+      return (
+        <svg {...common}>
+          <rect x="3" y="5" width="18" height="14" rx="1" />
+          <path d="M3 16h18" />
+          <path d="M5 8c1.5-.5 3 .5 4.5 0S12.5 7.5 14 8s3 .5 4.5 0" />
+        </svg>
+      )
+    case 'chemistry':
+      // Erlenmeyer flask with droplet — water chemistry / test kits
+      return (
+        <svg {...common}>
+          <path d="M9 3h6" />
+          <path d="M10 3v5L5 18a2 2 0 0 0 1.8 2.9h10.4A2 2 0 0 0 19 18l-5-10V3" />
+          <path d="M8 14h8" />
+          <circle cx="12" cy="17" r="1.1" />
+        </svg>
+      )
+    case 'health':
+      // Shield with caduceus arc — vet-respectful, not red-cross hospital
+      return (
+        <svg {...common}>
+          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+          <path d="M9 11v2a3 3 0 0 0 6 0v-2" />
+          <circle cx="9" cy="10" r="0.6" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="10" r="0.6" fill="currentColor" stroke="none" />
+        </svg>
+      )
+    case 'reviews':
+      // Award ribbon — comparison conclusion, not cheerleading star
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="9" r="5.5" />
+          <path d="M8.5 13L6 21l3.5-2 2.5 1.5 2.5-1.5L18 21l-2.5-8" />
+          <path d="M12 6.5l1 2 2.2.2-1.7 1.4.6 2.2L12 11l-2.1 1.3.6-2.2-1.7-1.4 2.2-.2z" />
+        </svg>
+      )
+    case 'tools':
+      // Calculator — calculators, dosing math, stocking math
+      return (
+        <svg {...common}>
+          <rect x="5" y="3" width="14" height="18" rx="1.5" />
+          <rect x="8" y="6" width="8" height="3" rx="0.5" />
+          <circle cx="9" cy="13" r="0.7" fill="currentColor" stroke="none" />
+          <circle cx="12" cy="13" r="0.7" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="13" r="0.7" fill="currentColor" stroke="none" />
+          <circle cx="9" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
+          <circle cx="12" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
+        </svg>
+      )
+  }
+}
+
+// ── Page data ──────────────────────────────────────────────────────────────
+
+const CATEGORIES: {
+  icon: CategoryIcon
+  title: string
+  desc: string
+  href: string
+}[] = [
   {
-    name: 'Betta Fish',
-    type: 'Freshwater · Labyrinth',
-    tags: ['Beginner', 'Solo', 'Colorful'],
-    href: '/species/betta-fish',
-    image: 'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Betta fish',
+    icon: 'species',
+    title: 'Species',
+    desc:
+      'Profiles for community fish, single-species displays, schoolers, and the difficult ones — temperament, parameter range, and tankmate logic that respects each species.',
+    href: '/species',
   },
   {
-    name: 'Neon Tetra',
-    type: 'Freshwater · Characin',
-    tags: ['Community', 'Schooling', 'Hardy'],
-    href: '/species/neon-tetra',
-    image: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Neon tetra fish',
+    icon: 'setup',
+    title: 'Setup',
+    desc:
+      'Tank cycling, hardware selection, substrate, filtration sizing, and the planted-, saltwater-, and pond-specific decisions that come before the first fish goes in.',
+    href: '/setup',
   },
   {
-    name: 'Clownfish',
-    type: 'Saltwater · Reef',
-    tags: ['Reef Safe', 'Hardy', 'Iconic'],
-    href: '/species/clownfish',
-    image: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Clownfish in anemone',
+    icon: 'chemistry',
+    title: 'Water Chemistry',
+    desc:
+      'The nitrogen cycle, pH and KH, GH, ammonia and nitrite thresholds, and the slow-moving parameters that decide whether a tank reads stable or stays in trouble.',
+    href: '/water',
   },
   {
-    name: 'Goldfish',
-    type: 'Freshwater · Cyprinid',
-    tags: ['Beginner', 'Coldwater', 'Long-lived'],
-    href: '/species/goldfish',
-    image: 'https://images.unsplash.com/photo-1524704654690-b56af7d6b9f1?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Goldfish',
+    icon: 'health',
+    title: 'Fish Health',
+    desc:
+      'Ich, fin rot, dropsy, columnaris, velvet, and the rest — disease identification with treatment protocols and the when-to-call-an-aquatic-vet line.',
+    href: '/health',
+  },
+  {
+    icon: 'reviews',
+    title: 'Equipment Reviews',
+    desc:
+      'Filters, heaters, lights, water test kits, and nano tanks evaluated on the same dimensions — independent comparisons, retail receipts, no paid placements.',
+    href: '/reviews',
+  },
+  {
+    icon: 'tools',
+    title: 'Calculators',
+    desc:
+      'Aquarium volume, stocking density, heater wattage, CO2 dosing, and water-change planners — the math that keeps a tank inside the parameters its inhabitants need.',
+    href: '/tools',
   },
 ]
 
-const GUIDE_CATEGORIES = [
-  { icon: '🧮', title: 'Calculators', desc: 'Volume, stocking, heater, CO2', href: '/tools' },
-  { icon: '🐠', title: 'Species Guides', desc: '200+ fish profiles', href: '/species' },
-  { icon: '🏠', title: 'Tank Setup', desc: 'Size, filtration, substrate', href: '/setup' },
-  { icon: '🌿', title: 'Planted Tanks', desc: 'Live plants, CO2, lighting', href: '/setup/planted-tank-setup' },
-  { icon: '🪸', title: 'Reef & Saltwater', desc: 'Marine systems and corals', href: '/setup/saltwater-tank-setup' },
-  { icon: '🏥', title: 'Fish Health', desc: 'Disease ID and treatment', href: '/health' },
-  { icon: '🧪', title: 'Water Chemistry', desc: 'pH, ammonia, nitrites, cycling', href: '/water' },
-  { icon: '⚙️', title: 'Equipment Reviews', desc: 'Filters, lights, heaters', href: '/reviews' },
+const FEATURED: {
+  href: string
+  eyebrow: string
+  title: string
+  teaser: string
+  readTime: string
+}[] = [
+  {
+    href: '/setup/aquarium-cycling-guide',
+    eyebrow: 'Setup · Cornerstone',
+    title: 'The Aquarium Cycling Guide',
+    teaser:
+      'Fishless cycling, fish-in cycling, when ammonia and nitrite finally read zero, and why the slow weeks at the start determine whether the tank reads stable a year from now. The step-by-step reference, written without the forum-lore detours.',
+    readTime: '18 min',
+  },
+  {
+    href: '/water/nitrogen-cycle-explained',
+    eyebrow: 'Water Chemistry',
+    title: 'The Nitrogen Cycle, Explained',
+    teaser:
+      'Ammonia to nitrite to nitrate — the bacterial chemistry that turns a sterile tank into a habitat, and the parameter readings that tell you the colony has actually arrived. A reference for the test results you are about to look at.',
+    readTime: '11 min',
+  },
+  {
+    href: '/species/betta-fish',
+    eyebrow: 'Species Profile',
+    title: 'Betta Fish',
+    teaser:
+      'Labyrinth fish from the rice paddies and slow-water margins of Southeast Asia, sold to beginners and almost universally undertanked. Temperament, parameter range, tankmate logic, and the five-gallon-minimum argument with the science behind it.',
+    readTime: '14 min',
+  },
+  {
+    href: '/reviews/best-aquarium-filters',
+    eyebrow: 'Equipment Review',
+    title: 'Best Aquarium Filters',
+    teaser:
+      'HOB, canister, sponge, and internal — eight filters compared on flow rate, media volume, noise floor, and serviceability. Tank-volume sizing, planted-tank flow considerations, and which categories overlap with which use cases.',
+    readTime: '13 min',
+  },
 ]
+
+const TRUST_CLAIMS = [
+  'Research-anchored content',
+  'Aquatic-vet respectful',
+  'No paid scores',
+  'WAVMA-aligned guidance',
+]
+
+// ── Page ───────────────────────────────────────────────────────────────────
 
 export default function FishHomePage() {
   return (
     <>
-      {/* ── HERO ────────────────────────────────────────────────────── */}
-      <section className="min-h-[92vh] grid lg:grid-cols-[1fr_1.1fr] bg-brand-dark overflow-hidden">
-        <div className="flex flex-col justify-center px-container sm:px-container-sm py-20 relative z-10">
-          {/* Underwater texture overlay */}
-          <div
-            className="absolute inset-0 opacity-8"
-            style={{
-              backgroundImage: `
-                radial-gradient(ellipse at 15% 60%, rgba(14,107,138,0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 85% 30%, rgba(14,107,138,0.08) 0%, transparent 40%)
-              `,
-            }}
-            aria-hidden="true"
-          />
+      {/* ── HERO ───────────────────────────────────────────────────────
+          CSS-only deep-water field. Three radial washes stacked over the
+          brand-dark masthead — a teal light upper-right (the lamp at the
+          surface), a deep shadow lower-left (the substrate), and a top-
+          weighted vertical fade to anchor the headline. A subtle wave
+          overlay (repeating-linear-gradient at 4deg) sits at 6% opacity
+          to keep the field from reading flat. */}
+      <section className="relative overflow-hidden bg-brand-dark">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: [
+              'radial-gradient(ellipse 85% 60% at 78% 14%, rgba(91,192,222,0.16) 0%, transparent 55%)',
+              'radial-gradient(ellipse 70% 70% at 10% 95%, rgba(8,74,102,0.65) 0%, transparent 60%)',
+              'linear-gradient(180deg, rgba(6,18,27,0.0) 0%, rgba(6,18,27,0.55) 95%)',
+            ].join(','),
+          }}
+        />
+        {/* Subtle wave / water-ripple overlay */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(4deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 6px)',
+          }}
+        />
+        {/* Caustic-light flicker — second pass, vertical */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-screen"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, rgba(91,192,222,0.4) 0px, rgba(91,192,222,0.4) 1px, transparent 1px, transparent 4px)',
+          }}
+        />
 
-          <div className="relative z-10">
-            <div className="flex items-center gap-2.5 mb-8">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                The Complete Aquarium Resource
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
+          <div className="max-w-3xl">
+            {/* Eyebrow — refraction-light rule + tracking-eyebrow caps */}
+            <div className="flex items-center gap-3 mb-6">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-accent)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                The Aquarium Reference
               </span>
             </div>
 
+            {/* Wordmark — Cormorant 700 */}
             <h1
-              className="font-display text-white leading-none tracking-tighter mb-6"
-              style={{ fontSize: 'clamp(52px, 7vw, 90px)', fontWeight: 400, fontStyle: 'italic' }}
+              className="font-display font-bold text-white tracking-tight leading-[1.02] mb-6"
+              style={{ fontSize: 'clamp(48px, 7.5vw, 92px)' }}
             >
-              Fishkeeping,<br />
-              <span className="not-italic font-bold">Done Right.</span>
+              Fish.com
             </h1>
 
-            <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Species guides for 200+ fish, water chemistry explained, honest equipment reviews,
-              and fish health content written with aquarists who know what they&apos;re talking about.
+            {/* Tagline — Cormorant italic, accent-tinted, the magazine-cover voice */}
+            <p
+              className="font-display italic mb-7"
+              style={{
+                color: 'var(--brand-accent-light)',
+                fontSize: 'clamp(22px, 2.4vw, 30px)',
+                lineHeight: 1.25,
+                maxWidth: '46rem',
+              }}
+            >
+              An aquarium reference.
             </p>
 
-            <div className="flex gap-4 flex-wrap">
-              <Link href="/species"
-                className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors">
-                Browse Species →
-              </Link>
-              <Link href="/setup"
-                className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-7 py-3.5 rounded no-underline hover:border-white/40 hover:text-white transition-colors">
-                Tank Setup Guide
-              </Link>
-            </div>
+            {/* Positioning paragraph — ~80 words establishing what the site is and is not */}
+            <p className="text-base lg:text-lg text-white/75 leading-relaxed max-w-2xl mb-9">
+              Fish.com is a research-based reference for aquarists across
+              freshwater, planted, saltwater, and pond systems. Not a community
+              forum, not a tank-shot gallery, not a tackle shop. Every species
+              profile is tied to published parameter ranges, every health entry
+              points to the when-to-call-an-aquatic-vet line, and every filter,
+              heater, and water-test kit is compared on the same dimensions.
+              Where Aquarium Co-Op runs the community and Practical Fishkeeping
+              runs the magazine, Fish.com runs the reference.
+            </p>
 
-            {/* Trust stats */}
-            <div className="flex gap-8 mt-12 pt-8 border-t border-white/10">
-              {[
-                { num: '200+', label: 'Species Profiles' },
-                { num: 'Expert', label: 'Reviewed Content' },
-                { num: '50+', label: 'Equipment Reviews' },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-display text-2xl font-bold text-white">{stat.num}</div>
-                  <div className="text-xs text-white/35 mt-0.5">{stat.label}</div>
-                </div>
-              ))}
+            {/* CTAs — primary refraction-blue, secondary text-arrow link */}
+            <div className="flex items-center gap-6 flex-wrap">
+              <Link
+                href="/setup/aquarium-cycling-guide"
+                className="inline-flex items-center font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200"
+                style={{
+                  background: 'var(--brand-accent)',
+                  color: 'var(--brand-dark)',
+                }}
+              >
+                Read the cycling guide
+                <span aria-hidden="true" className="ml-2">→</span>
+              </Link>
+              <Link
+                href="/reviews"
+                className="group inline-flex items-center text-sm font-semibold text-white/85 no-underline hover:text-white transition-colors"
+              >
+                Find your equipment
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </Link>
             </div>
           </div>
-        </div>
-
-        {/* Hero image */}
-        <div className="relative hidden lg:block overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=1000&q=80&auto=format&fit=crop"
-            alt="Tropical aquarium with colorful fish"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="55vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to right, #050E14 0%, rgba(5,14,20,0.3) 20%, transparent 50%), linear-gradient(to top, rgba(5,14,20,0.5) 0%, transparent 40%)',
-            }}
-            aria-hidden="true"
-          />
         </div>
       </section>
 
-      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center">
-        {[
-          '✓ Research-based content',
-          '✓ 200+ species profiles',
-          '✓ Honest equipment reviews',
-          '✓ No paid editorial placements',
-        ].map((item) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary">
-            {item}
-          </span>
-        ))}
-      </div>
-
-      {/* ── FEATURED SPECIES ───────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
-        <div className="flex items-end justify-between mb-9">
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Species Library</span>
-            </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">Popular Species</h2>
-          </div>
-          <Link href="/species" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
-            All 200+ species →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          {FEATURED_SPECIES.map((species) => (
-            <Link
-              key={species.name}
-              href={species.href}
-              className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
+      {/* ── TRUST BAR — slim dark strip with vertical separators ───────── */}
+      <div
+        className="px-container-sm sm:px-container py-4"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+          borderBottom: '1px solid rgba(255,255,255,0.05)',
+        }}
+      >
+        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2">
+          {TRUST_CLAIMS.map((item, i, arr) => (
+            <span
+              key={item}
+              className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
+              style={{ color: 'rgba(255,255,255,0.80)' }}
             >
-              <div className="relative h-44 overflow-hidden">
-                <Image src={species.image} alt={species.imageAlt} fill className="object-cover" sizes="(max-width: 640px) 50vw, 25vw" />
-              </div>
-              <div className="p-4">
-                <div className="font-display font-semibold text-brand-dark text-base mb-1">{species.name}</div>
-                <div className="text-xs text-brand-text-light mb-2.5">{species.type}</div>
-                <div className="flex gap-1.5 flex-wrap">
-                  {species.tags.map((tag) => (
-                    <span key={tag} className="text-2xs font-semibold px-2 py-0.5 bg-brand-surface text-brand-text-mid rounded-pill border border-brand-border">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
+              <span
+                aria-hidden="true"
+                className="mr-2"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                ✓
+              </span>
+              {item}
+              {i < arr.length - 1 && (
+                <span
+                  aria-hidden="true"
+                  className="hidden sm:inline mx-5 h-3 w-px"
+                  style={{ background: 'rgba(255,255,255,0.18)' }}
+                />
+              )}
+            </span>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* ── GUIDE CATEGORIES ───────────────────────────────────────── */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(14,107,138,0.4) 0%, transparent 60%)' }}
-          aria-hidden="true" />
-        <div className="relative z-10">
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Complete Library</span>
+      {/* ── CATEGORIES — six-card grid, magazine-spread voice ─────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-surface)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-primary)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  By Section
+                </span>
+              </div>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
+                Where to start
+              </h2>
+            </div>
+            <p
+              className="text-sm max-w-md"
+              style={{ color: 'var(--brand-text-light)' }}
+            >
+              Every section reads the same whether you arrived from a search
+              for fish-in cycling, a fin-rot diagnosis, or a comparison of
+              canister filters.
+            </p>
           </div>
-          <h2 className="font-display font-bold text-white tracking-tight text-3xl mb-2">Everything You Need</h2>
-          <p className="text-base text-white/40 max-w-lg mb-10">Reference content across every aspect of fishkeeping.</p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {GUIDE_CATEGORIES.map((cat) => (
-              <Link key={cat.href} href={cat.href}
-                className="block bg-white/5 border border-white/8 rounded-lg p-6 text-center no-underline hover:bg-brand-primary/10 hover:border-brand-primary/25 hover:-translate-y-1 transition-all duration-200">
-                <span className="text-3xl mb-3 block">{cat.icon}</span>
-                <div className="font-display font-semibold text-white text-sm mb-1.5">{cat.title}</div>
-                <div className="text-xs text-white/40">{cat.desc}</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {CATEGORIES.map((cat) => (
+              <Link
+                key={cat.href}
+                href={cat.href}
+                className="group block p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                style={{
+                  background: 'var(--brand-white)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                <div
+                  className="mb-5 transition-colors"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  <CategoryIconSvg name={cat.icon} />
+                </div>
+                <h3
+                  className="font-display font-bold text-xl leading-snug mb-2"
+                  style={{ color: 'var(--brand-text-dark)' }}
+                >
+                  {cat.title}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed mb-4"
+                  style={{ color: 'var(--brand-text-mid)' }}
+                >
+                  {cat.desc}
+                </p>
+                <span
+                  className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Read
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
-      <section className="bg-brand-primary-pale px-container sm:px-container-sm py-section">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Species spotlights, water chemistry tips, equipment picks, and fishkeeping advice — every Thursday."
-          ctaText="Subscribe Free"
-          source="homepage-section"
-          perks={['🐠 Species spotlights', '🧪 Water chemistry tips', '⚙️ Equipment picks', '🚫 No spam']}
+      {/* ── FEATURED CORNERSTONES — eyebrow + Cormorant title + teaser ── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-white)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-primary)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Cornerstone Articles
+                </span>
+              </div>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
+                Reference, maintained
+              </h2>
+            </div>
+            <p
+              className="text-sm max-w-md"
+              style={{ color: 'var(--brand-text-light)' }}
+            >
+              The pieces we link back to constantly — re-read when the science
+              shifts, re-dated when they get an edit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {FEATURED.map((art) => (
+              <Link
+                key={art.href}
+                href={art.href}
+                className="group block p-7 lg:p-8 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                style={{
+                  background: 'var(--brand-surface)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                {/* Decorative top rule — accent, signals premium */}
+                <span
+                  aria-hidden="true"
+                  className="block h-px w-10 mb-5"
+                  style={{ background: 'var(--brand-primary)' }}
+                />
+                <div
+                  className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  {art.eyebrow}
+                </div>
+                <h3
+                  className="font-display font-bold text-2xl leading-tight mb-3"
+                  style={{ color: 'var(--brand-text-dark)' }}
+                >
+                  {art.title}
+                </h3>
+                <p
+                  className="text-base leading-relaxed mb-5"
+                  style={{ color: 'var(--brand-text-mid)' }}
+                >
+                  {art.teaser}
+                </p>
+                <div className="flex items-center justify-between gap-4">
+                  <span
+                    className="text-xs font-semibold uppercase tracking-eyebrow tabular-display"
+                    style={{ color: 'var(--brand-text-light)' }}
+                  >
+                    {art.readTime} read
+                  </span>
+                  <span
+                    className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                    style={{ color: 'var(--brand-primary)' }}
+                  >
+                    Read
+                    <span
+                      aria-hidden="true"
+                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EDITORIAL STANDARDS BAND — deep teal + Cormorant pull quote ── */}
+      <section
+        className="px-container-sm sm:px-container py-section relative overflow-hidden"
+        style={{ background: 'var(--brand-primary)' }}
+      >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse 60% 60% at 82% 22%, rgba(91,192,222,0.18) 0%, transparent 60%)',
+          }}
         />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(2deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 7px)',
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-container-wide grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-accent-light)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Editorial Standard
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
+              style={{ lineHeight: 1.15 }}
+            >
+              The reference reads the same
+              <br />
+              <em
+                className="not-italic font-display italic"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                whichever tank you arrived from.
+              </em>
+            </h2>
+          </div>
+          <div className="text-white/85 leading-relaxed space-y-5">
+            <p className="text-base lg:text-lg">
+              Every species profile carries its published parameter range —
+              temperature, pH, hardness, tankmate logic — drawn from FishBase,
+              peer-reviewed habitat surveys, and established care sheets, not
+              forum lore. Every health entry names the disease, the protocol,
+              and the WAVMA-listed aquatic-veterinarian line for when the tank
+              is past hobbyist treatment.
+            </p>
+            <p className="text-base lg:text-lg">
+              Equipment write-ups draw on retail receipts and manufacturer
+              specifications. No paid scores. No undisclosed sponsorships. No
+              brand bought a higher position. Where the evidence is mixed —
+              planted-tank dosing strategies, marine refugium design, certain
+              disease treatments — we say so on the page.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/editorial-standards"
+                className="group inline-flex items-center text-sm font-semibold no-underline transition-colors"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Read our editorial standards
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE — cycling-guide lead magnet teaser ─────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-primary-pale)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <EmailCapture
+            variant="section"
+            siteId="fish-com"
+            source="homepage"
+            title="The Cycling Guide, in your inbox"
+            subtitle="An eight-email reference series that walks the nitrogen cycle from sterile glass to a colony reading zero ammonia and zero nitrite. Fishless and fish-in protocols, the parameter readings that mean what they mean, and the slow weeks that decide whether the tank reads stable a year from now. One email per stage. No upsells."
+            ctaText="Send me the series"
+            perks={[
+              'Eight emails, one tank',
+              'Citation-anchored',
+              'Aquatic-vet respectful',
+              'Unsubscribe anytime',
+            ]}
+          />
+        </div>
       </section>
     </>
   )
