@@ -61,7 +61,7 @@ export default function DogEarInfectionsPage() {
           <p>Breeds with heavy, pendulous ears (Cocker Spaniels, Basset Hounds, Bloodhounds) trap moisture and have reduced airflow — predisposing to chronic infections. Breeds with hairy ear canals (Poodles, Schnauzers) may benefit from hair removal by a groomer or veterinarian to improve ventilation. Breeds with allergies (Goldens, Labradors, Frenchies, Bulldogs) are predisposed because ear infection is commonly an allergy manifestation.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, Scor
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best English Saddles 2025 — Dressage, Jumping | Saddle.com', description: 'We ranked the best English saddles by discipline — dressage, show jumping, all-purpose, and eventing. Stubben, Pessoa, Bates.', path: '/reviews/best-english-saddles', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English Saddles 2025', description: 'Stubben, Pessoa, Bates, Collegiate — compared across disciplines using published reviewer notes and rider reports.', url: 'https://saddle.com/reviews/best-english-saddles', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English Saddles 2025', description: 'Stubben, Pessoa, Bates, Collegiate — compared across disciplines using published reviewer notes and rider reports.', url: 'https://saddle.com/reviews/best-english-saddles', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Dressage', emoji: '🏆', name: 'Stubben Roxane', subtitle: '9.5 · Quick-Change · German leather', href: '#roxane' },
@@ -26,7 +26,9 @@ export default function BestEnglishSaddlesPage() {
         <div className="relative z-10">
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best English Saddles 2025</h1>
-          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right English saddle depends entirely on your discipline — a dressage saddle on a jumping horse is the wrong tool. Here&apos;s the top pick for each discipline, compared using CSF reviewer notes and published rider reports.</p>
+          <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
+            The best English saddle in 2025 depends on discipline: Stubben Roxane for dressage (Quick-Change tree, German leather), Pessoa Gen X Pro for show jumping (close-contact geometry ridden at Olympic level), Bates Caprilli for all-purpose (CAIR adjustable panels), and Collegiate Convertible AP as the best under-$800 pick. We compared by Society of Master Saddlers and CSF reviewer notes plus published rider reports. Saddle fit by a qualified fitter matters more than any single model choice.
+          </p>
         </div>
       </div>
       <QuickPicks items={PICKS} />
