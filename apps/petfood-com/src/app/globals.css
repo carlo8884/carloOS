@@ -4,6 +4,7 @@
 
 /* ─────────────────────────────────────────────
    PETFOOD.COM THEME TOKENS
+<<<<<<< HEAD
    "Consumer Reports of pet food" — moss-green
    primary, warm white, food-science feel.
    ───────────────────────────────────────────── */
@@ -38,6 +39,40 @@
   --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
   --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+=======
+   Sets CSS variables consumed by Tailwind utilities.
+   Change these values here; Tailwind picks them up automatically.
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Brand — clean food-brand palette */
+  --brand-primary: #D9622A;
+  --brand-primary-light: #E87A40;
+  --brand-primary-pale: #FBEEE3;
+  --brand-primary-dark: #B04A18;
+
+  /* Backgrounds */
+  --brand-dark: #1F1A14;
+  --brand-surface: #FBF8F2;
+  --brand-white: #FFFFFF;
+
+  /* Text */
+  --brand-text-dark: #1F1A14;
+  --brand-text-mid: #4A3E30;
+  --brand-text-light: #8A7E68;
+
+  /* Borders */
+  --brand-border: #ECE4D6;
+
+  /* Semantic */
+  --brand-success: #2A7A3A;
+  --brand-warning: #C8952A;
+  --brand-danger: #C84A2A;
+
+  /* Typography (loaded via next/font — variable names set there) */
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+>>>>>>> origin/main
 
   /* Layout */
   --nav-height: 68px;
@@ -55,9 +90,15 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   @apply bg-brand-surface text-brand-text-dark;
   font-family: var(--font-body);
   line-height: 1.65;
+=======
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+>>>>>>> origin/main
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,6 +135,7 @@ img {
   --tw-prose-td-borders: var(--brand-border);
 }
 
+<<<<<<< HEAD
 /* Ingredient panels / scoring data / regulatory references render in mono.
    Tagging a table or inline span with `.data-mono` opts it in. */
 .carloOS-article .data-mono,
@@ -140,9 +182,22 @@ img {
 }
 
 /* Font CSS variables — fallback when next/font fails to load (offline build) */
+=======
+/* ─── SELECTION ───────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(217, 98, 42, 0.2);
+  color: var(--brand-text-dark);
+}
+
+/* Font CSS variables — fonts loaded via Google Fonts CDN */
+>>>>>>> origin/main
 .font-vars,
 :root {
   --font-cormorant: Georgia, "Times New Roman", serif;
   --font-inter: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+<<<<<<< HEAD
   --font-jetbrains-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+=======
+>>>>>>> origin/main
 }

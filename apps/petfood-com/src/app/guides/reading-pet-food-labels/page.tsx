@@ -212,7 +212,11 @@ export default function ReadingPetFoodLabelsPage() {
         <p>
           To convert as-fed to dry-matter:
         </p>
+<<<<<<< HEAD
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', background: 'var(--brand-primary-pale)', border: '1px solid var(--brand-border)', padding: '14px 18px', borderRadius: '8px', margin: '14px 0', color: 'var(--brand-text-dark)' }}>
+=======
+        <p style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: '14px', background: 'rgba(31,26,20,0.05)', padding: '14px 18px', borderRadius: '8px', margin: '14px 0' }}>
+>>>>>>> origin/main
           Dry-Matter % = (As-Fed % ÷ (100 − Moisture %)) × 100
         </p>
         <p>
@@ -242,7 +246,11 @@ export default function ReadingPetFoodLabelsPage() {
           that each appear lower on the list, allowing a different ingredient — typically a named
           protein — to occupy the first position. Worked example:
         </p>
+<<<<<<< HEAD
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', background: 'var(--brand-primary-pale)', border: '1px solid var(--brand-border)', padding: '14px 18px', borderRadius: '8px', margin: '14px 0', color: 'var(--brand-text-dark)' }}>
+=======
+        <p style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: '14px', background: 'rgba(31,26,20,0.05)', padding: '14px 18px', borderRadius: '8px', margin: '14px 0' }}>
+>>>>>>> origin/main
           Chicken, ground corn, corn gluten meal, corn bran, chicken fat, ...
         </p>
         <p>

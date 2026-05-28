@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 50+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
 
 const SECTIONS = [
   { category: '🚨 Emergency', items: [{ title: '15 Dog Symptoms to Never Ignore', href: '/health/dog-symptoms-guide', badge: 'Essential' }, { title: 'Find an Emergency Vet', href: '/find-a-vet' }] },
@@ -11,13 +12,78 @@ const SECTIONS = [
   { category: '💊 Treatments & Products', items: [{ title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { title: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
 ]
 
+const CATEGORY_ORDER: DiseaseCategory[] = [
+  'Infectious',
+  'Oncology',
+  'Cardiac',
+  'Renal',
+  'GI',
+  'Endocrine',
+  'Orthopedic',
+  'Neurological',
+  'Ocular',
+  'Respiratory',
+  'Skin',
+  'Dental',
+  'Reproductive',
+  'Behavioral',
+  'Genetic',
+]
+
+const CATEGORY_ICONS: Record<DiseaseCategory, string> = {
+  Infectious: '🦠',
+  Oncology: '🩺',
+  Cardiac: '❤️',
+  Renal: '💧',
+  GI: '🍽️',
+  Endocrine: '⚖️',
+  Orthopedic: '🦴',
+  Neurological: '🧠',
+  Ocular: '👁️',
+  Respiratory: '🫁',
+  Skin: '🐕',
+  Dental: '🦷',
+  Reproductive: '🧬',
+  Behavioral: '🐾',
+  Genetic: '🧬',
+}
+
+function urgencyBadge(u: string): { label: string; cls: string } {
+  switch (u) {
+    case 'Emergency — ER now':
+      return { label: 'ER', cls: 'bg-red-100 text-red-800' }
+    case 'Same-day vet':
+      return { label: 'Same-day', cls: 'bg-orange-100 text-orange-800' }
+    case 'Schedule vet visit':
+      return { label: 'Vet visit', cls: 'bg-yellow-100 text-yellow-800' }
+    default:
+      return { label: 'Monitor', cls: 'bg-green-100 text-green-800' }
+  }
+}
+
+// Group programmatic diseases by category, excluding existing static slugs.
+function groupedDiseases() {
+  const programmaticOnly = Diseases.filter(
+    (d) => !d.existingHandWrittenSlug && !EXISTING_STATIC_HEALTH_SLUGS.has(d.slug),
+  )
+  const groups: Record<DiseaseCategory, typeof Diseases> = {} as Record<DiseaseCategory, typeof Diseases>
+  for (const d of programmaticOnly) {
+    if (!groups[d.category]) groups[d.category] = []
+    groups[d.category].push(d)
+  }
+  return groups
+}
+
 export default function DogHealthHubPage() {
+  const groups = groupedDiseases()
+  const totalProgrammatic = Object.values(groups).reduce((acc, list) => acc + list.length, 0)
+
   return (
     <>
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health Library</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">50+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">100+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
       </div>
       <div className="px-container sm:px-container-sm py-14">
         {SECTIONS.map(section => (
@@ -34,12 +100,63 @@ export default function DogHealthHubPage() {
           </div>
         ))}
       </div>
+
+      {/* Conditions browser — grouped by category, programmatic from /data/diseases.ts */}
+      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-12">
+        <div className="flex items-baseline gap-3 mb-2">
+          <h2 className="font-display font-bold text-brand-dark text-xl">Conditions A–Z</h2>
+          <span className="text-xs text-brand-text-light">
+            {totalProgrammatic} conditions across {Object.keys(groups).length} categories
+          </span>
+        </div>
+        <p className="text-sm text-brand-text-mid mb-6 max-w-2xl">
+          Disease and condition references with symptoms, diagnostic approach, treatment tiers, and prognosis. Each page is sourced from ACVIM consensus statements, AAHA guidelines, OFA data, and the peer-reviewed veterinary literature.
+        </p>
+        <div className="space-y-8">
+          {CATEGORY_ORDER.map((cat) => {
+            const list = groups[cat]
+            if (!list || list.length === 0) return null
+            return (
+              <div key={cat}>
+                <h3 className="font-display font-bold text-brand-dark text-base mb-3 flex items-center gap-2">
+                  <span>{CATEGORY_ICONS[cat]}</span>
+                  <span>{cat}</span>
+                  <span className="text-xs font-normal text-brand-text-light">({list.length})</span>
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {list.map((d) => {
+                    const u = urgencyBadge(d.urgency)
+                    return (
+                      <Link
+                        key={d.slug}
+                        href={`/health/${d.slug}`}
+                        className="block bg-brand-white border border-brand-border rounded-lg p-3 no-underline hover:border-brand-primary transition-colors"
+                      >
+                        <div className="flex items-start justify-between gap-2">
+                          <span className="font-display font-semibold text-brand-dark text-sm leading-tight">
+                            {d.name}
+                          </span>
+                          <span className={`text-2xs font-bold tracking-eyebrow uppercase px-2 py-0.5 rounded ${u.cls} whitespace-nowrap`}>
+                            {u.label}
+                          </span>
+                        </div>
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
       <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
         <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 Breed-specific']} />
       </div>
+
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
-        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics</h2>
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics (hand-written)</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="addisons-disease" href="/health/addisons-disease" className="text-sm text-brand-primary no-underline hover:underline">Addisons Disease</Link>
         <Link key="anemia-in-dogs" href="/health/anemia-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Anemia In Dogs</Link>
