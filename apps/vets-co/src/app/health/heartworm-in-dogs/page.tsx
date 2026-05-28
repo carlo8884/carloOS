@@ -50,7 +50,7 @@ export default function HeartwormPage() {
           <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow — exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
