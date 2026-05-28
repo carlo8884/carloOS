@@ -7,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
    "Consumer Reports of pet food" — moss-green
    primary, warm white, food-science feel.
    ───────────────────────────────────────────── */
@@ -43,6 +45,7 @@
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 =======
 >>>>>>> origin/main
+>>>>>>> origin/main
    Sets CSS variables consumed by Tailwind utilities.
    Change these values here; Tailwind picks them up automatically.
    ───────────────────────────────────────────── */
@@ -77,6 +80,9 @@
   --font-body: var(--font-inter), system-ui, sans-serif;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 
@@ -102,6 +108,11 @@ body {
   line-height: 1.6;
 =======
 <<<<<<< HEAD
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+=======
+<<<<<<< HEAD
   @apply bg-brand-surface text-brand-text-dark;
   font-family: var(--font-body);
   line-height: 1.65;
@@ -109,6 +120,7 @@ body {
   @apply bg-brand-white text-brand-text-dark;
   font-family: var(--font-body);
   line-height: 1.6;
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   overflow-x: hidden;
@@ -147,6 +159,8 @@ img {
   --tw-prose-td-borders: var(--brand-border);
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -198,6 +212,7 @@ img {
 /* Font CSS variables — fallback when next/font fails to load (offline build) */
 =======
 >>>>>>> origin/main
+>>>>>>> origin/main
 /* ─── SELECTION ───────────────────────────────────────────────── */
 
 ::selection {
@@ -208,6 +223,9 @@ img {
 /* Font CSS variables — fonts loaded via Google Fonts CDN */
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 .font-vars,
@@ -217,8 +235,11 @@ img {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   --font-jetbrains-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 =======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 }

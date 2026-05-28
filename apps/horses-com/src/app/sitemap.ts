@@ -2,12 +2,16 @@ import { MetadataRoute } from 'next'
 
 /**
 <<<<<<< HEAD
+ * Skeleton sitemap — only the homepage exists today.
+=======
+<<<<<<< HEAD
  * Sitemap — homepage + cornerstone content pages.
 =======
 <<<<<<< HEAD
  * Skeleton sitemap — only the homepage exists today.
 =======
  * Sitemap — homepage + cornerstone content pages.
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
  * Add new entries here (or via scripts/regenerate-sitemaps.mjs) as content lands.
@@ -21,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/main
     { url: 'https://horses.com/first-horse-roadmap', lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
     { url: 'https://horses.com/breeds/quarter-horse', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
@@ -30,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/reviews/best-winter-horse-blankets', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
 <<<<<<< HEAD
 =======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   ]

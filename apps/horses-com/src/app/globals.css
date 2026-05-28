@@ -8,6 +8,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
    HORSES.COM THEME TOKENS — refined equestrian
    Brand brief: deep forest green primary, saddle-leather tan secondary,
    unbleached cream surface, brass accent, off-black text.
@@ -53,6 +55,7 @@
 =======
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
    HORSES.COM THEME TOKENS
    Sets CSS variables consumed by Tailwind utilities.
    Change these values here; Tailwind picks them up automatically.
@@ -90,6 +93,9 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
@@ -112,6 +118,8 @@ html {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   font-family: var(--font-body);
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   text-rendering: optimizeLegibility;
@@ -123,6 +131,7 @@ body {
 =======
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
 }
 
 body {
@@ -131,6 +140,9 @@ body {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
@@ -146,6 +158,8 @@ body {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6, .font-display {
   font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
 }
@@ -153,6 +167,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .tabular-display { font-variant-numeric: lining-nums tabular-nums; }
 
 =======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
@@ -183,11 +198,14 @@ img {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   --tw-prose-bullets: var(--brand-accent);
   --tw-prose-hr: var(--brand-border);
   --tw-prose-quotes: var(--brand-text-mid);
   --tw-prose-quote-borders: var(--brand-accent);
 =======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   --tw-prose-bullets: var(--brand-text-light);
@@ -198,6 +216,9 @@ img {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
@@ -206,6 +227,8 @@ img {
   --tw-prose-td-borders: var(--brand-border);
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -238,6 +261,7 @@ img {
 =======
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
 /* ─── SELECTION ───────────────────────────────────────────────── */
 
 ::selection {
@@ -254,6 +278,9 @@ img {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main

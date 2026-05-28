@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 >>>>>>> origin/main
  * Horses.com — placeholder homepage.
  * Skeleton only: real content arrives in a later sprint.
@@ -15,6 +18,8 @@ export const metadata: Metadata = buildMetadata({
   title: 'Horses.com',
   description:
     'Premium domain. Site coming soon — research-based reference for horse owners.',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -35,6 +40,7 @@ export const metadata: Metadata = buildMetadata({
     'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
   path: '/',
   type: 'website',
 })
@@ -42,6 +48,9 @@ export const metadata: Metadata = buildMetadata({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 >>>>>>> origin/main
 export default function HomePage() {
   const year = new Date().getFullYear()
@@ -86,6 +95,8 @@ export default function HomePage() {
         © {year} Horses.com
       </footer>
     </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -665,6 +676,7 @@ export default function HomePage() {
         />
       </section>
     </>
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   )

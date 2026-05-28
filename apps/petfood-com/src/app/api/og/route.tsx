@@ -22,9 +22,13 @@ const SITE_CONFIGS: Record<string, { primary: string; dark: string; name: string
   'petfood-com': { primary: '#D9622A', dark: '#1F1A14', name: 'PetFood.com', domain: 'petfood.com' },
 =======
 <<<<<<< HEAD
+  'petfood-com': { primary: '#D9622A', dark: '#1F1A14', name: 'PetFood.com', domain: 'petfood.com' },
+=======
+<<<<<<< HEAD
   'petfood-com': { primary: '#3F5C3A', dark: '#1A1F18', name: 'PetFood.com', domain: 'petfood.com' },
 =======
   'petfood-com': { primary: '#D9622A', dark: '#1F1A14', name: 'PetFood.com', domain: 'petfood.com' },
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
 }
@@ -36,9 +40,13 @@ export async function GET(req: NextRequest) {
   const title = searchParams.get('title') ?? 'A Reference for Pet Nutrition'
 =======
 <<<<<<< HEAD
+  const title = searchParams.get('title') ?? 'A Reference for Pet Nutrition'
+=======
+<<<<<<< HEAD
   const title = searchParams.get('title') ?? 'The independent reference for pet food.'
 =======
   const title = searchParams.get('title') ?? 'A Reference for Pet Nutrition'
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   const category = searchParams.get('category') ?? ''
