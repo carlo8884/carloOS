@@ -179,7 +179,7 @@ const FEATURED: {
     readTime: '18 min',
   },
   {
-    href: '/water/nitrogen-cycle-explained',
+    href: '/health/nitrogen-cycle-explained',
     eyebrow: 'Water Chemistry',
     title: 'The Nitrogen Cycle, Explained',
     teaser:
