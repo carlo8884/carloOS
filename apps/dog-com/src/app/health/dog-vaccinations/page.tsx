@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vaccination Schedule', description: 'Core and non-core vaccines, puppy schedule, and titer testing for dogs.', url: 'https://dog.com/health/dog-vaccinations', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vaccination Schedule', description: 'Core and non-core vaccines, puppy schedule, and titer testing for dogs.', url: 'https://dog.com/health/dog-vaccinations', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Schedule', description: 'Core vaccines, non-core vaccines, and puppy vaccination schedule.', url: 'https://dog.com/health/dog-vaccinations', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
@@ -34,6 +34,14 @@ export default function DogVaccinationsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
+            Every dog needs four core vaccines per WSAVA guidelines: rabies (required by law),
+            distemper, adenovirus, and parvovirus (combined as DA2PP). Puppies receive a
+            series from 6–8 weeks through 16 weeks, then a one-year booster, then every
+            three years for adults with documented history. Non-core vaccines — bordetella,
+            leptospirosis, Lyme, influenza — depend on lifestyle and geographic exposure.
+            Titer testing can support evidence-based revaccination decisions for adults.
+          </p>
           <h2>Core Vaccines — Every Dog</h2>
           <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The WSAVA guidelines define four core canine vaccines:</p>
           <ul>
@@ -68,7 +76,7 @@ export default function DogVaccinationsPage() {
           <p><strong>Canine Influenza (H3N2/H3N8):</strong> Recommended for dogs with high social contact — boarding, shows, sporting events. Two initial vaccines 3–4 weeks apart, then annual booster.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

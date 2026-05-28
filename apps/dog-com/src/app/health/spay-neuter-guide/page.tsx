@@ -57,7 +57,7 @@ export default function SpayNeuterGuidePage() {
           <p>Bring your dog's expected adult weight and breed. Ask specifically about breed-specific research if yours is one of the studied breeds (Golden Retriever, Labrador, German Shepherd, Vizsla, Bernese Mountain Dog — all have published timing research). Ask about the prophylactic gastropexy (surgical stomach tacking that prevents GDV) option — this can be performed simultaneously with spay/neuter in predisposed breeds and changes the cost-benefit calculation for timing.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

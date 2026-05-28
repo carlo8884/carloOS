@@ -49,7 +49,7 @@ export default function DogSeizuresPage() {
           <p><strong>Newer options:</strong> Zonisamide, levetiracetam (Keppra), and pregabalin are used in refractory cases or when phenobarbital cannot be tolerated. A veterinary neurologist should be involved in complex or refractory epilepsy management.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
