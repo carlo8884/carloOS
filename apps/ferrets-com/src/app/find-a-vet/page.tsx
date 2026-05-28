@@ -11,6 +11,7 @@ import {
   EmailCapture,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { States } from '@/data/states'
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
@@ -23,61 +24,9 @@ export const metadata: Metadata = buildMetadata({
   type: 'website',
 })
 
-// ─── State list (UI only — these are 404s today) ─────────────────────────────
-
-const US_STATES: Array<{ slug: string; name: string }> = [
-  { slug: 'alabama', name: 'Alabama' },
-  { slug: 'alaska', name: 'Alaska' },
-  { slug: 'arizona', name: 'Arizona' },
-  { slug: 'arkansas', name: 'Arkansas' },
-  { slug: 'california', name: 'California' },
-  { slug: 'colorado', name: 'Colorado' },
-  { slug: 'connecticut', name: 'Connecticut' },
-  { slug: 'delaware', name: 'Delaware' },
-  { slug: 'florida', name: 'Florida' },
-  { slug: 'georgia', name: 'Georgia' },
-  { slug: 'hawaii', name: 'Hawaii (ferrets prohibited)' },
-  { slug: 'idaho', name: 'Idaho' },
-  { slug: 'illinois', name: 'Illinois' },
-  { slug: 'indiana', name: 'Indiana' },
-  { slug: 'iowa', name: 'Iowa' },
-  { slug: 'kansas', name: 'Kansas' },
-  { slug: 'kentucky', name: 'Kentucky' },
-  { slug: 'louisiana', name: 'Louisiana' },
-  { slug: 'maine', name: 'Maine' },
-  { slug: 'maryland', name: 'Maryland' },
-  { slug: 'massachusetts', name: 'Massachusetts' },
-  { slug: 'michigan', name: 'Michigan' },
-  { slug: 'minnesota', name: 'Minnesota' },
-  { slug: 'mississippi', name: 'Mississippi' },
-  { slug: 'missouri', name: 'Missouri' },
-  { slug: 'montana', name: 'Montana' },
-  { slug: 'nebraska', name: 'Nebraska' },
-  { slug: 'nevada', name: 'Nevada' },
-  { slug: 'new-hampshire', name: 'New Hampshire' },
-  { slug: 'new-jersey', name: 'New Jersey' },
-  { slug: 'new-mexico', name: 'New Mexico' },
-  { slug: 'new-york', name: 'New York (NYC restrictions apply)' },
-  { slug: 'north-carolina', name: 'North Carolina' },
-  { slug: 'north-dakota', name: 'North Dakota' },
-  { slug: 'ohio', name: 'Ohio' },
-  { slug: 'oklahoma', name: 'Oklahoma' },
-  { slug: 'oregon', name: 'Oregon' },
-  { slug: 'pennsylvania', name: 'Pennsylvania' },
-  { slug: 'rhode-island', name: 'Rhode Island' },
-  { slug: 'south-carolina', name: 'South Carolina' },
-  { slug: 'south-dakota', name: 'South Dakota' },
-  { slug: 'tennessee', name: 'Tennessee' },
-  { slug: 'texas', name: 'Texas' },
-  { slug: 'utah', name: 'Utah' },
-  { slug: 'vermont', name: 'Vermont' },
-  { slug: 'virginia', name: 'Virginia' },
-  { slug: 'washington', name: 'Washington' },
-  { slug: 'west-virginia', name: 'West Virginia' },
-  { slug: 'wisconsin', name: 'Wisconsin' },
-  { slug: 'wyoming', name: 'Wyoming' },
-  { slug: 'district-of-columbia', name: 'Washington, D.C.' },
-]
+// ─── State list (live — sourced from canonical data file) ────────────────────
+// Per-state pages are generated at build time via the [state] dynamic route
+// in this same directory. See apps/ferrets-com/src/data/states.ts.
 
 // ─── Vetting questions ───────────────────────────────────────────────────────
 
@@ -223,8 +172,9 @@ export default function FindAVetPage() {
               event, an exotic-pet vet is not a luxury.
             </li>
             <li>
-              The state directory below is in build. Browse anyway and email
-              us if you would like to suggest a clinic.
+              The state-by-state directory below is live — every state page
+              has search guidance, major-metro coverage, and state-specific
+              legal notes where applicable.
             </li>
           </ul>
         </aside>
@@ -331,12 +281,14 @@ export default function FindAVetPage() {
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed m-0">
             Combine the AEMV directory with a phone call running the seven
-            questions above. That is the workflow we recommend until the
-            Ferrets.com state-by-state directory below is fully populated.
+            questions above. The Ferrets.com state-by-state pages below layer
+            on state-specific legal notes, major-metro coverage, and search
+            hints — open the page for your state for context before you
+            start calling clinics.
           </p>
         </section>
 
-        {/* ─── State directory placeholder ────────────────────────────── */}
+        {/* ─── State directory (live) ─────────────────────────────────── */}
         <section aria-labelledby="states" className="mb-12">
           <h2
             id="states"
@@ -345,15 +297,12 @@ export default function FindAVetPage() {
           >
             Browse exotic-pet vets by state
           </h2>
-          <p className="text-base text-brand-text-mid leading-relaxed mb-2">
-            The state-by-state directory is under construction. The links
-            below show the planned navigation structure; per-state pages will
-            roll out as clinic listings are verified.
-          </p>
-          <p className="text-sm text-brand-text-light leading-relaxed mb-6">
-            <em>
-              Coming soon — Q3 2026. State links currently 404 by design.
-            </em>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-6">
+            Every state and the District of Columbia has a dedicated page with
+            major-metro coverage, search guidance, and — where applicable —
+            state-specific legal notes (California, Hawaii, New York City, and
+            adjacent jurisdictions have documented restrictions on ferret
+            ownership).
           </p>
           <ul
             className="list-none p-0 m-0 grid gap-2"
@@ -361,14 +310,19 @@ export default function FindAVetPage() {
               gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
             }}
           >
-            {US_STATES.map((s) => (
+            {States.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/find-a-vet/${s.slug}`}
                   className="block px-3 py-2 rounded-md border border-brand-border bg-brand-surface text-sm text-brand-text-mid hover:bg-brand-primary/5 hover:border-brand-primary/40 transition-colors no-underline"
-                  aria-label={`${s.name} — directory coming soon`}
+                  aria-label={`Ferret vets in ${s.name}`}
                 >
                   {s.name}
+                  {s.ferretLegalNote != null && (
+                    <span className="block text-2xs text-brand-text-light mt-0.5">
+                      Legal restrictions apply — read note
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}
@@ -382,13 +336,13 @@ export default function FindAVetPage() {
             className="font-display font-bold text-brand-text-dark mb-3"
             style={{ fontSize: '1.5rem' }}
           >
-            Notify me when my state goes live
+            Stay current as clinic listings are added
           </h2>
           <EmailCapture
             siteId="ferrets-com"
             variant="section"
             title="Vet Directory Updates"
-            subtitle="One email per state batch. Includes vetting checklists."
+            subtitle="One email per metro batch as verified clinic listings are added. Includes vetting checklists."
             source="find-a-vet"
           />
         </section>
