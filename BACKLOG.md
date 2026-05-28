@@ -3,7 +3,7 @@
 Single prioritized queue of deferred work. Replaces ad-hoc lists
 scattered across PR descriptions and STATUS.md.
 
-**Last updated:** 2026-05-27
+**Last updated:** 2026-05-28 (evening)
 
 **Rules:**
 - Anything in this file is deferred by design — listed here means
@@ -12,6 +12,28 @@ scattered across PR descriptions and STATUS.md.
   without recording why.
 - When an item ships, remove from this file and add to STATUS.md
   release log.
+
+---
+
+## In Flight (on branches, not yet PR'd) — see STATUS.md §2a
+
+Pushed 2026-05-28 by parallel agents. Carlo triages Saturday 2026-05-30.
+
+- `build-bot/fish-sitemap-priority-fix` — sitemap `priorityFor` codification (fish-com sitemap regenerated)
+- `build-bot/phase3d-lizard-trust-fix` — 2 lizard review files cleaned of first-person testing claims
+- `build-bot/fish-metadata-trim` — 3 fish-com metadata strings trimmed (unblocks metadata-policy CI across the repo)
+- `coo/2026-05-28-pr-triage` — Saturday PR triage report at `ops/handoffs/2026-05-28-pr-triage.md`
+- `claude/lizard-content-sprint-2026-05-28` — leopard-gecko + veiled-chameleon expand, `/health/hypocalcemia`
+- `claude/saddle-content-sprint-2026-05-28` — horse-nutrition + best-english-saddles expand, best-riding-boots
+- `claude/vets-content-sprint-2026-05-28` — `/health/leptospirosis` + `/health/dog-eye-conditions`
+- `claude/fish-content-sprint-2026-05-28` — betta expand + swordtail + aquarium-cycling-guide
+- `claude/dog-content-post-launch-2026-05-28` — dog-allergies + raw-diet-risks + dog-seizures (post-launch material)
+- `claude/scaffold-horses-petfood` — Horses.com + PetFood.com app shells
+- `coo/2026-05-28-monetization-briefs` — Horses + PetFood monetization briefs in `ops/handoffs/`
+
+P1–P5 items below have an `[in flight: <branch>]` postfix where a branch
+above already addresses the item. Per "How to use this file" rules, the
+items stay listed until the corresponding PR merges.
 
 ---
 
@@ -102,6 +124,14 @@ Strategy work. Requires confirmation Carlo owns the domains + a
 positioning brief per domain. Pull forward when Dog.com hits Week-1
 metrics.
 
+**Update 2026-05-28:** Carlo confirmed ownership of **Horses.com** and
+**PetFood.com**. App scaffolds in flight on `claude/scaffold-horses-petfood`;
+monetization briefs in flight on `coo/2026-05-28-monetization-briefs`
+(landing in `ops/handoffs/`). Ferret.com positioning remains deferred —
+no ownership confirmation yet. Portfolio is now 7 domains (5 built + 2
+scaffolded in progress).
+[in flight: claude/scaffold-horses-petfood, coo/2026-05-28-monetization-briefs]
+
 ### Vets.co disposition
 Currently in priority list but no specific direction. Options when
 revisited: standalone site / sister of Dog.com / trust hub for the
@@ -157,11 +187,17 @@ These were considered and explicitly declined or descoped:
 - **PR #4 (governance docs) merging** — superseded by PR #8
   (docs consolidation). Recommendation: close PR #4 without
   merging once PR #8 lands.
-- **Three-pod parallelism** (activating Fish Pod + Saddle Pod
-  before Dog.com is live) — held per "operational simplicity"
-  principle; revisit after Dog.com hits 7-day metrics.
 - **Adding new bots / agents to the roster** — current 2-lane
   (Build + Audit + Carlo) model is sufficient at current scale.
+  (COO layer added 2026-05-28 — see [`COO.md`](./COO.md) — but this is
+  a strategic layer, not a new execution bot.)
+
+**Moved to active 2026-05-28:** *Three-pod parallelism* — Carlo
+authorized parallel work on the evening of 2026-05-28. Multiple Build
+and content agents are now running concurrently against separate
+branches (see "In Flight" section at top of file). Previously held per
+"operational simplicity" principle; reactivated for the pre/post soft-
+launch sprint window.
 
 ---
 

@@ -5,7 +5,7 @@ Replaces the previous five governance docs (`OPERATIONS`, `ROADMAP`,
 `AGENTS`, `RELEASES`, `QC-STANDARDS`). Trust standards still live in
 their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-27 (post PR #9 merge)
+**Last updated:** 2026-05-28 (evening: parallel sprint pushed)
 
 ---
 
@@ -13,9 +13,15 @@ their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
 **Phase 4 — Dog.com soft-launch readiness.**
 
-Dog.com is technically launch-ready. All content-side launch blockers
-cleared. What remains is operational (Carlo-only): Mailchimp wiring,
-GA4 property, DNS cutover, and a final visual check (optional).
+Dog.com remains soft-launch-ready (Friday 2026-05-29 soft-launch).
+All content-side launch blockers cleared. What remains is operational
+(Carlo-only): Mailchimp wiring, GA4 property, DNS cutover, and a final
+visual check (optional).
+
+Portfolio expanded to **7 domains** as of 2026-05-28: the 5 built sites
+(dog-com, fish-com, lizard-com, saddle-com, vets-co) plus 2 scaffolded
+in progress (horses-com, petfood-com) — see §6 Roadmap rows 11–12 and
+§2a in-flight branches.
 
 Fish, Saddle, Lizard, Vets pods stay staged until Dog.com demonstrates:
 live deployment stability · analytics flow · email capture · operational
@@ -23,20 +29,54 @@ cadence (≥ 7 days live).
 
 ## 2. Active PRs
 
+Source of truth for triage: [`ops/handoffs/2026-05-28-pr-triage.md`](./ops/handoffs/2026-05-28-pr-triage.md)
+(on branch `coo/2026-05-28-pr-triage`, not yet merged). Saturday merge
+order is enumerated there. **No merges happen Friday 2026-05-29 (launch day).**
+
 | PR | Branch | Purpose | State |
 |---|---|---|---|
-| #8 | `agent3/docs-consolidation` | Collapse 5 governance docs → STATUS.md + QC-STANDARDS.md; refresh README | Open — this PR |
+| #19 | `agent2/pr3d-fish-launch-blockers` | fish-com launch blockers (homepage trust stats + heater hands-on claims) | NEEDS FIX — PR is the fix; merge **first** Saturday to unblock metadata-policy across the repo |
+| #20 | `claude/fish-equipment-recommender` | fish.com `/tools/equipment-recommender` new route | READY |
+| #21 | `agent4/visual-pass-vets-co` | Vets.co visual launch-polish (next/font + hero mobile) | READY |
+| #22 | `agent4/visual-pass-fish-com` | Fish.com visual launch-polish (next/font + mobile hero + SVG icons) | READY |
+| #23 | `agent4/visual-pass-saddle-com` | Saddle.com visual launch-polish (Bodoni + Jost) | READY |
+| #24 | `agent4/visual-pass-lizard-com` | Lizard.com visual launch-polish | READY (rebase after #26) |
+| #26 | `build-bot/phase3d-lizard-launch-blockers` | Lizard.com launch blockers | NEEDS FIX — clears after #19 lands |
+| #27 | `build-bot/phase3e-vets-launch-blockers` | Vets.co launch blockers | NEEDS FIX — clears after #19 lands |
+| #28 | `agent4/visual-brand-pass` | Dog.com visual + design audit MD | NEEDS FIX — metadata-policy likely clears after #19; review carefully |
+| #29 | `build-bot/trust-guard-baseline-expand` | trust-guard CI baseline expansion (hands-on testing patterns) | BLOCKED-BY #19 + #26 (by design) |
+| #30 | `build-bot/sitemap-freshness-check` | sitemap-freshness gate (`--check` mode + qc.yml job) | BLOCKED-BY follow-up fish-com sitemap PR; **defer to next week** |
 
-PRs #7 and #9 merged into main on 2026-05-27. PR #4 (governance docs,
-`claude/ecstatic-shannon-tXkds`) is superseded by this PR — close
-without merging once this lands.
+## 2a. In-flight branches (not yet PR'd)
+
+Pushed by parallel agents on 2026-05-28. Verify with
+`git fetch origin && git branch -a | grep -E "(build-bot|claude/|coo/)"`.
+
+| Branch | Description |
+|---|---|
+| `build-bot/fish-sitemap-priority-fix` | sitemap `priorityFor` codification (fish-com sitemap regenerated) — natural companion to PR #30 |
+| `build-bot/phase3d-lizard-trust-fix` | 2 lizard review files cleaned of first-person testing claims |
+| `build-bot/fish-metadata-trim` | 3 fish-com metadata strings trimmed — **unblocks metadata-policy CI across the repo** |
+| `coo/2026-05-28-pr-triage` | Saturday PR triage report at `ops/handoffs/2026-05-28-pr-triage.md` |
+| `claude/lizard-content-sprint-2026-05-28` (in flight) | leopard-gecko + veiled-chameleon expand, `/health/hypocalcemia` |
+| `claude/saddle-content-sprint-2026-05-28` (in flight) | horse-nutrition + best-english-saddles expand, best-riding-boots |
+| `claude/vets-content-sprint-2026-05-28` (in flight) | `/health/leptospirosis` + `/health/dog-eye-conditions` |
+| `claude/fish-content-sprint-2026-05-28` (in flight) | betta expand + swordtail + aquarium-cycling-guide |
+| `claude/dog-content-post-launch-2026-05-28` (in flight) | dog-allergies + raw-diet-risks + dog-seizures (post-launch material) |
+| `claude/scaffold-horses-petfood` (in flight) | Horses.com + PetFood.com app shells |
+| `coo/2026-05-28-monetization-briefs` (in flight) | Horses + PetFood monetization briefs in `ops/handoffs/` |
+
+These branches are NOT yet open PRs. Carlo triages Saturday 2026-05-30
+after launch settles.
 
 ## 3. Lanes
 
-Two-lane model. No further role expansion.
+Two-lane model for execution. COO layer sits above as the strategic
+& coordination layer (installed 2026-05-28 — see [`COO.md`](./COO.md)).
 
 | Lane | Who | Mandate | Limits |
 |---|---|---|---|
+| COO | Claude (COO role per [`COO.md`](./COO.md)) | Strategy, prioritization, triage, handoffs, portfolio planning. Writes briefs & ops docs; does not write app code. Installed 2026-05-28. | Sits above Build/Audit; does not merge or ship code. |
 | Build | Claude (Agent 1 / A3) | Implements, ships PRs. Touches code, scripts, docs in the same PR. | Cannot merge to main. |
 | Audit | Claude (Agent 2) | Read-only verification. Reports findings; only Blocker-severity halts a launch. | Cannot edit app code. |
 | Decisions | Carlo | Merges, live keys, DNS, partnerships, money. | Final authority. |
@@ -91,6 +131,8 @@ block launch.
 | 8 — Shared CI checks (link-check, metadata, trust-guard) | ⬜ briefed | A6 dispatched but not yet executed |
 | 9 — PetFood / Ferret / Horses positioning | ⬜ deferred | Strategy work post-launch |
 | 10 — Monetization wiring (Stripe webhook, real Mailchimp full integration) | ⬜ deferred | After Dog.com first revenue signal |
+| 11 — Horses.com scaffold | 🟡 scaffold in flight | Ownership confirmed 2026-05-28. App shell on `claude/scaffold-horses-petfood`; monetization brief on `coo/2026-05-28-monetization-briefs`. |
+| 12 — PetFood.com scaffold | 🟡 scaffold in flight | Ownership confirmed 2026-05-28. App shell on `claude/scaffold-horses-petfood`; monetization brief on `coo/2026-05-28-monetization-briefs`. |
 
 ## 7. Release Log
 
