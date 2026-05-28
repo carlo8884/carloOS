@@ -266,30 +266,31 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'petfood-com': {
-    // Clean food-brand palette — warm white background with a single warm accent.
-    primary: '#D9622A',
-    primaryLight: '#E87A40',
-    primaryPale: '#FBEEE3',
-    primaryDark: '#B04A18',
-    dark: '#1F1A14',
-    surface: '#FBF8F2',
+    // Clean food-science palette — warm white background + deep moss green primary.
+    // Differentiates visually from Chewy / Petco's orange-warm palettes per brand brief.
+    primary: '#3F5C3A',
+    primaryLight: '#577A50',
+    primaryPale: '#EDF1EA',
+    primaryDark: '#2C4128',
+    dark: '#1A1F18',
+    surface: '#FAFAF7',
     white: '#FFFFFF',
-    textDark: '#1F1A14',
-    textMid: '#4A3E30',
-    textLight: '#8A7E68',
-    border: '#ECE4D6',
-    success: '#2A7A3A',
-    warning: '#C8952A',
-    danger: '#C84A2A',
+    textDark: '#1F2A1C',
+    textMid: '#3E4A3A',
+    textLight: '#7A8478',
+    border: '#E2E6DC',
+    success: '#2C7A3A',
+    warning: '#B0822A',
+    danger: '#A8442A',
     fontDisplay: 'Cormorant Garamond',
     fontBody: 'Inter',
-    fontDisplayWeights: [400, 600, 700],
+    fontDisplayWeights: [400, 500, 600, 700],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'PetFood.com',
-    siteTagline: 'A Reference for Pet Nutrition',
+    siteTagline: 'The independent reference for pet food.',
     siteUrl: 'https://petfood.com',
     logoText: 'PetFood.com',
-    twPrimary: 'orange',
+    twPrimary: 'emerald',
   },
 }
 
@@ -657,13 +658,31 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     },
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
-      { label: 'Home', href: '/' },
+      { label: 'Methodology', href: '/guides/methodology' },
+      { label: 'Read the Label', href: '/guides/reading-pet-food-labels' },
+      { label: 'AAFCO Explained', href: '/guides/aafco-completeness-explained' },
+      { label: 'Ingredients', href: '/ingredients/grain-free-dcm-risk' },
+      { label: 'Brand Comparisons', href: '/brands/orijen-vs-acana-comparison' },
     ],
     footerLinks: [
       {
-        heading: 'PetFood.com',
+        heading: 'Reference',
         links: [
-          { label: 'Home', href: '/' },
+          { label: 'How We Score', href: '/guides/methodology' },
+          { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+          { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
+        ],
+      },
+      {
+        heading: 'Ingredients',
+        links: [
+          { label: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
+        ],
+      },
+      {
+        heading: 'Brand Comparisons',
+        links: [
+          { label: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
         ],
       },
     ],

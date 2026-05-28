@@ -1,15 +1,45 @@
 import type { Metadata } from 'next'
-import { Nav, Footer } from '@carloOS/ui'
-import { buildMetadata } from '@carloOS/ui'
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from 'next/font/google'
+import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+// ─── Fonts ──────────────────────────────────────────────────────────────────
+// Three families locked per the PetFood.com brand brief:
+//   - Cormorant Garamond  → display / category headlines
+//   - Inter               → body
+//   - JetBrains Mono      → ingredient panels, data callouts, scoring formulas
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+  fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+  fallback: ['ui-monospace', 'SF Mono', 'Menlo', 'Consolas', 'monospace'],
+})
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
-  title: 'A Reference for Pet Nutrition',
+  title: 'The independent reference for pet food.',
   description:
-    'PetFood.com — research-based reference for pet nutrition. Site coming soon.',
+    'PetFood.com — independent ingredient-and-brand reference for cat and dog food. AAFCO-anchored methodology, recall-tracked, no paid scores.',
   path: '/',
   type: 'website',
 })
@@ -28,10 +58,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="font-vars"
+      className={`font-vars ${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        {/* GA4 — only loads in production with a real ID */}
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>
             <script
@@ -58,13 +87,8 @@ export default function RootLayout({
         )}
       </head>
       <body>
-        {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="petfood-com" />
-
-        {/* Page content */}
         <main>{children}</main>
-
-        {/* Shared Footer */}
         <Footer siteId="petfood-com" showAffiliateDisclosure={false} />
       </body>
     </html>
