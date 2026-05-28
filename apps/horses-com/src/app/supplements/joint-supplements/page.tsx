@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -48,6 +49,22 @@ export default function JointSupplementsPage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The equine joint-supplement market is large, lightly regulated, and dominated by marketing claims that outpace the data. This guide grades each ingredient by what the peer-reviewed literature actually supports — plus the prohibited-substance footnote that every competitive rider needs to know.
         </p>
+      </div>
+
+      {/* Cover photo — show-jumper mid-flight. Reuses the verified
+          saddle-com Unsplash ID (CarloOS production catalog). Joint
+          supplements are most consequential for the explosive-impact
+          sport horse; the airborne composition makes the editorial
+          subject visible without bottle-marketing staging. */}
+      <div className="relative w-full aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1600&q=80&auto=format&fit=crop"
+          alt="A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
       </div>
 
       <QuickPicks items={PICKS} />

@@ -54,6 +54,14 @@ export default function SaddleFitBasicsPage() {
           authorAvatar: '☘',
           publishedAt: 'May 2026',
           readTime: '14 min',
+          // Cover photo — dressage horse and rider in tack at the canter.
+          // Reuses the verified saddle-com hero Unsplash ID (CarloOS
+          // production catalog). English dressage tack is the most-checked
+          // saddle type in the framework; the photo signals the subject
+          // without staging a clinical/marketing scene.
+          image:
+            'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop',
+          imageAlt: 'A dressage horse and rider working in tack at the canter',
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },

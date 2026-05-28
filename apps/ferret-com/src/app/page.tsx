@@ -12,6 +12,26 @@
  *   5. Email capture (homepage source)
  *   6. Sister-site teaser — Ferrets.com
  *   7. Editorial footer copy (separate from shared <Footer>)
+ *
+ * Visual strategy (per COO photo-sourcing playbook, ops/handoffs/
+ * 2026-05-29-photo-sourcing-playbook.md):
+ * - Brand mood: "playful but careful (ferret ownership skews
+ *   informed/dedicated). Closest analog: an indie hobbyist magazine."
+ * - PHOTO SOURCE: Unsplash has ~5K ferret photos (verifiable subset);
+ *   Wikimedia Commons via scientific name "Mustela putorius furo" is
+ *   the highest-quality reference; Marshall Pet Products is the
+ *   manufacturer affiliate.
+ * - NONE of those IDs exist yet in the verified CarloOS Unsplash
+ *   catalog, and verification of new IDs from inside the sandbox
+ *   workflow is not possible (web search returns gallery pages, not
+ *   direct CDN URLs). Per task hard constraint — "ferret photos are
+ *   limited but Unsplash has ~5K — verifiable ones only" — the
+ *   homepage stays CSS-only until Carlo's next browsing pass selects
+ *   the keeper IDs from Unsplash directly.
+ * - Cross-site reuse of dog/horse/lizard photos would violate visual
+ *   differentiation per playbook ("reuse across sites breaks visual
+ *   differentiation — avoid") and would actively undermine the indie-
+ *   hobbyist brand mood. Editorial honesty > placeholder photos.
  */
 
 import type { Metadata } from 'next'

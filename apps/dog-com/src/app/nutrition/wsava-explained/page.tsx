@@ -55,15 +55,11 @@ export default function WSAVAExplainedPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2>What Are WSAVA Guidelines?</h2>
-<<<<<<< HEAD
         <DropCap>The World Small Animal Veterinary Association published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</DropCap>
 
         <CalloutBox variant="evidence" title="Evidence-anchored">
           The <strong>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee</strong> publishes the Recommendations on Selecting Pet Foods used here. Pair their six questions with an AAFCO feeding-trial statement on the bag to evaluate manufacturer rigor.
         </CalloutBox>
-=======
-        <p>The <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">World Small Animal Veterinary Association</a> published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</p>
->>>>>>> origin/main
 
         <h2>The Six Questions WSAVA Recommends Asking</h2>
         <p>WSAVA recommends asking these six questions of any pet food manufacturer:</p>
