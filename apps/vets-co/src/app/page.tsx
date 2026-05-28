@@ -47,7 +47,12 @@ export default function VetsHomePage() {
               <span className="text-brand-primary">Get Trusted Answers.</span>
             </h1>
             <p className="text-lg font-light text-white/55 leading-relaxed max-w-md mb-10">
-              Veterinary specialists near you, research-based health guides for every breed, honest pet insurance comparisons, and telehealth options — all in one place.
+              Vets.co is a veterinarian-edited reference site for pet owners: a directory
+              of board-certified veterinary specialists, research-based health guides
+              covering every major breed and condition, honest pet insurance comparisons
+              graded on payout speed and exclusions, and curated telehealth options for
+              when an in-person visit isn&apos;t needed. Every guide cites primary
+              veterinary sources and is reviewed against current evidence.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link href="/find-a-vet"

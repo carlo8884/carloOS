@@ -107,7 +107,7 @@ export default function AquariumSetupPage() {
         <p>Quarantine all new fish for 4 weeks in a separate tank before adding to your display tank. This prevents introducing disease (especially Neon Tetra Disease, which has no cure) and is one of the most important practices in the hobby.</p>
 
         <h2 id="faq">FAQ</h2>
-        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
       </div>
     </ArticleLayout>
   )

@@ -19,7 +19,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2026-05-27T00:00:00Z',
-  modifiedAt: '2026-05-27T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
 })
 
 const FAQS = [
@@ -78,9 +78,12 @@ export default function PuppySchedulePage() {
               <span className="text-brand-primary">Weeks 8 to 16.</span>
             </h1>
             <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
-              The window when your puppy&apos;s brain is wired to learn that the world is safe.
-              Get the printable schedule plus an 8-week email course — one email per week, timed to
-              your puppy&apos;s exact developmental stage.
+              The first 16 weeks are your puppy&apos;s critical socialization window — the
+              one period when their brain is wired to learn that the world is safe. Get
+              a printable week-by-week schedule covering sleep, feeding, vaccinations,
+              and structured socialization, plus an 8-email course timed to each developmental
+              stage. Grounded in AVSAB and current behavioral science. Free, no upsells,
+              one-click unsubscribe.
             </p>
             <ul className="text-sm text-white/70 space-y-2 mb-10 max-w-md">
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>One-page printable schedule (sleep, feeding, training, vaccination windows)</span></li>
