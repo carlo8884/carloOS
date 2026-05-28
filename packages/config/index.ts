@@ -239,27 +239,29 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'ferret-com': {
-    // Rich chocolate brown + warm cream + soft amber accent — ferret coloring.
+    // Refined chocolate-amber palette: rich chocolate brown primary,
+    // warm cream surface, soft amber secondary for accents/CTAs,
+    // deep brown masthead for the trust bar.
     primary: '#5C3A1E',
-    primaryLight: '#7A4F2C',
-    primaryPale: '#F5EBDC',
+    primaryLight: '#C99D5F',   // warm amber — used for CTAs, accents, eyebrows
+    primaryPale: '#FBF5E8',    // warm cream surface tint
     primaryDark: '#3F2710',
-    dark: '#1E140A',
-    surface: '#FBF5E8',
-    white: '#FFFFFF',
+    dark: '#1E140A',           // masthead / trust bar deep brown
+    surface: '#FBF5E8',        // warm cream section bg
+    white: '#FFFFFF',          // elevated white
     textDark: '#1E140A',
     textMid: '#4A3220',
     textLight: '#8A7058',
     border: '#E6D6BE',
     success: '#3A6A2A',
-    warning: '#D6A22A',
+    warning: '#C99D5F',
     danger: '#C84A2A',
     fontDisplay: 'Playfair Display',
     fontBody: 'Source Sans 3',
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Ferret.com',
-    siteTagline: 'A Reference for Ferret Owners',
+    siteTagline: 'Research-based reference for ferret owners',
     siteUrl: 'https://ferret.com',
     logoText: 'Ferret.com',
     twPrimary: 'amber',
@@ -603,13 +605,29 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     },
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
-      { label: 'Home', href: '/' },
+      { label: 'Care', href: '/care/diet-basics' },
+      { label: 'Health', href: '/health/insulinoma' },
+      { label: 'Equipment', href: '/care/cage-setup' },
+      { label: 'First-Year Schedule', href: '/first-year-schedule', highlight: true },
     ],
     footerLinks: [
       {
-        heading: 'Ferret.com',
+        heading: 'Care',
         links: [
-          { label: 'Home', href: '/' },
+          { label: 'Diet Basics', href: '/care/diet-basics' },
+          { label: 'Cage Setup', href: '/care/cage-setup' },
+        ],
+      },
+      {
+        heading: 'Health',
+        links: [
+          { label: 'Insulinoma', href: '/health/insulinoma' },
+        ],
+      },
+      {
+        heading: 'Get Started',
+        links: [
+          { label: 'First-Year Schedule', href: '/first-year-schedule' },
         ],
       },
     ],
