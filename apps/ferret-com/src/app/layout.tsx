@@ -1,15 +1,36 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Nav, Footer } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+// ─── Fonts ──────────────────────────────────────────────────────────────────
+// Playfair Display — editorial display (headlines)
+// Source Sans 3 — body type
+// next/font/google self-hosts at build time and exposes the family via a
+// CSS variable that globals.css consumes (--font-playfair, --font-source-sans).
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-source-sans',
+  display: 'swap',
+})
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'A Reference for Ferret Owners',
+  title: 'Ferret.com — A Reference for Ferret Owners',
   description:
-    'Ferret.com — research-based reference for ferret owners. Site coming soon.',
+    'Ferret.com — research-based reference for ferret owners. Diet, health, equipment, and the first-year schedule, grounded in exotic-mammal veterinary literature.',
   path: '/',
   type: 'website',
 })
@@ -28,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="font-vars"
+      className={`font-vars ${playfair.variable} ${sourceSans.variable}`}
     >
       <head>
         {/* GA4 — only loads in production with a real ID */}
