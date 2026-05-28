@@ -10,6 +10,7 @@
  */
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
@@ -169,6 +170,13 @@ const FEATURED: {
   title: string
   teaser: string
   readTime: string
+  /**
+   * Optional cover image — Unsplash CDN URL. Photo IDs are the same ones
+   * already shipped on /species (verified-in-production). Cards without
+   * a cover render the CSS-only treatment unchanged.
+   */
+  image?: string
+  imageAlt?: string
 }[] = [
   {
     href: '/setup/aquarium-cycling-guide',
@@ -177,6 +185,10 @@ const FEATURED: {
     teaser:
       'Fishless cycling, fish-in cycling, when ammonia and nitrite finally read zero, and why the slow weeks at the start determine whether the tank reads stable a year from now. The step-by-step reference, written without the forum-lore detours.',
     readTime: '18 min',
+    image:
+      'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=900&q=80&auto=format&fit=crop',
+    imageAlt:
+      'Tropical aquarium scene with refraction-blue light over a planted substrate',
   },
   {
     href: '/health/nitrogen-cycle-explained',
@@ -185,6 +197,9 @@ const FEATURED: {
     teaser:
       'Ammonia to nitrite to nitrate — the bacterial chemistry that turns a sterile tank into a habitat, and the parameter readings that tell you the colony has actually arrived. A reference for the test results you are about to look at.',
     readTime: '11 min',
+    image:
+      'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A school of small freshwater fish in a planted tank',
   },
   {
     href: '/species/betta-fish',
@@ -193,6 +208,9 @@ const FEATURED: {
     teaser:
       'Labyrinth fish from the rice paddies and slow-water margins of Southeast Asia, sold to beginners and almost universally undertanked. Temperament, parameter range, tankmate logic, and the five-gallon-minimum argument with the science behind it.',
     readTime: '14 min',
+    image:
+      'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A male betta fish with long flowing fins in profile',
   },
   {
     href: '/reviews/best-aquarium-filters',
@@ -201,6 +219,9 @@ const FEATURED: {
     teaser:
       'HOB, canister, sponge, and internal — eight filters compared on flow rate, media volume, noise floor, and serviceability. Tank-volume sizing, planted-tank flow considerations, and which categories overlap with which use cases.',
     readTime: '13 min',
+    image:
+      'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'Freshwater angelfish swimming in a planted aquarium',
   },
 ]
 
@@ -253,6 +274,34 @@ export default function FishHomePage() {
               'repeating-linear-gradient(90deg, rgba(91,192,222,0.4) 0px, rgba(91,192,222,0.4) 1px, transparent 1px, transparent 4px)',
           }}
         />
+
+        {/* Hero photo — anchored right, blended into the CSS field. Photo is
+            an angelfish (Pterophyllum scalare) in profile, the same identity
+            used on the species index — verified Unsplash CDN URL already in
+            production on /species. Hidden on mobile; on lg+ takes the right
+            45% of the masthead. Sits below the radial washes so the brand
+            field still grades over it. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden lg:block w-[45%] z-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=1400&q=80&auto=format&fit=crop"
+            alt=""
+            fill
+            sizes="45vw"
+            className="object-cover"
+            priority
+          />
+          {/* Edge fade into the brand-dark field on the left of the photo */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(6,18,27,1) 0%, rgba(6,18,27,0.75) 25%, rgba(6,18,27,0.25) 65%, rgba(6,18,27,0.35) 100%)',
+            }}
+          />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
           <div className="max-w-3xl">
@@ -491,12 +540,27 @@ export default function FishHomePage() {
               <Link
                 key={art.href}
                 href={art.href}
-                className="group block p-7 lg:p-8 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                className="group block rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
                 style={{
                   background: 'var(--brand-surface)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
+                {/* Cover photo — verified Unsplash CDN, only renders when
+                    an image is set on the data record. The hover-zoom is the
+                    same easing curve the page uses elsewhere. */}
+                {art.image && art.imageAlt ? (
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={art.image}
+                      alt={art.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-7 lg:p-8">
                 {/* Decorative top rule — accent, signals premium */}
                 <span
                   aria-hidden="true"
@@ -540,6 +604,7 @@ export default function FishHomePage() {
                       →
                     </span>
                   </span>
+                </div>
                 </div>
               </Link>
             ))}
@@ -654,6 +719,33 @@ export default function FishHomePage() {
           />
         </div>
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      <aside
+        className="px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'rgba(255,255,255,0.55)' }}
+        >
+          Hero & featured photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'rgba(255,255,255,0.75)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License.
+        </p>
+      </aside>
     </>
   )
 }

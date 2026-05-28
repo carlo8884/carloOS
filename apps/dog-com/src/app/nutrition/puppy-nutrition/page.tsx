@@ -21,7 +21,7 @@ export default function PuppyNutritionPage() {
       <div className="carloOS-article">
         <h2 id="formulas">Puppy Formula vs Adult Food</h2>
         <p>Puppy formulas are nutritionally distinct from adult formulas in ways that matter. Puppies require more protein, more fat, more calories per pound of body weight, and a different calcium-to-phosphorus ratio than adults. Feeding adult food to a growing puppy is not ideal and can result in nutrient deficiencies that affect development. Conversely, feeding adult food with appropriate supplementation is not a substitute — the ratio adjustments in puppy-specific formulas are designed for the requirements of growth.</p>
-        <p>Choose a puppy food with an AAFCO statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>
+        <p>Choose a puppy food with an <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>
 
         <h2 id="large-breed">Large Breed Puppies — A Critical Difference</h2>
         <p>The most important nutritional distinction in puppy feeding: <strong>large and giant breed puppies (expected adult weight over 50 lbs) must eat a large breed puppy formula.</strong> This is not a marketing preference — it is a clinically meaningful distinction.</p>

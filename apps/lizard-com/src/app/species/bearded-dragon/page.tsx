@@ -50,7 +50,7 @@ export default function BeardedDragonPage() {
 
         <h2 id="uvb">UVB — The Non-Negotiable</h2>
         <p>Bearded dragons are Zone 4 species — they bask in open desert sun at very high UV Index (4–7+). This requires the most powerful T5 HO UVB available: <strong>Arcadia 12% Desert</strong> or Zoo Med T5 HO 10.0. Arcadia 12% is preferred — higher and more consistent output.</p>
-        <p>Distance from basking surface: 12–14 inches for Arcadia 12% without a reflector produces the target UVI of 4–6 at the basking spot. Use a Solarmeter 6.5 to verify, or rely on published keeper testing data for your specific fixture.</p>
+        <p>Distance from basking surface: 12–14 inches for Arcadia 12% without a reflector produces the target UVI of 4–6 at the basking spot. Use a <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> to verify, or rely on published keeper testing data for your specific fixture.</p>
         <p>Replace every 12 months (Arcadia). The bulb appears to work — it still produces visible light — but UVB output declines well before visible light fails. Mark the date on installation with a Sharpie. A bearded dragon without adequate UVB develops MBD within months.</p>
         <p>Photoperiod: 12–14 hours light in summer, 10–12 in winter. This mimics natural day length variation and supports normal behavioral cycling.</p>
 

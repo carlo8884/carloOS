@@ -47,7 +47,7 @@ export default function BestWesternSaddlesPage() {
             Best Western Saddles 2025
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using CSF reviewer notes and published rider reports.
+            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">CSF</a> reviewer notes and published rider reports.
           </p>
         </div>
       </div>

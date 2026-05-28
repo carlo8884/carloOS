@@ -9,12 +9,26 @@
    ───────────────────────────────────────────── */
 
 :root {
+<<<<<<< HEAD
+  /* Brand — rich chocolate brown primary, warm amber accent, warm cream surface */
+  --brand-primary: #5C3A1E;
+  --brand-primary-light: #C99D5F;   /* warm amber — CTAs, accents, eyebrows */
+  --brand-primary-pale: #FBF5E8;    /* warm cream */
+  --brand-primary-dark: #3F2710;
+
+  /* Brand secondary — amber */
+  --brand-amber: #C99D5F;
+  --brand-amber-light: #E0BC85;
+  --brand-amber-dark: #A77D44;
+
+=======
   /* Brand — rich chocolate brown + warm cream + soft amber accent */
   --brand-primary: #5C3A1E;
   --brand-primary-light: #7A4F2C;
   --brand-primary-pale: #F5EBDC;
   --brand-primary-dark: #3F2710;
 
+>>>>>>> origin/main
   /* Backgrounds */
   --brand-dark: #1E140A;
   --brand-surface: #FBF5E8;
@@ -30,12 +44,21 @@
 
   /* Semantic */
   --brand-success: #3A6A2A;
+<<<<<<< HEAD
+  --brand-warning: #C99D5F;
+  --brand-danger: #C84A2A;
+
+  /* Typography (loaded via next/font in layout.tsx) */
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+=======
   --brand-warning: #D6A22A;
   --brand-danger: #C84A2A;
 
   /* Typography (loaded via next/font — variable names set there) */
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-source-sans), system-ui, sans-serif;
+>>>>>>> origin/main
 
   /* Layout */
   --nav-height: 68px;
@@ -99,9 +122,48 @@ img {
   color: var(--brand-text-dark);
 }
 
+<<<<<<< HEAD
+/* Font CSS variables — next/font/google injects these on <html> via layout.tsx.
+   Fallback declarations here so utility classes resolve when next/font is unavailable
+   (offline dev / CI without remote font fetch). */
+=======
 /* Font CSS variables — fonts loaded via Google Fonts CDN */
+>>>>>>> origin/main
 .font-vars,
 :root {
   --font-playfair: Georgia, "Times New Roman", serif;
   --font-source-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+<<<<<<< HEAD
+
+/* ─── EDITORIAL DISPLAY UTILITIES ───────────────────────────────── */
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-amber);
+}
+
+.eyebrow-rule {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--brand-amber);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.amber-link {
+  color: var(--brand-amber-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.amber-link:hover {
+  color: var(--brand-primary);
+}
+=======
+>>>>>>> origin/main
