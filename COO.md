@@ -72,25 +72,40 @@ to authorize parallel pod activation before it is met.
 ## 6. Portfolio
 
 **Owned domains** (confirmed by Carlo 2026-05-28): Dog · Fish · Horses
-· Saddle · PetFood · Lizard · Vets
+· Saddle · PetFood · PetFoods · Lizard · Vets · Ferret · Ferrets · [+1
+unknown GitHub site — pending Carlo's confirmation]
+
+**Two-domain model** (singular ↔ plural pairs):
+The plural is NOT a 301-redirect. Pattern: **commercial brand (singular)
+↔ SEO/content engine (plural).** The two feed each other.
+
+- **Singular** = premium commercial brand. Buyer guides, product reviews,
+  affiliate conversion, email capture, AI assistant. "The destination."
+  Monetization-priority HIGH.
+- **Plural** = SEO/content firehose. Long-tail informational, directories
+  (rescues, breeders, vets per state/city), per-ingredient and per-SKU
+  programmatic-SEO pages. Authority feeds back to the singular.
 
 **Build state and priority order:**
 
-| # | Domain | State | Next action |
-|---|---|---|---|
-| 1 | Dog.com | Flagship, soft-launch 2026-05-29 | Activate (LAUNCH-DAY.md) |
-| 2 | Fish.com | Built (80 pages), staged | Activate after Dog.com hits 7-day gate |
-| 3 | Saddle.com | Built (42 pages), staged | Activate after Fish.com hits 7-day gate |
-| 4 | Horses.com | **Not built** | Begin scaffold after Dog.com is live + stable |
-| 5 | PetFood.com | **Not built** | Begin scaffold after Horses.com scaffold |
-| 6 | Lizard.com | Built (51 pages), shipped | Maintenance-only — no new content sprints |
-| 7 | Vets.co | Built (38 pages), shipped | Maintenance-only — no new content sprints |
+| # | Domain | Pair role | State | Next action |
+|---|---|---|---|---|
+| 1 | Dog.com | singular (no plural) | Flagship, launching Friday | Activate (LAUNCH-DAY.md) |
+| 2 | Fish.com | singular (no plural) | Built (80 pages), staged | Activate after Dog hits 7-day gate |
+| 3 | Saddle.com | singular (no plural) | Built (42 pages), staged | Activate after Fish hits 7-day gate |
+| 4 | Horses.com | singular (no plural yet) | Scaffold pushed; 5 cornerstone pages in flight | Activate after Saddle |
+| 5 | PetFood.com | commercial brand | Scaffold pushed; 5 cornerstone pages in flight | Activate after Horses |
+| 6 | PetFoods.com | content engine | Scaffold in flight | Directory + programmatic SEO when PetFood matures |
+| 7 | Ferret.com | commercial brand | Scaffold pushed; 3 cornerstone pages in flight | Activate after PetFood |
+| 8 | Ferrets.com | content engine | Scaffold in flight | Directory + programmatic SEO when Ferret matures |
+| 9 | Lizard.com | singular (no plural) | Built (51 pages), shipped | Maintenance-only |
+| 10 | Vets.co | singular (no plural) | Built (38 pages), shipped | Maintenance-only |
+| 11 | [5th GitHub site, unknown] | pending | pending | pending Carlo confirms repo name |
 
-**Rationale:** Activate built portfolio in order (cheapest path to
-revenue). Build Horses + PetFood in parallel after Dog.com proves the
-loop. Lizard + Vets stay live as published work but receive no new
-content investment — they were not in the strategic portfolio defined
-in the master prompt.
+Lizard + Vets remain maintenance-only — not in the master-prompt
+strategic portfolio but stay shipped as published work. Dog / Fish /
+Saddle / Horses have no plural pair today; revisit if Carlo acquires
+them.
 
 The gating rubric in §5 applies to every activation: no parallel pod
 activation before the previous site clears 7-day metrics.
