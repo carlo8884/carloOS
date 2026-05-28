@@ -20,5 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/supplements/joint-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/reviews/best-winter-horse-blankets', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/reviews/best-equine-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.88 },
+
+    // Discipline reference — overview hub + 6 disciplines
+    { url: 'https://horses.com/disciplines', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/disciplines/dressage', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/disciplines/show-jumping', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/disciplines/eventing', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/disciplines/western-pleasure', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://horses.com/disciplines/reining', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://horses.com/disciplines/trail-riding', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
   ]
 }
