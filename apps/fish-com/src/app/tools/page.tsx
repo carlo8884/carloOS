@@ -4,7 +4,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Aquarium Calculators & Tools — Volume, Stocking, Heater, CO2 | Fish.com',
+  title: 'Aquarium Calculators — Volume, Stocking, Heater, CO2 | Fish.com',
   description: 'Free aquarium calculators: tank volume in gallons or liters, stocking limits, heater wattage, water-change math, and CO2 from KH/pH. Built by aquarists.',
   path: '/tools',
 })
