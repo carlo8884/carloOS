@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'ferrets-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -238,35 +238,58 @@ export const themes: Record<SiteId, SiteTheme> = {
     twPrimary: 'lime',
   },
 
-  'ferrets-com': {
-    // Lighter chocolate brown + paper-cream — sister to ferret.com (the
-    // premium store brand). Ferrets.com is the content engine / library:
-    // care guides + directories of vets, rescues, breeders. Slightly
-    // lighter palette to evoke "reference / library" vs ferret.com's
-    // "premium boutique."
+  'horses-com': {
+    // Warm equestrian palette — saddle leather browns, cream, dark green accents.
     primary: '#6E4A28',
-    primaryLight: '#8A6240',
-    primaryPale: '#F8F1E2',
-    primaryDark: '#4E331A',
-    dark: '#2A1E12',
-    surface: '#FBF6EA',
-    white: '#FFFDF7',
-    textDark: '#2A1E12',
-    textMid: '#5A4230',
-    textLight: '#957E62',
-    border: '#EADDC4',
+    primaryLight: '#8C6238',
+    primaryPale: '#F4ECDF',
+    primaryDark: '#523618',
+    dark: '#1F2B1E',
+    surface: '#FAF4E8',
+    white: '#FFFFFF',
+    textDark: '#1F2B1E',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D6C2',
     success: '#3A6A2A',
-    warning: '#D6A22A',
+    warning: '#C8952A',
     danger: '#C84A2A',
     fontDisplay: 'Playfair Display',
     fontBody: 'Source Sans 3',
     fontDisplayWeights: [400, 700, 900],
     fontBodyWeights: [300, 400, 500, 600, 700],
-    siteName: 'Ferrets.com',
-    siteTagline: 'The Ferret Owner\'s Library',
-    siteUrl: 'https://ferrets.com',
-    logoText: 'Ferrets.com',
+    siteName: 'Horses.com',
+    siteTagline: 'A Reference for Horse Owners',
+    siteUrl: 'https://horses.com',
+    logoText: 'Horses.com',
     twPrimary: 'amber',
+  },
+
+  'petfood-com': {
+    // Clean food-brand palette — warm white background with a single warm accent.
+    primary: '#D9622A',
+    primaryLight: '#E87A40',
+    primaryPale: '#FBEEE3',
+    primaryDark: '#B04A18',
+    dark: '#1F1A14',
+    surface: '#FBF8F2',
+    white: '#FFFFFF',
+    textDark: '#1F1A14',
+    textMid: '#4A3E30',
+    textLight: '#8A7E68',
+    border: '#ECE4D6',
+    success: '#2A7A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Cormorant Garamond',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFood.com',
+    siteTagline: 'A Reference for Pet Nutrition',
+    siteUrl: 'https://petfood.com',
+    logoText: 'PetFood.com',
+    twPrimary: 'orange',
   },
 }
 
@@ -593,9 +616,36 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
 
-  'ferrets-com': {
-    id: 'ferrets-com',
-    theme: themes['ferrets-com'],
+  'horses-com': {
+    id: 'horses-com',
+    theme: themes['horses-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Horses.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://horses.com/og-default.jpg',
+  },
+
+  'petfood-com': {
+    id: 'petfood-com',
+    theme: themes['petfood-com'],
     gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
     affiliates: {
       amazon: true,
@@ -611,342 +661,13 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     ],
     footerLinks: [
       {
-        heading: 'Ferrets.com',
+        heading: 'PetFood.com',
         links: [
           { label: 'Home', href: '/' },
         ],
       },
     ],
-    defaultOgImage: 'https://ferrets.com/og-default.jpg',
-  },
-}
-
-// ─────────────────────────────────────────────
-// CROSS-PORTFOLIO RECOMMENDATIONS
-// Drives the CrossPortfolioCard component — sister-site recommendations
-// shown contextually so each domain refers readers to relevant siblings.
-// Builds internal-network authority and funnels owners toward Vets.co.
-// ─────────────────────────────────────────────
-
-/** Sister sites we may recommend. Includes the 5 active sites plus the new
- *  portfolio scaffolds (Horses / PetFood / PetFoods / Ferret / Ferrets) whose
- *  content branches are landing in parallel. URLs point to the canonical
- *  sibling domains. */
-export type RecommendedSiteId =
-  | SiteId
-  | 'ferret-com'
-  | 'ferrets-com'
-  | 'horses-com'
-  | 'petfood-com'
-  | 'petfoods-com'
-
-/** Editorial context of the page driving the recommendation. */
-export type ContentType =
-  | 'health'
-  | 'food'
-  | 'breed'
-  | 'training'
-  | 'gear'
-  | 'general'
-
-/** One sister-site recommendation entry. Editorial copy — never ad-y. */
-export interface CrossPortfolioRecommendation {
-  siteId: RecommendedSiteId
-  /** Sister-site name shown above the headline (e.g. "Vets.co"). */
-  siteName: string
-  /** Where the card links — root or a deeper relevant route on the sister. */
-  href: string
-  /** ≤ 8 words. */
-  headline: string
-  /** ≤ 25 words — explains the relevance. */
-  blurb: string
-  /** Short CTA label, e.g. "Find a vet". */
-  cta: string
-}
-
-/**
- * (fromSiteId, contentType) → up to 2 sister-site recommendations.
- * Editorial rule: never overlink; never recommend a site without
- * relevant content for the given context.
- */
-export const crossPortfolioRecommendations: Record<
-  SiteId,
-  Partial<Record<ContentType, CrossPortfolioRecommendation[]>>
-> = {
-  'dog-com': {
-    health: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find a vet near you',
-        blurb:
-          'When your dog needs hands-on care, Vets.co lists vets, telehealth options, and emergency clinics with verified hours.',
-        cta: 'Find a vet',
-      },
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com/dogs',
-        headline: 'Compare commercial dog diets',
-        blurb:
-          'PetFood.com compares dog foods against WSAVA nutritional standards so you can see which meet the guidelines you actually care about.',
-        cta: 'Compare diets',
-      },
-    ],
-    food: [
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com/dogs',
-        headline: 'See how brands compare',
-        blurb:
-          'Side-by-side dog-food comparisons across WSAVA criteria, life-stage suitability, and ingredient transparency.',
-        cta: 'Compare brands',
-      },
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/health',
-        headline: 'When diet meets a diagnosis',
-        blurb:
-          'If a vet has recommended a prescription or therapeutic diet, Vets.co explains what those formulas actually do.',
-        cta: 'Read the guides',
-      },
-    ],
-    breed: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/breeds',
-        headline: 'Breed-specific health risks',
-        blurb:
-          'Vets.co covers the genetic conditions, screening tests, and life-stage red flags that are over-represented in this breed.',
-        cta: 'Health profile',
-      },
-    ],
-    training: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/health',
-        headline: 'When behavior is medical',
-        blurb:
-          'Sudden behavior changes can be pain or thyroid — Vets.co covers the medical signs people commonly mistake for training problems.',
-        cta: 'Behavior guides',
-      },
-    ],
-    gear: [
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com/dogs',
-        headline: 'Pair the gear with the diet',
-        blurb:
-          'Once the bowl and crate are sorted, PetFood.com helps you compare the food that goes inside.',
-        cta: 'Compare diets',
-      },
-    ],
-    general: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find a vet near you',
-        blurb:
-          'Vets.co — the portfolio reference for finding veterinary care, understanding diagnoses, and comparing pet insurance.',
-        cta: 'Find a vet',
-      },
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com/dogs',
-        headline: 'Compare dog foods on the merits',
-        blurb:
-          'PetFood.com benchmarks commercial diets against WSAVA criteria so you can pick food on substance, not packaging.',
-        cta: 'Compare diets',
-      },
-    ],
-  },
-
-  'vets-co': {
-    breed: [
-      {
-        siteId: 'dog-com',
-        siteName: 'Dog.com',
-        href: 'https://dog.com/breeds',
-        headline: 'Full breed profiles',
-        blurb:
-          'Dog.com goes deeper on temperament, exercise, training, and day-to-day care for every breed Vets.co covers medically.',
-        cta: 'Breed library',
-      },
-    ],
-    health: [
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com',
-        headline: 'Diets that match the diagnosis',
-        blurb:
-          'PetFood.com compares prescription and therapeutic diets against WSAVA criteria when your vet has recommended a dietary change.',
-        cta: 'Compare diets',
-      },
-    ],
-    general: [
-      {
-        siteId: 'dog-com',
-        siteName: 'Dog.com',
-        href: 'https://dog.com',
-        headline: 'Dog owner reference library',
-        blurb:
-          'Dog.com is the portfolio reference for breed profiles, training, nutrition, and day-to-day owner questions.',
-        cta: 'Visit Dog.com',
-      },
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com',
-        headline: 'Compare pet foods on the merits',
-        blurb:
-          'PetFood.com benchmarks commercial pet diets against WSAVA criteria so you can pick food on substance, not packaging.',
-        cta: 'Compare diets',
-      },
-    ],
-  },
-
-  'fish-com': {
-    health: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Aquatic & exotic vets',
-        blurb:
-          'When water-quality fixes aren\'t enough, Vets.co helps you locate vets with aquatic and exotic-species experience.',
-        cta: 'Find a vet',
-      },
-    ],
-    gear: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/health',
-        headline: 'When equipment fails fish',
-        blurb:
-          'Vets.co covers the medical fallout — ammonia burns, swim-bladder issues, stress disease — when filtration or heating goes wrong.',
-        cta: 'Health guides',
-      },
-    ],
-    general: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Aquatic & exotic vets',
-        blurb:
-          'Vets.co helps you find a vet with aquatic experience for the cases water testing alone can\'t resolve.',
-        cta: 'Find a vet',
-      },
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com',
-        headline: 'Beyond fish flakes',
-        blurb:
-          'PetFood.com compares commercial diets across species — useful when your household is more than the aquarium.',
-        cta: 'Compare brands',
-      },
-    ],
-  },
-
-  'saddle-com': {
-    health: [
-      {
-        siteId: 'horses-com',
-        siteName: 'Horses.com',
-        href: 'https://horses.com/health',
-        headline: 'Equine health & soundness',
-        blurb:
-          'Horses.com covers back pain, saddle fit consequences, and lameness work-ups — the medical side of the tack questions.',
-        cta: 'Health library',
-      },
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find an equine vet',
-        blurb:
-          'When fit changes don\'t resolve the issue, Vets.co lists equine practitioners and specialists by region.',
-        cta: 'Find a vet',
-      },
-    ],
-    gear: [
-      {
-        siteId: 'horses-com',
-        siteName: 'Horses.com',
-        href: 'https://horses.com',
-        headline: 'Riding & horse care reference',
-        blurb:
-          'Horses.com is the broader reference — care, training, discipline guides — for the horse the tack is going on.',
-        cta: 'Visit Horses.com',
-      },
-    ],
-    general: [
-      {
-        siteId: 'horses-com',
-        siteName: 'Horses.com',
-        href: 'https://horses.com',
-        headline: 'Riding & horse care reference',
-        blurb:
-          'Horses.com covers care, training, and discipline guides for the horse under the saddle.',
-        cta: 'Visit Horses.com',
-      },
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find an equine vet',
-        blurb:
-          'Vets.co lists equine practitioners and specialists when a fit question turns out to be a soundness question.',
-        cta: 'Find a vet',
-      },
-    ],
-  },
-
-  'lizard-com': {
-    health: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find an exotic-species vet',
-        blurb:
-          'Reptile husbandry mistakes show up medically — Vets.co helps you find vets who actually treat reptiles, not just dogs and cats.',
-        cta: 'Find a vet',
-      },
-    ],
-    food: [
-      {
-        siteId: 'petfood-com',
-        siteName: 'PetFood.com',
-        href: 'https://petfood.com',
-        headline: 'Commercial diets, compared',
-        blurb:
-          'PetFood.com compares commercial reptile and insectivore diets where they\'re a sensible supplement to a live-feed schedule.',
-        cta: 'Compare brands',
-      },
-    ],
-    general: [
-      {
-        siteId: 'vets-co',
-        siteName: 'Vets.co',
-        href: 'https://vets.co/find-a-vet',
-        headline: 'Find an exotic-species vet',
-        blurb:
-          'Vets.co helps you find vets with reptile experience — most general-practice clinics don\'t see them often.',
-        cta: 'Find a vet',
-      },
-    ],
+    defaultOgImage: 'https://petfood.com/og-default.jpg',
   },
 }
 
@@ -962,21 +683,6 @@ export function getSiteConfig(siteId: SiteId): SiteConfig {
 
 export function getTheme(siteId: SiteId): SiteTheme {
   return themes[siteId]
-}
-
-/**
- * Look up cross-portfolio recommendations for a site + content context.
- * Returns at most 2 entries (editorial cap — never overlink).
- * Falls back to the site's `general` set when no rule matches the contentType.
- */
-export function getCrossPortfolioRecommendations(
-  fromSite: SiteId,
-  contentType: ContentType,
-): CrossPortfolioRecommendation[] {
-  const rules = crossPortfolioRecommendations[fromSite]
-  if (!rules) return []
-  const match = rules[contentType] ?? rules.general ?? []
-  return match.slice(0, 2)
 }
 
 /** CSS custom properties string for a given site — inject into :root */
