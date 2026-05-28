@@ -142,7 +142,7 @@ const CATEGORIES: {
     icon: 'health',
     title: 'Health',
     desc: 'Sick-reptile signs, MBD, parasites, and when-to-call-an-ARAV-vet thresholds.',
-    href: '/health',
+    href: '/health/metabolic-bone-disease',
   },
   {
     icon: 'uvb',
