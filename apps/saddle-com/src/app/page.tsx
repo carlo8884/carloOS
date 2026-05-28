@@ -13,6 +13,7 @@
  */
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
@@ -115,6 +116,14 @@ interface FeaturedReview {
   score: string
   takeaway: string
   href: string
+  /**
+   * Optional cover photo. Photo IDs reuse the equestrian Unsplash CDN URLs
+   * already shipped on /english (verified-in-production). Atmospheric
+   * subjects — horse-in-tack, not branded gear shots — keep the editorial
+   * voice and avoid implying paid endorsement.
+   */
+  image?: string
+  imageAlt?: string
 }
 
 const FEATURED_REVIEWS: FeaturedReview[] = [
@@ -127,6 +136,9 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Deep seat, narrow twist, hand-stitched bridle leather. Pricing aligned with the German-made cohort; resale holds among the strongest in the category.',
     href: '/reviews/stubben-saddle-review',
+    image:
+      'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'Dressage horse in tack at the canter',
   },
   {
     badge: 'Best Jumping',
@@ -137,6 +149,9 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Forward flap, anatomic panels, calfskin grip. The benchmark performance jumper; widely fitted, with predictable resale.',
     href: '/reviews/pessoa-saddle-review',
+    image:
+      'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'Show jumper mid-flight over a fence',
   },
   {
     badge: 'Best Value',
@@ -147,6 +162,9 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
     takeaway:
       'Adjustable gullet, synthetic-blocked tree, calf-padded flap. The honest entry-tier choice for a growing horse or a second-saddle slot.',
     href: '/reviews/collegiate-saddle-review',
+    image:
+      'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'Horse and rider in an all-purpose schooling session',
   },
 ]
 
@@ -234,6 +252,31 @@ export default function SaddleHomePage() {
               'repeating-linear-gradient(96deg, rgba(255,255,255,0.6) 0px, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 4px)',
           }}
         />
+
+        {/* Hero photo — dressage horse in profile, blended into the brass
+            radial wash. Photo ID is already in production on /english.
+            Mobile collapses to CSS-only; lg+ takes the right 50% of the
+            masthead with a cordovan-toned edge fade. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden lg:block w-1/2 z-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1400&q=80&auto=format&fit=crop"
+            alt=""
+            fill
+            sizes="50vw"
+            className="object-cover"
+            priority
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(16,10,4,1) 0%, rgba(16,10,4,0.78) 25%, rgba(16,10,4,0.28) 65%, rgba(16,10,4,0.40) 100%)',
+            }}
+          />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
           <div className="max-w-3xl">
@@ -489,8 +532,23 @@ export default function SaddleHomePage() {
               <Link
                 key={r.href}
                 href={r.href}
-                className="group relative bg-brand-white border border-brand-border rounded-lg p-7 no-underline transition-all duration-200 hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/40 flex flex-col"
+                className="group relative bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline transition-all duration-200 hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/40 flex flex-col"
               >
+                {/* Cover photo — equestrian editorial subject, not a branded
+                    product shot. Hover-zoom is restrained to avoid the
+                    over-active marketing-card feel. */}
+                {r.image && r.imageAlt ? (
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={r.image}
+                      alt={r.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="relative p-7 flex flex-col flex-1">
                 {/* Brass top-rule */}
                 <span
                   aria-hidden="true"
@@ -552,6 +610,7 @@ export default function SaddleHomePage() {
                     →
                   </span>
                 </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -667,6 +726,33 @@ export default function SaddleHomePage() {
           />
         </div>
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      <aside
+        className="px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'rgba(255,255,255,0.55)' }}
+        >
+          Hero & featured photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'rgba(255,255,255,0.78)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License.
+        </p>
+      </aside>
     </>
   )
 }
