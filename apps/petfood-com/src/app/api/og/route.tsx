@@ -24,7 +24,7 @@ const SITE_CONFIGS: Record<string, { primary: string; dark: string; name: string
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
 
-  const title = searchParams.get('title') ?? 'The independent reference for pet food.'
+  const title = searchParams.get('title') ?? 'A Reference for Pet Nutrition'
   const category = searchParams.get('category') ?? ''
   const siteId = (searchParams.get('site') ?? 'petfood-com') as keyof typeof SITE_CONFIGS
   const site = SITE_CONFIGS[siteId] ?? SITE_CONFIGS['petfood-com']
