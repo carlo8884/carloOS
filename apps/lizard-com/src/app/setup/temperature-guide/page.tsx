@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide — Gradients | Lizard.com', description: 'How to create a proper thermal gradient, select the right heat sources, use thermostats, and measure temperatures accurately for reptiles.', path: '/setup/temperature-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Temperature Setup Guide', description: 'Thermal gradients, heat sources, thermostats, and accurate measurement.', url: 'https://lizard.com/setup/temperature-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,8 +34,10 @@ export default function TemperatureGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2 id="gradient">The Thermal Gradient Principle</h2>
-        <p>A thermal gradient is a continuous range of temperatures across the length of the enclosure — from a warm basking zone at one end to a cooler retreat at the other. The animal self-regulates body temperature by choosing where to position itself. This behavioral thermoregulation is the mechanism through which reptiles control digestion, immune function, reproduction, and virtually every metabolic process.</p>
+        <DropCap>A thermal gradient is a continuous range of temperatures across the length of the enclosure — from a warm basking zone at one end to a cooler retreat at the other. The animal self-regulates body temperature by choosing where to position itself. This behavioral thermoregulation is the mechanism through which reptiles control digestion, immune function, reproduction, and virtually every metabolic process.</DropCap>
         <p>An enclosure with uniform temperature — even the correct temperature — denies the animal the ability to thermoregulate. The basking zone and the cool end serve different physiological functions; both are required.</p>
         <p><strong>Minimum gradient requirements:</strong> The temperature difference between the hottest basking surface and the coolest retreat should be at least 15–20°F for most species. A bearded dragon needs a 110°F basking spot and a 75–80°F cool end. Both zones are essential.</p>
 
@@ -60,6 +63,10 @@ export default function TemperatureGuidePage() {
             <div style={{ fontSize: '13px', color: 'rgba(238,240,228,0.7)' }}>{t.notes}</div>
           </div>
         ))}
+
+        <CalloutBox variant="warning" title="Unthermostated heat = dead reptile">
+          Every heat source — basking bulb, CHE, DHP, heat mat — must be connected to the correct thermostat. An unthermostated heater can overshoot enclosure temperatures and kill an animal within hours. The thermostat is not an optional accessory; it is part of the heater.
+        </CalloutBox>
 
         <h2 id="measuring">Measuring Temperatures Correctly</h2>
         <p>The most critical measurement is basking surface temperature — measured with a temperature gun (infrared) pointed at the exact basking surface the animal contacts. Ambient air temperature is measured with a probe thermometer (Govee H5053) in the cool zone. Both measurements matter; both require accurate instruments.</p>

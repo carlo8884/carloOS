@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+.', path: '/health/senior-pet-care', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
@@ -27,8 +28,10 @@ export default function SeniorPetCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2>Why Biannual Exams Matter</h2>
-          <p>A year in a senior dog's life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs' health changes.</p>
+          <DropCap>A year in a senior dog's life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs' health changes.</DropCap>
           <p>Each biannual senior exam should include: a comprehensive physical examination with specific attention to lymph nodes (lymphoma screening), abdominal palpation (organ size and masses), cardiac auscultation (murmur grading), orthopedic assessment (joint pain, range of motion), ophthalmic assessment (cataracts, early glaucoma), dental grading, body weight and condition scoring, and a brief cognitive and behavioral history review.</p>
 
           <h2>What Bloodwork Reveals</h2>
@@ -40,6 +43,10 @@ export default function SeniorPetCarePage() {
             <li><strong>Liver disease:</strong> Elevated liver enzymes may indicate hepatic disease, Cushing's disease, or medication effects.</li>
             <li><strong>Anemia:</strong> May indicate blood loss, bone marrow disease, or chronic disease.</li>
           </ul>
+
+          <CalloutBox variant="evidence" title="SDMA catches CKD years early">
+            SDMA elevation detects chronic kidney disease when roughly 25% of kidney function has been lost — years before BUN and creatinine become abnormal. Adding SDMA to senior bloodwork is one of the highest-yield additions to the standard panel and allows dietary intervention well before clinical signs develop.
+          </CalloutBox>
 
           <h2>Blood Pressure — The Overlooked Vital</h2>
           <p>Hypertension (high blood pressure) occurs in senior dogs — commonly secondary to kidney disease, hypothyroidism, Cushing's disease, or cardiac disease. Hypertension causes retinal detachment and blindness, progresses kidney disease, and affects cardiac function. It is detected only by measurement and is easily treated once identified. Blood pressure should be measured at every senior wellness visit using a Doppler or oscillometric device. A normal canine blood pressure is under 160 mmHg systolic.</p>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies.', path: '/species/ball-python', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Care Guide', description: 'Morphs, humidity, feeding refusal management, and setup for Python regius ball pythons.', url: 'https://lizard.com/species/ball-python', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BallPythonPage() {
@@ -24,10 +25,16 @@ export default function BallPythonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Feeding Refusals — The Biggest Beginner Fear</h2>
-        <p>Ball pythons are notorious for feeding strikes — periods of weeks to months where they refuse food entirely. This behavior is normal and rooted in their biology: in the wild, West African ball pythons may not eat for 3–6 months during dry season when prey is scarce. A healthy, well-maintained adult ball python refusing food for 4–8 weeks is not cause for panic — it is normal seasonal behavior.</p>
+        <DropCap>Ball pythons are notorious for feeding strikes — periods of weeks to months where they refuse food entirely. This behavior is normal and rooted in their biology: in the wild, West African ball pythons may not eat for 3–6 months during dry season when prey is scarce. A healthy, well-maintained adult ball python refusing food for 4–8 weeks is not cause for panic — it is normal seasonal behavior.</DropCap>
         <p>Common triggers for feeding refusals: seasonal (late fall and winter — even captive snakes respond to changing day length and temperature), shedding cycle (snakes often refuse food while in the blue/opaque pre-shed phase), reproductive season in females, stress from handling or enclosure changes, and recent cage cleaning. When a ball python refuses food, the first step is not medication — it is asking what has changed and whether the husbandry parameters are correct.</p>
         <p><strong>When to actually be concerned:</strong> A feeding refusal combined with weight loss (weigh monthly — a scale is essential), mucus discharge, respiratory sounds, or visible illness warrants veterinary evaluation. A feeding refusal in an otherwise healthy-appearing snake that is maintaining or gaining weight over months is almost never medically urgent. A healthy adult ball python can safely fast for 6 months or more.</p>
+
+        <CalloutBox variant="tip" title="Weigh monthly, not weekly">
+          A monthly weigh-in on a digital kitchen scale tells you whether a feeding strike is a healthy seasonal fast or an actual concern. Stable or rising weight during a refusal means the snake is fine; sustained weight loss accompanied by any other sign (mucus, wheezing, lethargy) is worth a vet call.
+        </CalloutBox>
 
         <h2>Humidity — More Important Than Most Think</h2>
         <p>Ball pythons come from the humid forests and grasslands of West and Central Africa where relative humidity averages 60–80%. Inadequate humidity is the most common husbandry problem in ball python keeping — and the most common cause of dysecdysis (incomplete shed), respiratory infections, and skin condition problems. In screen-top enclosures (the standard decade ago), maintaining 60-80% humidity is nearly impossible without covering most of the screen. PVC or glass enclosures with limited ventilation maintain humidity far more reliably and are now the standard recommendation.</p>
