@@ -135,17 +135,20 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'vets-co': {
-    primary: '#0A8A7A',
-    primaryLight: '#12B09C',
-    primaryPale: '#E6F5F3',
-    primaryDark: '#076B5E',
-    dark: '#0D2535',
-    surface: '#F8FAFB',
+    // Clinical authority palette — deep teal primary, dark navy masthead,
+    // warm ivory paper surface. Sits between AAHA/AVMA (institutional) and
+    // 1-800-PetMeds (commercial) — research-anchored, owner-friendly.
+    primary: '#0A6B5E',          // deepened, more clinical
+    primaryLight: '#0F8A78',
+    primaryPale: '#E8F2F0',
+    primaryDark: '#054C42',
+    dark: '#0C1F2C',             // deeper navy — masthead authority
+    surface: '#F6F4EE',          // warm ivory paper (not cool grey)
     white: '#FFFFFF',
-    textDark: '#0D2535',
-    textMid: '#3A5A6A',
-    textLight: '#7A9AAA',
-    border: '#DDE8EE',
+    textDark: '#0C1F2C',
+    textMid: '#3A4F5C',
+    textLight: '#7A8C97',
+    border: '#DDE3E5',
     success: '#1E8A4A',
     warning: '#C8952A',
     danger: '#C84A2A',
@@ -154,7 +157,7 @@ export const themes: Record<SiteId, SiteTheme> = {
     fontDisplayWeights: [400, 700],
     fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Vets.co',
-    siteTagline: 'Find a Vet. Read the Guidelines.',
+    siteTagline: 'Find a vet. Read the guidelines.',
     siteUrl: 'https://vets.co',
     logoText: 'Vets.co',
     twPrimary: 'teal',
