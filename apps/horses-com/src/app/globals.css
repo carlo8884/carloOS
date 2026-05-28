@@ -3,39 +3,48 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────
-   HORSES.COM THEME TOKENS
-   Sets CSS variables consumed by Tailwind utilities.
-   Change these values here; Tailwind picks them up automatically.
+   HORSES.COM THEME TOKENS — refined equestrian
+   Brand brief: deep forest green primary, saddle-leather tan secondary,
+   unbleached cream surface, brass accent, off-black text.
    ───────────────────────────────────────────── */
 
 :root {
-  /* Brand — warm equestrian palette */
-  --brand-primary: #6E4A28;
-  --brand-primary-light: #8C6238;
-  --brand-primary-pale: #F4ECDF;
-  --brand-primary-dark: #523618;
+  /* Primary — deep forest green (hunt coat / Hermès equestrian) */
+  --brand-primary: #1F3A2F;
+  --brand-primary-light: #2E5444;
+  --brand-primary-pale: #E8EDE6;
+  --brand-primary-dark: #142820;
+
+  /* Secondary — saddle-leather tan */
+  --brand-secondary: #A37547;
+  --brand-secondary-light: #BD8C5C;
+  --brand-secondary-dark: #7A5530;
+
+  /* Accent — brass / antique gold, used sparingly */
+  --brand-accent: #B68830;
+  --brand-accent-light: #D6A14A;
 
   /* Backgrounds */
-  --brand-dark: #1F2B1E;
-  --brand-surface: #FAF4E8;
+  --brand-dark: #13241C;          /* green-black masthead */
+  --brand-surface: #F4EFE6;       /* unbleached cream */
   --brand-white: #FFFFFF;
 
   /* Text */
-  --brand-text-dark: #1F2B1E;
-  --brand-text-mid: #4A3A28;
-  --brand-text-light: #8A7A68;
+  --brand-text-dark: #13241C;
+  --brand-text-mid: #3F3A2E;
+  --brand-text-light: #7A6E5C;
 
   /* Borders */
-  --brand-border: #E2D6C2;
+  --brand-border: #D9D0BE;
 
   /* Semantic */
-  --brand-success: #3A6A2A;
-  --brand-warning: #C8952A;
-  --brand-danger: #C84A2A;
+  --brand-success: #1F3A2F;
+  --brand-warning: #B68830;
+  --brand-danger: #9A3A22;
 
-  /* Typography (loaded via next/font — variable names set there) */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-body: var(--font-source-sans), system-ui, sans-serif;
+  /* Typography — actual families wired by next/font in layout.tsx */
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Layout */
   --nav-height: 68px;
@@ -50,16 +59,26 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  @apply bg-brand-white text-brand-text-dark;
+  background: var(--brand-surface);
+  color: var(--brand-text-dark);
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+
+.tabular-display { font-variant-numeric: lining-nums tabular-nums; }
 
 img {
   max-width: 100%;
@@ -83,25 +102,37 @@ img {
   --tw-prose-links: var(--brand-primary);
   --tw-prose-bold: var(--brand-text-dark);
   --tw-prose-counters: var(--brand-text-light);
-  --tw-prose-bullets: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-accent);
   --tw-prose-hr: var(--brand-border);
   --tw-prose-quotes: var(--brand-text-mid);
-  --tw-prose-quote-borders: var(--brand-primary);
+  --tw-prose-quote-borders: var(--brand-accent);
   --tw-prose-code: var(--brand-text-dark);
   --tw-prose-th-borders: var(--brand-border);
   --tw-prose-td-borders: var(--brand-border);
 }
 
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
 /* ─── SELECTION ───────────────────────────────────────────────── */
 
 ::selection {
-  background: rgba(110, 74, 40, 0.2);
+  background: rgba(31, 58, 47, 0.18);
   color: var(--brand-text-dark);
 }
 
-/* Font CSS variables — fonts loaded via Google Fonts CDN */
+/* Font CSS variables — fallbacks if next/font fails. The layout.tsx import sets
+   the real --font-playfair and --font-source-sans values. */
 .font-vars,
 :root {
-  --font-playfair: Georgia, "Times New Roman", serif;
-  --font-source-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-playfair: Georgia, 'Times New Roman', serif;
+  --font-source-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }

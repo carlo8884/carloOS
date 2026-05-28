@@ -1,15 +1,34 @@
 import type { Metadata } from 'next'
-import { Nav, Footer } from '@carloOS/ui'
-import { buildMetadata } from '@carloOS/ui'
+import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
+import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+// ─── Fonts ──────────────────────────────────────────────────────────────────
+// Playfair Display — high-contrast didone-adjacent serif. Used for display
+// headings only (32px and up — thin strokes vanish below that).
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+// Source Sans 3 — readable humanist sans for body + UI.
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-source-sans',
+  display: 'swap',
+})
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'A Reference for Horse Owners',
+  title: 'The Reference for Horse Owners',
   description:
-    'Horses.com — research-based reference for horse owners. Site coming soon.',
+    'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
   path: '/',
   type: 'website',
 })
@@ -28,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="font-vars"
+      className={`${playfair.variable} ${sourceSans.variable} font-vars`}
     >
       <head>
         {/* GA4 — only loads in production with a real ID */}
