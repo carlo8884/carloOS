@@ -45,3 +45,17 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 // Search
 export { SearchBar } from './components/SearchBar'
 export { buildHowToSchema, buildMedicalWebPageSchema, combineSchemas } from './components/SEOHead'
+
+// Editorial component library
+export { PullQuote } from './components/PullQuote'
+export type { PullQuoteProps } from './components/PullQuote'
+export { DropCap } from './components/DropCap'
+export type { DropCapProps } from './components/DropCap'
+export { ImageCard } from './components/ImageCard'
+export type { ImageCardProps } from './components/ImageCard'
+export { CalloutBox } from './components/CalloutBox'
+export type { CalloutBoxProps, CalloutVariant } from './components/CalloutBox'
+export { SourceCitation } from './components/SourceCitation'
+export type { SourceCitationProps } from './components/SourceCitation'
+export { ArticleByline } from './components/ArticleByline'
+export type { ArticleBylineProps } from './components/ArticleByline'
