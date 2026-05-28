@@ -5,7 +5,7 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Best Aquarium Equipment Reviews 2025 — Ranked & Compared | Fish.com',
-  description: 'Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, planted-tank fertilizers, and water test kits — ranked with real data.',
+  description: 'Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, fertilizers, and water test kits — ranked with real data.',
   path: '/reviews',
 })
 
