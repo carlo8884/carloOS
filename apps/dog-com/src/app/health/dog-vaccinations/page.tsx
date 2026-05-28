@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vaccination Schedule', description: 'Core and non-core vaccines, puppy schedule, and titer testing for dogs.', url: 'https://dog.com/health/dog-vaccinations', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
@@ -34,6 +34,8 @@ export default function DogVaccinationsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
             Every dog needs four core vaccines per WSAVA guidelines: rabies (required by law),
             distemper, adenovirus, and parvovirus (combined as DA2PP). Puppies receive a
@@ -42,6 +44,11 @@ export default function DogVaccinationsPage() {
             leptospirosis, Lyme, influenza — depend on lifestyle and geographic exposure.
             Titer testing can support evidence-based revaccination decisions for adults.
           </p>
+
+          <CalloutBox variant="evidence" title="Evidence-anchored">
+            Core vaccine selection follows the <strong>WSAVA Vaccination Guidelines for the Owners and Breeders of Dogs and Cats</strong> — the international standard for canine immunization. Recommendations reflect the WSAVA guideline framework as published.
+          </CalloutBox>
+
           <h2>Core Vaccines — Every Dog</h2>
           <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The WSAVA guidelines define four core canine vaccines:</p>
           <ul>
@@ -68,6 +75,8 @@ export default function DogVaccinationsPage() {
               </tbody>
             </table>
           </div>
+
+          <PullQuote variant="inline" quote="Titer testing is most useful for owners concerned about over-vaccination in adult dogs with documented vaccine history." attribution="On evidence-based revaccination" />
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
           <p><strong>Bordetella (kennel cough):</strong> Recommended for dogs in boarding facilities, doggy daycare, training classes, or frequent dog park contact. Highly contagious but rarely serious in healthy adult dogs. Intranasal or oral administration provides faster immunity than injectable. Annual booster; some facilities require every 6 months.</p>
