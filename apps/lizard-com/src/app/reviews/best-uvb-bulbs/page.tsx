@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -60,6 +61,8 @@ export default function BestUVBBulbsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-12">
         <div className="grid lg:grid-cols-[1fr_260px] gap-12">
           <div>
+            <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
             {/* Methodology */}
             <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Ranking Methodology</div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Dressage Basics Guide — Training Scale, Tests | Saddle.com', description: 'Introduction to dressage. The Training Scale (Rhythm, Relaxation, Contact, Impulsion, Straightness, Collection), how dressage tests work.', path: '/guides/dressage-basics-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Dressage Basics Guide', description: 'Training scale, competition tests, and equipment for beginning dressage riders.', url: 'https://saddle.com/guides/dressage-basics-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DressageBasicsGuidePage() {
@@ -24,8 +25,10 @@ export default function DressageBasicsGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>The Training Scale — The Foundation</h2>
-        <p>German classical dressage training is built on the Ausbildungsskala — the Training Scale — six interconnected qualities that are developed in sequence but maintained together. They are not steps to be completed and left behind but qualities that inform every ride at every level.</p>
+        <DropCap>German classical dressage training is built on the Ausbildungsskala — the Training Scale — six interconnected qualities that are developed in sequence but maintained together. They are not steps to be completed and left behind but qualities that inform every ride at every level.</DropCap>
         <p><strong>Rhythm (Takt):</strong> Regular, pure gaits — walk in 4-beat, trot in 2-beat, canter in 3-beat. A horse with irregular rhythm is not yet ready to develop the next qualities. Rhythm is established through relaxation and forward movement.</p>
         <p><strong>Relaxation (Losgelassenheit):</strong> Mental and physical relaxation — the absence of tension that prevents correct movement. A tense horse cannot swing through its back, cannot use its hind end correctly, and cannot accept contact. Relaxation is the foundation on which all training is built.</p>
         <p><strong>Contact (Anlehnung):</strong> Consistent, elastic connection between rider's hand and horse's mouth through the rein. Not pulling — a conversation. The horse seeks the contact when relaxed and forward. Contact is developed from the leg aid forward into the hand, not from pulling backward.</p>

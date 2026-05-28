@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide — Enclosure, UVB, Diet | Lizard.com', description: 'Complete bearded dragon care guide. 4x2x2 enclosure minimum, Arcadia 12% UVB required, calcium supplementation, diet ratios.', path: '/species/bearded-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,8 +29,14 @@ export default function BeardedDragonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2 id="enclosure">Enclosure</h2>
-        <p><strong>Minimum adult enclosure: 4 feet long × 2 feet wide × 2 feet tall.</strong> This is not a guideline — a smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate. A juvenile can live in a 3x1.5x1.5 enclosure, but you will need to upgrade within the first year. Buy the adult size from the start.</p>
+        <DropCap letter="M"><strong>Minimum adult enclosure: 4 feet long × 2 feet wide × 2 feet tall.</strong> This is not a guideline — a smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate. A juvenile can live in a 3x1.5x1.5 enclosure, but you will need to upgrade within the first year. Buy the adult size from the start.</DropCap>
+
+        <CalloutBox variant="tip" title="Impaction prevention">
+          For juveniles under 12 inches, keep them on tile or paper rather than loose particulate substrate — they ingest sand and small particles while striking prey. For adults on bioactive soil, ensure a thermal gradient with a true cool side (75–80°F) so the dragon can hydrate without becoming hyperthermic. Always offer water in a shallow dish and gut-load insects on calcium-rich greens.
+        </CalloutBox>
         <p><strong>Enclosure type:</strong> PVC or wood with glass front (Zen Habitats, Animal Plastics) for best heat retention and UVB reflection. All-glass tanks lose heat rapidly and are inefficient for desert species. The front-opening design of purpose-built reptile enclosures reduces stress compared to top-opening tanks (approach from above mimics predator behavior).</p>
         <p><strong>Substrate:</strong> Bioactive soil mix (60% topsoil / 30% sand / 10% organic matter) for adults. Tile or paper for juveniles under 12 inches (impaction risk from loose particle at small size). See substrate guide for full bioactive setup instructions.</p>
 

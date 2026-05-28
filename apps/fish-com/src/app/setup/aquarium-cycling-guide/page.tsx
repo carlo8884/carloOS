@@ -1,4 +1,19 @@
 import type { Metadata } from 'next'
+<<<<<<< HEAD
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle — How to Cycle a Fish Tank | Fish.com', description: 'The nitrogen cycle is the most important concept in fishkeeping. How to cycle a tank correctly (with and without fish), how to speed it up.', path: '/setup/aquarium-cycling-guide', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle Guide', description: 'How to cycle a fish tank — fishless cycling, seeded media, and completing the nitrogen cycle.', url: 'https://fish.com/setup/aquarium-cycling-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const howTo = buildHowToSchema({ name: 'How to Cycle a Fish Tank (Fishless Cycling)', description: 'Step-by-step guide to establishing the nitrogen cycle in a new aquarium.', url: 'https://fish.com/setup/aquarium-cycling-guide', totalTime: 'P5W', steps: [
+  { name: 'Set up the tank and add dechlorinated water', text: 'Fill the tank with tap water treated with a dechlorinator (Seachem Prime). Run the filter, heater, and any air pumps. Do not add fish.' },
+  { name: 'Add an ammonia source', text: 'For fishless cycling: add ammonia to reach 2 ppm. Use pure ammonia drops (Dr. Tim\'s Ammonium Chloride) or add a pinch of fish food and wait for it to decompose. Test with an API ammonia test kit to confirm 2 ppm.' },
+  { name: 'Add beneficial bacteria', text: 'Add a bottled bacteria supplement: Seachem Stability (shake vigorously, dose daily for 7 days), Dr. Tim\'s One & Only (single dose), or Fritz Turbo Start 700. These introduce real Nitrosomonas and Nitrospira bacteria.' },
+  { name: 'Test every 2-3 days', text: 'Test ammonia, nitrite, and nitrate with an API Master Test Kit. You will first see nitrite appear as ammonia drops. Then nitrate appears as nitrite drops. The cycle is complete when both ammonia and nitrite read 0 within 24 hours of a 2 ppm ammonia dose.' },
+  { name: 'Do a large water change and add fish', text: 'Once cycled, do a 50% water change to reduce accumulated nitrate. Then add fish — slowly, one or two species at a time, with 2-week intervals. Test water weekly for the first month.' },
+]})
+const combined = combineSchemas(schema, howTo)
+=======
 import {
   buildMetadata,
   ArticleLayout,
@@ -125,6 +140,7 @@ const faqSchema = buildFAQSchema({
 
 const combinedSchema = combineSchemas(articleSchema, howToSchema, faqSchema)
 
+>>>>>>> origin/main
 export default function CyclingGuidePage() {
   return (
     <>
@@ -192,6 +208,12 @@ export default function CyclingGuidePage() {
         }
       >
         <div className="carloOS-article">
+<<<<<<< HEAD
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <h2>What the Nitrogen Cycle Is</h2>
+          <DropCap>Fish excrete ammonia (NH₃) as a metabolic waste product through their gills. Ammonia is highly toxic — even at 0.5 ppm it damages gill tissue and causes stress. Two groups of beneficial bacteria convert ammonia to progressively less toxic compounds in a two-step process:</DropCap>
+=======
           <h2>The Nitrogen Cycle — What Each Step Does</h2>
           <p>
             Fish excrete ammonia (NH₃) through their gills as a metabolic waste product, and
@@ -199,6 +221,7 @@ export default function CyclingGuidePage() {
             damages gill tissue. Two distinct groups of chemolithoautotrophic bacteria perform
             the conversion that makes a stable aquarium possible:
           </p>
+>>>>>>> origin/main
           <ol>
             <li>
               <strong>Ammonia oxidizers</strong> (the Nitrosomonas group, plus some ammonia-oxidizing
@@ -233,7 +256,18 @@ export default function CyclingGuidePage() {
             aquarium husbandry guidance.
           </p>
 
+<<<<<<< HEAD
+          <CalloutBox variant="warning" title="Stalled cycle">
+            If nitrite stays elevated for more than 2–3 weeks without dropping, the cycle is stalled. Common causes: pH below 6.5 (nitrifying bacteria slow dramatically in acidic water), no detectable carbonate hardness (KH at 0), excessive ammonia dosing above 4–5 ppm (toxic to the bacteria themselves), or chlorinated tap water added without dechlorinator. Test pH and KH, raise both with crushed coral if needed, and reduce ammonia dosing to 2 ppm.
+          </CalloutBox>
+
+          <h2>The Fastest Method — Seeded Media</h2>
+          <p>Transferring established filter media from a running cycled tank to the new tank provides an instant population of beneficial bacteria. A fully seeded sponge from a healthy established tank can cycle a new tank in 24–48 hours. Sources: your local fish store may provide a seeded sponge on request, an established hobbyist in your area, or your own established tank if you're setting up an additional one. This is the fastest possible cycling method — faster than any bottled bacteria product.</p>
+
+          <h2>What Kills Your Cycle</h2>
+=======
           <h3>Ammonia source choices</h3>
+>>>>>>> origin/main
           <ul>
             <li>
               <strong>Pure ammonium chloride solution.</strong> Dr. Tim’s Ammonium Chloride and

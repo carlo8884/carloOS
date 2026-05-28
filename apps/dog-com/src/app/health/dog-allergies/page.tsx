@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Environmental, Food | Dog.com', description: 'Dog allergies have three types: environmental (atopy), food, and flea allergy dermatitis. Each presents differently and is treated differently.', path: '/health/dog-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Environmental, food, and flea allergy dermatitis in dogs — diagnosis and management.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -27,8 +28,14 @@ export default function DogAllergiesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2 id="atopy">Environmental Allergies (Atopy)</h2>
-          <p>Environmental allergy (atopic dermatitis) is the most common allergic disease in dogs — caused by inhaled or contact allergens (pollen, dust mites, mold, grass). Unlike humans who primarily experience respiratory symptoms, dogs manifest environmental allergies almost entirely through the skin: itching, redness, and secondary skin infections from self-trauma.</p>
+          <DropCap>Environmental allergy (atopic dermatitis) is the most common allergic disease in dogs — caused by inhaled or contact allergens (pollen, dust mites, mold, grass). Unlike humans who primarily experience respiratory symptoms, dogs manifest environmental allergies almost entirely through the skin: itching, redness, and secondary skin infections from self-trauma.</DropCap>
+
+          <CalloutBox variant="evidence" title="Evidence-anchored">
+            Board-certified veterinary dermatologists (<strong>ACVD</strong> diplomates — American College of Veterinary Dermatology) are the appropriate specialists for refractory or complex allergy cases. Their intradermal skin testing remains more reliable than serology for environmental allergens.
+          </CalloutBox>
           <p><strong>Presentation:</strong> Itching that follows a seasonal or year-round pattern. Most commonly affects: paws (licking and chewing), armpits, groin, ears (recurrent ear infections), and face. Golden Retrievers, Labradors, West Highland White Terriers, Boxers, and French Bulldogs are among the most predisposed breeds.</p>
           <p><strong>Treatment:</strong> Apoquel (oclacitinib) is the most commonly prescribed first-line treatment — fast-acting, effective, and generally safe for long-term use. Cytopoint (lokivetmab) is a monthly injectable that blocks the itch signal directly with a duration of 4–8 weeks. Immunotherapy (allergy shots or sublingual drops) after allergy testing is the only disease-modifying treatment — it takes 6–12 months to show effect but can reduce the need for long-term medication significantly. Cyclosporine (Atopica) is effective but has a slower onset.</p>
 

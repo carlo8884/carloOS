@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best English Saddles 2025 — Dressage, Jumping | Saddle.com', description: 'We ranked the best English saddles by discipline — dressage, show jumping, all-purpose, and eventing. Stubben, Pessoa, Bates.', path: '/reviews/best-english-saddles', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best English Saddles 2025', description: 'Stubben, Pessoa, Bates, Collegiate, Wintec, Custom Saddlery, County — compared across disciplines using published specs and aggregated rider reports.', url: 'https://saddle.com/reviews/best-english-saddles', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -34,6 +35,12 @@ export default function BestEnglishSaddlesPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            <CalloutBox variant="tip" title="Buy fit, not brand">
+              Saddle fit by a qualified Society of Master Saddlers (SMS) fitter matters more than which brand you choose — a perfectly fitted Collegiate will out-ride a poorly fitted Stubben every time. Try the saddle on your horse before purchase, and have the fit re-checked annually as horses change shape with conditioning and age.
+            </CalloutBox>
+
             <ScoreMethodology />
             <ReviewCard id="roxane" badge="Best Dressage" badgeEmoji="🏆" name="Stubben Roxane" subtitle="Deep seat · Quick-Change tree (5 widths) · Hand-finished German leather" score={9.5} winner
               description={<p>The Roxane is the benchmark dressage saddle — Quick-Change tree width adjustment, 130 years of German craftsmanship, and a deep seat geometry developed alongside FEI-level dressage riders. Panel construction is supple and fits a wider range of horses than most competitors. Resale value is excellent. See the <Link href="/reviews/stubben-saddle-review" className="text-brand-primary">full Stubben review →</Link></p>}
