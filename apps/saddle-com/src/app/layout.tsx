@@ -1,6 +1,27 @@
 import type { Metadata } from 'next'
+import { Bodoni_Moda, Jost } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import './globals.css'
+
+// ─── Fonts ──────────────────────────────────────────────────────────────────
+// Bodoni Moda — high-contrast modern didone. THE luxury identity for Saddle.com.
+// The thick/thin contrast is what carries the equestrian-luxury position;
+// Georgia fallback flattens it, so wiring this through next/font is critical.
+const bodoni = Bodoni_Moda({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-bodoni',
+  display: 'swap',
+})
+
+// Jost — geometric humanist sans for body + UI. Restrained, never barn-rustic.
+const jost = Jost({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-jost',
+  display: 'swap',
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -14,7 +35,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="font-vars">
+    <html lang="en" className={`${bodoni.variable} ${jost.variable} font-vars`}>
       <head>
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>

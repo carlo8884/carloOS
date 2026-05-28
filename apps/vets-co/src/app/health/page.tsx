@@ -16,7 +16,7 @@ export default function VetsHealthHubPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health Library</span></div>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Pet Health Library</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Emergency guides, breed health, specialist directories, and insurance comparisons — all drawing on current AVMA, AAHA, and ACVIM guidance.</p>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Emergency guides, breed health, specialist directories, and insurance comparisons — all drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
       </div>
       <div className="px-container sm:px-container-sm py-14">
         {GUIDES.map(section => (
