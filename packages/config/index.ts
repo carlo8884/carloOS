@@ -222,24 +222,28 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'lizard-com': {
-    primary: '#7AB52A',
-    primaryLight: '#9AD040',
+    // Dark-mode-first field-guide palette. Lime/herp accent lifted toward the
+    // brighter end (#9AD140) so small UI text passes WCAG AA against the
+    // green-black backgrounds the masthead leans on. Zilla Slab + Raleway
+    // pairing for magazine-quality field-guide-cover typography.
+    primary: '#9AD140',
+    primaryLight: '#B4E368',
     primaryPale: '#F0F7E6',
-    primaryDark: '#5C8A1A',
-    dark: '#080C08',
+    primaryDark: '#6E9F1F',
+    dark: '#060A06',
     surface: '#0D1A0D',
     white: '#EEF0E4',
     textDark: '#EEF0E4',
-    textMid: 'rgba(238,240,228,0.85)',
-    textLight: 'rgba(238,240,228,0.4)',
+    textMid: 'rgba(238,240,228,0.78)',
+    textLight: 'rgba(238,240,228,0.45)',
     border: 'rgba(255,255,255,0.07)',
-    success: '#2AC87A',
-    warning: '#C8A840',
-    danger: '#E05A3A',
+    success: '#4FD18A',
+    warning: '#D6BE52',
+    danger: '#E87060',
     fontDisplay: 'Zilla Slab',
     fontBody: 'Raleway',
     fontDisplayWeights: [400, 600, 700],
-    fontBodyWeights: [300, 400, 500, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Lizard.com',
     siteTagline: 'Reptile Care, Source-First',
     siteUrl: 'https://lizard.com',
