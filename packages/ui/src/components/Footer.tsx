@@ -21,7 +21,8 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
   return (
     <footer className="bg-brand-dark">
       {/* Main grid */}
-      <div className="px-container sm:px-container-sm py-16">
+      <div className="px-container-sm sm:px-container py-16">
+        <div className="mx-auto max-w-container-wide">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
           {/* Brand column */}
@@ -32,7 +33,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             >
               {config.theme.siteName}
             </Link>
-            <p className="text-sm text-white/40 leading-relaxed max-w-xs">
+            <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               {config.theme.siteTagline}
             </p>
           </div>
@@ -43,12 +44,12 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               <h4 className="text-2xs font-bold tracking-eyebrow uppercase text-white mb-4">
                 {col.heading}
               </h4>
-              <ul className="list-none m-0 p-0 flex flex-col gap-2" role="list">
+              <ul className="list-none m-0 p-0 flex flex-col gap-2.5" role="list">
                 {col.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/40 no-underline hover:text-brand-primary-light transition-colors duration-200"
+                      className="text-sm text-white/65 no-underline hover:text-white transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -61,7 +62,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
-          <span className="text-xs text-white/25">
+          <span className="text-xs text-white/50">
             © {currentYear} {config.theme.siteName} — All rights reserved
           </span>
           <div className="flex gap-5 flex-wrap">
@@ -74,7 +75,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-white/25 no-underline hover:text-white/50 transition-colors"
+                className="text-xs text-white/55 no-underline hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -82,9 +83,10 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           </div>
         </div>
 
-        {/* Affiliate disclosure */}
+        {/* Affiliate disclosure — must be readable for FTC visibility, not
+            decoratively faded. Bumped from white/20 → white/65. */}
         {showAffiliateDisclosure && (
-          <p className="mt-6 pt-5 border-t border-white/5 text-xs text-white/20 leading-relaxed">
+          <p className="mt-8 pt-6 border-t border-white/10 text-xs text-white/65 leading-relaxed max-w-3xl">
             {config.theme.siteName} participates in affiliate marketing programs including
             Amazon Associates, Chewy, and pet insurance referral programs. When you
             purchase through links on this site, we may earn a commission at no extra
@@ -92,6 +94,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             for advice from a licensed veterinarian.
           </p>
         )}
+        </div>
       </div>
     </footer>
   )
