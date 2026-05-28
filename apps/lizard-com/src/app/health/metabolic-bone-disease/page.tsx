@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles — Causes, Signs | Lizard.com', description: 'MBD is the most common nutritional disease in captive reptiles. Caused by calcium deficiency or UVB deprivation. Rubber jaw, tremors.', path: '/health/metabolic-bone-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles', description: 'Causes, signs, and prevention of nutritional secondary hyperparathyroidism (MBD) in reptiles.', url: 'https://lizard.com/health/metabolic-bone-disease', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MBDPage() {
@@ -21,6 +22,12 @@ export default function MBDPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <CalloutBox variant="warning" title="Early warning signs — act now">
+          Lethargy, fine tremors when at rest, weakness lifting the body off the substrate, a softer-than-normal jaw, and a wobbly gait are the earliest red flags. By the time pathological fractures or visible spinal kinking appear, demineralization is severe. Audit UVB output (Solarmeter 6.5), calcium dusting frequency, and gut-loading immediately — and get a reptile-experienced vet involved.
+        </CalloutBox>
+
         <h2>The Calcium-Vitamin D3-Phosphorus Triangle</h2>
         <p>MBD is fundamentally a calcium metabolism problem, but understanding it requires understanding the triangle of three interacting factors:</p>
         <p><strong>Calcium:</strong> Reptiles require dietary calcium (primarily through supplementation of feeder insects or plant food dusted with calcium carbonate powder) to build and maintain bone mineral density. Without adequate calcium intake, the parathyroid glands release parathyroid hormone (PTH) to mobilize calcium from bone — causing bone demineralization and the characteristic softening (rubber jaw, pathological fractures).</p>

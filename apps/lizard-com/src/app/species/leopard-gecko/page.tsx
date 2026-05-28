@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide — Warm Hide, Diet | Lizard.com', description: 'Complete leopard gecko care. Why they need a warm hide (not a basking spot), belly heat, diet of dubia and crickets, and how to prevent stuck shed on toes.', path: '/species/leopard-gecko', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide', description: 'Warm hide setup, diet, supplementation, and shedding for leopard geckos.', url: 'https://lizard.com/species/leopard-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
@@ -27,14 +28,14 @@ export default function LeopardGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
-        <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
-          Leopard geckos (Eublepharis macularius) are nocturnal insectivores that
-          thermoregulate by belly contact, not basking. They need a 3x1.5x1.5 foot
-          enclosure with three hides (warm, cool, and a damp moist hide for shedding),
-          a thermostat-controlled heat mat or Arcadia DHP holding the warm hide floor
-          at 88–92°F, and a diet of gut-loaded dubia and crickets dusted with calcium
-          plus a separate D3/multivitamin. With correct husbandry they live 15–20+ years.
-        </p>
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <DropCap letter="L">Leopard geckos (Eublepharis macularius) are nocturnal insectivores that thermoregulate by belly contact, not basking. They need a 3x1.5x1.5 foot enclosure with three hides (warm, cool, and a damp moist hide for shedding), a thermostat-controlled heat mat or Arcadia DHP holding the warm hide floor at 88–92°F, and a diet of gut-loaded dubia and crickets dusted with calcium plus a separate D3/multivitamin. With correct husbandry they live 15–20+ years.</DropCap>
+
+        <CalloutBox variant="tip" title="Impaction prevention">
+          Avoid loose particulate substrates (calci-sand, walnut shell, fine sand) — leopard geckos ingest substrate while striking prey and can develop fatal impactions. Use slate tile, paper towel, or a properly mixed bioactive substrate with a deep, packed surface. Always feed in a shallow dish or via tongs rather than free-ranging insects across loose substrate.
+        </CalloutBox>
+
         <h2>The Warm Hide — The Most Critical Setup Element</h2>
         <p>Leopard geckos are nocturnal ground-dwellers from semi-arid Pakistan and Afghanistan. Unlike bearded dragons (diurnal basking species), leopard geckos do not bask under a heat lamp — they thermoregulate via belly contact with warm substrate, primarily inside hides. The warm hide is where they spend most of the day and where digestion happens.</p>
         <p><strong>Warm hide floor temperature: 88–92°F.</strong> This is measured at the floor surface inside the hide — not the air temperature. Heat source: a heat mat (UTH) under one-third of the enclosure connected to a thermostat probe placed inside the warm hide, or a Arcadia Deep Heat Projector positioned overhead. The DHP is preferred because it produces IRA radiation that penetrates tissue like natural ground heat; UTH is acceptable with a properly calibrated thermostat.</p>

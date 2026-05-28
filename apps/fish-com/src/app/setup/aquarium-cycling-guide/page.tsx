@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle — How to Cycle a Fish Tank | Fish.com', description: 'The nitrogen cycle is the most important concept in fishkeeping. How to cycle a tank correctly (with and without fish), how to speed it up.', path: '/setup/aquarium-cycling-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Nitrogen Cycle Guide', description: 'How to cycle a fish tank — fishless cycling, seeded media, and completing the nitrogen cycle.', url: 'https://fish.com/setup/aquarium-cycling-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Cycle a Fish Tank (Fishless Cycling)', description: 'Step-by-step guide to establishing the nitrogen cycle in a new aquarium.', url: 'https://fish.com/setup/aquarium-cycling-guide', totalTime: 'P5W', steps: [
@@ -32,8 +33,10 @@ export default function CyclingGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2>What the Nitrogen Cycle Is</h2>
-          <p>Fish excrete ammonia (NH₃) as a metabolic waste product through their gills. Ammonia is highly toxic — even at 0.5 ppm it damages gill tissue and causes stress. Two groups of beneficial bacteria convert ammonia to progressively less toxic compounds in a two-step process:</p>
+          <DropCap>Fish excrete ammonia (NH₃) as a metabolic waste product through their gills. Ammonia is highly toxic — even at 0.5 ppm it damages gill tissue and causes stress. Two groups of beneficial bacteria convert ammonia to progressively less toxic compounds in a two-step process:</DropCap>
           <ol>
             <li><strong>Nitrosomonas species</strong> convert ammonia (NH₃) → nitrite (NO₂⁻)</li>
             <li><strong>Nitrospira species</strong> convert nitrite (NO₂⁻) → nitrate (NO₃⁻)</li>
@@ -52,6 +55,10 @@ export default function CyclingGuidePage() {
             <li>Test ammonia and nitrite every 2–3 days — re-dose ammonia to 2 ppm when it drops to 0</li>
             <li>Cycle is complete when: ammonia drops from 2 ppm to 0 AND nitrite drops from its peak to 0, both within 24 hours of a 2 ppm ammonia dose</li>
           </ol>
+
+          <CalloutBox variant="warning" title="Stalled cycle">
+            If nitrite stays elevated for more than 2–3 weeks without dropping, the cycle is stalled. Common causes: pH below 6.5 (nitrifying bacteria slow dramatically in acidic water), no detectable carbonate hardness (KH at 0), excessive ammonia dosing above 4–5 ppm (toxic to the bacteria themselves), or chlorinated tap water added without dechlorinator. Test pH and KH, raise both with crushed coral if needed, and reduce ammonia dosing to 2 ppm.
+          </CalloutBox>
 
           <h2>The Fastest Method — Seeded Media</h2>
           <p>Transferring established filter media from a running cycled tank to the new tank provides an instant population of beneficial bacteria. A fully seeded sponge from a healthy established tank can cycle a new tank in 24–48 hours. Sources: your local fish store may provide a seeded sponge on request, an established hobbyist in your area, or your own established tank if you're setting up an additional one. This is the fastest possible cycling method — faster than any bottled bacteria product.</p>
