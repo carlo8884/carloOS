@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com' | 'ferret-com' | 'ferrets-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com' | 'ferret-com' | 'ferrets-com' | 'petfoods-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -344,6 +344,33 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  'petfoods-com': {
+    // Catalog/database feel — deep moss green + warm white, ingredient-table mono.
+    primary: '#3F5C3A',
+    primaryLight: '#577A50',
+    primaryPale: '#EDF1EA',
+    primaryDark: '#2C4128',
+    dark: '#161C15',
+    surface: '#FAFAF7',
+    white: '#FFFFFF',
+    textDark: '#161C15',
+    textMid: '#3A4A38',
+    textLight: '#7A8A78',
+    border: '#DAE2D6',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Cormorant Garamond',
+    fontBody: 'Inter',
+    fontDisplayWeights: [500, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFoods.com',
+    siteTagline: 'The Pet Food Catalog',
+    siteUrl: 'https://petfoods.com',
+    logoText: 'PetFoods.com',
+    twPrimary: 'emerald',
   },
 }
 
@@ -776,6 +803,33 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'petfoods-com': {
+    id: 'petfoods-com',
+    theme: themes['petfoods-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'PetFoods.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://petfoods.com/og-default.jpg',
   },
 }
 
