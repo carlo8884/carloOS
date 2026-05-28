@@ -1,79 +1,48 @@
 /**
  * Dog.com Homepage — /
- * Server component. Fetches featured posts from Supabase.
- * Uses shared CarloOS components for all UI.
+ *
+ * Magazine-quality rebuild (2026-05-28). Server component.
+ *
+ * Positioning: "A reference for dog owners." Research-anchored, citation-
+ * heavy, no fabricated authority. The destination — not a magazine, not a
+ * marketplace, not a community forum.
+ *
+ * Visual voice: Playfair Display for editorial display type + DM Sans for
+ * UI/body (wired by next/font in layout.tsx). Warm terracotta primary on
+ * deep cocoa masthead; caramel accent rules for editorial polish. CSS-only
+ * visuals — no real photography in this pass (image-strategy ships later).
+ *
+ * Strict trust posture (QC-STANDARDS §1): no "our team tested", no fake DVM
+ * bylines, no invented superlatives. The trust bar reads as a constitution,
+ * not a marketing flourish.
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
-import { getPosts } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'A Reference for Dog Owners',
   description:
-    'Dog health guides for 200+ breeds, research-based health articles, honest product reviews, and expert training advice — built for dog owners who take…',
+    'Dog.com is the research-based reference for dog owners — breed health, citation-anchored articles, honest editorial scores, and the printable puppy schedule.',
   path: '/',
   type: 'website',
-  ogImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80&auto=format&fit=crop',
 })
 
-// ── Static breed data (will move to Supabase species table) ──────────────────
+// ── Inline SVG icon set — single visual voice, 1.5px stroke geometry ───────
+// Server-component-safe (no JS shipped) line icons. No emoji anywhere on
+// the page — iconography reads editorial, not playful.
 
-const FEATURED_BREEDS = [
-  {
-    name: 'Golden Retriever',
-    type: 'Sporting Group · Large',
-    tags: ['Family', 'Trainable', 'Active'],
-    href: '/breeds/golden-retriever',
-    image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Golden Retriever dog',
-  },
-  {
-    name: 'Labrador Retriever',
-    type: 'Sporting Group · Large',
-    tags: ['Family', 'Gentle', 'Water'],
-    href: '/breeds/labrador-retriever',
-    image: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Labrador Retriever dog',
-  },
-  {
-    name: 'French Bulldog',
-    type: 'Non-Sporting · Small',
-    tags: ['Apartment', 'Low exercise'],
-    href: '/breeds/french-bulldog',
-    image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'French Bulldog dog',
-  },
-  {
-    name: 'German Shepherd',
-    type: 'Herding Group · Large',
-    tags: ['Intelligent', 'Loyal', 'Active'],
-    href: '/breeds/german-shepherd',
-    image: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'German Shepherd dog',
-  },
-]
+type CategoryIconName =
+  | 'breeds'
+  | 'health'
+  | 'nutrition'
+  | 'training'
+  | 'reviews'
+  | 'puppy'
 
-// Stats shown in the hero — same numbers render twice (desktop floating
-// cards / mobile inline strip) so the data lives in one place.
-const HERO_STATS = [
-  { num: '30',  label: 'Breed Guides' },
-  { num: '70+', label: 'Sourced Articles' },
-  { num: '16',  label: 'Product Reviews' },
-] as const
-
-// ── Inline SVG icon set — single visual voice for category cards ────────────
-// 1.5px stroke geometric line icons, sized to a 24x24 viewBox. Kept inline
-// so the page stays a server component and ships zero icon-library JS.
-
-type IconName =
-  | 'symptoms' | 'nutrition' | 'preventive' | 'senior'
-  | 'breed' | 'dental' | 'weight' | 'behavior'
-
-function CategoryIcon({ name, className }: { name: IconName; className?: string }) {
+function CategoryIcon({ name }: { name: CategoryIconName }) {
   const common = {
     width: 28,
     height: 28,
@@ -84,472 +53,594 @@ function CategoryIcon({ name, className }: { name: IconName; className?: string 
     strokeLinecap: 'round' as const,
     strokeLinejoin: 'round' as const,
     'aria-hidden': true,
-    className,
   }
   switch (name) {
-    case 'symptoms':   // pulse / heartbeat line
+    case 'breeds':
+      // Open book / reference — encyclopedia voice
       return (
         <svg {...common}>
-          <path d="M3 12h3l2-5 4 10 2-5h3" />
-          <circle cx="20" cy="12" r="1.2" fill="currentColor" stroke="none" />
+          <path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v13c-3-1-6-1-9 1-3-2-6-2-9-1V5z" />
+          <path d="M12 6v14" />
         </svg>
       )
-    case 'nutrition':  // food bowl
+    case 'health':
+      // Shield + stethoscope arc — vet-respectful, not clinic-cross
+      return (
+        <svg {...common}>
+          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+          <path d="M9 11v2a3 3 0 0 0 6 0v-2" />
+          <circle cx="9" cy="10" r="0.6" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="10" r="0.6" fill="currentColor" stroke="none" />
+        </svg>
+      )
+    case 'nutrition':
+      // Food bowl + steam — straightforward, not branded
       return (
         <svg {...common}>
           <path d="M3 11h18" />
           <path d="M4 11a8 8 0 0 0 16 0" />
-          <path d="M2 11h20" />
           <path d="M9 7c0-1 .5-2 1.5-2.5M13 7c0-1 .5-2 1.5-2.5" />
         </svg>
       )
-    case 'preventive': // shield
+    case 'training':
+      // Leash + clip — positive-reinforcement core tool
       return (
         <svg {...common}>
-          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
-          <path d="M9 12l2 2 4-4" />
+          <path d="M5 4c0 3 2 5 4.5 5S14 7 14 4" />
+          <path d="M9.5 9v10" />
+          <circle cx="9.5" cy="20" r="1.4" />
+          <path d="M5 4l-1 1M14 4l1 1" />
+          <path d="M17 12h3v3h-3z" />
         </svg>
       )
-    case 'senior':     // clock / time
+    case 'reviews':
+      // Comparison rubric — three bars at different heights
       return (
         <svg {...common}>
-          <circle cx="12" cy="12" r="9" />
-          <path d="M12 7v5l3 2" />
+          <path d="M4 20V10" />
+          <path d="M12 20V4" />
+          <path d="M20 20v-8" />
+          <path d="M3 20h18" />
         </svg>
       )
-    case 'breed':      // DNA double-helix abstract
+    case 'puppy':
+      // Paw pad — only allowed paw motif, geometric
       return (
         <svg {...common}>
-          <path d="M7 3c0 4 10 4 10 10s-10 6-10 10" />
-          <path d="M17 3c0 4-10 4-10 10s10 6 10 10" />
-          <path d="M8.5 7h7M8.5 17h7M7.7 10.5h8.6M7.7 13.5h8.6" />
-        </svg>
-      )
-    case 'dental':     // tooth
-      return (
-        <svg {...common}>
-          <path d="M7 3c-2 0-3 1.5-3 4 0 2 1 4 1.5 7 .4 2.5 1 6 2.5 6s1.5-3 2-5 .5-3 2-3 1.5 1 2 3 .5 5 2 5 2.1-3.5 2.5-6c.5-3 1.5-5 1.5-7 0-2.5-1-4-3-4-1.5 0-2.5 1-4 1s-2.5-1-4-1z" />
-        </svg>
-      )
-    case 'weight':     // balance scale
-      return (
-        <svg {...common}>
-          <path d="M12 4v16" />
-          <path d="M4 20h16" />
-          <path d="M7 9l-3 6h6l-3-6zM17 9l-3 6h6l-3-6z" />
-          <path d="M5 7l14-2" />
-        </svg>
-      )
-    case 'behavior':   // brain / mind abstract
-      return (
-        <svg {...common}>
-          <path d="M9 4c-2 0-3 1.5-3 3 0 .5.1 1 .3 1.4C5 9 4 10.3 4 12c0 1.5.8 2.7 2 3.4-.1 2.3 1.6 4.1 3.5 4.1 1 0 1.8-.4 2.5-1V4.5C11.3 4.2 10.7 4 9 4z" />
-          <path d="M15 4c2 0 3 1.5 3 3 0 .5-.1 1-.3 1.4C19 9 20 10.3 20 12c0 1.5-.8 2.7-2 3.4.1 2.3-1.6 4.1-3.5 4.1-1 0-1.8-.4-2.5-1V4.5c.7-.3 1.3-.5 3-.5z" />
-          <path d="M12 8v8" />
+          <ellipse cx="5.5" cy="10" rx="1.6" ry="2.2" />
+          <ellipse cx="9" cy="6.5" rx="1.6" ry="2.2" />
+          <ellipse cx="15" cy="6.5" rx="1.6" ry="2.2" />
+          <ellipse cx="18.5" cy="10" rx="1.6" ry="2.2" />
+          <path d="M8 17.5c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.4-1 2.5-2.4 2.5h-3.2C9 20 8 18.9 8 17.5z" />
         </svg>
       )
   }
 }
 
-const HEALTH_CATEGORIES: { icon: IconName; title: string; desc: string; href: string }[] = [
-  { icon: 'symptoms',   title: 'Symptoms & Signs',   desc: 'When to worry, when to wait',    href: '/health/dog-symptoms-guide' },
-  { icon: 'nutrition',  title: 'Nutrition & Diet',   desc: 'Food guides and what to avoid',  href: '/nutrition' },
-  { icon: 'preventive', title: 'Preventive Care',    desc: 'Vaccines, parasites, screening', href: '/health/dog-vaccinations' },
-  { icon: 'senior',     title: 'Senior Dog Care',    desc: 'What changes after age 7',       href: '/health/senior-dog-care' },
-  { icon: 'breed',      title: 'Breed Conditions',   desc: 'Health risks by breed',          href: '/breeds' },
-  { icon: 'dental',     title: 'Dental Health',      desc: 'The most overlooked issue',      href: '/health/dog-dental-care' },
-  { icon: 'weight',     title: 'Weight & Obesity',   desc: 'Assessment and management',      href: '/nutrition/weight-management' },
-  { icon: 'behavior',   title: 'Behavior & Anxiety', desc: 'Separation anxiety and fear',    href: '/health/dog-anxiety' },
+// ── Page data ──────────────────────────────────────────────────────────────
+
+const CATEGORIES: {
+  icon: CategoryIconName
+  title: string
+  desc: string
+  href: string
+}[] = [
+  {
+    icon: 'breeds',
+    title: 'Breeds',
+    desc: 'Health-anchored breed references — genetic risk, conformation realities, and what changes after the puppy year.',
+    href: '/breeds/golden-retriever',
+  },
+  {
+    icon: 'health',
+    title: 'Health',
+    desc: 'Conditions, prevention, and when-to-call-your-vet thresholds, written against AVMA, WSAVA, and AAHA guidance.',
+    href: '/health/dog-vaccinations',
+  },
+  {
+    icon: 'nutrition',
+    title: 'Nutrition',
+    desc: 'AAFCO completeness, WSAVA manufacturer standards, and what a guaranteed-analysis panel actually tells you.',
+    href: '/nutrition/wsava-explained',
+  },
+  {
+    icon: 'training',
+    title: 'Training',
+    desc: 'Positive-reinforcement fundamentals, socialization windows, and the red flags that should make you change trainers.',
+    href: '/training/positive-reinforcement',
+  },
+  {
+    icon: 'reviews',
+    title: 'Reviews',
+    desc: 'Honest editorial scoring on the same rubric every time. Affiliate-aware; never affiliate-driven.',
+    href: '/reviews/best-pet-insurance',
+  },
+  {
+    icon: 'puppy',
+    title: 'Puppy Schedule',
+    desc: 'A printable week-by-week plan from 8 to 16 weeks plus an 8-week email course — free for new puppy owners.',
+    href: '/puppy-schedule',
+  },
 ]
 
-// ─────────────────────────────────────────────────────────────────────────────
+const FEATURED_ARTICLES: {
+  href: string
+  eyebrow: string
+  title: string
+  teaser: string
+  readTime: string
+}[] = [
+  {
+    href: '/reviews/best-pet-insurance',
+    eyebrow: 'Editorial Review',
+    title: 'Best Pet Insurance, 2026',
+    teaser:
+      'Eight national carriers compared on the same rubric: coverage limits, exclusions, hereditary-condition handling, claim turnaround, and how each handles pre-existing conditions. Honest scores, not affiliate-led rankings.',
+    readTime: '18 min',
+  },
+  {
+    href: '/health/dog-vaccinations',
+    eyebrow: 'Preventive Care',
+    title: 'Dog Vaccinations — Core, Non-Core, and the WSAVA Schedule',
+    teaser:
+      'What the WSAVA guidelines say about core vaccines, when boosters actually matter, and the lifestyle questions that decide which non-core vaccines belong on your dog’s record.',
+    readTime: '14 min',
+  },
+  {
+    href: '/health/dog-allergies',
+    eyebrow: 'Dermatology',
+    title: 'Dog Allergies — Atopy, Food, and Flea-Bite Hypersensitivity',
+    teaser:
+      'The three allergy categories your vet rules out in order, the elimination-diet protocol that actually works, and why a single positive blood panel is not a diagnosis.',
+    readTime: '15 min',
+  },
+  {
+    href: '/puppy-schedule',
+    eyebrow: 'Lead Magnet',
+    title: 'The Puppy Schedule, Weeks 8 to 16',
+    teaser:
+      'A printable week-by-week reference covering vaccinations, socialization windows, crate-training milestones, and food transitions. Paired with an 8-week email course written for first-time owners.',
+    readTime: 'Printable + 8-email course',
+  },
+]
 
-export default async function HomePage() {
-  // Fetch recent health articles from Supabase
-  // Falls back gracefully if DB not yet connected
-  let healthPosts: Awaited<ReturnType<typeof getPosts>> = []
-  try {
-    healthPosts = await getPosts('dog-com', 'article', 4)
-  } catch {
-    // DB not connected yet — static content shows
-  }
+const TRUST_CLAIMS = [
+  'Research-anchored content',
+  'No fake DVM bylines',
+  'Honest editorial scores',
+  'Affiliate-aware, never affiliate-driven',
+]
 
+// ── Page ───────────────────────────────────────────────────────────────────
+
+export default function HomePage() {
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-brand-dark relative overflow-hidden grid lg:grid-cols-2 lg:min-h-[88vh]">
-        {/* Image — visible on every viewport. Order flipped so mobile sees
-            the photograph first (editorial cover treatment), desktop reads
-            text-first on the left, image on the right. */}
-        <div className="relative order-1 lg:order-2 aspect-[5/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full">
-          <Image
-            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&q=85&auto=format&fit=crop"
-            alt="Golden retriever resting in warm afternoon light"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          />
-          {/* Single moody vignette — bottom-to-top dark wash on mobile so the
-              transition into the text block reads clean; left-edge feather on
-              desktop so the side-by-side seam disappears. */}
-          <div
-            className="absolute inset-0 lg:hidden"
-            style={{ background: 'linear-gradient(to bottom, transparent 35%, #1A0E08 100%)' }}
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 hidden lg:block"
-            style={{ background: 'linear-gradient(to right, #1A0E08 0%, rgba(26,14,8,0.0) 22%)' }}
-            aria-hidden="true"
-          />
+      {/* ── HERO ──────────────────────────────────────────────────────
+          CSS-only environmental wash. Two radial pools (warm terracotta
+          glow upper-right, cocoa shadow lower-left) over the dark masthead,
+          a subtle vertical-grain overlay so the field never reads flat.
+          ──────────────────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-brand-dark">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: [
+              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(232,98,42,0.22) 0%, transparent 55%)',
+              'radial-gradient(ellipse 70% 70% at 12% 95%, rgba(26,14,8,0.65) 0%, transparent 60%)',
+              'linear-gradient(180deg, rgba(26,14,8,0) 0%, rgba(26,14,8,0.55) 95%)',
+            ].join(','),
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 3px)',
+          }}
+        />
 
-          {/* Stats — desktop only; floating cards. Mobile gets an inline
-              version below the CTAs to avoid covering the image. */}
-          <div className="hidden lg:flex absolute bottom-10 right-8 z-10 flex-col gap-2.5">
-            {HERO_STATS.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white/95 backdrop-blur-sm rounded-md px-5 py-3 shadow-card min-w-[180px] border-l-2 border-brand-primary"
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
+          <div className="max-w-3xl">
+            {/* Eyebrow — caramel rule + caps */}
+            <div className="flex items-center gap-3 mb-6">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-accent)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
               >
-                <div className="font-display font-black text-brand-dark text-3xl leading-none tabular-display">
-                  {stat.num}
-                </div>
-                <div className="text-2xs text-brand-text-light font-semibold uppercase tracking-eyebrow mt-1.5">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Text column */}
-        <div className="relative order-2 lg:order-1 flex flex-col justify-center px-container-sm sm:px-container py-14 lg:py-20">
-          <div
-            className="absolute inset-0 opacity-90 pointer-events-none"
-            style={{
-              backgroundImage: 'radial-gradient(ellipse at 15% 50%, rgba(232,98,42,0.10) 0%, transparent 55%)',
-            }}
-            aria-hidden="true"
-          />
-
-          <div className="relative z-10 max-w-xl">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-2.5 mb-5 lg:mb-6">
-              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                A Dog Owner Reference
+                The Dog Owner Reference
               </span>
             </div>
 
-            {/* Headline */}
+            {/* Headline — Playfair 700, generous size, brand title */}
             <h1
-              className="font-display font-black text-white tracking-tighter leading-[0.95] mb-5 lg:mb-7"
-              style={{ fontSize: 'clamp(42px, 7vw, 88px)' }}
+              className="font-display font-bold text-white tracking-tight leading-[1.02] mb-6"
+              style={{ fontSize: 'clamp(48px, 7.5vw, 92px)' }}
             >
-              Everything<br />
-              Your Dog<br />
-              <em className="text-brand-primary not-italic">Deserves.</em>
+              Dog.com
             </h1>
 
-            <p className="text-base lg:text-lg font-light text-white/65 leading-relaxed max-w-md mb-8 lg:mb-10">
-              Breed guides for 200+ breeds, research-based health articles, training that works,
-              and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
+            {/* Tagline — Playfair italic, caramel-tinted */}
+            <p
+              className="font-display italic mb-7"
+              style={{
+                color: 'var(--brand-accent-light)',
+                fontSize: 'clamp(22px, 2.4vw, 30px)',
+                lineHeight: 1.25,
+                maxWidth: '46rem',
+              }}
+            >
+              A reference for dog owners.
             </p>
 
-            {/* CTAs — primary solid, secondary as text-arrow link to keep
-                hierarchy unambiguous (was an outline button that competed
-                with the primary). */}
+            {/* Positioning paragraph — establishes what the site is and is
+                not. Sticks to ~80 words. */}
+            <p className="text-base lg:text-lg text-white/75 leading-relaxed max-w-2xl mb-9">
+              Dog.com is the research-based destination for dog owners — breed
+              health profiles, citation-anchored health articles, honest
+              editorial scoring on the products you actually need, and a
+              printable puppy schedule we keep current against WSAVA, AAHA,
+              and AVMA guidance. Not a magazine. Not a marketplace. Not a
+              community forum. Every claim is sourced and every score is
+              published against the rubric we publish on the page.
+            </p>
+
+            {/* CTAs — primary terracotta-on-dark, secondary text-arrow */}
             <div className="flex items-center gap-6 flex-wrap">
               <Link
-                href="/breeds"
-                className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200"
+                href="/puppy-schedule"
+                className="inline-flex items-center font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200 hover:bg-brand-primary-light"
+                style={{
+                  background: 'var(--brand-primary)',
+                  color: 'var(--brand-white)',
+                }}
               >
-                Browse Breed Guide
-                <span aria-hidden="true" className="ml-2">→</span>
+                Get the puppy schedule
+                <span aria-hidden="true" className="ml-2">
+                  &rarr;
+                </span>
               </Link>
               <Link
-                href="/health"
+                href="/breeds/golden-retriever"
                 className="group inline-flex items-center text-sm font-semibold text-white/85 no-underline hover:text-white transition-colors"
               >
-                Dog Health Library
-                <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span>
+                Read the breed health series
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  &rarr;
+                </span>
               </Link>
-            </div>
-
-            {/* Mobile stats strip — three-up inline, only renders <lg. */}
-            <div className="lg:hidden flex items-center gap-6 mt-10 pt-7 border-t border-white/10">
-              {HERO_STATS.map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-display font-black text-white text-2xl leading-none tabular-display">
-                    {stat.num}
-                  </div>
-                  <div className="text-2xs text-white/55 font-semibold uppercase tracking-eyebrow mt-1.5">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
-      <div className="bg-brand-dark border-b border-white/5 px-container-sm sm:px-container py-3">
-        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2 text-white/70">
-          {[
-            'Research-based health content',
-            '200+ breed profiles',
-            'Honest product reviews',
-            'No paid editorial placements',
-          ].map((item, i, arr) => (
+      {/* ── TRUST BAR ──────────────────────────────────────────────────
+          Dark masthead continuation. Reads as a constitution, not a
+          marketing flourish. QC-STANDARDS §1: every claim is defensible.
+          ──────────────────────────────────────────────────────────────── */}
+      <div
+        className="px-container-sm sm:px-container py-4"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+          borderBottom: '1px solid rgba(255,255,255,0.05)',
+        }}
+      >
+        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2">
+          {TRUST_CLAIMS.map((item, i, arr) => (
             <span
               key={item}
               className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
+              style={{ color: 'rgba(255,255,255,0.78)' }}
             >
+              <span
+                aria-hidden="true"
+                className="mr-2"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                &#10003;
+              </span>
               {item}
               {i < arr.length - 1 && (
-                <span aria-hidden="true" className="hidden sm:inline mx-5 h-3 w-px bg-white/15" />
+                <span
+                  aria-hidden="true"
+                  className="hidden sm:inline mx-5 h-3 w-px"
+                  style={{ background: 'rgba(255,255,255,0.18)' }}
+                />
               )}
             </span>
           ))}
         </div>
       </div>
 
-      {/* ── PUPPY SCHEDULE LEAD-MAGNET BANNER ──────────────────────── */}
-      <Link
-        href="/puppy-schedule"
-        className="block bg-[#22150F] border-b border-white/5 px-container-sm sm:px-container py-4 hover:bg-[#291812] transition-colors duration-200 no-underline"
+      {/* ── CATEGORIES ─────────────────────────────────────────────────
+          Six-card grid, single visual voice. Inline SVG icons in the
+          terracotta primary. Each card teases the section voice in a
+          single sentence.
+          ──────────────────────────────────────────────────────────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-surface)' }}
       >
-        <div className="mx-auto max-w-container-wide flex items-center justify-between gap-6 flex-wrap">
-          <div className="flex items-center gap-4 min-w-0">
-            {/* Paw-mark line icon — replaces the 🐶 emoji to keep iconography
-                consistent with the rest of the homepage chrome. */}
-            <svg
-              width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="1.5"
-              strokeLinecap="round" strokeLinejoin="round"
-              aria-hidden="true"
-              className="text-brand-primary shrink-0"
-            >
-              <ellipse cx="5.5" cy="10" rx="1.6" ry="2.2" />
-              <ellipse cx="9" cy="6.5" rx="1.6" ry="2.2" />
-              <ellipse cx="15" cy="6.5" rx="1.6" ry="2.2" />
-              <ellipse cx="18.5" cy="10" rx="1.6" ry="2.2" />
-              <path d="M8 17.5c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.4-1 2.5-2.4 2.5h-3.2C9 20 8 18.9 8 17.5z" />
-            </svg>
-            <div className="min-w-0">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">Free for puppy owners</div>
-              <div className="text-sm sm:text-base text-white font-semibold leading-snug">
-                Puppy Schedule, Weeks 8 to 16 — printable + 8-week email course
-              </div>
-            </div>
-          </div>
-          <span className="text-xs font-semibold text-brand-primary ml-auto sm:ml-0 whitespace-nowrap">
-            Get the schedule →
-          </span>
-        </div>
-      </Link>
-
-      {/* ── BREED DIRECTORY ────────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="mx-auto max-w-container-wide">
-        <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                Breed Encyclopedia
-              </span>
-            </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl sm:text-4xl">
-              Find Your Breed
-            </h2>
-          </div>
-          <Link href="/breeds" className="text-sm font-semibold text-brand-primary no-underline hover:text-brand-primary-dark transition-colors">
-            All 200+ breeds →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          {FEATURED_BREEDS.map((breed) => (
-            <Link
-              key={breed.name}
-              href={breed.href}
-              className="group block bg-brand-white border border-brand-border rounded-md overflow-hidden no-underline hover:border-brand-primary/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 ease-carloOS"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
-                <Image
-                  src={breed.image}
-                  alt={breed.imageAlt}
-                  fill
-                  className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.04]"
-                  sizes="(max-width: 640px) 50vw, 25vw"
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-accent)' }}
                 />
-              </div>
-              <div className="p-5">
-                <div className="font-display font-bold text-brand-dark text-base leading-snug mb-1">
-                  {breed.name}
-                </div>
-                <div className="text-xs text-brand-text-light mb-3">{breed.type}</div>
-                <div className="flex gap-1.5 flex-wrap">
-                  {breed.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-2xs font-semibold px-2 py-0.5 bg-brand-surface text-brand-text-mid rounded-pill"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        </div>
-      </section>
-
-      {/* ── HEALTH ARTICLES ────────────────────────────────────────── */}
-      <section className="bg-brand-white px-container-sm sm:px-container py-section">
-        <div className="mx-auto max-w-container-wide">
-        <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                Dog Health Library
-              </span>
-            </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl sm:text-4xl">
-              Expert Health Guides
-            </h2>
-          </div>
-          <Link href="/health" className="text-sm font-semibold text-brand-primary no-underline hover:text-brand-primary-dark transition-colors">
-            All health guides →
-          </Link>
-        </div>
-
-        {/* Static featured articles — will pull from Supabase once DB is seeded */}
-        <div className="grid lg:grid-cols-[2fr_1fr_1fr] gap-5">
-          {/* Featured */}
-          <Link
-            href="/health/golden-retriever-health"
-            className="group block border border-brand-border rounded-md overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/30 transition-all duration-300 ease-carloOS"
-          >
-            <div className="relative aspect-[16/10] overflow-hidden bg-brand-surface">
-              <Image
-                src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=900&q=85&auto=format&fit=crop"
-                alt="Veterinarian examining dog"
-                fill
-                className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="p-6">
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Health</span>
-              <h3 className="font-display font-bold text-brand-dark text-xl leading-snug mt-2 mb-2">
-                Golden Retriever Health Guide — Cancer Risk, Hip Dysplasia &amp; What Owners Must Know
-              </h3>
-              <p className="text-sm text-brand-text-light line-clamp-2 leading-relaxed">
-                More than 60% of Golden Retrievers develop cancer in their lifetime. Understanding the risks can add years to your dog&apos;s life.
-              </p>
-            </div>
-          </Link>
-
-          {/* Secondary articles */}
-          {[
-            {
-              href: '/health/dog-symptoms-guide',
-              category: 'Emergency',
-              title: '15 Dog Symptoms You Should Never Ignore',
-              image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=700&q=85&auto=format&fit=crop',
-            },
-            {
-              href: '/health/senior-dog-care',
-              category: 'Senior Care',
-              title: 'Senior Dog Care — What Changes at 7 Years',
-              image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=700&q=85&auto=format&fit=crop',
-            },
-          ].map((article) => (
-            <Link
-              key={article.href}
-              href={article.href}
-              className="group block border border-brand-border rounded-md overflow-hidden no-underline hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-primary/30 transition-all duration-300 ease-carloOS"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.04]"
-                  sizes="(max-width: 1024px) 100vw, 25vw"
-                />
-              </div>
-              <div className="p-5">
-                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                  {article.category}
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  By Category
                 </span>
-                <h3 className="font-display font-bold text-brand-dark text-base leading-snug mt-2">
-                  {article.title}
-                </h3>
               </div>
-            </Link>
-          ))}
-        </div>
-        </div>
-      </section>
-
-      {/* ── HEALTH CATEGORIES ──────────────────────────────────────── */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-50 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(ellipse at 75% 40%, rgba(232,98,42,0.10) 0%, transparent 55%)',
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative z-10 mx-auto max-w-container-wide">
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="w-6 h-0.5 bg-brand-primary" aria-hidden="true" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-              Health by Topic
-            </span>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
+                Where to start
+              </h2>
+            </div>
+            <p
+              className="text-sm max-w-md"
+              style={{ color: 'var(--brand-text-light)' }}
+            >
+              Every section reads the same whether you arrived from a search
+              for a symptom, a breed name, or a product comparison.
+            </p>
           </div>
-          <h2 className="font-display font-bold text-white tracking-tight text-3xl sm:text-4xl mb-3">
-            Find the Right Guide
-          </h2>
-          <p className="text-base text-white/55 max-w-lg mb-10 leading-relaxed">
-            Research-based content organized by condition, life stage, and body system.
-          </p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {HEALTH_CATEGORIES.map((cat) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {CATEGORIES.map((cat) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="group block bg-white/[0.04] border border-white/[0.08] rounded-md p-6 no-underline hover:bg-brand-primary/10 hover:border-brand-primary/30 hover:-translate-y-1 transition-all duration-200"
+                className="group block p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1 hover:shadow-card-hover"
+                style={{
+                  background: 'var(--brand-white)',
+                  border: '1px solid var(--brand-border)',
+                }}
               >
-                <div className="text-brand-primary/85 group-hover:text-brand-primary mb-4 transition-colors">
+                <div
+                  className="mb-5"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
                   <CategoryIcon name={cat.icon} />
                 </div>
-                <div className="font-display font-bold text-white text-base leading-snug mb-1.5">{cat.title}</div>
-                <div className="text-xs text-white/45 leading-relaxed">{cat.desc}</div>
+                <h3
+                  className="font-display font-bold text-xl leading-snug mb-2"
+                  style={{ color: 'var(--brand-text-dark)' }}
+                >
+                  {cat.title}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed mb-4"
+                  style={{ color: 'var(--brand-text-mid)' }}
+                >
+                  {cat.desc}
+                </p>
+                <span
+                  className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Read
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                  >
+                    &rarr;
+                  </span>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
-      <section className="bg-brand-primary-pale px-container sm:px-container-sm py-section">
+      {/* ── FEATURED ARTICLES ──────────────────────────────────────────
+          Four cornerstone references. Eyebrow / Playfair title / two-
+          sentence teaser / read-time / Read link. No images in this pass.
+          ──────────────────────────────────────────────────────────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-white)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-accent)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Cornerstone Articles
+                </span>
+              </div>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
+                Reference, maintained
+              </h2>
+            </div>
+            <p
+              className="text-sm max-w-md"
+              style={{ color: 'var(--brand-text-light)' }}
+            >
+              The pieces we keep current as guidance changes. Every claim
+              is sourced inline.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {FEATURED_ARTICLES.map((art) => (
+              <Link
+                key={art.href}
+                href={art.href}
+                className="group block p-7 lg:p-8 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1 hover:shadow-card-hover"
+                style={{
+                  background: 'var(--brand-surface)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                {/* Decorative top rule — caramel, signals premium */}
+                <span
+                  aria-hidden="true"
+                  className="block h-px w-10 mb-5"
+                  style={{ background: 'var(--brand-accent)' }}
+                />
+                <div
+                  className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  {art.eyebrow}
+                </div>
+                <h3
+                  className="font-display font-bold text-2xl leading-tight mb-3"
+                  style={{ color: 'var(--brand-text-dark)' }}
+                >
+                  {art.title}
+                </h3>
+                <p
+                  className="text-base leading-relaxed mb-5"
+                  style={{ color: 'var(--brand-text-mid)' }}
+                >
+                  {art.teaser}
+                </p>
+                <div className="flex items-center justify-between gap-4">
+                  <span
+                    className="text-xs font-semibold uppercase tracking-eyebrow"
+                    style={{ color: 'var(--brand-text-light)' }}
+                  >
+                    {art.readTime}
+                  </span>
+                  <span
+                    className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                    style={{ color: 'var(--brand-primary)' }}
+                  >
+                    Read
+                    <span
+                      aria-hidden="true"
+                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                    >
+                      &rarr;
+                    </span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EDITORIAL POSITIONING BAND ─────────────────────────────────
+          Dark cocoa band with a Playfair-italic accent pull paragraph
+          and a route to /editorial-standards. Same architecture as the
+          Horses.com positioning block, tuned to Dog.com voice.
+          ──────────────────────────────────────────────────────────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section relative overflow-hidden"
+        style={{ background: 'var(--brand-dark)' }}
+      >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse 60% 60% at 80% 20%, rgba(232,98,42,0.16) 0%, transparent 60%)',
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-container-wide grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-accent-light)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Editorial Standard
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
+              style={{ lineHeight: 1.15 }}
+            >
+              We say when
+              <br />
+              <em
+                className="not-italic font-display italic"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                the evidence is thin.
+              </em>
+            </h2>
+          </div>
+          <div className="text-white/85 leading-relaxed space-y-5">
+            <p className="text-base lg:text-lg">
+              Articles are written and updated by the Dog.com editorial team,
+              anchored to the WSAVA, AAHA, AVMA, AVDC, and ACVIM where
+              consensus guidance exists. Where it doesn&rsquo;t, we say so.
+              We don&rsquo;t claim hands-on testing we haven&rsquo;t done and
+              we don&rsquo;t put fabricated DVM signatures on the page.
+            </p>
+            <p className="text-base lg:text-lg">
+              Product rankings are made before affiliate links are added,
+              not after. The rubric for every review is published on the
+              page. If we get a fact wrong, we correct it in place and date
+              the correction.
+            </p>
+            <Link
+              href="/editorial-standards"
+              className="inline-flex items-center text-sm font-semibold no-underline transition-colors"
+              style={{ color: 'var(--brand-accent-light)' }}
+            >
+              Read the full editorial standards
+              <span aria-hidden="true" className="ml-1.5">
+                &rarr;
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE ──────────────────────────────────────────────
+          Lead-magnet tone: hints at the puppy-schedule download but is
+          honest that the weekly email is the durable value.
+          ──────────────────────────────────────────────────────────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-primary-pale)' }}
+      >
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          title="Dog Health Tips, Every Week"
-          subtitle="Practical guidance on dog health, breed spotlights, training tips, and honest product picks — every Tuesday morning."
-          ctaText="Subscribe Free"
-          source="homepage-section"
-          perks={['Practical', 'Every Tuesday', 'Breed-specific advice', 'No spam']}
+          title="The Dog.com Reference, in your inbox"
+          subtitle="One email a week: a deep dive on a breed, condition, or product category — plus the puppy schedule and 8-week email course free for new owners."
+          ctaText="Subscribe"
+          source="homepage"
+          perks={[
+            'Weekly reference',
+            'Puppy schedule included',
+            'Citation-anchored',
+            'Unsubscribe anytime',
+          ]}
         />
       </section>
     </>

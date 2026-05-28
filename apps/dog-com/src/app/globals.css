@@ -9,11 +9,17 @@
    ───────────────────────────────────────────── */
 
 :root {
-  /* Brand */
+  /* Brand — warm terracotta orange against deep cocoa */
   --brand-primary: #E8622A;
   --brand-primary-light: #F07840;
   --brand-primary-pale: #FEF3EE;
   --brand-primary-dark: #C44E18;
+
+  /* Accent — warm caramel / brass, used sparingly for editorial
+     rules, eyebrows on the dark masthead, and pull-quote punctuation.
+     Pairs with terracotta primary without competing. */
+  --brand-accent: #C99A5B;
+  --brand-accent-light: #E0B879;
 
   /* Backgrounds */
   --brand-dark: #1A0E08;
