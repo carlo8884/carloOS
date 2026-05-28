@@ -69,19 +69,31 @@ content build-out only when the previous active domain has demonstrated:
 This is the gate STATUS.md §1 already names. COO holds it and refuses
 to authorize parallel pod activation before it is met.
 
-## 6. Portfolio reality (open question for Carlo)
+## 6. Portfolio
 
-Master prompt names: Dog · Fish · Horses · Saddle · PetFood
-Built portfolio: Dog · Fish · Lizard · Saddle · Vets
+**Owned domains** (confirmed by Carlo 2026-05-28): Dog · Fish · Horses
+· Saddle · PetFood · Lizard · Vets
 
-Horses.com and PetFood.com do not exist in `apps/`. Lizard.com (51
-pages) and Vets.co (38 pages) do. Carlo to confirm:
+**Build state and priority order:**
 
-- Does Carlo own Horses.com and PetFood.com?
-- Are Lizard.com and Vets.co being deprioritized in favor of those?
-- Or should the master prompt be amended to reflect the built portfolio?
+| # | Domain | State | Next action |
+|---|---|---|---|
+| 1 | Dog.com | Flagship, soft-launch 2026-05-29 | Activate (LAUNCH-DAY.md) |
+| 2 | Fish.com | Built (80 pages), staged | Activate after Dog.com hits 7-day gate |
+| 3 | Saddle.com | Built (42 pages), staged | Activate after Fish.com hits 7-day gate |
+| 4 | Horses.com | **Not built** | Begin scaffold after Dog.com is live + stable |
+| 5 | PetFood.com | **Not built** | Begin scaffold after Horses.com scaffold |
+| 6 | Lizard.com | Built (51 pages), shipped | Maintenance-only — no new content sprints |
+| 7 | Vets.co | Built (38 pages), shipped | Maintenance-only — no new content sprints |
 
-Until resolved, all COO strategy work assumes the built portfolio.
+**Rationale:** Activate built portfolio in order (cheapest path to
+revenue). Build Horses + PetFood in parallel after Dog.com proves the
+loop. Lizard + Vets stay live as published work but receive no new
+content investment — they were not in the strategic portfolio defined
+in the master prompt.
+
+The gating rubric in §5 applies to every activation: no parallel pod
+activation before the previous site clears 7-day metrics.
 
 ## 7. Cadence
 
