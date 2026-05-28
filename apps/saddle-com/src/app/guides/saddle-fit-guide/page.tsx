@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, DropCap, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,9 @@ export default function SaddleFitGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <DropCap>
           Correct saddle fit comes down to a 4-point check: 2–3 fingers of wither
           clearance, even panel contact along the full bearing surface, full spinal
           channel clearance (no contact along the spinous processes), and a level
@@ -53,7 +55,12 @@ export default function SaddleFitGuidePage() {
           and after major fitness or seasonal changes — horses change shape, and a
           poorly fitting saddle is the most overlooked cause of back pain, resistance,
           and behavior problems under saddle.
-        </p>
+        </DropCap>
+
+        <CalloutBox variant="tip" title="Owner tip">
+          Check fit both <strong>statically and dynamically</strong>. A saddle that has adequate wither clearance with the horse standing still can still bridge the withers at trot. Have someone watch the saddle from the side as you ride at walk and trot before you commit to a fit verdict.
+        </CalloutBox>
+
         <h2 id="why">Why Saddle Fit Is Non-Negotiable</h2>
         <p>The saddle is the interface between rider and horse — when it fits correctly, communication is clear and movement is free. When it fits poorly, every aid is distorted through a structure that is causing pain, restricting movement, or both.</p>
         <p>Poor saddle fit is the most commonly overlooked cause of behavioral problems in ridden horses. A horse that is reluctant to go forward, bucks when asked to canter, pins ears when saddled, or is stiff on one rein may simply be in pain. Before addressing behavior with training, rule out pain from saddle fit.</p>
