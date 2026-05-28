@@ -62,6 +62,8 @@ function priorityFor(route) {
   const depth = (route.match(/\//g) || []).length
   if (route.startsWith('/legal/')) return 0.2
   if (route === '/editorial-standards') return 0.3
+  if (route === '/tools') return 0.95 // calculator hub
+  if (route.startsWith('/tools/')) return 0.85 // individual calculator
   if (depth === 1) return 0.9 // category index
   if (depth === 2) return 0.7 // content page
   return 0.5
