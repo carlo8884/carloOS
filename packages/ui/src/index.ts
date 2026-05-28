@@ -45,3 +45,7 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 // Search
 export { SearchBar } from './components/SearchBar'
 export { buildHowToSchema, buildMedicalWebPageSchema, combineSchemas } from './components/SEOHead'
+
+// Cross-portfolio sister-site recommendations
+export { CrossPortfolioCard } from './components/CrossPortfolioCard'
+export type { CrossPortfolioCardProps, CrossPortfolioVariant } from './components/CrossPortfolioCard'

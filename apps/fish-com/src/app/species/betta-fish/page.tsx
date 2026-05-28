@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Care Guide — Carnivore Diet, Fin Types | Fish.com', description: 'Bettas are carnivores that need protein-rich pellets, not flake food. They need a heater — room temperature is too cold.', path: '/species/betta-fish', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Care Guide', description: 'Carnivore diet, heater requirement, fin types, and enrichment for Betta splendens.', url: 'https://fish.com/species/betta-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
 export default function BettaFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
@@ -23,6 +23,14 @@ export default function BettaFishPage() {
       </>}
     >
       <div className="carloOS-article">
+        <p className="text-lg leading-relaxed text-brand-text-mid mb-6">
+          Bettas (Betta splendens) need a heated, filtered tank of at least 5 gallons
+          held at 76–82°F — not a bowl or vase. They are carnivores: feed a high-protein
+          betta-specific pellet (Northfin Betta Bits, NLS Betta Formula) plus frozen
+          bloodworms or daphnia 3–4 times weekly, not flake. Males cannot share a tank.
+          With correct heat, filtration, and diet, bettas live 3–5 years and display
+          vivid color, recognition of their owner, and learned behavior.
+        </p>
         <h2>The Bowl Myth — Why Bettas Die Young</h2>
         <p>The betta in a small unheated bowl or vase is not thriving — it is surviving, slowly, in conditions that compromise immune function and lifespan. The misconception originates from wild bettas living in shallow rice paddies and puddles — technically true, but those environments are large, warm (Thailand's climate keeps water at 78–82°F naturally), and subject to rain dilution that provides regular partial water changes. A 1-gallon unheated bowl in an air-conditioned room provides none of these. Room temperature in most US homes (68–72°F) is below betta's optimal range — cold enough to suppress immune function and promote disease.</p>
         <p>Minimum correct housing: 5-gallon tank with a gentle filter (sponge filter or low-flow internal filter — bettas' long fins are damaged by strong currents) and a heater maintaining 76–82°F. A 10-gallon tank allows planting, more stable water parameters, and more enrichment options. Bettas in appropriately sized, heated, filtered, planted tanks live 3–5 years and display vivid colors and active, curious behavior. The same fish in a bowl rarely reaches 2 years.</p>
