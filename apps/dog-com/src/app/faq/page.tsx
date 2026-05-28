@@ -130,7 +130,6 @@ export default function FAQPage() {
                 answer: item.answer,
                 answerText: item.answerText,
               }))}
-              includeSchema={false}
               allowMultiple
             />
           </div>
