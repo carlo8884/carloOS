@@ -16,9 +16,12 @@
  */
 
 import { readdirSync, writeFileSync, statSync } from 'node:fs'
-import { join } from 'node:path'
+import { join, dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = '/home/user/carloOS'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const ROOT = resolve(__dirname, '..')
 
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
@@ -62,6 +65,8 @@ function priorityFor(route) {
   const depth = (route.match(/\//g) || []).length
   if (route.startsWith('/legal/')) return 0.2
   if (route === '/editorial-standards') return 0.3
+  if (route === '/tools') return 0.95 // calculator hub
+  if (route.startsWith('/tools/')) return 0.85 // individual calculator
   if (depth === 1) return 0.9 // category index
   if (depth === 2) return 0.7 // content page
   return 0.5

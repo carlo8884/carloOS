@@ -48,7 +48,7 @@ export default function DogVaccinationsGuidePage() {
           <p>Important limitations: titer testing cannot substitute for rabies vaccination in most US states (legal requirement regardless of titer status). Titers measure one arm of immunity — circulating antibodies — and do not capture cell-mediated immunity. A negative titer does not definitively mean the dog is unprotected; a positive titer does not guarantee protection against all strains. Titer testing is most useful for owners of adult dogs with documented vaccine history who want to minimize vaccine frequency.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
