@@ -107,7 +107,7 @@ export default function PositiveReinforcementPage() {
         <p>Positive reinforcement-based training does not require punishment. Every behavior problem has a reinforcement-based solution. The behaviors you don&apos;t want can be reduced through differential reinforcement of incompatible behaviors (teaching what you do want), management (preventing the behavior from occurring and being reinforced), and extinction (removing the reinforcer that maintains the unwanted behavior).</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
       </div>
     </ArticleLayout>
   )
