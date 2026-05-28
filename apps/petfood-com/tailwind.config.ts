@@ -11,6 +11,9 @@ const config: Config = {
   theme: {
     extend: {
       // PetFood.com-specific overrides — driven by CSS variables in globals.css.
+      fontFamily: {
+        mono: ['var(--font-mono)'],
+      },
     },
   },
   plugins: [typography],

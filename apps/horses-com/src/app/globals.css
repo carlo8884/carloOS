@@ -3,6 +3,59 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+   HORSES.COM THEME TOKENS — refined equestrian
+   Brand brief: deep forest green primary, saddle-leather tan secondary,
+   unbleached cream surface, brass accent, off-black text.
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Primary — deep forest green (hunt coat / Hermès equestrian) */
+  --brand-primary: #1F3A2F;
+  --brand-primary-light: #2E5444;
+  --brand-primary-pale: #E8EDE6;
+  --brand-primary-dark: #142820;
+
+  /* Secondary — saddle-leather tan */
+  --brand-secondary: #A37547;
+  --brand-secondary-light: #BD8C5C;
+  --brand-secondary-dark: #7A5530;
+
+  /* Accent — brass / antique gold, used sparingly */
+  --brand-accent: #B68830;
+  --brand-accent-light: #D6A14A;
+
+  /* Backgrounds */
+  --brand-dark: #13241C;          /* green-black masthead */
+  --brand-surface: #F4EFE6;       /* unbleached cream */
+  --brand-white: #FFFFFF;
+
+  /* Text */
+  --brand-text-dark: #13241C;
+  --brand-text-mid: #3F3A2E;
+  --brand-text-light: #7A6E5C;
+
+  /* Borders */
+  --brand-border: #D9D0BE;
+
+  /* Semantic */
+  --brand-success: #1F3A2F;
+  --brand-warning: #B68830;
+  --brand-danger: #9A3A22;
+
+  /* Typography — actual families wired by next/font in layout.tsx */
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
    HORSES.COM THEME TOKENS
    Sets CSS variables consumed by Tailwind utilities.
    Change these values here; Tailwind picks them up automatically.
@@ -36,6 +89,16 @@
   /* Typography (loaded via next/font — variable names set there) */
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-source-sans), system-ui, sans-serif;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 
   /* Layout */
   --nav-height: 68px;
@@ -50,10 +113,39 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--brand-surface);
+  color: var(--brand-text-dark);
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 }
 
 body {
   @apply bg-brand-white text-brand-text-dark;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
@@ -61,6 +153,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+
+.tabular-display { font-variant-numeric: lining-nums tabular-nums; }
+
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 img {
   max-width: 100%;
   height: auto;
@@ -83,15 +193,75 @@ img {
   --tw-prose-links: var(--brand-primary);
   --tw-prose-bold: var(--brand-text-dark);
   --tw-prose-counters: var(--brand-text-light);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  --tw-prose-bullets: var(--brand-accent);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-accent);
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
   --tw-prose-bullets: var(--brand-text-light);
   --tw-prose-hr: var(--brand-border);
   --tw-prose-quotes: var(--brand-text-mid);
   --tw-prose-quote-borders: var(--brand-primary);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
   --tw-prose-code: var(--brand-text-dark);
   --tw-prose-th-borders: var(--brand-border);
   --tw-prose-td-borders: var(--brand-border);
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* ─── SELECTION ───────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(31, 58, 47, 0.18);
+  color: var(--brand-text-dark);
+}
+
+/* Font CSS variables — fallbacks if next/font fails. The layout.tsx import sets
+   the real --font-playfair and --font-source-sans values. */
+.font-vars,
+:root {
+  --font-playfair: Georgia, 'Times New Roman', serif;
+  --font-source-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 /* ─── SELECTION ───────────────────────────────────────────────── */
 
 ::selection {
@@ -104,4 +274,14 @@ img {
 :root {
   --font-playfair: Georgia, "Times New Roman", serif;
   --font-source-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 }

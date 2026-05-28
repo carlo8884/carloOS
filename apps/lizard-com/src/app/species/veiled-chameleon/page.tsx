@@ -1,48 +1,111 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling.', path: '/species/veiled-chameleon', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide', description: 'Screen cage requirements, hydration, diet, and stress management for Chamaeleo calyptratus veiled chameleons.', url: 'https://lizard.com/species/veiled-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide', description: 'Screen cage requirements, hydration, diet, and stress management for Chamaeleo calyptratus veiled chameleons.', url: 'https://lizard.com/species/veiled-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
+
+const FAQS = [
+  { question: 'Can I keep a veiled chameleon in a glass terrarium?', answer: 'No. Veiled chameleons require all-screen enclosures or, at the most, an enclosure with three screen sides plus one solid back wall. Glass terraria trap warm, humid, stagnant air around the animal, which leads rapidly to respiratory infection — one of the most common preventable killers in captive veiled chameleons. Even hybrid enclosures that combine glass sides with screen tops are a compromise that does not give the constant cross-ventilation a chameleon needs. If you cannot provide a true screen enclosure (or a custom build with proper ventilation), this is not the species to keep.' },
+  { question: 'Why do chameleons only drink from moving water?', answer: 'Chameleons evolved in environments where standing water is rare and where the water they encounter is on leaves after rain or from morning dew. Their visual and behavioral systems are tuned to moving droplets — they recognize, track, and drink water that is in motion. Standing water in a dish is invisible to them as a drinking source. The keeper has to bring water to the leaves: an automated misting system (Mist King or similar) on a 2 to 3 sessions per day schedule, or a dripper system that runs over the foliage. Without one of these, the chameleon dehydrates regardless of how many water dishes you provide.' },
+  { question: 'How do I know if my female veiled chameleon is gravid?', answer: 'Females develop visibly distended abdomens during follicular development and again during eggshell formation. Receptive coloration (bright pastel patterns) shifts to non-receptive coloration (darker greens and blues with yellow accents, sometimes black) once the female is no longer interested in breeding — which is also when she may be carrying follicles or eggs. Behavioral signs include increased ground-time, pacing along the cage floor, restless digging at the substrate or in the laying bin. If you suspect a female is gravid (with or without male contact), provide a laying bin of at least 12 inches of moist, packable substrate immediately and increase calcium supplementation to daily.' },
+  { question: 'How much should I handle my veiled chameleon?', answer: 'Less than you want to. Veiled chameleons are display animals, not interaction animals. Handling is a stressor — every handling event triggers a stress response that takes time to resolve. A reasonable maximum for a healthy, well-acclimated adult is two or three brief handling sessions per week, ideally for husbandry purposes (transferring during cage cleaning, weighing, veterinary checks). Juveniles, recently acquired animals, and any animal showing dark stressed coloration should be handled even less. A chameleon that retreats, hisses, or gapes when you approach is asking you to back off; respect that signal.' },
+  { question: 'What is reproductive prolapse and how do I prevent it?', answer: 'Reproductive prolapse is when reproductive tissue — most commonly hemipenis tissue in males or oviduct tissue in females — protrudes from the cloaca and cannot be retracted. In females it is most often associated with dystocia (egg binding) and the straining that accompanies it. Prevention in females is the prevention of dystocia: provide an appropriate laying site at all times, maintain calcium status with daily supplementation during gravidity, and seek veterinary evaluation early in the laying process if straining is unproductive. Once a prolapse is visible, keep the tissue moist (saline-soaked gauze) and go to a reptile-experienced veterinarian the same day — prolapsed tissue desiccates and necroses rapidly, and surgical correction is required.' },
+  { question: 'What should I gut-load feeder insects with?', answer: 'Gut-load feeders for at least 24 hours before offering. The goal is for the insect to be carrying high-calcium, vitamin-rich food in its digestive tract when the chameleon eats it. A practical gut-load mix combines (1) commercial gut-load product (Repashy Bug Burger, Mazuri Better Bug, or similar), (2) fresh leafy greens (collard, mustard, dandelion — high calcium, low oxalate), and (3) a moisture source (carrot, butternut squash, or water gel). Avoid spinach, kale (as the only green), and iceberg lettuce. A well-gut-loaded cricket is a fundamentally different nutritional package from a cricket fed only oatmeal, even before you dust it with supplement powder.' },
+]
+
+const faqSchema = buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) })
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
+
 export default function VeiledChameleonPage() {
   return (
-    <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
-      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Veiled Chameleon', href: '/species/veiled-chameleon' }]}
-      schema={schema}
-      sidebar={<>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
-          <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
-          {[['Adult male size', '18–24 inches'], ['Adult female size', '10–14 inches'], ['Enclosure', 'Screen cage 24×24×48" minimum'], ['Basking surface', '85–95°F'], ['Ambient', '72–80°F'], ['Humidity', '50–70% — fluctuation is fine'], ['Watering', 'Drip system or misting 2–3×/day'], ['Lifespan', 'Males 6–8 yrs · Females 4–6 yrs']].map(([k, v]) => (
-            <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '12px' }}>
-              <span style={{ color: 'rgba(238,240,228,0.45)' }}>{k}</span>
-              <span style={{ color: 'var(--brand-white)', fontWeight: 600, textAlign: 'right', maxWidth: '55%' }}>{v}</span>
-            </div>
-          ))}
+    <>
+      <SchemaScript schema={combinedSchema} />
+      <ArticleLayout
+        siteId="lizard-com"
+        hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
+        breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Veiled Chameleon', href: '/species/veiled-chameleon' }]}
+        sidebar={<>
+          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>
+            {[['Adult male size', '18–24 inches'], ['Adult female size', '10–14 inches'], ['Enclosure', 'Screen cage 24×24×48" minimum'], ['Basking surface', '85–95°F'], ['Ambient', '72–80°F'], ['Humidity', '50–70% — fluctuation is fine'], ['Watering', 'Drip system or misting 2–3×/day'], ['Lifespan', 'Males 6–8 yrs · Females 4–6 yrs']].map(([k, v]) => (
+              <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '12px' }}>
+                <span style={{ color: 'rgba(238,240,228,0.45)' }}>{k}</span>
+                <span style={{ color: 'var(--brand-white)', fontWeight: 600, textAlign: 'right', maxWidth: '55%' }}>{v}</span>
+              </div>
+            ))}
+          </div>
+          <RelatedLinks title="Related Species" links={[{ label: 'Panther Chameleon', href: '/species/panther-chameleon' }, { label: 'Day Gecko', href: '/species/day-gecko' }, { label: 'Egg Binding', href: '/health/egg-binding' }, { label: 'Hypocalcemia', href: '/health/hypocalcemia' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]} />
+          <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-veiled-chameleon" ctaText="Download Free" />
+        </>}
+      >
+        <div className="carloOS-article">
+          <h2>Screen Cages — The Non-Negotiable</h2>
+          <p>Veiled chameleons require screen enclosures — not glass, not plastic tubs, not hybrid enclosures with glass sides and screen tops. Chameleons need maximum airflow throughout the entire enclosure at all times. The warm, stagnant air that accumulates in glass or plastic enclosures causes upper respiratory infections rapidly in chameleons. The screen cage allows air movement that prevents this while still allowing appropriate temperature gradients and humidity fluctuation.</p>
+          <p>Minimum dimensions: 24×24×48 inches for adult males. Females are smaller and can be maintained in a 24×24×36 at minimum. Taller is always better — chameleons are arboreal and feel most secure at height. The cage must be densely planted with live plants (pothos is the standard — cheap, fast-growing, non-toxic to chameleons, and tolerant of the humidity cycles) and structured with branches at multiple heights to allow full use of vertical space.</p>
+
+          <h2>Ventilation and Air Movement</h2>
+          <p>The single most important difference between a screen enclosure that produces healthy chameleons and a screen enclosure that produces sick chameleons is air movement. Even an all-screen cage can build up a stagnant warm-moist zone in the upper third where the basking light is, particularly if the room itself is still. The corrective is gentle, continuous air movement across the enclosure: a small clip fan running on low across the room or directed at the cage exterior, an HVAC vent in the room, or simply siting the enclosure in a part of the house that gets regular air exchange. Direct, strong airflow blowing on the chameleon itself is a stressor and is not what you want — gentle, ambient room circulation is the goal.</p>
+          <p>Why ventilation matters so much specifically for veiled chameleons: their respiratory tract appears to be unusually susceptible to bacterial and fungal colonization in damp, still air. A wet enclosure that never dries out, combined with a glass enclosure that traps warmth and moisture, is a near-guaranteed respiratory infection within months. A screen enclosure that wets fully during a misting cycle and dries fully between misting cycles, while gentle room air moves across it continuously, is what the species is adapted for. Get the ventilation right and many other problems become rarer.</p>
+
+          <h2>Hydration Protocol — How Chameleons Actually Drink</h2>
+          <p>Chameleons drink from water droplets on leaves; they do not recognize standing water and will not drink from a water dish. Dehydration is common and often fatal if not caught early — deeply sunken eyes are the classic sign, by which point significant dehydration has already occurred. There are two reliable delivery systems:</p>
+          <ul>
+            <li><strong>Automated misting system:</strong> Mist King is the field-standard option (well-documented across published care guides and contributors writing in <em>Reptiles Magazine</em> and on Chameleon Academy). Program for 2 to 3 sessions daily of 2 to 3 minutes each, scheduled to deposit droplets on foliage where the chameleon will see them. Distilled or RO water is preferred to avoid mineral deposits clogging nozzles; tap water is acceptable in many municipalities but check the water quality.</li>
+            <li><strong>Manual dripper:</strong> a Zoo Med Big Dripper or DIY bucket-and-tubing setup that runs for several hours and deposits slow droplets onto a leaf below. Refill morning and evening. Less convenient than an automated mister but very reliable — many experienced keepers use a dripper as the primary hydration delivery and use a mister as a supplement for humidity cycling.</li>
+          </ul>
+          <p>The misting schedule serves dual purpose: hydration and humidity cycling. Veiled chameleons from Yemen&apos;s highland environments have evolved for daily cycles of higher humidity (during and immediately after misting) followed by full drying between sessions. A cage that stays continuously wet develops respiratory problems and fungal growth; a cage that cycles wet-then-dry provides the conditions that support respiratory health. Run the misting system, allow the cage to dry fully between sessions, repeat. Target humidity is typically 50 to 70 percent during the day, with overnight humidity climbing higher (70 to 100 percent during and just after a long evening fog). A digital hygrometer with min/max recording (Govee, Inkbird) inside the enclosure gives you the data to calibrate.</p>
+
+          <h3>Recognizing Dehydration Early</h3>
+          <ul>
+            <li><strong>Urate color:</strong> the white urate cap on chameleon stool should be white or off-white. Yellow or orange urates indicate dehydration. This is the most reliable early indicator and visible during routine spot-cleaning.</li>
+            <li><strong>Eye appearance:</strong> healthy chameleon eyes are full, rounded, and active. Sunken eyes — appearing recessed into the orbit — are a late dehydration sign. By this point intervention is urgent.</li>
+            <li><strong>Skin elasticity:</strong> gently lifted skin on the casque or flank should snap back immediately. Skin that tents and returns slowly indicates significant dehydration.</li>
+            <li><strong>Behavior:</strong> increased drinking activity during misting (you may see the chameleon orient toward droplets immediately and drink extensively), or conversely lethargy and reduced activity in advanced cases.</li>
+          </ul>
+          <p>Mild-to-moderate dehydration responds to increased misting frequency over several days, supplementing with longer misting sessions or running a dripper in addition. Sustained dehydration or any case combined with refusal to drink warrants veterinary evaluation; subcutaneous fluids may be needed.</p>
+
+          <h2>Stress — The Leading Cause of Death</h2>
+          <p>Chameleons are profoundly affected by chronic stress in ways that most reptiles are not. Chronic stress produces immunosuppression, anorexia, and a progressive decline that is difficult to reverse once established. The most common chronic stressors in captivity: seeing their own reflection (cover three sides of the cage with opaque material — the chameleon seeing itself triggers constant territorial stress), being housed where they see other animals or other chameleons (even through glass), handling more than 2 to 3 times weekly, and enclosures with insufficient cover (a chameleon that cannot hide feels perpetually exposed).</p>
+          <p>Color reading: a stressed veiled chameleon is dark — dark brown, dark green, or near-black. A relaxed, comfortable veiled chameleon displays bright greens and yellows with vivid turquoise, white, and orange accents on the sides. Daily color observation is the most reliable health indicator. A chameleon that has been dark for multiple days consecutively without an obvious stressor (shed, handling) requires husbandry assessment.</p>
+
+          <h2>Diet and Feeding</h2>
+          <p>Veiled chameleons are omnivorous — primarily insectivorous with significant plant matter in the diet compared to other chameleon species. Primary feeders: dubia roaches, hornworms, silkworms, and crickets (gut-loaded and dusted). Plant matter: most veiled chameleons will eat the pothos and other plants in their enclosure — this is normal and acceptable, not a problem to prevent. Supplement with kale, collard greens, or dandelion if they are consuming plant matter readily.</p>
+
+          <h3>Gutloading Protocol</h3>
+          <p>What you put into the feeder insect is what your chameleon eats. A cricket fed only oatmeal for a week is a nearly-empty package nutritionally — even dusted with calcium it provides little. A cricket gut-loaded for 24 to 72 hours on a high-calcium, vitamin-rich diet is a fundamentally different food item.</p>
+          <ul>
+            <li><strong>Time:</strong> minimum 24 hours of gut-loading before offering. 48 to 72 hours is better.</li>
+            <li><strong>Commercial gut-load base:</strong> Repashy Bug Burger, Mazuri Better Bug, or Arcadia InsectFuel are formulated products designed for this purpose. Use one of these as the foundation.</li>
+            <li><strong>Fresh greens:</strong> collard, mustard, dandelion, and turnip greens supply natural calcium and beta-carotene (which a chameleon converts to vitamin A as needed — see the note on preformed vitamin A below). Avoid spinach, chard, and beet greens as staples because their oxalate content binds calcium.</li>
+            <li><strong>Moisture source:</strong> carrot, butternut squash, water gel cubes. Crickets need moisture or they cannibalize each other; the moisture also keeps the gut content hydrated and bioavailable.</li>
+            <li><strong>Avoid:</strong> dry oats, dog kibble, plain bread, iceberg lettuce. These keep crickets alive but do nothing nutritionally for your animal.</li>
+          </ul>
+
+          <h3>Supplementation</h3>
+          <p>Supplementation is critical: Arcadia EarthPro-A or Repashy Calcium Plus LoD calcium product (without D3) at every feeding for routine maintenance, plus a multivitamin (Arcadia EarthPro RevitaliseD3 or equivalent) on a twice-monthly to weekly schedule depending on the product&apos;s D3 concentration. Veiled chameleons are prone to metabolic bone disease and hypovitaminosis A without consistent supplementation — see our <a href="/health/metabolic-bone-disease">MBD page</a> and the related discussion of <a href="/health/hypocalcemia">acute hypocalcemia</a> for the underlying biology. Calcium without D3 is used when adequate UVB is provided; calcium with D3 is used as backup insurance or on cloudy days when UVB output is reduced. A small amount of preformed vitamin A (retinol) every few weeks via a multivitamin that contains it is appropriate; veiled chameleons appear to convert beta-carotene inefficiently and benefit from some preformed vitamin A in the supplement schedule.</p>
+
+          <h2>Female Veiled Chameleons — Reproductive Risk</h2>
+          <p>Female veiled chameleons produce infertile egg clutches even without male contact. This is a species-specific reality, not a problem you can prevent through husbandry alone. The metabolic drain shortens their lifespan substantially — typical 4 to 6 years for females versus 6 to 8 years for males — and every clutch carries its own risk of complications.</p>
+
+          <h3>Laying Bin Requirements</h3>
+          <p>A laying bin must be available to any female at all times once she reaches sexual maturity (typically around 6 months of age). Specifications:</p>
+          <ul>
+            <li><strong>Substrate depth:</strong> at least 12 inches of packable substrate. A female that cannot dig a tunnel deep enough to feel secure may abandon the attempt and become egg-bound. Twelve inches is the minimum; some keepers use 16 inches.</li>
+            <li><strong>Substrate composition:</strong> washed play sand mixed with organic topsoil (about 50/50) is the standard. The mix should hold its shape when packed slightly damp — not wet enough to slump, not dry enough to collapse. Test by squeezing a handful; it should hold the shape briefly then release.</li>
+            <li><strong>Container:</strong> a deep food-grade plastic storage tub large enough that the female can dig multiple test holes is appropriate. Place it on the floor of the enclosure or in an enclosed laying chamber attached to the cage.</li>
+            <li><strong>Privacy:</strong> females abandon laying attempts if they feel observed. Position the laying bin in a corner with foliage or visual cover above it. Do not check on a female who is actively digging.</li>
+          </ul>
+
+          <h3>Egg-Binding (Dystocia) and Reproductive Prolapse</h3>
+          <p>Dystocia — inability to lay eggs that are present in the oviduct — is the leading cause of premature death in captive female veiled chameleons. The classic presentation is a female that has been digging or pacing the floor for days without laying, has become lethargic, has lost interest in food, and may be visibly distended along the abdomen. This is a veterinary emergency. Treatment options include calcium and oxytocin under veterinary direction (sometimes successful in early cases with adequate calcium status), or surgical removal of the eggs (salpingotomy or in some cases a complete ovariosalpingectomy that prevents future clutches). The decision is made by the veterinarian based on the timeline, radiographs, and clinical condition.</p>
+          <p>Reproductive prolapse — protrusion of oviduct, hemipenis, or cloacal tissue through the vent — can follow straining during dystocia in females or can occur from other causes in males. Visible tissue at the vent that does not retract is an emergency. Keep the tissue moist with saline-soaked gauze, do not attempt to push it back yourself, and transport to a reptile-experienced veterinarian the same day. Prolapsed tissue desiccates and necroses rapidly; delays of even hours can change the prognosis.</p>
+          <p>Prevention of reproductive crises in females rests on three points: (1) provide a laying bin at all times once sexually mature, (2) maintain robust calcium status with daily supplementation during follicular development and active gravidity, and (3) recognize the early signs of dystocia (ground-time, restless digging without laying, refusal to eat, lethargy) and seek veterinary evaluation early rather than late. See our dedicated <a href="/health/egg-binding">egg binding</a> page for the full clinical picture.</p>
+
+          <h2>Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
         </div>
-        <RelatedLinks title="Related Species" links={[{ label: 'Panther Chameleon', href: '/species/panther-chameleon' }, { label: 'Day Gecko', href: '/species/day-gecko' }, { label: 'Egg Binding', href: '/health/egg-binding' }]} />
-        <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-veiled-chameleon" ctaText="Download Free" />
-      </>}
-    >
-      <div className="carloOS-article">
-        <h2>Screen Cages — The Non-Negotiable</h2>
-        <p>Veiled chameleons require screen enclosures — not glass, not plastic tubs, not hybrid enclosures with glass sides and screen tops. Chameleons need maximum airflow throughout the entire enclosure at all times. The warm, stagnant air that accumulates in glass or plastic enclosures causes upper respiratory infections rapidly in chameleons. The screen cage allows air movement that prevents this while still allowing appropriate temperature gradients and humidity fluctuation.</p>
-        <p>Minimum dimensions: 24×24×48 inches for adult males. Females are smaller and can be maintained in a 24×24×36 at minimum. Taller is always better — chameleons are arboreal and feel most secure at height. The cage must be densely planted with live plants (pothos is the standard — cheap, fast-growing, non-toxic to chameleons, and tolerant of the humidity cycles) and structured with branches at multiple heights to allow full use of vertical space.</p>
-
-        <h2>Hydration — Drip System or Daily Misting</h2>
-        <p>Chameleons drink from water droplets on leaves — they do not recognize standing water and will not drink from a water dish. Dehydration is common and often fatal if not caught early (deeply sunken eyes are the classic sign — by this point significant dehydration has occurred). Hydration options: an automated misting system (Mist King is the industry standard) programmed for 2–3 sessions daily of 2–3 minutes each, or a manual dripper (Zoo Med Big Dripper or DIY bucket-and-tubing setup) that runs for several hours and deposits water droplets throughout the cage.</p>
-        <p>The misting schedule serves dual purpose: hydration and humidity cycling. Chameleons from Yemen's highland environments have evolved for periods of high humidity (misting) followed by full drying. A cage that stays continuously wet develops respiratory problems; a cage that cycles wet-then-dry provides the conditions that support respiratory health. Run the misting system, allow the cage to dry fully between sessions, repeat.</p>
-
-        <h2>Stress — The Leading Cause of Death</h2>
-        <p>Chameleons are profoundly affected by chronic stress in ways that most reptiles are not. Chronic stress produces immunosuppression, anorexia, and a progressive decline that is difficult to reverse once established. The most common chronic stressors in captivity: seeing their own reflection (cover three sides of the cage with opaque material — the chameleon seeing itself triggers constant territorial stress), being housed where they see other animals or other chameleons (even through glass), handling more than 2–3 times weekly, and enclosures with insufficient cover (a chameleon that cannot hide feels perpetually exposed).</p>
-        <p>Color reading: a stressed veiled chameleon is dark — dark brown, dark green, or near-black. A relaxed, comfortable veiled chameleon displays bright greens and yellows with vivid turquoise, white, and orange accents on the sides. Daily color observation is the most reliable health indicator. A chameleon that has been dark for multiple days consecutively without an obvious stressor (shed, handling) requires husbandry assessment.</p>
-
-        <h2>Diet and Feeding</h2>
-        <p>Veiled chameleons are omnivorous — primarily insectivorous with significant plant matter in the diet compared to other chameleon species. Primary feeders: dubia roaches, hornworms, silkworms, and crickets (gut-loaded and dusted). Plant matter: most veiled chameleons will eat the pothos and other plants in their enclosure — this is normal and acceptable, not a problem to prevent. Supplement with kale, collard greens, or dandelion if they are consuming plant matter readily.</p>
-        <p>Supplementation is critical: Arcadia EarthPro-A calcium supplement at every feeding, ReptiVite or Arcadia EarthPro RevitaliseD3 twice monthly. Veiled chameleons are prone to metabolic bone disease and hypovitaminosis A without consistent supplementation. Calcium without D3 is used when adequate UVB is provided; calcium with D3 is used as backup insurance or on cloudy days when UVB output is reduced.</p>
-
-        <h2>Female Veiled Chameleons and Egg Production</h2>
-        <p>Female veiled chameleons produce infertile egg clutches even without male contact — a metabolic drain that shortens their lifespan (4–6 years versus 6–8 for males). A laying bin (a deep container of moist substrate — at least 12 inches deep — placed in the enclosure) must be available at all times for females. A female that cannot find an appropriate laying site will become egg-bound. Laying typically occurs at night; a female that is digging in the corner of the cage or pacing the floor is nesting and needs the laying bin immediately accessible.</p>
-      </div>
-    </ArticleLayout>
+      </ArticleLayout>
+    </>
   )
 }
