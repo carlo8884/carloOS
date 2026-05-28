@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com' | 'ferret-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com' | 'ferret-com' | 'ferrets-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -316,6 +316,33 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteTagline: 'A Reference for Ferret Owners',
     siteUrl: 'https://ferret.com',
     logoText: 'Ferret.com',
+    twPrimary: 'amber',
+  },
+
+  'ferrets-com': {
+    // Library/reference feel — lighter chocolate + paper cream + warmer off-white.
+    primary: '#6E4A28',
+    primaryLight: '#8C6238',
+    primaryPale: '#F5EBDC',
+    primaryDark: '#523618',
+    dark: '#1F140A',
+    surface: '#FBF6EA',
+    white: '#FFFDF7',
+    textDark: '#1F140A',
+    textMid: '#4A3220',
+    textLight: '#8A7058',
+    border: '#E2D6C2',
+    success: '#3A6A2A',
+    warning: '#D6A22A',
+    danger: '#C84A2A',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Ferrets.com',
+    siteTagline: 'The Ferret Library & Directory',
+    siteUrl: 'https://ferrets.com',
+    logoText: 'Ferrets.com',
     twPrimary: 'amber',
   },
 }
@@ -722,6 +749,33 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferret.com/og-default.jpg',
+  },
+
+  'ferrets-com': {
+    id: 'ferrets-com',
+    theme: themes['ferrets-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Ferrets.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://ferrets.com/og-default.jpg',
   },
 }
 
