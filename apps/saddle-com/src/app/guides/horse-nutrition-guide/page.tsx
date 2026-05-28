@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Nutrition Guide — Hay, Grain, Supplements | Saddle.com', description: 'Complete horse nutrition guide. Forage-first feeding, how much hay a horse needs, when to add grain, essential supplements.', path: '/guides/horse-nutrition-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Nutrition Guide', description: 'Hay, grain, and supplement guide for horse owners — forage-first approach.', url: 'https://saddle.com/guides/horse-nutrition-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseNutritionGuidePage() {
@@ -25,8 +26,10 @@ export default function HorseNutritionGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Forage First — The Foundation</h2>
-        <p>The horse's digestive system — a 100-foot gastrointestinal tract with a relatively small stomach and a large hindgut designed for fermentation of fibrous plant material — requires near-continuous forage intake to function properly. Horses produce stomach acid continuously; without food in the stomach, that acid causes gastric ulcers. The hindgut requires a consistent flow of fermentable fiber — gaps in forage intake (more than 4–6 hours) disrupt hindgut flora and predispose to hindgut dysbiosis, colic, and laminitis.</p>
+        <DropCap>The horse's digestive system — a 100-foot gastrointestinal tract with a relatively small stomach and a large hindgut designed for fermentation of fibrous plant material — requires near-continuous forage intake to function properly. Horses produce stomach acid continuously; without food in the stomach, that acid causes gastric ulcers. The hindgut requires a consistent flow of fermentable fiber — gaps in forage intake (more than 4–6 hours) disrupt hindgut flora and predispose to hindgut dysbiosis, colic, and laminitis.</DropCap>
         <p>Practical implication: horses should have access to forage for as close to 24 hours as possible. Pasture grazing, slow-feeder hay nets (which extend eating time dramatically by reducing the rate of consumption), or multiple daily hay feedings are the tools to achieve this. A horse that inhales all its hay within 4 hours and then stands with no forage for 8 hours before the next feeding is at elevated colic, ulcer, and behavioral problem risk.</p>
         <p>The forage-first principle is reinforced by published equine nutrition research — work referenced in journals such as the <em>Equine Veterinary Journal</em> and the <em>Journal of Equine Veterinary Science</em> has repeatedly documented the relationship between long feed-free intervals and equine gastric ulcer syndrome (EGUS) prevalence, particularly in performance horses. The National Research Council's <em>Nutrient Requirements of Horses</em> (sixth revised edition) sets minimum forage at 1% of body weight in dry matter and recommends 1.5–2% for normal maintenance. Most working horses do best at the upper end of that range.</p>
 
@@ -73,6 +76,10 @@ export default function HorseNutritionGuidePage() {
           <li><strong>Feeding directions:</strong> always list the intake range required to deliver the formulated vitamin/mineral package. A ration balancer fed at 0.5 lb when the bag specifies 1–2 lb will under-deliver micronutrients.</li>
         </ul>
         <p>Most importantly: the ingredient list reveals what's actually in the bag. "Grain by-products" and "plant protein products" are vague catch-alls; named ingredients (oats, soybean meal, beet pulp, alfalfa meal, rice bran) tell you what you're paying for.</p>
+
+        <CalloutBox variant="evidence" title="Ca:P target: 1.5–2:1, never inverted">
+          The accepted calcium-to-phosphorus ratio across most equine life stages is 1.5:1 to 2:1, with the absolute minimum being 1:1. Straight cereal grains (oats, corn, barley) are phosphorus-heavy and will invert the ratio if fed without a calcium-providing forage or balancer. Run a hay analysis and have a nutritionist balance the ration when in doubt.
+        </CalloutBox>
 
         <h2>Water — The Most Critical Nutrient</h2>
         <p>A 1,000 lb horse drinks 8–12 gallons of water per day at maintenance, significantly more in hot weather or heavy work. Water must be fresh, clean, and accessible at all times. Automatic waterers should be inspected daily — malfunction without the horse showing obvious distress until dehydration is significant. In winter, water temperature matters: horses prefer water at 45–65°F and may reduce intake significantly when water is at or near freezing, increasing colic risk. Heated buckets or tank heaters are advisable in climates with freezing temperatures.</p>

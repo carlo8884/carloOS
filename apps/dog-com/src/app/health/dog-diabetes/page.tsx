@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs', description: 'Signs, insulin treatment, glucose monitoring, and management of canine diabetes mellitus.', url: 'https://dog.com/health/dog-diabetes', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -19,8 +20,10 @@ export default function DogDiabetesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2 id="signs">Signs — The Classic Presentation</h2>
-          <p>Diabetes mellitus in dogs presents with the classic "four Ps": polyuria (urinating more), polydipsia (drinking more), polyphagia (eating more), and weight loss despite increased appetite. The mechanism: insufficient insulin means glucose cannot enter cells — cells starve despite elevated blood glucose. The body excretes excess glucose in urine (glucosuria), drawing water with it (osmotic diuresis), causing the PU/PD cycle. The dog eats more to compensate for cellular starvation but loses weight as the body catabolizes fat and muscle for energy.</p>
+          <DropCap>Diabetes mellitus in dogs presents with the classic "four Ps": polyuria (urinating more), polydipsia (drinking more), polyphagia (eating more), and weight loss despite increased appetite. The mechanism: insufficient insulin means glucose cannot enter cells — cells starve despite elevated blood glucose. The body excretes excess glucose in urine (glucosuria), drawing water with it (osmotic diuresis), causing the PU/PD cycle. The dog eats more to compensate for cellular starvation but loses weight as the body catabolizes fat and muscle for energy.</DropCap>
           <p>Additional signs: cataracts developing rapidly (canine diabetics are uniquely prone to rapid cataract formation from glucose accumulation in the lens — this can occur within weeks of diagnosis), recurring urinary tract infections (glucose in urine promotes bacterial growth), and lethargy. Uncomplicated diabetes: drinking and urinating more, eating more, losing weight. Complicated diabetic ketoacidosis (DKA): vomiting, anorexia, lethargy, collapse — a medical emergency requiring hospitalization.</p>
 
           <h2 id="diagnosis">Diagnosis</h2>
@@ -40,6 +43,10 @@ export default function DogDiabetesPage() {
           <p><strong>Fructosamine:</strong> Reflects average blood glucose over 2–3 weeks. A single clinic value provides a useful "average control" metric. Target fructosamine: 350–450 μmol/L in well-controlled diabetic dogs.</p>
 
           <h2 id="hypoglycemia">Hypoglycemia — The Emergency to Know</h2>
+          <CalloutBox variant="warning" title="Hypoglycemia kit at the front door">
+            Every diabetic dog household should keep Karo corn syrup or honey somewhere accessible and an emergency-vet number saved in every phone. If a diabetic dog is wobbly, trembling, or disoriented: rub a tablespoon of Karo syrup on the gums and travel to the vet immediately. Never give anything by mouth to an unconscious or seizing dog — go directly to emergency care. This is a life-threatening complication that requires IV dextrose.
+          </CalloutBox>
+
           <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have Karo corn syrup or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of Karo syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose.</p>
         </div>
       </ArticleLayout>

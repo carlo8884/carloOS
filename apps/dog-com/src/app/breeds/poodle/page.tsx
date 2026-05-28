@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Poodle Breed Guide — Standard, Miniature & Toy | Dog.com', description: 'Poodles are the most intelligent dog breed. Three sizes with different health profiles — Standard Poodles at risk for GDV/bloat and Addison\'s disease.', path: '/breeds/poodle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Poodle Breed Guide', description: 'Standard, Miniature, and Toy Poodle health profiles — Addison\'s disease, bloat, and PRA.', url: 'https://dog.com/breeds/poodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PoodlePage() {
@@ -24,8 +25,14 @@ export default function PoodlePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Intelligence — The Practical Implications</h2>
-        <p>Poodles are consistently ranked first in canine intelligence assessments. This has practical implications beyond performance dog sports: a bored Poodle invents its own entertainment, which is rarely what owners want. Poodles need substantial mental stimulation — training, puzzle toys, nose work, agility, or any structured activity that engages their problem-solving capacity. A Poodle that receives training, enrichment, and interaction is an ideal companion; a Poodle left alone without mental engagement develops anxious, destructive behaviors.</p>
+        <DropCap>Poodles are consistently ranked first in canine intelligence assessments. This has practical implications beyond performance dog sports: a bored Poodle invents its own entertainment, which is rarely what owners want. Poodles need substantial mental stimulation — training, puzzle toys, nose work, agility, or any structured activity that engages their problem-solving capacity. A Poodle that receives training, enrichment, and interaction is an ideal companion; a Poodle left alone without mental engagement develops anxious, destructive behaviors.</DropCap>
+
+        <CalloutBox variant="evidence" title="Standard Poodle GDV risk">
+          Standard Poodles are deep-chested and rank among the highest-risk breeds for gastric dilatation-volvulus. A prophylactic gastropexy performed at the time of spay/neuter is offered by many surgeons for this breed — discuss with your veterinarian before the surgery is scheduled.
+        </CalloutBox>
 
         <BreedHealthCard name="Addison's Disease (Standard Poodles)" riskLevel="high"
           description="Standard Poodles have the highest breed predisposition to Addison's disease (hypoadrenocorticism) of any breed. Addison's occurs when the adrenal glands produce insufficient cortisol and aldosterone. The condition is called 'the great pretender' because it can present with vague, intermittent signs — lethargy, vomiting, weight loss, weakness — that wax and wane. The classic presentation is an Addisonian crisis: acute collapse, severe vomiting, profound weakness, and potentially fatal electrolyte disturbances. Addison's disease is suspected in any Standard Poodle with recurring GI symptoms or episodic weakness. Diagnosis: ACTH stimulation test. Treatment: lifelong mineralocorticoid (Percorten-V or Florinef) and glucocorticoid (prednisone) supplementation."
