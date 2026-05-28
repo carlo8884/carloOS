@@ -49,6 +49,15 @@ export default function QuarterHorseBreedPage() {
           authorAvatar: '☘',
           publishedAt: 'May 2026',
           readTime: '14 min',
+          // Cover photo — horse and rider in an all-purpose schooling
+          // session. Reuses the verified saddle-com /english Unsplash ID
+          // (verified-in-production CarloOS catalog). The schooling-session
+          // composition fits the Quarter Horse's discipline versatility
+          // better than a breed-specific stance shot. Wikimedia Commons
+          // breed-conformation photography is the right long-term source.
+          image:
+            'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1600&q=80&auto=format&fit=crop',
+          imageAlt: 'A horse and rider working in an all-purpose schooling session',
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },

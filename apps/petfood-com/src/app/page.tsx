@@ -7,9 +7,28 @@
  * FTC disclosure.
  *
  * Voice: skeptical, evidence-based, technical, transparent, comparative.
- * Visuals: CSS-only — no brand marketing imagery, no smiling-pet stock,
- * no manufacturer hero shots. Score chips and ingredient/dimension labels
- * render in JetBrains Mono per brand brief.
+ *
+ * Visual strategy (per COO photo-sourcing playbook, ops/handoffs/
+ * 2026-05-29-photo-sourcing-playbook.md):
+ * - Brand mood is "clean, food-magazine, evaluative not promotional"
+ *   (Bon Appétit restaurant-review aesthetic).
+ * - PHOTOS BANNED: smiling-pet-with-bowl cliché, brand marketing scenes,
+ *   manufacturer hero shots (those go on /brands/* pages with attribution,
+ *   NOT on evaluative comparison pages — editorial separation is the
+ *   moat).
+ * - PHOTOS WANTED: ingredient-forward (raw protein/grain/vegetable
+ *   close-ups, white/wood backgrounds), lab/scientific-transparency
+ *   imagery. Sources: Unsplash for ingredient close-ups (verify each ID
+ *   before commit), Wikimedia Commons for rarer ingredients (Quinoa,
+ *   Kelp, Cranberry), manufacturer-supplied for brand pages only.
+ * - NONE of those source-appropriate IDs exist yet in the verified
+ *   CarloOS Unsplash catalog. Rather than add reused dog/horse photos
+ *   that would actively undermine the brand brief, the homepage stays
+ *   CSS-only until Carlo's next photo-sourcing pass populates the
+ *   ingredient library. Same posture as Vets.co before its illustration
+ *   sprint lands.
+ * - Score chips and ingredient/dimension labels continue to render in
+ *   JetBrains Mono per brand brief — data-vis IS the visual.
  */
 
 import type { Metadata } from 'next'

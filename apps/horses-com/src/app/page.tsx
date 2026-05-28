@@ -1,35 +1,16 @@
 /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/main
- * Horses.com — placeholder homepage.
- * Skeleton only: real content arrives in a later sprint.
- */
-
-import type { Metadata } from 'next'
-import { buildMetadata } from '@carloOS/ui'
-
-export const metadata: Metadata = buildMetadata({
-  siteId: 'horses-com',
-  title: 'Horses.com',
-  description:
-    'Premium domain. Site coming soon — research-based reference for horse owners.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
  * Horses.com Homepage — /
  * Server component. Shared CarloOS components for all UI.
  * Visual pass: refined-equestrian palette, Playfair Display + Source Sans 3,
- * CSS-only hero (no real photography until image-strategy ships).
+ * hero photography + featured-cornerstone photo cards (Unsplash CDN, IDs
+ * verified across the CarloOS network or via Unsplash search). Per the
+ * COO photo-sourcing playbook: Unsplash heavy for equestrian lifestyle,
+ * Wikimedia Commons reserved for breed pages where taxonomic accuracy
+ * matters.
  */
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
@@ -38,68 +19,10 @@ export const metadata: Metadata = buildMetadata({
   title: 'The Reference for Horse Owners',
   description:
     'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
   path: '/',
   type: 'website',
 })
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/main
-export default function HomePage() {
-  const year = new Date().getFullYear()
-
-  return (
-    <div
-      style={{
-        maxWidth: '720px',
-        margin: '0 auto',
-        padding: '96px 24px 64px',
-        textAlign: 'center',
-      }}
-    >
-      <h1
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '3rem',
-          fontWeight: 900,
-          letterSpacing: '-0.02em',
-          color: 'var(--brand-text-dark)',
-          marginBottom: '20px',
-        }}
-      >
-        Horses.com
-      </h1>
-      <p
-        style={{
-          fontSize: '1.125rem',
-          lineHeight: 1.6,
-          color: 'var(--brand-text-mid)',
-        }}
-      >
-        Premium domain. Site coming soon — research-based reference for horse owners.
-      </p>
-      <footer
-        style={{
-          marginTop: '96px',
-          fontSize: '0.875rem',
-          color: 'var(--brand-text-light)',
-        }}
-      >
-        © {year} Horses.com
-      </footer>
-    </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 // ── Inline SVG icon set — restrained line illustration, no emoji ────────────
 
 type CategoryIcon =
@@ -234,6 +157,15 @@ const FEATURED_ARTICLES: {
   title: string
   teaser: string
   readTime: string
+  /**
+   * Optional cover photo. Photo IDs are either reused from the CarloOS
+   * Saddle.com codebase (verified-in-production) or sourced via Unsplash
+   * search for equestrian editorial subjects matching the brand mood.
+   * Per playbook: moody single-subject, environmental over isolated,
+   * never the "smiling rider on stock horse" cliché.
+   */
+  image?: string
+  imageAlt?: string
 }[] = [
   {
     href: '/breeds/quarter-horse',
@@ -242,6 +174,13 @@ const FEATURED_ARTICLES: {
     teaser:
       'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration. AQHA registry, the 5-panel genetic test, and what to expect as a first-time owner.',
     readTime: '14 min',
+    // All-purpose horse and rider photo — reused from saddle-com /english
+    // (verified-in-production CarloOS Unsplash ID). Quarter Horse is the
+    // workhorse of multiple disciplines; the schooling-session photo fits
+    // the breed's versatility better than a discipline-specific shot.
+    image:
+      'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A horse and rider in an all-purpose schooling session',
   },
   {
     href: '/health/equine-ulcers',
@@ -250,6 +189,11 @@ const FEATURED_ARTICLES: {
     teaser:
       'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.',
     readTime: '16 min',
+    // No photo — gastric ulcers are an internal-medicine subject; no
+    // editorial photo stands in honestly. CSS-only keeps the card text-led
+    // (same pattern as Lizard.com UVB/Bioactive cards). A vet-anatomy
+    // diagram from Wikimedia Commons would be the right replacement; that
+    // lands when the medical-illustration line item in the playbook fires.
   },
   {
     href: '/guides/saddle-fit-basics',
@@ -258,6 +202,25 @@ const FEATURED_ARTICLES: {
     teaser:
       'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings. Eight checks, in order, that catch the most common fit problems.',
     readTime: '12 min',
+    // No photo — saddle-fit is an evaluative subject. A single saddle
+    // photo cannot demonstrate tree width or wither clearance honestly;
+    // the right replacement is a saddle-tree diagram or a series of
+    // panel-contact frames, queued for the medical-illustration sprint.
+  },
+  {
+    href: '/supplements/joint-supplements',
+    eyebrow: 'Supplements',
+    title: 'Joint Supplements for the Working Horse',
+    teaser:
+      'Glucosamine, chondroitin, hyaluronic acid, MSM — the four ingredients on most labels. What the literature actually shows, the difference between maintenance and loading doses, and where to skip the marketing.',
+    readTime: '13 min',
+    // Show-jumper mid-flight — reused from saddle-com production. Joint
+    // supplements are most relevant to the explosive-impact sport horse;
+    // the airborne jumper makes the subject visible without staging a
+    // bottle-marketing scene.
+    image:
+      'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A show jumper mid-flight over a fence',
   },
   {
     href: '/reviews/best-winter-horse-blankets',
@@ -266,6 +229,11 @@ const FEATURED_ARTICLES: {
     teaser:
       'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions, discipline-tagged, with a turnout-vs-stable decision tree.',
     readTime: '11 min',
+    // No photo — winter-blanket review wants a turnout-in-cold-weather
+    // shot specifically, and none exists in the verified CarloOS Unsplash
+    // catalog yet. Manufacturer-supplied product photography (Weatherbeeta,
+    // Horseware) is the right source per playbook; flagged for the
+    // affiliate-outreach sprint.
   },
 ]
 
@@ -283,13 +251,41 @@ export default function HomePage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
-        {/* Moody environmental wash — CSS only until photography ships.
-            Two radial washes (warm dawn light upper-right, deep green shadow
-            lower-left) over the green-black masthead, with a subtle vertical
-            grain to keep the field from reading flat. */}
+        {/* Hero photograph — moody single-subject equestrian editorial.
+            Reuses the dressage-horse-at-canter ID from Saddle.com
+            production (verified-in-production CarloOS Unsplash catalog).
+            Per the COO playbook: no smiling-rider cliché, environmental
+            over staged. The dressage portrait is the strongest single-
+            subject image in the verified catalog and grades cleanly into
+            the deep green-black masthead via the multi-stop gradient. */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-y-0 right-0 hidden lg:block w-[55%] z-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop"
+            alt=""
+            fill
+            sizes="55vw"
+            className="object-cover"
+            priority
+          />
+          {/* Multi-stop gradient blends photo into the green-black masthead;
+              keeps the left 45% clear for the text block. */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(19,36,28,1) 0%, rgba(19,36,28,0.82) 22%, rgba(19,36,28,0.30) 60%, rgba(19,36,28,0.45) 100%)',
+            }}
+          />
+        </div>
+
+        {/* Atmospheric overlays kept on top of photo for cohesion with the
+            CSS-only fallback on mobile. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none z-[1]"
           style={{
             backgroundImage: [
               'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.22) 0%, transparent 55%)',
@@ -300,7 +296,7 @@ export default function HomePage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay"
+          className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay z-[1]"
           style={{
             backgroundImage:
               'repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 3px)',
@@ -539,55 +535,71 @@ export default function HomePage() {
               <Link
                 key={art.href}
                 href={art.href}
-                className="group block p-7 lg:p-8 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                className="group block rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
                 style={{
                   background: 'var(--brand-surface)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                {/* Decorative top rule — brass, signals premium */}
-                <span
-                  aria-hidden="true"
-                  className="block h-px w-10 mb-5"
-                  style={{ background: 'var(--brand-accent)' }}
-                />
-                <div
-                  className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  {art.eyebrow}
-                </div>
-                <h3
-                  className="font-display font-bold text-2xl leading-tight mb-3"
-                  style={{ color: 'var(--brand-text-dark)' }}
-                >
-                  {art.title}
-                </h3>
-                <p
-                  className="text-base leading-relaxed mb-5"
-                  style={{ color: 'var(--brand-text-mid)' }}
-                >
-                  {art.teaser}
-                </p>
-                <div className="flex items-center justify-between gap-4">
+                {/* Cover photo — verified Unsplash equestrian editorial.
+                    Aspect 16/9. Renders only when both image and alt are
+                    provided. */}
+                {art.image && art.imageAlt ? (
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={art.image}
+                      alt={art.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-7 lg:p-8">
+                  {/* Decorative top rule — brass, signals premium */}
                   <span
-                    className="text-xs font-semibold uppercase tracking-eyebrow"
-                    style={{ color: 'var(--brand-text-light)' }}
-                  >
-                    {art.readTime} read
-                  </span>
-                  <span
-                    className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                    aria-hidden="true"
+                    className="block h-px w-10 mb-5"
+                    style={{ background: 'var(--brand-accent)' }}
+                  />
+                  <div
+                    className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
                     style={{ color: 'var(--brand-primary)' }}
                   >
-                    Read
+                    {art.eyebrow}
+                  </div>
+                  <h3
+                    className="font-display font-bold text-2xl leading-tight mb-3"
+                    style={{ color: 'var(--brand-text-dark)' }}
+                  >
+                    {art.title}
+                  </h3>
+                  <p
+                    className="text-base leading-relaxed mb-5"
+                    style={{ color: 'var(--brand-text-mid)' }}
+                  >
+                    {art.teaser}
+                  </p>
+                  <div className="flex items-center justify-between gap-4">
                     <span
-                      aria-hidden="true"
-                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                      className="text-xs font-semibold uppercase tracking-eyebrow"
+                      style={{ color: 'var(--brand-text-light)' }}
                     >
-                      →
+                      {art.readTime} read
                     </span>
-                  </span>
+                    <span
+                      className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                      style={{ color: 'var(--brand-primary)' }}
+                    >
+                      Read
+                      <span
+                        aria-hidden="true"
+                        className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                      >
+                        →
+                      </span>
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -675,9 +687,34 @@ export default function HomePage() {
           ]}
         />
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      <aside
+        className="relative z-10 px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide font-body text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'rgba(255,255,255,0.6)' }}
+        >
+          Hero & cornerstone photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'var(--brand-accent-light)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Breed photography will migrate to
+          Wikimedia Commons references as the breed library expands.
+        </p>
+      </aside>
     </>
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
   )
 }
