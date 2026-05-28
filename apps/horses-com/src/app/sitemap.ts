@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://horses.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://horses.com/first-horse-roadmap', lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
     { url: 'https://horses.com/breeds/quarter-horse', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://horses.com/health/equine-ulcers', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://horses.com/guides/saddle-fit-basics', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
