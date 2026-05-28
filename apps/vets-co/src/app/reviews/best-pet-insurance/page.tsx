@@ -41,7 +41,13 @@ export default function VetsPetInsurancePage() {
           Best Pet Insurance 2025 — What Vets Actually Think
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          For owners, the pattern is clear: the aftermath of uninsured emergencies daily. Here&apos;s which plans actually perform when your pet needs $5,000 of care at 11pm on a Saturday.
+          From a veterinarian&apos;s perspective, Trupanion is the only major pet insurer
+          that pays the practice directly at checkout, eliminating the
+          submit-and-wait reimbursement gap that strands owners with a $5,000
+          emergency bill. Healthy Paws delivers the fastest reimbursement (around
+          two days, no payout caps), and Embrace is the practical choice when
+          routine wellness coverage matters. Enroll before any vet visit — every
+          insurer permanently excludes conditions documented before the policy starts.
         </p>
         <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated May 2025 · Affiliate disclosure applies</div>
       </div>
