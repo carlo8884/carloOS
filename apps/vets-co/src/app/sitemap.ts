@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/breeds/golden-retriever-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/labrador-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
+    { url: 'https://vets.co/emergency-triage-card', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://vets.co/find-a-vet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     ...stateRoutes,
     { url: 'https://vets.co/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
