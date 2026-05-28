@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', description: 'Step-by-step quarantine tank setup for new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', totalTime: 'P1D', steps: [
@@ -32,8 +33,10 @@ export default function QuarantineGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2>Why Most Aquarists Skip It — And Why They Regret It</h2>
-          <p>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $2,000 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</p>
+          <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $2,000 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
           <p>The psychological barrier is effort and space. The practical solution: a single 10-gallon tank stored in a closet or garage, a sponge filter always running in the main tank to seed it, a heater and thermometer. Total space: 18 inches × 10 inches. Total ongoing effort when not in use: approximately zero. The infrastructure cost ($30–60) amortizes over every subsequent fish purchase for years.</p>
 
           <h2>The Seeded Sponge Filter — Solving the Cycle Problem</h2>
@@ -47,6 +50,10 @@ export default function QuarantineGuidePage() {
           <h2>Prophylactic Treatment — The Proactive Approach</h2>
           <p>Some experienced marine fishkeepers treat all new fish prophylactically during quarantine rather than waiting for symptoms. The marine protocol has become fairly standardized: praziquantel (treats flukes — external and gill parasites extremely common in wild-caught marines) plus chloroquine phosphate or copper (treats external parasites including Amyloodinium and Cryptocaryon) applied during the first 30 days of quarantine regardless of visible signs. For freshwater fish, prophylactic deworming (fenbendazole for internal worms) is particularly useful for wild-caught species or those from uncontrolled breeding environments.</p>
           <p>Prophylactic treatment is not universally agreed upon — some fishkeepers prefer to observe and treat only if signs develop. For reef fish and other expensive livestock, the proactive approach provides greater assurance.</p>
+
+          <CalloutBox variant="tip" title="Run a permanent second sponge filter">
+            Keep a second sponge filter running in your display tank at all times. When quarantine is needed, that pre-colonized sponge moves to the QT and provides instant biological filtration — no cycling delay, no ammonia spike. It also serves as a backup filter if your main one ever fails. This single habit removes the most-cited objection to keeping a QT.
+          </CalloutBox>
 
           <h2>Duration — Why 4 Weeks Is the Minimum</h2>
           <p>The 4-week minimum is based on the incubation and latency periods of the most common fish diseases. Ich (Ichthyophthirius): can be subclinical for 2–3 weeks as the parasite completes multiple cycles before enough trophonts are attached to cause visible white spots. Velvet (Oodinium): shorter latency but invisible early — the flashlight test daily catches it before clinical signs appear. Lymphocystis: slow-growing viral infection that may not be visible for 3–4 weeks. Bacterial infections: most become apparent within 1–2 weeks. The 4-week window catches essentially all of these.</p>

@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -27,7 +28,7 @@ const schema = buildArticleSchema({
   imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
 })
 
 const SCORES = [
@@ -61,7 +62,15 @@ export default function GoldenRetrieverBreedPage() {
             </div>
             <h1 className="font-display font-black text-white tracking-tighter leading-none mb-2" style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}>Golden Retriever</h1>
             <div className="font-display italic text-white/35 text-lg mb-4">Canis lupus familiaris</div>
-            <p className="text-base font-light text-white/60 leading-relaxed max-w-sm">America&apos;s most beloved family dog — loyal, trainable, and endlessly good-natured. Requires informed health management due to a very high cancer predisposition.</p>
+            <p className="text-base font-light text-white/60 leading-relaxed max-w-lg">
+              The Golden Retriever is a 55–75 lb sporting breed bred for retrieving game,
+              known for an exceptional temperament with children, high trainability, and a
+              10–12 year lifespan. They are America&apos;s most popular family dog. The
+              defining health concern is cancer: roughly 60% of Goldens die of cancer
+              (Morris Animal Foundation Golden Retriever Lifetime Study), with
+              hemangiosarcoma and lymphoma most common. Hip dysplasia and aortic stenosis
+              also warrant OFA-screened breeders.
+            </p>
           </div>
         </div>
       </div>
@@ -98,8 +107,14 @@ export default function GoldenRetrieverBreedPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
             <h2>Overview</h2>
-            <p>The Golden Retriever has ranked among America&apos;s most popular dog breeds for decades — a position earned through an unmatched combination of temperament, trainability, and adaptability. Goldens are gentle with children, tolerant with strangers, responsive to training, and genuinely enthusiastic about life in a way that is infectious. They are also a breed that requires informed ownership — particularly around health monitoring as they age.</p>
+            <DropCap>The Golden Retriever has ranked among America&apos;s most popular dog breeds for decades — a position earned through an unmatched combination of temperament, trainability, and adaptability. Goldens are gentle with children, tolerant with strangers, responsive to training, and genuinely enthusiastic about life in a way that is infectious. They are also a breed that requires informed ownership — particularly around health monitoring as they age.</DropCap>
+
+            <CalloutBox variant="evidence" title="Evidence-anchored">
+              Hip dysplasia screening in Goldens uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> hip evaluation as the long-standing US standard. Buy only from breeders who provide OFA hip and elbow certifications on both sire and dam.
+            </CalloutBox>
 
             <h2>Temperament Scores</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-5">

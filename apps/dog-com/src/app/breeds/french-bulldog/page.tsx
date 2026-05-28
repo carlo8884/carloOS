@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article', ogImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -46,6 +47,12 @@ export default function FrenchBulldogBreedPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            <CalloutBox variant="warning" title="BOAS — emergency awareness">
+              Brachycephalic Airway Syndrome severely limits a Frenchie&apos;s ability to thermoregulate. Heat distress (frantic panting, blue/purple gums, collapse) is an emergency — cool the dog and transport to an ER immediately. Never leave a Frenchie in a parked car, even with windows cracked.
+            </CalloutBox>
+
             <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.15)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 28px' }}>
               <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '7px' }}>Before You Buy</div>
               <p style={{ fontSize: '14px', color: '#4A2E18', margin: 0, lineHeight: 1.6 }}>French Bulldogs cannot be naturally bred or born without human intervention. Many cannot breathe normally at rest. Average vet costs significantly exceed most other breeds. Pet insurance enrolled at purchase is essential, not optional.</p>

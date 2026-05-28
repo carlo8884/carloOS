@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide — Enclosure, UVB, Diet | Lizard.com', description: 'Complete bearded dragon care guide. 4x2x2 enclosure minimum, Arcadia 12% UVB required, calcium supplementation, diet ratios.', path: '/species/bearded-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,8 +29,14 @@ export default function BeardedDragonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2 id="enclosure">Enclosure</h2>
-        <p><strong>Minimum adult enclosure: 4 feet long × 2 feet wide × 2 feet tall.</strong> This is not a guideline — a smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate. A juvenile can live in a 3x1.5x1.5 enclosure, but you will need to upgrade within the first year. Buy the adult size from the start.</p>
+        <DropCap letter="M"><strong>Minimum adult enclosure: 4 feet long × 2 feet wide × 2 feet tall.</strong> This is not a guideline — a smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate. A juvenile can live in a 3x1.5x1.5 enclosure, but you will need to upgrade within the first year. Buy the adult size from the start.</DropCap>
+
+        <CalloutBox variant="tip" title="Impaction prevention">
+          For juveniles under 12 inches, keep them on tile or paper rather than loose particulate substrate — they ingest sand and small particles while striking prey. For adults on bioactive soil, ensure a thermal gradient with a true cool side (75–80°F) so the dragon can hydrate without becoming hyperthermic. Always offer water in a shallow dish and gut-load insects on calcium-rich greens.
+        </CalloutBox>
         <p><strong>Enclosure type:</strong> PVC or wood with glass front (Zen Habitats, Animal Plastics) for best heat retention and UVB reflection. All-glass tanks lose heat rapidly and are inefficient for desert species. The front-opening design of purpose-built reptile enclosures reduces stress compared to top-opening tanks (approach from above mimics predator behavior).</p>
         <p><strong>Substrate:</strong> Bioactive soil mix (60% topsoil / 30% sand / 10% organic matter) for adults. Tile or paper for juveniles under 12 inches (impaction risk from loose particle at small size). See substrate guide for full bioactive setup instructions.</p>
 
@@ -43,7 +50,7 @@ export default function BeardedDragonPage() {
 
         <h2 id="uvb">UVB — The Non-Negotiable</h2>
         <p>Bearded dragons are Zone 4 species — they bask in open desert sun at very high UV Index (4–7+). This requires the most powerful T5 HO UVB available: <strong>Arcadia 12% Desert</strong> or Zoo Med T5 HO 10.0. Arcadia 12% is preferred — higher and more consistent output.</p>
-        <p>Distance from basking surface: 12–14 inches for Arcadia 12% without a reflector produces the target UVI of 4–6 at the basking spot. Use a Solarmeter 6.5 to verify, or rely on published keeper testing data for your specific fixture.</p>
+        <p>Distance from basking surface: 12–14 inches for Arcadia 12% without a reflector produces the target UVI of 4–6 at the basking spot. Use a <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> to verify, or rely on published keeper testing data for your specific fixture.</p>
         <p>Replace every 12 months (Arcadia). The bulb appears to work — it still produces visible light — but UVB output declines well before visible light fails. Mark the date on installation with a Sharpie. A bearded dragon without adequate UVB develops MBD within months.</p>
         <p>Photoperiod: 12–14 hours light in summer, 10–12 in winter. This mimics natural day length variation and supports normal behavioral cycling.</p>
 

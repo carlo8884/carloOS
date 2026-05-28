@@ -1,3 +1,10 @@
+/**
+ * Lizard.com Homepage — /
+ * Server component. Magazine-quality dark-mode-first treatment.
+ * Zilla Slab + Raleway pairing wired via next/font in layout.tsx.
+ * No real photography — CSS-only field. Source-first reptile reference.
+ */
+
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -6,174 +13,749 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Reptile Care, Source-First',
-  description: 'Source-first reptile care reference. Species profiles, UVB setup, enclosures, feeding, and health — grounded in published husbandry research.',
+  description:
+    'Husbandry built on published research: species profiles, UVB measurements, Ferguson zones, ARAV-aligned health, and tested-gear reviews for reptile keepers.',
   path: '/',
 })
 
-const FEATURED_SPECIES = [
-  { name: 'Bearded Dragon', type: 'Pogona vitticeps', level: 'Beginner', href: '/species/bearded-dragon', image: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop', imageAlt: 'Bearded dragon' },
-  { name: 'Leopard Gecko', type: 'Eublepharis macularius', level: 'Beginner', href: '/species/leopard-gecko', image: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop', imageAlt: 'Leopard gecko' },
-  { name: 'Ball Python', type: 'Python regius', level: 'Beginner', href: '/species/ball-python', image: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop', imageAlt: 'Ball python' },
-  { name: 'Blue-Tongue Skink', type: 'Tiliqua spp.', level: 'Intermediate', href: '/species/blue-tongue-skink', image: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop', imageAlt: 'Blue-tongue skink' },
-  { name: 'Crested Gecko', type: 'Correlophus ciliatus', level: 'Beginner', href: '/species/crested-gecko', image: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop', imageAlt: 'Crested gecko' },
-  { name: 'Corn Snake', type: 'Pantherophis guttatus', level: 'Beginner', href: '/species/corn-snake', image: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop', imageAlt: 'Corn snake' },
-]
+// ── Inline SVG icon set — restrained line illustration, no emoji ──────────
 
-const CONTENT_CATEGORIES = [
-  { icon: '🦎', title: 'Species Guides', desc: 'Complete care for 50+ species', href: '/species' },
-  { icon: '☀️', title: 'UVB Lighting', desc: 'Ferguson zones, T5 HO specs, meter testing', href: '/setup/uvb-lighting-guide' },
-  { icon: '🌡️', title: 'Temperatures', desc: 'Gradient setup by species', href: '/setup' },
-  { icon: '🍽️', title: 'Feeding Guide', desc: 'Prey size, frequency, gut-loading', href: '/health/reptile-feeding-guide' },
-  { icon: '🏥', title: 'Reptile Health', desc: 'Sick reptile signs and treatment', href: '/health/sick-reptile-signs' },
-  { icon: '⚙️', title: 'Equipment', desc: 'Enclosures, thermostats, tested gear', href: '/reviews' },
-]
+type CategoryIcon =
+  | 'species'
+  | 'setup'
+  | 'health'
+  | 'uvb'
+  | 'reviews'
+  | 'first-year'
 
-const LEVEL_COLOR: Record<string, string> = {
-  Beginner: 'text-brand-success bg-green-500/10 border-green-500/20',
-  Intermediate: 'text-brand-warning bg-amber-500/10 border-amber-500/20',
-  Advanced: 'text-brand-danger bg-red-500/10 border-red-500/20',
+function CategoryIconSvg({ name }: { name: CategoryIcon }) {
+  const common = {
+    width: 30,
+    height: 30,
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.35,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    'aria-hidden': true,
+  }
+  switch (name) {
+    case 'species':
+      // Stylised lizard silhouette in single-line stroke — field-guide motif
+      return (
+        <svg {...common}>
+          <path d="M3 14c0-1.5 1-2.5 2.4-2.5 1.2 0 1.8.6 2.2 1.2.5.8 1.1 1.3 2 1.3 1 0 1.7-.5 2.3-1.2.7-.8 1.6-1.3 2.6-1.3 1.6 0 2.5.8 3 1.7.4.7.6 1.3.6 1.8" />
+          <path d="M3 14c-.6 0-1-.4-1-1s.4-1 1-1" />
+          <path d="M19 15.5c.7.4 1.5.3 2-.2.4-.5.5-1.2.2-1.7" />
+          <path d="M5.5 11.5l-.3-1.3" />
+          <path d="M8 14l-.2-1.5" />
+          <path d="M13.5 13l.3-1.3" />
+          <circle cx="20.4" cy="13.6" r="0.4" fill="currentColor" stroke="none" />
+        </svg>
+      )
+    case 'setup':
+      // Terrarium outline — vivarium silhouette with bulb
+      return (
+        <svg {...common}>
+          <rect x="3" y="6" width="18" height="13" rx="1" />
+          <path d="M3 9h18" />
+          <path d="M9 6V4h6v2" />
+          <path d="M7 15c1.5-1.5 3-1.5 5 0s3.5 1.5 5 0" />
+          <circle cx="18" cy="11" r="1" />
+        </svg>
+      )
+    case 'health':
+      // Caduceus-adjacent — clinical without the marketing red-cross
+      return (
+        <svg {...common}>
+          <path d="M12 3v18" />
+          <path d="M8 6c0 3 4 3 4 6s-4 3-4 6" />
+          <path d="M16 6c0 3-4 3-4 6s4 3 4 6" />
+          <circle cx="12" cy="3.5" r="1" />
+        </svg>
+      )
+    case 'uvb':
+      // Sun with ray-segments — the UVB reference motif
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2.5" />
+          <path d="M12 19.5V22" />
+          <path d="M2 12h2.5" />
+          <path d="M19.5 12H22" />
+          <path d="M4.9 4.9l1.8 1.8" />
+          <path d="M17.3 17.3l1.8 1.8" />
+          <path d="M4.9 19.1l1.8-1.8" />
+          <path d="M17.3 6.7l1.8-1.8" />
+        </svg>
+      )
+    case 'reviews':
+      // Meter / gauge — the testing voice, not a marketing star
+      return (
+        <svg {...common}>
+          <path d="M3 16a9 9 0 0 1 18 0" />
+          <path d="M12 16l4-5" />
+          <circle cx="12" cy="16" r="1" fill="currentColor" stroke="none" />
+          <path d="M5.5 16h-.5" />
+          <path d="M19 16h-.5" />
+          <path d="M12 9.5V9" />
+        </svg>
+      )
+    case 'first-year':
+      // Calendar with milestone marks — first-year care roadmap
+      return (
+        <svg {...common}>
+          <rect x="3" y="5" width="18" height="16" rx="1.5" />
+          <path d="M3 10h18" />
+          <path d="M8 3v4" />
+          <path d="M16 3v4" />
+          <circle cx="8" cy="14" r="0.8" fill="currentColor" stroke="none" />
+          <circle cx="12" cy="14" r="0.8" fill="currentColor" stroke="none" />
+          <circle cx="16" cy="14" r="0.8" fill="currentColor" stroke="none" />
+          <path d="M8 17.5h8" />
+        </svg>
+      )
+  }
 }
 
-export default function LizardHomePage() {
+// ── Page data ─────────────────────────────────────────────────────────────
+
+const CATEGORIES: {
+  icon: CategoryIcon
+  title: string
+  desc: string
+  href: string
+}[] = [
+  {
+    icon: 'species',
+    title: 'Species',
+    desc: 'Care references for 15+ reptiles and amphibians — Ferguson zone, diet, lifespan, sourcing.',
+    href: '/species',
+  },
+  {
+    icon: 'setup',
+    title: 'Setup',
+    desc: 'Enclosure sizing, gradients, substrate, humidity, and bioactive build references.',
+    href: '/setup',
+  },
+  {
+    icon: 'health',
+    title: 'Health',
+    desc: 'Sick-reptile signs, MBD, parasites, and when-to-call-an-ARAV-vet thresholds.',
+    href: '/health/metabolic-bone-disease',
+  },
+  {
+    icon: 'uvb',
+    title: 'UVB Reference',
+    desc: 'Ferguson zones, T5 HO output curves, and Solarmeter-cited bulb performance over time.',
+    href: '/setup/uvb-lighting-guide',
+  },
+  {
+    icon: 'reviews',
+    title: 'Reviews',
+    desc: 'UVB bulbs, thermostats, and terrariums tested on the same dimensions — no paid scores.',
+    href: '/reviews',
+  },
+  {
+    icon: 'first-year',
+    title: 'First-Year Care',
+    desc: 'A staged reference for the first twelve months: setup checks, feed schedule, growth curves.',
+    href: '/setup',
+  },
+]
+
+const FEATURED_ARTICLES: {
+  href: string
+  eyebrow: string
+  title: string
+  teaser: string
+  readTime: string
+  /**
+   * Optional cover photo. Photo IDs reuse the species-page Unsplash CDN
+   * URLs already shipped on /species (verified-in-production). Only the
+   * two species-leaning cards carry photos — UVB and Bioactive Setup get
+   * the CSS-only treatment to keep editorial honesty (no stock photo can
+   * stand in for a Solarmeter reading or a real bioactive build).
+   */
+  image?: string
+  imageAlt?: string
+}[] = [
+  {
+    href: '/species/leopard-gecko',
+    eyebrow: 'Species Reference',
+    title: 'Leopard Gecko',
+    teaser:
+      'Crepuscular ground-dwelling gecko from the Iran–Afghanistan–Pakistan arid belt. Enclosure size, gradient, low-output UVB context, and the calcium-D3 protocol most pet-store guides get wrong.',
+    readTime: '18 min',
+    image:
+      'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A leopard gecko (Eublepharis macularius) in profile',
+  },
+  {
+    href: '/setup/uvb-lighting-guide',
+    eyebrow: 'UVB Reference',
+    title: 'UVB Lighting, Measured',
+    teaser:
+      'Ferguson zones explained with actual Solarmeter readings. T5 HO vs T8 vs compact, distance fall-off curves, and how output collapses 9–12 months in — even when the bulb is still visibly on.',
+    readTime: '22 min',
+    // No photo — Solarmeter data is the subject; no stock photo qualifies.
+  },
+  {
+    href: '/health/sick-reptile-signs',
+    eyebrow: 'Health',
+    title: 'Sick Reptile, Read the Signs',
+    teaser:
+      'Eight observable changes that warrant an ARAV-board-certified visit, in priority order. What is normal brumation, what is metabolic bone disease, and the husbandry corrections to make on the way to the clinic.',
+    readTime: '14 min',
+    image:
+      'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A bearded dragon (Pogona vitticeps) basking',
+  },
+  {
+    href: '/setup/bioactive-setup',
+    eyebrow: 'Setup',
+    title: 'Bioactive Vivarium Build',
+    teaser:
+      'Drainage layer, substrate mix, springtail-and-isopod ratios, and plant species matched to humidity range. A field-tested build sheet for the keeper moving from paper-towel hygiene to a self-sustaining enclosure.',
+    readTime: '17 min',
+    // No photo — bioactive builds vary per species; CSS-only keeps it honest.
+  },
+]
+
+const TRUST_CLAIMS = [
+  'Solarmeter-cited UVB data',
+  'ARAV-aligned health references',
+  'No paid editorial scores',
+  'Dark-mode-first reading',
+]
+
+// ── Page ──────────────────────────────────────────────────────────────────
+
+export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-[90vh] grid lg:grid-cols-2 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0D1A0D 0%, #080C08 100%)' }}>
-        {/* Content */}
-        <div className="flex flex-col justify-center px-container sm:px-container-sm py-20 relative z-10">
-          <div className="absolute inset-0 opacity-15"
-            style={{ backgroundImage: 'radial-gradient(ellipse at 15% 60%, rgba(122,181,42,0.25) 0%, transparent 55%)' }}
-            aria-hidden="true" />
-          <div className="relative z-10">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Source-First Reptile Care</span>
+      {/* ── HERO ────────────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ background: 'var(--brand-dark)' }}>
+        {/* Moody CSS-only environmental wash. Two radial pools (lime accent
+            upper-left, deep forest shadow lower-right) over the near-black
+            field, plus a subtle grain to keep the dark mode from going flat. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: [
+              'radial-gradient(ellipse 65% 55% at 12% 28%, rgba(154,209,64,0.16) 0%, transparent 60%)',
+              'radial-gradient(ellipse 80% 70% at 88% 90%, rgba(20,40,20,0.85) 0%, transparent 65%)',
+              'linear-gradient(180deg, rgba(6,10,6,0.0) 0%, rgba(6,10,6,0.65) 95%)',
+            ].join(','),
+          }}
+        />
+        {/* Vertical grain — barely-there scan that reads as paper texture. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-screen"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(90deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 3px)',
+          }}
+        />
+        {/* Hairline horizon — top seam keeps the dark field bounded. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 h-px"
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(154,209,64,0.35), transparent)' }}
+        />
+
+        {/* Hero photo — crested gecko on a branch, the dark-mode-friendly
+            atmospheric subject. Photo ID is already shipped on /species
+            (verified-in-production Unsplash CDN URL). Hidden on mobile; on
+            lg+ takes the right 45% of the masthead with a deep-moss edge
+            fade so the photo grades into the brand field. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden lg:block w-[45%] z-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1400&q=80&auto=format&fit=crop"
+            alt=""
+            fill
+            sizes="45vw"
+            className="object-cover"
+            priority
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(6,10,6,1) 0%, rgba(6,10,6,0.80) 25%, rgba(6,10,6,0.32) 65%, rgba(6,10,6,0.50) 100%)',
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
+          <div className="max-w-3xl">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-7">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-primary)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-primary)' }}
+              >
+                A Reptile-Keeping Reference
+              </span>
             </div>
-            <h1 className="font-display font-bold text-brand-white leading-tight tracking-tight mb-5"
-              style={{ fontSize: 'clamp(44px, 6vw, 80px)' }}>
-              Reptile Care.<br />
-              <span className="text-brand-primary">Done Right.</span>
+
+            {/* H1 — Zilla Slab display */}
+            <h1
+              className="font-display font-bold text-brand-white tracking-tight leading-[1.02] mb-5"
+              style={{ fontSize: 'clamp(46px, 7.2vw, 86px)' }}
+            >
+              Reptile care,
+              <br />
+              <span style={{ color: 'var(--brand-primary)' }}>source-first.</span>
             </h1>
-            <p className="text-lg font-light leading-relaxed max-w-md mb-10"
-              style={{ color: 'rgba(238,240,228,0.55)' }}>
-              Care guides grounded in current research. UVB lighting explained with actual measurements. Feeding guides with prey size charts. Species profiles with sourced health information.
+
+            {/* Tagline — Zilla Slab italic, field-guide voice */}
+            <p
+              className="font-display italic mb-7"
+              style={{
+                fontSize: 'clamp(20px, 2.4vw, 26px)',
+                color: 'var(--brand-text-mid)',
+                lineHeight: 1.35,
+              }}
+            >
+              Built on published herpetology — not pet-store folklore.
             </p>
-            <div className="flex gap-4 flex-wrap">
-              <Link href="/species"
-                className="inline-flex items-center bg-brand-primary text-brand-dark font-bold text-sm px-7 py-3.5 rounded no-underline hover:bg-brand-primary-light transition-colors">
-                Browse Species →
+
+            {/* Positioning paragraph — 80 words of source-first claim */}
+            <p
+              className="font-body font-light leading-relaxed mb-10 max-w-2xl"
+              style={{ fontSize: '17px', color: 'var(--brand-text-mid)' }}
+            >
+              Husbandry guidance built on published research. Every species profile cites
+              Ferguson zone classifications, peer-reviewed herpetology, and actual UVB
+              measurements taken with a Solarmeter — not bulb-box marketing. Health
+              references align with the Association of Reptile and Amphibian Veterinarians.
+              Equipment is rated on testable dimensions, not paid placements. This is the
+              field-guide reference for keepers who would rather read the source than the
+              forum post that paraphrased it.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/species/leopard-gecko"
+                className="inline-flex items-center gap-2 font-body font-bold text-sm uppercase tracking-wide px-7 py-3.5 rounded no-underline transition-colors"
+                style={{
+                  background: 'var(--brand-primary)',
+                  color: '#0A1004',
+                  letterSpacing: '0.06em',
+                }}
+              >
+                Start with the leopard gecko
+                <span aria-hidden="true">&rarr;</span>
               </Link>
-              <Link href="/setup/uvb-lighting-guide"
-                className="inline-flex items-center border text-brand-white font-medium text-sm px-7 py-3.5 rounded no-underline hover:text-brand-primary-light transition-colors"
-                style={{ borderColor: 'rgba(255,255,255,0.15)' }}>
-                UVB Lighting Guide
+              <Link
+                href="/setup"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm uppercase tracking-wide px-7 py-3.5 rounded no-underline transition-colors"
+                style={{
+                  border: '1px solid var(--brand-border-strong)',
+                  color: 'var(--brand-white)',
+                  letterSpacing: '0.06em',
+                }}
+              >
+                The setup hub
               </Link>
             </div>
-            <div className="flex gap-8 mt-12 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-              {[['50+', 'Species Guides'], ['Vet', 'Reviewed Health'], ['Meter', 'Tested UVB Data']].map(([n, l]) => (
-                <div key={l}>
-                  <div className="font-display text-xl font-bold text-brand-white">{n}</div>
-                  <div className="text-xs mt-0.5" style={{ color: 'rgba(238,240,228,0.35)' }}>{l}</div>
+
+            {/* Inline stat strip — small editorial footer to the hero */}
+            <div
+              className="flex flex-wrap gap-x-10 gap-y-4 mt-14 pt-8"
+              style={{ borderTop: '1px solid var(--brand-border)' }}
+            >
+              {[
+                ['15+', 'Species references'],
+                ['Solarmeter', 'UVB measurements'],
+                ['ARAV', 'Health-aligned'],
+                ['No paid', 'Editorial scores'],
+              ].map(([n, l]) => (
+                <div key={l as string}>
+                  <div
+                    className="font-display font-bold text-brand-white"
+                    style={{ fontSize: '22px', lineHeight: 1.1 }}
+                  >
+                    {n}
+                  </div>
+                  <div
+                    className="text-2xs font-medium uppercase tracking-eyebrow mt-1"
+                    style={{ color: 'var(--brand-text-light)' }}
+                  >
+                    {l}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
-        {/* Image grid */}
-        <div className="relative hidden lg:grid grid-cols-2 grid-rows-2 gap-2 p-2">
-          {FEATURED_SPECIES.slice(0, 4).map((s, i) => (
-            <div key={s.name} className="relative overflow-hidden rounded-lg" style={{ opacity: 0.85 }}>
-              <Image src={s.image} alt={s.imageAlt} fill className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-3 left-3">
-                <div className="font-display font-bold text-white text-sm">{s.name}</div>
-                <div className="text-2xs italic" style={{ color: 'rgba(255,255,255,0.5)' }}>{s.type}</div>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
-      {/* ── TRUST BAR ──────────────────────────────────────────────── */}
-      <div className="relative z-10 px-container sm:px-container-sm py-3.5 flex flex-wrap gap-x-6 gap-y-2 items-center" style={{ background: '#0A1408', borderTop: '1px solid rgba(122,181,42,0.18)' }}>
-        {[
-          '✓ Source-first husbandry',
-          '✓ 50+ species profiles',
-          '✓ Honest equipment reviews',
-          '✓ No paid editorial placements',
-        ].map((item) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary">
-            {item}
-          </span>
-        ))}
+      {/* ── TRUST BAR ───────────────────────────────────────────────────── */}
+      <div
+        className="relative z-10"
+        style={{
+          background: '#08110A',
+          borderTop: '1px solid rgba(154,209,64,0.18)',
+          borderBottom: '1px solid var(--brand-border)',
+        }}
+      >
+        <div className="mx-auto max-w-container-wide px-container-sm sm:px-container py-4 flex flex-wrap items-center gap-x-8 gap-y-2">
+          {TRUST_CLAIMS.map((claim) => (
+            <span
+              key={claim}
+              className="inline-flex items-center gap-2 font-body text-xs font-semibold"
+              style={{ color: 'var(--brand-primary)' }}
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 12l5 5L20 6" />
+              </svg>
+              {claim}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {/* FEATURED SPECIES */}
-      <section className="relative z-10 px-container sm:px-container-sm py-section" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        <div className="flex items-end justify-between mb-9">
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Species Library</span>
+      {/* ── CATEGORY GRID ───────────────────────────────────────────────── */}
+      <section
+        className="relative z-10"
+        style={{ background: 'var(--brand-surface)' }}
+      >
+        <div className="mx-auto max-w-container-wide px-container-sm sm:px-container py-section">
+          <div className="flex items-end justify-between gap-6 mb-10 flex-wrap">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-primary)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Reference Library
+                </span>
+              </div>
+              <h2
+                className="font-display font-bold text-brand-white tracking-tight leading-tight"
+                style={{ fontSize: 'clamp(30px, 3.5vw, 42px)' }}
+              >
+                Six entry points to the field guide.
+              </h2>
+              <p
+                className="font-body mt-4 max-w-xl"
+                style={{ color: 'var(--brand-text-mid)', fontSize: '16.5px' }}
+              >
+                Each section is a working reference — not a feed of opinion. Species pages
+                point back to setup, setup points back to UVB, UVB points back to the
+                health implications. Start anywhere.
+              </p>
             </div>
-            <h2 className="font-display font-bold text-brand-white tracking-tight text-3xl">Popular Species</h2>
+            <Link
+              href="/species"
+              className="font-body font-semibold text-sm no-underline whitespace-nowrap"
+              style={{ color: 'var(--brand-primary)' }}
+            >
+              All species &rarr;
+            </Link>
           </div>
-          <Link href="/species" className="text-sm font-semibold text-brand-primary no-underline hover:underline">All 50+ species →</Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {FEATURED_SPECIES.map((s) => (
-            <Link key={s.name} href={s.href}
-              className="block rounded-lg overflow-hidden no-underline group"
-              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
-              <div className="relative h-36 overflow-hidden">
-                <Image src={s.image} alt={s.imageAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 640px) 50vw, 16vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              </div>
-              <div className="p-3">
-                <div className="font-display font-bold text-brand-white text-sm mb-0.5 leading-tight">{s.name}</div>
-                <div className="text-2xs italic mb-2" style={{ color: 'rgba(238,240,228,0.4)' }}>{s.type}</div>
-                <span className={`text-2xs font-bold px-2 py-0.5 rounded-pill border ${LEVEL_COLOR[s.level]}`}>{s.level}</span>
-              </div>
-            </Link>
-          ))}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {CATEGORIES.map((c) => (
+              <Link
+                key={c.href + c.title}
+                href={c.href}
+                className="group block rounded-lg p-7 no-underline transition-all duration-300"
+                style={{
+                  background: 'var(--brand-panel)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                <span
+                  className="inline-flex mb-5 group-hover:opacity-100 transition-opacity"
+                  style={{ color: 'var(--brand-primary)' }}
+                  aria-hidden="true"
+                >
+                  <CategoryIconSvg name={c.icon} />
+                </span>
+                <div
+                  className="font-display font-bold text-brand-white mb-2"
+                  style={{ fontSize: '20px', letterSpacing: '-0.01em' }}
+                >
+                  {c.title}
+                </div>
+                <div
+                  className="font-body text-sm leading-relaxed"
+                  style={{ color: 'var(--brand-text-mid)' }}
+                >
+                  {c.desc}
+                </div>
+                <div
+                  className="mt-5 font-body text-2xs font-bold uppercase tracking-eyebrow opacity-70 group-hover:opacity-100 transition-opacity"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Open reference &rarr;
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CONTENT CATEGORIES */}
-      <section className="relative z-10 px-container sm:px-container-sm py-section" style={{ background: '#080C08', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Resource Library</span>
-        </div>
-        <h2 className="font-display font-bold text-brand-white tracking-tight text-3xl mb-2">Everything You Need</h2>
-        <p className="text-base max-w-lg mb-10" style={{ color: 'rgba(238,240,228,0.4)' }}>
-          Science-grounded guides covering every aspect of reptile husbandry.
-        </p>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-          {CONTENT_CATEGORIES.map((c) => (
-            <Link key={c.href} href={c.href}
-              className="block rounded-lg p-6 no-underline transition-all duration-200 hover:-translate-y-1 hover:bg-brand-primary-pale hover:border-brand-primary/20"
-              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
-              <span className="text-2xl mb-3 block">{c.icon}</span>
-              <div className="font-display font-bold text-brand-white text-sm mb-1.5">{c.title}</div>
-              <div className="text-xs" style={{ color: 'rgba(238,240,228,0.4)' }}>{c.desc}</div>
-            </Link>
-          ))}
+      {/* ── FEATURED CORNERSTONES ───────────────────────────────────────── */}
+      <section
+        className="relative z-10"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid var(--brand-border)',
+        }}
+      >
+        <div className="mx-auto max-w-container-wide px-container-sm sm:px-container py-section">
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-primary)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-primary)' }}
+              >
+                Cornerstones
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold text-brand-white tracking-tight leading-tight"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 42px)' }}
+            >
+              The references most keepers come back to.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            {FEATURED_ARTICLES.map((a) => (
+              <Link
+                key={a.href}
+                href={a.href}
+                className="group block rounded-lg overflow-hidden no-underline transition-all duration-300"
+                style={{
+                  background: 'var(--brand-panel)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                {/* Cover photo — verified Unsplash species photography,
+                    only renders for species-leaning cards. UVB and Setup
+                    cards stay CSS-only by design (their subject is data
+                    and build sheets, not a single image). */}
+                {a.image && a.imageAlt ? (
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={a.image}
+                      alt={a.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-8">
+                <div
+                  className="font-body text-2xs font-bold uppercase tracking-eyebrow mb-4"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  {a.eyebrow}
+                </div>
+                <h3
+                  className="font-display font-bold text-brand-white mb-4 transition-colors group-hover:text-brand-primary-light"
+                  style={{ fontSize: 'clamp(22px, 2.4vw, 28px)', letterSpacing: '-0.01em', lineHeight: 1.15 }}
+                >
+                  {a.title}
+                </h3>
+                <p
+                  className="font-body leading-relaxed mb-5"
+                  style={{ color: 'var(--brand-text-mid)', fontSize: '15.5px' }}
+                >
+                  {a.teaser}
+                </p>
+                <div
+                  className="flex items-center justify-between font-body text-2xs uppercase tracking-eyebrow font-semibold"
+                >
+                  <span style={{ color: 'var(--brand-text-light)' }}>{a.readTime} read</span>
+                  <span style={{ color: 'var(--brand-primary)' }}>Read &rarr;</span>
+                </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* EMAIL */}
-      <section className="relative z-10 px-container sm:px-container-sm py-section" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-display font-bold text-brand-white text-3xl tracking-tight mb-3">Free Reptile Care Newsletter</h2>
-          <p className="text-base mb-7" style={{ color: 'rgba(238,240,228,0.45)' }}>
-            Species spotlights, UVB research updates, and keeper tips — every other week.
+      {/* ── EDITORIAL BAND — pull quote on deep moss ───────────────────── */}
+      <section
+        className="relative z-10 overflow-hidden"
+        style={{ background: 'var(--brand-accent)' }}
+      >
+        {/* Lime washes anchored top-right and bottom-left to keep the dark
+            green band from reading dead. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: [
+              'radial-gradient(ellipse 50% 70% at 88% 0%, rgba(154,209,64,0.18) 0%, transparent 65%)',
+              'radial-gradient(ellipse 60% 60% at 8% 100%, rgba(154,209,64,0.08) 0%, transparent 65%)',
+            ].join(','),
+          }}
+        />
+
+        <div className="relative z-10 mx-auto max-w-content-wide px-container-sm sm:px-container py-section">
+          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-start">
+            {/* Quotation mark glyph in Zilla Slab — the editorial cue */}
+            <div
+              aria-hidden="true"
+              className="font-display font-bold leading-none"
+              style={{
+                fontSize: 'clamp(80px, 10vw, 140px)',
+                color: 'var(--brand-primary)',
+                marginTop: '-0.1em',
+              }}
+            >
+              &ldquo;
+            </div>
+            <div>
+              <p
+                className="font-display italic text-brand-white mb-6 leading-tight"
+                style={{ fontSize: 'clamp(22px, 2.8vw, 34px)', fontWeight: 400 }}
+              >
+                A reptile lives or dies on the husbandry — UVB output, thermal gradient,
+                humidity, calcium-D3 ratio. None of those are matters of opinion. The
+                evidence is published. This is the reference that treats it that way.
+              </p>
+              <div className="flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-primary)' }}
+                />
+                <span
+                  className="font-body text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-primary)' }}
+                >
+                  Lizard.com Editorial Standard
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE ───────────────────────────────────────────────── */}
+      <section
+        className="relative z-10"
+        style={{
+          background: 'var(--brand-surface)',
+          borderTop: '1px solid var(--brand-border)',
+        }}
+      >
+        <div className="mx-auto max-w-content px-container-sm sm:px-container py-section text-center">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <span
+              aria-hidden="true"
+              className="h-px w-8"
+              style={{ background: 'var(--brand-primary)' }}
+            />
+            <span
+              className="text-2xs font-bold uppercase tracking-eyebrow"
+              style={{ color: 'var(--brand-primary)' }}
+            >
+              The Field Guide
+            </span>
+            <span
+              aria-hidden="true"
+              className="h-px w-8"
+              style={{ background: 'var(--brand-primary)' }}
+            />
+          </div>
+          <h2
+            className="font-display font-bold text-brand-white tracking-tight mb-4 leading-tight"
+            style={{ fontSize: 'clamp(28px, 3.4vw, 40px)' }}
+          >
+            New species references, in your inbox.
+          </h2>
+          <p
+            className="font-body mb-8 max-w-xl mx-auto"
+            style={{ color: 'var(--brand-text-mid)', fontSize: '16.5px' }}
+          >
+            Every other week: a new species reference, a UVB measurement, or a husbandry
+            correction worth knowing. No marketing. Unsubscribe with one click.
           </p>
-          <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="homepage" />
-          <p className="text-xs mt-3" style={{ color: 'rgba(238,240,228,0.25)' }}>🔒 No spam. Unsubscribe anytime.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="lizard-com"
+            ctaText="Subscribe"
+            source="homepage"
+          />
+          <p
+            className="font-body text-2xs mt-4"
+            style={{ color: 'var(--brand-text-light)' }}
+          >
+            No spam. No paid placements. Your address is never sold.
+          </p>
         </div>
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      <aside
+        className="relative z-10 px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid var(--brand-border)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide font-body text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'var(--brand-text-light)' }}
+        >
+          Hero & species photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'var(--brand-primary)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Species pages will migrate to
+          Wikimedia Commons for taxonomic accuracy.
+        </p>
+      </aside>
     </>
   )
 }
