@@ -19,10 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://vets.co', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://vets.co/breeds/beagle-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/breeds/chihuahua-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/french-bulldog-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/german-shepherd-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/golden-retriever-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/breeds/husky-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/labrador-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/breeds/pomeranian-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/breeds/yorkshire-terrier-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://vets.co/emergency-triage-card', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://vets.co/find-a-vet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
