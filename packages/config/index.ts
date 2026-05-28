@@ -164,24 +164,27 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'fish-com': {
-    primary: '#0E6B8A',
-    primaryLight: '#1490B8',
-    primaryPale: '#E6F4F9',
-    primaryDark: '#0A5470',
-    dark: '#050E14',
-    surface: '#F4F9FC',
+    // Aquarium-magazine palette — refined deep teal-blue, cool whites, restrained
+    // accents. Aquatic but editorial; competes against Aquarium Co-Op (community)
+    // and Practical Fishkeeping (UK magazine) on visual seriousness.
+    primary: '#0E5F7E',          // deep aquarium teal — slightly darker, more editorial
+    primaryLight: '#1A85AE',     // refraction blue — links / hover
+    primaryPale: '#EAF3F8',      // cool wash — section bands
+    primaryDark: '#084A66',      // hyper-deep, accents on dark
+    dark: '#06121B',             // near-black blue, deep-water masthead
+    surface: '#F3F8FB',          // cool magazine off-white
     white: '#FFFFFF',
-    textDark: '#050E14',
-    textMid: '#1E3D50',
-    textLight: '#6A90A8',
-    border: '#C8DDE8',
+    textDark: '#06121B',
+    textMid: '#21465B',          // mid teal-grey, body on light surfaces
+    textLight: '#6E92A8',
+    border: '#CADDE8',
     success: '#1A7A44',
     warning: '#C8952A',
     danger: '#C84A2A',
     fontDisplay: 'Cormorant Garamond',
     fontBody: 'Inter',
     fontDisplayWeights: [400, 600, 700],
-    fontBodyWeights: [300, 400, 500, 600],
+    fontBodyWeights: [300, 400, 500, 600, 700],
     siteName: 'Fish.com',
     siteTagline: 'An Aquarium Reference',
     siteUrl: 'https://fish.com',
