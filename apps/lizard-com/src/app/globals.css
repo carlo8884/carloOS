@@ -2,23 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────
+   LIZARD.COM THEME TOKENS — dark-mode field guide
+   Brand brief: dark-mode-first reptile reference. Lime/herp accent
+   tuned for AA contrast on the deep-green-black masthead. Zilla Slab +
+   Raleway pairing for the magazine-quality field-guide-cover feel.
+   ───────────────────────────────────────────── */
+
 :root {
-  --brand-primary: #7AB52A;
-  --brand-primary-light: #9AD040;
+  /* Primary — lime/herp accent. Lightened toward the high-contrast end so
+     small text passes AA against the dark backgrounds we lean on. */
+  --brand-primary: #9AD140;
+  --brand-primary-light: #B4E368;
   --brand-primary-pale: #F0F7E6;
-  --brand-primary-dark: #5C8A1A;
-  --brand-dark: #080C08;
+  --brand-primary-dark: #6E9F1F;
+
+  /* Accent — moss/jungle green for editorial bands and section seams */
+  --brand-accent: #1A3F1A;
+  --brand-accent-light: #2C5C2C;
+
+  /* Backgrounds — masthead near-black with a green cast, surface a hair
+     warmer so panels read as a real surface, not a colour shift */
+  --brand-dark: #060A06;
   --brand-surface: #0D1A0D;
+  --brand-panel: #0F1A0F;
   --brand-white: #EEF0E4;
+
+  /* Text — off-white with measured alphas so the dark field never glows */
   --brand-text-dark: #EEF0E4;
-  --brand-text-mid: rgba(238,240,228,0.85);
-  --brand-text-light: rgba(238,240,228,0.4);
-  --brand-border: rgba(255,255,255,0.07);
-  --brand-success: #2AC87A;
-  --brand-warning: #C8A840;
-  --brand-danger: #E05A3A;
-  --font-display: var(--font-zilla), serif;
-  --font-body: var(--font-raleway), system-ui, sans-serif;
+  --brand-text-mid: rgba(238, 240, 228, 0.78);
+  --brand-text-light: rgba(238, 240, 228, 0.45);
+  --brand-text-dim: rgba(238, 240, 228, 0.32);
+
+  /* Borders */
+  --brand-border: rgba(255, 255, 255, 0.07);
+  --brand-border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Semantic */
+  --brand-success: #4FD18A;
+  --brand-warning: #D6BE52;
+  --brand-danger: #E87060;
+
+  /* Typography — actual families wired by next/font in layout.tsx */
+  --font-display: var(--font-zilla), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-raleway), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --nav-height: 68px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -27,15 +57,17 @@ body {
   background: var(--brand-dark);
   color: var(--brand-white);
   font-family: var(--font-body);
-  line-height: 1.6; overflow-x: hidden;
+  line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Grid dot pattern */
+/* Grid dot pattern — subtle scaled field that holds the dark mode together */
 body::before {
   content: '';
   position: fixed; inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(122,181,42,0.05) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(154, 209, 64, 0.05) 1px, transparent 0);
   background-size: 32px 32px;
   pointer-events: none; z-index: 0;
 }
@@ -43,28 +75,42 @@ body::before {
 img { max-width: 100%; height: auto; display: block; }
 :focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; border-radius: 4px; }
 
+/* ─── ARTICLE PROSE ───────────────────────────────────────────────────────── */
+
 .carloOS-article {
   position: relative; z-index: 2;
 }
 .carloOS-article h2 {
-  font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+  font-family: var(--font-display); font-size: 1.6rem; font-weight: 700;
   color: var(--brand-white); margin-top: 2.5rem; margin-bottom: 0.875rem;
   border-bottom: 1px solid var(--brand-border); padding-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
-.carloOS-article h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--brand-white); margin-top: 1.75rem; margin-bottom: 0.6rem; }
-.carloOS-article p { font-size: 1rem; line-height: 1.85; color: var(--brand-text-mid); margin-bottom: 1rem; }
+.carloOS-article h3 {
+  font-family: var(--font-display); font-size: 1.25rem; font-weight: 600;
+  color: var(--brand-white); margin-top: 1.75rem; margin-bottom: 0.6rem;
+}
+.carloOS-article p {
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.85;
+  color: var(--brand-text-mid); margin-bottom: 1rem; font-weight: 400;
+}
 .carloOS-article ul, .carloOS-article ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 .carloOS-article li { font-size: 1rem; line-height: 1.75; color: var(--brand-text-mid); margin-bottom: 0.5rem; }
 .carloOS-article strong { color: var(--brand-white); font-weight: 600; }
-.carloOS-article a { color: var(--brand-primary); }
-.carloOS-article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
-.carloOS-article th { background: rgba(122,181,42,0.1); color: var(--brand-primary); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(122,181,42,0.15); }
-.carloOS-article td { padding: 10px 12px; border-bottom: 1px solid var(--brand-border); color: var(--brand-text-mid); }
-::selection { background: rgba(122,181,42,0.2); color: var(--brand-white); }
-
-/* Font CSS variables — fonts loaded via Google Fonts CDN */
-.font-vars,
-:root {
-  --font-zilla: Georgia, "Times New Roman", serif;
-  --font-raleway: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+.carloOS-article em { font-style: italic; color: var(--brand-text-mid); }
+.carloOS-article a { color: var(--brand-primary); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.carloOS-article a:hover { color: var(--brand-primary-light); }
+.carloOS-article blockquote {
+  border-left: 3px solid var(--brand-primary); padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 1.5rem 0; color: var(--brand-text-mid); font-style: italic;
+  font-family: var(--font-display);
 }
+.carloOS-article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+.carloOS-article th {
+  background: rgba(154, 209, 64, 0.1); color: var(--brand-primary);
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 10px 12px; text-align: left;
+  border-bottom: 1px solid rgba(154, 209, 64, 0.18);
+}
+.carloOS-article td { padding: 10px 12px; border-bottom: 1px solid var(--brand-border); color: var(--brand-text-mid); }
+::selection { background: rgba(154, 209, 64, 0.25); color: var(--brand-white); }

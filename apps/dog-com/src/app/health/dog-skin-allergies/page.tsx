@@ -72,7 +72,7 @@ export default function DogSkinAllergiesPage() {
           <p>Allergen-specific immunotherapy (ASIT) — allergy shots or sublingual drops — is the only treatment that modifies the underlying immune response rather than just controlling symptoms. Based on intradermal or serum allergy testing identifying specific allergens, a custom immunotherapy solution is formulated and administered as subcutaneous injections (weekly initially, then monthly) or sublingual drops (daily). Response rate: 50–75% good to excellent response, with improvement building over 6–12 months. Requires long-term (often lifelong) commitment. Best outcome when started in young dogs early in the disease course.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
