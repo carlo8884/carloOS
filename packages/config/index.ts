@@ -8,7 +8,7 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'petfoods-com'
+export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com' | 'horses-com' | 'petfood-com'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -238,34 +238,58 @@ export const themes: Record<SiteId, SiteTheme> = {
     twPrimary: 'lime',
   },
 
-  'petfoods-com': {
-    // Catalog / database voice — deep moss green, utilitarian.
-    // Sister site to PetFood.com (commercial brand); this is the
-    // content-engine / per-SKU directory. JetBrains Mono available
-    // for ingredient/nutrition tables.
-    primary: '#3F5C3A',
-    primaryLight: '#557454',
-    primaryPale: '#EBF0E8',
-    primaryDark: '#2A3E26',
-    dark: '#161C15',
-    surface: '#F6F7F4',
+  'horses-com': {
+    // Warm equestrian palette — saddle leather browns, cream, dark green accents.
+    primary: '#6E4A28',
+    primaryLight: '#8C6238',
+    primaryPale: '#F4ECDF',
+    primaryDark: '#523618',
+    dark: '#1F2B1E',
+    surface: '#FAF4E8',
     white: '#FFFFFF',
-    textDark: '#161C15',
-    textMid: '#3A4438',
-    textLight: '#7A8278',
-    border: '#DDE2D8',
+    textDark: '#1F2B1E',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D6C2',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Horses.com',
+    siteTagline: 'A Reference for Horse Owners',
+    siteUrl: 'https://horses.com',
+    logoText: 'Horses.com',
+    twPrimary: 'amber',
+  },
+
+  'petfood-com': {
+    // Clean food-brand palette — warm white background with a single warm accent.
+    primary: '#D9622A',
+    primaryLight: '#E87A40',
+    primaryPale: '#FBEEE3',
+    primaryDark: '#B04A18',
+    dark: '#1F1A14',
+    surface: '#FBF8F2',
+    white: '#FFFFFF',
+    textDark: '#1F1A14',
+    textMid: '#4A3E30',
+    textLight: '#8A7E68',
+    border: '#ECE4D6',
     success: '#2A7A3A',
     warning: '#C8952A',
     danger: '#C84A2A',
-    fontDisplay: 'Inter',
+    fontDisplay: 'Cormorant Garamond',
     fontBody: 'Inter',
-    fontDisplayWeights: [400, 600, 700, 900],
+    fontDisplayWeights: [400, 600, 700],
     fontBodyWeights: [300, 400, 500, 600, 700],
-    siteName: 'PetFoods.com',
-    siteTagline: 'The Catalog: Every Commercial Pet Food, Scored',
-    siteUrl: 'https://petfoods.com',
-    logoText: 'PetFoods.com',
-    twPrimary: 'emerald',
+    siteName: 'PetFood.com',
+    siteTagline: 'A Reference for Pet Nutrition',
+    siteUrl: 'https://petfood.com',
+    logoText: 'PetFood.com',
+    twPrimary: 'orange',
   },
 }
 
@@ -592,9 +616,36 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
 
-  'petfoods-com': {
-    id: 'petfoods-com',
-    theme: themes['petfoods-com'],
+  'horses-com': {
+    id: 'horses-com',
+    theme: themes['horses-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Horses.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://horses.com/og-default.jpg',
+  },
+
+  'petfood-com': {
+    id: 'petfood-com',
+    theme: themes['petfood-com'],
     gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
     affiliates: {
       amazon: true,
@@ -610,13 +661,13 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     ],
     footerLinks: [
       {
-        heading: 'PetFoods.com',
+        heading: 'PetFood.com',
         links: [
           { label: 'Home', href: '/' },
         ],
       },
     ],
-    defaultOgImage: 'https://petfoods.com/og-default.jpg',
+    defaultOgImage: 'https://petfood.com/og-default.jpg',
   },
 }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -51,15 +52,25 @@ export default function WSAVAExplainedPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>What Are WSAVA Guidelines?</h2>
-        <p>The World Small Animal Veterinary Association published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</p>
+<<<<<<< HEAD
+        <DropCap>The World Small Animal Veterinary Association published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</DropCap>
+
+        <CalloutBox variant="evidence" title="Evidence-anchored">
+          The <strong>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee</strong> publishes the Recommendations on Selecting Pet Foods used here. Pair their six questions with an AAFCO feeding-trial statement on the bag to evaluate manufacturer rigor.
+        </CalloutBox>
+=======
+        <p>The <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">World Small Animal Veterinary Association</a> published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</p>
+>>>>>>> origin/main
 
         <h2>The Six Questions WSAVA Recommends Asking</h2>
         <p>WSAVA recommends asking these six questions of any pet food manufacturer:</p>
         <ol>
           <li><strong>Do you employ a full-time qualified nutritionist?</strong> Look for a board-certified veterinary nutritionist (DACVN or DECVCN) or PhD animal nutritionist. Not a consultant — a full-time employee.</li>
           <li><strong>Who formulates your diets, and what are their qualifications?</strong> Same as above — you want credentialed nutritionists, not marketing teams.</li>
-          <li><strong>Are your diets tested using AAFCO feeding trials?</strong> There are two ways to claim AAFCO compliance: feeding trial (dogs actually ate the food and were monitored) or formulation (the formula was calculated to meet nutrient profiles). Feeding trials are more rigorous and meaningful. Look for &quot;Animal feeding tests using AAFCO procedures substantiate that [product] provides complete and balanced nutrition.&quot;</li>
+          <li><strong>Are your diets tested using <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials?</strong> There are two ways to claim AAFCO compliance: feeding trial (dogs actually ate the food and were monitored) or formulation (the formula was calculated to meet nutrient profiles). Feeding trials are more rigorous and meaningful. Look for &quot;Animal feeding tests using AAFCO procedures substantiate that [product] provides complete and balanced nutrition.&quot;</li>
           <li><strong>Do you own your manufacturing facilities?</strong> Companies that own their manufacturing have more control over quality. Contract manufacturers produce food for many different brands under different names — quality control is less consistent.</li>
           <li><strong>What quality control measures do you use?</strong> Should include testing of raw ingredients and finished products, and verification that nutrient levels match label claims.</li>
           <li><strong>Has your diet undergone any AAFCO or industry standard feeding tests?</strong> Beyond the label claim — have they published any research on their foods?</li>

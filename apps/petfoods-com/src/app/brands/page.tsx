@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { Brands as BRAND_DATA } from '../../data/brands'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
@@ -38,52 +40,25 @@ const schema = buildArticleSchema({
 
 interface BrandEntry {
   name: string
+  slug: string
   parent: string
   manufacturing: string
-  // Editorial cross-link on PetFood.com if one already exists; otherwise the
-  // placeholder local href the future per-brand catalog page will live at.
-  href: string
-  external?: boolean
-  status: 'editorial-linked' | 'catalog-placeholder'
+  // Editorial cross-link on PetFood.com (sister site), if one exists. The
+  // catalog reference page on PetFoods.com lives at `/brands/{slug}` for all
+  // entries — that is the primary destination of the card click.
+  editorialCrossLink?: string
 }
 
-const BRANDS: BrandEntry[] = [
-  { name: 'Acana', parent: 'Champion Petfoods (Mars Petcare)', manufacturing: 'Canada / USA (Kentucky)', href: 'https://petfood.com/brands/orijen-vs-acana-comparison', external: true, status: 'editorial-linked' },
-  { name: 'Beneful', parent: 'Nestlé Purina PetCare', manufacturing: 'USA', href: '/brands/beneful', status: 'catalog-placeholder' },
-  { name: 'Blue Buffalo', parent: 'General Mills', manufacturing: 'USA', href: '/brands/blue-buffalo', status: 'catalog-placeholder' },
-  { name: 'Cesar', parent: 'Mars Petcare', manufacturing: 'USA / Austria', href: '/brands/cesar', status: 'catalog-placeholder' },
-  { name: 'Diamond Pet Foods', parent: 'Schell & Kampeter (independent)', manufacturing: 'USA (multiple)', href: '/brands/diamond-pet-foods', status: 'catalog-placeholder' },
-  { name: 'Eukanuba', parent: 'Mars Petcare', manufacturing: 'USA / Netherlands', href: '/brands/eukanuba', status: 'catalog-placeholder' },
-  { name: 'Fancy Feast', parent: 'Nestlé Purina PetCare', manufacturing: 'USA / Thailand', href: '/brands/fancy-feast', status: 'catalog-placeholder' },
-  { name: 'Friskies', parent: 'Nestlé Purina PetCare', manufacturing: 'USA', href: '/brands/friskies', status: 'catalog-placeholder' },
-  { name: 'Fromm Family Foods', parent: 'Fromm (independent, family-owned)', manufacturing: 'USA (Wisconsin)', href: '/brands/fromm', status: 'catalog-placeholder' },
-  { name: 'Greenies', parent: 'Mars Petcare', manufacturing: 'USA', href: '/brands/greenies', status: 'catalog-placeholder' },
-  { name: 'Halo', parent: 'Better Choice Company', manufacturing: 'USA', href: '/brands/halo', status: 'catalog-placeholder' },
-  { name: 'Hill’s Science Diet', parent: 'Colgate-Palmolive', manufacturing: 'USA (multiple)', href: '/brands/hills-science-diet', status: 'catalog-placeholder' },
-  { name: 'Iams', parent: 'Mars Petcare', manufacturing: 'USA / Netherlands', href: '/brands/iams', status: 'catalog-placeholder' },
-  { name: 'Instinct', parent: 'Nature’s Variety (Agrolimen)', manufacturing: 'USA / Canada', href: '/brands/instinct', status: 'catalog-placeholder' },
-  { name: 'Merrick', parent: 'Nestlé Purina PetCare', manufacturing: 'USA (Texas / Missouri)', href: '/brands/merrick', status: 'catalog-placeholder' },
-  { name: 'Natural Balance', parent: 'Nexus Capital Management', manufacturing: 'USA', href: '/brands/natural-balance', status: 'catalog-placeholder' },
-  { name: 'Nulo', parent: 'Nulo Pet Food (independent)', manufacturing: 'USA', href: '/brands/nulo', status: 'catalog-placeholder' },
-  { name: 'Nutro', parent: 'Mars Petcare', manufacturing: 'USA', href: '/brands/nutro', status: 'catalog-placeholder' },
-  { name: 'Open Farm', parent: 'Open Farm Inc. (independent)', manufacturing: 'Canada / USA', href: '/brands/open-farm', status: 'catalog-placeholder' },
-  { name: 'Orijen', parent: 'Champion Petfoods (Mars Petcare)', manufacturing: 'Canada / USA (Kentucky)', href: 'https://petfood.com/brands/orijen-vs-acana-comparison', external: true, status: 'editorial-linked' },
-  { name: 'Pedigree', parent: 'Mars Petcare', manufacturing: 'USA / multiple', href: '/brands/pedigree', status: 'catalog-placeholder' },
-  { name: 'Primal Pet Foods', parent: 'Primal (independent)', manufacturing: 'USA (California)', href: '/brands/primal', status: 'catalog-placeholder' },
-  { name: 'Purina ONE', parent: 'Nestlé Purina PetCare', manufacturing: 'USA', href: '/brands/purina-one', status: 'catalog-placeholder' },
-  { name: 'Purina Pro Plan', parent: 'Nestlé Purina PetCare', manufacturing: 'USA', href: '/brands/purina-pro-plan', status: 'catalog-placeholder' },
-  { name: 'Royal Canin', parent: 'Mars Petcare', manufacturing: 'USA / France / multiple', href: '/brands/royal-canin', status: 'catalog-placeholder' },
-  { name: 'Solid Gold', parent: 'H.H. Gregg / NXMH', manufacturing: 'USA', href: '/brands/solid-gold', status: 'catalog-placeholder' },
-  { name: 'Stella & Chewy’s', parent: 'Stella & Chewy’s (independent)', manufacturing: 'USA (Wisconsin)', href: '/brands/stella-and-chewys', status: 'catalog-placeholder' },
-  { name: 'Taste of the Wild', parent: 'Schell & Kampeter (Diamond Pet Foods)', manufacturing: 'USA', href: '/brands/taste-of-the-wild', status: 'catalog-placeholder' },
-  { name: 'The Honest Kitchen', parent: 'The Honest Kitchen (independent)', manufacturing: 'USA', href: '/brands/the-honest-kitchen', status: 'catalog-placeholder' },
-  { name: 'Tiki Pets (Tiki Dog / Tiki Cat)', parent: 'Whitebridge Pet Brands', manufacturing: 'Thailand / USA', href: '/brands/tiki-pets', status: 'catalog-placeholder' },
-  { name: 'Victor Pet Food', parent: 'Mid America Pet Food (Post Holdings)', manufacturing: 'USA (Texas)', href: '/brands/victor', status: 'catalog-placeholder' },
-  { name: 'Wellness (WellPet)', parent: 'Clearlake Capital', manufacturing: 'USA', href: '/brands/wellness', status: 'catalog-placeholder' },
-  { name: 'Whole Earth Farms', parent: 'Nestlé Purina PetCare (Merrick)', manufacturing: 'USA', href: '/brands/whole-earth-farms', status: 'catalog-placeholder' },
-  { name: 'Wysong', parent: 'Wysong Corporation (independent)', manufacturing: 'USA (Michigan)', href: '/brands/wysong', status: 'catalog-placeholder' },
-  { name: 'ZiwiPeak', parent: 'Ziwi Limited (FountainVest)', manufacturing: 'New Zealand', href: '/brands/ziwipeak', status: 'catalog-placeholder' },
-]
+// One row per brand. All 35 catalog reference pages are live; entries with
+// an editorialCrossLink also carry an outbound link to the PetFood.com
+// editorial comparison page.
+const BRANDS: BrandEntry[] = BRAND_DATA.map((b) => ({
+  name: b.name,
+  slug: b.slug,
+  parent: b.parentCompany,
+  manufacturing: b.manufacturingCountries.join(' / '),
+  editorialCrossLink: b.editorialCrossLink,
+}))
 
 // Sort alphabetically — index reads like a reference table, not a ranking.
 const SORTED = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name))
@@ -97,11 +72,11 @@ const FAQ_ITEMS: FAQItem[] = [
       'The index is the catalog spine. Listing the brand publicly is the first deliverable; the scored profile is the second. Publishing the index first keeps the scope of coverage honest.',
   },
   {
-    question: 'What does “scored profile coming soon” actually mean?',
+    question: 'What is the difference between the catalog reference page and a scored profile?',
     answer:
-      'It means a per-brand reference page applying the published PetFood.com scoring rubric (AAFCO completeness, ingredient sourcing transparency, recall history, manufacturing standards, feeding-outcome literature) is queued but not yet written. When it lands it will appear at the linked URL. The methodology is fixed in advance; the rubric does not change to suit a brand.',
+      'Each brand card here links to a catalog reference page on PetFoods.com — corporate ownership, manufacturing footprint, AAFCO posture, recall pointer, distribution channels, and an explicit list of fields we could not verify. A scored profile is a separate artifact published on the PetFood.com editorial sister site that runs the v1.0 rubric (AAFCO completeness, ingredient sourcing transparency, recall history, manufacturing standards, feeding-outcome literature). Where a scored profile exists on PetFood.com, the catalog reference page cross-links to it.',
     answerText:
-      'A per-brand reference page applying the published PetFood.com scoring rubric is queued but not yet written. The methodology is fixed in advance and does not change per brand.',
+      'The catalog reference page is a structured per-brand record on PetFoods.com. The scored profile is a separate rubric-driven artifact on the PetFood.com editorial sister site; catalog pages cross-link to it where one exists.',
   },
   {
     question: 'Why list the corporate parent so prominently?',
@@ -179,9 +154,10 @@ export default function BrandsHubPage() {
           <strong>TL;DR.</strong> This is the brand catalog for PetFoods.com. It lists the major
           commercial pet food brands sold in the United States, each annotated with corporate parent
           and primary manufacturing country. When the sister editorial site, PetFood.com, has
-          already published a scored profile or brand-vs-brand comparison, the entry cross-links to
-          it. Where no scored profile exists yet, the entry is a catalog placeholder — the
-          brand is in scope, the scoring rubric is fixed, and the per-brand page is queued.
+          already published a scored profile or brand-vs-brand comparison, the entry surfaces that
+          editorial link in addition to the catalog reference. Every brand card resolves to a
+          per-brand catalog reference page on PetFoods.com with corporate ownership, manufacturing
+          footprint, AAFCO posture, and an explicit list of fields we could not verify.
         </p>
 
         <h2 id="how-to-read">How to Read This Index</h2>
@@ -209,10 +185,9 @@ export default function BrandsHubPage() {
           }}
         >
           {SORTED.map((brand) => (
-            <a
-              key={brand.name}
-              href={brand.href}
-              {...(brand.external ? { target: '_blank', rel: 'noopener' } : {})}
+            <Link
+              key={brand.slug}
+              href={`/brands/${brand.slug}`}
               style={{
                 display: 'block',
                 padding: '16px 18px',
@@ -246,18 +221,17 @@ export default function BrandsHubPage() {
                   fontSize: '11px',
                   letterSpacing: '0.04em',
                   textTransform: 'uppercase',
-                  color:
-                    brand.status === 'editorial-linked'
-                      ? 'var(--brand-success)'
-                      : 'var(--brand-text-light)',
+                  color: brand.editorialCrossLink
+                    ? 'var(--brand-success)'
+                    : 'var(--brand-text-mid)',
                   fontWeight: 600,
                 }}
               >
-                {brand.status === 'editorial-linked'
-                  ? 'Editorial comparison → PetFood.com'
-                  : 'Scored profile coming soon'}
+                {brand.editorialCrossLink
+                  ? 'Catalog reference · Editorial comparison on PetFood.com'
+                  : 'View catalog reference →'}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

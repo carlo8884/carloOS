@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -69,6 +70,11 @@ export default function UVBLightingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <CalloutBox variant="evidence" title="Evidence-anchored">
+          UVI targets in this guide follow the <strong>Ferguson Zone</strong> framework derived from field UVI measurements of free-ranging reptiles. Verify actual UVI at the basking site with a <strong>Solarmeter 6.5</strong> — the long-standing reference instrument for reptile-keepers — rather than relying on bulb labels alone.
+        </CalloutBox>
 
         <h2 id="why">Why UVB Matters</h2>
 
@@ -111,7 +117,7 @@ export default function UVBLightingGuidePage() {
 
         <p>T5 HO (High Output) tubes produce consistent UVB across the tube length and penetrate 30–60cm — enough to create a meaningful UVB gradient across the enclosure. They are also more consistent in their output decline over time.</p>
 
-        <p>Top T5 HO UVB bulbs ranked by Solarmeter 6.5 testing:</p>
+        <p>Top T5 HO UVB bulbs ranked by <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> testing:</p>
         <ul>
           <li><strong>Arcadia T5 HO 12% Desert</strong> — highest measured UVI, best output retention (85–90% at 6 months). Zone 4 species. See <Link href="/reviews/best-uvb-bulbs">our full review →</Link></li>
           <li><strong>Arcadia T5 HO 6% Forest</strong> — Zone 2–3 species. Same exceptional build quality as the 12%.</li>

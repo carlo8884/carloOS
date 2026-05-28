@@ -412,6 +412,26 @@ export default async function HomePage() {
           perks={['📋 Practical', '📬 Every Tuesday', '🐕 Breed-specific advice', '🚫 No spam']}
         />
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — Unsplash credit strip ──────────────── */}
+      <aside
+        className="bg-brand-dark px-container sm:px-container-sm py-6"
+        aria-label="Photo credits"
+      >
+        <p className="text-2xs uppercase tracking-eyebrow text-white/55">
+          Hero, breed, and health-article photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline text-white/80"
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Breed photos will migrate to
+          Wikimedia Commons references where taxonomic accuracy matters.
+        </p>
+      </aside>
     </>
   )
 }

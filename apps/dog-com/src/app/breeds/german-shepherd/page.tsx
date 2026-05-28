@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds', path: '/breeds/german-shepherd', type: 'article', ogImage: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -46,6 +47,12 @@ export default function GermanShepherdBreedPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            <CalloutBox variant="evidence" title="Evidence-anchored">
+              Hip dysplasia screening in German Shepherds uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> hip evaluation. Working-line dogs generally have better conformation than extreme show lines — require OFA hip and elbow clearances on both sire and dam regardless of line.
+            </CalloutBox>
+
             <h2>Health Conditions</h2>
             <BreedHealthCard name="Degenerative Myelopathy (DM)" riskLevel="very-high" description="Progressive spinal cord disease causing gradual paralysis — the canine equivalent of ALS. No cure. Physical rehabilitation extends quality of life. DNA test identifies at-risk dogs. Most commonly affected breed. Watch for subtle gait changes from age 7+." guideHref="/health/german-shepherd-health" guideLabel="Full GSD health guide →" />
             <BreedHealthCard name="Hip Dysplasia" riskLevel="high" description="Developmental joint disorder with strong genetic component. Buy from OFA-certified breeders. Working-line GSDs generally have better conformation than extreme show lines. Weight control most impactful non-surgical intervention." />

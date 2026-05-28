@@ -20,7 +20,7 @@ export default function ReadingFoodLabelsPage() {
     >
       <div className="carloOS-article">
         <h2 id="aafco">The AAFCO Statement — The Most Important Thing on the Bag</h2>
-        <p>The Association of American Feed Control Officials (AAFCO) establishes nutrient profiles for dog food. Every complete and balanced dog food must include one of two AAFCO statements:</p>
+        <p>The <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Association of American Feed Control Officials (AAFCO)</a> establishes nutrient profiles for dog food. Every complete and balanced dog food must include one of two AAFCO statements:</p>
         <p><strong>Feeding trial statement:</strong> &quot;Animal feeding tests using AAFCO procedures substantiate that [product] provides complete and balanced nutrition for [life stage].&quot; This means dogs actually ate this food during a feeding trial and were monitored for health outcomes. This is the more rigorous and meaningful claim.</p>
         <p><strong>Formulation statement:</strong> &quot;[Product] is formulated to meet the nutritional levels established by the AAFCO Dog Food Nutrient Profiles for [life stage].&quot; This means the formula was calculated to meet nutrient profiles — no dogs were fed the food in a trial. Weaker claim.</p>
         <p>Look for feeding trial language. Royal Canin, Purina Pro Plan, and Hill&apos;s conduct AAFCO feeding trials. Many premium-marketing brands do not — they rely on formulation statements.</p>

@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -106,8 +107,14 @@ export default function GoldenRetrieverBreedPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
             <h2>Overview</h2>
-            <p>The Golden Retriever has ranked among America&apos;s most popular dog breeds for decades — a position earned through an unmatched combination of temperament, trainability, and adaptability. Goldens are gentle with children, tolerant with strangers, responsive to training, and genuinely enthusiastic about life in a way that is infectious. They are also a breed that requires informed ownership — particularly around health monitoring as they age.</p>
+            <DropCap>The Golden Retriever has ranked among America&apos;s most popular dog breeds for decades — a position earned through an unmatched combination of temperament, trainability, and adaptability. Goldens are gentle with children, tolerant with strangers, responsive to training, and genuinely enthusiastic about life in a way that is infectious. They are also a breed that requires informed ownership — particularly around health monitoring as they age.</DropCap>
+
+            <CalloutBox variant="evidence" title="Evidence-anchored">
+              Hip dysplasia screening in Goldens uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> hip evaluation as the long-standing US standard. Buy only from breeders who provide OFA hip and elbow certifications on both sire and dam.
+            </CalloutBox>
 
             <h2>Temperament Scores</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-5">

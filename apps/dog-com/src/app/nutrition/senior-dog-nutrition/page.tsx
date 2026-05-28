@@ -30,7 +30,7 @@ export default function SeniorDogNutritionPage() {
       >
         <div className="carloOS-article">
           <h2>What "Senior Dog Food" Actually Means</h2>
-          <p>AAFCO does not have a separate nutritional standard for "senior" dog food — the category is a marketing designation, not a regulated nutritional specification. Senior formulas from different manufacturers vary enormously in their actual nutritional profile. Some reduce calories (appropriate for overweight seniors), some add joint supplements (useful), some simply add the label "senior" to an adult formula with minimal changes. Always look at the actual nutrient profile, not just the label.</p>
+          <p><a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> does not have a separate nutritional standard for "senior" dog food — the category is a marketing designation, not a regulated nutritional specification. Senior formulas from different manufacturers vary enormously in their actual nutritional profile. Some reduce calories (appropriate for overweight seniors), some add joint supplements (useful), some simply add the label "senior" to an adult formula with minimal changes. Always look at the actual nutrient profile, not just the label.</p>
           <p>The most important factors for senior dogs: caloric density appropriate to activity level and weight, high-quality protein, reduced phosphorus if kidney disease is present, and omega-3 fatty acids for cognitive and joint support.</p>
 
           <h2>Protein in Aging Dogs — The Common Misconception</h2>

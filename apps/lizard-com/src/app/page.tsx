@@ -6,6 +6,7 @@
  */
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
@@ -170,6 +171,15 @@ const FEATURED_ARTICLES: {
   title: string
   teaser: string
   readTime: string
+  /**
+   * Optional cover photo. Photo IDs reuse the species-page Unsplash CDN
+   * URLs already shipped on /species (verified-in-production). Only the
+   * two species-leaning cards carry photos — UVB and Bioactive Setup get
+   * the CSS-only treatment to keep editorial honesty (no stock photo can
+   * stand in for a Solarmeter reading or a real bioactive build).
+   */
+  image?: string
+  imageAlt?: string
 }[] = [
   {
     href: '/species/leopard-gecko',
@@ -178,6 +188,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'Crepuscular ground-dwelling gecko from the Iran–Afghanistan–Pakistan arid belt. Enclosure size, gradient, low-output UVB context, and the calcium-D3 protocol most pet-store guides get wrong.',
     readTime: '18 min',
+    image:
+      'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A leopard gecko (Eublepharis macularius) in profile',
   },
   {
     href: '/setup/uvb-lighting-guide',
@@ -186,6 +199,7 @@ const FEATURED_ARTICLES: {
     teaser:
       'Ferguson zones explained with actual Solarmeter readings. T5 HO vs T8 vs compact, distance fall-off curves, and how output collapses 9–12 months in — even when the bulb is still visibly on.',
     readTime: '22 min',
+    // No photo — Solarmeter data is the subject; no stock photo qualifies.
   },
   {
     href: '/health/sick-reptile-signs',
@@ -194,6 +208,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'Eight observable changes that warrant an ARAV-board-certified visit, in priority order. What is normal brumation, what is metabolic bone disease, and the husbandry corrections to make on the way to the clinic.',
     readTime: '14 min',
+    image:
+      'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A bearded dragon (Pogona vitticeps) basking',
   },
   {
     href: '/setup/bioactive-setup',
@@ -202,6 +219,7 @@ const FEATURED_ARTICLES: {
     teaser:
       'Drainage layer, substrate mix, springtail-and-isopod ratios, and plant species matched to humidity range. A field-tested build sheet for the keeper moving from paper-towel hygiene to a self-sustaining enclosure.',
     readTime: '17 min',
+    // No photo — bioactive builds vary per species; CSS-only keeps it honest.
   },
 ]
 
@@ -248,6 +266,32 @@ export default function HomePage() {
           className="absolute inset-x-0 top-0 h-px"
           style={{ background: 'linear-gradient(90deg, transparent, rgba(154,209,64,0.35), transparent)' }}
         />
+
+        {/* Hero photo — crested gecko on a branch, the dark-mode-friendly
+            atmospheric subject. Photo ID is already shipped on /species
+            (verified-in-production Unsplash CDN URL). Hidden on mobile; on
+            lg+ takes the right 45% of the masthead with a deep-moss edge
+            fade so the photo grades into the brand field. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden lg:block w-[45%] z-0"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1400&q=80&auto=format&fit=crop"
+            alt=""
+            fill
+            sizes="45vw"
+            className="object-cover"
+            priority
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(6,10,6,1) 0%, rgba(6,10,6,0.80) 25%, rgba(6,10,6,0.32) 65%, rgba(6,10,6,0.50) 100%)',
+            }}
+          />
+        </div>
 
         <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
           <div className="max-w-3xl">
@@ -518,12 +562,28 @@ export default function HomePage() {
               <Link
                 key={a.href}
                 href={a.href}
-                className="group block rounded-lg p-8 no-underline transition-all duration-300"
+                className="group block rounded-lg overflow-hidden no-underline transition-all duration-300"
                 style={{
                   background: 'var(--brand-panel)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
+                {/* Cover photo — verified Unsplash species photography,
+                    only renders for species-leaning cards. UVB and Setup
+                    cards stay CSS-only by design (their subject is data
+                    and build sheets, not a single image). */}
+                {a.image && a.imageAlt ? (
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={a.image}
+                      alt={a.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-8">
                 <div
                   className="font-body text-2xs font-bold uppercase tracking-eyebrow mb-4"
                   style={{ color: 'var(--brand-primary)' }}
@@ -547,6 +607,7 @@ export default function HomePage() {
                 >
                   <span style={{ color: 'var(--brand-text-light)' }}>{a.readTime} read</span>
                   <span style={{ color: 'var(--brand-primary)' }}>Read &rarr;</span>
+                </div>
                 </div>
               </Link>
             ))}
@@ -667,6 +728,34 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
+      <aside
+        className="relative z-10 px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-dark)',
+          borderTop: '1px solid var(--brand-border)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide font-body text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'var(--brand-text-light)' }}
+        >
+          Hero & species photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'var(--brand-primary)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Species pages will migrate to
+          Wikimedia Commons for taxonomic accuracy.
+        </p>
+      </aside>
     </>
   )
 }
