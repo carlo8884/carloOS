@@ -4,6 +4,42 @@
 
 /* ─────────────────────────────────────────────
    PETFOOD.COM THEME TOKENS
+<<<<<<< HEAD
+   "Consumer Reports of pet food" — moss-green
+   primary, warm white, food-science feel.
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Brand — deep moss green (independence / earned trust) */
+  --brand-primary: #3F5C3A;
+  --brand-primary-light: #577A50;
+  --brand-primary-pale: #EDF1EA;
+  --brand-primary-dark: #2C4128;
+
+  /* Backgrounds — warm white, no pure black */
+  --brand-dark: #1A1F18;
+  --brand-surface: #FAFAF7;
+  --brand-white: #FFFFFF;
+
+  /* Text — dark warm-gray, not pure black */
+  --brand-text-dark: #1F2A1C;
+  --brand-text-mid: #3E4A3A;
+  --brand-text-light: #7A8478;
+
+  /* Borders */
+  --brand-border: #E2E6DC;
+
+  /* Semantic */
+  --brand-success: #2C7A3A;
+  --brand-warning: #B0822A;
+  --brand-danger: #A8442A;
+
+  /* Typography — three families locked per brand brief */
+  /* Cormorant Garamond (display) + Inter (body) + JetBrains Mono (data) */
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+=======
    Sets CSS variables consumed by Tailwind utilities.
    Change these values here; Tailwind picks them up automatically.
    ───────────────────────────────────────────── */
@@ -36,6 +72,7 @@
   /* Typography (loaded via next/font — variable names set there) */
   --font-display: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
+>>>>>>> origin/main
 
   /* Layout */
   --nav-height: 68px;
@@ -53,9 +90,15 @@ html {
 }
 
 body {
+<<<<<<< HEAD
+  @apply bg-brand-surface text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.65;
+=======
   @apply bg-brand-white text-brand-text-dark;
   font-family: var(--font-body);
   line-height: 1.6;
+>>>>>>> origin/main
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,6 +135,54 @@ img {
   --tw-prose-td-borders: var(--brand-border);
 }
 
+<<<<<<< HEAD
+/* Ingredient panels / scoring data / regulatory references render in mono.
+   Tagging a table or inline span with `.data-mono` opts it in. */
+.carloOS-article .data-mono,
+.carloOS-article table,
+.data-mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.005em;
+}
+
+.carloOS-article table th {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-text-mid);
+  font-weight: 600;
+}
+
+/* Score chip — colored numeric badge, colorblind-safe pairing
+   uses both color and ring style. */
+.score-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  background: var(--brand-primary-pale);
+  color: var(--brand-primary-dark);
+  border: 1px solid var(--brand-primary);
+}
+
+/* ─── SELECTION ───────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(63, 92, 58, 0.2);
+  color: var(--brand-text-dark);
+}
+
+/* Font CSS variables — fallback when next/font fails to load (offline build) */
+=======
 /* ─── SELECTION ───────────────────────────────────────────────── */
 
 ::selection {
@@ -100,8 +191,13 @@ img {
 }
 
 /* Font CSS variables — fonts loaded via Google Fonts CDN */
+>>>>>>> origin/main
 .font-vars,
 :root {
   --font-cormorant: Georgia, "Times New Roman", serif;
   --font-inter: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+<<<<<<< HEAD
+  --font-jetbrains-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+=======
+>>>>>>> origin/main
 }
