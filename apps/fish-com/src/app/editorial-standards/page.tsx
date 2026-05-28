@@ -28,7 +28,7 @@ export default function EditorialStandardsPage() {
 
         <h2>How We Research and Write</h2>
         <ul>
-          <li><strong>Sources are cited where it matters.</strong> When we name a parameter (pH range, hardness, temperature), we lean on published species data (FishBase, peer-reviewed habitat surveys, established care sheets) rather than forum lore.</li>
+          <li><strong>Sources are cited where it matters.</strong> When we name a parameter (pH range, hardness, temperature), we lean on published species data (<a href="https://fishbase.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FishBase</a>, peer-reviewed habitat surveys, established care sheets) rather than forum lore.</li>
           <li><strong>Current guidance.</strong> Where consensus exists (nitrogen cycle, fish-in vs fishless cycling, quarantine protocols), we follow it rather than out-of-date advice.</li>
           <li><strong>We say when evidence is thin.</strong> The hobby has plenty of contested topics (planted-tank dosing strategies, marine refugium design, certain disease treatments). When the evidence is mixed, we say so.</li>
           <li><strong>Honest scope.</strong> We don&apos;t claim hands-on testing we haven&apos;t done. Equipment write-ups draw on manufacturer specifications, published reviews, and aggregated keeper feedback.</li>

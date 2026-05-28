@@ -46,7 +46,7 @@ export default function VetsLabradorHealthPage() {
 
         <h2>Recommended Screening</h2>
         <ul>
-          <li><strong>OFA hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms</li>
+          <li><strong><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms</li>
           <li><strong>EIC DNA test:</strong> Before intense training programs; important for families with children who play intensely with the dog</li>
           <li><strong>PRA DNA test:</strong> For any dog used for breeding</li>
           <li><strong>Annual bloodwork:</strong> From age 5; earlier if overweight (metabolic monitoring)</li>
