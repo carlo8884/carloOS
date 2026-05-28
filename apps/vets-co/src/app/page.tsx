@@ -11,6 +11,7 @@
  */
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
@@ -193,6 +194,15 @@ const FEATURED_GUIDES: {
   title: string
   teaser: string
   readTime: string
+  /**
+   * Optional cover photo. Per the COO photo-sourcing playbook, Vets.co
+   * uses photography sparingly and avoids clinical-scene clichés. Only
+   * breed-specific cards may carry a verified breed portrait — never an
+   * actor-as-vet shot, never a fake exam scene. Photo IDs reuse the dog
+   * breed CDN URLs already shipped on Dog.com (verified-in-production).
+   */
+  image?: string
+  imageAlt?: string
 }[] = [
   {
     href: '/health/emergency-signs',
@@ -201,6 +211,8 @@ const FEATURED_GUIDES: {
     teaser:
       'A field-reference list every owner should read before the moment they need it. Breathing patterns, gum color, abdominal posture, and the calls that should not wait until morning.',
     readTime: '11 min',
+    // No photo — emergency-triage content stays text-led; a photo would
+    // editorialize an emergency unhelpfully.
   },
   {
     href: '/reviews/best-pet-insurance',
@@ -209,6 +221,7 @@ const FEATURED_GUIDES: {
     teaser:
       'Most rankings score policies on premium and brand. We compare on payout speed, exclusion language, bilateral-condition handling, and the renewal-year footnotes that quietly raise rates.',
     readTime: '18 min',
+    // No photo — financial comparison content stays text/data-led.
   },
   {
     href: '/breeds/golden-retriever-health',
@@ -217,6 +230,9 @@ const FEATURED_GUIDES: {
     teaser:
       'The most common hereditary risks in the modern Golden line — hemangiosarcoma, lymphoma, hip dysplasia, subaortic stenosis — plus the screening tests that change outcomes if you start early.',
     readTime: '14 min',
+    image:
+      'https://images.unsplash.com/photo-1552053831-71594a27632d?w=900&q=80&auto=format&fit=crop',
+    imageAlt: 'A Golden Retriever portrait in natural light',
   },
   {
     href: '/health/dog-vaccinations-guide',
@@ -225,6 +241,8 @@ const FEATURED_GUIDES: {
     teaser:
       'Core vs. lifestyle vaccines, current AAHA intervals, titer testing, and the three vaccines that get questioned the most by experienced clinicians.',
     readTime: '13 min',
+    // No photo — vaccine schedule content stays text/data-led; a generic
+    // dog photo here would imply a clinical context we are not staging.
   },
 ]
 
@@ -257,6 +275,19 @@ export default function VetsHomePage() {
               'repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 3px)',
           }}
         />
+
+        {/* TODO(photography): hero slot intentionally CSS-only until an
+            abstract clinical photograph is sourced and verified per the
+            COO photo-sourcing playbook (ops/handoffs/2026-05-29). The
+            playbook's Vets.co guidance prohibits:
+              - generic vet-with-puppy stock cliché
+              - any image that implies a real clinical scene with real staff
+            Acceptable directions when a verified Unsplash CDN URL exists:
+              - stethoscope on warm wood (texture-led, no humans)
+              - dim clinic interior (architectural, no humans)
+              - vector medical diagrams (Wikimedia Commons, with attribution)
+            Until then the radial-wash field is honest and preserves the
+            clinical-reference voice. Do not paste an unverified URL here. */}
 
         <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
           <div className="max-w-3xl">
@@ -578,12 +609,28 @@ export default function VetsHomePage() {
               <Link
                 key={art.href}
                 href={art.href}
-                className="group block p-7 lg:p-8 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+                className="group block rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
                 style={{
                   background: 'var(--brand-surface)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
+                {/* Cover photo — verified Unsplash breed portrait, only on
+                    cards where a single subject makes editorial sense (not
+                    on emergency-triage, insurance, or vaccine-schedule
+                    cards, which stay text-led per the Vets.co playbook). */}
+                {art.image && art.imageAlt ? (
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={art.image}
+                      alt={art.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-7 lg:p-8">
                 <span
                   aria-hidden="true"
                   className="block h-px w-10 mb-5"
@@ -627,6 +674,7 @@ export default function VetsHomePage() {
                     </span>
                   </span>
                 </div>
+                </div>
               </Link>
             ))}
           </div>
@@ -655,6 +703,35 @@ export default function VetsHomePage() {
           />
         </div>
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — restrained credit, Unsplash hygiene ─── */}
+      <aside
+        className="px-container-sm sm:px-container py-6"
+        style={{
+          background: 'var(--brand-primary-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+        }}
+        aria-label="Photo credits"
+      >
+        <p
+          className="mx-auto max-w-container-wide text-2xs uppercase tracking-eyebrow"
+          style={{ color: 'rgba(255,255,255,0.60)' }}
+        >
+          Breed photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline"
+            style={{ color: 'rgba(255,255,255,0.80)' }}
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Vets.co does not stage clinical
+          scenes; medical imagery, when added, will be sourced from NIH /
+          CDC / AVMA libraries with attribution.
+        </p>
+      </aside>
     </>
   )
 }
