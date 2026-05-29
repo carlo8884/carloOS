@@ -45,6 +45,7 @@ import {
   getBreedBySlug,
   type Breed,
 } from '../../../data/breeds'
+import { getBreedInsuranceByBreedDataSlug } from '../../../data/insurance-by-breed'
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -456,6 +457,33 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </a>
             </p>
             {/* future: <CrossPortfolioCard contentType="breed" /> — component not yet merged. */}
+
+            {/* Pair with pet insurance — cross-link into the insurance funnel */}
+            {(() => {
+              const insurance = getBreedInsuranceByBreedDataSlug(breed.slug)
+              if (!insurance) return null
+              return (
+                <>
+                  <h2>Pair With Pet Insurance</h2>
+                  <p>
+                    Many of the {breed.name} health risks above are well-known
+                    enough that insurance carriers price the breed accordingly
+                    — and exclude any condition documented before enrollment.
+                    Our breed-specific insurance guide explains which carrier
+                    matches a {breed.name}&apos;s hereditary risk profile and
+                    sample premium bands.
+                  </p>
+                  <p>
+                    <Link
+                      href={`/pet-insurance/breeds/${insurance.slug}`}
+                      className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+                    >
+                      Best Pet Insurance for {breed.name} →
+                    </Link>
+                  </p>
+                </>
+              )
+            })()}
 
             {/* FAQ */}
             <h2>Frequently Asked Questions</h2>

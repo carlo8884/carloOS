@@ -36,6 +36,10 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 
+// Monetization
+export { AffiliateLink } from './components/AffiliateLink'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+
 // Health condition cards
 export { BreedHealthCard, SpeciesHealthCard } from './components/BreedHealthCard'
 
