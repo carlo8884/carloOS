@@ -180,6 +180,7 @@ export default function GoldenRetrieverBreedPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Health Resources" links={[
+              { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
               { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },
