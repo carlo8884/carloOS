@@ -33,6 +33,7 @@ import {
   combineSchemas,
   ArticleLayout,
   CalloutBox,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   SidebarCard,
@@ -192,6 +193,11 @@ export default function SpecialistPage({ params }: PageProps) {
               { label: 'All Veterinary Specialties', href: '/specialists' },
               { label: 'Emergency Signs Guide', href: '/health/emergency-signs' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="vets-co"
+            contentType="specialty"
+            variant="sidebar"
           />
           <SidebarCard title="Board Certification">
             <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">
