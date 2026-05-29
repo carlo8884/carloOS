@@ -143,7 +143,7 @@ export default async function BreedDnaPage({
             including the ones most relevant to {b.breedName}s.
           </p>
           <a
-              href={`/go/${recommendedTest.vendor}/home?s=dna-testing-breed-${breed}
+              href={`/go/${recommendedTest.vendor}/home?s=dna-testing-breed-${breed}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Shop {recommendedTest.brand} →

@@ -136,7 +136,7 @@ export default function DnaTestingHub() {
               </div>
 
               <a
-              href={`/go/${t.vendor}/home?s=dna-testing-hub-${t.slug}
+              href={`/go/${t.vendor}/home?s=dna-testing-hub-${t.slug}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-4 py-2 rounded-lg font-semibold text-sm text-center no-underline hover:opacity-90 mb-2"
             >
               Shop {t.brand} →

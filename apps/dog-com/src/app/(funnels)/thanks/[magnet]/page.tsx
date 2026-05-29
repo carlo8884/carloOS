@@ -195,7 +195,7 @@ export default async function ThanksPage({
                 {r.body}
               </p>
               <a
-              href={`/go/${r.cta.vendor}/${r.cta.sku}?s=thanks-${magnet}
+              href={`/go/${r.cta.vendor}/${r.cta.sku}?s=thanks-${magnet}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-5 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90"
             >
               {r.cta.label}
