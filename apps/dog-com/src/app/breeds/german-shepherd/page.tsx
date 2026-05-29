@@ -62,7 +62,8 @@ export default function GermanShepherdBreedPage() {
             <p>GSDs require 1–2+ hours of vigorous exercise daily with mental stimulation. Excellent at obedience, agility, Schutzhund, herding, and tracking. Without adequate physical and mental outlets, GSDs develop anxiety, destructive behavior, and excessive vocalization. Begin training and socialization from day one.</p>
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
-            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Feeding Guide', href: '/breeds/german-shepherd/feeding' }, { label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-german-shepherd" />
           </aside>
         </div>

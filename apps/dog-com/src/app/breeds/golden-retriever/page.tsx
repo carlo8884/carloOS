@@ -179,6 +179,9 @@ export default function GoldenRetrieverBreedPage() {
           </article>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="Golden Retriever Health Deep-Dive" links={[
+              { label: 'Golden Retriever Health Issues & Screenings', href: '/breeds/golden-retriever/health' },
+            ]} />
             <RelatedLinks title="Health Resources" links={[
               { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },

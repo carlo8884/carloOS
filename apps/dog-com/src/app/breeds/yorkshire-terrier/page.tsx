@@ -18,6 +18,7 @@ export default function YorkiePage() {
             </div>
           ))}
         </div>
+        <RelatedLinks title="Yorkie Health Deep-Dive" links={[{ label: 'Yorkshire Terrier Health Issues & Screenings', href: '/breeds/yorkshire-terrier/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Yorkie Feeding Guide', href: '/breeds/yorkshire-terrier/feeding' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-yorkie" />
       </>}
