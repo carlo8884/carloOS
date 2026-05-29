@@ -81,3 +81,15 @@ export type {
 // 12-line minimal.
 export { OgTemplate } from './og/OgTemplate'
 export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'
+
+// Visual primitives — composable site shells & section components.
+// Lives under packages/ui/src/components/visual/ per master prompt §4
+// ("NEW shared visual primitives"). Used by scaffolded sites to compose
+// a launch-ready homepage from ~50 lines of config instead of 700+
+// lines of hand-coded JSX.
+export { ScaffoldHomeShell } from './components/visual/ScaffoldHomeShell'
+export type {
+  ScaffoldHomeShellProps,
+  ScaffoldCategory,
+  ScaffoldIconName,
+} from './components/visual/ScaffoldHomeShell'

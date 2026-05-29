@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, Nav, Footer } from '@carloOS/ui'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], weight: ['300','400','500','600','700','800'], variable: '--font-inter', display: 'swap' })
@@ -16,7 +16,11 @@ export const metadata: Metadata = buildMetadata({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <Nav siteId="askthevet" />
+        <main>{children}</main>
+        <Footer siteId="askthevet" showAffiliateDisclosure />
+      </body>
     </html>
   )
 }
