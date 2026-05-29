@@ -7,6 +7,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   EmailCapture,
 } from '@carloOS/ui'
@@ -214,6 +215,11 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
                 ? [{ label: `${brand.name} — PetFood.com editorial`, href: brand.editorialCrossLink }]
                 : []),
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="brand"
+            variant="sidebar"
           />
           <EmailCapture
             variant="sidebar"
@@ -551,6 +557,11 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
                 ? [{ label: `${review.brandName} on PetFood.com`, href: brand.editorialCrossLink }]
                 : []),
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="brand"
+            variant="sidebar"
           />
           <EmailCapture
             variant="sidebar"

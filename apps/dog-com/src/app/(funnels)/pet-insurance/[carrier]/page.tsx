@@ -33,8 +33,8 @@ export async function generateMetadata({
   if (!c) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `${c.name} Review 2026 — Pros, Cons, and Who It's For | Dog.com`,
-    description: `${c.tagline} See sample premiums, deductibles, waiting periods, what's covered, and how ${c.name} stacks up against the other 8 major U.S. pet insurance carriers.`,
+    title: `${c.name} Review 2026 — Pros, Cons, and Who It's For`,
+    description: `${c.tagline} Premiums, deductibles, waiting periods, and ${c.name} vs other carriers.`,
     path: `/pet-insurance/${c.slug}`,
     type: 'article',
   })
@@ -131,7 +131,7 @@ export default async function CarrierPage({
         </p>
         <div className="mt-7 flex gap-4 flex-wrap items-center">
           <a
-              href={`/go/${c.vendor}/home?s=${`pet-insurance-carrier-${c.slug}`}
+              href={`/go/${c.vendor}/home?s=pet-insurance-carrier-${c.slug}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Get a {c.name} quote →
@@ -340,7 +340,7 @@ export default async function CarrierPage({
             return a price in under a minute.
           </p>
           <a
-              href={`/go/${c.vendor}/home?s=${`pet-insurance-carrier-${c.slug}`}
+              href={`/go/${c.vendor}/home?s=pet-insurance-carrier-${c.slug}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Get a {c.name} quote →

@@ -5,6 +5,7 @@ import {
   buildMetadata,
   ArticleLayout,
   RelatedLinks,
+  CrossPortfolioCard,
   EmailCapture,
   FAQAccordion,
   CalloutBox,
@@ -149,6 +150,11 @@ export default async function DisciplineFitPage({ params }: FitPageProps) {
                 { label: 'Saddle Fit Guide (General)', href: '/guides/saddle-fit-guide' },
                 { label: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide' },
               ]}
+            />
+            <CrossPortfolioCard
+              currentSite="saddle-com"
+              contentType="review"
+              variant="sidebar"
             />
             <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">

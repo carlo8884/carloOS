@@ -37,6 +37,7 @@ import {
   combineSchemas,
   SchemaScript,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -187,6 +188,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   href: 'https://saddle.com',
                 },
               ]}
+            />
+            <CrossPortfolioCard
+              currentSite="horses-com"
+              contentType="equipment"
+              variant="sidebar"
             />
             <EmailCapture
               variant="sidebar"
