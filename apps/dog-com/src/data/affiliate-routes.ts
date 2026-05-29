@@ -34,7 +34,7 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     // Network: Amazon Associates. Carlo-approved per policy §5.
     // See roadmap §1 row 1.1.
     name: 'Amazon',
-    template: 'https://amazon.com/dp/{sku}?tag=PLACEHOLDER-20',
+    template: 'https://amazon.com/dp/{sku}?tag=PLACEHOLDER',
     requiresSku: true,
   },
   chewy: {

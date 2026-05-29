@@ -9,6 +9,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   CalloutBox,
 } from '@carloOS/ui'
@@ -1244,6 +1245,11 @@ export default async function IngredientPage({ params }: PageProps) {
                 ? [{ label: 'Preservatives in Pet Food — Editorial', href: '/ingredients/preservatives-pet-food' }]
                 : []),
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="nutrition"
+            variant="sidebar"
           />
         </>
       }
