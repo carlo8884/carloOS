@@ -33,8 +33,8 @@ export async function generateMetadata({
   if (!c) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `${c.name} Review 2026 — Pros, Cons, and Who It's For | Dog.com`,
-    description: `${c.tagline} See sample premiums, deductibles, waiting periods, what's covered, and how ${c.name} stacks up against the other 8 major U.S. pet insurance carriers.`,
+    title: `${c.name} Review 2026 — Pros, Cons, and Who It's For`,
+    description: `${c.tagline} Premiums, deductibles, waiting periods, and ${c.name} vs other carriers.`,
     path: `/pet-insurance/${c.slug}`,
     type: 'article',
   })
