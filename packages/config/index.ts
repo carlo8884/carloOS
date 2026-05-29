@@ -19,6 +19,7 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  | 'askthevet'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -354,6 +355,33 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  // ─── AskTheVet.com — trust-medical blue, AI pet symptom checker ─────
+  'askthevet': {
+    primary: '#2563eb',
+    primaryLight: '#3b82f6',
+    primaryPale: '#eff6ff',
+    primaryDark: '#1d4ed8',
+    dark: '#0f172a',
+    surface: '#f8fafc',
+    white: '#ffffff',
+    textDark: '#0f172a',
+    textMid: '#334155',
+    textLight: '#64748b',
+    border: '#e2e8f0',
+    success: '#16a34a',
+    warning: '#d97706',
+    danger: '#dc2626',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 500, 600, 700, 800],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'AskTheVet.com',
+    siteTagline: 'AI Pet Symptom Checker — Triage in Seconds',
+    siteUrl: 'https://askthevet.com',
+    logoText: 'AskTheVet',
+    twPrimary: 'blue',
   },
 
   // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
@@ -813,6 +841,53 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'askthevet': {
+    id: 'askthevet',
+    theme: themes['askthevet'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: true,
+      healthyPaws: true,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Symptom Checker', href: '/' },
+      { label: 'Common Symptoms', href: '/symptom' },
+      { label: 'Find a Vet', href: '/find-vet' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Symptom Checker',
+        links: [
+          { label: 'Home', href: '/' },
+          { label: 'Common Symptoms', href: '/symptom' },
+        ],
+      },
+      {
+        heading: 'Care Options',
+        links: [
+          { label: 'Find a Vet', href: '/find-vet' },
+          { label: 'Telehealth', href: '/find-vet' },
+          { label: 'Pet Insurance', href: '/find-vet' },
+        ],
+      },
+      {
+        heading: 'About',
+        links: [
+          { label: 'Editorial Standards', href: '/legal/editorial-standards' },
+          { label: 'Affiliate Disclosure', href: '/legal/affiliate-disclosure' },
+          { label: 'Privacy', href: '/legal/privacy' },
+          { label: 'Terms', href: '/legal/terms' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://askthevet.com/og-default.jpg',
   },
 
   'petfoods-com': {

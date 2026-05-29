@@ -481,3 +481,41 @@ alter table public.site_configs_db enable row level security;
 create policy "Anyone can read site configs"
   on public.site_configs_db for select
   using (true);
+
+-- ─────────────────────────────────────────────────────────────
+-- ASKTHEVET — triage_queries
+-- Appended for AskTheVet.com (Architect S2 / Directive 6).
+-- Stores every AI triage query, the LLM response, the chosen
+-- monetization route, and (later) attributed revenue per query.
+-- Never references the existing site_id enum so it does not
+-- require migrating any other table.
+-- ─────────────────────────────────────────────────────────────
+
+create table if not exists public.triage_queries (
+  id                    text primary key,
+  question              text not null,
+  species               text not null,
+  age                   integer,
+  breed                 text,
+  response_json         jsonb not null,
+  monetization_route    text not null,
+  attributed_revenue    numeric(10,2) default 0,
+  created_at            timestamptz default now()
+);
+
+create index if not exists triage_queries_created_at_idx
+  on public.triage_queries (created_at desc);
+create index if not exists triage_queries_route_idx
+  on public.triage_queries (monetization_route);
+create index if not exists triage_queries_species_idx
+  on public.triage_queries (species);
+
+alter table public.triage_queries enable row level security;
+
+-- The triage UI writes through the service role; reads are server-side via
+-- the same role. Anonymous browsers never read this table directly, so the
+-- default-deny RLS posture is correct.
+create policy "Service role full access"
+  on public.triage_queries for all
+  using (auth.role() = 'service_role')
+  with check (auth.role() = 'service_role');
