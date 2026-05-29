@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
+import { AffiliateDisclosure } from './AffiliateDisclosure'
 
 interface FooterProps {
   siteId: SiteId
@@ -60,8 +61,16 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           ))}
         </div>
 
+        {/* Affiliate disclosure — sits ABOVE the copyright bar so it is the
+            first visible disclosure when scrolling to the footer. Uses the
+            shared AffiliateDisclosure component (variant=footer) to keep the
+            copy and link target consistent across all 10 sites. */}
+        {showAffiliateDisclosure && (
+          <AffiliateDisclosure variant="footer" siteId={siteId} />
+        )}
+
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
+        <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
           <span className="text-xs text-white/50">
             © {currentYear} {config.theme.siteName} — All rights reserved
           </span>
@@ -69,7 +78,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             {[
               { label: 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
-              { label: 'Affiliate Disclosure', href: '/legal/affiliate-disclosure' },
+              { label: 'Disclosure', href: '/disclosure' },
               { label: 'Editorial Standards', href: '/editorial-standards' },
             ].map((link) => (
               <Link
@@ -82,18 +91,6 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             ))}
           </div>
         </div>
-
-        {/* Affiliate disclosure — must be readable for FTC visibility, not
-            decoratively faded. Bumped from white/20 → white/65. */}
-        {showAffiliateDisclosure && (
-          <p className="mt-8 pt-6 border-t border-white/10 text-xs text-white/65 leading-relaxed max-w-3xl">
-            {config.theme.siteName} participates in affiliate marketing programs including
-            Amazon Associates, Chewy, and pet insurance referral programs. When you
-            purchase through links on this site, we may earn a commission at no extra
-            cost to you. Content is for general information only and is not a substitute
-            for advice from a licensed veterinarian.
-          </p>
-        )}
         </div>
       </div>
     </footer>
