@@ -136,6 +136,15 @@ const FEATURED: ReferenceCard[] = [
     href: '/guides/reading-pet-food-labels',
     meta: 'Cornerstone guide · 14-min read',
   },
+  {
+    kind: 'guide',
+    eyebrow: 'LIFE_STAGE',
+    title: 'Pet Food by Life Stage',
+    description:
+      'Seven deep-dives against AAFCO 2025 Chapter 6 nutrient profiles — puppy, kitten, adult dog, adult cat, senior dog, senior cat, and large-breed puppy. The senior gap, the large-breed calcium ceiling, and what each label statement commits the manufacturer to.',
+    href: '/life-stage',
+    meta: 'Reference hub · 7 pages',
+  },
 ]
 
 const TRUST_CLAIMS: Array<{ glyph: string; text: string }> = [
@@ -279,7 +288,7 @@ export default function HomePage() {
       <section className="bg-brand-white border-t border-brand-border">
         <div className="max-w-container mx-auto px-6 md:px-10 py-5 flex items-center justify-between flex-wrap gap-3">
           <p className="font-mono text-2xs uppercase tracking-wider text-brand-text-light">
-            FEATURED REFERENCES · 04
+            FEATURED REFERENCES · 05
           </p>
           <p className="font-mono text-2xs uppercase tracking-wider text-brand-text-light">
             BRANDS · INGREDIENTS · REGULATION · LABELS

@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { LifeStages } from '../data/life-stages'
 
 /**
- * Skeleton sitemap — only the homepage exists today.
+ * Sitemap — homepage, cornerstone references, and life-stage catalog.
  * Add new entries here (or via scripts/regenerate-sitemaps.mjs) as content lands.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,5 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/brands/orijen-vs-acana-comparison', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/brands/hills-vs-royal-canin', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://petfood.com/brands/blue-buffalo-evaluation', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    // Life-stage hub + 7 deep-dive pages (puppy, kitten, adult dog, adult cat,
+    // senior dog, senior cat, large-breed puppy)
+    { url: 'https://petfood.com/life-stage', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    ...LifeStages.map((s) => ({
+      url: `https://petfood.com/life-stage/${s.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.80,
+    })),
   ]
 }
