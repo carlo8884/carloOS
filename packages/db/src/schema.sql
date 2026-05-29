@@ -481,3 +481,43 @@ alter table public.site_configs_db enable row level security;
 create policy "Anyone can read site configs"
   on public.site_configs_db for select
   using (true);
+
+-- ─────────────────────────────────────────────────────────────
+-- PRODUCTS_V2 — PetSupplies.com comparison-engine catalog
+-- Architect S1 / Directive 6 — structured product data for the
+-- NerdWallet-style comparison engine. Independent of the legacy
+-- products table; keyed by free-text category instead of site_id
+-- so a single SKU can serve multiple consumer brands.
+-- ─────────────────────────────────────────────────────────────
+
+create table if not exists public.products_v2 (
+  id uuid primary key default uuid_generate_v4(),
+  category text not null,
+  subcategory text,
+  name text not null,
+  brand text,
+  vendor text not null,        -- key in packages/config/affiliate.ts AFFILIATE_PROGRAMS
+  vendor_sku text,
+  price_cents integer,
+  price_range text,
+  expert_score numeric(3,1),   -- 0-10 editorial score, independent of affiliate program
+  pros text[],
+  cons text[],
+  specs jsonb default '{}',
+  best_for text[],             -- ["small dogs", "puppies", "senior", etc.]
+  reviewed_at timestamptz,
+  active boolean default true,
+  created_at timestamptz default now()
+);
+
+alter table public.products_v2 enable row level security;
+
+create policy "Anyone can read active products_v2"
+  on public.products_v2 for select
+  using (active = true);
+
+create index if not exists products_v2_category_idx on public.products_v2(category);
+create index if not exists products_v2_category_score_idx
+  on public.products_v2(category, expert_score desc);
+create index if not exists products_v2_vendor_idx on public.products_v2(vendor);
+create index if not exists products_v2_active_idx on public.products_v2(active);

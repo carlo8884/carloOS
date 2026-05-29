@@ -19,6 +19,7 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  | 'petsupplies'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -354,6 +355,34 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  // ─── PetSupplies.com — NerdWallet-style comparison engine ──────────────
+  // Architect S1 / Directive 6 — independent rankings, slate-blue commerce.
+  'petsupplies': {
+    primary: '#475569',         // slate-blue commerce
+    primaryLight: '#64748B',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#334155',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#16A34A',
+    warning: '#D97706',
+    danger: '#DC2626',
+    fontDisplay: 'Inter',          // clean modern sans throughout (no decorative serif)
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetSupplies.com',
+    siteTagline: 'Independent Pet Product Comparisons',
+    siteUrl: 'https://petsupplies.com',
+    logoText: 'PetSupplies.com',
+    twPrimary: 'slate',
   },
 
   // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
@@ -813,6 +842,69 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'petsupplies': {
+    id: 'petsupplies',
+    theme: themes['petsupplies'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Dogs', href: '/category/dog-food-dry' },
+      { label: 'Cats', href: '/category/cat-food' },
+      { label: 'Fish', href: '/category/fish-tanks' },
+      { label: 'Reptiles', href: '/category/reptile-enclosures' },
+      { label: 'Compare', href: '/compare', highlight: true },
+    ],
+    footerLinks: [
+      {
+        heading: 'Dogs',
+        links: [
+          { label: 'Best Dry Dog Food', href: '/category/dog-food-dry' },
+          { label: 'Best Dog Beds', href: '/category/dog-beds' },
+          { label: 'Best Dog Crates', href: '/category/dog-crates' },
+          { label: 'Best Dog Harnesses', href: '/category/dog-harnesses' },
+          { label: 'Joint Supplements', href: '/category/dog-joint-supplements' },
+        ],
+      },
+      {
+        heading: 'Cats',
+        links: [
+          { label: 'Best Cat Food', href: '/category/cat-food' },
+          { label: 'Best Litter', href: '/category/cat-litter' },
+          { label: 'Cat Scratchers', href: '/category/cat-scratchers' },
+          { label: 'Cat Toys', href: '/category/cat-toys' },
+        ],
+      },
+      {
+        heading: 'Aquarium & Reptile',
+        links: [
+          { label: 'Aquarium Filters', href: '/category/fish-filters' },
+          { label: 'Aquarium Heaters', href: '/category/fish-heaters' },
+          { label: 'Reptile UVB Lighting', href: '/category/reptile-uvb-lighting' },
+          { label: 'Reptile Heating', href: '/category/reptile-heating' },
+        ],
+      },
+      {
+        heading: 'About',
+        links: [
+          { label: 'Editorial Standards', href: '/editorial-standards' },
+          { label: 'How We Review', href: '/editorial-standards' },
+          { label: 'Affiliate Disclosure', href: '/legal/affiliate-disclosure' },
+          { label: 'Privacy Policy', href: '/legal/privacy-policy' },
+          { label: 'Terms of Use', href: '/legal/terms' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://petsupplies.com/og-default.jpg',
   },
 
   'petfoods-com': {

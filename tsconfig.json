@@ -19,6 +19,7 @@
     "paths": {
       "@carloOS/ui": ["./packages/ui/src/index.ts"],
       "@carloOS/config": ["./packages/config/index.ts"],
+      "@carloOS/config/affiliate": ["./packages/config/affiliate.ts"],
       "@carloOS/db": ["./packages/db/src/index.ts"]
     }
   },
