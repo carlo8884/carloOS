@@ -19,6 +19,7 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  | 'dogpicture'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -354,6 +355,35 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  // ─── DogPicture.com — AI pet portrait commerce (Architect S8 / V2 §3.6) ──
+  // Vibrant, playful, consumer-product feel — high-conversion checkout site.
+  // Coral/orange primary on a cream background with a rounded modern sans.
+  'dogpicture': {
+    primary: '#F97316',
+    primaryLight: '#FB923C',
+    primaryPale: '#FFF4EB',
+    primaryDark: '#C2410C',
+    dark: '#1F1408',
+    surface: '#FFF8F0',
+    white: '#FFFFFF',
+    textDark: '#1A0F08',
+    textMid: '#5C3E28',
+    textLight: '#9A7860',
+    border: '#F3E4D2',
+    success: '#16A34A',
+    warning: '#F59E0B',
+    danger: '#DC2626',
+    fontDisplay: 'Fraunces',
+    fontBody: 'Nunito',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 600, 700, 800],
+    siteName: 'DogPicture.com',
+    siteTagline: 'AI dog portraits — keepsakes for the dog you love',
+    siteUrl: 'https://dogpicture.com',
+    logoText: 'DogPicture',
+    twPrimary: 'orange',
   },
 
   // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
@@ -813,6 +843,56 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'dogpicture': {
+    id: 'dogpicture',
+    theme: themes['dogpicture'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      // Cross-portfolio promo only — Lemonade pet insurance hub lives on dog.com.
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: true,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Create', href: '/create', highlight: true },
+      { label: 'Styles', href: '/#styles' },
+      { label: 'How it works', href: '/#how-it-works' },
+      { label: 'Track Order', href: '/order' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Create',
+        links: [
+          { label: 'Start a Portrait', href: '/create' },
+          { label: 'Browse Styles', href: '/#styles' },
+          { label: 'Gift Cards', href: '/create?gift=true' },
+        ],
+      },
+      {
+        heading: 'Help',
+        links: [
+          { label: 'How It Works', href: '/#how-it-works' },
+          { label: 'Track an Order', href: '/order' },
+          { label: 'Refund Policy', href: '/legal/refund-policy' },
+          { label: 'Contact', href: 'mailto:hello@dogpicture.com' },
+        ],
+      },
+      {
+        heading: 'About',
+        links: [
+          { label: 'Why We Do This', href: '/about' },
+          { label: 'Terms of Use', href: '/legal/terms' },
+          { label: 'Privacy', href: '/legal/privacy-policy' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://dogpicture.com/og-default.jpg',
   },
 
   'petfoods-com': {
