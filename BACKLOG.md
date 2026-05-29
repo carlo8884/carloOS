@@ -125,26 +125,103 @@ kit, acquirer pitch framework, per-site Stitch + photo briefs all live
 in `ops/handoffs/`. P3 below is execution against those briefs once
 Dog.com has Week-1 metrics.
 
+### Monetization architect (CANONICAL — 2026-05-29)
+
+**[`MONETIZATION-ARCHITECT.md`](./MONETIZATION-ARCHITECT.md)** is the
+system of record for monetization. Supersedes earlier playbooks on
+"what to build next" questions and filters all plays through Carlo's
+no-calls / automation / leverage / repeatability preferences.
+
+The architect doc defines:
+- 6 shared infrastructure primitives (P1-P6) built once, reused everywhere
+- 25 monetization systems (S1-S25) in the user's 13-field spec format
+- A deployment matrix mapping every domain (full 64-domain portfolio)
+  to its primary + supporting systems
+- A 12-week deployment sequence prioritized for a no-outbound-sales
+  operator
+- A continuously-updated affiliate program watch list (~100 programs)
+- A research queue (S26-S34+) for systems still being evaluated
+
+Companion handoff to the COO orchestrator (reply to PR #122) lives at
+[`ops/handoffs/2026-05-29-architect-to-coo-bot.md`](./ops/handoffs/2026-05-29-architect-to-coo-bot.md)
+— 6 directives + 4 new-bot specs.
+
+### Monetization playbooks V1 + V2 (CONTEXT — 2026-05-28)
+
+Earlier strategic analysis, kept for context:
+- [`MONETIZATION-PLAYBOOK.md`](./MONETIZATION-PLAYBOOK.md) — V1, 10
+  domains, 7-mode frame, top-12 plays, three $1B paths
+- [`MONETIZATION-PLAYBOOK-V2.md`](./MONETIZATION-PLAYBOOK-V2.md) — V2,
+  full 64-domain portfolio, "Pet Health Trinity" $1B path
+- [`QUICK-WINS.md`](./QUICK-WINS.md) — 6 fast-revenue plays shipping
+  in 30-90 days
+- [`90-DAY-MONETIZATION-PLAN.md`](./90-DAY-MONETIZATION-PLAN.md) —
+  operational sequencing with 4 decision gates
+
+All four docs remain valid as strategic context but should be filtered
+through the Architect doc's no-calls preference before any work begins.
+
+### PetFood.com / Ferret.com / Horses.com positioning
+Strategy work. Requires confirmation Carlo owns the domains + a
+positioning brief per domain. Pull forward when Dog.com hits Week-1
+metrics. **Per playbook V2 §5.7-5.9 and Architect §3:** petfood.com
+primary play is a "find the right food" recommendation engine + DTC
+affiliate aggregation; horses.com primary is equine insurance affiliate
++ supplies comparison (marketplace classifieds demoted under no-calls
+filter); ferret.com defer or lease per Architect S10.
+
+### Vets.co disposition (RESOLVED — direction set by Architect)
+Per Architect §3 and §7: **vets.co = the highest-value B2B asset in the
+portfolio.** Pivoted under no-calls filter from "full B2B SaaS suite
+with sales motion" to **S30 (free self-serve scribe demo) + S7
+(directory engine) + S22 (CE affiliate)** — same destination, no
+outbound sales required.
+
 ### Monetization wiring (Stripe webhook live, Mailchimp segmentation)
 Stripe membership spec is written (`ops/handoffs/2026-05-29-stripe-
 membership-spec.md`). `/api/checkout` scaffold exists; `STRIPE_WEBHOOK_
 SECRET` not yet referenced. Mailchimp basic flow lands in P0; advanced
-segmentation post-launch.
+segmentation post-launch. **Per Architect S14:** premium membership
+scaffolding can be wired now, but do NOT sell until each site crosses
+5-10k email subs.
 
-### Sponsorship sales motion
-Pitch deck framework + sales kit in `ops/handoffs/2026-05-29-
-sponsorship-sales-kit.md`. Execute against the partner shortlist once
-Dog.com has Week-1 traffic to anchor pitches.
+### Pet insurance comparison hub (Architect S6)
+Lowest-cost monetization move in the portfolio. Phase 1: affiliate hub
+on dog.com + vets-co + askthevet.com with 9 carriers. Phase 2: quote
+APIs (Lemonade, Pumpkin, ManyPets) — 2-3× higher conversion than
+clickout. **MGA upgrade demoted under no-calls filter** (requires
+carrier conversations).
 
-### Acquirer pitch (10-domain portfolio)
+### Sponsorship sales motion (DEMOTED — no-calls)
+Pitch deck framework + sales kit was drafted in
+`ops/handoffs/2026-05-29-sponsorship-sales-kit.md`. **Per Architect §4
+and §7:** outbound sponsorship sales is removed from scope; replaced
+with **programmatic equivalents:**
+- Newsletter sponsorships → S12 (Paved.com / Beehiiv Ad Network /
+  Swapstack — self-serve marketplaces)
+- Sponsored content → S16 (Acceleration Partners / Sovrn Editorial /
+  Skimlinks Editorial)
+- Display sponsorships → S4 (Mediavine / Raptive / Ezoic)
+
+### Acquirer pitch (portfolio)
 Framework in `ops/handoffs/2026-05-29-acquirer-pitch-framework.md`.
-Premature until traffic + email list size + revenue are real numbers.
-Revisit at 90-day milestone.
+Premature until revenue + traffic + email list size are real numbers.
+Revisit at 90-day milestone. **Per playbook V2 §4 and Architect:** the
+"Pet Health Trinity" (AskTheVet.com B2C + Vets.co B2B + SeniorPetPharmacy
+DTC) is the strongest exit narrative.
 
-### Deal / partnership outreach
+### Deal / partnership outreach (DEMOTED — no-calls)
 Top 10 strategic-partner shortlist: Chewy, Trupanion, Embrace, Healthy
-Paws, Rover, AKC, Banfield, BarkBox, Wagmo, VIN. No outreach until
-Dog.com has Week-1 data.
+Paws, Rover, AKC, Banfield, BarkBox, Wagmo, VIN. **Per Architect §4
+and §7:** direct outreach to strategics removed from scope; replaced by
+affiliate program enrollment (self-serve) and S16 programmatic
+sponsored content. M&A conversations deferred until acquirer-pitch
+gate clears (90-day milestone).
+
+### Investor / $100M narrative
+Premature until revenue + traffic + email list size are real numbers.
+Revisit at 90-day post-launch milestone. Investor Bot deferred until
+combined portfolio MRR crosses $30-50k.
 
 ---
 
