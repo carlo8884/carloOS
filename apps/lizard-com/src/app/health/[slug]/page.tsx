@@ -30,6 +30,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   CalloutBox,
   EmailCapture,
@@ -293,6 +294,11 @@ export default async function ConditionPage({ params }: PageProps) {
               { label: 'Salmonella Prevention', href: '/health/salmonella-prevention' },
               { label: 'Lighting & UVB Guide', href: '/setup/uvb-lighting-guide' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="lizard-com"
+            contentType="health"
+            variant="sidebar"
           />
           <EmailCapture
             variant="sidebar"

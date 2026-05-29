@@ -26,6 +26,7 @@ import {
   buildMetadata,
   CalloutBox,
   combineSchemas,
+  CrossPortfolioCard,
   EmailCapture,
   FAQAccordion,
   RelatedLinks,
@@ -190,6 +191,12 @@ export default async function BreedFeedingPage({ params }: PageProps) {
                 href: `/breeds/${profile.slug}`,
               },
             ]}
+          />
+
+          <CrossPortfolioCard
+            currentSite="dog-com"
+            contentType="nutrition"
+            variant="sidebar"
           />
 
           <EmailCapture
