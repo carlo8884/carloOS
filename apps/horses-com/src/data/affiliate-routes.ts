@@ -55,7 +55,7 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   amazon: {
     // Network: Amazon Associates. Carlo-approved per policy §5.
     name: 'Amazon',
-    template: 'https://amazon.com/dp/{sku}?tag=PLACEHOLDER-20',
+    template: 'https://amazon.com/dp/{sku}?tag=PLACEHOLDER',
     requiresSku: true,
   },
   // ─── Round-1 wiring 2026-05-30 (architect §5 equine list + S17) ───
