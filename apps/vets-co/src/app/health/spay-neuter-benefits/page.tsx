@@ -45,7 +45,7 @@ export default function SpayNeuterPage() {
           <p>Current guidance for large breeds from many internal medicine and orthopedic specialists: consider waiting until 12–18 months for males (or considering alternatives such as vasectomy that preserve sex hormones while preventing reproduction); for females, the pyometra and mammary cancer risk reduction from early spay must be weighed against the orthopedic/cancer risk data. This is an evolving area — discuss with your veterinarian and consider a consultation with a board-certified internist or orthopedist for large breed dogs.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dachshund Breed Guide — IVDD Risk, Ramps Required | Dog.com', description: 'Dachshunds have a 25% lifetime risk of IVDD spinal disc disease. Ramps are not optional — they prevent the jumping that herniated discs.', path: '/breeds/dachshund', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dachshund Breed Guide', description: 'IVDD risk, ramp requirements, and weight management for Dachshunds.', url: 'https://dog.com/breeds/dachshund', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DachshundPage() {
@@ -21,13 +22,19 @@ export default function DachshundPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <BreedHealthCard name="Intervertebral Disc Disease (IVDD)" riskLevel="very-high"
           description="Dachshunds are the breed most commonly affected by IVDD — approximately 25% will experience at least one disc event in their lifetime. Their long spine and chondrodystrophic build causes premature disc mineralization. A disc can herniate suddenly — often triggered by jumping from furniture — compressing the spinal cord. Severity ranges from back pain (Grade 1) to complete hind limb paralysis (Grade 5). Speed matters: the neurological recovery window after paralysis is 24–48 hours. Every Dachshund owner should know the emergency signs and have the nearest 24-hour vet's number saved before they ever need it."
           signs={['Back pain — yelping when touched, hunched posture', 'Reluctance to jump or climb stairs', 'Wobbly or crossing hind legs', 'Hind leg weakness or stumbling', 'Inability to walk on hind legs — emergency', 'Loss of bladder or bowel control — emergency']}
           management="Ramps and steps to all elevated surfaces. Weight management to ideal BCS. No jumping. When IVDD occurs: immediate neurological assessment, MRI for surgical planning, surgery within 24-48 hours for Grade 3-5 cases for best recovery odds. Conservative management (strict crate rest + NSAIDs) for Grade 1-2 without neurological deficits. Rehabilitation post-surgery." />
 
         <h2>Ramps — Not Optional, Not Decorative</h2>
-        <p>The single most impactful IVDD prevention measure in a household Dachshund is eliminating jumping. A Dachshund jumping off a couch generates significant spinal impact — repeated over years, this contributes to disc degeneration. A single jump can herniate an already-compromised disc. Ramps to every piece of furniture the dog accesses — couch, bed, car seats — eliminate the jumping force. Ramps should be in place from puppyhood, before any disc events occur, not after.</p>
+        <DropCap>The single most impactful IVDD prevention measure in a household Dachshund is eliminating jumping. A Dachshund jumping off a couch generates significant spinal impact — repeated over years, this contributes to disc degeneration. A single jump can herniate an already-compromised disc. Ramps to every piece of furniture the dog accesses — couch, bed, car seats — eliminate the jumping force. Ramps should be in place from puppyhood, before any disc events occur, not after.</DropCap>
+
+        <CalloutBox variant="warning" title="Emergency window is hours, not days">
+          A Dachshund that loses the ability to walk on its hind legs or loses bladder control is a same-day surgical emergency. The neurological recovery window after paralysis is approximately 24–48 hours. Have the address and number of the nearest 24-hour vet saved in your phone before an event occurs — not after.
+        </CalloutBox>
         <p>Ramp gradient: gentle enough that the dog willingly uses it. A steep ramp the dog refuses to use provides no protection. Maximum gradient approximately 20 degrees. Non-slip surface is essential. Carpeted or rubber-treaded ramps are safer than smooth surfaces. Get ramps before the dog comes home — changing the environment after the dog has established jumping habits is harder than preventing the habit from forming.</p>
 
         <h2>Weight — The Multiplier</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Dehydration in Reptiles — Sunken Eyes, Skin Tenting | Lizard.com', description: 'Dehydration is common in captive reptiles. Sunken eyes, wrinkled skin, retained shed, and elevated uric acid. Warm water soaking.', path: '/health/dehydration-reptiles', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Dehydration in Reptiles', description: 'Signs, soaking protocol, and species-appropriate hydration for dehydrated reptiles.', url: 'https://lizard.com/health/dehydration-reptiles', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function ReptileDehydrationPage() {
@@ -21,8 +22,10 @@ export default function ReptileDehydrationPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Assessing Dehydration in Reptiles</h2>
-        <p>The skin tent test (identical to the mammalian version): gently pinch a fold of loose skin on the neck or back and release. Hydrated skin snaps back immediately. Dehydrated skin remains tented for a moment or returns slowly. This test is reliable in lizards and chelonians; snakes have tighter skin that makes tenting less visible. In snakes, assess hydration by the appearance of the eye scales (sunken versus normal convex profile) and the consistency of urates (white solid component of waste) — dry, crumbly, or absent urates suggest dehydration, while well-hydrated urates are soft and white.</p>
+        <DropCap>The skin tent test (identical to the mammalian version): gently pinch a fold of loose skin on the neck or back and release. Hydrated skin snaps back immediately. Dehydrated skin remains tented for a moment or returns slowly. This test is reliable in lizards and chelonians; snakes have tighter skin that makes tenting less visible. In snakes, assess hydration by the appearance of the eye scales (sunken versus normal convex profile) and the consistency of urates (white solid component of waste) — dry, crumbly, or absent urates suggest dehydration, while well-hydrated urates are soft and white.</DropCap>
         <p>The combination of sunken eyes and retained shed is strongly suggestive of chronic dehydration — both are downstream effects of inadequate body water. A reptile with retained shed that is not responding to humidity corrections should be assessed for dehydration as an underlying cause.</p>
 
         <h2>Soaking Protocol</h2>
@@ -33,6 +36,10 @@ export default function ReptileDehydrationPage() {
         <p><strong>Lizards (bearded dragons, leopard geckos):</strong> Standing water dish is the primary method for most species. Many desert species will not drink from still water readily — a slow drip from a dropper onto the snout or a gentle stream of water often encourages drinking. Wetting the lips with a dropper works well for very reluctant drinkers. Regular soaking (weekly for healthy animals, daily for dehydrated ones).</p>
         <p><strong>Chameleons and some arboreal species:</strong> These animals drink from water droplets on leaves — they do not recognize standing water dishes. Misting the enclosure 2-3 times daily and providing a drip system are necessary for adequate hydration. Dehydrated chameleons have deeply sunken eyes — a reliable early indicator that the hydration system is inadequate.</p>
         <p><strong>Snakes:</strong> A water dish large enough to soak in is appropriate for most snake species. Ball pythons regularly soak in their water dish — ensure it is large enough for the whole body. Change water daily or whenever soiled. Snakes that soak excessively may be thermoregulating (enclosure too hot), dealing with a parasite issue (mites), or dehydrated — context determines the interpretation.</p>
+
+        <CalloutBox variant="warning" title="Never soak in hot water">
+          Use 85–90°F water, measured with a thermometer — not water that feels warm to your hand. Reptiles cool quickly in tepid water and burn rapidly in hot water; both stress an already-compromised animal. Never leave a small or weak reptile unsupervised during a soak, even in shallow water — drowning is a real risk in debilitated animals.
+        </CalloutBox>
 
         <h2>Veterinary Care for Severe Dehydration</h2>
         <p>Severe dehydration (estimated greater than 5-8% body weight deficit) — visible by extreme skin tenting, deeply sunken eyes, extreme lethargy, and absent urination for extended periods — requires veterinary rehydration. A reptile veterinarian can administer subcutaneous or intracoelemic (body cavity) fluids using appropriate reptile fluid solutions at calculated rates. Oral fluids via tube (gavage) are also used for moderately dehydrated animals that can safely receive them. IV fluid therapy is possible in some species but technically challenging. The underlying cause of the dehydration must also be addressed — whether husbandry, illness, or both.</p>

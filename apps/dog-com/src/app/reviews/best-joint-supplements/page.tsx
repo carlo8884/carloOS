@@ -78,7 +78,7 @@ export default function BestJointSupplementsPage() {
               score={9.2}
               winner
               description={<div>
-                <p>Dasuquin is the most evidence-supported joint supplement for dogs. The key differentiator from basic glucosamine products is the addition of Avocado/Soybean Unsaponifiables (ASU) — a plant extract with documented cartilage protection and anti-inflammatory effects in human and canine clinical trials. The NASC quality seal confirms manufacturing standards. Made by Nutramax, which has the most robust research investment of any pet supplement company.</p>
+                <p>Dasuquin is the most evidence-supported joint supplement for dogs. The key differentiator from basic glucosamine products is the addition of Avocado/Soybean Unsaponifiables (ASU) — a plant extract with documented cartilage protection and anti-inflammatory effects in human and canine clinical trials. The <a href="https://nasc.cc" rel="noopener" target="_blank" className="text-brand-primary hover:underline">NASC</a> quality seal confirms manufacturing standards. Made by Nutramax, which has the most robust research investment of any pet supplement company.</p>
                 <p>The MSM (methylsulfonylmethane) component adds additional anti-inflammatory support. Clinical effect: a 2014 study in JAVMA showed significant improvement in force plate analysis (objective measurement of weight-bearing) in osteoarthritic dogs given Dasuquin vs placebo. Allow 4–6 weeks for measurable effect — onset is gradual.</p>
               </div>}
               specs={[

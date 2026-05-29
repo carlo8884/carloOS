@@ -136,15 +136,15 @@ export default function SeniorDogCarePage() {
 
         <h2 id="nutrition">Senior Nutrition</h2>
         <ul>
-          <li><strong>Senior formula food</strong> — lower calorie density, typically higher protein to preserve muscle mass, adjusted phosphorus to support kidney health. Look for AAFCO feeding trial labeling.</li>
+          <li><strong>Senior formula food</strong> — lower calorie density, typically higher protein to preserve muscle mass, adjusted phosphorus to support kidney health. Look for <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trial labeling.</li>
           <li><strong>Fish oil (EPA/DHA)</strong> — documented anti-inflammatory benefit for joints and potential cognitive benefit. Discuss appropriate dosing with your vet.</li>
-          <li><strong>Joint supplements</strong> — glucosamine and chondroitin sulfate; look for NASC quality seal on the label</li>
+          <li><strong>Joint supplements</strong> — glucosamine and chondroitin sulfate; look for <a href="https://nasc.cc" rel="noopener" target="_blank" className="text-brand-primary hover:underline">NASC</a> quality seal on the label</li>
           <li><strong>Prescription kidney diet</strong> if CKD is diagnosed — reduced phosphorus formulas (Hill&apos;s k/d, Royal Canin Renal Support) slow disease progression</li>
           <li><strong>Cognitive function diets</strong> — Hill&apos;s b/d or Purina Pro Plan Bright Mind if CCD is present or concerning</li>
         </ul>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQ_ITEMS} includeSchema={false} allowMultiple />
+        <FAQAccordion items={FAQ_ITEMS} allowMultiple />
       </div>
     </ArticleLayout>
   )

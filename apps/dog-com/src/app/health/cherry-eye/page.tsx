@@ -41,14 +41,14 @@ export default function CherryEyePage() {
           <p>Manual replacement is sometimes used as a short-term bridge to surgery — a veterinarian may show an owner how to temporarily reduce the prolapse to keep the gland moist until a surgical appointment. This is not a substitute for surgery.</p>
 
           <h2>Surgical Options</h2>
-          <p><strong>Pocket technique (gland replacement and anchoring):</strong> The preferred approach. The gland is repositioned and sutured into a pocket created in the nictitating membrane, securing it in place. The gland is preserved — maintaining its tear-producing function. Re-prolapse rate: approximately 5–20% depending on technique and breed. Bulldog-type breeds have higher re-prolapse rates due to the severity of the underlying anatomical weakness. Recommended to be performed by a veterinary ophthalmologist (DACVO) for best outcomes.</p>
+          <p><strong>Pocket technique (gland replacement and anchoring):</strong> The preferred approach. The gland is repositioned and sutured into a pocket created in the nictitating membrane, securing it in place. The gland is preserved — maintaining its tear-producing function. Re-prolapse rate: approximately 5–20% depending on technique and breed. Bulldog-type breeds have higher re-prolapse rates due to the severity of the underlying anatomical weakness. Recommended to be performed by a veterinary ophthalmologist (<a href="https://acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVO</a>) for best outcomes.</p>
           <p><strong>Gland excision (removal):</strong> Removal of the prolapsed gland entirely. Eliminates re-prolapse risk but removes 30–50% of tear production capacity. The long-term consequence: keratoconjunctivitis sicca (KCS/dry eye) — insufficient tear production causing chronic eye inflammation, corneal damage, and the need for lifelong cyclosporine or tacrolimus eye drops (immunosuppressive drops that stimulate remaining tear production). This approach is now generally considered outdated for cherry eye and should only be considered when gland replacement has repeatedly failed and the gland itself has become too damaged to function.</p>
 
           <h2>When to See an Ophthalmologist</h2>
           <p>Cherry eye surgery can be performed by general practice veterinarians with appropriate training, but referral to a board-certified veterinary ophthalmologist (DACVO) produces better outcomes — lower re-prolapse rates, better preservation of glandular function. For brachycephalic breeds (Bulldogs, French Bulldogs) where re-prolapse rates are higher and ocular complications are more common, ophthalmologist referral is particularly advisable. Pet insurance typically covers cherry eye surgery as it is a medical condition rather than cosmetic.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
