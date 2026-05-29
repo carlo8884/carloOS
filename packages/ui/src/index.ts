@@ -66,3 +66,11 @@ export type {
   AffiliateDisclosureProps,
   AffiliateDisclosureVariant,
 } from './components/AffiliateDisclosure'
+
+// Cross-portfolio sister-site recommendations (restoring export shipped in PR #72,
+// lost in a later merge — re-export only; CrossPortfolioCard.tsx itself untouched).
+export { CrossPortfolioCard } from './components/CrossPortfolioCard'
+export type {
+  CrossPortfolioCardProps,
+  CrossPortfolioVariant,
+} from './components/CrossPortfolioCard'

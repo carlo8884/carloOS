@@ -30,6 +30,7 @@ import {
   SchemaScript,
   ArticleByline,
   CalloutBox,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
 } from '@carloOS/ui'
@@ -194,6 +195,12 @@ export default async function BreedHealthPage({ params }: PageProps) {
                 { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' },
                 { label: 'Find a Vet', href: '/find-a-vet' },
               ]}
+            />
+
+            <CrossPortfolioCard
+              currentSite="dog-com"
+              contentType="health"
+              variant="sidebar"
             />
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
