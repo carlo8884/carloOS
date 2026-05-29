@@ -392,10 +392,10 @@ export default async function BreedInsurancePage({
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:insurance-comparison"
+          source="dog-com:insurance-comparison"
           title="Get the full 9-carrier comparison spreadsheet"
           subtitle={`The complete spec sheet for every carrier we considered for ${b.breedName}s. Free.`}
-          buttonText="Email the spreadsheet"
+          ctaText="Email the spreadsheet"
         />
       </div>
     </>

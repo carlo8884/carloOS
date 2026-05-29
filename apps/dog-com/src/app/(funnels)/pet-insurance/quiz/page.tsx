@@ -8,7 +8,7 @@ import {
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
-import { CARRIERS, type CarrierProfile } from '../../../data/insurance-carriers'
+import { CARRIERS, type CarrierProfile } from '../../../../data/insurance-carriers'
 
 type Answers = {
   species: 'dog' | 'cat' | ''
@@ -288,10 +288,10 @@ export default function InsuranceQuizPage() {
             <EmailCapture
               variant="section"
               siteId="dog-com"
-              tag="dog-com:insurance-comparison"
+              source="dog-com:insurance-comparison"
               title="Want the full carrier comparison?"
               subtitle="Side-by-side spreadsheet of all 9 carriers. We'll email it instantly."
-              buttonText="Send the spreadsheet"
+              ctaText="Send the spreadsheet"
             />
           </div>
         )}

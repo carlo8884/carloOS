@@ -9,7 +9,7 @@ import {
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
-import { CARRIERS } from '../../data/insurance-carriers'
+import { CARRIERS } from '../../../data/insurance-carriers'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -177,10 +177,10 @@ export default function PetInsuranceHubPage() {
           <EmailCapture
             variant="section"
             siteId="dog-com"
-            tag="dog-com:insurance-comparison"
+            source="dog-com:insurance-comparison"
             title="Get the Pet Insurance Comparison Spreadsheet"
             subtitle="All 9 carriers · all coverage details · downloadable PDF. We'll email it instantly."
-            buttonText="Email me the spreadsheet"
+            ctaText="Email me the spreadsheet"
           />
         </div>
 
@@ -360,10 +360,10 @@ export default function PetInsuranceHubPage() {
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:insurance-comparison"
+          source="dog-com:insurance-comparison"
           title="One more time: get the comparison spreadsheet"
           subtitle="All 9 carriers, side-by-side, downloadable. Free."
-          buttonText="Send the spreadsheet"
+          ctaText="Send the spreadsheet"
         />
       </div>
     </>

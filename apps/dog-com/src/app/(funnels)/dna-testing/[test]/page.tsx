@@ -17,7 +17,7 @@ import {
   dnaTestSlugs,
   getDnaTestBySlug,
   type DnaTestProfile,
-} from '../../../data/dna-tests'
+} from '../../../../data/dna-tests'
 
 export async function generateStaticParams() {
   return dnaTestSlugs().map((test) => ({ test }))
@@ -318,10 +318,10 @@ export default async function DnaTestPage({
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:dna-test-comparison"
+          source="dog-com:dna-test-comparison"
           title="Get the full DNA test buyer's guide"
           subtitle="All 3 tests compared. Which test for which breed. Free PDF."
-          buttonText="Send the guide"
+          ctaText="Send the guide"
         />
       </div>
     </>

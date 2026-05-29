@@ -9,7 +9,7 @@ import {
   AffiliateDisclosure,
   EmailCapture
 } from '@carloOS/ui'
-import { DNA_TESTS, BREED_DNA_RECOMMENDATIONS } from '../../data/dna-tests'
+import { DNA_TESTS, BREED_DNA_RECOMMENDATIONS } from '../../../data/dna-tests'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -154,10 +154,10 @@ export default function DnaTestingHub() {
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:dna-test-comparison"
+          source="dog-com:dna-test-comparison"
           title="Get our pet DNA test buyer's guide"
           subtitle="Side-by-side spreadsheet · which tests are best for which breeds · downloadable PDF."
-          buttonText="Send the buyer's guide"
+          ctaText="Send the buyer's guide"
         />
 
         {/* Breed-specific landing */}
