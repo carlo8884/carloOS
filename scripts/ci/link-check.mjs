@@ -53,8 +53,15 @@ function routesFor(site) {
   const dynamicFolders = new Set()
   const dynamicPatterns = [] // RegExp[] for routes with [slug] anywhere in the path
   for (const f of pageFiles) {
-    const rel = f.slice(appDir.length).replace(/\/page\.[tj]sx?$/, '')
+    let rel = f.slice(appDir.length).replace(/\/page\.[tj]sx?$/, '')
     if (rel === '') continue
+    // Strip Next.js route groups: (funnels)/foo → /foo, (auth)/login → /login.
+    // Route groups are ignored when computing the URL path.
+    rel = rel.replace(/\/\([^)]+\)(?=\/|$)/g, '')
+    if (rel === '') {
+      staticRoutes.add('/')
+      continue
+    }
     if (/\[.+\]/.test(rel)) {
       // Trailing [slug] → register the parent folder (backwards-compat)
       if (rel.endsWith('/[slug]')) {
