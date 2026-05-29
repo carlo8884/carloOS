@@ -46,6 +46,11 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 export { SearchBar } from './components/SearchBar'
 export { buildHowToSchema, buildMedicalWebPageSchema, combineSchemas } from './components/SEOHead'
 
+// Affiliate / monetization (Architect S1: Universal Comparison Engine)
+export { AffiliateLink, resolveAffiliateUrl, getVendorLabel } from './components/AffiliateLink'
+export type { AffiliateVendor } from './components/AffiliateLink'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+
 // Editorial component library
 export { PullQuote } from './components/PullQuote'
 export type { PullQuoteProps } from './components/PullQuote'

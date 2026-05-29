@@ -878,3 +878,19 @@ export function themeToCSS(theme: SiteTheme): string {
     --font-body: '${theme.fontBody}', system-ui, sans-serif;
   `.trim()
 }
+
+// ─────────────────────────────────────────────
+// Re-export affiliate helpers so consumers can
+// `import { AFFILIATE_DISCLOSURE } from '@carloOS/config'`
+// ─────────────────────────────────────────────
+export {
+  AFFILIATE_PROGRAMS,
+  AFFILIATE_DISCLOSURE,
+  AFFILIATE_DISCLOSURE_SHORT,
+  SITE_PROGRAMS,
+  amazonLink,
+  amazonSearchLink,
+  chewyLink,
+} from './affiliate'
+export type { AffiliateProgram } from './affiliate'
+
