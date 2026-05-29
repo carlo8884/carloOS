@@ -1,34 +1,49 @@
-# Merge Plan — 7 Monetization Branches
+# Merge Plan — 12 Monetization Branches
 
 The Monetization Architect run (2026-05-28 → 2026-05-29) produced
-**7 branches** ready to land on `main`. This doc tells you the safe
-merge order, the predictable conflicts, and the post-merge env vars
-you need to set for revenue to actually flow.
+**12 branches** across two rounds, ready to land on `main`. This doc
+tells you the safe merge order, the predictable conflicts, and the
+post-merge env vars you need to set for revenue to actually flow.
 
-_Last updated: 2026-05-29. Source: see [`MONETIZATION-ARCHITECT.md`](./MONETIZATION-ARCHITECT.md)._
+_Last updated: 2026-05-29 (after round 2). Source: see [`MONETIZATION-ARCHITECT.md`](./MONETIZATION-ARCHITECT.md)._
 
 ---
 
 ## TL;DR
 
-Merge in this order, in this many minutes:
+Merge in this order. **The architect canonical branch (#1) MUST land
+first** — it carries the primitives that every other branch references.
 
-| Order | Branch | Estimated time | Conflict? |
+### Round 1 (foundation + 4 new apps)
+
+| Order | Branch | Time | Conflict? |
 |---|---|---|---|
 | **1** | `claude/carlo-os-monetization-ZQgKF` (architect canonical) | 5 min | No |
-| **2** | `claude/affiliate-link-portfolio-rollout` | 5 min | No |
-| **3** | `claude/email-sequences-7-magnets` | 2 min | No |
-| **4** | `claude/askthevet-mvp` | 5 min | Yes — `packages/config/index.ts` SiteId |
-| **5** | `claude/seniorpets-mvp-content` | 5 min | Yes — same file |
-| **6** | `claude/dogpicture-mvp` | 5 min | Yes — same file |
-| **7** | `claude/petsupplies-mvp` | 5 min | Yes — same file |
+| **2** | `claude/affiliate-link-portfolio-rollout` (A1) | 5 min | No |
+| **3** | `claude/email-sequences-7-magnets` (A4) | 2 min | No |
+| **4** | `claude/askthevet-mvp` (A2) | 5 min | Yes — `packages/config/index.ts` SiteId |
+| **5** | `claude/seniorpets-mvp-content` (A3) | 5 min | Yes — same file |
+| **6** | `claude/dogpicture-mvp` (A5) | 5 min | Yes — same file |
+| **7** | `claude/petsupplies-mvp` (A6) | 5 min | Yes — same file |
 
-Total: ~30 minutes of focused merge work. Every conflict has a
-deterministic resolution documented below.
+### Round 2 (content depth + off-vertical)
+
+| Order | Branch | Time | Conflict? |
+|---|---|---|---|
+| **8** | `claude/dna-breed-pages-expansion` (B2) | 3 min | Likely no — only adds to `BREED_DNA_RECOMMENDATIONS` |
+| **9** | `claude/insurance-breed-pages` (B3) | 3 min | Likely no — adds new file + new route |
+| **10** | `claude/fish-species-expansion` (B4) | 5 min | Possibly — touches `packages/ui` (re-implements primitives in worktree) |
+| **11** | `claude/vets-co-directory-foundation` (B5) | 3 min | Likely no — adds new files only |
+| **12** | `claude/hardmoneyloans-mvp` (B1) | 5 min | Yes — `packages/config/index.ts` SiteId + `affiliate-vendors` extends |
+
+Total: **~50 minutes** of focused merge work for all 12 branches.
+Every conflict has a deterministic resolution documented below.
 
 ---
 
 ## What each branch contains
+
+### Round 1: Foundation + first 4 new apps
 
 ### 1. `claude/carlo-os-monetization-ZQgKF` (the architect canonical)
 
@@ -143,6 +158,92 @@ products comparison engine.
 **Conflicts at merge:** adds `'petsupplies'` to SiteId union and adds
 its theme + siteConfig to `packages/config/index.ts`. Also appends a
 `products_v2` schema. See resolution below.
+
+---
+
+### Round 2: content depth + off-vertical
+
+### 8. `claude/dna-breed-pages-expansion` (B2)
+
+Expands DNA test breed pages on dog.com from 6 → 51 breeds (45 new
+breeds added). Each page targets "[breed] DNA test" search queries.
+
+- Modifies: `apps/dog-com/src/data/dna-tests.ts` only — appends 45
+  entries to `BREED_DNA_RECOMMENDATIONS` map
+- Sources: OMIA + Embark + Wisdom Panel published breed-condition
+  lists — no fabrication
+- Branched off `claude/carlo-os-monetization-ZQgKF` (#1) so the
+  original 6 breeds exist to extend. Fast-forwards cleanly when #1
+  lands first.
+
+**Conflict probability:** Low. Only touches the data file added in #1.
+
+### 9. `claude/insurance-breed-pages` (B3)
+
+30 breed × pet insurance landing pages on dog.com with breed-specific
+carrier matching logic.
+
+- New file: `apps/dog-com/src/data/insurance-by-breed.ts` (30 breed
+  profiles with recommended carrier + reasoning)
+- New route: `apps/dog-com/src/app/pet-insurance/breeds/[breed]/page.tsx`
+- Module-load integrity check validates every recommended carrier slug
+  exists in the CARRIERS array (build-time safety)
+- Sample matches: Golden → Trupanion (cancer LTV), Lab → Pumpkin
+  (orthopedic waiting), Yorkie → Fetch (periodontal coverage)
+
+**Conflict probability:** Low. New file + new route.
+
+### 10. `claude/fish-species-expansion` (B4)
+
+40 species programmatic SEO pages on fish.com (25 freshwater + 10
+saltwater + 5 invertebrates).
+
+- New file: `apps/fish-com/src/data/species-v2.ts` (40 species profiles
+  with care level, tank size, pH, temp, salinity, common diseases,
+  product recommendations)
+- Modified: `apps/fish-com/src/app/species/[slug]/page.tsx`,
+  `species/page.tsx`, `sitemap.ts`
+- ⚠️ Also touches `packages/ui` (re-implements primitives in worktree
+  because main doesn't have them yet) and `packages/config/index.ts`
+
+**Conflict probability:** Medium. Touches shared packages — but its
+primitive re-implementations are functionally identical to #1's. Take
+#1's version (theirs) on conflict.
+
+### 11. `claude/vets-co-directory-foundation` (B5)
+
+20 placeholder reviewer slots + 20 city-specific "find a vet" landing
+pages on vets.co.
+
+- New files: `apps/vets-co/src/data/reviewers.ts`, `cities.ts`,
+  `app/reviewers/page.tsx`, `app/reviewers/[slug]/page.tsx`,
+  `app/find-a-vet/in/[city]/page.tsx`
+- ⚠️ All reviewer slots gated behind `NEXT_PUBLIC_SHOW_REVIEWERS` env
+  var (defaults FALSE) AND per-slot `is_visible` flag — no placeholder
+  DVM credentials render in production until Carlo flips the switch
+- Smart routing: `/find-a-vet/in/[city]` to avoid Next.js sibling
+  dynamic-route collision with existing `/find-a-vet/[state]`
+
+**Conflict probability:** Low. Mostly new files in new directories.
+
+### 12. `claude/hardmoneyloans-mvp` (B1)
+
+New `apps/hardmoneyloans` Next.js app — off-vertical lead generation
+site. Architect S11. $200-600 per lead economics.
+
+- New app: 51 state pages + 8 lender pages + 5 educational guides +
+  lead-capture API at `/api/lead`
+- 8 new vendors in affiliate registry: kiavi, rcncapital, limaone,
+  anchorloans, groundfloor, crosscountry, jetlending, civicfinancial
+  (new category 'hard-money')
+- New Supabase table: `hard_money_leads` (appended to schema.sql,
+  RLS service-role-only)
+- Sample lender profile: Kiavi — $75k-$3M, 9.25-12.50% rate, 90% LTV,
+  fix-and-flip / DSCR-rental / bridge, nationwide except ND/SD/VT
+
+**Conflicts at merge:** adds `'hardmoneyloans'` to SiteId union + adds
+theme + siteConfig + extends Vendor union + extends affiliate-vendors
+registry + appends schema. All same-pattern accept-both resolutions.
 
 ---
 
