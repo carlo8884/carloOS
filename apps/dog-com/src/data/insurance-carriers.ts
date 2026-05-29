@@ -12,6 +12,13 @@
  */
 
 
+/**
+ * Slug union — referenced from insurance-by-breed.ts for type-safe carrier
+ * recommendations. Treated as `string` at compile time; runtime safety is
+ * enforced by the module-load assertion at the bottom of this file.
+ */
+export type CarrierSlug = string
+
 export interface CarrierProfile {
   slug: string
   name: string
