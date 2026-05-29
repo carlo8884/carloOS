@@ -123,7 +123,7 @@ export default async function DnaTestPage({
         </p>
         <div className="mt-7">
           <a
-              href={`/go/${t.vendor}/home?s=${`dna-test-${t.slug}`}
+              href={`/go/${t.vendor}/home?s=dna-test-${t.slug}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Shop {t.brand} →
@@ -284,7 +284,7 @@ export default async function DnaTestPage({
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-6 mb-12">
           <h3 className="font-display text-xl font-bold mb-3">Ready to order?</h3>
           <a
-              href={`/go/${t.vendor}/home?s=${`dna-test-${t.slug}`}
+              href={`/go/${t.vendor}/home?s=dna-test-${t.slug}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Shop {t.brand} →

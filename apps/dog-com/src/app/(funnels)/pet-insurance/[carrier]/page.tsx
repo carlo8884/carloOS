@@ -131,7 +131,7 @@ export default async function CarrierPage({
         </p>
         <div className="mt-7 flex gap-4 flex-wrap items-center">
           <a
-              href={`/go/${c.vendor}/home?s=${`pet-insurance-carrier-${c.slug}`}
+              href={`/go/${c.vendor}/home?s=pet-insurance-carrier-${c.slug}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Get a {c.name} quote →
@@ -340,7 +340,7 @@ export default async function CarrierPage({
             return a price in under a minute.
           </p>
           <a
-              href={`/go/${c.vendor}/home?s=${`pet-insurance-carrier-${c.slug}`}
+              href={`/go/${c.vendor}/home?s=pet-insurance-carrier-${c.slug}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Get a {c.name} quote →
