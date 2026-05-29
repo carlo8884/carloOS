@@ -61,3 +61,8 @@ export { SourceCitation } from './components/SourceCitation'
 export type { SourceCitationProps } from './components/SourceCitation'
 export { ArticleByline } from './components/ArticleByline'
 export type { ArticleBylineProps } from './components/ArticleByline'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export type {
+  AffiliateDisclosureProps,
+  AffiliateDisclosureVariant,
+} from './components/AffiliateDisclosure'
