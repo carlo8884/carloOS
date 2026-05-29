@@ -26,12 +26,14 @@ API="https://api.vercel.com"
 AUTH="Authorization: Bearer ${VERCEL_TOKEN}"
 
 # Sites to create. Mirror the existing dog-com pattern.
-declare -A SITES=(
-  [horses-com]="apps/horses-com"
-  [petfood-com]="apps/petfood-com"
-  [petfoods-com]="apps/petfoods-com"
-  [ferret-com]="apps/ferret-com"
-  [ferrets-com]="apps/ferrets-com"
+# Plain indexed array so this works on macOS's default bash 3.2 (no associative arrays).
+# Each ROOT_DIR is derived as apps/<site>.
+SITES=(
+  "horses-com"
+  "petfood-com"
+  "petfoods-com"
+  "ferret-com"
+  "ferrets-com"
 )
 
 echo "=== Step 1: Verify token + list existing projects ==="
@@ -64,8 +66,8 @@ for e in envs:
 echo ""
 
 echo "=== Step 3: Create projects + copy env vars ==="
-for SITE_ID in "${!SITES[@]}"; do
-  ROOT_DIR="${SITES[$SITE_ID]}"
+for SITE_ID in "${SITES[@]}"; do
+  ROOT_DIR="apps/${SITE_ID}"
 
   if echo "$EXISTING" | grep -qx "$SITE_ID"; then
     echo "SKIP: $SITE_ID already exists"
