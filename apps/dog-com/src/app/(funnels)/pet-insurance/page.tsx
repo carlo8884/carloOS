@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Pet Insurance 2026 — Side-by-Side Comparison | Dog.com',
   description:
-    'Compare the 9 major pet insurance carriers on premium, deductible, reimbursement, exam-fee coverage, and waiting periods. Independent editorial rankings updated quarterly.',
+    'Compare 9 pet insurance carriers on premium, deductible, reimbursement, and waiting periods. Editorial rankings.',
   path: '/pet-insurance',
   type: 'article',
 })
