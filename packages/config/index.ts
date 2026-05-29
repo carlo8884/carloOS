@@ -878,3 +878,146 @@ export function themeToCSS(theme: SiteTheme): string {
     --font-body: '${theme.fontBody}', system-ui, sans-serif;
   `.trim()
 }
+
+// ─────────────────────────────────────────────
+// CROSS-PORTFOLIO RECOMMENDATIONS
+// ─────────────────────────────────────────────
+// Sister-site recommendations rendered by <CrossPortfolioCard>.
+// Maps (currentSiteId, contentType) → 0-3 curated sibling references.
+// Drives internal network authority, pages-per-session, and revenue intent
+// hand-off (e.g., dog.com health → vets-co specialist → pet insurance).
+
+export type ContentType =
+  | 'health'
+  | 'nutrition'
+  | 'breed'
+  | 'species'
+  | 'condition'
+  | 'medication'
+  | 'specialty'
+  | 'equipment'
+  | 'gear'
+  | 'brand'
+  | 'training'
+  | 'care'
+  | 'directory'
+  | 'review'
+  | 'guide'
+
+export interface CrossPortfolioRecommendation {
+  siteId: SiteId
+  siteName: string
+  headline: string
+  blurb: string
+  cta: string
+  href: string
+}
+
+// Static recommendation table. Each entry has (currentSite × contentType)
+// keyed on `${siteId}:${contentType}` → array of 2-3 sibling recs.
+// Editorial decisions: dog/cat health → vets-co; product/diet → petfood/petfoods;
+// equestrian discipline ↔ saddle brand; ferret care ↔ ferrets-com state info.
+const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
+  // ── dog-com ───────────────────────────────────────────
+  'dog-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Specialist Vet', blurb: 'Board-certified veterinary specialists by condition, with average cost ranges.', cta: 'Browse specialists', href: 'https://vets.co/specialists' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'AAFCO Life-Stage Guides', blurb: 'How to read pet food labels by life stage — puppy, adult, senior.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+  ],
+  'dog-com:nutrition': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Reviews', blurb: 'Independent reviews of Royal Canin, Hill\'s, Purina, Orijen and more — scored against WSAVA guidelines.', cta: 'See rankings', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Deep Dives', blurb: 'AAFCO-anchored guides on puppy, adult, senior, and large-breed nutrition.', cta: 'Read more', href: 'https://petfood.com/life-stage' },
+  ],
+  'dog-com:breed': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Breed Health Profiles', blurb: 'Hereditary screening recommendations and breed-specific conditions, sourced from veterinary references.', cta: 'See breed health', href: 'https://vets.co/breeds' },
+  ],
+  'dog-com:training': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Behavioral Specialists', blurb: 'When to consult a veterinary behaviorist for training-resistant issues.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-behavior' },
+  ],
+
+  // ── vets-co ───────────────────────────────────────────
+  'vets-co:medication': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Best Pet Insurance', blurb: 'Compare pet insurance plans that cover chronic prescriptions — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', href: 'https://dog.com/reviews/best-pet-insurance' },
+  ],
+  'vets-co:specialty': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist visits run $3,000–15,000/year. Find a plan that covers them.', cta: 'See comparison', href: 'https://dog.com/reviews/best-pet-insurance' },
+  ],
+  'vets-co:breed': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', href: 'https://dog.com/breeds' },
+  ],
+
+  // ── horses-com ────────────────────────────────────────
+  'horses-com:discipline': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Brand Reviews', blurb: 'Independent reviews of Stübben, Pessoa, Bates, County, and Custom Saddlery for English riders.', cta: 'See brand reviews', href: 'https://saddle.com/brands' },
+  ],
+  'horses-com:equipment': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Brands', blurb: 'Discipline-specific saddle brand recommendations and fit guides.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
+  ],
+  'horses-com:breed': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle-Fit Guidance', blurb: 'How conformation affects saddle fit — including breed-specific notes.', cta: 'Read more', href: 'https://saddle.com' },
+  ],
+
+  // ── saddle-com ────────────────────────────────────────
+  'saddle-com:brand': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Equipment Guides', blurb: 'Required and optional equipment for dressage, hunter-jumper, eventing, western, trail, and endurance.', cta: 'Browse disciplines', href: 'https://horses.com/disciplines' },
+  ],
+  'saddle-com:review': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Selection', blurb: 'Pick the right discipline for your goals — then come back for the right saddle.', cta: 'Explore disciplines', href: 'https://horses.com/disciplines' },
+  ],
+
+  // ── lizard-com ────────────────────────────────────────
+  'lizard-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'ARAV-certified reptile veterinarians + what to expect at the visit.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-internal-medicine' },
+  ],
+  'lizard-com:species': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Reptile Health Conditions', blurb: 'Cross-reference species-specific conditions with veterinary specialist guidance.', cta: 'Browse conditions', href: 'https://vets.co/specialists' },
+  ],
+
+  // ── fish-com ──────────────────────────────────────────
+  'fish-com:equipment': [],  // Same-site reviews handle this; no fish sister site.
+  'fish-com:species': [],
+
+  // ── petfood-com ───────────────────────────────────────
+  'petfood-com:nutrition': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Scorecards', blurb: 'Independent brand-by-brand WSAVA compliance reviews to pair with life-stage choice.', cta: 'See brand rankings', href: 'https://petfoods.com/brands' },
+  ],
+  'petfood-com:guide': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Independent Brand Reference', blurb: 'When you know what to feed, find out who makes it well.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
+  ],
+
+  // ── petfoods-com ──────────────────────────────────────
+  'petfoods-com:brand': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored advice on matching food to your pet\'s life stage and special needs.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+  ],
+  'petfoods-com:nutrition': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading the Label', blurb: 'What AAFCO statements, guaranteed analysis, and ingredient lists actually tell you.', cta: 'Learn more', href: 'https://petfood.com/guides' },
+  ],
+
+  // ── ferret-com ────────────────────────────────────────
+  'ferret-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians and what to expect at the visit.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Ferret legality varies by state. Check your state\'s rules before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+  ],
+  'ferret-com:care': [
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Adoption Directory', blurb: 'Find local shelters, rescues, and AEMV-certified exotic vets by state.', cta: 'Browse states', href: 'https://ferrets.com/states' },
+  ],
+
+  // ── ferrets-com ───────────────────────────────────────
+  'ferrets-com:directory': [
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', href: 'https://ferret.com/care' },
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', href: 'https://ferret.com/health' },
+  ],
+}
+
+/**
+ * Returns 0-3 curated sister-site recommendations for the given site + content type.
+ * Empty array if no recommendations are defined (component will render nothing).
+ */
+export function getCrossPortfolioRecommendations(
+  currentSite: SiteId,
+  contentType: ContentType,
+  limit = 3,
+): CrossPortfolioRecommendation[] {
+  const key = `${currentSite}:${contentType}`
+  const recs = RECOMMENDATIONS[key] ?? []
+  return recs.slice(0, limit)
+}
