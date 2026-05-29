@@ -113,6 +113,106 @@ function buildPerIngredientMetadata(ingredient: Ingredient): { title: string; de
       description:
         'Glucosamine: AAFCO posture, clinical-evidence picture, and why kibble inclusion levels typically fall below therapeutic dosing.',
     },
+    'corn-gluten-meal': {
+      title: 'Corn Gluten Meal — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Corn gluten meal: AAFCO definition, why "filler" is a marketing myth, amino-acid limitation in lysine, and brand examples.',
+    },
+    'soybean-meal': {
+      title: 'Soybean Meal — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Soybean meal: AAFCO definition, the dog allergy debate vs. veterinary dermatology evidence, and brand examples from the catalog.',
+    },
+    'potato-protein': {
+      title: 'Potato Protein — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Potato protein: AAFCO posture, grain-free formulation context, FDA CVM DCM investigation note, and brand examples.',
+    },
+    'pea-protein': {
+      title: 'Pea Protein — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Pea protein: AAFCO posture, FDA CVM open investigation into grain-free diets and DCM in dogs, and brand examples.',
+    },
+    'legume-blends': {
+      title: 'Legume Blends in Pet Food — Reference | PetFoods.com',
+      description:
+        'Peas, lentils, chickpeas: AAFCO framework, FDA CVM open DCM investigation, taurine question, and what the label tells you.',
+    },
+    'wheat-flour': {
+      title: 'Wheat Flour — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Wheat flour: AAFCO definition, allergen-frequency context from veterinary dermatology, and brand examples from the catalog.',
+    },
+    'rice-flour': {
+      title: 'Rice Flour — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Rice flour: AAFCO definition, background arsenic context, brown vs white rice flour, and brand examples from the catalog.',
+    },
+    'tapioca-starch': {
+      title: 'Tapioca Starch — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Tapioca starch: AAFCO posture as a refined grain-free starch, what it does (and does not) contribute, and brand examples.',
+    },
+    pumpkin: {
+      title: 'Pumpkin in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Pumpkin: regulatory framework, soluble-fiber (pectin) stool consistency support, and brand examples from the catalog.',
+    },
+    carrots: {
+      title: 'Carrots in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Carrots: regulatory framework, beta-carotene contribution, vitamin A conversion differences in dogs vs cats, and brand examples.',
+    },
+    spinach: {
+      title: 'Spinach in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Spinach: regulatory framework, oxalate chemistry, calcium oxalate urolithiasis context, and brand examples from the catalog.',
+    },
+    blueberries: {
+      title: 'Blueberries in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Blueberries: regulatory framework, antioxidant marketing vs. controlled-trial evidence, and brand examples from the catalog.',
+    },
+    cranberries: {
+      title: 'Cranberries in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Cranberries: regulatory framework, the human UTI evidence picture vs. canine claims, and brand examples from the catalog.',
+    },
+    flaxseed: {
+      title: 'Flaxseed — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Flaxseed: AAFCO definition, ALA omega-3 contribution, ALA-to-EPA conversion limits in dogs and cats, and brand examples.',
+    },
+    'fish-oil': {
+      title: 'Fish Oil — Pet Food Ingredient Reference | PetFoods.com',
+      description:
+        'Generic fish oil: AAFCO definition, species-disclosure gap vs. salmon oil, ethoxyquin carryover, and brand examples.',
+    },
+    chondroitin: {
+      title: 'Chondroitin Sulfate — Pet Food Supplement Reference | PetFoods.com',
+      description:
+        'Chondroitin sulfate: AAFCO posture, clinical evidence in canine osteoarthritis, and why kibble inclusion falls below therapeutic.',
+    },
+    'l-carnitine': {
+      title: 'L-Carnitine — Pet Food Supplement Reference | PetFoods.com',
+      description:
+        'L-carnitine: AAFCO posture, role in fatty-acid metabolism, breed-specific carnitine-responsive DCM context, and brand examples.',
+    },
+    'yucca-schidigera': {
+      title: 'Yucca Schidigera Extract — Ingredient Reference | PetFoods.com',
+      description:
+        'Yucca schidigera extract: AAFCO posture, fecal-odor-reduction marketing claims, and the evidence picture in companion animals.',
+    },
+    'choline-chloride': {
+      title: 'Choline Chloride — Pet Food Supplement Reference | PetFoods.com',
+      description:
+        'Choline chloride: AAFCO-required nutrient, role in hepatic function and lipid transport, and brand examples from the catalog.',
+    },
+    'natural-flavors': {
+      title: 'Natural Flavors in Pet Food — Ingredient Reference | PetFoods.com',
+      description:
+        'Natural flavors: AAFCO posture, hydrolyzed animal digest as the most common source, and what the term discloses (and does not).',
+    },
   }
 
   const entry = PER[ingredient.slug]
@@ -561,6 +661,486 @@ function buildIngredientFaq(ingredient: Ingredient): FAQItem[] {
           'The clinical-trial evidence for glucosamine in feline osteoarthritis is even thinner than for canine. AAFCO does not require glucosamine in either species. For a cat with diagnosed osteoarthritis, a treating veterinarian sets the management plan; ingredient-panel presence in a maintenance kibble is not the same as treatment.',
         answerText:
           'Clinical-trial evidence in cats is thinner than for dogs. AAFCO does not require it for either species; treatment of feline osteoarthritis is a veterinary decision.',
+      },
+      SHARED,
+    ],
+    'corn-gluten-meal': [
+      {
+        question: 'Is corn gluten meal a "filler" in pet food?',
+        answer:
+          'No — "filler" is a marketing word, not a regulatory one. Corn gluten meal is a concentrated plant protein (typically around 60% crude protein on a dry-matter basis). The relevant formulation question is amino-acid completeness — corn gluten meal is low in lysine, which formulators address by combining it with complementary proteins or by adding crystalline lysine — not "filler."',
+        answerText:
+          'No. Corn gluten meal is a concentrated plant protein (~60% crude protein DM). The relevant question is amino-acid completeness (it is low in lysine), not "filler."',
+      },
+      {
+        question: 'Why do premium brands avoid corn gluten meal?',
+        answer:
+          'Procurement, marketing positioning, and amino-acid profile choices. Premium positioning leans toward animal-anchored protein and uses plant proteins more sparingly; mass-market portfolios use corn gluten meal as a cost-effective protein concentrate. The choice is a formulation and marketing decision, not a safety question — AAFCO permits corn gluten meal and the AAFCO definition is narrow.',
+        answerText:
+          'Premium portfolios lean toward animal-anchored protein; mass-market portfolios use corn gluten meal as a cost-effective protein concentrate. Formulation choice, not safety.',
+      },
+      {
+        question: 'Is corn gluten meal the same as corn?',
+        answer:
+          'No. The AAFCO definition is specific: corn gluten meal is the dried protein-dense residue after starch, germ, and bran are removed from corn during wet milling. It is roughly 60% protein and is nutritionally distinct from whole corn or ground corn meal.',
+        answerText:
+          'No. Corn gluten meal is the dried protein-dense residue after starch, germ, and bran are removed — about 60% protein, nutritionally distinct from whole corn.',
+      },
+      SHARED,
+    ],
+    'soybean-meal': [
+      {
+        question: 'Is soy a common food allergen in dogs?',
+        answer:
+          'Less common than commonly assumed. The most frequently reported canine food allergens in the veterinary dermatology literature are beef, dairy, chicken, wheat, and lamb. Soy is reported as a cause of adverse food reactions in some dogs, but at a lower frequency than the proteins above. For diagnosed soy hypersensitivity (rare), strict avoidance is appropriate; for the general population, AAFCO permitted use and clinical evidence support soybean meal as an acceptable protein source.',
+        answerText:
+          'Less common than marketing implies. The most frequently reported canine food allergens are beef, dairy, chicken, wheat, and lamb; soy is reported less often.',
+      },
+      {
+        question: 'How does soybean meal compare to animal proteins?',
+        answer:
+          'Soybean meal has an unusually complete essential amino-acid profile for a plant protein — including reasonable lysine and methionine — but is still lower in digestibility for dogs than rendered animal proteins on most published estimates. Formulators routinely combine it with animal proteins to anchor the dry-matter amino-acid profile.',
+        answerText:
+          'Soybean meal has a relatively complete plant-protein amino-acid profile but lower digestibility than rendered animal proteins. Typically combined with animal proteins in formulation.',
+      },
+      {
+        question: 'Is soybean meal in pet food genetically modified?',
+        answer:
+          'In the US commodity supply chain, soybean meal is overwhelmingly derived from GMO soybeans. Brands that market non-GMO sourcing should be able to substantiate that claim at the supplier level. AAFCO does not require GMO disclosure on the pet-food ingredient panel.',
+        answerText:
+          'US soybean meal is overwhelmingly from GMO soybeans. Non-GMO marketing should be substantiated at the supplier level. AAFCO does not require GMO disclosure.',
+      },
+      SHARED,
+    ],
+    'potato-protein': [
+      {
+        question: 'Is potato protein implicated in the FDA CVM DCM investigation?',
+        answer:
+          'No, not specifically. The FDA Center for Veterinary Medicine investigation, opened in 2018, has focused on grain-free formulations heavy in pulses (peas, lentils, chickpeas, faba beans). Potato protein appears in some of those formulations but has not itself been singled out as a focus of the investigation. The investigation remains open.',
+        answerText:
+          'No, not specifically. The FDA CVM investigation focuses on pulse-heavy grain-free formulations; potato protein has not been singled out. Investigation remains open.',
+      },
+      {
+        question: 'How does potato protein compare to animal protein?',
+        answer:
+          'Potato protein is a concentrated plant protein (75-80% crude protein DM) with a distinct amino-acid profile from animal proteins. Digestibility is reasonable but generally lower than rendered animal proteins. Formulators typically combine it with complementary proteins or supplemental amino acids to anchor the dry-matter profile.',
+        answerText:
+          'Concentrated plant protein (75-80% crude protein DM). Distinct amino-acid profile from animal proteins; typically combined with complementary proteins in formulation.',
+      },
+      {
+        question: 'Why does potato protein appear in grain-free formulas?',
+        answer:
+          'Grain-free formulations need a protein concentrate that is not a cereal grain; potato protein and pulse proteins (pea, chickpea) are the two main categories. Some manufacturers favor potato protein specifically to keep pulse density lower in light of the FDA CVM open investigation into pulse-heavy diets and DCM.',
+        answerText:
+          'Grain-free formulations need a non-cereal protein concentrate; potato protein and pulse proteins are the two main categories. Potato protein keeps pulse density lower.',
+      },
+      SHARED,
+    ],
+    'pea-protein': [
+      {
+        question: 'Does pea protein cause DCM in dogs?',
+        answer:
+          'The FDA Center for Veterinary Medicine has not established that pea protein, or any single ingredient, causes non-hereditary dilated cardiomyopathy in dogs. The 2018 FDA CVM investigation observed an association between grain-free formulations with high proportions of pulses (including pea protein) and reported DCM cases. The agency continues to investigate; no causal mechanism has been established and the investigation is open.',
+        answerText:
+          'FDA CVM has not established causation. The 2018 investigation observed an association between pulse-heavy grain-free formulations and DCM cases; no mechanism is established and the investigation is open.',
+      },
+      {
+        question: 'Is a pea-protein-free diet always safer for dogs?',
+        answer:
+          'Not by itself. The FDA CVM investigation has not provided a binary safe-versus-unsafe threshold, and several confounding factors (genetics, breed, total dietary pulse density, taurine status, total amino-acid balance) remain under investigation. For a dog with diagnosed DCM or with breed predisposition, the treating veterinarian sets the dietary plan; for healthy dogs, the practical recommendation in the Tufts Cummings School Petfoodology blog is caution with pulse-heavy grain-free diets pending resolution.',
+        answerText:
+          'Not by itself. The FDA CVM investigation has not provided a safe-vs-unsafe threshold; multiple confounders remain. Tufts Petfoodology blog recommends caution with pulse-heavy grain-free pending resolution.',
+      },
+      {
+        question: 'What is the amino-acid profile of pea protein?',
+        answer:
+          'Pea protein concentrate is reasonably complete for a plant protein, with adequate lysine but limited methionine and cysteine relative to AAFCO amino-acid profiles for dogs. Formulators typically combine it with complementary proteins or supplemental sulfur amino acids.',
+        answerText:
+          'Reasonably complete plant protein. Adequate lysine but limited methionine/cysteine; typically combined with complementary proteins or supplemental sulfur amino acids.',
+      },
+      SHARED,
+    ],
+    'legume-blends': [
+      {
+        question: 'What is the FDA investigation into grain-free diets and DCM?',
+        answer:
+          'The FDA Center for Veterinary Medicine opened an investigation in 2018 after reports of non-hereditary dilated cardiomyopathy in dogs eating grain-free diets with high proportions of pulse ingredients (peas, lentils, chickpeas, faba beans). FDA has provided several public Q&A updates and has not established a causal mechanism. The investigation is open. The official FDA CVM updates are the authoritative source for the current status.',
+        answerText:
+          'FDA CVM opened the investigation in 2018 after DCM reports in dogs on pulse-heavy grain-free diets. No causal mechanism established; investigation open. The official FDA CVM Q&A is the authoritative source.',
+      },
+      {
+        question: 'Should I avoid all legumes in my dog\'s food?',
+        answer:
+          'The FDA has not advised a blanket avoidance. The Tufts Cummings School Petfoodology blog, written by veterinary nutritionists, has provided practitioner-facing guidance recommending caution with grain-free diets that include pulses in the first few ingredient-panel positions, particularly for breeds with DCM predisposition. The treating veterinarian sets the plan for an individual dog.',
+        answerText:
+          'FDA has not advised blanket avoidance. Tufts Petfoodology blog recommends caution with grain-free diets that have pulses in the first few panel positions, especially for DCM-predisposed breeds.',
+      },
+      {
+        question: 'Will adding a taurine supplement fix the problem?',
+        answer:
+          'Possibly not by itself. Some cases of diet-associated DCM in dogs have shown taurine deficiency; others have not. The FDA CVM investigation is examining multiple hypotheses (taurine bioavailability, sulfur amino-acid balance, lectin or phytate interactions, fiber-mineral interactions). Supplementation alone has not been shown to address the underlying mechanism in all cases; the dietary question matters.',
+        answerText:
+          'Possibly not by itself. Some cases show taurine deficiency, others do not. Multiple hypotheses (taurine bioavailability, sulfur amino acids, lectins, fiber-mineral interactions) are under investigation.',
+      },
+      SHARED,
+    ],
+    'wheat-flour': [
+      {
+        question: 'Is wheat a common dog allergen?',
+        answer:
+          'Wheat is among the more frequently reported canine food allergens in the veterinary dermatology literature, after beef, dairy, and chicken. That said, the population-level prevalence is still well below the level implied by grain-free marketing. For dogs with diagnosed wheat hypersensitivity, strict avoidance is appropriate; for the general population, AAFCO permitted use and clinical evidence support wheat as an acceptable carbohydrate.',
+        answerText:
+          'Wheat is among the more frequently reported canine food allergens (after beef, dairy, chicken). Prevalence is still well below grain-free-marketing levels.',
+      },
+      {
+        question: 'What is the difference between wheat flour and whole wheat?',
+        answer:
+          'Whole wheat preserves the bran (fiber and micronutrients) and germ (fat and micronutrients). Refined wheat flour is the milled endosperm with most of the bran and germ removed. Nutritionally, whole wheat delivers more fiber and micronutrients than refined flour; the AAFCO definition above covers refined wheat flour.',
+        answerText:
+          'Whole wheat preserves bran and germ. Refined wheat flour is the milled endosperm only — more processed, lower in fiber and micronutrients.',
+      },
+      {
+        question: 'Is wheat flour related to wheat gluten?',
+        answer:
+          'Related but distinct. Wheat gluten is the concentrated protein fraction isolated from wheat flour, typically about 75% protein on a dry-matter basis. Wheat flour is the full milled grain (or refined endosperm); wheat gluten is the protein concentrate. The 2007 melamine recalls involved wheat gluten contaminated at the supplier, not wheat flour per se.',
+        answerText:
+          'Related but distinct. Wheat gluten is the protein concentrate (~75% protein DM) isolated from wheat flour. The 2007 melamine recall involved contaminated wheat gluten, not wheat flour per se.',
+      },
+      SHARED,
+    ],
+    'rice-flour': [
+      {
+        question: 'Is rice flour better than brown rice in pet food?',
+        answer:
+          'Depends on context. Rice flour is milled from rice (often white rice in commercial pet food) and is more easily digested than whole-grain brown rice. Brown rice preserves more fiber and micronutrients but is slightly less digestible. Veterinary therapeutic diets for gastrointestinal recovery often choose white-rice-derived flour for digestibility; maintenance diets often choose brown rice for fiber.',
+        answerText:
+          'Depends on context. Rice flour (often white rice) is more digestible; brown rice has more fiber and micronutrients. GI recovery diets favor white; maintenance often favors brown.',
+      },
+      {
+        question: 'Does rice flour carry the same arsenic concern as brown rice?',
+        answer:
+          'The arsenic uptake happens in the rice plant, not at the flour-milling step — so any rice-derived ingredient carries the same background-arsenic profile as the source rice. At typical pet-food inclusion levels, the contribution to total dietary arsenic is generally below thresholds of concern (per the FDA arsenic-in-rice risk assessment); it is a documented background factor, not a reason to avoid rice as a category.',
+        answerText:
+          'Yes — arsenic uptake happens in the rice plant, not at milling. At typical pet-food inclusion the contribution is generally below thresholds of concern per FDA risk assessment.',
+      },
+      {
+        question: 'Is rice flour gluten-free?',
+        answer:
+          'Rice itself does not contain gluten. Rice flour in a pet food labeled gluten-free should be supplier-substantiated against cross-contamination, but the underlying ingredient is naturally gluten-free. True canine gluten sensitivity (separate from general wheat allergy) is rare and has been described primarily in Irish Setters.',
+        answerText:
+          'Yes — rice does not contain gluten. Cross-contamination is the supplier-side question. True canine gluten sensitivity is rare and described primarily in Irish Setters.',
+      },
+      SHARED,
+    ],
+    'tapioca-starch': [
+      {
+        question: 'What does tapioca starch actually contribute nutritionally?',
+        answer:
+          'Carbohydrate energy and binding function — and very little else. Tapioca starch is a highly refined starch with negligible protein, fat, fiber, or micronutrients. When tapioca is a primary carbohydrate, the fiber and micronutrient contribution must come from other ingredients in the formulation.',
+        answerText:
+          'Carbohydrate energy and binding function. Negligible protein, fat, fiber, or micronutrients; other ingredients must supply fiber and micronutrients when tapioca is a primary carb.',
+      },
+      {
+        question: 'Is tapioca part of the FDA grain-free DCM investigation?',
+        answer:
+          'No, not specifically. The FDA Center for Veterinary Medicine investigation is focused on pulse-heavy grain-free formulations. Tapioca starch appears in some grain-free formulations as a non-pulse alternative carb; the investigation has not singled out tapioca starch. The investigation remains open.',
+        answerText:
+          'No, not specifically. The FDA CVM investigation focuses on pulse-heavy grain-free formulations, not on tapioca starch. Investigation remains open.',
+      },
+      {
+        question: 'Is tapioca starch the same as cassava?',
+        answer:
+          'Tapioca starch is the starch fraction extracted from cassava root (Manihot esculenta). "Cassava" on a pet-food label usually refers to the whole-root form (with fiber and micronutrients intact); "tapioca starch" refers to the refined starch fraction. They are not nutritionally equivalent.',
+        answerText:
+          'Tapioca starch is the refined starch fraction of cassava root. "Cassava" usually means the whole-root form (with fiber/micronutrients); the two are not nutritionally equivalent.',
+      },
+      SHARED,
+    ],
+    pumpkin: [
+      {
+        question: 'Does pumpkin really help with dog diarrhea?',
+        answer:
+          'There is plausible mechanistic and clinical evidence for the soluble-fiber fraction (pectin) supporting stool consistency. At small pet-food inclusion levels, the contribution to the formula\'s total fiber profile is modest, but the functional reputation for fresh pumpkin (canned, pureed, unsweetened) as a home-management option for mild loose stools is consistent with the fiber chemistry. For persistent or severe gastrointestinal signs, a treating veterinarian sets the management plan.',
+        answerText:
+          'The soluble fiber (pectin) supports stool consistency. At pet-food inclusion levels, contribution is modest. For persistent or severe GI signs, the treating veterinarian sets the plan.',
+      },
+      {
+        question: 'How much pumpkin can a dog eat?',
+        answer:
+          'For home use as a digestive aid: plain canned pumpkin (not pumpkin pie filling), one to two tablespoons per meal for a medium-sized dog, is the commonly cited starting amount. The exact amount depends on body weight and the specific issue being managed; if signs persist beyond a day or two, a veterinary consultation is appropriate.',
+        answerText:
+          'Plain canned pumpkin (not pie filling), 1-2 tablespoons per meal for a medium-sized dog as a starting amount. Persistent signs warrant veterinary consultation.',
+      },
+      {
+        question: 'Is pumpkin safe for cats?',
+        answer:
+          'Yes, in modest amounts. Plain pumpkin is sometimes used in cats for hairball management or mild stool consistency support, on the same soluble-fiber rationale. Cats are obligate carnivores and dietary fiber serves a functional role; pumpkin is not a nutritional requirement.',
+        answerText:
+          'Yes, in modest amounts. Sometimes used for hairball management or stool consistency. Cats are obligate carnivores; pumpkin is functional, not required.',
+      },
+      SHARED,
+    ],
+    carrots: [
+      {
+        question: 'Do dogs get vitamin A from carrots?',
+        answer:
+          'Dogs can convert dietary beta-carotene (the orange pigment in carrots) to retinol (vitamin A), so carrots contribute to vitamin A intake for dogs. Cats lack efficient beta-carotene-to-retinol conversion and require preformed vitamin A from animal sources or supplementation. The AAFCO Cat Food Nutrient Profile reflects this species difference.',
+        answerText:
+          'Dogs convert beta-carotene to retinol; carrots contribute to canine vitamin A intake. Cats lack efficient conversion and need preformed vitamin A from animal sources.',
+      },
+      {
+        question: 'How much of a pet food is actually carrot?',
+        answer:
+          'When carrots appear near the end of the ingredient panel, the inclusion percentage is typically small (often well under 1% by weight). Marketing-front mentions of carrots ("with garden vegetables") frequently reflect small inclusions; the panel order is the cue to the relative contribution.',
+        answerText:
+          'When carrots appear near the end of the panel, inclusion is typically under 1% by weight. Marketing-front "with garden vegetables" mentions often reflect small inclusions.',
+      },
+      {
+        question: 'Are raw carrots safe for dogs as a treat?',
+        answer:
+          'Yes, in moderation. Raw carrot pieces are a low-calorie treat option for dogs without dental disease that affects chewing; for puppies and small breeds, cut to a size that does not pose a choking risk. The vitamin A contribution from a treat-sized amount is small but nonzero.',
+        answerText:
+          'Yes, in moderation. Cut to a size that does not pose a choking risk. Vitamin A contribution from a treat-sized amount is small.',
+      },
+      SHARED,
+    ],
+    spinach: [
+      {
+        question: 'Should I avoid spinach if my dog has had bladder stones?',
+        answer:
+          'For dogs with a documented history of calcium oxalate urolithiasis specifically, the treating veterinarian or veterinary nutritionist may advise limiting chronically high-oxalate ingredients — and spinach is among the higher-oxalate common vegetables. For dogs without stone history, routine inclusion of small amounts of spinach in maintenance diets is generally not a clinical concern.',
+        answerText:
+          'For dogs with calcium oxalate urolithiasis history, the treating vet may advise limiting high-oxalate ingredients including spinach. For dogs without stone history, small routine inclusion is generally not a concern.',
+      },
+      {
+        question: 'How much spinach is in commercial pet food?',
+        answer:
+          'When spinach appears in commercial pet food, the inclusion percentage is typically small (often well under 1% by weight). The oxalate contribution at those levels is modest in absolute terms; the chemistry is documented but the clinical risk depends on the individual dog\'s history and the total dietary picture.',
+        answerText:
+          'Typically under 1% by weight when spinach appears. Oxalate contribution at those levels is modest in absolute terms; risk depends on individual history.',
+      },
+      {
+        question: 'Is spinach toxic to dogs?',
+        answer:
+          'No — spinach is not toxic. The oxalate question is a chronic-management consideration for stone-forming patients, not an acute toxicity concern. For a healthy dog, spinach in commercial pet food at typical inclusion levels does not pose a clinical concern.',
+        answerText:
+          'No, spinach is not toxic. The oxalate question is a chronic-management consideration for stone-forming patients, not acute toxicity.',
+      },
+      SHARED,
+    ],
+    blueberries: [
+      {
+        question: 'Do blueberries in pet food actually deliver antioxidant benefits?',
+        answer:
+          'The in vitro antioxidant chemistry of blueberry polyphenols is well documented, but the in vivo clinical outcomes at the inclusion levels used in commercial pet food are not well characterized in dogs or cats. Marketing-front antioxidant claims typically rest on chemistry, not on controlled-trial outcomes in companion animals. For most pet foods that list blueberries near the end of the panel, the inclusion is small.',
+        answerText:
+          'In vitro antioxidant chemistry is well documented; in vivo outcomes at pet-food inclusion levels are not well characterized. Marketing-front claims rest on chemistry, not on controlled trials.',
+      },
+      {
+        question: 'Are blueberries safe for dogs?',
+        answer:
+          'Yes, in moderation. Fresh or frozen blueberries are a low-calorie treat option for dogs. Inclusion in commercial pet food at small panel-order positions is safe; the marketing question is whether the inclusion is at functionally meaningful levels.',
+        answerText:
+          'Yes, in moderation. Fresh or frozen blueberries are a low-calorie treat. Commercial pet-food inclusion is safe; the question is whether levels are functionally meaningful.',
+      },
+      {
+        question: 'Can cats eat blueberries?',
+        answer:
+          'Yes, in very small amounts. Cats are obligate carnivores and lack the sweet-taste receptor, so most cats are indifferent to fruit. Blueberries in cat food appear primarily as a marketing-front antioxidant claim; functional contribution at small inclusion levels is unverified in the feline literature.',
+        answerText:
+          'Yes, in very small amounts. Most cats are indifferent to fruit (no sweet-taste receptor). Functional contribution in cat food is unverified.',
+      },
+      SHARED,
+    ],
+    cranberries: [
+      {
+        question: 'Do cranberries prevent urinary-tract infections in dogs?',
+        answer:
+          'The veterinary clinical evidence is limited and does not parallel the human therapeutic-dose literature. Even in humans, cranberry trials for UTI prevention have produced mixed results, and the therapeutic doses used in those trials are well above what pet-food inclusion delivers. AAFCO does not recognize a UTI-prevention therapeutic claim for cranberry in pet food; for diagnosed urinary-tract conditions, the treating veterinarian sets the management plan.',
+        answerText:
+          'Veterinary clinical evidence is limited and does not match the human therapeutic-dose literature. AAFCO does not recognize a UTI-prevention therapeutic claim for cranberry. Treatment is a veterinary decision.',
+      },
+      {
+        question: 'Are cranberries safe for dogs?',
+        answer:
+          'Yes, in moderation. Fresh, dried (unsweetened), or commercial pet-food inclusion of cranberry at small levels is safe. Sweetened or sugared cranberry products (juice, dried with added sugar) are not appropriate for dogs.',
+        answerText:
+          'Yes, in moderation — fresh, unsweetened, or pet-food inclusion at small levels is safe. Sweetened cranberry products are not appropriate.',
+      },
+      {
+        question: 'Should I give my dog cranberry supplements?',
+        answer:
+          'For a dog with recurrent urinary-tract issues, the treating veterinarian sets the management plan; cranberry supplementation may be discussed but is not first-line therapy in the veterinary urology literature. Ingredient-panel presence of cranberry in a maintenance pet food is not a treatment.',
+        answerText:
+          'The treating vet sets the plan for recurrent UTIs; cranberry is not first-line in veterinary urology literature. Panel presence in maintenance pet food is not treatment.',
+      },
+      SHARED,
+    ],
+    flaxseed: [
+      {
+        question: 'Is flaxseed a good source of omega-3 for dogs?',
+        answer:
+          'Flaxseed provides alpha-linolenic acid (ALA), the plant-derived omega-3. Conversion of ALA to the long-chain omega-3s EPA and DHA is limited in dogs (and very limited in cats), so flaxseed is not a substitute for marine-derived EPA/DHA when those long-chain omega-3s are the nutritional target. For dietary fiber contribution, flaxseed is a useful ingredient; for EPA/DHA, fish oil or salmon oil are the relevant sources.',
+        answerText:
+          'Flaxseed provides plant-derived ALA. ALA-to-EPA/DHA conversion is limited in dogs and very limited in cats; for EPA/DHA targets, fish oil or salmon oil are the relevant sources.',
+      },
+      {
+        question: 'Is flaxseed safe for cats?',
+        answer:
+          'Yes, at modest inclusion. The ALA-to-EPA/DHA conversion is even more limited in cats than in dogs, so flaxseed is not a meaningful source of long-chain omega-3s for cats. For fiber and ALA at modest inclusion, flaxseed is acceptable in feline diets; for EPA/DHA, marine-derived sources are required.',
+        answerText:
+          'Yes, at modest inclusion. ALA conversion in cats is very limited; flaxseed is not a meaningful EPA/DHA source for cats. Marine-derived sources are required for those.',
+      },
+      {
+        question: 'Does flaxseed go rancid in kibble?',
+        answer:
+          'Whole flaxseed is more shelf-stable than ground flaxseed or expressed flaxseed oil; the ALA fatty acid is polyunsaturated and oxidation-prone. In kibble, the preservation system (mixed tocopherols, rosemary extract) and storage conditions matter for ALA preservation. Whole-flax inclusion is more shelf-stable than oil inclusion.',
+        answerText:
+          'Whole flaxseed is more shelf-stable than ground or oil forms. ALA is polyunsaturated and oxidation-prone; preservation system and storage conditions matter.',
+      },
+      SHARED,
+    ],
+    'fish-oil': [
+      {
+        question: 'What is the difference between "fish oil" and "salmon oil" on a pet food label?',
+        answer:
+          'Species disclosure. "Salmon oil" names the species (salmon only). Generic "fish oil" does not — under AAFCO §9.46 the term covers oil from undisclosed fish species, commonly menhaden, anchovy, sardine, or a supplier-determined mix. Both deliver EPA and DHA; named-species disclosure is the difference at the label level.',
+        answerText:
+          'Species disclosure. "Salmon oil" names the species. "Fish oil" covers undisclosed species (commonly menhaden, anchovy, sardine, or a mix). Both deliver EPA and DHA.',
+      },
+      {
+        question: 'How can I tell if the fish oil in my dog\'s food is preserved with ethoxyquin?',
+        answer:
+          'Often, you cannot from the label alone. The supplier-side ethoxyquin question described on the ethoxyquin ingredient page applies to any fish-derived ingredient. Brands marketing "ethoxyquin-free" should be able to substantiate the claim at the fish-oil supplier level, not just at the manufacturing-add step. See /ingredients/ethoxyquin for the carryover-disclosure discussion.',
+        answerText:
+          'Often you cannot from the label alone. Supplier-side ethoxyquin carryover applies to any fish-derived ingredient. Brands marketing "ethoxyquin-free" should substantiate at the supplier level.',
+      },
+      {
+        question: 'Is fish oil sustainable?',
+        answer:
+          'Sustainability depends on the source fishery, not on the words "fish oil." Without species and source disclosure, the question cannot be answered from the label alone. Marine Stewardship Council (MSC) certification on the brand\'s fish supply chain — when disclosed — is the most direct sustainability signal.',
+        answerText:
+          'Depends on the source fishery, not the words "fish oil." MSC certification on the brand\'s fish supply chain (when disclosed) is the most direct sustainability signal.',
+      },
+      SHARED,
+    ],
+    chondroitin: [
+      {
+        question: 'Does chondroitin work for canine joint pain?',
+        answer:
+          'The clinical evidence is mixed, paralleling the picture for glucosamine. Systematic reviews of canine osteoarthritis treatments have reported inconsistent effect for glucosamine-chondroitin combinations at therapeutic dosing, and typical pet-food inclusion is below those dosing levels. A pet food labeled "with chondroitin" is not a therapeutic joint-support supplement; the treating veterinarian sets the management plan for diagnosed osteoarthritis.',
+        answerText:
+          'Clinical evidence is mixed. Systematic reviews report inconsistent effect at therapeutic dosing; kibble inclusion is below therapeutic. Panel presence is not a therapeutic supplement.',
+      },
+      {
+        question: 'Is chondroitin in pet food sourced from a specific animal?',
+        answer:
+          'Yes — common sources are bovine, porcine, or marine (shark, fish) cartilage. The AAFCO ingredient definition does not require source disclosure on the consumer-facing label, so the chondroitin in a specific pet food is sourced according to the manufacturer\'s supply contract and may not be disclosed.',
+        answerText:
+          'Common sources are bovine, porcine, or marine cartilage. AAFCO does not require source disclosure on the consumer-facing panel.',
+      },
+      {
+        question: 'Can I give my dog a chondroitin supplement on top of a pet food that already contains it?',
+        answer:
+          'For a dog with diagnosed osteoarthritis, the treating veterinarian sets the dosing plan; therapeutic dosing in the veterinary literature is per kilogram of body weight per day, and pet-food panel inclusion typically does not reach those levels. Stacking is a veterinary decision rather than an owner-side calculation.',
+        answerText:
+          'For diagnosed osteoarthritis, the treating vet sets the dosing plan. Therapeutic dosing is per kg body weight per day; pet-food inclusion typically does not reach those levels. Stacking is a veterinary decision.',
+      },
+      SHARED,
+    ],
+    'l-carnitine': [
+      {
+        question: 'What does L-carnitine do in pet food?',
+        answer:
+          'L-carnitine plays a role in transporting fatty acids into mitochondria for beta-oxidation; physiologically it is involved in both fat metabolism and cardiac muscle energetics. AAFCO does not require it as a separately listed nutrient. It is used in some weight-management formulations (on a fat-metabolism rationale) and in some cardiac-support formulations (particularly for breeds with carnitine-responsive DCM phenotypes).',
+        answerText:
+          'Carnitine transports fatty acids into mitochondria for beta-oxidation. Roles in fat metabolism and cardiac energetics. AAFCO does not require it; used in some weight-management and cardiac-support formulations.',
+      },
+      {
+        question: 'Which breeds have carnitine-responsive dilated cardiomyopathy?',
+        answer:
+          'Boxers and American Cocker Spaniels are the two breeds with the best-documented carnitine-responsive (or taurine-responsive) DCM phenotypes in the veterinary cardiology literature. For dogs in those breeds with diagnosed DCM, the treating veterinary cardiologist sets the therapeutic supplementation plan; ingredient-panel presence in a maintenance kibble is not equivalent to therapeutic dosing.',
+        answerText:
+          'Boxers and American Cocker Spaniels are the best-documented breeds. For diagnosed DCM, the treating veterinary cardiologist sets therapeutic dosing; panel presence is not equivalent.',
+      },
+      {
+        question: 'Is L-carnitine appropriate for cats?',
+        answer:
+          'Cats have their own taurine-responsive DCM picture (described in the 1987 Pion et al. work that established taurine as essential for cats). L-carnitine supplementation in feline cardiac disease is less established than taurine. For a cat with diagnosed cardiac disease, the treating veterinarian sets the supplementation plan.',
+        answerText:
+          'Cats have a taurine-responsive DCM picture. L-carnitine in feline cardiac disease is less established than taurine; the treating vet sets the plan.',
+      },
+      SHARED,
+    ],
+    'yucca-schidigera': [
+      {
+        question: 'Does yucca schidigera reduce dog poop smell?',
+        answer:
+          'The proposed mechanism — saponin-mediated ammonia binding — has support in livestock studies (cattle, swine, poultry), where reductions in ammonia emission have been reported. Controlled trials in companion animals are sparser and the effect size at typical pet-food inclusion levels is not well established. Marketing-front "odor reduction" claims rest more on the livestock literature than on companion-animal controlled trials.',
+        answerText:
+          'Mechanism (saponin-mediated ammonia binding) has support in livestock studies. Companion-animal trials are sparser; effect size at typical inclusion is not well established.',
+      },
+      {
+        question: 'Is yucca schidigera safe in cat food?',
+        answer:
+          'AAFCO permits yucca schidigera extract in pet food at the typical low inclusion levels used commercially. There is no documented safety signal in cats at those inclusion levels. The marketing question (effect on litter-box odor) parallels the canine question — not well characterized in controlled feline trials.',
+        answerText:
+          'AAFCO permits it at typical low inclusion levels. No documented safety signal in cats. The odor-reduction claim is not well characterized in controlled feline trials.',
+      },
+      {
+        question: 'Does yucca contain saponins that could harm dogs?',
+        answer:
+          'Raw yucca plant material contains saponins that can be irritating at high doses; yucca schidigera extract used in pet food is a processed extract at low inclusion. At those inclusion levels, AAFCO permitted use does not raise a safety concern. The question for the consumer is efficacy, not toxicity.',
+        answerText:
+          'Raw yucca contains saponins. Pet-food extract is processed and used at low inclusion; AAFCO permitted use does not raise a safety concern. The question is efficacy, not toxicity.',
+      },
+      SHARED,
+    ],
+    'choline-chloride': [
+      {
+        question: 'Why does choline chloride appear on so many pet food panels?',
+        answer:
+          'Choline is an AAFCO-required nutrient in both the Dog and Cat Food Nutrient Profiles. Most commercial diets meet the AAFCO minimum (1,200 mg/kg dry-matter basis for adult dogs, 2,400 mg/kg for adult cats) by supplementing with choline chloride. Its appearance on the ingredient panel is a routine formulation step, not a marketing flourish.',
+        answerText:
+          'Choline is AAFCO-required (1,200 mg/kg DM for adult dogs, 2,400 mg/kg for adult cats). Choline chloride is the standard supplemental form; panel appearance is routine formulation.',
+      },
+      {
+        question: 'What does choline do in dogs and cats?',
+        answer:
+          'Choline is involved in hepatic function (lipid transport from the liver), neurotransmitter synthesis (acetylcholine), and methyl-group metabolism. Deficiency in dogs and cats has been associated with hepatic lipidosis (fatty liver) in experimental studies, which is why the AAFCO minimum exists. At commercial-diet inclusion levels, deficiency is not a clinical concern.',
+        answerText:
+          'Hepatic function, acetylcholine synthesis, methyl-group metabolism. Experimental deficiency causes hepatic lipidosis; AAFCO minimum exists for this reason. At commercial-diet levels deficiency is not a clinical concern.',
+      },
+      {
+        question: 'Can a dog or cat get too much choline?',
+        answer:
+          'At typical commercial-diet inclusion levels, choline excess is not a documented clinical concern. NRC has documented experimental high-dose tolerances; commercial diets meeting AAFCO minimums operate well within those margins. The AAFCO posture is that the regulated minimum is the relevant number for label compliance.',
+        answerText:
+          'At typical commercial-diet levels, excess is not a documented clinical concern. Commercial diets meeting AAFCO minimums operate well within NRC-documented experimental tolerances.',
+      },
+      SHARED,
+    ],
+    'natural-flavors': [
+      {
+        question: 'What is "natural flavor" actually made of?',
+        answer:
+          'In pet food, the most common source is hydrolyzed animal tissue ("digest") — animal protein chemically or enzymatically broken down to enhance palatability. Other sources include yeast-derived flavorings, herb extracts, and other AAFCO-recognized natural flavoring materials. The term itself does not commit the manufacturer to a single species or source; more specific subforms such as "chicken digest" carry more disclosure.',
+        answerText:
+          'Most commonly hydrolyzed animal tissue (digest). Other sources include yeast-derived flavorings and herb extracts. Specific subforms like "chicken digest" carry more disclosure than generic "natural flavor."',
+      },
+      {
+        question: 'Is "natural flavor" a hidden ingredient?',
+        answer:
+          'Not in a regulatory sense — AAFCO permits the term and the underlying material is recognized as a feed ingredient. The disclosure question is about species and source specificity. For owners managing food allergies, more specific forms (named-species digest) provide the disclosure needed for elimination work; generic "natural flavor" does not.',
+        answerText:
+          'Not in a regulatory sense — AAFCO permits the term. The disclosure question is about species specificity. For allergy management, named-species digest provides the needed disclosure; generic "natural flavor" does not.',
+      },
+      {
+        question: 'Are natural flavors safer than artificial flavors?',
+        answer:
+          'AAFCO permits both natural and artificial flavoring categories at specified levels; the regulatory posture does not classify one as safer than the other. The marketing distinction is a labeling-tier statement, not a safety statement. Owners who prefer the natural category for personal reasons should look for the more specific subforms for better disclosure.',
+        answerText:
+          'AAFCO permits both at specified levels; the regulatory posture does not rank one as safer. The distinction is a labeling-tier statement, not a safety statement.',
       },
       SHARED,
     ],
