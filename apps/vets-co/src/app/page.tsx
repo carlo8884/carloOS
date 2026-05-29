@@ -146,9 +146,9 @@ const CATEGORIES: {
 }[] = [
   {
     icon: 'find-a-vet',
-    title: 'Find a Vet',
+    title: 'Find a Vet in your area',
     desc:
-      'Search a directory of veterinary specialists by city and discipline — neurology, cardiology, oncology, ophthalmology, and more.',
+      'Find a vet by city — twenty metro guides with state licensing context, specialty considerations, and what to look for. Plus board-certified specialists by discipline.',
     href: '/find-a-vet',
   },
   {

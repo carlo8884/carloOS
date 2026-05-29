@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@carloOS/ui'
 import { States, type CensusRegion } from '../../data/states'
+import { Cities } from '../../data/cities'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
 const SPECIALISTS = [
   { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', icon: '🚨', color: '#C84A2A' },
@@ -84,6 +85,18 @@ export default function FindAVetPage() {
             </div>
           </div>
           <Link href="/health/emergency-signs" className="text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (14 signs to know)</Link>
+        </section>
+
+        <section id="cities" className="mb-16">
+          <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Find a Vet by City</h2>
+          <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">Twenty metro-level guides — state licensing context, what to look for in a {`"`}{`first`} appointment, specialty considerations by region, and how pet insurance fits in. Use these as a starting point before you commit to a primary care vet.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+            {Cities.map((c) => (
+              <Link key={c.slug} href={`/find-a-vet/in/${c.slug}`} className="bg-brand-surface border border-brand-border rounded-lg px-3 py-2 text-sm text-brand-dark no-underline hover:border-brand-primary hover:text-brand-primary block">
+                {c.name}, {c.state_abbr}
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section id="states" className="mb-16">
