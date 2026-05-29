@@ -33,4 +33,11 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://petsmart.com/fish/{sku}.html?source=PLACEHOLDER',
     requiresSku: true,
   },
+  // ─── Pre-approved per policy §5 (fish-com list: Amazon, Chewy,
+  // MarineDepot, PetCo). Added 2026-05-30 for email sequences. ───
+  marinedepot: {
+    name: 'Marine Depot',
+    template: 'https://marinedepot.com/?ref=PLACEHOLDER&sku={sku}',
+    requiresSku: false,
+  },
 }
