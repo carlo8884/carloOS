@@ -34,7 +34,21 @@ export async function GET(request: Request, { params }: RouteParams) {
     return new NextResponse('SKU required for vendor', { status: 400 })
   }
 
-  const target = route.template.replace('{sku}', encodeURIComponent(sku))
+  // Substitute the `{sku}` slot, then look up the per-vendor tracking ID
+  // from env and swap it in for any `PLACEHOLDER` substring in the URL
+  // template (per ops/policies/bot-coordination.md §6 rule 3). The env-var
+  // name is computed as: `AFF_` + uppercased vendor key with hyphens
+  // replaced by underscores + `_TAG`. If the env var is unset the redirect
+  // still works — only the attribution tag is missing.
+  const envVarName = `AFF_${vendor.replace(/-/g, '_').toUpperCase()}_TAG`
+  const trackingId = process.env[envVarName]
+  const tagResolved = typeof trackingId === 'string' && trackingId.length > 0
+
+  let target = route.template.replace('{sku}', encodeURIComponent(sku))
+  if (tagResolved) {
+    target = target.split('PLACEHOLDER').join(trackingId as string)
+  }
+
   const referrer = request.headers.get('referer') || ''
   const userAgent = request.headers.get('user-agent') || ''
 
@@ -49,6 +63,8 @@ export async function GET(request: Request, { params }: RouteParams) {
       sku,
       referrer,
       userAgent,
+      tagResolved,
+      envVarName,
       timestamp: new Date().toISOString(),
     }),
   )
