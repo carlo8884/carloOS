@@ -10,101 +10,112 @@ import {
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands as BRAND_DATA } from '../../data/brands'
+import { BrandReviews, getBrandReviewBySlug } from '../../data/brand-reviews'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
-  title: 'Pet Food Brands — Independent Comparison Index',
+  title: 'Pet Food Brands — Independent Reviews & WSAVA Scorecards',
   description:
-    'Catalog of major commercial pet food brands sold in the US — corporate parent, manufacturing country, scoring status. Companion catalog to PetFood.com.',
+    'Independent reviews of major pet food brands — WSAVA Global Nutrition Committee scorecards, FDA recall history, and corporate-parent context. Companion catalog to PetFood.com.',
   path: '/brands',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'petfoods-com',
-  title: 'Pet Food Brands — Independent Comparison Index',
+  title: 'Pet Food Brands — Independent Reviews & WSAVA Scorecards',
   description:
-    'A working index of every commercial dog and cat food brand sold in the United States, mapped to corporate parent and manufacturing country. The catalog is the spine; per-brand scored profiles are published as the PetFood.com editorial team reaches each one.',
+    'A working index of every commercial dog and cat food brand sold in the United States, mapped to corporate parent and manufacturing country, with long-form WSAVA-scored reviews for the highest-search-volume brands.',
   url: 'https://petfoods.com/brands',
   imageUrl: '',
-  authorName: 'PetFoods.com Catalog',
+  authorName: 'PetFoods.com Editorial — independent ingredient & brand reference',
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-// ─── Brand catalog ──────────────────────────────────────────────────────────
-// One row per brand we plan to score. Where a comparison page already exists
-// on PetFood.com (the editorial sister site), it is linked. Otherwise the
-// brand page is a placeholder; the entry exists so this index reflects the
-// real catalog scope.
+// ─── Reviewed brand grid (10 long-form reviews) ─────────────────────────────
+
+interface ReviewedBrandRow {
+  slug: string
+  name: string
+  parent: string
+  wsava: number
+  recalls: number
+  hasBoardCertNutritionists: boolean
+  manufacturing: string
+}
+
+const REVIEWED_ROWS: ReviewedBrandRow[] = BrandReviews.map((r) => ({
+  slug: r.slug,
+  name: r.brandName,
+  parent: r.parentCompany,
+  wsava: r.wsavaComplianceScore,
+  recalls: r.recallHistory.length,
+  hasBoardCertNutritionists: r.hasBoardCertifiedNutritionists,
+  manufacturing: r.manufacturingLocations.join(' / '),
+})).sort((a, b) => {
+  // Sort by WSAVA score descending, then alphabetical.
+  if (b.wsava !== a.wsava) return b.wsava - a.wsava
+  return a.name.localeCompare(b.name)
+})
+
+// ─── Full catalog (unchanged) ───────────────────────────────────────────────
 
 interface BrandEntry {
   name: string
   slug: string
   parent: string
   manufacturing: string
-  // Editorial cross-link on PetFood.com (sister site), if one exists. The
-  // catalog reference page on PetFoods.com lives at `/brands/{slug}` for all
-  // entries — that is the primary destination of the card click.
   editorialCrossLink?: string
+  hasReview: boolean
 }
 
-// One row per brand. All 35 catalog reference pages are live; entries with
-// an editorialCrossLink also carry an outbound link to the PetFood.com
-// editorial comparison page.
 const BRANDS: BrandEntry[] = BRAND_DATA.map((b) => ({
   name: b.name,
   slug: b.slug,
   parent: b.parentCompany,
   manufacturing: b.manufacturingCountries.join(' / '),
   editorialCrossLink: b.editorialCrossLink,
+  hasReview: !!getBrandReviewBySlug(b.slug),
 }))
 
-// Sort alphabetically — index reads like a reference table, not a ranking.
 const SORTED = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name))
 
 const FAQ_ITEMS: FAQItem[] = [
   {
-    question: 'Why does this index list brands you have not scored yet?',
+    question: 'How is the WSAVA scorecard calculated?',
     answer:
-      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is the first deliverable. The scored profile is the second. We publish the index first so the scope is honest: this is the universe we intend to cover, and a missing entry is a gap we will fill, not a brand we are hiding.',
+      'WSAVA itself does not publish brand-level scores. The score on each brand card here is PetFoods.com’s editorial count of how many of the WSAVA Global Nutrition Committee’s six "Selecting a Pet Food Manufacturer" questions the brand answers publicly on its corporate site or science pages. The six questions cover qualified nutritionist on staff, formulation responsibility, AAFCO feeding-trial vs. formulation-only substantiation, manufacturing location and visitability, quality-control measures, and whether the brand publishes a complete typical nutrient analysis. Each per-brand review page shows which questions were answered and which were not, with the brand’s public answer cited, so the score is auditable.',
     answerText:
-      'The index is the catalog spine. Listing the brand publicly is the first deliverable; the scored profile is the second. Publishing the index first keeps the scope of coverage honest.',
+      'PetFoods.com counts how many of the WSAVA Global Nutrition Committee’s six "Selecting a Pet Food Manufacturer" questions the brand answers publicly. Per-brand pages cite the answer for each question.',
   },
   {
-    question: 'What is the difference between the catalog reference page and a scored profile?',
+    question: 'Why does this index list brands you have not reviewed yet?',
     answer:
-      'Each brand card here links to a catalog reference page on PetFoods.com — corporate ownership, manufacturing footprint, AAFCO posture, recall pointer, distribution channels, and an explicit list of fields we could not verify. A scored profile is a separate artifact published on the PetFood.com editorial sister site that runs the v1.0 rubric (AAFCO completeness, ingredient sourcing transparency, recall history, manufacturing standards, feeding-outcome literature). Where a scored profile exists on PetFood.com, the catalog reference page cross-links to it.',
+      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is the first deliverable. The long-form review is the second. Ten brands have a full WSAVA-scored review at launch; the remaining catalog entries link to the structured reference page and are queued for review.',
     answerText:
-      'The catalog reference page is a structured per-brand record on PetFoods.com. The scored profile is a separate rubric-driven artifact on the PetFood.com editorial sister site; catalog pages cross-link to it where one exists.',
+      'The catalog is the spine; the long-form reviews come next. Ten brands have full reviews at launch; the rest are queued.',
+  },
+  {
+    question: 'Do any brands pay for inclusion or for assessment language?',
+    answer:
+      'No. The catalog is built from public retail availability, FDA CVM filings, and AAFCO state-registration records. The reviews are written from public corporate disclosures, the WSAVA Global Nutrition Committee guidance, the AAFCO Official Publication, FDA CVM recall records, and the Tufts Cummings Vet School Petfoodology blog. No brand has paid, sponsored, or otherwise compensated PetFoods.com for inclusion, ordering, or assessment language. Affiliate links to retailers may appear on individual brand pages, separately disclosed; affiliate revenue does not influence the WSAVA scoring or the editorial assessment.',
+    answerText:
+      'No brand has paid for inclusion or for assessment language. Affiliate revenue, where it exists, does not influence the WSAVA scoring or editorial.',
   },
   {
     question: 'Why list the corporate parent so prominently?',
     answer:
-      'Pet food brand ownership is highly consolidated. Mars Petcare, Nestlé Purina, Colgate-Palmolive, and General Mills own most of the brands an average shopper sees on a shelf. Knowing the parent matters for recall analysis (manufacturing footprint is often shared across siblings), for sourcing transparency, and for understanding why a “boutique” brand sometimes shares a plant with a mass-market one.',
+      'Pet food brand ownership is highly consolidated. Mars Petcare, Nestlé Purina, Colgate-Palmolive, and General Mills own most of the brands an average shopper sees on a shelf. Knowing the parent matters for recall analysis (manufacturing footprint is often shared across siblings), for sourcing transparency, and for understanding why a "boutique" brand sometimes shares a plant with a mass-market one.',
     answerText:
-      'Pet food brand ownership is highly consolidated. Knowing the parent matters for recall analysis, sourcing transparency, and understanding shared manufacturing footprints across brand siblings.',
+      'Pet food brand ownership is highly consolidated. Knowing the parent matters for recall analysis, sourcing transparency, and shared manufacturing across brand siblings.',
   },
   {
     question: 'How is this site different from PetFood.com?',
     answer:
-      'PetFood.com (singular) is the editorial sister site — it publishes scored brand comparisons, ingredient explainers, and the methodology that governs everything here. PetFoods.com (plural) is the catalog: per-brand, per-ingredient, per-life-stage, per-recall pages. The catalog feeds search demand; the editorial site holds the rubric. They share standards and cite each other.',
+      'PetFood.com (singular) is the editorial sister site — scored brand comparisons, ingredient explainers, and the methodology that governs everything here. PetFoods.com (plural) is the catalog: per-brand, per-ingredient, per-life-stage, per-recall pages, plus the WSAVA-scored long-form reviews. The two sites share standards and cite each other.',
     answerText:
-      'PetFood.com publishes the editorial scoring and comparison pages. PetFoods.com hosts the catalog of per-brand, per-ingredient, per-life-stage, and per-recall reference pages. Same standards, different surfaces.',
-  },
-  {
-    question: 'Do any brands pay for inclusion?',
-    answer:
-      'No. The catalog is built from public retail availability, FDA CVM filings, and AAFCO state-registration records. No brand has paid, sponsored, or otherwise compensated for inclusion or ordering on this index — and per the PetFood.com brand standards, no brand ever will. Affiliate links to retailers may appear on individual brand pages, separately disclosed; affiliate revenue does not influence scoring.',
-    answerText:
-      'No. No brand has paid or sponsored for inclusion or ordering. Affiliate revenue, where it exists, is separately disclosed and does not influence scoring.',
-  },
-  {
-    question: 'A brand I feed is not in this index. How do I get it added?',
-    answer:
-      'The current index covers approximately the top 35 by US shelf presence and search demand. Smaller regional brands, single-channel direct-to-consumer brands, and store-private-label SKUs are queued for a later expansion pass. If a brand is missing, it will be added before we score it; missing now is not a quality signal in either direction.',
-    answerText:
-      'The index covers the top brands by shelf presence and search demand; smaller regional and DTC brands are queued for a later expansion. Missing is not a quality signal in either direction.',
+      'PetFood.com publishes scored comparisons and methodology. PetFoods.com hosts the catalog of per-brand, per-ingredient, per-life-stage, per-recall reference pages and the WSAVA-scored long-form reviews.',
   },
 ]
 
@@ -113,12 +124,13 @@ export default function BrandsHubPage() {
     <ArticleLayout
       siteId="petfoods-com"
       hero={{
-        title: 'Pet Food Brands — Independent Comparison',
+        title: 'Pet Food Brands — Independent Reviews & WSAVA Scorecards',
         subtitle:
-          'A working alphabetical index of major commercial pet food brands sold in the United States, each mapped to its corporate parent and manufacturing footprint. The scored profile for each brand applies the same five-dimension rubric published on PetFood.com — the editorial sister site — and is added here as it is completed.',
-        category: 'Brand Catalog Index',
+          'A working index of major commercial pet food brands sold in the United States, each mapped to its corporate parent, manufacturing footprint, and (for the ten brands with the highest search volume) a long-form WSAVA-scored independent review.',
+        category: 'Brand Catalog & Reviews',
         publishedAt: 'May 2026',
-        readTime: '9 min',
+        readTime: '10 min',
+        authorName: 'PetFoods.com Editorial',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -131,7 +143,8 @@ export default function BrandsHubPage() {
             items={[
               { label: 'TL;DR', href: '#tldr' },
               { label: 'How to Read This Index', href: '#how-to-read' },
-              { label: 'Brand Index (A–Z)', href: '#index' },
+              { label: 'In-Depth Reviews (WSAVA-Scored)', href: '#reviews' },
+              { label: 'Full Brand Index (A–Z)', href: '#index' },
               { label: 'How We Score Brands', href: '#scoring' },
               { label: 'Corporate Consolidation Notes', href: '#consolidation' },
               { label: 'FAQ', href: '#faq' },
@@ -139,25 +152,44 @@ export default function BrandsHubPage() {
             ]}
           />
           <RelatedLinks
-            title="On the Sister Site"
+            title="Reference Hubs"
             links={[
+              { label: 'Ingredient Glossary', href: '/ingredients' },
+              { label: 'Pet Food Recall Database', href: '/recalls' },
+              { label: 'Life-Stage Catalog', href: '/life-stage' },
               { label: 'PetFood.com — Scoring Methodology v1.0', href: 'https://petfood.com/guides/methodology' },
-              { label: 'AAFCO Completeness Explained', href: 'https://petfood.com/guides/aafco-completeness-explained' },
-              { label: 'Orijen vs Acana — Brand Comparison', href: 'https://petfood.com/brands/orijen-vs-acana-comparison' },
             ]}
           />
         </>
       }
     >
       <div className="carloOS-article">
+        <div
+          style={{
+            background: 'var(--brand-surface)',
+            border: '1px solid var(--brand-border)',
+            borderLeft: '4px solid var(--brand-primary)',
+            borderRadius: '6px',
+            padding: '12px 16px',
+            margin: '0 0 24px',
+            fontSize: '13.5px',
+            lineHeight: 1.55,
+            color: 'var(--brand-text-mid)',
+          }}
+        >
+          <strong style={{ color: 'var(--brand-text-dark)' }}>Independent editorial.</strong>{' '}
+          PetFoods.com is reader-supported via affiliate links to retailers. No brand has paid for
+          inclusion or for any assessment language. WSAVA scoring and recall coverage are not for
+          sale.
+        </div>
+
         <p id="tldr">
-          <strong>TL;DR.</strong> This is the brand catalog for PetFoods.com. It lists the major
-          commercial pet food brands sold in the United States, each annotated with corporate parent
-          and primary manufacturing country. When the sister editorial site, PetFood.com, has
-          already published a scored profile or brand-vs-brand comparison, the entry surfaces that
-          editorial link in addition to the catalog reference. Every brand card resolves to a
-          per-brand catalog reference page on PetFoods.com with corporate ownership, manufacturing
-          footprint, AAFCO posture, and an explicit list of fields we could not verify.
+          <strong>TL;DR.</strong> This page indexes the major commercial pet-food brands sold in the
+          United States, each annotated with corporate parent and primary manufacturing country.
+          {' '}<strong>Ten brands</strong> carry a full long-form independent review, with a WSAVA
+          Global Nutrition Committee 6-question scorecard, FDA CVM recall history, product-line
+          breakdown, strengths and weaknesses, and an editorial assessment paragraph. The remainder
+          of the catalog links to a structured reference page and is queued for the next review pass.
         </p>
 
         <h2 id="how-to-read">How to Read This Index</h2>
@@ -170,18 +202,118 @@ export default function BrandsHubPage() {
           regulatory and supply-chain surface and is read differently for that reason.
         </p>
         <p>
-          The catalog does not rank. Alphabetical only. Ranked positions appear only on per-brand
-          scored profiles, where the score is tied to a specific formula and a specific date and is
-          re-runnable from the published methodology.
+          The index does not rank. The reviewed-brand grid below is sorted by WSAVA-questions-
+          answered (descending), then alphabetical — the WSAVA count is a transparency indicator,
+          not a ranking of food quality. The full alphabetical index follows the reviewed grid.
         </p>
 
-        <h2 id="index">Brand Index (A–Z)</h2>
+        <h2 id="reviews">In-Depth Reviews (WSAVA-Scored)</h2>
+        <p>
+          Ten brands have a long-form independent review at launch — selected by US shelf presence
+          and search volume. Each card below shows the WSAVA Global Nutrition Committee 6-question
+          score (0-6), the FDA CVM recall count in our review window, and whether the brand
+          publicly identifies a board-certified veterinary nutritionist (ACVN/ECVCN) on its
+          formulation team. Click through to the per-brand page for the full scorecard and
+          assessment.
+        </p>
+
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '14px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            gap: '16px',
             margin: '24px 0 32px',
+          }}
+        >
+          {REVIEWED_ROWS.map((row) => (
+            <Link
+              key={row.slug}
+              href={`/brands/${row.slug}`}
+              style={{
+                display: 'block',
+                padding: '18px 20px',
+                border: '1px solid var(--brand-border)',
+                borderRadius: '8px',
+                background: 'var(--brand-white)',
+                color: 'var(--brand-text-dark)',
+                textDecoration: 'none',
+                lineHeight: 1.45,
+              }}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  justifyContent: 'space-between',
+                  gap: '10px',
+                  marginBottom: '8px',
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '17px',
+                    fontWeight: 700,
+                    color: 'var(--brand-text-dark)',
+                  }}
+                >
+                  {row.name}
+                </div>
+                <WsavaBadge score={row.wsava} />
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginBottom: '4px' }}>
+                Parent: {row.parent}
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginBottom: '10px' }}>
+                Manufactured: {row.manufacturing}
+              </div>
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '6px',
+                  margin: '0 0 8px',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '11px',
+                }}
+              >
+                <Chip
+                  label={row.hasBoardCertNutritionists ? 'Board-cert nutritionist' : 'No public nutritionist'}
+                  good={row.hasBoardCertNutritionists}
+                />
+                <Chip
+                  label={row.recalls === 0 ? 'No recalls (review window)' : `${row.recalls} FDA recall${row.recalls === 1 ? '' : 's'}`}
+                  good={row.recalls === 0}
+                />
+              </div>
+              <div
+                style={{
+                  fontSize: '11px',
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase',
+                  color: 'var(--brand-primary)',
+                  fontWeight: 600,
+                  marginTop: '6px',
+                }}
+              >
+                Read full review →
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <h2 id="index">Full Brand Index (A–Z)</h2>
+        <p>
+          The complete catalog — every brand we cover, in alphabetical order. Cards marked
+          “Reviewed” carry the full long-form WSAVA-scored review above; the others link to the
+          structured catalog reference page.
+        </p>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+            gap: '12px',
+            margin: '18px 0 28px',
           }}
         >
           {SORTED.map((brand) => (
@@ -190,7 +322,7 @@ export default function BrandsHubPage() {
               href={`/brands/${brand.slug}`}
               style={{
                 display: 'block',
-                padding: '16px 18px',
+                padding: '14px 16px',
                 border: '1px solid var(--brand-border)',
                 borderRadius: '6px',
                 background: 'var(--brand-white)',
@@ -202,34 +334,30 @@ export default function BrandsHubPage() {
               <div
                 style={{
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '15px',
+                  fontSize: '14.5px',
                   fontWeight: 700,
                   color: 'var(--brand-text-dark)',
-                  marginBottom: '6px',
+                  marginBottom: '4px',
                 }}
               >
                 {brand.name}
               </div>
-              <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginBottom: '4px' }}>
+              <div style={{ fontSize: '12.5px', color: 'var(--brand-text-mid)', marginBottom: '4px' }}>
                 Parent: {brand.parent}
               </div>
-              <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
+              <div style={{ fontSize: '12.5px', color: 'var(--brand-text-mid)', marginBottom: '6px' }}>
                 Manufactured: {brand.manufacturing}
               </div>
               <div
                 style={{
-                  fontSize: '11px',
+                  fontSize: '10.5px',
                   letterSpacing: '0.04em',
                   textTransform: 'uppercase',
-                  color: brand.editorialCrossLink
-                    ? 'var(--brand-success)'
-                    : 'var(--brand-text-mid)',
-                  fontWeight: 600,
+                  color: brand.hasReview ? 'var(--brand-success)' : 'var(--brand-text-mid)',
+                  fontWeight: 700,
                 }}
               >
-                {brand.editorialCrossLink
-                  ? 'Catalog reference · Editorial comparison on PetFood.com'
-                  : 'View catalog reference →'}
+                {brand.hasReview ? 'Full WSAVA review →' : 'Catalog reference →'}
               </div>
             </Link>
           ))}
@@ -246,35 +374,30 @@ export default function BrandsHubPage() {
           }}
         >
           <p style={{ margin: 0, fontWeight: 600, color: 'var(--brand-text-dark)' }}>
-            Every per-brand scored profile runs through the published PetFood.com rubric, v1.0.
+            Each long-form review counts how many of the WSAVA Global Nutrition Committee’s six
+            “Selecting a Pet Food Manufacturer” questions the brand answers publicly.
           </p>
           <ol style={{ margin: '10px 0 0 18px' }}>
-            <li><strong>AAFCO completeness</strong> — nutritional adequacy statement and whether it was earned by feeding trial or by formulation only.</li>
-            <li><strong>Ingredient sourcing transparency</strong> — disclosure of protein source, country of origin, and supplier audit posture.</li>
-            <li><strong>Recall history</strong> — FDA CVM Recalls &amp; Withdrawals database record for the brand and its manufacturer, weighted by severity.</li>
-            <li><strong>Manufacturing standards</strong> — Global Food Safety Initiative–benchmarked certification status and audit transparency.</li>
-            <li><strong>Feeding-outcome literature</strong> — peer-reviewed evidence, where it exists, for the formula or product family.</li>
+            <li><strong>Q1.</strong> Does the company employ a full-time qualified nutritionist (PhD in animal nutrition or board-certified veterinary nutritionist — ACVN or ECVCN)?</li>
+            <li><strong>Q2.</strong> Who formulates the diets and what are their credentials?</li>
+            <li><strong>Q3.</strong> Are the diets tested using AAFCO feeding trials, or formulated to meet AAFCO nutrient profiles only?</li>
+            <li><strong>Q4.</strong> Where are the foods produced and manufactured? Can the facility be visited?</li>
+            <li><strong>Q5.</strong> What specific quality-control measures are used to assure the consistency and quality of ingredients and the end product?</li>
+            <li><strong>Q6.</strong> Will the company provide a complete product nutrient analysis (beyond the guaranteed analysis on the bag)?</li>
           </ol>
           <p style={{ margin: '12px 0 0', fontSize: '14px' }}>
-            The rubric, including the explicit anti-criteria (what we do <em>not</em> score on —
-            packaging quality, brand age, marketing tone), is published in full at{' '}
-            <a href="https://petfood.com/guides/methodology" target="_blank" rel="noopener">
-              petfood.com/guides/methodology
-            </a>
-            . When the rubric version changes, prior scores are re-run.
+            WSAVA does not itself publish brand-level scores. The 0-6 number is PetFoods.com’s
+            editorial reading of which questions the brand answers publicly. Each per-brand review
+            shows the brand’s public answer for each answered question and explicitly notes the
+            questions that were not answered, so the score is auditable. The WSAVA scoring is a
+            transparency indicator only — not a ranking of food quality and not a substitute for
+            veterinary advice for an individual pet.
           </p>
         </div>
-        <p>
-          The catalog is structurally independent from the methodology. The catalog says “this
-          brand exists, here is who owns it, here is where it is made.” The methodology says
-          “here is the rubric that will be applied.” The per-brand scored profile is the
-          intersection: the rubric applied to a brand on a dated, citable record.
-        </p>
 
         <h2 id="consolidation">Corporate Consolidation Notes</h2>
         <p>
-          The US pet food market is dominated by a small number of multinational owners. As an
-          orientation:
+          The US pet food market is dominated by a small number of multinational owners:
         </p>
         <ul>
           <li>
@@ -289,8 +412,7 @@ export default function BrandsHubPage() {
           </li>
           <li>
             <strong>Colgate-Palmolive</strong> — sole owner of Hill’s Pet Nutrition
-            (Science Diet and Prescription Diet). The only top-three pet food owner whose primary
-            business is consumer health rather than confectionery or food conglomerate.
+            (Science Diet and Prescription Diet).
           </li>
           <li>
             <strong>General Mills</strong> — owns Blue Buffalo since 2018.
@@ -298,15 +420,14 @@ export default function BrandsHubPage() {
           <li>
             <strong>Independent / family-owned</strong> — Fromm, Wysong, Stella &amp; Chewy’s,
             The Honest Kitchen, Open Farm, Diamond Pet Foods (also contract-manufactures for other
-            brands), and others. Independent ownership is not, on its own, a quality signal; it is
-            a procurement-and-recall posture worth knowing.
+            brands). Independent ownership is not, on its own, a quality signal; it is a
+            procurement-and-recall posture worth knowing.
           </li>
         </ul>
         <p>
           Consolidation matters operationally. When a contract manufacturer issues a recall, every
           brand on that production line is affected — which is why the recall section on each
-          per-brand page is tied to the manufacturer, not only the brand name on the bag. The
-          consolidation map above is the reference for those cross-brand implications.
+          per-brand page is tied to the manufacturer, not only the brand name on the bag.
         </p>
 
         <h2 id="faq">FAQ</h2>
@@ -315,28 +436,94 @@ export default function BrandsHubPage() {
         <h2 id="sources">Sources</h2>
         <ul>
           <li>
+            World Small Animal Veterinary Association (WSAVA), Global Nutrition Committee.{' '}
+            <em>Selecting a Pet Food Manufacturer</em>.{' '}
+            <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noopener">
+              wsava.org/global-guidelines/global-nutrition-guidelines/
+            </a>{' '}
+            — primary source for the 6-question scorecard rubric.
+          </li>
+          <li>
             Association of American Feed Control Officials (AAFCO). <em>2025 Official Publication</em>,
-            sections on pet food labeling, AAFCO nutrient profiles for dogs and cats, and feed
-            ingredient definitions. Corporate parent and product-name claims are validated against
-            this volume.
+            sections on pet food labeling, nutrient profiles for dogs and cats, and feeding-trial
+            substantiation requirements.
           </li>
           <li>
             U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Recalls &amp;
-            Withdrawals — Animal &amp; Veterinary</em>. Used to associate each brand with its
-            manufacturing parent for recall-history analysis.
+            Withdrawals — Animal &amp; Veterinary</em>.{' '}
+            <a href="https://www.fda.gov/animal-veterinary/safety-health/recalls-withdrawals" target="_blank" rel="noopener">
+              fda.gov/animal-veterinary/safety-health/recalls-withdrawals
+            </a>{' '}
+            — primary source for recall history on every reviewed brand.
           </li>
           <li>
-            World Small Animal Veterinary Association (WSAVA), Global Nutrition Committee. <em>WSAVA
-            Selecting a Pet Food Manufacturer</em> guidance. The audit posture questions on the
-            five-dimension rubric are derived from this document.
+            U.S. FDA CVM. <em>Investigation into Potential Link between Certain Diets and Canine
+            Dilated Cardiomyopathy</em>.{' '}
+            <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy" target="_blank" rel="noopener">
+              fda.gov — DCM investigation
+            </a>{' '}
+            — cited on the Blue Buffalo, Wellness, Orijen, and Acana reviews.
           </li>
           <li>
-            Corporate disclosures (10-K, investor decks, brand-acquisition press releases) from
-            Mars, Nestlé, General Mills, Colgate-Palmolive, Post Holdings, Better Choice Company,
-            and other parents. Used to confirm parent ownership and acquisition dates.
+            Tufts University Cummings School of Veterinary Medicine. <em>Petfoodology blog</em>.{' '}
+            <a href="https://vetnutrition.tufts.edu/petfoodology" target="_blank" rel="noopener">
+              vetnutrition.tufts.edu/petfoodology
+            </a>{' '}
+            — clinical-nutrition perspective referenced across the WSAVA-tier reviews.
+          </li>
+          <li>
+            Corporate disclosures (10-K filings, investor decks, brand “About” / “Science” pages,
+            acquisition press releases) from the parent companies named above.
           </li>
         </ul>
       </div>
     </ArticleLayout>
+  )
+}
+
+// ─── Sub-components ─────────────────────────────────────────────────────────
+
+function WsavaBadge({ score }: { score: number }) {
+  const bg =
+    score >= 5
+      ? 'var(--brand-primary)'
+      : score >= 3
+        ? 'var(--brand-primary-light)'
+        : 'var(--brand-text-light)'
+  return (
+    <span
+      style={{
+        display: 'inline-block',
+        background: bg,
+        color: '#fff',
+        fontFamily: 'var(--font-mono)',
+        fontSize: '12px',
+        fontWeight: 700,
+        letterSpacing: '0.02em',
+        padding: '4px 10px',
+        borderRadius: '999px',
+        whiteSpace: 'nowrap',
+      }}
+      title="Count of WSAVA Global Nutrition Committee 6-question rubric items answered publicly."
+    >
+      WSAVA {score}/6
+    </span>
+  )
+}
+
+function Chip({ label, good }: { label: string; good: boolean }) {
+  return (
+    <span
+      style={{
+        display: 'inline-block',
+        padding: '3px 8px',
+        borderRadius: '999px',
+        background: good ? 'var(--brand-primary-pale)' : 'var(--brand-surface)',
+        color: good ? 'var(--brand-primary-dark)' : 'var(--brand-text-mid)',
+        border: '1px solid var(--brand-border)',
+      }}
+    >
+      {label}
+    </span>
   )
 }
