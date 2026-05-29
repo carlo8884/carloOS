@@ -19,7 +19,7 @@ export default function LabradorPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Labrador Feeding Guide', href: '/breeds/labrador-retriever/feeding' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-lab" />
       </>}
     >

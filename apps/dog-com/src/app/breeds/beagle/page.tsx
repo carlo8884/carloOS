@@ -22,7 +22,7 @@ export default function BeaglePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Beagle Feeding Guide', href: '/breeds/beagle/feeding' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
     >
