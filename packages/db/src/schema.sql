@@ -18,7 +18,8 @@ create type site_id as enum (
   'vets-co',
   'fish-com',
   'saddle-com',
-  'lizard-com'
+  'lizard-com',
+  'hardmoneyloans'
 );
 
 create type content_type as enum (
@@ -481,3 +482,39 @@ alter table public.site_configs_db enable row level security;
 create policy "Anyone can read site configs"
   on public.site_configs_db for select
   using (true);
+
+-- ─────────────────────────────────────────────────────────────
+-- HARD MONEY LEAD MARKETPLACE (Architect S11)
+-- Captures quote submissions from hardmoneyloans.com /quote/[lender].
+-- One row per submitted quote request. Leads remain RLS-locked
+-- (insert via service role only) and are manually relayed to
+-- lenders until the prepaid-balance auction layer (P6) is built.
+-- ─────────────────────────────────────────────────────────────
+
+create table public.hard_money_leads (
+  id              uuid primary key default gen_random_uuid(),
+  lender_slug     text not null,
+  name            text not null,
+  email           text not null,
+  phone           text not null,
+  loan_amount     numeric(14, 2) not null,
+  property_type   text not null,
+  state           text not null,
+  purpose         text,
+  credit_range    text,
+  source_path     text,
+  created_at      timestamptz default now()
+);
+
+create index on public.hard_money_leads(lender_slug, created_at desc);
+create index on public.hard_money_leads(state, created_at desc);
+create index on public.hard_money_leads(created_at desc);
+
+alter table public.hard_money_leads enable row level security;
+
+-- No anon read or insert — service role only.
+create policy "service role manages leads"
+  on public.hard_money_leads for all
+  using (false)
+  with check (false);
+

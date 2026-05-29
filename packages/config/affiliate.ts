@@ -58,6 +58,58 @@ export const AFFILIATE_PROGRAMS: Record<string, AffiliateProgram> = {
     tag: 'carloOS',
     commission: '5–8%',
   },
+
+  // ── Hard Money / Real Estate Investor Lending (S11) ────────────────────────
+  // These are direct-lender referral relationships (no network in between).
+  // Tags are placeholders; replace with real referral IDs from each lender.
+  kiavi: {
+    name: 'Kiavi (formerly LendingHome)',
+    tag: process.env.AFF_KIAVI_TAG ?? 'carloOS',
+    baseUrl: 'https://www.kiavi.com',
+    commission: 'CPA per funded loan (~$500–$1500)',
+  },
+  rcncapital: {
+    name: 'RCN Capital',
+    tag: process.env.AFF_RCN_TAG ?? 'carloOS',
+    baseUrl: 'https://www.rcncapital.com',
+    commission: 'CPA per funded loan',
+  },
+  limaone: {
+    name: 'Lima One Capital',
+    tag: process.env.AFF_LIMAONE_TAG ?? 'carloOS',
+    baseUrl: 'https://www.limaone.com',
+    commission: 'CPA per funded loan',
+  },
+  anchorloans: {
+    name: 'Anchor Loans',
+    tag: process.env.AFF_ANCHOR_TAG ?? 'carloOS',
+    baseUrl: 'https://www.anchorloans.com',
+    commission: 'CPA per funded loan',
+  },
+  groundfloor: {
+    name: 'Groundfloor',
+    tag: process.env.AFF_GROUNDFLOOR_TAG ?? 'carloOS',
+    baseUrl: 'https://www.groundfloor.com',
+    commission: 'CPA per funded loan',
+  },
+  crosscountry: {
+    name: 'CrossCountry Mortgage (Hard Money Division)',
+    tag: process.env.AFF_CROSSCOUNTRY_TAG ?? 'carloOS',
+    baseUrl: 'https://crosscountrymortgage.com',
+    commission: 'CPA per funded loan',
+  },
+  jetlending: {
+    name: 'Jet Lending',
+    tag: process.env.AFF_JETLENDING_TAG ?? 'carloOS',
+    baseUrl: 'https://jetlending.com',
+    commission: 'CPA per funded loan',
+  },
+  civicfinancial: {
+    name: 'Civic Financial Services',
+    tag: process.env.AFF_CIVIC_TAG ?? 'carloOS',
+    baseUrl: 'https://www.civicfs.com',
+    commission: 'CPA per funded loan',
+  },
 }
 
 // ── Amazon affiliate link builder ─────────────────────────────────────────────
@@ -90,4 +142,18 @@ export const SITE_PROGRAMS = {
   'fish-com': ['amazon', 'chewy'],
   'saddle-com': ['sharesale', 'amazon'],
   'lizard-com': ['amazon'],
+  'hardmoneyloans': [
+    'kiavi',
+    'rcncapital',
+    'limaone',
+    'anchorloans',
+    'groundfloor',
+    'crosscountry',
+    'jetlending',
+    'civicfinancial',
+  ],
 } as const
+
+// ── Hard money / finance-vertical disclosure (FTC-compliant) ───────────────────
+// Used on HardMoneyLoans.com per S11 editorial standards.
+export const HARD_MONEY_DISCLOSURE = `HardMoneyLoans.com receives referral fees when readers connect with lenders through our platform. Rankings are editorial and independent of compensation. This is not a loan offer, loan approval, or commitment to lend. All loan terms, rates, and eligibility are determined by the lender. This site does not provide legal, financial, or tax advice.`

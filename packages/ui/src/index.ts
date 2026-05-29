@@ -46,6 +46,22 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 export { SearchBar } from './components/SearchBar'
 export { buildHowToSchema, buildMedicalWebPageSchema, combineSchemas } from './components/SEOHead'
 
+// Affiliate / monetization (S11 — Hard money lead marketplace)
+export { AffiliateLink } from './components/AffiliateLink'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export { SkimlinksLoader } from './components/SkimlinksLoader'
+export { AdSenseLoader } from './components/AdSenseLoader'
+export { AdSlot } from './components/AdSlot'
+export {
+  AFFILIATE_VENDORS,
+  listVendorsByCategory,
+} from './components/affiliate-vendors'
+export type {
+  Vendor,
+  VendorEntry,
+  AffiliateCategory,
+} from './components/affiliate-vendors'
+
 // Editorial component library
 export { PullQuote } from './components/PullQuote'
 export type { PullQuoteProps } from './components/PullQuote'

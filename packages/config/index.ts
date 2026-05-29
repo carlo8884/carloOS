@@ -19,6 +19,7 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  | 'hardmoneyloans'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -354,6 +355,33 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  // ─── HardMoneyLoans.com — finance-trustworthy slate/charcoal authority palette ───
+  'hardmoneyloans': {
+    primary: '#1e293b',
+    primaryLight: '#334155',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#0F172A',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#15803D',
+    warning: '#B45309',
+    danger: '#B91C1C',
+    fontDisplay: 'Source Serif 4',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [400, 500, 600, 700],
+    siteName: 'HardMoneyLoans.com',
+    siteTagline: 'Compare top hard money lenders for real estate investors',
+    siteUrl: 'https://hardmoneyloans.com',
+    logoText: 'HardMoneyLoans.com',
+    twPrimary: 'slate',
   },
 
   // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
@@ -813,6 +841,60 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'hardmoneyloans': {
+    id: 'hardmoneyloans',
+    theme: themes['hardmoneyloans'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Lenders', href: '/lenders' },
+      { label: 'By State', href: '/states' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Quiz', href: '/quiz' },
+      { label: 'Get Quotes', href: '/quote', highlight: true },
+    ],
+    footerLinks: [
+      {
+        heading: 'Top Lenders',
+        links: [
+          { label: 'Kiavi', href: '/lenders/kiavi' },
+          { label: 'RCN Capital', href: '/lenders/rcn-capital' },
+          { label: 'Lima One', href: '/lenders/lima-one' },
+          { label: 'Anchor Loans', href: '/lenders/anchor-loans' },
+          { label: 'All Lenders', href: '/lenders' },
+        ],
+      },
+      {
+        heading: 'Guides',
+        links: [
+          { label: 'What Is Hard Money?', href: '/guides/what-is-hard-money' },
+          { label: 'Fix-and-Flip Financing', href: '/guides/fix-and-flip-financing' },
+          { label: 'BRRRR Strategy', href: '/guides/brrrr-strategy' },
+          { label: 'DSCR vs Hard Money', href: '/guides/dscr-vs-hard-money' },
+          { label: 'How to Qualify', href: '/guides/how-to-qualify' },
+        ],
+      },
+      {
+        heading: 'Resources',
+        links: [
+          { label: 'Find a Lender by State', href: '/states' },
+          { label: 'Quote Quiz', href: '/quiz' },
+          { label: 'Editorial Standards', href: '/editorial-standards' },
+          { label: 'Disclosures', href: '/disclosures' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://hardmoneyloans.com/og-default.jpg',
   },
 
   'petfoods-com': {
