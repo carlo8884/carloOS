@@ -19,6 +19,7 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  | 'seniorpets'
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -354,6 +355,37 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://ferrets.com',
     logoText: 'Ferrets.com',
     twPrimary: 'amber',
+  },
+
+  // ─── SeniorPets — warm muted earth tones for the senior pet brand ─────
+  // Primary #7c6f59 mushroom-taupe, soft cream background, serif headers
+  // for warmth and authority. Single family across the sister domains:
+  //   seniorpetpharmacy.com · seniorpetmeds.com · seniorpetproducts.com
+  //   seniorpetplace.com · seniorcats.com
+  seniorpets: {
+    primary: '#7C6F59',
+    primaryLight: '#9A8D74',
+    primaryPale: '#F1EBDD',
+    primaryDark: '#5A503F',
+    dark: '#211D17',
+    surface: '#FAF5EA',
+    white: '#FFFFFF',
+    textDark: '#211D17',
+    textMid: '#4A4234',
+    textLight: '#8A8070',
+    border: '#E3D9C5',
+    success: '#2A6A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Lora',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 500, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'SeniorPetPharmacy',
+    siteTagline: 'Compassionate care for aging pets — vet-reviewed guides and trusted product recommendations.',
+    siteUrl: 'https://seniorpetpharmacy.com',
+    logoText: 'SeniorPetPharmacy',
+    twPrimary: 'stone',
   },
 
   // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
@@ -813,6 +845,68 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  seniorpets: {
+    id: 'seniorpets',
+    theme: themes['seniorpets'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: true,
+      healthyPaws: true,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Senior Conditions', href: '/conditions' },
+      { label: 'Medications', href: '/medications' },
+      { label: 'Pet Insurance', href: '/insurance', highlight: true },
+      { label: 'Find a Vet', href: '/find-a-vet' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Conditions',
+        links: [
+          { label: 'Arthritis & Joint Pain', href: '/conditions/osteoarthritis' },
+          { label: 'Kidney Disease', href: '/conditions/chronic-kidney-disease' },
+          { label: 'Cognitive Decline', href: '/conditions/canine-cognitive-dysfunction' },
+          { label: 'Heart Disease', href: '/conditions/congestive-heart-failure' },
+          { label: 'All Conditions', href: '/conditions' },
+        ],
+      },
+      {
+        heading: 'Medications',
+        links: [
+          { label: 'Adequan', href: '/medications/adequan' },
+          { label: 'Galliprant', href: '/medications/galliprant' },
+          { label: 'Vetmedin', href: '/medications/vetmedin' },
+          { label: 'Methimazole', href: '/medications/methimazole' },
+          { label: 'All Medications', href: '/medications' },
+        ],
+      },
+      {
+        heading: 'Resources',
+        links: [
+          { label: 'Pet Insurance', href: '/insurance' },
+          { label: 'Find a Vet', href: '/find-a-vet' },
+          { label: 'Senior Pet Newsletter', href: '/newsletter' },
+        ],
+      },
+      {
+        heading: 'Our Domains',
+        links: [
+          { label: 'seniorpetpharmacy.com', href: 'https://seniorpetpharmacy.com' },
+          { label: 'seniorpetmeds.com', href: 'https://seniorpetmeds.com' },
+          { label: 'seniorpetproducts.com', href: 'https://seniorpetproducts.com' },
+          { label: 'seniorpetplace.com', href: 'https://seniorpetplace.com' },
+          { label: 'seniorcats.com', href: 'https://seniorcats.com' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://seniorpetpharmacy.com/og-default.jpg',
   },
 
   'petfoods-com': {
