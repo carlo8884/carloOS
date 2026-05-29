@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   PETSUPPLIES.COM THEME TOKENS
+   Architect S1 / Directive 6 — slate-blue commerce.
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Brand */
+  --brand-primary: #475569;
+  --brand-primary-light: #64748B;
+  --brand-primary-pale: #F1F5F9;
+  --brand-primary-dark: #334155;
+
+  /* Backgrounds */
+  --brand-dark: #0F172A;
+  --brand-surface: #F8FAFC;
+  --brand-white: #FFFFFF;
+
+  /* Text */
+  --brand-text-dark: #0F172A;
+  --brand-text-mid: #334155;
+  --brand-text-light: #64748B;
+
+  /* Borders */
+  --brand-border: #E2E8F0;
+
+  /* Semantic */
+  --brand-success: #16A34A;
+  --brand-warning: #D97706;
+  --brand-danger: #DC2626;
+
+  /* Typography — Inter throughout for clean modern commerce feel. */
+  --font-display: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --nav-height: 68px;
+}
+
+/* ─── BASE ─────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-brand-white text-brand-text-dark;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── ARTICLE BODY TYPOGRAPHY ───────────────────────────────── */
+
+.carloOS-article {
+  --tw-prose-body: var(--brand-text-mid);
+  --tw-prose-headings: var(--brand-text-dark);
+  --tw-prose-links: var(--brand-primary);
+  --tw-prose-bold: var(--brand-text-dark);
+  --tw-prose-counters: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-text-light);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-primary);
+}
+
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 1px solid var(--brand-border);
+  padding-bottom: 0.625rem;
+  letter-spacing: -0.025em;
+}
+
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-text-dark);
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.carloOS-article p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--brand-text-mid);
+  margin-bottom: 1rem;
+}
+
+.carloOS-article ul, .carloOS-article ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.carloOS-article li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--brand-text-mid);
+  margin-bottom: 0.5rem;
+}
+
+.carloOS-article strong {
+  color: var(--brand-text-dark);
+  font-weight: 600;
+}
+
+.carloOS-article a {
+  color: var(--brand-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(71, 85, 105, 0.35);
+  transition: text-decoration-color 0.2s;
+}
+
+.carloOS-article a:hover {
+  text-decoration-color: var(--brand-primary);
+}
+
+/* ─── COMPARISON GRID ───────────────────────────────────────── */
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 180px repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--brand-border);
+  border: 1px solid var(--brand-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.compare-grid > div {
+  background: var(--brand-white);
+  padding: 16px 18px;
+}
+
+.compare-grid .label-cell {
+  background: var(--brand-surface);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--brand-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── SELECTION ─────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(71, 85, 105, 0.18);
+  color: var(--brand-text-dark);
+}

@@ -1,0 +1,4237 @@
+[
+  {
+    "category": "dog-food-dry",
+    "name": "Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food",
+    "brand": "Hill's Science Diet",
+    "vendor": "chewy",
+    "vendor_sku": "118731",
+    "price_range": "$59-$84 (30 lb)",
+    "price_cents": 6499,
+    "expert_score": 9.4,
+    "pros": [
+      "WSAVA-compliant: full-time ACVN nutritionists, AAFCO feeding trials, owned manufacturing",
+      "Prebiotic fiber and vitamin E specifically targeted to skin and GI tolerance",
+      "Widely available with consistent formulation across batches"
+    ],
+    "cons": [
+      "Higher per-pound cost than supermarket maintenance brands",
+      "Chicken-based recipe is not appropriate for chicken-allergic dogs"
+    ],
+    "specs": {
+      "protein": "21%",
+      "fat": "13%",
+      "fiber": "3%",
+      "kcal_per_cup": "362",
+      "life_stage": "Adult maintenance"
+    },
+    "best_for": ["sensitive stomach", "adult dogs", "skin allergies"],
+    "badge": "Best Overall"
+  },
+  {
+    "category": "dog-food-dry",
+    "name": "Purina Pro Plan Sport Performance 30/20 Chicken & Rice",
+    "brand": "Purina Pro Plan",
+    "vendor": "chewy",
+    "vendor_sku": "381127",
+    "price_range": "$58-$89 (37.5 lb)",
+    "price_cents": 7299,
+    "expert_score": 9.2,
+    "pros": [
+      "30% protein / 20% fat — high energy density for working and sport dogs",
+      "WSAVA-compliant manufacturer with published nutrient analyses",
+      "AAFCO feeding trial substantiated for all life stages"
+    ],
+    "cons": [
+      "Too calorically dense for sedentary house dogs — risk of weight gain",
+      "Chicken-based, not appropriate for chicken-allergic dogs"
+    ],
+    "specs": {
+      "protein": "30%",
+      "fat": "20%",
+      "fiber": "3%",
+      "kcal_per_cup": "475",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["working dogs", "sport dogs", "active adults"],
+    "badge": "Best for Active Dogs"
+  },
+  {
+    "category": "dog-food-dry",
+    "name": "Royal Canin Size Health Nutrition Medium Adult Dry Dog Food",
+    "brand": "Royal Canin",
+    "vendor": "chewy",
+    "vendor_sku": "33237",
+    "price_range": "$92-$118 (30 lb)",
+    "price_cents": 9999,
+    "expert_score": 9.0,
+    "pros": [
+      "Size-specific kibble shape and nutrient profile for 23-55 lb adult dogs",
+      "WSAVA-compliant manufacturer with ACVN nutritionists on staff",
+      "Targeted EPA/DHA for skin and coat support"
+    ],
+    "cons": [
+      "Premium pricing relative to broader-market WSAVA brands",
+      "Size-specific marketing can drive owners to over-segment normal dogs"
+    ],
+    "specs": {
+      "protein": "25%",
+      "fat": "14%",
+      "fiber": "3.4%",
+      "kcal_per_cup": "316",
+      "life_stage": "Adult, medium breed"
+    },
+    "best_for": ["medium breed adults", "23-55 lb dogs"],
+    "badge": "Best for Medium Breeds"
+  },
+  {
+    "category": "dog-food-dry",
+    "name": "Iams Proactive Health Minichunks Adult Dry Dog Food",
+    "brand": "Iams",
+    "vendor": "amazon",
+    "vendor_sku": "B07PG2X9M2",
+    "price_range": "$36-$52 (30 lb)",
+    "price_cents": 4299,
+    "expert_score": 8.6,
+    "pros": [
+      "WSAVA-compliant manufacturer with published nutrient analyses",
+      "Significantly cheaper per-pound than other WSAVA brands",
+      "Stable, long-established formulation with consistent palatability"
+    ],
+    "cons": [
+      "Less specialty differentiation than Hill's or Royal Canin for medical conditions",
+      "Higher carbohydrate percentage than premium WSAVA equivalents"
+    ],
+    "specs": {
+      "protein": "25%",
+      "fat": "14%",
+      "fiber": "4%",
+      "kcal_per_cup": "352",
+      "life_stage": "Adult maintenance"
+    },
+    "best_for": ["budget-conscious owners", "healthy adult dogs"],
+    "badge": "Best Value"
+  },
+  {
+    "category": "dog-food-dry",
+    "name": "Eukanuba Large Breed Adult Dry Dog Food",
+    "brand": "Eukanuba",
+    "vendor": "amazon",
+    "vendor_sku": "B083CWQS6L",
+    "price_range": "$55-$78 (33 lb)",
+    "price_cents": 6499,
+    "expert_score": 8.8,
+    "pros": [
+      "Large-breed formulation with appropriate calcium and phosphorus ratio",
+      "WSAVA-compliant with AAFCO feeding trials",
+      "Joint-support glucosamine and chondroitin included"
+    ],
+    "cons": [
+      "Chicken-based — not appropriate for chicken-allergic dogs",
+      "Higher caloric density requires careful portion control"
+    ],
+    "specs": {
+      "protein": "26%",
+      "fat": "14%",
+      "fiber": "4%",
+      "kcal_per_cup": "324",
+      "life_stage": "Adult, large breed"
+    },
+    "best_for": ["large breeds 55+ lb", "joint support"],
+    "badge": "Best for Large Breeds"
+  },
+  {
+    "category": "dog-food-wet",
+    "name": "Hill's Science Diet Adult Sensitive Stomach Wet Dog Food",
+    "brand": "Hill's Science Diet",
+    "vendor": "chewy",
+    "vendor_sku": "118732",
+    "price_range": "$54-$72 (12-pack 12.8 oz cans)",
+    "price_cents": 5999,
+    "expert_score": 9.2,
+    "pros": [
+      "WSAVA-compliant manufacturer with published clinical evidence",
+      "Higher moisture for hydration support",
+      "Consistent palatability across batches"
+    ],
+    "cons": [
+      "Significantly higher cost-per-calorie than dry equivalents",
+      "Limited recipe variety compared to premium wet brands"
+    ],
+    "specs": {
+      "protein": "8%",
+      "fat": "5.5%",
+      "moisture": "76%",
+      "kcal_per_can": "322",
+      "life_stage": "Adult"
+    },
+    "best_for": ["sensitive stomach", "hydration support", "picky eaters"],
+    "badge": "Best Overall Wet"
+  },
+  {
+    "category": "dog-food-wet",
+    "name": "Wellness Complete Health Pâté Adult Beef & Sweet Potato",
+    "brand": "Wellness",
+    "vendor": "chewy",
+    "vendor_sku": "27732",
+    "price_range": "$48-$65 (12-pack 12.5 oz cans)",
+    "price_cents": 5499,
+    "expert_score": 8.6,
+    "pros": [
+      "Real meat first ingredient with whole-food vegetables",
+      "Grain-inclusive formulation avoids DCM-associated grain-free legume bases",
+      "Strong palatability — high acceptance from finicky dogs"
+    ],
+    "cons": [
+      "No board-certified veterinary nutritionist on staff (per published reporting)",
+      "Boutique brand without WSAVA-equivalent transparency"
+    ],
+    "specs": {
+      "protein": "8%",
+      "fat": "5%",
+      "moisture": "78%",
+      "kcal_per_can": "439",
+      "life_stage": "Adult"
+    },
+    "best_for": ["picky eaters", "owners wanting whole-food ingredients"],
+    "badge": "Best Picky-Eater Option"
+  },
+  {
+    "category": "dog-food-wet",
+    "name": "Royal Canin Adult Loaf in Sauce Wet Dog Food",
+    "brand": "Royal Canin",
+    "vendor": "chewy",
+    "vendor_sku": "67239",
+    "price_range": "$58-$78 (24-pack 5.8 oz cans)",
+    "price_cents": 6299,
+    "expert_score": 8.9,
+    "pros": [
+      "WSAVA-compliant manufacturer with documented clinical evidence",
+      "Wide variety of breed-specific and size-specific wet formulas",
+      "Useful as a topper for transitioning kibble-resistant dogs"
+    ],
+    "cons": [
+      "Premium pricing positions it above mainstream wet brands",
+      "Smaller can size means lower per-can value than larger cans"
+    ],
+    "specs": {
+      "protein": "8.5%",
+      "fat": "5.5%",
+      "moisture": "78%",
+      "kcal_per_can": "150",
+      "life_stage": "Adult"
+    },
+    "best_for": ["adult dogs", "wet/dry mixed feeding"],
+    "badge": "Best for Mixed Feeding"
+  },
+  {
+    "category": "dog-food-wet",
+    "name": "Purina Pro Plan Savor Adult Classic Beef & Rice Entrée",
+    "brand": "Purina Pro Plan",
+    "vendor": "amazon",
+    "vendor_sku": "B003ULKDR2",
+    "price_range": "$36-$52 (12-pack 13 oz cans)",
+    "price_cents": 4299,
+    "expert_score": 8.8,
+    "pros": [
+      "WSAVA-compliant brand with strong feeding-trial track record",
+      "Significantly cheaper than Hill's or Royal Canin wet equivalents",
+      "Real meat first ingredient, grain-inclusive"
+    ],
+    "cons": [
+      "Less recipe differentiation than competitors",
+      "Pâté texture only — no chunked or stewed options in this line"
+    ],
+    "specs": {
+      "protein": "8%",
+      "fat": "4%",
+      "moisture": "78%",
+      "kcal_per_can": "390",
+      "life_stage": "Adult"
+    },
+    "best_for": ["adult dogs", "budget-conscious wet feeding"],
+    "badge": "Best Value Wet"
+  },
+  {
+    "category": "dog-food-wet",
+    "name": "Merrick Classic Grain-Inclusive Real Beef + Sweet Potato Stew",
+    "brand": "Merrick",
+    "vendor": "chewy",
+    "vendor_sku": "229531",
+    "price_range": "$52-$72 (12-pack 12.7 oz cans)",
+    "price_cents": 5799,
+    "expert_score": 8.4,
+    "pros": [
+      "Real chunked meat in visible stew format — high palatability",
+      "Grain-inclusive formulation avoids DCM-associated legume bases",
+      "Made in U.S. with published ingredient sourcing"
+    ],
+    "cons": [
+      "No board-certified veterinary nutritionist on staff (per published reporting)",
+      "Boutique brand without WSAVA-equivalent transparency"
+    ],
+    "specs": {
+      "protein": "8%",
+      "fat": "5%",
+      "moisture": "78%",
+      "kcal_per_can": "412",
+      "life_stage": "Adult"
+    },
+    "best_for": ["stew-texture preference", "picky eaters"],
+    "badge": "Best Stew Texture"
+  },
+  {
+    "category": "dog-food-fresh",
+    "name": "The Farmer's Dog Custom Fresh Recipe",
+    "brand": "The Farmer's Dog",
+    "vendor": "amazon",
+    "vendor_sku": "TFD-SUB",
+    "price_range": "$2-$12/day (subscription, varies by dog)",
+    "price_cents": 24000,
+    "expert_score": 9.0,
+    "pros": [
+      "Board-certified ACVN nutritionist on staff (per published profile)",
+      "Custom-portioned to individual dog weight, age, and activity",
+      "USDA-compliant facility with full ingredient traceability"
+    ],
+    "cons": [
+      "Cost is 3-5x higher than quality kibble at equivalent caloric density",
+      "Requires freezer storage and consistent thaw-cycle planning"
+    ],
+    "specs": {
+      "protein": "Varies (typically 30-40% on dry-matter basis)",
+      "fat": "Varies (typically 18-25% on dry-matter basis)",
+      "moisture": "70-75%",
+      "format": "Frozen 1-lb portion bags",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["picky eaters", "owners wanting transparency", "small-medium dogs"],
+    "badge": "Best Fresh Overall"
+  },
+  {
+    "category": "dog-food-fresh",
+    "name": "Just Food For Dogs Beef & Russet Potato Recipe",
+    "brand": "Just Food For Dogs",
+    "vendor": "amazon",
+    "vendor_sku": "JFFD-BRP",
+    "price_range": "$3-$11/day (subscription, varies by dog)",
+    "price_cents": 21000,
+    "expert_score": 9.0,
+    "pros": [
+      "Board-certified veterinary nutritionists on staff",
+      "Available frozen-shipped and at brand-owned U.S. retail kitchens",
+      "Published nutrient profiles for every recipe"
+    ],
+    "cons": [
+      "Cost remains substantially higher than quality kibble",
+      "Beef base — not appropriate for beef-allergic dogs"
+    ],
+    "specs": {
+      "protein": "9% (as-fed)",
+      "fat": "5% (as-fed)",
+      "moisture": "73%",
+      "kcal_per_pound": "498",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["all life stages", "transparent ingredients"],
+    "badge": "Most Transparent Sourcing"
+  },
+  {
+    "category": "dog-food-fresh",
+    "name": "Ollie Fresh Beef Hearty Recipe",
+    "brand": "Ollie",
+    "vendor": "amazon",
+    "vendor_sku": "OLLIE-BHR",
+    "price_range": "$4-$10/day (subscription)",
+    "price_cents": 22000,
+    "expert_score": 8.6,
+    "pros": [
+      "Veterinary nutritionist consultation in recipe development (per company disclosure)",
+      "Custom portion plans based on intake survey",
+      "Reasonable price relative to competing premium fresh brands"
+    ],
+    "cons": [
+      "Less transparent on board-certified ACVN credentials than The Farmer's Dog or JFFD",
+      "Beef recipes only in this specific entry — recipe variety in other lines"
+    ],
+    "specs": {
+      "protein": "11% (as-fed)",
+      "fat": "8% (as-fed)",
+      "moisture": "71%",
+      "format": "Frozen 1-lb portion packs",
+      "life_stage": "Adult maintenance"
+    },
+    "best_for": ["adult dogs", "owners wanting subscription convenience"],
+    "badge": "Best Value Fresh"
+  },
+  {
+    "category": "dog-food-fresh",
+    "name": "Nom Nom Beef Mash Fresh",
+    "brand": "Nom Nom",
+    "vendor": "amazon",
+    "vendor_sku": "NOMNOM-BM",
+    "price_range": "$3-$10/day (subscription)",
+    "price_cents": 21000,
+    "expert_score": 8.4,
+    "pros": [
+      "Veterinary nutritionist consultation in formulation (per company disclosure)",
+      "Portion-controlled packets reduce overfeeding risk",
+      "Frequent flavor rotation supports variety in picky-eater households"
+    ],
+    "cons": [
+      "Cost remains in the high-premium fresh tier",
+      "Pre-portioned packaging generates substantial recyclable waste"
+    ],
+    "specs": {
+      "protein": "8% (as-fed)",
+      "fat": "5% (as-fed)",
+      "moisture": "74%",
+      "format": "Pre-portioned vacuum packs",
+      "life_stage": "Adult"
+    },
+    "best_for": ["adult dogs", "portion-control concerns"],
+    "badge": "Best Portion Control"
+  },
+  {
+    "category": "dog-food-fresh",
+    "name": "Hill's Pet Nutrition Fresh-Delivered (clinic-channel)",
+    "brand": "Hill's",
+    "vendor": "chewy",
+    "vendor_sku": "HILLS-FRESH",
+    "price_range": "$3-$9/day",
+    "price_cents": 22000,
+    "expert_score": 8.6,
+    "pros": [
+      "WSAVA-compliant manufacturer with deepest clinical evidence base",
+      "Veterinarian-channel availability for prescription-adjacent feeding",
+      "Cold-chain logistics from established pet-food manufacturer"
+    ],
+    "cons": [
+      "Limited variety compared to subscription-native fresh brands",
+      "Distribution still expanding — not nationally available"
+    ],
+    "specs": {
+      "protein": "Varies by recipe",
+      "fat": "Varies by recipe",
+      "format": "Frozen vacuum-sealed portions",
+      "life_stage": "Adult"
+    },
+    "best_for": ["veterinarian-recommended feeding", "established-brand preference"],
+    "badge": "Best Established Brand Fresh"
+  },
+  {
+    "category": "dog-food-raw",
+    "name": "Stella & Chewy's Stella's Super Beef Dinner Patties Freeze-Dried Raw",
+    "brand": "Stella & Chewy's",
+    "vendor": "chewy",
+    "vendor_sku": "47232",
+    "price_range": "$58-$84 (25 oz bag)",
+    "price_cents": 6499,
+    "expert_score": 8.5,
+    "pros": [
+      "Freeze-dried format substantially reduces bacterial load vs fresh raw",
+      "HPP (high-pressure pasteurization) applied before freeze-drying",
+      "Single-protein recipe useful for limited-ingredient feeding"
+    ],
+    "cons": [
+      "Per-pound cost is 4-8x quality kibble",
+      "Raw products carry residual pathogen risk regardless of processing"
+    ],
+    "specs": {
+      "protein": "44%",
+      "fat": "30%",
+      "fiber": "5%",
+      "kcal_per_patty": "104",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["raw-curious owners", "single-protein needs"],
+    "badge": "Best Freeze-Dried Raw"
+  },
+  {
+    "category": "dog-food-raw",
+    "name": "Primal Pet Foods Chicken Formula Nuggets Grain-Free Frozen Raw",
+    "brand": "Primal",
+    "vendor": "chewy",
+    "vendor_sku": "47235",
+    "price_range": "$32-$48 (3 lb bag)",
+    "price_cents": 3699,
+    "expert_score": 8.2,
+    "pros": [
+      "HPP-treated to reduce bacterial loads",
+      "Wide variety of protein sources for rotational feeding",
+      "USDA-inspected human-grade ingredients (per company disclosure)"
+    ],
+    "cons": [
+      "Frozen logistics required — cannot ship to all regions",
+      "Higher pathogen-handling risk than freeze-dried equivalents"
+    ],
+    "specs": {
+      "protein": "16%",
+      "fat": "11%",
+      "moisture": "65%",
+      "format": "Frozen nuggets",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["raw rotational feeding", "owners willing to handle raw"],
+    "badge": "Best Frozen Raw"
+  },
+  {
+    "category": "dog-food-raw",
+    "name": "Vital Essentials Chicken Mini Patties Freeze-Dried Raw",
+    "brand": "Vital Essentials",
+    "vendor": "chewy",
+    "vendor_sku": "84221",
+    "price_range": "$42-$58 (14 oz bag)",
+    "price_cents": 4799,
+    "expert_score": 8.0,
+    "pros": [
+      "Freeze-dried with no HPP — claims to preserve more native enzymes",
+      "Bone, organ, and meat inclusion per AAFCO complete-and-balanced",
+      "Small mini-patty format eases portioning"
+    ],
+    "cons": [
+      "Absence of HPP means higher residual pathogen load than HPP-treated alternatives",
+      "Sourcing transparency less developed than category leaders"
+    ],
+    "specs": {
+      "protein": "47%",
+      "fat": "30%",
+      "fiber": "3%",
+      "format": "Freeze-dried mini patties",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["small-medium dogs", "raw rotational feeders"],
+    "badge": "Best Mini-Format Raw"
+  },
+  {
+    "category": "dog-food-raw",
+    "name": "Instinct Raw Boost Mixers Beef Recipe Freeze-Dried Topper",
+    "brand": "Instinct",
+    "vendor": "amazon",
+    "vendor_sku": "B07GMSC2NQ",
+    "price_range": "$28-$36 (12.5 oz)",
+    "price_cents": 3299,
+    "expert_score": 7.8,
+    "pros": [
+      "Topper format limits raw exposure while allowing kibble-base feeding",
+      "Freeze-dried reduces bacterial load",
+      "Reasonable entry point for raw-curious owners not ready for full transition"
+    ],
+    "cons": [
+      "Not complete and balanced as sole nutrition — supplemental only",
+      "Calorie density adds up quickly if portion control lapses"
+    ],
+    "specs": {
+      "protein": "40%",
+      "fat": "30%",
+      "fiber": "4%",
+      "format": "Freeze-dried meal topper",
+      "life_stage": "Adult — supplemental feeding only"
+    },
+    "best_for": ["transition feeding", "raw-curious owners"],
+    "badge": "Best Topper Raw"
+  },
+  {
+    "category": "dog-food-raw",
+    "name": "Open Farm Homestead Turkey RawMix Freeze-Dried Topper",
+    "brand": "Open Farm",
+    "vendor": "chewy",
+    "vendor_sku": "278321",
+    "price_range": "$36-$48 (3.5 lb)",
+    "price_cents": 4099,
+    "expert_score": 7.8,
+    "pros": [
+      "Published ingredient sourcing with farm-level traceability",
+      "Combined freeze-dried raw and kibble — single-bag format",
+      "Certified humane and Global Animal Partnership-rated meat sources"
+    ],
+    "cons": [
+      "No board-certified ACVN nutritionist on staff (per published reporting)",
+      "Premium pricing relative to mainstream brands"
+    ],
+    "specs": {
+      "protein": "33%",
+      "fat": "20%",
+      "fiber": "6%",
+      "format": "Kibble + freeze-dried raw blend",
+      "life_stage": "All life stages"
+    },
+    "best_for": ["ethical sourcing focus", "kibble + raw mixed feeding"],
+    "badge": "Most Transparent Raw"
+  },
+  {
+    "category": "dog-food-rx",
+    "name": "Hill's Prescription Diet k/d Kidney Care Chicken & Vegetable Stew",
+    "brand": "Hill's Prescription Diet",
+    "vendor": "chewy",
+    "vendor_sku": "PRD-KD-CHK",
+    "price_range": "$74-$92 (12-pack cans)",
+    "price_cents": 8499,
+    "expert_score": 9.6,
+    "pros": [
+      "Largest published clinical evidence base for chronic kidney disease management",
+      "Controlled phosphorus, restricted high-quality protein, omega-3 supplementation",
+      "Studies show extended survival in CKD-affected dogs vs maintenance diets"
+    ],
+    "cons": [
+      "Requires veterinarian prescription",
+      "Significant cost increase over maintenance diets"
+    ],
+    "specs": {
+      "protein": "Restricted, high-biological-value",
+      "phosphorus": "Restricted",
+      "omega_3": "Supplemented",
+      "indication": "Chronic kidney disease, IRIS stage 2-4",
+      "life_stage": "Adult — therapeutic"
+    },
+    "best_for": ["dogs with diagnosed chronic kidney disease"],
+    "badge": "Best CKD Evidence"
+  },
+  {
+    "category": "dog-food-rx",
+    "name": "Royal Canin Veterinary Diet Hydrolyzed Protein HP Dry Dog Food",
+    "brand": "Royal Canin Veterinary Diet",
+    "vendor": "chewy",
+    "vendor_sku": "RC-HP-DRY",
+    "price_range": "$96-$132 (22 lb)",
+    "price_cents": 11999,
+    "expert_score": 9.4,
+    "pros": [
+      "Hydrolyzed soy protein — peptide-size below typical IgE recognition threshold",
+      "Used in elimination-diet trials per AVNA protocols",
+      "Published evidence for food-responsive enteropathy management"
+    ],
+    "cons": [
+      "Requires veterinarian prescription",
+      "Soy-based protein not universally accepted by allergy-prone dogs"
+    ],
+    "specs": {
+      "protein": "Hydrolyzed soy",
+      "fat": "Low-moderate",
+      "indication": "Food allergy, IBD elimination trial, food-responsive enteropathy",
+      "life_stage": "Adult — therapeutic"
+    },
+    "best_for": ["food allergy diagnostic trials", "IBD management"],
+    "badge": "Best Hydrolyzed Protein"
+  },
+  {
+    "category": "dog-food-rx",
+    "name": "Hill's Prescription Diet i/d Digestive Care Chicken Flavor Dry",
+    "brand": "Hill's Prescription Diet",
+    "vendor": "chewy",
+    "vendor_sku": "PRD-ID-DRY",
+    "price_range": "$78-$108 (27.5 lb)",
+    "price_cents": 9499,
+    "expert_score": 9.3,
+    "pros": [
+      "Highly digestible formula with prebiotic fiber and electrolytes",
+      "Published evidence for acute and chronic GI signs management",
+      "Available in dry, canned, low-fat, and stew formats"
+    ],
+    "cons": [
+      "Requires veterinarian prescription",
+      "Higher cost than maintenance diets"
+    ],
+    "specs": {
+      "protein": "Moderate, high-digestibility",
+      "fat": "Moderate",
+      "fiber": "Prebiotic-supplemented",
+      "indication": "Acute diarrhea, vomiting, IBD, post-surgical recovery",
+      "life_stage": "Adult — therapeutic"
+    },
+    "best_for": ["GI signs management", "post-surgical recovery"],
+    "badge": "Best GI Recovery"
+  },
+  {
+    "category": "dog-food-rx",
+    "name": "Royal Canin Veterinary Diet Urinary SO Dry Dog Food",
+    "brand": "Royal Canin Veterinary Diet",
+    "vendor": "chewy",
+    "vendor_sku": "RC-SO-DRY",
+    "price_range": "$82-$116 (25 lb)",
+    "price_cents": 9999,
+    "expert_score": 9.3,
+    "pros": [
+      "Promotes undersaturation of urine for struvite and calcium oxalate stones",
+      "Published clinical evidence for struvite dissolution",
+      "Increased water intake via dietary sodium adjustment"
+    ],
+    "cons": [
+      "Higher sodium content not appropriate for cardiac patients without cardiology clearance",
+      "Requires veterinarian prescription"
+    ],
+    "specs": {
+      "rss_struvite": "Low",
+      "rss_oxalate": "Low",
+      "indication": "Struvite stones, calcium oxalate stones, FLUTD management",
+      "life_stage": "Adult — therapeutic"
+    },
+    "best_for": ["struvite or oxalate stone history", "FLUTD recurrence prevention"],
+    "badge": "Best Urinary Rx"
+  },
+  {
+    "category": "dog-food-rx",
+    "name": "Purina Pro Plan Veterinary Diets HA Hydrolyzed Formula",
+    "brand": "Purina Pro Plan Veterinary Diets",
+    "vendor": "chewy",
+    "vendor_sku": "PPVD-HA",
+    "price_range": "$88-$118 (25 lb)",
+    "price_cents": 10499,
+    "expert_score": 9.1,
+    "pros": [
+      "Hydrolyzed soy protein for elimination-diet trials",
+      "WSAVA-compliant manufacturer with extensive feeding-trial data",
+      "Often more cost-effective than Royal Canin equivalent"
+    ],
+    "cons": [
+      "Requires veterinarian prescription",
+      "Soy-based — not appropriate for soy-allergic dogs (rare)"
+    ],
+    "specs": {
+      "protein": "Hydrolyzed soy",
+      "indication": "Food allergy diagnostic trial, dietary management of CAFR",
+      "life_stage": "Adult — therapeutic"
+    },
+    "best_for": ["adverse food reaction diagnostic trials"],
+    "badge": "Best Value Rx Hydrolyzed"
+  },
+  {
+    "category": "dog-beds",
+    "name": "Big Barker 7-Inch Pillowtop Orthopedic Dog Bed",
+    "brand": "Big Barker",
+    "vendor": "chewy",
+    "vendor_sku": "176511",
+    "price_range": "$229-$399",
+    "price_cents": 27900,
+    "expert_score": 9.6,
+    "pros": [
+      "Only dog bed with published peer-reviewed clinical evidence (AJVR 2018)",
+      "10-year no-flatten warranty",
+      "American-made therapeutic-grade foam"
+    ],
+    "cons": [
+      "Premium pricing",
+      "Cover is spot-clean only, not machine washable"
+    ],
+    "specs": {
+      "foam_depth": "7 inches",
+      "foam_grade": "Therapeutic American foam",
+      "warranty": "10-year no-flatten",
+      "sizes": "Large, XL, Giant"
+    },
+    "best_for": ["large breeds", "senior dogs", "arthritis", "joint disease"],
+    "badge": "Best Orthopedic"
+  },
+  {
+    "category": "dog-beds",
+    "name": "Casper Dog Bed (Large)",
+    "brand": "Casper",
+    "vendor": "amazon",
+    "vendor_sku": "B07GVRSDH4",
+    "price_range": "$125-$175",
+    "price_cents": 14900,
+    "expert_score": 9.0,
+    "pros": [
+      "Removable, fully machine-washable zippered cover",
+      "Memory foam over supportive base layer",
+      "Reputable brand with 1-year warranty"
+    ],
+    "cons": [
+      "Less therapeutic than Big Barker for severe arthritis",
+      "Zippered cover can be chewed by destructive dogs"
+    ],
+    "specs": {
+      "foam": "Memory foam + support base",
+      "cover": "Machine washable",
+      "sizes": "Small, Medium, Large",
+      "warranty": "1 year"
+    },
+    "best_for": ["medium-large breeds", "everyday use"],
+    "badge": "Best Premium"
+  },
+  {
+    "category": "dog-beds",
+    "name": "FurHaven Orthopedic Sofa-Style Dog Bed",
+    "brand": "FurHaven",
+    "vendor": "chewy",
+    "vendor_sku": "84422",
+    "price_range": "$45-$95",
+    "price_cents": 5999,
+    "expert_score": 7.8,
+    "pros": [
+      "Bolster sides for head and neck support",
+      "Removable, machine-washable cover",
+      "Wide size range from small to jumbo"
+    ],
+    "cons": [
+      "Foam quality is mid-tier — flattens within 18-24 months of heavy use",
+      "Not appropriate for severe orthopedic disease"
+    ],
+    "specs": {
+      "foam": "Egg-crate orthopedic foam",
+      "cover": "Removable, machine washable",
+      "sizes": "Small through jumbo"
+    },
+    "best_for": ["budget orthopedic option", "small-medium dogs"],
+    "badge": "Best Budget"
+  },
+  {
+    "category": "dog-beds",
+    "name": "Best Friends by Sheri OrthoComfort Donut Cuddler",
+    "brand": "Best Friends by Sheri",
+    "vendor": "amazon",
+    "vendor_sku": "B074MJBQGZ",
+    "price_range": "$36-$95",
+    "price_cents": 5499,
+    "expert_score": 8.4,
+    "pros": [
+      "Donut shape provides anxiety-reducing enclosure",
+      "Faux shag fabric is washable and durable",
+      "Available in multiple sizes for small through large dogs"
+    ],
+    "cons": [
+      "Single-piece construction — no removable cover",
+      "Not orthopedic-grade foam"
+    ],
+    "specs": {
+      "shape": "Donut / bolster",
+      "fabric": "Vegan faux shag",
+      "washable": "Whole-bed machine wash",
+      "sizes": "23-45 inch diameter"
+    },
+    "best_for": ["anxious dogs", "curl-up sleepers", "small-medium breeds"],
+    "badge": "Best Anxiety/Donut"
+  },
+  {
+    "category": "dog-beds",
+    "name": "K&H Pet Products Original Bolster Heated Pet Bed",
+    "brand": "K&H Pet Products",
+    "vendor": "chewy",
+    "vendor_sku": "42291",
+    "price_range": "$58-$132",
+    "price_cents": 8999,
+    "expert_score": 8.2,
+    "pros": [
+      "Low-wattage heating element with built-in thermostat",
+      "MET safety-listed for U.S. household use",
+      "Bolster sides retain heat in cool rooms"
+    ],
+    "cons": [
+      "Heating element adds noise (mild)",
+      "Not appropriate for warm climates or already-warm households"
+    ],
+    "specs": {
+      "wattage": "4-12W depending on size",
+      "safety": "MET listed, auto-thermostat",
+      "shape": "Bolster"
+    },
+    "best_for": ["senior dogs in cool households", "thermoregulation-impaired dogs"],
+    "badge": "Best Heated"
+  },
+  {
+    "category": "dog-crates",
+    "name": "MidWest iCrate Folding Metal Dog Crate (Double-Door, 42-inch)",
+    "brand": "MidWest Homes for Pets",
+    "vendor": "amazon",
+    "vendor_sku": "B0002AT3MQ",
+    "price_range": "$58-$108",
+    "price_cents": 8499,
+    "expert_score": 9.2,
+    "pros": [
+      "Includes divider panel for puppy-to-adult sizing",
+      "Folds flat for storage and travel",
+      "Removable plastic tray for easy cleaning"
+    ],
+    "cons": [
+      "Wire construction not appropriate for severe escape artists",
+      "Plastic tray edges can crack with heavy use"
+    ],
+    "specs": {
+      "construction": "Wire with plastic tray",
+      "doors": "Double-door (front + side)",
+      "divider_included": true,
+      "size_range": "22\"-48\" available"
+    },
+    "best_for": ["puppies through adults", "house training", "everyday use"],
+    "badge": "Best Value Wire"
+  },
+  {
+    "category": "dog-crates",
+    "name": "Petmate Sky Kennel (Airline-Approved Plastic, 36-inch)",
+    "brand": "Petmate",
+    "vendor": "amazon",
+    "vendor_sku": "B000PBRP1A",
+    "price_range": "$95-$185",
+    "price_cents": 13900,
+    "expert_score": 9.0,
+    "pros": [
+      "IATA-compliant for major airline cargo",
+      "Steel wire vents on all four sides",
+      "Locking mechanisms meet airline requirements"
+    ],
+    "cons": [
+      "Heavier and harder to fold than wire crates",
+      "Not appropriate for serious escape artists"
+    ],
+    "specs": {
+      "construction": "Heavy-duty plastic",
+      "airline_compliance": "IATA, USDA",
+      "ventilation": "Four-side wire mesh",
+      "sizes": "Small through giant (54\")"
+    },
+    "best_for": ["air travel", "vehicle transport"],
+    "badge": "Best for Air Travel"
+  },
+  {
+    "category": "dog-crates",
+    "name": "Frisco Heavy Duty Single Door Dog Crate (Welded Steel)",
+    "brand": "Frisco",
+    "vendor": "chewy",
+    "vendor_sku": "164821",
+    "price_range": "$229-$439",
+    "price_cents": 32900,
+    "expert_score": 8.6,
+    "pros": [
+      "Welded steel construction resists escape attempts",
+      "Casters included for moving",
+      "Reinforced tray and door latches"
+    ],
+    "cons": [
+      "Substantially heavier than wire crates",
+      "Higher price than standard wire equivalents"
+    ],
+    "specs": {
+      "construction": "Welded steel",
+      "doors": "Single front door",
+      "casters": "Included",
+      "sizes": "Medium through XXL"
+    },
+    "best_for": ["escape-prone dogs", "stronger chewers"],
+    "badge": "Best Heavy-Duty Value"
+  },
+  {
+    "category": "dog-crates",
+    "name": "Impact Case Stationary Dog Crate (Aluminum)",
+    "brand": "Impact Case",
+    "vendor": "amazon",
+    "vendor_sku": "IMPACT-STN",
+    "price_range": "$895-$2,200",
+    "price_cents": 119500,
+    "expert_score": 9.4,
+    "pros": [
+      "Welded aluminum construction — truly escape-proof",
+      "Lifetime craftsmanship warranty",
+      "Custom sizing available"
+    ],
+    "cons": [
+      "Substantial premium pricing",
+      "Heavy and not portable"
+    ],
+    "specs": {
+      "construction": "Welded aluminum",
+      "doors": "Side or front, custom",
+      "warranty": "Lifetime"
+    },
+    "best_for": ["severe separation anxiety", "extreme escape artists"],
+    "badge": "Best Premium Escape-Proof"
+  },
+  {
+    "category": "dog-crates",
+    "name": "EliteField 3-Door Folding Soft Dog Crate",
+    "brand": "EliteField",
+    "vendor": "amazon",
+    "vendor_sku": "B0034G3R5O",
+    "price_range": "$58-$118",
+    "price_cents": 8499,
+    "expert_score": 7.6,
+    "pros": [
+      "Folds flat for travel and storage",
+      "Lightweight for transport",
+      "Three-door access for flexible placement"
+    ],
+    "cons": [
+      "Not appropriate for chewers — fabric construction",
+      "Not airline-cargo compliant"
+    ],
+    "specs": {
+      "construction": "Steel frame + 600D nylon",
+      "doors": "Three (top + two side)",
+      "weight": "8-22 lbs depending on size"
+    },
+    "best_for": ["travel", "calm crate-trained dogs", "indoor use only"],
+    "badge": "Best Soft Travel Crate"
+  },
+  {
+    "category": "dog-leashes",
+    "name": "Mendota Pet Snap Leash (6-foot, Solid Braid)",
+    "brand": "Mendota Pet",
+    "vendor": "amazon",
+    "vendor_sku": "B001NJ31KK",
+    "price_range": "$22-$36",
+    "price_cents": 2999,
+    "expert_score": 9.0,
+    "pros": [
+      "Marine-grade rope construction resists fraying",
+      "Solid brass or nickel hardware",
+      "Made in USA with 1-year warranty"
+    ],
+    "cons": [
+      "Rope thinner than webbing leashes — hands tire faster on strong pullers",
+      "Higher cost than nylon webbing equivalents"
+    ],
+    "specs": {
+      "length": "6 feet",
+      "material": "Solid-braid nylon rope",
+      "hardware": "Solid brass / nickel plated",
+      "diameter": "1/2 inch"
+    },
+    "best_for": ["everyday walking", "dogs under 70 lbs"],
+    "badge": "Best Daily Leash"
+  },
+  {
+    "category": "dog-leashes",
+    "name": "Ruffwear Roamer Bungee Hands-Free Dog Leash",
+    "brand": "Ruffwear",
+    "vendor": "amazon",
+    "vendor_sku": "B00MNHL68A",
+    "price_range": "$52-$72",
+    "price_cents": 5999,
+    "expert_score": 9.2,
+    "pros": [
+      "Shock-absorbing bungee section reduces jolts on handler hip",
+      "Adjustable from 5.5 to 7 feet",
+      "Waist belt fits 25-46\" waists"
+    ],
+    "cons": [
+      "Bungee adds slight slack tolerance during loose-leash training",
+      "Higher cost than basic hands-free options"
+    ],
+    "specs": {
+      "type": "Hands-free with bungee",
+      "length_adjustable": "5.5 to 7 feet",
+      "waist_belt": "25-46 inches"
+    },
+    "best_for": ["running with dogs", "hiking", "endurance walks"],
+    "badge": "Best Hands-Free"
+  },
+  {
+    "category": "dog-leashes",
+    "name": "Wilderdog Big Carabiner Climbing Rope Dog Leash",
+    "brand": "Wilderdog",
+    "vendor": "amazon",
+    "vendor_sku": "WD-BCR-6",
+    "price_range": "$28-$38",
+    "price_cents": 3499,
+    "expert_score": 8.4,
+    "pros": [
+      "Climbing rope construction is extremely durable",
+      "Aluminum climbing-grade carabiner",
+      "Lifetime warranty against breakage"
+    ],
+    "cons": [
+      "Carabiner is heavier than standard snap hooks",
+      "Rope can be uncomfortable on bare hands during pulling"
+    ],
+    "specs": {
+      "length": "5 feet",
+      "material": "Climbing rope",
+      "hardware": "Aluminum carabiner",
+      "warranty": "Lifetime"
+    },
+    "best_for": ["adventure walks", "hiking", "casual use"],
+    "badge": "Best Adventure Leash"
+  },
+  {
+    "category": "dog-leashes",
+    "name": "Frisco Reflective Bungee Dog Leash",
+    "brand": "Frisco",
+    "vendor": "chewy",
+    "vendor_sku": "139422",
+    "price_range": "$14-$22",
+    "price_cents": 1799,
+    "expert_score": 7.8,
+    "pros": [
+      "Reflective stitching for low-light visibility",
+      "Bungee section reduces jolting",
+      "Very affordable"
+    ],
+    "cons": [
+      "Hardware quality not at premium level",
+      "Lifespan shorter than premium brands"
+    ],
+    "specs": {
+      "length": "4 to 6 feet",
+      "material": "Nylon webbing with bungee",
+      "reflective": true
+    },
+    "best_for": ["dawn/dusk walks", "budget-conscious owners"],
+    "badge": "Best Value Reflective"
+  },
+  {
+    "category": "dog-leashes",
+    "name": "PetSafe 30-foot Cotton Web Training Long Line",
+    "brand": "PetSafe",
+    "vendor": "amazon",
+    "vendor_sku": "B0002I0GUE",
+    "price_range": "$14-$22",
+    "price_cents": 1599,
+    "expert_score": 8.0,
+    "pros": [
+      "30-foot length supports recall training in open spaces",
+      "Cotton webbing is hand-friendly",
+      "Affordable training tool"
+    ],
+    "cons": [
+      "Cotton can mildew when wet",
+      "Tangles easily in long grass or brush"
+    ],
+    "specs": {
+      "length": "30 feet",
+      "material": "Cotton webbing",
+      "hardware": "Standard snap hook"
+    },
+    "best_for": ["recall training", "open-space practice"],
+    "badge": "Best Long Line Training"
+  },
+  {
+    "category": "dog-harnesses",
+    "name": "Ruffwear Front Range Dog Harness",
+    "brand": "Ruffwear",
+    "vendor": "amazon",
+    "vendor_sku": "B07P5T68WX",
+    "price_range": "$45-$58",
+    "price_cents": 4999,
+    "expert_score": 9.2,
+    "pros": [
+      "Y-front geometry preserves shoulder rotation",
+      "Front-clip and back-clip attachment points",
+      "Padded chest and belly panel"
+    ],
+    "cons": [
+      "Less anti-pull effectiveness than dedicated front-clip-only harnesses",
+      "Strap rub possible on short-coated dogs without padding adjustment"
+    ],
+    "specs": {
+      "geometry": "Y-front",
+      "clip_points": "Front + back",
+      "padding": "Chest and belly",
+      "sizes": "XXS through XL"
+    },
+    "best_for": ["everyday walking", "active dogs", "hiking"],
+    "badge": "Best Overall Harness"
+  },
+  {
+    "category": "dog-harnesses",
+    "name": "PetSafe Easy Walk No-Pull Dog Harness",
+    "brand": "PetSafe",
+    "vendor": "amazon",
+    "vendor_sku": "B00114PVY8",
+    "price_range": "$19-$32",
+    "price_cents": 2499,
+    "expert_score": 8.4,
+    "pros": [
+      "Front-clip design redirects pulling momentum back to handler",
+      "Effective short-term training tool for pullers",
+      "Affordable training option"
+    ],
+    "cons": [
+      "Horizontal chest strap can affect shoulder mechanics if used long-term",
+      "Not appropriate as permanent walking harness for fully trained dogs"
+    ],
+    "specs": {
+      "geometry": "Horizontal front strap",
+      "clip_points": "Front only",
+      "purpose": "Training (short-term)",
+      "sizes": "XS through XL"
+    },
+    "best_for": ["pullers in training", "short-term no-pull intervention"],
+    "badge": "Best No-Pull Training"
+  },
+  {
+    "category": "dog-harnesses",
+    "name": "Julius-K9 IDC Powerharness",
+    "brand": "Julius-K9",
+    "vendor": "amazon",
+    "vendor_sku": "B0014RKMW4",
+    "price_range": "$48-$78",
+    "price_cents": 5999,
+    "expert_score": 9.0,
+    "pros": [
+      "Y-front geometry with extremely durable construction",
+      "Reflective stitching and ID label patch",
+      "Tested for stronger pullers and working dogs"
+    ],
+    "cons": [
+      "Step-in style not appropriate for harness-aversive dogs",
+      "Limited padding compared to Ruffwear competitors"
+    ],
+    "specs": {
+      "geometry": "Y-front",
+      "construction": "Heavy-duty webbing",
+      "reflective": true,
+      "sizes": "Mini through 4 (XXL)"
+    },
+    "best_for": ["working dogs", "strong pullers", "professional handlers"],
+    "badge": "Best Working Harness"
+  },
+  {
+    "category": "dog-harnesses",
+    "name": "Sleepypod Clickit Sport Crash-Tested Dog Safety Harness",
+    "brand": "Sleepypod",
+    "vendor": "amazon",
+    "vendor_sku": "B00C1HFXJ8",
+    "price_range": "$74-$98",
+    "price_cents": 8499,
+    "expert_score": 9.4,
+    "pros": [
+      "Independently crash-tested by Center for Pet Safety",
+      "Three-point seat belt design distributes crash forces",
+      "Y-front geometry for everyday walking compatibility"
+    ],
+    "cons": [
+      "Specifically a vehicle safety product — additional walking harness recommended for daily use",
+      "Premium pricing"
+    ],
+    "specs": {
+      "crash_tested": "Center for Pet Safety verified",
+      "attachment": "Three-point seat belt routing",
+      "sizes": "Small through XL"
+    },
+    "best_for": ["vehicle travel safety"],
+    "badge": "Best Car Safety"
+  },
+  {
+    "category": "dog-harnesses",
+    "name": "Puppia Soft B Vest Harness",
+    "brand": "Puppia",
+    "vendor": "amazon",
+    "vendor_sku": "B000R47XGW",
+    "price_range": "$18-$32",
+    "price_cents": 2299,
+    "expert_score": 7.8,
+    "pros": [
+      "Soft padded mesh vest comfortable for small breeds",
+      "Step-in design easy to put on",
+      "Wide neck opening for brachycephalic-friendly fit"
+    ],
+    "cons": [
+      "Horizontal chest strap restricts shoulder rotation",
+      "Not appropriate for medium-to-large dogs or pullers"
+    ],
+    "specs": {
+      "construction": "Padded mesh vest",
+      "geometry": "Step-in with horizontal chest strap",
+      "sizes": "XS through XXL (small breeds)"
+    },
+    "best_for": ["small breeds", "brachycephalic dogs", "calm walkers"],
+    "badge": "Best Small Breed"
+  },
+  {
+    "category": "dog-toys",
+    "name": "KONG Classic Dog Toy",
+    "brand": "KONG",
+    "vendor": "amazon",
+    "vendor_sku": "B0002AR0II",
+    "price_range": "$10-$22",
+    "price_cents": 1499,
+    "expert_score": 9.4,
+    "pros": [
+      "Natural rubber durable enough for most chewers",
+      "Hollow center accepts stuffing for extended enrichment",
+      "Decades of validated use as separation-anxiety tool"
+    ],
+    "cons": [
+      "Extreme chewers can eventually destroy classic version — Extreme variant available",
+      "No squeaker"
+    ],
+    "specs": {
+      "material": "Natural rubber",
+      "fill_compatible": "Peanut butter, wet food, frozen treats",
+      "sizes": "XS through XXL"
+    },
+    "best_for": ["enrichment", "separation anxiety", "moderate chewers"],
+    "badge": "Best Overall Chew Toy"
+  },
+  {
+    "category": "dog-toys",
+    "name": "West Paw Zogoflex Hurley Stick",
+    "brand": "West Paw",
+    "vendor": "amazon",
+    "vendor_sku": "B003OCH35S",
+    "price_range": "$14-$24",
+    "price_cents": 1799,
+    "expert_score": 8.8,
+    "pros": [
+      "Zogoflex material is durable yet thumbnail-test compliant",
+      "Floats — useful for water-loving dogs",
+      "Made in USA with replacement guarantee"
+    ],
+    "cons": [
+      "Not as long-lasting for extreme chewers as Goughnuts",
+      "Limited size options for very large breeds"
+    ],
+    "specs": {
+      "material": "Zogoflex (proprietary rubber)",
+      "floats": true,
+      "guarantee": "One-time replacement"
+    },
+    "best_for": ["fetch", "water play", "moderate chewers"],
+    "badge": "Best Fetch Toy"
+  },
+  {
+    "category": "dog-toys",
+    "name": "Outward Hound Nina Ottosson Puzzle Brick Treat Dispenser",
+    "brand": "Outward Hound",
+    "vendor": "amazon",
+    "vendor_sku": "B000HHIVNI",
+    "price_range": "$14-$32",
+    "price_cents": 1899,
+    "expert_score": 9.0,
+    "pros": [
+      "Genuine cognitive enrichment for high-drive breeds",
+      "Adjustable difficulty levels",
+      "Affordable entry into puzzle feeding"
+    ],
+    "cons": [
+      "Plastic construction not appropriate for chewers (engage in supervised play only)",
+      "Difficulty plateau once dog learns the puzzle — rotation required"
+    ],
+    "specs": {
+      "type": "Sliding compartment puzzle",
+      "difficulty": "Beginner to intermediate",
+      "material": "Plastic"
+    },
+    "best_for": ["high-drive dogs", "enrichment", "rainy day activity"],
+    "badge": "Best Puzzle Feeder"
+  },
+  {
+    "category": "dog-toys",
+    "name": "Goughnuts Original Ring (Black, Heavy)",
+    "brand": "Goughnuts",
+    "vendor": "amazon",
+    "vendor_sku": "B003LXR2VM",
+    "price_range": "$28-$48",
+    "price_cents": 3499,
+    "expert_score": 9.0,
+    "pros": [
+      "Two-layer construction with chew-warning indicator (red inner layer)",
+      "Made in USA from natural rubber",
+      "Replacement guarantee if dog chews through outer to indicator"
+    ],
+    "cons": [
+      "Significantly heavier than alternatives — not for small breeds",
+      "Premium price"
+    ],
+    "specs": {
+      "material": "Two-layer natural rubber",
+      "warning_indicator": "Red inner layer",
+      "made_in": "USA"
+    },
+    "best_for": ["heavy chewers", "large breeds"],
+    "badge": "Best for Power Chewers"
+  },
+  {
+    "category": "dog-toys",
+    "name": "Chuckit! Classic Launcher 26M",
+    "brand": "Chuckit!",
+    "vendor": "amazon",
+    "vendor_sku": "B0006L2HBC",
+    "price_range": "$10-$18",
+    "price_cents": 1399,
+    "expert_score": 8.6,
+    "pros": [
+      "Throws standard tennis balls 2-3x further than by hand",
+      "No-bend pickup design",
+      "Affordable and widely available"
+    ],
+    "cons": [
+      "Tennis balls cause dental enamel wear with daily heavy use",
+      "Not a toy in itself — requires balls"
+    ],
+    "specs": {
+      "type": "Ball launcher",
+      "compatible_balls": "Standard 2.5\" tennis balls",
+      "length": "26 inches"
+    },
+    "best_for": ["high-drive fetch dogs", "extended outdoor play"],
+    "badge": "Best Fetch Launcher"
+  },
+  {
+    "category": "dog-dental",
+    "name": "Greenies Original Dental Treats (Regular, Adult Dog)",
+    "brand": "Greenies",
+    "vendor": "chewy",
+    "vendor_sku": "31662",
+    "price_range": "$22-$48",
+    "price_cents": 3499,
+    "expert_score": 9.2,
+    "pros": [
+      "VOHC-accepted for plaque and tartar reduction",
+      "Demonstrated efficacy in clinical trials",
+      "Widely available with strong palatability"
+    ],
+    "cons": [
+      "High caloric density — counts toward daily calorie allowance",
+      "Cost adds up at daily use frequency"
+    ],
+    "specs": {
+      "vohc_accepted": "Yes (plaque + tartar)",
+      "size_options": "Teenie through Jumbo",
+      "kcal_per_chew": "85 (Regular)"
+    },
+    "best_for": ["daily dental support", "adult dogs"],
+    "badge": "Best Daily Dental Chew"
+  },
+  {
+    "category": "dog-dental",
+    "name": "Virbac C.E.T. Enzymatic Toothpaste (Poultry Flavor)",
+    "brand": "Virbac",
+    "vendor": "chewy",
+    "vendor_sku": "94292",
+    "price_range": "$10-$18",
+    "price_cents": 1299,
+    "expert_score": 9.4,
+    "pros": [
+      "Enzymatic formulation with established veterinary-dental track record",
+      "Multiple flavor options support acclimation",
+      "No fluoride or xylitol (safe if swallowed)"
+    ],
+    "cons": [
+      "Requires daily brushing to be effective — owner adherence is the gating factor",
+      "Smaller tube than human toothpaste equivalents"
+    ],
+    "specs": {
+      "formulation": "Enzymatic (glucose oxidase + lactoperoxidase)",
+      "flavors": "Poultry, beef, malt, seafood, vanilla-mint",
+      "size": "70g tube"
+    },
+    "best_for": ["daily brushing routine"],
+    "badge": "Best Toothpaste"
+  },
+  {
+    "category": "dog-dental",
+    "name": "Virbac C.E.T. VeggieDent Fr3sh Dental Chews",
+    "brand": "Virbac",
+    "vendor": "chewy",
+    "vendor_sku": "94293",
+    "price_range": "$22-$48",
+    "price_cents": 3299,
+    "expert_score": 8.8,
+    "pros": [
+      "VOHC-accepted for plaque control",
+      "Vegetable-based for dogs with chicken or beef sensitivities",
+      "Z-shape design for mechanical scraping"
+    ],
+    "cons": [
+      "Less widely available than Greenies",
+      "Some dogs find the vegetable flavor less palatable"
+    ],
+    "specs": {
+      "vohc_accepted": "Yes (plaque)",
+      "size_options": "XS through Large",
+      "main_ingredients": "Vegetable-based"
+    },
+    "best_for": ["chicken or beef sensitivities", "vegetable-source preference"],
+    "badge": "Best Vegetable Chew"
+  },
+  {
+    "category": "dog-dental",
+    "name": "OraVet Dental Hygiene Chews",
+    "brand": "OraVet",
+    "vendor": "chewy",
+    "vendor_sku": "129022",
+    "price_range": "$24-$58",
+    "price_cents": 4299,
+    "expert_score": 8.6,
+    "pros": [
+      "VOHC-accepted for both plaque and tartar",
+      "Delmopinol coating reduces bacterial adhesion",
+      "Manufactured by Merial (Boehringer Ingelheim animal health)"
+    ],
+    "cons": [
+      "More expensive per chew than Greenies",
+      "Limited size variety"
+    ],
+    "specs": {
+      "vohc_accepted": "Yes (plaque + tartar)",
+      "active": "Delmopinol coating",
+      "sizes": "XS through Large"
+    },
+    "best_for": ["dogs with high tartar accumulation", "owners avoiding daily brushing"],
+    "badge": "Best for Plaque + Tartar"
+  },
+  {
+    "category": "dog-dental",
+    "name": "PetSmile Dog Toothpaste (London Broil Flavor)",
+    "brand": "PetSmile",
+    "vendor": "amazon",
+    "vendor_sku": "B07GVTW1B7",
+    "price_range": "$22-$28",
+    "price_cents": 2499,
+    "expert_score": 8.4,
+    "pros": [
+      "VOHC-accepted toothpaste (one of few on the list)",
+      "Calprox active ingredient supported by clinical data",
+      "Strong palatability for picky dogs"
+    ],
+    "cons": [
+      "More expensive than Virbac C.E.T.",
+      "Single tube smaller than alternatives"
+    ],
+    "specs": {
+      "vohc_accepted": "Yes (toothpaste — rare)",
+      "active": "Calprox",
+      "size": "2.5 oz tube"
+    },
+    "best_for": ["picky brushers", "evidence-based dental routine"],
+    "badge": "Best VOHC Toothpaste"
+  },
+  {
+    "category": "dog-joint-supplements",
+    "name": "Nutramax Cosequin Maximum Strength Joint Health Supplement",
+    "brand": "Nutramax",
+    "vendor": "chewy",
+    "vendor_sku": "11241",
+    "price_range": "$45-$78",
+    "price_cents": 5999,
+    "expert_score": 9.0,
+    "pros": [
+      "NASC-certified manufacturer with established quality controls",
+      "Most-recommended joint supplement by U.S. veterinarians (per VPI survey)",
+      "Soft chew format with high palatability"
+    ],
+    "cons": [
+      "Effect size is smaller than therapeutic NSAIDs for advanced arthritis",
+      "Takes 4-8 weeks to assess response"
+    ],
+    "specs": {
+      "actives": "Glucosamine HCl, Sodium chondroitin sulfate, MSM",
+      "format": "Soft chews",
+      "nasc_certified": true,
+      "size_options": "Small/Medium and Large"
+    },
+    "best_for": ["mild-to-moderate arthritis", "preventive support for at-risk breeds"],
+    "badge": "Best Overall Joint Supplement"
+  },
+  {
+    "category": "dog-joint-supplements",
+    "name": "Nutramax Dasuquin with MSM Soft Chews",
+    "brand": "Nutramax",
+    "vendor": "chewy",
+    "vendor_sku": "92642",
+    "price_range": "$78-$118",
+    "price_cents": 9999,
+    "expert_score": 9.2,
+    "pros": [
+      "Adds ASU (avocado-soybean unsaponifiables) to glucosamine/chondroitin base",
+      "Published evidence for measurable cartilage protection in some studies",
+      "NASC-certified with broad veterinarian acceptance"
+    ],
+    "cons": [
+      "More expensive than Cosequin",
+      "ASU evidence is modest in dog-specific studies"
+    ],
+    "specs": {
+      "actives": "Glucosamine, Chondroitin, ASU, MSM",
+      "format": "Soft chews",
+      "nasc_certified": true
+    },
+    "best_for": ["established arthritis cases", "owners willing to pay premium"],
+    "badge": "Best Premium Joint"
+  },
+  {
+    "category": "dog-joint-supplements",
+    "name": "Nordic Naturals Omega-3 Pet Liquid",
+    "brand": "Nordic Naturals",
+    "vendor": "amazon",
+    "vendor_sku": "B0019LRY8A",
+    "price_range": "$22-$48",
+    "price_cents": 2999,
+    "expert_score": 9.2,
+    "pros": [
+      "High EPA/DHA concentration with third-party purity testing",
+      "Liquid format allows accurate body-weight-based dosing",
+      "Strongest evidence base of any joint nutraceutical"
+    ],
+    "cons": [
+      "Fish oil odor may transfer to dog breath and coat",
+      "Refrigeration required after opening"
+    ],
+    "specs": {
+      "epa_per_tsp": "267 mg",
+      "dha_per_tsp": "168 mg",
+      "format": "Liquid in glass bottle",
+      "purity_testing": "Third-party (IFOS)"
+    },
+    "best_for": ["arthritis management", "skin and coat support"],
+    "badge": "Best Omega-3 (Strongest Evidence)"
+  },
+  {
+    "category": "dog-joint-supplements",
+    "name": "Antinol RAPID Green-Lipped Mussel Joint Supplement",
+    "brand": "Antinol",
+    "vendor": "amazon",
+    "vendor_sku": "B0BVDGXPT4",
+    "price_range": "$48-$88",
+    "price_cents": 6499,
+    "expert_score": 8.6,
+    "pros": [
+      "PCSO-524 green-lipped mussel extract with peer-reviewed studies",
+      "Published evidence for measurable mobility improvement",
+      "Often well-tolerated when other supplements cause GI upset"
+    ],
+    "cons": [
+      "Premium pricing relative to glucosamine-only supplements",
+      "Limited U.S. availability compared to widely-distributed brands"
+    ],
+    "specs": {
+      "active": "PCSO-524 green-lipped mussel oil",
+      "format": "Soft capsules",
+      "published_evidence": "Multiple peer-reviewed trials"
+    },
+    "best_for": ["dogs with GI sensitivity to glucosamine", "moderate-to-severe arthritis"],
+    "badge": "Best Green-Lipped Mussel"
+  },
+  {
+    "category": "dog-joint-supplements",
+    "name": "VetriScience GlycoFlex Plus Joint Supplement",
+    "brand": "VetriScience",
+    "vendor": "chewy",
+    "vendor_sku": "47832",
+    "price_range": "$28-$58",
+    "price_cents": 3999,
+    "expert_score": 8.0,
+    "pros": [
+      "NASC-certified manufacturer",
+      "Adds perna mussel and DMG to glucosamine base",
+      "Reasonable mid-range pricing"
+    ],
+    "cons": [
+      "Less published clinical evidence than Cosequin/Dasuquin",
+      "Effect size variable across individuals"
+    ],
+    "specs": {
+      "actives": "Glucosamine, Perna canaliculus, MSM, DMG",
+      "format": "Soft chews or tablets",
+      "nasc_certified": true
+    },
+    "best_for": ["preventive support", "moderate arthritis"],
+    "badge": "Best Mid-Range Joint"
+  },
+  {
+    "category": "cat-food",
+    "name": "Hill's Science Diet Adult Indoor Chicken Recipe Dry Cat Food",
+    "brand": "Hill's Science Diet",
+    "vendor": "chewy",
+    "vendor_sku": "10772",
+    "price_range": "$32-$78 (15.5 lb)",
+    "price_cents": 5499,
+    "expert_score": 9.2,
+    "pros": [
+      "WSAVA-compliant with ACVN nutritionists on staff",
+      "Indoor-formulated for moderate caloric density",
+      "Established 25+ year formulation history"
+    ],
+    "cons": [
+      "Higher carbohydrate than wet alternatives — dental and weight implications",
+      "Chicken-based — not appropriate for chicken-allergic cats"
+    ],
+    "specs": {
+      "protein": "32%",
+      "fat": "13%",
+      "fiber": "9%",
+      "kcal_per_cup": "326",
+      "life_stage": "Adult indoor"
+    },
+    "best_for": ["adult indoor cats", "moderate-activity cats"],
+    "badge": "Best Dry Overall"
+  },
+  {
+    "category": "cat-food",
+    "name": "Royal Canin Feline Health Nutrition Indoor Adult Dry Cat Food",
+    "brand": "Royal Canin",
+    "vendor": "chewy",
+    "vendor_sku": "30531",
+    "price_range": "$32-$76 (15 lb)",
+    "price_cents": 5299,
+    "expert_score": 9.2,
+    "pros": [
+      "WSAVA-compliant manufacturer",
+      "Hairball control via insoluble fiber blend",
+      "Breed-specific variants available (Persian, Maine Coon, etc.)"
+    ],
+    "cons": [
+      "Premium pricing relative to mass-market brands",
+      "Limited grain-free options (intentional, per WSAVA evidence)"
+    ],
+    "specs": {
+      "protein": "31%",
+      "fat": "16%",
+      "fiber": "5%",
+      "kcal_per_cup": "337",
+      "life_stage": "Adult indoor"
+    },
+    "best_for": ["indoor cats", "hairball management"],
+    "badge": "Best Specialty Formulation"
+  },
+  {
+    "category": "cat-food",
+    "name": "Wellness Complete Health Pâté Chicken & Herring Recipe Wet Cat Food",
+    "brand": "Wellness",
+    "vendor": "chewy",
+    "vendor_sku": "32132",
+    "price_range": "$28-$48 (24-pack 3 oz cans)",
+    "price_cents": 3499,
+    "expert_score": 8.6,
+    "pros": [
+      "Real fish and meat as primary protein sources",
+      "Grain-inclusive formulation (per current WSAVA preference)",
+      "Strong palatability across cat populations"
+    ],
+    "cons": [
+      "No board-certified veterinary nutritionist on staff (per published reporting)",
+      "Higher cost-per-calorie than mass-market wet brands"
+    ],
+    "specs": {
+      "protein": "10%",
+      "fat": "5%",
+      "moisture": "78%",
+      "kcal_per_can": "84",
+      "life_stage": "Adult"
+    },
+    "best_for": ["adult cats", "hydration support", "picky eaters"],
+    "badge": "Best Premium Wet"
+  },
+  {
+    "category": "cat-food",
+    "name": "Purina Pro Plan Adult Chicken & Rice Formula Dry Cat Food",
+    "brand": "Purina Pro Plan",
+    "vendor": "amazon",
+    "vendor_sku": "B0083K5BB0",
+    "price_range": "$36-$58 (16 lb)",
+    "price_cents": 4499,
+    "expert_score": 9.0,
+    "pros": [
+      "WSAVA-compliant with extensive AAFCO feeding trial history",
+      "More affordable than Hill's or Royal Canin equivalents",
+      "Optimal Starts probiotic for digestive support"
+    ],
+    "cons": [
+      "Chicken-based — not appropriate for chicken-allergic cats",
+      "Less indoor-specific differentiation than Hill's Indoor formula"
+    ],
+    "specs": {
+      "protein": "40%",
+      "fat": "16%",
+      "fiber": "3%",
+      "kcal_per_cup": "470",
+      "life_stage": "Adult"
+    },
+    "best_for": ["adult cats", "value-conscious owners"],
+    "badge": "Best Value Dry"
+  },
+  {
+    "category": "cat-food",
+    "name": "Tiki Cat After Dark Chicken Recipe Wet Cat Food",
+    "brand": "Tiki Cat",
+    "vendor": "chewy",
+    "vendor_sku": "94223",
+    "price_range": "$28-$46 (12-pack 5.5 oz cans)",
+    "price_cents": 3699,
+    "expert_score": 8.2,
+    "pros": [
+      "Very high moisture and meat content",
+      "Limited-ingredient grain-free formulations",
+      "Strong palatability for picky cats"
+    ],
+    "cons": [
+      "No board-certified veterinary nutritionist on staff (per published reporting)",
+      "Premium pricing in the wet category"
+    ],
+    "specs": {
+      "protein": "15%",
+      "fat": "2.5%",
+      "moisture": "80%",
+      "kcal_per_can": "104",
+      "life_stage": "Adult"
+    },
+    "best_for": ["picky eaters", "high-moisture feeding"],
+    "badge": "Best for Picky Cats"
+  },
+  {
+    "category": "cat-litter",
+    "name": "Dr. Elsey's Precious Cat Ultra Premium Clumping Cat Litter",
+    "brand": "Dr. Elsey's",
+    "vendor": "chewy",
+    "vendor_sku": "10532",
+    "price_range": "$22-$36 (40 lb)",
+    "price_cents": 2999,
+    "expert_score": 9.6,
+    "pros": [
+      "Unscented, fine-grained — preferred substrate in published feline preference studies",
+      "Hard-clumping for easy daily scooping",
+      "99.9% dust-free claim (relative to category)"
+    ],
+    "cons": [
+      "Heavy — 40 lb bags difficult for some owners to manage",
+      "Tracks more than crystal alternatives"
+    ],
+    "specs": {
+      "type": "Clumping bentonite clay",
+      "scented": false,
+      "dust_level": "Low (99.9% dust-free claim)",
+      "weight": "40 lb bag"
+    },
+    "best_for": ["multi-cat households", "cats with substrate preferences"],
+    "badge": "Best Overall Litter"
+  },
+  {
+    "category": "cat-litter",
+    "name": "Tidy Cats Free & Clean Unscented Clumping Clay Litter",
+    "brand": "Tidy Cats",
+    "vendor": "amazon",
+    "vendor_sku": "B00P5SOQM6",
+    "price_range": "$14-$24 (20 lb)",
+    "price_cents": 1799,
+    "expert_score": 8.6,
+    "pros": [
+      "Unscented — preferred by cats",
+      "Widely available at most grocery and big-box stores",
+      "Reasonable per-pound cost"
+    ],
+    "cons": [
+      "Dustier than Dr. Elsey's Ultra Premium",
+      "Tracks substantially without enclosed mats"
+    ],
+    "specs": {
+      "type": "Clumping bentonite clay",
+      "scented": false,
+      "weight": "20 lb pail"
+    },
+    "best_for": ["budget-conscious owners", "single-cat homes"],
+    "badge": "Best Value Clay"
+  },
+  {
+    "category": "cat-litter",
+    "name": "World's Best Cat Litter Clumping Multi-Cat Formula",
+    "brand": "World's Best Cat Litter",
+    "vendor": "amazon",
+    "vendor_sku": "B000W2VFNS",
+    "price_range": "$26-$48 (28 lb)",
+    "price_cents": 3499,
+    "expert_score": 8.4,
+    "pros": [
+      "Corn-based, flushable in many municipalities",
+      "Low dust profile compared to clay",
+      "Lighter than clay equivalents for owner handling"
+    ],
+    "cons": [
+      "Higher cost per pound than clay",
+      "Less effective odor control than clay or crystal in multi-cat households"
+    ],
+    "specs": {
+      "type": "Corn-based clumping",
+      "flushable": "Per local regulations",
+      "weight": "28 lb bag"
+    },
+    "best_for": ["plant-based preference", "low-dust requirements"],
+    "badge": "Best Plant-Based"
+  },
+  {
+    "category": "cat-litter",
+    "name": "PrettyLitter Health Monitoring Crystal Litter",
+    "brand": "PrettyLitter",
+    "vendor": "amazon",
+    "vendor_sku": "PRETTY-MO",
+    "price_range": "$22-$36 (subscription, 6 lb monthly)",
+    "price_cents": 2299,
+    "expert_score": 7.8,
+    "pros": [
+      "Crystal litter changes color with urine pH (potential early health warning)",
+      "Lightweight monthly delivery",
+      "Low dust"
+    ],
+    "cons": [
+      "Color-change feature is supplemental, not diagnostic — does not replace vet exam",
+      "More expensive per use than clay alternatives"
+    ],
+    "specs": {
+      "type": "Silica crystal with pH indicator",
+      "subscription": "Monthly 6 lb delivery",
+      "color_indicator": "pH-based"
+    },
+    "best_for": ["health-monitoring focus", "low-dust environment"],
+    "badge": "Best Health-Indicator"
+  },
+  {
+    "category": "cat-litter",
+    "name": "Fresh Step Multi-Cat Strength Scented Clumping Cat Litter",
+    "brand": "Fresh Step",
+    "vendor": "amazon",
+    "vendor_sku": "B07YZTLZ95",
+    "price_range": "$18-$28 (25 lb)",
+    "price_cents": 2099,
+    "expert_score": 7.4,
+    "pros": [
+      "Strong odor control for multi-cat households",
+      "Widely available",
+      "Affordable"
+    ],
+    "cons": [
+      "Scented — known to cause litter aversion in some cats",
+      "Higher dust than premium alternatives"
+    ],
+    "specs": {
+      "type": "Clumping bentonite clay with fragrance",
+      "scented": true,
+      "weight": "25 lb"
+    },
+    "best_for": ["odor-control priority (where cat tolerance is established)"],
+    "badge": "Best Strong Odor Control"
+  },
+  {
+    "category": "cat-scratchers",
+    "name": "SmartCat Ultimate Scratching Post (32 inches)",
+    "brand": "SmartCat",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DK26C",
+    "price_range": "$42-$58",
+    "price_cents": 4799,
+    "expert_score": 9.4,
+    "pros": [
+      "32-inch height allows full vertical stretch",
+      "Heavy base (18 lbs) prevents tipping",
+      "Durable woven sisal fabric resists shredding"
+    ],
+    "cons": [
+      "Single-color aesthetic limited",
+      "Heavy and difficult to relocate"
+    ],
+    "specs": {
+      "height": "32 inches",
+      "material": "Woven sisal fabric over wood",
+      "base_weight": "18 lbs",
+      "stability": "High"
+    },
+    "best_for": ["adult cats wanting full stretch", "single-post households"],
+    "badge": "Best Vertical Post"
+  },
+  {
+    "category": "cat-scratchers",
+    "name": "PetFusion Ultimate Cat Scratcher Lounge",
+    "brand": "PetFusion",
+    "vendor": "amazon",
+    "vendor_sku": "B007F0L1L4",
+    "price_range": "$38-$58",
+    "price_cents": 4499,
+    "expert_score": 9.2,
+    "pros": [
+      "Curved cardboard provides multiple scratching angles",
+      "Doubles as lounging surface — many cats sleep on it",
+      "Reversible for extended lifespan"
+    ],
+    "cons": [
+      "Cardboard surface eventually requires replacement",
+      "Less appropriate for cats who prefer vertical scratching"
+    ],
+    "specs": {
+      "material": "Recycled cardboard",
+      "orientation": "Curved horizontal",
+      "reversible": true,
+      "dimensions": "34\" x 11\" x 4\""
+    },
+    "best_for": ["horizontal scratchers", "lounging cats"],
+    "badge": "Best Horizontal Scratcher"
+  },
+  {
+    "category": "cat-scratchers",
+    "name": "Frisco 33.5-inch Faux Fur Cat Tree",
+    "brand": "Frisco",
+    "vendor": "chewy",
+    "vendor_sku": "151221",
+    "price_range": "$48-$78",
+    "price_cents": 5999,
+    "expert_score": 8.2,
+    "pros": [
+      "Multi-level perches and enclosed condo",
+      "Sisal-rope wrapped scratching posts",
+      "Affordable entry into cat-tree category"
+    ],
+    "cons": [
+      "Lower-cost construction less durable than premium cat trees",
+      "Assembly required — some users report stability issues"
+    ],
+    "specs": {
+      "height": "33.5 inches",
+      "levels": "Three (base, mid, top perch)",
+      "scratching_surfaces": "Sisal rope posts",
+      "condo": "Yes"
+    },
+    "best_for": ["multi-function setup", "budget-conscious households"],
+    "badge": "Best Multi-Level Tree"
+  },
+  {
+    "category": "cat-scratchers",
+    "name": "4CLAWS Wall-Mounted Cat Scratcher",
+    "brand": "4CLAWS",
+    "vendor": "amazon",
+    "vendor_sku": "B07T3ZQZ3D",
+    "price_range": "$26-$42",
+    "price_cents": 2999,
+    "expert_score": 8.4,
+    "pros": [
+      "Wall-mount design saves floor space",
+      "Solid sisal rope construction",
+      "Adjustable mounting height"
+    ],
+    "cons": [
+      "Wall-mounting requires drilling",
+      "Position cannot be easily relocated once installed"
+    ],
+    "specs": {
+      "mount": "Wall (drywall or wood)",
+      "material": "Sisal rope",
+      "length": "20 inches"
+    },
+    "best_for": ["small apartments", "vertical-space limited homes"],
+    "badge": "Best Wall-Mounted"
+  },
+  {
+    "category": "cat-scratchers",
+    "name": "Pioneer Pet SmartCat Bootsie's Combination Scratcher",
+    "brand": "SmartCat",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DK264",
+    "price_range": "$28-$36",
+    "price_cents": 3199,
+    "expert_score": 8.0,
+    "pros": [
+      "Combines sisal and cardboard surfaces in one unit",
+      "Inclined ramp angle preferred by many cats",
+      "Compact footprint"
+    ],
+    "cons": [
+      "Lower vertical reach than tall posts",
+      "Cardboard insert requires periodic replacement"
+    ],
+    "specs": {
+      "surfaces": "Sisal + cardboard",
+      "orientation": "Inclined ramp",
+      "footprint": "16\" x 16\""
+    },
+    "best_for": ["dual-texture preference", "small spaces"],
+    "badge": "Best Combo Scratcher"
+  },
+  {
+    "category": "cat-toys",
+    "name": "Da Bird Original Feather Wand Cat Toy",
+    "brand": "Go-Cat",
+    "vendor": "amazon",
+    "vendor_sku": "B0002AT47W",
+    "price_range": "$10-$16",
+    "price_cents": 1199,
+    "expert_score": 9.4,
+    "pros": [
+      "Most cats engage strongly with the rotating-feather motion",
+      "Long handle allows safe distance for high-arousal play",
+      "Replaceable feather attachments"
+    ],
+    "cons": [
+      "Loose feathers can be ingested — supervise play",
+      "Wand handle breaks under heavy use over time"
+    ],
+    "specs": {
+      "length": "36 inches",
+      "attachment": "Natural feathers on flexible wire",
+      "replaceable": true
+    },
+    "best_for": ["interactive play", "predatory enrichment"],
+    "badge": "Best Wand Teaser"
+  },
+  {
+    "category": "cat-toys",
+    "name": "Yeowww! Catnip Banana Toy",
+    "brand": "Yeowww!",
+    "vendor": "amazon",
+    "vendor_sku": "B0002APH0Q",
+    "price_range": "$8-$14",
+    "price_cents": 999,
+    "expert_score": 9.0,
+    "pros": [
+      "Organic catnip-only filling without filler",
+      "Strong feline response in catnip-responsive cats (about 70%)",
+      "Durable construction lasts years"
+    ],
+    "cons": [
+      "Useless for the 30% of cats that don't respond to catnip",
+      "Catnip potency degrades with age — store in airtight container between use"
+    ],
+    "specs": {
+      "filling": "100% organic catnip",
+      "made_in": "USA",
+      "size": "7 inches"
+    },
+    "best_for": ["catnip-responsive cats", "solo play"],
+    "badge": "Best Catnip Toy"
+  },
+  {
+    "category": "cat-toys",
+    "name": "PetSafe SlimCat Interactive Treat Ball",
+    "brand": "PetSafe",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DJX7M",
+    "price_range": "$8-$14",
+    "price_cents": 999,
+    "expert_score": 8.6,
+    "pros": [
+      "Converts feeding into a hunting activity",
+      "Adjustable difficulty (opening size)",
+      "Particularly effective for indoor obesity management"
+    ],
+    "cons": [
+      "Hardwood floors amplify rolling noise",
+      "Some cats lose interest after the puzzle becomes routine"
+    ],
+    "specs": {
+      "capacity": "1/3 cup dry food",
+      "adjustable": "Opening size",
+      "material": "Plastic"
+    },
+    "best_for": ["obesity management", "food-motivated cats"],
+    "badge": "Best Treat Puzzle"
+  },
+  {
+    "category": "cat-toys",
+    "name": "Petlinks Mouse Mates Refillable Catnip Toys",
+    "brand": "Petlinks",
+    "vendor": "amazon",
+    "vendor_sku": "B07LFTQJDM",
+    "price_range": "$8-$14 (3-pack)",
+    "price_cents": 999,
+    "expert_score": 8.0,
+    "pros": [
+      "Small size suitable for batting and carrying",
+      "Refillable catnip pouch",
+      "Affordable multi-pack pricing"
+    ],
+    "cons": [
+      "Plastic eyes potential choke hazard if disembowelled",
+      "Lower-quality catnip than Yeowww!"
+    ],
+    "specs": {
+      "count": "3 mice per pack",
+      "refillable": true,
+      "size": "Small"
+    },
+    "best_for": ["solo play", "multi-cat households"],
+    "badge": "Best Toy Mouse"
+  },
+  {
+    "category": "cat-toys",
+    "name": "Cat Dancer Original Interactive Cat Toy",
+    "brand": "Cat Dancer",
+    "vendor": "amazon",
+    "vendor_sku": "B000HHO04S",
+    "price_range": "$6-$10",
+    "price_cents": 799,
+    "expert_score": 8.8,
+    "pros": [
+      "Simple wire-and-cardboard design extremely effective for most cats",
+      "Inexpensive and durable",
+      "Triggers strong prey-chase response"
+    ],
+    "cons": [
+      "Cardboard tips eventually wear down (replacements available)",
+      "Wire can be unsafe if left for unsupervised play"
+    ],
+    "specs": {
+      "construction": "Spring wire + cardboard tips",
+      "length": "30 inches",
+      "made_in": "USA"
+    },
+    "best_for": ["interactive play", "low-cost effective enrichment"],
+    "badge": "Best Value Interactive"
+  },
+  {
+    "category": "small-animal-hutches",
+    "name": "MidWest Wabbitat Folding Rabbit Cage with Pen Add-On",
+    "brand": "MidWest Homes for Pets",
+    "vendor": "amazon",
+    "vendor_sku": "B007D1ZH3I",
+    "price_range": "$78-$128",
+    "price_cents": 9499,
+    "expert_score": 8.0,
+    "pros": [
+      "Larger than typical pet-store rabbit cages",
+      "Folding design for storage and transport",
+      "Removable plastic tray for cleaning"
+    ],
+    "cons": [
+      "Still smaller than House Rabbit Society welfare minimum without the pen add-on",
+      "Wire bottom can cause sore hocks — requires solid floor mat"
+    ],
+    "specs": {
+      "footprint": "47\" x 23\"",
+      "height": "20\"",
+      "construction": "Wire with plastic tray"
+    },
+    "best_for": ["indoor rabbits with daily exercise outside cage"],
+    "badge": "Best Folding Rabbit Cage"
+  },
+  {
+    "category": "small-animal-hutches",
+    "name": "MidWest Critter Nation Double Unit Small Animal Cage",
+    "brand": "MidWest Homes for Pets",
+    "vendor": "amazon",
+    "vendor_sku": "B003TFOL34",
+    "price_range": "$248-$398",
+    "price_cents": 32900,
+    "expert_score": 9.4,
+    "pros": [
+      "Industry standard for ferret housing — meets welfare guidelines",
+      "Double-door design for full access",
+      "Multi-level with adjustable shelves"
+    ],
+    "cons": [
+      "Substantial floor footprint required",
+      "Assembly is involved (1-2 hours)"
+    ],
+    "specs": {
+      "dimensions": "36\" x 25\" x 62.5\" (double)",
+      "levels": "Two",
+      "doors": "Full-front swing"
+    },
+    "best_for": ["ferrets", "chinchillas", "rats", "small parrots"],
+    "badge": "Best Ferret/Rat Cage"
+  },
+  {
+    "category": "small-animal-hutches",
+    "name": "AmazonBasics 4-Panel Indoor Small Pet X-Pen",
+    "brand": "AmazonBasics",
+    "vendor": "amazon",
+    "vendor_sku": "B0727SBQNT",
+    "price_range": "$32-$58",
+    "price_cents": 3999,
+    "expert_score": 8.8,
+    "pros": [
+      "Configurable footprint via panel arrangement",
+      "Affordable solution for adequate rabbit/guinea pig space",
+      "Easy to assemble and disassemble"
+    ],
+    "cons": [
+      "No floor — requires placement on washable surface or mat",
+      "Determined chewers can damage the plastic-coated wire"
+    ],
+    "specs": {
+      "panels": "8 panels (configurable)",
+      "height": "30 inches",
+      "footprint_max": "Up to 16 sq ft"
+    },
+    "best_for": ["indoor rabbits", "guinea pigs", "adequate-welfare housing"],
+    "badge": "Best Indoor X-Pen"
+  },
+  {
+    "category": "small-animal-hutches",
+    "name": "Kaytee My First Home Multi-Level Habitat for Guinea Pigs",
+    "brand": "Kaytee",
+    "vendor": "chewy",
+    "vendor_sku": "32922",
+    "price_range": "$78-$118",
+    "price_cents": 9999,
+    "expert_score": 7.6,
+    "pros": [
+      "Multi-level design provides vertical interest",
+      "Wire top access for handling",
+      "Includes ramps and platforms"
+    ],
+    "cons": [
+      "Single-pig footprint below Humane Society 7.5 sq ft recommendation",
+      "Pairs require additional housing or DIY C&C expansion"
+    ],
+    "specs": {
+      "dimensions": "30.5\" x 18\" x 26\"",
+      "levels": "Two with ramp",
+      "construction": "Wire over plastic base"
+    },
+    "best_for": ["single guinea pigs with daily out-of-cage time"],
+    "badge": "Best Single Guinea Pig"
+  },
+  {
+    "category": "small-animal-hutches",
+    "name": "PawHut Wooden Outdoor Rabbit Hutch with Run",
+    "brand": "PawHut",
+    "vendor": "amazon",
+    "vendor_sku": "B07XV3KGS3",
+    "price_range": "$178-$298",
+    "price_cents": 23900,
+    "expert_score": 7.4,
+    "pros": [
+      "Combined sheltered hutch and outdoor run",
+      "Weather-resistant fir wood construction",
+      "Asphalt roof for rain protection"
+    ],
+    "cons": [
+      "Outdoor housing carries documented predator risk",
+      "Modern welfare guidance increasingly favors indoor housing"
+    ],
+    "specs": {
+      "dimensions": "70\" x 26\" x 41\"",
+      "material": "Fir wood with asphalt roof",
+      "shelter_section": "Enclosed sleeping area"
+    },
+    "best_for": ["outdoor rabbit housing where indoor is not viable"],
+    "badge": "Best Outdoor Hutch"
+  },
+  {
+    "category": "small-animal-food",
+    "name": "Oxbow Essentials Adult Rabbit Food",
+    "brand": "Oxbow",
+    "vendor": "chewy",
+    "vendor_sku": "30122",
+    "price_range": "$18-$36 (10 lb)",
+    "price_cents": 2299,
+    "expert_score": 9.4,
+    "pros": [
+      "Timothy-based pellet appropriate for adult rabbits",
+      "Endorsed by exotic-veterinary organizations",
+      "Consistent batch quality"
+    ],
+    "cons": [
+      "Higher per-pound cost than supermarket rabbit food",
+      "Plain pellet has lower palatability than muesli mixes (which is the point)"
+    ],
+    "specs": {
+      "base": "Timothy hay",
+      "protein": "14%",
+      "fiber": "25%",
+      "calcium": "0.6%"
+    },
+    "best_for": ["adult rabbits over 1 year"],
+    "badge": "Best Rabbit Pellet"
+  },
+  {
+    "category": "small-animal-food",
+    "name": "Oxbow Western Timothy Hay",
+    "brand": "Oxbow",
+    "vendor": "chewy",
+    "vendor_sku": "29821",
+    "price_range": "$22-$38 (25 lb box)",
+    "price_cents": 2999,
+    "expert_score": 9.6,
+    "pros": [
+      "Consistent quality and minimal dust",
+      "Long strands suitable for foraging behavior",
+      "Endorsed by exotic-veterinary organizations as primary diet"
+    ],
+    "cons": [
+      "Higher cost than feed-store hay",
+      "Compressed packaging requires fluffing before feeding"
+    ],
+    "specs": {
+      "type": "Western timothy hay",
+      "form": "Long-stem dried",
+      "size_options": "9 oz to 25 lb"
+    },
+    "best_for": ["all herbivores: rabbits, guinea pigs, chinchillas"],
+    "badge": "Best Timothy Hay"
+  },
+  {
+    "category": "small-animal-food",
+    "name": "Oxbow Essentials Adult Guinea Pig Food with Vitamin C",
+    "brand": "Oxbow",
+    "vendor": "chewy",
+    "vendor_sku": "30123",
+    "price_range": "$16-$32 (10 lb)",
+    "price_cents": 2099,
+    "expert_score": 9.4,
+    "pros": [
+      "Stabilized vitamin C formulation appropriate for guinea pigs",
+      "Timothy-based pellet (appropriate for adults)",
+      "Endorsed by exotic-veterinary organizations"
+    ],
+    "cons": [
+      "Vitamin C still degrades within 90 days of manufacture — supplement with fresh produce",
+      "Premium pricing"
+    ],
+    "specs": {
+      "base": "Timothy hay",
+      "vitamin_c_added": "Stabilized formulation",
+      "protein": "14%",
+      "fiber": "25%"
+    },
+    "best_for": ["adult guinea pigs"],
+    "badge": "Best Guinea Pig Pellet"
+  },
+  {
+    "category": "small-animal-food",
+    "name": "Wysong Epigen 90 Starch-Free Ferret Food",
+    "brand": "Wysong",
+    "vendor": "amazon",
+    "vendor_sku": "B005A9NW3Y",
+    "price_range": "$28-$58 (5 lb)",
+    "price_cents": 4499,
+    "expert_score": 9.0,
+    "pros": [
+      "Very high protein and fat appropriate for obligate carnivore needs",
+      "Starch-free formulation",
+      "Established brand in ferret community"
+    ],
+    "cons": [
+      "Significantly more expensive than mass-market ferret food",
+      "Limited retail availability"
+    ],
+    "specs": {
+      "protein": "63%",
+      "fat": "19%",
+      "starch": "Minimal",
+      "base": "Meat-based"
+    },
+    "best_for": ["adult ferrets", "carnivore-appropriate feeding"],
+    "badge": "Best Ferret Food"
+  },
+  {
+    "category": "small-animal-food",
+    "name": "Kaytee Forti-Diet Pro Health Hamster & Gerbil Food",
+    "brand": "Kaytee",
+    "vendor": "chewy",
+    "vendor_sku": "30821",
+    "price_range": "$10-$18 (3 lb)",
+    "price_cents": 1399,
+    "expert_score": 7.6,
+    "pros": [
+      "Includes prebiotic and probiotic supplementation",
+      "Widely available in retail",
+      "Acceptable nutritional profile for hamsters and gerbils"
+    ],
+    "cons": [
+      "Mixed-form format allows selective feeding",
+      "Less specific to species than higher-end alternatives"
+    ],
+    "specs": {
+      "protein": "18%",
+      "fat": "7%",
+      "fiber": "12%",
+      "form": "Pellet + seed mix"
+    },
+    "best_for": ["hamsters", "gerbils", "general small-rodent feeding"],
+    "badge": "Best Hamster/Gerbil Food"
+  },
+  {
+    "category": "fish-tanks",
+    "name": "Aqueon LED Aquarium Kit (29 Gallon)",
+    "brand": "Aqueon",
+    "vendor": "amazon",
+    "vendor_sku": "B07NTPN8C7",
+    "price_range": "$148-$198",
+    "price_cents": 17500,
+    "expert_score": 8.4,
+    "pros": [
+      "29 gallons offers substantially better water stability than 10-gal kits",
+      "Includes LED hood, filter, heater, and thermometer",
+      "Reputable brand with U.S. parts availability"
+    ],
+    "cons": [
+      "Included filter often inadequate (recommend upgrade to Aquaclear 50/70)",
+      "Heater rated below 200W for 29 gal — adequate but not robust"
+    ],
+    "specs": {
+      "volume": "29 gallons",
+      "dimensions": "30\" x 12\" x 18\"",
+      "included": "Tank, LED hood, filter, heater, conditioner, food"
+    },
+    "best_for": ["first aquariums", "starter community tanks"],
+    "badge": "Best Starter Kit"
+  },
+  {
+    "category": "fish-tanks",
+    "name": "Marineland Portrait Aquarium Kit (5 Gallon)",
+    "brand": "Marineland",
+    "vendor": "amazon",
+    "vendor_sku": "B003UA8MN2",
+    "price_range": "$98-$148",
+    "price_cents": 12900,
+    "expert_score": 7.6,
+    "pros": [
+      "Adequate for a single betta with proper care",
+      "Hidden filtration with three-stage media",
+      "Compact desktop footprint"
+    ],
+    "cons": [
+      "5 gallons remains a small water volume — less forgiving of mistakes",
+      "Vertical orientation provides less horizontal swimming space"
+    ],
+    "specs": {
+      "volume": "5 gallons",
+      "dimensions": "11\" x 11\" x 17\"",
+      "filtration": "Three-stage hidden"
+    },
+    "best_for": ["single betta with experienced keeper"],
+    "badge": "Best Nano Tank"
+  },
+  {
+    "category": "fish-tanks",
+    "name": "Fluval Flex 32-Gallon Curved Aquarium Kit",
+    "brand": "Fluval",
+    "vendor": "amazon",
+    "vendor_sku": "B07GWXVZ3R",
+    "price_range": "$248-$348",
+    "price_cents": 29900,
+    "expert_score": 8.8,
+    "pros": [
+      "Curved front glass for unique aesthetic",
+      "Substantial 32-gallon volume for stability",
+      "Hidden filter chamber for clean appearance"
+    ],
+    "cons": [
+      "Curved glass distorts viewing angles",
+      "Premium price relative to standard rectangular tanks"
+    ],
+    "specs": {
+      "volume": "32 gallons",
+      "dimensions": "19\" x 19\" x 16\"",
+      "filtration": "Built-in three-stage"
+    },
+    "best_for": ["aesthetic-focused builds", "small-footprint installs"],
+    "badge": "Best Design Tank"
+  },
+  {
+    "category": "fish-tanks",
+    "name": "Tetra Aquarium 20-Gallon LED Starter Kit",
+    "brand": "Tetra",
+    "vendor": "amazon",
+    "vendor_sku": "B077ZDQ6QH",
+    "price_range": "$98-$148",
+    "price_cents": 11900,
+    "expert_score": 7.8,
+    "pros": [
+      "Includes most components needed for first tank",
+      "20-gallon long footprint preferred over 20-gallon high",
+      "Widely available with replacement parts"
+    ],
+    "cons": [
+      "Filter cartridge system locks owners into proprietary replacement costs",
+      "Lighting inadequate for live plants"
+    ],
+    "specs": {
+      "volume": "20 gallons",
+      "dimensions": "24\" x 12\" x 16\"",
+      "included": "Tank, LED, filter, heater, conditioner"
+    },
+    "best_for": ["budget-conscious starters"],
+    "badge": "Best Budget Starter"
+  },
+  {
+    "category": "fish-tanks",
+    "name": "SeaClear 50-Gallon Acrylic Aquarium",
+    "brand": "SeaClear",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DJZ7K",
+    "price_range": "$398-$598",
+    "price_cents": 49900,
+    "expert_score": 8.4,
+    "pros": [
+      "Acrylic is 17x stronger than glass and lighter",
+      "50-gallon volume provides excellent water stability",
+      "Made in USA"
+    ],
+    "cons": [
+      "Acrylic scratches easily during cleaning",
+      "Substantially higher cost than glass equivalent"
+    ],
+    "specs": {
+      "volume": "50 gallons",
+      "material": "Acrylic",
+      "dimensions": "36\" x 15\" x 20\""
+    },
+    "best_for": ["larger setups", "weight-sensitive installations"],
+    "badge": "Best Acrylic Tank"
+  },
+  {
+    "category": "fish-filters",
+    "name": "Fluval C4 Power Filter (50-70 gallon)",
+    "brand": "Fluval",
+    "vendor": "amazon",
+    "vendor_sku": "B00422IXNC",
+    "price_range": "$78-$108",
+    "price_cents": 8999,
+    "expert_score": 9.2,
+    "pros": [
+      "5-stage filtration with customizable media",
+      "Drip-tray design improves aerobic biological filtration",
+      "Quiet operation"
+    ],
+    "cons": [
+      "More expensive than equivalent Aquaclear",
+      "Proprietary media trays add ongoing cost if owner uses brand media"
+    ],
+    "specs": {
+      "flow_rate": "264 gph",
+      "tank_range": "50-70 gallons",
+      "filtration_stages": "5 (mechanical, chemical, 3 biological)"
+    },
+    "best_for": ["medium tanks 40-70 gallons"],
+    "badge": "Best HOB Filter"
+  },
+  {
+    "category": "fish-filters",
+    "name": "AquaClear 70 Power Filter (40-70 gallon)",
+    "brand": "AquaClear",
+    "vendor": "amazon",
+    "vendor_sku": "B00027LP10",
+    "price_range": "$68-$98",
+    "price_cents": 7999,
+    "expert_score": 9.4,
+    "pros": [
+      "Industry-standard HOB filter with decades of community trust",
+      "Adjustable flow control",
+      "Generous media chamber accommodates third-party media"
+    ],
+    "cons": [
+      "Loud during priming and after maintenance",
+      "Single intake limits coverage in tall tanks"
+    ],
+    "specs": {
+      "flow_rate": "300 gph (rated)",
+      "tank_range": "40-70 gallons",
+      "media_chamber": "Customizable"
+    },
+    "best_for": ["community freshwater tanks 29-75 gallons"],
+    "badge": "Best Overall HOB"
+  },
+  {
+    "category": "fish-filters",
+    "name": "Fluval 307 Canister Filter (up to 70 gallons)",
+    "brand": "Fluval",
+    "vendor": "amazon",
+    "vendor_sku": "B086YJDD9V",
+    "price_range": "$198-$248",
+    "price_cents": 22900,
+    "expert_score": 9.0,
+    "pros": [
+      "Large media volume supports long maintenance intervals",
+      "Quieter than HOB equivalents",
+      "Better suited to heavily-stocked or planted tanks"
+    ],
+    "cons": [
+      "Higher upfront cost than HOB",
+      "More complex installation and maintenance"
+    ],
+    "specs": {
+      "flow_rate": "303 gph",
+      "tank_range": "Up to 70 gallons",
+      "media_capacity": "Multi-tray"
+    },
+    "best_for": ["planted tanks", "heavily stocked tanks"],
+    "badge": "Best Canister Filter"
+  },
+  {
+    "category": "fish-filters",
+    "name": "Hygger 5W Aquarium Sponge Filter",
+    "brand": "Hygger",
+    "vendor": "amazon",
+    "vendor_sku": "B07CW2JWLY",
+    "price_range": "$18-$28",
+    "price_cents": 1899,
+    "expert_score": 8.6,
+    "pros": [
+      "Air-pump driven — extremely gentle flow safe for shrimp and fry",
+      "Inexpensive and effectively maintenance-free",
+      "Excellent biological filtration capacity"
+    ],
+    "cons": [
+      "Requires separate air pump",
+      "Less effective at mechanical (particulate) filtration than HOB"
+    ],
+    "specs": {
+      "type": "Sponge filter, air-driven",
+      "tank_range": "Up to 60 gallons (with adequate air pump)",
+      "filtration": "Biological + mild mechanical"
+    },
+    "best_for": ["shrimp tanks", "betta tanks", "fry-rearing"],
+    "badge": "Best Sponge Filter"
+  },
+  {
+    "category": "fish-filters",
+    "name": "Marineland Penguin Pro 75 Power Filter",
+    "brand": "Marineland",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DJUSY",
+    "price_range": "$38-$58",
+    "price_cents": 4799,
+    "expert_score": 7.8,
+    "pros": [
+      "Bio-Wheel adds aerobic biological filtration",
+      "Affordable entry-level HOB",
+      "Wide retail availability"
+    ],
+    "cons": [
+      "Proprietary cartridge format locks owners into replacement costs",
+      "Bio-Wheel can stop spinning, reducing filtration efficiency"
+    ],
+    "specs": {
+      "flow_rate": "350 gph (rated)",
+      "tank_range": "Up to 75 gallons",
+      "media": "Cartridge + Bio-Wheel"
+    },
+    "best_for": ["budget-conscious starter tanks"],
+    "badge": "Best Budget HOB"
+  },
+  {
+    "category": "fish-heaters",
+    "name": "Eheim Jager Aquarium Heater (200W)",
+    "brand": "Eheim",
+    "vendor": "amazon",
+    "vendor_sku": "B0002566UE",
+    "price_range": "$48-$68",
+    "price_cents": 5499,
+    "expert_score": 9.6,
+    "pros": [
+      "Community-trusted reliability over decades",
+      "TruTemp dial accurate within 0.5°F",
+      "Auto-shutoff if exposed to air"
+    ],
+    "cons": [
+      "Glass construction vulnerable to large or boisterous fish",
+      "Higher cost than budget heaters"
+    ],
+    "specs": {
+      "wattage": "200W",
+      "tank_range": "55-65 gallons",
+      "construction": "Glass with thermal cutoff"
+    },
+    "best_for": ["55-65 gallon tanks", "reliability priority"],
+    "badge": "Best Reliable Heater"
+  },
+  {
+    "category": "fish-heaters",
+    "name": "Fluval E300 Electronic Heater",
+    "brand": "Fluval",
+    "vendor": "amazon",
+    "vendor_sku": "B003TDM7UQ",
+    "price_range": "$78-$118",
+    "price_cents": 8999,
+    "expert_score": 8.8,
+    "pros": [
+      "Digital LCD display shows actual water temperature",
+      "Flashing alert if temperature drifts outside range",
+      "Aluminum heat shield protects fish from contact"
+    ],
+    "cons": [
+      "Premium pricing compared to standard heaters",
+      "Larger physical size than equivalent wattage Eheim"
+    ],
+    "specs": {
+      "wattage": "300W",
+      "tank_range": "65-100 gallons",
+      "display": "LCD with alarm"
+    },
+    "best_for": ["large tanks", "owners wanting display feedback"],
+    "badge": "Best Display Heater"
+  },
+  {
+    "category": "fish-heaters",
+    "name": "Finnex Titanium Aquarium Heater (with HC-0810M Controller)",
+    "brand": "Finnex",
+    "vendor": "amazon",
+    "vendor_sku": "B003WJ8KPS",
+    "price_range": "$78-$128",
+    "price_cents": 9999,
+    "expert_score": 9.0,
+    "pros": [
+      "Titanium element essentially shatter-proof",
+      "External controller separates regulation from heating element",
+      "Suitable for large freshwater and marine tanks"
+    ],
+    "cons": [
+      "Two-piece system more complex to install",
+      "Higher cost than standard heaters"
+    ],
+    "specs": {
+      "wattage": "300W",
+      "construction": "Titanium element",
+      "controller": "External (HC-0810M)"
+    },
+    "best_for": ["large tanks 75+ gallons", "marine tanks"],
+    "badge": "Best Titanium Heater"
+  },
+  {
+    "category": "fish-heaters",
+    "name": "Cobalt Aquatics Neo-Therm Heater (100W)",
+    "brand": "Cobalt Aquatics",
+    "vendor": "amazon",
+    "vendor_sku": "B00C7TUNF0",
+    "price_range": "$48-$68",
+    "price_cents": 5499,
+    "expert_score": 8.6,
+    "pros": [
+      "Flat profile takes minimal tank space",
+      "LED indicator for heat-on status",
+      "Thermal-protection auto-shutoff"
+    ],
+    "cons": [
+      "Higher cost than equivalent Eheim Jager",
+      "Some users report failure rate higher than Eheim"
+    ],
+    "specs": {
+      "wattage": "100W",
+      "tank_range": "25-40 gallons",
+      "profile": "Flat, low-clearance"
+    },
+    "best_for": ["small-medium tanks 25-40 gallons", "aesthetics-focused builds"],
+    "badge": "Best Compact Heater"
+  },
+  {
+    "category": "fish-heaters",
+    "name": "Inkbird ITC-308 Aquarium Temperature Controller",
+    "brand": "Inkbird",
+    "vendor": "amazon",
+    "vendor_sku": "B01HXM5UAC",
+    "price_range": "$36-$48",
+    "price_cents": 3999,
+    "expert_score": 9.2,
+    "pros": [
+      "Adds redundant temperature control to any heater",
+      "Programmable high/low alarm cutoffs",
+      "Standard NEMA outlet for any plug-in heater"
+    ],
+    "cons": [
+      "Not a heater itself — requires separate heater purchase",
+      "Wall-warts add cabinet complexity"
+    ],
+    "specs": {
+      "type": "External thermostat controller",
+      "outlets": "Heating and cooling outlets",
+      "range": "Programmable 32-220°F"
+    },
+    "best_for": ["valuable tanks requiring redundant safety", "DIY temperature control"],
+    "badge": "Best Heater Controller"
+  },
+  {
+    "category": "fish-lighting",
+    "name": "Fluval Plant 3.0 LED Aquarium Light",
+    "brand": "Fluval",
+    "vendor": "amazon",
+    "vendor_sku": "B07L4HZHC8",
+    "price_range": "$178-$258",
+    "price_cents": 22900,
+    "expert_score": 9.4,
+    "pros": [
+      "Bluetooth programmable sunrise/sunset cycle",
+      "Strong PAR output for low-to-mid light planted tanks",
+      "Adjustable spectrum"
+    ],
+    "cons": [
+      "App control occasionally buggy",
+      "Premium pricing"
+    ],
+    "specs": {
+      "tank_range": "36-46 inches",
+      "par_at_12_inch": "70-90 µmol",
+      "programmable": "Sunrise/sunset, weather effects"
+    },
+    "best_for": ["low-mid light planted tanks"],
+    "badge": "Best Planted Light"
+  },
+  {
+    "category": "fish-lighting",
+    "name": "Mars Hydro Reef LED 165W",
+    "brand": "Mars Hydro",
+    "vendor": "amazon",
+    "vendor_sku": "B07S5SSRJM",
+    "price_range": "$148-$198",
+    "price_cents": 17900,
+    "expert_score": 8.6,
+    "pros": [
+      "High PAR output at price below premium brands",
+      "Suitable for soft corals and LPS",
+      "Cooler-running than older models"
+    ],
+    "cons": [
+      "Build quality less consistent than AI or Kessil",
+      "No native programmable cycle (timer required)"
+    ],
+    "specs": {
+      "wattage": "165W",
+      "spectrum": "Reef (heavy blue + white)",
+      "coverage": "24\" x 24\""
+    },
+    "best_for": ["budget reef tanks", "soft coral and LPS"],
+    "badge": "Best Budget Reef LED"
+  },
+  {
+    "category": "fish-lighting",
+    "name": "NICREW ClassicLED Plus Planted Aquarium Light",
+    "brand": "NICREW",
+    "vendor": "amazon",
+    "vendor_sku": "B07FNCN21B",
+    "price_range": "$58-$98",
+    "price_cents": 7999,
+    "expert_score": 8.0,
+    "pros": [
+      "Suitable for low-light planted tanks",
+      "Affordable entry into planted lighting",
+      "Easy installation with adjustable bracket"
+    ],
+    "cons": [
+      "Insufficient PAR for high-light plants or carpeting species",
+      "Not programmable"
+    ],
+    "specs": {
+      "tank_range": "30-36 inches",
+      "spectrum": "Full-spectrum white with red emphasis",
+      "par_at_12_inch": "30-50 µmol"
+    },
+    "best_for": ["low-light plants (Anubias, Java Fern, Crypts)"],
+    "badge": "Best Budget Planted Light"
+  },
+  {
+    "category": "fish-lighting",
+    "name": "AI Prime 16HD Reef LED",
+    "brand": "Aqua Illumination",
+    "vendor": "amazon",
+    "vendor_sku": "B07JC3KNHG",
+    "price_range": "$398-$498",
+    "price_cents": 44900,
+    "expert_score": 9.4,
+    "pros": [
+      "Programmable spectrum with WiFi/Bluetooth app control",
+      "Strong PAR with adjustable intensity",
+      "Compact form factor"
+    ],
+    "cons": [
+      "Premium pricing",
+      "Single unit covers limited footprint — multiple units required for larger tanks"
+    ],
+    "specs": {
+      "coverage": "24\" x 24\" per unit",
+      "control": "WiFi + Bluetooth via myAI app",
+      "channels": "7-color programmable"
+    },
+    "best_for": ["serious reef tanks", "SPS coral keeping"],
+    "badge": "Best Premium Reef Light"
+  },
+  {
+    "category": "fish-lighting",
+    "name": "Hygger 24/7 Planted Aquarium LED Light",
+    "brand": "Hygger",
+    "vendor": "amazon",
+    "vendor_sku": "B07VLM7RG3",
+    "price_range": "$48-$78",
+    "price_cents": 6499,
+    "expert_score": 8.2,
+    "pros": [
+      "Built-in 24/7 sunrise/sunset programming",
+      "Affordable price point",
+      "Adjustable bracket fits most rimless and rimmed tanks"
+    ],
+    "cons": [
+      "Programming limited compared to Fluval 3.0",
+      "Build quality varies between batches"
+    ],
+    "specs": {
+      "tank_range": "30-36 inches",
+      "programmable": "24/7 cycle preset",
+      "spectrum": "Full white + RGB accent"
+    },
+    "best_for": ["budget low-light planted tanks with auto-cycle"],
+    "badge": "Best Auto-Cycle Light"
+  },
+  {
+    "category": "fish-water-test-kits",
+    "name": "API Freshwater Master Test Kit",
+    "brand": "API",
+    "vendor": "amazon",
+    "vendor_sku": "B000255NCI",
+    "price_range": "$28-$42",
+    "price_cents": 3499,
+    "expert_score": 9.6,
+    "pros": [
+      "Industry-standard liquid test kit for over two decades",
+      "Tests ammonia, nitrite, nitrate, and pH (high and low range)",
+      "Approximately 800 tests across all four parameters"
+    ],
+    "cons": [
+      "Color charts require good lighting to read accurately",
+      "Reagents lose accuracy 12-18 months after opening"
+    ],
+    "specs": {
+      "parameters": "Ammonia, Nitrite, Nitrate, pH",
+      "test_count": "~800 across parameters",
+      "shelf_life": "3 years from manufacture"
+    },
+    "best_for": ["freshwater hobbyists", "cycling diagnosis"],
+    "badge": "Best Master Test Kit"
+  },
+  {
+    "category": "fish-water-test-kits",
+    "name": "Salifert Reef Master Test Kit",
+    "brand": "Salifert",
+    "vendor": "amazon",
+    "vendor_sku": "B00012XGCS",
+    "price_range": "$48-$78",
+    "price_cents": 6499,
+    "expert_score": 9.2,
+    "pros": [
+      "Most-accurate widely-available reef test kit",
+      "Tests calcium, magnesium, alkalinity, nitrate",
+      "Trusted by reef-keeping community for precision"
+    ],
+    "cons": [
+      "Higher per-test cost than API equivalents",
+      "Requires more careful technique for accuracy"
+    ],
+    "specs": {
+      "parameters": "Calcium, Magnesium, Alkalinity, Nitrate",
+      "accuracy": "High (reef-grade)",
+      "intended_use": "Reef and marine tanks"
+    },
+    "best_for": ["reef aquariums", "marine livestock keeping"],
+    "badge": "Best Reef Test Kit"
+  },
+  {
+    "category": "fish-water-test-kits",
+    "name": "API GH & KH Test Kit",
+    "brand": "API",
+    "vendor": "amazon",
+    "vendor_sku": "B000UWJSJ8",
+    "price_range": "$14-$22",
+    "price_cents": 1799,
+    "expert_score": 8.8,
+    "pros": [
+      "Essential parameters for planted tanks and species-specific water chemistry",
+      "Drop-count testing is simple and accurate",
+      "Affordable supplement to Freshwater Master Kit"
+    ],
+    "cons": [
+      "Not included in the Freshwater Master Kit",
+      "Two-bottle format adds shelf complexity"
+    ],
+    "specs": {
+      "parameters": "General Hardness (GH), Carbonate Hardness (KH)",
+      "test_count": "~200 tests per parameter"
+    },
+    "best_for": ["planted tanks", "soft-water species keeping"],
+    "badge": "Best GH/KH Kit"
+  },
+  {
+    "category": "fish-water-test-kits",
+    "name": "Seachem Multitest Ammonia Alert",
+    "brand": "Seachem",
+    "vendor": "amazon",
+    "vendor_sku": "B0002APR82",
+    "price_range": "$10-$18",
+    "price_cents": 1299,
+    "expert_score": 7.6,
+    "pros": [
+      "Continuous in-tank ammonia indicator (no testing required)",
+      "Lasts approximately 12 months",
+      "Useful supplement to liquid test kits"
+    ],
+    "cons": [
+      "Indicator does not show specific concentration",
+      "Less accurate than liquid drop testing for diagnosis"
+    ],
+    "specs": {
+      "type": "Continuous in-tank indicator",
+      "duration": "~12 months",
+      "parameter": "Ammonia (free)"
+    },
+    "best_for": ["established tanks as supplement to liquid testing"],
+    "badge": "Best Continuous Monitor"
+  },
+  {
+    "category": "fish-water-test-kits",
+    "name": "API Phosphate Test Kit",
+    "brand": "API",
+    "vendor": "amazon",
+    "vendor_sku": "B000255NRM",
+    "price_range": "$12-$22",
+    "price_cents": 1599,
+    "expert_score": 8.4,
+    "pros": [
+      "Useful for diagnosing algae outbreaks",
+      "Critical for reef tanks (phosphate management)",
+      "Reliable drop-test format"
+    ],
+    "cons": [
+      "Not needed for fish-only freshwater tanks at startup",
+      "Requires separate purchase from master kit"
+    ],
+    "specs": {
+      "parameter": "Phosphate (PO4)",
+      "test_count": "~150 tests"
+    },
+    "best_for": ["reef tanks", "planted tank diagnosis", "algae troubleshooting"],
+    "badge": "Best Phosphate Kit"
+  },
+  {
+    "category": "reptile-enclosures",
+    "name": "Zen Habitats Reptile Enclosure (4ft x 2ft x 2ft PVC)",
+    "brand": "Zen Habitats",
+    "vendor": "amazon",
+    "vendor_sku": "ZEN-4X2X2",
+    "price_range": "$498-$698",
+    "price_cents": 59900,
+    "expert_score": 9.4,
+    "pros": [
+      "Meets modern welfare-recommended minimum for bearded dragons and ball pythons",
+      "PVC construction holds heat efficiently",
+      "Front-opening design reduces handling stress"
+    ],
+    "cons": [
+      "Substantial price relative to glass terrariums",
+      "Assembly required"
+    ],
+    "specs": {
+      "dimensions": "48\" x 24\" x 24\"",
+      "construction": "PVC panels",
+      "opening": "Front-opening sliding doors"
+    },
+    "best_for": ["adult bearded dragons", "ball pythons", "leopard geckos (with screen top)"],
+    "badge": "Best Welfare-Compliant Enclosure"
+  },
+  {
+    "category": "reptile-enclosures",
+    "name": "Exo Terra Glass Terrarium (Large Wide, 36\" x 18\" x 18\")",
+    "brand": "Exo Terra",
+    "vendor": "amazon",
+    "vendor_sku": "B0002AS50G",
+    "price_range": "$298-$398",
+    "price_cents": 34900,
+    "expert_score": 8.4,
+    "pros": [
+      "Front-opening dual-door design",
+      "Mesh top accommodates overhead lighting",
+      "Reputable brand with replacement-part availability"
+    ],
+    "cons": [
+      "Glass loses heat — higher wattage required in cool rooms",
+      "36\" length below modern welfare minimum for adult bearded dragons"
+    ],
+    "specs": {
+      "dimensions": "36\" x 18\" x 18\"",
+      "construction": "Glass with mesh top",
+      "opening": "Front dual-door"
+    },
+    "best_for": ["juvenile reptiles", "leopard geckos", "amphibians"],
+    "badge": "Best Glass Terrarium"
+  },
+  {
+    "category": "reptile-enclosures",
+    "name": "REPTI ZOO Reptile Glass Terrarium (24\" x 18\" x 36\" tall)",
+    "brand": "REPTI ZOO",
+    "vendor": "amazon",
+    "vendor_sku": "B07PJ8VYK7",
+    "price_range": "$198-$298",
+    "price_cents": 24900,
+    "expert_score": 8.2,
+    "pros": [
+      "Tall arboreal-friendly dimensions",
+      "Front-opening swing doors",
+      "More affordable than Exo Terra equivalents"
+    ],
+    "cons": [
+      "Build quality varies batch-to-batch",
+      "Customer support response slower than premium brands"
+    ],
+    "specs": {
+      "dimensions": "24\" x 18\" x 36\"",
+      "construction": "Glass",
+      "orientation": "Tall (arboreal)"
+    },
+    "best_for": ["crested geckos", "tree-dwelling species", "chameleons (with proper care)"],
+    "badge": "Best Arboreal Enclosure"
+  },
+  {
+    "category": "reptile-enclosures",
+    "name": "Zoo Med ReptiBreeze Open Air Aluminum Screen Cage (Large)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B002AQI91A",
+    "price_range": "$98-$148",
+    "price_cents": 12900,
+    "expert_score": 8.0,
+    "pros": [
+      "Excellent ventilation for chameleons and arboreal species",
+      "Lightweight aluminum frame",
+      "Easy to disassemble for cleaning"
+    ],
+    "cons": [
+      "Difficult to maintain humidity (open mesh)",
+      "Not appropriate for species requiring stable warmth or humidity"
+    ],
+    "specs": {
+      "dimensions": "24\" x 24\" x 48\"",
+      "construction": "Aluminum + mesh",
+      "ventilation": "Maximum (open mesh)"
+    },
+    "best_for": ["chameleons", "species requiring high airflow"],
+    "badge": "Best for Chameleons"
+  },
+  {
+    "category": "reptile-enclosures",
+    "name": "Animal Plastics T8 PVC Enclosure (4ft x 2ft x 2ft)",
+    "brand": "Animal Plastics",
+    "vendor": "amazon",
+    "vendor_sku": "AP-T8-422",
+    "price_range": "$648-$898",
+    "price_cents": 74900,
+    "expert_score": 9.4,
+    "pros": [
+      "Premium PVC construction with excellent thermal retention",
+      "Customizable colors and door configurations",
+      "Industry standard among advanced keepers"
+    ],
+    "cons": [
+      "Long lead times — built to order",
+      "Premium pricing"
+    ],
+    "specs": {
+      "dimensions": "48\" x 24\" x 24\"",
+      "construction": "PVC with extruded aluminum reinforcement",
+      "customization": "Color, door, lighting options"
+    },
+    "best_for": ["serious reptile keepers", "long-term welfare-focused setups"],
+    "badge": "Best Premium PVC"
+  },
+  {
+    "category": "reptile-uvb-lighting",
+    "name": "Arcadia Reptile ProT5 12% Desert UVB Kit (36-inch)",
+    "brand": "Arcadia",
+    "vendor": "amazon",
+    "vendor_sku": "B01CR3KCEC",
+    "price_range": "$118-$148",
+    "price_cents": 12900,
+    "expert_score": 9.6,
+    "pros": [
+      "Industry-leading UVB output for desert species",
+      "T5 HO bulb format with included fixture",
+      "Recommended by exotic veterinary specialists"
+    ],
+    "cons": [
+      "Bulb replacement required every 12 months",
+      "Premium pricing"
+    ],
+    "specs": {
+      "uv_output": "12% UVB (desert)",
+      "format": "T5 HO linear",
+      "length": "36 inches",
+      "fixture_included": true
+    },
+    "best_for": ["bearded dragons", "uromastyx", "desert tortoises"],
+    "badge": "Best Desert UVB"
+  },
+  {
+    "category": "reptile-uvb-lighting",
+    "name": "Zoo Med ReptiSun 10.0 T5 HO UVB Bulb (24-inch)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B003A3GGSO",
+    "price_range": "$48-$68",
+    "price_cents": 5499,
+    "expert_score": 9.0,
+    "pros": [
+      "Strong UVB output suitable for most desert species",
+      "Widely available in U.S. retail",
+      "T5 HO format provides 2-3x output of T8 alternatives"
+    ],
+    "cons": [
+      "Bulb only — fixture sold separately",
+      "Replace every 12 months even if visible light continues"
+    ],
+    "specs": {
+      "uv_output": "10.0 (desert)",
+      "format": "T5 HO bulb only",
+      "length": "24 inches"
+    },
+    "best_for": ["bearded dragons", "desert species"],
+    "badge": "Best Value UVB Bulb"
+  },
+  {
+    "category": "reptile-uvb-lighting",
+    "name": "Arcadia Shade Dweller ProT5 6% Forest UVB Kit",
+    "brand": "Arcadia",
+    "vendor": "amazon",
+    "vendor_sku": "B07RKQVW4D",
+    "price_range": "$98-$128",
+    "price_cents": 10999,
+    "expert_score": 9.4,
+    "pros": [
+      "Appropriate UVB output for low-UVB-requiring species",
+      "Includes fixture for plug-and-play install",
+      "Backed by Arcadia research and welfare guidance"
+    ],
+    "cons": [
+      "Premium pricing relative to retail bulb-only options",
+      "12-month replacement cycle for the bulb"
+    ],
+    "specs": {
+      "uv_output": "6% UVB (forest/shade)",
+      "format": "T5 HO linear",
+      "fixture_included": true
+    },
+    "best_for": ["leopard geckos", "crested geckos", "low-UVB species"],
+    "badge": "Best Low-UVB Forest"
+  },
+  {
+    "category": "reptile-uvb-lighting",
+    "name": "Zoo Med PowerSun Mercury Vapor UV Lamp (160W)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B0002APX86",
+    "price_range": "$58-$88",
+    "price_cents": 7999,
+    "expert_score": 8.4,
+    "pros": [
+      "Combined UVB and basking heat in single fixture",
+      "Strong UVB output suitable for desert species",
+      "Convenient for large enclosures needing both"
+    ],
+    "cons": [
+      "Requires ceramic socket and proper fixture (sold separately)",
+      "Higher wattage means more heat output — verify enclosure ventilation"
+    ],
+    "specs": {
+      "wattage": "160W",
+      "uv_output": "Mercury vapor (UVB + heat)",
+      "lifespan": "12 months UVB"
+    },
+    "best_for": ["large desert enclosures", "single-fixture installs"],
+    "badge": "Best Combo UVB + Heat"
+  },
+  {
+    "category": "reptile-uvb-lighting",
+    "name": "Solarmeter 6.5 UV Index Meter",
+    "brand": "Solarmeter",
+    "vendor": "amazon",
+    "vendor_sku": "B003JX98ZE",
+    "price_range": "$198-$248",
+    "price_cents": 21900,
+    "expert_score": 9.4,
+    "pros": [
+      "Measures actual UV Index at basking surface — gold standard verification",
+      "Used by exotic veterinary professionals",
+      "Replaces guesswork with measurable data"
+    ],
+    "cons": [
+      "Premium price for verification tool",
+      "Not strictly required for healthy setups, but strongly recommended"
+    ],
+    "specs": {
+      "measurement": "UV Index (0-15+ range)",
+      "use_case": "Verify UVB output at basking distance",
+      "battery": "9V (included)"
+    },
+    "best_for": ["advanced keepers", "setup verification", "multi-enclosure homes"],
+    "badge": "Best UVB Meter"
+  },
+  {
+    "category": "reptile-heating",
+    "name": "Arcadia Halogen Heat Spot Lamp (50W)",
+    "brand": "Arcadia",
+    "vendor": "amazon",
+    "vendor_sku": "B083X1KCJV",
+    "price_range": "$14-$22",
+    "price_cents": 1699,
+    "expert_score": 9.2,
+    "pros": [
+      "Halogen produces strong infrared-A wavelengths preferred for basking",
+      "Tight beam pattern for focused basking point",
+      "Long lifespan vs incandescent equivalents"
+    ],
+    "cons": [
+      "Bulb only — requires fixture with dimmer-compatible socket",
+      "Must be used with thermostat (always)"
+    ],
+    "specs": {
+      "wattage": "50W",
+      "type": "Halogen flood",
+      "spectrum": "Infrared-A weighted"
+    },
+    "best_for": ["bearded dragons", "small-medium basking points"],
+    "badge": "Best Basking Bulb"
+  },
+  {
+    "category": "reptile-heating",
+    "name": "Zoo Med Repti Therm Under Tank Heater (Medium)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B0002566YS",
+    "price_range": "$14-$22",
+    "price_cents": 1699,
+    "expert_score": 7.8,
+    "pros": [
+      "Provides supplemental belly heat for some species",
+      "Affordable",
+      "Adhesive backing for tank attachment"
+    ],
+    "cons": [
+      "Modern care guidance increasingly favors overhead heating",
+      "MUST be used with a thermostat — direct power risks burns"
+    ],
+    "specs": {
+      "wattage": "8W",
+      "type": "Adhesive heat mat",
+      "coverage": "8\" x 6\""
+    },
+    "best_for": ["supplemental belly heat", "specific species requiring it"],
+    "badge": "Best Heat Mat"
+  },
+  {
+    "category": "reptile-heating",
+    "name": "Herpstat 1 Single-Ramping Reptile Thermostat",
+    "brand": "Spyder Robotics",
+    "vendor": "amazon",
+    "vendor_sku": "HERPSTAT-1",
+    "price_range": "$148-$198",
+    "price_cents": 17900,
+    "expert_score": 9.6,
+    "pros": [
+      "Proportional control prevents temperature overshoot",
+      "Industry standard for serious reptile keeping",
+      "Web-enabled monitoring on Pro models"
+    ],
+    "cons": [
+      "Premium pricing",
+      "Overkill for low-cost simple setups"
+    ],
+    "specs": {
+      "type": "Proportional thermostat",
+      "outlets": "1",
+      "max_wattage": "600W"
+    },
+    "best_for": ["serious reptile keepers", "high-value livestock"],
+    "badge": "Best Reptile Thermostat"
+  },
+  {
+    "category": "reptile-heating",
+    "name": "Arcadia Deep Heat Projector (75W)",
+    "brand": "Arcadia",
+    "vendor": "amazon",
+    "vendor_sku": "B07TFZ7TVR",
+    "price_range": "$48-$72",
+    "price_cents": 5999,
+    "expert_score": 9.0,
+    "pros": [
+      "Infrared-A and B emission similar to natural sun",
+      "No visible light — appropriate for ambient heat without disrupting day/night cycle",
+      "Glass envelope shields direct contact"
+    ],
+    "cons": [
+      "Higher cost than ceramic heat emitters",
+      "Requires ceramic socket fixture"
+    ],
+    "specs": {
+      "wattage": "75W",
+      "type": "Deep heat projector (infrared)",
+      "light_output": "None visible"
+    },
+    "best_for": ["nocturnal supplemental heat", "non-basking ambient heat"],
+    "badge": "Best Deep Heat Projector"
+  },
+  {
+    "category": "reptile-heating",
+    "name": "Zoo Med Ceramic Heat Emitter (100W)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B0002566ZW",
+    "price_range": "$18-$28",
+    "price_cents": 2199,
+    "expert_score": 8.0,
+    "pros": [
+      "Produces heat without visible light",
+      "Long lifespan (10,000+ hours)",
+      "Affordable"
+    ],
+    "cons": [
+      "Less efficient at generating reptile-preferred infrared-A than halogen or DHP",
+      "Always requires thermostat regulation"
+    ],
+    "specs": {
+      "wattage": "100W",
+      "type": "Ceramic heat emitter",
+      "lifespan": "~10,000 hours"
+    },
+    "best_for": ["nighttime ambient heat", "non-basking species"],
+    "badge": "Best Ceramic Heater"
+  },
+  {
+    "category": "reptile-substrate",
+    "name": "The Bio Dude Terra Sahara Bioactive Substrate (24qt)",
+    "brand": "The Bio Dude",
+    "vendor": "amazon",
+    "vendor_sku": "BIODUDE-SAHARA-24",
+    "price_range": "$48-$68",
+    "price_cents": 5499,
+    "expert_score": 9.4,
+    "pros": [
+      "Pre-blended for arid bioactive setups — no DIY mixing required",
+      "Supports natural digging behavior safely",
+      "Cleanup-crew compatible (springtails, isopods)"
+    ],
+    "cons": [
+      "Premium pricing relative to commodity substrates",
+      "Shipping cost for heavy substrate is significant"
+    ],
+    "specs": {
+      "type": "Bioactive arid soil mix",
+      "volume": "24 quarts",
+      "compatibility": "Bearded dragons, uromastyx, sand boas"
+    },
+    "best_for": ["bioactive bearded dragon setups", "arid-species bioactive"],
+    "badge": "Best Bioactive Arid"
+  },
+  {
+    "category": "reptile-substrate",
+    "name": "Zoo Med Eco Earth Coconut Fiber Substrate (3-Brick Pack)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B0002AQHV2",
+    "price_range": "$14-$22",
+    "price_cents": 1699,
+    "expert_score": 8.6,
+    "pros": [
+      "Holds humidity well for tropical species",
+      "Coconut-fiber base is renewable and chemically inert",
+      "Reasonable cost for compressed-brick format"
+    ],
+    "cons": [
+      "Less appropriate for arid species (impaction risk debated)",
+      "Compressed bricks require hydration before use"
+    ],
+    "specs": {
+      "material": "Coconut fiber (compressed brick)",
+      "expansion": "8 liters per brick (hydrated)",
+      "pack_size": "3 bricks"
+    },
+    "best_for": ["crested geckos", "ball pythons", "tropical species"],
+    "badge": "Best Humid Substrate"
+  },
+  {
+    "category": "reptile-substrate",
+    "name": "Reptile Sciences Terrarium Sand (Natural White, 10 lb)",
+    "brand": "Reptile Sciences",
+    "vendor": "amazon",
+    "vendor_sku": "B003TX23PG",
+    "price_range": "$12-$22",
+    "price_cents": 1499,
+    "expert_score": 7.0,
+    "pros": [
+      "Natural unbleached sand without calcium-fortification claims",
+      "Affordable",
+      "Mixes well with soil for bioactive setups"
+    ],
+    "cons": [
+      "Loose sand carries impaction risk if used as sole substrate",
+      "Better used as bioactive blend component than primary substrate"
+    ],
+    "specs": {
+      "type": "Natural sand",
+      "weight": "10 lbs",
+      "color": "Natural white"
+    },
+    "best_for": ["soil-sand bioactive blends", "supplemental dig zones"],
+    "badge": "Best Bioactive Blend Component"
+  },
+  {
+    "category": "reptile-substrate",
+    "name": "Reptile Sciences Cypress Mulch Bedding (8 qt)",
+    "brand": "Reptile Sciences",
+    "vendor": "amazon",
+    "vendor_sku": "B005J5T0YO",
+    "price_range": "$14-$22",
+    "price_cents": 1599,
+    "expert_score": 8.8,
+    "pros": [
+      "Holds humidity for ball pythons and corn snakes",
+      "Resistant to mold growth",
+      "Naturalistic appearance"
+    ],
+    "cons": [
+      "Coarser texture may not suit all species",
+      "Dust release on first opening — rinse before use"
+    ],
+    "specs": {
+      "material": "Cypress mulch",
+      "volume": "8 quarts",
+      "humidity_retention": "Good"
+    },
+    "best_for": ["ball pythons", "corn snakes", "humidity-loving snakes"],
+    "badge": "Best Ball Python Substrate"
+  },
+  {
+    "category": "reptile-substrate",
+    "name": "Zoo Med Aspen Snake Bedding (24 qt)",
+    "brand": "Zoo Med",
+    "vendor": "amazon",
+    "vendor_sku": "B0002567HK",
+    "price_range": "$18-$28",
+    "price_cents": 2299,
+    "expert_score": 8.6,
+    "pros": [
+      "Appropriate for dry-environment snakes (corns, kings, milks)",
+      "Easy spot-cleaning",
+      "Allows burrowing behavior"
+    ],
+    "cons": [
+      "Not appropriate for humid-environment species",
+      "Aspen dust can irritate respiratory passages of sensitive species"
+    ],
+    "specs": {
+      "material": "Aspen wood shavings",
+      "volume": "24 quarts",
+      "humidity_retention": "Low (dry substrate)"
+    },
+    "best_for": ["corn snakes", "king snakes", "milk snakes"],
+    "badge": "Best Snake Substrate"
+  },
+  {
+    "category": "bird-cages",
+    "name": "A&E Cage Company Flight Cage (32\" x 21\" x 63\")",
+    "brand": "A&E Cage Company",
+    "vendor": "amazon",
+    "vendor_sku": "B005GNN8HW",
+    "price_range": "$298-$398",
+    "price_cents": 34900,
+    "expert_score": 9.0,
+    "pros": [
+      "Adequate size for cockatiels, parakeets, and small conures",
+      "5/8\" bar spacing safe for medium small parrots",
+      "Removable bottom grate and tray for cleaning"
+    ],
+    "cons": [
+      "Premium pricing relative to mass-market starter cages",
+      "Assembly required (1-2 hours)"
+    ],
+    "specs": {
+      "dimensions": "32\" x 21\" x 63\"",
+      "bar_spacing": "5/8 inch",
+      "construction": "Powder-coated steel"
+    },
+    "best_for": ["cockatiels", "small conures", "parakeet pairs"],
+    "badge": "Best Medium Bird Cage"
+  },
+  {
+    "category": "bird-cages",
+    "name": "Prevue Pet Products Hampton Deluxe Bird Cage",
+    "brand": "Prevue Pet Products",
+    "vendor": "amazon",
+    "vendor_sku": "B007GP09EQ",
+    "price_range": "$148-$248",
+    "price_cents": 19900,
+    "expert_score": 8.4,
+    "pros": [
+      "Affordable mid-size cage suitable for cockatiels and small parrots",
+      "Wheeled stand for mobility",
+      "Multiple food/water doors"
+    ],
+    "cons": [
+      "Build quality less robust than A&E or HQ equivalents",
+      "Powder coating wears at chewed corners"
+    ],
+    "specs": {
+      "dimensions": "30\" x 18\" x 53\"",
+      "bar_spacing": "5/8 inch",
+      "stand": "Wheeled"
+    },
+    "best_for": ["cockatiels", "budget-conscious bird owners"],
+    "badge": "Best Value Mid-Size Cage"
+  },
+  {
+    "category": "bird-cages",
+    "name": "HQ Macaw Cage with Stand (40\" x 30\" x 70\")",
+    "brand": "HQ",
+    "vendor": "amazon",
+    "vendor_sku": "HQ-MACAW-S",
+    "price_range": "$998-$1,498",
+    "price_cents": 119900,
+    "expert_score": 9.2,
+    "pros": [
+      "Adequate size for medium-to-large parrots",
+      "Heavy-gauge powder-coated steel construction",
+      "1-inch bar spacing appropriate for macaws"
+    ],
+    "cons": [
+      "Substantial floor footprint required",
+      "Significant cost"
+    ],
+    "specs": {
+      "dimensions": "40\" x 30\" x 70\"",
+      "bar_spacing": "1 inch",
+      "construction": "Powder-coated wrought iron"
+    },
+    "best_for": ["macaws", "large cockatoos", "large amazons"],
+    "badge": "Best Macaw Cage"
+  },
+  {
+    "category": "bird-cages",
+    "name": "Vision Bird Cage Model M02 (Medium Wire Bottom)",
+    "brand": "Vision",
+    "vendor": "amazon",
+    "vendor_sku": "B000GFJ6WK",
+    "price_range": "$118-$178",
+    "price_cents": 14900,
+    "expert_score": 8.6,
+    "pros": [
+      "Hybrid plastic-and-wire design reduces seed scatter",
+      "Easier cleaning than all-wire cages",
+      "Appropriate for cockatiels and budgies"
+    ],
+    "cons": [
+      "Plastic chewable surfaces may concern owners",
+      "Limited size range"
+    ],
+    "specs": {
+      "dimensions": "29\" x 16\" x 31\"",
+      "bar_spacing": "5/8 inch",
+      "construction": "Plastic base + wire"
+    },
+    "best_for": ["seed-scatter management", "single budgie or cockatiel"],
+    "badge": "Best Seed-Catcher Design"
+  },
+  {
+    "category": "bird-cages",
+    "name": "Prevue Pet Products Travel Bird Carrier",
+    "brand": "Prevue Pet Products",
+    "vendor": "amazon",
+    "vendor_sku": "B00179I2X4",
+    "price_range": "$48-$78",
+    "price_cents": 5999,
+    "expert_score": 7.8,
+    "pros": [
+      "Lightweight for vet trips and short transport",
+      "Perch and food/water cups included",
+      "Reasonable price"
+    ],
+    "cons": [
+      "Not intended for long-term housing",
+      "Limited ventilation compared to home cages"
+    ],
+    "specs": {
+      "dimensions": "13\" x 8.5\" x 12\"",
+      "bar_spacing": "1/2 inch",
+      "use": "Travel only"
+    },
+    "best_for": ["vet trips", "short transport"],
+    "badge": "Best Travel Carrier"
+  },
+  {
+    "category": "pet-carriers",
+    "name": "Sherpa Original Deluxe Pet Carrier (Medium)",
+    "brand": "Sherpa",
+    "vendor": "amazon",
+    "vendor_sku": "B003KP9PXM",
+    "price_range": "$58-$88",
+    "price_cents": 7499,
+    "expert_score": 9.2,
+    "pros": [
+      "Guaranteed On Board program with major U.S. airlines",
+      "Mesh ventilation on three sides",
+      "Spring wire frame allows under-seat compression"
+    ],
+    "cons": [
+      "Not crash-tested for vehicle safety",
+      "Soft-sided carrier inappropriate for cargo travel"
+    ],
+    "specs": {
+      "dimensions": "17\" x 11\" x 10.5\"",
+      "weight_capacity": "16 lbs",
+      "airline_approved": "Major U.S. airlines (verify per airline)"
+    },
+    "best_for": ["in-cabin air travel", "small dogs and cats"],
+    "badge": "Best Airline Carrier"
+  },
+  {
+    "category": "pet-carriers",
+    "name": "Sleepypod Air In-Cabin Pet Carrier",
+    "brand": "Sleepypod",
+    "vendor": "amazon",
+    "vendor_sku": "B00B8Y9C0G",
+    "price_range": "$248-$298",
+    "price_cents": 27900,
+    "expert_score": 9.4,
+    "pros": [
+      "Crash-tested for vehicle safety (Center for Pet Safety)",
+      "Mesh on all four sides for ventilation",
+      "Compresses for in-cabin air travel and expands for floor use"
+    ],
+    "cons": [
+      "Premium pricing",
+      "Limited size options"
+    ],
+    "specs": {
+      "dimensions": "22\" x 10\" x 10.5\"",
+      "crash_tested": "Center for Pet Safety",
+      "airline_approved": "Major U.S. airlines"
+    },
+    "best_for": ["combined air + vehicle travel", "frequent traveler households"],
+    "badge": "Best Crash-Tested Carrier"
+  },
+  {
+    "category": "pet-carriers",
+    "name": "Petmate Two Door Top Load Pet Kennel",
+    "brand": "Petmate",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DJONK",
+    "price_range": "$48-$78",
+    "price_cents": 5999,
+    "expert_score": 9.0,
+    "pros": [
+      "Top-load opening dramatically reduces cat handling stress",
+      "Front door for normal entry/exit",
+      "Affordable price point"
+    ],
+    "cons": [
+      "Plastic construction less premium than Sleepypod",
+      "Smaller interior than Sherpa equivalents"
+    ],
+    "specs": {
+      "dimensions": "19\" x 12.5\" x 12\"",
+      "openings": "Top and front",
+      "construction": "Plastic"
+    },
+    "best_for": ["cat owners", "carrier-aversive cats"],
+    "badge": "Best Cat Carrier"
+  },
+  {
+    "category": "pet-carriers",
+    "name": "Petmate Sky Kennel IATA-Compliant Large Pet Carrier",
+    "brand": "Petmate",
+    "vendor": "amazon",
+    "vendor_sku": "B0002DKAAU",
+    "price_range": "$148-$248",
+    "price_cents": 18900,
+    "expert_score": 9.0,
+    "pros": [
+      "IATA-compliant for major airline cargo travel",
+      "Steel wire vents on all four sides",
+      "Live-animal labels included"
+    ],
+    "cons": [
+      "Bulky and heavy",
+      "Not appropriate for in-cabin travel"
+    ],
+    "specs": {
+      "dimensions": "32\" x 22\" x 24\"",
+      "weight_capacity": "50-90 lbs",
+      "airline_compliance": "IATA, USDA"
+    },
+    "best_for": ["medium-large dog air cargo", "international travel"],
+    "badge": "Best Air Cargo Kennel"
+  },
+  {
+    "category": "pet-carriers",
+    "name": "Mr. Peanut's Tahoe Series Expandable Backpack Pet Carrier",
+    "brand": "Mr. Peanut's",
+    "vendor": "amazon",
+    "vendor_sku": "B07KQK5SDS",
+    "price_range": "$58-$88",
+    "price_cents": 7499,
+    "expert_score": 8.0,
+    "pros": [
+      "Hands-free backpack format for active owners",
+      "Expandable side panel adds interior space when stationary",
+      "Mesh ventilation on multiple sides"
+    ],
+    "cons": [
+      "Not airline-approved for in-cabin travel as backpack",
+      "Weight limit lower than traditional carriers"
+    ],
+    "specs": {
+      "dimensions": "17\" x 11\" x 12\" (collapsed)",
+      "weight_capacity": "20 lbs",
+      "type": "Backpack with expandable panel"
+    },
+    "best_for": ["hiking with small dogs/cats", "active urban transport"],
+    "badge": "Best Backpack Carrier"
+  },
+  {
+    "category": "pet-gps-trackers",
+    "name": "Fi Smart Dog Collar Series 3",
+    "brand": "Fi",
+    "vendor": "amazon",
+    "vendor_sku": "FI-SERIES3",
+    "price_range": "$148-$198 (collar) + $99/year subscription",
+    "price_cents": 14900,
+    "expert_score": 9.4,
+    "pros": [
+      "Multi-week battery life (typical use)",
+      "Durable construction tested to IP68 water resistance",
+      "Activity tracking integrated"
+    ],
+    "cons": [
+      "Requires annual subscription for full functionality",
+      "Cellular coverage gaps in rural areas"
+    ],
+    "specs": {
+      "battery_life": "1-3 weeks typical use",
+      "water_resistance": "IP68",
+      "subscription": "$99/year"
+    },
+    "best_for": ["medium-large dogs", "active outdoor owners"],
+    "badge": "Best Dog GPS"
+  },
+  {
+    "category": "pet-gps-trackers",
+    "name": "Tractive GPS Pet Tracker (LTE)",
+    "brand": "Tractive",
+    "vendor": "amazon",
+    "vendor_sku": "B07XQ7T3T3",
+    "price_range": "$48-$68 (tracker) + $5-13/month subscription",
+    "price_cents": 6999,
+    "expert_score": 8.8,
+    "pros": [
+      "Lighter weight suitable for cats and small dogs",
+      "Live tracking with unlimited range",
+      "International coverage in 175+ countries"
+    ],
+    "cons": [
+      "Monthly subscription required",
+      "Battery life shorter than Fi (2-7 days typical)"
+    ],
+    "specs": {
+      "weight": "30g (cat-friendly)",
+      "battery_life": "2-7 days typical",
+      "subscription": "$5-13/month"
+    },
+    "best_for": ["cats", "small dogs", "international travel"],
+    "badge": "Best Cat GPS"
+  },
+  {
+    "category": "pet-gps-trackers",
+    "name": "Whistle Go Explore Health & GPS Pet Tracker",
+    "brand": "Whistle",
+    "vendor": "amazon",
+    "vendor_sku": "B07Z9K8FCP",
+    "price_range": "$98-$148 (tracker) + $7-10/month subscription",
+    "price_cents": 12900,
+    "expert_score": 8.6,
+    "pros": [
+      "Combined GPS and health monitoring (scratching, licking, sleep)",
+      "Cellular and Wi-Fi coverage",
+      "Backed by Mars Petcare/Banfield network"
+    ],
+    "cons": [
+      "Subscription required",
+      "Battery life shorter than Fi"
+    ],
+    "specs": {
+      "battery_life": "Up to 20 days (varies)",
+      "health_tracking": "Scratching, licking, sleep",
+      "subscription": "$7-10/month"
+    },
+    "best_for": ["health-conscious dog owners", "Mars Petcare network customers"],
+    "badge": "Best Health + GPS"
+  },
+  {
+    "category": "pet-gps-trackers",
+    "name": "Apple AirTag (4-Pack)",
+    "brand": "Apple",
+    "vendor": "amazon",
+    "vendor_sku": "B0932QJ2JZ",
+    "price_range": "$78-$99 (4-pack)",
+    "price_cents": 9900,
+    "expert_score": 8.4,
+    "pros": [
+      "No subscription required",
+      "Leverages massive Apple Find My network",
+      "Long battery life (~1 year)"
+    ],
+    "cons": [
+      "Not real-time GPS — relies on Apple device proximity",
+      "Less effective in rural areas with fewer iPhones"
+    ],
+    "specs": {
+      "battery_life": "~1 year (replaceable CR2032)",
+      "network": "Apple Find My",
+      "subscription": "None"
+    },
+    "best_for": ["indoor cats with occasional escape", "Apple-ecosystem households"],
+    "badge": "Best No-Subscription Tracker"
+  },
+  {
+    "category": "pet-gps-trackers",
+    "name": "Jiobit Smart Tag Pet GPS Tracker",
+    "brand": "Jiobit",
+    "vendor": "amazon",
+    "vendor_sku": "B083X3LRZP",
+    "price_range": "$98-$148 (tracker) + $9-13/month subscription",
+    "price_cents": 12900,
+    "expert_score": 8.4,
+    "pros": [
+      "Compact and lightweight (18g) — suitable for small pets",
+      "Bluetooth + cellular + Wi-Fi for layered tracking",
+      "Battery life up to 14 days"
+    ],
+    "cons": [
+      "Monthly subscription required for cellular features",
+      "Coverage varies by carrier partnership"
+    ],
+    "specs": {
+      "weight": "18g",
+      "battery_life": "Up to 14 days",
+      "subscription": "$9-13/month"
+    },
+    "best_for": ["very small pets", "owners wanting compact tracker"],
+    "badge": "Best Lightweight GPS"
+  },
+  {
+    "category": "pet-stairs",
+    "name": "PetSafe CozyUp Folding Pet Stairs (4 Step)",
+    "brand": "PetSafe",
+    "vendor": "amazon",
+    "vendor_sku": "B07FZNS3PB",
+    "price_range": "$48-$78",
+    "price_cents": 5999,
+    "expert_score": 8.8,
+    "pros": [
+      "Folds flat for storage and transport",
+      "Carpeted treads provide traction",
+      "Weight capacity rated for 150 lbs"
+    ],
+    "cons": [
+      "Folded stair geometry less stable than rigid alternatives",
+      "Carpet collects pet hair quickly"
+    ],
+    "specs": {
+      "steps": "4",
+      "weight_capacity": "150 lbs",
+      "folded_dimensions": "Compact storage"
+    },
+    "best_for": ["multi-room flexibility", "travel use"],
+    "badge": "Best Folding Stairs"
+  },
+  {
+    "category": "pet-stairs",
+    "name": "Frisco Foam Pet Stairs (4 Step)",
+    "brand": "Frisco",
+    "vendor": "chewy",
+    "vendor_sku": "151221F",
+    "price_range": "$38-$78",
+    "price_cents": 5999,
+    "expert_score": 8.4,
+    "pros": [
+      "Solid foam construction provides cushioning",
+      "Removable washable cover",
+      "Lightweight for relocation"
+    ],
+    "cons": [
+      "Foam compresses under heavy dogs over time",
+      "Cover requires regular washing"
+    ],
+    "specs": {
+      "steps": "4",
+      "construction": "High-density foam with washable cover",
+      "weight_capacity": "150 lbs"
+    },
+    "best_for": ["small-medium dogs", "older pets with mild mobility issues"],
+    "badge": "Best Foam Stairs"
+  },
+  {
+    "category": "pet-stairs",
+    "name": "Pet Gear Easy-Step II Folding Ramp",
+    "brand": "Pet Gear",
+    "vendor": "amazon",
+    "vendor_sku": "B000W2VDH4",
+    "price_range": "$98-$148",
+    "price_cents": 12900,
+    "expert_score": 9.0,
+    "pros": [
+      "Folding ramp provides continuous incline",
+      "High-traction surface",
+      "Weight capacity rated for 200 lbs"
+    ],
+    "cons": [
+      "Heavier than stairs",
+      "Requires more floor space when deployed"
+    ],
+    "specs": {
+      "length_extended": "42 inches",
+      "weight_capacity": "200 lbs",
+      "surface": "High-traction carpet"
+    },
+    "best_for": ["arthritic dogs", "post-surgical recovery", "vehicle access"],
+    "badge": "Best Folding Ramp"
+  },
+  {
+    "category": "pet-stairs",
+    "name": "PetSafe Happy Ride Folding Aluminum Dog Ramp",
+    "brand": "PetSafe",
+    "vendor": "amazon",
+    "vendor_sku": "B003ZL05U6",
+    "price_range": "$98-$168",
+    "price_cents": 14900,
+    "expert_score": 9.2,
+    "pros": [
+      "Aluminum construction extremely durable",
+      "Folds in half for storage",
+      "300 lb weight capacity supports large breeds"
+    ],
+    "cons": [
+      "Heavier than carpeted folding ramps",
+      "Premium pricing"
+    ],
+    "specs": {
+      "length_extended": "62 inches",
+      "weight_capacity": "300 lbs",
+      "material": "Aluminum with high-traction surface"
+    },
+    "best_for": ["large breed dogs", "vehicle access", "long-term durability"],
+    "badge": "Best Vehicle Ramp"
+  },
+  {
+    "category": "pet-stairs",
+    "name": "Best Pet Supplies Pet Steps (3 Step)",
+    "brand": "Best Pet Supplies",
+    "vendor": "amazon",
+    "vendor_sku": "B07Z6F3K9T",
+    "price_range": "$28-$58",
+    "price_cents": 4499,
+    "expert_score": 7.8,
+    "pros": [
+      "Affordable entry into pet stairs",
+      "Lightweight for relocation",
+      "Carpeted treads for traction"
+    ],
+    "cons": [
+      "Build quality less robust than premium brands",
+      "Lower weight capacity (~80 lbs)"
+    ],
+    "specs": {
+      "steps": "3",
+      "construction": "Foam with carpet cover",
+      "weight_capacity": "80 lbs"
+    },
+    "best_for": ["small-medium dogs", "budget-conscious owners"],
+    "badge": "Best Budget Stairs"
+  },
+  {
+    "category": "pet-cameras",
+    "name": "Furbo 360° Dog Camera (with Treat Tossing)",
+    "brand": "Furbo",
+    "vendor": "amazon",
+    "vendor_sku": "B08DXJTCRT",
+    "price_range": "$198-$248",
+    "price_cents": 22900,
+    "expert_score": 9.0,
+    "pros": [
+      "360-degree rotation tracks dog movement",
+      "Treat-tossing feature useful for separation-anxiety training",
+      "Bark alerts via smartphone notification"
+    ],
+    "cons": [
+      "Monthly subscription unlocks full features ($7/month)",
+      "Treat-toss can encourage caloric overfeeding"
+    ],
+    "specs": {
+      "resolution": "1080p",
+      "rotation": "360 degrees",
+      "treat_capacity": "100+ small treats"
+    },
+    "best_for": ["dog owners with separation-anxiety concerns", "treat-based training"],
+    "badge": "Best Treat-Tossing Camera"
+  },
+  {
+    "category": "pet-cameras",
+    "name": "Wyze Cam v3 (2-Pack)",
+    "brand": "Wyze",
+    "vendor": "amazon",
+    "vendor_sku": "B08R59YH7W",
+    "price_range": "$58-$78 (2-pack)",
+    "price_cents": 6499,
+    "expert_score": 9.0,
+    "pros": [
+      "Excellent value — quality 1080p for under $40",
+      "Free cloud storage for 14-second event clips",
+      "Color night vision"
+    ],
+    "cons": [
+      "Not pet-specific — no treat tossing",
+      "Subscription unlocks longer cloud storage"
+    ],
+    "specs": {
+      "resolution": "1080p",
+      "night_vision": "Color (with adequate ambient light)",
+      "subscription_optional": "Yes"
+    },
+    "best_for": ["general pet monitoring", "value-conscious owners"],
+    "badge": "Best Value Pet Cam"
+  },
+  {
+    "category": "pet-cameras",
+    "name": "Petcube Bites 2 Lite Pet Camera with Treat Dispenser",
+    "brand": "Petcube",
+    "vendor": "amazon",
+    "vendor_sku": "B07XV3KS8R",
+    "price_range": "$148-$198",
+    "price_cents": 17900,
+    "expert_score": 8.4,
+    "pros": [
+      "1080p video with two-way audio",
+      "Treat dispenser for short and long ranges",
+      "Pet emergency hotline via Petcube Care subscription"
+    ],
+    "cons": [
+      "Subscription required for full features",
+      "Smaller treat capacity than Furbo"
+    ],
+    "specs": {
+      "resolution": "1080p",
+      "treat_dispenser": "Yes",
+      "two_way_audio": "Yes"
+    },
+    "best_for": ["households with multiple pets", "Petcube ecosystem users"],
+    "badge": "Best Alternative Treat Cam"
+  },
+  {
+    "category": "pet-cameras",
+    "name": "Eufy Pet Camera with Treat Dispenser",
+    "brand": "Eufy",
+    "vendor": "amazon",
+    "vendor_sku": "B08V5MGJW4",
+    "price_range": "$148-$198",
+    "price_cents": 17900,
+    "expert_score": 8.6,
+    "pros": [
+      "No subscription required for core features",
+      "Local SD card storage option",
+      "Treat-tossing distance up to 3 feet"
+    ],
+    "cons": [
+      "Smartphone app less refined than Furbo or Wyze",
+      "Limited cloud storage without subscription"
+    ],
+    "specs": {
+      "resolution": "1080p",
+      "storage": "Local SD card or cloud (subscription)",
+      "treat_distance": "Up to 3 feet"
+    },
+    "best_for": ["subscription-averse owners", "local-storage preference"],
+    "badge": "Best No-Subscription Treat Cam"
+  },
+  {
+    "category": "pet-cameras",
+    "name": "Arlo Pro 4 Wireless Security Camera",
+    "brand": "Arlo",
+    "vendor": "amazon",
+    "vendor_sku": "B08M3VV5W7",
+    "price_range": "$198-$248",
+    "price_cents": 22900,
+    "expert_score": 8.4,
+    "pros": [
+      "2K resolution with HDR",
+      "Wireless and weather-resistant for outdoor monitoring",
+      "Strong smart-home integration"
+    ],
+    "cons": [
+      "Higher per-camera cost",
+      "Subscription required for full features"
+    ],
+    "specs": {
+      "resolution": "2K HDR",
+      "weather_resistance": "Outdoor rated",
+      "wireless": "Battery-powered"
+    },
+    "best_for": ["outdoor pet monitoring", "smart-home households"],
+    "badge": "Best Outdoor Pet Cam"
+  }
+]
