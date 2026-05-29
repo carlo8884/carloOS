@@ -53,9 +53,16 @@ export { DropCap } from './components/DropCap'
 export type { DropCapProps } from './components/DropCap'
 export { ImageCard } from './components/ImageCard'
 export type { ImageCardProps } from './components/ImageCard'
+export { StockImage } from './components/StockImage'
+export type { StockImageProps } from './components/StockImage'
 export { CalloutBox } from './components/CalloutBox'
 export type { CalloutBoxProps, CalloutVariant } from './components/CalloutBox'
 export { SourceCitation } from './components/SourceCitation'
 export type { SourceCitationProps } from './components/SourceCitation'
 export { ArticleByline } from './components/ArticleByline'
 export type { ArticleBylineProps } from './components/ArticleByline'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export type {
+  AffiliateDisclosureProps,
+  AffiliateDisclosureVariant,
+} from './components/AffiliateDisclosure'
