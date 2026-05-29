@@ -26,7 +26,7 @@ export default function SalmonellaPage() {
         <p>Salmonella in the environment can survive on surfaces for extended periods. The enclosure, substrate, water dishes, and any surface the reptile contacts can harbor the bacteria. This is why "my reptile looks clean" or "I cleaned the tank recently" does not eliminate the risk — the bacteria are a permanent feature of the reptile and its environment.</p>
 
         <h2>At-Risk Groups — Who Should Avoid Contact</h2>
-        <p>Healthy adults with intact immune systems who practice appropriate hygiene have a low risk of symptomatic Salmonella infection. The groups at significantly elevated risk — for whom the CDC recommends avoiding contact with reptiles and reptile environments entirely:</p>
+        <p>Healthy adults with intact immune systems who practice appropriate hygiene have a low risk of symptomatic Salmonella infection. The groups at significantly elevated risk — for whom the <a href="https://www.cdc.gov/healthy-pets/about/reptiles-and-amphibians.html" rel="noopener" target="_blank" className="text-brand-primary hover:underline">CDC</a> recommends avoiding contact with reptiles and reptile environments entirely:</p>
         <ul>
           <li><strong>Children under 5:</strong> Immune systems not fully mature, more likely to put hands to mouth, less reliable handwashing. The CDC specifically recommends against reptiles in households with children under 5.</li>
           <li><strong>Pregnant women:</strong> Pregnancy alters immune function. Salmonella during pregnancy can cause severe maternal illness and in some cases fetal complications.</li>

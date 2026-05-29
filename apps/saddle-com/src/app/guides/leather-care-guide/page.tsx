@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -61,7 +62,9 @@ export default function LeatherCareGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p>I have been making and repairing saddles for thirty-one years. In that time I have seen every failure mode leather is capable of — and almost all of them were preventable. Cracked panels, stitching rot, delaminated seat leather, flap hardening — these are not the inevitable consequences of use. They are the consequences of neglect, or of using the wrong products with good intentions.</p>
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <DropCap>I have been making and repairing saddles for thirty-one years. In that time I have seen every failure mode leather is capable of — and almost all of them were preventable. Cracked panels, stitching rot, delaminated seat leather, flap hardening — these are not the inevitable consequences of use. They are the consequences of neglect, or of using the wrong products with good intentions.</DropCap>
         <p>This guide covers what actually matters: the correct cleaning and conditioning sequence, the products that genuinely work, and the products marketed to equestrians that quietly destroy the leather they claim to protect.</p>
 
         <h2 id="rule">The Golden Rule of Leather Care</h2>
@@ -92,6 +95,10 @@ export default function LeatherCareGuidePage() {
           <li><strong>Neatsfoot oil (pure, not compound)</strong> — excellent for suppling new or dry leather. Use sparingly — too much softens leather excessively and darkens it permanently. Pure neatsfoot oil only; "compound" versions contain petroleum derivatives that damage stitching.</li>
           <li><strong>Beeswax (Renapur, some Effax products)</strong> — adds a protective surface layer. Good for billets and girth straps that take the most moisture exposure.</li>
         </ul>
+
+        <CalloutBox variant="warning" title="Never use heat to dry leather">
+          A hairdryer, radiator, or direct sun will desiccate and crack leather within an hour. Always dry at room temperature in still air. The same rule applies to a wet saddle after rain — wipe it down, condition lightly once dry, and let it recover slowly. Heat shortcuts shorten saddle life by years.
+        </CalloutBox>
 
         <h2 id="avoid">Products to Avoid</h2>
         <ul>

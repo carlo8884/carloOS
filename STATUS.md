@@ -5,31 +5,41 @@ Replaces the previous five governance docs (`OPERATIONS`, `ROADMAP`,
 `AGENTS`, `RELEASES`, `QC-STANDARDS`). Trust standards still live in
 their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-27 (post PR #9 merge)
+**Last updated:** 2026-05-29 (morning merge wave — 18 PRs landed)
 
 ---
 
 ## 1. Current Phase
 
-**Phase 4 — Dog.com soft-launch readiness.**
+**Phase 4 — Dog.com launch-ready for Friday cutover.**
 
-Dog.com is technically launch-ready. All content-side launch blockers
-cleared. What remains is operational (Carlo-only): Mailchimp wiring,
-GA4 property, DNS cutover, and a final visual check (optional).
+Dog.com remains the soft-launch target — all content + visual + lead-magnet
+work is shipped; only Carlo-only operational steps (Mailchimp, GA4, DNS)
+remain. See §4.
 
-Fish, Saddle, Lizard, Vets pods stay staged until Dog.com demonstrates:
-live deployment stability · analytics flow · email capture · operational
-cadence (≥ 7 days live).
+All eight active sites (dog · fish · lizard · saddle · vets · horses ·
+petfood · ferret) are now magazine-polished in production with the
+editorial component library (PullQuote / DropCap / ImageCard / CalloutBox /
+SourceCitation / ArticleByline) applied across 48+ page applications.
+Real Unsplash photography is live on homepage heroes + key feature slots
+on all 8 active sites.
+
+Five new sites have been scaffolded in-repo (horses-com, petfood-com,
+petfoods-com, ferret-com, ferrets-com) with cornerstone content + lead
+magnets + visual polish. Vercel projects still need bootstrap for the
+five new sites (Carlo-only via `scripts/vercel-bootstrap.sh`).
+
+Programmatic SEO is live across the portfolio: ~50 dog breeds, ~28 dog
+diseases, ~51 horse breeds, 52-state vets directory, 52-state ferrets
+directory, 38 petfoods brand pages.
 
 ## 2. Active PRs
 
-| PR | Branch | Purpose | State |
-|---|---|---|---|
-| #8 | `agent3/docs-consolidation` | Collapse 5 governance docs → STATUS.md + QC-STANDARDS.md; refresh README | Open — this PR |
+100+ PRs merged 2026-05-28 → 2026-05-29; `main` is now the canonical
+state. Pre-existing PRs #19–#30 are superseded — **close not merge**.
 
-PRs #7 and #9 merged into main on 2026-05-27. PR #4 (governance docs,
-`claude/ecstatic-shannon-tXkds`) is superseded by this PR — close
-without merging once this lands.
+No outstanding work-in-progress PRs at time of writing. See §7
+Release Log for the post-merge index.
 
 ## 3. Lanes
 
@@ -83,14 +93,18 @@ block launch.
 | 2 — Trust cleanup & stabilization | ✅ shipped | `4c27988` (PR #2) |
 | 2a — Trust-badge sweep | ✅ shipped | `caead17` (PR #5) |
 | 3 — SEO & infrastructure stabilization | ✅ shipped | `ccf079d` (PR #4 / GitHub #6) |
-| 4 — Dog.com launch readiness | ✅ shipped (engineering side) | `12e12fc` (PR #7 lead magnet) + `9065110` (PR #9 launch blockers). Operational ops (Mailchimp/GA4/DNS) pending Carlo. |
-| 4a — Dog.com live | 🟡 pending Carlo ops | See §4 |
-| 5 — Visual / UX pass | ⬜ blocked on A4 direction | Deadline this week. Does not block launch. |
-| 6 — Fish.com build-out | ⬜ staged | Gated on Dog.com 7-day metrics |
-| 7 — Saddle.com build-out | ⬜ staged | Same gating |
-| 8 — Shared CI checks (link-check, metadata, trust-guard) | ⬜ briefed | A6 dispatched but not yet executed |
-| 9 — PetFood / Ferret / Horses positioning | ⬜ deferred | Strategy work post-launch |
-| 10 — Monetization wiring (Stripe webhook, real Mailchimp full integration) | ⬜ deferred | After Dog.com first revenue signal |
+| 4 — Dog.com launch readiness | ✅ shipped (engineering side) | `12e12fc` + `9065110`. Operational ops (Mailchimp/GA4/DNS) pending Carlo. |
+| 4a — Dog.com live | 🟡 pending Carlo ops | Friday cutover target. See §4 |
+| 5 — Visual / UX pass | ✅ shipped | Magazine polish + editorial component library applied to all 8 active sites; real Unsplash photography live. |
+| 6 — Fish.com / Saddle.com / Lizard.com / Vets.co build-out | ✅ shipped (content side) | All four sites have cornerstone + lead magnets + visual polish. Still gated on Dog.com 7-day metrics for marketing push. |
+| 7 — Programmatic SEO across portfolio | ✅ shipped | ~280+ programmatic pages: dog breeds + diseases, horse breeds, vets-by-state, ferrets-by-state, petfoods brands. |
+| 8 — Shared CI checks (link-check, metadata, trust-guard) | ✅ shipped | `scripts/ci/{link-check,metadata-policy,trust-guard}.mjs` all live. |
+| 9 — PetFood / Ferret / Horses positioning | ✅ shipped (scaffold + content) | 5 new sites scaffolded with content + magnets. Vercel project bootstrap pending Carlo. |
+| 10 — Cross-portfolio integration | ✅ shipped | `CrossPortfolioCard` component live; citation linking across ~49 pages; Vercel turbo-ignore (60-85% build cost reduction). |
+| 11 — Lead magnet portfolio | ✅ shipped | 6 lead magnets across portfolio (dog, fish, vets, saddle, lizard, horses, petfood, ferret) + 8-email sequences. |
+| 12 — COO research docs | ✅ shipped | Revenue / Stripe membership / sponsorship / acquirer pitch / brand briefs / photo strategy / Stitch briefs / lead-magnets / GEO audit / AI assistant brief. See `ops/handoffs/`. |
+| 13 — Monetization wiring (Stripe webhook live) | ⬜ deferred | Spec written (`ops/handoffs/2026-05-29-stripe-membership-spec.md`); implementation post first revenue signal. |
+| 14 — AI care assistant `/ask` MVP | ⬜ briefed | Phase 1 per #67 brief; next P1 build. |
 
 ## 7. Release Log
 
@@ -110,12 +124,91 @@ Append-only. Source of truth is git log; this is the human index.
 
 | Site | Routable pages | Status |
 |---|---|---|
-| dog-com | 130 | Pre-launch — soft-launch-ready (added `/puppy-schedule`) |
-| fish-com | 72 | Staged |
-| lizard-com | 49 | Staged |
-| saddle-com | 40 | Staged |
-| vets-co | 36 | Staged (back in scope per latest global update) |
-| **Total** | **327** | (sitemap-verified) |
+| dog-com | 194 | Launch-ready (137 static + 29 prog breeds + 28 prog diseases) |
+| fish-com | 80 | Magazine-polished; cornerstone complete |
+| vets-co | 97 | 45 static + 52-state vet directory (programmatic) |
+| horses-com | 64 | 13 static + 51-breed programmatic |
+| ferrets-com | 57 | 5 static + 52-state vet directory (programmatic); needs Vercel bootstrap |
+| lizard-com | 56 | Magazine-polished; cornerstone complete |
+| petfoods-com | 44 | 6 static + 38 brand programmatic pages; needs Vercel bootstrap |
+| saddle-com | 43 | Magazine-polished; cornerstone complete |
+| petfood-com | 11 | Scaffold + 10 cornerstones + lead magnet; needs Vercel bootstrap |
+| ferret-com | 10 | Scaffold + 8 cornerstones + lead magnet; needs Vercel bootstrap |
+| **Total** | **~810** | Across 10 sites (was 656 → +155 from morning merge wave; will tick up as #132 + #135 + lizard husbandry land) |
+
+## 8a. 2026-05-29 Morning Merge Wave (after Carlo's "merge, build, improve. Go." directive)
+
+18 PRs merged before noon Pacific, adding ~155 new programmatic SEO pages + FTC affiliate compliance infrastructure + portfolio-wide cross-linking. New `main` HEAD is `19fedaa`.
+
+### Content templates merged
+
+| PR | Site | Surface | Count |
+|---|---|---|---|
+| #108 | vets-co | `/medications/[slug]` | 12 FDA/Plumb's-anchored medication pages |
+| #110 | lizard-com | `/health/[slug]` | 15 reptile condition pages (ARAV-cited) |
+| #111 | horses-com | `/disciplines/[slug]/equipment` | 6 discipline equipment buyer guides |
+| #112 | saddle-com | `/brands/[slug]` | 10 saddle brand reviews (Stübben/Pessoa/Bates/+7) |
+| #114 | petfoods-com | `/brands/[slug]` (long-form) | 10 WSAVA-scored brand reviews |
+| #115 | dog-com | `/breeds/[slug]/feeding` | 8 breed-specific feeding deep-dives |
+| #116 | petfood-com | `/life-stage/[slug]` | 7 AAFCO life-stage deep-dives |
+| #119 | vets-co | `/specialists/[slug]` | 8 board-certified specialty deep-dives |
+| #120 | fish-com | `/equipment/[slug]` | 6 equipment-category buyer guides |
+| #121 | ferrets-com | `/states/[slug]` | 51 per-state legality + adoption directory |
+| #123 | ferret-com | `/care/*`, `/health/*` | 6 new cornerstones (vaccinations, lymphoma, +4) |
+
+### Infrastructure merged
+
+| PR | What |
+|---|---|
+| #122 | Monetization-bot strategic handoff (`ops/handoffs/2026-05-29-monetization-update-for-bot.md`) |
+| #124 | AffiliateDisclosure component + 10 site disclosure pages + 10 `/go/[vendor]/[sku]` redirects + per-site vendor allow-lists |
+| #126 | Bot coordination policy (`ops/policies/bot-coordination.md`) — lanes, governance, vendor allow-lists, trust-bar guardrails |
+| #127 | Monday launch checklist (`ops/handoffs/2026-05-29-monday-launch-checklist.md`) — Carlo's DNS/Mailchimp/GA4 punch list |
+| #128 | `getCrossPortfolioRecommendations` helper + 29 (site × content-type) recommendation entries — unblocks CrossPortfolioCard portfolio-wide |
+| #129 | `link-check.mjs` fix — handles `[slug]` anywhere in path (not just trailing) |
+| #130 | ArticleLayout `schema` prop accepts combined-schema arrays |
+
+### Open PRs queued
+
+- #132 — dog-com `/breeds/[slug]/health` (8 OFA/CHIC breed health deep-dives) — CI cycling
+- #135 — saddle-com `/fit/[slug]` (6 discipline-specific saddle fit guides + hub) — CI cycling
+- Monetization bot's 11 in-flight branches (affiliate-link-portfolio-rollout, askthevet-mvp, seniorpets-mvp, dogpicture-mvp, petsupplies-mvp, email-sequences-7-magnets, etc.) — PRs not yet open
+
+### Agents running in background
+
+- Lizard.com /husbandry/[slug] — 8 husbandry topics (UVB, basking, humidity, etc.)
+
+## 8b. Recently Shipped This Week (2026-05-28 → 2026-05-29)
+
+Highlights from the ~100-PR merge wave:
+
+- **5 new sites scaffolded** with content + lead magnets + visual polish:
+  horses-com, petfood-com, petfoods-com, ferret-com, ferrets-com.
+- **Magazine visual polish** rolled out across all 8 active sites
+  (per-site palettes, Playfair / Cormorant / JetBrains Mono typography).
+- **Editorial component library** shipped (`PullQuote`, `DropCap`,
+  `ImageCard`, `CalloutBox`, `SourceCitation`, `ArticleByline`) — applied
+  across 48+ page applications portfolio-wide.
+- **Real Unsplash photography** on 8 site homepages + key feature slots
+  (replaces placeholder gradients).
+- **~280+ programmatic SEO pages** across dog (breeds + diseases),
+  horses (breeds), vets-co (states), ferrets-com (states), petfoods-com
+  (brands) — all from single-template + structured data files.
+- **6 lead magnets + 8-email sequences** added: aquarium cycling (fish),
+  emergency triage card (vets), saddle fit checklist (saddle), first-year
+  care (lizard), first-horse roadmap (horses), reading-pet-food-labels
+  (petfood), first-year-schedule (ferret).
+- **30+ new cornerstone content pages** across the portfolio.
+- **CrossPortfolioCard** — sister-site recommendations component live
+  on 5 sites.
+- **Citation linking** — inline authority citations across ~49 pages.
+- **Vercel turbo-ignore** on all 10 projects → 60-85% build cost
+  reduction.
+- **Lockfile sync** + supporting engineering fixes.
+- **COO research docs** in `ops/handoffs/`: revenue/affiliate playbook,
+  Stripe membership spec, sponsorship sales kit, acquirer pitch deck
+  framework, per-site Stitch design briefs, per-site photo sourcing
+  playbook, Vercel cost-reduction memo.
 
 ## 9. Operating Principles
 

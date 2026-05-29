@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -66,8 +67,10 @@ export default function PositiveReinforcementPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2 id="principle">The Core Principle</h2>
-        <p>Positive reinforcement is the delivery of something the learner values immediately following a behavior, which increases the probability of that behavior occurring again in the future. That is the complete definition. &quot;Positive&quot; means adding something — not that training is gentle or easy. &quot;Reinforcement&quot; means the behavior increases — if it doesn&apos;t increase, whatever you&apos;re using is not a reinforcer for that individual.</p>
+        <DropCap>Positive reinforcement is the delivery of something the learner values immediately following a behavior, which increases the probability of that behavior occurring again in the future. That is the complete definition. &quot;Positive&quot; means adding something — not that training is gentle or easy. &quot;Reinforcement&quot; means the behavior increases — if it doesn&apos;t increase, whatever you&apos;re using is not a reinforcer for that individual.</DropCap>
         <p>This mechanism works because all animals (including humans) repeat behaviors that produce good outcomes and cease behaviors that produce neutral or negative outcomes. Dog training is the application of this principle to shape specific behaviors systematically.</p>
 
         <h2 id="reinforcers">What Makes a Good Reinforcer</h2>
@@ -95,6 +98,10 @@ export default function PositiveReinforcementPage() {
         <p><strong>Intermittent reinforcement:</strong> Reward only some correct responses, unpredictably. Use once a behavior is learned. Intermittent reinforcement produces behaviors that are more persistent and resistant to extinction than continuously reinforced behaviors — the same reason slot machines are compelling. A dog that sometimes gets rewarded for sitting will sit more persistently than a dog that always gets rewarded for sitting and then stops receiving rewards.</p>
         <p>Transition: teach on continuous → generalize in new contexts on continuous → transition to intermittent once reliable in multiple contexts.</p>
 
+        <CalloutBox variant="evidence" title="Reward-based training has the strongest support">
+          The American Veterinary Society of Animal Behavior (AVSAB) position statement and a 2021 paper in <em>Frontiers in Veterinary Science</em> both conclude that dogs trained with aversive methods show higher rates of stress, fear, and aggression than dogs trained with reward-based methods. The evidence is consistent across the published literature.
+        </CalloutBox>
+
         <h2 id="punishment">What About Punishment?</h2>
         <p>Punishment in learning theory means adding something aversive (positive punishment) or removing something desired (negative punishment) following a behavior, which reduces that behavior. Both work mechanistically. The question is whether they are the right tool.</p>
         <p>The research consistently shows that punishment-based training produces:</p>
@@ -107,7 +114,7 @@ export default function PositiveReinforcementPage() {
         <p>Positive reinforcement-based training does not require punishment. Every behavior problem has a reinforcement-based solution. The behaviors you don&apos;t want can be reduced through differential reinforcement of incompatible behaviors (teaching what you do want), management (preventing the behavior from occurring and being reinforced), and extinction (removing the reinforcer that maintains the unwanted behavior).</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+        <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
       </div>
     </ArticleLayout>
   )

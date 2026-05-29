@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -63,7 +64,9 @@ export default function UsedSaddleBuyingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p>The used saddle market offers genuine value — a well-maintained Stubben or Passier at 40–60% of new price is a better saddle than a new budget-brand at full price. But the used market also contains damaged saddles whose problems are cosmetically hidden, saddles that have been mis-stored, and saddles with tree damage that will injure your horse in ways that take months to diagnose.</p>
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <DropCap>The used saddle market offers genuine value — a well-maintained Stubben or Passier at 40–60% of new price is a better saddle than a new budget-brand at full price. But the used market also contains damaged saddles whose problems are cosmetically hidden, saddles that have been mis-stored, and saddles with tree damage that will injure your horse in ways that take months to diagnose.</DropCap>
         <p>This checklist is what I walk through on every used saddle I inspect, in the order I do it. Each step builds on the last. If you find a serious problem in step one, you don&apos;t need to continue — the saddle is not worth considering at any price.</p>
 
         <h2 id="before">Before You View — What to Ask in Advance</h2>

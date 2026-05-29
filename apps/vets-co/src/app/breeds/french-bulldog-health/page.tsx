@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. This guide explains BOAS surgery, IVDD risk, skin fold management.', path: '/breeds/french-bulldog-health', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -30,6 +31,8 @@ export default function VetsFrenchBulldogHealthPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Several insurers have breed exclusions for BOAS-related conditions if enrolled after symptoms appear. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>
@@ -44,7 +47,11 @@ export default function VetsFrenchBulldogHealthPage() {
         <BreedHealthCard name="Heat Stroke" riskLevel="very-high" description="French Bulldogs cannot thermoregulate effectively. BOAS restricts airflow — panting (the primary canine cooling mechanism) is impaired in proportion to the severity of airway compromise. Heat stroke can occur at ambient temperatures where other breeds are comfortable. This is a genuine life-threatening emergency." signs={['Excessive panting or labored breathing', 'Drooling, bright red gums', 'Glassy eyes, disorientation', 'Collapse (late sign — critical emergency)']} management="Never leave in a car, even briefly. Limit outdoor time in temperatures above 70°F, particularly if humid. Walk in early morning or after sunset in summer. If heat stroke suspected: wet dog with cool (not cold) water, fan, get to emergency vet immediately. Do not wait." />
 
         <h2>The Surgical Decision — My Honest Advice</h2>
-        <p>Most French Bulldog owners are advised to at minimum have their dog BOAS-graded by a soft tissue surgeon. Many dogs with Grade II–III BOAS are significantly more comfortable and have longer, healthier lives after surgical correction. Too many owners believe the noisy breathing is &quot;just how Frenchies are&quot; — it is, but it doesn&apos;t mean it can&apos;t be improved.</p>
+        <DropCap>Most French Bulldog owners are advised to at minimum have their dog BOAS-graded by a soft tissue surgeon. Many dogs with Grade II–III BOAS are significantly more comfortable and have longer, healthier lives after surgical correction. Too many owners believe the noisy breathing is &quot;just how Frenchies are&quot; — it is, but it doesn&apos;t mean it can&apos;t be improved.</DropCap>
+
+        <CalloutBox variant="evidence" title="Operate before age 2 when possible">
+          Surgical correction of stenotic nares, elongated soft palate, and everted saccules produces the best outcomes when performed before age 2 — the soft palate and surrounding tissues have undergone less secondary remodeling. If your Frenchie is still young and is BOAS Grade II–III, the assessment is worth scheduling sooner rather than later.
+        </CalloutBox>
         <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. If your Frenchie is still young: get the assessment now.</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>

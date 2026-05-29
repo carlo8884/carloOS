@@ -1,0 +1,99 @@
+{
+  "$schema": "Image query manifest. Each key maps to a search query + provider preference + alt text template.",
+  "$instructions": "When adding new image needs, append entries here. Run `node scripts/sync-images.mjs` to populate the manifest with actual URLs + photographer credits.",
+
+  "horses-com:hero": {
+    "query": "horse galloping field",
+    "provider": "either",
+    "alt": "A horse galloping through an open field at sunset",
+    "orientation": "landscape"
+  },
+  "horses-com:category-breeds": {
+    "query": "horse portrait close up",
+    "provider": "either",
+    "alt": "Close-up portrait of a horse",
+    "orientation": "landscape"
+  },
+  "horses-com:category-care": {
+    "query": "horse stable grooming",
+    "provider": "either",
+    "alt": "A horse being groomed in a stable",
+    "orientation": "landscape"
+  },
+  "horses-com:category-disciplines": {
+    "query": "dressage horse rider",
+    "provider": "either",
+    "alt": "A dressage horse and rider in competition",
+    "orientation": "landscape"
+  },
+
+  "petfood-com:hero": {
+    "query": "pet food bowl ingredients",
+    "provider": "either",
+    "alt": "A bowl of pet food surrounded by raw ingredients",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-nutrition": {
+    "query": "dog eating bowl",
+    "provider": "either",
+    "alt": "A dog eating from a food bowl",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-life-stage": {
+    "query": "puppy dog food",
+    "provider": "either",
+    "alt": "A puppy eating from a food bowl",
+    "orientation": "landscape"
+  },
+
+  "petfoods-com:hero": {
+    "query": "pet food ingredients comparison",
+    "provider": "either",
+    "alt": "An array of pet food ingredients laid out for comparison",
+    "orientation": "landscape"
+  },
+  "petfoods-com:category-brands": {
+    "query": "dog food bag shelves",
+    "provider": "either",
+    "alt": "Shelves of dog food bags",
+    "orientation": "landscape"
+  },
+  "petfoods-com:category-ingredients": {
+    "query": "raw meat fish vegetables",
+    "provider": "either",
+    "alt": "Raw meat, fish, and vegetables — common pet food ingredients",
+    "orientation": "landscape"
+  },
+
+  "ferret-com:hero": {
+    "query": "ferret pet playing",
+    "provider": "either",
+    "alt": "A pet ferret playing",
+    "orientation": "landscape"
+  },
+  "ferret-com:category-care": {
+    "query": "ferret close up",
+    "provider": "either",
+    "alt": "Close-up of a ferret looking at the camera",
+    "orientation": "landscape"
+  },
+  "ferret-com:category-health": {
+    "query": "ferret sleeping",
+    "provider": "either",
+    "alt": "A ferret resting comfortably",
+    "orientation": "landscape"
+  },
+
+  "ferrets-com:hero": {
+    "query": "two ferrets playing",
+    "provider": "either",
+    "alt": "Two ferrets playing together",
+    "orientation": "landscape"
+  },
+  "ferrets-com:category-directory": {
+    "query": "ferret face portrait",
+    "provider": "either",
+    "alt": "Portrait of a ferret's face",
+    "orientation": "landscape"
+  }
+}
