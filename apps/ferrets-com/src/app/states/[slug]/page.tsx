@@ -34,6 +34,7 @@ import {
   combineSchemas,
   SchemaScript,
   Breadcrumb,
+  CrossPortfolioCard,
   FAQAccordion,
   EmailCapture,
   SidebarCard,
@@ -281,9 +282,14 @@ export default async function StateLegalityPage({
     <>
       <RelatedLinks title="Other state guides" links={otherTopStates} />
 
-      {/* Cross-portfolio: Ferret.com for care content. Plain semantic card
-          (the shared CrossPortfolioCard component requires config helpers
-          not present in this monorepo yet). */}
+      <CrossPortfolioCard
+        currentSite="ferrets-com"
+        contentType="directory"
+        variant="sidebar"
+      />
+
+      {/* Local cross-link to Ferret.com cornerstones — complements the shared
+          CrossPortfolioCard above with state-specific care anchors. */}
       <SidebarCard title="Care references">
         <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">
           For day-to-day care, diet, and health-condition references, see the

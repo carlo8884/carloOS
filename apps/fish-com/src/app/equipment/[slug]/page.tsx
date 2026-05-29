@@ -23,6 +23,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
+  CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
   EmailCapture,
@@ -164,6 +165,11 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               label: r.label,
               href: r.href,
             }))}
+          />
+          <CrossPortfolioCard
+            currentSite="fish-com"
+            contentType="equipment"
+            variant="sidebar"
           />
           <div className="bg-brand-primary-pale border border-brand-primary/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">

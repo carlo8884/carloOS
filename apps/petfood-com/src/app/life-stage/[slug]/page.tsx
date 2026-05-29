@@ -9,6 +9,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   CalloutBox,
 } from '@carloOS/ui'
@@ -354,6 +355,11 @@ export default async function LifeStagePage({ params }: PageProps) {
               ...stage.cornerstoneLinks,
               { label: 'Methodology', href: '/guides/methodology' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfood-com"
+            contentType="nutrition"
+            variant="sidebar"
           />
         </>
       }
