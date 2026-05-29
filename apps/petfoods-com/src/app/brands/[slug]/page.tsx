@@ -8,15 +8,28 @@ import {
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
+  EmailCapture,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands, getBrandBySlug, getRelatedBrandsByPriceTier, type Brand } from '../../../data/brands'
+import {
+  BrandReviews,
+  getBrandReviewBySlug,
+  WSAVA_QUESTION_TEXT,
+  type BrandReview,
+  type WsavaAnsweredQuestion,
+} from '../../../data/brand-reviews'
 
 // ─── Static generation ──────────────────────────────────────────────────────
 // One static page per brand at build time. No runtime fetch, no DB.
 
 export function generateStaticParams() {
-  return Brands.map((brand) => ({ slug: brand.slug }))
+  // Union of catalog brand slugs and long-form-review slugs.
+  const set = new Set<string>([
+    ...Brands.map((b) => b.slug),
+    ...BrandReviews.map((r) => r.slug),
+  ])
+  return Array.from(set).map((slug) => ({ slug }))
 }
 
 interface PageProps {
@@ -28,7 +41,8 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const brand = getBrandBySlug(slug)
-  if (!brand) {
+  const review = getBrandReviewBySlug(slug)
+  if (!brand && !review) {
     return buildMetadata({
       siteId: 'petfoods-com',
       title: 'Brand Not Found',
@@ -37,21 +51,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     })
   }
 
-  // Title ≤70 chars. "{Name} — Parent, Manufacturing, AAFCO | PetFoods.com"
-  // We construct conservatively and trim.
-  const baseTitle = `${brand.name} — Independent Reference | PetFoods.com`
-  const title = baseTitle.length <= 70 ? baseTitle : `${brand.name} — Reference | PetFoods.com`
+  const displayName = review?.brandName ?? brand!.name
+  const parent = review?.parentCompany ?? brand!.parentCompany
 
-  // Description ≤160 chars
-  const mfg = brand.manufacturingCountries.join(' / ')
-  const descRaw = `${brand.name} corporate parent ${brand.parentCompany}; manufactured in ${mfg}. Catalog reference with AAFCO, transparency, and recall notes.`
+  const baseTitle = review
+    ? `${displayName} Review — WSAVA, Recalls, Lineup | PetFoods.com`
+    : `${displayName} — Independent Reference | PetFoods.com`
+  const title = baseTitle.length <= 70 ? baseTitle : `${displayName} — Reference | PetFoods.com`
+
+  const mfg = (review?.manufacturingLocations ?? brand?.manufacturingCountries ?? []).join(' / ')
+  const descRaw = review
+    ? `${displayName} review: parent ${parent}, manufacturing ${mfg}, WSAVA scorecard, recalls, who it's best for. Independent — no brand has paid for this assessment.`
+    : `${displayName} corporate parent ${parent}; manufactured in ${mfg}. Catalog reference with AAFCO, transparency, and recall notes.`
   const description = descRaw.length <= 160 ? descRaw : descRaw.slice(0, 157) + '...'
 
   return buildMetadata({
     siteId: 'petfoods-com',
     title,
     description,
-    path: `/brands/${brand.slug}`,
+    path: `/brands/${slug}`,
     type: 'article',
   })
 }
@@ -80,7 +98,6 @@ function gfsiLabel(brand: Brand): string {
 }
 
 function buildTldr(brand: Brand): string {
-  // 60-80 word objective summary, no marketing language.
   const founded = brand.founded ? `founded in ${brand.founded}` : 'founding year not publicly verified'
   const hq = brand.headquartersCountry ? `headquartered in ${brand.headquartersCountry}` : 'headquarters not publicly verified'
   const mfg = formatList(brand.manufacturingCountries)
@@ -98,8 +115,18 @@ function buildTldr(brand: Brand): string {
 export default async function BrandPage({ params }: PageProps) {
   const { slug } = await params
   const brand = getBrandBySlug(slug)
-  if (!brand) notFound()
+  const review = getBrandReviewBySlug(slug)
+  if (!brand && !review) notFound()
 
+  if (review) {
+    return <BrandReviewPage review={review} brand={brand ?? undefined} />
+  }
+  return <BrandCatalogPage brand={brand!} />
+}
+
+// ─── Catalog-only renderer (legacy 25 brands) ──────────────────────────────
+
+function BrandCatalogPage({ brand }: { brand: Brand }) {
   const related = getRelatedBrandsByPriceTier(brand.slug, 4)
 
   const schema = buildArticleSchema({
@@ -108,12 +135,11 @@ export default async function BrandPage({ params }: PageProps) {
     description: `Independent reference page for ${brand.name}: corporate parent (${brand.parentCompany}), manufacturing footprint, AAFCO posture, transparency and recall notes.`,
     url: `https://petfoods.com/brands/${brand.slug}`,
     imageUrl: '',
-    authorName: 'PetFoods.com Catalog',
+    authorName: 'PetFoods.com Editorial',
     publishedAt: '2026-05-28T00:00:00Z',
     modifiedAt: '2026-05-28T00:00:00Z',
   })
 
-  // Organization schema for the brand itself (separate from the Article above).
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -134,7 +160,6 @@ export default async function BrandPage({ params }: PageProps) {
       : {}),
   } as Record<string, unknown>
 
-  // Track which fields we don't know, to render the explicit "verify" callout.
   const unknowns: string[] = []
   if (!brand.founded) unknowns.push('Founding year')
   if (!brand.headquartersCountry) unknowns.push('Headquarters country')
@@ -182,6 +207,7 @@ export default async function BrandPage({ params }: PageProps) {
             title="Companion References"
             links={[
               { label: 'Brand Index (all 35)', href: '/brands' },
+              { label: 'Ingredient Glossary', href: '/ingredients' },
               { label: 'Pet Food Recall Database', href: '/recalls' },
               { label: 'Life-Stage Catalog', href: '/life-stage' },
               ...(brand.editorialCrossLink
@@ -189,16 +215,24 @@ export default async function BrandPage({ params }: PageProps) {
                 : []),
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfoods-com"
+            title="PetFoods.com weekly digest"
+            subtitle="New recall filings, reformulations, and brand changes — one email a week."
+            source={`brand:${brand.slug}`}
+          />
         </>
       }
     >
-      {/* Inline Organization schema, in addition to the Article schema injected by ArticleLayout. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
       />
 
       <div className="carloOS-article">
+        <DisclosureBanner />
+
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(brand)}
         </p>
@@ -227,13 +261,6 @@ export default async function BrandPage({ params }: PageProps) {
             </p>
           )}
         </div>
-        <p>
-          Corporate ownership matters because procurement, plant footprint, and recall liability
-          flow through the parent. A brand acquired into a multi-billion-dollar portfolio inherits
-          shared suppliers and shared production lines with its siblings; an independently held
-          brand operates a smaller and typically more visible supply chain. Neither is, on its own,
-          a quality signal — both are context for reading the rest of this page.
-        </p>
 
         <h2 id="at-a-glance">At a Glance</h2>
         <div
@@ -308,9 +335,6 @@ export default async function BrandPage({ params }: PageProps) {
           </a>{' '}
           database. The PetFoods.com{' '}
           <Link href="/recalls">recall catalog</Link> is a structured mirror of those filings.
-          For {brand.name}, recall history should be read alongside the parent company’s and the
-          manufacturer’s record — when the brand is contract-manufactured or shares a plant with a
-          sibling, a recall on the production line affects every brand on it.
         </p>
         <p>
           <strong>Recorded recall count for {brand.name} (this catalog):</strong> {formatRecall(brand)}.
@@ -335,11 +359,6 @@ export default async function BrandPage({ params }: PageProps) {
                 {brand.editorialCrossLink}
               </a>
             </p>
-            <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)' }}>
-              The editorial page applies the published v1.0 rubric (AAFCO completeness, ingredient
-              sourcing, recall history, manufacturing standards, feeding-outcome literature). This
-              catalog page is the structured reference; the editorial page is the assessment.
-            </p>
           </>
         )}
 
@@ -355,8 +374,7 @@ export default async function BrandPage({ params }: PageProps) {
             <p>
               The following fields are not filled in for {brand.name} because we could not verify
               them from a public corporate disclosure, brand website, or FDA filing. The catalog
-              policy is to leave a field empty rather than estimate it. Verify with the manufacturer
-              if you need an answer before purchase:
+              policy is to leave a field empty rather than estimate it.
             </p>
             <ul>
               {unknowns.map((u) => (
@@ -372,48 +390,7 @@ export default async function BrandPage({ params }: PageProps) {
           are <em>not</em> rank-ordered):
         </p>
         {related.length > 0 ? (
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-              gap: '12px',
-              margin: '12px 0 24px',
-            }}
-          >
-            {related.map((r) => (
-              <Link
-                key={r.slug}
-                href={`/brands/${r.slug}`}
-                style={{
-                  display: 'block',
-                  padding: '12px 14px',
-                  border: '1px solid var(--brand-border)',
-                  borderRadius: '6px',
-                  background: 'var(--brand-white)',
-                  color: 'var(--brand-text-dark)',
-                  textDecoration: 'none',
-                  lineHeight: 1.4,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '14px',
-                    fontWeight: 700,
-                    marginBottom: '4px',
-                  }}
-                >
-                  {r.name}
-                </div>
-                <div style={{ fontSize: '12px', color: 'var(--brand-text-mid)' }}>
-                  Parent: {r.parentCompany}
-                </div>
-                <div style={{ fontSize: '12px', color: 'var(--brand-text-mid)' }}>
-                  Tier: {r.priceTier}
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CompareGrid related={related} />
         ) : (
           <p>
             No other brands in the catalog share this exact price tier. See the full{' '}
@@ -430,9 +407,7 @@ export default async function BrandPage({ params }: PageProps) {
             <strong>{brand.name} corporate site:</strong>{' '}
             <a href={brand.sourcesUrl} target="_blank" rel="noopener">
               {brand.sourcesUrl}
-            </a>{' '}
-            — used to confirm category coverage, headquarters country, and parent-company
-            attribution.
+            </a>
           </li>
           <li>
             U.S. Food and Drug Administration, Center for Veterinary Medicine.{' '}
@@ -443,18 +418,17 @@ export default async function BrandPage({ params }: PageProps) {
               rel="noopener"
             >
               fda.gov/animal-veterinary/safety-health/recalls-withdrawals
-            </a>{' '}
-            — primary source for recall history.
+            </a>
           </li>
           <li>
-            Association of American Feed Control Officials (AAFCO).{' '}
-            <em>2025 Official Publication</em>. Reference for AAFCO statement type, nutrient
-            profiles, and feed-ingredient definitions referenced on the brand’s product panels.
+            Association of American Feed Control Officials (AAFCO). <em>2025 Official Publication</em>.
           </li>
           <li>
-            Corporate disclosures (10-K, investor decks, acquisition press releases) from{' '}
-            {brand.parentCompany} and predecessors. Used to confirm parent ownership and
-            acquisition year.
+            World Small Animal Veterinary Association (WSAVA), Global Nutrition Committee.{' '}
+            <em>Selecting a Pet Food Manufacturer</em>.{' '}
+            <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noopener">
+              wsava.org/global-guidelines/global-nutrition-guidelines/
+            </a>
           </li>
         </ul>
       </div>
@@ -462,7 +436,419 @@ export default async function BrandPage({ params }: PageProps) {
   )
 }
 
-// ─── Row helper ────────────────────────────────────────────────────────────
+// ─── Long-form review renderer ─────────────────────────────────────────────
+
+function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand }) {
+  const schema = buildArticleSchema({
+    siteId: 'petfoods-com',
+    title: `${review.brandName} Review — WSAVA, Recalls, Lineup`,
+    description: `Independent review of ${review.brandName}: parent ${review.parentCompany}, manufacturing ${review.manufacturingLocations.join(' / ')}, WSAVA scorecard, FDA recall history, who it's best for and who should avoid it.`,
+    url: `https://petfoods.com/brands/${review.slug}`,
+    imageUrl: '',
+    authorName: 'PetFoods.com Editorial — independent ingredient & brand reference',
+    publishedAt: '2026-05-28T00:00:00Z',
+    modifiedAt: '2026-05-28T00:00:00Z',
+  })
+
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: review.brandName,
+    parentOrganization: {
+      '@type': 'Organization',
+      name: review.parentCompany,
+    },
+    ...(review.founded ? { foundingDate: String(review.founded) } : {}),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: review.headquarters,
+    },
+  } as Record<string, unknown>
+
+  const reviewedQuestions = new Set(review.wsavaQuestionsAnswered.map((q) => q.question))
+  const allQuestions: WsavaAnsweredQuestion['question'][] = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']
+
+  const faqItems: FAQItem[] = [
+    {
+      question: `What is ${review.brandName}’s WSAVA compliance score?`,
+      answer: `${review.brandName} answers ${review.wsavaComplianceScore} of the six WSAVA Global Nutrition Committee "Selecting a Pet Food Manufacturer" questions publicly. The six questions cover nutritionist credentials, formulation responsibility, AAFCO substantiation, manufacturing location and visitability, quality-control measures, and full nutrient analysis disclosure. WSAVA itself does not publish brand-level scores; the count here is PetFoods.com’s editorial reading of the brand’s public disclosures.`,
+      answerText: `${review.brandName} answers ${review.wsavaComplianceScore} of the six WSAVA "Selecting a Pet Food Manufacturer" questions publicly per our editorial reading.`,
+    },
+    {
+      question: `Does ${review.brandName} use board-certified veterinary nutritionists?`,
+      answer: review.hasBoardCertifiedNutritionists
+        ? `Yes — ${review.brandName} publicly identifies at least one full-time qualified nutritionist (PhD in animal nutrition or board-certified veterinary nutritionist — ACVN/ECVCN) on its corporate or science pages.`
+        : `Based on the brand’s public disclosures we reviewed, ${review.brandName} does not publicly identify a board-certified veterinary nutritionist (ACVN/ECVCN) on its formulation team. The brand may employ qualified nutrition staff that are not publicly profiled; verify with the manufacturer if this is a deciding factor.`,
+      answerText: review.hasBoardCertifiedNutritionists
+        ? `Yes — public disclosure identifies qualified nutritionists.`
+        : `Not publicly disclosed. Verify with the manufacturer if it is a deciding factor.`,
+    },
+    {
+      question: `Does ${review.brandName} run AAFCO feeding trials?`,
+      answer: review.conductsFeedingTrials
+        ? `${review.brandName} publicly indicates that at least part of its portfolio is substantiated by AAFCO feeding trials (not only formulated to meet the AAFCO nutrient profile). The AAFCO statement on the bag is the per-SKU authority.`
+        : `${review.brandName} does not publicly headline AAFCO feeding-trial substantiation. Many SKUs in the line appear to be formulated to meet the AAFCO nutrient profile only — confirm the AAFCO statement on the specific bag you are buying.`,
+      answerText: review.conductsFeedingTrials
+        ? `At least partially, per public disclosure.`
+        : `Not publicly highlighted. Verify per bag.`,
+    },
+    {
+      question: `Has ${review.brandName} had any recalls?`,
+      answer:
+        review.recallHistory.length === 0
+          ? `In the FDA CVM Recalls & Withdrawals window we reviewed, ${review.brandName} has no recall records. Recall posture changes over time — confirm the current state directly at the FDA CVM database before purchase.`
+          : `${review.brandName} has ${review.recallHistory.length} FDA CVM recall record${review.recallHistory.length === 1 ? '' : 's'} in the window we reviewed. The most recent: ${review.recallHistory[0].year} — ${review.recallHistory[0].product}.`,
+      answerText:
+        review.recallHistory.length === 0
+          ? `No recall records in our review window. Verify on FDA CVM.`
+          : `${review.recallHistory.length} FDA CVM recall record(s) in our review window.`,
+    },
+  ]
+
+  return (
+    <ArticleLayout
+      siteId="petfoods-com"
+      hero={{
+        title: `${review.brandName} — Independent Review`,
+        subtitle: `${review.parentCompany} · HQ ${review.headquarters} · Manufactured in ${review.manufacturingLocations.join(' / ')} · WSAVA scorecard ${review.wsavaComplianceScore}/6`,
+        category: 'Brand Review',
+        publishedAt: 'May 2026',
+        readTime: '9 min',
+        authorName: 'PetFoods.com Editorial',
+      }}
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Brands', href: '/brands' },
+        { name: review.brandName, href: `/brands/${review.slug}` },
+      ]}
+      schema={schema}
+      sidebar={
+        <>
+          <TableOfContents
+            items={[
+              { label: 'Overview', href: '#overview' },
+              { label: 'Manufacturer Profile', href: '#manufacturer' },
+              { label: 'WSAVA Compliance Scorecard', href: '#wsava' },
+              { label: 'Product Lines', href: '#product-lines' },
+              { label: 'Strengths', href: '#strengths' },
+              { label: 'Weaknesses', href: '#weaknesses' },
+              { label: 'Recall History', href: '#recall-history' },
+              { label: 'Who It’s Best For', href: '#best-for' },
+              { label: 'Who Should Avoid', href: '#avoid' },
+              { label: 'Independent Assessment', href: '#assessment' },
+              { label: 'FAQ', href: '#faq' },
+              { label: 'Sources', href: '#sources' },
+            ]}
+          />
+          <RelatedLinks
+            title="Companion References"
+            links={[
+              { label: 'Ingredient Glossary', href: '/ingredients' },
+              { label: 'All Brands (index)', href: '/brands' },
+              { label: 'Pet Food Recall Database', href: '/recalls' },
+              { label: 'Life-Stage Catalog', href: '/life-stage' },
+              ...(brand?.editorialCrossLink
+                ? [{ label: `${review.brandName} on PetFood.com`, href: brand.editorialCrossLink }]
+                : []),
+            ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfoods-com"
+            title="PetFoods.com weekly digest"
+            subtitle="New recall filings, reformulations, and brand changes — one email a week."
+            source={`brand-review:${review.slug}`}
+          />
+        </>
+      }
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+
+      <div className="carloOS-article">
+        <DisclosureBanner />
+
+        <h2 id="overview">Overview</h2>
+        <div
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '13.5px',
+            border: '1px solid var(--brand-border)',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            margin: '16px 0 24px',
+          }}
+        >
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <tbody>
+              <Row label="Brand" value={review.brandName} />
+              <Row label="Parent company" value={review.parentCompany} />
+              <Row label="Founded" value={review.founded ? String(review.founded) : 'Not publicly verified'} />
+              <Row label="Headquarters" value={review.headquarters} />
+              <Row label="Manufacturing locations" value={review.manufacturingLocations.join(', ')} />
+              <Row label="Owns manufacturing" value={review.ownsManufacturing ? 'Yes' : 'No (uses contract manufacturing in whole or part)'} />
+              <Row label="WSAVA compliance" value={`${review.wsavaComplianceScore} of 6 questions answered publicly`} />
+              <Row label="Board-certified veterinary nutritionists" value={review.hasBoardCertifiedNutritionists ? 'Publicly disclosed' : 'Not publicly disclosed'} />
+              <Row label="AAFCO feeding trials" value={review.conductsFeedingTrials ? 'At least partially substantiated' : 'Not publicly highlighted'} />
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="manufacturer">Manufacturer Profile</h2>
+        <p>
+          {review.brandName} is owned by <strong>{review.parentCompany}</strong>, headquartered in{' '}
+          {review.headquarters}. Production runs in {review.manufacturingLocations.join(', ')}.{' '}
+          {review.ownsManufacturing
+            ? 'The brand owns and operates at least one of the plants where its food is made — chain-of-custody is direct.'
+            : 'The brand does not own all the plants where its food is made — at least part of the line is contract-manufactured, per the brand’s own public disclosures.'}{' '}
+          {review.hasBoardCertifiedNutritionists
+            ? 'The corporate disclosures identify a full-time qualified nutritionist (PhD in animal nutrition or ACVN/ECVCN board certification) on the formulation team.'
+            : 'The corporate disclosures we reviewed do not publicly identify a full-time qualified nutritionist (PhD in animal nutrition or ACVN/ECVCN board certification). That does not mean none is employed — only that the credential is not part of the brand’s public face.'}
+        </p>
+
+        <h2 id="wsava">WSAVA Compliance Scorecard</h2>
+        <p>
+          The World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee publishes
+          a six-question rubric — <em>Selecting a Pet Food Manufacturer</em> — that owners and
+          veterinarians can apply to any brand. Our scorecard counts how many of the six questions
+          {' '}{review.brandName} answers publicly. WSAVA itself does <em>not</em> publish brand-level
+          scores; this scorecard is PetFoods.com’s editorial reading of public disclosures, and the
+          per-question evidence below is auditable.
+        </p>
+        <div
+          style={{
+            background: 'var(--brand-primary-pale)',
+            border: '1px solid var(--brand-primary)',
+            borderRadius: '8px',
+            padding: '14px 18px',
+            margin: '16px 0',
+            fontFamily: 'var(--font-mono)',
+          }}
+        >
+          <strong>Score: {review.wsavaComplianceScore} / 6 WSAVA questions answered publicly.</strong>
+        </div>
+        <div style={{ overflowX: 'auto', margin: '16px 0 28px' }}>
+          <table
+            style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '14px',
+              border: '1px solid var(--brand-border)',
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}
+          >
+            <thead>
+              <tr style={{ background: 'var(--brand-surface)', textAlign: 'left' }}>
+                <th style={{ padding: '10px 12px', width: '60px' }}>Q</th>
+                <th style={{ padding: '10px 12px' }}>WSAVA question</th>
+                <th style={{ padding: '10px 12px', width: '100px' }}>Answered?</th>
+                <th style={{ padding: '10px 12px' }}>Public answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {allQuestions.map((q) => {
+                const answered = reviewedQuestions.has(q)
+                const detail = review.wsavaQuestionsAnswered.find((x) => x.question === q)
+                return (
+                  <tr key={q} style={{ borderTop: '1px solid var(--brand-border)' }}>
+                    <td style={{ padding: '10px 12px', fontFamily: 'var(--font-mono)', fontWeight: 700 }}>{q}</td>
+                    <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>{WSAVA_QUESTION_TEXT[q]}</td>
+                    <td
+                      style={{
+                        padding: '10px 12px',
+                        fontFamily: 'var(--font-mono)',
+                        fontWeight: 700,
+                        color: answered ? 'var(--brand-success)' : 'var(--brand-text-light)',
+                      }}
+                    >
+                      {answered ? 'Yes' : 'Not disclosed'}
+                    </td>
+                    <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>
+                      {detail?.answer ?? 'No public answer found in the corporate disclosures we reviewed.'}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="product-lines">Product Lines</h2>
+        <div style={{ overflowX: 'auto', margin: '12px 0 24px' }}>
+          <table
+            style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '14px',
+              border: '1px solid var(--brand-border)',
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}
+          >
+            <thead>
+              <tr style={{ background: 'var(--brand-surface)', textAlign: 'left' }}>
+                <th style={{ padding: '10px 12px' }}>Line</th>
+                <th style={{ padding: '10px 12px' }}>Target pet</th>
+                <th style={{ padding: '10px 12px' }}>Formulation approach</th>
+                <th style={{ padding: '10px 12px' }}>Price tier</th>
+              </tr>
+            </thead>
+            <tbody>
+              {review.productLines.map((line) => (
+                <tr key={line.name} style={{ borderTop: '1px solid var(--brand-border)' }}>
+                  <td style={{ padding: '10px 12px', fontWeight: 600 }}>{line.name}</td>
+                  <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>{line.targetPet}</td>
+                  <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>{line.formulationApproach}</td>
+                  <td style={{ padding: '10px 12px', fontFamily: 'var(--font-mono)' }}>{line.priceTier}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="strengths">Strengths</h2>
+        <ul>
+          {review.strengths.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
+
+        <h2 id="weaknesses">Weaknesses</h2>
+        <ul>
+          {review.weaknesses.map((w) => (
+            <li key={w}>{w}</li>
+          ))}
+        </ul>
+
+        <h2 id="recall-history">Recall History</h2>
+        <p>
+          The authoritative source for US pet-food recalls is the{' '}
+          <a
+            href="https://www.fda.gov/animal-veterinary/safety-health/recalls-withdrawals"
+            target="_blank"
+            rel="noopener"
+          >
+            FDA Center for Veterinary Medicine Recalls &amp; Withdrawals
+          </a>{' '}
+          database. The list below is the recall record we found for {review.brandName} in the
+          window we reviewed (2015 onward). Always cross-check with FDA CVM directly before
+          purchase.
+        </p>
+        {review.recallHistory.length === 0 ? (
+          <div
+            style={{
+              padding: '14px 18px',
+              border: '1px solid var(--brand-border)',
+              borderRadius: '8px',
+              background: 'var(--brand-surface)',
+              margin: '12px 0 24px',
+              fontSize: '14px',
+            }}
+          >
+            <strong>No reported recalls in our review window.</strong> We found no FDA CVM recall
+            records for {review.brandName} from 2015 onward. Recall posture changes — confirm the
+            current state directly at the FDA CVM database before purchase.
+          </div>
+        ) : (
+          <div style={{ overflowX: 'auto', margin: '12px 0 24px' }}>
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                fontSize: '14px',
+                border: '1px solid var(--brand-border)',
+                borderRadius: '8px',
+                overflow: 'hidden',
+              }}
+            >
+              <thead>
+                <tr style={{ background: 'var(--brand-surface)', textAlign: 'left' }}>
+                  <th style={{ padding: '10px 12px', width: '80px' }}>Year</th>
+                  <th style={{ padding: '10px 12px' }}>Product affected</th>
+                  <th style={{ padding: '10px 12px' }}>FDA-stated reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                {review.recallHistory.map((r, idx) => (
+                  <tr key={`${r.year}-${idx}`} style={{ borderTop: '1px solid var(--brand-border)' }}>
+                    <td style={{ padding: '10px 12px', fontFamily: 'var(--font-mono)' }}>{r.year}</td>
+                    <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>{r.product}</td>
+                    <td style={{ padding: '10px 12px', color: 'var(--brand-text-mid)' }}>{r.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        <h2 id="best-for">Who It’s Best For</h2>
+        <ul>
+          {review.whoItsBestFor.map((w) => (
+            <li key={w}>{w}</li>
+          ))}
+        </ul>
+
+        <h2 id="avoid">Who Should Avoid</h2>
+        <ul>
+          {review.whoShouldAvoid.map((w) => (
+            <li key={w}>{w}</li>
+          ))}
+        </ul>
+
+        <h2 id="assessment">Independent Assessment</h2>
+        <p style={{ fontSize: '15.5px', lineHeight: 1.6 }}>{review.independentAssessment}</p>
+        <p style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginTop: '10px' }}>
+          Assessment by the PetFoods.com editorial desk. No DVM byline is claimed. We do not score on
+          packaging, brand age, or marketing tone. We do not accept brand payment for assessment
+          language.
+        </p>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={faqItems} />
+
+        <h2 id="sources">Sources</h2>
+        <ul>
+          {review.citedSources.map((src) => (
+            <li key={src.url}>
+              {src.name}.{' '}
+              <a href={src.url} target="_blank" rel="noopener">
+                {src.url}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ArticleLayout>
+  )
+}
+
+// ─── Shared sub-components ─────────────────────────────────────────────────
+
+function DisclosureBanner() {
+  return (
+    <div
+      style={{
+        background: 'var(--brand-surface)',
+        border: '1px solid var(--brand-border)',
+        borderLeft: '4px solid var(--brand-primary)',
+        borderRadius: '6px',
+        padding: '12px 16px',
+        margin: '0 0 24px',
+        fontSize: '13.5px',
+        lineHeight: 1.55,
+        color: 'var(--brand-text-mid)',
+      }}
+    >
+      <strong style={{ color: 'var(--brand-text-dark)' }}>Independent editorial.</strong>{' '}
+      PetFoods.com is reader-supported via affiliate links to retailers. No brand has paid for
+      this assessment. Editorial decisions — including which brands are reviewed, the WSAVA
+      scoring, and recall coverage — are not for sale.
+    </div>
+  )
+}
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
@@ -485,7 +871,54 @@ function Row({ label, value }: { label: string; value: string }) {
   )
 }
 
-// ─── FAQ builder ───────────────────────────────────────────────────────────
+function CompareGrid({ related }: { related: Brand[] }) {
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+        gap: '12px',
+        margin: '12px 0 24px',
+      }}
+    >
+      {related.map((r) => (
+        <Link
+          key={r.slug}
+          href={`/brands/${r.slug}`}
+          style={{
+            display: 'block',
+            padding: '12px 14px',
+            border: '1px solid var(--brand-border)',
+            borderRadius: '6px',
+            background: 'var(--brand-white)',
+            color: 'var(--brand-text-dark)',
+            textDecoration: 'none',
+            lineHeight: 1.4,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '14px',
+              fontWeight: 700,
+              marginBottom: '4px',
+            }}
+          >
+            {r.name}
+          </div>
+          <div style={{ fontSize: '12px', color: 'var(--brand-text-mid)' }}>
+            Parent: {r.parentCompany}
+          </div>
+          <div style={{ fontSize: '12px', color: 'var(--brand-text-mid)' }}>
+            Tier: {r.priceTier}
+          </div>
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+// ─── FAQ builder (catalog renderer) ───────────────────────────────────────
 
 function buildBrandFaq(brand: Brand): FAQItem[] {
   return [
