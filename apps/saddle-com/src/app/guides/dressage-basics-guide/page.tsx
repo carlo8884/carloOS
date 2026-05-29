@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Dressage Basics Guide — Training Scale, Tests | Saddle.com', description: 'Introduction to dressage. The Training Scale (Rhythm, Relaxation, Contact, Impulsion, Straightness, Collection), how dressage tests work.', path: '/guides/dressage-basics-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Dressage Basics Guide', description: 'Training scale, competition tests, and equipment for beginning dressage riders.', url: 'https://saddle.com/guides/dressage-basics-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DressageBasicsGuidePage() {
@@ -24,8 +25,10 @@ export default function DressageBasicsGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>The Training Scale — The Foundation</h2>
-        <p>German classical dressage training is built on the Ausbildungsskala — the Training Scale — six interconnected qualities that are developed in sequence but maintained together. They are not steps to be completed and left behind but qualities that inform every ride at every level.</p>
+        <DropCap>German classical dressage training is built on the Ausbildungsskala — the Training Scale — six interconnected qualities that are developed in sequence but maintained together. They are not steps to be completed and left behind but qualities that inform every ride at every level.</DropCap>
         <p><strong>Rhythm (Takt):</strong> Regular, pure gaits — walk in 4-beat, trot in 2-beat, canter in 3-beat. A horse with irregular rhythm is not yet ready to develop the next qualities. Rhythm is established through relaxation and forward movement.</p>
         <p><strong>Relaxation (Losgelassenheit):</strong> Mental and physical relaxation — the absence of tension that prevents correct movement. A tense horse cannot swing through its back, cannot use its hind end correctly, and cannot accept contact. Relaxation is the foundation on which all training is built.</p>
         <p><strong>Contact (Anlehnung):</strong> Consistent, elastic connection between rider's hand and horse's mouth through the rein. Not pulling — a conversation. The horse seeks the contact when relaxed and forward. Contact is developed from the leg aid forward into the hand, not from pulling backward.</p>
@@ -35,7 +38,7 @@ export default function DressageBasicsGuidePage() {
 
         <h2>How Dressage Tests Work</h2>
         <p>A dressage test is a sequence of movements performed in an arena (20×40 meters for lower levels, 20×60 meters for upper levels) that are judged individually by a judge positioned at C (the end of the arena). Each movement receives a score from 0–10: 10 (excellent), 9 (very good), 8 (good), 7 (fairly good), 6 (satisfactory), 5 (marginal), 4 (insufficient), 3 (fairly bad), 2 (bad), 1 (very bad), 0 (not performed or rider elimination). Collective marks at the end assess gaits, impulsion, submission, and rider position. The test percentage is the total score divided by the maximum possible score.</p>
-        <p>USDF levels in the US: Introductory (walk/trot), Training Level (adds canter), First Level (adds lengthenings), Second Level (shoulder-in, travers, rein-back, medium gaits), Third Level (half-pass, flying changes), Fourth Level (more collected movements). FEI levels: Prix St. Georges, Intermediate I and II, Grand Prix. Most amateur riders compete at Training through Second Level.</p>
+        <p><a href="https://www.usef.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">USDF</a> levels in the US: Introductory (walk/trot), Training Level (adds canter), First Level (adds lengthenings), Second Level (shoulder-in, travers, rein-back, medium gaits), Third Level (half-pass, flying changes), Fourth Level (more collected movements). <a href="https://fei.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FEI</a> levels: Prix St. Georges, Intermediate I and II, Grand Prix. Most amateur riders compete at Training through Second Level.</p>
 
         <h2>Equipment for Dressage</h2>
         <p><strong>Saddle:</strong> A dressage saddle has a straighter flap than an all-purpose saddle, a deep seat, and a longer billet designed to work with dressage girth. The straighter flap allows the rider to maintain the long-leg dressage position without the flap pushing the leg forward. A correctly fitting dressage saddle is the foundation of correct position.</p>

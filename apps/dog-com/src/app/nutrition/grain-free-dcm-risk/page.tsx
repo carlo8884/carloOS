@@ -53,7 +53,7 @@ export default function GrainFreeDCMPage() {
       <div className="carloOS-article">
         <h2>What Is DCM?</h2>
         <p>Dilated cardiomyopathy (DCM) is a disease of the heart muscle in which the heart chambers enlarge and the heart&apos;s ability to pump blood weakens. It is one of the most serious heart diseases in dogs — large and giant breeds are predisposed, but DCM can occur in any breed. Untreated DCM leads to congestive heart failure. The condition is typically considered genetic in predisposed breeds.</p>
-        <p>What made the FDA investigation significant was the apparent emergence of DCM in breeds not historically predisposed — including Golden Retrievers, Labradors, and other medium-to-large breeds — in dogs eating grain-free diets. This suggested a dietary rather than genetic cause.</p>
+        <p>What made the <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> investigation significant was the apparent emergence of DCM in breeds not historically predisposed — including Golden Retrievers, Labradors, and other medium-to-large breeds — in dogs eating grain-free diets. This suggested a dietary rather than genetic cause.</p>
 
         <h2>What the FDA Found</h2>
         <p>Between January 2014 and April 2019, the FDA received over 500 reports of DCM in dogs, many in breeds not genetically predisposed. The investigation identified a pattern: the majority of affected dogs were eating grain-free diets — specifically diets with high legume content (peas, lentils, chickpeas, or potatoes as primary ingredients).</p>
