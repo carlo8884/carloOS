@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,7 +29,7 @@ const PICKS = [
 
 export default function CollegiateReviewPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
@@ -153,6 +153,6 @@ export default function CollegiateReviewPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,7 +45,7 @@ const PICKS = [
 
 export default function BestPetInsurancePage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={combinedSchema} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Buyer's Guide</span>
@@ -228,6 +228,6 @@ export default function BestPetInsurancePage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

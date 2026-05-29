@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention 2025 — Bravecto, NexGard | Dog.com', description: 'Best flea and tick prevention for dogs — Bravecto, NexGard, and Simparica compared by coverage, duration, and safety profile. research-based.', path: '/reviews/best-flea-tick-prevention', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention for Dogs 2025', description: 'Bravecto, NexGard, and Simparica ranked by coverage and safety.', url: 'https://dog.com/reviews/best-flea-tick-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -14,7 +14,7 @@ const PICKS = [
 ]
 export default function FleaTickPreventionPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · May 2025</span>
@@ -73,6 +73,6 @@ export default function FleaTickPreventionPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

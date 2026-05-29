@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -18,7 +18,7 @@ const PICKS = [
 
 export default function BestDogHarnessesPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Buyer's Guide</span>
@@ -88,6 +88,6 @@ export default function BestDogHarnessesPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -26,7 +26,7 @@ const combined = combineSchemas(schema)
 
 export default function FerretCageSetupPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
@@ -229,6 +229,6 @@ export default function FerretCageSetupPage() {
           </p>
         </div>
       </ArticleLayout>
-    </>
+    </AffiliateDisclosure>
   )
 }

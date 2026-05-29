@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2025 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2025', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -13,7 +13,7 @@ const PICKS = [
 ]
 export default function BestWaterTestKitsPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🧪 Buyer's Guide</span>
@@ -67,6 +67,6 @@ export default function BestWaterTestKitsPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

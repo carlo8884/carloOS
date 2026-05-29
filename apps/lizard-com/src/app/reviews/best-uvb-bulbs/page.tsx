@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -36,7 +36,7 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 export default function BestUVBBulbsPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
 
       <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
@@ -185,6 +185,6 @@ export default function BestUVBBulbsPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

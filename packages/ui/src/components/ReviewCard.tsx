@@ -3,9 +3,16 @@
  * Used on comparison pages (best pet insurance, best dog food, saddle reviews, etc.)
  *
  * Supports: score badge, spec grid, pros/cons, affiliate CTA, winner highlight.
+ *
+ * CTA rendering modes (Architect Directive 2 — AffiliateLink rollout):
+ *   - Preferred: pass `ctaVendor` + `ctaSku` → renders <AffiliateLink>
+ *     (FTC-enforced, UTM-tagged, click-tracked through /go/[vendor]/[sku]).
+ *   - Legacy: pass `ctaHref` → renders a plain <a> (logs a dev warning).
+ *     Kept for backward compatibility while content is migrated.
  */
 
 import type { ReactNode } from 'react'
+import { AffiliateLink, type Vendor } from './AffiliateLink'
 
 interface Spec {
   label: string
@@ -34,9 +41,25 @@ interface ReviewCardProps {
   priceNote?: string
 
   ctaText?: string
+  /**
+   * Legacy raw href. Still supported but deprecated — prefer
+   * `ctaVendor` + `ctaSku` so the link routes through `/go/[vendor]/[sku]`
+   * with attribution + FTC enforcement.
+   */
   ctaHref?: string
   ctaAffiliateProgram?: string
   ctaAffiliateProduct?: string
+
+  /**
+   * Preferred CTA path: vendor key from the `Vendor` registry.
+   * When both `ctaVendor` and `ctaSku` are set, the CTA renders an
+   * `<AffiliateLink>` instead of a plain `<a>`.
+   */
+  ctaVendor?: Vendor
+  /** Vendor's product SKU/ASIN, or 'home' for vendor-home links. */
+  ctaSku?: string
+  /** Optional source slug for AffiliateLink attribution (article slug). */
+  ctaSource?: string
 
   /** Highlights the card with primary color top border */
   winner?: boolean
@@ -59,12 +82,37 @@ export function ReviewCard({
   price,
   priceNote,
   ctaText = 'Check Price →',
-  ctaHref = '#',
+  ctaHref,
   ctaAffiliateProgram,
   ctaAffiliateProduct,
+  ctaVendor,
+  ctaSku,
+  ctaSource,
   winner = false,
   id,
 }: ReviewCardProps) {
+  const useAffiliateLink = Boolean(ctaVendor && ctaSku)
+  const hasCta = useAffiliateLink || Boolean(ctaHref)
+
+  // Dev-only deprecation warning when the legacy plain-href path is used.
+  // Production: silent (don't spam logs / no behavior change).
+  if (
+    !useAffiliateLink &&
+    ctaHref &&
+    typeof process !== 'undefined' &&
+    process.env.NODE_ENV !== 'production'
+  ) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[ReviewCard] ctaHref is deprecated for "${name}". ` +
+        `Pass ctaVendor + ctaSku to route through <AffiliateLink> ` +
+        `(adds FTC enforcement, /go/[vendor]/[sku] redirect, click tracking).`,
+    )
+  }
+
+  const ctaClassName =
+    'inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap'
+
   return (
     <div
       id={id}
@@ -163,7 +211,7 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || ctaHref) && (
+      {(price || hasCta) && (
         <div className="flex items-end justify-between pt-5 border-t border-brand-border mt-2 gap-4 flex-wrap">
           {price && (
             <div>
@@ -177,10 +225,21 @@ export function ReviewCard({
             </div>
           )}
 
-          {ctaHref && (
+          {useAffiliateLink && ctaVendor && ctaSku && (
+            <AffiliateLink
+              vendor={ctaVendor}
+              sku={ctaSku}
+              source={ctaSource}
+              className={ctaClassName}
+            >
+              {ctaText}
+            </AffiliateLink>
+          )}
+
+          {!useAffiliateLink && ctaHref && (
             <a
               href={ctaHref}
-              className="inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
+              className={ctaClassName}
               data-program={ctaAffiliateProgram}
               data-product={ctaAffiliateProduct}
               rel="nofollow sponsored"
@@ -193,7 +252,7 @@ export function ReviewCard({
       )}
 
       {/* Affiliate note */}
-      {ctaHref && (
+      {hasCta && (
         <p className="text-2xs text-brand-text-light mt-2">
           We earn a commission if you purchase — no extra cost to you.
         </p>

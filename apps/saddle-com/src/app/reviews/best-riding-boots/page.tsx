@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall, Paddock, Western | Saddle.com', description: 'Best riding boots by category — tall field and dress boots, paddock boots, western boots, and half-chaps. Ariat, Mountain Horse, Tucci, Konig, Justin, Lucchese.', path: '/reviews/best-riding-boots', type: 'article' })
@@ -53,7 +53,7 @@ const PICKS = [
 
 export default function BestRidingBootsPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer&apos;s Guide</span>
@@ -232,6 +232,6 @@ export default function BestRidingBootsPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

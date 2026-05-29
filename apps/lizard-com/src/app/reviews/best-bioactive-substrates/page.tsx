@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Bioactive Reptile Substrates 2025 — Desert | Lizard.com', description: 'Best bioactive substrate mixes for reptile enclosures. Josh\'s Frogs, BioDude, and DIY mixes ranked for bearded dragons, leopard geckos, and tropical species.', path: '/reviews/best-bioactive-substrates', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Bioactive Reptile Substrates 2025', description: "Josh's Frogs, BioDude, and DIY desert/tropical mixes for reptile bioactive setups.", url: 'https://lizard.com/reviews/best-bioactive-substrates', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -14,7 +14,7 @@ const PICKS = [
 ]
 export default function BestBioactiveSubstratesPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="relative px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌱 Buyer's Guide</span>
@@ -67,6 +67,6 @@ export default function BestBioactiveSubstratesPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

@@ -11,6 +11,7 @@ import {
   ArticleByline,
   CalloutBox,
   DropCap,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -154,7 +155,7 @@ const PICKS = [
 
 export default function BestSaddlePadsPage() {
   return (
-    <>
+    <AffiliateDisclosure variant="banner">
       <SchemaScript schema={allSchemas} />
       <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
@@ -393,6 +394,6 @@ export default function BestSaddlePadsPage() {
           </aside>
         </div>
       </div>
-    </>
+    </AffiliateDisclosure>
   )
 }

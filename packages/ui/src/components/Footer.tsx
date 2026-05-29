@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
+import { SkimlinksLoader } from './SkimlinksLoader'
 
 interface FooterProps {
   siteId: SiteId
@@ -19,7 +20,11 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-brand-dark">
+    <>
+      {/* Universal Skimlinks auto-monetization (Architect Directive 1 / S5).
+          No-op until NEXT_PUBLIC_SKIMLINKS_PUBLISHER_ID is set in Vercel. */}
+      <SkimlinksLoader />
+      <footer className="bg-brand-dark">
       {/* Main grid */}
       <div className="px-container-sm sm:px-container py-16">
         <div className="mx-auto max-w-container-wide">
@@ -97,5 +102,6 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
         </div>
       </div>
     </footer>
+    </>
   )
 }
