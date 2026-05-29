@@ -183,6 +183,7 @@ export default function GoldenRetrieverBreedPage() {
               { label: 'Golden Retriever Health Issues & Screenings', href: '/breeds/golden-retriever/health' },
             ]} />
             <RelatedLinks title="Health Resources" links={[
+              { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
               { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },

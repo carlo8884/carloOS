@@ -39,7 +39,7 @@ interface ArticleLayoutProps {
   breadcrumbs?: Array<{ name: string; href?: string }>
   children: ReactNode       // article body
   sidebar?: ReactNode       // right sidebar content
-  schema?: Record<string, unknown>
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>
   /** Footer internal link suggestions */
   relatedLinks?: Array<{ title: string; href: string; category?: string }>
 }
