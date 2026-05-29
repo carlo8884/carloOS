@@ -48,12 +48,15 @@ function exists(path) {
 
 function routesFor(site) {
   const appDir = join(ROOT, 'apps', site, 'src/app')
+  // page.* files yield UI routes; route.* files yield API/redirect handlers.
+  // Both contribute to valid URL paths the site exposes.
   const pageFiles = listFiles(appDir, ['page.tsx', 'page.ts', 'page.jsx', 'page.js'])
+  const routeFiles = listFiles(appDir, ['route.ts', 'route.js'])
   const staticRoutes = new Set(['/'])
   const dynamicFolders = new Set()
   const dynamicPatterns = [] // RegExp[] for routes with [slug] anywhere in the path
-  for (const f of pageFiles) {
-    let rel = f.slice(appDir.length).replace(/\/page\.[tj]sx?$/, '')
+  for (const f of [...pageFiles, ...routeFiles]) {
+    let rel = f.slice(appDir.length).replace(/\/(page|route)\.[tj]sx?$/, '')
     if (rel === '') continue
     // Strip Next.js route groups: (funnels)/foo → /foo, (auth)/login → /login.
     // Route groups are ignored when computing the URL path.

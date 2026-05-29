@@ -6,6 +6,7 @@ import {
   ArticleLayout,
   ReviewCard,
   RelatedLinks,
+  CrossPortfolioCard,
   EmailCapture,
   FAQAccordion,
   CalloutBox,
@@ -155,6 +156,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
                 { label: disciplineShort(brand) === 'Western' ? 'Best Western Saddles' : 'Best English Saddles', href: disciplineShort(brand) === 'Western' ? '/reviews/best-western-saddles' : '/reviews/best-english-saddles' },
                 { label: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide' },
               ]}
+            />
+            <CrossPortfolioCard
+              currentSite="saddle-com"
+              contentType="brand"
+              variant="sidebar"
             />
             <EmailCapture
               variant="sidebar"

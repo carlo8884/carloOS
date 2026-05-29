@@ -32,7 +32,7 @@ export async function generateMetadata({
   return buildMetadata({
     siteId: 'dog-com',
     title: `${b.breedName} DNA Testing — Which Test, Which Conditions to Screen | Dog.com`,
-    description: `${b.breedName}s carry ${b.keyConditions.length} key hereditary conditions worth screening: ${b.keyConditions.map((c) => c.name).slice(0, 3).join(', ')} and more. See which DNA test is best.`,
+    description: `${b.breedName}s carry ${b.keyConditions.length} hereditary conditions worth screening. See which DNA test fits best.`,
     path: `/dna-testing/breeds/${breed}`,
     type: 'article',
   })
@@ -143,7 +143,7 @@ export default async function BreedDnaPage({
             including the ones most relevant to {b.breedName}s.
           </p>
           <a
-              href={`/go/${recommendedTest.vendor}/home?s=${`dna-testing-breed-${breed}`}
+              href={`/go/${recommendedTest.vendor}/home?s=dna-testing-breed-${breed}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Shop {recommendedTest.brand} →
