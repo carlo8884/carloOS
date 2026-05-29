@@ -36,6 +36,13 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 
+// Monetization primitives (Architect P2, S5 — see MONETIZATION-ARCHITECT.md)
+export { AffiliateLink, AffiliateDisclosureContext } from './components/AffiliateLink'
+export type { Vendor } from './components/AffiliateLink'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export { SkimlinksLoader } from './components/SkimlinksLoader'
+export { VENDORS, resolveVendorUrl } from './components/affiliate-vendors'
+
 // Health condition cards
 export { BreedHealthCard, SpeciesHealthCard } from './components/BreedHealthCard'
 
