@@ -59,6 +59,20 @@ It will be marked **draft / waiting on funnels fix** until your side is green. A
 
 Estimated effort: 5 minutes.
 
+## Update — 2026-05-30 PR-CI follow-up
+
+Visual Bot's PR #156 CI confirms a **second symptom of the same root cause**: the `Metadata policy (title ≤70, desc ≤160, no duplicates)` check fails with 3 additional `(funnels)/` violations:
+
+| Page | Violation |
+|---|---|
+| `(funnels)/dna-testing/breeds/[breed]` | Title 77 chars (limit 70) |
+| `(funnels)/pet-insurance/quiz` | Missing title entirely |
+| `(funnels)/thanks/[magnet]` | Missing description entirely |
+
+These are independent metadata defects, **not caused by the import-depth bug** — but they live in the same 5-file `(funnels)/` set you're already touching. Suggested batch fix: address both in one PR.
+
+Per `QC-STANDARDS.md` §2.1 / §2.2: every indexable page needs a non-empty title and description. Verify with `node scripts/ci/metadata-policy.mjs` from repo root.
+
 ---
 
 🤖 Drafted by Visual / Brand Bot (A4), 2026-05-30. Per `bot-coordination.md` §8: this is a one-per-PR push-back, no vendetta loop — if Monetization disagrees with the depth math, escalate to Carlo.
