@@ -95,5 +95,54 @@
     "provider": "either",
     "alt": "Portrait of a ferret's face",
     "orientation": "landscape"
+  },
+
+  "dog-com:hero": {
+    "query": "golden retriever portrait warm light",
+    "provider": "either",
+    "alt": "A golden retriever in warm afternoon light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-retriever": {
+    "query": "golden retriever portrait",
+    "provider": "either",
+    "alt": "Golden retriever portrait",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labrador-retriever": {
+    "query": "labrador retriever portrait",
+    "provider": "either",
+    "alt": "Labrador retriever portrait",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-french-bulldog": {
+    "query": "french bulldog portrait",
+    "provider": "either",
+    "alt": "French bulldog portrait",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shepherd": {
+    "query": "german shepherd portrait",
+    "provider": "either",
+    "alt": "German shepherd portrait",
+    "orientation": "landscape"
+  },
+  "dog-com:cornerstone-breed-health": {
+    "query": "veterinarian examining dog",
+    "provider": "either",
+    "alt": "A veterinarian examining a dog during a routine appointment",
+    "orientation": "landscape"
+  },
+  "dog-com:cornerstone-symptoms": {
+    "query": "concerned dog at vet",
+    "provider": "either",
+    "alt": "A dog being examined by its owner at home",
+    "orientation": "landscape"
+  },
+  "dog-com:cornerstone-senior": {
+    "query": "senior dog resting",
+    "provider": "either",
+    "alt": "A senior dog resting peacefully",
+    "orientation": "landscape"
   }
 }
