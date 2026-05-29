@@ -114,8 +114,12 @@ export default async function HomePage() {
             </h1>
 
             <p className="text-lg font-light text-white/60 leading-relaxed max-w-md mb-10">
-              Breed guides for 200+ breeds, research-based health articles, training that works,
-              and honest product reviews — built for owners who take their dog&apos;s wellbeing seriously.
+              Dog.com is a research-based reference library for dog owners covering
+              200+ breed profiles, vaccination schedules, training methods grounded in
+              positive-reinforcement science, nutrition guidance aligned with WSAVA and
+              AAFCO standards, and independent product reviews. Every article cites
+              veterinary sources and is reviewed against current evidence — built for
+              owners who want defensible answers about their dog&apos;s health, behavior, and care.
             </p>
 
             {/* CTAs */}
@@ -408,6 +412,26 @@ export default async function HomePage() {
           perks={['📋 Practical', '📬 Every Tuesday', '🐕 Breed-specific advice', '🚫 No spam']}
         />
       </section>
+
+      {/* ── PHOTO ATTRIBUTION — Unsplash credit strip ──────────────── */}
+      <aside
+        className="bg-brand-dark px-container sm:px-container-sm py-6"
+        aria-label="Photo credits"
+      >
+        <p className="text-2xs uppercase tracking-eyebrow text-white/55">
+          Hero, breed, and health-article photography: contributors on{' '}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="underline text-white/80"
+          >
+            Unsplash
+          </a>
+          . Used under the Unsplash License. Breed photos will migrate to
+          Wikimedia Commons references where taxonomic accuracy matters.
+        </p>
+      </aside>
     </>
   )
 }

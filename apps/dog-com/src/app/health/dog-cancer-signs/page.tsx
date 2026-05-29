@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals.', path: '/health/dog-cancer-signs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs', description: 'Early detection cancer warning signs for dogs.', url: 'https://dog.com/health/dog-cancer-signs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: '12 Warning Signs of Cancer in Dogs', description: 'Cancer warning signs and early detection for dogs.', url: 'https://dog.com/health/dog-cancer-signs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -38,7 +39,13 @@ export default function DogCancerSignsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">Recognizing these signs early — before a cancer is advanced — provides more treatment options, better prognosis, and in many cases, the difference between curative intent treatment and palliative care. Annual or biannual comprehensive wellness exams with a veterinarian who performs thorough physical assessment (lymph node palpation, abdominal palpation, oral examination) is the baseline.</p>
+
+          <CalloutBox variant="warning" title="When to go to the ER">
+            Sudden abdominal distension (especially with pale gums, weakness, or collapse) can mean a bleeding splenic mass — common in Goldens, Labs, and German Shepherds. Acute respiratory distress, profuse bleeding from any orifice, or sudden collapse are emergencies. Transport to a 24/7 veterinary ER immediately rather than waiting for an appointment.
+          </CalloutBox>
           {SIGNS.map((item, i) => (
             <div key={item.sign} className="flex gap-4 mb-5 p-5 rounded-xl border border-brand-border bg-brand-surface">
               <span className="font-display font-black text-brand-primary text-2xl flex-shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>

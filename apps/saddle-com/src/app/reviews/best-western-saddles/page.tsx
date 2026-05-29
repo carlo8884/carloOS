@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -46,7 +47,7 @@ export default function BestWesternSaddlesPage() {
             Best Western Saddles 2025
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using CSF reviewer notes and published rider reports.
+            Western saddle design is highly discipline-specific — a reining saddle on a barrel horse or a trail saddle in a cutting pen is the wrong tool. We ranked the best options per discipline, compared using <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">CSF</a> reviewer notes and published rider reports.
           </p>
         </div>
       </div>
@@ -63,6 +64,12 @@ export default function BestWesternSaddlesPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            <CalloutBox variant="tip" title="Match the saddle to the discipline">
+              A reining saddle on a barrel horse, or a roping saddle on a trail horse, is the wrong tool — each tree geometry is optimized for a specific job. Buy used from a discipline-specific source (reiner, cutter, roper) rather than a general tack store when possible: the gear has already been validated for the job.
+            </CalloutBox>
+
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Western Saddle Sizing</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Western saddle seat size is measured differently from English — the measurement runs from the base of the horn to the front of the cantle. Most adult riders fall between 14.5" and 17" depending on hip width and riding discipline. Disciplines that require deep-seat security (reining, cutting) typically use smaller seats; trail and pleasure riding can go slightly larger for comfort. See our <Link href="/guides/seat-size-guide" className="text-brand-primary no-underline hover:underline">seat size guide</Link> for measurements.</p>

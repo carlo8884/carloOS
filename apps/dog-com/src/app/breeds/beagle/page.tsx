@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Beagle Dog Breed Guide — Health, Training & Care | Dog.com', description: 'Complete Beagle guide. Nose-driven escape artists with specific health concerns — epilepsy, hypothyroidism, and obesity.', path: '/breeds/beagle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Beagle Breed Guide', description: 'Health, temperament, training, and care for Beagles.', url: 'https://dog.com/breeds/beagle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -21,14 +22,21 @@ export default function BeaglePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
+        <RelatedLinks title="Beagle Health Deep-Dive" links={[{ label: 'Beagle Health Issues & Screenings', href: '/breeds/beagle/health' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Beagle Feeding Guide', href: '/breeds/beagle/feeding' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Temperament</h2>
-        <p>Beagles were bred to trail rabbit and hare by scent — this history defines their behavior in captivity. They are friendly, pack-oriented dogs that coexist well with other dogs, children, and most people. The challenges: they follow their nose with extraordinary single-mindedness, bark and howl vocally (they were bred to alert hunters), and have a low threshold for bolting after scent trails.</p>
+        <DropCap>Beagles were bred to trail rabbit and hare by scent — this history defines their behavior in captivity. They are friendly, pack-oriented dogs that coexist well with other dogs, children, and most people. The challenges: they follow their nose with extraordinary single-mindedness, bark and howl vocally (they were bred to alert hunters), and have a low threshold for bolting after scent trails.</DropCap>
         <p>A Beagle off-leash in an unfenced area is a Beagle that can disappear — their nose overrides recall training reliably. Fenced yard or leash at all times outdoors. A high fence (5+ feet) is important — Beagles will dig under or find gaps in lower fences.</p>
+
+        <CalloutBox variant="tip" title="Channel the nose">
+          Structured nose work classes are the single most effective enrichment activity for Beagles. Their scent drive is a feature, not a flaw — directing it into a training activity reduces destructive behavior, vocalisation, and bolting. Many positive-reinforcement trainers offer beginner scent-work programs that suit pet Beagles.
+        </CalloutBox>
 
         <h2>Training</h2>
         <p>Beagles are intelligent but not easily motivated by the same things as herding breeds. Food is the primary currency — they are highly food-motivated (which also predisposes them to obesity). Short sessions, high-value rewards, and environmental management (do not expect reliable off-leash recall). <em>Nose work</em> — structured scent detection training — is the discipline Beagles excel at and genuinely enjoy. It channels their primary drive into a structured activity.</p>

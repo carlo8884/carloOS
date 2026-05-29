@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Boxer Breed Guide — Cancer Risk, Aortic Stenosis | Dog.com', description: 'Boxers have the highest cancer rate of any breed. Mast cell tumors, brain tumors, and heart disease (ARVC, SAS) are the primary concerns.', path: '/breeds/boxer', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Boxer Breed Guide', description: 'Cancer risk, cardiac disease, and health screening for Boxers.', url: 'https://dog.com/breeds/boxer', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BoxerPage() {
@@ -23,6 +24,8 @@ export default function BoxerPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <BreedHealthCard name="Cancer — Highest Rate of Any Breed" riskLevel="very-high"
           description="Boxers have the highest cancer incidence of any breed studied. The most significant cancer types: mast cell tumors (skin tumors that can be benign or highly malignant — any new skin lump on a Boxer requires immediate fine needle aspirate, not watchful waiting), brain tumors (gliomas and meningiomas — Boxers and brachycephalic breeds are disproportionately affected, presenting with new-onset seizures, behavior changes, or neurological signs in a middle-aged to older dog), lymphoma, and histiocytic sarcoma. The average age of cancer death in Boxers is approximately 6–7 years."
           signs={['Any new skin lump — aspirate immediately', 'New-onset seizures in adult', 'Rapid neurological changes', 'Unexplained weight loss', 'Lymph node enlargement']}
@@ -39,7 +42,11 @@ export default function BoxerPage() {
           management="Cardiologist evaluation when murmur detected. Annual echocardiogram for Grade 3+ murmurs. Atenolol for moderate-severe SAS to reduce cardiac workload." />
 
         <h2>Heat Sensitivity — Brachycephalic Considerations</h2>
-        <p>Boxers are brachycephalic — their shortened muzzle compresses the airway. Like Bulldogs and French Bulldogs, they cannot pant as effectively as long-nosed breeds, making them significantly more susceptible to heat stroke. During hot weather: limit exercise to early morning and evening, never leave in a car, provide constant cool water access, and watch for excessive panting, drooling, and weakness. Any Boxer that collapses in heat is a veterinary emergency. Boxers with more severe respiratory compromise (loud breathing at rest, sleep apnea) should be evaluated for BOAS (brachycephalic obstructive airway syndrome) surgery.</p>
+        <DropCap>Boxers are brachycephalic — their shortened muzzle compresses the airway. Like Bulldogs and French Bulldogs, they cannot pant as effectively as long-nosed breeds, making them significantly more susceptible to heat stroke. During hot weather: limit exercise to early morning and evening, never leave in a car, provide constant cool water access, and watch for excessive panting, drooling, and weakness. Any Boxer that collapses in heat is a veterinary emergency. Boxers with more severe respiratory compromise (loud breathing at rest, sleep apnea) should be evaluated for BOAS (brachycephalic obstructive airway syndrome) surgery.</DropCap>
+
+        <CalloutBox variant="evidence" title="Aspirate every new lump">
+          The Boxer skin lump that &quot;looks like a wart&quot; is the mast cell tumor that is locally invasive and may have metastasized by the time it&apos;s removed. Any new skin lesion in a Boxer warrants a fine-needle aspirate at the next available appointment — not watchful waiting. This single habit is the highest-yield cancer-detection intervention in the breed.
+        </CalloutBox>
 
         <h2>Screening Protocol for Boxer Owners</h2>
         <ul>
