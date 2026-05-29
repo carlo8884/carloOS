@@ -5,7 +5,7 @@ Replaces the previous five governance docs (`OPERATIONS`, `ROADMAP`,
 `AGENTS`, `RELEASES`, `QC-STANDARDS`). Trust standards still live in
 their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-29 (post launch-wave merge)
+**Last updated:** 2026-05-29 (morning merge wave — 18 PRs landed)
 
 ---
 
@@ -134,9 +134,51 @@ Append-only. Source of truth is git log; this is the human index.
 | saddle-com | 43 | Magazine-polished; cornerstone complete |
 | petfood-com | 11 | Scaffold + 10 cornerstones + lead magnet; needs Vercel bootstrap |
 | ferret-com | 10 | Scaffold + 8 cornerstones + lead magnet; needs Vercel bootstrap |
-| **Total** | **656** | Across 10 sites (was 327 across 5 sites at prior update) |
+| **Total** | **~810** | Across 10 sites (was 656 → +155 from morning merge wave; will tick up as #132 + #135 + lizard husbandry land) |
 
-## 8a. Recently Shipped This Week (2026-05-28 → 2026-05-29)
+## 8a. 2026-05-29 Morning Merge Wave (after Carlo's "merge, build, improve. Go." directive)
+
+18 PRs merged before noon Pacific, adding ~155 new programmatic SEO pages + FTC affiliate compliance infrastructure + portfolio-wide cross-linking. New `main` HEAD is `19fedaa`.
+
+### Content templates merged
+
+| PR | Site | Surface | Count |
+|---|---|---|---|
+| #108 | vets-co | `/medications/[slug]` | 12 FDA/Plumb's-anchored medication pages |
+| #110 | lizard-com | `/health/[slug]` | 15 reptile condition pages (ARAV-cited) |
+| #111 | horses-com | `/disciplines/[slug]/equipment` | 6 discipline equipment buyer guides |
+| #112 | saddle-com | `/brands/[slug]` | 10 saddle brand reviews (Stübben/Pessoa/Bates/+7) |
+| #114 | petfoods-com | `/brands/[slug]` (long-form) | 10 WSAVA-scored brand reviews |
+| #115 | dog-com | `/breeds/[slug]/feeding` | 8 breed-specific feeding deep-dives |
+| #116 | petfood-com | `/life-stage/[slug]` | 7 AAFCO life-stage deep-dives |
+| #119 | vets-co | `/specialists/[slug]` | 8 board-certified specialty deep-dives |
+| #120 | fish-com | `/equipment/[slug]` | 6 equipment-category buyer guides |
+| #121 | ferrets-com | `/states/[slug]` | 51 per-state legality + adoption directory |
+| #123 | ferret-com | `/care/*`, `/health/*` | 6 new cornerstones (vaccinations, lymphoma, +4) |
+
+### Infrastructure merged
+
+| PR | What |
+|---|---|
+| #122 | Monetization-bot strategic handoff (`ops/handoffs/2026-05-29-monetization-update-for-bot.md`) |
+| #124 | AffiliateDisclosure component + 10 site disclosure pages + 10 `/go/[vendor]/[sku]` redirects + per-site vendor allow-lists |
+| #126 | Bot coordination policy (`ops/policies/bot-coordination.md`) — lanes, governance, vendor allow-lists, trust-bar guardrails |
+| #127 | Monday launch checklist (`ops/handoffs/2026-05-29-monday-launch-checklist.md`) — Carlo's DNS/Mailchimp/GA4 punch list |
+| #128 | `getCrossPortfolioRecommendations` helper + 29 (site × content-type) recommendation entries — unblocks CrossPortfolioCard portfolio-wide |
+| #129 | `link-check.mjs` fix — handles `[slug]` anywhere in path (not just trailing) |
+| #130 | ArticleLayout `schema` prop accepts combined-schema arrays |
+
+### Open PRs queued
+
+- #132 — dog-com `/breeds/[slug]/health` (8 OFA/CHIC breed health deep-dives) — CI cycling
+- #135 — saddle-com `/fit/[slug]` (6 discipline-specific saddle fit guides + hub) — CI cycling
+- Monetization bot's 11 in-flight branches (affiliate-link-portfolio-rollout, askthevet-mvp, seniorpets-mvp, dogpicture-mvp, petsupplies-mvp, email-sequences-7-magnets, etc.) — PRs not yet open
+
+### Agents running in background
+
+- Lizard.com /husbandry/[slug] — 8 husbandry topics (UVB, basking, humidity, etc.)
+
+## 8b. Recently Shipped This Week (2026-05-28 → 2026-05-29)
 
 Highlights from the ~100-PR merge wave:
 
