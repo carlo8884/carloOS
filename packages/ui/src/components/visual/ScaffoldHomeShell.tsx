@@ -431,7 +431,8 @@ export function ScaffoldHomeShell(props: ScaffoldHomeShellProps) {
 
       {/* EMAIL CAPTURE ───────────────────────────────────────────────── */}
       <section
-        className="px-container-sm sm:px-container py-section"
+        id="email-capture"
+        className="px-container-sm sm:px-container py-section scroll-mt-nav"
         style={{ background: 'var(--brand-primary-pale)' }}
       >
         <div className="mx-auto max-w-container-wide">
