@@ -25,6 +25,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   CalloutBox,
   EmailCapture,
@@ -203,6 +204,11 @@ export default async function HusbandryTopicPage({ params }: PageProps) {
           {relatedHealthLinks.length > 0 && (
             <RelatedLinks title="Related Conditions" links={relatedHealthLinks} />
           )}
+          <CrossPortfolioCard
+            currentSite="lizard-com"
+            contentType="health"
+            variant="sidebar"
+          />
           <CalloutBox variant="info" title="Find an ARAV-certified vet">
             <p style={{ margin: 0, fontSize: '13.5px' }}>
               The Association of Reptilian and Amphibian Veterinarians (ARAV) maintains a public

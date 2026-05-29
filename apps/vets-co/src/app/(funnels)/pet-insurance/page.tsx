@@ -120,7 +120,7 @@ export default function VetsCoInsuranceHub() {
                   <p className="text-sm text-brand-text-mid">{c.blurb}</p>
                 </div>
                 <a
-              href={`/go/${c.vendor}/home?s=${`vets-co-insurance-hub-${c.slug}`}
+              href={`/go/${c.vendor}/home?s=vets-co-insurance-hub-${c.slug}`}
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-4 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90 whitespace-nowrap"
             >
               Get quote →

@@ -39,8 +39,8 @@ export async function generateMetadata({
   if (!b) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `Best Pet Insurance for ${b.breedName}s (2026) — Carrier Match by Risk Profile | Dog.com`,
-    description: `${b.breedName}s face ${b.keyConditions.length} key hereditary conditions. Our editorial recommendation is ${getCarrierBySlug(b.recommendedCarrier)?.name ?? 'the right-for-breed carrier'}, with two backups. Compare sample premiums + coverage.`,
+    title: `Best Pet Insurance for ${b.breedName}s (2026)`,
+    description: `${b.breedName}s have ${b.keyConditions.length} hereditary conditions worth screening. Top carrier matches with sample premiums.`,
     path: `/pet-insurance/breeds/${b.slug}`,
     type: 'article',
   })
