@@ -19,6 +19,12 @@ export type SiteId =
   | 'ferret-com'
   | 'ferrets-com'
   | 'petfoods-com'
+  // ─── New apps (Architect scaffold request 2026-05-30, Carlo-approved) ─
+  | 'askthevet'         // S2 — AI symptom checker
+  | 'seniorpets'        // S9 — senior pet Rx + content
+  | 'dogpicture'        // S8 — AI pet portraits + POD
+  | 'petsupplies'       // S1 — comparison engine
+  | 'hardmoneyloans'    // S11 — off-vertical lead gen
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -381,6 +387,141 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://petfoods.com',
     logoText: 'PetFoods.com',
     twPrimary: 'green',
+  },
+
+  // ─── AskTheVet.com — AI symptom checker (Architect S2) ────────────────
+  'askthevet': {
+    primary: '#2563eb',
+    primaryLight: '#3b82f6',
+    primaryPale: '#eff6ff',
+    primaryDark: '#1d4ed8',
+    dark: '#0f172a',
+    surface: '#f8fafc',
+    white: '#ffffff',
+    textDark: '#0f172a',
+    textMid: '#334155',
+    textLight: '#64748b',
+    border: '#e2e8f0',
+    success: '#16a34a',
+    warning: '#d97706',
+    danger: '#dc2626',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 500, 600, 700, 800],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'AskTheVet.com',
+    siteTagline: 'AI Pet Symptom Checker — Triage in Seconds',
+    siteUrl: 'https://askthevet.com',
+    logoText: 'AskTheVet',
+    twPrimary: 'blue',
+  },
+
+  // ─── SeniorPetPharmacy — senior pet Rx + care content (Architect S9) ──
+  'seniorpets': {
+    primary: '#7C6F59',
+    primaryLight: '#9A8D74',
+    primaryPale: '#F1EBDD',
+    primaryDark: '#5A503F',
+    dark: '#211D17',
+    surface: '#FAF5EA',
+    white: '#FFFFFF',
+    textDark: '#211D17',
+    textMid: '#4A4234',
+    textLight: '#8A8070',
+    border: '#E3D9C5',
+    success: '#2A6A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Lora',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 500, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'SeniorPetPharmacy',
+    siteTagline: 'Compassionate care for aging pets',
+    siteUrl: 'https://seniorpetpharmacy.com',
+    logoText: 'SeniorPetPharmacy',
+    twPrimary: 'stone',
+  },
+
+  // ─── DogPicture.com — AI dog portraits + POD (Architect S8) ───────────
+  'dogpicture': {
+    primary: '#F97316',
+    primaryLight: '#FB923C',
+    primaryPale: '#FFF4EB',
+    primaryDark: '#C2410C',
+    dark: '#1F1408',
+    surface: '#FFF8F0',
+    white: '#FFFFFF',
+    textDark: '#1A0F08',
+    textMid: '#5C3E28',
+    textLight: '#9A7860',
+    border: '#F3E4D2',
+    success: '#16A34A',
+    warning: '#F59E0B',
+    danger: '#DC2626',
+    fontDisplay: 'Fraunces',
+    fontBody: 'Nunito',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 600, 700, 800],
+    siteName: 'DogPicture.com',
+    siteTagline: 'AI dog portraits — keepsakes for the dog you love',
+    siteUrl: 'https://dogpicture.com',
+    logoText: 'DogPicture',
+    twPrimary: 'orange',
+  },
+
+  // ─── PetSupplies.com — NerdWallet for pet products (Architect S1) ─────
+  'petsupplies': {
+    primary: '#475569',
+    primaryLight: '#64748B',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#334155',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#16A34A',
+    warning: '#D97706',
+    danger: '#DC2626',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetSupplies.com',
+    siteTagline: 'Independent Pet Product Comparisons',
+    siteUrl: 'https://petsupplies.com',
+    logoText: 'PetSupplies.com',
+    twPrimary: 'slate',
+  },
+
+  // ─── HardMoneyLoans.com — off-vertical lead gen (Architect S11) ───────
+  'hardmoneyloans': {
+    primary: '#1e293b',
+    primaryLight: '#334155',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#0F172A',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#15803D',
+    warning: '#B45309',
+    danger: '#B91C1C',
+    fontDisplay: 'Source Serif 4',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [400, 500, 600, 700],
+    siteName: 'HardMoneyLoans.com',
+    siteTagline: 'Compare top hard money lenders for real estate investors',
+    siteUrl: 'https://hardmoneyloans.com',
+    logoText: 'HardMoneyLoans.com',
+    twPrimary: 'slate',
   },
 }
 
@@ -840,6 +981,101 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://petfoods.com/og-default.jpg',
+  },
+
+  // ─── AskTheVet.com ────────────────────────────────────────────────────
+  'askthevet': {
+    id: 'askthevet',
+    theme: themes['askthevet'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'AskTheVet', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://askthevet.com/og-default.jpg',
+  },
+
+  // ─── SeniorPetPharmacy ────────────────────────────────────────────────
+  'seniorpets': {
+    id: 'seniorpets',
+    theme: themes['seniorpets'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: true,
+      healthyPaws: true,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'SeniorPetPharmacy', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://seniorpetpharmacy.com/og-default.jpg',
+  },
+
+  // ─── DogPicture.com ───────────────────────────────────────────────────
+  'dogpicture': {
+    id: 'dogpicture',
+    theme: themes['dogpicture'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'DogPicture', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://dogpicture.com/og-default.jpg',
+  },
+
+  // ─── PetSupplies.com ──────────────────────────────────────────────────
+  'petsupplies': {
+    id: 'petsupplies',
+    theme: themes['petsupplies'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'PetSupplies.com', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://petsupplies.com/og-default.jpg',
+  },
+
+  // ─── HardMoneyLoans.com ───────────────────────────────────────────────
+  'hardmoneyloans': {
+    id: 'hardmoneyloans',
+    theme: themes['hardmoneyloans'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'HardMoneyLoans.com', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://hardmoneyloans.com/og-default.jpg',
   },
 }
 
