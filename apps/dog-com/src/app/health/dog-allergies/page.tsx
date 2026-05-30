@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Atopic, Food, Contact | Dog.com', description: 'Three allergy types in dogs: atopic dermatitis, food allergy, contact allergy. Diagnostic ladder, treatment tiers, and when to refer to a dermatologist.', path: '/health/dog-allergies', type: 'article' })
@@ -40,12 +40,18 @@ export default function DogAllergiesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
+            <strong className="not-italic">TL;DR.</strong> Dogs get three types of allergy — atopic dermatitis (the most common, environmental), cutaneous adverse food reaction, and contact allergy — plus flea allergy as the critical differential. The only validated food-allergy test is a strict 8–12 week elimination diet with provocation. First-line atopic therapy is oclacitinib (Apoquel) or lokivetmab (Cytopoint); antihistamines are unreliable.
+          </p>
+
           <div style={{ background: 'rgba(60, 90, 140, 0.06)', border: '1px solid rgba(60, 90, 140, 0.20)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '8px' }}>General Information</div>
             <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>This page summarizes the published veterinary literature on canine allergic skin disease. It is not a substitute for examination by your veterinarian or by a board-certified dermatologist (DACVD).</p>
           </div>
 
-          <h2 id="types">The Three Allergy Types</h2>
+          <h2 id="types">What Are the Three Types of Dog Allergy?</h2>
           <p>Veterinary dermatology recognizes three immunologically distinct categories of allergic skin disease in dogs:</p>
           <ul>
             <li><strong>Atopic dermatitis (canine atopy)</strong> — IgE-mediated hypersensitivity to environmental allergens such as house dust mites, storage mites, pollens, mold spores, and animal danders. The most common form. The International Committee on Allergic Diseases of Animals (ICADA) treatment guidelines published in BMC Veterinary Research (Olivry et al., 2015) are the standard reference.</li>
@@ -54,12 +60,12 @@ export default function DogAllergiesPage() {
           </ul>
           <p>A fourth condition — <strong>flea allergy dermatitis (FAD)</strong> — is also allergic but mechanistically distinct (hypersensitivity to flea salivary antigens). FAD is covered in its own section below because it is the single most important differential and must be excluded before any other allergy work-up proceeds.</p>
 
-          <h2 id="atopy">Atopic Dermatitis — The Most Common</h2>
+          <h2 id="atopy">How Do I Know If My Dog Has Atopic Dermatitis?</h2>
           <p>Canine atopic dermatitis is a chronic, relapsing inflammatory skin disease with strong breed and familial predisposition. Predisposed breeds reported in the dermatology literature include West Highland White Terriers, Boxers, Bulldogs, French Bulldogs, Labrador and Golden Retrievers, German Shepherds, and Shar-Peis, among others.</p>
           <p><strong>Typical presentation.</strong> Onset usually between 6 months and 3 years of age. Pruritus (itching) is the cardinal sign and is initially nonlesional — the dog itches before there is anything visible. Affected sites: face (periocular, perioral), ears (recurrent otitis externa is often the first clue), ventral neck, axillae, groin, ventral abdomen, perineum, and the feet (paw licking and chewing). Seasonal at first in many dogs; year-round with progression.</p>
           <p><strong>Diagnosis is clinical.</strong> Favrot&apos;s criteria (Favrot et al., Vet Dermatol 2010) are a published set of clinical features that, in combination, suggest atopic dermatitis. Diagnosis is one of exclusion: ectoparasites, secondary bacterial and yeast infection, and cutaneous adverse food reaction must be ruled out first. Intradermal or serum allergy testing is used to identify specific environmental allergens for immunotherapy formulation — not as a screening or diagnostic test.</p>
 
-          <h2 id="food">Cutaneous Adverse Food Reaction</h2>
+          <h2 id="food">How Do I Test for a Food Allergy in My Dog?</h2>
           <p>Food allergy is frequently overdiagnosed by owners and underdiagnosed when properly worked up. Two patterns are important:</p>
           <ul>
             <li><strong>Cutaneous signs</strong> — nonseasonal pruritus, recurrent pyoderma, recurrent otitis. Indistinguishable from atopic dermatitis on physical exam alone in most dogs.</li>
@@ -134,7 +140,7 @@ export default function DogAllergiesPage() {
           </ul>
 
           <h2 id="faq">FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

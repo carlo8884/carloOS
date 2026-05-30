@@ -34,6 +34,37 @@ const schema = buildHowToSchema({
   ],
 })
 
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Aquarium Stocking Calculator',
+  url: URL,
+  applicationCategory: 'UtilitiesApplication',
+  applicationSubCategory: 'AquariumCalculator',
+  operatingSystem: 'Web Browser (any HTML5-capable device)',
+  description:
+    'Free interactive aquarium stocking calculator that estimates how many fish a tank can house using net water volume, surface area, filtration capacity, and aquascape style — a modern replacement for the outdated inch-per-gallon rule.',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Surface-area-based stocking model (oxygen exchange) rather than inch-per-gallon',
+    'Adjusts for filtration class (HOB, canister, sump) and aquascape style',
+    'Separate freshwater and saltwater modes',
+    'Outputs slim-inch equivalents with body-mass conversion factors',
+    'Recommends a 60–80% target band for parameter stability',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fish.com Editorial',
+    url: 'https://fish.com',
+  },
+}
+
 const FAQS = [
   {
     question: 'Is the "1 inch of fish per gallon" rule accurate?',
@@ -109,6 +140,10 @@ export default function StockingCalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
