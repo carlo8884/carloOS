@@ -81,3 +81,22 @@ export type {
 // 12-line minimal.
 export { OgTemplate } from './og/OgTemplate'
 export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'
+
+// Visual primitives — composable site shells & calculator components.
+// Live under packages/ui/src/components/visual/ per master prompt §4
+// ("NEW shared visual primitives").
+export {
+  Calculator,
+  FieldNumber,
+  FieldSelect,
+  OutputBig,
+  OutputRange,
+} from './components/visual/CalculatorShell'
+export type {
+  CalculatorProps,
+  FieldNumberProps,
+  FieldSelectProps,
+  FieldSelectOption,
+  OutputBigProps,
+  OutputRangeProps,
+} from './components/visual/CalculatorShell'
