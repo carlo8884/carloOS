@@ -10,7 +10,10 @@ import {
   AffiliateDisclosure,
   EmailCapture,
 } from '@carloOS/ui'
-import { INSURANCE_BREEDS } from '../../../../../data/insurance-by-breed'
+import {
+  ALL_INSURANCE_BREEDS,
+  findBreedBySlug,
+} from '../../../../../data/insurance-breeds-all'
 import { CARRIERS } from '../../../../../data/insurance-carriers'
 import { States } from '../../../../../data/states'
 
@@ -19,14 +22,14 @@ interface PageParams {
 }
 
 export async function generateStaticParams() {
-  return INSURANCE_BREEDS.map((b) => ({ breed: b.slug }))
+  return ALL_INSURANCE_BREEDS.map((b) => ({ breed: b.slug }))
 }
 
 export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
   const { breed } = await params
-  const b = INSURANCE_BREEDS.find((x) => x.slug === breed)
+  const b = findBreedBySlug(breed)
   if (!b) return {}
   return buildMetadata({
     siteId: 'vets-co',
@@ -39,7 +42,7 @@ export async function generateMetadata({
 
 export default async function BreedInsuranceHub({ params }: PageParams) {
   const { breed } = await params
-  const b = INSURANCE_BREEDS.find((x) => x.slug === breed)
+  const b = findBreedBySlug(breed)
   if (!b) notFound()
 
   const recommended = CARRIERS.find((c) => c.slug === b.recommendedCarrier)

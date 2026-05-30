@@ -10,7 +10,7 @@ import {
   AffiliateDisclosure,
   EmailCapture,
 } from '@carloOS/ui'
-import { INSURANCE_BREEDS } from '../../../../../data/insurance-by-breed'
+import { breedsForSpecies } from '../../../../../data/insurance-breeds-all'
 import { States } from '../../../../../data/states'
 import { getStateInsuranceContext } from '../../../../../data/insurance-by-state'
 
@@ -117,10 +117,10 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         </div>
       </section>
 
-      {/* ─── Breed index ──────────────────────────────────────────────────── */}
+      {/* ─── Dog breed index ──────────────────────────────────────────────── */}
       <section className="mt-12">
         <h2 className="font-display text-2xl font-bold mb-3">
-          Breed-Specific Recommendations for {s.name} Owners
+          Dog Breeds — Recommendations for {s.name} Owners
         </h2>
         <p className="text-brand-text-mid leading-relaxed mb-5">
           Different breeds carry different hereditary risk profiles. The right
@@ -128,7 +128,31 @@ export default async function StateInsuranceHub({ params }: PageParams) {
           factors second. Pick your breed for a {s.name}-specific breakdown:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-          {INSURANCE_BREEDS.map((b) => (
+          {breedsForSpecies('dog').map((b) => (
+            <Link
+              key={b.slug}
+              href={`/pet-insurance/breeds/${b.slug}/${s.slug}`}
+              className="text-sm px-3 py-2 border border-brand-border rounded hover:border-brand-primary hover:text-brand-primary transition-colors"
+            >
+              {b.breedName}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Cat breed index ──────────────────────────────────────────────── */}
+      <section className="mt-12">
+        <h2 className="font-display text-2xl font-bold mb-3">
+          Cat Breeds — Recommendations for {s.name} Owners
+        </h2>
+        <p className="text-brand-text-mid leading-relaxed mb-5">
+          Cat insurance is a different market than dog insurance — generally
+          lower premiums, but hereditary conditions (HCM, PKD, breed-specific
+          metabolic disorders) make breed-aware coverage selection important.
+          Pick your breed:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+          {breedsForSpecies('cat').map((b) => (
             <Link
               key={b.slug}
               href={`/pet-insurance/breeds/${b.slug}/${s.slug}`}

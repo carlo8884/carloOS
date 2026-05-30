@@ -10,7 +10,10 @@ import {
   AffiliateDisclosure,
   EmailCapture,
 } from '@carloOS/ui'
-import { INSURANCE_BREEDS } from '../../../../../../data/insurance-by-breed'
+import {
+  ALL_INSURANCE_BREEDS,
+  findBreedBySlug,
+} from '../../../../../../data/insurance-breeds-all'
 import { CARRIERS } from '../../../../../../data/insurance-carriers'
 import { States } from '../../../../../../data/states'
 import { getStateInsuranceContext } from '../../../../../../data/insurance-by-state'
@@ -20,7 +23,7 @@ interface PageParams {
 }
 
 /**
- * Programmatic SEO page: 31 breeds × 52 states = 1,612 pages.
+ * Programmatic SEO page: (31 dog + 25 cat) breeds × 52 states = 2,912 pages.
  *
  * Each page targets buyer-stage queries like "best pet insurance for
  * golden retrievers in California". Content blends breed-specific risk
@@ -31,7 +34,7 @@ interface PageParams {
 
 export async function generateStaticParams() {
   const out: Array<{ breed: string; state: string }> = []
-  for (const breed of INSURANCE_BREEDS) {
+  for (const breed of ALL_INSURANCE_BREEDS) {
     for (const state of States) {
       out.push({ breed: breed.slug, state: state.slug })
     }
@@ -43,7 +46,7 @@ export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
   const { breed, state } = await params
-  const b = INSURANCE_BREEDS.find((x) => x.slug === breed)
+  const b = findBreedBySlug(breed)
   const s = States.find((x) => x.slug === state)
   if (!b || !s) return {}
   return buildMetadata({
@@ -57,7 +60,7 @@ export async function generateMetadata({
 
 export default async function BreedStateInsurancePage({ params }: PageParams) {
   const { breed, state } = await params
-  const b = INSURANCE_BREEDS.find((x) => x.slug === breed)
+  const b = findBreedBySlug(breed)
   const s = States.find((x) => x.slug === state)
   if (!b || !s) notFound()
 
