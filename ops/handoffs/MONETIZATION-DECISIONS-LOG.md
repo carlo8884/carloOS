@@ -19,6 +19,7 @@ Every entry uses the standard 5-field framework:
 
 ### D-001 · Programmatic Breed × State Insurance Matrix (vets.co)
 - **Date shipped:** 2026-05-30
+- **PR:** #173 (open, layered with D-005)
 - **Branch:** `claude/vets-co-programmatic-breed-state-insurance`
 - **Pages added:** 1,612 deep + 31 breed hubs + 52 state hubs = 1,695 total
 - **Revenue Potential:** $15K–$60K MRR at maturity (100% B-tier insurance leads, $30–$120 EPC)
@@ -53,14 +54,14 @@ Every entry uses the standard 5-field framework:
 
 ## 🚧 PROPOSED (next in queue)
 
-### D-005 · Cat-Breed Extension to D-001 Matrix
-- **Why:** Same template, same data structure. Adding 25 cat breeds → 1,300 more pages (25 × 52 states). Marginal cost: ~2 hours data entry.
+### D-005 · Cat-Breed Extension to D-001 Matrix · **SHIPPED 2026-05-30**
+- **PR:** #173 (layered with D-001)
+- **Pages added:** 1,300 cat deep pages + 25 cat breed hubs = 1,325 new routes
+- **Combined matrix total:** 2,912 deep pages + 56 breed hubs + 52 state hubs = **3,020 programmatic routes**
 - **Revenue Potential:** Additional $5K–$15K MRR at maturity (cats are ~35% of pet insurance market)
-- **Traffic Requirements:** Adds ~30K monthly visitors
-- **Ease of Implementation:** Easy (data file only — no new templates)
+- **Implementation:** ~2 hours (data file + thin merge wrapper + template wiring)
 - **Time to Revenue:** Same as D-001 (6–9 months post-launch)
-- **Priority Level:** P0 — should land in same launch window as D-001
-- **Blocker:** Need verified cat-breed hereditary-condition profiles (smaller existing dataset than dogs)
+- **Editorial note:** Cat-breed hereditary conditions sourced from AAFP/ACVIM/Winn Feline Foundation literature. [NEEDS-VET-REVIEW] flagged in the data file before launch.
 
 ### D-006 · Petfood.com Brand-Page Affiliate Enrichment
 - **Why:** 38 existing brand pages with content; just need affiliate buy-boxes added contextually. Pure mechanical work.
