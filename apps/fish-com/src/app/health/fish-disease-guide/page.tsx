@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -141,7 +142,13 @@ export default function FishDiseaseGuidePage() {
       </>}
     >
       <div className="carloOS-article">
-        <p>The most important thing to understand about fish disease: 90% of aquarium disease is caused by stress, and the most common stressor is poor water quality. Before reaching for medication, test your water. Before adding fish to a display tank, quarantine for 4 weeks. Before treating disease, fix the environment that allowed disease to develop.</p>
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <DropCap>The most important thing to understand about fish disease: 90% of aquarium disease is caused by stress, and the most common stressor is poor water quality. Before reaching for medication, test your water. Before adding fish to a display tank, quarantine for 4 weeks. Before treating disease, fix the environment that allowed disease to develop.</DropCap>
+
+        <CalloutBox variant="warning" title="Before you medicate">
+          Adding medication to an uncycled or poorly maintained tank will not save fish in failing water. Test ammonia, nitrite, and nitrate first. Many antibiotics also kill nitrifying bacteria — treat in a separate hospital tank whenever possible to protect your display tank&apos;s biofilter.
+        </CalloutBox>
 
         {DISEASES.map(disease => {
           const style = URGENCY_STYLES[disease.urgency]

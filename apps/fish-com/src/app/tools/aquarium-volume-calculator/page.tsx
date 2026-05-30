@@ -16,7 +16,7 @@ const URL = 'https://fish.com/tools/aquarium-volume-calculator'
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Aquarium Volume Calculator — Gallons & Liters from L×W×H | Fish.com',
-  description: 'Free aquarium volume calculator. Convert tank length, width, height to US gallons, UK gallons, and liters. Supports rectangular, cube, bow-front, hexagonal, and cylinder tanks.',
+  description: 'Free aquarium volume calculator. Convert L×W×H to US gallons, UK gallons, and liters. Supports rectangular, cube, bow-front, hexagonal, and cylinder tanks.',
   path: '/tools/aquarium-volume-calculator',
 })
 
@@ -32,6 +32,37 @@ const schema = buildHowToSchema({
     { name: 'Subtract for displacement', text: 'Net water volume is about 90–92% of gross volume after substrate, decor, and freeboard. Use this number for stocking and dosing.' },
   ],
 })
+
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Aquarium Volume Calculator',
+  url: URL,
+  applicationCategory: 'UtilitiesApplication',
+  applicationSubCategory: 'AquariumCalculator',
+  operatingSystem: 'Web Browser (any HTML5-capable device)',
+  description:
+    'Free interactive aquarium volume calculator. Converts length × width × height to US gallons, UK gallons, and liters for rectangular, cube, bow-front, hexagonal, and cylinder tanks, with optional net-fill adjustment for substrate, hardscape, and freeboard.',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Supports rectangular, cube, bow-front, hexagonal, and cylinder tank shapes',
+    'Outputs US gallons, UK (imperial) gallons, and liters simultaneously',
+    'Inputs in inches or centimeters',
+    'Adjustable net-water fill factor (default 92%) for substrate and freeboard',
+    'Common-size reference table from 5 to 180 US gallons',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fish.com Editorial',
+    url: 'https://fish.com',
+  },
+}
 
 const FAQS = [
   {
@@ -107,6 +138,10 @@ export default function VolumeCalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 

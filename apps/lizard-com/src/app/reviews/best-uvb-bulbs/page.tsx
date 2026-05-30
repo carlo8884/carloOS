@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -47,7 +48,7 @@ export default function BestUVBBulbsPage() {
           Best UVB Bulbs 2025 — Ranked by Published UVI Output
         </h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl mb-4" style={{ color: 'rgba(238,240,228,0.55)' }}>
-          Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which we cross-check against independent keeper testing.
+          Rankings draw on published Solarmeter 6.5 UVI measurements (the same meter used in the Ferguson Zone research) at standardised distances, rather than manufacturer claims. Brands such as Arcadia Reptile and Reptile Systems publish their own measured outputs, which are cross-checked against independent keeper-reported measurements.
         </p>
         <p className="text-xs" style={{ color: 'rgba(238,240,228,0.25)' }}>
           Lizard.com Editorial · Updated May 2025 · Affiliate disclosure applies
@@ -60,11 +61,13 @@ export default function BestUVBBulbsPage() {
       <div className="relative z-10 px-container sm:px-container-sm py-12">
         <div className="grid lg:grid-cols-[1fr_260px] gap-12">
           <div>
+            <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
             {/* Methodology */}
             <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Ranking Methodology</div>
               <p className="text-sm leading-relaxed m-0" style={{ color: 'rgba(238,240,228,0.75)' }}>
-                All bulbs tested at 30cm and 60cm with a Solarmeter 6.5 UVI radiometer (calibrated). Each bulb measured new, at 3 months, and at 6 months to assess output decline. T5 HO fixtures used throughout — coil/compact bulbs tested separately. Ferguson Zone targets used as reference: FZ1 (0.6–1.4 UVI), FZ2 (1.1–3.0 UVI), FZ3 (2.9–7.4 UVI), FZ4 (4.5–9.5 UVI).
+                Rankings use published Solarmeter 6.5 UVI radiometer measurements at 30cm and 60cm, drawn from manufacturer-published data and independent keeper-reported measurements. Each bulb is referenced new, at 3 months, and at 6 months to assess output decline. T5 HO fixtures are the basis throughout — coil/compact bulbs are referenced separately. Ferguson Zone targets used as reference: FZ1 (0.6–1.4 UVI), FZ2 (1.1–3.0 UVI), FZ3 (2.9–7.4 UVI), FZ4 (4.5–9.5 UVI).
               </p>
             </div>
 
@@ -79,7 +82,7 @@ export default function BestUVBBulbsPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest UVI measurements of any bulb in our test. At 30cm with a reflector, new bulbs are reported at 7.2–8.1 UVI in published Solarmeter 6.5 measurements (centre of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Arcadia 12% is the benchmark for desert reptile UVB — consistently producing the highest published UVI measurements in the category. At 30cm with a reflector, new bulbs are reported at 7.2–8.1 UVI in published Solarmeter 6.5 measurements (centre of beam), placing squarely in Ferguson Zone 4 territory appropriate for bearded dragons, uromastyx, and similar species.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>Output retention is the other standout: at 6 months, published Solarmeter measurements show Arcadia 12% bulbs retaining 85–90% of initial output. Most competitors are reported to drop 20–30% by month 6 in the same measurements. We still recommend replacing at 12 months regardless of visible output — UV degrades before visible light does, and only a radiometer can confirm output level.</p>
                 </div>
               }

@@ -1,0 +1,265 @@
+{
+  "$schema": "Image query manifest. Each key maps to a search query + provider preference + alt text template.",
+  "$instructions": "When adding new image needs, append entries here. Run `node scripts/sync-images.mjs` to populate the manifest with actual URLs + photographer credits.",
+
+  "horses-com:hero": {
+    "query": "horse galloping field",
+    "provider": "either",
+    "alt": "A horse galloping through an open field at sunset",
+    "orientation": "landscape"
+  },
+  "horses-com:category-breeds": {
+    "query": "horse portrait close up",
+    "provider": "either",
+    "alt": "Close-up portrait of a horse",
+    "orientation": "landscape"
+  },
+  "horses-com:category-care": {
+    "query": "horse stable grooming",
+    "provider": "either",
+    "alt": "A horse being groomed in a stable",
+    "orientation": "landscape"
+  },
+  "horses-com:category-disciplines": {
+    "query": "dressage horse rider",
+    "provider": "either",
+    "alt": "A dressage horse and rider in competition",
+    "orientation": "landscape"
+  },
+
+  "petfood-com:hero": {
+    "query": "pet food bowl ingredients",
+    "provider": "either",
+    "alt": "A bowl of pet food surrounded by raw ingredients",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-nutrition": {
+    "query": "dog eating bowl",
+    "provider": "either",
+    "alt": "A dog eating from a food bowl",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-life-stage": {
+    "query": "puppy dog food",
+    "provider": "either",
+    "alt": "A puppy eating from a food bowl",
+    "orientation": "landscape"
+  },
+
+  "petfoods-com:hero": {
+    "query": "pet food ingredients comparison",
+    "provider": "either",
+    "alt": "An array of pet food ingredients laid out for comparison",
+    "orientation": "landscape"
+  },
+  "petfoods-com:category-brands": {
+    "query": "dog food bag shelves",
+    "provider": "either",
+    "alt": "Shelves of dog food bags",
+    "orientation": "landscape"
+  },
+  "petfoods-com:category-ingredients": {
+    "query": "raw meat fish vegetables",
+    "provider": "either",
+    "alt": "Raw meat, fish, and vegetables — common pet food ingredients",
+    "orientation": "landscape"
+  },
+
+  "ferret-com:hero": {
+    "query": "ferret pet playing",
+    "provider": "either",
+    "alt": "A pet ferret playing",
+    "orientation": "landscape"
+  },
+  "ferret-com:category-care": {
+    "query": "ferret close up",
+    "provider": "either",
+    "alt": "Close-up of a ferret looking at the camera",
+    "orientation": "landscape"
+  },
+  "ferret-com:category-health": {
+    "query": "ferret sleeping",
+    "provider": "either",
+    "alt": "A ferret resting comfortably",
+    "orientation": "landscape"
+  },
+
+  "ferrets-com:hero": {
+    "query": "two ferrets playing",
+    "provider": "either",
+    "alt": "Two ferrets playing together",
+    "orientation": "landscape"
+  },
+  "ferrets-com:category-directory": {
+    "query": "ferret face portrait",
+    "provider": "either",
+    "alt": "Portrait of a ferret's face",
+    "orientation": "landscape"
+  },
+
+  "fish-com:hero": {
+    "query": "planted freshwater aquarium",
+    "provider": "either",
+    "alt": "A planted freshwater aquarium with warm internal lighting",
+    "orientation": "landscape"
+  },
+  "fish-com:category-freshwater": {
+    "query": "neon tetra school",
+    "provider": "either",
+    "alt": "A school of neon tetras in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:category-saltwater": {
+    "query": "clownfish anemone reef",
+    "provider": "either",
+    "alt": "A clownfish among the tentacles of a sea anemone",
+    "orientation": "landscape"
+  },
+  "fish-com:category-planted": {
+    "query": "aquatic plants aquarium",
+    "provider": "either",
+    "alt": "Lush aquatic plants in a planted aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:category-equipment": {
+    "query": "aquarium filter heater equipment",
+    "provider": "either",
+    "alt": "Aquarium filtration and heating equipment",
+    "orientation": "landscape"
+  },
+  "fish-com:cornerstone-cycling": {
+    "query": "aquarium water test kit",
+    "provider": "either",
+    "alt": "A freshwater aquarium test kit being used to check water parameters",
+    "orientation": "landscape"
+  },
+  "fish-com:cornerstone-species-betta": {
+    "query": "betta fish portrait",
+    "provider": "either",
+    "alt": "A portrait of a betta fish with flaring fins",
+    "orientation": "landscape"
+  },
+
+  "saddle-com:hero": {
+    "query": "english jumping saddle leather",
+    "provider": "either",
+    "alt": "A high-end English jumping saddle photographed against a dark backdrop",
+    "orientation": "landscape"
+  },
+  "saddle-com:category-dressage": {
+    "query": "dressage saddle leather",
+    "provider": "either",
+    "alt": "A dressage saddle on a wooden stand",
+    "orientation": "landscape"
+  },
+  "saddle-com:category-jumping": {
+    "query": "show jumping saddle close up",
+    "provider": "either",
+    "alt": "A close-up of a close-contact jumping saddle",
+    "orientation": "landscape"
+  },
+  "saddle-com:category-western": {
+    "query": "western saddle leather",
+    "provider": "either",
+    "alt": "A traditional Western saddle with hand-tooled leather",
+    "orientation": "landscape"
+  },
+  "saddle-com:category-restoration": {
+    "query": "leather conditioning saddle",
+    "provider": "either",
+    "alt": "Leather conditioner being applied to a vintage saddle",
+    "orientation": "landscape"
+  },
+  "saddle-com:cornerstone-fit": {
+    "query": "saddle fit horse withers",
+    "provider": "either",
+    "alt": "A saddle being fitted to a horse, viewed from above",
+    "orientation": "landscape"
+  },
+  "saddle-com:cornerstone-used": {
+    "query": "vintage leather saddle detail",
+    "provider": "either",
+    "alt": "Close-up of vintage saddle leather and stitching",
+    "orientation": "landscape"
+  },
+
+  "lizard-com:hero": {
+    "query": "crested gecko portrait macro",
+    "provider": "either",
+    "alt": "A close-up macro portrait of a crested gecko on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-bearded-dragon": {
+    "query": "bearded dragon basking",
+    "provider": "either",
+    "alt": "A bearded dragon basking under enclosure lighting",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-leopard-gecko": {
+    "query": "leopard gecko macro",
+    "provider": "either",
+    "alt": "A leopard gecko in a naturalistic terrarium",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-ball-python": {
+    "query": "ball python coiled",
+    "provider": "either",
+    "alt": "A ball python coiled on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-crested-gecko": {
+    "query": "crested gecko branch",
+    "provider": "either",
+    "alt": "A crested gecko climbing a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-uvb": {
+    "query": "uvb light terrarium",
+    "provider": "either",
+    "alt": "A UVB fluorescent lamp installed above a reptile enclosure",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-bioactive": {
+    "query": "bioactive terrarium plants",
+    "provider": "either",
+    "alt": "A bioactive vivarium with live plants and substrate",
+    "orientation": "landscape"
+  },
+
+  "vets-co:hero": {
+    "query": "veterinarian examining dog gentle",
+    "provider": "either",
+    "alt": "A veterinarian examining a calm dog during a routine visit",
+    "orientation": "landscape"
+  },
+  "vets-co:category-find-a-vet": {
+    "query": "veterinary clinic exterior",
+    "provider": "either",
+    "alt": "The exterior of a small veterinary clinic",
+    "orientation": "landscape"
+  },
+  "vets-co:category-pet-insurance": {
+    "query": "veterinarian with cat",
+    "provider": "either",
+    "alt": "A veterinarian holding a cat during a wellness check",
+    "orientation": "landscape"
+  },
+  "vets-co:category-telehealth": {
+    "query": "video call laptop dog",
+    "provider": "either",
+    "alt": "A dog owner consulting a veterinarian via video call",
+    "orientation": "landscape"
+  },
+  "vets-co:cornerstone-emergency-signs": {
+    "query": "concerned owner with dog",
+    "provider": "either",
+    "alt": "A pet owner attentively observing their dog at home",
+    "orientation": "landscape"
+  },
+  "vets-co:cornerstone-breed-health": {
+    "query": "veterinarian listening to dog heart",
+    "provider": "either",
+    "alt": "A veterinarian using a stethoscope on a dog's chest",
+    "orientation": "landscape"
+  }
+}

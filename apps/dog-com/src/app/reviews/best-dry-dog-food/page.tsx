@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -49,7 +49,7 @@ export default function BestDogFoodPage() {
           Best Dry Dog Food 2025
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
-          The dog food market is full of marketing. We cut through it: 12 foods evaluated on WSAVA compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.
+          The dog food market is full of marketing. We cut through it: 12 foods evaluated on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.
         </p>
         <div className="text-xs text-white/30">
           Updated May 2025 ·{' '}
@@ -71,6 +71,13 @@ export default function BestDogFoodPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_280px] gap-14">
           <div>
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            {/* TL;DR */}
+            <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
+              <strong className="not-italic">TL;DR.</strong> Royal Canin is our top dry dog food pick — it meets WSAVA guidelines, runs AAFCO feeding trials, and employs board-certified veterinary nutritionists. Purina Pro Plan is the best value at the same scientific standard. Hill&apos;s Science Diet leads on prescription formulas. Avoid grain-free formulas heavy in peas, lentils, or chickpeas — the FDA flagged these in its DCM investigation.
+            </p>
+
             {/* Methodology callout */}
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">How We Ranked</div>

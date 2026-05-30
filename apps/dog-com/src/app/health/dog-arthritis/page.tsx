@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment | Dog.com', description: 'Arthritis affects 1 in 5 dogs. Signs owners miss, proven treatments (weight loss + NSAIDs + rehabilitation).', path: '/health/dog-arthritis', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -17,12 +18,20 @@ export default function DogArthritisPage() {
         sidebar={<>
           <TableOfContents items={[{ label: 'Signs — What to Look For', href: '#signs' }, { label: 'Diagnosis', href: '#diagnosis' }, { label: 'Weight Management', href: '#weight' }, { label: 'NSAIDs', href: '#nsaids' }, { label: 'Supplements', href: '#supplements' }, { label: 'Rehabilitation', href: '#rehab' }, { label: 'Newer Treatments', href: '#newer' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
+          <div className="bg-brand-dark rounded-lg p-5 mb-4">
+            <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Arthritis + Insurance</div>
+            <h3 className="font-display text-base font-bold text-brand-white mb-2">Joint care adds up year over year</h3>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifelong arthritis management — joint injections, surgery, daily medication — typically totals $5,000-$15,000+. Insurance covers it if you enroll before signs appear.</p>
+            <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+          </div>
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-arthritis" />
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2 id="signs">Signs — What Owners Miss</h2>
-          <p>The obvious signs — limping, crying when touched — occur in severe cases. Most arthritic dogs show subtler changes that are frequently attributed to "just getting old": reluctance to use stairs or jump onto furniture (new, when they used to do it without hesitation), stiffness after rest that improves after a few minutes of movement (the warming-up pattern), reduced walking pace or distance tolerance, difficulty rising from lying down, muscle mass reduction over affected limbs (dogs use them less), and behavioral changes — less interactive, more irritable when touched.</p>
+          <DropCap>The obvious signs — limping, crying when touched — occur in severe cases. Most arthritic dogs show subtler changes that are frequently attributed to "just getting old": reluctance to use stairs or jump onto furniture (new, when they used to do it without hesitation), stiffness after rest that improves after a few minutes of movement (the warming-up pattern), reduced walking pace or distance tolerance, difficulty rising from lying down, muscle mass reduction over affected limbs (dogs use them less), and behavioral changes — less interactive, more irritable when touched.</DropCap>
           <p>The diagnostic question: has something changed from the dog's normal baseline? A dog that used to spring up the stairs and now hesitates is telling you something. Age alone does not cause these changes — pain causes them.</p>
 
           <h2 id="diagnosis">Diagnosis</h2>
@@ -35,6 +44,11 @@ export default function DogArthritisPage() {
 
           <h2 id="nsaids">NSAIDs — Prescription Required</h2>
           <p>Non-steroidal anti-inflammatory drugs are the most effective pharmaceutical treatment for osteoarthritis pain in dogs. Veterinary NSAIDs (Carprofen/Rimadyl, Meloxicam/Metacam, Grapiprant/Galliprant, Deracoxib/Deramaxx) are designed for dogs and metabolized appropriately by canine physiology.</p>
+
+          <CalloutBox variant="warning" title="Human NSAIDs are toxic">
+            Ibuprofen, naproxen, and acetaminophen (Tylenol) cause gastrointestinal ulceration and acute kidney or liver injury in dogs at doses that are safe for humans. Aspirin has a narrow safety margin. Never use a human pain reliever on a dog — call your veterinarian for the appropriate prescription instead.
+          </CalloutBox>
+
           <p><strong>Do not give human NSAIDs to dogs.</strong> Ibuprofen and naproxen are toxic to dogs at doses that are safe for humans — they cause gastrointestinal ulceration and acute kidney injury. Aspirin has a narrow safety margin and significant GI side effects. Acetaminophen (Tylenol) is toxic to dogs. All of these are inappropriate for canine pain management.</p>
           <p>Veterinary NSAIDs require a prescription and periodic blood monitoring (liver and kidney function) when used long-term. The monitoring is not excessive caution — NSAID-associated kidney and liver effects, while uncommon, are real and detectable before they become serious. Annual bloodwork is standard for dogs on chronic NSAIDs.</p>
 
@@ -47,7 +61,7 @@ export default function DogArthritisPage() {
           <p>Veterinary rehabilitation (performed by CCRT-certified therapists or veterinary physiotherapists) includes: hydrotherapy (underwater treadmill — warm water supports body weight while allowing gait), therapeutic exercises (balance boards, cavaletti poles, controlled leash exercises), manual therapy (joint mobilization, massage), laser therapy, and TENS/NMES. Rehabilitation improves muscle mass, mobility, and pain scores in arthritic dogs. It is not a luxury — it is a recognized medical modality with substantial evidence.</p>
 
           <h2 id="newer">Newer Treatments</h2>
-          <p><strong>Librela (bedinvetmab):</strong> A monoclonal antibody targeting nerve growth factor (NGF), a key pain mediator in osteoarthritis. Monthly injection. FDA approved in 2023. Clinical trials showed significant improvement in pain and mobility scores with minimal side effects. A meaningful advance — particularly for dogs that cannot tolerate NSAIDs due to kidney or liver disease.</p>
+          <p><strong>Librela (bedinvetmab):</strong> A monoclonal antibody targeting nerve growth factor (NGF), a key pain mediator in osteoarthritis. Monthly injection. <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> approved in 2023. Clinical trials showed significant improvement in pain and mobility scores with minimal side effects. A meaningful advance — particularly for dogs that cannot tolerate NSAIDs due to kidney or liver disease.</p>
           <p><strong>Adequan (polysulfated glycosaminoglycan):</strong> Injectable — administered by injection twice weekly for 4 weeks, then monthly. Inhibits cartilage-degrading enzymes and may support cartilage repair. Used as a disease-modifying treatment in early arthritis.</p>
         </div>
       </ArticleLayout>

@@ -48,20 +48,37 @@ function exists(path) {
 
 function routesFor(site) {
   const appDir = join(ROOT, 'apps', site, 'src/app')
+  // page.* files yield UI routes; route.* files yield API/redirect handlers.
+  // Both contribute to valid URL paths the site exposes.
   const pageFiles = listFiles(appDir, ['page.tsx', 'page.ts', 'page.jsx', 'page.js'])
+  const routeFiles = listFiles(appDir, ['route.ts', 'route.js'])
   const staticRoutes = new Set(['/'])
   const dynamicFolders = new Set()
-  for (const f of pageFiles) {
-    const rel = f.slice(appDir.length).replace(/\/page\.[tj]sx?$/, '')
+  const dynamicPatterns = [] // RegExp[] for routes with [slug] anywhere in the path
+  for (const f of [...pageFiles, ...routeFiles]) {
+    let rel = f.slice(appDir.length).replace(/\/(page|route)\.[tj]sx?$/, '')
     if (rel === '') continue
-    if (rel.includes('[slug]')) {
-      const parent = rel.replace(/\/\[slug\]$/, '')
-      dynamicFolders.add(parent || '/')
-    } else if (!/\[.+\]/.test(rel)) {
+    // Strip Next.js route groups: (funnels)/foo → /foo, (auth)/login → /login.
+    // Route groups are ignored when computing the URL path.
+    rel = rel.replace(/\/\([^)]+\)(?=\/|$)/g, '')
+    if (rel === '') {
+      staticRoutes.add('/')
+      continue
+    }
+    if (/\[.+\]/.test(rel)) {
+      // Trailing [slug] → register the parent folder (backwards-compat)
+      if (rel.endsWith('/[slug]')) {
+        const parent = rel.replace(/\/\[slug\]$/, '')
+        dynamicFolders.add(parent || '/')
+      }
+      // Always register a regex pattern for the full route — covers /breeds/[slug]/feeding etc.
+      const pattern = '^' + rel.replace(/\[[^\]]+\]/g, '[^/]+') + '$'
+      dynamicPatterns.push(new RegExp(pattern))
+    } else {
       staticRoutes.add(rel)
     }
   }
-  return { staticRoutes, dynamicFolders }
+  return { staticRoutes, dynamicFolders, dynamicPatterns }
 }
 
 function resolves(href, routes) {
@@ -71,6 +88,9 @@ function resolves(href, routes) {
   if (parts.length >= 2) {
     const parent = parts.slice(0, -1).join('/') || '/'
     if (routes.dynamicFolders.has(parent)) return true
+  }
+  for (const re of routes.dynamicPatterns) {
+    if (re.test(path)) return true
   }
   return false
 }

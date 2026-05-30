@@ -17,6 +17,12 @@ export default function DogHeartDiseasePage() {
         sidebar={<>
           <TableOfContents items={[{ label: 'MMVD — Most Common', href: '#mmvd' }, { label: 'DCM', href: '#dcm' }, { label: 'Murmur Grades', href: '#murmurs' }, { label: 'Pimobendan (EPIC trial)', href: '#pimobendan' }, { label: 'CHF Signs', href: '#chf' }, { label: 'Managing CHF', href: '#management' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }, { label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <div className="bg-brand-dark rounded-lg p-5 mb-4">
+            <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Heart Disease + Insurance</div>
+            <h3 className="font-display text-base font-bold text-brand-white mb-2">Cardiac care is a lifetime cost</h3>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly exceed $8,000. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+          </div>
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-heart-disease" />
         </>}
       >
@@ -28,7 +34,7 @@ export default function DogHeartDiseasePage() {
           <h2 id="dcm">Dilated Cardiomyopathy (DCM)</h2>
           <p>DCM is a disease of the heart muscle itself — the heart muscle weakens, the heart dilates (enlarges), and pumping efficiency decreases. Accounts for approximately 10% of canine cardiac cases. Strongly breed-associated: Doberman Pinschers (most commonly affected — published estimates of up to ~58% by age 7; Wess et al., J Vet Intern Med), Boxers (where it presents as ARVC — see Boxer guide), Great Danes, Irish Wolfhounds, Newfoundlands, Portuguese Water Dogs, and Scottish Deerhounds.</p>
           <p>DCM in Dobermans is particularly insidious — it frequently causes sudden cardiac death from ventricular fibrillation before any clinical signs are apparent. Annual echocardiograms and 24-hour Holter monitoring from age 3 are recommended for Dobermans. A DNA test for one mutation associated with DCM in Dobermans is available but does not identify all affected dogs.</p>
-          <p><strong>Grain-free diet and DCM:</strong> The FDA investigated a potential association between grain-free diets (particularly those high in legumes — peas, lentils, chickpeas) and DCM in dogs not typically predisposed to the condition. The mechanism is not fully established and the investigation is ongoing, but the WSAVA recommends avoiding diets with legumes as primary ingredients in dogs without a specific dietary necessity. WSAVA-compliant manufacturers (Purina, Hill's, Royal Canin) use traditional grain ingredients.</p>
+          <p><strong>Grain-free diet and DCM:</strong> The <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> investigated a potential association between grain-free diets (particularly those high in legumes — peas, lentils, chickpeas) and DCM in dogs not typically predisposed to the condition. The mechanism is not fully established and the investigation is ongoing, but the <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> recommends avoiding diets with legumes as primary ingredients in dogs without a specific dietary necessity. WSAVA-compliant manufacturers (Purina, Hill's, Royal Canin) use traditional grain ingredients.</p>
 
           <h2 id="murmurs">Murmur Grading — What the Numbers Mean</h2>
           <div className="overflow-x-auto mb-4">

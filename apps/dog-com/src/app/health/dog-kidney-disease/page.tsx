@@ -21,6 +21,12 @@ export default function DogKidneyPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <div className="bg-brand-dark rounded-lg p-5 mb-4">
+            <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Kidney Disease + Insurance</div>
+            <h3 className="font-display text-base font-bold text-brand-white mb-2">CKD is a multi-year claim profile</h3>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Chronic kidney disease — Rx kidney diet, fluid therapy, recheck bloodwork every 1-3 months — runs $4,000-$10,000+ over the staged progression. Insurance with no chronic-claim reset is the right structure.</p>
+            <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+          </div>
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-kidney" />
         </>}
       >

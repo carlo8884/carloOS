@@ -18,7 +18,7 @@ export default function SensitiveStomachFoodPage() {
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2025</h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet WSAVA guidelines.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">

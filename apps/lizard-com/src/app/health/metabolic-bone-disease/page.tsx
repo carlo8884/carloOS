@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles — Causes, Signs | Lizard.com', description: 'MBD is the most common nutritional disease in captive reptiles. Caused by calcium deficiency or UVB deprivation. Rubber jaw, tremors.', path: '/health/metabolic-bone-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles', description: 'Causes, signs, and prevention of nutritional secondary hyperparathyroidism (MBD) in reptiles.', url: 'https://lizard.com/health/metabolic-bone-disease', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MBDPage() {
@@ -21,6 +22,12 @@ export default function MBDPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <CalloutBox variant="warning" title="Early warning signs — act now">
+          Lethargy, fine tremors when at rest, weakness lifting the body off the substrate, a softer-than-normal jaw, and a wobbly gait are the earliest red flags. By the time pathological fractures or visible spinal kinking appear, demineralization is severe. Audit UVB output (Solarmeter 6.5), calcium dusting frequency, and gut-loading immediately — and get a reptile-experienced vet involved.
+        </CalloutBox>
+
         <h2>The Calcium-Vitamin D3-Phosphorus Triangle</h2>
         <p>MBD is fundamentally a calcium metabolism problem, but understanding it requires understanding the triangle of three interacting factors:</p>
         <p><strong>Calcium:</strong> Reptiles require dietary calcium (primarily through supplementation of feeder insects or plant food dusted with calcium carbonate powder) to build and maintain bone mineral density. Without adequate calcium intake, the parathyroid glands release parathyroid hormone (PTH) to mobilize calcium from bone — causing bone demineralization and the characteristic softening (rubber jaw, pathological fractures).</p>
@@ -28,7 +35,7 @@ export default function MBDPage() {
         <p><strong>Phosphorus:</strong> Feeder insects are naturally high in phosphorus and low in calcium — an inverted ratio compared to what reptiles require. The calcium-to-phosphorus ratio should be approximately 2:1 (calcium:phosphorus). Straight, unsupplemented insects have a ratio closer to 1:3. Gut-loading insects with calcium-rich foods and dusting with calcium powder corrects this inversion.</p>
 
         <h2>Causes — What's Wrong in the Setup</h2>
-        <p><strong>Insufficient UVB:</strong> The most common cause in diurnal lizards. Signs: MBD developing despite calcium supplementation — the calcium is being offered but cannot be absorbed without D3. Diagnosis by process of elimination: if calcium supplementation is adequate and MBD is developing, UVB is the likely missing factor. Assess UVB with a Solarmeter 6.5R — confirm actual UVI at the basking position, not just the presence of a UVB bulb.</p>
+        <p><strong>Insufficient UVB:</strong> The most common cause in diurnal lizards. Signs: MBD developing despite calcium supplementation — the calcium is being offered but cannot be absorbed without D3. Diagnosis by process of elimination: if calcium supplementation is adequate and MBD is developing, UVB is the likely missing factor. Assess UVB with a <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5R</a> — confirm actual UVI at the basking position, not just the presence of a UVB bulb.</p>
         <p><strong>Insufficient calcium supplementation:</strong> Feeder insects not dusted at adequate frequency, calcium powder not reaching food (poor adhesion, dusting too far in advance), or inadequate gut-loading of insects with calcium-rich foods. Protocol: calcium carbonate powder (without D3 for diurnal UVB-supplemented reptiles) at every feeding for juveniles, every other feeding for adults.</p>
         <p><strong>High oxalate or phytate content in plant food (herbivores):</strong> Spinach, chard, and beet greens are high in oxalates that bind calcium and prevent absorption. These foods should not be the primary diet for herbivorous reptiles — dark leafy greens (collard, mustard, dandelion) with lower oxalate content are preferable.</p>
         <p><strong>Renal disease:</strong> Kidneys activate vitamin D3 to its functional form. Advanced kidney disease in senior reptiles can cause MBD despite adequate UVB and calcium — a different pathway requiring veterinary management.</p>

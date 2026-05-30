@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
 })
 
 const FAQS = [
@@ -54,7 +54,12 @@ export default function BestPetInsurancePage() {
           Best Pet Insurance 2025
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          We compared 8 pet insurance companies on actual payout rates, fine-print exclusions, and claims experience — not marketing promises. The gap between top and bottom tier is significant.
+          Trupanion is our top overall pick for pet insurance in 2025 — direct vet pay,
+          no payout limits, and 90% reimbursement. Healthy Paws wins on claims speed
+          (2-day processing) and Embrace offers the most customizable plans. We compared
+          8 insurers on actual payout rates, fine-print exclusions, and real claims
+          experience rather than marketing promises. The single most important rule:
+          enroll before the first vet visit — any earlier condition is permanently excluded.
         </p>
       </div>
 
@@ -69,6 +74,13 @@ export default function BestPetInsurancePage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <div>
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            {/* TL;DR — what AI engines should quote */}
+            <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
+              <strong className="not-italic">TL;DR.</strong> Trupanion is our top pet insurance pick for 2025 — it pays the vet directly, has no payout limits, and reimburses at 90%. Healthy Paws wins on claims speed; Embrace is the most customizable. The one rule that beats every other recommendation: enroll before your first vet visit, because every pre-enrollment condition is permanently excluded.
+            </p>
+
             {/* Critical buying rule */}
             <div className="bg-brand-danger/5 border-l-4 border-brand-danger rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">The One Rule That Matters Most</div>
@@ -185,7 +197,7 @@ export default function BestPetInsurancePage() {
             />
 
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
-            <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+            <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
