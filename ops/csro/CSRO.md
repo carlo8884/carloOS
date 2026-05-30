@@ -233,18 +233,31 @@ Score each Tier-1 and Tier-2 domain 1-5 on:
 - **Ignore for now**: explicit deprioritization with date to revisit
 
 **Current operating policy (Carlo-approved 2026-05-30, not permanent law — revise per the thesis-revision triggers in §11):**
-- **Tier 1 (confirmed by Carlo):** Dog.com, Fish.com
-- **Tier 1 (COO recommendation pending Carlo confirmation):** Vets.co — recommended on the basis that insurance lead-gen is the highest-margin product in the portfolio and the vet directory creates a SaaS moat
-- **Tier 2 with promotion path:** Saddle.com, Lizard.com
+- **Tier 1 (confirmed by Carlo on inbound-offer validation):** Dog.com, Fish.com
+- **Tier 2 with promotion path to Tier 1 (pending Carlo confirmation):** Vets.co, Saddle.com, Lizard.com
 - **Tier 2:** Horses.com (pending Racing Bot findings), Ferret.com, PetFood.com
 - **Tier 3:** PetFoods.com, Ferrets.com + scaffolds
 - **Sunset (confirmed by Carlo):** hardmoneyloans.com
 
 ### Real acquisition offers received (Carlo-disclosed 2026-05-30)
-- **Dog.com:** $2.3M offer received
-- **Fish.com:** $1.45M offer received
+- **Dog.com:** $2.3M offer received → confirms Tier 1
+- **Fish.com:** $1.45M offer received → confirms Tier 1
 
 These are the floor numbers. The operating goal is to **increase credible exit value toward $10M+ each** through traffic, revenue, email capture, product/tool depth, and defensible authority.
+
+### Vets.co — Tier 1 promotion criteria (CSRO must validate before recommending promotion)
+
+Carlo's position 2026-05-30: Vets.co may become Tier 1, but **not** treated as approved policy until CSRO validates the no-calls / self-serve monetization path and regulatory/commercial risks.
+
+CSRO promotes Vets.co to Tier 1 only after **all** of the following are validated and documented with sourced evidence:
+
+1. **Clear self-serve revenue path** — no high-volume sales calls required (light partnership outreach OK per Carlo's stated constraint)
+2. **Monetization stack defined and viable**: pet insurance lead-gen + vet directory premium listings + AI tooling — each line documented with realistic CPL / CAC / sell-through assumptions, IR-Bot-audited as REALISTIC (not AGGRESSIVE/UNREALISTIC)
+3. **Trust/compliance risk under control** — FTC, state vet-board licensure disclosure, insurance-broker regulatory posture (MGA path if applicable), no health-misinformation surface
+4. **Evidence of demand** — at least one of: meaningful traffic (>5K monthly pageviews trending up), validated lead value, or inbound buyer interest signal
+5. **CSRO recommendation** after the above research is complete, filed as a strategic recommendation in the daily brief with the full evidence trail
+
+Until all 5 criteria are met, Vets.co stays Tier 2. CSRO maintains a live tracker for these criteria in `ops/csro/portfolio-ranking.md` against the Vets.co entry.
 
 ### Protect-the-asset directive (Carlo 2026-05-30)
 
