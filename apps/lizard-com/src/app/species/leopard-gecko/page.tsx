@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide — Warm Hide, Diet | Lizard.com', description: 'Complete leopard gecko care. Why they need a warm hide (not a basking spot), belly heat, diet of dubia and crickets, and how to prevent stuck shed on toes.', path: '/species/leopard-gecko', type: 'article' })
@@ -39,12 +39,18 @@ export default function LeopardGeckoPage() {
         </>}
       >
         <div className="carloOS-article">
-          <h2>The Warm Hide — The Most Critical Setup Element</h2>
+          <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <p className="text-lg leading-relaxed italic mb-6" style={{ color: 'rgba(238,240,228,0.78)' }}>
+            <strong className="not-italic">TL;DR.</strong> Leopard geckos thermoregulate via belly heat, not basking — set the warm hide floor to 88–92°F using a thermostat-controlled heat mat or deep heat projector. Provide three hides (warm, cool, moist), feed insect prey no wider than the gap between the eyes, dust calcium at every feeding, and check toes after every shed for stuck skin that strangulates circulation.
+          </p>
+
+          <h2>How Do I Set Up a Warm Hide for a Leopard Gecko?</h2>
           <p>Leopard geckos are nocturnal ground-dwellers from semi-arid Pakistan and Afghanistan. Unlike bearded dragons (diurnal basking species), leopard geckos do not bask under a heat lamp — they thermoregulate via belly contact with warm substrate, primarily inside hides. The warm hide is where they spend most of the day and where digestion happens.</p>
           <p><strong>Warm hide floor temperature: 88–92°F.</strong> This is measured at the floor surface inside the hide — not the air temperature. Heat source: a heat mat (UTH) under one-third of the enclosure connected to a thermostat probe placed inside the warm hide, or a Arcadia Deep Heat Projector positioned overhead. The DHP is preferred because it produces IRA radiation that penetrates tissue like natural ground heat; UTH is acceptable with a properly calibrated thermostat.</p>
           <p><strong>Never operate a heat mat without a thermostat.</strong> Unthermostated heat mats have caused fire and burned geckos to death — this is documented and not rare. Connect every heat mat to a pulse proportional thermostat with the probe inside the warm hide.</p>
 
-          <h2>Enclosure Setup — Three Hides Required</h2>
+          <h2>What Does a Leopard Gecko Enclosure Need?</h2>
           <p>Leopard geckos need three hides:</p>
           <ol>
             <li><strong>Warm hide:</strong> Over the heat mat, on the warm end. This is where the gecko spends the day and digests food. Small and enclosed — geckos feel secure in tight spaces.</li>
@@ -62,7 +68,7 @@ export default function LeopardGeckoPage() {
           </ul>
           <p>A digital thermometer in the warm hide and a separate one on the cool side gives you the data you need. Analog dials are inaccurate — see our thermometer guide.</p>
 
-          <h2>UVB — Optional But Beneficial</h2>
+          <h2>Do Leopard Geckos Need UVB Lighting?</h2>
           <p>Leopard geckos are crepuscular and nocturnal — they receive minimal UV exposure in the wild. UVB is therefore optional. Current keeper best practice leans toward providing low-level UVB (Arcadia 6% or Arcadia Forest 6% at 40+ cm distance — producing UVI of approximately 0.5–1.0) because research shows improved immune function, natural color, and behavioral enrichment. It is not required but is currently recommended by most experienced keepers.</p>
           <p>If provided, connect to a light timer: 12 hours on in summer, 10 hours in winter.</p>
 
