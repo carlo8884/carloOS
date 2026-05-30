@@ -92,7 +92,7 @@ export default function BestTerrariumsPage() {
               price="$320–420"
               priceNote="Varies by size and configuration"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=zen+habitats+reptile+enclosure"
+              ctaHref="/go/amazon-brand/zen+habitats+reptile+enclosure?s=reviews-best-reptile-terrariums"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="zen-habitats-4x2x2"
             />
@@ -145,7 +145,7 @@ export default function BestTerrariumsPage() {
               cons={['Glass loses heat faster than PVC — higher energy use', 'Heavier than PVC alternatives', 'Not ideal for sustained high humidity']}
               price="$180–280"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=exo+terra+36x18x24"
+              ctaHref="/go/amazon-brand/exo+terra+36x18x24?s=reviews-best-reptile-terrariums"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="exo-terra-36x18x24"
             />
@@ -169,7 +169,7 @@ export default function BestTerrariumsPage() {
               cons={['Lower build quality than Exo Terra', 'Less refined latches and hinges', 'Not a long-term investment enclosure']}
               price="$80–140"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=reptizoo+glass+terrarium"
+              ctaHref="/go/amazon-brand/reptizoo+glass+terrarium?s=reviews-best-reptile-terrariums"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="reptizoo-terrarium"
             />

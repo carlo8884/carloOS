@@ -54,7 +54,7 @@ export default function BestStirrupIronsPage() {
               cons={['Requires Ophena magnetic band — additional item to manage', 'Not show-legal in all organizations', 'Higher cost']}
               price="$180–220/pair"
               ctaText="Shop Ophena S Safety Stirrups →"
-              ctaHref="https://www.amazon.com/s?k=ophena+s+magnetic+stirrup"
+              ctaHref="/go/amazon-brand/ophena+s+magnetic+stirrup?s=reviews-best-stirrup-irons"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ophena-s"
             />

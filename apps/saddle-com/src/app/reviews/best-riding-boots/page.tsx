@@ -89,7 +89,7 @@ export default function BestRidingBootsPage() {
               cons={['$250–350 price point', 'Not custom fitted — calf fit can be tricky', 'Regular sole — not ideal for heavy yard work']}
               price="$250–$350"
               ctaText="Shop Ariat Heritage II →"
-              ctaHref="https://www.amazon.com/s?k=ariat+heritage+contour+II+zip"
+              ctaHref="/go/amazon-brand/ariat+heritage+contour+II+zip?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ariat-heritage-contour-ii"
             />
@@ -137,7 +137,7 @@ export default function BestRidingBootsPage() {
               cons={['Heavier than competition-only tall boots', 'Higher price than entry-level field boots ($400–600)', 'Break-in required']}
               price="$400–$600"
               ctaText="Shop Mountain Horse Sovereign →"
-              ctaHref="https://www.amazon.com/s?k=mountain+horse+sovereign"
+              ctaHref="/go/amazon-brand/mountain+horse+sovereign?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="mountain-horse-sovereign"
             />
@@ -170,7 +170,7 @@ export default function BestRidingBootsPage() {
               cons={['Not show-ring premium', 'Standard cuts; not made-to-measure', 'Pointed-toe styles cause fit issues for wider feet — try before buying']}
               price="$200–$350"
               ctaText="Shop Justin Boots →"
-              ctaHref="https://www.amazon.com/s?k=justin+roper+boot"
+              ctaHref="/go/amazon-brand/justin+roper+boot?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="justin-roper"
             />
@@ -184,7 +184,7 @@ export default function BestRidingBootsPage() {
               cons={['$500–1,200 stock; $1,500–4,000+ custom or exotic', 'Long lead times for custom', 'Show-ring boot — not the daily-wear pick']}
               price="$500–$4,000+"
               ctaText="Shop Lucchese →"
-              ctaHref="https://www.amazon.com/s?k=lucchese+classics"
+              ctaHref="/go/amazon-brand/lucchese+classics?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="lucchese-classics"
             />

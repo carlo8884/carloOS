@@ -81,7 +81,7 @@ export default function BestThermometersPage() {
               price="$18–25"
               priceNote="Often on sale — buy 3–4"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=govee+h5053"
+              ctaHref="/go/amazon-brand/govee+h5053?s=reviews-best-thermometers-hygrometers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="govee-h5053"
             />
@@ -106,7 +106,7 @@ export default function BestThermometersPage() {
               cons={['Bluetooth only — no remote monitoring', 'Shorter data logging than Govee']}
               price="$10–18"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=inkbird+ibs-th2"
+              ctaHref="/go/amazon-brand/inkbird+ibs-th2?s=reviews-best-thermometers-hygrometers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="inkbird-ibs-th2"
             />

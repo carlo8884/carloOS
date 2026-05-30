@@ -223,7 +223,7 @@ export default function BestSaddlePadsPage() {
               cons={['$150–250 — premium price', 'Only useful when used under fitter guidance', 'Sheepskin requires wool-safe washing', 'Misuse can worsen pressure problems']}
               price="$150–250"
               ctaText="Shop Mattes Correction Pad →"
-              ctaHref="https://www.amazon.com/s?k=mattes+correction+half+pad"
+              ctaHref="/go/amazon-brand/mattes+correction+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="mattes-correction-half-pad"
             />
@@ -250,7 +250,7 @@ export default function BestSaddlePadsPage() {
               cons={['Not a fit-correction tool', '$180–240', 'Spot-cleaning only — no machine wash']}
               price="$180–240"
               ctaText="Shop ECOGOLD Flip →"
-              ctaHref="https://www.amazon.com/s?k=ecogold+flip+half+pad"
+              ctaHref="/go/amazon-brand/ecogold+flip+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ecogold-flip"
             />
@@ -277,7 +277,7 @@ export default function BestSaddlePadsPage() {
               cons={['Less impact absorption than memory-foam options', 'Not a fit-correction tool', '$120–160']}
               price="$120–160"
               ctaText="Shop Thinline Trifecta →"
-              ctaHref="https://www.amazon.com/s?k=thinline+trifecta+half+pad"
+              ctaHref="/go/amazon-brand/thinline+trifecta+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="thinline-trifecta"
             />
@@ -307,7 +307,7 @@ export default function BestSaddlePadsPage() {
               cons={['$80–110 — above commodity dressage pads', 'Charcoal mid-layer is heavier than plain cotton']}
               price="$80–110"
               ctaText="Shop ECP Dressage Pads →"
-              ctaHref="https://www.amazon.com/s?k=ecp+equine+comfort+dressage+pad"
+              ctaHref="/go/amazon-brand/ecp+equine+comfort+dressage+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ecp-dressage-square"
             />
@@ -340,7 +340,7 @@ export default function BestSaddlePadsPage() {
               cons={['Brush-clean only — not machine washable', '$120–180 — mid-market premium pricing', 'Heavier than commodity synthetic western pads']}
               price="$120–180"
               ctaText="Shop Reinsman Tacky Too →"
-              ctaHref="https://www.amazon.com/s?k=reinsman+tacky+too+saddle+pad"
+              ctaHref="/go/amazon-brand/reinsman+tacky+too+saddle+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="reinsman-tacky-too"
             />
