@@ -79,11 +79,11 @@ export default async function CarrierPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
       { name: c.name, url: `https://dog.com/pet-insurance/${c.slug}` },
-    ]),
+    ] }),
   )
 
   const faqItems = [

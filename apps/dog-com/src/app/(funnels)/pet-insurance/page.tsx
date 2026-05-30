@@ -32,10 +32,10 @@ const schema = combineSchemas(
     publishedAt: '2026-05-29T00:00:00Z',
     modifiedAt: '2026-05-29T00:00:00Z',
   }),
-  buildBreadcrumbSchema([
+  buildBreadcrumbSchema({ items: [
     { name: 'Home', url: 'https://dog.com/' },
     { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
-  ]),
+  ] }),
 )
 
 function formatPrem(c: { samplePremiumMonthly: { low: number; high: number } }) {

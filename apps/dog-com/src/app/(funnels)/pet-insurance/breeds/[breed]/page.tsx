@@ -160,11 +160,11 @@ export default async function BreedInsurancePage({
       publishedAt: '2026-05-30T00:00:00Z',
       modifiedAt: '2026-05-30T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
       { name: `${b.breedName}`, url: `https://dog.com/pet-insurance/breeds/${b.slug}` },
-    ]),
+    ] }),
   )
 
   const faqs = [

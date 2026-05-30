@@ -65,11 +65,11 @@ export default async function BreedDnaPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'DNA Testing', url: 'https://dog.com/dna-testing' },
       { name: `${b.breedName}`, url: `https://dog.com/dna-testing/breeds/${breed}` },
-    ]),
+    ] }),
   )
 
   return (
