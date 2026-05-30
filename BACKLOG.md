@@ -3,7 +3,7 @@
 Single prioritized queue of deferred work. Replaces ad-hoc lists
 scattered across PR descriptions and STATUS.md.
 
-**Last updated:** 2026-05-29
+**Last updated:** 2026-05-30 (EOD)
 
 **Rules:**
 - Anything in this file is deferred by design — listed here means
@@ -33,11 +33,19 @@ listed here for queue visibility.
 
 ## P1 — Engineering, post-launch (no rush)
 
-### Vercel project bootstrap for 5 new sites (Carlo-only)
-horses-com · petfood-com · petfoods-com · ferret-com · ferrets-com
-all have repo scaffolds, content, lead magnets, and visual polish — but
-no live Vercel project. Carlo runs `scripts/vercel-bootstrap.sh` per
-site (creates project, sets env vars, links to repo). Each ~5 min.
+### Vercel project bootstrap for 5 new app scaffolds (Carlo-only)
+askthevet, seniorpets, dogpicture, petsupplies, hardmoneyloans — scaffolds shipped via PR #138 but no Vercel projects yet. `scripts/vercel-bootstrap.sh` needs `SITES` array extended to include these 5. Defer until each app has content beyond the placeholder homepage.
+
+(The previous 5: horses-com · petfood-com · petfoods-com · ferret-com · ferrets-com — bootstrap completed earlier this week. Confirmed by `vercel-set-env.sh` succeeding on those project names 2026-05-30.)
+
+### Visual Bot work in flight (Visual Bot lane)
+Multiple `visual-bot/*` PRs in queue: per-site favicons (PR #164), OG image generation across 8 sites (PR #163), ScaffoldHomeShell for new apps (PR #161), Dog.com magazine polish (PR #156), Horses.com discipline-callout chip row (PR #159). All safe to merge once CI clears. Coordinated via `ops/handoffs/visual-*.md`.
+
+### Mailchimp / MailerLite / Beehiiv decision (Carlo)
+7 lead-magnet welcome sequences (~35 emails) written and saved at `apps/<site>/src/content/email-sequences/*`. **Deferred per Carlo's 2026-05-30 cost decision** — no point paying for an ESP pre-traffic. Revisit once any site hits 100+ daily signups. MailerLite recommended (free tier includes automations, unlike Mailchimp).
+
+### `/ask` MVP — Phase 1 on Dog.com only
+Anthropic API key exists, `/ask` spec is in PR #67 brief. COO has `apps/dog-com/src/lib/ask-safety.ts` scaffolded mid-build (paused per Carlo's "test on one site" directive). Resume when Carlo confirms traffic on Dog.com.
 
 ### Photo sourcing follow-up
 Real Unsplash photography shipped for homepage heroes + key feature
