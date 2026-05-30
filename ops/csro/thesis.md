@@ -15,11 +15,10 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 - Two domains (Dog.com, Fish.com) have **live inbound offers** ($2.3M, $1.45M) — proof that premium
   single-word .com pet domains attract real acquirer interest.
 - The ARCHITECT doc *describes* a 64-domain portfolio (`MONETIZATION-ARCHITECT.md §9`), but a 2026-05-30
-  ownership spot-check found that doc is **not a reliable ownership ledger** — 2 of 3 sampled unbuilt domains
-  (Cat.com, PetInsuranceReviews.com) are not owned, and a third (Horse.com) is a separate business. So the
-  "broad held base" is **unproven**; the verified asset base is the **15 built sites** until Carlo supplies the
-  real owned list (`csro-dir-001`). Thesis structure is therefore "few hero builds," with long-tail option value
-  treated as `[UNK]` rather than assumed.
+  ownership check **invalidated it as a holdings record: 0 of 28 unbuilt domains are owned.** Carlo owns *similar*
+  names, not those. So the "broad held base" is **disproven for that list**; the verified asset base is the
+  **15 built sites, full stop**, until the Monetization Bot supplies the real owned list (`csro-dir-001`).
+  Thesis structure is firmly "few hero builds"; any long-tail option value is `[UNK]` and must not be assumed.
 - Carlo's stated wants (programmatic SEO, affiliate, lead-gen, comparison engines, tools/calculators) and
   avoidances (marketplaces, pre-threshold display ads, enterprise sales) bound the monetization design space.
 - The trust bar (no fake credentials, no AI humans, FTC disclosure) is an **asset-preservation moat**, not

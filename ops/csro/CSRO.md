@@ -114,14 +114,15 @@ secrets. A recommendation that violates this = drift alarm + Carlo escalation.
 
 ## §16 Master domain inventory — **PENDING**
 
-> The kickoff asserts a **75-domain portfolio (68 portfolio + 7 identity)** and points here for the
-> authoritative list. The repo's own authoritative source is the **64-domain deployment matrix in
-> `MONETIZATION-ARCHITECT.md §9`** (43 domains mapped across 9 clusters; ~21 in the §11 research queue).
-> Of those, **15 are built** (app dirs + `packages/config/index.ts`). The CSRO Bot has inventoried all of
-> this in `ops/csro/domain-inventory.md` and labels unmapped/identity domains `[UNK]` rather than inventing them.
+> **Confirmed-owned portfolio (2026-05-30): the 15 built sites only.** The kickoff's "75" and the ARCHITECT
+> §9 "64-domain" matrix are NOT verified holdings — Carlo checked the matrix's 28 unbuilt entries and **0 are
+> owned** (he owns *similar* names). `MONETIZATION-ARCHITECT.md §9` is therefore an **aspirational target list,
+> not an ownership ledger**; do not cite it as holdings. The 15 built sites are inventoried in
+> `ops/csro/domain-inventory.md §4`; everything beyond them is `[UNK]`.
 >
-> **Action required (Carlo):** confirm the full owned-domain list (matrix maps only 43 of 64; the +7 identity
-> domains are unspecified). Tracked as `csro-dir-2026-W22-001`.
+> **Action required (`csro-dir-2026-W22-001`, elevated to #1):** obtain the **real owned-domain list from the
+> Monetization Bot** + Carlo's registrar account. That — not this doc, not the ARCHITECT doc — becomes the
+> §16 master inventory once it lands.
 >
 > **Recommended-action vocabulary (interim):** `build · hold · validate · promote · consolidate · lease · sell · sunset · acquire-adjacent`.
 

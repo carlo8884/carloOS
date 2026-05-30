@@ -2,31 +2,36 @@
 
 **Owner:** CSRO Bot
 **Created:** 2026-05-30
-**Status:** DRAFT v2 — anchored to the repo's 64-domain matrix; ownership/registrar reconciliation still open (§0)
+**Status:** v3 — ARCHITECT §9 matrix INVALIDATED as an ownership source; only the 15 built sites are confirmed-owned. True owned list pending Monetization Bot + Carlo (`csro-dir-001`).
 
-> **v2 correction (2026-05-30):** v1 of this file contained two factual errors caused by stale filesystem
-> reads: it claimed the 5 scaffolds were "unbuilt/absent" (they ARE built — 15 app dirs + 15 entries in
-> `packages/config/index.ts`) and that the large-portfolio claim had "zero backing" (the repo defines a
-> **64-domain portfolio** in `MONETIZATION-ARCHITECT.md §9`). Both corrected below.
+> **v3 correction (2026-05-30):** Carlo spot-checked the ARCHITECT §9 unbuilt-domain list against actual
+> holdings. Result: **0 of 28 unbuilt domains are owned** (3 dropped earlier, 25 confirmed not-owned in this
+> pass). He owns *similar* domains, not these. **Conclusion: `MONETIZATION-ARCHITECT.md §9` is an aspirational
+> target list, not an ownership record — it does not describe the real portfolio.** Treat §2 below as historical
+> only. The verified owned portfolio = the 15 built sites; the rest is `[UNK]` pending the Monetization Bot's
+> actual owned-domain list. (v2 had wrongly anchored to the 64-domain matrix as if it were real holdings.)
 
 ---
 
 ## §0 Reconciliation flag — READ FIRST
 
-Three different portfolio sizes appear across the repo + my kickoff. They are reconcilable but not yet reconciled:
+**What is actually confirmed-owned as of 2026-05-30:** the **15 built sites** (§4). Nothing else is verified.
 
-| Source | Claimed scale | Provenance |
+The three portfolio-size claims have now collapsed to one trustworthy number:
+
+| Source | Claimed scale | Status after 2026-05-30 ownership check |
 |---|---|---|
-| CSRO kickoff prompt | **75** (68 portfolio + 7 identity) | my brief; `CSRO.md §16` (was empty before today) |
-| `MONETIZATION-ARCHITECT.md §9` | **64** ("domains Carlo owns") — 43 mapped, ~21 in research queue §11 | Monetization Bot strategy doc `[FACT: doc states this]` |
-| Built in-repo (`apps/` + `packages/config/index.ts`) | **15** apps with full config | verified filesystem `[FACT]` |
+| CSRO kickoff prompt | 75 (68 + 7 identity) | **unverified** — no list ever supplied |
+| `MONETIZATION-ARCHITECT.md §9` | 64 "domains Carlo owns" | **INVALIDATED** — Carlo checked the 28 unbuilt entries; **0 owned.** Aspirational list, not holdings. |
+| Built in-repo (`apps/` + config) | 15 | **CONFIRMED OWNED** `[FACT]` |
 
-**Working interpretation `[HYP]`:** 64 (ARCHITECT) + ~4 newer acquisitions + 7 identity/brand domains ≈ 75 (kickoff).
-The 15 built sites are the production+scaffold front of a much larger held-domain portfolio.
+**Why the matrix failed:** it reads like an ownership ledger ("domains Carlo owns") but is a strategy/wishlist.
+Every unbuilt domain sampled (Cat.com, PetInsuranceReviews.com, then all 25 remaining) was **not owned** — Carlo
+owns *similar* names, not those exact ones. So no unbuilt domain in §2 can be treated as an asset.
 
-**Still required from Carlo (`csro-dir-2026-W22-001`):** confirm the true owned-domain list (the ARCHITECT
-matrix maps only 43 of 64; the other 21 and the 7 "identity" domains are unspecified). Per research standard
-I list only what the repo evidences and label the rest `[UNK]` — I do not invent domains, registrars, or dates.
+**Next step (`csro-dir-001`, re-pointed):** the real owned-domain list must come from the **Monetization Bot**
+(it maintains the affiliate/holdings view) + Carlo's registrar account — **not** the ARCHITECT doc. Carlo is
+checking with the Monetization Bot. Until that lands, the inventory = 15 built sites, everything else `[UNK]`.
 
 ---
 
@@ -42,7 +47,13 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 
 ---
 
-## §2 The 64-domain matrix (source: `MONETIZATION-ARCHITECT.md §9`)
+## §2 The ARCHITECT §9 matrix — ⚠️ INVALIDATED AS OWNERSHIP (historical reference only)
+
+> **Do not use this section to decide what is owned or buildable.** Carlo confirmed 2026-05-30 that **none of
+> the 28 unbuilt domains below are owned** — this is the Monetization Bot's aspirational *target* list, not a
+> holdings record. The only rows here that are real owned assets are the ones marked ✅ Built (those 15 also
+> appear in §4). Every ❌ row = aspiration, ownership = NO (confirmed) or N/A. Kept verbatim only so future
+> sessions don't re-derive it from the same misleading doc and repeat the mistake.
 
 ### Cluster 1 — Dogs (flagship)
 | Domain | Built? | ARCH tier | CSRO action | Note |
@@ -135,17 +146,16 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 
 ---
 
-## §3 Build-status overlay `[FACT]`
+## §3 Ownership overlay `[FACT as of 2026-05-30]`
 
-15 domains are built (app dir + config entry); 28 mapped domains are held-but-unbuilt; ~21 unmapped.
+| Confirmed OWNED (15 built) | Confirmed NOT owned (28 unbuilt ARCHITECT entries) | Real owned non-built domains |
+|---|---|---|
+| Dog, Fish, Vets.co, Saddle, Lizard, Horses, PetFood, PetFoods, Ferret, Ferrets, AskTheVet, SeniorPetPharmacy, DogPicture, PetSupplies, HardMoneyLoans | Cat, PetInsuranceReviews (earlier) + Puppy, DogFood, DogToys, DogBeds, DogCollars, Cats, CatFood, Kitten, CatLitter, Aquarium, Aquariums, Goldfish, Equine, HorseTack, Reptile, Reptiles, Snake, Turtle, Rabbit, GuineaPig, Hamster, Bird, Birds, Parrot, PetMeds (all confirmed NOT owned 2026-05-30) | **`[UNK]` — Carlo owns *similar* names; the real list must come from the Monetization Bot (`csro-dir-001`)** |
 
-| Built (15) | Domain-only, mapped — ownership unverified | Confirmed NOT owned / out of scope | Unmapped (~21) |
-|---|---|---|---|
-| Dog, Fish, Vets.co, Saddle, Lizard, Horses, PetFood, PetFoods, Ferret, Ferrets, AskTheVet, SeniorPetPharmacy, DogPicture, PetSupplies, HardMoneyLoans | Puppy, DogFood, DogToys, DogBeds, DogCollars, Cats, CatFood, Kitten, CatLitter, Aquarium, Aquariums, Goldfish, Equine, HorseTack, Reptile, Reptiles, Snake, Turtle, Rabbit, GuineaPig, Hamster, Bird, Birds, Parrot, PetMeds | Cat.com (not owned), PetInsuranceReviews.com (not owned), Horse.com (separate business) | `[UNK]` — needs Carlo list |
+**Separate business (out of scope, owned):** Horse.com, StateLineTack.com + related.
 
-> The "domain-only, mapped" column is **unverified ownership** — it was reconstructed from the ARCHITECT matrix.
-> Carlo's 2026-05-30 spot-check found 2 of 3 sampled were not owned. Do not treat this column as an asset list
-> until `csro-dir-001` returns the real owned set.
+> The entire middle column is now **confirmed not-owned** — the ARCHITECT §9 matrix is invalidated as an
+> ownership source. The right column is the only thing still open and is the whole point of `csro-dir-001`.
 
 ---
 
@@ -166,20 +176,20 @@ This is the **strategy** tier (distinct from ARCHITECT's monetization tier). Dri
 
 ---
 
-## §5 Highest-value gaps (built ≠ owned)
+## §5 Highest-value gaps
 
-1. ~~Cat.com / Horse.com / PetInsuranceReviews.com as unbuilt upside~~ — **RESOLVED, no upside here (Carlo 2026-05-30):**
-   Cat.com + PetInsuranceReviews.com **not owned**; Horse.com **owned but separate business (out of scope).** `[FACT]`
-   Lesson: the unbuilt-domain matrix was reconstruction — do not treat any unbuilt row as an asset until ownership is confirmed.
-2. `[UNK]` The real owned-domain list (matrix maps 43 of 64; +7 identity) — the genuine open gap. `csro-dir-001`.
+1. **`[UNK]` The real owned-domain list — now the #1 open item.** Confirmed 2026-05-30 that the ARCHITECT §9
+   matrix is NOT it (0 of 28 unbuilt entries owned). Carlo owns *similar* domains; the authoritative list lives
+   with the **Monetization Bot** + his registrar account. `csro-dir-001` re-pointed to that source.
+2. `[FACT]` The verified owned portfolio today = **the 15 built sites.** Plan strategy on those until (1) lands.
 3. `[UNK]` Per-domain registrar + renewal dates — renewal lapse on a T1 asset = catastrophic (`csro-dir-003`).
 
 ---
 
 ## §6 Known unknowns (→ `research-backlog.md`)
 
-1. The true 64/75 owned-domain list (only 43 mapped) — `csro-dir-2026-W22-001` / R-001.
-2. ~~Ownership of Cat.com / Horse.com / PetInsuranceReviews.com~~ — RESOLVED (Carlo 2026-05-30): first two not owned, Horse.com separate-business/out-of-scope.
+1. The real owned-domain list — source is the **Monetization Bot** (ARCHITECT §9 invalidated) — `csro-dir-001` / R-001.
+2. ~~Ownership of the 28 ARCHITECT unbuilt domains~~ — RESOLVED (Carlo 2026-05-30): **0 of 28 owned.**
 3. Registrar + renewal dates, all domains — `csro-dir-2026-W22-003` / R-002.
 4. Vets.co — status of all 5 Tier-1 promotion criteria — R-004.
 5. PetFood/PetFoods, Ferret/Ferrets, Aquarium/Aquariums, Reptile/Reptiles, Bird/Birds — consolidate vs distinct — R-005.
