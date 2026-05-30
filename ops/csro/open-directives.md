@@ -7,12 +7,17 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 ## Open
 
-### csro-dir-2026-W22-006 → Carlo — traffic numbers + Efty URLs (new 2026-05-30)
-- **Action:** (a) Share **rough monthly visits per domain** (Carlo's chosen format); (b) provide **per-domain Efty listing URLs**, at least for the Tier-C sell-domain names.
-- **Why:** Rough traffic reorders build-vs-sell and flags thin names already pulling organic; Efty URLs let the sell-domain names point at their for-sale pages immediately. For-sale **mechanism is decided = Efty via discreet footer link** per `strategy-disposition.md §4` tiers (Tier A flagships show nothing). `[FACT]`
-- **Deadline:** next CSRO brief.
-- **Done-when:** rough traffic received + Efty URLs received.
+### csro-dir-2026-W22-009 → Monetization Bot — monetize Ferret.com + re-target PetFood buy-box (new 2026-05-30) ⬆ TOP
+- **Action:** (a) **Ferret.com (~11K/mo, zero revenue surface):** wire affiliate on existing high-traffic pages now — per the **ferret-com allow-list** (Amazon, Chewy, Marshall Pet Products, Wysong, Carniwhole) in `bot-coordination.md §5`; FTC disclosure surfaced. (b) **Re-target the D-006 buy-box from PetFoods.com (~30) to PetFood.com (~5K)** — PR #174 hit the wrong site. Full brief: `ops/handoffs/2026-05-30-csro-to-monetization-ferret-petfood-revenue.md`.
+- **Why:** Ferret.com is the highest-leverage near-term revenue move — real traffic leaking with no monetization. PetFood retarget points high-intent buy-boxes at a live audience, not a dead site. `[FACT — traffic Carlo-provided]`
+- **Deadline:** this week (no content build — pure wiring).
+- **Done-when:** Ferret.com affiliate live w/ disclosure; buy-box live on PetFood.com.
 - **Status:** open.
+
+### csro-dir-2026-W22-006 → Carlo — Efty URLs (traffic half RECEIVED) (updated 2026-05-30)
+- **Action:** Provide **per-domain Efty listing URLs**, at least for the Tier-C sell-domain names (DogPicture, hardmoneyloans, idog, allpets + thin product names).
+- **Update:** ✅ **Traffic half satisfied** — Carlo provided the live snapshot (8 measured domains), now in `strategy-disposition.md §2` + `portfolio-ranking.md §A`. Remaining: Efty URLs (unblocks `dir-008`).
+- **Status:** open (Efty URLs only).
 
 ### csro-dir-2026-W22-008 → COO — Efty footer link component (new 2026-05-30)
 - **Action:** Add a config-driven `eftyUrl` field per site (`packages/config`) + a discreet footer link in the shared Footer that renders only when set. Tier A (Dog/Fish) left unset → renders nothing. Per `strategy-disposition.md §4`.
