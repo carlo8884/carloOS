@@ -1,19 +1,45 @@
-# Overnight Summary — 2026-05-30
+# Overnight + Morning Summary — 2026-05-30
 
 **For:** Carlo (30-second wake-up recap)
-**Session window:** ~2 hours autonomous after "12-hour discretion" mandate
 
 ---
 
-## 5 PRs open, all green or finalizing — order to merge
+## 🚨 BIGGEST FINDING — MAJOR LEAK FIX (D-012 + D-013)
 
-| # | PR | What it does | Site traffic | CI | Suggested order |
-|---|---|---|---|---|---|
-| 1 | **#177** | D-010 Dog-com insurance CTAs on 7 high-cost health pages | ~36K/mo | finalizing | **Merge first** — biggest traffic × highest-EPC routing |
-| 2 | **#175** | D-009 Ferret-com monetization (starter kit + insurance CTAs) | ~11K/mo | ✅ green | Merge second — biggest hidden-leak fix |
-| 3 | **#176** | D-006 REVISED petfood-com buy-boxes on 3 brand evals | ~5K/mo | ✅ green | Merge third |
-| 4 | **#173** | D-001+D-005 vets-co programmatic 3,020-route matrix | n/a | ✅ green | Merge fourth — 6-9mo SEO bet |
-| 5 | **#174** | D-006 petfoods-com buy-boxes (template/reference) | ~30/mo | ✅ green | Merge last or close — site has minimal traffic |
+**Dog-com review pages had 36 hardcoded `amazon.com/s?k=...` and `chewy.com/...` URLs that bypassed `/go/` entirely — earning $0** on every click. Same pattern existed on fish-com (20 URLs), saddle-com (19), lizard-com (11), vets-co (3). **89 affiliate URLs total across the portfolio were silently earning zero commission.**
+
+PR #181 (dog-com) and PR #183 (other 4 sites) convert all 89 to tracked `/go/<vendor>/<keyword>?s=<source>` routes. **Revenue impact at maturity: ~$700-$2.5K MRR** depending on traffic.
+
+## 🔥 ACTIVATION STEP — UNLOCKS REVENUE INSTANTLY
+
+The 89 fixed URLs earn $0 until Amazon tag env var is set on each Vercel project. The script exists. Run on your Mac:
+
+```bash
+export VERCEL_TOKEN="<your-vercel-token>"
+bash scripts/vercel-set-env.sh AFF_AMAZON_TAG boltonpets20-20
+```
+
+This activates revenue on all 10 Vercel projects in one shot. Idempotent — safe to re-run.
+
+When other affiliate IDs land (Chewy via Impact, SmartPak via CJ, BRS via ShareASale), same pattern:
+```bash
+bash scripts/vercel-set-env.sh AFF_CHEWY_AFFILIATE_ID <chewy-id>
+bash scripts/vercel-set-env.sh AFF_SMARTPAK_AFFILIATE_ID <smartpak-id>
+```
+
+---
+
+## 7 PRs open, all green or finalizing — order to merge
+
+| # | PR | What it does | Traffic | Suggested order |
+|---|---|---|---|---|
+| 1 | **#181** | D-011 dog-com breed CTAs + **D-012 CRITICAL leak fix** (36 hardcoded URLs) | 36K/mo | **MERGE FIRST** — biggest single revenue uplift |
+| 2 | **#183** | D-013 portfolio-wide leak fix (fish + lizard + saddle + vets — 53 more URLs) | n/a | Merge second — same leak class as #181 |
+| 3 | **#177** | D-010 dog-com insurance CTAs on 7 high-cost health pages | 36K/mo | Merge third — highest-EPC routing |
+| 4 | **#175** | D-009 ferret-com monetization (starter kit + insurance CTAs) | 11K/mo | Merge fourth — biggest hidden-leak fix |
+| 5 | **#176** | D-006 REVISED petfood-com buy-boxes on 3 brand evals | 5K/mo | Merge fifth |
+| 6 | **#173** | D-001+D-005 vets-co programmatic 3,020-route matrix | — | Merge sixth — 6-9mo SEO bet |
+| 7 | **#174** | D-006 petfoods-com buy-boxes (template/reference) | 30/mo | Merge last or close — site has minimal traffic |
 
 **Note on #174 vs #176:** The pattern from #174 (buy-boxes on programmatic brand pages) was correct; the site was wrong (petfoods.com gets 30 visitors/mo vs. petfood.com's 5K). #176 applies the same pattern to the right site. #174 stays valuable as a template for when petfoods.com's SEO ramps.
 
