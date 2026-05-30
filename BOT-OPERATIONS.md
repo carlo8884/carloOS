@@ -93,6 +93,8 @@ Then markdown body with sections: Context · Inputs · Definition of done.
 
 | Bot | Type | Status | Branch prefix | Role |
 |---|---|---|---|---|
+| **CSRO** | Persistent | Active | `csro/*` | Portfolio strategy router + loop-closure. Ranks domains, issues directives with IDs, revises thesis when results contradict. Spec: `ops/handoffs/2026-05-30-csro-bot-role-spec.md` |
+| **IR Bot (Codex)** | Persistent | Active | `ir-bot/*` (read-only) | Independent reviewer on non-Claude model. PR risk audit, projection benchmarking, strategy dissent. Spec: `ops/handoffs/2026-05-30-ir-bot-role-spec.md` |
 | **COO Orchestrator** | Persistent | Active | `coo/*` | Builds programmatic SEO surface; coordinates implementation agents; ships content |
 | **Monetization Architect** | Persistent | Active | `claude/carlo-os-monetization-*` | Maintains MONETIZATION-ARCHITECT.md, writes handoffs, spawns subagents for bursts |
 | **Affiliate Operations Bot** | Persistent | Planned | `affiliate-ops/*` | Manages ~100 affiliate programs, monitors performance, suggests replacements |
