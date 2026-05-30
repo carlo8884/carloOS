@@ -57,11 +57,15 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 ### Cluster 2 — Cats
 | Domain | Built? | ARCH tier | CSRO action | Note |
 |---|---|---|---|---|
-| Cat.com | ❌ | T1 | **build (P1 candidate)** | Cat = the obvious missing flagship; high-value `[HYP]` |
-| Cats.com | ❌ | T2 | build/consolidate | content hub; pairs with Cat.com `[HYP]` |
-| CatFood.com | ❌ | T2 | defer | food-finder `[HYP]` |
-| Kitten.com | ❌ | T3 | defer | content `[HYP]` |
-| CatLitter.com | ❌ | T3 | defer/lease | thin comparison `[HYP]` |
+| ~~Cat.com~~ | — | — | **DROP** | **NOT owned (Carlo 2026-05-30)** `[FACT]`. Remove from portfolio modeling. |
+| Cats.com | ❌ | T2 | ownership `[UNK]` | content hub — only relevant if owned; verify in `csro-dir-001` |
+| CatFood.com | ❌ | T2 | ownership `[UNK]` | food-finder `[HYP]` |
+| Kitten.com | ❌ | T3 | ownership `[UNK]` | content `[HYP]` |
+| CatLitter.com | ❌ | T3 | ownership `[UNK]` | thin comparison `[HYP]` |
+
+> ⚠️ Cat.com being unowned confirms the cat-cluster rows below were **reconstruction `[HYP]`, not verified
+> ownership.** Treat the entire unbuilt-domain matrix (§2) as candidate-not-confirmed until `csro-dir-001`
+> returns the real owned list. Do not model any unbuilt domain as an asset on the strength of this table alone.
 
 ### Cluster 3 — Aquatic
 | Domain | Built? | ARCH tier | CSRO action | Note |
@@ -74,11 +78,15 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 ### Cluster 4 — Equestrian
 | Domain | Built? | ARCH tier | CSRO action | Note |
 |---|---|---|---|---|
-| Horse.com | ❌ | T1 | **build (P1 candidate)** | singular Horse.com not built; high-value `[HYP]` |
+| Horse.com | n/a | — | **OUT OF SCOPE** | Owned but **separate business** (with StateLineTack.com + related). Review-only, high-level. No CSRO directives. (Carlo 2026-05-30) `[FACT]` |
 | Horses.com | ✅ | T1 | hold (pending Racing Bot) | tier gated on specialist `[FACT: kickoff]` |
 | Saddle.com | ✅ | T2 | validate (T2→1 path) | luxury; CSRO promotion candidate `[FACT: kickoff]` |
-| Equine.com | ❌ | T2 | build | directory + insurance `[HYP]` |
-| HorseTack.com | ❌ | T3 | defer/lease | thin comparison `[HYP]` |
+| Equine.com | ❌ | T2 | ownership `[UNK]` | directory + insurance `[HYP]` |
+| HorseTack.com | ❌ | T3 | ownership `[UNK]` | thin comparison `[HYP]` |
+
+> **Separate-business boundary (Carlo 2026-05-30):** Horse.com, StateLineTack.com, and related equestrian-retail
+> sites are a distinct business outside the CarloOS loop. CSRO may use them for high-level competitive
+> read-through (esp. vs Saddle.com / Horses.com) but issues no directives, rankings, or build work against them.
 
 ### Cluster 5 — Reptiles & Exotics
 | Domain | Built? | ARCH tier | CSRO action | Note |
@@ -110,7 +118,7 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 |---|---|---|---|---|
 | Vets.co | ✅ | T1 | **validate → promote** | top Tier-1 promotion candidate (5 criteria, `CSRO.md §8`) `[FACT: kickoff]` |
 | AskTheVet.com | ✅ (`askthevet`) | T1 | build (P2) | AI symptom checker; GEO magnet if trust-bar held `[FACT: built]` |
-| PetInsuranceReviews.com | ❌ | T1 | **build (P1 candidate)** | pure-intent insurance comparison; lowest-cost revenue `[HYP]` |
+| ~~PetInsuranceReviews.com~~ | — | — | **DROP** | **NOT owned (Carlo 2026-05-30)** `[FACT]`. Pet-insurance affiliate (Architect S6) still runs on owned built sites (dog/vets/askthevet) — just not this domain. |
 | PetMeds.com | ❌ | T2 | build | Rx + comparison `[HYP]` |
 | SeniorPetPharmacy.com | ✅ (`seniorpets`) | T2 | defer (P3) | recurring-Rx LTV; needs demand validation `[FACT: built]` |
 | PetFood.com | ✅ | T1 | build | nutrition cluster; food-finder `[FACT: built]` |
@@ -131,9 +139,13 @@ I list only what the repo evidences and label the rest `[UNK]` — I do not inve
 
 15 domains are built (app dir + config entry); 28 mapped domains are held-but-unbuilt; ~21 unmapped.
 
-| Built (15) | Domain-only, mapped (28) | Unmapped (~21) |
-|---|---|---|
-| Dog, Fish, Vets.co, Saddle, Lizard, Horses, PetFood, PetFoods, Ferret, Ferrets, AskTheVet, SeniorPetPharmacy, DogPicture, PetSupplies, HardMoneyLoans | Puppy, DogFood, DogToys, DogBeds, DogCollars, Cat, Cats, CatFood, Kitten, CatLitter, Aquarium, Aquariums, Goldfish, Horse, Equine, HorseTack, Reptile, Reptiles, Snake, Turtle, Rabbit, GuineaPig, Hamster, Bird, Birds, Parrot, PetInsuranceReviews, PetMeds | `[UNK]` — needs Carlo list |
+| Built (15) | Domain-only, mapped — ownership unverified | Confirmed NOT owned / out of scope | Unmapped (~21) |
+|---|---|---|---|
+| Dog, Fish, Vets.co, Saddle, Lizard, Horses, PetFood, PetFoods, Ferret, Ferrets, AskTheVet, SeniorPetPharmacy, DogPicture, PetSupplies, HardMoneyLoans | Puppy, DogFood, DogToys, DogBeds, DogCollars, Cats, CatFood, Kitten, CatLitter, Aquarium, Aquariums, Goldfish, Equine, HorseTack, Reptile, Reptiles, Snake, Turtle, Rabbit, GuineaPig, Hamster, Bird, Birds, Parrot, PetMeds | Cat.com (not owned), PetInsuranceReviews.com (not owned), Horse.com (separate business) | `[UNK]` — needs Carlo list |
+
+> The "domain-only, mapped" column is **unverified ownership** — it was reconstructed from the ARCHITECT matrix.
+> Carlo's 2026-05-30 spot-check found 2 of 3 sampled were not owned. Do not treat this column as an asset list
+> until `csro-dir-001` returns the real owned set.
 
 ---
 
@@ -156,9 +168,10 @@ This is the **strategy** tier (distinct from ARCHITECT's monetization tier). Dri
 
 ## §5 Highest-value gaps (built ≠ owned)
 
-1. `[HYP→P1]` **Cat.com / Horse.com / PetInsuranceReviews.com** are ARCHITECT-T1 but **not built.** If Carlo owns
-   these single-word/high-intent domains, they may rival Dog.com/Fish.com for exit value and are unbuilt upside.
-2. `[UNK]` ~21 unmapped owned domains + 7 "identity" domains — entire value unknown until listed.
+1. ~~Cat.com / Horse.com / PetInsuranceReviews.com as unbuilt upside~~ — **RESOLVED, no upside here (Carlo 2026-05-30):**
+   Cat.com + PetInsuranceReviews.com **not owned**; Horse.com **owned but separate business (out of scope).** `[FACT]`
+   Lesson: the unbuilt-domain matrix was reconstruction — do not treat any unbuilt row as an asset until ownership is confirmed.
+2. `[UNK]` The real owned-domain list (matrix maps 43 of 64; +7 identity) — the genuine open gap. `csro-dir-001`.
 3. `[UNK]` Per-domain registrar + renewal dates — renewal lapse on a T1 asset = catastrophic (`csro-dir-003`).
 
 ---
@@ -166,7 +179,7 @@ This is the **strategy** tier (distinct from ARCHITECT's monetization tier). Dri
 ## §6 Known unknowns (→ `research-backlog.md`)
 
 1. The true 64/75 owned-domain list (only 43 mapped) — `csro-dir-2026-W22-001` / R-001.
-2. Ownership confirmation of the high-value unbuilt T1 domains (Cat.com, Horse.com, PetInsuranceReviews.com).
+2. ~~Ownership of Cat.com / Horse.com / PetInsuranceReviews.com~~ — RESOLVED (Carlo 2026-05-30): first two not owned, Horse.com separate-business/out-of-scope.
 3. Registrar + renewal dates, all domains — `csro-dir-2026-W22-003` / R-002.
 4. Vets.co — status of all 5 Tier-1 promotion criteria — R-004.
 5. PetFood/PetFoods, Ferret/Ferrets, Aquarium/Aquariums, Reptile/Reptiles, Bird/Birds — consolidate vs distinct — R-005.

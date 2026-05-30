@@ -14,11 +14,12 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 
 - Two domains (Dog.com, Fish.com) have **live inbound offers** ($2.3M, $1.45M) — proof that premium
   single-word .com pet domains attract real acquirer interest.
-- The repo backs a **64-domain portfolio** (`MONETIZATION-ARCHITECT.md §9`) organized into 9 species/service
-  clusters — i.e., the held-domain base is broad even though only 15 are built. This supports a
-  "few hero builds + long-tail option value" structure.
-- High-value single-word domains exist **unbuilt** (Cat.com, Horse.com, PetInsuranceReviews.com tagged T1) —
-  latent upside that costs only build effort to activate, assuming ownership.
+- The ARCHITECT doc *describes* a 64-domain portfolio (`MONETIZATION-ARCHITECT.md §9`), but a 2026-05-30
+  ownership spot-check found that doc is **not a reliable ownership ledger** — 2 of 3 sampled unbuilt domains
+  (Cat.com, PetInsuranceReviews.com) are not owned, and a third (Horse.com) is a separate business. So the
+  "broad held base" is **unproven**; the verified asset base is the **15 built sites** until Carlo supplies the
+  real owned list (`csro-dir-001`). Thesis structure is therefore "few hero builds," with long-tail option value
+  treated as `[UNK]` rather than assumed.
 - Carlo's stated wants (programmatic SEO, affiliate, lead-gen, comparison engines, tools/calculators) and
   avoidances (marketplaces, pre-threshold display ads, enterprise sales) bound the monetization design space.
 - The trust bar (no fake credentials, no AI humans, FTC disclosure) is an **asset-preservation moat**, not
@@ -40,8 +41,9 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 
 ## Open questions / falsifiers
 
-- `[UNK]` Does Carlo own the unbuilt T1 domains (Cat.com, Horse.com, PetInsuranceReviews.com)? If yes, build priority shifts hard toward them.
-- `[UNK]` Is the full 64/75 breadth strategic, or domain-hoarding cost? Renewal cost vs option value needs sizing.
+- ~~Does Carlo own the unbuilt T1 domains?~~ RESOLVED 2026-05-30: Cat.com / PetInsuranceReviews.com not owned; Horse.com separate-business/out-of-scope.
+- `[UNK]` What does Carlo *actually* own? The ARCHITECT matrix is unreliable for ownership — the real list is the open question (`csro-dir-001`).
+- `[UNK]` Is the real owned breadth strategic, or domain-hoarding cost? Renewal cost vs option value needs sizing once the true list exists.
 - `[UNK]` Do tool/AI assets (askthevet, comparison engine) command acquisition multiples comparable to content authorities? Needs Empire Flippers / FE International comps.
 - `[UNK]` Does the pre-launch posture (no DNS, no GA4, no traffic) materially weaken the standing offers?
 

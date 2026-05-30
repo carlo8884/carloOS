@@ -28,16 +28,21 @@
 
 ---
 
-## Unbuilt high-value candidates (rank pending ownership — `csro-dir-002`)
+## Unbuilt high-value candidates — RESOLVED (Carlo 2026-05-30, `csro-dir-002` closed)
 
-Mapped Tier-1 in `MONETIZATION-ARCHITECT.md §9` but **not built**. If Carlo owns them, they likely outrank most
-of the built T3 set and possibly the T2 set:
+Ownership of the ARCHITECT-Tier-1 unbuilt domains is confirmed. Result: **none are in-scope build targets.** `[FACT]`
 
-| Candidate | Cluster | Why it could be top-tier |
+| Candidate | Status | Disposition |
 |---|---|---|
-| Cat.com | Cats | Missing flagship species; mirrors Dog.com value `[HYP]` |
-| Horse.com | Equestrian | Singular high-value .com; pairs with built Horses.com `[HYP]` |
-| PetInsuranceReviews.com | Health | Pure-intent; lowest-cost revenue surface (Architect S6) `[HYP]` |
+| Cat.com | **NOT owned** `[FACT]` | Drop. Do not rank, do not treat as latent upside. |
+| PetInsuranceReviews.com | **NOT owned** `[FACT]` | Drop. The pet-insurance affiliate play still runs on owned built sites (dog/vets/askthevet) per ARCHITECT S6 — just not on this domain. |
+| Horse.com | **Owned, separate business** `[FACT]` | Out of CSRO scope — see carve-out below. |
+
+## Out-of-scope: separate-business carve-out (Carlo 2026-05-30) `[FACT]`
+
+**Horse.com, StateLineTack.com, and related sites are a separate business.** CSRO may review them for
+**high-level / informational** context only (e.g. competitive read-through to Saddle.com / Horses.com), but
+issues **no directives, rankings, or build work** against them. They are not part of the CarloOS portfolio loop.
 
 ## Movement watch
 

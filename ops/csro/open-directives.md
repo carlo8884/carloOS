@@ -14,13 +14,6 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 - **Done-when:** full list in-repo OR Carlo confirms the canonical count + list.
 - **Status:** open
 
-### csro-dir-2026-W22-002 → Carlo
-- **Action:** Confirm ownership + state of the unbuilt ARCHITECT-Tier-1 domains: **Cat.com, Horse.com, PetInsuranceReviews.com**.
-- **Why:** These are tagged T1 in `MONETIZATION-ARCHITECT.md §9` but have no app dir. If owned, they are candidate top-tier build targets (Cat = missing flagship species; PetInsuranceReviews = lowest-cost revenue surface). `[HYP]`
-- **Deadline:** next CSRO brief.
-- **Done-when:** ownership confirmed; ranked in `portfolio-ranking.md`.
-- **Status:** open
-
 ### csro-dir-2026-W22-003 → Carlo / COO
 - **Action:** Provide per-domain registrar + renewal dates, starting with the 15 built domains (Dog.com/Fish.com first).
 - **Why:** Renewal lapse on an offer-validated T1 asset = catastrophic, irreversible value loss. `[FACT]`
@@ -32,4 +25,7 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 ## Closed
 
-*(none yet)*
+### csro-dir-2026-W22-002 → Carlo — CLOSED 2026-05-30
+- **Action was:** confirm ownership of the unbuilt ARCHITECT-Tier-1 domains (Cat.com, Horse.com, PetInsuranceReviews.com).
+- **Resolution (Carlo 2026-05-30):** Cat.com — **not owned.** PetInsuranceReviews.com — **not owned.** Horse.com — **owned but separate business** (with StateLineTack.com + related); review-only, out of CSRO scope.
+- **Outcome:** all three dropped/scoped-out of the portfolio loop. Registers updated. Lesson: the unbuilt-domain matrix is unverified-ownership reconstruction; don't model unbuilt rows as assets pre-confirmation. This raises the value of `csro-dir-001` (the real owned list is the only reliable source).
