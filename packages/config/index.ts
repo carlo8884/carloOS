@@ -921,12 +921,16 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Race Center', href: '/', highlight: true },
+      { label: 'Methodology', href: '/methodology' },
+      { label: 'Track Record', href: '/track-record' },
     ],
     footerLinks: [
       {
         heading: 'Racing Intelligence',
         links: [
           { label: 'Race Center', href: '/' },
+          { label: 'Methodology', href: '/methodology' },
+          { label: 'Track Record', href: '/track-record' },
         ],
       },
     ],

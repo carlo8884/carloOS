@@ -148,6 +148,20 @@ export default function RaceCenterPage() {
           Phase 1 runs on curated cards while we validate the model. Live multi-track feeds, results,
           and full horse / trainer / jockey / track databases follow in Phase 2.
         </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href="/methodology"
+            className="rounded-lg bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+          >
+            Read the methodology &rarr;
+          </Link>
+          <Link
+            href="/track-record"
+            className="rounded-lg border border-brand-border bg-white px-4 py-2 text-sm font-semibold text-brand-primary no-underline hover:border-brand-primary"
+          >
+            See the track record &rarr;
+          </Link>
+        </div>
       </section>
 
       <EmailCapture

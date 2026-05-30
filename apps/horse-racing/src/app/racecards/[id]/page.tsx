@@ -7,9 +7,9 @@
  */
 
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { buildMetadata, Breadcrumb, EmailCapture } from '@carloOS/ui';
+import { buildMetadata, Breadcrumb, EmailCapture, SchemaScript } from '@carloOS/ui';
+import { getSiteConfig } from '@carloOS/config';
 import { allRaces, getRace } from '../../../data/racing/meetings';
 import { analyzeRace } from '../../../data/racing/analysis';
 
@@ -61,8 +61,31 @@ export default function RacecardPage({ params }: { params: { id: string } }) {
 
   const valueRunnerId = analysis.valuePick?.runnerId;
 
+  // SportsEvent structured data — makes the card citable in AI search / rich
+  // results. Competitors hide this behind paywalls; we surface it.
+  const base = getSiteConfig('horse-racing').theme.siteUrl;
+  const sportsEventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsEvent',
+    name: race.name,
+    sport: 'Horse racing',
+    startDate: race.offTime,
+    eventStatus: 'https://schema.org/EventScheduled',
+    url: `${base}/racecards/${race.id}`,
+    location: {
+      '@type': 'Place',
+      name: race.course,
+      address: { '@type': 'PostalAddress', addressCountry: meeting.country },
+    },
+    competitor: race.runners.map((r) => ({
+      '@type': 'SportsTeam',
+      name: r.name,
+    })),
+  };
+
   return (
     <>
+      <SchemaScript schema={sportsEventSchema} />
       <Breadcrumb
         siteId="horse-racing"
         items={[{ name: 'Race Center', href: '/' }, { name: race.course }]}
