@@ -84,6 +84,33 @@ export default function OrijenVsAcanaComparisonPage() {
           facilities, and distinct price tiers.
         </p>
 
+        {/* ─── Buy-boxes (D-006 — affiliate enrichment) ────────────────── */}
+        <div style={{ background: 'var(--brand-bg, #f8f8f8)', border: '1px solid var(--brand-border)', borderRadius: '10px', padding: '20px', margin: '24px 0 28px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
+            Where to buy either line
+          </div>
+          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid)', lineHeight: 1.5 }}>
+            Both lines are available on Chewy and Amazon. We earn an affiliate commission when you
+            purchase through these links — at no extra cost to you. We never rank by commission.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 700, marginBottom: '6px' }}>Orijen</div>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                <a href="/go/chewy-brand/Orijen?s=orijen-vs-acana" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Chewy →</a>
+                <a href="/go/amazon-brand/Orijen?s=orijen-vs-acana" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Amazon →</a>
+              </div>
+            </div>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 700, marginBottom: '6px' }}>Acana</div>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                <a href="/go/chewy-brand/Acana?s=orijen-vs-acana" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Chewy →</a>
+                <a href="/go/amazon-brand/Acana?s=orijen-vs-acana" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Amazon →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h2 id="parent">Parent Company Context</h2>
         <p>
           Champion Petfoods was founded in 1985 in Morinville, Alberta. Acana launched first; Orijen
