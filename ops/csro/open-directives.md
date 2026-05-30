@@ -5,7 +5,27 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 ---
 
+## Autonomous work queue (non-blocked tasks CSRO advances without Carlo)
+
+Per the §17 autonomy mandate — when blocked, pull the next item here. Keep ≥5 live.
+
+- [ ] **Exit-valuation model** — once research agent returns comps, build a per-domain valuation/disposition model (sell-price vs build-to-earn NPV). *(research running)*
+- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains (redirect / sell / hold) on a consistent rubric. Provisional now; finalize as traffic is measured.
+- [ ] **Dog.com / Fish.com acquirer revenue-trajectory angle** — draft the "small-but-growing revenue + traffic" narrative that justifies the step-up from the $2.3M/$1.45M offers. No Carlo input needed to draft.
+- [ ] **Duplication/redirect map** — concrete 301 plan for PetFoods→PetFood, Ferrets→Ferret, and the cluster-support names → heroes. Hand to COO.
+- [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
+- [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
+- [ ] **Bot-quality ledger refresh** — review COO/Monetization/Visual PRs as they land against the strategy.
+
+---
+
 ## Open
+
+### csro-dir-2026-W22-010 → COO — free-tier vet-directory prep (no spend) (new 2026-05-30)
+- **Action:** Scope/prototype a $0 directory slice: OpenStreetMap `amenity=veterinary` (ODbL) + the ~20 states publishing free license CSVs + AAHA-accredited public listings as a "premium tier." Research/prep only — no build commitment, no spend.
+- **Why:** Lets a credible directory subset go live without the paid state-board pipeline or Places spend (which is Carlo-gated). Keeps the directory progressing while the budget decision waits. `[CSRO DECISION — see vet-directory-position.md §4]`
+- **Done-when:** feasibility note on coverage/quality of the free slice; go/no-go on de-noindexing a subset.
+- **Status:** open.
 
 ### csro-dir-2026-W22-009 → Monetization Bot — monetize Ferret.com + re-target PetFood buy-box (new 2026-05-30) ⬆ TOP
 - **Action:** (a) **Ferret.com (~11K/mo, zero revenue surface):** wire affiliate on existing high-traffic pages now — per the **ferret-com allow-list** (Amazon, Chewy, Marshall Pet Products, Wysong, Carniwhole) in `bot-coordination.md §5`; FTC disclosure surfaced. (b) **Re-target the D-006 buy-box from PetFoods.com (~30) to PetFood.com (~5K)** — PR #174 hit the wrong site. Full brief: `ops/handoffs/2026-05-30-csro-to-monetization-ferret-petfood-revenue.md`.
