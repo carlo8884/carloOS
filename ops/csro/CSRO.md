@@ -232,12 +232,33 @@ Score each Tier-1 and Tier-2 domain 1-5 on:
 - **Research needed**: insufficient data — assign a specialist
 - **Ignore for now**: explicit deprioritization with date to revisit
 
-**Confirmed by Carlo 2026-05-30:**
-- Tier 1: Dog.com, Fish.com, Vets.co
-- Tier 2 with promotion path: Saddle.com, Lizard.com
-- Tier 2: Horses.com (pending Racing Bot findings), Ferret.com, PetFood.com
-- Tier 3: PetFoods.com, Ferrets.com + scaffolds
-- Sunset: hardmoneyloans.com
+**Current operating policy (Carlo-approved 2026-05-30, not permanent law — revise per the thesis-revision triggers in §11):**
+- **Tier 1 (confirmed by Carlo):** Dog.com, Fish.com
+- **Tier 1 (COO recommendation pending Carlo confirmation):** Vets.co — recommended on the basis that insurance lead-gen is the highest-margin product in the portfolio and the vet directory creates a SaaS moat
+- **Tier 2 with promotion path:** Saddle.com, Lizard.com
+- **Tier 2:** Horses.com (pending Racing Bot findings), Ferret.com, PetFood.com
+- **Tier 3:** PetFoods.com, Ferrets.com + scaffolds
+- **Sunset (confirmed by Carlo):** hardmoneyloans.com
+
+### Real acquisition offers received (Carlo-disclosed 2026-05-30)
+- **Dog.com:** $2.3M offer received
+- **Fish.com:** $1.45M offer received
+
+These are the floor numbers. The operating goal is to **increase credible exit value toward $10M+ each** through traffic, revenue, email capture, product/tool depth, and defensible authority.
+
+### Protect-the-asset directive (Carlo 2026-05-30)
+
+Dog.com and Fish.com are **protect-the-asset domains**. Do NOT let short-term monetization or low-quality content damage buyer diligence or brand trust. This is the highest-priority constraint on every tactical decision touching these two domains.
+
+Concretely, on Dog.com and Fish.com:
+- **No paid favorable reviews** (already QC §1, but restated as Tier-1 protect-the-asset gate)
+- **No fabricated credentials, no fake authority signals**
+- **No aggressive monetization tactics** (interstitial ads, exit-intent pop-ups, sponsored content masquerading as editorial)
+- **No low-quality programmatic content** that doesn't pass editorial review
+- **Acquirer-diligence-ready posture**: every page must be defensible under buyer scrutiny (sourced claims, primary references, real editorial standards page, transparent affiliate disclosure)
+- **Brand-trust drift = drift alarm**: if Monetization or any other bot proposes a tactic that risks Tier-1 brand integrity on Dog.com or Fish.com, CSRO files a drift alarm immediately
+
+Any conflict between short-term revenue and protect-the-asset constraints on Tier 1 → escalate to Carlo. Default decision: **preserve the asset.**
 
 ---
 
