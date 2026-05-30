@@ -17,7 +17,7 @@ import {
   dnaTestSlugs,
   getDnaTestBySlug,
   type DnaTestProfile,
-} from '../../../data/dna-tests'
+} from '../../../../data/dna-tests'
 
 export async function generateStaticParams() {
   return dnaTestSlugs().map((test) => ({ test }))
@@ -75,11 +75,11 @@ export default async function DnaTestPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'DNA Testing', url: 'https://dog.com/dna-testing' },
       { name: t.brand, url: `https://dog.com/dna-testing/${t.slug}` },
-    ]),
+    ] }),
   )
 
   const faqItems = [
@@ -318,10 +318,10 @@ export default async function DnaTestPage({
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:dna-test-comparison"
+          source="dog-com:dna-test-comparison"
           title="Get the full DNA test buyer's guide"
           subtitle="All 3 tests compared. Which test for which breed. Free PDF."
-          buttonText="Send the guide"
+          ctaText="Send the guide"
         />
       </div>
     </>
