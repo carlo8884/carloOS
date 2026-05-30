@@ -42,7 +42,7 @@ export default function FleaTickPreventionPage() {
               cons={['Prescription required', 'More expensive per dose (but similar annual cost)', 'Isoxazoline seizure risk in predisposed dogs']}
               price="$50–60 per 12-week dose"
               ctaText="Ask Your Vet About Bravecto →"
-              ctaHref="https://www.chewy.com/s?query=bravecto+chew+dogs"
+              ctaHref="/go/chewy-brand/bravecto+chew+dogs?s=review-best-flea-tick-prevention"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="bravecto-chew"
             />
@@ -53,7 +53,7 @@ export default function FleaTickPreventionPage() {
               cons={['Monthly dosing — 12 doses/year', '5 tick species vs Bravecto\'s 7', 'Prescription required']}
               price="$20–25 per monthly dose"
               ctaText="Ask Your Vet About NexGard →"
-              ctaHref="https://www.chewy.com/s?query=nexgard+chew+dogs"
+              ctaHref="/go/chewy-brand/nexgard+chew+dogs?s=review-best-flea-tick-prevention"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="nexgard-chew"
             />

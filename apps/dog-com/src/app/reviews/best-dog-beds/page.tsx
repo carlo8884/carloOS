@@ -39,7 +39,7 @@ export default function BestDogBedsPage() {
               cons={['Expensive ($279–399)', 'Cover is not machine washable (spot clean only)', 'Heavy — difficult to move']}
               price="$279–399"
               ctaText="Shop Big Barker →"
-              ctaHref="https://www.chewy.com/s?query=big+barker+orthopedic+dog+bed"
+              ctaHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=review-best-dog-beds"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="big-barker-orthopedic"
             />
@@ -50,7 +50,7 @@ export default function BestDogBedsPage() {
               cons={['Less therapeutic than Big Barker for severe arthritis', 'Cover zippers can be chewed by destructive dogs']}
               price="$125–175"
               ctaText="Shop Casper Dog Bed →"
-              ctaHref="https://www.chewy.com/s?query=casper+dog+bed"
+              ctaHref="/go/chewy-brand/casper+dog+bed?s=review-best-dog-beds"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="casper-dog-bed"
             />

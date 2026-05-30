@@ -42,7 +42,7 @@ export default function BestSeniorDogFoodPage() {
               cons={['Not appropriate as sole management for significant CDS — consult vet', 'Chicken-based — not for chicken-allergic dogs']}
               price="$55–75 / 30 lb"
               ctaText="Shop Purina Pro Plan Bright Mind →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+bright+mind+senior"
+              ctaHref="/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=review-best-dog-food-senior"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="pp-bright-mind-senior"
             />
@@ -53,7 +53,7 @@ export default function BestSeniorDogFoodPage() {
               cons={['Less cognitive-specific than Bright Mind', 'No published cognitive clinical trial']}
               price="$55–70 / 30 lb"
               ctaText="Shop Hill's Science Diet Senior →"
-              ctaHref="https://www.chewy.com/s?query=hills+science+diet+senior+7"
+              ctaHref="/go/chewy-brand/hills+science+diet+senior+7?s=review-best-dog-food-senior"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="hills-science-diet-senior"
             />

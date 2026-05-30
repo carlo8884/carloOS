@@ -94,7 +94,7 @@ export default function BestDogCratesPage() {
               price="$40–80"
               priceNote="By size"
               ctaText="Shop MidWest iCrate →"
-              ctaHref="https://www.amazon.com/s?k=midwest+icrate"
+              ctaHref="/go/amazon-brand/midwest+icrate?s=review-best-dog-crates"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="midwest-icrate"
             />
@@ -147,7 +147,7 @@ export default function BestDogCratesPage() {
               price="$40–120"
               priceNote="By size"
               ctaText="Shop Petmate Sky Kennel →"
-              ctaHref="https://www.amazon.com/s?k=petmate+sky+kennel"
+              ctaHref="/go/amazon-brand/petmate+sky+kennel?s=review-best-dog-crates"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="petmate-sky-kennel"
             />
@@ -173,7 +173,7 @@ export default function BestDogCratesPage() {
               cons={['Not chew-resistant', 'Less ventilation than wire', 'Not for escape artists or puppies', 'Harder to clean']}
               price="$80–160"
               ctaText="Shop Frisco Furniture Crates →"
-              ctaHref="https://www.chewy.com/b/furniture-style-crates-3858"
+              ctaHref="/go/chewy-brand/furniture style crates?s=review-best-dog-crates"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="frisco-furniture-crate"
             />

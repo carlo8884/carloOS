@@ -306,4 +306,18 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://www.awin1.com/cread.php?awinmid=PLACEHOLDER&awinaffid=PLACEHOLDER&p={sku}',
     requiresSku: true,
   },
+
+  // ─── Brand-search variants (D-012 — convert hardcoded retailer URLs to tracked /go/ routes) ──
+  // Lets review pages link to retailer brand/keyword search instead of dead
+  // direct URLs. Reader picks the specific product; we earn the commission.
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

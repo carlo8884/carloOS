@@ -118,7 +118,7 @@ export default function BestDogFoodPage() {
               price="$55–110 / 30 lbs"
               priceNote="Varies by formula and bag size"
               ctaText="Shop Royal Canin →"
-              ctaHref="https://www.chewy.com/royal-canin"
+              ctaHref="/go/chewy-brand/royal canin?s=review-best-dry-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="royal-canin"
             />
@@ -156,7 +156,7 @@ export default function BestDogFoodPage() {
               ]}
               price="$45–90 / 30 lbs"
               ctaText="Shop Pro Plan →"
-              ctaHref="https://www.chewy.com/purina-pro-plan"
+              ctaHref="/go/chewy-brand/purina pro plan?s=review-best-dry-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="purina-pro-plan"
             />
@@ -191,7 +191,7 @@ export default function BestDogFoodPage() {
               price="$60–120 / 30 lbs (Science Diet)"
               priceNote="Prescription Diet varies"
               ctaText="Shop Hill's →"
-              ctaHref="https://www.chewy.com/hills-science-diet"
+              ctaHref="/go/chewy-brand/hills science diet?s=review-best-dry-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="hills-science-diet"
             />
@@ -218,7 +218,7 @@ export default function BestDogFoodPage() {
               cons={['Weaker WSAVA compliance than Royal Canin/Purina', 'Premium price', 'Not ideal for dogs with health conditions']}
               price="$90–150 / 25 lbs"
               ctaText="Shop Orijen →"
-              ctaHref="https://www.chewy.com/orijen"
+              ctaHref="/go/chewy-brand/orijen?s=review-best-dry-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="orijen"
             />

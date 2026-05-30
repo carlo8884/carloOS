@@ -92,7 +92,7 @@ export default function BestPuppyFoodPage() {
               cons={['Higher price than Purina or Hill\'s', 'Some dogs do not like the kibble shape', 'Must transition to RC adult at appropriate age']}
               price="$65–90 per 30 lb bag"
               ctaText="Shop Royal Canin →"
-              ctaHref="https://www.amazon.com/s?k=royal+canin+large+breed+puppy"
+              ctaHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=review-best-dog-food-for-puppies"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="royal-canin-large-puppy"
             />
@@ -116,7 +116,7 @@ export default function BestPuppyFoodPage() {
               cons={['No breed-specific lines (unlike Royal Canin)', 'Chicken as primary protein — not suitable for chicken-sensitive dogs']}
               price="$55–75 per 34 lb bag"
               ctaText="Shop Purina Pro Plan →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+puppy+large+breed"
+              ctaHref="/go/chewy-brand/s?query=purina+pro+plan+puppy+large+breed?s=review-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="purina-pro-plan-puppy-large"
             />
@@ -139,7 +139,7 @@ export default function BestPuppyFoodPage() {
               cons={['Premium price', 'Not for large breeds — use Hill\'s Large Breed formula instead']}
               price="$55–80 per 28.5 lb bag"
               ctaText="Shop Hill's Science Diet →"
-              ctaHref="https://www.chewy.com/s?query=hills+science+diet+puppy+small+paws"
+              ctaHref="/go/chewy-brand/s?query=hills+science+diet+puppy+small+paws?s=review-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="hills-puppy-small-paws"
             />
@@ -162,7 +162,7 @@ export default function BestPuppyFoodPage() {
               cons={['Less research investment than top 3', 'AAFCO formulation (not feeding trial) on some lines', 'Lower-quality protein sourcing than premium options']}
               price="$30–50 per 30 lb bag"
               ctaText="Shop Iams →"
-              ctaHref="https://www.chewy.com/s?query=iams+proactive+health+puppy+large+breed"
+              ctaHref="/go/chewy-brand/s?query=iams+proactive+health+puppy+large+breed?s=review-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="iams-puppy-large-breed"
             />
