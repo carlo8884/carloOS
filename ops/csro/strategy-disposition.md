@@ -129,11 +129,22 @@ Sites that can't clear (2) soon should be re-dispositioned to SELL-DOMAIN rather
 
 ---
 
-## §7 Immediate sequence (what I'm driving now, no Carlo dependency)
+## §7 Immediate sequence (traffic-driven, revised 2026-05-30)
 
-1. Prioritize **Vets.co** build-to-earn plan (insurance affiliate + directory) — the highest-value non-flagship.
-2. Keep **Dog.com / Fish.com** in protect-asset grooming; draft the "revenue-trajectory-for-acquirers" angle.
-3. Hold all DNS until the §5 gate is met per site.
-4. Finalize §2/§3 the moment traffic data lands.
+**Order of operations = monetize where traffic already exists, then build authority where it doesn't.**
+
+1. **Ferret.com — plug the leak NOW.** Direct Monetization Bot to wire affiliate on its existing ~11K/mo pages.
+   #1 because it's pure upside with no content build required (`csro-dir-009`).
+2. **PetFood.com — re-target the buy-box pattern here (not PetFoods.com).** ~5K high-intent; fix the PR #174
+   mis-targeting (`csro-dir-009`).
+3. **Dog.com / Fish.com — confirm affiliate surfaces are live + clean on existing traffic** (36K / 7K). Doubles as
+   the revenue-trajectory story for acquirers. Stay in protect-asset grooming.
+4. **Vets.co — start the long-term insurance-hub + directory build** in parallel (6–9mo SEO bet; highest ceiling,
+   not near-term cash). Demoted from "#1 now" but still the top *authority* build.
+5. **Pause programmatic build-outs on Horses / Lizard / Saddle** — traffic doesn't justify build cost yet.
+6. **Hold all DNS until the §5 gate is met per site.** Finalize §3 (the ~48 unbuilt) when their traffic is measured.
+
+> Lane note: the monetization wiring in steps 1–3 is the **Monetization Bot's lane** (`affiliate-routes.ts`,
+> buy-boxes, funnels). CSRO directs + prioritizes; CSRO does not wire. Briefs go via `ops/handoffs/`.
 
 *Living register — update in place as decisions execute and data arrives.*

@@ -6,7 +6,13 @@ created: 2026-05-30
 next_action: COO to scope build; Monetization Bot to confirm affiliate stack realism
 ---
 
-# CSRO Directive — Vets.co is the #1 non-flagship build-to-earn priority
+> **⚠️ Re-prioritization (2026-05-30, after live traffic landed):** Vets.co is the #1 **long-term authority /
+> exit-ceiling** build, but it is **NOT the #1 *near-term revenue* move** — it has ~0 measured traffic and is a
+> 6–9-month SEO bet. The immediate-cash priority is **Ferret.com** (~11K/mo, zero monetization — see
+> `2026-05-30-csro-to-monetization-ferret-petfood-revenue.md`). Proceed with Vets.co as a **parallel long-term
+> track**, not ahead of monetizing existing traffic. Everything below still stands as the Vets.co plan.
+
+# CSRO Directive — Vets.co is the #1 non-flagship build-to-earn priority (long-term/exit ceiling)
 
 **Directive ID:** `csro-dir-2026-W22-007`
 **Source:** Carlo's 2026-05-30 mandate ("maximize value → sell or earn") + `ops/csro/strategy-disposition.md §2`.
