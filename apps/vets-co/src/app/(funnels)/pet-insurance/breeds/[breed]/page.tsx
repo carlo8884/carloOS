@@ -95,7 +95,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
         the conditions that matter, and a state-by-state breakdown.
       </p>
 
-      <AffiliateDisclosure variant="banner" />
+      <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
       {/* ─── Top pick ─────────────────────────────────────────────────────── */}
       {recommended && (

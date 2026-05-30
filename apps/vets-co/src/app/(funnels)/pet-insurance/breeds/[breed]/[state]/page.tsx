@@ -143,7 +143,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
         market means for your premium.
       </p>
 
-      <AffiliateDisclosure variant="banner" />
+      <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
       {/* ─── Top recommendation ───────────────────────────────────────────── */}
       {recommendedCarrier && (

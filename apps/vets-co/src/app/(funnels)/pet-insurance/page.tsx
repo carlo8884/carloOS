@@ -180,10 +180,10 @@ export default function VetsCoInsuranceHub() {
         <EmailCapture
           variant="section"
           siteId="vets-co"
-          tag="vets-co:insurance-comparison"
+          source="vets-co:insurance-comparison"
           title="Save the comparison for later"
           subtitle="We'll send you the 9-carrier comparison spreadsheet by email."
-          buttonText="Email the spreadsheet"
+          ctaText="Email the spreadsheet"
         />
       </div>
     </>

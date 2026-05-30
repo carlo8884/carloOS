@@ -92,7 +92,7 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         {s.name} owners.
       </p>
 
-      <AffiliateDisclosure variant="banner" />
+      <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
       {/* ─── Market context ───────────────────────────────────────────────── */}
       <section className="mt-10">
