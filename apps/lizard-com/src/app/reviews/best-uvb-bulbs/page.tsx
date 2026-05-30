@@ -99,7 +99,7 @@ export default function BestUVBBulbsPage() {
               price="$28–45"
               priceNote="Varies by length"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=arcadia+t5+12+desert"
+              ctaHref="/go/amazon-brand/arcadia+t5+12+desert?s=reviews-best-uvb-bulbs"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="arcadia-12-desert"
             />
@@ -125,7 +125,7 @@ export default function BestUVBBulbsPage() {
               cons={['Not suitable for desert species — too low output', 'Slightly less widely stocked than Zoo Med']}
               price="$26–40"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=arcadia+t5+6+forest"
+              ctaHref="/go/amazon-brand/arcadia+t5+6+forest?s=reviews-best-uvb-bulbs"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="arcadia-6-forest"
             />
@@ -151,7 +151,7 @@ export default function BestUVBBulbsPage() {
               cons={['Faster output decline — replace every 6 months', 'Lower output than Arcadia at 6 months']}
               price="$20–35"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=zoo+med+reptisun+t5+ho+10.0"
+              ctaHref="/go/amazon-brand/zoo+med+reptisun+t5+ho+10.0?s=reviews-best-uvb-bulbs"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="zoomed-reptisun-10"
             />

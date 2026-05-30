@@ -52,7 +52,7 @@ export default function BestThermostatsPage() {
               cons={['Not for bulbs (use dimming thermostat)', 'More expensive than budget options ($65-85)']}
               price="$65–85"
               ctaText="Shop Herpstat 1 →"
-              ctaHref="https://www.amazon.com/s?k=herpstat+1+thermostat"
+              ctaHref="/go/amazon-brand/herpstat+1+thermostat?s=reviews-best-thermostats"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="herpstat-1"
             />
@@ -63,7 +63,7 @@ export default function BestThermostatsPage() {
               cons={['Not for heat mats', 'More expensive than basic on/off']}
               price="$70–90"
               ctaText="Shop VE-100 →"
-              ctaHref="https://www.amazon.com/s?k=vivarium+electronics+VE-100"
+              ctaHref="/go/amazon-brand/vivarium+electronics+VE-100?s=reviews-best-thermostats"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ve-100"
             />
@@ -74,7 +74,7 @@ export default function BestThermostatsPage() {
               cons={['On/off = temperature swings', 'Not ideal for high-wattage sources', 'Upgrade needed for serious setups']}
               price="$20–30"
               ctaText="Shop Inkbird →"
-              ctaHref="https://www.amazon.com/s?k=inkbird+itc-306a+thermostat"
+              ctaHref="/go/amazon-brand/inkbird+itc-306a+thermostat?s=reviews-best-thermostats"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="inkbird-itc-306a"
             />

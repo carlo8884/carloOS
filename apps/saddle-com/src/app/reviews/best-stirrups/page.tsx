@@ -210,7 +210,7 @@ export default function BestStirrupsPage() {
               cons={['$300&ndash;380 &mdash; premium price', 'Distinctive look that some traditionalists dislike', 'Branch arm requires periodic inspection for fatigue']}
               price="$300&ndash;380"
               ctaText="Shop FreeJump Soft Up Pro →"
-              ctaHref="https://www.amazon.com/s?k=freejump+soft+up+pro+stirrup"
+              ctaHref="/go/amazon-brand/freejump+soft+up+pro+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="freejump-soft-up-pro"
             />
@@ -237,7 +237,7 @@ export default function BestStirrupsPage() {
               cons={['$280&ndash;360', 'Magnetic catch can rust if not maintained', 'Heavier than the lightest composite alternatives']}
               price="$280&ndash;360"
               ctaText="Shop Tech Venice →"
-              ctaHref="https://www.amazon.com/s?k=tech+stirrups+venice"
+              ctaHref="/go/amazon-brand/tech+stirrups+venice?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="tech-venice-safety"
             />
@@ -264,7 +264,7 @@ export default function BestStirrupsPage() {
               cons={['Asymmetric weight &mdash; hangs twisted at rest', 'Rubber bands degrade in UV and must be checked seasonally', 'Less stable than modern composite safety stirrups']}
               price="$40&ndash;70"
               ctaText="Shop Korsteel Peacock →"
-              ctaHref="https://www.amazon.com/s?k=korsteel+peacock+safety+stirrup"
+              ctaHref="/go/amazon-brand/korsteel+peacock+safety+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="korsteel-peacock"
             />
@@ -294,7 +294,7 @@ export default function BestStirrupsPage() {
               cons={['No safety release mechanism', 'Aluminum can dent if dropped on concrete', 'Not accepted in some traditional show classes']}
               price="$90&ndash;130"
               ctaText="Shop Acavallo Arena →"
-              ctaHref="https://www.amazon.com/s?k=acavallo+arena+stirrup"
+              ctaHref="/go/amazon-brand/acavallo+arena+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="acavallo-arena"
             />
@@ -324,7 +324,7 @@ export default function BestStirrupsPage() {
               cons={['No safety release', '4x the weight of composite alternatives', 'Rubber tread wears smooth in 12&ndash;18 months']}
               price="$40&ndash;70"
               ctaText="Shop Centaur Fillis Iron →"
-              ctaHref="https://www.amazon.com/s?k=centaur+fillis+stirrup+iron"
+              ctaHref="/go/amazon-brand/centaur+fillis+stirrup+iron?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="centaur-fillis-iron"
             />

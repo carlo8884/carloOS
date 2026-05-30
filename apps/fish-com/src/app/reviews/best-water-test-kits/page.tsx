@@ -37,7 +37,7 @@ export default function BestWaterTestKitsPage() {
               cons={['Color matching can be tricky in certain lighting', 'Separate saltwater kit needed for marine tanks', 'No hardness (GH/KH) test included']}
               price="$28–35"
               ctaText="Shop API Master Test Kit →"
-              ctaHref="https://www.amazon.com/s?k=api+freshwater+master+test+kit"
+              ctaHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="api-master-test-kit"
             />

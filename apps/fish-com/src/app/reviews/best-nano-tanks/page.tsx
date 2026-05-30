@@ -43,7 +43,7 @@ export default function BestNanoTanksPage() {
               cons={['5 gallons is minimum — less stable than 10+', 'Flow needs baffling for betta', 'Tight space for aquascaping']}
               price="$75–95"
               ctaText="Shop Fluval Spec V →"
-              ctaHref="https://www.amazon.com/s?k=fluval+spec+v+5+gallon"
+              ctaHref="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-spec-v"
             />
@@ -54,7 +54,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
               ctaText="Shop Aqueon 10 Gallon →"
-              ctaHref="https://www.chewy.com/s?query=aqueon+10+gallon+aquarium"
+              ctaHref="/go/chewy-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="aqueon-10-gallon"
             />
@@ -65,7 +65,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
               ctaText="Shop 20-Gallon Long →"
-              ctaHref="https://www.chewy.com/s?query=aqueon+20+gallon+long+aquarium"
+              ctaHref="/go/chewy-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="aqueon-20-long"
             />

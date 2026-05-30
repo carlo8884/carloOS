@@ -43,7 +43,7 @@ export default function BestRidingHelmetsPage() {
               cons={['Expensive ($200–280)', 'Requires professional fitting for best protection']}
               price="$200–280"
               ctaText="Shop Charles Owen AYR8 Plus →"
-              ctaHref="https://www.amazon.com/s?k=charles+owen+ayr8+helmet"
+              ctaHref="/go/amazon-brand/charles+owen+ayr8+helmet?s=reviews-best-riding-helmets"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="charles-owen-ayr8"
             />
@@ -54,7 +54,7 @@ export default function BestRidingHelmetsPage() {
               cons={['No MIPS', 'Not show-legal for most English disciplines', 'Less precise fit than premium helmets']}
               price="$50–90"
               ctaText="Shop Troxel Spirit →"
-              ctaHref="https://www.amazon.com/s?k=troxel+spirit+riding+helmet"
+              ctaHref="/go/amazon-brand/troxel+spirit+riding+helmet?s=reviews-best-riding-helmets"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="troxel-spirit"
             />

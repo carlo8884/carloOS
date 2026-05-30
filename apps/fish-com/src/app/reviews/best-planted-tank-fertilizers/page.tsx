@@ -57,7 +57,7 @@ export default function BestPlantedFertilizersPage() {
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
               ctaText="Shop Seachem Flourish →"
-              ctaHref="https://www.amazon.com/s?k=seachem+flourish+comprehensive"
+              ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="seachem-flourish"
             />
@@ -68,7 +68,7 @@ export default function BestPlantedFertilizersPage() {
               cons={['Overkill for low-tech / easy planted tanks', 'Algae risk if overdosed', 'Online ordering typically required']}
               price="$12–22"
               ctaText="Shop NilocG Thrive →"
-              ctaHref="https://www.amazon.com/s?k=nilocg+thrive+fertilizer"
+              ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
             />

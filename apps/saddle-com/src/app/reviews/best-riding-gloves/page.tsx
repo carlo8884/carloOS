@@ -37,7 +37,7 @@ export default function BestRidingGlovesPage() {
               cons={['More expensive ($45–60)', 'Sizing chart required — not standard sizing', 'Not waterproof']}
               price="$45–60"
               ctaText="Shop Roeckl Chester →"
-              ctaHref="https://www.amazon.com/s?k=roeckl+chester+riding+gloves"
+              ctaHref="/go/amazon-brand/roeckl+chester+riding+gloves?s=reviews-best-riding-gloves"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="roeckl-chester"
             />
@@ -48,7 +48,7 @@ export default function BestRidingGlovesPage() {
               cons={['Less rein feel than leather', 'Less breathable than Roeckl in summer heat']}
               price="$15–25"
               ctaText="Shop SSG All Weather →"
-              ctaHref="https://www.amazon.com/s?k=ssg+all+weather+riding+gloves"
+              ctaHref="/go/amazon-brand/ssg+all+weather+riding+gloves?s=reviews-best-riding-gloves"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ssg-all-weather"
             />

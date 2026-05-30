@@ -38,7 +38,7 @@ export default function BestCanisterFiltersPage() {
               cons={['Primer button can be finicky on first start', 'More expensive than Penn Plax']}
               price="$120–150"
               ctaText="Shop Fluval 307 →"
-              ctaHref="https://www.amazon.com/s?k=fluval+307+canister+filter"
+              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -49,7 +49,7 @@ export default function BestCanisterFiltersPage() {
               cons={['Less sophisticated media separation than Fluval', 'Older design — no AquaStop', 'Slightly louder than Fluval 307']}
               price="$100–130"
               ctaText="Shop Eheim Classic →"
-              ctaHref="https://www.amazon.com/s?k=eheim+classic+350+2215"
+              ctaHref="/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-classic-2215"
             />

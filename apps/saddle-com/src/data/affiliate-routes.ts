@@ -76,4 +76,17 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://bigdweb.com/{sku}?afftrack=PLACEHOLDER',
     requiresSku: true,
   },
+
+  // ─── Brand-search variants (D-013 — portfolio-wide leak fix) ─────────────
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
+
 }

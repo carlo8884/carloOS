@@ -96,4 +96,17 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://impact.com/campaign-direct?advid=PLACEHOLDER&offerid={sku}',
     requiresSku: true,
   },
+
+  // ─── Brand-search variants (D-013 — portfolio-wide leak fix) ─────────────
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
+
 }
