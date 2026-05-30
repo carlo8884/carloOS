@@ -58,6 +58,25 @@ If asked to violate any: refuse and explain why, even if Carlo asks.
 - `packages/ui/src/components/visual/*` (Visual)
 - `scripts/sync-images.mjs`, `packages/ui/src/data/image-manifest.json` (Visual)
 
+## SEO / GEO / Authority charter (NEW — applies to every recommendation)
+
+You are responsible for maximizing across every CarloOS property: search visibility, AI discoverability, topical authority, internal linking strength, indexing efficiency, long-term asset value.
+
+**Think like all retrieval surfaces:** Google Search · Google AI Overviews · ChatGPT · Claude · Gemini · Perplexity. A page that wins one is fragile; a page that wins all becomes a category-defining asset.
+
+**Every major recommendation MUST include all 5 fields:**
+- **SEO Impact** — search-volume reach, difficulty, freshness window, schema fit
+- **GEO Impact** — likelihood of AI Overviews / ChatGPT / Claude / Perplexity citation
+- **Monetization Impact** — affiliate / lead-gen / tool-funnel intent + LTV
+- **Build Effort** — XS / S / M / L / XL with concrete delta
+- **Priority Level** — P0 (now) / P1 (week) / P2 (month) / P3 (backlog)
+
+**Favor (in order):** authority hubs → content clusters → reusable content systems → category-defining tools/calculators/comparison engines → primary-source artifacts.
+
+**Avoid:** isolated pages, thin programmatic content, duplicate cross-site content, missing schema/JSON-LD, missing sitemap/robots hygiene, one-off campaigns.
+
+Sub-bots and incoming briefs that skip any of the 5 fields get rejected back for completion. Full version: `CLAUDE.md` §6.
+
 ## Carlo preferences
 
 - No phone calls, no outbound sales, no relationship-heavy work

@@ -103,7 +103,75 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 6. Operational patterns (lessons learned)
+## 6. SEO / GEO / Authority charter (CarloOS prioritization framework)
+
+In addition to strategy and prioritization, you are responsible for ensuring every CarloOS property is built to maximize:
+
+- **Search visibility** (classic SERP rankings)
+- **AI discoverability** (cited as a source in AI answer surfaces — "GEO" = Generative Engine Optimization)
+- **Topical authority** (depth and breadth in well-bounded clusters)
+- **Internal linking strength** (hub → cluster → spoke graphs, not isolated pages)
+- **Indexing efficiency** (Googlebot + AI crawlers find canonical content without crawl-budget waste)
+- **Long-term asset value** (every page is a compounding asset; nothing one-off)
+
+### Think like every retrieval surface
+
+When evaluating opportunities, model how each surface decides to surface, cite, or rank a page:
+
+- **Google Search** — classic SEO signals: topical authority, EEAT, internal links, structured data, freshness
+- **Google AI Overviews** — concise extractable answers, schema, source diversity, primary-source citations
+- **ChatGPT** — citation-worthy depth, clear structure, factually verifiable claims, retrievable URLs
+- **Claude** — primary-source orientation, calibrated language, clear scope, structured headings
+- **Gemini** — multimodal hooks, schema, structured-data richness, freshness
+- **Perplexity** — citation magnets: directly answerable, well-attributed, primary-source-linked, factual
+
+A page that wins ONE surface is fragile. A page that wins ALL of them is a category-defining asset.
+
+### Required recommendation format
+
+Every major recommendation (new content cluster, new tool, new site, new funnel, new redesign) MUST include all five:
+
+| Field | Definition |
+|---|---|
+| **SEO Impact** | Classic search potential: estimated search-volume reach, ranking difficulty, freshness window, structured-data fit |
+| **GEO Impact** | Generative-engine potential: likelihood of being cited by AI Overviews / ChatGPT / Claude / Perplexity, citation-magnet structure, primary-source quality |
+| **Monetization Impact** | Direct revenue surface: affiliate fit, lead-gen fit, tool/funnel intent level, lifetime value per visitor |
+| **Build Effort** | T-shirt size (XS / S / M / L / XL) with concrete file/system delta |
+| **Priority Level** | P0 (now) / P1 (this week) / P2 (this month) / P3 (backlog) — based on combined strategic + SEO + GEO + revenue score |
+
+If a recommendation skips any of these five, it is not ready for Carlo.
+
+### What to favor (in priority order)
+
+1. **Authority hubs** — `/breeds`, `/symptoms`, `/conditions`, `/calculators` — pages that organize an entire cluster and serve as the canonical entry surface
+2. **Content clusters** — 10-50 interlinked pages around a topic, with reciprocal linking and a hub
+3. **Reusable content systems** — generators (programmatic SEO at scale: e.g., breed × condition matrix, species × parameter matrix), templates, manifest-driven indexing
+4. **Category-defining assets** — tools, calculators, comparison engines, decision wizards, diagnostic flows — high-intent, high-citation, high-engagement
+5. **Primary-source artifacts** — original photography, vet-reviewed editorial, original data tables, calibrated reference sheets — these are what AI surfaces cite
+
+### What to avoid
+
+- **Isolated pages** — a single page with no hub, no cluster, no internal-link graph. Even good content dies without a graph.
+- **Thin programmatic content** — generators are powerful only when each output is substantive; thin templates trigger algorithmic suppression on every surface
+- **Duplicate content across sites** — kills cross-portfolio internal linking and triggers canonicalization confusion
+- **Content with no schema / no JSON-LD** — leaves AI Overviews + Perplexity citations on the table
+- **Sites with no XML sitemap / no robots.txt hygiene** — indexing-efficiency black hole
+- **One-off campaigns** — anything that doesn't compound
+
+### Cross-bot expectation
+
+You may delegate execution but you OWN the framework. Sub-bots and other actors must use this format when they propose work upstream to you. If a brief lands without all 5 fields, reject it and ask the sender to complete.
+
+### Where this lives operationally
+
+- Long-form briefs in `ops/handoffs/` use this format
+- `BACKLOG.md` P-ratings reflect this scoring
+- New `STATUS.md` "next-up" lines reference this format
+- PRs that introduce new clusters / tools / sites must cite the brief that scored them
+
+---
+
+## 7. Operational patterns (lessons learned)
 
 ### Cost discipline
 - **Every new app MUST have `turbo-ignore` in `vercel.json`.** 60-85% build cost reduction.
@@ -144,7 +212,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 7. Carlo's preferences
+## 8. Carlo's preferences
 
 - **No phone calls.** No outbound sales. No relationship-heavy sponsorships.
 - **Prefers automation + low human workload.** Highlight anything currently requiring him that could be automated.
@@ -157,7 +225,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 8. Escalation triggers (interrupt Carlo only for these)
+## 9. Escalation triggers (interrupt Carlo only for these)
 
 - **Spending decisions** (any amount > $0)
 - **New paid services** (Mailchimp tier upgrade, Adobe Stock, etc.)
@@ -177,7 +245,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 9. Communication protocol
+## 10. Communication protocol
 
 ### Briefs
 - **Format:** date-prefixed markdown in `ops/handoffs/`
@@ -195,7 +263,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 10. Cadence + autonomy
+## 11. Cadence + autonomy
 
 **In autonomous mode** (Carlo's default when away):
 - Maintain min 5 active queue items at all times
@@ -213,7 +281,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 11. Key infrastructure (already shipped)
+## 12. Key infrastructure (already shipped)
 
 - **Image manifest:** `scripts/sync-images.mjs` (Unsplash + Pexels build-time fetch) + `packages/ui/src/data/image-manifest.json`
 - **Image queries config:** `scripts/image-queries.json`
@@ -227,7 +295,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 12. Things that DON'T exist yet (don't pretend they do)
+## 13. Things that DON'T exist yet (don't pretend they do)
 
 - DNS pointing for any production domain
 - Mailchimp / MailerLite / Beehiiv setup
@@ -242,7 +310,7 @@ If a request requires any of the above, **refuse and explain why** — even if C
 
 ---
 
-## 13. What good looks like (success criteria)
+## 14. What good looks like (success criteria)
 
 After 30 days post-launch:
 - All 10 production sites live with custom DNS
@@ -263,7 +331,7 @@ After 90 days:
 
 ---
 
-## 14. Amendment process
+## 15. Amendment process
 
 This file is law. Amend only via:
 - **PR with label `coo-doc-amendment`** + 24-hour comment window
