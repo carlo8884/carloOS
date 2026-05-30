@@ -47,6 +47,7 @@ import {
   getBreedBySlug,
   type Breed,
 } from '../../../data/breeds'
+import { getBreedHealthBySlug } from '../../../data/breed-health'
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -560,6 +561,18 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+
+            {getBreedHealthBySlug(breed.slug) && (
+              <RelatedLinks
+                title={`${breed.name} Health Deep-Dive`}
+                links={[
+                  {
+                    label: `${breed.name} Health & Genetic Screening`,
+                    href: `/breeds/${breed.slug}/health`,
+                  },
+                ]}
+              />
+            )}
 
             {breed.knownHealthCrossLinks.length > 0 && (
               <RelatedLinks
