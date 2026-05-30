@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { allRaces } from '../data/racing/meetings'
 
 /**
  * Sitemap — homepage + cornerstone content pages.
@@ -7,8 +8,17 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
+  const racecardEntries: MetadataRoute.Sitemap = allRaces().map(({ race }) => ({
+    url: `https://horses.com/racing/racecards/${race.id}`,
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.70,
+  }))
+
   return [
     { url: 'https://horses.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://horses.com/racing', lastModified: now, changeFrequency: 'daily', priority: 0.95 },
+    ...racecardEntries,
     { url: 'https://horses.com/first-horse-roadmap', lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
     { url: 'https://horses.com/breeds/quarter-horse', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
     { url: 'https://horses.com/health/equine-ulcers', lastModified: now, changeFrequency: 'monthly', priority: 0.90 },
