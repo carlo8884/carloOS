@@ -147,8 +147,8 @@ stone = neutral ground.
 - Curated seed cards (Churchill Downs + Ascot): `src/data/racing/meetings.ts`
 - Race Center hub: `src/app/racing/page.tsx`
 - AI racecard with per-runner factor breakdown: `src/app/racing/racecards/[id]/page.tsx`
-- Homepage hero banner + nav promotion; sitemap coverage; responsible-gambling
-  disclosure on every card.
+- Site-nav promotion (highlighted "Race Center"); sitemap coverage;
+  responsible-gambling disclosure on every card.
 
 ## Phase 10 — Growth (next)
 
