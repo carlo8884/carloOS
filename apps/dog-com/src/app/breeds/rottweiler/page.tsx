@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Rottweiler Breed Guide — Osteosarcoma Risk | Dog.com', description: 'Rottweilers have elevated osteosarcoma (bone cancer) and subaortic stenosis (SAS) rates. Annual cardiac screening and bone cancer awareness are essential.', path: '/breeds/rottweiler', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Rottweiler Breed Guide', description: 'Osteosarcoma risk, subaortic stenosis, hip dysplasia, and health screening for Rottweilers.', url: 'https://dog.com/breeds/rottweiler', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -25,6 +26,8 @@ export default function RottweilerPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <BreedHealthCard name="Osteosarcoma (Bone Cancer)" riskLevel="very-high"
           description="Rottweilers have one of the highest osteosarcoma rates of any breed — exceeded only by Giant breeds (Irish Wolfhound, Great Dane). Osteosarcoma is an aggressive malignant bone tumor that most commonly affects the long bones of the limbs — distal radius (just above the wrist), proximal humerus (shoulder), and distal femur. It is locally destructive and metastasizes to the lungs early — typically before diagnosis. Median survival without treatment is 1–2 months; with limb amputation plus chemotherapy, approximately 10–12 months. Surgical alternatives (limb-sparing surgery) preserve the limb in some cases."
           signs={['Progressive single-limb lameness that does not respond to NSAIDs', 'Localized swelling at a specific bone site', 'Pain on palpation of the affected limb', 'Pathological fracture through the tumor site']}
@@ -41,7 +44,11 @@ export default function RottweilerPage() {
           management="Lean body weight throughout life — most critical management. Fish oil from young adulthood. Dasuquin Advanced for joint support. NSAIDs when symptomatic. Surgical options for significant dysplasia: total hip replacement, FHO, elbow surgery depending on pathology." />
 
         <h2>Training — Structure Required from Day One</h2>
-        <p>Rottweilers are powerful, confident dogs with natural protective instincts. Without consistent structure, training, and socialization from early puppyhood, these traits can become management problems. A Rottweiler that has not been properly socialized and trained is a liability; a properly trained and socialized Rottweiler is one of the most reliable, trustworthy family dogs in existence.</p>
+        <DropCap>Rottweilers are powerful, confident dogs with natural protective instincts. Without consistent structure, training, and socialization from early puppyhood, these traits can become management problems. A Rottweiler that has not been properly socialized and trained is a liability; a properly trained and socialized Rottweiler is one of the most reliable, trustworthy family dogs in existence.</DropCap>
+
+        <CalloutBox variant="warning" title="Unremitting limb lameness is urgent">
+          A large-breed dog with persistent single-limb lameness that does not improve with rest or NSAIDs should have radiographs taken within days, not weeks. Osteosarcoma in Rottweilers metastasizes to the lungs early — often before the limb signs are obvious. Early imaging is the difference between options and palliative care.
+        </CalloutBox>
         <p>Training approach: positive reinforcement methods work extremely well with Rottweilers — they are highly motivated by food and praise and learn quickly. Dominance-based methods and physical correction are contraindicated — they damage the relationship and create unpredictable responses in a powerful breed. Enroll in a positive reinforcement obedience class from 8 weeks (puppy class) and continue through at least a basic Canine Good Citizen certification.</p>
 
         <h2>Early Spay/Neuter and Cancer Risk</h2>

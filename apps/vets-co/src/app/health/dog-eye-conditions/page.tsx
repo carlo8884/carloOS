@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic).', path: '/health/dog-eye-conditions', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
@@ -26,8 +27,14 @@ export default function DogEyeConditionsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="warning" title="Red-flag list — same-day vet visit">
+            Any sudden change in eye appearance — cloudy or bluish tint, a visibly enlarged globe, squinting and reluctance to open the eye, sudden bumping into furniture, eye trauma, or chemical exposure — needs same-day evaluation. Glaucoma can cause permanent vision loss within hours; corneal lacerations and lens luxations are surgical emergencies.
+          </CalloutBox>
+
           <h2>Cherry Eye (Prolapsed Nictitans Gland)</h2>
-          <p>Cherry eye — the prolapse of the gland of the third eyelid — appears as a red, round, cherry-like mass in the inner corner of the eye. It looks alarming but is not painful acutely. It is most common in brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Beagles, Cocker Spaniels). The third eyelid (nictitating membrane) contains a tear gland that contributes approximately 30-40% of the tear film. If this gland is surgically removed (an older, now discouraged treatment), the dog is at increased risk for keratoconjunctivitis sicca (KCS / dry eye) for the rest of its life.</p>
+          <DropCap>Cherry eye — the prolapse of the gland of the third eyelid — appears as a red, round, cherry-like mass in the inner corner of the eye. It looks alarming but is not painful acutely. It is most common in brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Beagles, Cocker Spaniels). The third eyelid (nictitating membrane) contains a tear gland that contributes approximately 30-40% of the tear film. If this gland is surgically removed (an older, now discouraged treatment), the dog is at increased risk for keratoconjunctivitis sicca (KCS / dry eye) for the rest of its life.</DropCap>
           <p>Current standard treatment: surgical repositioning (tacking the gland back into its normal position) rather than removal. Success rate approximately 90% — some dogs require a second procedure. Prompt treatment is preferable — a chronically prolapsed gland becomes inflamed and more difficult to reposition successfully. Any dog with cherry eye should see a veterinarian within a few days of appearance; ophthalmology referral provides the best surgical outcomes.</p>
 
           <h2>Cataracts</h2>

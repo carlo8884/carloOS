@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. 82-86°F, pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Care Guide', description: 'Water requirements, daily water changes, and disease prevention for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DiscusPage() {
@@ -23,8 +24,10 @@ export default function DiscusPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Why Discus Are Advanced</h2>
-        <p>Discus are sensitive to water quality in a way that most fish are not — they show stress responses at nitrate levels that most community fish handle easily, they are susceptible to pathogens that hardy fish resist, and they require water parameters (soft, warm, acidic) that require active management in most US households with hard tap water. The daily or every-other-day water changes required to maintain discus — large volume, temperature-matched — represent a significant time commitment. A discus keeper does water changes the way a planted tank keeper doses fertilizers: consistently, on schedule, without exception.</p>
+        <DropCap>Discus are sensitive to water quality in a way that most fish are not — they show stress responses at nitrate levels that most community fish handle easily, they are susceptible to pathogens that hardy fish resist, and they require water parameters (soft, warm, acidic) that require active management in most US households with hard tap water. The daily or every-other-day water changes required to maintain discus — large volume, temperature-matched — represent a significant time commitment. A discus keeper does water changes the way a planted tank keeper doses fertilizers: consistently, on schedule, without exception.</DropCap>
         <p>The cost: quality wild-caught discus run $60–150+ per fish. Tank-bred discus from quality breeders run $30–80+. A group of 6 discus in an appropriate tank represents $200–600+ in fish alone before any equipment is purchased. If they die from inadequate water quality, that loss is significant. Research thoroughly before purchasing.</p>
 
         <h2>Water — The Critical Foundation</h2>
@@ -36,6 +39,10 @@ export default function DiscusPage() {
 
         <h2>Diet — High Protein Required</h2>
         <p>Discus are omnivorous but protein-forward. The traditional discus staple: beef heart mix — ground beef heart (fat removed) combined with frozen seafood, spinach, and vitamins, formed into thin sheets and frozen. Commercial alternatives: Hikari Discus Bio-Gold, NLS Discus Formula, Sera Discus Granules. Frozen bloodworms are eagerly accepted and valuable for conditioning. Feed 3–4 times daily — discus need frequent feeding due to their high metabolism. Remove uneaten food within 10 minutes to maintain water quality.</p>
+
+        <CalloutBox variant="tip" title="Pre-heat your change water">
+          Cold water additions cause temperature shock that immediately stresses discus and triggers disease. Store the daily change volume in heated containers (30–50 gallon drums with a heater set to tank temperature) so every refill is already at 84°F when it arrives.
+        </CalloutBox>
 
         <h2>Disease — The Primary Challenge</h2>
         <p>Discus are disproportionately susceptible to internal parasites (particularly Capillaria, Hexamita, and Spironucleus) and external parasites (flukes). New fish should be quarantined for 4–6 weeks and prophylactically treated for parasites before introduction to an established discus tank. The most common disease presentation in discus: "darkening" — the fish turns very dark in color, a stress response that accompanies disease, poor water quality, or aggression. A dark discus is a discus under stress, with disease and water quality being the two primary causes to investigate first.</p>

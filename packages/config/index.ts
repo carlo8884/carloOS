@@ -8,7 +8,23 @@
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
 
-export type SiteId = 'dog-com' | 'vets-co' | 'fish-com' | 'saddle-com' | 'lizard-com'
+export type SiteId =
+  | 'dog-com'
+  | 'vets-co'
+  | 'fish-com'
+  | 'saddle-com'
+  | 'lizard-com'
+  | 'horses-com'
+  | 'petfood-com'
+  | 'ferret-com'
+  | 'ferrets-com'
+  | 'petfoods-com'
+  // ─── New apps (Architect scaffold request 2026-05-30, Carlo-approved) ─
+  | 'askthevet'         // S2 — AI symptom checker
+  | 'seniorpets'        // S9 — senior pet Rx + content
+  | 'dogpicture'        // S8 — AI pet portraits + POD
+  | 'petsupplies'       // S1 — comparison engine
+  | 'hardmoneyloans'    // S11 — off-vertical lead gen
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -237,6 +253,276 @@ export const themes: Record<SiteId, SiteTheme> = {
     logoText: 'Lizard.com',
     twPrimary: 'lime',
   },
+
+  'horses-com': {
+    // Warm equestrian palette — saddle leather browns, cream, dark green accents.
+    primary: '#6E4A28',
+    primaryLight: '#8C6238',
+    primaryPale: '#F4ECDF',
+    primaryDark: '#523618',
+    dark: '#1F2B1E',
+    surface: '#FAF4E8',
+    white: '#FFFFFF',
+    textDark: '#1F2B1E',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D6C2',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Horses.com',
+    siteTagline: 'A Reference for Horse Owners',
+    siteUrl: 'https://horses.com',
+    logoText: 'Horses.com',
+    twPrimary: 'amber',
+  },
+
+  'petfood-com': {
+    // Clean food-brand palette — warm white background with a single warm accent.
+    primary: '#D9622A',
+    primaryLight: '#E87A40',
+    primaryPale: '#FBEEE3',
+    primaryDark: '#B04A18',
+    dark: '#1F1A14',
+    surface: '#FBF8F2',
+    white: '#FFFFFF',
+    textDark: '#1F1A14',
+    textMid: '#4A3E30',
+    textLight: '#8A7E68',
+    border: '#ECE4D6',
+    success: '#2A7A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Cormorant Garamond',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFood.com',
+    siteTagline: 'A Reference for Pet Nutrition',
+    siteUrl: 'https://petfood.com',
+    logoText: 'PetFood.com',
+    twPrimary: 'orange',
+  },
+
+  // ─── Ferret.com — chocolate-amber, exotic-mammal hobbyist magazine ────
+  'ferret-com': {
+    primary: '#5C3A1E',
+    primaryLight: '#8A5C38',
+    primaryPale: '#F4E8D8',
+    primaryDark: '#3E2810',
+    dark: '#1E1408',
+    surface: '#FBF5E8',
+    white: '#FFFFFF',
+    textDark: '#1E1408',
+    textMid: '#4A3A28',
+    textLight: '#8A7A68',
+    border: '#E2D2B6',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Ferret.com',
+    siteTagline: 'A Reference for Ferret Owners',
+    siteUrl: 'https://ferret.com',
+    logoText: 'Ferret.com',
+    twPrimary: 'amber',
+  },
+
+  // ─── Ferrets.com — muted reference / directory sister site ────────────
+  'ferrets-com': {
+    primary: '#4A3828',
+    primaryLight: '#6E5538',
+    primaryPale: '#EFE8DC',
+    primaryDark: '#2E2218',
+    dark: '#181208',
+    surface: '#F8F2E6',
+    white: '#FFFFFF',
+    textDark: '#181208',
+    textMid: '#4A3828',
+    textLight: '#8A7A68',
+    border: '#DDD2BC',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Ferrets.com',
+    siteTagline: 'Directory & Community Reference',
+    siteUrl: 'https://ferrets.com',
+    logoText: 'Ferrets.com',
+    twPrimary: 'amber',
+  },
+
+  // ─── PetFoods.com — reference-database sister to PetFood.com ──────────
+  'petfoods-com': {
+    primary: '#3F5C3A',
+    primaryLight: '#5C7D55',
+    primaryPale: '#E8EFE6',
+    primaryDark: '#28401F',
+    dark: '#1A1F18',
+    surface: '#F4F6F0',
+    white: '#FFFFFF',
+    textDark: '#1A1F18',
+    textMid: '#3A4A34',
+    textLight: '#7A8A74',
+    border: '#D8DED0',
+    success: '#3A6A2A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Cormorant Garamond',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetFoods.com',
+    siteTagline: 'Brand & Ingredient Database',
+    siteUrl: 'https://petfoods.com',
+    logoText: 'PetFoods.com',
+    twPrimary: 'green',
+  },
+
+  // ─── AskTheVet.com — AI symptom checker (Architect S2) ────────────────
+  'askthevet': {
+    primary: '#2563eb',
+    primaryLight: '#3b82f6',
+    primaryPale: '#eff6ff',
+    primaryDark: '#1d4ed8',
+    dark: '#0f172a',
+    surface: '#f8fafc',
+    white: '#ffffff',
+    textDark: '#0f172a',
+    textMid: '#334155',
+    textLight: '#64748b',
+    border: '#e2e8f0',
+    success: '#16a34a',
+    warning: '#d97706',
+    danger: '#dc2626',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 500, 600, 700, 800],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'AskTheVet.com',
+    siteTagline: 'AI Pet Symptom Checker — Triage in Seconds',
+    siteUrl: 'https://askthevet.com',
+    logoText: 'AskTheVet',
+    twPrimary: 'blue',
+  },
+
+  // ─── SeniorPetPharmacy — senior pet Rx + care content (Architect S9) ──
+  'seniorpets': {
+    primary: '#7C6F59',
+    primaryLight: '#9A8D74',
+    primaryPale: '#F1EBDD',
+    primaryDark: '#5A503F',
+    dark: '#211D17',
+    surface: '#FAF5EA',
+    white: '#FFFFFF',
+    textDark: '#211D17',
+    textMid: '#4A4234',
+    textLight: '#8A8070',
+    border: '#E3D9C5',
+    success: '#2A6A3A',
+    warning: '#C8952A',
+    danger: '#C84A2A',
+    fontDisplay: 'Lora',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 500, 600, 700],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'SeniorPetPharmacy',
+    siteTagline: 'Compassionate care for aging pets',
+    siteUrl: 'https://seniorpetpharmacy.com',
+    logoText: 'SeniorPetPharmacy',
+    twPrimary: 'stone',
+  },
+
+  // ─── DogPicture.com — AI dog portraits + POD (Architect S8) ───────────
+  'dogpicture': {
+    primary: '#F97316',
+    primaryLight: '#FB923C',
+    primaryPale: '#FFF4EB',
+    primaryDark: '#C2410C',
+    dark: '#1F1408',
+    surface: '#FFF8F0',
+    white: '#FFFFFF',
+    textDark: '#1A0F08',
+    textMid: '#5C3E28',
+    textLight: '#9A7860',
+    border: '#F3E4D2',
+    success: '#16A34A',
+    warning: '#F59E0B',
+    danger: '#DC2626',
+    fontDisplay: 'Fraunces',
+    fontBody: 'Nunito',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 600, 700, 800],
+    siteName: 'DogPicture.com',
+    siteTagline: 'AI dog portraits — keepsakes for the dog you love',
+    siteUrl: 'https://dogpicture.com',
+    logoText: 'DogPicture',
+    twPrimary: 'orange',
+  },
+
+  // ─── PetSupplies.com — NerdWallet for pet products (Architect S1) ─────
+  'petsupplies': {
+    primary: '#475569',
+    primaryLight: '#64748B',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#334155',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#16A34A',
+    warning: '#D97706',
+    danger: '#DC2626',
+    fontDisplay: 'Inter',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'PetSupplies.com',
+    siteTagline: 'Independent Pet Product Comparisons',
+    siteUrl: 'https://petsupplies.com',
+    logoText: 'PetSupplies.com',
+    twPrimary: 'slate',
+  },
+
+  // ─── HardMoneyLoans.com — off-vertical lead gen (Architect S11) ───────
+  'hardmoneyloans': {
+    primary: '#1e293b',
+    primaryLight: '#334155',
+    primaryPale: '#F1F5F9',
+    primaryDark: '#0F172A',
+    dark: '#0F172A',
+    surface: '#F8FAFC',
+    white: '#FFFFFF',
+    textDark: '#0F172A',
+    textMid: '#334155',
+    textLight: '#64748B',
+    border: '#E2E8F0',
+    success: '#15803D',
+    warning: '#B45309',
+    danger: '#B91C1C',
+    fontDisplay: 'Source Serif 4',
+    fontBody: 'Inter',
+    fontDisplayWeights: [400, 600, 700, 900],
+    fontBodyWeights: [400, 500, 600, 700],
+    siteName: 'HardMoneyLoans.com',
+    siteTagline: 'Compare top hard money lenders for real estate investors',
+    siteUrl: 'https://hardmoneyloans.com',
+    logoText: 'HardMoneyLoans.com',
+    twPrimary: 'slate',
+  },
 }
 
 // ─────────────────────────────────────────────
@@ -409,7 +695,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'Fish Species', href: '/species' },
       { label: 'Aquarium Setup', href: '/setup' },
-      { label: 'Water Chemistry', href: '/water' },
+      { label: 'Calculators', href: '/tools' },
       { label: 'Fish Health', href: '/health' },
       { label: 'Reviews', href: '/reviews' },
     ],
@@ -440,6 +726,16 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Heaters', href: '/reviews/best-aquarium-heaters' },
           { label: 'Lighting', href: '/reviews/best-aquarium-lighting' },
           { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+      {
+        heading: 'Calculators',
+        links: [
+          { label: 'Tank Volume', href: '/tools/aquarium-volume-calculator' },
+          { label: 'Stocking', href: '/tools/stocking-calculator' },
+          { label: 'Heater Wattage', href: '/tools/heater-wattage-calculator' },
+          { label: 'Water Change', href: '/tools/water-change-calculator' },
+          { label: 'CO2 (KH/pH)', href: '/tools/co2-calculator' },
         ],
       },
     ],
@@ -551,6 +847,236 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     ],
     defaultOgImage: 'https://lizard.com/og-default.jpg',
   },
+
+  'horses-com': {
+    id: 'horses-com',
+    theme: themes['horses-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Horses.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://horses.com/og-default.jpg',
+  },
+
+  'petfood-com': {
+    id: 'petfood-com',
+    theme: themes['petfood-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'PetFood.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://petfood.com/og-default.jpg',
+  },
+
+  'ferret-com': {
+    id: 'ferret-com',
+    theme: themes['ferret-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Ferret.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://ferret.com/og-default.jpg',
+  },
+
+  'ferrets-com': {
+    id: 'ferrets-com',
+    theme: themes['ferrets-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'Ferrets.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://ferrets.com/og-default.jpg',
+  },
+
+  'petfoods-com': {
+    id: 'petfoods-com',
+    theme: themes['petfoods-com'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Home', href: '/' },
+    ],
+    footerLinks: [
+      {
+        heading: 'PetFoods.com',
+        links: [
+          { label: 'Home', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://petfoods.com/og-default.jpg',
+  },
+
+  // ─── AskTheVet.com ────────────────────────────────────────────────────
+  'askthevet': {
+    id: 'askthevet',
+    theme: themes['askthevet'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'AskTheVet', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://askthevet.com/og-default.jpg',
+  },
+
+  // ─── SeniorPetPharmacy ────────────────────────────────────────────────
+  'seniorpets': {
+    id: 'seniorpets',
+    theme: themes['seniorpets'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: true,
+      healthyPaws: true,
+      vetster: true,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'SeniorPetPharmacy', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://seniorpetpharmacy.com/og-default.jpg',
+  },
+
+  // ─── DogPicture.com ───────────────────────────────────────────────────
+  'dogpicture': {
+    id: 'dogpicture',
+    theme: themes['dogpicture'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'DogPicture', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://dogpicture.com/og-default.jpg',
+  },
+
+  // ─── PetSupplies.com ──────────────────────────────────────────────────
+  'petsupplies': {
+    id: 'petsupplies',
+    theme: themes['petsupplies'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: true,
+      chewy: true,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: true,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'PetSupplies.com', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://petsupplies.com/og-default.jpg',
+  },
+
+  // ─── HardMoneyLoans.com ───────────────────────────────────────────────
+  'hardmoneyloans': {
+    id: 'hardmoneyloans',
+    theme: themes['hardmoneyloans'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [{ label: 'Home', href: '/' }],
+    footerLinks: [{ heading: 'HardMoneyLoans.com', links: [{ label: 'Home', href: '/' }] }],
+    defaultOgImage: 'https://hardmoneyloans.com/og-default.jpg',
+  },
 }
 
 // ─────────────────────────────────────────────
@@ -587,4 +1113,147 @@ export function themeToCSS(theme: SiteTheme): string {
     --font-display: '${theme.fontDisplay}', Georgia, serif;
     --font-body: '${theme.fontBody}', system-ui, sans-serif;
   `.trim()
+}
+
+// ─────────────────────────────────────────────
+// CROSS-PORTFOLIO RECOMMENDATIONS
+// ─────────────────────────────────────────────
+// Sister-site recommendations rendered by <CrossPortfolioCard>.
+// Maps (currentSiteId, contentType) → 0-3 curated sibling references.
+// Drives internal network authority, pages-per-session, and revenue intent
+// hand-off (e.g., dog.com health → vets-co specialist → pet insurance).
+
+export type ContentType =
+  | 'health'
+  | 'nutrition'
+  | 'breed'
+  | 'species'
+  | 'condition'
+  | 'medication'
+  | 'specialty'
+  | 'equipment'
+  | 'gear'
+  | 'brand'
+  | 'training'
+  | 'care'
+  | 'directory'
+  | 'review'
+  | 'guide'
+
+export interface CrossPortfolioRecommendation {
+  siteId: SiteId
+  siteName: string
+  headline: string
+  blurb: string
+  cta: string
+  href: string
+}
+
+// Static recommendation table. Each entry has (currentSite × contentType)
+// keyed on `${siteId}:${contentType}` → array of 2-3 sibling recs.
+// Editorial decisions: dog/cat health → vets-co; product/diet → petfood/petfoods;
+// equestrian discipline ↔ saddle brand; ferret care ↔ ferrets-com state info.
+const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
+  // ── dog-com ───────────────────────────────────────────
+  'dog-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Specialist Vet', blurb: 'Board-certified veterinary specialists by condition, with average cost ranges.', cta: 'Browse specialists', href: 'https://vets.co/specialists' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'AAFCO Life-Stage Guides', blurb: 'How to read pet food labels by life stage — puppy, adult, senior.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+  ],
+  'dog-com:nutrition': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Reviews', blurb: 'Independent reviews of Royal Canin, Hill\'s, Purina, Orijen and more — scored against WSAVA guidelines.', cta: 'See rankings', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Deep Dives', blurb: 'AAFCO-anchored guides on puppy, adult, senior, and large-breed nutrition.', cta: 'Read more', href: 'https://petfood.com/life-stage' },
+  ],
+  'dog-com:breed': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Breed Health Profiles', blurb: 'Hereditary screening recommendations and breed-specific conditions, sourced from veterinary references.', cta: 'See breed health', href: 'https://vets.co/breeds' },
+  ],
+  'dog-com:training': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Behavioral Specialists', blurb: 'When to consult a veterinary behaviorist for training-resistant issues.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-behavior' },
+  ],
+
+  // ── vets-co ───────────────────────────────────────────
+  'vets-co:medication': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Best Pet Insurance', blurb: 'Compare pet insurance plans that cover chronic prescriptions — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', href: 'https://dog.com/reviews/best-pet-insurance' },
+  ],
+  'vets-co:specialty': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist visits run $3,000–15,000/year. Find a plan that covers them.', cta: 'See comparison', href: 'https://dog.com/reviews/best-pet-insurance' },
+  ],
+  'vets-co:breed': [
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', href: 'https://dog.com/breeds' },
+  ],
+
+  // ── horses-com ────────────────────────────────────────
+  'horses-com:discipline': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Brand Reviews', blurb: 'Independent reviews of Stübben, Pessoa, Bates, County, and Custom Saddlery for English riders.', cta: 'See brand reviews', href: 'https://saddle.com/brands' },
+  ],
+  'horses-com:equipment': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Brands', blurb: 'Discipline-specific saddle brand recommendations and fit guides.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
+  ],
+  'horses-com:breed': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle-Fit Guidance', blurb: 'How conformation affects saddle fit — including breed-specific notes.', cta: 'Read more', href: 'https://saddle.com' },
+  ],
+
+  // ── saddle-com ────────────────────────────────────────
+  'saddle-com:brand': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Equipment Guides', blurb: 'Required and optional equipment for dressage, hunter-jumper, eventing, western, trail, and endurance.', cta: 'Browse disciplines', href: 'https://horses.com/disciplines' },
+  ],
+  'saddle-com:review': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Selection', blurb: 'Pick the right discipline for your goals — then come back for the right saddle.', cta: 'Explore disciplines', href: 'https://horses.com/disciplines' },
+  ],
+
+  // ── lizard-com ────────────────────────────────────────
+  'lizard-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'ARAV-certified reptile veterinarians + what to expect at the visit.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-internal-medicine' },
+  ],
+  'lizard-com:species': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Reptile Health Conditions', blurb: 'Cross-reference species-specific conditions with veterinary specialist guidance.', cta: 'Browse conditions', href: 'https://vets.co/specialists' },
+  ],
+
+  // ── fish-com ──────────────────────────────────────────
+  'fish-com:equipment': [],  // Same-site reviews handle this; no fish sister site.
+  'fish-com:species': [],
+
+  // ── petfood-com ───────────────────────────────────────
+  'petfood-com:nutrition': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Scorecards', blurb: 'Independent brand-by-brand WSAVA compliance reviews to pair with life-stage choice.', cta: 'See brand rankings', href: 'https://petfoods.com/brands' },
+  ],
+  'petfood-com:guide': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Independent Brand Reference', blurb: 'When you know what to feed, find out who makes it well.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
+  ],
+
+  // ── petfoods-com ──────────────────────────────────────
+  'petfoods-com:brand': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored advice on matching food to your pet\'s life stage and special needs.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+  ],
+  'petfoods-com:nutrition': [
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading the Label', blurb: 'What AAFCO statements, guaranteed analysis, and ingredient lists actually tell you.', cta: 'Learn more', href: 'https://petfood.com/guides' },
+  ],
+
+  // ── ferret-com ────────────────────────────────────────
+  'ferret-com:health': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians and what to expect at the visit.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Ferret legality varies by state. Check your state\'s rules before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+  ],
+  'ferret-com:care': [
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Adoption Directory', blurb: 'Find local shelters, rescues, and AEMV-certified exotic vets by state.', cta: 'Browse states', href: 'https://ferrets.com/states' },
+  ],
+
+  // ── ferrets-com ───────────────────────────────────────
+  'ferrets-com:directory': [
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', href: 'https://ferret.com/care' },
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', href: 'https://ferret.com/health' },
+  ],
+}
+
+/**
+ * Returns 0-3 curated sister-site recommendations for the given site + content type.
+ * Empty array if no recommendations are defined (component will render nothing).
+ */
+export function getCrossPortfolioRecommendations(
+  currentSite: SiteId,
+  contentType: ContentType,
+  limit = 3,
+): CrossPortfolioRecommendation[] {
+  const key = `${currentSite}:${contentType}`
+  const recs = RECOMMENDATIONS[key] ?? []
+  return recs.slice(0, limit)
 }

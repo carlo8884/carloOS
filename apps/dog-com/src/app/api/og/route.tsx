@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
         {/* Bottom bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '24px' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, color: 'rgba(255,255,255,0.5)' }}>
-            Expert-reviewed · {new Date().getFullYear()}
+            Dog.com · {new Date().getFullYear()}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: site.primary }} />

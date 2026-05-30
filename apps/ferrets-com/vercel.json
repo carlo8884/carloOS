@@ -1,0 +1,7 @@
+{
+  "framework": "nextjs",
+  "installCommand": "cd ../.. && npm install",
+  "buildCommand": "cd ../.. && npx turbo build --filter=ferrets-com",
+  "outputDirectory": ".next",
+  "ignoreCommand": "npx turbo-ignore ferrets-com"
+}

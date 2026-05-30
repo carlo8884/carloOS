@@ -1,0 +1,131 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { buildMetadata, EmailCapture } from '@carloOS/ui'
+
+export const metadata: Metadata = buildMetadata({
+  siteId: 'fish-com',
+  title: 'Aquarium Calculators — Volume, Stocking, Heater, CO2 | Fish.com',
+  description: 'Free aquarium calculators: tank volume in gallons or liters, stocking limits, heater wattage, water-change math, and CO2 from KH/pH. Built by aquarists.',
+  path: '/tools',
+})
+
+const TOOLS = [
+  {
+    href: '/tools/aquarium-volume-calculator',
+    icon: '📏',
+    title: 'Aquarium Volume Calculator',
+    desc: 'Convert tank dimensions (L × W × H) to US gallons, UK gallons, and liters. Supports rectangular, bow-front, and cylindrical tanks.',
+    tag: 'Most popular',
+  },
+  {
+    href: '/tools/stocking-calculator',
+    icon: '🐠',
+    title: 'Stocking Calculator',
+    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',
+    tag: 'Beginner essential',
+  },
+  {
+    href: '/tools/heater-wattage-calculator',
+    icon: '🔥',
+    title: 'Heater Wattage Calculator',
+    desc: 'Pick the right heater size for your tank, room temperature, and target water temperature. Includes redundancy recommendation.',
+    tag: 'Equipment',
+  },
+  {
+    href: '/tools/water-change-calculator',
+    icon: '💧',
+    title: 'Water Change Calculator',
+    desc: 'Calculate the % water change needed to bring nitrate or any parameter down to a target level. Includes dilution math.',
+    tag: 'Maintenance',
+  },
+  {
+    href: '/tools/co2-calculator',
+    icon: '🌿',
+    title: 'CO2 Calculator (KH/pH)',
+    desc: 'Estimate dissolved CO2 in ppm from carbonate hardness (KH) and pH. Essential for planted tanks running CO2 injection.',
+    tag: 'Planted tanks',
+  },
+]
+
+export default function ToolsHub() {
+  return (
+    <>
+      {/* HERO */}
+      <section className="bg-brand-dark px-container sm:px-container-sm py-section relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(14,107,138,0.5) 0%, transparent 60%)' }}
+          aria-hidden="true"
+        />
+        <div className="relative z-10 max-w-3xl">
+          <div className="flex items-center gap-2.5 mb-6">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Calculators &amp; Tools</span>
+          </div>
+          <h1 className="font-display font-bold text-white tracking-tight leading-none mb-5" style={{ fontSize: 'clamp(40px, 5.5vw, 64px)' }}>
+            Aquarium math, <span className="italic font-normal">done for you.</span>
+          </h1>
+          <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
+            Free calculators built by aquarists for the questions everyone Googles: how many gallons is my tank, how many fish can I stock,
+            what wattage heater do I need, and how much CO2 is actually in my planted tank. Mobile-friendly and no signup.
+          </p>
+        </div>
+      </section>
+
+      {/* TOOLS GRID */}
+      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+        <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
+          {TOOLS.map((tool) => (
+            <Link
+              key={tool.href}
+              href={tool.href}
+              className="block bg-brand-white border border-brand-border rounded-lg p-6 no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <span className="text-3xl">{tool.icon}</span>
+                <span className="text-2xs font-bold tracking-wider uppercase text-brand-primary bg-brand-primary-pale px-2 py-1 rounded-pill">
+                  {tool.tag}
+                </span>
+              </div>
+              <div className="font-display font-semibold text-brand-dark text-xl mb-2">{tool.title}</div>
+              <div className="text-sm text-brand-text-mid leading-relaxed">{tool.desc}</div>
+              <div className="text-sm font-semibold text-brand-primary mt-4">Open calculator →</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* WHY TRUST */}
+      <section className="bg-brand-white px-container sm:px-container-sm py-section border-t border-brand-border">
+        <div className="max-w-3xl">
+          <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl mb-4">Why our calculators are different</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-3">
+            Most aquarium calculators on the web are decade-old Flash-era pages with broken math, the wrong unit conversions, or — worst — the
+            old &quot;inch per gallon&quot; rule that has misled new aquarists for thirty years.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-3">
+            Our tools use modern stocking science (surface area + filtration + bioload), give honest confidence ranges instead of false precision,
+            and link to the underlying species data and equipment reviews so you can actually act on the answer.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            Every calculator is built by people who keep tanks. If you spot a bad answer,{' '}
+            <Link href="/editorial-standards" className="text-brand-primary font-semibold">tell us</Link> — we fix it.
+          </p>
+        </div>
+      </section>
+
+      {/* EMAIL */}
+      <section className="bg-brand-primary-pale px-container sm:px-container-sm py-section">
+        <EmailCapture
+          variant="section"
+          siteId="fish-com"
+          title="Get new calculators as we ship them"
+          subtitle="We're adding a new aquarium calculator or species tool every couple of weeks. Subscribe to be the first to use them."
+          ctaText="Subscribe Free"
+          source="tools-hub"
+          perks={['🧮 New calculators', '🐠 Species spotlights', '🧪 Water chemistry tips', '🚫 No spam']}
+        />
+      </section>
+    </>
+  )
+}

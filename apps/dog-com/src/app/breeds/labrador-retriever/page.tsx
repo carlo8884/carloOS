@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Labrador Retriever Guide — POMC Gene, Hip Dysplasia | Dog.com', description: 'Labradors have a specific genetic mutation (POMC) causing food obsession and obesity. Hip and elbow dysplasia common. One of the most trainable breeds', path: '/breeds/labrador-retriever', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Labrador Retriever Breed Guide', description: 'POMC gene food obsession, hip dysplasia, elbow dysplasia, and exercise for Labradors.', url: 'https://dog.com/breeds/labrador-retriever', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function LabradorPage() {
@@ -18,13 +19,20 @@ export default function LabradorPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
+        <RelatedLinks title="Labrador Health Deep-Dive" links={[{ label: 'Labrador Retriever Health Issues & Screenings', href: '/breeds/labrador-retriever/health' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Labrador Feeding Guide', href: '/breeds/labrador-retriever/feeding' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Large Breed Food', href: '/reviews/best-large-breed-dog-food' }]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-lab" />
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>The POMC Gene — Why Labs Are Obsessed With Food</h2>
-        <p>A 2016 study published in Cell Metabolism identified a specific genetic mutation in the POMC (pro-opiomelanocortin) gene that is associated with increased appetite, food-seeking behavior, and obesity in Labrador Retrievers and Flat-Coated Retrievers. Approximately 23% of pet Labradors carry at least one copy of the deletion; in assistance (guide and service) dog populations, the rate is higher — dogs with this mutation may be selected for training because their food motivation makes them exceptionally trainable.</p>
+        <DropCap>A 2016 study published in Cell Metabolism identified a specific genetic mutation in the POMC (pro-opiomelanocortin) gene that is associated with increased appetite, food-seeking behavior, and obesity in Labrador Retrievers and Flat-Coated Retrievers. Approximately 23% of pet Labradors carry at least one copy of the deletion; in assistance (guide and service) dog populations, the rate is higher — dogs with this mutation may be selected for training because their food motivation makes them exceptionally trainable.</DropCap>
+
+        <CalloutBox variant="evidence" title="Evidence-anchored">
+          Hip and elbow dysplasia screening in Labradors uses the <strong>Orthopedic Foundation for Animals (OFA)</strong> evaluation. Require OFA hip and elbow clearances on both sire and dam before purchasing — elbow radiographs are frequently overlooked despite Labradors being the second most elbow-affected breed.
+        </CalloutBox>
         <p>The practical implication: a Labrador with the POMC mutation genuinely does not feel full in the way other dogs do. They are not "just food motivated" in the way all dogs are — they have a physiological drive that does not signal satiety normally. This is why Labradors are the most obesity-prone large breed: the food obsession is not behavioral, it is genetic. Measured meals, no free-feeding, and treats counted against daily caloric intake are essential management tools, not suggestions.</p>
 
         <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="very-high"

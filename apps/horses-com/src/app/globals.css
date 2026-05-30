@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HORSES.COM THEME TOKENS — refined equestrian. */
+:root {
+  --brand-primary: #1F3A2F;
+  --brand-primary-light: #2E5444;
+  --brand-primary-pale: #E8EDE6;
+  --brand-primary-dark: #142820;
+  --brand-secondary: #A37547;
+  --brand-secondary-light: #BD8C5C;
+  --brand-secondary-dark: #7A5530;
+  --brand-accent: #B68830;
+  --brand-accent-light: #D6A14A;
+  --brand-dark: #13241C;
+  --brand-surface: #F4EFE6;
+  --brand-white: #FFFFFF;
+  --brand-text-dark: #13241C;
+  --brand-text-mid: #3F3A2E;
+  --brand-text-light: #7A6E5C;
+  --brand-border: #D9D0BE;
+  --brand-success: #1F3A2F;
+  --brand-warning: #B68830;
+  --brand-danger: #9A3A22;
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --nav-height: 68px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--font-body);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background: var(--brand-surface);
+  color: var(--brand-text-dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-feature-settings: 'kern' 1, 'liga' 1, 'dlig' 1;
+}
+.tabular-display { font-variant-numeric: lining-nums tabular-nums; }
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; border-radius: 4px; }
+.carloOS-article {
+  --tw-prose-body: var(--brand-text-mid);
+  --tw-prose-headings: var(--brand-text-dark);
+  --tw-prose-links: var(--brand-primary);
+  --tw-prose-bold: var(--brand-text-dark);
+  --tw-prose-counters: var(--brand-text-light);
+  --tw-prose-bullets: var(--brand-accent);
+  --tw-prose-hr: var(--brand-border);
+  --tw-prose-quotes: var(--brand-text-mid);
+  --tw-prose-quote-borders: var(--brand-accent);
+  --tw-prose-code: var(--brand-text-dark);
+  --tw-prose-th-borders: var(--brand-border);
+  --tw-prose-td-borders: var(--brand-border);
+}
+.carloOS-article h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.carloOS-article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+::selection { background: rgba(31, 58, 47, 0.18); color: var(--brand-text-dark); }
+.font-vars, :root {
+  --font-playfair: Georgia, 'Times New Roman', serif;
+  --font-source-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

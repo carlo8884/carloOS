@@ -119,7 +119,7 @@ export default function SeparationAnxietyPage() {
         <h2 id="medication">Medication — When and What</h2>
         <p>Veterinary behavior medication is appropriate for moderate to severe separation anxiety — not as a substitute for behavior modification, but as a tool that reduces baseline anxiety enough for training to be effective. The most commonly prescribed:</p>
         <ul>
-          <li><strong>Fluoxetine (Prozac, Reconcile):</strong> FDA-approved for canine separation anxiety. Takes 4–6 weeks for full effect. Used as a daily medication alongside behavior modification.</li>
+          <li><strong>Fluoxetine (Prozac, Reconcile):</strong> <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for canine separation anxiety. Takes 4–6 weeks for full effect. Used as a daily medication alongside behavior modification.</li>
           <li><strong>Clomipramine (Clomicalm):</strong> Also FDA-approved for canine SA. Similar mechanism. Some dogs respond better to one than the other.</li>
           <li><strong>Trazodone:</strong> Situational use for specific high-anxiety events; also used as adjunct to daily medication for particularly difficult situations.</li>
         </ul>
