@@ -32,10 +32,10 @@ const schema = combineSchemas(
     publishedAt: '2026-05-29T00:00:00Z',
     modifiedAt: '2026-05-29T00:00:00Z',
   }),
-  buildBreadcrumbSchema([
+  buildBreadcrumbSchema({ items: [
     { name: 'Home', url: 'https://dog.com/' },
     { name: 'DNA Testing', url: 'https://dog.com/dna-testing' },
-  ]),
+  ] }),
 )
 
 export default function DnaTestingHub() {

@@ -29,7 +29,7 @@ interface MagnetContent {
   recommendations: {
     headline: string
     body: string
-    cta: { label: string; vendor: import('@carloOS/ui').Vendor; sku: string }
+    cta: { label: string; vendor: string; sku: string }
   }[]
   nextReadingHref: string
   nextReadingLabel: string

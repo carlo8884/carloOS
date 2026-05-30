@@ -75,11 +75,11 @@ export default async function DnaTestPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'DNA Testing', url: 'https://dog.com/dna-testing' },
       { name: t.brand, url: `https://dog.com/dna-testing/${t.slug}` },
-    ]),
+    ] }),
   )
 
   const faqItems = [
