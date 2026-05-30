@@ -1,8 +1,10 @@
 # CSRO Portfolio Ranking
 
 **Owner:** CSRO Bot · **Created:** 2026-05-30 · **Basis:** Carlo-confirmed tiering (2026-05-30) + repo-verified state
-**Scope note:** Ranks the 15 *built* domains. The repo's 64-domain matrix (`MONETIZATION-ARCHITECT.md §9`) holds
-28 more mapped-but-unbuilt domains + ~21 unmapped; full ranking BLOCKED on `csro-dir-2026-W22-001`.
+**Scope note:** Ranks the **11 built, in-scope pet/horse domains.** Authoritative portfolio = Carlo's 74-domain
+list (`domain-inventory.md` v5): 46 pet + 13 horse/equine in scope, 15 personal/other set aside. The ~48 owned-
+but-unbuilt in-scope domains are not yet ranked (they're cluster-support/product names — ranking them awaits a
+build-priority pass). `hardmoneyloans` + `petsupplies` handled as flags, not ranked (see `domain-inventory.md §4`).
 
 ---
 
@@ -18,36 +20,27 @@
 | 6 | PetFood.com | T2 | build | High-intent nutrition cluster `[HYP]` |
 | 7 | Horses.com | T2 | hold (Racing Bot) | Tier gated on specialist findings `[FACT]` |
 | 8 | Ferret.com | T2 | build | Authority strong, commercial intent thin `[HYP]` |
-| 9 | petsupplies | T3 | build (P2) | High-intent comparison surface `[HYP]` |
-| 10 | askthevet | T3 | build (P2) | GEO citation magnet if trust-bar held `[HYP]` |
-| 11 | PetFoods.com | T3 | consolidate | Duplication risk vs PetFood.com `[HYP]` |
-| 12 | Ferrets.com | T3 | consolidate | Duplication risk vs Ferret.com `[HYP]` |
-| 13 | seniorpets | T3 | defer (P3) | Needs demand validation `[HYP]` |
-| 14 | dogpicture | T3 | defer (P3) | Trend-dependent POD `[HYP]` |
-| 15 | hardmoneyloans | Sunset | sunset | Off-thesis; Carlo-confirmed `[FACT]` |
+| 9 | AskTheVet.com | T3 | build (P2) | GEO citation magnet if trust-bar held `[HYP]` |
+| 10 | PetFoods.com | T3 | consolidate | Duplication risk vs PetFood.com `[HYP]` |
+| 11 | Ferrets.com | T3 | consolidate | Duplication risk vs Ferret.com `[HYP]` |
+| 12 | SeniorPetPharmacy.com | T3 | defer (P3) | Needs demand validation `[HYP]` |
+| 13 | DogPicture.com | T3 | defer (P3) | Trend-dependent POD `[HYP]` |
 
----
+**Held off the ranking pending flags (`domain-inventory.md §4`):**
+- **petsupplies.com** — built scaffold but **not on Carlo's owned list**; ownership unconfirmed (`csro-dir-004`).
+- **hardmoneyloans.com** — built but off-vertical/set-aside; sunset-vs-keep pending Carlo (`csro-dir-004`).
 
-## Unbuilt high-value candidates — RESOLVED (Carlo 2026-05-30, `csro-dir-002` closed)
+## Owned-but-unbuilt, in-scope (not yet ranked)
 
-Ownership of the ARCHITECT-Tier-1 unbuilt domains is confirmed. Result: **none are in-scope build targets.** `[FACT]`
-
-| Candidate | Status | Disposition |
-|---|---|---|
-| Cat.com | **NOT owned** `[FACT]` | Drop. Do not rank, do not treat as latent upside. |
-| PetInsuranceReviews.com | **NOT owned** `[FACT]` | Drop. The pet-insurance affiliate play still runs on owned built sites (dog/vets/askthevet) per ARCHITECT S6 — just not on this domain. |
-| Horse.com | **Owned, separate business** `[FACT]` | Out of CSRO scope — see carve-out below. |
-
-## Out-of-scope: separate-business carve-out (Carlo 2026-05-30) `[FACT]`
-
-**Horse.com, StateLineTack.com, and related sites are a separate business.** CSRO may review them for
-**high-level / informational** context only (e.g. competitive read-through to Saddle.com / Horses.com), but
-issues **no directives, rankings, or build work** against them. They are not part of the CarloOS portfolio loop.
+~48 owned pet/horse domains are unbuilt (cluster-support, product-comparison, and content names — e.g.
+allpets, doginfo, seniorcats, equineleader, wormer, ridershealth). These are real assets but mostly thin
+product/comparison plays. Ranking them awaits a dedicated build-priority pass; full list in `domain-inventory.md §1–§2`.
 
 ## Movement watch
 
 - **Vets.co → Tier 1:** unlocks when all 5 promotion criteria validated (see `CSRO.md §8`).
 - **Horses.com:** re-rank on Racing Bot handoff.
-- **PetFood/PetFoods · Ferret/Ferrets · Aquarium/Aquariums · Reptile/Reptiles · Bird/Birds:** consolidate-vs-distinct pending duplication audit (R-005).
+- **Duplication/cluster pairs to audit:** PetFood/PetFoods · Ferret/Ferrets · horsesupplies/horsesupply · equineleader/equineleaders · dogsaver.com/.org (R-005).
+- **Separate business (out of scope):** Horse.com + StateLineTack.com — not on the owned list; review-only.
 
 *Update in place as evidence shifts ranks.*

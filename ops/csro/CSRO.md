@@ -112,19 +112,18 @@ secrets. A recommendation that violates this = drift alarm + Carlo escalation.
 
 ---
 
-## §16 Master domain inventory — **PENDING**
+## §16 Master domain inventory — **SET (2026-05-30)**
 
-> **Confirmed-owned portfolio (2026-05-30): the 15 built sites only.** The kickoff's "75" and the ARCHITECT
-> §9 "64-domain" matrix are NOT verified holdings — Carlo checked the matrix's 28 unbuilt entries and **0 are
-> owned** (he owns *similar* names). `MONETIZATION-ARCHITECT.md §9` is therefore an **aspirational target list,
-> not an ownership ledger**; do not cite it as holdings. The 15 built sites are inventoried in
-> `ops/csro/domain-inventory.md §4`; everything beyond them is `[UNK]`.
+> **Authoritative owned portfolio = 74 domains**, supplied directly by Carlo and transcribed verbatim into
+> **`ops/csro/domain-inventory.md` v5** (the master). Breakdown: ~46 pet + ~13 horse/equine **in scope**;
+> 15 personal / holding-co / off-vertical **set aside**. 15 are built; the rest owned-but-unbuilt.
 >
-> **Action required (`csro-dir-2026-W22-001`, elevated to #1):** obtain the **real owned-domain list from the
-> Monetization Bot** + Carlo's registrar account. That — not this doc, not the ARCHITECT doc — becomes the
-> §16 master inventory once it lands.
+> **History (kept as a guardrail):** before this list arrived, CSRO **fabricated** a domain list and cited a
+> nonexistent `MONETIZATION-ARCHITECT.md §9`. The Monetization Bot and Carlo flagged it. **Permanent rule:
+> domains enter the inventory ONLY by transcription from an authoritative owner source; verify any doc citation
+> exists before relying on it. Never synthesize a domain list.**
 >
-> **Recommended-action vocabulary (interim):** `build · hold · validate · promote · consolidate · lease · sell · sunset · acquire-adjacent`.
+> **Recommended-action vocabulary:** `build · hold · validate · promote · consolidate · lease · sell · sunset · acquire-adjacent`.
 
 ---
 

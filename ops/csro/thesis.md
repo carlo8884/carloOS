@@ -14,11 +14,12 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 
 - Two domains (Dog.com, Fish.com) have **live inbound offers** ($2.3M, $1.45M) — proof that premium
   single-word .com pet domains attract real acquirer interest.
-- The ARCHITECT doc *describes* a 64-domain portfolio (`MONETIZATION-ARCHITECT.md §9`), but a 2026-05-30
-  ownership check **invalidated it as a holdings record: 0 of 28 unbuilt domains are owned.** Carlo owns *similar*
-  names, not those. So the "broad held base" is **disproven for that list**; the verified asset base is the
-  **15 built sites, full stop**, until the Monetization Bot supplies the real owned list (`csro-dir-001`).
-  Thesis structure is firmly "few hero builds"; any long-tail option value is `[UNK]` and must not be assumed.
+- **The real owned portfolio is 74 domains** (Carlo, authoritative, 2026-05-30 → `domain-inventory.md` v5):
+  ~46 pet + ~13 horse/equine in scope, 15 personal/other-business set aside. **15 are built; ~48 in-scope are
+  owned-but-unbuilt** — mostly cluster-support and product/comparison names (allpets, seniorcats, equineleader,
+  wormer, etc.). This is genuine long-tail breadth, but most of the unbuilt names are thin → thesis stays
+  **"few hero builds + selective cluster support,"** not "build all 74." (Earlier "64-domain matrix" framing was
+  a CSRO fabrication, now retracted — see provenance note in the inventory.)
 - Carlo's stated wants (programmatic SEO, affiliate, lead-gen, comparison engines, tools/calculators) and
   avoidances (marketplaces, pre-threshold display ads, enterprise sales) bound the monetization design space.
 - The trust bar (no fake credentials, no AI humans, FTC disclosure) is an **asset-preservation moat**, not
@@ -40,9 +41,9 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 
 ## Open questions / falsifiers
 
-- ~~Does Carlo own the unbuilt T1 domains?~~ RESOLVED 2026-05-30: Cat.com / PetInsuranceReviews.com not owned; Horse.com separate-business/out-of-scope.
-- `[UNK]` What does Carlo *actually* own? The ARCHITECT matrix is unreliable for ownership — the real list is the open question (`csro-dir-001`).
-- `[UNK]` Is the real owned breadth strategic, or domain-hoarding cost? Renewal cost vs option value needs sizing once the true list exists.
+- ~~What does Carlo actually own?~~ RESOLVED 2026-05-30: authoritative 74-domain list received → `domain-inventory.md` v5.
+- `[UNK]` Of the ~48 owned-but-unbuilt in-scope domains, which (if any) merit a build vs hold/redirect/lease? Most are thin product/comparison names → build-priority pass needed (R-010).
+- `[UNK]` Is the 74-domain breadth strategic, or renewal-cost drag? Size renewal cost vs option value now that the real list exists.
 - `[UNK]` Do tool/AI assets (askthevet, comparison engine) command acquisition multiples comparable to content authorities? Needs Empire Flippers / FE International comps.
 - `[UNK]` Does the pre-launch posture (no DNS, no GA4, no traffic) materially weaken the standing offers?
 
