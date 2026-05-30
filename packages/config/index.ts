@@ -25,6 +25,7 @@ export type SiteId =
   | 'dogpicture'        // S8 — AI pet portraits + POD
   | 'petsupplies'       // S1 — comparison engine
   | 'hardmoneyloans'    // S11 — off-vertical lead gen
+  | 'horse-racing'      // standalone AI racing intelligence (separate from horses.com)
 
 // ─────────────────────────────────────────────
 // DESIGN TOKENS — shared primitives
@@ -279,6 +280,35 @@ export const themes: Record<SiteId, SiteTheme> = {
     siteUrl: 'https://horses.com',
     logoText: 'Horses.com',
     twPrimary: 'amber',
+  },
+
+  // ─── Horse Racing — standalone AI racing intelligence product ─────────
+  // Working name + placeholder domain; restyle/rebrand once the real
+  // domain is chosen. Distinct from horses.com (care/ownership reference).
+  'horse-racing': {
+    primary: '#0A6B4F',
+    primaryLight: '#12916C',
+    primaryPale: '#E6F4EF',
+    primaryDark: '#064534',
+    dark: '#0B1A14',
+    surface: '#F4F8F6',
+    white: '#FFFFFF',
+    textDark: '#0B1A14',
+    textMid: '#33453E',
+    textLight: '#6E837B',
+    border: '#D6E4DD',
+    success: '#0A6B4F',
+    warning: '#B6882F',
+    danger: '#C0392B',
+    fontDisplay: 'Playfair Display',
+    fontBody: 'Source Sans 3',
+    fontDisplayWeights: [400, 700, 900],
+    fontBodyWeights: [300, 400, 500, 600, 700],
+    siteName: 'Horse Racing',
+    siteTagline: 'AI Racing Intelligence',
+    siteUrl: 'https://horseracing.com', // TODO: set real domain once chosen
+    logoText: 'Horse Racing',
+    twPrimary: 'emerald',
   },
 
   'petfood-com': {
@@ -873,6 +903,34 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       },
     ],
     defaultOgImage: 'https://horses.com/og-default.jpg',
+  },
+
+  // ─── Horse Racing — standalone AI racing intelligence product ─────────
+  'horse-racing': {
+    id: 'horse-racing',
+    theme: themes['horse-racing'],
+    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
+    affiliates: {
+      amazon: false,
+      chewy: false,
+      trupanion: false,
+      healthyPaws: false,
+      vetster: false,
+      sharesale: false,
+    },
+    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
+    nav: [
+      { label: 'Race Center', href: '/', highlight: true },
+    ],
+    footerLinks: [
+      {
+        heading: 'Racing Intelligence',
+        links: [
+          { label: 'Race Center', href: '/' },
+        ],
+      },
+    ],
+    defaultOgImage: 'https://horseracing.com/og-default.jpg',
   },
 
   'petfood-com': {
