@@ -43,7 +43,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <SchemaScript schema={buildFAQSchema({ items: g.faq })} />
+      <SchemaScript schema={buildFAQSchema({ questions: g.faq })} />
       <Breadcrumb
         siteId="horse-racing"
         items={[

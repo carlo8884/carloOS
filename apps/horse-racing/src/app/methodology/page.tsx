@@ -78,7 +78,7 @@ const FAQ = [
 export default function MethodologyPage() {
   return (
     <>
-      <SchemaScript schema={buildFAQSchema({ items: FAQ })} />
+      <SchemaScript schema={buildFAQSchema({ questions: FAQ })} />
       <Breadcrumb
         siteId="horse-racing"
         items={[{ name: 'Race Center', href: '/' }, { name: 'Methodology' }]}

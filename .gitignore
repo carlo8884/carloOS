@@ -61,4 +61,8 @@ coverage/
 .cache/
 
 # Claude Code session-local state (subagent worktrees)
-.claude/
+.claude/*
+# …but DO track the shared SessionStart hook + its settings (web-session setup)
+!.claude/settings.json
+!.claude/hooks/
+.claude/settings.local.json

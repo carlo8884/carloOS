@@ -57,7 +57,9 @@ export default function GlossaryTermPage({ params }: { params: { slug: string } 
       <SchemaScript schema={definedTermSchema} />
       <SchemaScript
         schema={buildFAQSchema({
-          items: [{ question: `What is ${term.term.toLowerCase()} in horse racing?`, answer: term.short }],
+          questions: [
+            { question: `What is ${term.term.toLowerCase()} in horse racing?`, answer: term.short },
+          ],
         })}
       />
       <Breadcrumb
