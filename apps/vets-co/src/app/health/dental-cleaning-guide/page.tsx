@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, DropCap } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Veterinary Dental Cleaning Guide', description: 'Professional dental cleaning under anesthesia — grades, safety, and expectations.', url: 'https://vets.co/health/dental-cleaning-guide', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
@@ -32,8 +33,10 @@ export default function DentalCleaningGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
           <h2>Why Anesthesia Is Required</h2>
-          <p>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</p>
+          <DropCap>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</DropCap>
 
           <h2>What the Procedure Involves</h2>
           <p><strong>Pre-anesthetic bloodwork:</strong> CBC and chemistry profile evaluate organ function before anesthesia is administered. Identifies conditions (anemia, kidney disease, liver disease, diabetes) that affect anesthetic protocol or increase risk. Standard of care for all dental procedures, especially in middle-aged and senior patients.</p>
@@ -50,7 +53,7 @@ export default function DentalCleaningGuidePage() {
           <p>A professional cleaning resets the clock on periodontal disease — the tooth surface is clean and the gumline is healthy. What happens next depends on home care. Daily toothbrushing (a soft toothbrush and enzymatic toothpaste — CET, Vetradent — never human fluoride toothpaste) is the most effective intervention to maintain the cleaning and extend the interval before the next professional cleaning is needed. VOHC-accepted dental chews (Greenies, Whimzees) supplement brushing. Water additives with the VOHC seal provide additional support. The goal is to maintain the Grade 0-1 state achieved by the cleaning for as long as possible.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is a life-threatening but preventable condition. Monthly prevention costs $5-10. Treatment costs $1,000-3,000.', path: '/health/heartworm-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
@@ -32,6 +33,12 @@ export default function HeartwormPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="warning" title="Strict rest during treatment">
+            Once melarsomine is administered, dying worms can lodge in pulmonary arteries and cause life-threatening thromboembolism — exercise dramatically raises this risk. The dog must be leash-restricted (no running, no playing, crate rest for high-energy dogs) for the full 8-week treatment course. This is not optional; non-compliance kills dogs every year.
+          </CalloutBox>
+
           <h2>How Heartworm Transmission Works</h2>
           <p>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood — a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10–14 days at temperatures above 57°F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms.</p>
 
@@ -50,7 +57,7 @@ export default function HeartwormPage() {
           <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow — exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

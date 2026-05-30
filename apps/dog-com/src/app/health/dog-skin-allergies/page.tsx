@@ -66,13 +66,13 @@ export default function DogSkinAllergiesPage() {
           <h2 id="medications">Apoquel and Cytopoint</h2>
           <p><strong>Apoquel (oclacitinib):</strong> A JAK (Janus kinase) inhibitor that blocks specific cytokine pathways involved in allergic itch. Prescription oral tablet taken once to twice daily. Effective within 4 hours. Controls itch in approximately 67% of dogs with atopic dermatitis. Long-term safety profile is well-established. Side effects: mild — occasional GI upset, slightly increased susceptibility to infection. Contraindicated in dogs under 12 months or with serious infections, neoplasia, or immune-mediated disease.</p>
           <p><strong>Cytopoint (lokivetmab):</strong> A monoclonal antibody that specifically targets and neutralizes canine IL-31, the primary cytokine driving allergic itch in dogs. Monthly subcutaneous injection given by a veterinarian. Highly targeted mechanism — fewer systemic effects than Apoquel. Works within 24 hours and lasts 4–8 weeks in most dogs. Excellent safety profile — safe for dogs with liver, kidney, or immune conditions that may not tolerate Apoquel.</p>
-          <p>Many dogs with moderate to severe atopy benefit from both medications together or from rotating between them. A veterinary dermatologist (DACVD) should be involved in complex or refractory atopic dermatitis — they provide allergen-specific immunotherapy and management approaches beyond what general practitioners typically offer.</p>
+          <p>Many dogs with moderate to severe atopy benefit from both medications together or from rotating between them. A veterinary dermatologist (<a href="https://acvd.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVD</a>) should be involved in complex or refractory atopic dermatitis — they provide allergen-specific immunotherapy and management approaches beyond what general practitioners typically offer.</p>
 
           <h2 id="immunotherapy">Allergen-Specific Immunotherapy</h2>
           <p>Allergen-specific immunotherapy (ASIT) — allergy shots or sublingual drops — is the only treatment that modifies the underlying immune response rather than just controlling symptoms. Based on intradermal or serum allergy testing identifying specific allergens, a custom immunotherapy solution is formulated and administered as subcutaneous injections (weekly initially, then monthly) or sublingual drops (daily). Response rate: 50–75% good to excellent response, with improvement building over 6–12 months. Requires long-term (often lifelong) commitment. Best outcome when started in young dogs early in the disease course.</p>
 
           <h2>FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

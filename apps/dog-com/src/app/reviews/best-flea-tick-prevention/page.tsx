@@ -32,7 +32,7 @@ export default function FleaTickPreventionPage() {
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Isoxazolines and Seizure Risk</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The FDA has issued a warning that isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) may cause neurological adverse events including muscle tremors, ataxia, and seizures in some dogs. This is rare — but dogs with a history of seizures or neurological conditions should use these products only under close veterinary supervision. Discuss with your vet before starting any isoxazoline product.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fact-sheet-isoxazoline-class-products" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> has issued a warning that isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) may cause neurological adverse events including muscle tremors, ataxia, and seizures in some dogs. This is rare — but dogs with a history of seizures or neurological conditions should use these products only under close veterinary supervision. Discuss with your vet before starting any isoxazoline product.</p>
             </div>
             <ScoreMethodology />
             <ReviewCard id="bravecto" badge="Best Overall" badgeEmoji="🏆" name="Bravecto Chew (Fluralaner)" subtitle="12-week duration · Covers 7 tick species · Single dose convenience" score={9.3} winner
