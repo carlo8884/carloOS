@@ -34,6 +34,37 @@ const schema = buildHowToSchema({
   ],
 })
 
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Aquarium Water Change Calculator',
+  url: URL,
+  applicationCategory: 'UtilitiesApplication',
+  applicationSubCategory: 'AquariumCalculator',
+  operatingSystem: 'Web Browser (any HTML5-capable device)',
+  description:
+    'Free interactive aquarium water change calculator. Uses the dilution equation to compute the percent water change required to bring nitrate, TDS, GH, or salinity down to a target value, with multi-change planning for large reductions.',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Dilution formula: fraction = (current − target) / (current − source)',
+    'Accepts non-zero source-water values (tap water with nitrate, TDS, or GH)',
+    'Caps single changes at 50% and splits larger reductions across sessions',
+    'Salinity reduction mode with 0.001 SG per day reef guidance',
+    'Sustainable weekly-schedule guidance by tank type',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fish.com Editorial',
+    url: 'https://fish.com',
+  },
+}
+
 const FAQS = [
   {
     question: 'How big a water change is safe?',
@@ -108,6 +139,10 @@ export default function WaterChangeCalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
