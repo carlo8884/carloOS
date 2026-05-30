@@ -137,6 +137,27 @@ export default function FerretAgingPage() {
                 { label: 'Dental Disease', href: '/health/dental-disease' },
               ]}
             />
+            <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
+                Senior Ferret + Insurance
+              </div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">
+                Insurance gets harder to qualify for as ferrets age
+              </h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">
+                Most exotic-pet insurers have age caps (typically 8 years).
+                If your ferret is approaching senior age, lock in a policy
+                now — once a condition is diagnosed, it&apos;s permanently
+                excluded.
+              </p>
+              <a
+                href="https://vets.co/pet-insurance"
+                rel="noopener"
+                className="inline-block text-xs font-bold text-brand-primary hover:underline"
+              >
+                Compare exotic-pet insurance →
+              </a>
+            </div>
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

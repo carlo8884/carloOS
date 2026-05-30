@@ -5,7 +5,7 @@ Replaces the previous five governance docs (`OPERATIONS`, `ROADMAP`,
 `AGENTS`, `RELEASES`, `QC-STANDARDS`). Trust standards still live in
 their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-29 (morning merge wave — 18 PRs landed)
+**Last updated:** 2026-05-30 (end-of-day — 3-bot operating model, Skimlinks + Amazon wired, ~810 pages, awaiting DNS)
 
 ---
 
@@ -33,47 +33,60 @@ Programmatic SEO is live across the portfolio: ~50 dog breeds, ~28 dog
 diseases, ~51 horse breeds, 52-state vets directory, 52-state ferrets
 directory, 38 petfoods brand pages.
 
-## 2. Active PRs
+## 2. Active PRs (2026-05-30 EOD verified)
 
-100+ PRs merged 2026-05-28 → 2026-05-29; `main` is now the canonical
-state. Pre-existing PRs #19–#30 are superseded — **close not merge**.
+`origin/main` HEAD: `a54a15b` (PR #162 — vercel-set-env.sh). 130+ PRs merged 2026-05-28 → 2026-05-30.
 
-No outstanding work-in-progress PRs at time of writing. See §7
-Release Log for the post-merge index.
+**Currently open and triaged** (verified via GitHub MCP):
 
-## 3. Lanes
+| Category | PRs |
+|---|---|
+| **Close — stale/superseded** | #60, #61, #63, #65, #144, #151 (in main as `58dc92f`), #153 (in main as `8731777`), #155 (in main as `34ec395`+`a54a15b`), #160 (in main as `eed2b7b`) |
+| **Merge if CI green (reference docs)** | #62, #64, #66 |
+| **Keep open (active reference)** | #67 (`/ask` MVP brief — still actionable) |
+| **Safe to merge — content PRs blocked only by metadata-policy** | #145, #148, #149, #150, #152 (all clear after PR #167 lands) |
+| **Safe to merge — Visual Bot work** | #156, #159, #161, #163, #164, #165 |
+| **Safe to merge — COO docs** | #158, #166 (CLAUDE.md), #167 (metadata fix) |
 
-Two-lane model. No further role expansion.
+## 3. Lanes (current 3-bot + Codex model)
 
-| Lane | Who | Mandate | Limits |
+Lane policy is `ops/policies/bot-coordination.md`. Summary:
+
+| Lane | Who | Mandate | Touches |
 |---|---|---|---|
-| Build | Claude (Agent 1 / A3) | Implements, ships PRs. Touches code, scripts, docs in the same PR. | Cannot merge to main. |
-| Audit | Claude (Agent 2) | Read-only verification. Reports findings; only Blocker-severity halts a launch. | Cannot edit app code. |
-| Decisions | Carlo | Merges, live keys, DNS, partnerships, money. | Final authority. |
+| **COO** | Claude Code session (this) | Content/infra/PR triage/agent orchestration | Editorial pages, `packages/ui/*` (non-visual), `packages/config/index.ts`, `scripts/ci/*`, STATUS/BACKLOG/DASHBOARD |
+| **Monetization Bot** | Separate Claude Code session | Revenue/affiliate/funnels/email | `apps/<site>/src/data/affiliate-routes.ts`, `apps/<site>/src/app/(funnels)/*`, `apps/<site>/src/content/email-sequences/*`, `apps/<site>/src/app/go/[vendor]/[sku]/route.ts` |
+| **Visual Bot** | Separate Claude Code session | Visual identity/photography/composition/motion | `apps/<site>/src/app/page.tsx` heroes, `apps/<site>/src/components/visual/*`, `packages/ui/src/components/visual/*` (new), `apps/<site>/src/app/globals.css`, `scripts/sync-images.mjs`, `scripts/image-queries.json`, `packages/ui/src/data/image-manifest.json` |
+| **Codex** | External, prompted per-task | Read-only triage, plain-English status synthesis, narrow QC fixes only on request | PR review comments, `codex/`-prefixed branches |
+| **Carlo** | Direct chat | Spending, DNS, vendor approvals, key rotation, lane policy amendments | Final authority |
 
-Visual, Strategy, SEO, Ops, Deal, Investor work happen as briefs that
-Build or Carlo executes. No standalone bots for those domains.
+Coordination law: lane violations cause CI outages. Use `ops/handoffs/` for cross-lane communication.
 
-**Lane-crossing note (informational):** PR #9 was authored by A2 and
-edited app code. The work was correct and the launch blockers were
-real, so the PR shipped — but this is the kind of crossing that
-should normally be flagged. Audit reports; Build implements.
+**Recent lane-crossing events** (informational, not blame):
+- 2026-05-29: Monetization Bot's funnel infrastructure (PR #133) shipped with unclosed template literals → main broken → COO fixed forward via PR #147. Per policy §8 (first-merge-wins), Mon-lane fix-forward by COO is permitted to unblock main.
+- 2026-05-30: COO modified `scripts/sync-images.mjs` (Visual Bot lane) — preceded the Visual Bot existing. Not a violation in retrospect.
 
 ## 4. Soft-Launch Blockers (Carlo-only)
 
 All remaining launch work is operational, not engineering.
 
-| # | Item | Time | What it unblocks |
+| # | Item | Time | Priority |
 |---|---|---|---|
-| 1 | Create Mailchimp audience `dog-com`; capture API key + audience ID | ~10 min | Live email capture |
-| 2 | Set `MAILCHIMP_API_KEY`, `MAILCHIMP_AUDIENCE_ID`, `NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED=true` in Vercel env (dog-com project) | ~5 min | Forms become visible + functional. See §11. |
-| 3 | Create GA4 property; set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in Vercel env | ~10 min | Analytics flow |
-| 4 | DNS cutover `dog.com` → Vercel (CNAME or A record at registrar) | ~30 min | Site goes live |
-| 5 | (Optional) Real mailboxes `privacy@dog.com`, `legal@dog.com` | depends on Carlo's mail setup | Legal pages fully compliant |
-| 6 | (Optional) Final visual check / A4 direction-proposal review | depends on A4 delivery | PR #5 visual pass scheduled or deferred |
+| 1 | DNS pointing (10 production domains → Vercel) at Network Solutions | ~30 min | **P1 — blocks launch** |
+| 2 | Rotate Vercel token `vcp_2C7...` (exposed in chat) at https://vercel.com/account/tokens | ~2 min | P2 — security hygiene |
+| 3 | Apply to **Chewy Partners** at chewy.com/partners | ~5 min | P2 — free revenue stream |
+| 4 | Apply to **ImpactRadius** at impact.com | ~15 min | P2 — biggest LTV unlock (pet-insurance roster) |
+| 5 | GA4 property + 10 data streams + set `NEXT_PUBLIC_GA_MEASUREMENT_ID` env var | ~15 min | P2 — analytics blackout post-launch otherwise |
+| 6 | Mailchimp / MailerLite / Beehiiv decision (Carlo deferred per cost) | ~30 min | P3 — can defer until traffic exists |
+| 7 | Email forwarding `editor@<domain>.com` at Network Solutions (10 domains) | ~20 min | P3 — needed when email infra activates |
+| 8 | Rotate Anthropic API key `sk-ant-...` after `/ask` MVP validation | ~2 min | P3 — security hygiene |
 
-Items 1–4 total: ~55 minutes of Carlo's time. Item 5 and 6 do not
-block launch.
+**Already done (verified):**
+- ✅ Amazon Associates tag `boltonpets20-20` wired across all 10 production projects via `scripts/vercel-set-env.sh`
+- ✅ Skimlinks publisher `303850X1791986` live on dog.com (PR #143)
+- ✅ Vercel projects bootstrapped for 10 production sites
+- ✅ Anthropic API key created (Carlo holds; not in repo)
+- ✅ Impact.com site-verification meta tag installed (PR #147)
 
 ## 5. Active Risks
 

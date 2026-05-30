@@ -10,6 +10,7 @@ import {
   buildHowToSchema,
   buildFAQSchema,
   combineSchemas,
+  ArticleByline,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -192,7 +193,13 @@ export default function CyclingGuidePage() {
         }
       >
         <div className="carloOS-article">
-          <h2>The Nitrogen Cycle — What Each Step Does</h2>
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
+            <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours.
+          </p>
+
+          <h2>How Does the Nitrogen Cycle Work?</h2>
           <p>
             Fish excrete ammonia (NH₃) through their gills as a metabolic waste product, and
             decaying food and plant matter add more. Ammonia is acutely toxic — even 0.25 ppm
@@ -224,7 +231,7 @@ export default function CyclingGuidePage() {
             are killed by chlorine, chloramine, antibiotics, and copper.
           </p>
 
-          <h2>Fishless Cycling — The Recommended Method</h2>
+          <h2>How Do I Do a Fishless Cycle?</h2>
           <p>
             Fishless cycling establishes the biofilter before any fish are introduced. No fish
             suffers ammonia exposure during the cycle, no water-change schedule has to keep pace
@@ -342,7 +349,7 @@ export default function CyclingGuidePage() {
             </li>
           </ul>
 
-          <h2>Stalled Cycle — The Four Common Causes</h2>
+          <h2>Why Has My Tank Cycle Stalled?</h2>
           <p>
             A "stalled" cycle is one where ammonia is processing but nitrite never resolves, or
             where both flatline mid-cycle and nothing moves for a week. Four causes account for
