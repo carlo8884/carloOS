@@ -8,14 +8,16 @@ This document is **law for bots**. If you are a bot reading this on session star
 
 ---
 
-## 1. The two primary bots
+## 1. The bot fleet
 
 | Bot | Owns | Reports to | Spawns sub-bots? |
 |---|---|---|---|
 | **COO** | Content, infrastructure, PR triage, agent orchestration, build-cost control | Carlo | Yes (build agents) |
 | **Monetization Bot** | Affiliate wiring, tracking IDs, email sequences, revenue dashboards, conversion optimization, sponsorship logic | Carlo | Yes (monetization sub-bots) |
+| **Visual Bot** (added 2026-05-30) | Visual identity, photography, composition, motion, hero treatments, signature elements, OG image generation, favicons, comparison-table visual design | Carlo | Yes (visual sub-bots — one level max) |
+| **Codex** (read-only secondary, added 2026-05-30) | Plain-English status synthesis, PR review summaries, narrow QC fixes ONLY on COO/Carlo request | Carlo | No |
 
-Carlo is the sole arbitrator when COO and Monetization disagree.
+Carlo is the sole arbitrator when bots disagree.
 
 ---
 
@@ -42,19 +44,41 @@ Carlo is the sole arbitrator when COO and Monetization disagree.
 - Stripe/payment-rail wiring (post-launch)
 - `ops/handoffs/*-monetization-*.md` — its own briefs
 
-### Shared lane (either bot may write; coordinate via PR)
+### Visual Bot lane (added 2026-05-30)
+
+- `apps/<site>/src/app/page.tsx` — homepage hero, sections, signature elements
+- `apps/<site>/src/components/visual/*` — site-specific visual primitives
+- `apps/<site>/src/app/globals.css` — per-site visual tokens (motion, gradients, textures)
+- `packages/ui/src/components/visual/*` — NEW shared visual primitives (motion, chart, infographic, comparison-table visuals)
+- `packages/ui/src/styles/*` — typography scale, spacing rhythm, motion timing
+- `scripts/sync-images.mjs`, `scripts/image-queries.json`, `packages/ui/src/data/image-manifest.json` — image manifest pipeline
+- `apps/<site>/public/favicon-*`, OG image assets, per-site icon sets
+- `ops/handoffs/visual-*.md` and `ops/handoffs/*-visual-*.md` — its own briefs
+
+### Codex lane (read-only by default, added 2026-05-30)
+
+- `codex/`-prefixed branches ONLY (no main commits)
+- PR review comments on PRs flagged for review
+- Plain-English status synthesis documents written to `ops/handoffs/codex-*.md`
+- Narrow QC-only fixes ONLY when explicitly requested by COO or Carlo, scoped to a single file and a single concern
+- May NOT touch any other lane's files, even with good intent
+
+### Shared lane (any bot may write; coordinate via PR)
 
 - `apps/<site>/src/app/disclosure/page.tsx` — FTC affiliate disclosure pages (COO ships scaffolds, Monetization refines copy)
-- `apps/<site>/src/components/*` — site-specific (not shared library) components
+- `apps/<site>/src/components/*` — site-specific (not shared library) non-visual components
 - `ops/handoffs/*` — briefs (use date-prefix + bot-name to avoid collisions)
 - `README.md` and top-level docs (light touches only)
 
-### Forbidden (neither bot, ever)
+### Forbidden (no bot, ever)
 
 - Real production secrets (`.env*` files — gitignored anyway)
+- Tokens, API keys, or affiliate tracking IDs in any committed file (env vars only, per §6)
 - `LICENSE`, `CODE_OF_CONDUCT.md`
 - Removing or weakening trust-bar enforcement in `scripts/ci/trust-guard.mjs`
 - Removing FTC affiliate disclosure language from any `/disclosure` page
+- Removing image-attribution from `<StockImage>` / `<ImageCard>` components (Unsplash/Pexels TOS)
+- AI-generated humans in any trust context (vet headshots, author portraits, clinical scenes)
 
 ---
 

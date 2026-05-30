@@ -29,7 +29,7 @@ interface MagnetContent {
   recommendations: {
     headline: string
     body: string
-    cta: { label: string; vendor: import('@carloOS/ui').Vendor; sku: string }
+    cta: { label: string; vendor: string; sku: string }
   }[]
   nextReadingHref: string
   nextReadingLabel: string
@@ -131,7 +131,7 @@ export async function generateMetadata({
   return buildMetadata({
     siteId: 'dog-com',
     title: `${m.title} | Dog.com`,
-    description: m.subtitle,
+    description: `${m.subtitle}`,
     path: `/thanks/${magnet}`,
     type: 'website',
     noIndex: true, // thank-you pages should not index
