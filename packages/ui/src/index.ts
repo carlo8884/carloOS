@@ -74,3 +74,10 @@ export type {
   CrossPortfolioCardProps,
   CrossPortfolioVariant,
 } from './components/CrossPortfolioCard'
+
+// Open Graph image template — consumed by each app's /api/og/route.tsx
+// via `new ImageResponse(<OgTemplate ... />, ...)` from edge runtime.
+// Carries the per-site palette + wordmark so route handlers stay
+// 12-line minimal.
+export { OgTemplate } from './og/OgTemplate'
+export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'
