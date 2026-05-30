@@ -106,9 +106,9 @@ function buildFaqItems(b: VivariumBuild): FAQItem[] {
 
 // ─── Affiliate link helper ─────────────────────────────────────────────────
 
-function productHref(asin?: string): string | undefined {
+function productHref(asin: string | undefined, source: string): string | undefined {
   if (!asin) return undefined
-  return `/go/amazon/${asin}`
+  return `/go/amazon/${asin}?s=${source}`
 }
 
 // ─── Page ──────────────────────────────────────────────────────────────────
@@ -485,7 +485,7 @@ export default async function VivariumBuildPage({ params }: PageProps) {
               }}
             >
               {cat.examples.map((p) => {
-                const href = productHref(p.asin)
+                const href = productHref(p.asin, `build-${slug}`)
                 return (
                   <div
                     key={p.name}

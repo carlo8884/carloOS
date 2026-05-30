@@ -98,9 +98,9 @@ function buildFaqItems(t: HusbandryTopic): FAQItem[] {
 
 // ─── Affiliate link helper ─────────────────────────────────────────────────
 
-function productHref(asin?: string): string | undefined {
+function productHref(asin: string | undefined, source: string): string | undefined {
   if (!asin) return undefined
-  return `/go/amazon/${asin}`
+  return `/go/amazon/${asin}?s=${source}`
 }
 
 // ─── Pretty-label helper ───────────────────────────────────────────────────
@@ -320,7 +320,7 @@ export default async function HusbandryTopicPage({ params }: PageProps) {
           }}
         >
           {topic.whatToBuy.map((p) => {
-            const href = productHref(p.amazonAsin)
+            const href = productHref(p.amazonAsin, `husbandry-${slug}`)
             return (
               <div
                 key={p.item}
