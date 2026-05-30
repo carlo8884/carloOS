@@ -35,6 +35,7 @@ import {
   buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
+  CrossPortfolioCard,
   SchemaScript,
   EmailCapture,
   RelatedLinks,
@@ -455,7 +456,6 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 Find a vet on Vets.co →
               </a>
             </p>
-            {/* future: <CrossPortfolioCard contentType="breed" /> — component not yet merged. */}
 
             {/* FAQ */}
             <h2>Frequently Asked Questions</h2>
@@ -517,6 +517,12 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 }))}
               />
             )}
+
+            <CrossPortfolioCard
+              currentSite="dog-com"
+              contentType="breed"
+              variant="sidebar"
+            />
 
             <EmailCapture
               variant="sidebar"
