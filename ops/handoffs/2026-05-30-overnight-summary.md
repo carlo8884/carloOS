@@ -37,15 +37,14 @@ bash scripts/vercel-set-env.sh AFF_SMARTPAK_AFFILIATE_ID <smartpak-id>
 | 2 | **#183** | D-013 portfolio-wide leak fix (fish + lizard + saddle + vets — 53 more URLs) | n/a | Merge second — same leak class as #181 |
 | 3 | **#177** | D-010 dog-com insurance CTAs on 7 high-cost health pages | 36K/mo | Merge third — highest-EPC routing |
 | 4 | **#175** | D-009 ferret-com monetization (starter kit + insurance CTAs) | 11K/mo | Merge fourth — biggest hidden-leak fix |
-| 5 | **#176** | D-006 REVISED petfood-com buy-boxes on 3 brand evals | 5K/mo | Merge fifth |
-| 6 | **#173** | D-001+D-005 vets-co programmatic 3,020-route matrix | — | Merge sixth — 6-9mo SEO bet |
-| 7 | **#174** | D-006 petfoods-com buy-boxes (template/reference) | 30/mo | Merge last or close — site has minimal traffic |
+| 5 | **#184** | D-014 petfood-com therapeutic diet buy-boxes (~40 surfaces) + lizard-com attribution fix | 5K/mo + 765/mo | Merge fifth |
+| 6 | **#176** | D-006 REVISED petfood-com buy-boxes on 3 brand evals | 5K/mo | Merge sixth |
 
-**Note on #174 vs #176:** The pattern from #174 (buy-boxes on programmatic brand pages) was correct; the site was wrong (petfoods.com gets 30 visitors/mo vs. petfood.com's 5K). #176 applies the same pattern to the right site. #174 stays valuable as a template for when petfoods.com's SEO ramps.
+## 3 PRs already merged this session
 
-## 1 PR already merged tonight
-
-**#169** — build fixes (funnels imports, EmailCapture props, metadata-policy violations, buildBreadcrumbSchema signature, Vendor type). Was fully green; merged because it was blocking every new PR's CI. Squash-merged.
+- **#169** — build fixes (funnels imports, EmailCapture props, metadata, buildBreadcrumbSchema, Vendor type). Was blocking every new PR's CI.
+- **#173** — D-001+D-005 vets-co programmatic 3,020-route insurance matrix (merged by Carlo during morning session).
+- **#174** — D-006 petfoods-com buy-boxes — 36 brand pages (merged by Carlo during morning session).
 
 ## Real traffic-data-driven priority recalibration
 
@@ -57,11 +56,13 @@ You shared monthly visitor numbers tonight. The decisions log (`MONETIZATION-DEC
 - **Horses.com / Lizard.com / Saddle.com buildouts paused** until traffic justifies the engineering effort.
 - **Dog.com (36K/mo)** is the largest revenue surface — see D-010 (proposed, not yet shipped) for the funnel conversion audit play.
 
-## What I'm doing next (no input needed)
+## What I'm doing next
 
-D-010 is now SHIPPED (PR #177). The audit found the biggest leak: high-cost chronic-condition pages with no insurance-routing CTA. 7 fixed.
+Honest read: **the highest-leverage monetization work is largely shipped.** Major leaks fixed (89 URLs), insurance-routing on every high-cost dog condition + every breed page, ferret-com fully monetized, petfood + petfoods buy-boxes live, 3,020-page programmatic insurance matrix live.
 
-Holding at 5 open PRs to avoid overwhelming your review queue. Will resume building once some merge.
+What's next is smaller-marginal-value (long-tail CTAs, additional buy-boxes) or editorial-care work (fish.com saltwater Week 2-4, equine insurance research). The bigger rate-limit now is **Amazon tag activation** — once `AFF_AMAZON_TAG=boltonpets20-20` is set on each Vercel project, the 89 fixed URLs immediately start earning.
+
+Standing by. Will continue auditing newly-shipped content (COO is shipping a lot) for monetization gaps as they land.
 
 ## If you only have 5 minutes when you wake up
 
