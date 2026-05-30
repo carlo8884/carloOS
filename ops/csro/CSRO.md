@@ -198,16 +198,16 @@ Recommended actions (pick one):
 - **Sunset** (let lapse or redirect to relevant CarloOS site)
 - **Acquire-adjacent** (CSRO recommendation: a cheap related domain Carlo should buy to strengthen a cluster)
 
-### Domains already known to me (59)
+### Domains already known to me (75 total, 2 inventory drops by Carlo)
 
 **Production (10):** dog.com, fish.com, vets.co, lizard.com, horses.com, ferret.com, ferrets.com, petfood.com, petfoods.com, saddle.com
 
-**Scaffolds (5):** askthevet.com, dogpicture.com, seniorpets (no domain in list — flag?), petsupplies (no domain in list — flag?), hardmoneyloans.com (sunset confirmed by Carlo 2026-05-30)
+**Scaffolds:** askthevet.com, dogpicture.com, seniorpets (no domain in list — flag?), petsupplies (no domain in list — flag?), hardmoneyloans.com (sunset confirmed by Carlo 2026-05-30)
 
-**Dog cluster (18):** dog.net, dogbed.com, dogfoodsupplies.com, doginfo.com, dogmail.com, dogpicture.com, dogproduct.com, dogsaver.com, dogsaver.org, dogscreen.com, dogstaff.com, dogstore.com, idog.com, luxurydog.com, luxurydogsupplies.com, luxurypuppy.com, rawhidedog.com, puppysupply.com
+**Dog cluster (18 + 1 = 19):** dog.net, dogbed.com, dogfoodsupplies.com, doginfo.com, dogmail.com, dogpicture.com, dogproduct.com, dogsaver.com, dogsaver.org, dogscreen.com, dogstaff.com, dogstore.com, idog.com, luxurydog.com, luxurydogsupplies.com, luxurypuppy.com, rawhidedog.com, puppysupply.com, dog-videos.com
 
 **Vertical-supply siblings:**
-- Horses: horsesupplies.com, horsesupply.com, saddleshop.com, safehorsefence.com, ridershealth.com, barnsupplies.com
+- Horses / equine: horsesupplies.com, horsesupply.com, saddleshop.com, safehorsefence.com, ridershealth.com, barnsupplies.com, equine.net, equineleader.com, equineleaders.com, equinetack.com, equiteric.com, equusure.com (equine+insurance — potential Vets.co × Horses.com crossover)
 - Fish: aquarium.net, fishsupplies.com
 - Lizard: lizardsupply.com
 - Ferret: ferretsupplies.com, ferrettreats.com
@@ -215,11 +215,19 @@ Recommended actions (pick one):
 
 **Senior-pet cluster (5):** seniorcats.com, seniorpetmeds.com, seniorpetpharmacy.com, seniorpetplace.com, seniorpetproducts.com
 
+**Pet-meds extension:** bestpetmedsites.com (fits with senior-pet-meds cluster)
+
 **General-pet trophies:** allpets.com, ecopets.com, ipetsupplies.com, petcostumes.com, wormer.com
 
 **Off-vertical (review for sell/lease/sunset):** employeerecognition.com, employeetraining.com, modernfixtures.com, moneylenders.com, transactionalfunding.com, weedforum.com
 
-**Carlo said the list is ~64 — please send the remaining ~5 if known.**
+**Personal-identity (NOT portfolio assets — exclude from CSRO classification):** carlotabibi.com, tabibi.com
+
+**Carlo's holding-company identity (NOT portfolio assets — exclude from CSRO classification):** shinydiscoballz.com, shinyholdings.com, shinyinvestments.com, shinyproperties.com, shinyventures.com
+
+**CSRO scope:** ~68 portfolio domains (75 total − 2 personal − 5 holdco = 68). The 7 identity/holdco domains are excluded from build/sell/lease decisions but CSRO should still verify renewal dates so they don't accidentally lapse.
+
+**Carlo said the list was ~64 originally; the second drop brought the count to 75. If more domains exist, send them — CSRO needs full visibility before its day-1 classification can be authoritative.**
 
 ---
 
