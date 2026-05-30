@@ -34,6 +34,37 @@ const schema = buildHowToSchema({
   ],
 })
 
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Planted Aquarium CO2 Calculator (KH/pH)',
+  url: URL,
+  applicationCategory: 'UtilitiesApplication',
+  applicationSubCategory: 'AquariumCalculator',
+  operatingSystem: 'Web Browser (any HTML5-capable device)',
+  description:
+    'Free interactive CO2 calculator for planted aquariums. Estimates dissolved CO2 in parts per million from carbonate hardness (KH) and pH using the standard carbonate-equilibrium formula, with target ranges and fish-stress thresholds.',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Standard KH/pH formula: CO2 ppm = 12.839 × KH × 10^(7 − pH)',
+    'Color-coded target band (15–35 ppm) with fish-stress threshold callout',
+    'Caveat notes for phosphate buffers, tannins, and low-KH instability',
+    'Drop-checker cross-reference colors (blue / lime green / yellow)',
+    'Linked to planted-tank setup, lighting, and fertilizer references',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fish.com Editorial',
+    url: 'https://fish.com',
+  },
+}
+
 const FAQS = [
   {
     question: 'What CO2 level should a planted tank run?',
@@ -109,6 +140,10 @@ export default function CO2CalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
