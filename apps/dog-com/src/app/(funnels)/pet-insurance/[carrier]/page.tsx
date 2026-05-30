@@ -17,7 +17,7 @@ import {
   getCarrierBySlug,
   carrierSlugs,
   type CarrierProfile,
-} from '../../../data/insurance-carriers'
+} from '../../../../data/insurance-carriers'
 
 export async function generateStaticParams() {
   return carrierSlugs().map((carrier) => ({ carrier }))
@@ -79,11 +79,11 @@ export default async function CarrierPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
       { name: c.name, url: `https://dog.com/pet-insurance/${c.slug}` },
-    ]),
+    ] }),
   )
 
   const faqItems = [
@@ -375,10 +375,10 @@ export default async function CarrierPage({
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:insurance-comparison"
+          source="dog-com:insurance-comparison"
           title="See all 9 carriers side-by-side"
           subtitle="Download the comparison spreadsheet — free."
-          buttonText="Send the spreadsheet"
+          ctaText="Send the spreadsheet"
         />
       </div>
     </>
