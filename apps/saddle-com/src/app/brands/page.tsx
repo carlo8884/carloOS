@@ -32,7 +32,7 @@ export default function BrandsHubPage() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -62,7 +62,7 @@ export default function BrandsHubPage() {
         items={[{ name: 'Home', href: '/' }, { name: 'Brands' }]}
       />
 
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <section className="mb-12">
           <h2 className="font-display font-bold text-brand-dark text-xl mb-4">English Saddle Brands</h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -108,7 +108,7 @@ export default function BrandsHubPage() {
         </section>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture
           variant="section"
           siteId="saddle-com"

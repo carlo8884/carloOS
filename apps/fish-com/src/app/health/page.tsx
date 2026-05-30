@@ -17,11 +17,11 @@ const GUIDES = [
 export default function FishHealthPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Aquarium Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Water chemistry, disease identification, and the nitrogen cycle — everything that keeps your fish alive.</p>
       </div>
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
           {GUIDES.map(g => (
             <Link key={g.href} href={g.href} className="block bg-brand-white border border-brand-border rounded-xl p-5 no-underline hover:border-brand-primary transition-colors">
@@ -32,11 +32,11 @@ export default function FishHealthPage() {
           ))}
         </div>
       </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Water chemistry tips and fishkeeping guides every Thursday." source="health-hub" ctaText="Subscribe Free" perks={['🧪 Water chemistry', '🐠 Species guides', '🚫 No spam']} />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Fish Health Topics</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="columnaris" href="/health/columnaris" className="text-sm text-brand-primary no-underline hover:underline">Columnaris</Link>
@@ -54,7 +54,7 @@ export default function FishHealthPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
-      <section className="border-t border-brand-border bg-brand-white px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-white px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">Disease Reference Catalog</h2>
         <p className="text-xs text-brand-text-light max-w-content-wide mb-4">25 common aquarium fish diseases with symptoms, diagnostic approach, treatment ladder, and prevention. Sourced from Noga, Roberts, WAVMA, UF/IFAS, and WOAH references.</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 max-w-content-wide">

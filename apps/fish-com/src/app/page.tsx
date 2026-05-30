@@ -172,7 +172,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 px-container sm:px-container-sm pt-16 pb-8">
+        <div className="relative z-10 px-container-sm sm:px-container pt-16 pb-8">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -192,7 +192,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="relative z-10 px-container sm:px-container-sm pb-16">
+        <div className="relative z-10 px-container-sm sm:px-container pb-16">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {PROBLEMS.map((p) => (
               <Link
@@ -217,7 +217,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR ──────────────────────────────────────────────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
         {[
           'Source-grounded fishkeeping guides',
           'Interactive calculators, not just articles',
@@ -232,7 +232,7 @@ export default function HomePage() {
       </div>
 
       {/* ── CALCULATORS BANNER ─────────────────────────────────────────── */}
-      <section className="bg-brand-dark border-b border-brand-border px-container sm:px-container-sm py-6">
+      <section className="bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-6">
         <div className="flex items-center justify-between gap-6 flex-wrap">
           <div>
             <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">
@@ -257,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TANK PLANNING ──────────────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -294,7 +294,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WATER SAFETY ───────────────────────────────────────────────── */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section text-white">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section text-white">
         <div className="flex items-center gap-2.5 mb-3">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -324,7 +324,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SPECIES COMPATIBILITY ──────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -386,7 +386,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EQUIPMENT DECISIONS ────────────────────────────────────────── */}
-      <section className="bg-brand-white px-container sm:px-container-sm py-section">
+      <section className="bg-brand-white px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -438,7 +438,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EMAIL CAPTURE — "The Weekly Tank" ──────────────────────────── */}
-      <section className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
         <EmailCapture
           variant="section"
           siteId="fish-com"
@@ -455,7 +455,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
-      <section className="bg-brand-white border-t border-brand-border px-container sm:px-container-sm py-12">
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />

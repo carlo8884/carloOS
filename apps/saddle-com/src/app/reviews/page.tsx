@@ -14,14 +14,14 @@ const REVIEWS = [
 export default function SaddleReviewsPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <h1 className="font-display font-black text-white tracking-tighter mb-3" style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>Saddle Reviews 2025</h1>
           <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">CSF reviewer notes and Society of Master Saddlers reference material. Honest editorial criteria — we rank what actually fits and performs.</p>
         </div>
       </div>
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {REVIEWS.map(r => (
             <Link key={r.href} href={r.href} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card-hover transition-all">
@@ -32,11 +32,11 @@ export default function SaddleReviewsPage() {
           ))}
         </div>
       </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture variant="section" siteId="saddle-com" title="Free Saddle Buyer's Guide" subtitle="Reviews and market intelligence every other week." source="reviews-hub" ctaText="Get Free Guide" perks={['📋 CSF-informed', '💰 Market pricing']} />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="best-english-saddles" href="/reviews/best-english-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best English Saddles</Link>

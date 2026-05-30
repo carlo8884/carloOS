@@ -39,7 +39,7 @@ export default function BestUVBBulbsPage() {
     <>
       <SchemaScript schema={allSchemas} />
 
-      <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
+      <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
           ⚡ Solarmeter 6.5 Data · May 2025
         </span>
@@ -58,7 +58,7 @@ export default function BestUVBBulbsPage() {
       <QuickPicks items={PICKS} title="Jump to Review" />
       <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best UVB Bulbs" }]} />
 
-      <div className="relative z-10 px-container sm:px-container-sm py-12">
+      <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_260px] gap-12">
           <div>
             <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />

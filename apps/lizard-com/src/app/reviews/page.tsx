@@ -14,12 +14,12 @@ const REVIEWS = [
 export default function LizardReviewsPage() {
   return (
     <>
-      <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
+      <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment Reviews</span></div>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Reptile Equipment Reviews</h1>
         <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Tested by experienced keepers with real data — not marketing copy.</p>
       </div>
-      <div className="relative z-10 px-container sm:px-container-sm py-12">
+      <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content mx-auto">
           {REVIEWS.map(r => (
             <Link key={r.href} href={r.href} className="block rounded-xl p-6 no-underline hover:-translate-y-1 transition-all duration-200" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
@@ -30,11 +30,11 @@ export default function LizardReviewsPage() {
           ))}
         </div>
       </div>
-      <div className="relative z-10 px-container sm:px-container-sm py-10" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
+      <div className="relative z-10 px-container-sm sm:px-container py-10" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="reviews-index" />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="best-bioactive-substrates" href="/reviews/best-bioactive-substrates" className="text-sm text-brand-primary no-underline hover:underline">Best Bioactive Substrates</Link>

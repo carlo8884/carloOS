@@ -179,7 +179,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 px-container sm:px-container-sm pt-16 pb-8">
+        <div className="relative z-10 px-container-sm sm:px-container pt-16 pb-8">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -200,7 +200,7 @@ export default function HomePage() {
         </div>
 
         {/* Owner-path cards */}
-        <div className="relative z-10 px-container sm:px-container-sm pb-16">
+        <div className="relative z-10 px-container-sm sm:px-container pb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {OWNER_PATHS.map((path) => (
               <Link
@@ -233,7 +233,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST BAR — softened (no "expert", no "reviewed") ──────────── */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
         {[
           'Research-based health content',
           '50+ breed profiles with hereditary risk data',
@@ -250,7 +250,7 @@ export default function HomePage() {
       {/* ── PUPPY LEAD-MAGNET BANNER (preserved) ───────────────────────── */}
       <Link
         href="/puppy-schedule"
-        className="block bg-brand-dark border-b border-brand-border px-container sm:px-container-sm py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
+        className="block bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-4 hover:bg-brand-dark/95 transition-colors duration-200 no-underline"
       >
         <div className="flex items-center justify-between gap-6 flex-wrap">
           <div className="flex items-center gap-4">
@@ -269,7 +269,7 @@ export default function HomePage() {
       </Link>
 
       {/* ── BREED-SPECIFIC RISK CENTER ─────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WHEN TO CALL THE VET (decision-tree CTAs) ──────────────────── */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section text-white">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section text-white">
         <div className="flex items-center gap-2.5 mb-3">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -360,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FOOD & WEIGHT TOOLS ────────────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -396,7 +396,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PUPPY + TRAINING ───────────────────────────────────────────── */}
-      <section className="bg-brand-white px-container sm:px-container-sm py-section">
+      <section className="bg-brand-white px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -437,7 +437,7 @@ export default function HomePage() {
       </section>
 
       {/* ── INSURANCE & COST PLANNING ──────────────────────────────────── */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -479,7 +479,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EMAIL CAPTURE — "This week for your dog" ───────────────────── */}
-      <section className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
         <EmailCapture
           variant="section"
           siteId="dog-com"
@@ -496,7 +496,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
-      <section className="bg-brand-white border-t border-brand-border px-container sm:px-container-sm py-12">
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />

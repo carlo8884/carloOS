@@ -17,7 +17,7 @@ export default function FrenchBulldogBreedPage() {
         <div className="relative h-64 lg:h-auto">
           <Image src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&auto=format&fit=crop" alt="French Bulldog" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
-        <div className="flex flex-col justify-center px-container sm:px-container-sm py-12 relative">
+        <div className="flex flex-col justify-center px-container-sm sm:px-container py-12 relative">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(232,98,42,0.3) 0%, transparent 60%)' }} aria-hidden="true" />
           <div className="relative z-10">
             <div className="flex gap-3 mb-4">
@@ -29,7 +29,7 @@ export default function FrenchBulldogBreedPage() {
           </div>
         </div>
       </div>
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-5">
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-5">
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
           {[{ label: 'Size', value: 'Small' }, { label: 'Weight', value: '20–28 lbs' }, { label: 'Breathing', value: 'BOAS Risk: Very High', bad: true }, { label: 'IVDD Risk', value: 'Very High', bad: true }, { label: 'Exercise', value: 'Low' }].map(s => (
             <div key={s.label} className="text-center bg-white border border-brand-border rounded-lg py-3 px-2">
@@ -39,12 +39,12 @@ export default function FrenchBulldogBreedPage() {
           ))}
         </div>
       </div>
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/breeds" className="hover:text-brand-primary no-underline">Breeds</Link><span>›</span>
         <span className="text-brand-text-mid font-medium">French Bulldog</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
             <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />

@@ -51,7 +51,7 @@ export default function ToolsHub() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(14,107,138,0.5) 0%, transparent 60%)' }}
@@ -73,7 +73,7 @@ export default function ToolsHub() {
       </section>
 
       {/* TOOLS GRID */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (
             <Link
@@ -96,7 +96,7 @@ export default function ToolsHub() {
       </section>
 
       {/* WHY TRUST */}
-      <section className="bg-brand-white px-container sm:px-container-sm py-section border-t border-brand-border">
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-t border-brand-border">
         <div className="max-w-3xl">
           <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl mb-4">Why our calculators are different</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-3">
@@ -115,7 +115,7 @@ export default function ToolsHub() {
       </section>
 
       {/* EMAIL */}
-      <section className="bg-brand-primary-pale px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale px-container-sm sm:px-container py-section">
         <EmailCapture
           variant="section"
           siteId="fish-com"

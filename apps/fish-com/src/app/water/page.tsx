@@ -71,7 +71,7 @@ const PARAMETERS = [
 export default function WaterChemistryPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Water Chemistry</span>
@@ -94,14 +94,14 @@ export default function WaterChemistryPage() {
         </div>
       </div>
 
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Water Chemistry</span>
       </nav>
 
       {/* Quick reference */}
-      <div className="bg-brand-surface border-b border-brand-border px-container sm:px-container-sm py-5">
+      <div className="bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-5">
         <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Reference — Target Ranges</div>
         <div className="overflow-x-auto">
           <table className="w-full text-xs border-collapse min-w-[500px]">
@@ -133,7 +133,7 @@ export default function WaterChemistryPage() {
       </div>
 
       {/* Parameter deep-dives */}
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid gap-6 max-w-content-wide mx-auto">
           {PARAMETERS.map((param) => (
             <div key={param.name} className="bg-brand-white border border-brand-border rounded-xl p-6">
@@ -170,7 +170,7 @@ export default function WaterChemistryPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="fish-com"
           title="The Weekly Tank"
           subtitle="Water chemistry tips, species spotlights, and equipment picks every Thursday."

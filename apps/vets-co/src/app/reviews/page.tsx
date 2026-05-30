@@ -12,11 +12,11 @@ const REVIEWS = [
 export default function VetsReviewsPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 4vw, 44px)' }}>Pet Product Reviews — Honest Comparisons</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Ranked from a veterinarian&apos;s perspective — what actually matters when your pet needs care.</p>
       </div>
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {REVIEWS.map(r => (
             <Link key={r.href} href={r.href} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all">
@@ -27,7 +27,7 @@ export default function VetsReviewsPage() {
           ))}
         </div>
       </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Tips" subtitle="research-based guidance every Tuesday." source="reviews-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly']} />
       </div>
     </>

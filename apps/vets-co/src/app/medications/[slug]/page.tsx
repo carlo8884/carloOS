@@ -127,7 +127,7 @@ export default function MedicationPage({ params }: PageProps) {
       <SchemaScript schema={combined} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -140,7 +140,7 @@ export default function MedicationPage({ params }: PageProps) {
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
           Medication Overview · {m.species}
         </span>
@@ -156,7 +156,7 @@ export default function MedicationPage({ params }: PageProps) {
         </p>
       </div>
 
-      <article className="px-container sm:px-container-sm py-12 max-w-4xl carloOS-article">
+      <article className="px-container-sm sm:px-container py-12 max-w-4xl carloOS-article">
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-8 not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">

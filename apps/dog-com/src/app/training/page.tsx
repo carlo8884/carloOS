@@ -49,7 +49,7 @@ const SECTIONS = [
 export default function TrainingHubPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Training</span>
@@ -62,13 +62,13 @@ export default function TrainingHubPage() {
         </p>
       </div>
 
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Training</span>
       </nav>
 
-      <div className="px-container sm:px-container-sm py-14 max-w-container-wide mx-auto">
+      <div className="px-container-sm sm:px-container py-14 max-w-container-wide mx-auto">
         {SECTIONS.map((section) => (
           <div key={section.category} className="mb-12">
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-5 pb-3 border-b border-brand-border">
@@ -105,7 +105,7 @@ export default function TrainingHubPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture
           variant="section" siteId="dog-com"
           title="Free Dog Training Tips"
@@ -115,7 +115,7 @@ export default function TrainingHubPage() {
         />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Training Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="basic-commands" href="/training/basic-commands" className="text-sm text-brand-primary no-underline hover:underline">Basic Commands</Link>

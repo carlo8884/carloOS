@@ -55,7 +55,7 @@ export default async function SpeciesIndexPage() {
 
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Species Library</span>
@@ -70,7 +70,7 @@ export default async function SpeciesIndexPage() {
       </div>
 
       {/* Category filters */}
-      <div className="bg-brand-surface border-b border-brand-border px-container sm:px-container-sm py-4">
+      <div className="bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-4">
         <div className="flex gap-3 overflow-x-auto pb-1 -mb-1">
           {CATEGORIES.map(cat => (
             <Link key={cat.href} href={cat.href}
@@ -81,7 +81,7 @@ export default async function SpeciesIndexPage() {
         </div>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="flex items-center justify-between mb-7">
           <h2 className="font-display font-bold text-brand-dark text-2xl">
             {dbSpecies.length > 0 ? `${dbSpecies.length} Species` : 'Featured Species'}
@@ -135,7 +135,7 @@ export default async function SpeciesIndexPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="fish-com"
           title="The Weekly Tank"
           subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
@@ -143,7 +143,7 @@ export default async function SpeciesIndexPage() {
           perks={['🐠 Species spotlights', '🧪 Water chemistry', '⚙️ Equipment picks']} />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Fish Species</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="african-cichlid" href="/species/african-cichlid" className="text-sm text-brand-primary no-underline hover:underline">African Cichlid</Link>
