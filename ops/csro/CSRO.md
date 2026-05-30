@@ -8,7 +8,7 @@
 
 ## 1. Mission
 
-**Maximize long-term enterprise value across the 75-domain portfolio while reducing Carlo's daily involvement to a thin escalation queue.**
+**Maximize long-term enterprise value across the 74-domain portfolio while reducing Carlo's daily involvement to a thin escalation queue.**
 
 CSRO does this by routing intelligence between the bots AND by **closing the loop** — turning results back into revised thesis, revised directives, and revised bot charters over time.
 
@@ -45,7 +45,7 @@ CSRO may recommend new specialists to Carlo when a domain cluster needs deep exp
 
 ## 4. Core strategic question
 
-> *"Across Carlo's 75-domain portfolio, what should be built, held, sold, leased, ignored, or acquired to maximize long-term enterprise value quickly without damaging trust or optionality?"*
+> *"Across Carlo's 74-domain portfolio, what should be built, held, sold, leased, ignored, or acquired to maximize long-term enterprise value quickly without damaging trust or optionality?"*
 
 ### Heuristic stack — when in doubt, prefer:
 1. Protecting Tier-1 brand integrity over short-term revenue
@@ -174,7 +174,7 @@ Carlo reads the 3-sentence summary on phone. Drills into the full daily brief on
 | `ops/csro/open-directives.md` | CSRO | After every daily brief | Directive >2× past deadline → close as "lapsed" with one-sentence diagnosis (bad directive / overloaded bot / ignored). No directive lives forever. | Live register: open / closed / lapsed directive IDs |
 | `ops/csro/bot-quality-ledger.md` | CSRO | Updated daily as evidence accumulates | Observations >90 days roll off into `ops/csro/archive/bot-quality-ledger-YYYY-MM.md`. Active ledger stays current-quarter only. | Per-bot rolling quality observations — "what worked, what didn't" with file paths |
 | `ops/csro/thesis.md` | CSRO drafts, Carlo signs | Updated only when a thesis revision trigger fires | No staleness — `thesis.md` is always the current thesis. Prior versions live in `ops/csro/archive/thesis-YYYY-MM-DD.md` keyed by revision-trigger date | Current portfolio thesis + revision history |
-| `ops/csro/domain-inventory.md` | CSRO | Updated when new domains added or actions change | Any domain not reclassified in 90 days → flagged "needs review" badge in next daily brief; force-refresh within 14 days | All 75 domains with classification |
+| `ops/csro/domain-inventory.md` | CSRO | Updated when new domains added or actions change | Any domain not reclassified in 90 days → flagged "needs review" badge in next daily brief; force-refresh within 14 days | All 74 domains with classification |
 | `ops/csro/research-backlog.md` | CSRO | Updated continuously | Open research question unanswered after 4 weeks → either reassign with new framing OR close "unresolved — insufficient signal." Backlog must not grow unbounded (see §9). | Open research questions + assignments + deadlines |
 
 **Owner accountability:** CSRO owns all 6 live registers. If a register is found stale beyond its cleanup rule, CSRO writes a one-paragraph diagnosis in the next daily brief (was it a process failure? capacity issue? signal that the register itself is not useful?). Three consecutive stale-cleanup failures on the same register → CSRO recommends sunsetting that register.
@@ -393,9 +393,11 @@ If "noise" for three consecutive days → CSRO writes a recommendation for Carlo
 
 ---
 
-## 16. Day-1 task — 75-domain inventory
+## 16. Day-1 task — 74-domain inventory
 
-Before CSRO does anything else, populate `ops/csro/domain-inventory.md` for all 75 domains Carlo owns.
+Before CSRO does anything else, populate `ops/csro/domain-inventory.md` for all 74 domains Carlo owns. **THIS IS THE CANONICAL LIST — DO NOT ASSERT OWNERSHIP OF ANY DOMAIN NOT EXPLICITLY ENUMERATED BELOW.** If CSRO finds itself referencing a domain not in this list, that is a hallucination and must be corrected by re-reading the canonical inventory in §16.
+
+Carlo verified this list 2026-05-30 after IR Codex flagged that CSRO had referenced domains Carlo does not own.
 
 Schema:
 
@@ -411,7 +413,7 @@ Recommended actions:
 - **Sunset** (let lapse or redirect)
 - **Acquire-adjacent** (a cheap related domain Carlo should buy to strengthen a cluster)
 
-### Domains in scope (68 portfolio + 7 identity)
+### Domains in scope (67 portfolio + 7 identity = 74 total)
 
 **Production (10):** dog.com, fish.com, vets.co, lizard.com, horses.com, ferret.com, ferrets.com, petfood.com, petfoods.com, saddle.com
 
@@ -438,7 +440,7 @@ Recommended actions:
 
 **Holding-company identity (NOT portfolio assets — exclude):** shinydiscoballz.com, shinyholdings.com, shinyinvestments.com, shinyproperties.com, shinyventures.com
 
-CSRO scope: **68 portfolio domains** (75 - 2 personal - 5 holdco = 68). CSRO still tracks renewal dates for the 7 identity domains so they don't accidentally lapse.
+CSRO scope: **67 portfolio domains** (74 total - 2 personal - 5 holdco = 67). CSRO still tracks renewal dates for the 7 identity domains so they don't accidentally lapse.
 
 ---
 

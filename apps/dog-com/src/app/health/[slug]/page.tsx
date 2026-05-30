@@ -218,6 +218,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
   const breadcrumbSchema = buildBreadcrumbSchema({
     items: [
       { name: 'Home', url: 'https://dog.com/' },
+      { name: 'Conditions', url: 'https://dog.com/conditions' },
       { name: 'Health', url: 'https://dog.com/health' },
       { name: disease.name, url: `https://dog.com/health/${disease.slug}` },
     ],
@@ -242,8 +243,10 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
       <SchemaScript schema={combined} />
 
       {/* Breadcrumb */}
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
+        <Link href="/conditions" className="hover:text-brand-primary no-underline">Conditions</Link>
         <span>›</span>
         <Link href="/health" className="hover:text-brand-primary no-underline">Health</Link>
         <span>›</span>
