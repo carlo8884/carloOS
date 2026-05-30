@@ -34,6 +34,37 @@ const schema = buildHowToSchema({
   ],
 })
 
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Aquarium Heater Wattage Calculator',
+  url: URL,
+  applicationCategory: 'UtilitiesApplication',
+  applicationSubCategory: 'AquariumCalculator',
+  operatingSystem: 'Web Browser (any HTML5-capable device)',
+  description:
+    'Free interactive aquarium heater wattage calculator. Sizes the correct wattage based on tank volume, the temperature delta between room and target water temperature, a 25% headroom factor, and a recommended split into dual heaters for redundancy.',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Inputs: tank gallons, target temperature, coldest typical room temperature',
+    'Baseline rule of 3 W per gallon per 10°F lift with cold-room scaling',
+    'Built-in 25% headroom for heater aging and cold snaps',
+    'Dual-heater split recommendation for tanks 40 gallons and up',
+    'External-controller guidance for sensitive species and large systems',
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fish.com Editorial',
+    url: 'https://fish.com',
+  },
+}
+
 const FAQS = [
   {
     question: 'What wattage heater do I need for a 20-gallon tank?',
@@ -108,6 +139,10 @@ export default function HeaterWattageCalculatorPage() {
       }
     >
       <div className="carloOS-article">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
 
