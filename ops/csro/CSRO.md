@@ -168,14 +168,16 @@ Carlo reads the 3-sentence summary on phone. Drills into the full daily brief on
 
 ### Live registers (not reports — continuously updated in place)
 
-| File | Update cadence | What it is |
-|---|---|---|
-| `ops/csro/portfolio-ranking.md` | When any tier or score changes | Live 10-dimension ranking of every Tier-1/Tier-2 domain + DIFF section showing recent moves |
-| `ops/csro/open-directives.md` | After every daily brief | Live register: open / closed / overdue directive IDs; overdue list with diagnoses |
-| `ops/csro/bot-quality-ledger.md` | Updated daily as evidence accumulates | Per-bot rolling quality observations — "what worked, what didn't" with file paths. Replaces monthly bot review as a continuous ledger |
-| `ops/csro/thesis.md` | Updated only when a thesis revision trigger fires | Current portfolio thesis + revision history with trigger references |
-| `ops/csro/domain-inventory.md` | Updated when new domains added or actions change | All 75 domains with classification |
-| `ops/csro/research-backlog.md` | Updated continuously | Open research questions + assignments + deadlines |
+| File | Owner | Update cadence | Stale-item cleanup rule | What it is |
+|---|---|---|---|---|
+| `ops/csro/portfolio-ranking.md` | CSRO | When any tier or score changes | Score >30 days old without refresh → flag in next daily brief; force-refresh within 7 days or roll into "stale-scores audit" | Live 10-dimension ranking of every Tier-1/Tier-2 domain + DIFF section showing recent moves |
+| `ops/csro/open-directives.md` | CSRO | After every daily brief | Directive >2× past deadline → close as "lapsed" with one-sentence diagnosis (bad directive / overloaded bot / ignored). No directive lives forever. | Live register: open / closed / lapsed directive IDs |
+| `ops/csro/bot-quality-ledger.md` | CSRO | Updated daily as evidence accumulates | Observations >90 days roll off into `ops/csro/archive/bot-quality-ledger-YYYY-MM.md`. Active ledger stays current-quarter only. | Per-bot rolling quality observations — "what worked, what didn't" with file paths |
+| `ops/csro/thesis.md` | CSRO drafts, Carlo signs | Updated only when a thesis revision trigger fires | No staleness — `thesis.md` is always the current thesis. Prior versions live in `ops/csro/archive/thesis-YYYY-MM-DD.md` keyed by revision-trigger date | Current portfolio thesis + revision history |
+| `ops/csro/domain-inventory.md` | CSRO | Updated when new domains added or actions change | Any domain not reclassified in 90 days → flagged "needs review" badge in next daily brief; force-refresh within 14 days | All 75 domains with classification |
+| `ops/csro/research-backlog.md` | CSRO | Updated continuously | Open research question unanswered after 4 weeks → either reassign with new framing OR close "unresolved — insufficient signal." Backlog must not grow unbounded (see §9). | Open research questions + assignments + deadlines |
+
+**Owner accountability:** CSRO owns all 6 live registers. If a register is found stale beyond its cleanup rule, CSRO writes a one-paragraph diagnosis in the next daily brief (was it a process failure? capacity issue? signal that the register itself is not useful?). Three consecutive stale-cleanup failures on the same register → CSRO recommends sunsetting that register.
 
 Carlo never reads these on a calendar. He can spot-check whenever; CSRO references them in daily briefs as needed.
 
