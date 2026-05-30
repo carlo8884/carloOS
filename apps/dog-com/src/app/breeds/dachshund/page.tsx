@@ -18,7 +18,13 @@ export default function DachshundPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'IVDD Complete Guide', href: '/health/intervertebral-disc-disease' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-dachshund" />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Dachshund + Insurance</div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">Breed-specific premium &amp; coverage</h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Dachshunds have a specific hereditary condition profile that should drive your carrier choice. Premiums vary materially by breed.</p>
+              <a href="/pet-insurance/breeds/dachshund" className="inline-block text-xs font-bold text-brand-primary hover:underline">See Dachshund insurance picks →</a>
+            </div>
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-dachshund" />
       </>}
     >
       <div className="carloOS-article">

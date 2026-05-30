@@ -20,7 +20,13 @@ export default function GoldendoodlePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever', href: '/breeds/golden-retriever' }, { label: 'Dog Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Grooming', href: '/training/basic-commands' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Golden Doodle + Insurance</div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">Breed-specific premium &amp; coverage</h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Golden Doodles have a specific hereditary condition profile that should drive your carrier choice. Premiums vary materially by breed.</p>
+              <a href="/pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+            </div>
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
       </>}
     >
       <div className="carloOS-article">

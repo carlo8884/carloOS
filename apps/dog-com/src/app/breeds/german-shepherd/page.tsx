@@ -64,6 +64,12 @@ export default function GermanShepherdBreedPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
             <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">German Shepherd + Insurance</div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">Breed-specific premium &amp; coverage</h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">German Shepherds have a specific hereditary condition profile that should drive your carrier choice. Premiums vary materially by breed.</p>
+              <a href="/pet-insurance/breeds/german-shepherd" className="inline-block text-xs font-bold text-brand-primary hover:underline">See German Shepherd insurance picks →</a>
+            </div>
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-german-shepherd" />
           </aside>
         </div>

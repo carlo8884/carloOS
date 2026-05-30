@@ -45,6 +45,7 @@ import {
   getBreedBySlug,
   type Breed,
 } from '../../../data/breeds'
+import { INSURANCE_BREEDS } from '../../../data/insurance-by-breed'
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -517,6 +518,31 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 }))}
               />
             )}
+
+            <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
+                {breed.name} + Insurance
+              </div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">
+                Breed-specific premium &amp; coverage
+              </h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">
+                {breed.name}s have a specific hereditary condition profile that should drive your
+                carrier choice. Premiums and coverage vary materially by breed.
+              </p>
+              <a
+                href={
+                  INSURANCE_BREEDS.find((b) => b.slug === breed.slug)
+                    ? `/pet-insurance/breeds/${breed.slug}`
+                    : `/pet-insurance`
+                }
+                className="inline-block text-xs font-bold text-brand-primary hover:underline"
+              >
+                {INSURANCE_BREEDS.find((b) => b.slug === breed.slug)
+                  ? `See ${breed.name} insurance picks →`
+                  : `Compare pet insurance →`}
+              </a>
+            </div>
 
             <EmailCapture
               variant="sidebar"

@@ -19,7 +19,13 @@ export default function WeimaranerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-weimaraner" />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Weimaraner + Insurance</div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">Breed-specific premium &amp; coverage</h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Weimaraners have a specific hereditary condition profile that should drive your carrier choice. Premiums vary materially by breed.</p>
+              <a href="/pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+            </div>
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-weimaraner" />
       </>}
     >
       <div className="carloOS-article">

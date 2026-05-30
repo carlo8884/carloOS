@@ -23,7 +23,13 @@ export default function BulldogPage() {
         </div>
         <RelatedLinks title="Bulldog Health Deep-Dive" links={[{ label: 'Bulldog Health Issues & Screenings', href: '/breeds/bulldog/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Feeding Guide', href: '/breeds/bulldog/feeding' }, { label: 'French Bulldog Health', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }]} />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-bulldog" />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Bulldog + Insurance</div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">Breed-specific premium &amp; coverage</h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Bulldogs have a specific hereditary condition profile that should drive your carrier choice. Premiums vary materially by breed.</p>
+              <a href="/pet-insurance/breeds/bulldog" className="inline-block text-xs font-bold text-brand-primary hover:underline">See Bulldog insurance picks →</a>
+            </div>
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-bulldog" />
       </>}
     >
       <div className="carloOS-article">
