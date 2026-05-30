@@ -11,9 +11,9 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 
 - [x] **Valuation comps** — DONE: `valuation-comps.md` (24–34× multiples, insurance affiliate $, domain comps, ad RPM). Research agent returned 2026-05-30.
 - [x] **Duplication/redirect map** — DONE: `2026-05-30-csro-to-coo-consolidation-redirect-map.md` (content-aware consolidate-and-preserve, not blanket 301).
-- [ ] **Exit-valuation model** — build a per-domain valuation/disposition model (sell-price vs build-to-earn NPV) on the comps + traffic. NEXT.
-- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains (redirect / sell / hold) on a consistent rubric. Provisional now; finalize as traffic is measured.
-- [ ] **Dog.com / Fish.com acquirer revenue-trajectory angle** — draft the narrative justifying the step-up from the $2.3M/$1.45M offers; fold in Dog.com $500K (2004) provenance + scarcity framing from comps.
+- [x] **Exit-valuation model** — DONE: `valuation-model.md`. Key insight: for premium-but-thin domains (Horses/Lizard/Saddle) the *name* holds the value → building content is value-destructive vs effort. Firmed Saddle→sell-domain.
+- [x] **Dog.com / Fish.com acquirer narrative** — DONE: `2026-05-30-csro-dogfish-acquirer-narrative.md` (scarcity thesis + $500K provenance anchor + 4 step-up levers).
+- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains (redirect / sell / hold) on a consistent rubric. NEXT.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
 - [ ] **Bot-quality ledger refresh** — review COO/Monetization/Visual PRs as they land against the strategy.

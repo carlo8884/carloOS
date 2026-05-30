@@ -47,7 +47,7 @@ sale price follows.**
 | **Fish.com** | ~7,000 | SELL-NOW (groom)+monetize | $1.45M offer. Saltwater funnel built — confirm it converts; extend to top pages. Protect-asset. |
 | **Horses.com** | ~1,000 | HOLD — light monetize, NO build | Thin. Affiliate on existing pages only; pause programmatic builds. Racing angle pending Racing Bot. |
 | **Lizard.com** | ~765 | HOLD — no build | Thin. Light affiliate; defer authority build. |
-| **Saddle.com** | ~214 | HOLD / candidate SELL-DOMAIN | Very thin. Premium name, weak traffic. Pause builds; re-evaluate groom-slow vs sell-the-domain. |
+| **Saddle.com** | ~214 | **lean SELL-DOMAIN** | Premium exact-match name; 214 visitors. Per `valuation-model.md §3`: the *name* holds the value; building content adds a few hundred $/mo to an asset whose worth is already in the domain → value-destructive vs effort. Pause builds; lean toward selling the domain unless traffic moves on its own. |
 | **Vets.co** | ~0 (pre-DNS) | **FINISH-TO-EARN — parallel now** | *Revised: insurance engine already BUILT* (hub + 11 carriers + ~2,912 programmatic pages + affiliate routes). Not a 6–9mo build — the job is trust-audit + carrier-enrollment realism + go-live. Track 1 (insurance) runs parallel with Ferret; Track 2 (directory) gated on data decision. Highest revenue/visitor ceiling. QC §1 absolute. |
 | **AskTheVet.com** | ~0 | BUILD-TO-EARN — long-term | High GEO + insurance/telehealth affiliate; no traffic → speculative. Behind Ferret/PetFood. QC §1 absolute. |
 | **SeniorPetPharmacy.com** | ~0 | BUILD-TO-EARN — long-term | Recurring-Rx LTV; niche; no traffic → speculative. |
