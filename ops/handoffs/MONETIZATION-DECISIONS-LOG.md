@@ -1,5 +1,21 @@
 # Monetization Decisions Log
 
+> **2026-05-30 priority recalibration:** Carlo shared live monthly traffic
+> numbers (with 4 days left in month):
+>
+> | Domain | Visitors/mo | Note |
+> |---|---|---|
+> | Dog.com | ~36,000 | Flagship; COO refresh in flight |
+> | Ferret.com | ~11,000 | **No monetization surface** — biggest hidden leak |
+> | Fish.com | ~7,000+ | D-002 saltwater funnel built; COO refresh in flight |
+> | PetFood.com | ~5,000 | Editorial face; D-006 should target this not PetFoods.com |
+> | Horses.com | ~1,000 | Thin — deprioritize programmatic builds |
+> | Lizard.com | ~765 | Thin — deprioritize |
+> | Saddle.com | ~214 | Very thin — deprioritize until traffic grows |
+> | PetFoods.com | ~30 | Database/catalog face — D-006 PR #174 is on wrong site |
+>
+> Implication: P0/P1 ranking has shifted. Ferret.com is now the #1 immediate-revenue opportunity (11K/mo × zero conversion = pure leak). PetFood.com (5K) is the right home for the D-006 buy-box pattern, not PetFoods.com (30). Vets.co D-001 matrix is still valuable but is a 6-9mo SEO bet, not near-term cash. Programmatic buildouts on horses/saddle/lizard are paused until traffic justifies the build cost.
+
 **Owner:** Monetization Bot (Analytics + Revenue Intelligence role per 2026-05-30 mandate)
 **Purpose:** Living scoreboard of every revenue recommendation — proposed, shipped, killed, and (post-launch) measured against actual outcome.
 
@@ -52,7 +68,25 @@ Every entry uses the standard 5-field framework:
 
 ---
 
-## 🚧 PROPOSED (next in queue)
+## 🚧 PROPOSED (next in queue — re-ranked post-traffic-data 2026-05-30)
+
+### D-009 · Ferret.com Monetization Surface (NEW · P0)
+- **Why now:** 11K monthly visitors with ZERO funnels, no buy-boxes, no insurance routing, no lead magnet. Single biggest immediate-revenue opportunity in the portfolio per real traffic data.
+- **Revenue Potential:** $500–$2,500 MRR within 60 days of shipping (~2-5% conversion × $5-20 EPC × 11K visitors)
+- **Traffic Requirements:** ALREADY EXISTS (11K/mo)
+- **Ease of Implementation:** Medium (~4 hours: starter-kit funnel + buy-box on existing /diseases/[condition] pages + cross-link to vets.co insurance)
+- **Time to Revenue:** 30–60 days post-merge
+- **Priority Level:** P0 — replaces vets.co matrix as #1 immediate-revenue play
+
+### D-010 · Dog.com Funnel Conversion Audit (NEW · P0)
+- **Why now:** 36K monthly visitors. Dog.com is the largest revenue surface by an order of magnitude. Even +1% conversion improvement = ~$300-1000 MRR uplift. COO refresh is in flight so I can't restructure design, but I can audit the current funnels for monetization-leak fixes (missing affiliate disclosures, broken affiliate links, missing buy-boxes on review pages, suboptimal CTA copy).
+- **Revenue Potential:** Audit might surface $500–$3,000 MRR worth of optimizations
+- **Traffic Requirements:** ALREADY EXISTS (36K/mo)
+- **Ease of Implementation:** Easy-Medium (~2-3 hours audit; fixes are typically one-line)
+- **Time to Revenue:** Immediate at next deploy
+- **Priority Level:** P0
+
+
 
 ### D-005 · Cat-Breed Extension to D-001 Matrix · **SHIPPED 2026-05-30**
 - **PR:** #173 (layered with D-001)
@@ -63,13 +97,12 @@ Every entry uses the standard 5-field framework:
 - **Time to Revenue:** Same as D-001 (6–9 months post-launch)
 - **Editorial note:** Cat-breed hereditary conditions sourced from AAFP/ACVIM/Winn Feline Foundation literature. [NEEDS-VET-REVIEW] flagged in the data file before launch.
 
-### D-006 · Petfood.com Brand-Page Affiliate Enrichment
-- **Why:** 38 existing brand pages with content; just need affiliate buy-boxes added contextually. Pure mechanical work.
-- **Revenue Potential:** $1K–$4K MRR (A-tier; pet food is high-volume low-margin)
-- **Traffic Requirements:** 150K monthly visitors (programmatic SEO advantage on brand-name queries)
-- **Ease of Implementation:** Easy (~3 hours)
-- **Time to Revenue:** Within 60 days of launch (faster than D-001 because pages already rank-able)
-- **Priority Level:** P1
+### D-006 · Brand-Page Affiliate Enrichment · **PARTIALLY SHIPPED + REVISED**
+- **What shipped:** PR #174 added buy-boxes to petfoods-com (36 catalog pages) — but petfoods-com has only ~30 monthly visitors. **The pattern is right; the site is wrong.**
+- **Revised target:** Move the same pattern to PetFood.com (~5K monthly visitors) — that's where the editorial brand pages live and where real traffic flows.
+- **Status:** PR #174 still has value as a template; will replicate on petfood-com in follow-up
+- **Revenue Potential (revised):** $200–$800 MRR within 90 days of shipping on petfood-com (real-traffic-adjusted)
+- **Priority Level:** P1 — do after D-009 (ferret) since that's the bigger immediate win
 
 ### D-007 · Equine Insurance Programmatic Matrix (horses.com)
 - **Why:** Replicate D-001 pattern. Smaller breed list (~30 horse breeds), same 52 states = ~1,500 pages.
