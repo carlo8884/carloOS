@@ -78,13 +78,15 @@ Every entry uses the standard 5-field framework:
 - **Time to Revenue:** 30–60 days post-merge
 - **Priority Level:** P0 — replaces vets.co matrix as #1 immediate-revenue play
 
-### D-010 · Dog.com Funnel Conversion Audit (NEW · P0)
-- **Why now:** 36K monthly visitors. Dog.com is the largest revenue surface by an order of magnitude. Even +1% conversion improvement = ~$300-1000 MRR uplift. COO refresh is in flight so I can't restructure design, but I can audit the current funnels for monetization-leak fixes (missing affiliate disclosures, broken affiliate links, missing buy-boxes on review pages, suboptimal CTA copy).
-- **Revenue Potential:** Audit might surface $500–$3,000 MRR worth of optimizations
+### D-010 · Dog.com Insurance-Routing CTAs on 7 High-Cost Health Pages · **SHIPPED 2026-05-30**
+- **PR:** #177
+- **Pages updated:** /health/{dog-cancer-treatment, dog-heart-disease, dog-arthritis, dog-diabetes, cushing-disease, dog-kidney-disease, anemia-in-dogs}
+- **Revenue Potential:** $500–$3K MRR uplift (36K visitors × small % converting on highest-EPC routing in portfolio)
 - **Traffic Requirements:** ALREADY EXISTS (36K/mo)
-- **Ease of Implementation:** Easy-Medium (~2-3 hours audit; fixes are typically one-line)
-- **Time to Revenue:** Immediate at next deploy
+- **Implementation:** ~30 min mechanical (7 sidebar inserts; zero design/body changes)
+- **Time to Revenue:** Immediate at deploy
 - **Priority Level:** P0
+- **Lane:** Sidebar-only — compatible with the in-flight COO dog-com refresh
 
 
 
