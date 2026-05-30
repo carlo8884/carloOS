@@ -31,23 +31,28 @@ sale price follows.**
 
 ---
 
-## §2 Disposition calls — built in-scope sites `[CSRO DECISION]`
+## §2 Disposition calls — built in-scope sites `[CSRO DECISION — revised with live traffic 2026-05-30]`
 
-| Domain | Disposition | Rationale & first move |
-|---|---|---|
-| **Dog.com** | SELL-NOW (groom) | $2.3M offer live. Target $10M+. Move: make it diligence-perfect + show a revenue/traffic *trajectory* (even small) to justify the step-up. **No public for-sale sign** (see §4). Protect-asset rules absolute. |
-| **Fish.com** | SELL-NOW (groom) | $1.45M offer live. Same playbook as Dog.com. |
-| **Vets.co** | **BUILD-TO-EARN — TOP PRIORITY** | *Carlo left this to me — I'm prioritizing it.* Highest-ceiling non-flagship: pet-insurance affiliate (high payout) + programmatic vet directory. B2B + insurance = best revenue-per-visitor in the portfolio. Drives the strongest flip/exit narrative. |
-| **Saddle.com** | BUILD-TO-EARN | High-AOV tack affiliate (SmartPak/Dover). Premium buyers = high commission. Pairs with Horses.com. |
-| **PetFood.com** | BUILD-TO-EARN | High-intent nutrition; Chewy/Amazon affiliate + Rx-diet → insurance handoff. |
-| **Lizard.com** | BUILD-TO-FLIP | Defensible niche authority, but ceiling is modest. Build to traffic, then flip. |
-| **Horses.com** | BUILD-TO-EARN (gated) | Tack/supplement affiliate; racing angle pending Racing Bot. Strong brand domain. |
-| **Ferret.com** | BUILD-TO-FLIP | Authority strong, commercial intent thin. Modest earn → flip. |
-| **AskTheVet.com** | BUILD-TO-EARN (gated on trust-bar) | AI symptom checker = high GEO/citation value + insurance/telehealth affiliate. Gated: the /ask tool must respect QC §1 (no fabricated clinical authority, no individualized medical advice). |
-| **SeniorPetPharmacy.com** | BUILD-TO-EARN | Recurring-Rx LTV; senior-pet med affiliate. Niche but sticky. |
-| **PetFoods.com** | REDIRECT → PetFood.com | Duplication risk kills both in SERP. Fold 301 into PetFood.com unless a *distinct* brand-database angle proves out. Revisit after PetFood.com traffic data. |
-| **Ferrets.com** | REDIRECT → Ferret.com | Same duplication logic. State-legality directory can live as a section of Ferret.com. |
-| **DogPicture.com** | SELL-DOMAIN (or low-pri flip) | AI-portrait POD is trend-dependent + operationally heavy (fulfillment). Better as a domain sale unless a no-ops affiliate angle appears. |
+> **Traffic pivot:** monetize EXISTING traffic first; new-SEO builds are the slower second track. Biggest finding
+> = a **leak, not a build**: Ferret.com ~11K/mo with **zero** monetization. Ferret + PetFood now outrank the
+> Vets.co build for *near-term cash* (Vets.co ~0 traffic = 6–9mo SEO bet). Live numbers in the Traffic column;
+> full near-term queue in `portfolio-ranking.md §A`. `~0` = unmeasured (research-needed), not assumed-zero.
+
+| Domain | Traffic/mo | Disposition | Rationale & first move |
+|---|---|---|---|
+| **Ferret.com** | ~11,000 | **EARN-NOW #1** | 11K visitors, zero revenue = biggest leak. Mon Bot wire affiliate on existing pages now (`dir-009`). No build needed. |
+| **PetFood.com** | ~5,000 | **EARN-NOW #2** | Correct buy-box home (NOT PetFoods, ~30 — PR#174 wrong site, §2a). Chewy/Amazon on existing pages. |
+| **Dog.com** | ~36,000 | SELL-NOW (groom)+monetize | $2.3M offer; target $10M+. 36K/mo = the trajectory that justifies the step-up. Ensure affiliate surfaces live+clean. No for-sale sign. Protect-asset absolute. |
+| **Fish.com** | ~7,000 | SELL-NOW (groom)+monetize | $1.45M offer. Saltwater funnel built — confirm it converts; extend to top pages. Protect-asset. |
+| **Horses.com** | ~1,000 | HOLD — light monetize, NO build | Thin. Affiliate on existing pages only; pause programmatic builds. Racing angle pending Racing Bot. |
+| **Lizard.com** | ~765 | HOLD — no build | Thin. Light affiliate; defer authority build. |
+| **Saddle.com** | ~214 | HOLD / candidate SELL-DOMAIN | Very thin. Premium name, weak traffic. Pause builds; re-evaluate groom-slow vs sell-the-domain. |
+| **Vets.co** | ~0 (unmeasured) | BUILD-TO-EARN — long-term (6–9mo) | Highest *ceiling* (insurance/visitor) but an SEO bet, not near-term cash. Parallel long-term track, not ahead of the earners. QC §1 absolute. |
+| **AskTheVet.com** | ~0 | BUILD-TO-EARN — long-term | High GEO + insurance/telehealth affiliate; no traffic → speculative. Behind Ferret/PetFood. QC §1 absolute. |
+| **SeniorPetPharmacy.com** | ~0 | BUILD-TO-EARN — long-term | Recurring-Rx LTV; niche; no traffic → speculative. |
+| **PetFoods.com** | ~30 | REDIRECT → PetFood.com | Dead standalone. 301 into PetFood.com; brand-DB angle becomes a section there. |
+| **Ferrets.com** | ~0 | REDIRECT → Ferret.com | Fold into Ferret.com (the live earner). |
+| **DogPicture.com** | ~0 | SELL-DOMAIN | Trend-dependent + fulfillment-heavy + no traffic. Sell via Efty. |
 
 **Out of scope:** PetSupplies.com, Horse.com, StateLineTack.com → Tabcom. HardMoneyLoans.com → SELL-DOMAIN.
 
