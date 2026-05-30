@@ -7,12 +7,19 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 ## Open
 
-### csro-dir-2026-W22-006 → Carlo — traffic data + for-sale design (new 2026-05-30)
-- **Action:** (a) Share current traffic per domain (Search Console clicks/impressions/top queries + any analytics); (b) decide the for-sale UX — Tier-B "inquire to acquire" element design + Tier-C marketplace choice (`strategy-disposition.md §4/§6`).
-- **Why:** Traffic data reorders the entire build-vs-sell disposition and sets sale prices; for-sale signage is outward-facing and affects acquirer perception (esp. flagship protection). `[FACT]`
+### csro-dir-2026-W22-006 → Carlo — traffic numbers + Efty URLs (new 2026-05-30)
+- **Action:** (a) Share **rough monthly visits per domain** (Carlo's chosen format); (b) provide **per-domain Efty listing URLs**, at least for the Tier-C sell-domain names.
+- **Why:** Rough traffic reorders build-vs-sell and flags thin names already pulling organic; Efty URLs let the sell-domain names point at their for-sale pages immediately. For-sale **mechanism is decided = Efty via discreet footer link** per `strategy-disposition.md §4` tiers (Tier A flagships show nothing). `[FACT]`
 - **Deadline:** next CSRO brief.
-- **Done-when:** traffic export received + for-sale approach chosen.
+- **Done-when:** rough traffic received + Efty URLs received.
 - **Status:** open.
+
+### csro-dir-2026-W22-008 → COO — Efty footer link component (new 2026-05-30)
+- **Action:** Add a config-driven `eftyUrl` field per site (`packages/config`) + a discreet footer link in the shared Footer that renders only when set. Tier A (Dog/Fish) left unset → renders nothing. Per `strategy-disposition.md §4`.
+- **Why:** Carlo runs Efty and wants a clear footer pointer to each site's listing; needs to be tier-gated so flagships never show it. `[FACT]`
+- **Deadline:** when Efty URLs arrive (dir-006).
+- **Done-when:** component live; URLs wired per tier.
+- **Status:** open (blocked on dir-006 URLs).
 
 ### csro-dir-2026-W22-005 → COO — petsupplies scaffold disposition (new 2026-05-30)
 - **Action:** petsupplies.com is Tabcom (out of CarloOS scope). Decide the `apps/petsupplies` scaffold: hand to Tabcom or decommission from this repo. Do NOT launch it under CarloOS.

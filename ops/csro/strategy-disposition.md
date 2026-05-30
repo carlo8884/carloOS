@@ -78,21 +78,26 @@ I will **not** build 48 thin sites — that's effort-dilution and triggers algor
 
 ---
 
-## §4 For-sale signage policy `[CSRO DECISION + needs Carlo design input — §6]`
+## §4 For-sale signage policy `[CSRO DECISION — Carlo input received 2026-05-30: use Efty]`
 
-Putting "this site is for sale" on a page is **outward-facing and affects sale price** — handled in tiers:
+**Carlo's call:** he already runs **Efty** for-sale pages, and wants a **clear footer link pointing to the
+relevant Efty listing**. So the mechanism is settled — Efty, surfaced via footer — and the only thing CSRO governs
+is *which tier of domain shows it and how prominently*:
 
-- **Tier A — flagships with live offers (Dog.com, Fish.com): NO public for-sale signage.** A visible "for sale"
-  on a site with a standing $2.3M/$1.45M offer signals distress and *caps* the price. Keep these to broker/direct
-  negotiation. At most, a single discreet `ownership@` contact in the footer — nothing that reads "motivated seller."
-- **Tier B — build-to-flip / build-to-earn sites (Vets.co, Saddle, Lizard, etc.): discreet acquisition capture,
-  but only once they have traffic.** A small footer line — *"Interested in acquiring this site? Inquire →"* — to a
-  simple form. Captures inbound without hurting UX or credibility. Off until the site is live + has traffic.
-- **Tier C — SELL-DOMAIN names: full domain-parking for-sale landers** (Afternic / Dan.com / Sedo, or a clean
-  branded "this domain is for sale" page). These aren't websites; the for-sale page *is* the product.
+- **Tier A — flagships with live offers (Dog.com, Fish.com): NO Efty/for-sale footer link.** A public "for sale"
+  on a site with a standing $2.3M/$1.45M offer signals distress and *caps* the price. Keep to broker/direct
+  negotiation. (At most a neutral `ownership@` contact — nothing that reads "motivated seller.")
+- **Tier B — build-to-earn / build-to-flip sites (Vets.co, Saddle, Lizard, PetFood, Horses, Ferret, AskTheVet,
+  SeniorPetPharmacy): discreet Efty footer link — but only once the site is live with traffic.** Wording kept
+  low-key (e.g. *"This site may be available — inquire"* → its Efty page). Captures inbound buyers without
+  undermining the editorial credibility that drives the revenue. Off until the go-live gate (§5) is met.
+- **Tier C — SELL-DOMAIN names (hardmoneyloans, dogpicture, idog, allpets, the thin product names, etc.): point
+  the domain straight at its Efty for-sale lander.** No website needed — the Efty page *is* the product. Prominent
+  by design.
 
-**Design decision still open for Carlo** (he flagged it): exact UX of the Tier-B "inquire to acquire" element and
-whether to use a third-party marketplace vs. our own form for Tier C. Options in §6.
+**Implementation note (→ COO):** add a config-driven `eftyUrl` field per site so the footer link renders only
+where a tier permits it (Tier A renders nothing). Per-domain Efty URLs come from Carlo (`csro-dir-006`). This is a
+small shared-component + `packages/config` change.
 
 ---
 
@@ -113,11 +118,13 @@ Sites that can't clear (2) soon should be re-dispositioned to SELL-DOMAIN rather
 
 ## §6 What I need from Carlo (the few things that are genuinely yours)
 
-1. **Traffic data** — you said the sites have traffic sitting on them. **Please share it** (Search Console
-   clicks/impressions/top queries + any analytics, per domain). This is the single highest-leverage input: it
-   reorders §2/§3 priorities, tells us which unbuilt names to *build* vs *sell*, and directly sets sale prices.
-2. **For-sale UX (Tier B) + marketplace choice (Tier C)** — your design call; options offered separately.
-3. **FYI confirmations (reversible defaults I've already set):** equiteric.com set-aside; hardmoneyloans → sell-domain;
+1. **Traffic — rough numbers (Carlo's chosen format, 2026-05-30).** Approximate monthly visits per domain is fine
+   for the first pass; it reorders §2/§3 and flags which thin names are actually pulling organic (→ promote to
+   build instead of sell). Search Console detail can come later for the sites we decide to groom for sale.
+2. **For-sale = Efty (decided).** Carlo runs Efty; we'll surface a discreet footer link to the relevant Efty page
+   per the §4 tiers. **Need from Carlo:** the per-domain Efty listing URLs (at least for the Tier-C sell-domain
+   names, so those can point at Efty immediately).
+3. **FYI confirmations (reversible defaults already set):** equiteric.com set-aside; hardmoneyloans → sell-domain;
    PetFoods/Ferrets → redirect into their singular heroes.
 
 ---
