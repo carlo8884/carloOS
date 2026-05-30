@@ -54,6 +54,10 @@ export default function WSAVAExplainedPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
+          <strong className="not-italic">TL;DR.</strong> The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
+        </p>
+
         <h2>What Are WSAVA Guidelines?</h2>
         <DropCap>The World Small Animal Veterinary Association published nutritional guidelines that provide a framework for evaluating pet food manufacturers. The key insight: the guidelines evaluate the company and its practices — not the ingredient list. You can have a beautiful ingredient list on a bag of food made by a company with no veterinary nutritionists, no feeding trials, and no quality control processes. The ingredient list tells you almost nothing about whether that food is actually good for your dog.</DropCap>
 
@@ -81,7 +85,7 @@ export default function WSAVAExplainedPage() {
           <li><strong>Iams/Eukanuba</strong> — meets WSAVA standards, less research investment than the top three.</li>
         </ul>
 
-        <h2>The Marketing vs Science Gap</h2>
+        <h2>Why Do Premium Marketing Brands Score Lower Than Royal Canin?</h2>
         <p>The brands that score highest on WSAVA criteria are not the brands with the most appealing marketing. They often have ingredient lists that look less impressive on the bag than premium &quot;natural&quot; brands. This is because ingredient quality as presented on a label is not the same as nutritional quality or safety.</p>
         <p>Corn, by-products, and grains — ingredients that premium marketing frames as inferior — are not inferior from a nutritional standpoint. AAFCO feeding trials measure actual nutritional outcomes, not ingredient source aesthetics. A diet full of named single-protein sources made by a company with no veterinary nutritionists and no feeding trials is not better than a diet with &quot;chicken by-product meal&quot; made by a company that has invested decades in nutritional research.</p>
 
