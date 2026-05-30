@@ -139,6 +139,26 @@ export default function FerretAdrenalDiseasePage() {
                 { label: 'First-Year Schedule', href: '/first-year-schedule' },
               ]}
             />
+            <div className="bg-brand-dark rounded-lg p-5 mb-4">
+              <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
+                Adrenal Disease + Insurance
+              </div>
+              <h3 className="font-display text-base font-bold text-brand-white mb-2">
+                Cover this condition before it&apos;s diagnosed
+              </h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">
+                Adrenal surgery runs $1,500–$3,500; deslorelin implants add
+                $400-600/year. Exotic-pet insurance covers it — but ONLY if
+                enrolled before symptoms appear.
+              </p>
+              <a
+                href="https://vets.co/pet-insurance"
+                rel="noopener"
+                className="inline-block text-xs font-bold text-brand-primary hover:underline"
+              >
+                Compare exotic-pet insurance →
+              </a>
+            </div>
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
