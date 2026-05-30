@@ -138,6 +138,17 @@ export default function FishDiseaseGuidePage() {
           { label: 'Water Chemistry', href: '/water' },
           { label: 'Tank Setup Guide', href: '/setup' },
         ]} />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+
+          <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Test Kit</div>
+
+          <h3 className="font-display text-base font-bold text-brand-white mb-2">Treat at home or before vet trip</h3>
+
+          <p className="text-xs text-white/60 mb-3 leading-relaxed">Most aquarium diseases require fast treatment. API Master Test Kit is the community-standard first-line product. (Always confirm diagnosis first.)</p>
+
+          <a href="/go/amazon-brand/API%20Master%20Test%20Kit?s=health-fish-disease-guide" rel="sponsored noopener" className="inline-block text-xs font-bold text-brand-primary hover:underline">Find on Amazon →</a>
+
+        </div>
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-disease-guide" />
       </>}
     >

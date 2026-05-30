@@ -22,6 +22,17 @@ export default function FinRotPage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Ich Treatment', href: '/health/ich-treatment' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+
+          <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Fin Rot Treatment</div>
+
+          <h3 className="font-display text-base font-bold text-brand-white mb-2">Treat at home or before vet trip</h3>
+
+          <p className="text-xs text-white/60 mb-3 leading-relaxed">Most aquarium diseases require fast treatment. Maracyn fin rot is the community-standard first-line product. (Always confirm diagnosis first.)</p>
+
+          <a href="/go/amazon-brand/Maracyn%20fin%20rot?s=health-fin-rot" rel="sponsored noopener" className="inline-block text-xs font-bold text-brand-primary hover:underline">Find on Amazon →</a>
+
+        </div>
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-fin-rot" />
       </>}
     >

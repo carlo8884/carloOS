@@ -15,6 +15,17 @@ export default function NitrogenCyclePage() {
       sidebar={<>
         <TableOfContents items={[{ label: 'What the Cycle Is', href: '#what' }, { label: 'The Three Stages', href: '#stages' }, { label: 'Fishless Cycling Protocol', href: '#cycling' }, { label: 'How Long It Takes', href: '#duration' }, { label: 'How to Know It\'s Done', href: '#done' }, { label: 'Mini-Cycles', href: '#mini-cycles' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Water Chemistry Guide', href: '/water' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }]} />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+
+          <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Test Kit</div>
+
+          <h3 className="font-display text-base font-bold text-brand-white mb-2">Treat at home or before vet trip</h3>
+
+          <p className="text-xs text-white/60 mb-3 leading-relaxed">Most aquarium diseases require fast treatment. API Master Test Kit is the community-standard first-line product. (Always confirm diagnosis first.)</p>
+
+          <a href="/go/amazon-brand/API%20Master%20Test%20Kit?s=health-nitrogen-cycle-explained" rel="sponsored noopener" className="inline-block text-xs font-bold text-brand-primary hover:underline">Find on Amazon →</a>
+
+        </div>
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="nitrogen-cycle" />
       </>}
     >

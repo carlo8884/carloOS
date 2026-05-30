@@ -22,6 +22,17 @@ export default function FishLicePage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide' }, { label: 'Koi Care Guide', href: '/species/koi' }]} />
+        <div className="bg-brand-dark rounded-lg p-5 mb-4">
+
+          <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Parasite Treatment</div>
+
+          <h3 className="font-display text-base font-bold text-brand-white mb-2">Treat at home or before vet trip</h3>
+
+          <p className="text-xs text-white/60 mb-3 leading-relaxed">Most aquarium diseases require fast treatment. API General Cure is the community-standard first-line product. (Always confirm diagnosis first.)</p>
+
+          <a href="/go/amazon-brand/API%20General%20Cure?s=health-fish-lice-anchor-worm" rel="sponsored noopener" className="inline-block text-xs font-bold text-brand-primary hover:underline">Find on Amazon →</a>
+
+        </div>
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-fish-lice" />
       </>}
     >
