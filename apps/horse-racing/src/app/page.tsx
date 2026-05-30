@@ -164,6 +164,30 @@ export default function RaceCenterPage() {
         </div>
       </section>
 
+      {/* Explore / learn — internal-linking + discovery surface */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-display text-2xl font-bold text-brand-text-dark">Explore</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { href: '/horses', label: 'Horse profiles', desc: 'Form, strike-rates & ratings' },
+            { href: '/trainers', label: 'Trainer profiles', desc: 'Strike-rates & runners' },
+            { href: '/jockeys', label: 'Jockey profiles', desc: 'Strike-rates & booked rides' },
+            { href: '/tracks', label: 'Racecourses', desc: 'Going, surface & cards' },
+            { href: '/guides', label: 'Guides', desc: 'How to read cards, odds & form' },
+            { href: '/glossary', label: 'Glossary', desc: 'Every racing term explained' },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="block rounded-xl border border-brand-border bg-white p-5 no-underline transition hover:border-brand-primary"
+            >
+              <p className="font-display text-lg font-bold text-brand-text-dark">{c.label}</p>
+              <p className="mt-1 text-sm text-brand-text-mid">{c.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <EmailCapture
         siteId="horse-racing"
         variant="section"

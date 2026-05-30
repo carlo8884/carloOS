@@ -949,6 +949,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Learn',
         links: [
+          { label: 'Guides', href: '/guides' },
           { label: 'Glossary', href: '/glossary' },
           { label: 'How ratings work', href: '/methodology' },
           { label: 'About', href: '/about' },
