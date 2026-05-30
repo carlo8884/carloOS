@@ -23,7 +23,7 @@ export default function EditorialStandardsPage() {
 
       <div className="carloOS-article">
         <h2>What Lizard.com Is</h2>
-        <p>Lizard.com is a consumer-facing reference site for reptile and amphibian keepers — species profiles, husbandry guides, UVB lighting, enclosure setup, feeding, and health overviews. Articles are written by the Lizard.com editorial team and draw on publicly available sources: peer-reviewed reptile husbandry research, the Ferguson Zone framework, published Solarmeter 6.5 UVI measurements, ARAV (Association of Reptilian and Amphibian Veterinarians) reference material, manufacturer documentation, and established keeper-society care sheets.</p>
+        <p>Lizard.com is a consumer-facing reference site for reptile and amphibian keepers — species profiles, husbandry guides, UVB lighting, enclosure setup, feeding, and health overviews. Articles are written by the Lizard.com editorial team and draw on publicly available sources: peer-reviewed reptile husbandry research, the Ferguson Zone framework, published <a href="https://solarmeter.com" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Solarmeter 6.5</a> UVI measurements, <a href="https://arav.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ARAV (Association of Reptilian and Amphibian Veterinarians)</a> reference material, manufacturer documentation, and established keeper-society care sheets.</p>
         <p>Lizard.com is <strong>not</strong> a veterinary practice. If your animal is sick, find an experienced exotics vet — the ARAV maintains a worldwide member directory at arav.org.</p>
 
         <h2>How We Research and Write</h2>

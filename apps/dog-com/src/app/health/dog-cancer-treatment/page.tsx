@@ -17,6 +17,12 @@ export default function DogCancerTreatmentPage() {
         sidebar={<>
           <TableOfContents items={[{ label: 'Chemotherapy', href: '#chemo' }, { label: 'Surgery', href: '#surgery' }, { label: 'Radiation', href: '#radiation' }, { label: 'Immunotherapy', href: '#immunotherapy' }, { label: 'Palliative Care', href: '#palliative' }, { label: 'The Oncologist Role', href: '#oncologist' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Cancer Warning Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+          <div className="bg-brand-dark rounded-lg p-5 mb-4">
+            <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cancer + Insurance</div>
+            <h3 className="font-display text-base font-bold text-brand-white mb-2">Cover treatment costs before diagnosis</h3>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Canine cancer treatment ranges $3,000-$15,000+ depending on stage and modality. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+          </div>
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-treatment" />
         </>}
       >
@@ -44,7 +50,7 @@ export default function DogCancerTreatmentPage() {
           <p>Palliative care tools: NSAIDs for pain management (particularly valuable for bone pain in osteosarcoma), gabapentin for neuropathic pain, prednisone for lymphoma (produces 1–4 months of remission without aggressive chemotherapy, maintaining appetite and activity), metronidazole for GI lymphoma symptoms, and palliative radiation (3–4 large fractions) for bone pain. Appetite stimulants (mirtazapine, maropitant) when cancer causes nausea and reduced appetite. Anti-nausea medication throughout.</p>
 
           <h2 id="oncologist">The Role of the Veterinary Oncologist</h2>
-          <p>A board-certified veterinary oncologist (DACVIM Oncology) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
+          <p>A board-certified veterinary oncologist (<a href="https://www.acvim.org/Specialties/Oncology" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVIM Oncology</a>) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
           <p>Cost reality: consultation with a veterinary oncologist: $200–500. Chemotherapy per cycle: $200–1,500 depending on protocol. Radiation therapy course: $8,000–20,000. Surgery: $2,000–15,000+ depending on procedure complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
         </div>
       </ArticleLayout>

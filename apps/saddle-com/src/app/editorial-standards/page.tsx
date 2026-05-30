@@ -23,7 +23,7 @@ export default function EditorialStandardsPage() {
 
       <div className="carloOS-article">
         <h2>What Saddle.com Is</h2>
-        <p>Saddle.com is a consumer-facing reference site for saddles, tack, and equestrian equipment — saddle reviews, fit guides, leather care, bit and bridle selection, and buying guides. Articles are written by the Saddle.com editorial team and draw on publicly available sources: Society of Master Saddlers (SMS) inspection and fitting material, published Certified Saddle Fitter (CSF) reviewer notes, manufacturer specifications, established equestrian texts, and aggregated rider reports.</p>
+        <p>Saddle.com is a consumer-facing reference site for saddles, tack, and equestrian equipment — saddle reviews, fit guides, leather care, bit and bridle selection, and buying guides. Articles are written by the Saddle.com editorial team and draw on publicly available sources: <a href="https://www.mastersaddlers.co.uk" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Society of Master Saddlers (SMS)</a> inspection and fitting material, published Certified Saddle Fitter (CSF) reviewer notes, manufacturer specifications, established equestrian texts, and aggregated rider reports.</p>
         <p>Saddle.com is <strong>not</strong> a saddle-fitting practice and is not a substitute for an in-person fitting. For an actual saddle to be fit to an actual horse, please book a qualified saddle fitter — the SMS maintains a worldwide directory at mastersaddlers.co.uk.</p>
 
         <h2>How We Research and Write</h2>

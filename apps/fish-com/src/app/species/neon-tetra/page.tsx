@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure', path: '/species/neon-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NeonTetraPage() {
@@ -23,13 +24,19 @@ export default function NeonTetraPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
         <h2>Why Store Neons Die — And How to Prevent It</h2>
-        <p>Neon tetras have an undeserved reputation for being fragile. Wild-caught neons from the Amazon, properly handled and quarantined, are actually quite hardy. The fish that die within days of purchase are almost always mass-farmed specimens subjected to: overcrowded holding tanks, poor water quality in transit, exposure to multiple disease sources from mixed-source holding systems, and the compounded stress of temperature and chemistry changes during shipping. The solution is quarantine (4 weeks minimum in a separate tank before introducing to an established aquarium) and purchasing from quality sources — not cheap bulk-lot fish store stock.</p>
+        <DropCap>Neon tetras have an undeserved reputation for being fragile. Wild-caught neons from the Amazon, properly handled and quarantined, are actually quite hardy. The fish that die within days of purchase are almost always mass-farmed specimens subjected to: overcrowded holding tanks, poor water quality in transit, exposure to multiple disease sources from mixed-source holding systems, and the compounded stress of temperature and chemistry changes during shipping. The solution is quarantine (4 weeks minimum in a separate tank before introducing to an established aquarium) and purchasing from quality sources — not cheap bulk-lot fish store stock.</DropCap>
         <p>Neons that survive their first month in appropriate conditions typically prove hardy. Water quality maintenance (nitrate under 20 ppm, stable temperature and pH, 0 ammonia and nitrite) keeps them healthy long-term. The "neons always die" experience is almost entirely attributable to disease introduction from unquarantined fish and poor initial stock quality.</p>
 
         <h2>Neon Tetra Disease (NTD) — Know It, Fear It</h2>
         <p>Neon tetra disease — caused by the microsporidian parasite Pleistophora hyphessobryconis — is the most important health concern for neon keepers. Signs: a white or pale area developing on the body (typically starting near the dorsal fin), the loss of the iridescent blue-green color in affected areas, progressive deterioration over days to weeks, secondary infections at the lesion sites, and eventual death. There is no cure. The parasite's spores are released when infected fish die and are consumed by other fish — it spreads through the tank.</p>
         <p>Management when NTD appears: remove and euthanize affected fish immediately (clove oil overdose is humane — do not allow them to die slowly in the tank releasing spores). Do not add new fish to an infected tank until all fish have been removed and the tank has been stripped and disinfected. Prevention: quarantine all new neons rigorously, purchase only from reputable sources, do not feed infected fish to other fish, and do not introduce fish from unknown sources to an established neon colony.</p>
+
+        <CalloutBox variant="warning" title="NTD has no cure">
+          Neon tetra disease, caused by the microsporidian parasite <em>Pleistophora hyphessobryconis</em>, has no treatment. Affected fish must be removed and humanely euthanized (clove oil overdose) to prevent spore release as they die. Rigorous 4-week quarantine of every new neon is the only reliable defense — once NTD enters an established colony it can persist for years.
+        </CalloutBox>
 
         <h2>Display — The School of 20</h2>
         <p>The visual impact of neon tetras scales dramatically with school size. Ten neons are pleasant. Twenty neons in a densely planted 30-gallon with dark substrate and good lighting are breathtaking — the school moves as a single organism, the blue stripe and red tail catching light from every angle simultaneously. The school cohesion (how tightly the fish school) also increases with group size — larger schools produce the coordinated, flowing movement behavior that is the most visually compelling aspect of schooling fish.</p>

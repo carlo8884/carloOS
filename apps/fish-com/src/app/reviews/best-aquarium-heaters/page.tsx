@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -51,6 +52,12 @@ export default function BestHeatersPage() {
       <div className="px-container sm:px-container-sm py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
+            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+            <CalloutBox variant="tip" title="Right-sizing wattage">
+              Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer.
+            </CalloutBox>
+
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Critical: Always Verify with a Separate Thermometer</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Every heater dial is an approximation. Even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer (Govee H5053 recommended). Set your heater, verify with the thermometer, adjust if needed. Check temperature daily for the first week, then weekly.</p>

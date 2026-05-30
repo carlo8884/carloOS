@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -51,9 +52,15 @@ export default function GrainFreeDCMPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
+          <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation — but most veterinary cardiologists now recommend avoiding high-legume grain-free formulas. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
+        </p>
+
         <h2>What Is DCM?</h2>
         <p>Dilated cardiomyopathy (DCM) is a disease of the heart muscle in which the heart chambers enlarge and the heart&apos;s ability to pump blood weakens. It is one of the most serious heart diseases in dogs — large and giant breeds are predisposed, but DCM can occur in any breed. Untreated DCM leads to congestive heart failure. The condition is typically considered genetic in predisposed breeds.</p>
-        <p>What made the FDA investigation significant was the apparent emergence of DCM in breeds not historically predisposed — including Golden Retrievers, Labradors, and other medium-to-large breeds — in dogs eating grain-free diets. This suggested a dietary rather than genetic cause.</p>
+        <p>What made the <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> investigation significant was the apparent emergence of DCM in breeds not historically predisposed — including Golden Retrievers, Labradors, and other medium-to-large breeds — in dogs eating grain-free diets. This suggested a dietary rather than genetic cause.</p>
 
         <h2>What the FDA Found</h2>
         <p>Between January 2014 and April 2019, the FDA received over 500 reports of DCM in dogs, many in breeds not genetically predisposed. The investigation identified a pattern: the majority of affected dogs were eating grain-free diets — specifically diets with high legume content (peas, lentils, chickpeas, or potatoes as primary ingredients).</p>
@@ -89,7 +96,7 @@ export default function GrainFreeDCMPage() {
 
         <p><strong>The exception:</strong> Dogs with diagnosed grain allergies (genuinely uncommon — most dogs with food sensitivities are sensitive to protein sources, not grains) may have a medical reason for avoiding specific grains. Work with a veterinary nutritionist to find an appropriate diet rather than defaulting to a commercial grain-free product.</p>
 
-        <h2>The Bottom Line</h2>
+        <h2>Should I Stop Feeding Grain-Free Dog Food?</h2>
         <p>The grain-free market was built primarily on marketing rather than nutritional science — the premise that dogs cannot digest grain or that grain-free is inherently more &quot;natural&quot; lacks scientific support. The subsequent FDA investigation revealing a potential link to serious cardiac disease is a significant concern that warrants caution.</p>
         <p>Our recommendation: choose a WSAVA-compliant food from a company that employs veterinary nutritionists and conducts feeding trials. See our <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for ranked options.</p>
       </div>

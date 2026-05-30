@@ -54,7 +54,7 @@ export default function EliminationDietPage() {
           <p>Improvement on the elimination diet alone could have multiple explanations: the original diet had a digestibility problem, the dog's environment changed, or the dog's seasonal allergies naturally improved. The only way to confirm food allergy is the provocation (food challenge): reintroduce the original diet for up to 2 weeks after symptoms have resolved. If symptoms return within 2 weeks, food allergy is confirmed — the clinical response to the challenge is the diagnostic confirmation.</p>
 
           <h2 id="faq">FAQ</h2>
-          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>
