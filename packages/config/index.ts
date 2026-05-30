@@ -921,8 +921,12 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Race Center', href: '/', highlight: true },
+      { label: 'Horses', href: '/horses' },
+      { label: 'Trainers', href: '/trainers' },
+      { label: 'Jockeys', href: '/jockeys' },
+      { label: 'Tracks', href: '/tracks' },
+      { label: 'Glossary', href: '/glossary' },
       { label: 'Methodology', href: '/methodology' },
-      { label: 'Track Record', href: '/track-record' },
     ],
     footerLinks: [
       {
@@ -931,6 +935,23 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Race Center', href: '/' },
           { label: 'Methodology', href: '/methodology' },
           { label: 'Track Record', href: '/track-record' },
+        ],
+      },
+      {
+        heading: 'Databases',
+        links: [
+          { label: 'Horses', href: '/horses' },
+          { label: 'Trainers', href: '/trainers' },
+          { label: 'Jockeys', href: '/jockeys' },
+          { label: 'Tracks', href: '/tracks' },
+        ],
+      },
+      {
+        heading: 'Learn',
+        links: [
+          { label: 'Glossary', href: '/glossary' },
+          { label: 'How ratings work', href: '/methodology' },
+          { label: 'About', href: '/about' },
         ],
       },
     ],
