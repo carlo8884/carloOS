@@ -467,13 +467,32 @@ export default async function ConditionDietPage({ params }: PageProps) {
               <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)', marginTop: '4px' }}>
                 {b.productLine}
               </div>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '10px', flexWrap: 'wrap' }}>
+                <a
+                  href={`/go/chewy-brand/${encodeURIComponent(b.brand)}?s=condition-${slug}`}
+                  rel="sponsored noopener"
+                  style={{ fontSize: '12px', padding: '4px 10px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}
+                >
+                  Search on Chewy →
+                </a>
+                <a
+                  href={`/go/amazon-brand/${encodeURIComponent(b.brand)}?s=condition-${slug}`}
+                  rel="sponsored noopener"
+                  style={{ fontSize: '12px', padding: '4px 10px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}
+                >
+                  Search on Amazon →
+                </a>
+              </div>
             </div>
           ))}
         </div>
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', margin: '0 0 24px' }}>
           Brand inclusion in this catalog is descriptive of label disclosure and published clinical
           use, not a ranking of formulation quality. Per-SKU AAFCO statements vary within a brand
-          portfolio and must be verified on the specific product label.
+          portfolio and must be verified on the specific product label. Prescription / therapeutic
+          diets often require a veterinary prescription for purchase — the retailer will verify
+          before shipping. We earn an affiliate commission when you purchase through these links;
+          we never rank by commission.
         </p>
 
         <h2 id="transition">How to Transition</h2>
