@@ -92,7 +92,22 @@ for (const app of APPS) {
     if (route.includes('[slug]') || route === '/admin') continue
 
     const src = readFileSync(file, 'utf8')
-    const { title, description } = extractMetadata(src)
+    let { title, description } = extractMetadata(src)
+
+    // Client components ('use client') can't export metadata. Next.js falls
+    // back to the nearest layout.tsx — so check there if the page itself
+    // has no metadata.
+    if (title === null) {
+      const layoutPath = file.replace(/\/page\.[tj]sx?$/, '/layout.tsx')
+      try {
+        const layoutSrc = readFileSync(layoutPath, 'utf8')
+        const layoutMeta = extractMetadata(layoutSrc)
+        if (layoutMeta.title !== null) {
+          title = layoutMeta.title
+          description = layoutMeta.description
+        }
+      } catch {}
+    }
 
     if (title === null) {
       issues.push({ route, type: 'missing-title' })
