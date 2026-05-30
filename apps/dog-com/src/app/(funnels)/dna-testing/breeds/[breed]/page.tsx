@@ -15,7 +15,7 @@ import {
   BREED_DNA_RECOMMENDATIONS,
   getDnaTestBySlug,
   DNA_TESTS,
-} from '../../../../data/dna-tests'
+} from '../../../../../data/dna-tests'
 
 export async function generateStaticParams() {
   return Object.keys(BREED_DNA_RECOMMENDATIONS).map((breed) => ({ breed }))
@@ -31,7 +31,7 @@ export async function generateMetadata({
   if (!b) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `${b.breedName} DNA Testing — Which Test, Which Conditions to Screen | Dog.com`,
+    title: `${b.breedName} DNA Testing — Tests & Conditions to Screen | Dog.com`,
     description: `${b.breedName}s carry ${b.keyConditions.length} hereditary conditions worth screening. See which DNA test fits best.`,
     path: `/dna-testing/breeds/${breed}`,
     type: 'article',
@@ -65,11 +65,11 @@ export default async function BreedDnaPage({
       publishedAt: '2026-05-29T00:00:00Z',
       modifiedAt: '2026-05-29T00:00:00Z',
     }),
-    buildBreadcrumbSchema([
+    buildBreadcrumbSchema({ items: [
       { name: 'Home', url: 'https://dog.com/' },
       { name: 'DNA Testing', url: 'https://dog.com/dna-testing' },
       { name: `${b.breedName}`, url: `https://dog.com/dna-testing/breeds/${breed}` },
-    ]),
+    ] }),
   )
 
   return (
@@ -197,10 +197,10 @@ export default async function BreedDnaPage({
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          tag="dog-com:dna-test-comparison"
+          source="dog-com:dna-test-comparison"
           title={`Get our ${b.breedName} hereditary conditions guide`}
           subtitle="What every owner should screen for, what each result means, and which tests catch what."
-          buttonText="Send the guide"
+          ctaText="Send the guide"
         />
       </div>
     </>
