@@ -23,17 +23,42 @@ next_action: Monetization Bot to wire Ferret.com affiliate + re-target PetFood b
 
 ## Action 1 — Ferret.com: plug the leak (highest-leverage move in the portfolio)
 
-11K real monthly visitors with **no way to earn** is the single biggest revenue gap we have. No content build is
-required — this is pure wiring on pages that already get traffic.
+11K real monthly visitors with **no way to earn** is the single biggest revenue gap we have. **CSRO mapped the app
+2026-05-30 — the affiliate plumbing already exists; this is application, not construction:**
 
-- Wire affiliate on the existing high-traffic Ferret.com pages (care guides, health/lymphoma/adrenal, diet).
-- **Vendor allow-list (`bot-coordination.md §5`, ferret-com):** Amazon Associates, Chewy Partners, Marshall Pet
-  Products, Wysong, Carniwhole. No vendors outside this list without Carlo approval.
-- Tracking IDs via env vars only (§6). FTC affiliate disclosure surfaced above the fold (QC §3.2 — blocker-severity).
-- Prioritize the pages with the most traffic first (pull from Search Console / analytics).
+**Already built (verified):**
+- `apps/ferret-com/src/data/affiliate-routes.ts` — all 5 allow-list vendors wired (Amazon, Chewy, Marshall,
+  Wysong, Carniwhole), PLACEHOLDER tracking templates.
+- `apps/ferret-com/src/app/go/[vendor]/[sku]/route.ts` — click-tracker live (env-var substitution at runtime).
+- `packages/ui/src/components/ReviewCard.tsx` + `AffiliateDisclosure.tsx` — ready to drop in.
+- Already applied on `/care/cage-setup` (2 ReviewCards) and the `/ferret-starter-kit` funnel.
 
-**Expected impact:** even a modest 1–2% affiliate CTR on 11K/mo is real, immediate, recurring revenue — and it
-becomes part of the trafficked-revenue story that lifts the site's sale value.
+**The gap (the leak):** the high-traffic editorial pages carry **zero** monetization. The traffic is on the care +
+health clusters:
+- Care: `/care/diet-basics`, `/care/cage-setup` (partial), `/care/litter-training`, `/care/bathing-and-grooming`,
+  `/care/exercise-and-enrichment`, `/care/toxic-foods`
+- Health: `/health/adrenal-disease`, `/health/insulinoma`, `/health/lymphoma`, `/health/dental-disease`,
+  `/health/vaccinations`, `/health/aging-ferret-care`, `/health/vet-visit-prep`
+
+**The job (fast — pure application):**
+1. Pull the actual top-traffic Ferret pages from analytics (start with the highest, not all 14 at once).
+2. On each, add contextually-honest product recommendations via the existing **ReviewCard** with
+   `ctaAffiliateProgram` (amazon/chewy/marshall/wysong/carniwhole) → routes through the existing `/go` handler.
+   Examples that fit the content: diet-basics → ferret kibble (Wysong/Marshall/Carniwhole); cage-setup →
+   cages/bedding (Amazon/Chewy); litter-training → litter/pans; health pages → supportive-care supplies only
+   (NOT treatment claims — see guardrails).
+3. Ensure `AffiliateDisclosure` is surfaced above the fold on every page that gains affiliate links.
+
+**Config fix (small, COO lane):** `ferret-com` in `packages/config/index.ts` still has placeholder nav
+(`[{Home}]`) and `marshall/wysong/carniwhole` aren't reflected in the `affiliates` flags (only amazon/chewy true).
+Not blocking the buy-boxes, but worth aligning when convenient.
+
+**Guardrail specific to health pages (QC §1/§3.3):** health/disease pages may link *supportive-care* products
+(e.g. high-calorie recovery supplement, soft bedding) but must **not** imply a product treats/cures the condition,
+and must not give individualized medical advice. Keep treatment framing on "see your exotic vet."
+
+**Expected impact:** even 1–2% affiliate CTR on 11K/mo is real, recurring revenue with ~zero build cost — and it
+becomes part of the trafficked-revenue story that lifts the site's eventual sale value.
 
 ## Action 2 — PetFood.com: re-target the buy-box (fix PR #174)
 

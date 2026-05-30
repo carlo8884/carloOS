@@ -47,7 +47,7 @@ sale price follows.**
 | **Horses.com** | ~1,000 | HOLD — light monetize, NO build | Thin. Affiliate on existing pages only; pause programmatic builds. Racing angle pending Racing Bot. |
 | **Lizard.com** | ~765 | HOLD — no build | Thin. Light affiliate; defer authority build. |
 | **Saddle.com** | ~214 | HOLD / candidate SELL-DOMAIN | Very thin. Premium name, weak traffic. Pause builds; re-evaluate groom-slow vs sell-the-domain. |
-| **Vets.co** | ~0 (unmeasured) | BUILD-TO-EARN — long-term (6–9mo) | Highest *ceiling* (insurance/visitor) but an SEO bet, not near-term cash. Parallel long-term track, not ahead of the earners. QC §1 absolute. |
+| **Vets.co** | ~0 (pre-DNS) | **FINISH-TO-EARN — parallel now** | *Revised: insurance engine already BUILT* (hub + 11 carriers + ~2,912 programmatic pages + affiliate routes). Not a 6–9mo build — the job is trust-audit + carrier-enrollment realism + go-live. Track 1 (insurance) runs parallel with Ferret; Track 2 (directory) gated on data decision. Highest revenue/visitor ceiling. QC §1 absolute. |
 | **AskTheVet.com** | ~0 | BUILD-TO-EARN — long-term | High GEO + insurance/telehealth affiliate; no traffic → speculative. Behind Ferret/PetFood. QC §1 absolute. |
 | **SeniorPetPharmacy.com** | ~0 | BUILD-TO-EARN — long-term | Recurring-Rx LTV; niche; no traffic → speculative. |
 | **PetFoods.com** | ~30 | REDIRECT → PetFood.com | Dead standalone. 301 into PetFood.com; brand-DB angle becomes a section there. |
@@ -144,8 +144,9 @@ Sites that can't clear (2) soon should be re-dispositioned to SELL-DOMAIN rather
    mis-targeting (`csro-dir-009`).
 3. **Dog.com / Fish.com — confirm affiliate surfaces are live + clean on existing traffic** (36K / 7K). Doubles as
    the revenue-trajectory story for acquirers. Stay in protect-asset grooming.
-4. **Vets.co — start the long-term insurance-hub + directory build** in parallel (6–9mo SEO bet; highest ceiling,
-   not near-term cash). Demoted from "#1 now" but still the top *authority* build.
+4. **Vets.co — finish-and-launch the EXISTING insurance hub** in parallel (revised: it's already built — hub +
+   11 carriers + ~2,912 programmatic pages + affiliate routes). Job = trust-audit + carrier-enrollment realism +
+   go-live, NOT a 6–9mo build. Directory (Track 2) gated on the data-source decision. (`csro-dir-007`)
 5. **Pause programmatic build-outs on Horses / Lizard / Saddle** — traffic doesn't justify build cost yet.
 6. **Hold all DNS until the §5 gate is met per site.** Finalize §3 (the ~48 unbuilt) when their traffic is measured.
 
