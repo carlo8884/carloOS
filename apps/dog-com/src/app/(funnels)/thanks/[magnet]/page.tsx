@@ -131,7 +131,7 @@ export async function generateMetadata({
   return buildMetadata({
     siteId: 'dog-com',
     title: `${m.title} | Dog.com`,
-    description: m.subtitle,
+    description: `${m.subtitle}`,
     path: `/thanks/${magnet}`,
     type: 'website',
     noIndex: true, // thank-you pages should not index
