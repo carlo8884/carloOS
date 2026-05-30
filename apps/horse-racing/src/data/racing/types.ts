@@ -1,4 +1,4 @@
-// Core domain model for the Horses.com Racing Intelligence platform.
+// Core domain model for the Horse Racing Intelligence platform.
 //
 // This schema is deliberately provider-agnostic. Phase 1 ships with the
 // hand-curated seed data in `meetings.ts`; Phase 2+ swaps the data source for

@@ -1,4 +1,4 @@
-// The Horses.com Intelligence Rating engine.
+// The Horse Racing Intelligence Rating engine.
 //
 // This is real, deterministic, explainable logic — not a stub. It converts the
 // structured runner data into a 0-100 composite rating plus human-readable
@@ -72,16 +72,24 @@ function classScore(runner: Runner): RatingFactor {
   const or = runner.officialRating;
   if (!or) return { label: 'Class / rating', points: 6, detail: 'No official rating on file.' };
   // Map a typical 40-120 OR band onto 0-22 points.
-  const points = Math.round(Math.min(22, Math.max(0, (or - 40) / 80 * 22)));
+  const points = Math.round(Math.min(22, Math.max(0, ((or - 40) / 80) * 22)));
   return { label: 'Class / rating', points, detail: `Official rating ${or}.` };
 }
 
 function goingScore(runner: Runner, going: Going): RatingFactor {
   if (goingMatches(runner.goingPreference, going)) {
-    return { label: 'Going suitability', points: 10, detail: `Proven on ${going.replace(/-/g, ' ')} ground.` };
+    return {
+      label: 'Going suitability',
+      points: 10,
+      detail: `Proven on ${going.replace(/-/g, ' ')} ground.`,
+    };
   }
   if (runner.goingPreference && runner.goingPreference.length > 0) {
-    return { label: 'Going suitability', points: 2, detail: `Today's ${going.replace(/-/g, ' ')} going is unproven for this runner.` };
+    return {
+      label: 'Going suitability',
+      points: 2,
+      detail: `Today's ${going.replace(/-/g, ' ')} going is unproven for this runner.`,
+    };
   }
   return { label: 'Going suitability', points: 5, detail: 'Going preference unknown.' };
 }
@@ -89,9 +97,12 @@ function goingScore(runner: Runner, going: Going): RatingFactor {
 function fitnessScore(runner: Runner): RatingFactor {
   const days = runner.daysSinceLastRun;
   if (days == null) return { label: 'Fitness / freshness', points: 5, detail: 'Layoff unknown.' };
-  if (days <= 21) return { label: 'Fitness / freshness', points: 9, detail: `Race-fit — ${days} days since last run.` };
-  if (days <= 60) return { label: 'Fitness / freshness', points: 7, detail: `${days} days since last run.` };
-  if (days <= 120) return { label: 'Fitness / freshness', points: 4, detail: `Returning from a ${days}-day break.` };
+  if (days <= 21)
+    return { label: 'Fitness / freshness', points: 9, detail: `Race-fit — ${days} days since last run.` };
+  if (days <= 60)
+    return { label: 'Fitness / freshness', points: 7, detail: `${days} days since last run.` };
+  if (days <= 120)
+    return { label: 'Fitness / freshness', points: 4, detail: `Returning from a ${days}-day break.` };
   return { label: 'Fitness / freshness', points: 2, detail: `Long ${days}-day absence — fitness a question.` };
 }
 
@@ -153,9 +164,16 @@ export function analyzeRace(race: Race): RaceAnalysis {
   const topRunner = race.runners.find((r) => r.id === topPick.runnerId)!;
   const valueRunner = valuePick ? race.runners.find((r) => r.id === valuePick.runnerId) : null;
 
-  let verdict = `${topRunner.name} tops the Horses.com Intelligence Rating at ${topPick.score}/100 (${(topPick.winProbability * 100).toFixed(0)}% model win probability), driven by ${topPick.factors.sort((a, b) => b.points - a.points)[0].detail.toLowerCase()}`;
+  let verdict = `${topRunner.name} tops the Intelligence Rating at ${topPick.score}/100 (${(topPick.winProbability * 100).toFixed(0)}% model win probability), driven by ${topPick.factors
+    .slice()
+    .sort((a, b) => b.points - a.points)[0]
+    .detail.toLowerCase()}`;
   if (valueRunner && valuePick && valueRunner.id !== topRunner.id) {
-    verdict += ` The standout value play is ${valueRunner.name} at ${valueRunner.oddsDecimal.toFixed(1)} — the model makes it a ${valuePick.fairOdds.toFixed(1)} chance, a ${(valuePick.valueEdge * 100).toFixed(0)}-point edge over the market.`;
+    verdict += ` The standout value play is ${valueRunner.name} at ${valueRunner.oddsDecimal.toFixed(
+      1,
+    )} — the model makes it a ${valuePick.fairOdds.toFixed(1)} chance, a ${(
+      valuePick.valueEdge * 100
+    ).toFixed(0)}-point edge over the market.`;
   } else {
     verdict += ` The market looks broadly efficient on this race, with no standout overlay.`;
   }

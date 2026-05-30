@@ -862,14 +862,12 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     },
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
-      { label: 'Race Center', href: '/racing', highlight: true },
       { label: 'Home', href: '/' },
     ],
     footerLinks: [
       {
         heading: 'Horses.com',
         links: [
-          { label: 'Race Center', href: '/racing' },
           { label: 'Home', href: '/' },
         ],
       },

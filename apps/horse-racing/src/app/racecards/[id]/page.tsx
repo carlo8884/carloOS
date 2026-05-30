@@ -1,17 +1,17 @@
 /**
- * Horses.com AI Racecard — /racing/racecards/[id]
+ * AI Racecard — /racecards/[id]
  *
  * Content-only page (Nav/Footer/main come from layout.tsx). Renders a ranked
- * field with the explainable Horses.com Intelligence Rating and per-runner
- * factor breakdowns ("show your work" trust + GEO citability layer).
+ * field with the explainable Intelligence Rating and per-runner factor
+ * breakdowns ("show your work" trust + GEO citability layer).
  */
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { buildMetadata, Breadcrumb, EmailCapture } from '@carloOS/ui';
-import { allRaces, getRace } from '../../../../data/racing/meetings';
-import { analyzeRace } from '../../../../data/racing/analysis';
+import { allRaces, getRace } from '../../../data/racing/meetings';
+import { analyzeRace } from '../../../data/racing/analysis';
 
 export function generateStaticParams() {
   return allRaces().map(({ race }) => ({ id: race.id }));
@@ -21,18 +21,18 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   const found = getRace(params.id);
   if (!found) {
     return buildMetadata({
-      siteId: 'horses-com',
+      siteId: 'horse-racing',
       title: 'Racecard not found',
       description: 'This racecard could not be found.',
-      path: `/racing/racecards/${params.id}`,
+      path: `/racecards/${params.id}`,
     });
   }
   const { race } = found;
   return buildMetadata({
-    siteId: 'horses-com',
+    siteId: 'horse-racing',
     title: `${race.name} — AI Racecard, Form & Verdict | ${race.course}`,
-    description: `AI-graded racecard for the ${race.name} at ${race.course}: every runner scored by the Horses.com Intelligence Rating with form, value picks, and a full verdict.`,
-    path: `/racing/racecards/${race.id}`,
+    description: `AI-graded racecard for the ${race.name} at ${race.course}: every runner scored by the Intelligence Rating with form, value picks, and a full verdict.`,
+    path: `/racecards/${race.id}`,
   });
 }
 
@@ -52,7 +52,6 @@ export default function RacecardPage({ params }: { params: { id: string } }) {
   const { meeting, race } = found;
   const analysis = analyzeRace(race);
 
-  // Order runners by Intelligence Rating, highest first.
   const ranked = [...race.runners]
     .map((runner) => ({
       runner,
@@ -65,12 +64,8 @@ export default function RacecardPage({ params }: { params: { id: string } }) {
   return (
     <>
       <Breadcrumb
-        siteId="horses-com"
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Race Center', href: '/racing' },
-          { label: race.course },
-        ]}
+        siteId="horse-racing"
+        items={[{ name: 'Race Center', href: '/' }, { name: race.course }]}
       />
 
       <div className="mx-auto max-w-5xl px-4 py-10">
@@ -91,7 +86,7 @@ export default function RacecardPage({ params }: { params: { id: string } }) {
         {/* AI Verdict */}
         <section className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
           <h2 className="text-2xs font-bold uppercase tracking-eyebrow text-emerald-700">
-            Horses.com AI Verdict
+            AI Verdict
           </h2>
           <p className="mt-2 text-lg leading-relaxed text-brand-text-dark">{analysis.verdict}</p>
         </section>
@@ -187,15 +182,11 @@ export default function RacecardPage({ params }: { params: { id: string } }) {
         <p className="mb-8 rounded-lg bg-brand-surface p-4 text-xs text-brand-text-light">
           Ratings are model-generated for informational and educational purposes. Racing involves
           risk; nothing here is a guarantee of outcome or financial advice. Please gamble
-          responsibly. See our{' '}
-          <Link href="/disclosure" className="underline">
-            disclosure
-          </Link>
-          .
+          responsibly (18+; in the US, call 1-800-GAMBLER).
         </p>
 
         <EmailCapture
-          siteId="horses-com"
+          siteId="horse-racing"
           variant="section"
           source="racecard"
           title="Never miss a value play"
