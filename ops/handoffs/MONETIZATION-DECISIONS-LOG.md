@@ -88,7 +88,26 @@ Every entry uses the standard 5-field framework:
 - **Priority Level:** P0
 - **Lane:** Sidebar-only — compatible with the in-flight COO dog-com refresh
 
+### D-011 · Dog.com Breed-Page Insurance CTAs · **SHIPPED 2026-05-30**
+- **PR:** #181 (layered with D-012)
+- **Pages updated:** All 30 static breed pages + programmatic /breeds/[slug] template
+- **Revenue Potential:** $200-$800 MRR uplift
+- **Traffic Requirements:** ALREADY EXISTS (36K/mo, breed pages are a significant slice)
+- **Implementation:** ~30 min mechanical (Python batch + template update)
+- **Time to Revenue:** Immediate at deploy
+- **Priority Level:** P0
+- **Scales without humans:** New breeds added to breeds.ts auto-get the CTA; new insurance profiles auto-upgrade the link to deep-page.
 
+### D-012 · Fix MAJOR Review-Page Affiliate Leak · **SHIPPED 2026-05-30 (CRITICAL)**
+- **PR:** #181 (layered with D-011)
+- **What was leaking:** Dog-com review pages had 36 hardcoded amazon.com/s?k=... and chewy.com/... URLs that bypassed the /go/ handler entirely. Zero affiliate tag attached. **100% of review-page affiliate clicks were earning $0.**
+- **What ships:** Added amazon-brand + chewy-brand search routes; converted 36 hardcoded URLs to /go/<vendor>/<keyword>?s=review-<slug>
+- **Revenue Potential:** **$500-$2K MRR immediate uplift** — stops the $0 hemorrhage on the highest-traffic site's highest commercial-intent surface
+- **Traffic Requirements:** ALREADY EXISTS (36K/mo + review-page slice)
+- **Implementation:** ~45 min (Python batch + 2 route additions)
+- **Time to Revenue:** **Immediate at deploy** (Amazon Associates tag activates the moment AFF_AMAZON_TAG env var is set on dog-com Vercel)
+- **Priority Level:** **P0 — biggest single leak fix in the portfolio**
+- **Remaining:** 2 hardcoded URLs (ellevetsciences.com, impactdogcrates.com) lack /go/ routes — add if monetizing those brands
 
 ### D-005 · Cat-Breed Extension to D-001 Matrix · **SHIPPED 2026-05-30**
 - **PR:** #173 (layered with D-001)
