@@ -8,24 +8,24 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 ## Open
 
 ### csro-dir-2026-W22-001 → Carlo
-- **Action:** Confirm true portfolio scale and supply the ~60 domains unaccounted for vs the kickoff's 75-domain claim (or restore the master list to `CSRO.md §16`).
-- **Why:** Kickoff asserts 75 domains; repo evidences 15. The strategy loop is unanchored until scale is real. `[FACT]`
+- **Action:** Confirm the true owned-domain list. `MONETIZATION-ARCHITECT.md §9` defines a 64-domain portfolio but maps only 43; the kickoff cites 75 (68 + 7 identity). Supply the full list (or confirm 64 is current).
+- **Why:** Allocation strategy is unanchored until owned-scale is real. `[FACT]`
 - **Deadline:** next CSRO brief.
-- **Done-when:** full domain list available in-repo OR Carlo confirms 15 is the true current scale.
+- **Done-when:** full list in-repo OR Carlo confirms the canonical count + list.
 - **Status:** open
 
-### csro-dir-2026-W22-002 → COO
-- **Action:** Confirm whether the 5 scaffolds (askthevet/seniorpets/dogpicture/petsupplies/hardmoneyloans) were ever built; reconcile `STATUS.md`/`DASHBOARD.md` against `apps/` (only 10 prod dirs exist).
-- **Why:** Docs imply 15 apps; filesystem shows 10. Drift between docs and reality. `[FACT]`
+### csro-dir-2026-W22-002 → Carlo
+- **Action:** Confirm ownership + state of the unbuilt ARCHITECT-Tier-1 domains: **Cat.com, Horse.com, PetInsuranceReviews.com**.
+- **Why:** These are tagged T1 in `MONETIZATION-ARCHITECT.md §9` but have no app dir. If owned, they are candidate top-tier build targets (Cat = missing flagship species; PetInsuranceReviews = lowest-cost revenue surface). `[HYP]`
 - **Deadline:** next CSRO brief.
-- **Done-when:** docs match `apps/` or scaffolds are created.
+- **Done-when:** ownership confirmed; ranked in `portfolio-ranking.md`.
 - **Status:** open
 
 ### csro-dir-2026-W22-003 → Carlo / COO
-- **Action:** Provide per-domain registrar + renewal dates for the 10 production domains.
-- **Why:** Renewal lapse on Dog.com/Fish.com = catastrophic asset loss on offer-validated assets. Cannot manage expiry risk blind. `[FACT]`
+- **Action:** Provide per-domain registrar + renewal dates, starting with the 15 built domains (Dog.com/Fish.com first).
+- **Why:** Renewal lapse on an offer-validated T1 asset = catastrophic, irreversible value loss. `[FACT]`
 - **Deadline:** this week.
-- **Done-when:** renewal dates logged in `domain-inventory.md`.
+- **Done-when:** dates logged in `domain-inventory.md`.
 - **Status:** open
 
 ---

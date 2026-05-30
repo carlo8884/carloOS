@@ -2,118 +2,176 @@
 
 **Owner:** CSRO Bot
 **Created:** 2026-05-30
-**Status:** DRAFT — verified-domains pass complete; full-portfolio reconciliation BLOCKED (see §0)
+**Status:** DRAFT v2 — anchored to the repo's 64-domain matrix; ownership/registrar reconciliation still open (§0)
+
+> **v2 correction (2026-05-30):** v1 of this file contained two factual errors caused by stale filesystem
+> reads: it claimed the 5 scaffolds were "unbuilt/absent" (they ARE built — 15 app dirs + 15 entries in
+> `packages/config/index.ts`) and that the large-portfolio claim had "zero backing" (the repo defines a
+> **64-domain portfolio** in `MONETIZATION-ARCHITECT.md §9`). Both corrected below.
 
 ---
 
-## §0 Reconciliation flag — READ FIRST `[FACT]`
+## §0 Reconciliation flag — READ FIRST
 
-My CSRO kickoff brief asserts a **75-domain portfolio (68 portfolio + 7 identity)** and points to
-`CSRO.md §16` for the authoritative list. As of this inventory:
+Three different portfolio sizes appear across the repo + my kickoff. They are reconcilable but not yet reconciled:
 
-- `ops/csro/CSRO.md` is a **0-byte empty stub** — §16 and the full domain list **do not exist** in the repo.
-- `ops/policies/bot-fleet.md` (also referenced by the kickoff) is **absent**.
-- The repo's own source-of-truth docs (`CLAUDE.md`, `STATUS.md`, `DASHBOARD.md`) describe a
-  **15-app portfolio: 10 production sites + 5 scaffolds** — not 75 domains.
-- `apps/` contains exactly **10 production directories**; the 5 scaffolds are documented but **not built**.
+| Source | Claimed scale | Provenance |
+|---|---|---|
+| CSRO kickoff prompt | **75** (68 portfolio + 7 identity) | my brief; `CSRO.md §16` (was empty before today) |
+| `MONETIZATION-ARCHITECT.md §9` | **64** ("domains Carlo owns") — 43 mapped, ~21 in research queue §11 | Monetization Bot strategy doc `[FACT: doc states this]` |
+| Built in-repo (`apps/` + `packages/config/index.ts`) | **15** apps with full config | verified filesystem `[FACT]` |
 
-**Per `CLAUDE.md §3`, the repo is the source of truth.** I will not invent 59 phantom domains,
-registrars, renewal dates, or valuations (research standard: *never invent; "unknown" is a valid finding*).
+**Working interpretation `[HYP]`:** 64 (ARCHITECT) + ~4 newer acquisitions + 7 identity/brand domains ≈ 75 (kickoff).
+The 15 built sites are the production+scaffold front of a much larger held-domain portfolio.
 
-**This inventory therefore covers the 15 verifiable domains only.** The 75-domain claim is logged as an
-open escalation to Carlo (see `daily/2026-05-30.md` and `open-directives.md` → `csro-dir-2026-W22-001`).
-If the additional ~60 domains are real, Carlo must supply the list (or restore `CSRO.md §16`) before they
-can be inventoried.
+**Still required from Carlo (`csro-dir-2026-W22-001`):** confirm the true owned-domain list (the ARCHITECT
+matrix maps only 43 of 64; the other 21 and the 7 "identity" domains are unspecified). Per research standard
+I list only what the repo evidences and label the rest `[UNK]` — I do not invent domains, registrars, or dates.
 
 ---
 
-## §1 Schema
+## §1 Schema + conventions
 
-`Domain | Cluster | Registrar | Renewal | Production? | Current state | Recommended action | Rationale`
+`Domain | Cluster | Built? | ARCHITECT tier | CSRO action | Note`
 
-**Recommended-action vocabulary:** `build` · `hold` · `validate` · `promote` · `consolidate` · `lease` · `sell` · `sunset` · `acquire-adjacent`
-(Source: CSRO decision-rights list in kickoff. Canonical vocabulary pending `CSRO.md §16`.)
-
-**Confidence labels:** every cell is `[FACT]` (verified in repo / Carlo-confirmed), `[HYP]` (hypothesis), or `[UNK]` (unknown — needs research).
-
----
-
-## §2 Tier 1 — inbound-offer validated (protect-the-asset)
-
-| Domain | Cluster | Registrar | Renewal | Prod? | Current state | Rec. action | Rationale |
-|---|---|---|---|---|---|---|---|
-| Dog.com | companion-dog (flagship) `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (12 pp) `[FACT]` | live-ready, pre-DNS `[FACT]` | **hold / protect-asset** | $2.3M inbound offer; target $10M+ exit. Preserve diligence-readiness over aggressive monetization. `[FACT]` |
-| Fish.com | aquarium-magazine `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (8 pp) `[FACT]` | live-ready, pre-DNS `[FACT]` | **hold / protect-asset** | $1.45M inbound offer; target $10M+ exit. Same protect-asset posture. `[FACT]` |
-
-\* Registrar = Network Solutions is `[FACT]` at portfolio level (`CLAUDE.md §8`); per-domain confirmation `[UNK]`.
+- **Built?** = has an `apps/<id>` dir + `packages/config` entry `[FACT]`. "Domain-only" = listed in ARCHITECT §9, not built.
+- **ARCHITECT tier** = monetization tier from `MONETIZATION-ARCHITECT.md §9` (T1/T2/T3). This is a *monetization*
+  tier, distinct from the CSRO *enterprise-value* tier in §4.
+- **CSRO action** vocab: `hold/protect` · `build` · `validate` · `promote` · `consolidate` · `defer` · `sunset` · `acquire-adjacent`.
+- Registrar = Network Solutions at portfolio level `[FACT: CLAUDE.md §8]`; per-domain renewal dates `[UNK]`.
 
 ---
 
-## §3 Tier 2 with Tier 1 promotion path (pending Carlo confirmation)
+## §2 The 64-domain matrix (source: `MONETIZATION-ARCHITECT.md §9`)
 
-| Domain | Cluster | Registrar | Renewal | Prod? | Current state | Rec. action | Rationale |
-|---|---|---|---|---|---|---|---|
-| Vets.co | veterinary-authority `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (9 pp) `[FACT]` | live-ready `[FACT]` | **validate → promote** | Tier 1 promotion requires all 5 criteria (self-serve revenue path · realistic monetization per IR Bot · trust/compliance risk controlled · demand evidence · CSRO recommendation w/ evidence). `[FACT]` |
-| Saddle.com | equestrian-luxury `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (7 pp) `[FACT]` | live-ready `[FACT]` | **build / validate** | High-AOV luxury vertical; promotion path pending. Affiliate fit: SmartPak/Dover (pending). `[FACT]` |
-| Lizard.com | reptile field-guide `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (8 pp) `[FACT]` | live-ready `[FACT]` | **build / validate** | Defensible niche-authority play; programmatic care-sheet potential. Promotion path pending. `[FACT]` |
+### Cluster 1 — Dogs (flagship)
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Dog.com | ✅ | T1 | **hold/protect** | $2.3M offer; flagship; protect-asset `[FACT: kickoff]` |
+| Puppy.com | ❌ domain-only | T2 | defer | content+comparison play `[HYP]` |
+| DogFood.com | ❌ | T2 | defer | food-finder; overlaps PetFood `[HYP]` |
+| DogToys.com | ❌ | T3 | defer/lease | thin Amazon-comparison `[HYP]` |
+| DogBeds.com | ❌ | T3 | defer/lease | thin Amazon-comparison `[HYP]` |
+| DogCollars.com | ❌ | T3 | defer/lease | thin Amazon-comparison `[HYP]` |
+
+### Cluster 2 — Cats
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Cat.com | ❌ | T1 | **build (P1 candidate)** | Cat = the obvious missing flagship; high-value `[HYP]` |
+| Cats.com | ❌ | T2 | build/consolidate | content hub; pairs with Cat.com `[HYP]` |
+| CatFood.com | ❌ | T2 | defer | food-finder `[HYP]` |
+| Kitten.com | ❌ | T3 | defer | content `[HYP]` |
+| CatLitter.com | ❌ | T3 | defer/lease | thin comparison `[HYP]` |
+
+### Cluster 3 — Aquatic
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Fish.com | ✅ | T1 | **hold/protect** | $1.45M offer; protect-asset `[FACT: kickoff]` |
+| Aquarium.com | ❌ | T2 | build | strong cluster support for Fish.com `[HYP]` |
+| Aquariums.com | ❌ | T3 | consolidate | dup of Aquarium.com `[HYP]` |
+| Goldfish.com | ❌ | T3 | defer | content `[HYP]` |
+
+### Cluster 4 — Equestrian
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Horse.com | ❌ | T1 | **build (P1 candidate)** | singular Horse.com not built; high-value `[HYP]` |
+| Horses.com | ✅ | T1 | hold (pending Racing Bot) | tier gated on specialist `[FACT: kickoff]` |
+| Saddle.com | ✅ | T2 | validate (T2→1 path) | luxury; CSRO promotion candidate `[FACT: kickoff]` |
+| Equine.com | ❌ | T2 | build | directory + insurance `[HYP]` |
+| HorseTack.com | ❌ | T3 | defer/lease | thin comparison `[HYP]` |
+
+### Cluster 5 — Reptiles & Exotics
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Lizard.com | ✅ | T2 | validate (T2→1 path) | CSRO promotion candidate `[FACT: kickoff]` |
+| Reptile.com | ❌ | T2 | build | cluster support for Lizard.com `[HYP]` |
+| Reptiles.com | ❌ | T3 | consolidate | directory dup `[HYP]` |
+| Snake.com | ❌ | T3 | defer | content `[HYP]` |
+| Turtle.com | ❌ | T3 | defer | content `[HYP]` |
+
+### Cluster 6 — Small Mammals
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Ferret.com | ✅ | T2 | build | authority strong, intent thin `[FACT: kickoff T2]` |
+| Ferrets.com | ✅ | T3 | consolidate | dup of Ferret.com `[FACT: kickoff T3]` |
+| Rabbit.com | ❌ | T2 | build | insurance-eligible cluster `[HYP]` |
+| GuineaPig.com | ❌ | T3 | defer | content `[HYP]` |
+| Hamster.com | ❌ | T3 | defer | content `[HYP]` |
+
+### Cluster 7 — Birds
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Bird.com | ❌ | T2 | build | content + insurance `[HYP]` |
+| Birds.com | ❌ | T2 | build/consolidate | directory; pairs with Bird.com `[HYP]` |
+| Parrot.com | ❌ | T3 | defer | content `[HYP]` |
+
+### Cluster 8 — Pet services & health
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| Vets.co | ✅ | T1 | **validate → promote** | top Tier-1 promotion candidate (5 criteria, `CSRO.md §8`) `[FACT: kickoff]` |
+| AskTheVet.com | ✅ (`askthevet`) | T1 | build (P2) | AI symptom checker; GEO magnet if trust-bar held `[FACT: built]` |
+| PetInsuranceReviews.com | ❌ | T1 | **build (P1 candidate)** | pure-intent insurance comparison; lowest-cost revenue `[HYP]` |
+| PetMeds.com | ❌ | T2 | build | Rx + comparison `[HYP]` |
+| SeniorPetPharmacy.com | ✅ (`seniorpets`) | T2 | defer (P3) | recurring-Rx LTV; needs demand validation `[FACT: built]` |
+| PetFood.com | ✅ | T1 | build | nutrition cluster; food-finder `[FACT: built]` |
+| PetFoods.com | ✅ | T3 | consolidate | dup of PetFood.com `[FACT: built]` |
+| PetSupplies.com | ✅ (`petsupplies`) | T2 | build (P2) | comparison engine; high-intent affiliate `[FACT: built]` |
+
+### Cluster 9 — Off-vertical / misc
+| Domain | Built? | ARCH tier | CSRO action | Note |
+|---|---|---|---|---|
+| HardMoneyLoans.com | ✅ (`hardmoneyloans`) | T2 | **sunset** | off-thesis; Carlo-confirmed sunset `[FACT: kickoff]` |
+| DogPicture.com | ✅ (`dogpicture`) | T3 | defer (P3) | AI portraits + POD; trend-dependent `[FACT: built]` |
+
+**Mapped count: 43 domains.** Remaining **~21** (to reach 64) are unassigned in ARCHITECT §11 research queue → `[UNK]`.
 
 ---
 
-## §4 Tier 2
+## §3 Build-status overlay `[FACT]`
 
-| Domain | Cluster | Registrar | Renewal | Prod? | Current state | Rec. action | Rationale |
-|---|---|---|---|---|---|---|---|
-| Horses.com | equestrian-editorial `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (7 pp) `[FACT]` | live-ready `[FACT]` | **hold (pending Racing Bot)** | Tier placement gated on Horses.com Racing Intelligence Bot findings (bloodstock/betting-adjacent strategy). `[FACT]` |
-| Ferret.com | ferret-hobbyist magazine `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (6 pp) `[FACT]` | live-ready `[FACT]` | **build** | Indie-hobbyist authority; thin commercial intent — monetization fit needs IR Bot review. `[HYP]` |
-| PetFood.com | pet-nutrition reference `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (6 pp) `[FACT]` | live-ready `[FACT]` | **build** | High-intent nutrition cluster; condition×ingredient matrix = strong GEO/affiliate fit. `[HYP]` |
+15 domains are built (app dir + config entry); 28 mapped domains are held-but-unbuilt; ~21 unmapped.
 
----
-
-## §5 Tier 3
-
-| Domain | Cluster | Registrar | Renewal | Prod? | Current state | Rec. action | Rationale |
-|---|---|---|---|---|---|---|---|
-| PetFoods.com | pet-nutrition (ingredient/brand DB) `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (5 pp) `[FACT]` | live-ready `[FACT]` | **consolidate** | Overlaps PetFood.com — canonicalization/duplication risk. Evaluate merge vs distinct-cluster. `[HYP]` |
-| Ferrets.com | ferret state-legality directory `[FACT]` | Network Solutions `[FACT]`* | `[UNK]` | Yes (5 pp) `[FACT]` | live-ready `[FACT]` | **consolidate** | Overlaps Ferret.com; legality-directory is narrow. Evaluate merge vs cross-link. `[HYP]` |
-| askthevet | vet AI symptom-checker (tool) `[FACT]` | `[UNK]` | `[UNK]` | No (scaffold, unbuilt) `[FACT]` | no Vercel, no content `[FACT]` | **build (P2)** | High-intent diagnostic flow; strong GEO citation magnet IF trust-bar respected (no fabricated clinical authority). `[HYP]` |
-| seniorpets | senior-pet Rx + content `[FACT]` | `[UNK]` | `[UNK]` | No (scaffold) `[FACT]` | no Vercel, no content `[FACT]` | **defer (P3)** | Recurring-Rx LTV potential; needs demand validation before build. `[HYP]` |
-| dogpicture | AI pet portraits + POD `[FACT]` | `[UNK]` | `[UNK]` | No (scaffold) `[FACT]` | no Vercel, no content `[FACT]` | **defer (P3)** | POD = inventory-light, fits Carlo's no-marketplace preference; trend-dependent. `[HYP]` |
-| petsupplies | comparison engine `[FACT]` | `[UNK]` | `[UNK]` | No (scaffold) `[FACT]` | no Vercel, no content `[FACT]` | **build (P2)** | Comparison engine = high-intent affiliate surface; matches Carlo's stated wants. `[HYP]` |
+| Built (15) | Domain-only, mapped (28) | Unmapped (~21) |
+|---|---|---|
+| Dog, Fish, Vets.co, Saddle, Lizard, Horses, PetFood, PetFoods, Ferret, Ferrets, AskTheVet, SeniorPetPharmacy, DogPicture, PetSupplies, HardMoneyLoans | Puppy, DogFood, DogToys, DogBeds, DogCollars, Cat, Cats, CatFood, Kitten, CatLitter, Aquarium, Aquariums, Goldfish, Horse, Equine, HorseTack, Reptile, Reptiles, Snake, Turtle, Rabbit, GuineaPig, Hamster, Bird, Birds, Parrot, PetInsuranceReviews, PetMeds | `[UNK]` — needs Carlo list |
 
 ---
 
-## §6 Sunset
+## §4 CSRO enterprise-value tier (Carlo-confirmed 2026-05-30) — built domains
 
-| Domain | Cluster | Registrar | Renewal | Prod? | Current state | Rec. action | Rationale |
-|---|---|---|---|---|---|---|---|
-| hardmoneyloans | off-vertical finance lead-gen `[FACT]` | `[UNK]` | `[UNK]` | No (scaffold) `[FACT]` | no Vercel, no content `[FACT]` | **sunset** | Off-thesis (non-pet); Carlo-confirmed sunset. No portfolio-internal-linking value. `[FACT]` |
+This is the **strategy** tier (distinct from ARCHITECT's monetization tier). Drives `portfolio-ranking.md`.
 
----
+| CSRO tier | Domains | Posture |
+|---|---|---|
+| **T1 (offer-validated, protect-asset)** | Dog.com ($2.3M), Fish.com ($1.45M) | diligence-ready; asset > revenue |
+| **T2 → T1 path (pending Carlo)** | Vets.co, Saddle.com, Lizard.com | validate 5 promotion criteria |
+| **T2** | Horses.com (pending Racing Bot), Ferret.com, PetFood.com | build |
+| **T3** | PetFoods.com, Ferrets.com, AskTheVet, SeniorPetPharmacy, PetSupplies, DogPicture | build/defer/consolidate |
+| **Sunset** | HardMoneyLoans.com | sunset |
 
-## §7 Coverage summary `[FACT]`
-
-| Bucket | Count |
-|---|---|
-| Tier 1 (offer-validated) | 2 |
-| Tier 2→1 path | 3 |
-| Tier 2 | 3 |
-| Tier 3 | 7 |
-| Sunset | 1 |
-| **Verified total** | **15 (10 production + 5 scaffolds)** |
-| Kickoff-claimed total | 75 (68 + 7 identity) |
-| **Unaccounted (BLOCKED on Carlo / `CSRO.md §16`)** | **~60** |
+> Note: ARCHITECT tags AskTheVet + PetFood as monetization-T1; CSRO holds them lower on the *enterprise-value*
+> tier because they are not offer-validated. Resolve the two frameworks in `thesis.md`.
 
 ---
 
-## §8 Known unknowns (research backlog seeds)
+## §5 Highest-value gaps (built ≠ owned)
 
-1. `[UNK]` Do the additional ~60 domains exist? — escalated `csro-dir-2026-W22-001`.
-2. `[UNK]` Per-domain registrar + renewal dates (expiry risk = asset risk).
-3. `[UNK]` Vets.co — status of all 5 Tier-1 promotion criteria.
-4. `[UNK]` Horses.com — Racing Bot tier recommendation.
-5. `[UNK]` PetFood.com / PetFoods.com and Ferret.com / Ferrets.com — consolidate vs keep-distinct (duplication risk).
-6. `[UNK]` Empire Flippers / FE International comparable multiples for pet-content + tool assets (for exit-value modeling).
+1. `[HYP→P1]` **Cat.com / Horse.com / PetInsuranceReviews.com** are ARCHITECT-T1 but **not built.** If Carlo owns
+   these single-word/high-intent domains, they may rival Dog.com/Fish.com for exit value and are unbuilt upside.
+2. `[UNK]` ~21 unmapped owned domains + 7 "identity" domains — entire value unknown until listed.
+3. `[UNK]` Per-domain registrar + renewal dates — renewal lapse on a T1 asset = catastrophic (`csro-dir-003`).
 
 ---
 
-*Update this register in place as evidence accumulates. No calendar-driven rewrites.*
+## §6 Known unknowns (→ `research-backlog.md`)
+
+1. The true 64/75 owned-domain list (only 43 mapped) — `csro-dir-2026-W22-001` / R-001.
+2. Ownership confirmation of the high-value unbuilt T1 domains (Cat.com, Horse.com, PetInsuranceReviews.com).
+3. Registrar + renewal dates, all domains — `csro-dir-2026-W22-003` / R-002.
+4. Vets.co — status of all 5 Tier-1 promotion criteria — R-004.
+5. PetFood/PetFoods, Ferret/Ferrets, Aquarium/Aquariums, Reptile/Reptiles, Bird/Birds — consolidate vs distinct — R-005.
+6. Empire Flippers / FE International comps for content + tool assets — R-003.
+
+---
+
+*Update in place as evidence accumulates. No calendar-driven rewrites.*

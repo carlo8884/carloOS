@@ -14,6 +14,11 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 
 - Two domains (Dog.com, Fish.com) have **live inbound offers** ($2.3M, $1.45M) — proof that premium
   single-word .com pet domains attract real acquirer interest.
+- The repo backs a **64-domain portfolio** (`MONETIZATION-ARCHITECT.md §9`) organized into 9 species/service
+  clusters — i.e., the held-domain base is broad even though only 15 are built. This supports a
+  "few hero builds + long-tail option value" structure.
+- High-value single-word domains exist **unbuilt** (Cat.com, Horse.com, PetInsuranceReviews.com tagged T1) —
+  latent upside that costs only build effort to activate, assuming ownership.
 - Carlo's stated wants (programmatic SEO, affiliate, lead-gen, comparison engines, tools/calculators) and
   avoidances (marketplaces, pre-threshold display ads, enterprise sales) bound the monetization design space.
 - The trust bar (no fake credentials, no AI humans, FTC disclosure) is an **asset-preservation moat**, not
@@ -27,9 +32,16 @@ as either consolidation fodder or sunset candidates. Exit value lives in **2–5
 4. **Kill duplication.** PetFood/PetFoods and Ferret/Ferrets cannibalize each other; decide consolidate-vs-distinct.
 5. **Cut dead weight.** Sunset hardmoneyloans; defer unbuilt scaffolds without demand evidence.
 
+## Framework collision to resolve
+
+- ARCHITECT assigns **monetization** tiers; CSRO (Carlo-confirmed 2026-05-30) assigns **enterprise-value** tiers.
+  They disagree on AskTheVet + PetFood (ARCH T1, CSRO lower). Rule of thumb pending Carlo: for build/exit
+  prioritization the CSRO enterprise tier governs; for revenue sequencing the ARCHITECT tier informs.
+
 ## Open questions / falsifiers
 
-- `[UNK]` Is breadth (75 domains) actually part of the strategy, or noise? If real, thesis must widen.
+- `[UNK]` Does Carlo own the unbuilt T1 domains (Cat.com, Horse.com, PetInsuranceReviews.com)? If yes, build priority shifts hard toward them.
+- `[UNK]` Is the full 64/75 breadth strategic, or domain-hoarding cost? Renewal cost vs option value needs sizing.
 - `[UNK]` Do tool/AI assets (askthevet, comparison engine) command acquisition multiples comparable to content authorities? Needs Empire Flippers / FE International comps.
 - `[UNK]` Does the pre-launch posture (no DNS, no GA4, no traffic) materially weaken the standing offers?
 

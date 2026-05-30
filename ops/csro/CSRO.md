@@ -115,12 +115,13 @@ secrets. A recommendation that violates this = drift alarm + Carlo escalation.
 ## §16 Master domain inventory — **PENDING**
 
 > The kickoff asserts a **75-domain portfolio (68 portfolio + 7 identity)** and points here for the
-> authoritative list and the recommended-action vocabulary. **That list was never present in this file.**
-> The repo verifiably contains **15 domains** (10 production + 5 documented scaffolds). The CSRO Bot has
-> inventoried those 15 in `ops/csro/domain-inventory.md` and refused to fabricate the remainder.
+> authoritative list. The repo's own authoritative source is the **64-domain deployment matrix in
+> `MONETIZATION-ARCHITECT.md §9`** (43 domains mapped across 9 clusters; ~21 in the §11 research queue).
+> Of those, **15 are built** (app dirs + `packages/config/index.ts`). The CSRO Bot has inventoried all of
+> this in `ops/csro/domain-inventory.md` and labels unmapped/identity domains `[UNK]` rather than inventing them.
 >
-> **Action required (Carlo):** supply the full domain list, or confirm that 15 is the true current scale.
-> Tracked as `csro-dir-2026-W22-001`.
+> **Action required (Carlo):** confirm the full owned-domain list (matrix maps only 43 of 64; the +7 identity
+> domains are unspecified). Tracked as `csro-dir-2026-W22-001`.
 >
 > **Recommended-action vocabulary (interim):** `build · hold · validate · promote · consolidate · lease · sell · sunset · acquire-adjacent`.
 

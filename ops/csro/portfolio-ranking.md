@@ -1,7 +1,8 @@
 # CSRO Portfolio Ranking
 
 **Owner:** CSRO Bot · **Created:** 2026-05-30 · **Basis:** Carlo-confirmed tiering (2026-05-30) + repo-verified state
-**Scope note:** Ranks the 15 verified domains only. ~60 kickoff-claimed domains BLOCKED on `csro-dir-2026-W22-001`.
+**Scope note:** Ranks the 15 *built* domains. The repo's 64-domain matrix (`MONETIZATION-ARCHITECT.md §9`) holds
+28 more mapped-but-unbuilt domains + ~21 unmapped; full ranking BLOCKED on `csro-dir-2026-W22-001`.
 
 ---
 
@@ -27,10 +28,21 @@
 
 ---
 
+## Unbuilt high-value candidates (rank pending ownership — `csro-dir-002`)
+
+Mapped Tier-1 in `MONETIZATION-ARCHITECT.md §9` but **not built**. If Carlo owns them, they likely outrank most
+of the built T3 set and possibly the T2 set:
+
+| Candidate | Cluster | Why it could be top-tier |
+|---|---|---|
+| Cat.com | Cats | Missing flagship species; mirrors Dog.com value `[HYP]` |
+| Horse.com | Equestrian | Singular high-value .com; pairs with built Horses.com `[HYP]` |
+| PetInsuranceReviews.com | Health | Pure-intent; lowest-cost revenue surface (Architect S6) `[HYP]` |
+
 ## Movement watch
 
-- **Vets.co → Tier 1:** unlocks when all 5 promotion criteria validated (see `CSRO.md §8` — pending content).
+- **Vets.co → Tier 1:** unlocks when all 5 promotion criteria validated (see `CSRO.md §8`).
 - **Horses.com:** re-rank on Racing Bot handoff.
-- **PetFood/PetFoods + Ferret/Ferrets:** consolidate-vs-distinct decision pending duplication audit.
+- **PetFood/PetFoods · Ferret/Ferrets · Aquarium/Aquariums · Reptile/Reptiles · Bird/Birds:** consolidate-vs-distinct pending duplication audit (R-005).
 
 *Update in place as evidence shifts ranks.*
