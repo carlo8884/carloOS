@@ -281,7 +281,7 @@ export default function SymptomsHubPage() {
       <SchemaScript schema={combinedSchema} />
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14 relative overflow-hidden">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -305,7 +305,7 @@ export default function SymptomsHubPage() {
       {/* Breadcrumb */}
       <nav
         aria-label="Breadcrumb"
-        className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"
+        className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"
       >
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
@@ -315,7 +315,7 @@ export default function SymptomsHubPage() {
       </nav>
 
       {/* Body */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         {/* Rule #1 callout — mirrors the master guide voice */}
         <div
           className="rounded-xl p-5 mb-10 max-w-3xl"

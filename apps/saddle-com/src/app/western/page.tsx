@@ -23,7 +23,7 @@ const TOP_BRANDS = [
 export default function WesternSaddlesPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <div className="flex items-center gap-2.5 mb-5"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Western Saddles</span></div>
@@ -31,7 +31,7 @@ export default function WesternSaddlesPage() {
           <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">The right western saddle depends entirely on what you do with it. Barrel saddles are wrong for roping. Trail saddles are wrong for reining. Here&apos;s how to navigate the market by discipline.</p>
         </div>
       </div>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
           {DISCIPLINES.map(d => (
             <Link key={d.href} href={d.href} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200">
@@ -60,7 +60,7 @@ export default function WesternSaddlesPage() {
           ))}
         </div>
       </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="saddle-com" title="Free Western Saddle Buying Guide" subtitle="Brand reviews and market intelligence." source="western-hub" ctaText="Get Free Guide" perks={['🏇 Discipline-specific advice', '💰 Market pricing', '🚫 No spam']} />
       </div>
     </>

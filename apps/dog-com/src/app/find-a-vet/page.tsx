@@ -108,7 +108,7 @@ export default function FindAVetPage() {
       <SchemaScript schema={faqSchema} />
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Veterinary Specialists</span>
@@ -133,7 +133,7 @@ export default function FindAVetPage() {
       </div>
 
       {/* Specialist grid */}
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid gap-6">
           {SPECIALTIES.map((s) => (
             <div key={s.title} className="bg-brand-white border border-brand-border rounded-lg p-7">
@@ -173,7 +173,7 @@ export default function FindAVetPage() {
       </div>
 
       {/* FAQ */}
-      <div className="px-container sm:px-container-sm pb-14">
+      <div className="px-container-sm sm:px-container pb-14">
         <h2 className="font-display text-2xl font-bold text-brand-dark mb-6">Common Questions</h2>
         <FAQAccordion
           items={FAQ_ITEMS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answerText }))}
@@ -182,7 +182,7 @@ export default function FindAVetPage() {
       </div>
 
       {/* Email */}
-      <div className="bg-brand-primary-pale px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="dog-com"
           title="Free Dog Health Newsletter"
           subtitle="Breed health guides and specialist Q&A — every Tuesday."

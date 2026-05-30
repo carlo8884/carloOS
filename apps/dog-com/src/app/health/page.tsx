@@ -80,12 +80,12 @@ export default function DogHealthHubPage() {
 
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">100+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
       </div>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         {SECTIONS.map(section => (
           <div key={section.category} className="mb-10">
             <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
@@ -102,7 +102,7 @@ export default function DogHealthHubPage() {
       </div>
 
       {/* Conditions browser — grouped by category, programmatic from /data/diseases.ts */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-12">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-12">
         <div className="flex items-baseline gap-3 mb-2">
           <h2 className="font-display font-bold text-brand-dark text-xl">Conditions A–Z</h2>
           <span className="text-xs text-brand-text-light">
@@ -150,12 +150,12 @@ export default function DogHealthHubPage() {
         </div>
       </section>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Breed health guides and health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 Breed-specific']} />
       </div>
 
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics (hand-written)</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="addisons-disease" href="/health/addisons-disease" className="text-sm text-brand-primary no-underline hover:underline">Addisons Disease</Link>

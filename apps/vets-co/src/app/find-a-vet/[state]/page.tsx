@@ -73,14 +73,14 @@ export default function StateVetFinderPage({ params }: PageProps) {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/find-a-vet" className="hover:text-brand-primary no-underline">Find a Vet</Link><span>›</span>
         <span className="text-brand-text-mid">{state.name}</span>
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
           Veterinary Directory · {state.region}
         </span>
@@ -92,7 +92,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
         </p>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12 max-w-5xl">
+      <div className="px-container-sm sm:px-container py-12 max-w-5xl">
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">TL;DR</div>

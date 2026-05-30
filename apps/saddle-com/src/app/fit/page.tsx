@@ -26,7 +26,7 @@ export default function FitHubPage() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -59,7 +59,7 @@ export default function FitHubPage() {
         items={[{ name: 'Home', href: '/' }, { name: 'Saddle Fit' }]}
       />
 
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-5 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
             Free Lead Magnet
@@ -184,7 +184,7 @@ export default function FitHubPage() {
         </section>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture
           variant="section"
           siteId="saddle-com"

@@ -63,7 +63,7 @@ export default async function BreedsPage() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Breed Encyclopedia</span>
@@ -78,14 +78,14 @@ export default async function BreedsPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
 
       {/* Content */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="flex items-center justify-between mb-8">
           <p className="text-sm text-brand-text-light">
             {breeds.length} breeds profiled
@@ -145,7 +145,7 @@ export default async function BreedsPage() {
         </div>
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">All Dog Breeds</h2>
         <p className="text-sm text-brand-text-light mb-6">
           {Breeds.length} breed profiles, grouped by AKC group. Profiles

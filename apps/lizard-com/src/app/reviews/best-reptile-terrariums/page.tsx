@@ -32,7 +32,7 @@ export default function BestTerrariumsPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="relative z-10 px-container sm:px-container-sm py-14"
+      <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
           ⚡ Editor Pick · May 2025
@@ -51,7 +51,7 @@ export default function BestTerrariumsPage() {
       <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best Reptile Terrariums" }]} />
 
       {/* Methodology */}
-      <div className="relative z-10 px-container sm:px-container-sm py-5"
+      <div className="relative z-10 px-container-sm sm:px-container py-5"
         style={{ background: '#0D1A0D', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="rounded-lg p-5" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
@@ -61,7 +61,7 @@ export default function BestTerrariumsPage() {
         </div>
       </div>
 
-      <div className="relative z-10 px-container sm:px-container-sm py-12">
+      <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
             <ScoreMethodology />

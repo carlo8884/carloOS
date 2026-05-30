@@ -50,7 +50,7 @@ export default function AquariumSetupPage() {
         ]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-guide" />
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="aquarium-cycling-guide" href="/setup/aquarium-cycling-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Cycling Guide</Link>

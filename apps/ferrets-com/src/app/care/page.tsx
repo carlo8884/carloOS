@@ -187,7 +187,7 @@ export default function CareHubPage() {
         ]}
       />
 
-      <div className="px-container sm:px-container-sm py-12 max-w-4xl mx-auto">
+      <div className="px-container-sm sm:px-container py-12 max-w-4xl mx-auto">
         {/* ─── Header ─────────────────────────────────────────────────── */}
         <header className="mb-10">
           <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

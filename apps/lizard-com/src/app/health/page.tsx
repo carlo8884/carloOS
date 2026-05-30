@@ -85,7 +85,7 @@ export default function LizardHealthPage() {
 
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1
           className="font-display font-bold text-white tracking-tight mb-3"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}
@@ -100,7 +100,7 @@ export default function LizardHealthPage() {
         </p>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
           {FOUNDATIONAL_GUIDES.map((g) => (
             <Link
@@ -120,7 +120,7 @@ export default function LizardHealthPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture
           variant="section"
           siteId="lizard-com"
@@ -132,7 +132,7 @@ export default function LizardHealthPage() {
         />
       </div>
 
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">
           Existing Reptile-Health Guides
         </h2>
@@ -149,7 +149,7 @@ export default function LizardHealthPage() {
         </div>
       </section>
 
-      <section className="border-t border-brand-border bg-brand-white px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-white px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">
           Condition Reference Catalog
         </h2>

@@ -377,7 +377,7 @@ export default async function StateLegalityPage({
         ]}
       />
 
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid gap-14 lg:grid-cols-[1fr_300px]">
           <article className="carloOS-article min-w-0 max-w-content">
             {/* ─── Header ───────────────────────────────────────────────── */}

@@ -92,7 +92,7 @@ export default function MedicationsHubPage() {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -101,7 +101,7 @@ export default function MedicationsHubPage() {
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
           Pet Medication Library
         </span>
@@ -135,7 +135,7 @@ export default function MedicationsHubPage() {
         </p>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12 max-w-6xl">
+      <div className="px-container-sm sm:px-container py-12 max-w-6xl">
         {/* Why we don't publish dosing */}
         <section className="bg-brand-primary/5 border-2 border-brand-primary/30 rounded-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">

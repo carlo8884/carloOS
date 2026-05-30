@@ -89,7 +89,7 @@ export default function SaddleFitChecklistPage() {
       <SchemaScript schema={allSchemas} />
 
       {/* HERO */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-5">
@@ -146,7 +146,7 @@ export default function SaddleFitChecklistPage() {
       </section>
 
       {/* TWELVE POINTS PREVIEW */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -189,7 +189,7 @@ export default function SaddleFitChecklistPage() {
       </section>
 
       {/* WHY FIT MATTERS */}
-      <section className="bg-white px-container sm:px-container-sm py-section">
+      <section className="bg-white px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -219,7 +219,7 @@ export default function SaddleFitChecklistPage() {
       </section>
 
       {/* WHEN TO CALL A FITTER */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -260,7 +260,7 @@ export default function SaddleFitChecklistPage() {
       </section>
 
       {/* SECOND CAPTURE */}
-      <section className="bg-brand-primary-pale border-y border-brand-border px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Get the printable checklist + the email course
@@ -282,7 +282,7 @@ export default function SaddleFitChecklistPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-container sm:px-container-sm py-section">
+      <section className="bg-white px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />

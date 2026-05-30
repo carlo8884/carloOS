@@ -33,7 +33,7 @@ export default function EquipmentHubPage() {
   return (
     <>
       {/* HERO */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -54,7 +54,7 @@ export default function EquipmentHubPage() {
       </div>
 
       {/* BREADCRUMB */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -63,7 +63,7 @@ export default function EquipmentHubPage() {
       </nav>
 
       {/* CATEGORY GRID */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {EquipmentCategories.map((c) => (
             <Link
@@ -107,7 +107,7 @@ export default function EquipmentHubPage() {
       </div>
 
       {/* EMAIL */}
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture
           variant="section"
           siteId="fish-com"
@@ -120,7 +120,7 @@ export default function EquipmentHubPage() {
       </div>
 
       {/* QUICK LINKS */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Equipment Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
           {EquipmentCategories.map((c) => (

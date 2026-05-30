@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => { console.error(error) }, [error])
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-container sm:px-container-sm">
+    <div className="min-h-[80vh] flex items-center justify-center px-container-sm sm:px-container">
       <div className="text-center max-w-lg">
         <div className="text-5xl mb-6">⚠️</div>
         <h2 className="font-display font-black text-brand-dark text-2xl tracking-tight mb-4">Something went wrong</h2>

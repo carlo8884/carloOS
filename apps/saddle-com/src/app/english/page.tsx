@@ -67,7 +67,7 @@ const BRAND_GUIDE = [
 export default function EnglishSaddlesPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }}
           aria-hidden="true" />
@@ -87,7 +87,7 @@ export default function EnglishSaddlesPage() {
       </div>
 
       {/* Discipline grid */}
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <h2 className="font-display text-2xl font-bold text-brand-dark mb-8 pb-3 border-b border-brand-border">By Discipline</h2>
         <div className="grid lg:grid-cols-2 gap-6 mb-14">
           {DISCIPLINES.map((disc) => (
@@ -162,7 +162,7 @@ export default function EnglishSaddlesPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="saddle-com"
           title="Free English Saddle Buying Guide"
           subtitle="Brand reviews, used market tips, and fitting guides."

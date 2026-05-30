@@ -65,7 +65,7 @@ export default function PuppySchedulePage() {
       <SchemaScript schema={allSchemas} />
 
       {/* HERO with above-the-fold capture */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-5">
@@ -119,7 +119,7 @@ export default function PuppySchedulePage() {
       </section>
 
       {/* WEEK-BY-WEEK PREVIEW (free, visible to non-subscribers) */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -163,7 +163,7 @@ export default function PuppySchedulePage() {
       </section>
 
       {/* SECOND CAPTURE */}
-      <section className="bg-brand-primary-pale border-y border-brand-border px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Get the printable schedule + the email course
@@ -185,7 +185,7 @@ export default function PuppySchedulePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-container sm:px-container-sm py-section">
+      <section className="bg-white px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />

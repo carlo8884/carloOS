@@ -171,7 +171,7 @@ export default function StatesHubPage() {
         ]}
       />
 
-      <div className="px-container sm:px-container-sm py-14 max-w-5xl mx-auto">
+      <div className="px-container-sm sm:px-container py-14 max-w-5xl mx-auto">
         {/* ─── Header ─────────────────────────────────────────────────── */}
         <header className="mb-10">
           <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

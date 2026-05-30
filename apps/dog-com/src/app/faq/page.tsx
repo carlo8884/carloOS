@@ -96,7 +96,7 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Researched Answers</span>
@@ -111,14 +111,14 @@ export default function FAQPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">FAQ</span>
       </nav>
 
       {/* FAQ sections */}
-      <div className="px-container sm:px-container-sm py-14 max-w-content-wide mx-auto">
+      <div className="px-container-sm sm:px-container py-14 max-w-content-wide mx-auto">
         {FAQ_SECTIONS.map((section) => (
           <div key={section.heading} className="mb-12">
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-5 pb-3 border-b border-brand-border">
@@ -155,7 +155,7 @@ export default function FAQPage() {
       </div>
 
       {/* Email */}
-      <div className="bg-brand-surface border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-surface border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture variant="section" siteId="dog-com"
           title="Weekly Dog Health Tips"
           subtitle="Answers, breed spotlights, and health alerts — every Tuesday."

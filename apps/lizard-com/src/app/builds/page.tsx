@@ -25,7 +25,7 @@ export default function VivariumBuildsHubPage() {
   return (
     <>
       <div
-        className="relative z-10 px-container sm:px-container-sm py-16"
+        className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}
       >
         <div className="flex items-center gap-2.5 mb-5">
@@ -52,7 +52,7 @@ export default function VivariumBuildsHubPage() {
         </p>
       </div>
 
-      <div className="relative z-10 px-container sm:px-container-sm py-14">
+      <div className="relative z-10 px-container-sm sm:px-container py-14">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
           {VivariumBuilds.map((b) => (
             <Link
@@ -110,7 +110,7 @@ export default function VivariumBuildsHubPage() {
       </div>
 
       <div
-        className="relative z-10 px-container sm:px-container-sm py-12"
+        className="relative z-10 px-container-sm sm:px-container py-12"
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}
       >
         <EmailCapture
@@ -121,7 +121,7 @@ export default function VivariumBuildsHubPage() {
         />
       </div>
 
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">
           All Vivarium Build Guides
         </h2>

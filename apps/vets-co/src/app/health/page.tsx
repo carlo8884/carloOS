@@ -13,12 +13,12 @@ const GUIDES = [
 export default function VetsHealthHubPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health Library</span></div>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Pet Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Emergency guides, breed health, specialist directories, and insurance comparisons — all drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
       </div>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         {GUIDES.map(section => (
           <div key={section.category} className="mb-10">
             <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
@@ -33,11 +33,11 @@ export default function VetsHealthHubPage() {
           </div>
         ))}
       </div>
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-10">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
         <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Newsletter" subtitle="research-based health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 All species']} />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="allergic-reactions-dogs" href="/health/allergic-reactions-dogs" className="text-sm text-brand-primary no-underline hover:underline">Allergic Reactions Dogs</Link>
