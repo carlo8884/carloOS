@@ -85,6 +85,15 @@ export default function QuarterHorseBreedPage() {
             ))}
           </div>
           <RelatedLinks
+            title="Quarter Horse Health Deep-Dive"
+            links={[
+              {
+                label: 'Quarter Horse Health & Genetic Screening',
+                href: '/breeds/quarter-horse/health',
+              },
+            ]}
+          />
+          <RelatedLinks
             title="Related Guides"
             links={[
               { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
