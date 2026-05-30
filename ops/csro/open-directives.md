@@ -7,11 +7,18 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 ## Open
 
-### csro-dir-2026-W22-004 → Carlo — resolve inventory flags (new 2026-05-30)
-- **Action:** Resolve the three §4 flags in `domain-inventory.md`: (a) **petsupplies.com** is built in the repo but not on the owned list — confirm ownership; (b) **equiteric.com** — equine or personal? which bucket; (c) **hardmoneyloans.com** — sunset, or keep as off-vertical lead-gen?
-- **Why:** petsupplies.com is a built scaffold pointing at a possibly-unowned domain — that's a real liability to resolve before any launch. `[FACT]`
+### csro-dir-2026-W22-006 → Carlo — traffic data + for-sale design (new 2026-05-30)
+- **Action:** (a) Share current traffic per domain (Search Console clicks/impressions/top queries + any analytics); (b) decide the for-sale UX — Tier-B "inquire to acquire" element design + Tier-C marketplace choice (`strategy-disposition.md §4/§6`).
+- **Why:** Traffic data reorders the entire build-vs-sell disposition and sets sale prices; for-sale signage is outward-facing and affects acquirer perception (esp. flagship protection). `[FACT]`
 - **Deadline:** next CSRO brief.
-- **Done-when:** the three flags are answered and logged.
+- **Done-when:** traffic export received + for-sale approach chosen.
+- **Status:** open.
+
+### csro-dir-2026-W22-005 → COO — petsupplies scaffold disposition (new 2026-05-30)
+- **Action:** petsupplies.com is Tabcom (out of CarloOS scope). Decide the `apps/petsupplies` scaffold: hand to Tabcom or decommission from this repo. Do NOT launch it under CarloOS.
+- **Why:** A built CarloOS scaffold pointing at a separate-business domain is a launch liability + lane confusion. `[FACT]`
+- **Deadline:** next merge wave.
+- **Done-when:** scaffold removed or formally handed off; noted in STATUS.md.
 - **Status:** open.
 
 ### csro-dir-2026-W22-003 → Carlo / COO
@@ -24,6 +31,9 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 ---
 
 ## Closed
+
+### csro-dir-2026-W22-004 → Carlo — CLOSED 2026-05-30
+- **Resolution:** (a) petsupplies.com = Tabcom, out of scope (→ dir-005 for the scaffold); (b) equiteric.com → set aside (CSRO decision); (c) hardmoneyloans.com → SELL-DOMAIN (CSRO decision). All logged in `domain-inventory.md §4` + `strategy-disposition.md`.
 
 ### csro-dir-2026-W22-001 → Carlo — CLOSED 2026-05-30
 - **Action was:** obtain the authoritative owned-domain list.

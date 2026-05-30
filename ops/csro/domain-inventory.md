@@ -124,19 +124,27 @@ Per Carlo: park these for now. No CSRO tiering, ranking, or build work.
 | employeerecognition.com | off-vertical B2B |
 | employeetraining.com | off-vertical B2B |
 | weedforum.com | off-vertical (cannabis) |
-| equiteric.com | **ambiguous** — reads equine-ish; set aside pending Carlo's call (see §5) |
+| equiteric.com | ambiguous (equine/personal) — set aside (CSRO decision, reversible) |
 
 ---
 
-## §4 Discrepancies & flags — need Carlo/COO `[FACT]`
+## §4 Flags — RESOLVED 2026-05-30 `[FACT]`
 
-1. **`petsupplies.com` is BUILT in the repo (`apps/petsupplies` + config entry) but is NOT on the owned list.**
-   Either (a) it's owned and was omitted, (b) owned under a different account, or (c) a scaffold was built for a
-   domain not yet acquired. **This is the one real anomaly — please confirm.** Until then I treat the
-   `petsupplies` app as built-but-ownership-unconfirmed.
-2. **`equiteric.com`** — I can't confidently bucket it (equine vs personal/typo). Set aside pending your call.
-3. **`hardmoneyloans.com`** is built (an app dir exists) but sits in the set-aside/off-vertical bucket and was
-   previously marked sunset. Confirm: sunset, or keep as off-vertical lead-gen?
+1. **`petsupplies.com` — RESOLVED: owned but part of TABCOM** (Carlo's other active business, with Horse.com +
+   StateLineTack.com). **Out of CSRO scope.** The built `apps/petsupplies` scaffold should be handed to Tabcom or
+   decommissioned from the CarloOS repo — it should not go live under CarloOS. Action → `csro-dir-005` (COO:
+   confirm disposition of the scaffold). It is correctly **absent** from the 74-domain CarloOS list.
+2. **`equiteric.com` — DECISION (CSRO): set aside.** Ambiguous (equine vs personal/typo), low value, not worth
+   chasing. Reversible if Carlo says it's an equine asset.
+3. **`hardmoneyloans.com` — DECISION (CSRO): SELL/LEASE the domain, do not build.** Off-thesis; the built scaffold
+   has no strategic fit. Park with a for-sale lander (Tier C, see strategy-disposition.md) or list on a domain
+   marketplace. Highest-value move is a clean domain sale, not content.
+
+## Tabcom carve-out (out of CSRO scope) `[FACT]`
+
+**Tabcom = Carlo's separate active business: Horse.com, StateLineTack.com, PetSupplies.com + other active sites.**
+CSRO does **no** build/rank/directive work on these; review-only for high-level competitive read-through
+(e.g. StateLineTack/PetSupplies vs Saddle.com pricing/affiliate structure).
 
 ---
 
