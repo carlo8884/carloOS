@@ -9,10 +9,11 @@ Status vocab: `open` · `acked` · `in-progress` · `done` · `blocked` · `drop
 
 Per the §17 autonomy mandate — when blocked, pull the next item here. Keep ≥5 live.
 
-- [ ] **Exit-valuation model** — once research agent returns comps, build a per-domain valuation/disposition model (sell-price vs build-to-earn NPV). *(research running)*
+- [x] **Valuation comps** — DONE: `valuation-comps.md` (24–34× multiples, insurance affiliate $, domain comps, ad RPM). Research agent returned 2026-05-30.
+- [x] **Duplication/redirect map** — DONE: `2026-05-30-csro-to-coo-consolidation-redirect-map.md` (content-aware consolidate-and-preserve, not blanket 301).
+- [ ] **Exit-valuation model** — build a per-domain valuation/disposition model (sell-price vs build-to-earn NPV) on the comps + traffic. NEXT.
 - [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains (redirect / sell / hold) on a consistent rubric. Provisional now; finalize as traffic is measured.
-- [ ] **Dog.com / Fish.com acquirer revenue-trajectory angle** — draft the "small-but-growing revenue + traffic" narrative that justifies the step-up from the $2.3M/$1.45M offers. No Carlo input needed to draft.
-- [ ] **Duplication/redirect map** — concrete 301 plan for PetFoods→PetFood, Ferrets→Ferret, and the cluster-support names → heroes. Hand to COO.
+- [ ] **Dog.com / Fish.com acquirer revenue-trajectory angle** — draft the narrative justifying the step-up from the $2.3M/$1.45M offers; fold in Dog.com $500K (2004) provenance + scarcity framing from comps.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
 - [ ] **Bot-quality ledger refresh** — review COO/Monetization/Visual PRs as they land against the strategy.
@@ -20,6 +21,13 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 ---
 
 ## Open
+
+### csro-dir-2026-W22-011 → Carlo (confirm) + Monetization Bot (execute) — display ads now clear the threshold (new 2026-05-30)
+- **Action:** Apply to **Mediavine Journey** (entry tier, now just **≥1,000 sessions/mo**, eff. 2026-01-15) for the trafficked sites: Dog (36K), Ferret (11K), Fish (7K), PetFood (5K), Horses (~1K) all qualify. Stack display ads **on top of** affiliate to monetize the ~98% of traffic that never clicks an affiliate link.
+- **Why:** CLAUDE.md said "avoid display ads pre-Mediavine threshold" — **that threshold dropped to 1K sessions, so display is now ON-thesis, not premature.** $0 to join (rev-share); RPM ~$11–15+ at entry. Incremental recurring revenue + lifts sale multiple. `[RESEARCH — valuation-comps.md §4]`
+- **Carlo gate:** joining is free (rev-share, no spend), but it's a new vendor/outward-facing surface → quick Carlo confirm. **Not a hard blocker to plan**; Mon Bot can stage the integration while confirm is pending.
+- **Done-when:** Carlo confirms; Mediavine applied for on qualifying sites post-launch; ads live with no UX/trust regression.
+- **Status:** open (Carlo confirm + post-launch sequencing).
 
 ### csro-dir-2026-W22-010 → COO — free-tier vet-directory prep (no spend) (new 2026-05-30)
 - **Action:** Scope/prototype a $0 directory slice: OpenStreetMap `amenity=veterinary` (ODbL) + the ~20 states publishing free license CSVs + AAHA-accredited public listings as a "premium tier." Research/prep only — no build commitment, no spend.

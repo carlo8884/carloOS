@@ -18,14 +18,15 @@ Carlo wants each domain to resolve to **SELL** or **EARN**. I split that into 6 
 |---|---|---|
 | **SELL-NOW (groom)** | Already has acquirer interest; maximize price, then exit | Sale proceeds |
 | **BUILD-TO-EARN** | Build into a real revenue asset; hold and compound | Affiliate / lead-gen / tools |
-| **BUILD-TO-FLIP** | Build just enough traffic+revenue to sell at a multiple | Sale at 30–45× monthly profit |
+| **BUILD-TO-FLIP** | Build just enough traffic+revenue to sell at a multiple | Sale at ~24–34× monthly profit |
 | **REDIRECT** | Fold into a hero domain (kill duplication, pass authority) | Indirect (boosts hero) |
 | **SELL-DOMAIN** | Thin/off-thesis; worth more as a domain name than a site | Domain marketplace sale/lease |
 | **SET-ASIDE** | Personal / other-business / out of scope | n/a |
 
-**Exit-multiple reality `[RESEARCH — to verify w/ comps, R-003]`:** content/affiliate sites trade ~30–45× trailing
-monthly net profit (Empire Flippers / FE International range). So **revenue and the for-sale decision are the same
-project** — a site earning $2k/mo sells for ~$70–90k; the same domain parked sells for domain-value only. Building
+**Exit-multiple reality `[RESEARCH — see valuation-comps.md, sandbox-unverified]`:** content/affiliate sites trade
+**~24–34× trailing monthly net profit** in the 2025–2026 market (Empire Flippers data; the older 30–45× I'd used
+was above market — corrected). So **revenue and the for-sale decision are the same project** — a site earning
+$2k/mo sells for ~$48–68k; $10k/mo ≈ $240–340k; the same domain parked sells for domain-value only. Building
 revenue *is* how we raise sale price. This unifies Carlo's "sell or earn" into one motion: **earn first, then the
 sale price follows.**
 
