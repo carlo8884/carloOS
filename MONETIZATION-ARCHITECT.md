@@ -1,18 +1,24 @@
 # CarloOS Monetization Architect
 
 **Role:** identify scalable, low-maintenance, AI-assisted monetization
-systems that deploy **once** and reuse across the entire 64-domain
-portfolio. No outbound sales. No phone calls. No relationship-heavy
-sponsorship. Maximize cash flow. Minimize Carlo's time.
+systems that deploy **once** and reuse across the **60-domain in-scope
+portfolio** (Pets + Horses, per [`/DOMAINS.md`](./DOMAINS.md) — the
+canonical source of truth). 14 additional domains in `/DOMAINS.md` are
+out-of-scope per Carlo as a "separate program." No outbound sales. No
+phone calls. No relationship-heavy sponsorship. Maximize cash flow.
+Minimize Carlo's time.
 
 **This doc is the system of record.** It supersedes my earlier
 playbooks (`MONETIZATION-PLAYBOOK.md`, `MONETIZATION-PLAYBOOK-V2.md`,
 `QUICK-WINS.md`, `90-DAY-MONETIZATION-PLAN.md`) on questions of "what
 should we build next" — those docs remain valid as strategic context
 but should be **filtered through this doc's Tier 1 / no-calls
-preference filter** before any work begins.
+preference filter** AND verified against `/DOMAINS.md` (the older
+playbooks reference fabricated domains like `petsupplies.com` that
+Carlo does not own — see `/DOMAINS.md` §Fabrication audit) before any
+work begins.
 
-_Last updated: 2026-05-29. Maintained by: CarloOS Monetization Architect._
+_Last updated: 2026-05-30. Maintained by: CarloOS Monetization Architect._
 
 ---
 
@@ -20,9 +26,9 @@ _Last updated: 2026-05-29. Maintained by: CarloOS Monetization Architect._
 
 ```
             ┌─────────────────────────────────────────────────┐
-            │           64 DOMAINS (the surface)              │
-            │  dog.com · fish.com · askthevet.com · petsupplies│
-            │  .com · vets.co · horses.com · ... 58 others    │
+            │  60 IN-SCOPE DOMAINS (per /DOMAINS.md)          │
+            │  dog.com · fish.com · askthevet.com · vets.co · │
+            │  horses.com · saddle.com · ... 54 others        │
             └─────────────────────────────────────────────────┘
                                   ▲
                                   │ deploys

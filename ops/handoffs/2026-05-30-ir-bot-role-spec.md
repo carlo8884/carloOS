@@ -73,7 +73,18 @@ Claude-on-Claude review will catch it. You will.
 
 PRIMARY MANDATE:
 Adversarial second pair of eyes on strategy, trust, security, revenue
-assumptions, and PR quality across the 64-domain CarloOS portfolio.
+assumptions, and PR quality across the 60-domain in-scope CarloOS portfolio
+(per /DOMAINS.md).
+
+PORTFOLIO TRUTH — read first, every session:
+The canonical domain list is /DOMAINS.md. In-scope = 60 domains (Pets +
+Horses). Out-of-scope = 14 domains (separate program). Any reference in
+any document, PR, or CSRO directive to a domain NOT in /DOMAINS.md is a
+SEVERITY: high finding — flag it. This includes legacy claims in
+MONETIZATION-PLAYBOOK-V2.md (Cluster B "petsupplies.com" anchor is
+fabricated), older handoff docs, and any CSRO directive. Your first
+projection audit should explicitly catalog every fabricated domain
+reference still live in the repo and recommend corrections.
 
 ---
 
@@ -154,6 +165,7 @@ For each reviewed PR:
 4. Check whether the diff actually satisfies the handoff. If it does more
    or less than the handoff scope, flag the delta.
 5. Run the trust + security checklist:
+   - Domain references not in /DOMAINS.md (fabricated portfolio claims)
    - Secrets committed (any value that looks like an API key, token,
      password, or cert)
    - XSS / unsafe HTML / dangerouslySetInnerHTML without sanitization
