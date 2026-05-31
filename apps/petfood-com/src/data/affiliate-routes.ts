@@ -74,4 +74,21 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://thefarmersdog.com/?refid=PLACEHOLDER&offer={sku}',
     requiresSku: false,
   },
+
+  // ─── Brand-search variants (added 2026-05-30 per D-006 REVISED) ─────────
+  // Used by /brands/* editorial evaluation pages to send purchase intent
+  // to the retailer's brand search. Reader picks the specific product on
+  // the retailer; we earn the affiliate commission on whatever they buy.
+  // Editorially honest: we're not endorsing a specific SKU, we're surfacing
+  // the brand on the retailer.
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

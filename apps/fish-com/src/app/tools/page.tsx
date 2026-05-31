@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const TOOLS = [
   {
+    href: '/tools/aquarium-cycling-estimator',
+    icon: '🔬',
+    title: 'Aquarium Cycling Time Estimator',
+    desc: 'How long will a new tank take to cycle? Pick method (fishless ammonia / bottled bacteria / used media / fish-in) and temperature, get a phase-by-phase timeline.',
+    tag: 'New tank setup',
+  },
+  {
     href: '/tools/aquarium-volume-calculator',
     icon: '📏',
     title: 'Aquarium Volume Calculator',

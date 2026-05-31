@@ -65,6 +65,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} font-vars`}
     >
       <head>
+        {/* Impact.com site verification — added 2026-05-30. Will resolve
+            once DNS points dog.com at this Vercel deployment. */}
+        <meta
+          name="impact-site-verification"
+          content="f06484a9-0400-4029-a0b5-f1f1014163fc"
+        />
+
         {/* GA4 — only loads in production with a real ID */}
         {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
           <>

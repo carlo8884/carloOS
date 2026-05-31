@@ -3,5 +3,5 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=hardmoneyloans",
   "outputDirectory": ".next",
-  "ignoreCommand": "npx turbo-ignore hardmoneyloans"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh hardmoneyloans"
 }

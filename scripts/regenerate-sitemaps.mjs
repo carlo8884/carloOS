@@ -49,6 +49,13 @@ const SITES = [
     extraRoutes: SADDLE_BRAND_SLUGS.map((s) => `/brands/${s}`),
   },
   { id: 'vets-co', domain: 'vets.co' },
+  // Added 2026-05-31: extend coverage to the remaining 5 production sites
+  // so sitemap regeneration is comprehensive post-mega-wave.
+  { id: 'horses-com', domain: 'horses.com' },
+  { id: 'petfood-com', domain: 'petfood.com' },
+  { id: 'petfoods-com', domain: 'petfoods.com' },
+  { id: 'ferret-com', domain: 'ferret.com' },
+  { id: 'ferrets-com', domain: 'ferrets.com' },
 ]
 
 function listRoutes(siteId) {

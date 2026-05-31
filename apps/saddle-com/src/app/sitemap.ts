@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://saddle.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://saddle.com/accessories', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/brands', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/brands/antares', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/brands/bates', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
