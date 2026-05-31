@@ -44,6 +44,8 @@ export { AffiliateLink, AffiliateDisclosureContext } from './components/Affiliat
 export type { Vendor } from './components/AffiliateLink'
 export { SkimlinksLoader } from './components/SkimlinksLoader'
 export { AdSenseLoader, AdSlot } from './components/AdSense'
+export { DisplayAds } from './components/DisplayAds'
+export type { DisplayAdConfig } from './components/DisplayAds'
 export { VENDORS, resolveVendorUrl } from './components/affiliate-vendors'
 
 // Health condition cards

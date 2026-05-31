@@ -128,7 +128,7 @@ export default function BestPetInsurancePage() {
               subtitle="Claims paid in days · No annual limits · Simple flat-rate plans"
               score={9.2}
               description={<div>
-                <p>Healthy Paws has the best claims processing speed of any insurer we reviewed — most claims resolved within 2 business days via their mobile app. No annual or lifetime limits. Simple plan structure (choose deductible and reimbursement percentage, done). 99% member satisfaction rate in independent surveys.</p>
+                <p>Healthy Paws has the best claims processing speed of the carriers compared on this page — most claims resolved within 2 business days via their mobile app. No annual or lifetime limits. Simple plan structure (choose deductible and reimbursement percentage, done). 99% member satisfaction rate in independent surveys.</p>
                 <p>Unlike Trupanion, Healthy Paws reimburses you rather than paying the vet directly — meaning you pay the full bill upfront and get reimbursed, which matters for very large unexpected bills. Their annual deductible means once you've met it, all claims that year are covered at your reimbursement rate — better for dogs with multiple conditions in a year.</p>
               </div>}
               specs={[
