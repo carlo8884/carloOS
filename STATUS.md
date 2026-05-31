@@ -1,70 +1,87 @@
 # CarloOS Status
 
 Single source of truth for the operating state of the portfolio.
-Replaces the previous five governance docs (`OPERATIONS`, `ROADMAP`,
-`AGENTS`, `RELEASES`, `QC-STANDARDS`). Trust standards still live in
-their own file: see [`QC-STANDARDS.md`](./QC-STANDARDS.md).
+Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-30 (end-of-day — 3-bot operating model, Skimlinks + Amazon wired, ~810 pages, awaiting DNS)
+**Last updated:** 2026-05-31 (6-bot fleet activated, tier policy in force, ~166 net new pages from today's mega-wave)
 
 ---
 
 ## 1. Current Phase
 
-**Phase 4 — Dog.com launch-ready for Friday cutover.**
+**Phase 4+ — autonomous fleet operation, Tier 1 protect-the-asset mode.**
 
-Dog.com remains the soft-launch target — all content + visual + lead-magnet
-work is shipped; only Carlo-only operational steps (Mailchimp, GA4, DNS)
-remain. See §4.
+The portfolio is now operated by a **6-bot fleet + Carlo** under explicit tier policy:
 
-All eight active sites (dog · fish · lizard · saddle · vets · horses ·
-petfood · ferret) are now magazine-polished in production with the
-editorial component library (PullQuote / DropCap / ImageCard / CalloutBox /
-SourceCitation / ArticleByline) applied across 48+ page applications.
-Real Unsplash photography is live on homepage heroes + key feature slots
-on all 8 active sites.
-
-Five new sites have been scaffolded in-repo (horses-com, petfood-com,
-petfoods-com, ferret-com, ferrets-com) with cornerstone content + lead
-magnets + visual polish. Vercel projects still need bootstrap for the
-five new sites (Carlo-only via `scripts/vercel-bootstrap.sh`).
-
-Programmatic SEO is live across the portfolio: ~50 dog breeds, ~28 dog
-diseases, ~51 horse breeds, 52-state vets directory, 52-state ferrets
-directory, 38 petfoods brand pages.
-
-## 2. Active PRs (2026-05-30 EOD verified)
-
-`origin/main` HEAD: `a54a15b` (PR #162 — vercel-set-env.sh). 130+ PRs merged 2026-05-28 → 2026-05-30.
-
-**Currently open and triaged** (verified via GitHub MCP):
-
-| Category | PRs |
-|---|---|
-| **Close — stale/superseded** | #60, #61, #63, #65, #144, #151 (in main as `58dc92f`), #153 (in main as `8731777`), #155 (in main as `34ec395`+`a54a15b`), #160 (in main as `eed2b7b`) |
-| **Merge if CI green (reference docs)** | #62, #64, #66 |
-| **Keep open (active reference)** | #67 (`/ask` MVP brief — still actionable) |
-| **Safe to merge — content PRs blocked only by metadata-policy** | #145, #148, #149, #150, #152 (all clear after PR #167 lands) |
-| **Safe to merge — Visual Bot work** | #156, #159, #161, #163, #164, #165 |
-| **Safe to merge — COO docs** | #158, #166 (CLAUDE.md), #167 (metadata fix) |
-
-## 3. Lanes (current 3-bot + Codex model)
-
-Lane policy is `ops/policies/bot-coordination.md`. Summary:
-
-| Lane | Who | Mandate | Touches |
+| Tier | Sites | Posture | Target exit |
 |---|---|---|---|
-| **COO** | Claude Code session (this) | Content/infra/PR triage/agent orchestration | Editorial pages, `packages/ui/*` (non-visual), `packages/config/index.ts`, `scripts/ci/*`, STATUS/BACKLOG/DASHBOARD |
-| **Monetization Bot** | Separate Claude Code session | Revenue/affiliate/funnels/email | `apps/<site>/src/data/affiliate-routes.ts`, `apps/<site>/src/app/(funnels)/*`, `apps/<site>/src/content/email-sequences/*`, `apps/<site>/src/app/go/[vendor]/[sku]/route.ts` |
-| **Visual Bot** | Separate Claude Code session | Visual identity/photography/composition/motion | `apps/<site>/src/app/page.tsx` heroes, `apps/<site>/src/components/visual/*`, `packages/ui/src/components/visual/*` (new), `apps/<site>/src/app/globals.css`, `scripts/sync-images.mjs`, `scripts/image-queries.json`, `packages/ui/src/data/image-manifest.json` |
-| **Codex** | External, prompted per-task | Read-only triage, plain-English status synthesis, narrow QC fixes only on request | PR review comments, `codex/`-prefixed branches |
-| **Carlo** | Direct chat | Spending, DNS, vendor approvals, key rotation, lane policy amendments | Final authority |
+| **Tier 1 (confirmed by inbound offers)** | Dog.com ($2.3M offer), Fish.com ($1.45M offer) | Protect-the-asset · acquirer-diligence-ready · no aggressive monetization · no low-quality programmatic | $10M+ each |
+| **Tier 2 with Tier 1 promotion path** | Vets.co, Saddle.com, Lizard.com | Build-to-sell, validate promotion criteria, evidence-driven | $5M+ each |
+| **Tier 2** | Horses.com (pending Racing Bot), Ferret.com, PetFood.com | Niche-monetization specialty publications | $1-5M each |
+| **Tier 3** | PetFoods.com, Ferrets.com + scaffolds | Free traffic-magnet databases that feed Tier 1/2 | varies |
+| **Sunset** | hardmoneyloans.com | Confirmed by Carlo 2026-05-30 | n/a |
 
-Coordination law: lane violations cause CI outages. Use `ops/handoffs/` for cross-lane communication.
+Full policy: `ops/csro/CSRO.md §8`. **Vets.co Tier-1 promotion criteria** (5 must be met before promotion): `ops/csro/CSRO.md §8`.
 
-**Recent lane-crossing events** (informational, not blame):
-- 2026-05-29: Monetization Bot's funnel infrastructure (PR #133) shipped with unclosed template literals → main broken → COO fixed forward via PR #147. Per policy §8 (first-merge-wins), Mon-lane fix-forward by COO is permitted to unblock main.
-- 2026-05-30: COO modified `scripts/sync-images.mjs` (Visual Bot lane) — preceded the Visual Bot existing. Not a violation in retrospect.
+## 2. Fleet (6 actors + Carlo)
+
+Specs: `ops/policies/bot-fleet.md` (coordination map) · `ops/policies/bot-coordination.md` (lane policy).
+
+| Actor | Owns | Where it runs | Spec |
+|---|---|---|---|
+| **CSRO** | Strategy / research / prioritization / loop closure | Separate Claude Code session | `ops/csro/CSRO.md` |
+| **COO** (this session) | Execution / PRs / build orchestration / agent dispatch | Claude Code | `CLAUDE.md` |
+| **Monetization Bot** | Revenue / affiliates / funnels / lead-gen / email | Separate session | `ops/policies/bot-coordination.md §2` |
+| **Visual / Brand Bot** | Brand / UX / trust / visual quality | Separate session | `ops/policies/bot-coordination.md §2` |
+| **Horses.com Racing Intelligence Bot** | Specialist: racing / bloodstock / betting-adjacent research | Separate session | `ops/csro/CSRO.md §12` |
+| **IR Bot** (Codex-hosted, chat-only by default) | Adversarial reviewer · audits PRs + CSRO · independent-model diversity | Codex | `ops/csro/IR-BOT.md` |
+| **Carlo** | Final authority · money · domains · irreversible decisions | Direct chat | — |
+
+**Carlo's standing autonomy rule (2026-05-31):** every bot works its lane autonomously. Decisions and ships are not gated on permission for in-lane work. Blocked work is routed around with a logged handoff; bots immediately pick the next queued task. Min 5 ready tasks queued at all times.
+
+## 3. Today's mega-wave (2026-05-30 → 2026-05-31)
+
+**35 PRs merged this session.** Net delta on main:
+
+### Strategic infrastructure
+- `ops/csro/CSRO.md` v2 — full CSRO spec with directive-ID protocol, loop closure, 10-dim scoring rubric, live registers, 74-domain inventory
+- `ops/csro/IR-BOT.md` — independent reviewer spec (chat-only by default per 2026-05-30 guardrail tighten)
+- `ops/csro/CSRO-PROMPT.md` + `ops/csro/IR-BOT-PROMPT.md` — operational kickoff prompts
+- `ops/policies/bot-fleet.md` — full fleet coordination map (feedback loop diagram, conflict matrix, daily rhythm)
+- `ops/handoffs/2026-05-30-portfolio-tier-architecture.md` — 3-tier model with per-site rationale
+- 3 coordination handoffs to Monetization / Visual / Horses-Racing bots
+
+### Content shipped
+| PR | Site | What | Pages |
+|---|---|---|---|
+| #170 | Dog.com | Homepage redesign → owner's operating system (5 owner-path cards) | 1 |
+| #171 | Fish.com | Homepage redesign → tank control center (6 problem cards + calculators banner) | 1 |
+| #182 | Dog.com | `/symptoms` authority hub (22 symptoms, urgency-tiered) | 1 |
+| #180 | Fish.com | JSON-LD HowTo + FAQ + SoftwareApplication schema on 5 calculators | 5 (additive) |
+| #187 | Dog.com | "Which Pet?" cross-portfolio decision wizard (10 questions, 10 species) | 1 |
+| #188 | Dog.com | `/compare` breed-vs-breed hub (30 pairwise comparisons) | 31 |
+| #189 | Vets.co | Programmatic vet directory scaffold (city × specialty taxonomy) | 78 |
+| #190 | 5 sites | `/data` partnership pages + Reddit/Quora syndication tracker | 5 |
+| #191 | Lizard.com | Per-state reptile legality hub (50 states + index) | 51 |
+| #173 | Vets.co | Programmatic breed × state insurance matrix | 1,695 |
+| #174 | PetFoods.com | D-006 brand-page affiliate buy-boxes | 36 (additive) |
+| #175 | Ferret.com | D-009 monetization surface for 11K/mo traffic | varies |
+| #177 | Dog.com | D-010 insurance-routing CTAs on 7 high-cost condition pages | 7 (additive) |
+| #183 | 4 sites | D-013 portfolio-wide affiliate-leak fix (53 URLs) | n/a |
+| #184 | PetFood.com | D-014 buy-boxes on 9 therapeutic-diet pages | 9 (additive) |
+| #145 | Saddle.com | 6 saddle-accessory buyer guides | 6 |
+| #148 | PetFood.com | 6 condition-specific therapeutic diet pages + hub | 7 |
+| #149 | Vets.co | 8 diagnostic-test deep-dive pages + hub | 9 |
+| #150 | 7 sites | GEO retrofit (TL;DR + question-form H2s on 7 high-traffic pages) | 7 (additive) |
+| #151 | Portfolio | CrossPortfolioCard applied to 14 SEO templates | 14 (additive) |
+| #152 | Lizard.com | 5 species-class vivarium build guides + hub | 6 |
+| #163 | 8 sites | Visual Bot OG-image rollout | 8 (additive) |
+| #164 | 14 sites | Visual Bot per-site favicons | 14 (additive) |
+
+**Net new pages this wave:** ~166 net new statically-rendered pages, plus extensive additive schema/affiliate enrichments across existing pages.
+
+### Closed (stale / superseded / sunset)
+#19, #26, #27, #59, #60, #61, #144, #167 (8 closed)
 
 ## 4. Soft-Launch Blockers (Carlo-only)
 
@@ -73,216 +90,52 @@ All remaining launch work is operational, not engineering.
 | # | Item | Time | Priority |
 |---|---|---|---|
 | 1 | DNS pointing (10 production domains → Vercel) at Network Solutions | ~30 min | **P1 — blocks launch** |
-| 2 | Rotate Vercel token `vcp_2C7...` (exposed in chat) at https://vercel.com/account/tokens | ~2 min | P2 — security hygiene |
-| 3 | Apply to **Chewy Partners** at chewy.com/partners | ~5 min | P2 — free revenue stream |
-| 4 | Apply to **ImpactRadius** at impact.com | ~15 min | P2 — biggest LTV unlock (pet-insurance roster) |
-| 5 | GA4 property + 10 data streams + set `NEXT_PUBLIC_GA_MEASUREMENT_ID` env var | ~15 min | P2 — analytics blackout post-launch otherwise |
-| 6 | Mailchimp / MailerLite / Beehiiv decision (Carlo deferred per cost) | ~30 min | P3 — can defer until traffic exists |
-| 7 | Email forwarding `editor@<domain>.com` at Network Solutions (10 domains) | ~20 min | P3 — needed when email infra activates |
-| 8 | Rotate Anthropic API key `sk-ant-...` after `/ask` MVP validation | ~2 min | P3 — security hygiene |
+| 2 | Rotate Vercel token (exposed in chat earlier this session) | ~2 min | P2 — security hygiene |
+| 3 | Apply to Chewy Partners | ~5 min | P2 — free revenue stream |
+| 4 | Apply to ImpactRadius (biggest LTV unlock — pet-insurance roster) | ~15 min | P2 |
+| 5 | GA4 property + 10 data streams + set `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ~15 min | P2 — analytics blackout otherwise |
+| 6 | Mailchimp / MailerLite / Beehiiv decision (deferred per cost) | ~30 min | P3 |
+| 7 | Email forwarding `editor@<domain>.com` (10 domains) | ~20 min | P3 |
+| 8 | Rotate Anthropic API key after `/ask` MVP validation | ~2 min | P3 |
+| 9 | Vercel project bootstrap for 5 new scaffolds (askthevet/seniorpets/dogpicture/petsupplies/hardmoneyloans) — note: hardmoneyloans is sunset, skip | ~10 min | P3 |
 
-**Already done (verified):**
-- ✅ Amazon Associates tag `boltonpets20-20` wired across all 10 production projects via `scripts/vercel-set-env.sh`
-- ✅ Skimlinks publisher `303850X1791986` live on dog.com (PR #143)
-- ✅ Vercel projects bootstrapped for 10 production sites
-- ✅ Anthropic API key created (Carlo holds; not in repo)
-- ✅ Impact.com site-verification meta tag installed (PR #147)
+**Already done:** Amazon Associates tag `boltonpets20-20` portfolio-wide · Skimlinks publisher live on Dog.com · Impact.com site-verification meta tag installed · 10 production Vercel projects bootstrapped.
 
-## 5. Active Risks
+## 5. Conflict-blocked PRs (bots own their rebases)
+
+Per `bot-coordination.md §8` first-merge-wins: the losing bot rebases. COO does not force-rebase other bots' lanes.
+
+| PR | Title | Lane |
+|---|---|---|
+| #21 | A4 Vets.co visual launch-polish | Visual |
+| #22 | A4 Fish.com visual launch-polish | Visual |
+| #156 | visual-bot: dog-com magazine polish | Visual |
+| #161 | visual-bot: ScaffoldHomeShell on seniorpets/askthevet | Visual |
+| #181 | D-011 dog-com breed insurance CTAs | Monetization |
+| #185 | visual-bot: CalculatorShell + dog daily-calorie calculator | Visual (with COO-authorized lane crossover) |
+
+## 6. Active risks
 
 | Risk | Severity | Mitigation |
 |---|---|---|
-| Vercel preview deploys hitting free-tier rate limit (24h reset window) | Medium (operational) | Either wait for reset OR upgrade to Vercel Pro. Local `turbo build` is the authoritative gate; Vercel previews are nice-to-have for QA. |
-| Carlo bottleneck on launch ops | Medium | All ~55 min worth of work, batchable in one block |
-| A4 visual direction outstanding | Low (deferred) | Launch does not wait. PR #5 scheduled if/when A4 delivers. |
-| `/api/og` route load-untested | Low | First-week traffic minimal; harden post-launch |
-| Single-key-person dependency (Carlo + Claude) | High (long-term) | Stabilizer CI checks + SOPs erode this over weeks |
+| Tier 1 brand-trust drift from short-term monetization | High | Protect-the-asset directive in CSRO.md §8 + bot-fleet.md trust-bar restatement. CSRO files drift alarm. |
+| CSRO fleet-activation brief missing on main | Low | Logged 2026-05-31; CSRO will produce on day-1 task. COO operates from CLAUDE.md + bot-coordination.md meanwhile. |
+| Bots ignoring CSRO directives (loop autonomy degradation) | Medium | Open-directive register at `ops/csro/open-directives.md`; Carlo escalation if directives lapse 2× past deadline |
+| Codex/IR-Bot writing untracked review files | Resolved 2026-05-30 | Chat-only-by-default guardrail in PR #197 |
+| Vercel preview rate limits at scale | Low (operational) | Local `turbo build` is authoritative gate |
+| Single-key-person dependency on Carlo | Medium | 6-bot autonomous fleet now operational; minimizes Carlo touch points |
 
-## 6. Roadmap Snapshot
+## 7. Operating Principles
 
-| Phase | State | Notes |
-|---|---|---|
-| 1 — Core build & deployment foundation | ✅ shipped | `2d3030a` → `9709150` |
-| 2 — Trust cleanup & stabilization | ✅ shipped | `4c27988` (PR #2) |
-| 2a — Trust-badge sweep | ✅ shipped | `caead17` (PR #5) |
-| 3 — SEO & infrastructure stabilization | ✅ shipped | `ccf079d` (PR #4 / GitHub #6) |
-| 4 — Dog.com launch readiness | ✅ shipped (engineering side) | `12e12fc` + `9065110`. Operational ops (Mailchimp/GA4/DNS) pending Carlo. |
-| 4a — Dog.com live | 🟡 pending Carlo ops | Friday cutover target. See §4 |
-| 5 — Visual / UX pass | ✅ shipped | Magazine polish + editorial component library applied to all 8 active sites; real Unsplash photography live. |
-| 6 — Fish.com / Saddle.com / Lizard.com / Vets.co build-out | ✅ shipped (content side) | All four sites have cornerstone + lead magnets + visual polish. Still gated on Dog.com 7-day metrics for marketing push. |
-| 7 — Programmatic SEO across portfolio | ✅ shipped | ~280+ programmatic pages: dog breeds + diseases, horse breeds, vets-by-state, ferrets-by-state, petfoods brands. |
-| 8 — Shared CI checks (link-check, metadata, trust-guard) | ✅ shipped | `scripts/ci/{link-check,metadata-policy,trust-guard}.mjs` all live. |
-| 9 — PetFood / Ferret / Horses positioning | ✅ shipped (scaffold + content) | 5 new sites scaffolded with content + magnets. Vercel project bootstrap pending Carlo. |
-| 10 — Cross-portfolio integration | ✅ shipped | `CrossPortfolioCard` component live; citation linking across ~49 pages; Vercel turbo-ignore (60-85% build cost reduction). |
-| 11 — Lead magnet portfolio | ✅ shipped | 6 lead magnets across portfolio (dog, fish, vets, saddle, lizard, horses, petfood, ferret) + 8-email sequences. |
-| 12 — COO research docs | ✅ shipped | Revenue / Stripe membership / sponsorship / acquirer pitch / brand briefs / photo strategy / Stitch briefs / lead-magnets / GEO audit / AI assistant brief. See `ops/handoffs/`. |
-| 13 — Monetization wiring (Stripe webhook live) | ⬜ deferred | Spec written (`ops/handoffs/2026-05-29-stripe-membership-spec.md`); implementation post first revenue signal. |
-| 14 — AI care assistant `/ask` MVP | ⬜ briefed | Phase 1 per #67 brief; next P1 build. |
+- **"Launchable and improving" beats "internally perfect but not live."**
+- **Tier 1 protect-the-asset is the highest-priority constraint** — never let short-term monetization damage Dog.com / Fish.com brand integrity. Acquirers diligence everything.
+- Trust integrity is non-negotiable. See `QC-STANDARDS.md §1`.
+- No new bots, no new governance docs, no new audit loops without a strategic justification CSRO has signed off on.
+- Every domain becomes one of: media / lead-gen / affiliate / marketplace / data / licensing / acquisition target. CSRO classifies; COO executes.
+- Speed matters. Daily rhythm > weekly/monthly calendar reports.
 
-## 7. Release Log
+## 8. Update Protocol
 
-Append-only. Source of truth is git log; this is the human index.
+Any PR that materially changes the operating state updates this file in the same PR. No separate docs-only PRs except this consolidation. Bump `Last updated:` at the top.
 
-| Commit | Date | What |
-|---|---|---|
-| `9065110` | 2026-05-27 | PR #9 — Dog.com launch blockers cleared (hero stats, HEALTH_CATEGORIES, fake-authority H1s, EmailCapture gating). 4 files. |
-| `12e12fc` | 2026-05-27 | PR #7 — Dog.com puppy-schedule lead magnet + 8-email sequence + homepage banner. 14 files. |
-| `ccf079d` | 2026-05-27 | PR #4 — SEO & Infrastructure Stabilization (6 commits, 300 files) |
-| `caead17` | 2026-05-27 | PR #5 — Trust-badge cleanup (21 files, +25/-25) |
-| `4c27988` | 2026-05-26 | PR #2 — Trust cleanup & stabilization (8 batches, ~480 files) |
-| `9709150` | 2026-05-26 | CarloOS V2 — build fixes, stubs, 37 new content pages |
-| `2d3030a` | 2026-05-25 | Initial monorepo — 5 apps, shared packages, Turborepo + Supabase |
-
-## 8. Page Counts (current)
-
-| Site | Routable pages | Status |
-|---|---|---|
-| dog-com | 194 | Launch-ready (137 static + 29 prog breeds + 28 prog diseases) |
-| fish-com | 80 | Magazine-polished; cornerstone complete |
-| vets-co | 97 | 45 static + 52-state vet directory (programmatic) |
-| horses-com | 64 | 13 static + 51-breed programmatic |
-| ferrets-com | 57 | 5 static + 52-state vet directory (programmatic); needs Vercel bootstrap |
-| lizard-com | 56 | Magazine-polished; cornerstone complete |
-| petfoods-com | 44 | 6 static + 38 brand programmatic pages; needs Vercel bootstrap |
-| saddle-com | 43 | Magazine-polished; cornerstone complete |
-| petfood-com | 11 | Scaffold + 10 cornerstones + lead magnet; needs Vercel bootstrap |
-| ferret-com | 10 | Scaffold + 8 cornerstones + lead magnet; needs Vercel bootstrap |
-| **Total** | **~810** | Across 10 sites (was 656 → +155 from morning merge wave; will tick up as #132 + #135 + lizard husbandry land) |
-
-## 8a. 2026-05-29 Morning Merge Wave (after Carlo's "merge, build, improve. Go." directive)
-
-18 PRs merged before noon Pacific, adding ~155 new programmatic SEO pages + FTC affiliate compliance infrastructure + portfolio-wide cross-linking. New `main` HEAD is `19fedaa`.
-
-### Content templates merged
-
-| PR | Site | Surface | Count |
-|---|---|---|---|
-| #108 | vets-co | `/medications/[slug]` | 12 FDA/Plumb's-anchored medication pages |
-| #110 | lizard-com | `/health/[slug]` | 15 reptile condition pages (ARAV-cited) |
-| #111 | horses-com | `/disciplines/[slug]/equipment` | 6 discipline equipment buyer guides |
-| #112 | saddle-com | `/brands/[slug]` | 10 saddle brand reviews (Stübben/Pessoa/Bates/+7) |
-| #114 | petfoods-com | `/brands/[slug]` (long-form) | 10 WSAVA-scored brand reviews |
-| #115 | dog-com | `/breeds/[slug]/feeding` | 8 breed-specific feeding deep-dives |
-| #116 | petfood-com | `/life-stage/[slug]` | 7 AAFCO life-stage deep-dives |
-| #119 | vets-co | `/specialists/[slug]` | 8 board-certified specialty deep-dives |
-| #120 | fish-com | `/equipment/[slug]` | 6 equipment-category buyer guides |
-| #121 | ferrets-com | `/states/[slug]` | 51 per-state legality + adoption directory |
-| #123 | ferret-com | `/care/*`, `/health/*` | 6 new cornerstones (vaccinations, lymphoma, +4) |
-
-### Infrastructure merged
-
-| PR | What |
-|---|---|
-| #122 | Monetization-bot strategic handoff (`ops/handoffs/2026-05-29-monetization-update-for-bot.md`) |
-| #124 | AffiliateDisclosure component + 10 site disclosure pages + 10 `/go/[vendor]/[sku]` redirects + per-site vendor allow-lists |
-| #126 | Bot coordination policy (`ops/policies/bot-coordination.md`) — lanes, governance, vendor allow-lists, trust-bar guardrails |
-| #127 | Monday launch checklist (`ops/handoffs/2026-05-29-monday-launch-checklist.md`) — Carlo's DNS/Mailchimp/GA4 punch list |
-| #128 | `getCrossPortfolioRecommendations` helper + 29 (site × content-type) recommendation entries — unblocks CrossPortfolioCard portfolio-wide |
-| #129 | `link-check.mjs` fix — handles `[slug]` anywhere in path (not just trailing) |
-| #130 | ArticleLayout `schema` prop accepts combined-schema arrays |
-
-### Open PRs queued
-
-- #132 — dog-com `/breeds/[slug]/health` (8 OFA/CHIC breed health deep-dives) — CI cycling
-- #135 — saddle-com `/fit/[slug]` (6 discipline-specific saddle fit guides + hub) — CI cycling
-- Monetization bot's 11 in-flight branches (affiliate-link-portfolio-rollout, askthevet-mvp, seniorpets-mvp, dogpicture-mvp, petsupplies-mvp, email-sequences-7-magnets, etc.) — PRs not yet open
-
-### Agents running in background
-
-- Lizard.com /husbandry/[slug] — 8 husbandry topics (UVB, basking, humidity, etc.)
-
-## 8b. Recently Shipped This Week (2026-05-28 → 2026-05-29)
-
-Highlights from the ~100-PR merge wave:
-
-- **5 new sites scaffolded** with content + lead magnets + visual polish:
-  horses-com, petfood-com, petfoods-com, ferret-com, ferrets-com.
-- **Magazine visual polish** rolled out across all 8 active sites
-  (per-site palettes, Playfair / Cormorant / JetBrains Mono typography).
-- **Editorial component library** shipped (`PullQuote`, `DropCap`,
-  `ImageCard`, `CalloutBox`, `SourceCitation`, `ArticleByline`) — applied
-  across 48+ page applications portfolio-wide.
-- **Real Unsplash photography** on 8 site homepages + key feature slots
-  (replaces placeholder gradients).
-- **~280+ programmatic SEO pages** across dog (breeds + diseases),
-  horses (breeds), vets-co (states), ferrets-com (states), petfoods-com
-  (brands) — all from single-template + structured data files.
-- **6 lead magnets + 8-email sequences** added: aquarium cycling (fish),
-  emergency triage card (vets), saddle fit checklist (saddle), first-year
-  care (lizard), first-horse roadmap (horses), reading-pet-food-labels
-  (petfood), first-year-schedule (ferret).
-- **30+ new cornerstone content pages** across the portfolio.
-- **CrossPortfolioCard** — sister-site recommendations component live
-  on 5 sites.
-- **Citation linking** — inline authority citations across ~49 pages.
-- **Vercel turbo-ignore** on all 10 projects → 60-85% build cost
-  reduction.
-- **Lockfile sync** + supporting engineering fixes.
-- **COO research docs** in `ops/handoffs/`: revenue/affiliate playbook,
-  Stripe membership spec, sponsorship sales kit, acquirer pitch deck
-  framework, per-site Stitch design briefs, per-site photo sourcing
-  playbook, Vercel cost-reduction memo.
-
-## 9. Operating Principles
-
-- "Launchable and improving" beats "internally perfect but not live."
-- Trust integrity is non-negotiable. See QC-STANDARDS.md §1.
-- No new bots, no new governance docs, no new audit loops without a launch-velocity justification.
-- Every domain becomes one of: media / lead-gen / affiliate / marketplace / data / licensing / acquisition target. Defined per domain when that domain activates, not in advance.
-
-## 10. Update Protocol
-
-Any PR that materially changes the operating state updates this file
-in the same PR. No separate docs-only PRs except this consolidation.
-Bump `Last updated:` at the top.
-
-The "Active PRs" table is the live queue. The "Release Log" is the
-post-merge record. The "Soft-Launch Blockers" section drops items as
-Carlo completes them.
-
-## 11. Operational Notes
-
-### EmailCapture gating (post-PR-#9)
-
-The shared `EmailCapture` component (`packages/ui/src/components/
-EmailCapture.tsx`) returns `null` unless `NEXT_PUBLIC_EMAIL_CAPTURE_
-ENABLED=true` is set in the deploy environment. This is intentional:
-prevents form submissions hitting a 503 from `/api/subscribe` when no
-ESP is wired.
-
-Affects **all five sites uniformly** (shared component). When Carlo
-flips the env var on for a given site's Vercel project, that site's
-forms reappear and post to the live `/api/subscribe`, which routes to
-Mailchimp.
-
-**To enable Dog.com email capture:**
-1. Vercel project `dog-com` → Settings → Environment Variables
-2. Add `NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED=true` (Production scope)
-3. Add `MAILCHIMP_API_KEY=<key from Mailchimp Account → Extras → API Keys>`
-4. Add `MAILCHIMP_AUDIENCE_ID=<audience ID from Mailchimp Audience → Settings>`
-5. Trigger a redeploy
-
-Until enabled, the puppy-schedule lead-magnet landing page renders but
-its capture forms are invisible (the banner still routes to it; the
-page content still shows; only the form disappears).
-
-### Vercel rate limits
-
-Free-tier Vercel limits how many Preview deployments can run per
-window. PR #9 hit this limit at merge time (5/5 previews failed with
-"Deployment rate limited — retry in 24 hours") — **the code was fine**,
-the local `turbo build` was green, and the merge proceeded based on
-local verification. Production deploys are unaffected.
-
-If launch cadence requires more reliable previews, upgrading the
-Vercel project to Pro removes the cap. Otherwise, free-tier previews
-recover automatically within 24h.
-
-### Mailchimp wiring is Carlo-only
-
-`/api/subscribe` exists and routes correctly. Mailchimp account
-creation, audience setup, API key generation, and Vercel env var
-configuration all happen in Carlo's accounts — not delegable. The
-8-email puppy autoresponder sequence is staged in
-`apps/dog-com/src/content/email-sequences/puppy-onboarding/` as
-Mailchimp-paste-ready markdown.
+Stale-cleanup: STATUS.md is refreshed whenever a major wave merges OR weekly (Sunday) at minimum. Currently CSRO owns the bot-quality-ledger; COO owns this file.
