@@ -230,7 +230,7 @@ export default function SaddleFitBasicsPage() {
             cons={['Premium price', 'Cannot correct structural fit problems — saddle work is the fix', 'Sheepskin care is more involved than a synthetic pad']}
             price="$180–350"
             ctaText="Find Mattes sheepskin half-pads"
-            ctaHref="https://www.smartpakequine.com/"
+            ctaHref="/go/smartpak/mattes-sheepskin-half-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="mattes-sheepskin-half-pad"
           />
@@ -254,7 +254,7 @@ export default function SaddleFitBasicsPage() {
             cons={['Square (non-contoured) pads bridge the wither under most saddles — avoid', 'Cheap fleece linings pill and lose wickability after a season']}
             price="$30–80"
             ctaText="Find contoured saddle pads"
-            ctaHref="https://www.smartpakequine.com/"
+            ctaHref="/go/smartpak/contoured-all-purpose-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="contoured-all-purpose-pad"
           />
