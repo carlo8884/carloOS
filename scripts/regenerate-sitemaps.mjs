@@ -76,7 +76,13 @@ function listRoutes(siteId) {
         ) {
           continue
         }
-        walk(path, `${prefix}/${entry.name}`)
+        // Next.js route groups: `(name)/foo/page.tsx` → URL `/foo`.
+        // The parenthesised segment exists only for code organization and
+        // must NOT appear in sitemap URLs (or Googlebot follows 404s).
+        const isRouteGroup =
+          entry.name.startsWith('(') && entry.name.endsWith(')')
+        const nextPrefix = isRouteGroup ? prefix : `${prefix}/${entry.name}`
+        walk(path, nextPrefix)
       } else if (/^page\.(tsx|ts|jsx|js)$/.test(entry.name)) {
         routes.add(prefix === '' ? '/' : prefix)
       }

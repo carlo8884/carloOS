@@ -23,5 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/ingredients/grain-free-dcm-risk', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/ingredients/preservatives-pet-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/life-stage', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://petfood.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://petfood.com/tools/food-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
