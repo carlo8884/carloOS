@@ -34,6 +34,13 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Done-when:** Carlo confirms; Mediavine applied for on qualifying sites post-launch; ads live with no UX/trust regression.
 - **Status:** open (Carlo confirm + post-launch sequencing).
 
+### csro-dir-2026-W22-014 → COO + Carlo — Vercel build-cost reduction (new 2026-05-31) ⬆ HIGH
+- **Action:** Cut the Vercel build-CPU leak ($59.75 build minutes = ~95% of cost, climbing; $42 on-demand w/ 27 days left). Plan: `ops/handoffs/2026-05-31-csro-vercel-cost-reduction.md`. Biggest levers: (1) Turbo Remote Caching on [Carlo+COO], (2) disable/scope preview deploys [Carlo], (3) no builds on ops/docs commits [COO], (4) batch shared-package edits [all bots], (5) spend cap [Carlo].
+- **Why:** Build minutes are pure overhead, not revenue. 15 apps share packages/ui+config → any shared change = 15× build fan-out; bots touch shared packages constantly. `[FACT]`
+- **Carlo (5 min, account-only):** confirm Turbo Remote Cache enabled; disable/scope Preview deploys; set spend cap. These ~3 toggles are the bulk of the win.
+- **Done-when:** build-minute line drops materially next cycle; cap in place.
+- **Status:** open.
+
 ### csro-dir-2026-W22-013 → ALL BOTS — fleet autonomy activation (new 2026-05-30) ⬆ STANDING
 - **Action:** Every bot runs autonomously and never idles — same rule CSRO operates under. Each maintains ≥5 ready tasks; when blocked, route around it. Starting queues + the standing rule in `ops/handoffs/2026-05-30-csro-fleet-activation.md`. Dedicated activation briefs for the two idle specialists: `…-csro-to-racing-bot-activation.md`, `…-csro-to-ir-bot-activation.md`.
 - **Why:** Carlo directive (2026-05-30) — idle bots = wasted capacity. COO + Monetization were loaded; **Visual Bot was under-used; Racing Bot + IR Bot had ZERO assignments.** Now all five have full non-blocking queues. `[FACT]`
