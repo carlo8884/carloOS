@@ -97,16 +97,13 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     requiresSku: true,
   },
 
-  // ─── Brand-search variants (D-013 — portfolio-wide leak fix) ─────────────
-  'amazon-brand': {
-    name: 'Amazon',
-    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
-    requiresSku: true,
-  },
-  'chewy-brand': {
-    name: 'Chewy',
-    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
-    requiresSku: true,
-  },
-
+  // ─── NO product affiliate routes on vets.co ───
+  // Per ops/policies/bot-coordination.md §5 (vets-co row): vets.co is
+  // PET INSURANCE ONLY — no product affiliates. Amazon/Chewy/PetSmart
+  // and brand-search variants do NOT belong here. The D-013 portfolio-
+  // wide leak fix added amazon-brand + chewy-brand to vets.co by mistake
+  // (caught by IR Bot, dir-015 finding #2, 2026-05-31); removed here.
+  // Insurance vendors remain. Future product additions on vets.co must
+  // also be blocked at PR review — the editorial-only-on-products policy
+  // is a Tier-1 protect-asset rule for the vets.co brand integrity.
 }
