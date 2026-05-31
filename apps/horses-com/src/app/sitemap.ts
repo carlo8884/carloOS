@@ -29,5 +29,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/disciplines/western-pleasure', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://horses.com/disciplines/reining', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://horses.com/disciplines/trail-riding', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+
+    // Racing — enthusiast/heritage hub + topic pages
+    { url: 'https://horses.com/racing', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/racing/triple-crown', lastModified: now, changeFrequency: 'monthly', priority: 0.84 },
+    { url: 'https://horses.com/racing/how-horse-racing-works', lastModified: now, changeFrequency: 'monthly', priority: 0.84 },
+    { url: 'https://horses.com/racing/bloodstock-and-breeding', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/racing/racehorse-ownership', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/racing/reading-the-form', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://horses.com/racing/kentucky-derby', lastModified: now, changeFrequency: 'monthly', priority: 0.86 },
+    { url: 'https://horses.com/racing/breeders-cup', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/racing/famous-racehorses', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
   ]
 }

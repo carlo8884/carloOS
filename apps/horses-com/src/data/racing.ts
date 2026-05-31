@@ -343,6 +343,188 @@ export const racingTopics: RacingTopic[] = [
     relatedBreeds: ['thoroughbred'],
     relatedTopics: ['how-horse-racing-works', 'triple-crown'],
   },
+  {
+    slug: 'kentucky-derby',
+    name: 'The Kentucky Derby',
+    metaTitle: 'The Kentucky Derby Explained — History & Format',
+    tagline: '"The most exciting two minutes in sports" — the first jewel of the Triple Crown.',
+    summary:
+      'The Kentucky Derby is the most famous horse race in the United States — the opening leg of the Triple Crown, run on the first Saturday in May at Churchill Downs in Louisville, Kentucky. This guide explains its history, format, and traditions for newcomers and fans.',
+    sections: [
+      {
+        heading: 'What the Kentucky Derby is',
+        body: [
+          'The Kentucky Derby is a Grade 1 stakes race for three-year-old Thoroughbreds, run at a distance of one and a quarter miles (ten furlongs) at Churchill Downs. First run in 1875, it is the longest-running continuously held major sporting event in the United States.',
+          'It is the first leg of the American Triple Crown, followed by the Preakness Stakes and the Belmont Stakes. Because it is restricted to three-year-olds, every horse in the field is making its one and only Kentucky Derby start.',
+        ],
+      },
+      {
+        heading: 'How horses qualify',
+        body: [
+          'The field is capped at twenty starters — the largest of any major American race, which is part of what makes it so chaotic and unpredictable. Entry is decided by the "Road to the Kentucky Derby," a series of qualifying races at which horses earn points; the top points-earners make the field.',
+          'This points system replaced the older graded-stakes-earnings method in 2013, and it rewards horses that perform in the prep races run through the winter and early spring of their three-year-old season.',
+        ],
+      },
+      {
+        heading: 'Traditions',
+        body: [
+          'The Derby is wrapped in tradition: the garland of more than 400 red roses draped over the winner (giving rise to the nickname "the Run for the Roses"), the crowd singing "My Old Kentucky Home" during the post parade, mint juleps, and elaborate hats in the grandstand.',
+          'Run on the first Saturday in May, it draws a crowd of well over 150,000 to Churchill Downs and a large television audience, making it the most-watched horse race in North America each year.',
+        ],
+      },
+    ],
+    essentials: [
+      'Grade 1 race for three-year-old Thoroughbreds',
+      '1¼ miles at Churchill Downs, Louisville, Kentucky',
+      'First Saturday in May; first run in 1875',
+      'First leg of the Triple Crown',
+      'Field capped at 20; entry via "Road to the Kentucky Derby" points',
+      'Nicknamed "the Run for the Roses"',
+    ],
+    faq: [
+      {
+        question: 'How long is the Kentucky Derby?',
+        answer:
+          'The Kentucky Derby is run at one and a quarter miles (ten furlongs) at Churchill Downs. The race typically takes about two minutes to run, which is the source of its nickname "the most exciting two minutes in sports."',
+      },
+      {
+        question: 'When is the Kentucky Derby held?',
+        answer:
+          'The Kentucky Derby is run on the first Saturday in May each year at Churchill Downs in Louisville, Kentucky.',
+      },
+      {
+        question: 'Why is it called the Run for the Roses?',
+        answer:
+          'The winner of the Kentucky Derby is draped in a garland of more than 400 red roses, a tradition that gave the race its nickname "the Run for the Roses."',
+      },
+    ],
+    references: [
+      { label: 'Kentucky Derby (official)', url: 'https://www.kentuckyderby.com' },
+      { label: 'Churchill Downs', url: 'https://www.churchilldowns.com' },
+    ],
+    relatedBreeds: ['thoroughbred'],
+    relatedTopics: ['triple-crown', 'how-horse-racing-works'],
+  },
+  {
+    slug: 'breeders-cup',
+    name: "The Breeders' Cup",
+    metaTitle: "The Breeders' Cup Explained — World Championships",
+    tagline: 'Year-end championships that crown the best horses across every division.',
+    summary:
+      "The Breeders' Cup is a series of championship Thoroughbred races held over two days each autumn, bringing together the best horses in the world across age groups, sexes, distances, and surfaces. This guide explains what it is and why it matters.",
+    sections: [
+      {
+        heading: "What the Breeders' Cup is",
+        body: [
+          "The Breeders' Cup World Championships is an end-of-season event made up of more than a dozen championship races, run over two days (typically the first weekend of November). Unlike the Triple Crown, it is open to horses of different ages and is held at a different host track most years.",
+          'Each race is a championship for its division — for example, the Breeders’ Cup Classic is the marquee race for the best older dirt horses, while the Breeders’ Cup Turf, Sprint, Mile, Distaff, and Juvenile crown champions in their respective categories.',
+        ],
+      },
+      {
+        heading: 'Why it matters',
+        body: [
+          "Because it gathers the best horses from North America, Europe, Japan, and beyond, the Breeders' Cup often decides year-end championship honors (such as American Horse of the Year) and is a major influence on a stallion or broodmare's future value at stud.",
+          'For fans it is one of the few occasions where international stars meet on the same cards, making it a high point of the racing calendar alongside the spring classics.',
+        ],
+      },
+    ],
+    essentials: [
+      'A series of championship races, not a single race',
+      'Held over two days each autumn (usually early November)',
+      'Open to different ages, sexes, distances, and surfaces',
+      "The Breeders' Cup Classic is the marquee race",
+      'Host track rotates most years',
+      'Often decides year-end championship honors',
+    ],
+    faq: [
+      {
+        question: "What is the Breeders' Cup?",
+        answer:
+          "The Breeders' Cup is a two-day series of championship Thoroughbred races held each autumn that brings together the best horses in the world across multiple divisions, crowning champions by age, sex, distance, and surface.",
+      },
+      {
+        question: "How is the Breeders' Cup different from the Triple Crown?",
+        answer:
+          "The Triple Crown is three races for three-year-olds in the spring. The Breeders' Cup is a year-end series of many championship races open to horses of all ages, run over two days in the autumn, usually at a different host track each year.",
+      },
+      {
+        question: "What is the most important Breeders' Cup race?",
+        answer:
+          "The Breeders' Cup Classic is generally considered the marquee event — a championship for the best older horses on dirt, and frequently a deciding factor in American Horse of the Year voting.",
+      },
+    ],
+    references: [
+      { label: "Breeders' Cup (official)", url: 'https://www.breederscup.com' },
+      { label: 'National Thoroughbred Racing Association (NTRA)', url: 'https://www.ntra.com' },
+    ],
+    relatedBreeds: ['thoroughbred'],
+    relatedTopics: ['triple-crown', 'bloodstock-and-breeding'],
+  },
+  {
+    slug: 'famous-racehorses',
+    name: 'Famous Racehorses in History',
+    metaTitle: 'Famous Racehorses in History — Secretariat & More',
+    tagline: 'The legends whose names outlived their racing days.',
+    summary:
+      'A handful of racehorses transcended the sport to become cultural icons. This guide profiles some of the most celebrated Thoroughbreds in history — Secretariat, Man o’ War, Seabiscuit, and recent Triple Crown winners — and explains why they are remembered.',
+    sections: [
+      {
+        heading: 'Secretariat (1970–1989)',
+        body: [
+          'Secretariat won the 1973 Triple Crown and is often cited as the greatest racehorse in history. His thirty-one-length victory in the Belmont Stakes — still the record margin for the race — and his track records in all three Triple Crown races, several of which still stand, made him a national celebrity.',
+          'Nicknamed "Big Red," he appeared on the covers of Time, Newsweek, and Sports Illustrated in the same week, a level of mainstream fame rare for any athlete, let alone a horse.',
+        ],
+      },
+      {
+        heading: 'Man o’ War (1917–1947)',
+        body: [
+          'Racing just after World War I, Man o’ War won twenty of his twenty-one starts and is frequently ranked alongside Secretariat among the greatest of all time. He became one of the most influential sires in the breed’s history, shaping pedigrees for generations.',
+        ],
+      },
+      {
+        heading: 'Seabiscuit (1933–1947)',
+        body: [
+          'Seabiscuit was an undersized, unlikely champion whose come-from-behind success during the Great Depression made him a symbol of hope, later popularized by a best-selling book and film. His 1938 match race against Triple Crown winner War Admiral was one of the most famous events in American sports of its era.',
+        ],
+      },
+      {
+        heading: 'Modern champions',
+        body: [
+          'After a thirty-seven-year drought, American Pharoah completed the Triple Crown in 2015, and Justify followed in 2018 — both reigniting mainstream interest in the sport. These recent champions, along with stars like Zenyatta and Cigar in earlier decades, show that the sport still produces horses capable of capturing a wide audience.',
+        ],
+      },
+    ],
+    essentials: [
+      'Secretariat — 1973 Triple Crown; record-setting and still-standing times',
+      'Man o’ War — 20 wins in 21 starts; foundational sire',
+      'Seabiscuit — Depression-era underdog icon',
+      'American Pharoah (2015) & Justify (2018) — modern Triple Crown winners',
+      'Fame tied to performance, story, and cultural moment',
+    ],
+    faq: [
+      {
+        question: 'Who is the greatest racehorse of all time?',
+        answer:
+          'Secretariat is the most common answer, widely cited for his 1973 Triple Crown and his record times in all three races — including a thirty-one-length Belmont victory. Man o’ War is also frequently named among the greatest. Such rankings are matters of informed opinion, not settled fact.',
+      },
+      {
+        question: 'Why is Secretariat so famous?',
+        answer:
+          'Secretariat won the 1973 Triple Crown after a 25-year drought, set track records that in several cases still stand, and won the Belmont Stakes by an astonishing thirty-one lengths — achievements that made him a mainstream celebrity beyond the sport.',
+      },
+      {
+        question: 'Who were the most recent Triple Crown winners?',
+        answer:
+          'American Pharoah won the Triple Crown in 2015 and Justify won it in 2018. They were the first winners since Affirmed in 1978.',
+      },
+    ],
+    references: [
+      { label: 'National Museum of Racing and Hall of Fame', url: 'https://www.racingmuseum.org' },
+      { label: 'Triple Crown of Thoroughbred Racing (official)', url: 'https://www.triplecrownracing.com' },
+    ],
+    relatedBreeds: ['thoroughbred'],
+    relatedTopics: ['triple-crown', 'kentucky-derby'],
+  },
 ];
 
 export function allRacingSlugs(): string[] {
