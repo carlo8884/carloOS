@@ -362,6 +362,55 @@ export default function OrijenVsAcanaComparisonPage() {
           and apply the five-dimension scoring rubric.
         </p>
 
+        <div
+          style={{
+            background: 'var(--brand-surface, #f8f8f8)',
+            border: '1px solid var(--brand-border, #e5e7eb)',
+            borderRadius: '10px',
+            padding: '20px',
+            margin: '28px 0',
+          }}
+        >
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #6b7280)', marginBottom: '8px' }}>
+            Where to buy Orijen or Acana
+          </div>
+          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid, #6b7280)', lineHeight: 1.5 }}>
+            Both brands are available through Chewy and Amazon. PetFood.com earns an affiliate
+            commission on qualifying purchases — at no extra cost to you. Commission does not
+            influence editorial scoring.
+          </p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a
+              href="/go/chewy-brand/Orijen+dog+food?s=brands-orijen-vs-acana"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-primary, #d2691e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Orijen on Chewy →
+            </a>
+            <a
+              href="/go/chewy-brand/Acana+dog+food?s=brands-orijen-vs-acana"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-primary, #d2691e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Acana on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/Orijen+dog+food?s=brands-orijen-vs-acana"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Orijen on Amazon →
+            </a>
+            <a
+              href="/go/amazon-brand/Acana+dog+food?s=brands-orijen-vs-acana"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Acana on Amazon →
+            </a>
+          </div>
+        </div>
+
         <h2 id="sources">Sources</h2>
         <ul>
           <li>

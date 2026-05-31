@@ -428,6 +428,55 @@ export default function HillsVsRoyalCaninPage() {
           not support one.
         </p>
 
+        <div
+          style={{
+            background: 'var(--brand-surface, #f8f8f8)',
+            border: '1px solid var(--brand-border, #e5e7eb)',
+            borderRadius: '10px',
+            padding: '20px',
+            margin: '28px 0',
+          }}
+        >
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #6b7280)', marginBottom: '8px' }}>
+            Where to buy Hill&apos;s or Royal Canin
+          </div>
+          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid, #6b7280)', lineHeight: 1.5 }}>
+            Both brands are available through Chewy and Amazon. PetFood.com earns an affiliate
+            commission on qualifying purchases — at no extra cost to you. Commission does not
+            influence editorial scoring.
+          </p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a
+              href="/go/chewy-brand/Hills+Science+Diet?s=brands-hills-vs-royal-canin"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-primary, #d2691e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Hill&apos;s on Chewy →
+            </a>
+            <a
+              href="/go/chewy-brand/Royal+Canin?s=brands-hills-vs-royal-canin"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-primary, #d2691e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Royal Canin on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/Hills+Science+Diet+dog+food?s=brands-hills-vs-royal-canin"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Hill&apos;s on Amazon →
+            </a>
+            <a
+              href="/go/amazon-brand/Royal+Canin+dog+food?s=brands-hills-vs-royal-canin"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Royal Canin on Amazon →
+            </a>
+          </div>
+        </div>
+
         <h2 id="sources">Sources</h2>
         <ul>
           <li>
