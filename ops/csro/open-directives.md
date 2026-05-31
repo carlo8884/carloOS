@@ -42,8 +42,6 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
   unregistered → still 404-ing on a live revenue funnel.** PR #240 fixed the wrong/incomplete keys. **Live leak
   still open.** → reopened as `csro-dir-2026-W22-017`.
 
-## Open
-
 ### csro-dir-2026-W22-018 → Monetization Bot + COO — URGENT: dedup funnel trees, un-red main (new 2026-05-31) 🔴 P0
 - **Action:** PR #229 duplicated 3 Dog.com funnel trees outside the `(funnels)` route group (dna-testing, pet-insurance, thanks) → 12 metadata violations, **main RED, whole fleet blocked.** Pick ONE canonical location per funnel (recommend keep `(funnels)/` originals, delete #229 dupes; migrate any newer content first), fix the title/desc length + missing-metadata issues on survivors, verify metadata-policy clean. Brief: `ops/handoffs/2026-05-31-csro-urgent-funnel-dedup-main-red.md`.
 - **Why:** red main blocks every PR (CLAUDE.md §7); + Dog.com (flagship protect-asset, live $2.3M offer) now has 2 indexable URLs per page = canonical/SEO damage. `[FACT — CSRO verified key-by-key]`
