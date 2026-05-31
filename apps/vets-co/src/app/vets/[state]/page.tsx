@@ -250,7 +250,7 @@ export default function StateHubPage({ params }: PageProps) {
                         return sp ? (
                           <span
                             key={s}
-                            className="text-2xs font-bold text-brand-text-mid bg-brand-bg border border-brand-border rounded-full px-2 py-0.5"
+                            className="text-2xs font-bold text-brand-text-mid bg-brand-surface border border-brand-border rounded-full px-2 py-0.5"
                           >
                             {sp.name}
                           </span>

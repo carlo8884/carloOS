@@ -141,7 +141,7 @@ export default function FerretStarterKitPage() {
       ))}
 
       {/* ─── Insurance cross-link ─────────────────────────────────────────── */}
-      <section className="mt-12 bg-brand-bg rounded-lg p-6 border-l-4 border-brand-primary">
+      <section className="mt-12 bg-brand-surface rounded-lg p-6 border-l-4 border-brand-primary">
         <h2 className="font-display text-xl font-bold mb-3">
           One More Thing: Insurance Before Symptoms
         </h2>

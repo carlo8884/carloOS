@@ -105,7 +105,7 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         <p className="text-brand-text-mid leading-relaxed mb-3">
           <strong>Consumer note:</strong> {ctx.consumerProtectionNote}
         </p>
-        <div className="bg-brand-bg rounded-lg p-4 text-sm text-brand-text-mid">
+        <div className="bg-brand-surface rounded-lg p-4 text-sm text-brand-text-mid">
           <strong>Regulator:</strong> {ctx.regulatorName}.{' '}
           <strong>Carrier availability:</strong>{' '}
           {ctx.carrierAvailability === 'all-major'
@@ -165,7 +165,7 @@ export default async function StateInsuranceHub({ params }: PageParams) {
       </section>
 
       {/* ─── Carrier overview cross-link ──────────────────────────────────── */}
-      <section className="mt-12 bg-brand-bg rounded-lg p-6">
+      <section className="mt-12 bg-brand-surface rounded-lg p-6">
         <h2 className="font-display text-xl font-bold mb-3">
           Or Compare All Carriers Side-by-Side
         </h2>

@@ -166,7 +166,7 @@ export default function SeniorWellnessCheckinPage() {
           <li>AVMA pet owner resources on senior pet care and end-of-life decisions.</li>
           <li>Cornell Feline Health Center — owner-facing references on common senior cat conditions.</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           SeniorPetPharmacy cites these as the published basis for the senior change signs and wellness-visit timing thresholds used by the checklist. Site Editorial does not have practicing veterinarians on staff; clinical decisions belong to the pet&apos;s veterinarian.
         </p>
 

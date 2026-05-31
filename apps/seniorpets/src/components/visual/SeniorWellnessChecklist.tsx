@@ -99,21 +99,21 @@ export function SeniorWellnessChecklist() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <div className="mb-6 flex gap-2 rounded bg-brand-bg p-1" role="tablist" aria-label="Species">
+      <div className="mb-6 flex gap-2 rounded bg-brand-surface p-1" role="tablist" aria-label="Species">
         {(['dog', 'cat'] as Species[]).map((s) => (
           <button
             key={s}
             role="tab"
             aria-selected={species === s}
             onClick={() => setSpecies(s)}
-            className={`flex-1 rounded px-4 py-2 text-sm font-semibold uppercase tracking-wide transition ${species === s ? 'bg-brand-primary text-white' : 'text-brand-text-muted hover:text-brand-text'}`}
+            className={`flex-1 rounded px-4 py-2 text-sm font-semibold uppercase tracking-wide transition ${species === s ? 'bg-brand-primary text-white' : 'text-brand-text-mid hover:text-brand-text-dark'}`}
           >
             {s === 'dog' ? 'Senior dog (7+ years)' : 'Senior cat (10+ years)'}
           </button>
         ))}
       </div>
 
-      <p className="mb-4 text-sm text-brand-text-muted">
+      <p className="mb-4 text-sm text-brand-text-mid">
         Check every sign you can answer &quot;yes&quot; to in the last 1-3 months. The count routes to one of four wellness-visit timings sourced from published senior-pet veterinary references.
       </p>
 
@@ -122,7 +122,7 @@ export function SeniorWellnessChecklist() {
           const isChecked = checked.has(sign.id)
           return (
             <li key={sign.id}>
-              <label className={`flex cursor-pointer items-start gap-3 rounded border p-3 transition ${isChecked ? 'border-brand-primary bg-brand-bg' : 'border-brand-border bg-brand-bg/50 hover:border-brand-text-muted'}`}>
+              <label className={`flex cursor-pointer items-start gap-3 rounded border p-3 transition ${isChecked ? 'border-brand-primary bg-brand-surface' : 'border-brand-border bg-brand-surface/50 hover:border-brand-text-muted'}`}>
                 <input
                   type="checkbox"
                   checked={isChecked}
@@ -130,8 +130,8 @@ export function SeniorWellnessChecklist() {
                   className="mt-1 h-4 w-4 flex-shrink-0"
                 />
                 <div className="flex-1">
-                  <p className="text-sm font-semibold text-brand-text">{sign.label}</p>
-                  <p className="mt-1 text-xs text-brand-text-muted">{sign.description}</p>
+                  <p className="text-sm font-semibold text-brand-text-dark">{sign.label}</p>
+                  <p className="mt-1 text-xs text-brand-text-mid">{sign.description}</p>
                 </div>
               </label>
             </li>
@@ -146,7 +146,7 @@ export function SeniorWellnessChecklist() {
         <p className="mt-2 text-sm font-semibold">{verdict.callToAction}</p>
       </div>
 
-      <p className="mt-4 text-xs text-brand-text-muted">
+      <p className="mt-4 text-xs text-brand-text-mid">
         Owner reference only. Senior pets can decline rapidly, and a single observable sign sometimes reflects an underlying condition that warrants more urgency than the count suggests. When in doubt, call your vet.
       </p>
     </div>

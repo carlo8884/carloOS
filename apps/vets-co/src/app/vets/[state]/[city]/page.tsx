@@ -256,7 +256,7 @@ export default function CityHubPage({ params }: PageProps) {
                           className={`text-2xs font-bold rounded-full px-2 py-0.5 border ${
                             s === 'emergency'
                               ? 'bg-brand-danger/10 text-brand-danger border-brand-danger/30'
-                              : 'bg-brand-bg text-brand-text-mid border-brand-border'
+                              : 'bg-brand-surface text-brand-text-mid border-brand-border'
                           }`}
                         >
                           {sp.name}

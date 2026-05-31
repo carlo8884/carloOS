@@ -167,7 +167,7 @@ export default function SymptomTriagePage() {
           <li>American Animal Hospital Association (AAHA) — &quot;When to take your pet to the emergency vet&quot; owner reference.</li>
           <li>Plunkett, S. J. (2013). <em>Emergency Procedures for the Small Animal Veterinarian</em>, 3rd Edition. Saunders.</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           AskTheVet.com Editorial cites these as the published basis for the warning-sign list and triage thresholds used by the checklist. The site does not have practicing veterinarians on staff; clinical decisions belong to the pet&apos;s veterinarian.
         </p>
 

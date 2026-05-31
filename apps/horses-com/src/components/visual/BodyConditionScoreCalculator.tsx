@@ -184,15 +184,15 @@ export function BodyConditionScoreCalculator() {
       <div className="grid grid-cols-1 gap-6">
         {(Object.entries(AREAS) as Array<[BodyArea, (typeof AREAS)[BodyArea]]>).map(([area, def]) => (
           <div key={area}>
-            <label htmlFor={`bcs-${area}`} className="mb-1 block text-sm font-medium text-brand-text">
+            <label htmlFor={`bcs-${area}`} className="mb-1 block text-sm font-medium text-brand-text-dark">
               {def.name}
             </label>
-            <p className="mb-2 text-xs text-brand-text-muted">{def.description}</p>
+            <p className="mb-2 text-xs text-brand-text-mid">{def.description}</p>
             <select
               id={`bcs-${area}`}
               value={String(scores[area])}
               onChange={(e) => setScores({ ...scores, [area]: Number(e.target.value) })}
-              className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
             >
               {def.options.map((opt) => (
                 <option key={opt.label} value={opt.score}>
@@ -205,15 +205,15 @@ export function BodyConditionScoreCalculator() {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
-        <div className="rounded border border-brand-border bg-brand-bg p-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-muted">Overall BCS</p>
-          <p className="mt-1 font-display text-4xl text-brand-text">{overall.toFixed(1)}</p>
-          <p className="mt-1 text-xs text-brand-text-muted">Average of 6 body areas (Henneke 1983).</p>
+        <div className="rounded border border-brand-border bg-brand-surface p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Overall BCS</p>
+          <p className="mt-1 font-display text-4xl text-brand-text-dark">{overall.toFixed(1)}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">Average of 6 body areas (Henneke 1983).</p>
         </div>
-        <div className="rounded border border-brand-border bg-brand-bg p-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-muted">Condition</p>
-          <p className="mt-1 font-display text-2xl text-brand-text">{verdict.label}</p>
-          <p className="mt-1 text-xs text-brand-text-muted">{verdict.range}</p>
+        <div className="rounded border border-brand-border bg-brand-surface p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Condition</p>
+          <p className="mt-1 font-display text-2xl text-brand-text-dark">{verdict.label}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{verdict.range}</p>
         </div>
       </div>
 
@@ -224,7 +224,7 @@ export function BodyConditionScoreCalculator() {
         </p>
       </div>
 
-      <p className="mt-4 text-xs text-brand-text-muted">
+      <p className="mt-4 text-xs text-brand-text-mid">
         BCS is a husbandry tool, not a clinical diagnosis. For any score outside the 4-6 range — especially BCS 1-2 or 8-9 — work with a veterinarian on a feeding plan, and rule out underlying disease before changing the ration significantly.
       </p>
     </div>

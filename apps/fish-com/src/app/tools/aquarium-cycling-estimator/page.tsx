@@ -176,7 +176,7 @@ export default function AquariumCyclingEstimatorPage() {
                 <th className="text-left py-2 font-semibold text-brand-dark">Best for</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text">
+            <tbody className="text-brand-text-dark">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Fishless ammonia</td><td className="py-2 pr-4">28-42 days</td><td className="py-2">Reliable; no fish needed; well-documented</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">+ Bottled bacteria</td><td className="py-2 pr-4">14-25 days</td><td className="py-2">First-time setups with a target stocking date</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">+ Used filter media</td><td className="py-2 pr-4">7-14 days</td><td className="py-2">Fastest path; requires access to an established healthy tank</td></tr>

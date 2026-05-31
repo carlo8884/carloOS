@@ -59,11 +59,11 @@ export function FoodCostCalculator() {
 
   function renderInputs(slot: FoodSlot, inputs: Inputs, setInputs: (i: Inputs) => void) {
     return (
-      <div className="rounded border border-brand-border bg-brand-bg p-4">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-text-muted">{slot.name}</p>
+      <div className="rounded border border-brand-border bg-brand-surface p-4">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-text-mid">{slot.name}</p>
         <div className="grid grid-cols-1 gap-3">
           <div>
-            <label htmlFor={`cups-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-muted">
+            <label htmlFor={`cups-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-mid">
               Cups per day
             </label>
             <input
@@ -74,11 +74,11 @@ export function FoodCostCalculator() {
               step={0.25}
               value={inputs.cupsPerDay}
               onChange={(e) => setInputs({ ...inputs, cupsPerDay: Math.max(0, Number(e.target.value) || 0) })}
-              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text"
+              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
             />
           </div>
           <div>
-            <label htmlFor={`bag-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-muted">
+            <label htmlFor={`bag-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-mid">
               Bag size (lb)
             </label>
             <input
@@ -89,11 +89,11 @@ export function FoodCostCalculator() {
               step={1}
               value={inputs.bagSizeLb}
               onChange={(e) => setInputs({ ...inputs, bagSizeLb: Math.max(1, Number(e.target.value) || 1) })}
-              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text"
+              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
             />
           </div>
           <div>
-            <label htmlFor={`price-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-muted">
+            <label htmlFor={`price-${slot.id}`} className="mb-1 block text-xs font-medium text-brand-text-mid">
               Bag price ($)
             </label>
             <input
@@ -104,7 +104,7 @@ export function FoodCostCalculator() {
               step={1}
               value={inputs.bagPriceUsd}
               onChange={(e) => setInputs({ ...inputs, bagPriceUsd: Math.max(0, Number(e.target.value) || 0) })}
-              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text"
+              className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
             />
           </div>
         </div>
@@ -114,27 +114,27 @@ export function FoodCostCalculator() {
 
   function renderResults(slot: FoodSlot, r: Result) {
     return (
-      <div className="rounded border border-brand-border bg-brand-bg p-4">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-text-muted">{slot.name} — results</p>
+      <div className="rounded border border-brand-border bg-brand-surface p-4">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-text-mid">{slot.name} — results</p>
         <dl className="grid grid-cols-2 gap-3 text-sm">
           <div>
-            <dt className="text-brand-text-muted">Cost / day</dt>
-            <dd className="font-display text-xl text-brand-text">{dollars(r.costPerDay)}</dd>
+            <dt className="text-brand-text-mid">Cost / day</dt>
+            <dd className="font-display text-xl text-brand-text-dark">{dollars(r.costPerDay)}</dd>
           </div>
           <div>
-            <dt className="text-brand-text-muted">Cost / month</dt>
-            <dd className="font-display text-xl text-brand-text">{dollars(r.costPerMonth)}</dd>
+            <dt className="text-brand-text-mid">Cost / month</dt>
+            <dd className="font-display text-xl text-brand-text-dark">{dollars(r.costPerMonth)}</dd>
           </div>
           <div>
-            <dt className="text-brand-text-muted">Cost / year</dt>
-            <dd className="font-display text-xl text-brand-text">{dollars(r.costPerYear)}</dd>
+            <dt className="text-brand-text-mid">Cost / year</dt>
+            <dd className="font-display text-xl text-brand-text-dark">{dollars(r.costPerYear)}</dd>
           </div>
           <div>
-            <dt className="text-brand-text-muted">Cost / cup</dt>
-            <dd className="font-display text-xl text-brand-text">{dollars(r.costPerCup)}</dd>
+            <dt className="text-brand-text-mid">Cost / cup</dt>
+            <dd className="font-display text-xl text-brand-text-dark">{dollars(r.costPerCup)}</dd>
           </div>
         </dl>
-        <p className="mt-3 text-xs text-brand-text-muted">
+        <p className="mt-3 text-xs text-brand-text-mid">
           One bag ≈ {Math.round(r.cupsPerBag)} cups → ≈ {r.daysPerBag > 0 ? r.daysPerBag.toFixed(0) : '—'} days per bag.
         </p>
       </div>
@@ -144,13 +144,13 @@ export function FoodCostCalculator() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <div className="mb-6 flex items-center justify-between">
-        <p className="text-sm text-brand-text-muted">Compare two foods side-by-side.</p>
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-brand-text">
+        <p className="text-sm text-brand-text-mid">Compare two foods side-by-side.</p>
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-brand-text-dark">
           <input
             type="checkbox"
             checked={compareMode}
             onChange={(e) => setCompareMode(e.target.checked)}
-            className="h-4 w-4 rounded border border-brand-border bg-brand-bg"
+            className="h-4 w-4 rounded border border-brand-border bg-brand-surface"
           />
           Compare 2 foods
         </label>
@@ -167,15 +167,15 @@ export function FoodCostCalculator() {
       </div>
 
       {compareMode && (
-        <div className="mt-6 rounded border border-brand-border bg-brand-bg p-4 text-sm">
-          <p className="font-semibold text-brand-text">Side-by-side delta</p>
-          <p className="mt-1 text-brand-text-muted">
+        <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4 text-sm">
+          <p className="font-semibold text-brand-text-dark">Side-by-side delta</p>
+          <p className="mt-1 text-brand-text-mid">
             Food A costs {dollars(resultA.costPerYear)} per year. Food B costs {dollars(resultB.costPerYear)} per year. Difference: {dollars(Math.abs(resultA.costPerYear - resultB.costPerYear))} per year ({resultA.costPerYear < resultB.costPerYear ? 'Food A is cheaper' : resultB.costPerYear < resultA.costPerYear ? 'Food B is cheaper' : 'tied'}).
           </p>
         </div>
       )}
 
-      <p className="mt-4 text-xs text-brand-text-muted">
+      <p className="mt-4 text-xs text-brand-text-mid">
         Cup-to-pound conversion uses {DEFAULT_CUPS_PER_LB} cups per pound, the industry rule of thumb for standard dry kibble (real density varies ±25% by kibble shape). For an exact number, use the manufacturer&apos;s stated weight-per-cup on the bag, or measure the bag&apos;s actual cup count and override cups-per-day accordingly.
       </p>
     </div>

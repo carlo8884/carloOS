@@ -50,17 +50,17 @@ export default function ToolsHub() {
             <Link
               key={tool.href}
               href={tool.href}
-              className="group block rounded-lg border border-brand-border bg-brand-bg p-6 transition hover:border-brand-primary"
+              className="group block rounded-lg border border-brand-border bg-brand-surface p-6 transition hover:border-brand-primary"
             >
               <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">{tool.tag}</div>
-              <h2 className="mb-2 font-display text-2xl font-semibold text-brand-text group-hover:text-brand-primary">{tool.title}</h2>
-              <p className="text-sm leading-relaxed text-brand-text-muted">{tool.desc}</p>
+              <h2 className="mb-2 font-display text-2xl font-semibold text-brand-text-dark group-hover:text-brand-primary">{tool.title}</h2>
+              <p className="text-sm leading-relaxed text-brand-text-mid">{tool.desc}</p>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="bg-brand-bg px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl">
           <EmailCapture
             siteId="horses-com"
