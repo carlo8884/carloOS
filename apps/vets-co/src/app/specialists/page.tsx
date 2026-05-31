@@ -1,14 +1,14 @@
 /**
  * Veterinary specialists hub — /specialists
  *
- * Lists the eight board-certified specialties Vets.co covers in depth.
+ * Lists the nine board-certified specialties Vets.co covers in depth.
  * Each card shows the discipline, the board-certification college, and a
  * one-line summary of when a primary vet typically refers.
  *
  * Editorial constraints (QC §1):
  *   - No fake clinician bylines, no fabricated review-process trust claims.
  *   - Board-certification orgs are named (ACVIM, ACVD, ACVO, ACVECC,
- *     AVDC) with verified directory links.
+ *     ACVS, AVDC) with verified directory links.
  *   - Cost ranges live on the deep-dive pages, not here.
  */
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Veterinary Specialists — When to See One | Vets.co',
   description:
-    'Eight board-certified veterinary specialties — cardiology, oncology, dermatology, ophthalmology, neurology, dentistry, internal medicine, and emergency care.',
+    'Board-certified veterinary specialty guides — cardiology, oncology, neurology, ophthalmology, dermatology, dentistry, internal medicine, orthopedics, ER.',
   path: '/specialists',
   type: 'website',
 })
@@ -41,7 +41,25 @@ export default function SpecialistsHubPage() {
       { name: 'Specialists', url },
     ],
   })
-  const combined = combineSchemas(breadcrumbSchema)
+  // ItemList — declares the hub as an ordered list of specialty deep-dives.
+  // Helps AI Overviews + Perplexity surface the cluster as a connected set
+  // rather than 9 unrelated pages.
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Board-Certified Veterinary Specialties',
+    description:
+      'Nine board-certified veterinary specialties Vets.co covers in depth, with referral guidance, typical US cost ranges, and pet-insurance notes.',
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: Specialties.length,
+    itemListElement: Specialties.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.specialtyName,
+      url: `https://vets.co/specialists/${s.slug}`,
+    })),
+  }
+  const combined = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
     <>
@@ -68,9 +86,9 @@ export default function SpecialistsHubPage() {
           Board-Certified Veterinary Specialists
         </h1>
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
-          Eight specialty deep-dives — when your primary vet refers, what to expect at the visit,
+          Nine specialty deep-dives — when your primary vet refers, what to expect at the visit,
           typical US cost ranges, how pet insurance fits in, and how to verify board
-          certification. Sourced from ACVIM, ACVD, ACVO, ACVECC, AVDC, and AVMA references.
+          certification. Sourced from ACVIM, ACVD, ACVO, ACVECC, ACVS, AVDC, and AVMA references.
         </p>
       </div>
 
@@ -94,14 +112,14 @@ export default function SpecialistsHubPage() {
             Board-certified veterinary specialists have completed a structured residency —
             typically three or more years beyond veterinary school — and passed a specialty board
             examination administered by an AVMA-recognized college. The credential letters
-            (DACVIM, DACVD, DACVO, DACVECC, DAVDC) signal a standard of training and continuing
+            (DACVIM, DACVD, DACVO, DACVECC, DACVS, DAVDC) signal a standard of training and continuing
             education that is independently verified.
           </p>
           <p className="text-brand-text-mid leading-relaxed mb-0">
             Specialists work in partnership with your primary vet: your primary vet handles
             routine and preventive care; the specialist handles the cases that benefit from
             advanced diagnostics and sub-specialty experience. Most pets never need to see a
-            specialist. The eight disciplines below are the most common reasons your primary vet
+            specialist. The nine disciplines below are the most common reasons your primary vet
             may suggest one.
           </p>
         </section>
@@ -109,7 +127,7 @@ export default function SpecialistsHubPage() {
         {/* Specialty grid */}
         <section className="mb-12">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Eight Specialty Deep-Dives
+            Nine Specialty Deep-Dives
           </div>
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-6">
             The disciplines we cover
@@ -217,6 +235,17 @@ export default function SpecialistsHubPage() {
               >
                 ACVECC — Find an Emergency & Critical Care Specialist
               </a>
+            </li>
+            <li>
+              <a
+                href="https://www.acvs.org/find-a-surgeon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                ACVS — Find a Surgeon
+              </a>{' '}
+              (orthopedic and soft-tissue surgery)
             </li>
             <li>
               <a
