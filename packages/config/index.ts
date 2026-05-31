@@ -1237,6 +1237,7 @@ export type ContentType =
   | 'directory'
   | 'review'
   | 'guide'
+  | 'racing'
 
 export interface CrossPortfolioRecommendation {
   siteId: SiteId
@@ -1288,6 +1289,9 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   ],
   'horses-com:breed': [
     { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle-Fit Guidance', blurb: 'How conformation affects saddle fit — including breed-specific notes.', cta: 'Read more', href: 'https://saddle.com' },
+  ],
+  'horses-com:racing': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack for Every Rider', blurb: 'From the racehorse owner moving into a second discipline to the lifelong fan — independent saddle brand and fit guidance.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
   ],
 
   // ── saddle-com ────────────────────────────────────────

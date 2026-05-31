@@ -9,7 +9,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { buildMetadata, Breadcrumb, SchemaScript, buildFAQSchema, EmailCapture } from '@carloOS/ui';
+import { buildMetadata, Breadcrumb, SchemaScript, buildFAQSchema, EmailCapture, CrossPortfolioCard } from '@carloOS/ui';
 import { allRacingSlugs, getRacingTopic } from '../../../data/racing';
 import { getBreedBySlug } from '../../../data/breeds';
 
@@ -179,6 +179,14 @@ export default function RacingTopicPage({ params }: { params: { slug: string } }
             </div>
           </section>
         )}
+
+        <div className="mt-8">
+          <CrossPortfolioCard
+            currentSite="horses-com"
+            contentType="racing"
+            variant="inline"
+          />
+        </div>
       </article>
     </>
   );
