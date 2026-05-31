@@ -84,7 +84,7 @@ export default function StubbenReviewPage() {
               price="$3,200–$4,500 new"
               priceNote="Used: $1,200–$2,400"
               ctaText="Find a Stubben Dealer →"
-              ctaHref="https://www.stubben.com"
+              ctaHref="/go/amazon-brand/stubben+saddle?s=reviews-stubben-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="stubben-roxane"
             />
@@ -109,7 +109,7 @@ export default function StubbenReviewPage() {
               price="$2,800–$4,200 new"
               priceNote="Used: $1,000–$2,000"
               ctaText="Find a Stubben Dealer →"
-              ctaHref="https://www.stubben.com"
+              ctaHref="/go/amazon-brand/stubben+saddle?s=reviews-stubben-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="stubben-portos"
             />
@@ -133,7 +133,7 @@ export default function StubbenReviewPage() {
               price="$2,400–$3,800 new"
               priceNote="Used: $900–$1,800"
               ctaText="Find a Stubben Dealer →"
-              ctaHref="https://www.stubben.com"
+              ctaHref="/go/amazon-brand/stubben+saddle?s=reviews-stubben-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="stubben-aramis"
             />

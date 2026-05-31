@@ -41,7 +41,7 @@ export default function BestDentalChewsPage() {
               cons={['Must count calories', 'Some dogs wolf them down too fast for dental benefit', 'Not ideal for dogs with wheat sensitivity (contains wheat)']}
               price="$25–35 / 27-count"
               ctaText="Shop Greenies →"
-              ctaHref="https://www.chewy.com/s?query=greenies+dental+chews+dogs"
+              ctaHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="greenies-dental-chews"
             />
@@ -52,7 +52,7 @@ export default function BestDentalChewsPage() {
               cons={['VOHC for plaque only (not tartar)', 'Higher calorie density than Greenies per chew']}
               price="$20–30 / 14-count"
               ctaText="Shop Whimzees →"
-              ctaHref="https://www.chewy.com/s?query=whimzees+dental+chews+dogs"
+              ctaHref="/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="whimzees-dental"
             />

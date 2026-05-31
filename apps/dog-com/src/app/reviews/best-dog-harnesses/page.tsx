@@ -46,7 +46,7 @@ export default function BestDogHarnessesPage() {
               cons={['Not for dogs with shoulder issues', 'Can rotate on small barrel-chested breeds', 'Needs correct fit to work']}
               price="$20–30"
               ctaText="Shop PetSafe Easy Walk →"
-              ctaHref="https://www.chewy.com/s?query=petsafe+easy+walk+harness"
+              ctaHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="petsafe-easy-walk"
             />
@@ -57,7 +57,7 @@ export default function BestDogHarnessesPage() {
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
               ctaText="Shop Ruffwear Front Range →"
-              ctaHref="https://www.chewy.com/s?query=ruffwear+front+range+harness"
+              ctaHref="/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="ruffwear-front-range"
             />
@@ -68,7 +68,7 @@ export default function BestDogHarnessesPage() {
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
               ctaText="Shop Julius-K9 →"
-              ctaHref="https://www.amazon.com/s?k=julius+k9+idc+powerharness"
+              ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="julius-k9-idc"
             />

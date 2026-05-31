@@ -160,7 +160,7 @@ export default function JointSupplementsPage() {
               cons={['Premium price per scoop', 'Not a substitute for IA or systemic chondroprotectant when indicated']}
               price="$60–95 per 30-day supply"
               ctaText="Compare at SmartPak →"
-              ctaHref="https://www.smartpakequine.com/ps/cosequin"
+              ctaHref="/go/smartpak/cosequin?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="cosequin-asu-plus"
             />
@@ -186,7 +186,7 @@ export default function JointSupplementsPage() {
               cons={['Significantly more expensive than category average', 'Some ingredients in the formula are Tier 3 evidence', 'Auto-ship lock-in']}
               price="$130–180 per 30-day supply"
               ctaText="Visit Platinum Performance →"
-              ctaHref="https://www.platinumperformance.com"
+              ctaHref="/go/amazon-brand/platinum+performance+equine?s=supplements-joint-supplements"
               ctaAffiliateProgram="platinum-performance"
               ctaAffiliateProduct="platinum-cj"
             />
@@ -212,7 +212,7 @@ export default function JointSupplementsPage() {
               cons={['No ASU component', 'House-brand HA at oral dose has limited evidence', 'Auto-ship requires SmartPak account']}
               price="$45–65 per 28-day supply"
               ctaText="Shop at SmartPak →"
-              ctaHref="https://www.smartpakequine.com/ps/smartflex-senior"
+              ctaHref="/go/smartpak/smartflex-senior?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="smartflex-senior"
             />
@@ -238,7 +238,7 @@ export default function JointSupplementsPage() {
               cons={['Flax-source ALA does not deliver equivalent benefit', 'Cold storage extends shelf life', 'Smell — some horses initially refuse']}
               price="$25–60 per 30-day supply"
               ctaText="Compare at Riding Warehouse →"
-              ctaHref="https://www.ridingwarehouse.com"
+              ctaHref="/go/ridingwarehouse/home?s=supplements-joint-supplements"
               ctaAffiliateProgram="riding-warehouse"
               ctaAffiliateProduct="marine-omega-3"
             />

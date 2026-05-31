@@ -79,7 +79,7 @@ export default function HorseGroomingGuidePage() {
             cons={['Easy to lose — keep spares', 'Cheap plastic handles fatigue and crack']}
             price="$5–18"
             ctaText="Find hoof picks"
-            ctaHref="https://www.smartpakequine.com/"
+            ctaHref="/go/smartpak/home?s=guides-horse-grooming-guide"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="hoof-pick-brush"
           />
@@ -103,7 +103,7 @@ export default function HorseGroomingGuidePage() {
             cons={['Bargain bundles use bristles that collapse fast', 'Sweat scraper and soft face cloth usually NOT included — buy separately', 'Mane combs in starter kits are often the weakest item']}
             price="$25–60"
             ctaText="Find grooming kit bundles"
-            ctaHref="https://www.smartpakequine.com/"
+            ctaHref="/go/smartpak/home?s=guides-horse-grooming-guide"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="grooming-kit-bundle"
           />

@@ -556,7 +556,7 @@ export default function FerretAgingPage() {
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
             price="$10–25 each"
             ctaText="Find ferret floor sleep sacks"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/home?s=health-aging-ferret-care"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-floor-sleep-sack"
           />

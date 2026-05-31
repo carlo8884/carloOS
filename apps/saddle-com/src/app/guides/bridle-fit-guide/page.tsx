@@ -256,7 +256,7 @@ export default function BridleFitGuidePage() {
           cons={['Some horses object to the gauge — same handling skill as bridling', 'Plastic versions flex over years — buy steel or stiff-plastic if doing many checks per week']}
           price="$15–35"
           ctaText="Find noseband taper gauges"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-bridle-fit-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="noseband-taper-gauge"
         />
@@ -280,7 +280,7 @@ export default function BridleFitGuidePage() {
           cons={['Premium price relative to flat-strap bridles', 'Will not fix a true bit-fit or saddle-fit problem — diagnose those first']}
           price="$200–550"
           ctaText="Find anatomic-crownpiece bridles"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-bridle-fit-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="anatomic-snaffle-bridle"
         />

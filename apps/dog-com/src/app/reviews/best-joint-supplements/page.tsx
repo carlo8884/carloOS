@@ -92,7 +92,7 @@ export default function BestJointSupplementsPage() {
               cons={['More expensive than basic glucosamine', 'Takes 4–6 weeks for effect — long evaluation window', 'Not a substitute for NSAIDs in severe arthritis']}
               price="$40–70 for 84-count"
               ctaText="Shop Dasuquin →"
-              ctaHref="https://www.amazon.com/s?k=dasuquin+with+msm"
+              ctaHref="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="dasuquin-msm"
             />
@@ -117,7 +117,7 @@ export default function BestJointSupplementsPage() {
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content"
               ctaText="Shop Nordic Naturals →"
-              ctaHref="https://www.amazon.com/s?k=nordic+naturals+omega+pet"
+              ctaHref="/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nordic-naturals-omega-pet"
             />
@@ -141,7 +141,7 @@ export default function BestJointSupplementsPage() {
               cons={['Less evidence than Dasuquin (no ASU)', 'Significant non-response rate in some dogs']}
               price="$25–45 for 120-count"
               ctaText="Shop Cosequin DS →"
-              ctaHref="https://www.amazon.com/s?k=cosequin+ds+maximum+strength"
+              ctaHref="/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="cosequin-ds"
             />
@@ -164,7 +164,7 @@ export default function BestJointSupplementsPage() {
               cons={['Market quality control is poor — many products misrepresented', 'More expensive than glucosamine', 'Discuss dose and brand with your vet before using']}
               price="$40–80/month at therapeutic dose"
               ctaText="Shop ElleVet CBD →"
-              ctaHref="https://www.ellevetsciences.com"
+              ctaHref="/go/amazon-brand/ellevet+sciences+cbd+dogs?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="ellevet"
               ctaAffiliateProduct="ellevet-cbd"
             />

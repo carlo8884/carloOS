@@ -318,4 +318,20 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://www.awin1.com/cread.php?awinmid=PLACEHOLDER&awinaffid=PLACEHOLDER&p={sku}',
     requiresSku: true,
   },
+
+  // ─── Brand-search variants (dir-019 — untracked-link sweep 2026-05-31) ───
+  // For ReviewCards that target a brand/category rather than a single ASIN —
+  // the `{sku}` slot carries the URL-encoded search query. Mirrors the
+  // amazon-brand / chewy-brand routes already on fish-com, lizard-com,
+  // saddle-com, petfood-com, petfoods-com, vets-co.
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

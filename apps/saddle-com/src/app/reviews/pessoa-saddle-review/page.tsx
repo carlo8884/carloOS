@@ -81,7 +81,7 @@ export default function PessoaReviewPage() {
               price="$2,400–$3,200"
               priceNote="Used: $900–$1,800"
               ctaText="Find a Pessoa Dealer →"
-              ctaHref="https://pessoaequestrian.com"
+              ctaHref="/go/amazon-brand/pessoa+saddle?s=reviews-pessoa-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="pessoa-gen-x-pro"
             />
@@ -105,7 +105,7 @@ export default function PessoaReviewPage() {
               price="$2,200–$3,000"
               priceNote="Used: $800–$1,600"
               ctaText="Find a Pessoa Dealer →"
-              ctaHref="https://pessoaequestrian.com"
+              ctaHref="/go/amazon-brand/pessoa+saddle?s=reviews-pessoa-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="pessoa-legacy"
             />
@@ -129,7 +129,7 @@ export default function PessoaReviewPage() {
               price="$1,200–$1,800"
               priceNote="Used: $500–$900"
               ctaText="Find a Pessoa Dealer →"
-              ctaHref="https://pessoaequestrian.com"
+              ctaHref="/go/amazon-brand/pessoa+saddle?s=reviews-pessoa-saddle-review"
               ctaAffiliateProgram="sharesale"
               ctaAffiliateProduct="pessoa-optimum"
             />

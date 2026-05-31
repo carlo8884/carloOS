@@ -45,7 +45,7 @@ export default function BestSlowFeederBowlsPage() {
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
               ctaText="Shop Outward Hound →"
-              ctaHref="https://www.chewy.com/s?query=outward+hound+fun+feeder"
+              ctaHref="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="outward-hound-fun-feeder"
             />
@@ -56,7 +56,7 @@ export default function BestSlowFeederBowlsPage() {
               cons={['More expensive than basic slow bowls', 'Kibble can get stuck deep in grass segments']}
               price="$25–35"
               ctaText="Shop Northmate Green →"
-              ctaHref="https://www.amazon.com/s?k=northmate+green+interactive+feeder"
+              ctaHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="northmate-green"
             />
@@ -67,7 +67,7 @@ export default function BestSlowFeederBowlsPage() {
               cons={['Wet food only — not for dry kibble feeders', 'Smaller capacity than bowl feeders']}
               price="$10–15"
               ctaText="Shop LickiMat →"
-              ctaHref="https://www.chewy.com/s?query=lickimat+splash"
+              ctaHref="/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="lickimat-splash"
             />

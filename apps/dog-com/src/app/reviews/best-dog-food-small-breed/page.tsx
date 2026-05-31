@@ -45,7 +45,7 @@ export default function BestSmallBreedFoodPage() {
               cons={['More expensive than standard adult formulas', 'Chicken-based — not for chicken-allergic dogs', 'Grain-inclusive (positive from WSAVA standpoint)']}
               price="$45–65 / 14-17 lb"
               ctaText="Shop Royal Canin Small Adult →"
-              ctaHref="https://www.chewy.com/s?query=royal+canin+small+adult"
+              ctaHref="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="rc-small-adult"
             />
@@ -56,7 +56,7 @@ export default function BestSmallBreedFoodPage() {
               cons={['Less dental-specific than Royal Canin', 'Not breed-specific (Small & Toy is a size category, not breed-targeted)']}
               price="$35–55 / 16 lb"
               ctaText="Shop Purina Pro Plan Small & Toy →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+small+toy+breed"
+              ctaHref="/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="pp-small-toy"
             />

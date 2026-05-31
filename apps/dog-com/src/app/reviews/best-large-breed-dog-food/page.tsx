@@ -42,7 +42,7 @@ export default function BestLargeBreedFoodPage() {
               cons={['More expensive', 'Chicken-based — not for chicken-sensitive dogs']}
               price="$60–80 / 30 lb"
               ctaText="Shop Royal Canin Large Adult →"
-              ctaHref="https://www.chewy.com/s?query=royal+canin+large+adult"
+              ctaHref="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="rc-large-adult"
             />
@@ -53,7 +53,7 @@ export default function BestLargeBreedFoodPage() {
               cons={['Glucosamine levels not as high as Royal Canin']}
               price="$50–70 / 34 lb"
               ctaText="Shop Purina Pro Plan Large Breed →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+large+breed+adult"
+              ctaHref="/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="pp-large-breed"
             />

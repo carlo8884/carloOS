@@ -119,7 +119,7 @@ export default function BestTerrariumsPage() {
               price="$180–600"
               priceNote="Varies significantly by size and configuration"
               ctaText="View at Animal Plastics →"
-              ctaHref="https://www.animalplastics.com"
+              ctaHref="/go/amazon-brand/reptile+enclosure?s=reviews-best-reptile-terrariums"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="animal-plastics-t8"
             />
