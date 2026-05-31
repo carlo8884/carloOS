@@ -86,7 +86,7 @@ export default function RootLayout({
         <main>{children}</main>
 
         {/* Shared Footer */}
-        <Footer siteId="ferret-com" showAffiliateDisclosure={false} />
+        <Footer siteId="ferret-com" showAffiliateDisclosure />
       </body>
     </html>
   )
