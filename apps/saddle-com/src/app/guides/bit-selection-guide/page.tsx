@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Bit Selection Guide — Snaffle, Pelham | Saddle.com', description: 'How to choose the right bit. Snaffle vs curb action, mouthpiece thickness, ring type, and when to consult an equine dentist before changing bits.', path: '/guides/bit-selection-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Bit Selection Guide', description: 'Snaffle, pelham, and double bridle bit selection for English riding.', url: 'https://saddle.com/guides/bit-selection-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -43,6 +43,63 @@ export default function BitSelectionGuidePage() {
 
         <h2>When a Bit Change Won't Help</h2>
         <p>If the horse resists contact, tosses its head, or is consistently above or behind the bit, rule out these causes before changing bits: dental issues (most common), saddle fit pain (transmitted to the mouth through tension), rider hands (unsteady contact causes horses to evade), and training gaps. A quieter, softer bit does not fix a training or pain problem — it delays addressing the real cause.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2 id="picks">Bit-Sizing &amp; Starter Bit Picks</h2>
+        <p>
+          Two picks tied to the practical content above — a bit gauge for measuring mouth width before any purchase, and an eggbutt French-link snaffle as the most universally-acceptable starting bit category per the article&apos;s analysis. The page intentionally does not recommend brands at the &quot;perfect bit for your horse&quot; level — bit choice depends on the individual mouth, training, and discipline. These are starting points, not endpoints.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="bit-gauge"
+          badge="Measure First"
+          badgeEmoji="📏"
+          name="Equine Bit-Sizing Gauge"
+          subtitle="Calibrated measuring tool for accurate bit width — neutral to bit choice"
+          score={8.5}
+          winner
+          description={
+            <p>The article&apos;s opening point: bit width should be the horse&apos;s mouth width plus 1/4 inch on each side. A calibrated bit gauge gives a reliable measurement; the &quot;piece of dowel&quot; alternative works but is more error-prone. One-time purchase, useful for the life of every horse you own. Particularly useful when sharing tack across multiple horses or when buying a horse whose previous owner&apos;s bit choice was guesswork.</p>
+          }
+          specs={[
+            { label: 'Function', value: 'Mouth-width measurement', highlight: 'good' },
+            { label: 'Calibration', value: 'Inch + millimeter scale' },
+            { label: 'Use case', value: 'Pre-purchase sizing check' },
+            { label: 'Replacement cadence', value: 'Lifetime' },
+          ]}
+          pros={['Eliminates the guesswork in bit sizing', 'One-time purchase', 'Neutral to which bit style you eventually choose']}
+          cons={['Some horses object to the gauge — same handling skill as bridling', 'Cheap plastic gauges flex and read inaccurately — get steel']}
+          price="$10–25"
+          ctaText="Find equine bit gauges"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="bit-gauge"
+        />
+        <ReviewCard
+          id="eggbutt-french-link"
+          badge="Starter Snaffle"
+          badgeEmoji="🐴"
+          name="Eggbutt French-Link Snaffle"
+          subtitle="Stable ring, double-jointed mouthpiece — the article's preferred starting category"
+          score={8.4}
+          description={
+            <p>Combines two of the article&apos;s most-recommended attributes: the eggbutt ring (fixed junction, no lip pinching, more stable in the mouth) and the double-jointed French-link mouthpiece (no nutcracker action; central plate sits flat on the tongue). A reasonable default for most horses learning steady contact, and for adult horses where the previous bit was a single-jointed loose-ring that the horse fussed with. Stainless steel 16–18 mm thickness covers most adult horses.</p>
+          }
+          specs={[
+            { label: 'Ring', value: 'Eggbutt (fixed)', highlight: 'good' },
+            { label: 'Mouthpiece', value: 'French link (double-jointed)', highlight: 'good' },
+            { label: 'Thickness', value: '16–18 mm typical' },
+            { label: 'Material', value: 'Stainless steel' },
+          ]}
+          pros={['Comfortable on most horse mouths', 'No lip pinching (eggbutt)', 'No nutcracker action (French link)', 'Affordable; widely available']}
+          cons={['Wrong for horses with low palates (use Mullen instead)', 'Not a strong-enough bit for horses requiring leverage — that is a separate conversation with an experienced trainer']}
+          price="$30–80"
+          ctaText="Find eggbutt French-link snaffles"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="eggbutt-french-link-snaffle"
+        />
       </div>
     </ArticleLayout>
   )
