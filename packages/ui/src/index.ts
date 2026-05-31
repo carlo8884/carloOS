@@ -82,6 +82,17 @@ export type {
 export { OgTemplate } from './og/OgTemplate'
 export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'
 
+// Visual primitive — affiliate "where to buy" buy-box. Drop-in replacement
+// for inline-styled <div><a rel="sponsored"> patterns on monetized
+// editorial pages. Per Visual Bot lane (bot-coordination.md §2).
+export { BuyBox } from './components/visual/BuyBox'
+export type {
+  BuyBoxProps,
+  BuyBoxBrand,
+  BuyBoxVendor,
+  BuyBoxVendorLink,
+} from './components/visual/BuyBox'
+
 // Apple touch icon template — consumed by each app's apple-icon.tsx
 // (App Router special filename). 180×180; iOS / iPadOS use this when
 // users pin the site to the home screen.
