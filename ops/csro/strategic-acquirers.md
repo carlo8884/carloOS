@@ -68,9 +68,17 @@ press dates — re-verify off-sandbox before quoting to Carlo externally.
 
 ## §2 The operating principle this creates
 
+> **⚠️ IR-Bot correction 2026-05-31 (F7/F8):** Equine Network is downgraded from "known strategic path" to
+> **"primary target-account HYPOTHESIS"** — they own equestrian media/domains, but there is **no direct signal
+> they'd buy Horses/Saddle at a premium**, and their own thesis is events/membership/commerce, not SEO content.
+> A named buyer is **not** a probability-weighted business case: it **raises priority, it does NOT override** low
+> demand, build cost, or lack of validation (F8). "Jumps the queue regardless of traffic" was wrong and is retracted.
+
 **For every in-scope domain, ask: who is the realistic strategic buyer, and what makes them want it?**
-- If a **named** buyer exists (e.g. Equine Network → horse cluster) → **build toward that buyer's interests** and
-  it jumps the build queue regardless of current traffic, because the exit path is concrete.
+- If a **named** buyer is hypothesized (e.g. Equine Network → horse cluster) → it **raises** that domain's priority
+  and triggers a **cheap validation pass first** (buyer mapping, keyword/demand math, a thin concept) — it does
+  **not** auto-greenlight a full build. Expected-value rank (buyer-fit × demand × monetization ÷ effort) governs;
+  the named buyer is one input, not a trump card.
 - If only a **category** of buyer exists (`[HYP]`) → build toward traffic/authority that any category acquirer values.
 - If **no plausible acquirer and no traffic path** → that's the only real "sell-raw or drop" case (true dead weight).
 
@@ -79,13 +87,15 @@ can summon?"** — not "is the name already valuable?" (illiquid names aren't va
 
 ## §3 Build-priority consequence (re-sequencing)
 
-Two priority axes now combine:
-1. **Immediate cash** (existing traffic to monetize): Ferret, PetFood, Dog, Fish — unchanged, still first for revenue.
-2. **Strategic-exit build** (manufacture a named buyer): **horse cluster (saddle.com, horses.com) for Equine
-   Network** moves UP — it has a concrete acquirer, which de-risks the build ROI. Build them into real assets.
+Two priority axes combine — but neither overrides the stage-gate (`strategy-disposition.md §0`):
+1. **Immediate cash** (existing traffic to monetize): Ferret, PetFood, Dog, Fish — **proven, first for revenue.**
+2. **Strategic-validation** (NOT yet "strategic build"): horse cluster (saddle.com, horses.com). The Equine
+   Network *hypothesis* raises their priority enough to warrant **cheap validation first** (keyword math,
+   monetization concept, buyer probe) — then build only if it clears the gate.
 
-So Saddle.com / Horses.com flip from "pause / sell-raw" → **active build targets with a named exit.** Sequenced
-after the immediate-cash monetization (which needs no build) but as genuine build priorities, not deferred.
+> **IR-Bot correction (F5):** Saddle/Horses are **VALIDATE-FIRST**, not "active build targets." A low-traffic
+> domain built toward one assumed buyer who may want events/commerce (not SEO) is exactly the wasted-effort risk
+> the stage-gate exists to prevent. Validate, then build — don't build on the hypothesis alone.
 
 ## §4 What I need / am researching (non-blocking)
 

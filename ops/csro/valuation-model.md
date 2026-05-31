@@ -16,21 +16,41 @@
 
 ## §1 Method
 
+> **⚠️ IR-Bot correction applied 2026-05-31 (findings F1–F3).** The prior version multiplied a *revenue* band by
+> the 24–34× multiple, but **24–34× applies to NET PROFIT, not revenue** — that overstated value (no costs/margin
+> deducted). Corrected to a proper revenue→cost→net-profit→multiple chain below. The per-domain $ columns in §2
+> are flagged accordingly and should be re-derived; treat the prior figures as **withdrawn pending the funnel/margin
+> inputs.**
+
 Two value bases per domain; take the higher:
 
-- **Content-business value** = (monthly net profit) × **24–34**. Profit is unknown pre-monetization, so I model a
-  **revenue band** from traffic:
-  - *Display (Mediavine Journey)* `[EST]`: visitors × ~$11–15 RPM / 1000. (Conservative; ignores affiliate.)
-  - *+ Affiliate uplift*: pet content affiliate typically adds roughly the same order as display on commercial-intent
-    pages; insurance pages far more. Modeled as a range, not a point.
-- **Domain-name value** = scarcity/comp-based (`valuation-comps.md §3`), independent of traffic. Floor for premium
-  one-word .coms even with zero traffic.
+- **Content-business value** = **monthly NET PROFIT × 24–34** (Empire Flippers range, `valuation-comps.md`).
+  Net profit must be built up, NOT short-cut from traffic:
+  1. *Gross revenue* = display (visitors × RPM/1000) **+** affiliate (visitors × CTR × conversion × commission) **+** lead-gen.
+  2. *Operating cost* = hosting/build/content/tooling allocable to the site.
+  3. *Net profit* = gross − cost. **Apply 24–34× to net profit only.**
+  - Pre-monetization, net profit is **unknown** — so content-business value is `[UNK]`, not a number. We do NOT
+    publish a value range until real RPM/EPC + cost data exist. (This is the F1 fix: no revenue-as-value shortcut.)
+- **Domain-name value** — split into two buckets (F2 fix):
+  - **Validated offer floor** `[FACT]`: only **Dog.com ($2.3M) and Fish.com ($1.45M)** — real live offers.
+  - **Brand-quality hypothesis** `[HYP]`: every other premium name (Ferret, PetFood, Horses, Saddle, Lizard…) —
+    *plausibly* valuable but **no comp, no offer, no buyer signal.** NOT a floor; a hypothesis. And per `thesis.md
+    §0`, notional/illiquid until traffic summons a bid.
+- **Vets.co / lead-gen sites** (F3 fix): model as **EPC or RPM through a funnel** (visitor → click → quote-start →
+  approved lead/sale → commission), NOT payout-per-policy. "$25–150/policy" is a *per-conversion* figure; earnings
+  per visitor depends on the full funnel + carrier enrollment + acceptance rates, all **unproven**. Mark Vets.co
+  upside **SPECULATIVE** until carrier terms + conversion data exist.
 
 "Visitors/mo" below = Carlo's snapshot. Assume ~1 session ≈ 1 visitor for rough math.
 
 ---
 
-## §2 Built in-scope sites — value ranges `[EST]`
+## §2 Built in-scope sites — value ranges `[EST]` — ⚠️ DOLLAR FIGURES WITHDRAWN (F1–F3)
+
+> The "content-biz value @24–34× (display-only)" column below applied the multiple to **revenue**, not net profit
+> (F1), so those $ ranges **overstate value and are withdrawn.** The "domain-name floor" column conflated
+> offer-validated (Dog/Fish) with hypothesis (everything else) — F2. **Re-derive once funnel/margin inputs exist.**
+> Kept below only for the traffic + disposition columns, which remain valid. Do not quote the $ ranges to anyone.
 
 | Domain | Visitors/mo | Display rev/mo `[EST]` | Content-biz value @24–34× (display-only, conservative) | Domain-name floor | Disposition |
 |---|---|---|---|---|---|
@@ -42,7 +62,7 @@ Two value bases per domain; take the higher:
 | **Lizard.com** | 765 | <$11 (below Journey 1K) | growth target | solid one-word .com | **BUILD toward traffic; name helps at exit** |
 | **Saddle.com** | 214 | negligible | growth target | premium exact-match (illiquid raw) | **BUILD → known strategic (Equine Network)** — NOT sell-raw |
 | **PetFoods.com** | 30 | $0 | $0 | weak (plural twin) | redirect → PetFood |
-| **Vets.co** | ~0 (pre-DNS) | $0 today | **insurance affiliate = highest revenue/visitor once live** ($25–150/policy) | strong category .co | finish-to-earn; value is forward, not current |
+| **Vets.co** | ~0 (pre-DNS) | $0 today | insurance affiliate — **SPECULATIVE** until funnel proven (model as EPC/RPM, NOT $/policy — F3) | hypothesis, not floor | finish-to-earn; upside unproven |
 | **AskTheVet / SeniorPetPharmacy / DogPicture** | ~0 | $0 | speculative | brandable | build-long / sell-domain (DogPicture) |
 
 ---

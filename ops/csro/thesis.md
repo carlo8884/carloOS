@@ -6,10 +6,17 @@
 
 ## §0 Governing market reality (Carlo, 2026-05-30) — overrides any "park and sell" instinct
 
-**The domain aftermarket is ILLIQUID.** Carlo's portfolio has been on the market ~20 years with no sale. A premium
-domain "comp value" is **notional, not realizable** — there is no liquid bid. **The only proven exit is to build a
-domain into a traffic/content asset that makes acquirers want it, then transact.** Building is the liquidity
-mechanism, not a cost against name value.
+**The domain aftermarket is ILLIQUID** for *most* of the portfolio. Carlo's domains have largely sat ~20 years
+unsold, so a premium "comp value" is **notional** for them — no liquid bid. **Building traffic/content is the
+preferred liquidity-enhancement path for domains WITHOUT validated offer demand** — it improves both the odds and
+the price of a sale, and produces income meanwhile.
+
+> **IR-Bot correction 2026-05-31 (F9):** an earlier draft said "the *only* proven exit is building." That's
+> **false and self-contradicting** — Dog.com ($2.3M) and Fish.com ($1.45M) drew real offers *without* being built
+> into full businesses, proving premium names can attract buyers unbuilt. Corrected: building is the **preferred
+> liquidity path for the un-validated majority**, not the only exit. The illiquidity claim also shouldn't be
+> over-read (F4): 20 years unsold may reflect pricing, no brokered process, or weak outbound — not just "needs
+> building." So building is *a* lever, gated on evidence (see disposition stage-gate), not an automatic default.
 
 **This corrects an earlier CSRO error** (treating premium-but-thin domains as "don't build, the name holds the
 value"). Wrong: an illiquid name holds *no realizable* value until traffic summons a buyer.
