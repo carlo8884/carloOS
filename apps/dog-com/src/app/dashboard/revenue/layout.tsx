@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import { buildMetadata } from '@carloOS/ui'
 
 /**
@@ -24,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
 export default function RevenueDashboardLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return <>{children}</>
 }
