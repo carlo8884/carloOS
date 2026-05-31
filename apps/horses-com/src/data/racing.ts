@@ -525,6 +525,74 @@ export const racingTopics: RacingTopic[] = [
     relatedBreeds: ['thoroughbred'],
     relatedTopics: ['triple-crown', 'kentucky-derby'],
   },
+  {
+    slug: 'racehorse-aftercare',
+    name: 'What Happens to Racehorses After Racing',
+    metaTitle: 'Racehorse Aftercare & Retirement Explained',
+    tagline: 'Second careers, retraining, and the aftercare movement.',
+    summary:
+      'Thoroughbreds typically race for only a few years, leaving most of their lives ahead of them. This guide explains what happens to racehorses after their racing careers — retraining for second careers, accredited aftercare, and how prospective owners can adopt an off-track Thoroughbred.',
+    sections: [
+      {
+        heading: 'Why aftercare matters',
+        body: [
+          'A racehorse\'s competitive career is short — many retire from racing by age four to seven, yet a healthy horse can live into its late twenties or beyond. That leaves the majority of a horse\'s life to be lived after the track, which is why responsible aftercare has become a central focus of the modern industry.',
+          'Over the past two decades the sport has built a formal aftercare infrastructure to ensure retiring racehorses transition to good homes and second careers rather than falling through the cracks.',
+        ],
+      },
+      {
+        heading: 'Second careers for off-track Thoroughbreds',
+        body: [
+          'Off-track Thoroughbreds (often abbreviated "OTTBs") are prized in many equestrian disciplines. With retraining, they commonly go on to eventing, show jumping, dressage, fox hunting, trail and pleasure riding, and therapeutic-riding programs. Their athleticism, work ethic, and trainability make them versatile sport and pleasure horses.',
+          'Retraining typically involves letting the horse decompress from racing fitness, addressing any soundness issues, and slowly introducing the cues and gaits of its new discipline. Organizations such as the Retired Racehorse Project promote this transition, including through the Thoroughbred Makeover competition.',
+        ],
+      },
+      {
+        heading: 'Accredited aftercare',
+        body: [
+          'The Thoroughbred Aftercare Alliance (TAA) accredits and funds aftercare organizations across North America, setting standards for the care, rehabilitation, retraining, and rehoming of retired racehorses. Many racetracks, owners, and breeders now contribute to aftercare funding.',
+          'Adopting through an accredited organization gives a prospective owner confidence that the horse has been evaluated and cared for to a recognized standard, with honest disclosure of soundness and temperament.',
+        ],
+      },
+      {
+        heading: 'Adopting an off-track Thoroughbred',
+        body: [
+          'Prospective owners can adopt an OTTB through accredited aftercare and adoption organizations. As with any horse purchase, a pre-adoption veterinary exam and an honest assessment of your own riding level and goals are essential — racing puts specific wear on a horse, and a good match depends on matching the horse\'s soundness and temperament to its new job.',
+          'An OTTB can be an exceptional and affordable partner for the right owner, but it is best approached with a knowledgeable trainer, especially for a first-time owner unfamiliar with retraining.',
+        ],
+      },
+    ],
+    essentials: [
+      'Racehorses often retire by age 4–7 but can live into their late twenties',
+      'Off-track Thoroughbreds ("OTTBs") retrain for eventing, jumping, dressage, trail, and more',
+      'The Retired Racehorse Project runs the Thoroughbred Makeover',
+      'The Thoroughbred Aftercare Alliance (TAA) accredits & funds aftercare orgs',
+      'Adopt through accredited organizations; always do a pre-adoption vet exam',
+    ],
+    faq: [
+      {
+        question: 'What happens to racehorses when they retire?',
+        answer:
+          'Most retired racehorses are retrained for second careers in disciplines such as eventing, show jumping, dressage, and pleasure riding, or are rehomed through accredited aftercare organizations. A healthy Thoroughbred can live for decades after its racing career ends.',
+      },
+      {
+        question: 'What is an OTTB?',
+        answer:
+          'OTTB stands for "off-track Thoroughbred" — a Thoroughbred that has retired from racing and is being retrained for, or has transitioned to, a second career as a sport or pleasure horse.',
+      },
+      {
+        question: 'Can you adopt a retired racehorse?',
+        answer:
+          'Yes. Prospective owners can adopt retired racehorses through accredited aftercare and adoption organizations. As with any horse, a pre-adoption veterinary exam and an honest match of the horse\'s soundness and temperament to your goals are essential.',
+      },
+    ],
+    references: [
+      { label: 'Thoroughbred Aftercare Alliance (TAA)', url: 'https://thoroughbredaftercare.org' },
+      { label: 'Retired Racehorse Project', url: 'https://www.therrp.org' },
+    ],
+    relatedBreeds: ['thoroughbred'],
+    relatedTopics: ['racehorse-ownership', 'how-horse-racing-works'],
+  },
 ];
 
 export function allRacingSlugs(): string[] {

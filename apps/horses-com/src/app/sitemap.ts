@@ -40,5 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/racing/kentucky-derby', lastModified: now, changeFrequency: 'monthly', priority: 0.86 },
     { url: 'https://horses.com/racing/breeders-cup', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: 'https://horses.com/racing/famous-racehorses', lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: 'https://horses.com/racing/racehorse-aftercare', lastModified: now, changeFrequency: 'monthly', priority: 0.83 },
   ]
 }
