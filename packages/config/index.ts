@@ -741,9 +741,10 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'English Saddles', href: '/reviews/best-english-saddles' },
       { label: 'Western Saddles', href: '/reviews/best-western-saddles' },
-      { label: 'Buying Guides', href: '/guides/saddle-fit-guide' },
-      { label: 'Brand Reviews', href: '/reviews' },
-      { label: 'Saddle Care', href: '/guides/leather-care-guide' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Reviews', href: '/reviews' },
+      { label: 'Fit Checklist', href: '/saddle-fit-checklist' },
+      { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
       {
@@ -757,8 +758,9 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         ],
       },
       {
-        heading: 'Buying Guides',
+        heading: 'Guides',
         links: [
+          { label: 'All Guides', href: '/guides' },
           { label: 'Saddle Fit', href: '/guides/saddle-fit-guide' },
           { label: 'Seat Size', href: '/guides/seat-size-guide' },
           { label: 'Used Saddle', href: '/guides/used-saddle-buying-guide' },
@@ -846,12 +848,23 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Breeds', href: '/breeds' },
+      { label: 'Disciplines', href: '/disciplines' },
+      { label: 'Health', href: '/health' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
       {
         heading: 'Horses.com',
         links: [
           { label: 'Home', href: '/' },
+          { label: 'Breeds', href: '/breeds' },
+          { label: 'Disciplines', href: '/disciplines' },
+          { label: 'Health', href: '/health' },
+          { label: 'Guides', href: '/guides' },
+          { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
+          { label: 'Tools', href: '/tools' },
         ],
       },
     ],
