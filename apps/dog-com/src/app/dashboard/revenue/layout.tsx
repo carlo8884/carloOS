@@ -16,6 +16,8 @@ import { buildMetadata } from '@carloOS/ui'
  * this route's content; this is a minimal metadata-only unblock.
  */
 export const metadata: Metadata = buildMetadata({
+  siteId: 'dog-com',
+  path: '/dashboard/revenue',
   title: 'Revenue Dashboard | Dog.com',
   description:
     'Admin-only revenue and affiliate-click dashboard for Dog.com. Not a public page.',
