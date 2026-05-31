@@ -65,7 +65,11 @@ export const DNA_TESTS: DnaTestProfile[] = [
     slug: 'embark-vet-dog-dna-test',
     name: 'Embark Breed + Health Identification Kit',
     brand: 'Embark Vet',
-    vendor: 'embark-vet',
+    // vendor key must match the registered route in
+    // apps/dog-com/src/data/affiliate-routes.ts — the canonical key is
+    // `embark`, NOT `embark-vet`. The page renders /go/${t.vendor}/home,
+    // so a mismatch here re-introduces the dir-015 #1 404 bug.
+    vendor: 'embark',
     species: ['dog'],
     tagline: 'The gold standard for canine genetic testing — built in partnership with Cornell University.',
     pricesUsd: [
