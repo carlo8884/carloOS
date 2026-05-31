@@ -1,23 +1,28 @@
 # Visual Bot — Wakeup Queue
 
-**Owner:** Visual Bot · **Lane:** brand/UX/design, hero/homepage, visual primitives, OG images, favicons, image manifest
+**Owner bot:** Visual Bot · **Lane:** photography, composition, motion, visual identity, `src/components/visual/*`, image manifest
 **Last updated:** 2026-05-31 (by CSRO)
 
-## RESTART PROMPT
+## RESTART PROMPT (paste to wake this bot)
 ```
-Pull latest origin/main. Read ops/bot-queue/Visual.md, do the top queued item, commit+push to your own branch, open a PR. Update this file before stopping. Don't idle; don't ask Carlo unless empty/blocked.
+Pull latest origin/main. Read ops/bot-queue/Visual.md and do the top queued item. Commit + push to your own branch, open a PR rebased on main. When done, update this queue file (finished/remaining/blocked/next/Carlo-needed) before ending. Stay in lane; QC §1 trust bar (no AI humans/animals, no fake headshots, preserve photographer attribution). Don't idle — next item if blocked. Don't ask Carlo unless queue is empty/blocked.
 ```
 
 ## Queue (priority order)
-| # | Item | Priority | Status | Next action |
-|---|---|---|---|---|
-| 1 | Launch-first visual sign-off | 🔴 HIGH | queued | Ferret → Vets insurance → PetFood: magazine-baseline, mobile clean, no placeholders. These launch first. |
-| 2 | Buy-box / ReviewCard polish | HIGH | queued | On the pages Monetization is monetizing (Ferret, PetFood) — credible commerce converts better. |
-| 3 | Audience-capture UX (`dir-012` L1) | MED | queued | EmailCapture / lead-magnet placement on high-intent pages (horse cluster is VALIDATE-FIRST, not build). |
 
-## Status
-- **Done:** ~15 PRs — tool/calculator pages across 9 sites, OG/favicons, scaffold shells.
-- **Blocked:** nothing. **Carlo needed?** No.
+| # | Directive | Priority | Status | Next action | Deadline |
+|---|---|---|---|---|---|
+| 1 | **Curated images + visual identity** (`dir-021`) | 🔴 P0 launch-blocking | queued | Execute `ops/handoffs/2026-05-31-csro-to-visual-curated-images-and-identity.md`. Hand-curate real photos into the manifest (NO API/keys/secrets, no build dependency). Tier-1: Dog→Fish→Horses→Vets→PetFood. ⚠️ Dog.com has ZERO slots in image-queries.json — add them first. Then wire `<StockImage>` into Tier-1 homepages + top hubs (give each a real hero). $0 typographic wordmark `<Logo>` for identity. Quality bar = Carlo's policy in the brief. | this wave |
+| 2 | Wire remaining sites' manifest keys | MED | queued | After Tier-1 proven: ferret/ferrets/saddle/lizard/petfoods curate + wire. | — |
+| 3 | Phase-2 API expansion proposal | LOW | queued | ONLY after curated set proves direction. Propose to CSRO with quality filters + attribution + no build fragility. Do not build yet. | — |
+
+## Status notes
+- **What's done:** functional UI to date (calculators, BuyBox, `/tools` hubs, audience-capture) — NOT visual identity. That's the gap dir-021 closes.
+- **What's blocked:** nothing — curation needs no API key (manual). Build on your own branch (main is green).
+- **Carlo needed?** No to execute. He WILL eyeball Tier-1 (Dog/Fish/Horses) fit — keep those in early commits.
 
 ## DO NOT TOUCH
-COO content/routing, Monetization affiliate logic, CSRO registers, secrets.
+- Other bots' lanes (COO routing/CI, Monetization affiliate/funnels, CSRO registers).
+- `Nav.tsx`/`Footer.tsx`/`ArticleLayout.tsx` are SHARED — coordinate via PR before structural change.
+- Never commit API keys/secrets. No CI/Vercel photo-API wiring (Carlo policy 2026-05-31).
+- QC §1: no AI-generated humans or animals, no fake headshots, preserve photographer attribution.
