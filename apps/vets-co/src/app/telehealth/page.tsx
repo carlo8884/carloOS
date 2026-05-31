@@ -16,14 +16,14 @@ export default function TelehealthPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality.</p>
       </div>
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">

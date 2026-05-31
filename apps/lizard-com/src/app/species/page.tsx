@@ -28,7 +28,7 @@ const LEVEL_COLORS = {
 export default function SpeciesIndexPage() {
   return (
     <>
-      <div className="relative z-10 px-container sm:px-container-sm py-16"
+      <div className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
@@ -43,7 +43,7 @@ export default function SpeciesIndexPage() {
         </p>
       </div>
 
-      <div className="relative z-10 px-container sm:px-container-sm py-12">
+      <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
           {SPECIES.map(s => (
             <Link key={s.slug} href={`/species/${s.slug}`}
@@ -82,12 +82,12 @@ export default function SpeciesIndexPage() {
         </div>
       </div>
 
-      <div className="relative z-10 px-container sm:px-container-sm py-12"
+      <div className="relative z-10 px-container-sm sm:px-container py-12"
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="species-index" />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10">
+      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reptile Species</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="ball-python" href="/species/ball-python" className="text-sm text-brand-primary no-underline hover:underline">Ball Python</Link>

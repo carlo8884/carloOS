@@ -37,7 +37,7 @@ export default function BestAquariumFiltersPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Editor Pick · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
@@ -48,12 +48,12 @@ export default function BestAquariumFiltersPage() {
         </p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Filters</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
@@ -90,7 +90,7 @@ export default function BestAquariumFiltersPage() {
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
               ctaText="Shop AquaClear →"
-              ctaHref="https://www.amazon.com/s?k=aquaclear+70+filter"
+              ctaHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aquaclear-70"
             />
@@ -115,7 +115,7 @@ export default function BestAquariumFiltersPage() {
               cons={['More complex to clean than HOB', 'Higher price than equivalent HOB', 'Under-cabinet space required']}
               price="$120–160"
               ctaText="Shop Fluval 307 →"
-              ctaHref="https://www.amazon.com/s?k=fluval+307+canister+filter"
+              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -140,7 +140,7 @@ export default function BestAquariumFiltersPage() {
               cons={['Requires separate air pump', 'Not suitable for larger tanks alone', 'Less mechanical filtration than HOB']}
               price="$10–20"
               ctaText="Shop Hikari Sponge →"
-              ctaHref="https://www.amazon.com/s?k=hikari+bacto+surge+sponge+filter"
+              ctaHref="/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hikari-sponge"
             />
@@ -164,7 +164,7 @@ export default function BestAquariumFiltersPage() {
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
               ctaText="Shop Aqueon QuietFlow →"
-              ctaHref="https://www.amazon.com/s?k=aqueon+quietflow+30"
+              ctaHref="/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-quietflow-30"
             />

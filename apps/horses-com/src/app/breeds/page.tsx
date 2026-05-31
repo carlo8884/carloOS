@@ -55,7 +55,7 @@ export default function BreedsIndexPage() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -75,14 +75,14 @@ export default function BreedsIndexPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breeds</span>
       </nav>
 
       {/* Content */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-10 max-w-2xl">
           {Breeds.length} breed profiles, grouped by working type. Profiles combine
           breed-registry guidance, UC Davis VGL test data, AAEP vaccination and

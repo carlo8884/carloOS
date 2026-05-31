@@ -15,18 +15,18 @@ export default function BestRidingGlovesPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🧤 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Riding Gloves 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Riding gloves protect your hands, improve rein grip, and in many disciplines are required for competition. The right glove gives rein feel without sacrificing grip or comfort over hours of riding.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Riding Gloves</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <ScoreMethodology />
@@ -37,7 +37,7 @@ export default function BestRidingGlovesPage() {
               cons={['More expensive ($45–60)', 'Sizing chart required — not standard sizing', 'Not waterproof']}
               price="$45–60"
               ctaText="Shop Roeckl Chester →"
-              ctaHref="https://www.amazon.com/s?k=roeckl+chester+riding+gloves"
+              ctaHref="/go/amazon-brand/roeckl+chester+riding+gloves?s=reviews-best-riding-gloves"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="roeckl-chester"
             />
@@ -48,7 +48,7 @@ export default function BestRidingGlovesPage() {
               cons={['Less rein feel than leather', 'Less breathable than Roeckl in summer heat']}
               price="$15–25"
               ctaText="Shop SSG All Weather →"
-              ctaHref="https://www.amazon.com/s?k=ssg+all+weather+riding+gloves"
+              ctaHref="/go/amazon-brand/ssg+all+weather+riding+gloves?s=reviews-best-riding-gloves"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ssg-all-weather"
             />

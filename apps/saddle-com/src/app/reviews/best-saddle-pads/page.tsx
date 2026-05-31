@@ -156,7 +156,7 @@ export default function BestSaddlePadsPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer&apos;s Guide</span>
@@ -167,12 +167,12 @@ export default function BestSaddlePadsPage() {
         </div>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Saddle Pads</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
@@ -223,7 +223,7 @@ export default function BestSaddlePadsPage() {
               cons={['$150–250 — premium price', 'Only useful when used under fitter guidance', 'Sheepskin requires wool-safe washing', 'Misuse can worsen pressure problems']}
               price="$150–250"
               ctaText="Shop Mattes Correction Pad →"
-              ctaHref="https://www.amazon.com/s?k=mattes+correction+half+pad"
+              ctaHref="/go/amazon-brand/mattes+correction+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="mattes-correction-half-pad"
             />
@@ -250,7 +250,7 @@ export default function BestSaddlePadsPage() {
               cons={['Not a fit-correction tool', '$180–240', 'Spot-cleaning only — no machine wash']}
               price="$180–240"
               ctaText="Shop ECOGOLD Flip →"
-              ctaHref="https://www.amazon.com/s?k=ecogold+flip+half+pad"
+              ctaHref="/go/amazon-brand/ecogold+flip+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ecogold-flip"
             />
@@ -277,7 +277,7 @@ export default function BestSaddlePadsPage() {
               cons={['Less impact absorption than memory-foam options', 'Not a fit-correction tool', '$120–160']}
               price="$120–160"
               ctaText="Shop Thinline Trifecta →"
-              ctaHref="https://www.amazon.com/s?k=thinline+trifecta+half+pad"
+              ctaHref="/go/amazon-brand/thinline+trifecta+half+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="thinline-trifecta"
             />
@@ -307,7 +307,7 @@ export default function BestSaddlePadsPage() {
               cons={['$80–110 — above commodity dressage pads', 'Charcoal mid-layer is heavier than plain cotton']}
               price="$80–110"
               ctaText="Shop ECP Dressage Pads →"
-              ctaHref="https://www.amazon.com/s?k=ecp+equine+comfort+dressage+pad"
+              ctaHref="/go/amazon-brand/ecp+equine+comfort+dressage+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ecp-dressage-square"
             />
@@ -340,7 +340,7 @@ export default function BestSaddlePadsPage() {
               cons={['Brush-clean only — not machine washable', '$120–180 — mid-market premium pricing', 'Heavier than commodity synthetic western pads']}
               price="$120–180"
               ctaText="Shop Reinsman Tacky Too →"
-              ctaHref="https://www.amazon.com/s?k=reinsman+tacky+too+saddle+pad"
+              ctaHref="/go/amazon-brand/reinsman+tacky+too+saddle+pad?s=reviews-best-saddle-pads"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="reinsman-tacky-too"
             />

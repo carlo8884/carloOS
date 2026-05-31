@@ -55,18 +55,18 @@ export default function BestRidingBootsPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer&apos;s Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Riding Boots 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right riding boot depends on discipline, budget, and how much time you spend in the saddle vs on the ground. Tall boots for competition and serious riding; paddock boots + half chaps for everyday versatility; western boots for stock work and trail.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Riding Boots</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
@@ -89,7 +89,7 @@ export default function BestRidingBootsPage() {
               cons={['$250–350 price point', 'Not custom fitted — calf fit can be tricky', 'Regular sole — not ideal for heavy yard work']}
               price="$250–$350"
               ctaText="Shop Ariat Heritage II →"
-              ctaHref="https://www.amazon.com/s?k=ariat+heritage+contour+II+zip"
+              ctaHref="/go/amazon-brand/ariat+heritage+contour+II+zip?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ariat-heritage-contour-ii"
             />
@@ -137,7 +137,7 @@ export default function BestRidingBootsPage() {
               cons={['Heavier than competition-only tall boots', 'Higher price than entry-level field boots ($400–600)', 'Break-in required']}
               price="$400–$600"
               ctaText="Shop Mountain Horse Sovereign →"
-              ctaHref="https://www.amazon.com/s?k=mountain+horse+sovereign"
+              ctaHref="/go/amazon-brand/mountain+horse+sovereign?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="mountain-horse-sovereign"
             />
@@ -170,7 +170,7 @@ export default function BestRidingBootsPage() {
               cons={['Not show-ring premium', 'Standard cuts; not made-to-measure', 'Pointed-toe styles cause fit issues for wider feet — try before buying']}
               price="$200–$350"
               ctaText="Shop Justin Boots →"
-              ctaHref="https://www.amazon.com/s?k=justin+roper+boot"
+              ctaHref="/go/amazon-brand/justin+roper+boot?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="justin-roper"
             />
@@ -184,7 +184,7 @@ export default function BestRidingBootsPage() {
               cons={['$500–1,200 stock; $1,500–4,000+ custom or exotic', 'Long lead times for custom', 'Show-ring boot — not the daily-wear pick']}
               price="$500–$4,000+"
               ctaText="Shop Lucchese →"
-              ctaHref="https://www.amazon.com/s?k=lucchese+classics"
+              ctaHref="/go/amazon-brand/lucchese+classics?s=reviews-best-riding-boots"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="lucchese-classics"
             />

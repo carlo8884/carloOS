@@ -27,7 +27,7 @@ const GUIDES = [
 export default function GuidesHubPage() {
   return (
     <>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Care Guides</span>
@@ -40,13 +40,13 @@ export default function GuidesHubPage() {
         </p>
       </div>
 
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Guides</span>
       </nav>
 
-      <div className="px-container sm:px-container-sm py-14 max-w-container-wide mx-auto">
+      <div className="px-container-sm sm:px-container py-14 max-w-container-wide mx-auto">
         <div className="grid sm:grid-cols-2 gap-4">
           {GUIDES.map((item) => (
             <Link
@@ -64,7 +64,7 @@ export default function GuidesHubPage() {
         </div>
       </div>
 
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container sm:px-container-sm py-12">
+      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture
           variant="section" siteId="dog-com"
           title="Free Dog Care Tips"

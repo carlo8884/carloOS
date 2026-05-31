@@ -47,6 +47,7 @@ import {
   getBreedBySlug,
   type Breed,
 } from '../../../data/breeds'
+import { getBreedHealthBySlug } from '../../../data/breed-health'
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -243,7 +244,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
       <SchemaScript schema={combined} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/breeds" className="hover:text-brand-primary no-underline">Breeds</Link>
@@ -252,7 +253,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">
             {breed.type}
@@ -279,7 +280,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
       </div>
 
       {/* Content */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
             {/* TL;DR */}
@@ -560,6 +561,18 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+
+            {getBreedHealthBySlug(breed.slug) && (
+              <RelatedLinks
+                title={`${breed.name} Health Deep-Dive`}
+                links={[
+                  {
+                    label: `${breed.name} Health & Genetic Screening`,
+                    href: `/breeds/${breed.slug}/health`,
+                  },
+                ]}
+              />
+            )}
 
             {breed.knownHealthCrossLinks.length > 0 && (
               <RelatedLinks

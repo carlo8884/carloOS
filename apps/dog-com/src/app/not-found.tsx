@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-container sm:px-container-sm">
+    <div className="min-h-[80vh] flex items-center justify-center px-container-sm sm:px-container">
       <div className="text-center max-w-lg">
         <div className="font-display font-black text-brand-dark leading-none mb-6"
           style={{ fontSize: 'clamp(80px, 12vw, 140px)', opacity: 0.08 }}>404</div>

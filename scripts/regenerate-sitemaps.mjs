@@ -23,11 +23,31 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const ROOT = resolve(__dirname, '..')
 
+// Per-site registry of dynamic-route slugs that should appear in the sitemap.
+// These are routes served by [slug] dynamic pages where the slug set is known
+// at build time (generateStaticParams).
+const SADDLE_BRAND_SLUGS = [
+  'antares',
+  'bates',
+  'billy-cook',
+  'circle-y',
+  'county',
+  'custom-saddlery',
+  'pessoa',
+  'reinsman',
+  'stubben',
+  'wintec',
+]
+
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
   { id: 'fish-com', domain: 'fish.com' },
   { id: 'lizard-com', domain: 'lizard.com' },
-  { id: 'saddle-com', domain: 'saddle.com' },
+  {
+    id: 'saddle-com',
+    domain: 'saddle.com',
+    extraRoutes: SADDLE_BRAND_SLUGS.map((s) => `/brands/${s}`),
+  },
   { id: 'vets-co', domain: 'vets.co' },
 ]
 
@@ -109,7 +129,10 @@ ${lines.join('\n')}
 
 let totalRoutes = 0
 for (const site of SITES) {
-  const routes = listRoutes(site.id)
+  const walked = listRoutes(site.id)
+  const merged = new Set(walked)
+  for (const r of site.extraRoutes || []) merged.add(r)
+  const routes = Array.from(merged).sort((a, b) => a.localeCompare(b))
   totalRoutes += routes.length
   const sitemapPath = join(ROOT, 'apps', site.id, 'src/app/sitemap.ts')
   writeFileSync(sitemapPath, generateSitemap(site, routes))

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
 import { Nav, Footer } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
@@ -39,6 +40,17 @@ export const metadata: Metadata = buildMetadata({
 // ─── GA4 Script ─────────────────────────────────────────────────────────────
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
+// ─── Skimlinks — auto-affiliate-link for long-tail merchants ────────────────
+// Approved 2026-05-30 (Carlo). Publisher ID is dog-com-specific per
+// Skimlinks dashboard; sister sites get their own publisher snippets.
+// Script loads after page is interactive — does NOT block render.
+//
+// Refs:
+//   ops/handoffs/2026-05-30-monetization-activation-roadmap.md (Day 0-7)
+//   ops/handoffs/2026-05-30-affiliate-wiring-round-1-applications.md
+const SKIMLINKS_SRC =
+  'https://s.skimresources.com/js/303850X1791986.skimlinks.js'
 
 // ─── Layout ─────────────────────────────────────────────────────────────────
 
@@ -88,6 +100,9 @@ export default function RootLayout({
 
         {/* Shared Footer */}
         <Footer siteId="dog-com" showAffiliateDisclosure />
+
+        {/* Skimlinks auto-affiliate — Carlo-approved 2026-05-30 */}
+        <Script src={SKIMLINKS_SRC} strategy="afterInteractive" />
       </body>
     </html>
   )

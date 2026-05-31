@@ -145,7 +145,7 @@ export default function BestStirrupsPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer&apos;s Guide</span>
@@ -156,12 +156,12 @@ export default function BestStirrupsPage() {
         </div>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Stirrups</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <ArticleByline siteName="Saddle.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
@@ -210,7 +210,7 @@ export default function BestStirrupsPage() {
               cons={['$300&ndash;380 &mdash; premium price', 'Distinctive look that some traditionalists dislike', 'Branch arm requires periodic inspection for fatigue']}
               price="$300&ndash;380"
               ctaText="Shop FreeJump Soft Up Pro →"
-              ctaHref="https://www.amazon.com/s?k=freejump+soft+up+pro+stirrup"
+              ctaHref="/go/amazon-brand/freejump+soft+up+pro+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="freejump-soft-up-pro"
             />
@@ -237,7 +237,7 @@ export default function BestStirrupsPage() {
               cons={['$280&ndash;360', 'Magnetic catch can rust if not maintained', 'Heavier than the lightest composite alternatives']}
               price="$280&ndash;360"
               ctaText="Shop Tech Venice →"
-              ctaHref="https://www.amazon.com/s?k=tech+stirrups+venice"
+              ctaHref="/go/amazon-brand/tech+stirrups+venice?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="tech-venice-safety"
             />
@@ -264,7 +264,7 @@ export default function BestStirrupsPage() {
               cons={['Asymmetric weight &mdash; hangs twisted at rest', 'Rubber bands degrade in UV and must be checked seasonally', 'Less stable than modern composite safety stirrups']}
               price="$40&ndash;70"
               ctaText="Shop Korsteel Peacock →"
-              ctaHref="https://www.amazon.com/s?k=korsteel+peacock+safety+stirrup"
+              ctaHref="/go/amazon-brand/korsteel+peacock+safety+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="korsteel-peacock"
             />
@@ -294,7 +294,7 @@ export default function BestStirrupsPage() {
               cons={['No safety release mechanism', 'Aluminum can dent if dropped on concrete', 'Not accepted in some traditional show classes']}
               price="$90&ndash;130"
               ctaText="Shop Acavallo Arena →"
-              ctaHref="https://www.amazon.com/s?k=acavallo+arena+stirrup"
+              ctaHref="/go/amazon-brand/acavallo+arena+stirrup?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="acavallo-arena"
             />
@@ -324,7 +324,7 @@ export default function BestStirrupsPage() {
               cons={['No safety release', '4x the weight of composite alternatives', 'Rubber tread wears smooth in 12&ndash;18 months']}
               price="$40&ndash;70"
               ctaText="Shop Centaur Fillis Iron →"
-              ctaHref="https://www.amazon.com/s?k=centaur+fillis+stirrup+iron"
+              ctaHref="/go/amazon-brand/centaur+fillis+stirrup+iron?s=reviews-best-stirrups"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="centaur-fillis-iron"
             />

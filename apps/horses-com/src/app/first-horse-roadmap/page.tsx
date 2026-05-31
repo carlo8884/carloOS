@@ -193,7 +193,7 @@ export default function FirstHorseRoadmapPage() {
       <SchemaScript schema={allSchemas} />
 
       {/* HERO with above-the-fold capture */}
-      <section className="bg-brand-dark px-container sm:px-container-sm py-section">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-5">
@@ -267,7 +267,7 @@ export default function FirstHorseRoadmapPage() {
       </section>
 
       {/* TIMELINE PREVIEW */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -316,7 +316,7 @@ export default function FirstHorseRoadmapPage() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="bg-white px-container sm:px-container-sm py-section">
+      <section className="bg-white px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -347,7 +347,7 @@ export default function FirstHorseRoadmapPage() {
       </section>
 
       {/* WHY THIS MATTERS */}
-      <section className="bg-brand-surface px-container sm:px-container-sm py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12">
             <div>
@@ -389,7 +389,7 @@ export default function FirstHorseRoadmapPage() {
       </section>
 
       {/* SECOND CAPTURE */}
-      <section className="bg-brand-primary-pale border-y border-brand-border px-container sm:px-container-sm py-section">
+      <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Get the 90-day roadmap + the email course
@@ -411,7 +411,7 @@ export default function FirstHorseRoadmapPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-container sm:px-container-sm py-section">
+      <section className="bg-white px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />

@@ -31,7 +31,7 @@ export default function BestThermometersPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="relative z-10 px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
+      <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Reptile Thermometers & Hygrometers 2025 — Ranked by Published Accuracy
@@ -45,7 +45,7 @@ export default function BestThermometersPage() {
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="lizard-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Best Thermometers & Hygrometers" }]} />
 
-      <div className="relative z-10 px-container sm:px-container-sm py-12">
+      <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
             <div className="rounded-lg p-5 mb-8" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
@@ -81,7 +81,7 @@ export default function BestThermometersPage() {
               price="$18–25"
               priceNote="Often on sale — buy 3–4"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=govee+h5053"
+              ctaHref="/go/amazon-brand/govee+h5053?s=reviews-best-thermometers-hygrometers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="govee-h5053"
             />
@@ -106,7 +106,7 @@ export default function BestThermometersPage() {
               cons={['Bluetooth only — no remote monitoring', 'Shorter data logging than Govee']}
               price="$10–18"
               ctaText="Buy on Amazon →"
-              ctaHref="https://www.amazon.com/s?k=inkbird+ibs-th2"
+              ctaHref="/go/amazon-brand/inkbird+ibs-th2?s=reviews-best-thermometers-hygrometers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="inkbird-ibs-th2"
             />

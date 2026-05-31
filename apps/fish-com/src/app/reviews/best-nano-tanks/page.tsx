@@ -17,18 +17,18 @@ export default function BestNanoTanksPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌊 Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Nano tanks (5–20 gallons) are ideal for betta fish, shrimp colonies, planted tanks, and small community setups. Bigger is more forgiving — but these small tanks are manageable and rewarding when set up correctly.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Nano Tanks</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
@@ -43,7 +43,7 @@ export default function BestNanoTanksPage() {
               cons={['5 gallons is minimum — less stable than 10+', 'Flow needs baffling for betta', 'Tight space for aquascaping']}
               price="$75–95"
               ctaText="Shop Fluval Spec V →"
-              ctaHref="https://www.amazon.com/s?k=fluval+spec+v+5+gallon"
+              ctaHref="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-spec-v"
             />
@@ -54,7 +54,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
               ctaText="Shop Aqueon 10 Gallon →"
-              ctaHref="https://www.chewy.com/s?query=aqueon+10+gallon+aquarium"
+              ctaHref="/go/chewy-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="aqueon-10-gallon"
             />
@@ -65,7 +65,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
               ctaText="Shop 20-Gallon Long →"
-              ctaHref="https://www.chewy.com/s?query=aqueon+20+gallon+long+aquarium"
+              ctaHref="/go/chewy-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="chewy"
               ctaAffiliateProduct="aqueon-20-long"
             />

@@ -16,18 +16,18 @@ export default function BestCanisterFiltersPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">💧 Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Canister Filters</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <ScoreMethodology />
@@ -38,7 +38,7 @@ export default function BestCanisterFiltersPage() {
               cons={['Primer button can be finicky on first start', 'More expensive than Penn Plax']}
               price="$120–150"
               ctaText="Shop Fluval 307 →"
-              ctaHref="https://www.amazon.com/s?k=fluval+307+canister+filter"
+              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -49,7 +49,7 @@ export default function BestCanisterFiltersPage() {
               cons={['Less sophisticated media separation than Fluval', 'Older design — no AquaStop', 'Slightly louder than Fluval 307']}
               price="$100–130"
               ctaText="Shop Eheim Classic →"
-              ctaHref="https://www.amazon.com/s?k=eheim+classic+350+2215"
+              ctaHref="/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-classic-2215"
             />

@@ -51,7 +51,7 @@ export default function GoldenRetrieverBreedPage() {
           <Image src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80&auto=format&fit=crop"
             alt="Golden Retriever" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
-        <div className="flex flex-col justify-center px-container sm:px-container-sm py-12 relative">
+        <div className="flex flex-col justify-center px-container-sm sm:px-container py-12 relative">
           <div className="absolute inset-0 opacity-10"
             style={{ backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(232,98,42,0.3) 0%, transparent 60%)' }}
             aria-hidden="true" />
@@ -76,7 +76,7 @@ export default function GoldenRetrieverBreedPage() {
       </div>
 
       {/* Stats bar */}
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container sm:px-container-sm py-5">
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-5">
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
           {[
             { label: 'Size', value: 'Large' },
@@ -95,7 +95,7 @@ export default function GoldenRetrieverBreedPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/breeds" className="hover:text-brand-primary no-underline">Breeds</Link>
@@ -104,7 +104,7 @@ export default function GoldenRetrieverBreedPage() {
       </nav>
 
       {/* Content */}
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
             <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
@@ -179,7 +179,11 @@ export default function GoldenRetrieverBreedPage() {
           </article>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="Golden Retriever Health Deep-Dive" links={[
+              { label: 'Golden Retriever Health Issues & Screenings', href: '/breeds/golden-retriever/health' },
+            ]} />
             <RelatedLinks title="Health Resources" links={[
+              { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
               { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },

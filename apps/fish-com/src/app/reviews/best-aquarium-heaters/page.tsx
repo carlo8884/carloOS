@@ -34,7 +34,7 @@ export default function BestHeatersPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Calibrated Testing · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Aquarium Heaters 2025 — Tested for Temperature Accuracy
@@ -44,12 +44,12 @@ export default function BestHeatersPage() {
         </p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Heaters</span>
       </nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
@@ -89,7 +89,7 @@ export default function BestHeatersPage() {
               price="$25–55"
               priceNote="By wattage"
               ctaText="Shop Eheim Jager →"
-              ctaHref="https://www.amazon.com/s?k=eheim+jager+heater"
+              ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-jager"
             />
@@ -113,7 +113,7 @@ export default function BestHeatersPage() {
               cons={['Higher price than Eheim Jager', 'Not recalibratable']}
               price="$35–65"
               ctaText="Shop Cobalt Neo-Therm →"
-              ctaHref="https://www.amazon.com/s?k=cobalt+neo-therm+pro"
+              ctaHref="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="cobalt-neo-therm"
             />
@@ -136,7 +136,7 @@ export default function BestHeatersPage() {
               cons={['Requires canister filter', 'More expensive than in-tank', 'Not compatible with HOB filters']}
               price="$40–70"
               ctaText="Shop Hydor Inline →"
-              ctaHref="https://www.amazon.com/s?k=hydor+inline+heater"
+              ctaHref="/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hydor-inline"
             />
@@ -159,7 +159,7 @@ export default function BestHeatersPage() {
               cons={['Less accurate than premium options', 'Not suitable for temperature-sensitive species']}
               price="$18–30"
               ctaText="Shop Aqueon Pro →"
-              ctaHref="https://www.amazon.com/s?k=aqueon+pro+heater"
+              ctaHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-pro-heater"
             />

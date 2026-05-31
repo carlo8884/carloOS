@@ -32,7 +32,7 @@ export default function VetsPetInsurancePage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
           Owner Reference · May 2025
         </span>
@@ -54,7 +54,7 @@ export default function VetsPetInsurancePage() {
 
       <QuickPicks items={PICKS} />
 
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>
@@ -62,7 +62,7 @@ export default function VetsPetInsurancePage() {
         <span className="text-brand-text-mid">Best Pet Insurance</span>
       </nav>
 
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
@@ -95,7 +95,7 @@ export default function VetsPetInsurancePage() {
               pros={['Only insurer paying vet directly at time of service', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
               cons={['Higher premiums', 'No wellness coverage']}
               price="$65–120/month"
-              ctaText="Get a Quote →" ctaHref="https://trupanion.com"
+              ctaText="Get a Quote →" ctaHref="/go/trupanion/home?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
@@ -112,7 +112,7 @@ export default function VetsPetInsurancePage() {
               pros={['Fastest claims in the industry', 'Highest customer satisfaction scores', 'No payout limits', 'Good mobile app']}
               cons={['No direct vet payment', 'No wellness add-on']}
               price="$40–85/month"
-              ctaText="Get a Quote →" ctaHref="https://healthypawspetinsurance.com"
+              ctaText="Get a Quote →" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
 
@@ -129,7 +129,7 @@ export default function VetsPetInsurancePage() {
               pros={['Only major insurer with wellness add-on', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
               cons={['6-month orthopedic waiting period', 'More complex plan options']}
               price="$45–95/month + wellness add-on"
-              ctaText="Get a Quote →" ctaHref="https://embracepetinsurance.com"
+              ctaText="Get a Quote →" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="embrace" ctaAffiliateProduct="pet-insurance"
             />
           </div>

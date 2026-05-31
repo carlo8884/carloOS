@@ -456,6 +456,45 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Discipline-callout chip row — telegraphs cross-discipline
+              coverage per Stitch brief §3 ("make the cross-discipline
+              coverage visible"). Each chip routes to a real existing
+              discipline page (or the discipline index). Brass-bordered
+              chips read as category-tag, not button. */}
+          <nav
+            aria-label="Browse by discipline"
+            className="mb-10 -mt-2 flex flex-wrap items-center gap-2 sm:gap-2.5"
+          >
+            <span
+              className="text-2xs font-bold uppercase tracking-eyebrow mr-1 sm:mr-2"
+              style={{ color: 'var(--brand-text-light)' }}
+            >
+              For
+            </span>
+            {[
+              { label: 'Dressage riders',     href: '/disciplines/dressage' },
+              { label: 'Show jumpers',        href: '/disciplines/show-jumping' },
+              { label: 'Eventers',            href: '/disciplines/eventing' },
+              { label: 'Western riders',      href: '/disciplines/western-pleasure' },
+              { label: 'Reining',             href: '/disciplines/reining' },
+              { label: 'Trail riders',        href: '/disciplines/trail-riding' },
+              { label: 'All disciplines',     href: '/disciplines' },
+            ].map((chip) => (
+              <Link
+                key={chip.label}
+                href={chip.href}
+                className="inline-flex items-center text-xs font-semibold no-underline transition-all duration-200 rounded-pill px-3 py-1.5 hover:bg-brand-primary-pale"
+                style={{
+                  background: 'transparent',
+                  color: 'var(--brand-text-mid)',
+                  border: '1px solid var(--brand-border)',
+                }}
+              >
+                {chip.label}
+              </Link>
+            ))}
+          </nav>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {CATEGORIES.map((cat) => (
               <Link

@@ -16,14 +16,14 @@ export default function BestBioactiveSubstratesPage() {
   return (
     <>
       <SchemaScript schema={allSchemas} />
-      <div className="relative px-container sm:px-container-sm py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
+      <div className="relative px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌱 Buyer's Guide</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Bioactive Reptile Substrates 2025</h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: 'rgba(238,240,228,0.55)' }}>A bioactive setup — live substrate with a cleanup crew of isopods and springtails — creates a self-maintaining, naturalistic enclosure. The substrate is the foundation. Here are the best options by species type.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"><Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span><Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span><span className="text-brand-text-mid">Best Bioactive Substrates</span></nav>
-      <div className="px-container sm:px-container-sm py-14">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"><Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span><Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span><span className="text-brand-text-mid">Best Bioactive Substrates</span></nav>
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">

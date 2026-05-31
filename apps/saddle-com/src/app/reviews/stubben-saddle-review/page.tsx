@@ -31,7 +31,7 @@ export default function StubbenReviewPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14 relative overflow-hidden">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }} aria-hidden="true" />
         <div className="relative z-10">
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">CSF Reviewer Notes · SMS Reference · May 2025</span>
@@ -48,7 +48,7 @@ export default function StubbenReviewPage() {
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Stubben Saddle" }]} />
 
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">

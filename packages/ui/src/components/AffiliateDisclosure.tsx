@@ -1,68 +1,112 @@
 /**
- * AffiliateDisclosure — FTC-compliant affiliate disclosure component.
+ * CarloOS AffiliateDisclosure — FTC-compliant affiliate disclosure component.
  *
- * Every page that renders <AffiliateLink> MUST render this somewhere up
- * the React tree (preferably above the fold). Sets the
- * AffiliateDisclosureContext flag that AffiliateLink reads.
+ * Renders one of three variants:
+ *   - 'inline'  : compact above-the-fold banner for any page that contains
+ *                 affiliate links. Designed to live just above the first
+ *                 affiliate CTA (16 CFR Part 255 "clear and conspicuous").
+ *   - 'footer'  : shorter copy used by the shared Footer component on every
+ *                 page across the site (defense-in-depth disclosure).
+ *   - 'page'    : longer paragraph for use on /disclosure pages themselves
+ *                 or other long-form legal pages.
  *
- * Built per Architect Directive 2 / Constraint §6 (non-negotiable FTC).
+ * Always links to `/disclosure` on the current site.
+ *
+ * Per QC §1: copy is identical across sites — we never accept payment for
+ * favorable reviews. Per-site nuance (which affiliate programs we
+ * participate in) lives on the /disclosure page, not in this banner.
  */
 
-'use client'
+import Link from 'next/link'
+import type { SiteId } from '@carloOS/config'
 
-import type { ReactNode } from 'react'
-import { AffiliateDisclosureContext } from './AffiliateLink'
+export type AffiliateDisclosureVariant = 'inline' | 'footer' | 'page'
 
-interface AffiliateDisclosureProps {
-  /**
-   * Variant: 'inline' renders a single line. 'banner' renders a
-   * styled box. 'collapsed' renders a small chip with hover/click
-   * expansion.
-   */
-  variant?: 'inline' | 'banner' | 'collapsed'
-
-  /**
-   * Optional override text. The default text is FTC-compliant out of
-   * the box for the CarloOS portfolio.
-   */
-  text?: string
-
-  /** Children render inside the disclosure provider's tree. */
-  children: ReactNode
-
-  /** Optional class override. */
+export interface AffiliateDisclosureProps {
+  variant: AffiliateDisclosureVariant
+  siteId: SiteId
+  /** Optional override for the disclosure URL — defaults to /disclosure */
+  href?: string
+  /** Optional extra className for container */
   className?: string
 }
 
-const DEFAULT_TEXT =
-  'This page contains affiliate links. We may earn a commission when ' +
-  'you buy through links on this page, at no extra cost to you. Our ' +
-  'editorial recommendations are independent — we never rank products ' +
-  'based on commission rates. See our editorial standards.'
-
 export function AffiliateDisclosure({
-  variant = 'banner',
-  text = DEFAULT_TEXT,
-  children,
+  variant,
+  siteId: _siteId,
+  href = '/disclosure',
   className,
 }: AffiliateDisclosureProps) {
-  const baseClasses =
-    variant === 'banner'
-      ? 'mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900'
-      : variant === 'inline'
-        ? 'text-xs text-stone-600 italic'
-        : 'inline-block rounded-full bg-stone-100 px-3 py-1 text-xs text-stone-700'
-
-  return (
-    <AffiliateDisclosureContext.Provider value={{ disclosed: true }}>
-      <div
+  if (variant === 'inline') {
+    return (
+      <aside
         role="note"
         aria-label="Affiliate disclosure"
-        className={className ?? baseClasses}
+        data-affiliate-disclosure="inline"
+        className={[
+          'my-4 px-4 py-3 border-l-4 border-brand-primary bg-brand-primary-pale/40 rounded-r',
+          'text-xs leading-relaxed text-brand-text-dark',
+          className ?? '',
+        ].join(' ')}
       >
-        <strong className="font-semibold">Disclosure:</strong> {text}
-      </div>
-      {children}
-    </AffiliateDisclosureContext.Provider>
+        <strong className="font-bold uppercase tracking-eyebrow text-2xs text-brand-primary-dark mr-2">
+          Disclosure
+        </strong>
+        Some links on this page are affiliate links. We earn a commission if
+        you click and buy, at no cost to you. We never accept payment for
+        favorable reviews.{' '}
+        <Link
+          href={href}
+          className="font-semibold text-brand-primary hover:underline no-underline"
+        >
+          Read our full disclosure &rarr;
+        </Link>
+      </aside>
+    )
+  }
+
+  if (variant === 'footer') {
+    return (
+      <p
+        data-affiliate-disclosure="footer"
+        className={[
+          'mt-8 pt-6 border-t border-white/10 text-xs text-white/65 leading-relaxed max-w-3xl',
+          className ?? '',
+        ].join(' ')}
+      >
+        Reader-supported. Affiliate links may earn a commission. We never
+        accept payment for favorable reviews.{' '}
+        <Link
+          href={href}
+          className="text-white hover:underline no-underline font-medium"
+        >
+          Disclosure &rarr;
+        </Link>
+      </p>
+    )
+  }
+
+  // variant === 'page'
+  return (
+    <p
+      data-affiliate-disclosure="page"
+      className={[
+        'text-sm text-brand-text-mid leading-relaxed',
+        className ?? '',
+      ].join(' ')}
+    >
+      Some links on this page are affiliate links. We earn a commission if
+      you click and buy, at no cost to you. We never accept payment for
+      favorable reviews, and our editorial rankings are decided before any
+      affiliate link is ever added. For the full version of this policy,
+      including the specific programs we participate in, see our{' '}
+      <Link
+        href={href}
+        className="text-brand-primary hover:underline no-underline font-medium"
+      >
+        full disclosure
+      </Link>
+      .
+    </p>
   )
 }

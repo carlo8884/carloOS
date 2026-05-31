@@ -1,12 +1,38 @@
 /**
- * Fish.com Homepage — /
- * Aquarium-magazine reference. Server component. CSS-only visuals (no
- * photography until image strategy ships). Shared CarloOS components for
- * navigation, footer, and email capture.
+ * Fish.com Homepage — / (Aquarist's Tank Control Center)
  *
- * Visual brief: Cormorant Garamond display + Inter body; deep teal-blue
- * masthead; restrained refraction-blue accent; magazine-quality layout
- * that reads as confidently as Practical Fishkeeping looks in print.
+ * Redesigned 2026-05-30 from a static aquarium reference homepage into a
+ * problem-first decision hub. Above the fold answers "What's happening
+ * in your tank?" with 6 quick-action problem cards rather than a
+ * category grid.
+ *
+ * Reused routes (all verified to exist on origin/main):
+ *   /water (water chemistry hub)
+ *   /setup, /setup/aquarium-cycling-guide, /setup/water-chemistry-guide,
+ *     /setup/planted-tank-setup, /setup/saltwater-tank-setup,
+ *     /setup/quarantine-tank-guide, /setup/pond-guide
+ *   /species, /species/[slug] (37+ species pages)
+ *   /health, /health/fish-disease-guide, /health/ich-treatment,
+ *     /health/fin-rot, /health/new-tank-syndrome, /health/dropsy-treatment,
+ *     /health/columnaris, /health/gill-flukes, /health/nitrogen-cycle-explained
+ *   /equipment, /equipment/[slug] (6 equipment category guides)
+ *   /tools (calculators hub), /tools/aquarium-volume-calculator,
+ *     /tools/co2-calculator, /tools/heater-wattage-calculator,
+ *     /tools/stocking-calculator, /tools/water-change-calculator,
+ *     /tools/equipment-recommender
+ *   /reviews, /reviews/best-aquarium-heaters, /reviews/best-aquarium-filters,
+ *     /reviews/best-aquarium-lighting, /reviews/best-canister-filters,
+ *     /reviews/best-water-test-kits, /reviews/best-nano-tanks,
+ *     /reviews/best-planted-tank-fertilizers
+ *   /disclosure, /editorial-standards
+ *
+ * Trust posture (QC §1):
+ *   - No fake authority. "Source-grounded" and "research-based" only
+ *   - Removed "Expert"-style review claims; replaced with "Practical Aquarium Guides"
+ *   - Replaced "Expert content across every aspect" with "Source-grounded fishkeeping guides"
+ *   - No fake aquarists, fake biologists, fake testing claims, fake hands-on
+ *   - Editorial byline: "Fish.com Editorial"
+ *   - FTC affiliate disclosure preserved (Footer renders portfolio-wide)
  */
 
 import type { Metadata } from 'next'
@@ -16,736 +42,447 @@ import { buildMetadata, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'An Aquarium Reference',
+  title: 'Fish.com — The Aquarist\'s Tank Control Center',
   description:
-    'Research-based reference for aquarists — species profiles, tank cycling, water chemistry, fish health, and honest equipment comparisons.',
+    'Cloudy water, ammonia spikes, fish gasping, algae, stocking — practical aquarium guides to help you fix or plan your tank.',
   path: '/',
+  type: 'website',
+  ogImage: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1200&q=80&auto=format&fit=crop',
 })
 
-// ── Inline SVG icon set ────────────────────────────────────────────────────
-// 1.4px stroke, 24×24 grid, the same illustration voice used on Dog.com /
-// Vets.co / Horses.com. No emoji on the homepage — the brief is magazine,
-// not app store.
+// ─── Quick-action problem cards (above the fold) ────────────────────────────
 
-type CategoryIcon =
-  | 'species'
-  | 'setup'
-  | 'chemistry'
-  | 'health'
-  | 'reviews'
-  | 'tools'
-
-function CategoryIconSvg({ name }: { name: CategoryIcon }) {
-  const common = {
-    width: 28,
-    height: 28,
-    viewBox: '0 0 24 24',
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.4,
-    strokeLinecap: 'round' as const,
-    strokeLinejoin: 'round' as const,
-    'aria-hidden': true,
-  }
-  switch (name) {
-    case 'species':
-      // Side-on fish silhouette in line — restrained, not cartoonish
-      return (
-        <svg {...common}>
-          <path d="M3 12c2-4 6-6 10-6 3 0 5.5 1 7 2.5L22 6v12l-2-2.5C18.5 17 16 18 13 18c-4 0-8-2-10-6z" />
-          <path d="M18 11.5c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" fill="currentColor" stroke="none" />
-          <path d="M9 9.5l-2-1M9 14.5l-2 1" />
-        </svg>
-      )
-    case 'setup':
-      // Aquarium tank silhouette with substrate line + waterline
-      return (
-        <svg {...common}>
-          <rect x="3" y="5" width="18" height="14" rx="1" />
-          <path d="M3 16h18" />
-          <path d="M5 8c1.5-.5 3 .5 4.5 0S12.5 7.5 14 8s3 .5 4.5 0" />
-        </svg>
-      )
-    case 'chemistry':
-      // Erlenmeyer flask with droplet — water chemistry / test kits
-      return (
-        <svg {...common}>
-          <path d="M9 3h6" />
-          <path d="M10 3v5L5 18a2 2 0 0 0 1.8 2.9h10.4A2 2 0 0 0 19 18l-5-10V3" />
-          <path d="M8 14h8" />
-          <circle cx="12" cy="17" r="1.1" />
-        </svg>
-      )
-    case 'health':
-      // Shield with caduceus arc — vet-respectful, not red-cross hospital
-      return (
-        <svg {...common}>
-          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
-          <path d="M9 11v2a3 3 0 0 0 6 0v-2" />
-          <circle cx="9" cy="10" r="0.6" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="10" r="0.6" fill="currentColor" stroke="none" />
-        </svg>
-      )
-    case 'reviews':
-      // Award ribbon — comparison conclusion, not cheerleading star
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="9" r="5.5" />
-          <path d="M8.5 13L6 21l3.5-2 2.5 1.5 2.5-1.5L18 21l-2.5-8" />
-          <path d="M12 6.5l1 2 2.2.2-1.7 1.4.6 2.2L12 11l-2.1 1.3.6-2.2-1.7-1.4 2.2-.2z" />
-        </svg>
-      )
-    case 'tools':
-      // Calculator — calculators, dosing math, stocking math
-      return (
-        <svg {...common}>
-          <rect x="5" y="3" width="14" height="18" rx="1.5" />
-          <rect x="8" y="6" width="8" height="3" rx="0.5" />
-          <circle cx="9" cy="13" r="0.7" fill="currentColor" stroke="none" />
-          <circle cx="12" cy="13" r="0.7" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="13" r="0.7" fill="currentColor" stroke="none" />
-          <circle cx="9" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
-          <circle cx="12" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="16.5" r="0.7" fill="currentColor" stroke="none" />
-        </svg>
-      )
-  }
-}
-
-// ── Page data ──────────────────────────────────────────────────────────────
-
-const CATEGORIES: {
-  icon: CategoryIcon
-  title: string
-  desc: string
-  href: string
-}[] = [
+const PROBLEMS = [
   {
-    icon: 'species',
-    title: 'Species',
-    desc:
-      'Profiles for community fish, single-species displays, schoolers, and the difficult ones — temperament, parameter range, and tankmate logic that respects each species.',
-    href: '/species',
+    icon: '☁️',
+    title: 'Cloudy water',
+    desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.',
+    href: '/setup/water-chemistry-guide',
   },
   {
-    icon: 'setup',
-    title: 'Setup',
-    desc:
-      'Tank cycling, hardware selection, substrate, filtration sizing, and the planted-, saltwater-, and pond-specific decisions that come before the first fish goes in.',
-    href: '/setup',
+    icon: '🫧',
+    title: 'Fish gasping at the surface',
+    desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.',
+    href: '/health/fish-disease-guide',
   },
   {
-    icon: 'chemistry',
-    title: 'Water Chemistry',
-    desc:
-      'The nitrogen cycle, pH and KH, GH, ammonia and nitrite thresholds, and the slow-moving parameters that decide whether a tank reads stable or stays in trouble.',
-    href: '/water',
+    icon: '⚠️',
+    title: 'Ammonia / nitrite spike',
+    desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.',
+    href: '/health/new-tank-syndrome',
   },
   {
-    icon: 'health',
-    title: 'Fish Health',
-    desc:
-      'Ich, fin rot, dropsy, columnaris, velvet, and the rest — disease identification with treatment protocols and the when-to-call-an-aquatic-vet line.',
-    href: '/health',
+    icon: '🌿',
+    title: 'Algae outbreak',
+    desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.',
+    href: '/setup/planted-tank-setup',
   },
   {
-    icon: 'reviews',
-    title: 'Equipment Reviews',
-    desc:
-      'Filters, heaters, lights, water test kits, and nano tanks evaluated on the same dimensions — independent comparisons, retail receipts, no paid placements.',
-    href: '/reviews',
-  },
-  {
-    icon: 'tools',
-    title: 'Calculators',
-    desc:
-      'Aquarium volume, stocking density, heater wattage, CO2 dosing, and water-change planners — the math that keeps a tank inside the parameters its inhabitants need.',
-    href: '/tools',
-  },
-]
-
-const FEATURED: {
-  href: string
-  eyebrow: string
-  title: string
-  teaser: string
-  readTime: string
-  /**
-   * Optional cover image — Unsplash CDN URL. Photo IDs are the same ones
-   * already shipped on /species (verified-in-production). Cards without
-   * a cover render the CSS-only treatment unchanged.
-   */
-  image?: string
-  imageAlt?: string
-}[] = [
-  {
+    icon: '🔄',
+    title: 'New tank cycling',
+    desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.',
     href: '/setup/aquarium-cycling-guide',
-    eyebrow: 'Setup · Cornerstone',
-    title: 'The Aquarium Cycling Guide',
-    teaser:
-      'Fishless cycling, fish-in cycling, when ammonia and nitrite finally read zero, and why the slow weeks at the start determine whether the tank reads stable a year from now. The step-by-step reference, written without the forum-lore detours.',
-    readTime: '18 min',
-    image:
-      'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=900&q=80&auto=format&fit=crop',
-    imageAlt:
-      'Tropical aquarium scene with refraction-blue light over a planted substrate',
   },
   {
-    href: '/health/nitrogen-cycle-explained',
-    eyebrow: 'Water Chemistry',
-    title: 'The Nitrogen Cycle, Explained',
-    teaser:
-      'Ammonia to nitrite to nitrate — the bacterial chemistry that turns a sterile tank into a habitat, and the parameter readings that tell you the colony has actually arrived. A reference for the test results you are about to look at.',
-    readTime: '11 min',
-    image:
-      'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=900&q=80&auto=format&fit=crop',
-    imageAlt: 'A school of small freshwater fish in a planted tank',
+    icon: '🐟',
+    title: 'Stocking & compatibility',
+    desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.',
+    href: '/tools/stocking-calculator',
   },
+]
+
+// ─── Featured species (most-searched freshwater) ─────────────────────────────
+
+const FEATURED_SPECIES = [
   {
+    name: 'Betta',
+    type: 'Freshwater · Beginner',
+    note: '5 gal min · solitary · tropical',
     href: '/species/betta-fish',
-    eyebrow: 'Species Profile',
-    title: 'Betta Fish',
-    teaser:
-      'Labyrinth fish from the rice paddies and slow-water margins of Southeast Asia, sold to beginners and almost universally undertanked. Temperament, parameter range, tankmate logic, and the five-gallon-minimum argument with the science behind it.',
-    readTime: '14 min',
-    image:
-      'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=900&q=80&auto=format&fit=crop',
-    imageAlt: 'A male betta fish with long flowing fins in profile',
+    image: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80&auto=format&fit=crop',
+    imageAlt: 'Betta fish in a planted aquarium',
   },
   {
-    href: '/reviews/best-aquarium-filters',
-    eyebrow: 'Equipment Review',
-    title: 'Best Aquarium Filters',
-    teaser:
-      'HOB, canister, sponge, and internal — eight filters compared on flow rate, media volume, noise floor, and serviceability. Tank-volume sizing, planted-tank flow considerations, and which categories overlap with which use cases.',
-    readTime: '13 min',
-    image:
-      'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=900&q=80&auto=format&fit=crop',
-    imageAlt: 'Freshwater angelfish swimming in a planted aquarium',
+    name: 'Neon Tetra',
+    type: 'Freshwater · Schooling',
+    note: '10 gal min · schools 6+ · peaceful',
+    href: '/species/neon-tetra',
+    image: 'https://images.unsplash.com/photo-1522069213448-443a614da9b6?w=400&q=80&auto=format&fit=crop',
+    imageAlt: 'School of neon tetras',
+  },
+  {
+    name: 'Corydoras',
+    type: 'Freshwater · Bottom dweller',
+    note: '20 gal · schools 6+ · sand substrate',
+    href: '/species/corydoras',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=400&q=80&auto=format&fit=crop',
+    imageAlt: 'Corydoras catfish on aquarium sand',
+  },
+  {
+    name: 'Goldfish',
+    type: 'Coldwater · Large',
+    note: '30+ gal · highly bioloaded · long-lived',
+    href: '/species/goldfish',
+    image: 'https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=400&q=80&auto=format&fit=crop',
+    imageAlt: 'Goldfish swimming',
   },
 ]
 
-const TRUST_CLAIMS = [
-  'Research-anchored content',
-  'Aquatic-vet respectful',
-  'No paid scores',
-  'WAVMA-aligned guidance',
+const TANK_PLANNING = [
+  { title: 'Choose tank size', desc: 'Volume calculator + bioload math for the species you want.', href: '/tools/aquarium-volume-calculator' },
+  { title: 'Freshwater vs saltwater', desc: 'Cost, complexity, time commitment, what changes month-to-month.', href: '/setup' },
+  { title: 'Beginner species', desc: 'Hardy, peaceful, schooling — species most newcomers do well with.', href: '/species' },
+  { title: 'Equipment checklist', desc: 'What you actually need before adding your first fish.', href: '/equipment' },
 ]
 
-// ── Page ───────────────────────────────────────────────────────────────────
+const WATER_SAFETY = [
+  { title: 'Parameter ranges by species', desc: 'pH, GH, KH, temperature targets — and what "stable" really means.', href: '/setup/water-chemistry-guide' },
+  { title: 'Cycling basics', desc: 'The nitrogen cycle explained, and how to know when your tank is ready for fish.', href: '/setup/aquarium-cycling-guide' },
+  { title: 'Emergency water changes', desc: 'When to do a large change, how to do it safely, calculator for volume.', href: '/tools/water-change-calculator' },
+  { title: 'Nitrogen cycle explained', desc: 'Ammonia → nitrite → nitrate, and why each matters for fish health.', href: '/health/nitrogen-cycle-explained' },
+]
 
-export default function FishHomePage() {
+const EQUIPMENT_DECISIONS = [
+  { title: 'Filters', desc: 'HOB vs. canister vs. sponge vs. sump — picking by tank size and stock.', href: '/equipment/aquarium-filters' },
+  { title: 'Heaters', desc: 'Wattage by tank volume, accuracy, redundancy strategy.', href: '/equipment/aquarium-heaters' },
+  { title: 'Lighting', desc: 'PAR, spectrum, photoperiod — planted, reef, FOWLR.', href: '/equipment/aquarium-lighting' },
+  { title: 'Test kits', desc: 'API vs. Salifert vs. Hanna — what to test for and how often.', href: '/equipment/aquarium-test-kits' },
+]
+
+const CALCULATORS = [
+  { title: 'Aquarium volume', href: '/tools/aquarium-volume-calculator' },
+  { title: 'Stocking calculator', href: '/tools/stocking-calculator' },
+  { title: 'Heater wattage', href: '/tools/heater-wattage-calculator' },
+  { title: 'Water-change calculator', href: '/tools/water-change-calculator' },
+  { title: 'CO₂ calculator (planted)', href: '/tools/co2-calculator' },
+]
+
+// ─── Page component ─────────────────────────────────────────────────────────
+
+export default function HomePage() {
   return (
     <>
-      {/* ── HERO ───────────────────────────────────────────────────────
-          CSS-only deep-water field. Three radial washes stacked over the
-          brand-dark masthead — a teal light upper-right (the lamp at the
-          surface), a deep shadow lower-left (the substrate), and a top-
-          weighted vertical fade to anchor the headline. A subtle wave
-          overlay (repeating-linear-gradient at 4deg) sits at 6% opacity
-          to keep the field from reading flat. */}
-      <section className="relative overflow-hidden bg-brand-dark">
+      {/* ── HERO ─────────────────────────────────────────────────────── */}
+      <section className="bg-brand-dark relative overflow-hidden">
         <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: [
-              'radial-gradient(ellipse 85% 60% at 78% 14%, rgba(91,192,222,0.16) 0%, transparent 55%)',
-              'radial-gradient(ellipse 70% 70% at 10% 95%, rgba(8,74,102,0.65) 0%, transparent 60%)',
-              'linear-gradient(180deg, rgba(6,18,27,0.0) 0%, rgba(6,18,27,0.55) 95%)',
-            ].join(','),
+            backgroundImage: 'radial-gradient(ellipse at 30% 30%, rgba(14,107,138,0.4) 0%, transparent 60%)',
           }}
-        />
-        {/* Subtle wave / water-ripple overlay */}
-        <div
           aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(4deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 6px)',
-          }}
-        />
-        {/* Caustic-light flicker — second pass, vertical */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-screen"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(90deg, rgba(91,192,222,0.4) 0px, rgba(91,192,222,0.4) 1px, transparent 1px, transparent 4px)',
-          }}
         />
 
-        {/* Hero photo — anchored right, blended into the CSS field. Photo is
-            an angelfish (Pterophyllum scalare) in profile, the same identity
-            used on the species index — verified Unsplash CDN URL already in
-            production on /species. Hidden on mobile; on lg+ takes the right
-            45% of the masthead. Sits below the radial washes so the brand
-            field still grades over it. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden lg:block w-[45%] z-0"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=1400&q=80&auto=format&fit=crop"
-            alt=""
-            fill
-            sizes="45vw"
-            className="object-cover"
-            priority
-          />
-          {/* Edge fade into the brand-dark field on the left of the photo */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(90deg, rgba(6,18,27,1) 0%, rgba(6,18,27,0.75) 25%, rgba(6,18,27,0.25) 65%, rgba(6,18,27,0.35) 100%)',
-            }}
-          />
+        <div className="relative z-10 px-container-sm sm:px-container pt-16 pb-8">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Fish.com — Tank control center
+            </span>
+          </div>
+          <h1
+            className="font-display font-bold text-white tracking-tighter leading-[1.05] mb-4 max-w-4xl italic"
+            style={{ fontSize: 'clamp(36px, 5.5vw, 64px)' }}
+          >
+            What&apos;s happening in your tank?
+          </h1>
+          <p className="text-base sm:text-lg font-light text-white/65 leading-relaxed max-w-2xl">
+            Cloudy water, fish gasping, ammonia spike, algae taking over, mid-cycle confusion,
+            picking your next fish — start where you are and we&apos;ll route you to the right
+            guide or calculator.
+          </p>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
-          <div className="max-w-3xl">
-            {/* Eyebrow — refraction-light rule + tracking-eyebrow caps */}
-            <div className="flex items-center gap-3 mb-6">
-              <span
-                aria-hidden="true"
-                className="h-px w-8"
-                style={{ background: 'var(--brand-accent)' }}
-              />
-              <span
-                className="text-2xs font-bold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
-              >
-                The Aquarium Reference
-              </span>
-            </div>
-
-            {/* Wordmark — Cormorant 700 */}
-            <h1
-              className="font-display font-bold text-white tracking-tight leading-[1.02] mb-6"
-              style={{ fontSize: 'clamp(48px, 7.5vw, 92px)' }}
-            >
-              Fish.com
-            </h1>
-
-            {/* Tagline — Cormorant italic, accent-tinted, the magazine-cover voice */}
-            <p
-              className="font-display italic mb-7"
-              style={{
-                color: 'var(--brand-accent-light)',
-                fontSize: 'clamp(22px, 2.4vw, 30px)',
-                lineHeight: 1.25,
-                maxWidth: '46rem',
-              }}
-            >
-              An aquarium reference.
-            </p>
-
-            {/* Positioning paragraph — ~80 words establishing what the site is and is not */}
-            <p className="text-base lg:text-lg text-white/75 leading-relaxed max-w-2xl mb-9">
-              Fish.com is a research-based reference for aquarists across
-              freshwater, planted, saltwater, and pond systems. Not a community
-              forum, not a tank-shot gallery, not a tackle shop. Every species
-              profile is tied to published parameter ranges, every health entry
-              points to the when-to-call-an-aquatic-vet line, and every filter,
-              heater, and water-test kit is compared on the same dimensions.
-              Where Aquarium Co-Op runs the community and Practical Fishkeeping
-              runs the magazine, Fish.com runs the reference.
-            </p>
-
-            {/* CTAs — primary refraction-blue, secondary text-arrow link */}
-            <div className="flex items-center gap-6 flex-wrap">
+        <div className="relative z-10 px-container-sm sm:px-container pb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            {PROBLEMS.map((p) => (
               <Link
-                href="/setup/aquarium-cycling-guide"
-                className="inline-flex items-center font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200"
-                style={{
-                  background: 'var(--brand-accent)',
-                  color: 'var(--brand-dark)',
-                }}
+                key={p.href}
+                href={p.href}
+                className="group block rounded-xl p-5 no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200"
               >
-                Read the cycling guide
-                <span aria-hidden="true" className="ml-2">→</span>
-              </Link>
-              <Link
-                href="/reviews"
-                className="group inline-flex items-center text-sm font-semibold text-white/85 no-underline hover:text-white transition-colors"
-              >
-                Find your equipment
-                <span
-                  aria-hidden="true"
-                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
-                >
-                  →
+                <div className="text-3xl mb-3" aria-hidden="true">{p.icon}</div>
+                <h2 className="font-display font-bold text-white text-base leading-tight mb-2">
+                  {p.title}
+                </h2>
+                <p className="text-xs text-white/55 leading-relaxed mb-3">
+                  {p.desc}
+                </p>
+                <span className="inline-flex items-center text-xs font-bold text-brand-primary-light group-hover:underline">
+                  Start here →
                 </span>
               </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── TRUST BAR — slim dark strip with vertical separators ───────── */}
-      <div
-        className="px-container-sm sm:px-container py-4"
-        style={{
-          background: 'var(--brand-dark)',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-          borderBottom: '1px solid rgba(255,255,255,0.05)',
-        }}
-      >
-        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2">
-          {TRUST_CLAIMS.map((item, i, arr) => (
-            <span
-              key={item}
-              className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
-              style={{ color: 'rgba(255,255,255,0.80)' }}
-            >
-              <span
-                aria-hidden="true"
-                className="mr-2"
-                style={{ color: 'var(--brand-accent-light)' }}
-              >
-                ✓
-              </span>
-              {item}
-              {i < arr.length - 1 && (
-                <span
-                  aria-hidden="true"
-                  className="hidden sm:inline mx-5 h-3 w-px"
-                  style={{ background: 'rgba(255,255,255,0.18)' }}
-                />
-              )}
-            </span>
-          ))}
-        </div>
+      {/* ── TRUST BAR ──────────────────────────────────────────────────── */}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
+        {[
+          'Source-grounded fishkeeping guides',
+          'Interactive calculators, not just articles',
+          '37+ species profiles with parameter targets',
+          'Equipment compared, not paid placements',
+        ].map((item, i) => (
+          <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
+            {i > 0 && <span className="text-brand-primary/30">·</span>}
+            {item}
+          </span>
+        ))}
       </div>
 
-      {/* ── CATEGORIES — six-card grid, magazine-spread voice ─────────── */}
-      <section
-        className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-surface)' }}
-      >
-        <div className="mx-auto max-w-container-wide">
-          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
-            <div>
-              <div className="flex items-center gap-3 mb-3">
-                <span
-                  aria-hidden="true"
-                  className="h-px w-8"
-                  style={{ background: 'var(--brand-primary)' }}
-                />
-                <span
-                  className="text-2xs font-bold uppercase tracking-eyebrow"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  By Section
-                </span>
-              </div>
-              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
-                Where to start
-              </h2>
-            </div>
-            <p
-              className="text-sm max-w-md"
-              style={{ color: 'var(--brand-text-light)' }}
-            >
-              Every section reads the same whether you arrived from a search
-              for fish-in cycling, a fin-rot diagnosis, or a comparison of
-              canister filters.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {CATEGORIES.map((cat) => (
-              <Link
-                key={cat.href}
-                href={cat.href}
-                className="group block p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
-                style={{
-                  background: 'var(--brand-white)',
-                  border: '1px solid var(--brand-border)',
-                }}
-              >
-                <div
-                  className="mb-5 transition-colors"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  <CategoryIconSvg name={cat.icon} />
-                </div>
-                <h3
-                  className="font-display font-bold text-xl leading-snug mb-2"
-                  style={{ color: 'var(--brand-text-dark)' }}
-                >
-                  {cat.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: 'var(--brand-text-mid)' }}
-                >
-                  {cat.desc}
-                </p>
-                <span
-                  className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  Read
-                  <span
-                    aria-hidden="true"
-                    className="ml-1.5 transition-transform group-hover:translate-x-0.5"
-                  >
-                    →
-                  </span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FEATURED CORNERSTONES — eyebrow + Cormorant title + teaser ── */}
-      <section
-        className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-white)' }}
-      >
-        <div className="mx-auto max-w-container-wide">
-          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
-            <div>
-              <div className="flex items-center gap-3 mb-3">
-                <span
-                  aria-hidden="true"
-                  className="h-px w-8"
-                  style={{ background: 'var(--brand-primary)' }}
-                />
-                <span
-                  className="text-2xs font-bold uppercase tracking-eyebrow"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  Cornerstone Articles
-                </span>
-              </div>
-              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">
-                Reference, maintained
-              </h2>
-            </div>
-            <p
-              className="text-sm max-w-md"
-              style={{ color: 'var(--brand-text-light)' }}
-            >
-              The pieces we link back to constantly — re-read when the science
-              shifts, re-dated when they get an edit.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {FEATURED.map((art) => (
-              <Link
-                key={art.href}
-                href={art.href}
-                className="group block rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
-                style={{
-                  background: 'var(--brand-surface)',
-                  border: '1px solid var(--brand-border)',
-                }}
-              >
-                {/* Cover photo — verified Unsplash CDN, only renders when
-                    an image is set on the data record. The hover-zoom is the
-                    same easing curve the page uses elsewhere. */}
-                {art.image && art.imageAlt ? (
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={art.image}
-                      alt={art.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
-                  </div>
-                ) : null}
-                <div className="p-7 lg:p-8">
-                {/* Decorative top rule — accent, signals premium */}
-                <span
-                  aria-hidden="true"
-                  className="block h-px w-10 mb-5"
-                  style={{ background: 'var(--brand-primary)' }}
-                />
-                <div
-                  className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
-                  style={{ color: 'var(--brand-primary)' }}
-                >
-                  {art.eyebrow}
-                </div>
-                <h3
-                  className="font-display font-bold text-2xl leading-tight mb-3"
-                  style={{ color: 'var(--brand-text-dark)' }}
-                >
-                  {art.title}
-                </h3>
-                <p
-                  className="text-base leading-relaxed mb-5"
-                  style={{ color: 'var(--brand-text-mid)' }}
-                >
-                  {art.teaser}
-                </p>
-                <div className="flex items-center justify-between gap-4">
-                  <span
-                    className="text-xs font-semibold uppercase tracking-eyebrow tabular-display"
-                    style={{ color: 'var(--brand-text-light)' }}
-                  >
-                    {art.readTime} read
-                  </span>
-                  <span
-                    className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                    style={{ color: 'var(--brand-primary)' }}
-                  >
-                    Read
-                    <span
-                      aria-hidden="true"
-                      className="ml-1.5 transition-transform group-hover:translate-x-0.5"
-                    >
-                      →
-                    </span>
-                  </span>
-                </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── EDITORIAL STANDARDS BAND — deep teal + Cormorant pull quote ── */}
-      <section
-        className="px-container-sm sm:px-container py-section relative overflow-hidden"
-        style={{ background: 'var(--brand-primary)' }}
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'radial-gradient(ellipse 60% 60% at 82% 22%, rgba(91,192,222,0.18) 0%, transparent 60%)',
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(2deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 7px)',
-          }}
-        />
-        <div className="relative z-10 mx-auto max-w-container-wide grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
+      {/* ── CALCULATORS BANNER ─────────────────────────────────────────── */}
+      <section className="bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-6">
+        <div className="flex items-center justify-between gap-6 flex-wrap">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span
-                aria-hidden="true"
-                className="h-px w-8"
-                style={{ background: 'var(--brand-accent-light)' }}
-              />
-              <span
-                className="text-2xs font-bold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
+            <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">
+              Decide with math, not guesses
+            </div>
+            <div className="text-sm sm:text-base text-white font-semibold">
+              5 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂
+            </div>
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {CALCULATORS.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="inline-flex items-center bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-semibold px-3 py-2 rounded no-underline transition-colors duration-200"
               >
-                Editorial Standard
+                {c.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TANK PLANNING ──────────────────────────────────────────────── */}
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                Tank planning
               </span>
             </div>
-            <h2
-              className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
-              style={{ lineHeight: 1.15 }}
-            >
-              The reference reads the same
-              <br />
-              <em
-                className="not-italic font-display italic"
-                style={{ color: 'var(--brand-accent-light)' }}
-              >
-                whichever tank you arrived from.
-              </em>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl italic">
+              Planning a new tank? Start here.
             </h2>
-          </div>
-          <div className="text-white/85 leading-relaxed space-y-5">
-            <p className="text-base lg:text-lg">
-              Every species profile carries its published parameter range —
-              temperature, pH, hardness, tankmate logic — drawn from FishBase,
-              peer-reviewed habitat surveys, and established care sheets, not
-              forum lore. Every health entry names the disease, the protocol,
-              and the WAVMA-listed aquatic-veterinarian line for when the tank
-              is past hobbyist treatment.
+            <p className="text-sm text-brand-text-mid mt-2 max-w-xl">
+              Size, type, species, equipment — the four decisions that determine whether your
+              first 90 days are smooth or painful.
             </p>
-            <p className="text-base lg:text-lg">
-              Equipment write-ups draw on retail receipts and manufacturer
-              specifications. No paid scores. No undisclosed sponsorships. No
-              brand bought a higher position. Where the evidence is mixed —
-              planted-tank dosing strategies, marine refugium design, certain
-              disease treatments — we say so on the page.
-            </p>
-            <div className="pt-2">
-              <Link
-                href="/editorial-standards"
-                className="group inline-flex items-center text-sm font-semibold no-underline transition-colors"
-                style={{ color: 'var(--brand-accent-light)' }}
-              >
-                Read our editorial standards
-                <span
-                  aria-hidden="true"
-                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </Link>
-            </div>
           </div>
+          <Link href="/setup" className="text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+            All setup guides →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {TANK_PLANNING.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-2 leading-tight">{item.title}</div>
+              <div className="text-xs text-brand-text-mid leading-relaxed">{item.desc}</div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* ── EMAIL CAPTURE — cycling-guide lead magnet teaser ─────────── */}
-      <section
-        className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <div className="mx-auto max-w-container-wide">
-          <EmailCapture
-            variant="section"
-            siteId="fish-com"
-            source="homepage"
-            title="The Cycling Guide, in your inbox"
-            subtitle="An eight-email reference series that walks the nitrogen cycle from sterile glass to a colony reading zero ammonia and zero nitrite. Fishless and fish-in protocols, the parameter readings that mean what they mean, and the slow weeks that decide whether the tank reads stable a year from now. One email per stage. No upsells."
-            ctaText="Send me the series"
-            perks={[
-              'Eight emails, one tank',
-              'Citation-anchored',
-              'Aquatic-vet respectful',
-              'Unsubscribe anytime',
-            ]}
-          />
+      {/* ── WATER SAFETY ───────────────────────────────────────────────── */}
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section text-white">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Water safety
+          </span>
         </div>
-      </section>
-
-      {/* ── PHOTO ATTRIBUTION — restrained credit strip, Unsplash hygiene ── */}
-      <aside
-        className="px-container-sm sm:px-container py-6"
-        style={{
-          background: 'var(--brand-dark)',
-          borderTop: '1px solid rgba(255,255,255,0.05)',
-        }}
-        aria-label="Photo credits"
-      >
-        <p
-          className="mx-auto max-w-container-wide text-2xs uppercase tracking-eyebrow"
-          style={{ color: 'rgba(255,255,255,0.55)' }}
-        >
-          Hero & featured photography: contributors on{' '}
-          <a
-            href="https://unsplash.com"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="underline"
-            style={{ color: 'rgba(255,255,255,0.75)' }}
-          >
-            Unsplash
-          </a>
-          . Used under the Unsplash License.
+        <h2 className="font-display font-bold tracking-tight text-3xl italic mb-4 max-w-3xl">
+          The cycle, the parameters, the emergencies.
+        </h2>
+        <p className="text-base text-white/60 mb-8 max-w-2xl leading-relaxed">
+          Most aquarium problems trace back to one of four water issues. Each guide covers what
+          the readings mean, what causes them, and the specific action that fixes them.
         </p>
-      </aside>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          {WATER_SAFETY.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block bg-white/[0.04] border border-white/[0.08] rounded-lg p-4 no-underline hover:bg-white/[0.08] hover:border-white/20 transition-all duration-200"
+            >
+              <div className="font-display font-bold text-white text-base mb-1.5 leading-tight">{item.title}</div>
+              <div className="text-xs text-white/55 leading-relaxed">{item.desc}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SPECIES COMPATIBILITY ──────────────────────────────────────── */}
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                Species & compatibility
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl italic">
+              Pick fish that won&apos;t fight your tank.
+            </h2>
+            <p className="text-sm text-brand-text-mid mt-2 max-w-xl">
+              Each species page covers minimum tank size, water parameters, school size,
+              temperament, compatible tank mates, and common health issues.
+            </p>
+          </div>
+          <Link href="/species" className="text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+            All species →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          {FEATURED_SPECIES.map((sp) => (
+            <Link
+              key={sp.name}
+              href={sp.href}
+              className="group block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
+                <Image
+                  src={sp.image}
+                  alt={sp.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
+                  {sp.type}
+                </div>
+                <div className="font-display font-bold text-brand-dark text-base mb-1.5 leading-tight">
+                  {sp.name}
+                </div>
+                <div className="text-xs text-brand-text-mid leading-snug">
+                  {sp.note}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <Link
+          href="/tools/stocking-calculator"
+          className="inline-flex items-center mt-8 bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200"
+        >
+          Try the stocking calculator →
+        </Link>
+      </section>
+
+      {/* ── EQUIPMENT DECISIONS ────────────────────────────────────────── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section">
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                Equipment
+              </span>
+            </div>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl italic">
+              Buy once. Pick the right gear.
+            </h2>
+            <p className="text-sm text-brand-text-mid mt-2 max-w-xl">
+              Equipment guides organized by category — what each type does, when to choose which,
+              and price tiers from entry to enthusiast.
+            </p>
+          </div>
+          <Link href="/equipment" className="text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+            All equipment guides →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {EQUIPMENT_DECISIONS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block bg-brand-surface border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-2 leading-tight">{item.title}</div>
+              <div className="text-xs text-brand-text-mid leading-relaxed">{item.desc}</div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-6 flex gap-4 flex-wrap">
+          <Link
+            href="/reviews"
+            className="inline-flex items-center bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200"
+          >
+            Compare specific products →
+          </Link>
+          <Link
+            href="/tools"
+            className="inline-flex items-center border border-brand-border text-brand-text-dark font-medium text-sm px-6 py-3 rounded no-underline hover:border-brand-primary hover:text-brand-primary transition-all duration-200"
+          >
+            Browse all calculators
+          </Link>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE — "The Weekly Tank" ──────────────────────────── */}
+      <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
+        <EmailCapture
+          variant="section"
+          siteId="fish-com"
+          title="The Weekly Tank"
+          subtitle="One short email each week: what to check this week, one parameter to watch by season, one fix or upgrade worth your time."
+          source="homepage"
+          ctaText="Get the weekly"
+          perks={[
+            'Seasonal water-quality checks',
+            'No paid product placements',
+            'Unsubscribe anytime',
+          ]}
+        />
+      </section>
+
+      {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              How we work
+            </span>
+          </div>
+          <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl mb-4 italic">
+            Practical and source-grounded.
+          </h2>
+          <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+            Fish.com Editorial writes the guides on this site. We reference published aquarist
+            literature, manufacturer specifications, and species-specific water-parameter data
+            from peer-reviewed sources where available. We don&apos;t use AI-generated aquarists
+            or biologists. We don&apos;t accept payment for favorable reviews. Affiliate links are
+            disclosed above the fold on every product page.
+          </p>
+          <div className="flex gap-5 mt-4 flex-wrap">
+            <Link href="/editorial-standards" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
+              Editorial standards →
+            </Link>
+            <Link href="/disclosure" className="text-sm font-semibold text-brand-primary no-underline hover:underline">
+              Affiliate disclosure →
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

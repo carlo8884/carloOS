@@ -69,3 +69,23 @@ export { SourceCitation } from './components/SourceCitation'
 export type { SourceCitationProps } from './components/SourceCitation'
 export { ArticleByline } from './components/ArticleByline'
 export type { ArticleBylineProps } from './components/ArticleByline'
+export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export type {
+  AffiliateDisclosureProps,
+  AffiliateDisclosureVariant,
+} from './components/AffiliateDisclosure'
+
+// Cross-portfolio sister-site recommendations (restoring export shipped in PR #72,
+// lost in a later merge — re-export only; CrossPortfolioCard.tsx itself untouched).
+export { CrossPortfolioCard } from './components/CrossPortfolioCard'
+export type {
+  CrossPortfolioCardProps,
+  CrossPortfolioVariant,
+} from './components/CrossPortfolioCard'
+
+// Open Graph image template — consumed by each app's /api/og/route.tsx
+// via `new ImageResponse(<OgTemplate ... />, ...)` from edge runtime.
+// Carries the per-site palette + wordmark so route handlers stay
+// 12-line minimal.
+export { OgTemplate } from './og/OgTemplate'
+export type { OgTemplateProps, OgSiteId } from './og/OgTemplate'

@@ -10,8 +10,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://saddle.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://saddle.com/brands', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/brands/antares', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/bates', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/billy-cook', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/circle-y', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/county', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/custom-saddlery', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/pessoa', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/reinsman', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/stubben', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/brands/wintec', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://saddle.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://saddle.com/english', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/fit', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/guides/bit-selection-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/bridle-fit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/buying-first-horse', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -52,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/reviews/collegiate-saddle-review', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/reviews/pessoa-saddle-review', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/reviews/stubben-saddle-review', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://saddle.com/saddle-fit-checklist', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://saddle.com/saddle-fit-checklist', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/western', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
   ]
 }

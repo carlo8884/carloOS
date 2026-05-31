@@ -18,7 +18,7 @@ const SPECIALISTS = [
 export default function FindAVetPage() {
   return (
     <div>
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Veterinary Directory</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>Find the Right Vet</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-8">General practice vets handle most of your dog's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each.</p>
@@ -28,12 +28,12 @@ export default function FindAVetPage() {
           <Link href="#emergency" className="bg-brand-danger text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">Emergency</Link>
         </div>
       </div>
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Find a Vet</span>
       </nav>
 
-      <div className="px-container sm:px-container-sm py-14 max-w-5xl">
+      <div className="px-container-sm sm:px-container py-14 max-w-5xl">
         <section id="general" className="mb-16">
           <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Your General Practice Vet</h2>
           <p className="text-brand-text-mid leading-relaxed mb-6 max-w-3xl">Your primary care vet handles wellness exams, vaccinations, routine diagnostics, most medical conditions, and is your first call for any health concern. They will refer to a specialist when the situation requires it — that referral is a sign of good judgment, not a limitation. Build a relationship with a GP vet you trust before you need them urgently.</p>
