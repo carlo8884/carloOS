@@ -89,7 +89,7 @@ export default function RootLayout({
       <body>
         <Nav siteId="petfood-com" />
         <main>{children}</main>
-        <Footer siteId="petfood-com" showAffiliateDisclosure={false} />
+        <Footer siteId="petfood-com" showAffiliateDisclosure />
       </body>
     </html>
   )

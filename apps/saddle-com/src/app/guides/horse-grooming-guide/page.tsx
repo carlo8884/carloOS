@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Grooming Guide — Tools, Sequence | Saddle.com', description: 'Complete horse grooming guide. The correct grooming sequence, essential tools, how to identify skin problems during grooming.', path: '/guides/horse-grooming-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Grooming Guide', description: 'Grooming sequence, tools, and pre-ride routine for horses.', url: 'https://saddle.com/guides/horse-grooming-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -50,6 +50,63 @@ export default function HorseGroomingGuidePage() {
 
           <h2>Post-Ride Grooming</h2>
           <p>After riding: rinse or scrape sweat from the girth area and under saddle, apply a sweat scraper, walk until cool before returning to the stable (a hot horse should not stand in a cold stable immediately). Pick hooves again after turnout or arena work — rocks picked up during riding should not stay in the hoof. A brief post-ride grooming also allows checking for new rubs from tack that indicates fit issues requiring attention.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+          <h2 id="picks">Grooming Kit Picks</h2>
+          <p>
+            Two picks that cover the essential-tools sidebar above: a hoof care set (the article&apos;s &ldquo;non-negotiable every ride&rdquo; tool) and a full grooming kit (curry / dandy / body brush / mane comb in one bundle). This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="hoof-pick-brush"
+            badge="Non-Negotiable"
+            badgeEmoji="🪛"
+            name="Hoof Pick + Brush Combination"
+            subtitle="Pick on one end, stiff brush on the other — the everyday tool"
+            score={9.0}
+            winner
+            description={
+              <p>The single tool that should be in every grooming kit. Pick on one end for clearing the sulci and frog, stiff brush on the other for cleaning around the sole and frog after picking. Stainless-steel picks last decades; plastic-handled options work and cost less. Keep a second one in the trailer or car so &ldquo;I forgot the hoof pick&rdquo; never becomes a reason to ride with unpicked hooves.</p>
+            }
+            specs={[
+              { label: 'Pick material', value: 'Steel (durable) or plastic (cheap)' },
+              { label: 'Built-in brush', value: 'Yes', highlight: 'good' },
+              { label: 'Use case', value: 'Daily / pre-ride / post-ride' },
+              { label: 'Replacement cadence', value: 'Years (steel), 1–2 yrs (plastic)' },
+            ]}
+            pros={['Used every ride; the most-handled grooming tool', 'Cheap', 'Builds the daily-inspection habit (thrush, stone bruises, loose shoes)']}
+            cons={['Easy to lose — keep spares', 'Cheap plastic handles fatigue and crack']}
+            price="$5–18"
+            ctaText="Find hoof picks"
+            ctaHref="https://www.smartpakequine.com/"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="hoof-pick-brush"
+          />
+          <ReviewCard
+            id="grooming-kit-bundle"
+            badge="Starter Kit"
+            badgeEmoji="🧴"
+            name="Grooming Kit Bundle (Curry + Dandy + Body Brush + Mane Comb)"
+            subtitle="The 4-tool sequence in one purchase — Oster, Tough-1, Wahl, others"
+            score={8.4}
+            description={
+              <p>A starter-bundle grooming kit puts the four sequence tools the article describes — rubber curry comb, stiff dandy brush, soft body brush, mane comb — in one purchase, usually with a tote. Brand choice matters less than picking firm-bristled tools that don&apos;t collapse after a season of use; mid-tier bundles ($25–60) outperform both the bargain $15 kits and the boutique $100+ kits on durability for the price. Add a sweat scraper and a soft face cloth separately.</p>
+            }
+            specs={[
+              { label: 'Tools included', value: 'Curry, dandy, body brush, mane comb', highlight: 'good' },
+              { label: 'Tote / storage', value: 'Usually included', highlight: 'good' },
+              { label: 'Bristle quality', value: 'Mid-tier outperforms cheap bundles' },
+              { label: 'Replacement cadence', value: '1–3 years' },
+            ]}
+            pros={['Whole grooming sequence in one purchase', 'Tote keeps the tools in one place at the barn', 'Cheaper than buying tools individually']}
+            cons={['Bargain bundles use bristles that collapse fast', 'Sweat scraper and soft face cloth usually NOT included — buy separately', 'Mane combs in starter kits are often the weakest item']}
+            price="$25–60"
+            ctaText="Find grooming kit bundles"
+            ctaHref="https://www.smartpakequine.com/"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="grooming-kit-bundle"
+          />
         </div>
       </ArticleLayout>
     </>

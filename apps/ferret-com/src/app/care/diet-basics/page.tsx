@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,7 @@ export default function FerretDietBasicsPage() {
                 { label: 'Raw & Whole-Prey', href: '#raw' },
                 { label: 'Carbs and Insulinoma', href: '#insulinoma-link' },
                 { label: 'Water and Treats', href: '#water' },
+                { label: 'Diet Picks', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -162,6 +163,89 @@ export default function FerretDietBasicsPage() {
           <p>
             Acceptable treats: small pieces of cooked or freeze-dried meat, egg yolk in small amounts, commercial high-protein freeze-dried treats (Wysong, Bravo, Vital Essentials). Unacceptable: yogurt drops, raisin treats, fruit-and-vegetable medleys, and any treat whose first ingredient is sugar or grain. A useful rule: if you would feed it to a cat with diabetes, it is probably fine for a ferret.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Diet Picks</h2>
+          <p>
+            Three formulations that line up with the obligate-carnivore macronutrient targets above — animal-first ingredient panels, low plant carbohydrate, widely available in US pet retail or direct from the manufacturer. This is a documented-spec comparison, not a hands-on test: inclusion is based on published ingredient and macronutrient panels and on adoption patterns in keeper communities and at exotic-mammal shelters.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Premium Tier"
+            badgeEmoji="🥇"
+            name="Wysong Epigen 90"
+            subtitle="Animal-first, starch-free, grain-free"
+            score={9.3}
+            winner
+            description={
+              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. Ingredient panel reads as named meats and organ meats; the formula is built on a starch-free system that drives carbohydrate by difference into the low single digits. Suitable as a sole diet for healthy adult ferrets, and the default choice when insulinoma risk is a primary concern. Higher price per pound than the mid tier.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~16%' },
+              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Grain-free', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct + specialty pet retail' },
+            ]}
+            pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
+            cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="https://www.wysong.net/"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
+          <ReviewCard
+            id="marshall-premium-diet"
+            badge="Mid Tier"
+            badgeEmoji="🛒"
+            name="Marshall Premium Ferret Diet"
+            subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
+            score={8.0}
+            description={
+              <p>The reference mid-tier ferret kibble in US pet retail. Specifically formulated for ferrets — not adapted from cat food — with a protein and fat profile that lands in the working ferret range. Imperfect ingredient panel (contains some plant protein) but the macro profile is acceptable for healthy adults, and per-pound price is materially lower than the premium tier. The most likely brand to find on a chain pet retailer shelf at short notice.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Mid teens', highlight: 'warn' },
+              { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'National chain pet retail' },
+            ]}
+            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
+            cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
+            price="$15–25 / 4 lb"
+            ctaText="Find Marshall Premium Ferret Diet"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="premium-ferret-diet"
+          />
+          <ReviewCard
+            id="carniwhole"
+            badge="Direct-to-Consumer"
+            badgeEmoji="📦"
+            name="Carniwhole Ferret Food"
+            subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
+            score={8.2}
+            description={
+              <p>A direct-to-consumer ferret food brand favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable commercial kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and a shorter community track record than Marshall or Wysong.</p>
+            }
+            specs={[
+              { label: 'Protein source', value: 'Animal-first, named meats', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct only (no retail)' },
+              { label: 'Subscription model', value: 'Yes' },
+              { label: 'Smaller-batch sourcing', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
+            cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
+            price="Subscription pricing"
+            ctaText="Visit Carniwhole"
+            ctaHref="https://www.carniwhole.com/"
+            ctaAffiliateProgram="carniwhole"
+            ctaAffiliateProduct="ferret-diet"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

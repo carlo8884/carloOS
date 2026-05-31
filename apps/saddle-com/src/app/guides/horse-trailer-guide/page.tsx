@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Trailer Guide — Buying, Types, Loading | Saddle.com', description: 'Horse trailer types (straight-load, slant-load, stock), what to inspect when buying used, loading a reluctant horse, and trailering safety for horse and driver.', path: '/guides/horse-trailer-guide', type: 'article' })
@@ -41,6 +41,63 @@ export default function HorseTrailerGuidePage() {
         <h2>Trailering Safety</h2>
         <p>Towing a loaded horse trailer requires different driving technique than towing empty or towing cargo: increase following distance significantly (loaded trailers require 2-3× the stopping distance), accelerate and brake gradually (horses lose balance with sudden changes), take turns slowly and wide, check mirrors continuously for horse movement, and never exceed speeds where trailer sway becomes a risk (typically 65 mph maximum with a loaded horse trailer, less if any sway is felt).</p>
         <p>Before every trip: verify tire pressure on both truck and trailer (trailer tires are the most common blowout cause — check cold pressure), check hitch connection and safety chains, verify all lights are functional with a second person walking the trailer, ensure horses have hay to occupy them during travel, and know the route including low bridges (horse trailers with tall horses require attention to clearance). Water horses before loading for long trips and plan rest stops for hauls over 4-5 hours.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2 id="picks">Trailering Supplies — Picks</h2>
+        <p>
+          Two picks tied to the safety and long-haul sections above: a tire-pressure monitoring system (the article calls out trailer tire failure as the most common blowout cause and a documented fatality source), and a trailer-mounted hay bag for hauls beyond 2 hours. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="trailer-tpms"
+          badge="Safety-Critical"
+          badgeEmoji="🚨"
+          name="Trailer Tire Pressure Monitoring System (TPMS)"
+          subtitle="Real-time tire-pressure and temperature monitoring from the truck cab"
+          score={9.0}
+          winner
+          description={
+            <p>The single most-cited preventable trailer disaster is wheel-bearing or under-inflated-tire failure on a loaded horse trailer — which often produces a tire fire, possible rollover, and risk to the horses inside. A wireless TPMS replaces the screw-on valve caps with sensors that report tire pressure and temperature to a cab display in real time. Alerts on rapid pressure loss or temperature rise (the early signal of a bearing or tire problem) give you minutes of warning instead of seconds. TST, EEZ Tire, and Tire-Safeguard are the standard brands in the equestrian and RV markets.</p>
+          }
+          specs={[
+            { label: 'Sensor type', value: 'Wireless valve-stem cap', highlight: 'good' },
+            { label: 'Alerts', value: 'Pressure loss + temperature rise', highlight: 'good' },
+            { label: 'Display', value: 'In-cab unit, battery- or USB-powered' },
+            { label: 'Coverage', value: '4 sensors (trailer-only) or 6+ (truck + trailer)' },
+          ]}
+          pros={['Minutes of warning vs no warning on the highest-impact trailer failure mode', 'Battery life on sensors is years', 'Re-usable across trailers (just move the sensors)']}
+          cons={['Sensors can be stolen if left on the trailer publicly — bring them with you for long-term parking', 'Cab unit needs reliable power source (most have battery + USB)', 'Initial pairing is fiddly on some brands']}
+          price="$150–350"
+          ctaText="Find trailer TPMS"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="trailer-tpms"
+        />
+        <ReviewCard
+          id="trailer-hay-bag"
+          badge="Long-Haul"
+          badgeEmoji="🌾"
+          name="Trailer Hay Bag (Slow-Feed Mesh)"
+          subtitle="Mounted hay bag designed for trailer use, slow-feed mesh to extend eating time"
+          score={8.3}
+          description={
+            <p>For any haul over about 90 minutes the article&apos;s advice — &quot;ensure horses have hay to occupy them during travel&quot; — needs a trailer-specific hay bag. Solid mounting (snaps or carabiners) so it stays put on rough roads; slow-feed mesh (1–1.5″ openings) so a stressed horse doesn&apos;t inhale a flake in 15 minutes; large enough capacity for the trip duration. Most trailer hay bags are nylon or canvas; canvas wears better long-term but nylon is lighter and cheaper.</p>
+          }
+          specs={[
+            { label: 'Mounting', value: 'Snaps / carabiners to trailer fixtures', highlight: 'good' },
+            { label: 'Mesh', value: 'Slow-feed 1–1.5″', highlight: 'good' },
+            { label: 'Capacity', value: 'Half-bale typical' },
+            { label: 'Material', value: 'Canvas (durable) or nylon (lighter)' },
+          ]}
+          pros={['Reduces travel stress', 'Slow-feed mesh keeps hay available for the duration of the haul', 'Mountable to most trailer fixtures with carabiners']}
+          cons={['Nylon bags fade and weaken in UV after a few seasons of outdoor storage', 'Cheap velcro closures fail on rough roads — buy snap-closure', 'Will not replace stopping for water on long hauls']}
+          price="$20–55"
+          ctaText="Find trailer hay bags"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="trailer-hay-bag"
+        />
       </div>
     </ArticleLayout>
   )

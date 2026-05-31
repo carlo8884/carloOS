@@ -9,6 +9,9 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -117,6 +120,7 @@ export default function FerretBathingGroomingPage() {
                 { label: 'Nail Trimming', href: '#nails' },
                 { label: 'Dental Routine', href: '#dental' },
                 { label: 'Seasonal Coat Changes', href: '#coat' },
+                { label: 'Grooming Kit Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -477,6 +481,85 @@ export default function FerretBathingGroomingPage() {
               a medical question.
             </p>
           </CalloutBox>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Grooming Kit Picks</h2>
+          <p>
+            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. This is a documented-spec comparison drawing on widely-stocked products in US pet retail and the shampoo and ear-product categories referenced in standard exotic-pet practice; the page does not claim hands-on testing. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-ferret-shampoo"
+            badge="Shampoo Default"
+            badgeEmoji="🧴"
+            name="Marshall Ferret Shampoo (Original / Fragrance-Free)"
+            subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
+            score={8.5}
+            winner
+            description={
+              <p>Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free SKUs and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
+            }
+            specs={[
+              { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },
+              { label: 'Tea tree oil', value: 'None (in this SKU)', highlight: 'good' },
+              { label: 'Fragrance', value: 'None or mild' },
+              { label: 'Distribution', value: 'National chain pet retail' },
+            ]}
+            pros={['Ferret-specific formulation', 'pH-balanced', 'Original / fragrance-free SKUs available', 'Widely stocked']}
+            cons={['Marshall also sells tea-tree variants — read the label every time', 'Bottle is small for the price']}
+            price="$8–14"
+            ctaText="Find Marshall ferret shampoo"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="ferret-shampoo-original"
+          />
+          <ReviewCard
+            id="pet-ear-cleaner"
+            badge="Ear Care"
+            badgeEmoji="👂"
+            name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
+            subtitle="Gentle pet ear cleaner used in exotic-pet practice"
+            score={8.4}
+            description={
+              <p>A standard veterinary ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
+            }
+            specs={[
+              { label: 'Compatibility', value: 'Pet-safe, exotic-pet practice standard', highlight: 'good' },
+              { label: 'Application', value: 'Cotton ball / gauze (NOT in-canal swab)' },
+              { label: 'Frequency', value: 'Every 2–4 weeks' },
+            ]}
+            pros={['Used in exotic-pet practice for ferret ear cleaning', 'Gentle on ferret canal', 'Available without prescription on most pet retailers']}
+            cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
+            price="$10–20"
+            ctaText="Find pet ear cleaner"
+            ctaHref="/go/chewy-brand/epi-otic-ear-cleaner"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="pet-ear-cleaner"
+          />
+          <ReviewCard
+            id="pet-nail-kit"
+            badge="Nail Care"
+            badgeEmoji="✂️"
+            name="Small-Pet Nail Clippers + Styptic Powder"
+            subtitle="Small clippers sized for ferret nails plus styptic for accidents"
+            score={8.0}
+            description={
+              <p>Ferret nails are non-retractable and grow continuously — every 2–3 weeks is the standard trim cadence. Use small pet nail clippers (not human clippers; the geometry is wrong). Keep styptic powder (Kwik Stop or equivalent) on hand for the occasional quick — apply a small amount to the bleeding end and bleeding stops within seconds. The belly-treat two-person method described in the nail-trim section above keeps the ferret cooperative.</p>
+            }
+            specs={[
+              { label: 'Clipper size', value: 'Small-pet (not human)' },
+              { label: 'Styptic included or compatible', value: 'Yes' },
+              { label: 'Frequency', value: 'Every 2–3 weeks' },
+            ]}
+            pros={['Right tool geometry for ferret nails', 'Quick-styptic stops accidents in seconds', 'One-time purchase, lasts years']}
+            cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
+            price="$10–18"
+            ctaText="Find small-pet nail clippers"
+            ctaHref="/go/chewy-brand/small-pet-nail-clipper-styptic"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="small-pet-nail-clipper-styptic"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

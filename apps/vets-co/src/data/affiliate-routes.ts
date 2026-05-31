@@ -89,6 +89,21 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://figopetinsurance.com/?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
+  // ─── Wiring-doc carriers added 2026-05-31 (referenced in env-var swap
+  //     list at ops/handoffs/2026-05-30-affiliate-wiring-round-1-
+  //     applications.md but not previously wired in vets-co). ───
+  metlife: {
+    // Network: Impact. Carlo-approved per policy §5.
+    name: 'MetLife Pet Insurance',
+    template: 'https://metlifepetinsurance.com/?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
+  wagmo: {
+    // Network: Impact. Carlo-approved per policy §5.
+    name: 'Wagmo Pet Insurance',
+    template: 'https://wagmo.io/?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
 
   // ─── Catch-all aggregator (pre-existing) ───
   impact: {

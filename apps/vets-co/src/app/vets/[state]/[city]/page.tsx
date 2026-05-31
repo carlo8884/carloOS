@@ -114,7 +114,7 @@ export default function CityHubPage({ params }: PageProps) {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/vets" className="hover:text-brand-primary no-underline">Vet Directory</Link>
@@ -125,7 +125,7 @@ export default function CityHubPage({ params }: PageProps) {
       </nav>
 
       {/* Sample-data banner */}
-      <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container sm:px-container-sm py-3">
+      <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span>{' '}
           Individual vet profiles below are placeholders pending Carlo&apos;s selection of a verified
@@ -134,7 +134,7 @@ export default function CityHubPage({ params }: PageProps) {
       </div>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-14">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
           Veterinary Directory · {state.code}
         </span>
@@ -151,7 +151,7 @@ export default function CityHubPage({ params }: PageProps) {
         </p>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12 max-w-5xl">
+      <div className="px-container-sm sm:px-container py-12 max-w-5xl">
         {/* Specialty filter chips */}
         {presentSpecialties.size > 0 && (
           <section className="mb-10">
@@ -297,7 +297,7 @@ export default function CityHubPage({ params }: PageProps) {
       </div>
 
       {/* Cross-link footer */}
-      <div className="px-container sm:px-container-sm py-8 border-t border-brand-border bg-brand-surface">
+      <div className="px-container-sm sm:px-container py-8 border-t border-brand-border bg-brand-surface">
         <div className="max-w-5xl text-sm text-brand-text-mid leading-relaxed">
           Looking for a specific specialty in {city.city}?{' '}
           <Link href="/specialists" className="text-brand-primary font-bold no-underline hover:underline">

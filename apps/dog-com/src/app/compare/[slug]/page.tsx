@@ -430,7 +430,7 @@ export default async function ComparePage({ params }: PageProps) {
       <SchemaScript schema={combined} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -445,7 +445,7 @@ export default async function ComparePage({ params }: PageProps) {
       </nav>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">
             Breed Comparison
@@ -509,7 +509,7 @@ export default async function ComparePage({ params }: PageProps) {
       </div>
 
       {/* Content */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
             {/* Quick verdict */}

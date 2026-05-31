@@ -222,7 +222,7 @@ export default function StatesHubPage() {
 
       {/* ─── Hero ───────────────────────────────────────────────────── */}
       <div
-        className="relative z-10 px-container sm:px-container-sm py-16"
+        className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}
       >
         <nav
@@ -267,7 +267,7 @@ export default function StatesHubPage() {
 
       {/* ─── Editorial byline (top of hub) ──────────────────────────── */}
       <div
-        className="relative z-10 px-container sm:px-container-sm pt-8"
+        className="relative z-10 px-container-sm sm:px-container pt-8"
         style={{ background: '#0D1A0D' }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -282,7 +282,7 @@ export default function StatesHubPage() {
 
       {/* ─── SVG Map ────────────────────────────────────────────────── */}
       <section
-        className="relative z-10 px-container sm:px-container-sm py-12"
+        className="relative z-10 px-container-sm sm:px-container py-12"
         style={{ background: '#0D1A0D' }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -308,7 +308,7 @@ export default function StatesHubPage() {
 
       {/* ─── Permit-always callouts ─────────────────────────────────── */}
       <section
-        className="relative z-10 px-container sm:px-container-sm py-10"
+        className="relative z-10 px-container-sm sm:px-container py-10"
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -520,7 +520,7 @@ export default function StatesHubPage() {
 
       {/* ─── Rankings ───────────────────────────────────────────────── */}
       <section
-        className="relative z-10 px-container sm:px-container-sm py-12"
+        className="relative z-10 px-container-sm sm:px-container py-12"
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -618,7 +618,7 @@ export default function StatesHubPage() {
 
       {/* ─── Alphabetical list ──────────────────────────────────────── */}
       <section
-        className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-12"
+        className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-12"
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2
@@ -713,7 +713,7 @@ export default function StatesHubPage() {
 
       {/* ─── Fully-covered shortlist ──────────────────────────────── */}
       <section
-        className="border-t border-brand-border bg-brand-surface px-container sm:px-container-sm py-10"
+        className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10"
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2
@@ -761,7 +761,7 @@ export default function StatesHubPage() {
 
       {/* ─── Disclaimer ─────────────────────────────────────────────── */}
       <section
-        className="px-container sm:px-container-sm py-10"
+        className="px-container-sm sm:px-container py-10"
         style={{ background: 'var(--brand-surface)' }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -777,7 +777,7 @@ export default function StatesHubPage() {
 
       {/* ─── Email capture ─────────────────────────────────────────── */}
       <div
-        className="relative z-10 px-container sm:px-container-sm py-12"
+        className="relative z-10 px-container-sm sm:px-container py-12"
         style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}
       >
         <EmailCapture

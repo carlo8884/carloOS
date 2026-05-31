@@ -45,7 +45,7 @@ const schema = combineSchemas(
 
 export default function DataPartnershipsPage() {
   return (
-    <div className="px-container sm:px-container-sm py-16 max-w-content mx-auto">
+    <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
       <SchemaScript schema={schema} />
 
       <nav className="text-xs text-brand-text-light flex gap-2 mb-8">

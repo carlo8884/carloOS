@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse First Aid Guide — Colic, Wounds, Lameness | Saddle.com', description: 'Every horse owner needs basic first aid knowledge. Colic assessment, wound care, lameness evaluation.', path: '/guides/horse-first-aid-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse First Aid Guide', description: 'Colic assessment, wound care, lameness evaluation, and vital signs for horse owners.', url: 'https://saddle.com/guides/horse-first-aid-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -41,6 +41,69 @@ export default function HorseFirstAidPage() {
 
         <h2>First Aid Kit Contents</h2>
         <p>Essential items: thermometer (digital rectal), stethoscope, flashlight, bandaging supplies (combine roll, cotton sheet, stretch gauze, vet wrap, medical tape), saline solution or dilute chlorhexidine for wound cleaning, clean cloths, Telfa non-stick pads, scissors, hoof pick, hoof gauge, leg splint or emergency bandage guide, phone numbers (veterinarian, emergency equine clinic), and a bucket for water. Optional for the prepared barn: IV catheter supplies if trained, endoscope, pulse oximeter. Keep the kit dry, organized, accessible, and reviewed annually to replace expired or depleted items.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <CalloutBox variant="warning" title="Supportive supplies, not treatment">
+          <p>
+            The products below are <em>supportive</em> — vital-signs equipment and bandaging supplies that help you take readings, stabilise a wound for transport, and be prepared. They do not treat colic, lameness, laminitis, or any other clinical condition. Treatment decisions belong to an equine veterinarian. Use these alongside veterinary care, not as a substitute.
+          </p>
+        </CalloutBox>
+        <h2 id="picks">First Aid Kit Picks</h2>
+        <p>
+          Two picks that anchor the &quot;know your normal&quot; and &quot;be prepared&quot; themes the article above develops: a vital-signs set (digital thermometer + stethoscope) and a pre-stocked equine first-aid kit. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="vital-signs-set"
+          badge="Know Your Normal"
+          badgeEmoji="🩺"
+          name="Digital Rectal Thermometer + Equine Stethoscope"
+          subtitle="The two tools needed to take and interpret the vital signs above"
+          score={8.7}
+          winner
+          description={
+            <p>The article&apos;s most important point is to know your individual horse&apos;s normal vital signs before any emergency — and to do that you need a thermometer and a stethoscope, used weekly when the horse is healthy. A digital rectal thermometer (fast, accurate, safer than mercury glass) and a single-head stethoscope of basic quality are the tools. Keep both in the first-aid kit; keep a notebook with the horse&apos;s baseline numbers in the same place.</p>
+          }
+          specs={[
+            { label: 'Thermometer', value: 'Digital rectal, plastic shell', highlight: 'good' },
+            { label: 'Stethoscope', value: 'Single-head, 22+ inch tubing' },
+            { label: 'Use case', value: 'Weekly when healthy + every emergency' },
+            { label: 'Replacement cadence', value: 'Years (with care)' },
+          ]}
+          pros={['The first-step diagnostic before any vet call', 'Builds the personal-baseline habit', 'Combined cost under $40']}
+          cons={['Plastic thermometers crack if dropped on concrete', 'Cheap stethoscopes have shorter tubing — get 22-inch minimum for equine work']}
+          price="$25–60 combined"
+          ctaText="Find equine thermometer + stethoscope"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="equine-thermometer-stethoscope"
+        />
+        <ReviewCard
+          id="equine-first-aid-kit"
+          badge="Pre-Stocked Kit"
+          badgeEmoji="🧰"
+          name="Pre-Stocked Equine First Aid Kit"
+          subtitle="Bandaging supplies, wound-cleaning, basic instruments in one purchase"
+          score={8.2}
+          description={
+            <p>A pre-stocked equine first-aid kit covers most of the article&apos;s essential-items list in one purchase — combine roll, cotton sheet, stretch gauze, vet wrap, medical tape, saline / chlorhexidine wash, Telfa pads, scissors, hoof pick — usually in a labelled tote. Brand choice matters less than checking what&apos;s inside; some kits skimp on bandaging supplies (the highest-use category) or include expired wound cleaner. Add or replace any item that&apos;s short. Review the kit annually and replace expired or depleted supplies.</p>
+          }
+          specs={[
+            { label: 'Bandaging supplies', value: 'Vet wrap, combine roll, gauze', highlight: 'good' },
+            { label: 'Wound cleaning', value: 'Saline / chlorhexidine', highlight: 'good' },
+            { label: 'Instruments', value: 'Scissors, hoof pick' },
+            { label: 'Storage', value: 'Tote / labelled kit', highlight: 'good' },
+            { label: 'Annual refresh', value: 'Required — supplies expire' },
+          ]}
+          pros={['One purchase covers most of the essential-items list', 'Labelled storage means supplies are findable in an emergency', 'Faster than assembling piece by piece']}
+          cons={['Cheap kits skimp on bandaging (the highest-use category)', 'Some kits include expired wound cleaner — check dates', 'Will not include thermometer or stethoscope — buy those separately']}
+          price="$50–150"
+          ctaText="Find pre-stocked equine first-aid kits"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="equine-first-aid-kit"
+        />
       </div>
     </ArticleLayout>
   )

@@ -44,6 +44,9 @@ Desktop.ini
 *.swo
 *~
 
+# Claude Code local state (subagent worktrees, session metadata)
+.claude/
+
 # Logs
 *.log
 npm-debug.log*

@@ -17,6 +17,7 @@ import {
   TableOfContents,
   RelatedLinks,
   CalloutBox,
+  EmailCapture,
 } from '@carloOS/ui'
 import { ConditionDiets } from '../../data/condition-diets'
 
@@ -157,6 +158,13 @@ export default function ConditionsHubPage() {
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Methodology', href: '/guides/methodology' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="PetFood.com reference"
+            subtitle="New brand evaluations and condition-specific deep-dives. No promotional copy."
+            source="conditions-hub"
           />
         </>
       }

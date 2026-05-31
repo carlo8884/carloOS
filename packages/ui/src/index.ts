@@ -36,6 +36,16 @@ export {
 // Forms
 export { EmailCapture } from './components/EmailCapture'
 
+// Monetization primitives (Architect P2, S4, S5 — see MONETIZATION-ARCHITECT.md)
+// Note: AffiliateDisclosure is exported below in the editorial component
+// library block (the canonical location post-2026-05-31 merge); it is not
+// re-exported here to avoid a duplicate-export build error.
+export { AffiliateLink, AffiliateDisclosureContext } from './components/AffiliateLink'
+export type { Vendor } from './components/AffiliateLink'
+export { SkimlinksLoader } from './components/SkimlinksLoader'
+export { AdSenseLoader, AdSlot } from './components/AdSense'
+export { VENDORS, resolveVendorUrl } from './components/affiliate-vendors'
+
 // Health condition cards
 export { BreedHealthCard, SpeciesHealthCard } from './components/BreedHealthCard'
 

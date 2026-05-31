@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Nutrition Guide — Hay, Grain, Supplements | Saddle.com', description: 'Complete horse nutrition guide. Forage-first feeding, how much hay a horse needs, when to add grain, essential supplements.', path: '/guides/horse-nutrition-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Nutrition Guide', description: 'Hay, grain, and supplement guide for horse owners — forage-first approach.', url: 'https://saddle.com/guides/horse-nutrition-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function HorseNutritionGuidePage() {
@@ -109,6 +109,86 @@ export default function HorseNutritionGuidePage() {
 
         <h2>Feeding Schedules</h2>
         <p>Whatever the ration design, the schedule is part of the diet. Two large meals 12 hours apart with no forage between is high-risk for any horse — it concentrates digestive load, leaves long acid-exposed gastric windows, and disrupts hindgut fermentation. The healthier model is small, frequent meals: ad libitum hay (slow-feeder if intake control is needed), grain or concentrate split into 2–3 meals, and salt and water continuously available. Changes to either the type or quantity of feed should be made over 7–14 days; abrupt changes are a well-documented colic trigger.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2 id="picks">Forage & Supplement Picks</h2>
+        <p>
+          Three items referenced directly in the guide above — a slow-feeder hay net to extend forage time, a salt source the article calls for daily, and a biotin-based hoof supplement using the dose described in the supplements section. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; the page does not claim hands-on testing.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="slow-feeder-hay-net"
+          badge="Slow-Feeder"
+          badgeEmoji="🌾"
+          name="Slow-Feeder Hay Net (Small-Mesh, 1″–1.5″ Opening)"
+          subtitle="Extends forage eating time, supports continuous-grazer physiology"
+          score={8.7}
+          winner
+          description={
+            <p>The single highest-leverage tool for the forage-first principle described above. Small-mesh hay nets (1″–1.5″ openings) extend the time a horse spends consuming a fixed quantity of hay by 2–4×, closing the gaps that drive ulcer and hindgut risk on traditional twice-a-day feeding. Multiple commercial options work — choose by stall vs paddock placement (paddock-grazer style for groups, hanging net for stalls) and by mesh size (smaller for easy keepers, larger for senior horses with reduced chewing efficiency).</p>
+          }
+          specs={[
+            { label: 'Mesh size', value: '1″–1.5″ (slow-feeding)', highlight: 'good' },
+            { label: 'Capacity', value: '½ to 1 bale typical' },
+            { label: 'Material', value: 'Knotted nylon or polyester' },
+            { label: 'Use case', value: 'Stall, paddock, trailer' },
+          ]}
+          pros={['Extends forage eating time 2–4×', 'Reduces ulcer / hindgut risk on fixed hay intake', 'Cuts waste from trampled hay', 'Multiple price tiers']}
+          cons={['Front teeth wear over years on small-mesh nets (mitigate with rotation)', 'Senior horses with reduced chewing may struggle with smallest mesh sizes']}
+          price="$25–80"
+          ctaText="Find slow-feeder hay nets"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="slow-feeder-hay-net"
+        />
+        <ReviewCard
+          id="salt-block-loose"
+          badge="Daily Sodium"
+          badgeEmoji="🧂"
+          name="Plain Salt Block + Loose Salt"
+          subtitle="The 1–2 oz daily sodium intake the guide above calls for"
+          score={8.3}
+          description={
+            <p>Most hay-based diets are sodium deficient — the article above calls for 1–2 oz of salt daily, scaling up under sweat load. A plain white salt block free-choice combined with 1 tablespoon of loose salt added to the daily ration ensures intake without relying on the horse to balance themselves (some horses under-use blocks). For working horses in heat or competition, add a balanced electrolyte (sodium / potassium / chloride) during sweat events.</p>
+          }
+          specs={[
+            { label: 'Plain salt block', value: 'White or trace-mineral (red)', highlight: 'good' },
+            { label: 'Loose salt for ration', value: '1 tbsp / day baseline' },
+            { label: 'Electrolyte for sweat', value: 'Sodium / K / Cl balanced' },
+          ]}
+          pros={['Cheapest essential supplement on the list', 'Free-choice block requires no daily handling', 'Long shelf life']}
+          cons={['Some horses ignore blocks — pair with loose salt to guarantee intake', 'Mineralised blocks (Himalayan, trace) cost more without strongly better outcomes for most horses']}
+          price="$5–25"
+          ctaText="Find horse salt blocks and electrolyte"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="equine-salt-electrolyte"
+        />
+        <ReviewCard
+          id="hoof-supplement-biotin"
+          badge="Hoof Support"
+          badgeEmoji="🐎"
+          name="Biotin Hoof Supplement (20mg/day + Zinc + Methionine)"
+          subtitle="The dose discussed in the supplements section above"
+          score={8.2}
+          description={
+            <p>For horses with poor hoof quality — cracks, wall separations, slow growth — the biotin / zinc / methionine combination at 20mg biotin daily is the dose discussed across equine nutrition literature including the NRC <em>Nutrient Requirements of Horses</em>. Results require 6–12 months of consistent supplementation because the hoof grows slowly; supplements deliver a single growth cycle's worth of improvement, not a season's worth. Avoid products that combine biotin with high-NSC (sweet feed–style) carriers if managing a metabolic horse.</p>
+          }
+          specs={[
+            { label: 'Biotin daily', value: '20 mg', highlight: 'good' },
+            { label: 'Zinc / methionine', value: 'Included', highlight: 'good' },
+            { label: 'Carrier base', value: 'Check for low-NSC if metabolic' },
+            { label: 'Time to visible effect', value: '6–12 months' },
+          ]}
+          pros={['Evidence-supported dose', 'Standard SmartPak / Dover supplement category', 'Long shelf life in pellet form']}
+          cons={['Slow visible payoff (one hoof growth cycle)', 'Will not fix a structural / shoeing problem — get the farrier work right first', 'Some products bundle with high-NSC carriers — read the label for metabolic horses']}
+          price="$25–70 / month"
+          ctaText="Find biotin hoof supplements"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="biotin-hoof-supplement"
+        />
       </div>
     </ArticleLayout>
   )
