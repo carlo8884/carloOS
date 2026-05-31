@@ -2,6 +2,43 @@
   "$schema": "Image query manifest. Each key maps to a search query + provider preference + alt text template.",
   "$instructions": "When adding new image needs, append entries here. Run `node scripts/sync-images.mjs` to populate the manifest with actual URLs + photographer credits.",
 
+  "dog-com:hero": {
+    "query": "dog portrait natural light",
+    "provider": "either",
+    "alt": "A dog in natural light — the flagship hero for Dog.com",
+    "orientation": "landscape"
+  },
+  "dog-com:category-health": {
+    "query": "veterinarian examining dog",
+    "provider": "either",
+    "alt": "A veterinarian gently examining a dog",
+    "orientation": "landscape"
+  },
+  "dog-com:category-breeds": {
+    "query": "golden retriever portrait",
+    "provider": "either",
+    "alt": "A Golden Retriever in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:category-puppy": {
+    "query": "puppy first weeks home",
+    "provider": "either",
+    "alt": "A young puppy at home",
+    "orientation": "landscape"
+  },
+  "dog-com:category-nutrition": {
+    "query": "dog eating from bowl natural ingredients",
+    "provider": "either",
+    "alt": "A dog eating from a food bowl",
+    "orientation": "landscape"
+  },
+  "dog-com:category-training": {
+    "query": "dog training outdoors",
+    "provider": "either",
+    "alt": "A dog working with its owner on a training cue",
+    "orientation": "landscape"
+  },
+
   "horses-com:hero": {
     "query": "horse galloping field",
     "provider": "either",
