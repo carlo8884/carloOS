@@ -106,7 +106,7 @@ export function EmailCapture({
       )
     }
     return (
-      <div className={variant === 'sidebar' ? 'bg-brand-dark rounded-lg p-5' : ''}>
+      <div className={variant === 'sidebar' ? 'bg-brand-dark rounded-lg p-5 ring-1 ring-white/8' : ''}>
         <div className="flex items-center gap-3 text-brand-success">
           <span className="text-xl">✓</span>
           <div>
@@ -121,7 +121,7 @@ export function EmailCapture({
   // ── SIDEBAR VARIANT ────────────────────────────────────────────────────────
   if (variant === 'sidebar') {
     return (
-      <div className="bg-brand-dark rounded-lg p-5">
+      <div data-email-capture="sidebar" className="bg-brand-dark rounded-lg p-5 ring-1 ring-white/8">
         <h3 className="font-display text-base font-bold text-brand-white mb-2">
           {title}
         </h3>
