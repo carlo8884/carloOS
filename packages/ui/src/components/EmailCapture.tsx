@@ -92,13 +92,26 @@ export function EmailCapture({
   }, [email, siteId, resolvedSource])
 
   if (status === 'success') {
+    if (variant === 'section') {
+      return (
+        <div className="text-center">
+          <div className="inline-flex items-center gap-3 px-5 py-4 bg-brand-success/10 border border-brand-success/30 rounded-lg">
+            <span className="text-2xl text-brand-success">✓</span>
+            <div className="text-left">
+              <div className="font-semibold text-base text-brand-text-dark">You&apos;re subscribed!</div>
+              <div className="text-sm text-brand-text-mid mt-0.5">Check your inbox to confirm.</div>
+            </div>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className={variant === 'sidebar' ? 'bg-brand-dark rounded-lg p-5' : ''}>
         <div className="flex items-center gap-3 text-brand-success">
           <span className="text-xl">✓</span>
           <div>
             <div className="font-semibold text-sm">You&apos;re subscribed!</div>
-            <div className="text-xs text-brand-text-light mt-0.5">Check your inbox to confirm.</div>
+            <div className={variant === 'sidebar' ? 'text-xs text-white/55 mt-0.5' : 'text-xs text-brand-text-light mt-0.5'}>Check your inbox to confirm.</div>
           </div>
         </div>
       </div>
@@ -150,9 +163,10 @@ export function EmailCapture({
         </p>
       )}
       {perks && perks.length > 0 && (
-        <div className="flex items-center justify-center gap-6 flex-wrap mb-6">
+        <div className="flex items-center justify-center gap-5 flex-wrap mb-6">
           {perks.map((perk, i) => (
             <span key={i} className="text-sm text-brand-text-mid flex items-center gap-1.5">
+              <span aria-hidden className="text-brand-success font-bold text-xs">✓</span>
               {perk}
             </span>
           ))}
@@ -164,9 +178,6 @@ export function EmailCapture({
         inputClass="flex-1 min-w-48 px-4 py-3.5 border border-brand-border rounded-md text-brand-dark text-sm outline-none focus:border-brand-primary bg-brand-white"
         btnClass="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
       />
-      {status === 'error' && (
-        <p className="text-xs text-brand-danger mt-2">{errorMsg}</p>
-      )}
       <p className="text-xs text-brand-text-light mt-3">
         🔒 No spam. Unsubscribe anytime.
       </p>
