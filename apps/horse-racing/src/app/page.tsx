@@ -181,6 +181,7 @@ export default function RaceCenterPage() {
             { href: '/newsletter', label: 'Newsletter', desc: 'The Form — the sport explained weekly' },
             { href: '/predict', label: 'Predict the Finish', desc: 'Test your eye against the model — just for fun' },
             { href: '/first-derby', label: 'Your First Derby', desc: 'New to the sport? Start here' },
+            { href: '/bloodstock', label: 'Bloodstock', desc: 'How sales & pedigrees actually work' },
           ].map((c) => (
             <Link
               key={c.href}
