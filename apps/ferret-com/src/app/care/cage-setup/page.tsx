@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -57,6 +57,7 @@ export default function FerretCageSetupPage() {
                 { label: 'Out-of-Cage Time', href: '#out-of-cage' },
                 { label: 'Ferret-Proofing the Home', href: '#ferret-proof' },
                 { label: 'Cage Picks', href: '#cage-picks' },
+                { label: 'Bedding Picks', href: '#bedding-picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -167,6 +168,7 @@ export default function FerretCageSetupPage() {
           <p>
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
           </p>
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
           <ScoreMethodology />
           <ReviewCard
             id="critter-nation"
@@ -190,9 +192,9 @@ export default function FerretCageSetupPage() {
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
             price="$200–280"
             ctaText="Find Critter Nation cages"
-            ctaHref="https://www.midwesthomes4pets.com/critter-nation/"
-            ctaAffiliateProgram="amazon"
-            ctaAffiliateProduct="critter-nation"
+            ctaHref="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="midwest+critter+nation+double+unit"
           />
           <ReviewCard
             id="marshall"
@@ -215,9 +217,50 @@ export default function FerretCageSetupPage() {
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
             price="$140–200"
             ctaText="Find Marshall ferret cages"
-            ctaHref="https://www.marshallpet.com/"
-            ctaAffiliateProgram="amazon"
-            ctaAffiliateProduct="marshall-designer-cage"
+            ctaHref="/go/marshall/designer-ferret-cage?s=care-cage-setup"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="designer-ferret-cage"
+          />
+
+          <h2 id="bedding-picks">Bedding Picks</h2>
+          <p>
+            Two bedding/accessories that come up consistently across ferret keeper communities. Hammocks and fleece sleep sacks are the default resting surface; a corner litter pan with low entry is the practical complement.
+          </p>
+          <ReviewCard
+            id="marshall-sleep-sack"
+            badge="Top Pick"
+            badgeEmoji="😴"
+            name="Marshall Ferret Sleep Sack & Hammock Set"
+            subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
+            score={9.0}
+            description={
+              <p>Marshall makes the most widely stocked ferret-specific sleep sacks and hammocks in US pet retail. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Ships as a set, so both the sleeping and lounging needs are covered in one purchase. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
+            }
+            pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
+            cons={['Fleece thins over time', 'Some ferrets chew the fabric']}
+            price="$10–20"
+            ctaText="Find Marshall hammocks & sacks"
+            ctaHref="/go/marshall/ferret-sleep-sack?s=care-cage-setup"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="ferret-sleep-sack"
+          />
+          <ReviewCard
+            id="kaytee-litter-pan"
+            badge="Essential"
+            badgeEmoji="🗑️"
+            name="Kaytee Corner Ferret Litter Pan"
+            subtitle="Corner-shaped, high back wall, low-entry front lip"
+            score={8.8}
+            description={
+              <p>A ferret corner pan needs three things: corner-shaped to fit into the natural elimination spot, high back wall so litter stays in, and a low front lip the ferret can step over without difficulty. The Kaytee ferret pan hits all three and is widely available in US pet retail. Get one per cage level plus one or two for the free-roam room — the multi-pan strategy is the single biggest variable in litter training success.</p>
+            }
+            pros={['Corner-shaped — fits ferret instinct', 'Low front lip for easy entry', 'High back wall reduces scatter', 'Widely available, inexpensive']}
+            cons={['Smaller ferrets can sometimes push it out of corner', 'Needs daily spot-clean']}
+            price="$5–12"
+            ctaText="Find Kaytee corner pans"
+            ctaHref="/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
           <h2 id="sources">Sources</h2>

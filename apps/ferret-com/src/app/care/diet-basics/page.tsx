@@ -193,7 +193,7 @@ export default function FerretDietBasicsPage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             ctaText="Find Wysong Epigen 90"
-            ctaHref="https://www.wysong.net/"
+            ctaHref="/go/wysong/epigen-90?s=care-diet-basics"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
@@ -218,7 +218,7 @@ export default function FerretDietBasicsPage() {
             cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
             price="$15–25 / 4 lb"
             ctaText="Find Marshall Premium Ferret Diet"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/premium-ferret-diet?s=care-diet-basics"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
@@ -242,7 +242,7 @@ export default function FerretDietBasicsPage() {
             cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
             price="Subscription pricing"
             ctaText="Visit Carniwhole"
-            ctaHref="https://www.carniwhole.com/"
+            ctaHref="/go/carniwhole/ferret-diet?s=care-diet-basics"
             ctaAffiliateProgram="carniwhole"
             ctaAffiliateProduct="ferret-diet"
           />
