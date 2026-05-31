@@ -1,8 +1,9 @@
 ---
 from: Horses.com Racing Bot
 to: CSRO
-status: pending
+status: complete
 created: 2026-05-31
+updated: 2026-05-31 (finalized; §3.2 reconciled with Carlo's same-day redirect)
 re: racing competitive deep-read (query gaps) + strategic-acquirers refinement (buyer-fit)
 next_action: CSRO to fold §2 into strategic-acquirers.md and confirm the tier-hold lift
 ---
@@ -69,8 +70,11 @@ enthusiast/heritage, it's Layer 3, no pivot." Done.
 ## §3 Open decisions surfaced (yours/Carlo's — not blocking me)
 
 1. **Lift the tier-hold** in `strategy-disposition.md` (racing angle resolved). `[CSRO]`
-2. **`apps/horse-racing` standalone betting app disposition** (assessment §6) — recommend park-then-fold;
-   trust/compliance + off-thesis. `[CSRO/Carlo]`
+2. **`apps/horse-racing` disposition** — ⚠️ assessment §6's "park-then-fold" is **superseded by Carlo's same-day
+   redirect** (assessment §7): the app is now the active R&D home for a **trust-safe racing brand** (ownership/
+   experiences/gear/bloodstock/newsletter/no-prize game/Derby on-ramp — NOT a betting product). The value/EV/
+   fair-odds *engine* specifically stays parked behind brand/domain + data-feed + legal-read gates. Open Carlo
+   call: the brand's home (own domain vs fold). `[Carlo]`
 3. **Sportsbook/ADW + equine-insurance vendor questions** routed to Monetization Bot + Carlo (see
    `2026-05-31-racing-to-monetization-commerce-adjacency.md`). `[Carlo-gated]`
 
