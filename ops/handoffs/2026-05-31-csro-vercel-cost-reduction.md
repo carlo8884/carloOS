@@ -84,3 +84,13 @@ These three are ~5 minutes and likely cut the build-minute line by the large maj
   Cache is being **hit** (look for "cache hit, replaying..." / "Remote caching enabled" vs cold "cache miss,
   executing..." on unchanged apps). If builds are cold, wiring `TURBO_TOKEN`/`TURBO_TEAM` for this team is the fix.
 - Carlo is not highly technical — give him click-by-click steps for any dashboard action; don't assume Vercel UI familiarity.
+- **Billing state (2026-05-31 screenshot):** Pro Plan. Cycle May 27–Jun 27. Included credit $20 (spent). On-demand
+  $40.63. Upcoming invoice ~$60.63 (incl. seat + add-ons). **On-Demand Budget = $200, at $46.68 (23%),
+  Notifications ON, but `Pause Projects: OFF`.**
+  - **So a budget cap EXISTS — the runaway-to-thousands risk is already contained.** The $200 ceiling just doesn't
+    auto-stop (Pause off = alerts only). Lowering the cap is optional; the trajectory (≈$40–60/mo, ~95% build
+    minutes) is the real target, not the ceiling.
+  - **Decision for Carlo (logged, his call):** leave `Pause Projects: Off` (recommended — turning it ON would halt
+    *production* deploys too when the cap hits, risking live sites going stale) and instead **lower the budget to
+    ~$75–100** so notifications fire earlier as an early-warning, while the COO build-minute fixes do the actual
+    cost reduction. Hard-pause is the wrong tool for a portfolio with live traffic.
