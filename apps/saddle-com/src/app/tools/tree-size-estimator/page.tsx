@@ -175,12 +175,12 @@ export default function TreeSizeEstimatorPage() {
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Width</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Code (UK)</th>
-                <th className="text-left py-2 font-semibold text-brand-text">Typical conformation</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Width</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Code (UK)</th>
+                <th className="text-left py-2 font-semibold text-brand-text-dark">Typical conformation</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text-muted">
+            <tbody className="text-brand-text-mid">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Narrow</td><td className="py-2 pr-4">N / 29</td><td className="py-2">Fine-boned Thoroughbreds, Arabs with high narrow withers</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Medium-Narrow</td><td className="py-2 pr-4">MN / 30</td><td className="py-2">Average Thoroughbreds, lighter Arabs, lighter sport types</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Medium</td><td className="py-2 pr-4">M / 31</td><td className="py-2">Average sport horse / warmblood</td></tr>
@@ -196,12 +196,12 @@ export default function TreeSizeEstimatorPage() {
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Bar</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Approximate gullet</th>
-                <th className="text-left py-2 font-semibold text-brand-text">Typical conformation</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Bar</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Approximate gullet</th>
+                <th className="text-left py-2 font-semibold text-brand-text-dark">Typical conformation</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text-muted">
+            <tbody className="text-brand-text-mid">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Arab / Semi-Quarter</td><td className="py-2 pr-4">6.25"-6.5"</td><td className="py-2">Arabs, lighter Thoroughbreds, narrower stock types</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Full Quarter Horse</td><td className="py-2 pr-4">6.75"-7"</td><td className="py-2">Average Quarter Horses, broader sport horses</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Wide / Draft</td><td className="py-2 pr-4">7"-7.5"</td><td className="py-2">Cobs, draft crosses, gaited draft types</td></tr>
@@ -235,7 +235,7 @@ export default function TreeSizeEstimatorPage() {
           <li>Greve, L., &amp; Dyson, S. (2013). The horse-saddle-rider interaction. <em>The Veterinary Journal</em>, 195(3), 275-281.</li>
           <li>Manufacturer fit guidance referenced under <Link href="/brands">Saddle Brand Database</Link>, drawn from each brand&apos;s published fitter materials.</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           Saddle.com Editorial cites these as the published basis for the conformation-group and tree-width categories used by the estimator. No fitter or saddler credentials are claimed for the Saddle.com editorial team.
         </p>
 

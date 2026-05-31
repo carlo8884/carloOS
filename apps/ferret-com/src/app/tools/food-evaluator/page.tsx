@@ -169,12 +169,12 @@ export default function FerretFoodEvaluatorPage() {
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Nutrient</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Target</th>
-                <th className="text-left py-2 font-semibold text-brand-text">Rationale</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Nutrient</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Target</th>
+                <th className="text-left py-2 font-semibold text-brand-text-dark">Rationale</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text-muted">
+            <tbody className="text-brand-text-mid">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">First ingredient</td><td className="py-2 pr-4">Named meat or meat meal</td><td className="py-2">Obligate carnivore — animal protein must dominate</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude protein</td><td className="py-2 pr-4">38-45% (min 35%)</td><td className="py-2">Short GI tract; high amino-acid requirement</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude fat</td><td className="py-2 pr-4">18-25%</td><td className="py-2">Primary energy source; satiety</td></tr>
@@ -207,7 +207,7 @@ export default function FerretFoodEvaluatorPage() {
           <li>Schoemaker, N. J., et al. (multiple). Pancreatic insulinoma in ferrets — published case series and dietary association reviews.</li>
           <li>Holistic Ferret Forum community resources on raw and whole-prey feeding (informally referenced; verify with vet for any specific raw plan).</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           Ferret.com Editorial cites these as the published basis for the nutrient targets and verdict bands used by the evaluator. No third-party bench-testing of specific brands is performed by Ferret.com.
         </p>
 

@@ -91,7 +91,7 @@ function recommend(type: HorseType, withers: Withers, back: BackLength): Result 
 }
 
 const CONFIDENCE_COPY: Record<Result['confidence'], { tone: string; label: string }> = {
-  'starting-point': { tone: 'border-brand-border bg-brand-surface text-brand-text', label: 'Starting estimate — verify with a qualified fitter.' },
+  'starting-point': { tone: 'border-brand-border bg-brand-surface text-brand-text-dark', label: 'Starting estimate — verify with a qualified fitter.' },
   'wider-fitter-window': { tone: 'border-amber-700/50 bg-amber-950/30 text-amber-100', label: 'Higher fit risk — a fitter consultation is strongly recommended.' },
   'narrower-fitter-window': { tone: 'border-amber-700/50 bg-amber-950/30 text-amber-100', label: 'Conformation needs careful clearance — book a fitter before purchase.' },
 }
@@ -107,7 +107,7 @@ export function TreeSizeEstimator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <div className="mb-6 flex gap-2 rounded bg-brand-bg p-1" role="tablist" aria-label="Saddle style">
+      <div className="mb-6 flex gap-2 rounded bg-brand-surface p-1" role="tablist" aria-label="Saddle style">
         {(['english', 'western'] as Style[]).map((s) => (
           <button
             key={s}
@@ -115,7 +115,7 @@ export function TreeSizeEstimator() {
             aria-selected={style === s}
             onClick={() => setStyle(s)}
             className={`flex-1 rounded px-4 py-2 text-sm font-semibold uppercase tracking-wide transition ${
-              style === s ? 'bg-brand-primary text-white' : 'text-brand-text-muted hover:text-brand-text'
+              style === s ? 'bg-brand-primary text-white' : 'text-brand-text-mid hover:text-brand-text-dark'
             }`}
           >
             {s === 'english' ? 'English' : 'Western'}
@@ -125,14 +125,14 @@ export function TreeSizeEstimator() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="horse-type" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="horse-type" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Horse type / conformation
           </label>
           <select
             id="horse-type"
             value={horseType}
             onChange={(e) => setHorseType(e.target.value as HorseType)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {HORSE_TYPES.map((t) => (
               <option key={t.id} value={t.id}>
@@ -140,18 +140,18 @@ export function TreeSizeEstimator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{HORSE_TYPES.find((t) => t.id === horseType)?.description}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{HORSE_TYPES.find((t) => t.id === horseType)?.description}</p>
         </div>
 
         <div>
-          <label htmlFor="withers" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="withers" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Withers profile
           </label>
           <select
             id="withers"
             value={withers}
             onChange={(e) => setWithers(e.target.value as Withers)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {(Object.entries(WITHERS) as Array<[Withers, (typeof WITHERS)[Withers]]>).map(([k, v]) => (
               <option key={k} value={k}>
@@ -159,18 +159,18 @@ export function TreeSizeEstimator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{WITHERS[withers].note}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{WITHERS[withers].note}</p>
         </div>
 
         <div className="md:col-span-2">
-          <label htmlFor="back-length" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="back-length" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Back length (length of thoracic span)
           </label>
           <select
             id="back-length"
             value={back}
             onChange={(e) => setBack(e.target.value as BackLength)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {(Object.entries(BACK_LENGTH) as Array<[BackLength, (typeof BACK_LENGTH)[BackLength]]>).map(([k, v]) => (
               <option key={k} value={k}>
@@ -178,7 +178,7 @@ export function TreeSizeEstimator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{BACK_LENGTH[back].note}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{BACK_LENGTH[back].note}</p>
         </div>
       </div>
 
@@ -197,7 +197,7 @@ export function TreeSizeEstimator() {
         )}
       </div>
 
-      <p className="mt-4 text-xs text-brand-text-muted">
+      <p className="mt-4 text-xs text-brand-text-mid">
         This is a starting reference. A qualified saddler (SMS / MSA / Master Saddlers Association) must verify fit on the horse, statically and under saddle. Saddle.com Editorial does not perform fittings.
       </p>
     </div>

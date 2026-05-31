@@ -111,64 +111,64 @@ export function FerretFoodEvaluator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <p className="mb-4 text-sm text-brand-text-muted">
+      <p className="mb-4 text-sm text-brand-text-mid">
         Enter the guaranteed analysis panel from the back of the bag, plus the first ingredient from the ingredient list. The evaluator scores the food against published ferret-husbandry targets.
       </p>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
-          <label htmlFor="ff-ingredient" className="mb-1 block text-sm font-medium text-brand-text-muted">First ingredient</label>
+          <label htmlFor="ff-ingredient" className="mb-1 block text-sm font-medium text-brand-text-mid">First ingredient</label>
           <select
             id="ff-ingredient"
             value={inputs.firstIngredient}
             onChange={(e) => setInputs({ ...inputs, firstIngredient: e.target.value as FirstIngredient })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {(Object.entries(FIRST_INGREDIENT) as Array<[FirstIngredient, (typeof FIRST_INGREDIENT)[FirstIngredient]]>).map(([k, v]) => (
               <option key={k} value={k}>{v.label}</option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{FIRST_INGREDIENT[inputs.firstIngredient].note}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{FIRST_INGREDIENT[inputs.firstIngredient].note}</p>
         </div>
 
         <div>
-          <label htmlFor="ff-protein" className="mb-1 block text-sm font-medium text-brand-text-muted">Crude protein (%)</label>
+          <label htmlFor="ff-protein" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude protein (%)</label>
           <input id="ff-protein" type="number" min={10} max={70} step={0.5} value={inputs.proteinPct}
             onChange={(e) => setInputs({ ...inputs, proteinPct: Math.max(0, Number(e.target.value) || 0) })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text" />
-          <p className="mt-1 text-xs text-brand-text-muted">Target: 38-45%. Minimum: 35%.</p>
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
+          <p className="mt-1 text-xs text-brand-text-mid">Target: 38-45%. Minimum: 35%.</p>
         </div>
 
         <div>
-          <label htmlFor="ff-fat" className="mb-1 block text-sm font-medium text-brand-text-muted">Crude fat (%)</label>
+          <label htmlFor="ff-fat" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude fat (%)</label>
           <input id="ff-fat" type="number" min={5} max={50} step={0.5} value={inputs.fatPct}
             onChange={(e) => setInputs({ ...inputs, fatPct: Math.max(0, Number(e.target.value) || 0) })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text" />
-          <p className="mt-1 text-xs text-brand-text-muted">Target: 18-25%.</p>
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
+          <p className="mt-1 text-xs text-brand-text-mid">Target: 18-25%.</p>
         </div>
 
         <div>
-          <label htmlFor="ff-fiber" className="mb-1 block text-sm font-medium text-brand-text-muted">Crude fiber (%)</label>
+          <label htmlFor="ff-fiber" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude fiber (%)</label>
           <input id="ff-fiber" type="number" min={0} max={20} step={0.5} value={inputs.fiberPct}
             onChange={(e) => setInputs({ ...inputs, fiberPct: Math.max(0, Number(e.target.value) || 0) })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text" />
-          <p className="mt-1 text-xs text-brand-text-muted">Target: ≤3%. Ferrets are obligate carnivores with a short GI tract.</p>
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
+          <p className="mt-1 text-xs text-brand-text-mid">Target: ≤3%. Ferrets are obligate carnivores with a short GI tract.</p>
         </div>
 
         <div>
-          <label htmlFor="ff-ash" className="mb-1 block text-sm font-medium text-brand-text-muted">Ash (%)</label>
+          <label htmlFor="ff-ash" className="mb-1 block text-sm font-medium text-brand-text-mid">Ash (%)</label>
           <input id="ff-ash" type="number" min={0} max={15} step={0.5} value={inputs.ashPct}
             onChange={(e) => setInputs({ ...inputs, ashPct: Math.max(0, Number(e.target.value) || 0) })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text" />
-          <p className="mt-1 text-xs text-brand-text-muted">Target: ≤7%.</p>
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
+          <p className="mt-1 text-xs text-brand-text-mid">Target: ≤7%.</p>
         </div>
 
         <div>
-          <label htmlFor="ff-moisture" className="mb-1 block text-sm font-medium text-brand-text-muted">Moisture (%)</label>
+          <label htmlFor="ff-moisture" className="mb-1 block text-sm font-medium text-brand-text-mid">Moisture (%)</label>
           <input id="ff-moisture" type="number" min={0} max={90} step={0.5} value={inputs.moisturePct}
             onChange={(e) => setInputs({ ...inputs, moisturePct: Math.max(0, Number(e.target.value) || 0) })}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text" />
-          <p className="mt-1 text-xs text-brand-text-muted">Typical kibble: 8-12%. Wet food: 70-80%. Reference only.</p>
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
+          <p className="mt-1 text-xs text-brand-text-mid">Typical kibble: 8-12%. Wet food: 70-80%. Reference only.</p>
         </div>
       </div>
 
@@ -178,8 +178,8 @@ export function FerretFoodEvaluator() {
         <p className="mt-1 text-xs opacity-80">Score: {verdict.overallScore} / 18</p>
       </div>
 
-      <div className="mt-6 rounded border border-brand-border bg-brand-bg p-4 text-sm text-brand-text-muted">
-        <p className="font-semibold text-brand-text">Per-nutrient notes</p>
+      <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4 text-sm text-brand-text-mid">
+        <p className="font-semibold text-brand-text-dark">Per-nutrient notes</p>
         <ul className="mt-2 space-y-1">
           <li><strong>First ingredient:</strong> {verdict.ingredientNote}</li>
           <li><strong>Protein:</strong> {verdict.proteinNote}</li>
@@ -189,7 +189,7 @@ export function FerretFoodEvaluator() {
         </ul>
       </div>
 
-      <p className="mt-4 text-xs text-brand-text-muted">
+      <p className="mt-4 text-xs text-brand-text-mid">
         Targets are drawn from Lewington&apos;s <em>Ferret Husbandry, Medicine and Surgery</em>, Marshall Pet Products published guidance, and the AAFCO Cat Food Nutrient Profiles (used as proxy — no AAFCO ferret profile exists). For an actual feeding plan, work with an exotics-experienced veterinarian.
       </p>
     </div>

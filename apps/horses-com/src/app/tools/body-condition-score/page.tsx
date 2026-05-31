@@ -185,12 +185,12 @@ export default function BodyConditionScorePage() {
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Score</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Label</th>
-                <th className="text-left py-2 font-semibold text-brand-text">Quick read</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Score</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Label</th>
+                <th className="text-left py-2 font-semibold text-brand-text-dark">Quick read</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text-muted">
+            <tbody className="text-brand-text-mid">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">1</td><td className="py-2 pr-4">Poor</td><td className="py-2">Emaciated; bony structure prominent throughout</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">2</td><td className="py-2 pr-4">Very thin</td><td className="py-2">Emaciated; slight fat covering</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">3</td><td className="py-2 pr-4">Thin</td><td className="py-2">Ribs easily discernible; thin</td></tr>
@@ -226,7 +226,7 @@ export default function BodyConditionScorePage() {
           <li>National Research Council (NRC) (2007). <em>Nutrient Requirements of Horses, Sixth Revised Edition</em>. National Academies Press.</li>
           <li>Frank, N., Geor, R. J., Bailey, S. R., Durham, A. E., &amp; Johnson, P. J. (2010). Equine metabolic syndrome. <em>Journal of Veterinary Internal Medicine</em>, 24(3), 467-475.</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           Horses.com Editorial cites these as the published basis for the Henneke scale, cresty neck score, and feeding-guidance ranges referenced by the calculator. No veterinary examination or diagnosis is implied by the calculator output.
         </p>
 

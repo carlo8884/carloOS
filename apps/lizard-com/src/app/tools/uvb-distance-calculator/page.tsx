@@ -176,13 +176,13 @@ export default function UvbDistanceCalculatorPage() {
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Zone</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">Microhabitat</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-text">UVI at basking surface</th>
-                <th className="text-left py-2 font-semibold text-brand-text">Representative species</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Zone</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">Microhabitat</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-text-dark">UVI at basking surface</th>
+                <th className="text-left py-2 font-semibold text-brand-text-dark">Representative species</th>
               </tr>
             </thead>
-            <tbody className="text-brand-text-muted">
+            <tbody className="text-brand-text-mid">
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">1</td><td className="py-2 pr-4">Crepuscular / shade-dweller</td><td className="py-2 pr-4">0 – 1.0</td><td className="py-2">Leopard gecko, ball python, corn snake, tokay gecko</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">2</td><td className="py-2 pr-4">Partial-sun thermoregulator</td><td className="py-2 pr-4">0.7 – 1.5</td><td className="py-2">Crested gecko, gargoyle gecko, day geckos (some)</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">3</td><td className="py-2 pr-4">Open / partial-sun basker</td><td className="py-2 pr-4">1.0 – 2.6</td><td className="py-2">Blue-tongue skink (N), panther chameleon, day gecko, tegu, savannah monitor</td></tr>
@@ -214,7 +214,7 @@ export default function UvbDistanceCalculatorPage() {
           <li>Mader, D. R., &amp; Divers, S. J. (eds.) (2014). <em>Current Therapy in Reptile Medicine and Surgery</em>. Saunders. (UVB / vitamin D3 / MBD chapters.)</li>
           <li>Solarmeter 6.5 reference instrument documentation, Solartech Inc. (Used by keeper community as the field-standard UVI meter.)</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           Lizard.com Editorial cites these as the published basis for the Ferguson Zone framework and bulb-class output figures used by the calculator. No in-house bench testing of bulbs by Lizard.com is implied or claimed.
         </p>
 

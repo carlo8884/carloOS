@@ -147,7 +147,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
 
       {/* ─── Top recommendation ───────────────────────────────────────────── */}
       {recommendedCarrier && (
-        <section className="mt-10 border-l-4 border-brand-primary bg-brand-bg p-6 rounded-r-lg">
+        <section className="mt-10 border-l-4 border-brand-primary bg-brand-surface p-6 rounded-r-lg">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
             Top pick for {b.breedName}s in {s.name}
           </div>
@@ -200,7 +200,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
         <h2 className="font-display text-2xl font-bold mb-4">
           What {s.name} Means for Your Premium
         </h2>
-        <div className="bg-brand-bg rounded-lg p-5 mb-4">
+        <div className="bg-brand-surface rounded-lg p-5 mb-4">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
             Sample premium for {b.breedName}s
           </div>
@@ -263,7 +263,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
       )}
 
       {/* ─── Cross-link footer ────────────────────────────────────────────── */}
-      <section className="mt-12 bg-brand-bg rounded-lg p-6">
+      <section className="mt-12 bg-brand-surface rounded-lg p-6">
         <h2 className="font-display text-xl font-bold mb-3">
           Compare Across All {s.name} Breeds, or All States for {b.breedName}s
         </h2>
