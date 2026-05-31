@@ -180,6 +180,7 @@ export default function RaceCenterPage() {
             { href: '/gear', label: 'Gear', desc: 'Honest equestrian buyer’s guides' },
             { href: '/newsletter', label: 'Newsletter', desc: 'The Form — the sport explained weekly' },
             { href: '/predict', label: 'Predict the Finish', desc: 'Test your eye against the model — just for fun' },
+            { href: '/first-derby', label: 'Your First Derby', desc: 'New to the sport? Start here' },
           ].map((c) => (
             <Link
               key={c.href}

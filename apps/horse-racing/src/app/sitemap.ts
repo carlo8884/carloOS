@@ -62,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/gear', 'weekly', 0.8),
     entry('/newsletter', 'weekly', 0.8),
     entry('/predict', 'weekly', 0.7),
+    entry('/first-derby', 'weekly', 0.9),
     ...racecards,
     ...horses,
     ...trainers,
