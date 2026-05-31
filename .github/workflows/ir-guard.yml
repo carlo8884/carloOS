@@ -1,0 +1,88 @@
+name: IR Guard (scheduled risk scan)
+
+# The autonomous, session-less half of IR. Runs on GitHub's servers on a
+# schedule — no bot session, no Mac, no Carlo needed. Catches the MECHANICAL
+# risk classes that have repeatedly leaked/broken on CarloOS and that `next
+# build` cannot see:
+#   - main metadata-policy red (route dupes, missing/long titles)
+#   - internal link breakage
+#   - trust-bar forbidden phrases (QC §1)
+#   - affiliate DEAD links (/go to unregistered vendor) + UNTRACKED buy-boxes
+#
+# It does NOT do LLM adversarial reasoning (strategy over-confidence, valuation
+# errors) — that needs a model/API key (a Carlo-escalation). This is the
+# deterministic guard; IR-the-bot keeps the judgment layer.
+#
+# On any failure on `main`, it opens/updates a single tracking issue so the
+# finding is visible without anyone watching.
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'   # every 12 hours (Carlo: 6 or 12h, not hourly)
+  pull_request:              # + run on every PR (report, never block-by-secret)
+  workflow_dispatch: {}      # + manual "run now" button
+
+# Guardrails (Carlo 2026-05-31): NO LLM/API review, NO new secrets, NO spend,
+# NO auto-fixing, NO silent push to main, NO noisy issue spam. This workflow only
+# READS the repo, runs deterministic Node checks, and (on schedule only) opens a
+# SINGLE deduped tracking issue. It uses only the built-in GITHUB_TOKEN.
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run mechanical risk gates
+        id: gates
+        run: |
+          {
+            echo "# IR Guard scan — $(date -u +%Y-%m-%dT%H:%MZ)"
+            echo ""
+            FAIL=0
+            for check in metadata-policy link-check trust-guard affiliate-link-integrity; do
+              echo "## $check"
+              echo '```'
+              if node "scripts/ci/$check.mjs"; then :; else FAIL=1; fi
+              echo '```'
+              echo ""
+            done
+            echo "FAIL=$FAIL"
+          } | tee guard-report.md
+          grep -q '^FAIL=0' guard-report.md && echo "status=clean" >> "$GITHUB_OUTPUT" || echo "status=issues" >> "$GITHUB_OUTPUT"
+
+      # Issue is opened ONLY on the scheduled run (catches main drift), and only
+      # ONE deduped issue is kept open — no spam. On PRs the report shows in the
+      # Actions log / can be read by reviewers; no issue is created per-PR.
+      - name: Open/update tracking issue on findings (scheduled only)
+        if: steps.gates.outputs.status == 'issues' && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const body = fs.readFileSync('guard-report.md', 'utf8').slice(0, 60000)
+            const title = 'IR Guard: mechanical risk findings on main'
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'ir-guard',
+            })
+            if (issues.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issues[0].number,
+                body: `Re-scan found issues:\n\n${body}`,
+              })
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, labels: ['ir-guard'],
+                body: `Automated IR Guard found mechanical risks on \`main\`. CSRO: verify + route.\n\n${body}`,
+              })
+            }
