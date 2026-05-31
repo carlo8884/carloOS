@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Health — Colic & Gastric Ulcers Reference | Horses.com',
   description:
-    'Two high-priority equine health references: colic (types, emergency recognition, treatment) and equine gastric ulcer syndrome — AAEP and peer-reviewed literature.',
+    'Equine health references: colic (types, signs, emergency recognition) and gastric ulcer syndrome (EGUS) — grounded in AAEP and peer-reviewed literature.',
   path: '/health',
 })
 

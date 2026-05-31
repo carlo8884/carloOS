@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Guides — Saddle Fit, Dental Care & Vaccinations | Horses.com',
   description:
-    'Three practical equine owner guides: saddle fit basics, equine dental care, and AAEP core and risk-based vaccination schedules — cited from primary veterinary sources.',
+    'Three equine owner guides: saddle fit basics, dental care, and AAEP core and risk-based vaccination schedules — cited from primary veterinary sources.',
   path: '/guides',
 })
 

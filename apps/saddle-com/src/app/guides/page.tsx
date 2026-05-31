@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Horse & Saddle Guides — Fit, Riding, Tack Care | Saddle.com',
   description:
-    '24 reference guides on saddle fit, bridle fitting, bit selection, riding disciplines, tack care, and horse ownership — grounded in Society of Master Saddlers and FEI criteria.',
+    '24 guides on saddle fit, bridle and bit selection, riding disciplines, tack care, and horse ownership — SMS and FEI criteria throughout.',
   path: '/guides',
 })
 

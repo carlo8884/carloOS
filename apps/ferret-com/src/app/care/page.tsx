@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Care — Diet, Housing, Grooming & Safety | Ferret.com',
   description:
-    'Six ferret care references: diet basics, cage setup, bathing and grooming, exercise and enrichment, litter training, and toxic foods — grounded in obligate-carnivore physiology.',
+    'Ferret care references: diet basics, cage setup, bathing and grooming, exercise, litter training, and toxic foods — grounded in obligate-carnivore physiology.',
   path: '/care',
 })
 

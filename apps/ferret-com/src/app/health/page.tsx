@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Health — Conditions, Vaccinations & Vet Prep | Ferret.com',
   description:
-    'Seven ferret health references: insulinoma, adrenal disease, lymphoma, dental disease, aging care, vaccinations, and vet-visit prep — grounded in exotic-mammal veterinary literature.',
+    'Ferret health references: insulinoma, adrenal disease, lymphoma, dental disease, aging care, vaccinations, and vet prep — exotic-mammal veterinary literature.',
   path: '/health',
 })
 
