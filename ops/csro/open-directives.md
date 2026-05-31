@@ -28,6 +28,12 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 
 ## Open
 
+### csro-dir-2026-W22-020 → COO — implement Bot Wakeup Queue v1 (new 2026-05-31) ⬆ P1
+- **Action:** Adopt + finalize the Bot Wakeup Queue. CSRO drafted the spec (`ops/bot-queue/wakeup-queue-spec.md`), README, and 6 example queue files (`ops/bot-queue/<Bot>.md`). COO: review/normalize them, make canonical, and enforce the read-on-wake / update-before-stop protocol fleet-wide. **Do NOT build an orchestrator.** Keep low-noise (spec §5).
+- **Why:** bots idle when sessions end and Carlo manually re-explains each task. The queue means a woken bot is instantly productive without asking Carlo — fixes the recurring "all bots stopped" pain. `[FACT]`
+- **Done-when:** 6 queue files live + accurate; bots reference them on wake; CSRO runs the stalled-directive sweep (spec §3).
+- **Status:** open.
+
 ### csro-dir-2026-W22-019 → Monetization Bot — 🔴 PORTFOLIO REVENUE LEAK: 110 untracked buy-box links (new 2026-05-31)
 - **Action:** 110 buy-box CTAs link to bare `chewy.com`/`amazon.com` URLs that **bypass `/go/`** → untracked = $0 commission on every purchase-intent click. By site: **dog-com 42** (36K/mo flagship review pages), saddle 34, horses 19, ferret 9, vets 3, lizard 2, fish 1. Convert `ctaHref="https://chewy.com/..."` → `ctaHref="/go/chewy/<sku>?s=<slug>"` (amazon → `/go/amazon/...`). Verify with `node scripts/ci/affiliate-link-integrity.mjs`.
 - **Why:** the flagship's highest-intent pages send purchase traffic to retailers with no commission credit — silent, portfolio-wide, real money on the 50K+/mo we already have. Found by the new affiliate-link-integrity check. `[FACT — 110 instances, CSRO-verified]`
