@@ -561,6 +561,13 @@ export interface SiteConfig {
   // SEO defaults
   defaultOgImage: string
   twitterHandle?: string
+
+  // Efty listing URL (per csro-dir-2026-W22-008).
+  // Set this PER SITE when Carlo provides the Efty listing URL.
+  // When set, the shared Footer renders a discreet "This domain is for sale →" link.
+  // Tier-A (Dog/Fish) and any other sites Carlo does NOT want to advertise as for-sale
+  // leave this unset → the link is not rendered.
+  eftyUrl?: string
 }
 
 export const siteConfigs: Record<SiteId, SiteConfig> = {
