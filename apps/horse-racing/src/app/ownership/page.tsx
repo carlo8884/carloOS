@@ -62,6 +62,23 @@ export default function OwnershipHubPage() {
           ))}
         </div>
 
+        {/* Interactive tool — citation magnet + engagement */}
+        <Link
+          href="/ownership/cost-calculator"
+          className="mt-6 block rounded-xl border border-brand-border bg-brand-surface p-5 no-underline transition hover:border-brand-primary"
+        >
+          <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Free tool
+          </p>
+          <h2 className="mt-1 font-display text-lg font-bold text-brand-text-dark">
+            Racehorse Ownership Cost Calculator
+          </h2>
+          <p className="mt-1 text-sm text-brand-text-mid">
+            Estimate what ownership would cost you per year — whole horse, partnership, or
+            fractional. You control every assumption.
+          </p>
+        </Link>
+
         {/* Paid digital product — the willingness-to-pay validator */}
         <section className="mt-12 rounded-2xl border-2 border-brand-primary bg-brand-primary-pale/40 p-6">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark">

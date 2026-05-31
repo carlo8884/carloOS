@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/guides', 'weekly', 0.8),
     entry('/ownership', 'weekly', 0.9),
     entry('/ownership/playbook', 'monthly', 0.8),
+    entry('/ownership/cost-calculator', 'monthly', 0.8),
     entry('/experiences', 'weekly', 0.8),
     entry('/gear', 'weekly', 0.8),
     entry('/newsletter', 'weekly', 0.8),
