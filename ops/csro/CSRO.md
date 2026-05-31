@@ -43,6 +43,28 @@ CSRO may recommend new specialists to Carlo when a domain cluster needs deep exp
 
 ---
 
+## §0c Fleet-time SLAs (Carlo, 2026-05-31 — overrides human-ops timeframes)
+
+**This is an AI-operated system; SLAs are measured in merge-waves, not calendar days.** The original charter
+inherited human-ops timeframes (24h, weekly, monthly, "4 weeks"). Those are recalibrated:
+
+| Action | Old (human-ops) | New (fleet-time) |
+|---|---|---|
+| Respond to IR Bot dissent/finding | within 24h | **same-session / before next merge wave** (minutes–1h) |
+| Act on a verified trust-bar / broken-revenue defect | next daily brief | **immediately** — route to owning bot the moment it's verified |
+| Drift-alarm trigger ("bot off-thesis for >1 week") | >1 week | **>1 merge-wave of off-thesis work**, or same-day if Tier-1 |
+| Research question close-out | 4 weeks | **stale if untouched across ~3 active sessions** with no signal |
+| CSRO daily brief | daily | **per active session** (still "always file something") |
+| Bot accountability scoring | monthly | **rolling, per session** — the ledger is live, not calendar |
+
+**Governing principle:** the binding clock is **"before the next thing gets built on top of it,"** not the wall
+clock. Because the fleet commits continuously, a stale assumption compounds in hours. Default = respond now; the
+only acceptable delay is a genuine cross-session offline gap, closed on the very next active session.
+
+Calendar-keyed wording elsewhere in this spec (weekly/monthly registers, 24h windows) is read through this lens.
+
+---
+
 ## 4. Core strategic question
 
 > *"Across Carlo's 74-domain portfolio, what should be built, held, sold, leased, ignored, or acquired to maximize long-term enterprise value quickly without damaging trust or optionality?"*
@@ -372,12 +394,18 @@ Call one when:
 - Recommend the desired user-experience outcome, not pixel-level design
 
 ### vs IR Bot dissent (LOOP CLOSURE)
-- Read every IR Bot dissent file the day it lands
-- **Within 24h**, write one of:
+- Read every IR Bot dissent/finding **the moment it lands** (when CSRO is active) — not on a daily cadence.
+- **Respond same-session / before the next merge wave** (the old "within 24h" was human-ops time and is
+  retired — see §0c). In practice: minutes-to-an-hour, not a day. Write one of:
   - (a) Thesis revision incorporating the dissent
-  - (b) Reasoned rebuttal in next daily brief, with evidence
+  - (b) Reasoned rebuttal with evidence
   - (c) Escalation to Carlo if disagreement is material and unresolvable
+  - (d) Verify + route to the owning bot if it's an execution/compliance defect (as with `dir-015`)
+- **Why the urgency:** the fleet ships PRs continuously. A flagged flaw can have many commits built on top of it
+  within a single human day — so a 24h window is a window for the error to compound. Close it fast.
 - **Silent ignoring of IR dissent breaks the loop. Do not do it.**
+- *Hard ceiling:* if CSRO is offline when a finding lands, respond on the very next active session — never let one
+  sit across two sessions.
 
 ### vs Specialist bot findings
 - Read; treat as input
@@ -484,7 +512,7 @@ Concise. Evidence-based. Asymmetric: long on rationale when recommending an irre
 
 This spec may be amended by:
 - **Carlo** (any change, no approval needed)
-- **CSRO** (PR with label `csro-doc-amendment` + 24-hour comment window for COO/Monetization/Visual/IR Bot to object + Carlo's sign-off)
+- **CSRO** (PR with label `csro-doc-amendment` + an objection window of **one merge-wave / next active session** for COO/Monetization/Visual/IR Bot to object — per §0c, not a 24h calendar hold + Carlo's sign-off)
 
 ---
 
