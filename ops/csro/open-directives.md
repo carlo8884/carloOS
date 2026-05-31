@@ -48,7 +48,13 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Done-when:** `node scripts/ci/metadata-policy.mjs` clean across all 5 sites; one canonical URL per funnel.
 - **Status:** open — P0, blocks merge queue.
 
-### csro-dir-2026-W22-017 → Monetization Bot — register `embark` + `basepaws` DNA vendors (REOPEN of 015#1) ⬆ HIGH
+### csro-dir-2026-W22-017 → ❌ VOID (CSRO error, caught by IR Bot 2026-05-31)
+- **Voided:** I reopened this claiming `embark`/`basepaws` 404, but **all three DNA vendors (`embark`,
+  `wisdom-panel`, `basepaws`) ARE registered on current main** (affiliate-routes.ts L128/134/140) and the page
+  links exactly those. No 404. My reopen was based on a stale-branch read. IR Bot caught it. **No work needed.**
+- Lesson (again): verify against `origin/main` HEAD, not a local stale checkout, before reopening anything.
+
+### ~~csro-dir-2026-W22-017~~ (orig, void) → register embark/basepaws — N/A, already registered
 - **Action:** add route templates for vendor keys **`embark`** and **`basepaws`** to `apps/dog-com/src/data/affiliate-routes.ts` (the DNA page + `[test]` sub-page both link `/go/embark/...` and `/go/basepaws/...`). Verify all 3 DNA CTAs (embark, basepaws, wisdom-panel) resolve, not 404.
 - **Why:** PR #240 only registered wisdom-panel; 2 of 3 DNA affiliate links still dead = lost commission on live traffic. `[FACT — verified by CSRO 2026-05-31, key-by-key]`
 - **Done-when:** `grep` of page `/go/<vendor>/` keys ⊆ registered route keys; all resolve.

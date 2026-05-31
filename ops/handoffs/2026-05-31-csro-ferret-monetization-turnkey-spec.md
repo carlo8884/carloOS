@@ -13,18 +13,20 @@ re: csro-dir-009 Ferret.com monetization — turn-key spec (pure execution)
 adding affiliate buy-boxes to the existing high-traffic pages. **This is the path to the portfolio's first real
 dollar.** Everything you need is below; no decisions required, just fill + ship.
 
-## Everything already exists (verified by CSRO 2026-05-31 against the actual source)
+## Everything already exists (verified by CSRO 2026-05-31 — corrected after IR Bot caught a spec bug)
 - `packages/ui/src/components/ReviewCard.tsx` — the buy-box component. **EXACT props (do not guess):**
   - `name` (req, string) · `score` (req, number **out of 10**) · `description` (req, ReactNode — JSX `<p>…</p>`)
-  - `ctaAffiliateProgram` (vendor key) · `ctaAffiliateProduct` (the SKU/product slug) · `ctaText` · `ctaHref`
+  - **`ctaHref` (THE LINK — required for the button to work) · `ctaText` · `ctaAffiliateProgram` · `ctaAffiliateProduct`**
   - optional: `badge`, `badgeEmoji`, `subtitle`, `specs` (`{label,value,highlight?:'good'|'warn'|'bad'}[]`),
     `pros: string[]`, `cons: string[]`, `price`, `priceNote`, `winner`, `id`
-  - The click routes via `ctaAffiliateProgram` + `ctaAffiliateProduct` through the `/go` handler.
-- `apps/ferret-com/src/data/affiliate-routes.ts` — vendor keys ready: **`amazon`, `chewy`, `marshall`, `wysong`,
-  `carniwhole`** (these are the only allowed values for `affiliateProgram`, per bot-coordination §5).
-- `apps/ferret-com/src/app/go/[vendor]/[sku]/route.ts` — click tracker (ReviewCard routes through it automatically).
-- **Working example to copy:** `apps/ferret-com/src/app/care/cage-setup/page.tsx` already imports and uses
-  `ReviewCard` with `affiliateProgram="amazon"`. Mirror that exact pattern.
+- > ⚠️ **CRITICAL (IR Bot finding, verified): the buy-box DOES NOT auto-route.** `ReviewCard` renders
+  > `href={ctaHref}` and `ctaHref` defaults to `'#'`. `ctaAffiliateProgram`/`ctaAffiliateProduct` are only `data-`
+  > attributes — **they do NOT build the link.** You MUST set `ctaHref="/go/<vendor>/<sku>?s=<page-slug>"` explicitly,
+  > or every buy-box links to `#` (dead). This is the affiliate path through `/go/[vendor]/[sku]/route.ts`.
+- `apps/ferret-com/src/data/affiliate-routes.ts` — vendor keys for the `<vendor>` in `ctaHref`: **`amazon`, `chewy`,
+  `marshall`, `wysong`, `carniwhole`** (only these, per bot-coordination §5).
+- **Working example to copy verbatim:** `apps/ferret-com/src/app/care/cage-setup/page.tsx` — its live cards set
+  `ctaHref="..."` explicitly (line 193). Mirror that — **always include `ctaHref`.**
 
 ## Import line (every page)
 ```tsx
@@ -72,15 +74,18 @@ Highest-intent: people choosing ferret food. Add 2-3 cards:
   pros={['real pro', 'real pro']}
   cons={['real con']}
   ctaText="Check price"
-  ctaAffiliateProgram="amazon"          {/* one of: amazon chewy marshall wysong carniwhole */}
-  ctaAffiliateProduct="REAL_ASIN_OR_SKU"  {/* look up — do NOT invent (fake SKU = the dir-015 404 bug) */}
+  ctaHref="/go/amazon/REAL_ASIN_OR_SKU?s=ferret-diet-basics"   {/* ← THE LINK. vendor ∈ amazon|chewy|marshall|wysong|carniwhole; SKU real (look up, don't invent); s=<page-slug> */}
+  ctaAffiliateProgram="amazon"          {/* data-attr only — does NOT build the link */}
+  ctaAffiliateProduct="REAL_ASIN_OR_SKU"
 />
 ```
+> **`ctaHref` is mandatory** — it's the actual affiliate link. Omit it and the button is dead (`#`). Copy the two
+> live `<ReviewCard>` calls in `apps/ferret-com/src/app/care/cage-setup/page.tsx` (they set `ctaHref`) as template.
 > Copy the two live `<ReviewCard>` calls already in `apps/ferret-com/src/app/care/cage-setup/page.tsx` as your
 > template — they compile and route correctly today.
 
 ## Hard rules
-- `affiliateProgram` ∈ {amazon, chewy, marshall, wysong, carniwhole} only. No other vendors (§5).
+- `ctaHref` vendor ∈ {amazon, chewy, marshall, wysong, carniwhole} only. No other vendors (§5).
 - Real SKUs only — broken/fake SKU = broken link = the exact failure IR caught on Dog.com (`dir-015`). Verify each resolves.
 - FTC disclosure above the fold on every page you touch (QC §3.2).
 - Health pages = supportive-care framing only, zero treatment claims (QC §1/§3.3).
