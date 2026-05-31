@@ -31,29 +31,33 @@ bot — same content, manual trigger.
 
 ## Per-role priorities (current — update centrally as state changes)
 
-### COO
-Vets.co insurance launch-readiness/trust-audit (`dir-007`) · Efty footer component (`dir-008`) · consolidation
-redirects (PetFoods→PetFood, Ferrets→Ferret) · free-tier vet-directory prep (`dir-010`) · keep main green.
+### Monetization Bot — 🔴 FIRST-DOLLAR, do in this order
+1. **Ferret.com buy-boxes** — execute `ops/handoffs/2026-05-31-csro-ferret-monetization-turnkey-spec.md` exactly
+   (6 pages, verified ReviewCard API, real SKUs — look up, don't invent). Ferret = 11K/mo, $0 monetized = the
+   portfolio's first dollar. **diet-basics is NOT yet monetized — start there.**
+2. **`dir-017`** — register `embark` + `basepaws` in `apps/dog-com/src/data/affiliate-routes.ts` (DNA page links
+   them but they 404; PR #240 only fixed wisdom-panel). Verify all 3 DNA CTAs resolve.
+3. **`dir-009`** — PetFood.com buy-box retarget.
 
-### Monetization Bot — TOP: live money
-1. **`dir-015`** — fix the live Dog.com DNA affiliate 404s (`/go/embark-vet`, `/go/basepaws` unregistered) + the
-   3 compliance items. **These are losing commission now.**
-2. **`dir-009`** — Ferret.com (11K/mo, zero monetization) buy-boxes + PetFood.com buy-box retarget.
-3. Confirm Vets.co carrier-enrollment realism (which carriers we can self-serve enroll with).
+### COO
+Vets.co insurance launch-readiness/trust-audit (`dir-007`) · Efty footer (`dir-008`) · consolidation redirects ·
+free-tier vet-directory prep (`dir-010`) · **keep main green + drain the merge queue.**
 
 ### Visual Bot
-Launch-first visual sign-off: Ferret → Vets insurance → PetFood · buy-box / ReviewCard polish on monetized pages ·
-audience-capture UX (email/lead-magnet placement). Per `dir-012` (note: horse-cluster is VALIDATE-FIRST, not build).
+Launch-first visual sign-off: Ferret → Vets insurance → PetFood · buy-box/ReviewCard polish on the pages
+Monetization is monetizing · audience-capture UX. (`dir-012` — horse cluster is VALIDATE-FIRST, not build.)
 
 ### Racing Bot
-`dir-016` — deliver the Horses.com fork decision brief (racing-intelligence vs editorial vs hybrid). Test the
-"informative + licensed racing-data-API analysis" hypothesis; tag every avenue 🟢/🟡/🔴 on legal-licensing friction
-(default NO on 🔴 unless overwhelming value + Carlo opts in). Judge by highest-and-best-use across all buyers.
+`dir-016` — deliver the Horses.com fork decision brief. Test "informative + licensed racing-data-API analysis";
+tag avenues 🟢/🟡/🔴 on legal-licensing friction; default NO on 🔴. Highest-and-best-use across all buyers.
 
 ### IR Bot (read-only / chat-relay)
-Self-run the adversarial loop (`IR-BOT.md §3a`). Next: **audit the Ferret/PetFood monetization PRs** with the same
-rigor as the strategy pass. Report findings in chat → Carlo relays → CSRO files. You already caught `dir-015` + the
-10-finding strategy pass; keep drawing blood.
+Self-run the adversarial loop (`IR-BOT.md §3a`). Next: **audit the Ferret/PetFood monetization PRs as they open** —
+verify SKUs resolve, disclosure present, health-page guardrails honored. Report in chat → Carlo relays → CSRO files.
+
+### CSRO (me)
+Revenue-first gate (per premortem): unblock the money work, keep main green, close IR loops, **verify every "done"
+key-by-key** (don't rubber-stamp). No new strategy docs until first dollar.
 
 ---
 
