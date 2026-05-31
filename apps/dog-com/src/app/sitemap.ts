@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/breeds/weimaraner', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/breeds/yorkshire-terrier', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/compare', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/conditions', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
