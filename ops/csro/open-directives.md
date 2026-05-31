@@ -28,6 +28,13 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 
 ## Open
 
+### csro-dir-2026-W22-016 → Racing Bot — Horses.com fork: decision-grade research brief (new 2026-05-31) ⬆ DECISION GATE
+- **Action:** Per Carlo's 2026-05-31 redirect — STOP building content; deliver a decision-grade brief: "Should Horses.com become a racing-intelligence platform, a general equine editorial asset, or a hybrid?" Full prompt + CSRO refinements: `ops/handoffs/2026-05-31-csro-horses-racing-fork-gate.md`. CSRO refinements: (1) headline = the buyer-set tradeoff (racing-intel may raise value OR swap Equine Network for a narrower buyer pool); (2) label claims FACT/RESEARCH/HYPOTHESIS + cite; (3) wagering-adjacent = legal hard-stop, no build without Carlo + legal review.
+- **Why:** Carlo caught the Racing Bot building content (lane breach — it's a research specialist). The fork is the #2 cluster's identity question; resolve deliberately, don't default to content. `[FACT]`
+- **Build boundary during gate:** PAUSE racing-direction/identity build; CONTINUE fork-agnostic audience-capture + Saddle tack-commerce (`dir-012` L1–2).
+- **Done-when:** brief delivered → CSRO reviews same-session → Carlo decides fork.
+- **Status:** open — DECISION GATE. CSRO endorses Carlo's redirect.
+
 ### csro-dir-2026-W22-015 → Monetization Bot — fix 4 IR-verified affiliate issues (new 2026-05-31) ⬆ HIGH
 - **Action:** Fix the IR Bot's verified affiliate findings (brief: `ops/handoffs/2026-05-31-csro-to-monetization-ir-fixes.md`). **#1 HIGH:** Dog.com DNA funnel links to unregistered `/go/embark-vet` + `/go/basepaws` → 404s on a live revenue funnel. #2 vets.co has out-of-policy `amazon-brand`/`chewy-brand` routes (latent, remove). #3 Dog.com Skimlinks sitewide w/ footer-only disclosure (surface on monetized pages — Tier-1 protect-asset). #4 env-var name mismatch (lost attribution).
 - **Why:** Finding #1 is broken affiliate links losing money now; #2–4 are compliance/trust hygiene. All verified by CSRO against main. `[CONFIRMED]`

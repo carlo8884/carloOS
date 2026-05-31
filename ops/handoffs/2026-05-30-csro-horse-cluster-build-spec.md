@@ -1,9 +1,17 @@
 ---
 from: CSRO
 to: COO, Monetization Bot, Visual Bot
-status: open
+status: open — AMENDED 2026-05-31 (racing fork gate)
 created: 2026-05-30
 re: build saddle.com + horses.com toward a named strategic acquirer (Equine Network)
+
+> **⚠️ AMENDMENT 2026-05-31 — Horses.com racing fork is GATED.** Carlo redirected the Racing Bot to produce a
+> decision-grade brief on whether Horses.com becomes a racing-intelligence platform vs editorial vs hybrid
+> (`2026-05-31-csro-horses-racing-fork-gate.md`). Until that resolves:
+> - ⏸ **PAUSE** any *racing-specific* Horses.com direction/identity build + Layer-3 traffic work on the racing dimension.
+> - ✅ **CONTINUE** Layers 1–2 (audience capture + tack commerce) on Saddle.com AND the fork-agnostic parts of
+>   Horses.com — these help every possible Horses.com future and don't pre-commit the fork.
+> - 🚫 **NO wagering-adjacent build** without Carlo's explicit approval + legal review (gambling-ad law).
 ---
 
 # CSRO — Horse-cluster build spec (target acquirer: Equine Network)
