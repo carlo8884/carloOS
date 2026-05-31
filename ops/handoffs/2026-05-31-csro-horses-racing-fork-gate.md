@@ -60,4 +60,34 @@ correct.** This is the kind of fork that should pause-and-prove, per CLAUDE.md's
 refinements above. `csro-dir-2026-W22-012` (horse-cluster build) amended: racing dimension PAUSED pending brief;
 audience-capture + tack-commerce CONTINUE.
 
+## Addendum — Carlo steer (2026-05-31): keep going + two constraints to research within
+
+Carlo: **keep figuring it out — don't stall the research.** Plus two framing inputs:
+
+1. **Carlo's working hypothesis to test (not adopt): "informative + racing-data analysis."** If Horses.com goes
+   racing, the model is an **informative analysis layer powered by licensed racing-data APIs** — i.e. ingest race
+   data, analyze it, present ratings/insights — NOT a tipster/wagering operation. So a core research question:
+   **which racing-data APIs/feeds exist, what do they cost, what are their licensing terms, and what does an
+   "informative analysis" layer on top legally/safely look like?** (e.g. Equibase, Racing Post / At The Races,
+   Timeform, BHA/US-TJC feeds, Drf, statistical/odds APIs — find the real options + terms.)
+
+2. **Legal/licensing = effort gate, not just risk flag.** Carlo: "if there's legal issues and licensing, we can
+   look at certain things — but unless it's EASY, it isn't something we'd do." So evaluate each racing avenue on a
+   **friction axis** and label it:
+   - 🟢 **EASY** — clean data license + no gambling-ad exposure + standard affiliate/subscription → fair game.
+   - 🟡 **MODERATE** — some licensing cost or compliance work but tractable → present with the cost/effort.
+   - 🔴 **HARD** — heavy legal review, gambling-advertising law, bespoke data deals, regulatory registration →
+     **default NO unless the value is overwhelming and Carlo explicitly opts in.**
+
+   Rank the strategic options partly by this friction axis. A high-value option that's 🔴-hard loses to a
+   slightly-lower-value option that's 🟢-easy, all else equal. **"Easy and valuable" wins.**
+
+3. **Judge every option by HIGHEST-AND-BEST-USE across ALL buyers + income** (`thesis.md §0a`), not by Equine
+   Network's preference. The winning Horses.com is the one worth the most to the most buyers AND earning the most —
+   not the one tailored to a single acquirer.
+
+**Net steer to Racing Bot:** keep researching; pressure-test the "informative + licensed-data-API analysis"
+hypothesis specifically; tag every avenue 🟢/🟡/🔴 on legal-licensing friction; recommend the highest-and-best-use
+path that is also as close to 🟢-easy as possible.
+
 **Status:** open — awaiting Racing Bot brief. This is a genuine strategic fork, correctly gated.
