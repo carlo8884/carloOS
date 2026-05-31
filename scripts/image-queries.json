@@ -261,5 +261,74 @@
     "provider": "either",
     "alt": "A veterinarian using a stethoscope on a dog's chest",
     "orientation": "landscape"
+  },
+
+  "lizard-com:tool-uvb-calculator": {
+    "query": "reptile basking lamp terrarium",
+    "provider": "either",
+    "alt": "A reptile basking under a UVB heat lamp in its terrarium",
+    "orientation": "landscape"
+  },
+  "lizard-com:tool-enclosure-calculator": {
+    "query": "bioactive vivarium reptile enclosure",
+    "provider": "either",
+    "alt": "A naturalistic bioactive reptile enclosure with live plants and hides",
+    "orientation": "landscape"
+  },
+
+  "saddle-com:tool-tree-size": {
+    "query": "saddle fitting horse withers",
+    "provider": "either",
+    "alt": "A saddle being assessed for fit on a horse's withers",
+    "orientation": "landscape"
+  },
+
+  "vets-co:tool-insurance-estimator": {
+    "query": "veterinarian receipt pet",
+    "provider": "either",
+    "alt": "A pet owner reviewing a veterinary bill",
+    "orientation": "landscape"
+  },
+
+  "horses-com:tool-bcs-calculator": {
+    "query": "horse body condition assessment",
+    "provider": "either",
+    "alt": "A horse standing square for body condition assessment",
+    "orientation": "landscape"
+  },
+
+  "petfood-com:tool-food-cost": {
+    "query": "dog food bowl measuring cup",
+    "provider": "either",
+    "alt": "A measuring cup beside a bowl of kibble",
+    "orientation": "landscape"
+  },
+
+  "ferret-com:tool-food-evaluator": {
+    "query": "ferret eating bowl",
+    "provider": "either",
+    "alt": "A pet ferret eating from its food bowl",
+    "orientation": "landscape"
+  },
+
+  "fish-com:tool-cycling-estimator": {
+    "query": "aquarium test kit ammonia",
+    "provider": "either",
+    "alt": "An aquarium water test kit measuring ammonia and nitrite",
+    "orientation": "landscape"
+  },
+
+  "askthevet:tool-symptom-triage": {
+    "query": "pet owner calling vet phone",
+    "provider": "either",
+    "alt": "A pet owner consulting their veterinarian by phone",
+    "orientation": "landscape"
+  },
+
+  "seniorpets:tool-wellness-checkin": {
+    "query": "senior dog veterinary exam",
+    "provider": "either",
+    "alt": "A senior dog being examined during a wellness visit",
+    "orientation": "landscape"
   }
 }
