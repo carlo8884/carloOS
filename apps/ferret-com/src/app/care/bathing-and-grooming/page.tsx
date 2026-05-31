@@ -533,8 +533,8 @@ export default function FerretBathingGroomingPage() {
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
             ctaText="Find pet ear cleaner"
-            ctaHref="https://www.chewy.com/s?query=epi-otic+ear+cleaner"
-            ctaAffiliateProgram="chewy"
+            ctaHref="/go/chewy-brand/epi-otic-ear-cleaner"
+            ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="pet-ear-cleaner"
           />
           <ReviewCard
@@ -556,8 +556,8 @@ export default function FerretBathingGroomingPage() {
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
             price="$10–18"
             ctaText="Find small-pet nail clippers"
-            ctaHref="https://www.chewy.com/s?query=small+pet+nail+clipper+styptic"
-            ctaAffiliateProgram="chewy"
+            ctaHref="/go/chewy-brand/small-pet-nail-clipper-styptic"
+            ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small-pet-nail-clipper-styptic"
           />
 

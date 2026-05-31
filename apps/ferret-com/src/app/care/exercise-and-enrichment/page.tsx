@@ -531,8 +531,8 @@ export default function FerretExerciseEnrichmentPage() {
             cons={['Fill spills are inevitable — keep near a vacuum-friendly surface', 'Rice fill needs replacement when it cracks down to dust']}
             price="$10–25 starter"
             ctaText="Find ferret-safe ball-pit fill"
-            ctaHref="https://www.chewy.com/s?query=small+pet+ball+pit+balls"
-            ctaAffiliateProgram="chewy"
+            ctaHref="/go/chewy-brand/small-pet-ball-pit-balls"
+            ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="dig-box-balls"
           />
 

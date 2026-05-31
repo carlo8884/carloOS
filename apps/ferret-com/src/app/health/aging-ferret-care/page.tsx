@@ -580,8 +580,8 @@ export default function FerretAgingPage() {
             cons={['Not a treatment for the underlying disease', 'Use without veterinary direction can delay needed care', 'Some ferrets reject the texture — switch brand or warm before serving']}
             price="$8–15 / can"
             ctaText="Find recovery / supportive feeding diet"
-            ctaHref="https://www.chewy.com/s?query=carnivore+care+recovery+diet"
-            ctaAffiliateProgram="chewy"
+            ctaHref="/go/chewy-brand/carnivore-care-recovery-diet"
+            ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="recovery-diet"
           />
 

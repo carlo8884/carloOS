@@ -530,8 +530,8 @@ export default function FerretLitterTrainingPage() {
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="$12–25 / 15-30 lb"
             ctaText="Find Yesterday's News paper-pellet litter"
-            ctaHref="https://www.chewy.com/s?query=yesterdays+news+litter"
-            ctaAffiliateProgram="chewy"
+            ctaHref="/go/chewy-brand/yesterdays-news-litter"
+            ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="yesterdays-news-paper-pellet"
           />
 
