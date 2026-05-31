@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -66,6 +66,7 @@ export default function FerretInsulinomaPage() {
                 { label: 'Treatment Ladder', href: '#treatment' },
                 { label: 'Emergency Crisis Protocol', href: '#emergency' },
                 { label: 'Prognosis', href: '#prognosis' },
+                { label: 'Supportive Nutrition', href: '#nutrition' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -197,6 +198,37 @@ export default function FerretInsulinomaPage() {
           <p>
             Quality of life on appropriate management is generally good. Most insulinoma ferrets continue to eat well, play, and engage with their household between episodes. The trajectory is not "rapid decline"; it is "stable on management with intermittent breakthrough episodes that become more frequent over time".
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="nutrition">Supportive Nutrition</h2>
+          <p>
+            <strong>Important framing: the product below is not a treatment for insulinoma</strong> and does not affect tumor growth or insulin output. It is a veterinary recovery-nutrition product used when a ferret on medical management is eating poorly or losing weight — a common secondary concern in managed insulinoma cases. Your exotic-pet vet prescribes the actual treatment (prednisone, diazoxide, surgical consultation); the item below supports caloric maintenance between vet visits when the ferret's appetite is reduced.
+          </p>
+          <ReviewCard
+            id="carnivore-care"
+            badge="Supportive Nutrition"
+            badgeEmoji="🩺"
+            name="Oxbow Carnivore Care (Syringe-Feeding Recovery Diet)"
+            subtitle="High-calorie recovery nutrition for ill carnivores — vet-used in ferret practice"
+            score={9.1}
+            description={
+              <p>Oxbow Carnivore Care is a powdered syringe-feeding diet formulated for ill or recovering obligate carnivores — it is used in exotic-pet veterinary practice specifically for ferrets that are not eating normally due to illness or post-surgery recovery. Mix with warm water and syringe-feed small amounts every few hours. It maintains caloric intake and hydration when the ferret is too weak or nauseous to eat kibble independently. It does not treat insulinoma — it supports the ferret's nutritional status while your vet manages the underlying disease.</p>
+            }
+            specs={[
+              { label: 'Use case', value: 'Syringe-feeding during illness or recovery', highlight: 'good' },
+              { label: 'Protein source', value: 'Animal-based (carnivore-appropriate)', highlight: 'good' },
+              { label: 'Availability', value: 'Online pet retail, some vet offices' },
+              { label: 'Prescription', value: 'Not required' },
+            ]}
+            pros={['Vet-used in ferret practice for recovery nutrition', 'Obligate-carnivore appropriate macros', 'Syringe-delivery gets calories in when eating independently fails', 'No prescription required']}
+            cons={['Not a substitute for treatment — vet management is non-optional', 'Some ferrets resist syringe-feeding; consult vet on technique']}
+            price="$8–18"
+            ctaText="Check price"
+            ctaHref="/go/chewy-brand/oxbow-carnivore-care"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="oxbow-carnivore-care"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>
