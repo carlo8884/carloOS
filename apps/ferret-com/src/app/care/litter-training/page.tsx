@@ -9,6 +9,9 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -116,6 +119,7 @@ export default function FerretLitterTrainingPage() {
                 { label: 'Training an Adult', href: '#adult' },
                 { label: 'Free-Roam Expansion', href: '#freeroam' },
                 { label: 'Troubleshooting Regression', href: '#regression' },
+                { label: 'Pan + Litter Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -471,6 +475,65 @@ export default function FerretLitterTrainingPage() {
               urinary or gastrointestinal disease in ferrets.
             </p>
           </CalloutBox>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Pan and Litter Picks</h2>
+          <p>
+            Two staples that line up with the substrate and pan-shape recommendations above. This is a documented-spec comparison drawing on widely-stocked products in US pet retail; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-corner-pan"
+            badge="Pan Shape Default"
+            badgeEmoji="🔻"
+            name="Marshall Lock-N-Litter Corner Pan"
+            subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
+            score={8.8}
+            winner
+            description={
+              <p>The reference ferret corner pan in US pet retail. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
+            }
+            specs={[
+              { label: 'Shape', value: 'Triangular corner', highlight: 'good' },
+              { label: 'Entry lip', value: 'Low (ferret-appropriate)', highlight: 'good' },
+              { label: 'Back wall', value: 'Raised splash guard', highlight: 'good' },
+              { label: 'Cage attach', value: 'Yes (lock-down lip)' },
+              { label: 'Sizes', value: 'Standard + small' },
+            ]}
+            pros={['Matches corner-elimination behaviour', 'Low entry for unsteady or senior ferrets', 'Splash containment', 'Multiple sizes', 'Widely stocked in US pet retail']}
+            cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
+            price="$10–18"
+            ctaText="Find Marshall Lock-N-Litter pans"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="lock-n-litter-pan"
+          />
+          <ReviewCard
+            id="yesterdays-news"
+            badge="Substrate Default"
+            badgeEmoji="📰"
+            name="Yesterday's News Recycled Paper-Pellet Litter"
+            subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
+            score={9.0}
+            description={
+              <p>The default substrate recommended across exotic-pet veterinary practice and ferret-keeper communities. Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Slightly more expensive per pound than kiln-dried wood pellets, but ferret tolerance and household odour control are both notably better.</p>
+            }
+            specs={[
+              { label: 'Material', value: 'Recycled paper pellet', highlight: 'good' },
+              { label: 'Dust', value: 'Very low', highlight: 'good' },
+              { label: 'Clumping', value: 'None', highlight: 'good' },
+              { label: 'Aromatics', value: 'None', highlight: 'good' },
+              { label: 'Odour control', value: 'Good' },
+            ]}
+            pros={['Lowest dust profile in widely-stocked litters', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
+            cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
+            price="$12–25 / 15-30 lb"
+            ctaText="Find Yesterday's News paper-pellet litter"
+            ctaHref="/go/chewy-brand/yesterdays-news-litter"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="yesterdays-news-paper-pellet"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

@@ -53,4 +53,22 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://carniwhole.com/products/{sku}?ref=PLACEHOLDER',
     requiresSku: true,
   },
+
+  // ─── Brand-search variants (2026-05-31) ─────────────────────────────────
+  // Use these when the CTA targets a search results page (no specific SKU)
+  // rather than a single product detail page. The `{sku}` slot carries the
+  // search query (URL-encoded by the route handler). Mirrors the existing
+  // amazon-brand / chewy-brand routes on dog-com, fish-com, saddle-com,
+  // horses-com, and vets-co — enables /go-routed affiliate tag substitution
+  // for the ferret-com care-page ReviewCards added 2026-05-31.
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -77,6 +77,7 @@ export default function SaddleFitBasicsPage() {
             { label: 'Reflock vs Replace', href: '#reflock' },
             { label: 'Discipline Notes', href: '#disciplines' },
             { label: 'When to Call a Fitter', href: '#call-fitter' },
+            { label: 'Pad & Tack Picks', href: '#picks' },
             { label: 'References', href: '#references' },
           ]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -200,6 +201,63 @@ export default function SaddleFitBasicsPage() {
             <li>The horse develops new behavioral problems under saddle (girthiness, cold-back, head-tossing, refusing transitions) and the saddle was not assessed recently.</li>
             <li>Every 6–12 months as routine maintenance for any working horse.</li>
           </ul>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <h2 id="picks">Pad and Tack Picks</h2>
+          <p>
+            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="mattes-sheepskin-half-pad"
+            badge="Half-Pad"
+            badgeEmoji="🐑"
+            name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
+            subtitle="Cushioning + correction-pocket shims for minor asymmetries"
+            score={8.6}
+            winner
+            description={
+              <p>The reference sheepskin half-pad in international saddle-fitting practice. Sheepskin distributes pressure under a correctly fitting saddle and adds a thin cushioning layer between the saddle panels and the horse's back. The "correction" variant has front and rear pockets that accept thin shims — useful for the minor asymmetries a qualified fitter has identified, NOT for forcing fit on a structurally wrong saddle. The article above is explicit: pads are a between-fitting tool, not a fix.</p>
+            }
+            specs={[
+              { label: 'Construction', value: 'Real sheepskin over wool felt' },
+              { label: 'Correction pockets', value: 'Front + rear', highlight: 'good' },
+              { label: 'Discipline', value: 'Dressage, jumping, all-purpose cuts' },
+              { label: 'Care', value: 'Specialist wash; long shelf life' },
+            ]}
+            pros={['Standard correction-pad in qualified-fitter practice', 'Sheepskin pressure distribution', 'Shimmable when a fitter has identified minor asymmetry', 'Long product life if washed correctly']}
+            cons={['Premium price', 'Cannot correct structural fit problems — saddle work is the fix', 'Sheepskin care is more involved than a synthetic pad']}
+            price="$180–350"
+            ctaText="Find Mattes sheepskin half-pads"
+            ctaHref="https://www.smartpakequine.com/"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="mattes-sheepskin-half-pad"
+          />
+          <ReviewCard
+            id="all-purpose-saddle-pad"
+            badge="Daily Pad"
+            badgeEmoji="🐎"
+            name="Contoured All-Purpose Saddle Pad"
+            subtitle="Standard daily-use saddle pad — contoured to the horse's back"
+            score={8.0}
+            description={
+              <p>The everyday saddle pad sitting between a correctly fitting saddle and the horse — contoured (cut-back at the wither, shaped to the spine) so it does not bridge the gullet or press into the withers. Brand choice matters less than getting a contoured shape that does not flatten under the saddle and a wickable lining that does not trap heat. Toklat, ECP, Roma, and several mid-tier brands cover this category at the $30–80 price point.</p>
+            }
+            specs={[
+              { label: 'Shape', value: 'Contoured (cut-back wither)', highlight: 'good' },
+              { label: 'Lining', value: 'Wickable, washable' },
+              { label: 'Discipline', value: 'All-purpose, dressage, jumping cuts available' },
+              { label: 'Care', value: 'Machine wash cold' },
+            ]}
+            pros={['Standard daily tack', 'Cheap relative to other riding gear', 'Multiple-discipline shapes available', 'Washable']}
+            cons={['Square (non-contoured) pads bridge the wither under most saddles — avoid', 'Cheap fleece linings pill and lose wickability after a season']}
+            price="$30–80"
+            ctaText="Find contoured saddle pads"
+            ctaHref="https://www.smartpakequine.com/"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="contoured-all-purpose-pad"
+          />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

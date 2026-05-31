@@ -9,6 +9,9 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -125,6 +128,7 @@ export default function FerretAgingPage() {
                 { label: 'Quality-of-Life Frameworks', href: '#qol' },
                 { label: 'The Euthanasia Conversation', href: '#euthanasia' },
                 { label: 'Hospice and Aftercare', href: '#hospice' },
+                { label: 'Supportive Care Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -518,6 +522,68 @@ export default function FerretAgingPage() {
             the appropriate level of formality is whatever feels right for
             the household.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Supportive Care Picks</h2>
+          <CalloutBox variant="warning" title="Supportive supplies, not treatment">
+            <p>
+              The products below are <em>supportive</em> — comfort and feeding aids for senior ferrets. They do not treat insulinoma, adrenal disease, lymphoma, cardiomyopathy, dental disease, or any other clinical condition. Treatment decisions belong to an exotic-pet vet. Use these in conjunction with veterinary care, not as a substitute.
+            </p>
+          </CalloutBox>
+          <p>
+            Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less. This is a documented-spec comparison; the page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="floor-level-hammock"
+            badge="Senior Comfort"
+            badgeEmoji="🛏️"
+            name="Floor-Level Fleece Sleep Sack / Low Hammock"
+            subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
+            score={8.5}
+            winner
+            description={
+              <p>Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make.</p>
+            }
+            specs={[
+              { label: 'Placement', value: 'Floor / cage-bottom', highlight: 'good' },
+              { label: 'Material', value: 'Fleece, soft padding' },
+              { label: 'Entry height', value: 'Low (no climb required)', highlight: 'good' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Eliminates climbing requirement for arthritic seniors', 'Soft on bony pressure points (common in weight-losing seniors)', 'Multiple cheap units mean spots in every room', 'Machine washable']}
+            cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
+            price="$10–25 each"
+            ctaText="Find ferret floor sleep sacks"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="ferret-floor-sleep-sack"
+          />
+          <ReviewCard
+            id="recovery-diet"
+            badge="Inappetent Senior"
+            badgeEmoji="🥄"
+            name="Meat-Based Recovery / Supportive Feeding Diet"
+            subtitle="High-calorie meat-based paste for ferrets who are eating less — vet-directed use only"
+            score={8.7}
+            description={
+              <p>A high-calorie meat-based paste (Oxbow Carnivore Care, Hill's a/d, or similar) is the standard tool for syringe-feeding a ferret who is eating less because of dental pain, insulinoma-related lethargy, post-surgical recovery, or end-of-life inappetence. This is a vet-directed product: amount, frequency, and underlying condition all need a clinician's guidance. The diet does not treat the underlying disease; it maintains caloric intake while the underlying disease is being addressed (or, in palliative care, while quality of life remains acceptable).</p>
+            }
+            specs={[
+              { label: 'Form', value: 'Paste, syringe-feedable' },
+              { label: 'Macros', value: 'High-protein, high-fat, meat-based', highlight: 'good' },
+              { label: 'Use case', value: 'Vet-directed supportive feeding only' },
+              { label: 'Shelf life (opened)', value: 'Short — discard promptly' },
+            ]}
+            pros={['Maintains caloric intake during illness or recovery', 'Easy to syringe-feed a reluctant ferret', 'Same product widely used in exotic-pet practice']}
+            cons={['Not a treatment for the underlying disease', 'Use without veterinary direction can delay needed care', 'Some ferrets reject the texture — switch brand or warm before serving']}
+            price="$8–15 / can"
+            ctaText="Find recovery / supportive feeding diet"
+            ctaHref="/go/chewy-brand/carnivore-care-recovery-diet"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="recovery-diet"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
