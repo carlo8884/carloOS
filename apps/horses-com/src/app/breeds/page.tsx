@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, EmailCapture } from '@carloOS/ui'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
@@ -127,6 +127,18 @@ export default function BreedsIndexPage() {
           })}
         </div>
       </div>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-2xl">
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Horses.com owner reference"
+            subtitle="Breed deep-dives, husbandry math, and care references. No spam."
+            source="breeds-index"
+          />
+        </div>
+      </section>
     </>
   )
 }

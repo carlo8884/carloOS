@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,6 +71,13 @@ export default function OrijenVsAcanaComparisonPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
               { label: 'Grain-Free and DCM — The FDA Record', href: '/ingredients/grain-free-dcm-risk' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="PetFood.com reference"
+            subtitle="New brand evaluations and ingredient deep-dives. No promotional copy."
+            source="orijen-vs-acana"
           />
         </>
       }

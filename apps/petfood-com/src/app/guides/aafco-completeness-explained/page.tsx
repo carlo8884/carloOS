@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -68,6 +69,13 @@ export default function AafcoCompletenessExplainedPage() {
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
               { label: 'Grain-Free and DCM — The FDA Record', href: '/ingredients/grain-free-dcm-risk' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="PetFood.com reference"
+            subtitle="New brand evaluations and ingredient deep-dives. No promotional copy."
+            source="aafco-completeness"
           />
         </>
       }
