@@ -12,6 +12,7 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   CalloutBox,
+  EmailCapture,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -360,6 +361,13 @@ export default async function LifeStagePage({ params }: PageProps) {
             currentSite="petfood-com"
             contentType="nutrition"
             variant="sidebar"
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="PetFood.com reference"
+            subtitle="New brand evaluations and life-stage deep-dives. No promotional copy."
+            source="life-stage-slug"
           />
         </>
       }

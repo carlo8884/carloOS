@@ -7,6 +7,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
 } from '@carloOS/ui'
 import { LifeStages } from '../../data/life-stages'
 
@@ -76,6 +77,13 @@ export default function LifeStageHubPage() {
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Methodology', href: '/guides/methodology' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="PetFood.com reference"
+            subtitle="New brand evaluations and life-stage-specific deep-dives. No promotional copy."
+            source="life-stage-hub"
           />
         </>
       }
