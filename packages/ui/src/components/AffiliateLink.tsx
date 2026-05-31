@@ -114,8 +114,12 @@ export type Vendor =
 // ─────────────────────────────────────────────
 
 interface AffiliateLinkProps {
-  /** Which vendor's program. Routed by /go/[vendor]/[sku]. */
-  vendor: Vendor
+  /**
+   * Which vendor's program. Routed by /go/[vendor]/[sku].
+   * Accepts a registered Vendor or an arbitrary string — unknown vendors
+   * 404 at the redirect route, so prefer adding to VENDORS first.
+   */
+  vendor: Vendor | (string & {})
 
   /**
    * Vendor's product SKU/ASIN. Used for attribution and (eventually)

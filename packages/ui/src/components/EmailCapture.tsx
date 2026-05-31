@@ -18,9 +18,13 @@ interface EmailCaptureProps {
   title?: string
   subtitle?: string
   ctaText?: string
+  /** Alias for ctaText (back-compat with monetization call sites) */
+  buttonText?: string
   placeholder?: string
   /** Source tag for analytics / Mailchimp tagging */
   source?: string
+  /** Alias for source (back-compat with monetization call sites that prefix with site, e.g. "dog-com:insurance-comparison") */
+  tag?: string
   /** Lead magnet description (shown in sidebar/section variants) */
   leadMagnet?: string
 
@@ -32,12 +36,16 @@ export function EmailCapture({
   siteId,
   title = 'Free Newsletter',
   subtitle,
-  ctaText = 'Subscribe Free',
+  ctaText,
+  buttonText,
   placeholder = 'your@email.com',
-  source = 'unknown',
+  source,
+  tag,
   leadMagnet,
   perks,
 }: EmailCaptureProps) {
+  const resolvedCtaText = ctaText ?? buttonText ?? 'Subscribe Free'
+  const resolvedSource = source ?? tag ?? 'unknown'
   // Gate: render nothing until the subscribe API is wired to a real ESP.
   // Flip on by setting NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED=true in the deploy env.
   if (process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED !== 'true') {
@@ -60,7 +68,7 @@ export function EmailCapture({
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, siteId, source }),
+        body: JSON.stringify({ email, siteId, source: resolvedSource }),
       })
 
       if (!res.ok) {
@@ -74,14 +82,14 @@ export function EmailCapture({
       if (typeof window !== 'undefined' && 'gtag' in window) {
         ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'email_signup', {
           site_id: siteId,
-          source,
+          source: resolvedSource,
         })
       }
     } catch (err) {
       setStatus('error')
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     }
-  }, [email, siteId, source])
+  }, [email, siteId, resolvedSource])
 
   if (status === 'success') {
     return (
@@ -110,7 +118,7 @@ export function EmailCapture({
           </p>
         )}
         <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
-          ctaText={ctaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
+          ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
           inputClass="w-full px-3 py-2.5 bg-white/8 border border-white/12 rounded text-brand-white text-xs outline-none mb-2 placeholder:text-white/30 focus:border-brand-primary"
           btnClass="w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded cursor-pointer border-0"
         />
@@ -122,7 +130,7 @@ export function EmailCapture({
   if (variant === 'inline') {
     return (
       <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
-        ctaText={ctaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
+        ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
         wrapClass="flex gap-3 flex-wrap"
         inputClass="flex-1 min-w-48 px-4 py-3 border border-brand-border rounded text-brand-dark text-sm outline-none focus:border-brand-primary"
         btnClass="px-6 py-3 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
@@ -151,7 +159,7 @@ export function EmailCapture({
         </div>
       )}
       <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
-        ctaText={ctaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
+        ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
         wrapClass="flex gap-3 max-w-md mx-auto flex-wrap"
         inputClass="flex-1 min-w-48 px-4 py-3.5 border border-brand-border rounded-md text-brand-dark text-sm outline-none focus:border-brand-primary bg-brand-white"
         btnClass="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"

@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * CarloOS AffiliateDisclosure — FTC-compliant affiliate disclosure component.
  *
@@ -18,17 +20,25 @@
  */
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import type { SiteId } from '@carloOS/config'
+import { AffiliateDisclosureContext } from './AffiliateLink'
 
-export type AffiliateDisclosureVariant = 'inline' | 'footer' | 'page'
+export type AffiliateDisclosureVariant = 'inline' | 'footer' | 'page' | 'banner'
 
 export interface AffiliateDisclosureProps {
   variant: AffiliateDisclosureVariant
-  siteId: SiteId
+  /** Optional — defaults to no-op for variants that don't need it. */
+  siteId?: SiteId
   /** Optional override for the disclosure URL — defaults to /disclosure */
   href?: string
   /** Optional extra className for container */
   className?: string
+  /**
+   * Children wrap pattern: used by the 'banner' variant to render an
+   * inline disclosure banner above page content in a single component.
+   */
+  children?: ReactNode
 }
 
 export function AffiliateDisclosure({
@@ -36,7 +46,33 @@ export function AffiliateDisclosure({
   siteId: _siteId,
   href = '/disclosure',
   className,
+  children,
 }: AffiliateDisclosureProps) {
+  if (variant === 'banner') {
+    return (
+      <AffiliateDisclosureContext.Provider value={{ disclosed: true }}>
+        <aside
+          role="note"
+          aria-label="Affiliate disclosure"
+          data-affiliate-disclosure="banner"
+          className={[
+            'px-container-sm sm:px-container py-2.5 bg-brand-primary-pale/60 border-b border-brand-border',
+            'text-2xs leading-relaxed text-brand-text-mid',
+            className ?? '',
+          ].join(' ')}
+        >
+          <strong className="font-bold uppercase tracking-eyebrow text-brand-primary-dark mr-2">
+            Disclosure
+          </strong>
+          Some links on this page are affiliate links — we may earn a commission at no extra cost to you. We never accept payment for favorable reviews.{' '}
+          <Link href={href} className="font-semibold text-brand-primary hover:underline no-underline">
+            Read more →
+          </Link>
+        </aside>
+        {children}
+      </AffiliateDisclosureContext.Provider>
+    )
+  }
   if (variant === 'inline') {
     return (
       <aside
