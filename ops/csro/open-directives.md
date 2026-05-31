@@ -34,6 +34,12 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Done-when:** Carlo confirms; Mediavine applied for on qualifying sites post-launch; ads live with no UX/trust regression.
 - **Status:** open (Carlo confirm + post-launch sequencing).
 
+### csro-dir-2026-W22-013 → ALL BOTS — fleet autonomy activation (new 2026-05-30) ⬆ STANDING
+- **Action:** Every bot runs autonomously and never idles — same rule CSRO operates under. Each maintains ≥5 ready tasks; when blocked, route around it. Starting queues + the standing rule in `ops/handoffs/2026-05-30-csro-fleet-activation.md`. Dedicated activation briefs for the two idle specialists: `…-csro-to-racing-bot-activation.md`, `…-csro-to-ir-bot-activation.md`.
+- **Why:** Carlo directive (2026-05-30) — idle bots = wasted capacity. COO + Monetization were loaded; **Visual Bot was under-used; Racing Bot + IR Bot had ZERO assignments.** Now all five have full non-blocking queues. `[FACT]`
+- **Done-when:** standing — all bots have live queues; CSRO is the priority clearinghouse when a queue empties.
+- **Status:** open (standing).
+
 ### csro-dir-2026-W22-012 → COO + Monetization Bot + Visual Bot — horse-cluster strategic build (new 2026-05-30)
 - **Action:** Build saddle.com + horses.com toward the named acquirer (Equine Network) per `ops/handoffs/2026-05-30-csro-horse-cluster-build-spec.md`. 3 layers, in order: **(1) audience capture** (EmailCapture + lead magnets on high-intent pages — highest acquirer value, works on existing thin traffic), **(2) commerce depth** (tack-allow-list buy-boxes on review/guide pages), **(3) traffic growth** (deepen high-intent pages, don't mass-produce thin ones).
 - **Why:** Equine Network (CVC-controlled, serial acquirer of premium horse .coms) pays for **audience + commerce + membership**, NOT thin content. Both apps are already substantially built (~55 / ~25 routes) but thin-trafficked with no audience capture. Build to the buyer's value drivers. `[CARLO buyer signal + RESEARCH profile]`
