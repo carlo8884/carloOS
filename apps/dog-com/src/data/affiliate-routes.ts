@@ -137,6 +137,18 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://wisdompanel.com/en-us/shop/{sku}?cjevent=PLACEHOLDER',
     requiresSku: true,
   },
+  basepaws: {
+    // Network: Direct (or Impact — adjust at env-var time). Carlo-approved
+    // per policy §5 (DNA testing — CSRO confirmed scope in
+    // csro-dir-2026-W22-015). Template uses a homepage URL with sku passed
+    // as utm_campaign so the page's `/go/basepaws/home` CTA resolves to
+    // basepaws.com homepage with tracking, AND a future product-level CTA
+    // (e.g. /go/basepaws/cat-dna-kit) still works without 404 — it lands
+    // on the homepage with the campaign tag preserved for analytics.
+    name: 'Basepaws (Cat DNA)',
+    template: 'https://basepaws.com/?ref=PLACEHOLDER&utm_source=carloOS&utm_campaign={sku}',
+    requiresSku: true,
+  },
 
   // ─── Telehealth (Impact) ───
   vetster: {

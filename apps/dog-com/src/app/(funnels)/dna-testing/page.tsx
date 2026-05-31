@@ -264,7 +264,7 @@ export default function DnaTestingHub() {
           </h3>
           <div className="flex flex-wrap gap-3">
             <a
-              href="/go/embark-vet/home?s=dna-testing-hub-bottom-embark"
+              href="/go/embark/home?s=dna-testing-hub-bottom-embark"
               rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-5 py-2 rounded-lg font-semibold no-underline hover:opacity-90"
             >
               Order Embark (dogs)
