@@ -77,3 +77,10 @@ edit them — this is a directive. Anti-cost-explosion is a permanent guardrail 
 - Set a Vercel spend cap.
 
 These three are ~5 minutes and likely cut the build-minute line by the large majority. Everything else is COO cleanup.
+
+## Account context (Carlo-provided 2026-05-31)
+
+- **Vercel team name: "Carlo Tabibi's projects"** — COO: use this to verify in the build logs whether Turbo Remote
+  Cache is being **hit** (look for "cache hit, replaying..." / "Remote caching enabled" vs cold "cache miss,
+  executing..." on unchanged apps). If builds are cold, wiring `TURBO_TOKEN`/`TURBO_TEAM` for this team is the fix.
+- Carlo is not highly technical — give him click-by-click steps for any dashboard action; don't assume Vercel UI familiarity.
