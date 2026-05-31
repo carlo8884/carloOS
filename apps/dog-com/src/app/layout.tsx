@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer } from '@carloOS/ui'
+import { Nav, Footer, AffiliateDisclosure } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import './globals.css'
 
@@ -101,6 +101,25 @@ export default function RootLayout({
       <body>
         {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="dog-com" />
+
+        {/*
+          Sitewide above-the-fold FTC affiliate disclosure
+          (QC-STANDARDS §3.2, ops/policies/bot-coordination.md §3,
+          csro-dir-2026-W22-015 #3). Skimlinks loads on every page (see
+          <Script> below) and may auto-convert any brand mention into an
+          affiliate link — so every dog.com page qualifies as "a page that
+          contains affiliate links," and 16 CFR Part 255 "clear and
+          conspicuous" requires disclosure above the fold, not just in the
+          footer. The Footer disclosure (variant="footer") stays as
+          defense-in-depth.
+          Dog.com is a Tier-1 protect-asset with a live $2.3M offer
+          (per CSRO dogfish-acquirer-narrative) — over-disclosure is the
+          correct diligence-cleanliness posture.
+          Some monetized pages (e.g. /dna-testing) render their own mid-
+          content <AffiliateDisclosure variant="inline" /> above their
+          first CTA; duplicate disclosures are intentional, not a defect.
+        */}
+        <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
         {/* Page content */}
         <main>{children}</main>
