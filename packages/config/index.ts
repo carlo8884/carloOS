@@ -900,12 +900,21 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Health', href: '/health' },
+      { label: 'Care', href: '/care' },
+      { label: 'Behavior', href: '/behavior' },
+      { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
       {
         heading: 'Ferret.com',
         links: [
           { label: 'Home', href: '/' },
+          { label: 'Health', href: '/health' },
+          { label: 'Care', href: '/care' },
+          { label: 'Behavior', href: '/behavior' },
+          { label: 'First-Year Schedule', href: '/first-year-schedule' },
+          { label: 'Tools', href: '/tools' },
         ],
       },
     ],
