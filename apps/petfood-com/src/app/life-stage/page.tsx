@@ -81,8 +81,8 @@ export default function LifeStageHubPage() {
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
-            title="PetFood.com reference"
-            subtitle="New brand evaluations and life-stage-specific deep-dives. No promotional copy."
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="life-stage-hub"
           />
         </>

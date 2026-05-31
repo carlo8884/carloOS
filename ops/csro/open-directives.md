@@ -35,7 +35,32 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Done-when:** brief delivered → CSRO reviews same-session → Carlo decides fork.
 - **Status:** open — DECISION GATE. CSRO endorses Carlo's redirect.
 
-### csro-dir-2026-W22-015 → Monetization Bot — fix 4 IR-verified affiliate issues (new 2026-05-31) ⬆ HIGH
+### csro-dir-2026-W22-015 → Monetization Bot — ⚠️ PARTIAL (NOT closed): #2/#3/#4 done, **#1 STILL BROKEN**
+- #2 vets-co routes (#241), #3 Dog disclosure (#242), #4 env-var (#243) → merged ✓.
+- **#1 (#240) FAILED VERIFICATION:** DNA page links `/go/embark/`, `/go/basepaws/`, `/go/wisdom-panel/` but
+  `dog-com/src/data/affiliate-routes.ts` only registers **`wisdom-panel`**. **`embark` and `basepaws` are still
+  unregistered → still 404-ing on a live revenue funnel.** PR #240 fixed the wrong/incomplete keys. **Live leak
+  still open.** → reopened as `csro-dir-2026-W22-017`.
+
+### csro-dir-2026-W22-018 → Monetization Bot + COO — URGENT: dedup funnel trees, un-red main (new 2026-05-31) 🔴 P0
+- **Action:** PR #229 duplicated 3 Dog.com funnel trees outside the `(funnels)` route group (dna-testing, pet-insurance, thanks) → 12 metadata violations, **main RED, whole fleet blocked.** Pick ONE canonical location per funnel (recommend keep `(funnels)/` originals, delete #229 dupes; migrate any newer content first), fix the title/desc length + missing-metadata issues on survivors, verify metadata-policy clean. Brief: `ops/handoffs/2026-05-31-csro-urgent-funnel-dedup-main-red.md`.
+- **Why:** red main blocks every PR (CLAUDE.md §7); + Dog.com (flagship protect-asset, live $2.3M offer) now has 2 indexable URLs per page = canonical/SEO damage. `[FACT — CSRO verified key-by-key]`
+- **Done-when:** `node scripts/ci/metadata-policy.mjs` clean across all 5 sites; one canonical URL per funnel.
+- **Status:** open — P0, blocks merge queue.
+
+### csro-dir-2026-W22-017 → ❌ VOID (CSRO error, caught by IR Bot 2026-05-31)
+- **Voided:** I reopened this claiming `embark`/`basepaws` 404, but **all three DNA vendors (`embark`,
+  `wisdom-panel`, `basepaws`) ARE registered on current main** (affiliate-routes.ts L128/134/140) and the page
+  links exactly those. No 404. My reopen was based on a stale-branch read. IR Bot caught it. **No work needed.**
+- Lesson (again): verify against `origin/main` HEAD, not a local stale checkout, before reopening anything.
+
+### ~~csro-dir-2026-W22-017~~ (orig, void) → register embark/basepaws — N/A, already registered
+- **Action:** add route templates for vendor keys **`embark`** and **`basepaws`** to `apps/dog-com/src/data/affiliate-routes.ts` (the DNA page + `[test]` sub-page both link `/go/embark/...` and `/go/basepaws/...`). Verify all 3 DNA CTAs (embark, basepaws, wisdom-panel) resolve, not 404.
+- **Why:** PR #240 only registered wisdom-panel; 2 of 3 DNA affiliate links still dead = lost commission on live traffic. `[FACT — verified by CSRO 2026-05-31, key-by-key]`
+- **Done-when:** `grep` of page `/go/<vendor>/` keys ⊆ registered route keys; all resolve.
+- **Status:** open.
+
+### csro-dir-2026-W22-015 (orig) → Monetization Bot — fix 4 IR-verified affiliate issues ⬆ HIGH
 - **Action:** Fix the IR Bot's verified affiliate findings (brief: `ops/handoffs/2026-05-31-csro-to-monetization-ir-fixes.md`). **#1 HIGH:** Dog.com DNA funnel links to unregistered `/go/embark-vet` + `/go/basepaws` → 404s on a live revenue funnel. #2 vets.co has out-of-policy `amazon-brand`/`chewy-brand` routes (latent, remove). #3 Dog.com Skimlinks sitewide w/ footer-only disclosure (surface on monetized pages — Tier-1 protect-asset). #4 env-var name mismatch (lost attribution).
 - **Why:** Finding #1 is broken affiliate links losing money now; #2–4 are compliance/trust hygiene. All verified by CSRO against main. `[CONFIRMED]`
 - **Done-when:** DNA CTAs resolve; vets-co policy-clean; Dog.com disclosure surfaced; env names reconciled.

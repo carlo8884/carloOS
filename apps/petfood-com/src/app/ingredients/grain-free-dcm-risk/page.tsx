@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,6 +71,13 @@ export default function GrainFreeDCMRiskPage() {
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="grain-free-dcm-risk"
           />
         </>
       }
