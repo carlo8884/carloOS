@@ -62,14 +62,14 @@ export default function VetDirectoryHubPage() {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid">Vet Directory</span>
       </nav>
 
       {/* Sample-data banner — visible on every page in this directory */}
-      <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container sm:px-container-sm py-3">
+      <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span> The
           individual vet profiles below are placeholders used to validate layout and schema. Real
@@ -83,7 +83,7 @@ export default function VetDirectoryHubPage() {
       </div>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
           Veterinary Directory
         </span>
@@ -100,7 +100,7 @@ export default function VetDirectoryHubPage() {
         </p>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12 max-w-5xl">
+      <div className="px-container-sm sm:px-container py-12 max-w-5xl">
         {/* Find-a-vet near you entry */}
         <section className="mb-12">
           <FindAVetNearYou variant="hero" />
@@ -268,7 +268,7 @@ export default function VetDirectoryHubPage() {
       </div>
 
       {/* Cross-link footer */}
-      <div className="px-container sm:px-container-sm py-8 border-t border-brand-border bg-brand-surface">
+      <div className="px-container-sm sm:px-container py-8 border-t border-brand-border bg-brand-surface">
         <div className="max-w-5xl text-sm text-brand-text-mid leading-relaxed">
           Looking for a specific specialty?{' '}
           <Link href="/specialists" className="text-brand-primary font-bold no-underline hover:underline">

@@ -123,7 +123,7 @@ export default function VetProfilePage({ params }: PageProps) {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/vets" className="hover:text-brand-primary no-underline">Vet Directory</Link>
@@ -136,7 +136,7 @@ export default function VetProfilePage({ params }: PageProps) {
       </nav>
 
       {/* Sample-data banner — REQUIRED on every vet profile */}
-      <div className="bg-brand-danger/10 border-b-2 border-brand-danger/40 px-container sm:px-container-sm py-4">
+      <div className="bg-brand-danger/10 border-b-2 border-brand-danger/40 px-container-sm sm:px-container py-4">
         <p className="text-sm text-brand-dark m-0 leading-relaxed max-w-5xl font-bold">
           Sample listing — not a real vet.
         </p>
@@ -152,7 +152,7 @@ export default function VetProfilePage({ params }: PageProps) {
       </div>
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-12">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-3">
           Vet Profile · {vet.city}, {vet.state}
         </span>
@@ -179,7 +179,7 @@ export default function VetProfilePage({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="px-container sm:px-container-sm py-12 max-w-5xl">
+      <div className="px-container-sm sm:px-container py-12 max-w-5xl">
         <div className="grid lg:grid-cols-[1fr_320px] gap-8">
           {/* Main content */}
           <div>
@@ -320,7 +320,7 @@ export default function VetProfilePage({ params }: PageProps) {
       </div>
 
       {/* Cross-link footer */}
-      <div className="px-container sm:px-container-sm py-8 border-t border-brand-border bg-brand-surface">
+      <div className="px-container-sm sm:px-container py-8 border-t border-brand-border bg-brand-surface">
         <div className="max-w-5xl text-sm text-brand-text-mid leading-relaxed">
           {vet.specialties[0] && (() => {
             const sp = SPECIALTIES.find((x) => x.slug === vet.specialties[0])

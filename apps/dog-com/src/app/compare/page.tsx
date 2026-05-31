@@ -125,7 +125,7 @@ export default function CompareHubPage() {
       <SchemaScript schema={combined} />
 
       {/* Hero */}
-      <div className="bg-brand-dark px-container sm:px-container-sm py-16">
+      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
@@ -146,7 +146,7 @@ export default function CompareHubPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -155,7 +155,7 @@ export default function CompareHubPage() {
       </nav>
 
       {/* Methodology */}
-      <div className="px-container sm:px-container-sm py-10 border-b border-brand-border">
+      <div className="px-container-sm sm:px-container py-10 border-b border-brand-border">
         <h2 className="font-display font-bold text-brand-dark text-xl mb-3">
           How we compare breeds
         </h2>
@@ -185,7 +185,7 @@ export default function CompareHubPage() {
       </div>
 
       {/* Grouped index */}
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="space-y-12">
           {AXIS_ORDER.map((axis) => {
             const list = grouped[axis]
@@ -231,7 +231,7 @@ export default function CompareHubPage() {
       </div>
 
       {/* Cross-link to breed encyclopedia */}
-      <section className="bg-brand-surface border-t border-brand-border px-container sm:px-container-sm py-10">
+      <section className="bg-brand-surface border-t border-brand-border px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-2">
           Looking for a breed deep dive?
         </h2>
