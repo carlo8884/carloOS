@@ -9,6 +9,9 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -115,6 +118,7 @@ export default function FerretExerciseEnrichmentPage() {
                 { label: 'Multi-Ferret vs Single', href: '#multi' },
                 { label: 'Welfare-Disease Link', href: '#welfare' },
                 { label: 'Setup Costs', href: '#costs' },
+                { label: 'Enrichment Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -474,6 +478,63 @@ export default function FerretExerciseEnrichmentPage() {
               </tbody>
             </table>
           </div>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Enrichment Picks</h2>
+          <p>
+            Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box. This is a documented-spec comparison drawing on widely-stocked products and the durable-material constraints discussed above; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-pop-n-play"
+            badge="Tunnel Default"
+            badgeEmoji="🚇"
+            name="Marshall Pop-N-Play Tunnel Set"
+            subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
+            score={8.6}
+            winner
+            description={
+              <p>The reference ferret tunnel product in US pet retail. Pop-up fabric construction stores flat, sets up in seconds, and connects to itself for multi-tunnel circuits. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
+            }
+            specs={[
+              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
+              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
+              { label: 'Connectivity', value: 'Multi-tunnel chain' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+              { label: 'Storage', value: 'Folds flat' },
+            ]}
+            pros={['Highest enrichment value per dollar in most ferret households', 'Pop-up + foldable for storage', 'Connects to itself for circuits', 'Machine washable']}
+            cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
+            price="$15–30"
+            ctaText="Find Marshall Pop-N-Play tunnels"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="pop-n-play-tunnel"
+          />
+          <ReviewCard
+            id="dig-box-supplies"
+            badge="Dig Box"
+            badgeEmoji="🪨"
+            name="Storage-Tote Dig Box + Safe Fill"
+            subtitle="Plastic tote plus washed river rocks, ferret-safe plastic balls, or rice"
+            score={8.0}
+            description={
+              <p>The dig drive is one of the strongest behavioural patterns in ferrets and is best satisfied in a designated container rather than a houseplant. Any clear plastic storage tote with a low-cut entry is the structural part; the fill is the variable — washed river rocks, ferret-safe plastic balls, or uncooked rice are all standard. Avoid soil, sand, or shredded paper (ingestion and inhalation risk). Rotate the fill weekly for novelty.</p>
+            }
+            specs={[
+              { label: 'Container', value: 'Clear plastic storage tote with low-cut entry' },
+              { label: 'Fill options', value: 'River rocks, plastic balls, uncooked rice', highlight: 'good' },
+              { label: 'Rotation cadence', value: 'Weekly fill swap' },
+            ]}
+            pros={['Satisfies the strongest natural drive in a controlled way', 'Cheap and durable container', 'Fill is rotatable for novelty without buying new toys']}
+            cons={['Fill spills are inevitable — keep near a vacuum-friendly surface', 'Rice fill needs replacement when it cracks down to dust']}
+            price="$10–25 starter"
+            ctaText="Find ferret-safe ball-pit fill"
+            ctaHref="https://www.chewy.com/s?query=small+pet+ball+pit+balls"
+            ctaAffiliateProgram="chewy"
+            ctaAffiliateProduct="dig-box-balls"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
