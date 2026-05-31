@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
   BuyBox,
 } from '@carloOS/ui'
 
@@ -71,6 +72,13 @@ export default function OrijenVsAcanaComparisonPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
               { label: 'Grain-Free and DCM — The FDA Record', href: '/ingredients/grain-free-dcm-risk' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="orijen-vs-acana-comparison"
           />
         </>
       }

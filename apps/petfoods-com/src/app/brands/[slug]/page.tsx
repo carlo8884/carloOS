@@ -10,6 +10,7 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   EmailCapture,
+  BuyBox,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands, getBrandBySlug, getRelatedBrandsByPriceTier, type Brand } from '../../../data/brands'
@@ -243,59 +244,20 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
           <strong>TL;DR.</strong> {buildTldr(brand)}
         </p>
 
-        {/* ─── Buy-box (D-006 — affiliate enrichment) ───────────────────── */}
-        <div
-          style={{
-            background: 'var(--brand-bg, #f8f8f8)',
-            border: '1px solid var(--brand-border)',
-            borderRadius: '10px',
-            padding: '20px',
-            margin: '24px 0 28px',
-          }}
-        >
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
-            Where to buy {brand.name}
-          </div>
-          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid)', lineHeight: 1.5 }}>
-            Browse {brand.name}&apos;s full lineup on Chewy or Amazon. We earn an affiliate
-            commission when you purchase through these links — at no extra cost to you.
-            We never rank by commission.
-          </p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a
-              href={`/go/chewy-brand/${encodeURIComponent(brand.name)}?s=brand-${brand.slug}`}
-              rel="sponsored noopener"
-              style={{
-                display: 'inline-block',
-                padding: '10px 18px',
-                background: 'var(--brand-primary, #d2691e)',
-                color: 'white',
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                borderRadius: '6px',
-              }}
-            >
-              Search {brand.name} on Chewy →
-            </a>
-            <a
-              href={`/go/amazon-brand/${encodeURIComponent(brand.name)}?s=brand-${brand.slug}`}
-              rel="sponsored noopener"
-              style={{
-                display: 'inline-block',
-                padding: '10px 18px',
-                background: 'var(--brand-dark, #232f3e)',
-                color: 'white',
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                borderRadius: '6px',
-              }}
-            >
-              Search {brand.name} on Amazon →
-            </a>
-          </div>
-        </div>
+        <BuyBox
+          label={`Where to buy ${brand.name}`}
+          disclosure={`Browse ${brand.name}'s full lineup on Chewy or Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you.`}
+          secondaryDisclosure="We never rank by commission."
+          brands={[
+            {
+              name: brand.name,
+              vendors: [
+                { vendor: 'chewy', href: `/go/chewy-brand/${encodeURIComponent(brand.name)}?s=brand-${brand.slug}`, label: 'Search on Chewy' },
+                { vendor: 'amazon', href: `/go/amazon-brand/${encodeURIComponent(brand.name)}?s=brand-${brand.slug}`, label: 'Search on Amazon' },
+              ],
+            },
+          ]}
+        />
 
         <h2 id="ownership">Corporate Ownership</h2>
         <div
@@ -635,59 +597,20 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
       <div className="carloOS-article">
         <DisclosureBanner />
 
-        {/* ─── Buy-box (D-006 — affiliate enrichment, review-page variant) ── */}
-        <div
-          style={{
-            background: 'var(--brand-bg, #f8f8f8)',
-            border: '1px solid var(--brand-border)',
-            borderRadius: '10px',
-            padding: '20px',
-            margin: '8px 0 28px',
-          }}
-        >
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
-            Where to buy {review.brandName}
-          </div>
-          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid)', lineHeight: 1.5 }}>
-            Browse {review.brandName}&apos;s full lineup on Chewy or Amazon. We earn an
-            affiliate commission when you purchase through these links — at no extra cost
-            to you. We never rank by commission.
-          </p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a
-              href={`/go/chewy-brand/${encodeURIComponent(review.brandName)}?s=review-${review.slug}`}
-              rel="sponsored noopener"
-              style={{
-                display: 'inline-block',
-                padding: '10px 18px',
-                background: 'var(--brand-primary, #d2691e)',
-                color: 'white',
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                borderRadius: '6px',
-              }}
-            >
-              Search {review.brandName} on Chewy →
-            </a>
-            <a
-              href={`/go/amazon-brand/${encodeURIComponent(review.brandName)}?s=review-${review.slug}`}
-              rel="sponsored noopener"
-              style={{
-                display: 'inline-block',
-                padding: '10px 18px',
-                background: 'var(--brand-dark, #232f3e)',
-                color: 'white',
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                borderRadius: '6px',
-              }}
-            >
-              Search {review.brandName} on Amazon →
-            </a>
-          </div>
-        </div>
+        <BuyBox
+          label={`Where to buy ${review.brandName}`}
+          disclosure={`Browse ${review.brandName}'s full lineup on Chewy or Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you.`}
+          secondaryDisclosure="We never rank by commission."
+          brands={[
+            {
+              name: review.brandName,
+              vendors: [
+                { vendor: 'chewy', href: `/go/chewy-brand/${encodeURIComponent(review.brandName)}?s=review-${review.slug}`, label: 'Search on Chewy' },
+                { vendor: 'amazon', href: `/go/amazon-brand/${encodeURIComponent(review.brandName)}?s=review-${review.slug}`, label: 'Search on Amazon' },
+              ],
+            },
+          ]}
+        />
 
         <h2 id="overview">Overview</h2>
         <div

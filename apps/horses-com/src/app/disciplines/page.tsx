@@ -9,7 +9,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -177,6 +177,26 @@ export default function DisciplinesIndexPage() {
           </p>
         </div>
       </div>
+
+      <section
+        className="px-container-sm sm:px-container py-12"
+        style={{ background: 'var(--brand-primary-pale)' }}
+      >
+        <EmailCapture
+          variant="section"
+          siteId="horses-com"
+          title="The Horses.com Reference"
+          subtitle="One email a week: a deep-dive on a single discipline, breed, or piece of gear. Citation-anchored. No product pushes."
+          ctaText="Subscribe"
+          source="disciplines-hub"
+          perks={[
+            'One email weekly',
+            'Citation-anchored',
+            'No paid placements',
+            'Unsubscribe anytime',
+          ]}
+        />
+      </section>
     </>
   )
 }

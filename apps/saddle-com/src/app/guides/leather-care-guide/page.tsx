@@ -64,7 +64,7 @@ export default function LeatherCareGuidePage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
-        <DropCap>I have been making and repairing saddles for thirty-one years. In that time I have seen every failure mode leather is capable of — and almost all of them were preventable. Cracked panels, stitching rot, delaminated seat leather, flap hardening — these are not the inevitable consequences of use. They are the consequences of neglect, or of using the wrong products with good intentions.</DropCap>
+        <DropCap>Across the equestrian craft and the published literature on leather care, the consistent picture is that almost every leather failure mode — cracked panels, stitching rot, delaminated seat leather, flap hardening — is preventable. These are not the inevitable consequences of use. They are the consequences of neglect, or of using the wrong products with good intentions.</DropCap>
         <p>This guide covers what actually matters: the correct cleaning and conditioning sequence, the products that genuinely work, and the products marketed to equestrians that quietly destroy the leather they claim to protect.</p>
 
         <h2 id="rule">The Golden Rule of Leather Care</h2>

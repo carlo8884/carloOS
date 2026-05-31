@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer, AffiliateDisclosure } from '@carloOS/ui'
+import { Nav, Footer, AffiliateDisclosure, DisplayAds } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
+import { displayAds } from '../data/display-ads'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -129,6 +130,11 @@ export default function RootLayout({
 
         {/* Skimlinks auto-affiliate — Carlo-approved 2026-05-30 */}
         <Script src={SKIMLINKS_SRC} strategy="afterInteractive" />
+
+        {/* Mediavine Journey display ads — gated on
+            NEXT_PUBLIC_MEDIAVINE_PUBLISHER_ID env var.
+            Per csro-dir-2026-W22-011. */}
+        <DisplayAds config={displayAds} />
       </body>
     </html>
   )
