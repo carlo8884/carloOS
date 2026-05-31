@@ -67,7 +67,7 @@ export default function VetsPetInsurancePage() {
           <div>
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
-            <AffiliateDisclosure variant="article" siteId="vets-co" />
+            <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
 
