@@ -91,7 +91,8 @@ const VENDOR_CLASSES: Record<BuyBoxVendor, string> = {
 export function BuyBox({ label, brands, disclosure, secondaryDisclosure }: BuyBoxProps): ReactElement {
   return (
     <aside
-      className="my-6 rounded-lg border border-brand-border bg-brand-bg p-5 sm:p-6"
+      data-buy-box=""
+      className="my-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6"
       aria-label={label ?? 'Where to buy'}
     >
       {label && (
@@ -106,7 +107,7 @@ export function BuyBox({ label, brands, disclosure, secondaryDisclosure }: BuyBo
       <div className={`mt-3 grid gap-3 ${brands.length > 1 ? 'sm:grid-cols-2' : 'grid-cols-1'}`}>
         {brands.map((brand) => (
           <div key={brand.name}>
-            <p className="mb-2 text-xs font-bold text-brand-text">{brand.name}</p>
+            <p className="mb-2 text-xs font-bold text-brand-text-dark">{brand.name}</p>
             <div className="flex flex-wrap gap-2">
               {brand.vendors.map((v) => (
                 <a
