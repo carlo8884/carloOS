@@ -580,7 +580,8 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Health',
         links: [
-          { label: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
+          { label: 'Symptoms (urgency-tiered)', href: '/symptoms' },
+          { label: 'Diagnosed Conditions', href: '/conditions' },
           { label: 'Dog Nutrition', href: '/nutrition' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
           { label: 'Dental Health', href: '/health/dog-dental-care' },
@@ -675,6 +676,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Fish Species', href: '/species' },
+      { label: 'Water Parameters', href: '/water-parameters' },
       { label: 'Aquarium Setup', href: '/setup' },
       { label: 'Calculators', href: '/tools' },
       { label: 'Fish Health', href: '/health' },
