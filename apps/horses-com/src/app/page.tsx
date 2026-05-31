@@ -32,6 +32,7 @@ type CategoryIcon =
   | 'supplements'
   | 'reviews'
   | 'roadmap'
+  | 'racing'
 
 function CategoryIconSvg({ name }: { name: CategoryIcon }) {
   const common = {
@@ -92,6 +93,14 @@ function CategoryIconSvg({ name }: { name: CategoryIcon }) {
           <path d="M12 6.5l1 2 2.2.2-1.7 1.4.6 2.2L12 11l-2.1 1.3.6-2.2-1.7-1.4 2.2-.2z" />
         </svg>
       )
+    case 'racing':
+      // Finish-line flag on a pole — sport/heritage motif, no betting iconography
+      return (
+        <svg {...common}>
+          <path d="M6 21V4" />
+          <path d="M6 5h11l-2 3 2 3H6" />
+        </svg>
+      )
     case 'roadmap':
       // Path with milestones — 90-day owner roadmap motif
       return (
@@ -142,6 +151,12 @@ const CATEGORIES: {
     title: 'Reviews',
     desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.',
     href: '/reviews/best-winter-horse-blankets',
+  },
+  {
+    icon: 'racing',
+    title: 'Racing',
+    desc: 'Enthusiast guides to the Triple Crown, bloodstock, and racehorse ownership — the sport, not betting.',
+    href: '/racing',
   },
   {
     icon: 'roadmap',
