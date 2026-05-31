@@ -1,8 +1,9 @@
 ---
 from: Horses.com Racing Bot
 to: CSRO, COO
-status: in_progress
+status: complete
 created: 2026-05-31
+updated: 2026-05-31 (reconciled with Carlo's same-day redirect — see §7)
 re: racing/competition opportunity assessment for Horses.com (answers csro-to-racing-bot activation brief Q1–Q5)
 ---
 
@@ -220,8 +221,10 @@ link-check / metadata-policy clean):**
 - ✅ #7 (extras) Layer-1 EmailCapture on all racing pages; hub grouped into 3 sub-themes; homepage Racing card;
   cross-portfolio racing→Saddle.com link (`packages/config` ContentType `racing`).
 
-**Carlo decision (2026-05-31):** standalone `apps/horse-racing` betting app → **PARK** (confirmed). PR #178 stays
-draft; no further investment; safe parts to fold into `/racing` over time.
+**Carlo decision (2026-05-31, EARLY in the session):** standalone `apps/horse-racing` → PARK.
+**⚠️ SUPERSEDED later the same day — see §7 below.** Carlo subsequently reversed this and directed
+continued pursuit of the racing angle + building license-free income surfaces. Do not act on the
+"PARK" line above; §7 is the current truth.
 
 **Layer-1 audit (dir-012):** every *high-intent* horses.com content page already has EmailCapture; only hub/index
 pages lack it (intentional). Layer-1 coverage effectively complete.
@@ -236,3 +239,47 @@ mass-production per build spec).
 once CSRO sequences it; (2) deepen `/racing/racehorse-ownership` if Monetization wires commerce there; (3) add
 demand-led spokes (maiden/graded-stakes, Preakness-vs-Belmont) only if traffic data shows pull; (4) bloodstock
 glossary micro-cluster if CSRO greenlights more racing depth; (5) monitor PR #178 CI + reviews.*
+
+---
+
+## §7 — Reconciliation with Carlo's same-day redirect (2026-05-31, AUTHORITATIVE)
+
+After the progress log above was written, **Carlo gave a direct redirect that supersedes the earlier
+"PARK / off-thesis" call** on `apps/horse-racing`. The current, authoritative state:
+
+**What Carlo decided (in his words, paraphrased):**
+1. **Other bots take horses.com content** (incl. the `/racing` editorial cluster) — handed off via
+   `2026-05-31-racing-to-fleet-horses-content-handoff.md`.
+2. **Racing Bot keeps validating the racing thesis** AND **builds racing-adjacent income that needs no paid
+   data feed and no gambling license.** Explicitly told me NOT to default back to content / NOT to call the
+   racing-intelligence app "off-thesis" before researching whether it's the *higher-value* thesis.
+3. Then: **"keep going, never stop, maximize value"** in research mode.
+
+**What this changes vs §6 above:** the §6 recommendation (park, lean toward fold) is **no longer the operating
+plan.** `apps/horse-racing` is now the **active R&D home** for a trust-safe racing brand — NOT a betting product.
+The value/EV/"fair-odds" engine is **not** the build focus; it stays parked behind a brand/domain + data-feed +
+legal-read gate (still correct per Q2). What I built instead is the **trust-safe, license-free, data-free layer.**
+
+**What I shipped under the redirect (all in `apps/horse-racing`, CI-green, PR #178):** 8 income/engagement
+surfaces forming one casual→committed funnel — `/ownership` (+cost-calculator, +ways-in directory, +playbook),
+`/experiences`, `/gear`, `/bloodstock`, `/newsletter` ("The Form"), `/predict` (NO-PRIZE skill game),
+`/first-derby` (the conversion on-ramp). Detail: `2026-05-31-racing-session-ship-summary.md`. All monetization
+points are documented seams awaiting Carlo-gated vendors; nothing fake, no live revenue claimed.
+
+**Net for the TIER decision (what CSRO actually asked):** unchanged from the TL;DR — **a racing angle does NOT
+move Horses.com's tier on its own** (Equine Network's gravity is Western competition/membership, not flat
+racing). BUT the *casual→committed conversion engine* I built (ownership audience + email capture + a real
+funnel) IS the "attached audience + commerce" asset Equine Network underwrites — so it is **mildly-to-moderately
+accretive to the build-toward-strategic thesis**, and it lives in a standalone R&D app rather than on horses.com,
+so it does **not** add thin content to the premium domain (which the build spec warns against). **Recommendation
+to CSRO stands: keep Horses.com on `BUILD → strategic exit`; treat the racing brand as a separate, optional,
+audience-building R&D asset whose disposition (own domain vs fold) is a Carlo brand/domain decision.**
+
+**Open for CSRO/Carlo (none block my continued in-lane work):**
+- Confirm the racing brand's home (standalone domain vs `horses.com/racing` vs fold) — brand/domain call.
+- Approve ≥1 Carlo-gated vendor (fractional-ownership referral, equine insurance, equestrian retail, travel) to
+  convert the built funnel from seam → revenue.
+- Ratings-app un-park remains gated on data-feed spend + legal read (unchanged).
+
+*Status: COMPLETE. Q1–Q5 answered, reconciled with Carlo's redirect. This is the single doc CSRO should fold
+into the Horses.com tier decision.*
