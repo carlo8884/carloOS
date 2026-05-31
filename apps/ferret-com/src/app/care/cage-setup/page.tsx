@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -57,6 +57,7 @@ export default function FerretCageSetupPage() {
                 { label: 'Out-of-Cage Time', href: '#out-of-cage' },
                 { label: 'Ferret-Proofing the Home', href: '#ferret-proof' },
                 { label: 'Cage Picks', href: '#cage-picks' },
+                { label: 'Bedding & Accessories', href: '#bedding-picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -163,6 +164,8 @@ export default function FerretCageSetupPage() {
             <li><strong>Electrical cords, toilets with the lid up, and unattended human food</strong> round out the standard list.</li>
           </ul>
 
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
           <h2 id="cage-picks">Cage Picks</h2>
           <p>
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
@@ -220,12 +223,62 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProduct="marshall-designer-cage"
           />
 
+          <h2 id="bedding-picks">Bedding and Accessories</h2>
+          <p>
+            Once the cage is sorted, two add-ons that significantly improve ferret quality of life inside it.
+          </p>
+          <ReviewCard
+            id="marshall-hammock"
+            badge="Bedding Default"
+            badgeEmoji="🛏️"
+            name="Marshall Triple Hammock"
+            subtitle="Fabric sleep hammock — the default ferret sleep surface"
+            score={8.8}
+            description={
+              <p>Ferrets preferentially sleep in enclosed or supported fabric rather than flat surfaces. The triple hammock clips to the cage bars at multiple points, holds two ferrets comfortably, and the fabric is machine-washable. Marshall's hammock line is the reference choice in US pet retail — the dimensions, clip hardware, and fabric durability are calibrated for ferret use.</p>
+            }
+            specs={[
+              { label: 'Material', value: 'Machine-washable fleece', highlight: 'good' },
+              { label: 'Attachment', value: 'Multi-point bar clips', highlight: 'good' },
+              { label: 'Capacity', value: '2 ferrets', highlight: 'good' },
+              { label: 'Washable', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Matches ferret hammock-sleep preference', 'Machine-washable', 'Widely available', 'Multi-point clip attachment stays secure']}
+            cons={['Needs weekly washing in heavy-use households', 'Clips occasionally stiffen with repeated washing']}
+            price="$12–20"
+            ctaText="Find Marshall hammocks"
+            ctaHref="https://www.marshallpet.com/"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="triple-hammock"
+          />
+          <ReviewCard
+            id="kaytee-corner-pan"
+            badge="Litter Pan"
+            badgeEmoji="🔻"
+            name="Kaytee Ferret Corner Litter Pan"
+            subtitle="Triangular corner pan, raised rear wall, ferret-appropriate entry"
+            score={8.3}
+            description={
+              <p>The Kaytee corner pan is the alternative to Marshall's equivalent in US chain pet retail, with a similar triangular footprint, low entry lip, and raised rear wall. Available at lower per-unit cost than the Marshall model and commonly sold in multi-packs for multi-cage or multi-room households.</p>
+            }
+            specs={[
+              { label: 'Shape', value: 'Triangular corner', highlight: 'good' },
+              { label: 'Entry lip', value: 'Low', highlight: 'good' },
+              { label: 'Rear wall', value: 'Raised splash guard', highlight: 'good' },
+              { label: 'Per-unit price', value: 'Lower than Marshall', highlight: 'good' },
+            ]}
+            pros={['Triangular shape aligns with corner-elimination behaviour', 'Multi-pack available', 'Lower per-unit cost', 'Widely stocked']}
+            cons={['Slightly smaller footprint than Marshall equivalent — ferrets need to back in cleanly']}
+            price="$8–14"
+            ctaText="Find Kaytee ferret corner pans"
+            ctaHref="/go/chewy-brand/kaytee-ferret-corner-pan"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="kaytee-ferret-corner-pan"
+          />
+
           <h2 id="sources">Sources</h2>
           <p>
-            Cage sizing, bar spacing, and out-of-cage time recommendations are drawn from American Ferret Association (AFA) owner-education materials. Bedding, foreign-body, and respiratory-irritant discussions reference Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>. Product picks are widely-stocked cages observed in keeper communities and at exotic-mammal shelters; this page does not claim hands-on testing.
-          </p>
-          <p className="text-sm text-brand-text-light">
-            Affiliate disclosure: Ferret.com may earn a commission on qualifying purchases made through links on this page. Editorial picks are based on documented product specifications and community-reported reliability; commission does not influence inclusion.
+            Cage sizing, bar spacing, and out-of-cage time recommendations are drawn from American Ferret Association (AFA) owner-education materials. Bedding, foreign-body, and respiratory-irritant discussions reference Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>. Product picks are widely-stocked products observed in keeper communities and at exotic-mammal shelters; this page does not claim hands-on testing.
           </p>
         </div>
       </ArticleLayout>

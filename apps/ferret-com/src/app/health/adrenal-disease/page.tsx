@@ -9,6 +9,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -128,6 +130,7 @@ export default function FerretAdrenalDiseasePage() {
                 { label: 'Prognosis', href: '#prognosis' },
                 { label: 'Finding an Exotic-Pet Vet', href: '#vet' },
                 { label: 'FAQ', href: '#faq' },
+                { label: 'Comfort & Care', href: '#comfort' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -579,6 +582,36 @@ export default function FerretAdrenalDiseasePage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="comfort">Comfort and Care Support</h2>
+          <p>
+            <strong>Important framing: the product below does not treat adrenal disease</strong> and has no effect on the underlying tumor or hormone overproduction. It addresses a secondary quality-of-life concern — ferrets with adrenal disease commonly develop progressive alopecia (fur loss) from the elevated sex hormones. A ferret that has lost significant coat can get cold, especially in air-conditioned households. Extra-warm, enclosed sleep surfaces reduce cold stress between vet visits. Your exotic-pet vet manages the actual disease via deslorelin implants, surgical adrenalectomy, or lupron injections.
+          </p>
+          <ReviewCard
+            id="ferret-sleep-sack"
+            badge="Comfort Care"
+            badgeEmoji="💛"
+            name="Ferret Fleece Sleep Sack (Enclosed)"
+            subtitle="Enclosed fleece sleep sack — warmth and security for alopecia-affected ferrets"
+            score={8.5}
+            description={
+              <p>An enclosed fleece sleep sack — as opposed to an open hammock — gives alopecia-affected ferrets more warmth by trapping body heat. Ferrets naturally prefer burrowing into enclosed spaces. For a ferret that has lost 30–50% of its coat to adrenal disease, replacing open hammocks with enclosed sacks materially reduces cold-stress discomfort. Machine-washable, widely available in the ferret section of US pet retail and from small-batch Etsy makers specializing in ferret accessories.</p>
+            }
+            specs={[
+              { label: 'Material', value: 'Soft fleece (machine-washable)', highlight: 'good' },
+              { label: 'Style', value: 'Enclosed sack (traps heat)', highlight: 'good' },
+              { label: 'Use case', value: 'Comfort for alopecia or cold-sensitive ferrets', highlight: 'good' },
+            ]}
+            pros={['Enclosed design traps more warmth than open hammock', 'Machine-washable', 'Satisfies burrowing drive', 'Not a prescription item']}
+            cons={['Does not treat adrenal disease — vet management is required', 'Sizing varies by maker; check ferret fit']}
+            price="$12–22"
+            ctaText="Find ferret sleep sacks"
+            ctaHref="/go/amazon-brand/ferret-fleece-sleep-sack-enclosed"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret-fleece-sleep-sack-enclosed"
+          />
 
           <h2 id="sources">Sources</h2>
           <ul>
