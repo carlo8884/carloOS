@@ -65,7 +65,6 @@ const OG_PALETTES: Record<string, OgSitePalette> = {
   'askthevet':     { primary: '#2563EB', dark: '#0F172A', name: 'AskTheVet.com',     domain: 'askthevet.com' },
   'dogpicture':    { primary: '#D97706', dark: '#1C1410', name: 'DogPicture.com',    domain: 'dogpicture.com' },
   'hardmoneyloans':{ primary: '#1F4D3A', dark: '#0D1F18', name: 'HardMoneyLoans.com',domain: 'hardmoneyloans.com' },
-  'petsupplies':   { primary: '#475569', dark: '#0F172A', name: 'PetSupplies.com',   domain: 'petsupplies.com' },
   'seniorpets':    { primary: '#7C6F59', dark: '#211D17', name: 'SeniorPetPharmacy', domain: 'seniorpets.com' },
 }
 
