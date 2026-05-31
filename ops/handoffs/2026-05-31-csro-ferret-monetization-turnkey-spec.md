@@ -13,10 +13,13 @@ re: csro-dir-009 Ferret.com monetization — turn-key spec (pure execution)
 adding affiliate buy-boxes to the existing high-traffic pages. **This is the path to the portfolio's first real
 dollar.** Everything you need is below; no decisions required, just fill + ship.
 
-## Everything already exists (verified by CSRO 2026-05-31)
-- `packages/ui/src/components/ReviewCard.tsx` — the buy-box component. Props:
-  `productName` (req), `affiliateProgram`, `affiliateSku`, `rating?`, `price?`, `pros?`, `cons?`, `summary?`,
-  `badge?`, `ctaText?`. It auto-renders the affiliate CTA + the "we earn a commission" disclosure line.
+## Everything already exists (verified by CSRO 2026-05-31 against the actual source)
+- `packages/ui/src/components/ReviewCard.tsx` — the buy-box component. **EXACT props (do not guess):**
+  - `name` (req, string) · `score` (req, number **out of 10**) · `description` (req, ReactNode — JSX `<p>…</p>`)
+  - `ctaAffiliateProgram` (vendor key) · `ctaAffiliateProduct` (the SKU/product slug) · `ctaText` · `ctaHref`
+  - optional: `badge`, `badgeEmoji`, `subtitle`, `specs` (`{label,value,highlight?:'good'|'warn'|'bad'}[]`),
+    `pros: string[]`, `cons: string[]`, `price`, `priceNote`, `winner`, `id`
+  - The click routes via `ctaAffiliateProgram` + `ctaAffiliateProduct` through the `/go` handler.
 - `apps/ferret-com/src/data/affiliate-routes.ts` — vendor keys ready: **`amazon`, `chewy`, `marshall`, `wysong`,
   `carniwhole`** (these are the only allowed values for `affiliateProgram`, per bot-coordination §5).
 - `apps/ferret-com/src/app/go/[vendor]/[sku]/route.ts` — click tracker (ReviewCard routes through it automatically).
@@ -58,21 +61,23 @@ Highest-intent: people choosing ferret food. Add 2-3 cards:
 ### 6. `/care/bathing-and-grooming`  → amazon / chewy
 - Ferret shampoo, nail clippers, ear cleaner → `"amazon"`/`"chewy"`
 
-## Copy-paste block per buy-box (fill the CAPS)
+## Copy-paste block per buy-box — VERIFIED API (fill the CAPS, matches the working cage-setup pattern)
 ```tsx
 <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 <ReviewCard
-  productName="REAL PRODUCT NAME"
-  affiliateProgram="amazon"   {/* one of: amazon chewy marshall wysong carniwhole */}
-  affiliateSku="REAL_ASIN_OR_SKU"   {/* look up — do NOT invent */}
-  rating={4.6}
+  name="REAL PRODUCT NAME"
+  score={9.0}                          {/* out of 10, honest */}
+  description={<p>One honest sentence on who it's for / why.</p>}
   price="$XX"
-  summary="One honest sentence on who it's for."
   pros={['real pro', 'real pro']}
   cons={['real con']}
   ctaText="Check price"
+  ctaAffiliateProgram="amazon"          {/* one of: amazon chewy marshall wysong carniwhole */}
+  ctaAffiliateProduct="REAL_ASIN_OR_SKU"  {/* look up — do NOT invent (fake SKU = the dir-015 404 bug) */}
 />
 ```
+> Copy the two live `<ReviewCard>` calls already in `apps/ferret-com/src/app/care/cage-setup/page.tsx` as your
+> template — they compile and route correctly today.
 
 ## Hard rules
 - `affiliateProgram` ∈ {amazon, chewy, marshall, wysong, carniwhole} only. No other vendors (§5).
