@@ -31,8 +31,8 @@ export async function generateMetadata({
   if (!b) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `${b.breedName} DNA Testing — Which Test, Which Conditions to Screen | Dog.com`,
-    description: `${b.breedName}s carry ${b.keyConditions.length} key hereditary conditions worth screening: ${b.keyConditions.map((c) => c.name).slice(0, 3).join(', ')} and more. See which DNA test is best.`,
+    title: `${b.breedName} DNA Testing — Best Test & Conditions | Dog.com`,
+    description: `${b.breedName}s carry ${b.keyConditions.length} key hereditary conditions worth screening. See which DNA test is best for the breed.`,
     path: `/dna-testing/breeds/${breed}`,
     type: 'article',
   })

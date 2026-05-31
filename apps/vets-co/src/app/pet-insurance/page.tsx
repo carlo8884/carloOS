@@ -22,7 +22,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Pet Insurance — Why Your Vet Recommends It | Vets.co',
+  title: 'Pet Insurance — The Clinical Case for Coverage | Vets.co',
   description:
     'Pet insurance lowers the cost of unexpected vet bills. See the carriers vets most often see in practice, with editorial rankings.',
   path: '/pet-insurance',

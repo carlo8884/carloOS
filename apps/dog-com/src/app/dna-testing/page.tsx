@@ -14,9 +14,9 @@ import { DNA_TESTS, BREED_DNA_RECOMMENDATIONS } from '../../data/dna-tests'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Pet DNA Tests 2026 — Embark vs. Wisdom Panel vs. Basepaws | Dog.com',
+  title: 'Best Pet DNA Tests 2026 — Embark, Wisdom Panel, Basepaws | Dog.com',
   description:
-    'Independent comparison of the 3 leading pet DNA tests. Genetic marker counts, breed library, health condition screening, pricing, and which test fits your situation.',
+    'Independent comparison of the 3 leading pet DNA tests: marker counts, breed library, health screening, pricing, and which fits your situation.',
   path: '/dna-testing',
   type: 'article',
 })

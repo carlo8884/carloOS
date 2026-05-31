@@ -33,8 +33,8 @@ export async function generateMetadata({
   if (!t) return {}
   return buildMetadata({
     siteId: 'dog-com',
-    title: `${t.name} Review 2026 — Pros, Cons, and Who It's For | Dog.com`,
-    description: `${t.tagline} See genetic marker count, breed coverage, health screening, pricing, and how ${t.brand} stacks up against alternatives.`,
+    title: `${t.name} DNA Test Review 2026 — Worth It? | Dog.com`,
+    description: `${t.tagline} See marker count, breed coverage, health screening, pricing, and how ${t.brand} compares to alternatives.`,
     path: `/dna-testing/${t.slug}`,
     type: 'article',
   })
