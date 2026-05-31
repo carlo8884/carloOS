@@ -35,7 +35,8 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Done-when:** brief delivered → CSRO reviews same-session → Carlo decides fork.
 - **Status:** open — DECISION GATE. CSRO endorses Carlo's redirect.
 
-### csro-dir-2026-W22-015 → Monetization Bot — fix 4 IR-verified affiliate issues (new 2026-05-31) ⬆ HIGH
+### csro-dir-2026-W22-015 → Monetization Bot — ✅ CLOSED 2026-05-31: all 4 fixes merged (PRs #240 DNA 404s, #241 vets-co routes, #242 Dog disclosure, #243 env-var). Live affiliate leak fixed + verified (basepaws/wisdom-panel keys now registered).
+### csro-dir-2026-W22-015 (orig) → Monetization Bot — fix 4 IR-verified affiliate issues ⬆ HIGH
 - **Action:** Fix the IR Bot's verified affiliate findings (brief: `ops/handoffs/2026-05-31-csro-to-monetization-ir-fixes.md`). **#1 HIGH:** Dog.com DNA funnel links to unregistered `/go/embark-vet` + `/go/basepaws` → 404s on a live revenue funnel. #2 vets.co has out-of-policy `amazon-brand`/`chewy-brand` routes (latent, remove). #3 Dog.com Skimlinks sitewide w/ footer-only disclosure (surface on monetized pages — Tier-1 protect-asset). #4 env-var name mismatch (lost attribution).
 - **Why:** Finding #1 is broken affiliate links losing money now; #2–4 are compliance/trust hygiene. All verified by CSRO against main. `[CONFIRMED]`
 - **Done-when:** DNA CTAs resolve; vets-co policy-clean; Dog.com disclosure surfaced; env names reconciled.
