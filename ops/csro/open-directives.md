@@ -13,7 +13,9 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - [x] **Duplication/redirect map** — DONE: `2026-05-30-csro-to-coo-consolidation-redirect-map.md` (content-aware consolidate-and-preserve, not blanket 301).
 - [x] **Exit-valuation model** — DONE: `valuation-model.md`. Key insight: for premium-but-thin domains (Horses/Lizard/Saddle) the *name* holds the value → building content is value-destructive vs effort. Firmed Saddle→sell-domain.
 - [x] **Dog.com / Fish.com acquirer narrative** — DONE: `2026-05-30-csro-dogfish-acquirer-narrative.md` (scarcity thesis + $500K provenance anchor + 4 step-up levers).
-- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains (redirect / sell / hold) on a consistent rubric. NEXT.
+- [x] **Strategic-acquirers map** — DONE: `strategic-acquirers.md` (Equine Network → horse cluster `[CARLO]`; reframes build-vs-sell around illiquid market). Corrected valuation-model §3 + thesis §0.
+- [ ] **Equine Network M&A profile** — research agent launched (what they've acquired, size, how to position the horse cluster). *(running)*
+- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains, now using the buyer-filter ("which buyer can this build summon?") not name-value. NEXT after Equine research.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
 - [ ] **Bot-quality ledger refresh** — review COO/Monetization/Visual PRs as they land against the strategy.

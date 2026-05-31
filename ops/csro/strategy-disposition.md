@@ -10,18 +10,32 @@ unless Carlo overrides. Inputs I still need from Carlo are listed in §6.
 
 ---
 
-## §1 The two value paths (every in-scope domain is assigned one)
+## §0 Governing principle (Carlo, 2026-05-30) — illiquid market = build to manufacture a buyer
 
-Carlo wants each domain to resolve to **SELL** or **EARN**. I split that into 6 concrete dispositions:
+**The domain aftermarket is illiquid.** Carlo's domains have been on the market ~20 years without selling. **Parking
+a domain and waiting for a buyer does not work** — the only realistic exit is to **build the site into a traffic/
+content asset that makes a strategic acquirer want it.** Building is therefore not a tradeoff against domain value;
+**building is the liquidity mechanism.** ("Sell a clean domain without content" is theoretically tidier but
+practically dead in this market.) This governs every disposition below — the default for an in-scope domain with a
+plausible buyer is **BUILD**, not park-and-sell.
+
+## §1 Value paths (every in-scope domain is assigned one)
+
+Each domain resolves to **EARN** or **SELL** — but per §0, the road to SELL almost always runs *through* BUILD.
 
 | Disposition | Meaning | Monetization |
 |---|---|---|
-| **SELL-NOW (groom)** | Already has acquirer interest; maximize price, then exit | Sale proceeds |
+| **EARN-NOW** | Existing traffic, monetize immediately | Affiliate / display / lead-gen |
 | **BUILD-TO-EARN** | Build into a real revenue asset; hold and compound | Affiliate / lead-gen / tools |
-| **BUILD-TO-FLIP** | Build just enough traffic+revenue to sell at a multiple | Sale at ~24–34× monthly profit |
+| **BUILD → STRATEGIC EXIT** | Build traffic to attract a **named** strategic acquirer (e.g. Equine Network → horse cluster), then transact | Sale to strategic (built audience is the trigger) |
+| **BUILD-TO-FLIP** | Build traffic+revenue to sell at a multiple to a category/marketplace buyer | Sale at ~24–34× monthly profit |
 | **REDIRECT** | Fold into a hero domain (kill duplication, pass authority) | Indirect (boosts hero) |
-| **SELL-DOMAIN** | Thin/off-thesis; worth more as a domain name than a site | Domain marketplace sale/lease |
+| **SELL-DOMAIN (last resort)** | Only when NO acquirer + NO traffic path exists (true dead weight) | Efty/marketplace — accepting the market is illiquid |
 | **SET-ASIDE** | Personal / other-business / out of scope | n/a |
+
+> **`SELL-DOMAIN` is now a last resort, not a default for thin sites.** Per §0, a thin premium domain is illiquid
+> raw — the move is to BUILD it toward a buyer, not list it and wait. Reserve SELL-DOMAIN for off-thesis names with
+> no plausible strategic and no traffic path (e.g. DogPicture, hardmoneyloans).
 
 **Exit-multiple reality `[RESEARCH — see valuation-comps.md, sandbox-unverified]`:** content/affiliate sites trade
 **~24–34× trailing monthly net profit** in the 2025–2026 market (Empire Flippers data; the older 30–45× I'd used
@@ -45,9 +59,9 @@ sale price follows.**
 | **PetFood.com** | ~5,000 | **EARN-NOW #2** | Correct buy-box home (NOT PetFoods, ~30 — PR#174 wrong site, §2a). Chewy/Amazon on existing pages. |
 | **Dog.com** | ~36,000 | SELL-NOW (groom)+monetize | $2.3M offer; target $10M+. 36K/mo = the trajectory that justifies the step-up. Ensure affiliate surfaces live+clean. No for-sale sign. Protect-asset absolute. |
 | **Fish.com** | ~7,000 | SELL-NOW (groom)+monetize | $1.45M offer. Saltwater funnel built — confirm it converts; extend to top pages. Protect-asset. |
-| **Horses.com** | ~1,000 | HOLD — light monetize, NO build | Thin. Affiliate on existing pages only; pause programmatic builds. Racing angle pending Racing Bot. |
-| **Lizard.com** | ~765 | HOLD — no build | Thin. Light affiliate; defer authority build. |
-| **Saddle.com** | ~214 | **lean SELL-DOMAIN** | Premium exact-match name; 214 visitors. Per `valuation-model.md §3`: the *name* holds the value; building content adds a few hundred $/mo to an asset whose worth is already in the domain → value-destructive vs effort. Pause builds; lean toward selling the domain unless traffic moves on its own. |
+| **Horses.com** | ~1,000 | **BUILD → strategic exit** | *Corrected (Carlo): named acquirer exists (Equine Network).* Build into a credible traffic/content asset to trigger the conversation. Racing angle pending Racing Bot. Behind Ferret/PetFood on *immediate cash*, but a prioritized strategic build — NOT a pause. See `strategic-acquirers.md`. |
+| **Lizard.com** | ~765 | **BUILD toward traffic** | *Corrected:* illiquid name isn't realizable without demand. Build toward traffic/authority; the name helps at exit but doesn't substitute for it. |
+| **Saddle.com** | ~214 | **BUILD → strategic exit** | *Corrected (Carlo): NOT sell-raw.* Named acquirer (Equine Network) would want it; the aftermarket is illiquid (sat ~20yrs). Building traffic is what makes it sellable. Prioritized strategic build alongside the horse cluster. |
 | **Vets.co** | ~0 (pre-DNS) | **FINISH-TO-EARN — parallel now** | *Revised: insurance engine already BUILT* (hub + 11 carriers + ~2,912 programmatic pages + affiliate routes). Not a 6–9mo build — the job is trust-audit + carrier-enrollment realism + go-live. Track 1 (insurance) runs parallel with Ferret; Track 2 (directory) gated on data decision. Highest revenue/visitor ceiling. QC §1 absolute. |
 | **AskTheVet.com** | ~0 | BUILD-TO-EARN — long-term | High GEO + insurance/telehealth affiliate; no traffic → speculative. Behind Ferret/PetFood. QC §1 absolute. |
 | **SeniorPetPharmacy.com** | ~0 | BUILD-TO-EARN — long-term | Recurring-Rx LTV; niche; no traffic → speculative. |
@@ -148,8 +162,12 @@ Sites that can't clear (2) soon should be re-dispositioned to SELL-DOMAIN rather
 4. **Vets.co — finish-and-launch the EXISTING insurance hub** in parallel (revised: it's already built — hub +
    11 carriers + ~2,912 programmatic pages + affiliate routes). Job = trust-audit + carrier-enrollment realism +
    go-live, NOT a 6–9mo build. Directory (Track 2) gated on the data-source decision. (`csro-dir-007`)
-5. **Pause programmatic build-outs on Horses / Lizard / Saddle** — traffic doesn't justify build cost yet.
-6. **Hold all DNS until the §5 gate is met per site.** Finalize §3 (the ~48 unbuilt) when their traffic is measured.
+5. **BUILD the horse cluster (Saddle.com, Horses.com) toward the named strategic (Equine Network)** — *corrected
+   from "pause."* A named acquirer exists, so the build ROI is de-risked; building traffic is what makes these
+   illiquid premium names sellable. Sequenced after the immediate-cash monetization (steps 1–3, which need no
+   build), but these are genuine build priorities, not deferrals. See `strategic-acquirers.md`. Lizard.com: build
+   toward traffic similarly.
+6. **Hold all DNS until the §5 gate is met per site.** Build the long tail toward whichever buyer each can summon.
 
 > Lane note: the monetization wiring in steps 1–3 is the **Monetization Bot's lane** (`affiliate-routes.ts`,
 > buy-boxes, funnels). CSRO directs + prioritizes; CSRO does not wire. Briefs go via `ops/handoffs/`.

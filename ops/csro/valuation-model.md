@@ -7,6 +7,10 @@
 > ⚠️ All figures are **planning estimates**, not appraisals. They rest on `[RESEARCH]` comps not yet
 > page-verified, and on *assumed* revenue (sites aren't monetized/live yet). Treat as decision-support ranges,
 > label `[EST]`. Re-run when real RPM/affiliate revenue data exists.
+>
+> ⚠️ **Domain "floor"/comp values in this file are NOTIONAL, not realizable** — the aftermarket is illiquid
+> (Carlo's domains sat ~20 years unsold). Do not treat any domain "floor" as cash. Value is realized only by
+> building traffic to manufacture a strategic buyer. See §3 (corrected).
 
 ---
 
@@ -34,33 +38,50 @@ Two value bases per domain; take the higher:
 | **Fish.com** | 7,000 | ~$80–105 | ~$2–3.5k *(display alone)* | **premium — $$M** ($1.45M offer live) | hold/protect; offer-driven |
 | **Ferret.com** | 11,000 | ~$120–165 | ~$3–5.6k display; **affiliate is the real driver** (EARN-NOW) | strong one-word .com | **earn-now** → then flip on a real profit multiple |
 | **PetFood.com** | 5,000 | ~$55–75 | ~$1.3–2.5k display; affiliate (high-intent nutrition) likely ≫ display | strong exact-match | earn-now |
-| **Horses.com** | 1,000 | ~$11–15 | ~$0.3–0.5k display | **premium one-word .com — likely $$$K–$$M floor regardless of traffic** | hold; **domain value ≫ content value** at current traffic |
-| **Lizard.com** | 765 | <$11 (below Journey 1K) | negligible | solid one-word .com | hold; domain-led |
-| **Saddle.com** | 214 | negligible | negligible | **premium exact-match — strong domain floor** | **domain value ≫ any near-term content value → lean SELL-DOMAIN or slow-groom** |
+| **Horses.com** | 1,000 | ~$11–15 | growth target | premium name (notional til a buyer exists) | **BUILD → strategic (Equine Network); racing angle** |
+| **Lizard.com** | 765 | <$11 (below Journey 1K) | growth target | solid one-word .com | **BUILD toward traffic; name helps at exit** |
+| **Saddle.com** | 214 | negligible | growth target | premium exact-match (illiquid raw) | **BUILD → known strategic (Equine Network)** — NOT sell-raw |
 | **PetFoods.com** | 30 | $0 | $0 | weak (plural twin) | redirect → PetFood |
 | **Vets.co** | ~0 (pre-DNS) | $0 today | **insurance affiliate = highest revenue/visitor once live** ($25–150/policy) | strong category .co | finish-to-earn; value is forward, not current |
 | **AskTheVet / SeniorPetPharmacy / DogPicture** | ~0 | $0 | speculative | brandable | build-long / sell-domain (DogPicture) |
 
 ---
 
-## §3 The load-bearing insight `[EST]`
+## §3 The load-bearing insight — CORRECTED (Carlo, 2026-05-30)
 
-**For the thin-but-premium domains (Horses, Lizard, Saddle), the domain name is worth far more than the content
-will be for years.** At 200–1,000 visitors/mo, display+affiliate content value is a few hundred $/mo → low-five-
-figure content-business value. But the *names* are premium one-word/exact-match .coms with five-to-seven-figure
-floors (cf. Bird.com $200K, Snake.com $135K, Dog.com $500K).
+> **My earlier §3 was wrong and is retracted.** I claimed building content on premium-but-thin domains is
+> "value-destructive vs. effort" because the name already holds the value. **Carlo corrected this, and he's
+> right:** the domain aftermarket is **illiquid**. These domains have sat for ~20 years without selling. A
+> premium-domain "floor" is **notional, not realizable** — there is no liquid bid. **Traffic + content is the
+> mechanism that manufactures a buyer** for an otherwise-unsellable asset. So content is not a drag on name value;
+> **content is the liquidity event.**
 
-**→ Strategic consequence:** building content on Horses/Lizard/Saddle to chase content-business value is
-**value-destructive vs. effort** at current traffic — you'd spend build cost to add a few hundred $/mo onto an
-asset whose value is already in the name. **Confirms the "pause builds" call** and pushes Saddle (214 visitors,
-premium name) toward **sell-the-domain** unless traffic moves on its own.
+**Corrected model:**
 
-Inverse for **Ferret + PetFood**: real traffic (11K/5K) with **no premium-domain ceiling issue** → content/affiliate
-value is the play, and it's unrealized. That's why they're EARN-NOW.
+- **Domain "floor" values are NOT realizable assets** — they are notional comps with no liquid market. Discount
+  them heavily for illiquidity. A $200K "comp" you can't transact is worth $0 until a buyer appears.
+- **The path to value = generate traffic → become attractive to a strategic acquirer → manufacture the sale.**
+  This is true *especially* for the premium names, not despite them. The name raises the ceiling **once a buyer
+  exists**; traffic is what summons the buyer.
+- **Build-vs-sell is therefore not a tradeoff — building IS the sell strategy** for an illiquid portfolio. The
+  only domains to *not* build are true dead-weight (off-thesis, no acquirer, no traffic path).
 
-And **Dog/Fish**: traffic is nice but the value is the **name + standing offers** — content math (~$10–18k / $2–3.5k
-content-biz value) is rounding error against $2.3M/$1.45M. The content's job there is purely to **support the
-acquirer narrative**, not to be the value.
+**Strategic-buyer reality (Carlo, 2026-05-30):** acquirers are often **known strategics**, not anonymous flippers.
+Example: **Equine Network** would plausibly want **horses.com, saddle.com** and the broader horse cluster. Building
+those into credible content/traffic assets is how you make them *want* it and start the conversation. → strategic-
+acquirers map: `ops/csro/strategic-acquirers.md`.
+
+**Consequences (reversing my prior calls):**
+- **Saddle.com: NOT sell-the-domain-raw. BUILD it** — it's a lead asset for a *named* strategic (Equine Network).
+  Traffic makes it sellable; raw it's been unsold for years.
+- **Horses.com: BUILD** (not "domain value ≫ content"). Same strategic logic + the racing angle.
+- **Lizard.com: BUILD** toward traffic; the name helps at exit but doesn't substitute for demand.
+- The earlier "pause builds on Horses/Lizard/Saddle" was based on the wrong premise. Re-sequenced: these are
+  **build targets aimed at strategic buyers**, prioritized by (a) traffic-growth potential and (b) whether a named
+  acquirer exists. Still behind the EARN-NOW sites (Ferret/PetFood) on *immediate cash*, but they are NOT "sell raw."
+
+Unchanged: **Ferret + PetFood** = EARN-NOW (real traffic, monetize first). **Dog/Fish** = protect-asset; their
+content's job is to support the acquirer narrative + keep the audience that makes the offers real.
 
 ## §4 What would sharpen this
 

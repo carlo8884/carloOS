@@ -1,14 +1,27 @@
 # CSRO Portfolio Thesis
 
-**Owner:** CSRO Bot · **Created:** 2026-05-30 · **Revision:** v0.1 (initial)
+**Owner:** CSRO Bot · **Created:** 2026-05-30 · **Revision:** v0.2 (illiquid-market correction, Carlo 2026-05-30)
 
 ---
 
-## Core thesis `[HYP]`
+## §0 Governing market reality (Carlo, 2026-05-30) — overrides any "park and sell" instinct
 
-CarloOS wins by concentrating build effort on a small number of **category-defining, single-word
-.com pet/equestrian authorities** that compound into acquirer-grade assets, while treating the long tail
-as either consolidation fodder or sunset candidates. Exit value lives in **2–5 hero domains**, not breadth.
+**The domain aftermarket is ILLIQUID.** Carlo's portfolio has been on the market ~20 years with no sale. A premium
+domain "comp value" is **notional, not realizable** — there is no liquid bid. **The only proven exit is to build a
+domain into a traffic/content asset that makes a strategic acquirer want it, then transact.** Building is the
+liquidity mechanism, not a cost against name value. Acquirers are typically **named strategics** (e.g. Equine
+Network for the horse cluster), not anonymous flippers. → `strategic-acquirers.md`.
+
+**This corrects an earlier CSRO error** (treating premium-but-thin domains as "don't build, the name holds the
+value"). Wrong: an illiquid name holds *no realizable* value until traffic summons a buyer.
+
+## Core thesis `[HYP]`, v0.2
+
+CarloOS wins by **building category-defining single-word .com pet/equestrian domains into real traffic/content
+assets that manufacture demand from named strategic acquirers** in an otherwise-illiquid market. Hero domains
+(Dog, Fish, Vets, Ferret, PetFood, the horse cluster) get the build effort; the exit is engineered, not awaited.
+The long tail is built toward whatever buyer it can summon, redirected into a hero, or — only as a true last
+resort with no buyer and no traffic path — sold raw.
 
 ## What the evidence supports `[FACT]`
 
