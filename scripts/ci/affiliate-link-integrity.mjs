@@ -52,8 +52,9 @@ function registeredVendors(appDir) {
   return keys
 }
 
-const deadLinks = []   // class 1 (hard fail)
-const untracked = []   // class 2 (warn / strict-fail)
+const deadLinks = []   // class 1 (hard fail) — /go to unregistered vendor → 404
+const untracked = []   // class 2 (warn / strict-fail) — bare URL bypassing /go
+const noDisclosure = [] // class 3 (warn / strict-fail) — affiliate page w/o visible disclosure
 
 for (const app of readdirSync(APPS_DIR, { withFileTypes: true })) {
   if (!app.isDirectory()) continue
@@ -80,6 +81,16 @@ for (const app of readdirSync(APPS_DIR, { withFileTypes: true })) {
     for (const m of src.matchAll(/ctaHref=["'](https?:\/\/[^"']+)["']/g)) {
       untracked.push(`${rel}: ctaHref="${m[1]}" bypasses /go → untracked (no affiliate attribution)`)
     }
+
+    // class 3 — page carries affiliate links but NO visible FTC disclosure (QC §3.2)
+    // "affiliate-bearing" = has a /go link, a ReviewCard CTA, or an affiliate program ref.
+    const isPage = /\/page\.[tj]sx?$/.test(file)
+    const hasAffiliate = /\/go\/[a-z0-9-]+\/|ctaAffiliateProgram|ctaHref=/.test(src)
+    const hasDisclosure = /AffiliateDisclosure|affiliate disclosure|FTC|"as an? .*associate"|earn(s)? a commission/i.test(src)
+    if (isPage && hasAffiliate && !hasDisclosure) {
+      // Footer-level disclosure may cover it; flag as a warning to review, not a hard fail.
+      noDisclosure.push(`${rel}: affiliate-bearing page with no in-page AffiliateDisclosure (verify footer covers it — QC §3.2)`)
+    }
   }
 }
 
@@ -97,15 +108,26 @@ if (deadLinks.length) {
 
 if (untracked.length) {
   console.log(`### ${STRICT ? '🔴' : '🟡'} UNTRACKED buy-box URLs (bypass /go, no attribution): ${untracked.length}`)
-  for (const u of untracked) console.log('  ' + u)
+  for (const u of untracked.slice(0, 40)) console.log('  ' + u)
+  if (untracked.length > 40) console.log(`  …and ${untracked.length - 40} more`)
   if (STRICT) failed = true
   console.log('')
 } else {
   console.log('### ✓ No bare-URL buy-boxes — all CTAs route through /go.\n')
 }
 
+if (noDisclosure.length) {
+  console.log(`### ${STRICT ? '🔴' : '🟡'} AFFILIATE PAGES w/o in-page disclosure (QC §3.2 — verify footer covers): ${noDisclosure.length}`)
+  for (const n of noDisclosure.slice(0, 40)) console.log('  ' + n)
+  if (noDisclosure.length > 40) console.log(`  …and ${noDisclosure.length - 40} more`)
+  if (STRICT) failed = true
+  console.log('')
+} else {
+  console.log('### ✓ Affiliate pages carry disclosure.\n')
+}
+
 if (failed) {
-  console.log('FAIL: affiliate-link integrity violations (dead = revenue lost; untracked = no commission).')
+  console.log('FAIL: affiliate-link integrity violations (dead /go = 404 revenue lost; untracked = no commission; missing disclosure = FTC risk).')
   process.exit(1)
 }
 console.log('PASS: affiliate links clean.')

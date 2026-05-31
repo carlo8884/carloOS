@@ -18,12 +18,18 @@ name: IR Guard (scheduled risk scan)
 
 on:
   schedule:
-    - cron: '0 */3 * * *'   # every 3 hours
-  workflow_dispatch: {}       # + manual "run now" button
+    - cron: '0 */12 * * *'   # every 12 hours (Carlo: 6 or 12h, not hourly)
+  pull_request:              # + run on every PR (report, never block-by-secret)
+  workflow_dispatch: {}      # + manual "run now" button
 
+# Guardrails (Carlo 2026-05-31): NO LLM/API review, NO new secrets, NO spend,
+# NO auto-fixing, NO silent push to main, NO noisy issue spam. This workflow only
+# READS the repo, runs deterministic Node checks, and (on schedule only) opens a
+# SINGLE deduped tracking issue. It uses only the built-in GITHUB_TOKEN.
 permissions:
   contents: read
   issues: write
+  pull-requests: write
 
 jobs:
   guard:
@@ -52,8 +58,11 @@ jobs:
           } | tee guard-report.md
           grep -q '^FAIL=0' guard-report.md && echo "status=clean" >> "$GITHUB_OUTPUT" || echo "status=issues" >> "$GITHUB_OUTPUT"
 
-      - name: Open/update tracking issue on findings
-        if: steps.gates.outputs.status == 'issues'
+      # Issue is opened ONLY on the scheduled run (catches main drift), and only
+      # ONE deduped issue is kept open — no spam. On PRs the report shows in the
+      # Actions log / can be read by reviewers; no issue is created per-PR.
+      - name: Open/update tracking issue on findings (scheduled only)
+        if: steps.gates.outputs.status == 'issues' && github.event_name == 'schedule'
         uses: actions/github-script@v7
         with:
           script: |
