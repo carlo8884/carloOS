@@ -23,7 +23,6 @@ export type SiteId =
   | 'askthevet'         // S2 — AI symptom checker
   | 'seniorpets'        // S9 — senior pet Rx + content
   | 'dogpicture'        // S8 — AI pet portraits + POD
-  | 'petsupplies'       // S1 — comparison engine
   | 'hardmoneyloans'    // S11 — off-vertical lead gen
 
 // ─────────────────────────────────────────────
@@ -471,31 +470,6 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   // ─── PetSupplies.com — NerdWallet for pet products (Architect S1) ─────
-  'petsupplies': {
-    primary: '#475569',
-    primaryLight: '#64748B',
-    primaryPale: '#F1F5F9',
-    primaryDark: '#334155',
-    dark: '#0F172A',
-    surface: '#F8FAFC',
-    white: '#FFFFFF',
-    textDark: '#0F172A',
-    textMid: '#334155',
-    textLight: '#64748B',
-    border: '#E2E8F0',
-    success: '#16A34A',
-    warning: '#D97706',
-    danger: '#DC2626',
-    fontDisplay: 'Inter',
-    fontBody: 'Inter',
-    fontDisplayWeights: [400, 600, 700, 900],
-    fontBodyWeights: [300, 400, 500, 600, 700],
-    siteName: 'PetSupplies.com',
-    siteTagline: 'Independent Pet Product Comparisons',
-    siteUrl: 'https://petsupplies.com',
-    logoText: 'PetSupplies.com',
-    twPrimary: 'slate',
-  },
 
   // ─── HardMoneyLoans.com — off-vertical lead gen (Architect S11) ───────
   'hardmoneyloans': {
@@ -561,6 +535,13 @@ export interface SiteConfig {
   // SEO defaults
   defaultOgImage: string
   twitterHandle?: string
+
+  // Efty listing URL (per csro-dir-2026-W22-008).
+  // Set this PER SITE when Carlo provides the Efty listing URL.
+  // When set, the shared Footer renders a discreet "This domain is for sale →" link.
+  // Tier-A (Dog/Fish) and any other sites Carlo does NOT want to advertise as for-sale
+  // leave this unset → the link is not rendered.
+  eftyUrl?: string
 }
 
 export const siteConfigs: Record<SiteId, SiteConfig> = {
@@ -599,7 +580,8 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       {
         heading: 'Health',
         links: [
-          { label: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
+          { label: 'Symptoms (urgency-tiered)', href: '/symptoms' },
+          { label: 'Diagnosed Conditions', href: '/conditions' },
           { label: 'Dog Nutrition', href: '/nutrition' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
           { label: 'Dental Health', href: '/health/dog-dental-care' },
@@ -694,6 +676,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Fish Species', href: '/species' },
+      { label: 'Water Parameters', href: '/water-parameters' },
       { label: 'Aquarium Setup', href: '/setup' },
       { label: 'Calculators', href: '/tools' },
       { label: 'Fish Health', href: '/health' },
@@ -1038,25 +1021,6 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [{ label: 'Home', href: '/' }],
     footerLinks: [{ heading: 'DogPicture', links: [{ label: 'Home', href: '/' }] }],
     defaultOgImage: 'https://dogpicture.com/og-default.jpg',
-  },
-
-  // ─── PetSupplies.com ──────────────────────────────────────────────────
-  'petsupplies': {
-    id: 'petsupplies',
-    theme: themes['petsupplies'],
-    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
-    affiliates: {
-      amazon: true,
-      chewy: true,
-      trupanion: false,
-      healthyPaws: false,
-      vetster: false,
-      sharesale: true,
-    },
-    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
-    nav: [{ label: 'Home', href: '/' }],
-    footerLinks: [{ heading: 'PetSupplies.com', links: [{ label: 'Home', href: '/' }] }],
-    defaultOgImage: 'https://petsupplies.com/og-default.jpg',
   },
 
   // ─── HardMoneyLoans.com ───────────────────────────────────────────────

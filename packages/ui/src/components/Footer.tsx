@@ -69,6 +69,22 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           <AffiliateDisclosure variant="footer" siteId={siteId} />
         )}
 
+        {/* Efty listing link — discreet, only renders when siteConfig.eftyUrl is set.
+            Per csro-dir-2026-W22-008: tier-gated; Tier-A flagships (Dog/Fish) leave
+            eftyUrl unset → nothing renders. */}
+        {config.eftyUrl && (
+          <div className="border-t border-white/10 pt-4 mt-6 text-center">
+            <a
+              href={config.eftyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-white/40 no-underline hover:text-white/70 transition-colors"
+            >
+              This domain is for sale →
+            </a>
+          </div>
+        )}
+
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
           <span className="text-xs text-white/50">
