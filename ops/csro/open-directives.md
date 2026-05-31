@@ -28,6 +28,12 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 
 ## Open
 
+### csro-dir-2026-W22-019 → Monetization Bot — 🔴 PORTFOLIO REVENUE LEAK: 110 untracked buy-box links (new 2026-05-31)
+- **Action:** 110 buy-box CTAs link to bare `chewy.com`/`amazon.com` URLs that **bypass `/go/`** → untracked = $0 commission on every purchase-intent click. By site: **dog-com 42** (36K/mo flagship review pages), saddle 34, horses 19, ferret 9, vets 3, lizard 2, fish 1. Convert `ctaHref="https://chewy.com/..."` → `ctaHref="/go/chewy/<sku>?s=<slug>"` (amazon → `/go/amazon/...`). Verify with `node scripts/ci/affiliate-link-integrity.mjs`.
+- **Why:** the flagship's highest-intent pages send purchase traffic to retailers with no commission credit — silent, portfolio-wide, real money on the 50K+/mo we already have. Found by the new affiliate-link-integrity check. `[FACT — 110 instances, CSRO-verified]`
+- **Done-when:** `affiliate-link-integrity.mjs` reports 0 untracked; every buy-box routes through `/go`.
+- **Status:** open — HIGH (found money).
+
 ### csro-dir-2026-W22-016 → Racing Bot — Horses.com fork: decision-grade research brief (new 2026-05-31) ⬆ DECISION GATE
 - **Action:** Per Carlo's 2026-05-31 redirect — STOP building content; deliver a decision-grade brief: "Should Horses.com become a racing-intelligence platform, a general equine editorial asset, or a hybrid?" Full prompt + CSRO refinements + Carlo's 2026-05-31 addendum: `ops/handoffs/2026-05-31-csro-horses-racing-fork-gate.md`. CSRO refinements: (1) headline = the buyer-set tradeoff; (2) label claims FACT/RESEARCH/HYPOTHESIS + cite; (3) wagering-adjacent = legal hard-stop. **Carlo addendum:** keep going; test the "informative + licensed racing-data-API analysis" hypothesis specifically (find real APIs + terms: Equibase/Timeform/etc.); tag every avenue 🟢easy/🟡moderate/🔴hard on legal-licensing friction — **default NO on 🔴 unless value is overwhelming + Carlo opts in; "easy and valuable" wins**; judge by highest-and-best-use across ALL buyers, not Equine Network.
 - **Why:** Carlo caught the Racing Bot building content (lane breach — it's a research specialist). The fork is the #2 cluster's identity question; resolve deliberately, don't default to content. `[FACT]`
