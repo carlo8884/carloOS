@@ -58,11 +58,23 @@ Curated entries render nothing until pages use them. Replace hardcoded `<Image>`
 emoji headers on Tier-1 homepages + top hubs with `<StockImage manifestKey="...">`. Give each
 Tier-1 homepage a real **hero** above the fold. This is the "appeal to make people scroll" fix.
 
-### Part C — Logos / brand identity
-No logos exist. **CSRO default (unless Carlo overrides): $0 typographic wordmarks** — a config-driven
-`<Logo>` (font + per-site color from `packages/config`), in-repo, no external tools, reversible.
-QC §1 forbids fake HUMANS, not logos — wordmarks are fine. Adopt in `Nav`/`Footer` (coordinate
-structural changes per CLAUDE.md §5). Upgrade to custom marks in a later phase.
+### Part C — Logos / brand identity (Carlo policy 2026-05-31 — LAW)
+No logos exist. **$0 typographic wordmarks now, upgrade later. Do NOT spend money on logos yet.**
+Build a config-driven `<Logo>` (font + per-site color from `packages/config`), in-repo, no external
+tools, reversible. Adopt in `Nav`/`Footer` (coordinate structural changes per CLAUDE.md §5).
+
+Rules:
+- **Clean, premium wordmarks.** Typography consistent with each site's positioning (e.g. Saddle =
+  luxury serif restraint, Lizard = dark-mode field-guide, Vets = clinical-authority, Fish =
+  aquarium-magazine).
+- **Do NOT over-design.** Do NOT use generic icons unless they genuinely improve recognition.
+- **Prioritize image quality, layout, trust, and tool usability OVER logo perfection.** The wordmark
+  is the floor, not the focus — spend effort on Parts A/B first.
+
+**Logo-upgrade trigger (revisit paid/custom only when a site has one of):** meaningful traffic ·
+real revenue · serious buyer interest · clear Tier-1 brand direction · CSRO+Visual agree the current
+wordmark is limiting perceived value. Dog.com and Fish.com may eventually deserve custom brand
+systems (they have real offers) — but NOT before the core product/visual experience is stronger.
 
 ## Constraints / lane
 - Stay in Visual lane: `src/components/visual/*`, `packages/ui/src/components/visual/*`,

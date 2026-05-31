@@ -25,4 +25,7 @@ Pull latest origin/main. Read ops/bot-queue/Visual.md and do the top queued item
 - Other bots' lanes (COO routing/CI, Monetization affiliate/funnels, CSRO registers).
 - `Nav.tsx`/`Footer.tsx`/`ArticleLayout.tsx` are SHARED — coordinate via PR before structural change.
 - Never commit API keys/secrets. No CI/Vercel photo-API wiring (Carlo policy 2026-05-31).
+- **No spend on logos.** $0 typographic wordmarks only; clean/premium, typography matched to each
+  site's positioning; do not over-design; no generic icons unless they aid recognition. Image quality
+  + layout + trust + tool usability rank ABOVE logo perfection. Upgrade trigger in dir-021 brief.
 - QC §1: no AI-generated humans or animals, no fake headshots, preserve photographer attribution.
