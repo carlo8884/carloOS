@@ -1,13 +1,21 @@
 # CSRO Strategic Acquirers Map
 
-**Owner:** CSRO Bot · **Created:** 2026-05-30
-**Premise (Carlo, 2026-05-30):** the domain aftermarket is **illiquid** — these domains sat ~20 years unsold.
-The realistic exit is **not** a passive marketplace sale; it's **manufacturing demand from a known strategic
-acquirer** by building the domain into a credible traffic/content asset they want to own. This register tracks
-*who would buy what, and why* — and that drives the build priority.
+**Owner:** CSRO Bot · **Created:** 2026-05-30 · **Reframed 2026-05-31 (Carlo)**
 
-> This reframes the whole portfolio strategy: **build → attract a named strategic → transact.** Building is not a
-> drag on domain value; it is the liquidity mechanism. (Corrects `valuation-model.md §3`.)
+> ## ⚠️ This is a SIGNAL TRACKER, not a build target (Carlo, 2026-05-31)
+>
+> **We build for highest-and-best-use, NOT toward any one buyer on this list** (`thesis.md §0a`). Once a site has
+> traffic + views + page depth + live monetization, there will be **many** buyers — and a competitive field is
+> what creates price. Equine Network and everyone below are **early signals that demand is real**, logged to
+> inform *positioning at sale time* — they do **not** narrow what we build. **When a named buyer's preference and
+> highest-and-best-use diverge, build for highest-and-best-use.**
+>
+> Use this register to: (a) confirm demand exists, (b) prep positioning once an asset is built, (c) spot
+> compliance/buyer-pool tradeoffs (e.g. the Horses.com racing fork). NOT to pre-pick a buyer or shape a build.
+
+**Premise:** the aftermarket is illiquid; the exit is **build a strong, trafficked, monetized asset → a
+competitive field of buyers emerges → transact at the best of many.** This register tracks *who might buy and why*
+as evidence, not as a target.
 
 > Research standard: acquirer interest is `[CARLO]` (he told me), `[HYP]` (my inference), or `[RESEARCH]`
 > (sourced). I do NOT invent buyer interest. "Unknown — needs research" is valid.

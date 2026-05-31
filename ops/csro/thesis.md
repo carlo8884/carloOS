@@ -8,20 +8,40 @@
 
 **The domain aftermarket is ILLIQUID.** Carlo's portfolio has been on the market ~20 years with no sale. A premium
 domain "comp value" is **notional, not realizable** — there is no liquid bid. **The only proven exit is to build a
-domain into a traffic/content asset that makes a strategic acquirer want it, then transact.** Building is the
-liquidity mechanism, not a cost against name value. Acquirers are typically **named strategics** (e.g. Equine
-Network for the horse cluster), not anonymous flippers. → `strategic-acquirers.md`.
+domain into a traffic/content asset that makes acquirers want it, then transact.** Building is the liquidity
+mechanism, not a cost against name value.
 
 **This corrects an earlier CSRO error** (treating premium-but-thin domains as "don't build, the name holds the
 value"). Wrong: an illiquid name holds *no realizable* value until traffic summons a buyer.
 
-## Core thesis `[HYP]`, v0.2
+## §0a Build for HIGHEST-AND-BEST-USE, not for one named buyer (Carlo, 2026-05-31)
 
-CarloOS wins by **building category-defining single-word .com pet/equestrian domains into real traffic/content
-assets that manufacture demand from named strategic acquirers** in an otherwise-illiquid market. Hero domains
-(Dog, Fish, Vets, Ferret, PetFood, the horse cluster) get the build effort; the exit is engineered, not awaited.
-The long tail is built toward whatever buyer it can summon, redirected into a hero, or — only as a true last
-resort with no buyer and no traffic path — sold raw.
+**Do NOT build toward a single named acquirer.** Equine Network is **one early signal, not "the buyer."** Once a
+site has real traffic, views, deep page counts, and live monetization, there will be **many** interested
+parties — and **a competitive field of buyers is what creates price.** Building to one buyer's taste risks
+under-building (shaping for their preference instead of maximum value) and weak negotiating leverage (one bidder).
+
+**The governing build objective is therefore highest-and-best-use:**
+- Maximize the universal value drivers every buyer (and the income statement) rewards: **traffic, engaged views,
+  topical authority / page depth, email/audience capture, and live monetized revenue.**
+- These make the asset valuable **whether or not it sells** — a strong income asset is its own reward, and also
+  the thing that summons the most bidders at the highest multiple.
+- A built, trafficked, monetized site is legible to *every* buyer pool simultaneously (strategic media, category
+  retailers, data/SaaS, PE roll-ups, content-portfolio buyers) — so we don't pre-pick the buyer; we build the
+  asset and let the field compete.
+
+**`strategic-acquirers.md` is a TRACKER of signals, not a build target.** Named buyers (Equine Network, etc.) are
+logged as evidence the demand is real and to inform *positioning at sale time* — never to narrow what we build.
+When a named buyer's preference and highest-and-best-use diverge, **build for highest-and-best-use.**
+
+## Core thesis `[HYP]`, v0.3
+
+CarloOS wins by **building its category-defining .com pet/equestrian domains to highest-and-best-use — maximum
+traffic, authority, audience, and live monetized revenue — so each becomes a strong income asset that also
+manufactures a competitive field of buyers** in an otherwise-illiquid market. Hero domains (Dog, Fish, Vets,
+Ferret, PetFood, Horses, Saddle) get the build effort; the exit is engineered by building value, not by courting
+one buyer. The long tail is redirected into a hero or built-lite; sold raw only as a true last resort (no hero, no
+traffic path, no buyer).
 
 ## What the evidence supports `[FACT]`
 

@@ -16,10 +16,15 @@ re: build saddle.com + horses.com toward a named strategic acquirer (Equine Netw
 
 # CSRO — Horse-cluster build spec (target acquirer: Equine Network)
 
-**Why this exists:** Carlo named a real strategic buyer — **Equine Network** — for saddle.com / horses.com + the
-horse cluster. Per the illiquid-market thesis (`thesis.md §0`), building these toward that buyer is the exit path.
-**But** research (`strategic-acquirers.md §1a`) shows Equine Network (now CVC-controlled, ~$300M deal) pays up for
-**audience + commerce + membership**, not thin SEO content. So we build to *their* value drivers.
+**Why this exists:** build saddle.com / horses.com to **highest-and-best-use** (`thesis.md §0a`) — maximum traffic,
+audience, and live monetized revenue. That makes them strong income assets AND legible to the **whole field** of
+equine buyers, not one. Equine Network is a confirmed-demand *signal* (`strategic-acquirers.md §1a`), not the
+target — and conveniently, what it values (audience + commerce + membership over thin SEO content) is the SAME as
+highest-and-best-use, so building for max value needs no buyer-specific shaping.
+
+> **Not building to one buyer:** the layers below are highest-and-best-use — every equine/media/retail/data buyer
+> rewards them, and they make the sites earn regardless of any sale. Equine Network just happens to confirm the
+> demand is real. (Per Carlo 2026-05-31: build for value, not for a named buyer.)
 
 ## Reality check (CSRO mapped the apps 2026-05-30)
 
@@ -27,8 +32,8 @@ These are **NOT greenfield** — they're substantially built with thin traffic:
 - **saddle.com:** ~55 routes (reviews, brands, fit guides, 30+ guides). Affiliate routes exist. **Traffic ~214/mo.**
 - **horses.com:** ~25 routes (breeds, disciplines, health, supplements). Affiliate routes exist. **Traffic ~1,000/mo.**
 
-**So the gap is NOT content volume. The gaps are: (1) traffic, (2) audience capture, (3) commerce depth** — exactly
-the three things that convert "parked premium domain" into "asset Equine Network pays a real number for."
+**So the gap is NOT content volume. The gaps are: (1) traffic, (2) audience capture, (3) commerce depth** — the
+universal value drivers that turn a thin premium domain into a strong income asset + a contested acquisition target.
 
 ## The build directive — three layers, in priority order
 
