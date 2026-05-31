@@ -176,6 +176,8 @@ export default function RaceCenterPage() {
             { href: '/guides', label: 'Guides', desc: 'How to read cards, odds & form' },
             { href: '/glossary', label: 'Glossary', desc: 'Every racing term explained' },
             { href: '/ownership', label: 'Ownership', desc: 'Get into racehorse ownership, honestly' },
+            { href: '/experiences', label: 'Experiences', desc: 'Plan a day at the races & racing travel' },
+            { href: '/gear', label: 'Gear', desc: 'Honest equestrian buyer’s guides' },
           ].map((c) => (
             <Link
               key={c.href}

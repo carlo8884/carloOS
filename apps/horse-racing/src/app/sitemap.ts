@@ -10,6 +10,8 @@ import {
 import { allTermSlugs } from '../data/racing/glossary'
 import { allGuideSlugs } from '../data/racing/guides'
 import { allOwnershipSlugs } from '../data/racing/ownership'
+import { allExperienceSlugs } from '../data/racing/experiences'
+import { allGearSlugs } from '../data/racing/gear'
 
 /**
  * Sitemap — hub pages, every racecard, every profile, and every glossary term.
@@ -38,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const glossary = allTermSlugs().map((s) => entry(`/glossary/${s}`, 'monthly', 0.6))
   const guides = allGuideSlugs().map((s) => entry(`/guides/${s}`, 'monthly', 0.7))
   const ownership = allOwnershipSlugs().map((s) => entry(`/ownership/${s}`, 'monthly', 0.7))
+  const experiences = allExperienceSlugs().map((s) => entry(`/experiences/${s}`, 'monthly', 0.7))
+  const gear = allGearSlugs().map((s) => entry(`/gear/${s}`, 'monthly', 0.7))
 
   return [
     entry('', 'daily', 1.0),
@@ -52,6 +56,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/guides', 'weekly', 0.8),
     entry('/ownership', 'weekly', 0.9),
     entry('/ownership/playbook', 'monthly', 0.8),
+    entry('/experiences', 'weekly', 0.8),
+    entry('/gear', 'weekly', 0.8),
     ...racecards,
     ...horses,
     ...trainers,
@@ -60,5 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...glossary,
     ...guides,
     ...ownership,
+    ...experiences,
+    ...gear,
   ]
 }
