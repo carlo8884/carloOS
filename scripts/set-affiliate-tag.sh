@@ -57,6 +57,19 @@ declare -A SITES_FOR_VENDOR=(
   [PETCO]='dog-com fish-com lizard-com ferret-com'
   [PETSMART]='dog-com fish-com lizard-com'
 
+  # Brand-search retailer variants (D-013 leak fix — separate env var per
+  # the runtime `AFF_${vendor.toUpperCase()}_TAG` convention: amazon-brand
+  # → AFF_AMAZON_BRAND_TAG, chewy-brand → AFF_CHEWY_BRAND_TAG). Values
+  # typically match AMAZON / CHEWY (same publisher account) but the env
+  # vars are distinct because each is keyed off the route name. Without
+  # these the brand-search redirects fall back to PLACEHOLDER → lost
+  # attribution on every brand-search click (IR finding, dir-015 #4).
+  # vets-co is included because it currently registers both routes on
+  # main; PR #241 (dir-015 #2) removes them — when that lands, drop
+  # vets-co from these two lines too.
+  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co'
+  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co'
+
   # Pet insurance — dog-com gets all; vets-co gets all (insurance-only per policy)
   [TRUPANION]='dog-com vets-co'
   [HEALTHY_PAWS]='dog-com vets-co'
