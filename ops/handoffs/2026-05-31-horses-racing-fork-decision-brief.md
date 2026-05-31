@@ -93,10 +93,10 @@ be "easy and valuable"? **Finding: the cheap option doesn't cover the US market,
 
 | Source | Access model | Coverage | Commercial terms | Friction |
 |---|---|---|---|---|
-| **The Racing API** (theracingapi.com) | Self-serve, free hobby tier; paid commercial tier ~**$25–30/mo** | **UK & IRE** + major internationals; thin on US | Commercial use allowed on paid tier `[RESEARCH]` | **🟢 easy** (but wrong geography for a US play) |
-| **RapidAPI / Goalserve aggregators** | Self-serve API, low monthly | Mixed; quality/coverage variable | Redistribution rights **vary** — must verify per provider `[RESEARCH]` | **🟡 moderate** (diligence + quality risk) |
-| **Equibase** (official US, Jockey Club) | **No self-serve API**; negotiated contract; free public data ToS **bars scraping/republication** | US Thoroughbred (authoritative) | Bespoke, relationship/revenue-share; not public `[RESEARCH]` + `[HYPOTHESIS]` on pricing | **🔴 hard** |
-| **Timeform** (Flutter-owned) | Enterprise B2B partnership; bespoke pricing | Global ratings IP | Contract, meaningful minimums; aimed at operators/broadcasters `[RESEARCH]` + `[HYPOTHESIS]` on pricing | **🔴 hard** |
+| **The Racing API** (theracingapi.com) | Self-serve, free hobby tier; paid Basic/Standard/Pro commercial tiers | **UK & IRE** + major internationals; **thin on US** | Commercial use allowed — but **explicitly PROHIBITS betting operators/sportsbooks** (which actually fits an *informative, non-wagering* layer cleanly) `[RESEARCH: theracingapi.com/terms-of-service]` | **🟢 easy** (but wrong geography for a US play) |
+| **RapidAPI / Goalserve aggregators** | Self-serve API, low monthly; free trial | Mixed; Goalserve covers UK/USA/FR/SA/SE | Redistribution rights **vary** — must verify per provider `[RESEARCH]` | **🟡 moderate** (diligence + quality risk) |
+| **Equibase** (official US, Jockey Club) | **No self-serve API**; negotiated contract via Data Sales dept (800-333-2211); free public data ToS **bars scraping/republication** (sends C&Ds) | US Thoroughbred (authoritative) | Bespoke, relationship/revenue-share; not public `[RESEARCH]` + `[HYPOTHESIS]` on exact pricing | **🔴 hard** |
+| **Timeform** (Flutter-owned; sold via PA Betting Services) | Enterprise B2B; **individual access £500–£1,500/mo, commercial "on application"** | Global ratings IP (UK-centric) | Contract via commercial@timeform.com; aimed at operators/broadcasters `[RESEARCH: timeform.com/commercial]` | **🔴 hard** |
 | **Daily Racing Form / Brisnet** | Paid products / partner licensing | US PPs/figures | Paid, gated `[RESEARCH]` | **🔴 hard** |
 
 **Net (per dir-016's decision rule "easy and valuable wins; default NO on 🔴"):**
