@@ -3,7 +3,7 @@
 **Five premium domain properties. One codebase. Shared infrastructure.**
 
 <!-- pagecount-intro:start -->
-**424 pages** across 5 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co
+**432 pages** across 5 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co
 <!-- pagecount-intro:end -->
 
 _Page counts auto-update via `scripts/dashboard.mjs`._
@@ -79,11 +79,11 @@ npx tsx scripts/seed-fish.ts
 <!-- pagecount-table:start -->
 | Site | Domain | Pages | Priority |
 |------|--------|-------|----------|
-| dog-com | dog.com | 155 | Flagship |
-| fish-com | fish.com | 86 | High |
-| lizard-com | lizard.com | 65 | High |
-| saddle-com | saddle.com | 54 | Medium |
-| vets-co | vets.co | 64 | Medium |
+| dog-com | dog.com | 156 | Flagship |
+| fish-com | fish.com | 87 | High |
+| lizard-com | lizard.com | 67 | High |
+| saddle-com | saddle.com | 56 | Medium |
+| vets-co | vets.co | 66 | Medium |
 <!-- pagecount-table:end -->
 
 ## Stack
