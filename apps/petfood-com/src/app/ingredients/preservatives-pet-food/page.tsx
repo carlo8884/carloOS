@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -71,6 +72,13 @@ export default function PreservativesPetFoodPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="preservatives-pet-food"
           />
         </>
       }

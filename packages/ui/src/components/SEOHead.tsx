@@ -163,11 +163,16 @@ interface BreadcrumbSchemaParams {
   items: Array<{ name: string; url: string }>
 }
 
-export function buildBreadcrumbSchema(params: BreadcrumbSchemaParams) {
+type BreadcrumbSchemaInput =
+  | BreadcrumbSchemaParams
+  | Array<{ name: string; url: string }>
+
+export function buildBreadcrumbSchema(input: BreadcrumbSchemaInput) {
+  const items = Array.isArray(input) ? input : input.items
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: params.items.map((item, i) => ({
+    itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,

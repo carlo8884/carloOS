@@ -162,8 +162,8 @@ export default function ConditionsHubPage() {
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
-            title="PetFood.com reference"
-            subtitle="New brand evaluations and condition-specific deep-dives. No promotional copy."
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="conditions-hub"
           />
         </>
