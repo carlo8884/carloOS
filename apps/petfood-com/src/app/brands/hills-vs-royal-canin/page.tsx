@@ -5,7 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
-  BuyBox,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -73,6 +73,13 @@ export default function HillsVsRoyalCaninPage() {
               { label: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="hills-vs-royal-canin"
+          />
         </>
       }
     >
@@ -90,27 +97,33 @@ export default function HillsVsRoyalCaninPage() {
           experience.
         </p>
 
-        <BuyBox
-          label="Where to buy either brand"
-          disclosure="Both brands are widely available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
-          secondaryDisclosure="We never rank by commission."
-          brands={[
-            {
-              name: "Hill's Science Diet",
-              vendors: [
-                { vendor: 'chewy', href: '/go/chewy-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc' },
-                { vendor: 'amazon', href: '/go/amazon-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc' },
-              ],
-            },
-            {
-              name: 'Royal Canin',
-              vendors: [
-                { vendor: 'chewy', href: '/go/chewy-brand/Royal%20Canin?s=hills-vs-rc' },
-                { vendor: 'amazon', href: '/go/amazon-brand/Royal%20Canin?s=hills-vs-rc' },
-              ],
-            },
-          ]}
-        />
+        {/* ─── Buy-boxes (D-006 — affiliate enrichment) ────────────────── */}
+        <div style={{ background: 'var(--brand-bg, #f8f8f8)', border: '1px solid var(--brand-border)', borderRadius: '10px', padding: '20px', margin: '24px 0 28px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
+            Where to buy either brand
+          </div>
+          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid)', lineHeight: 1.5 }}>
+            Both brands are widely available on Chewy and Amazon. We earn an affiliate commission
+            when you purchase through these links — at no extra cost to you. We never rank by
+            commission.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 700, marginBottom: '6px' }}>Hill&apos;s Science Diet</div>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                <a href="/go/chewy-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Chewy →</a>
+                <a href="/go/amazon-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Amazon →</a>
+              </div>
+            </div>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 700, marginBottom: '6px' }}>Royal Canin</div>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                <a href="/go/chewy-brand/Royal%20Canin?s=hills-vs-rc" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Chewy →</a>
+                <a href="/go/amazon-brand/Royal%20Canin?s=hills-vs-rc" rel="sponsored noopener" style={{ fontSize: '13px', padding: '6px 12px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}>Amazon →</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <h2 id="corporate">Corporate Context</h2>
         <p>

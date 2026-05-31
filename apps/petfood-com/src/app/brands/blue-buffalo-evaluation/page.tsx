@@ -5,7 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
-  BuyBox,
+  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -74,6 +74,13 @@ export default function BlueBuffaloEvaluationPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="blue-buffalo-evaluation"
+          />
         </>
       }
     >
@@ -88,20 +95,41 @@ export default function BlueBuffaloEvaluationPage() {
           investigation. An honest evaluation has to engage all of that.
         </p>
 
-        <BuyBox
-          label="Where to buy Blue Buffalo"
-          disclosure="If after reading this evaluation you still want to buy Blue Buffalo, browse the full lineup on Chewy or Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
-          secondaryDisclosure="We never rank by commission."
-          brands={[
-            {
-              name: 'Blue Buffalo',
-              vendors: [
-                { vendor: 'chewy', href: '/go/chewy-brand/Blue%20Buffalo?s=eval-blue-buffalo', label: 'Search on Chewy' },
-                { vendor: 'amazon', href: '/go/amazon-brand/Blue%20Buffalo?s=eval-blue-buffalo', label: 'Search on Amazon' },
-              ],
-            },
-          ]}
-        />
+        {/* ─── Buy-box (D-006 — affiliate enrichment) ──────────────────── */}
+        <div
+          style={{
+            background: 'var(--brand-bg, #f8f8f8)',
+            border: '1px solid var(--brand-border)',
+            borderRadius: '10px',
+            padding: '20px',
+            margin: '24px 0 28px',
+          }}
+        >
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid)', marginBottom: '8px' }}>
+            Where to buy Blue Buffalo
+          </div>
+          <p style={{ fontSize: '14px', margin: '0 0 14px', color: 'var(--brand-text-mid)', lineHeight: 1.5 }}>
+            If after reading this evaluation you still want to buy Blue Buffalo, browse the full
+            lineup on Chewy or Amazon. We earn an affiliate commission when you purchase through
+            these links — at no extra cost to you. We never rank by commission.
+          </p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a
+              href="/go/chewy-brand/Blue%20Buffalo?s=eval-blue-buffalo"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-primary, #d2691e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Blue Buffalo on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/Blue%20Buffalo?s=eval-blue-buffalo"
+              rel="sponsored noopener"
+              style={{ display: 'inline-block', padding: '10px 18px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '14px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}
+            >
+              Search Blue Buffalo on Amazon →
+            </a>
+          </div>
+        </div>
 
         <h2 id="history">Corporate History</h2>
         <p>
