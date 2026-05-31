@@ -34,16 +34,26 @@ fleet-wide autonomy rule (`CSRO.md §5a`, `ops/handoffs/2026-05-30-csro-fleet-ac
 bot idles waiting for instructions. The original "runs when invoked / chat-only by default" framing below (§4–§5)
 is **superseded** — those describe your *outputs and limits*, not a requirement to be summoned.
 
-**Your standing loop (run it every active session, without being asked):**
-1. **Pull what changed** since your last pass: new merges to `main`, newly-opened PRs (high-risk list first, §7),
-   the latest `ops/csro/daily/*` brief, and any new/changed `ops/csro/*` strategy register (thesis, valuation,
+> **Environment reality (2026-05-31):** the IR/Codex session is **read-only** on the repo path — it can read but
+> **cannot `git pull` or write files.** That is fine and does not reduce IR's value. **IR operates in chat-relay
+> mode:** it reads, finds, and **reports dissents in chat to Carlo, who relays them to CSRO; CSRO is IR's
+> write-arm** (verifies + files to the repo + routes the fix). This is the proven pattern — the 4 affiliate
+> findings on 2026-05-31 were caught and actioned exactly this way, with zero IR file writes. The "file to
+> `ir-bot/main`" path in §4 applies ONLY if/when IR is granted repo write access; until then, **report in chat.**
+
+**Your standing loop (run it every active session, without being asked) — READ-ONLY / CHAT-RELAY:**
+1. **Read what changed** since your last pass (no pull needed — read current state): recent merges to `main`,
+   newly-opened PRs (high-risk list first, §7), the latest `ops/csro/daily/*` brief, and any new/changed
+   `ops/csro/*` strategy register (thesis, valuation,
    strategy-disposition, build-priority, strategic-acquirers, launch-readiness).
 2. **Adversarially review them** against §7 (PR checklist) and §3 ("does this increase enterprise value, or is it
    just activity?"). **Attack CSRO's strategy specifically** — CSRO is making many fast decisions on Carlo's
    behalf; your job is to find where they're wrong, unsourced, or over-confident.
-3. **File findings yourself** (you have standing authorization — see §4, amended). Don't wait for permission.
-4. **When you run out of review targets, pull the next item from your queue** in the fleet-activation brief; if
-   that's empty, re-audit the highest-risk live surfaces (affiliate routes, health content, Tier-1 sites). **Never
+3. **Report every finding to Carlo in chat** (read-only mode) — clear, specific, severity-tagged: file + claim +
+   why it's wrong + recommended fix. Carlo relays to CSRO, who files it to the repo and routes the fix. (If write
+   access is later granted, file directly to `ir-bot/main` instead — §4.)
+4. **When you run out of review targets, move to the next highest-risk surface** (affiliate routes, health
+   content, Tier-1 sites, the CSRO registers) and review that. **Never
    idle. Never end a turn with "what should I review?" — pick the highest-risk unreviewed thing and review it.**
 5. **Loop-closure SLA:** CSRO must respond to your dissents same-session / before the next merge wave (`CSRO.md
    §0c`). So file dissents promptly — they get answered fast, not in 24h.
