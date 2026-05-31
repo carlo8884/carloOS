@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective | Vets.co',
-  description: 'Pet insurance ranked from a veterinarian\'s perspective — which plans actually pay when your pet needs care, how direct payment works, and what the fine…',
+  title: 'Best Pet Insurance 2025 — How the 11 Major Carriers Compare | Vets.co',
+  description: 'Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.',
   path: '/reviews/best-pet-insurance',
   type: 'article',
 })
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — A Veterinarian\'s Perspective',
+  title: 'Best Pet Insurance 2025 — How the 11 Major Carriers Compare',
   description: 'Pet insurance ranked using public payout data, contract terms, and what actually matters for owners.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',
@@ -38,10 +38,10 @@ export default function VetsPetInsurancePage() {
         </span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best Pet Insurance 2025 — What Vets Actually Think
+          Best Pet Insurance 2025 — How the 11 Major Carriers Compare
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          From a veterinarian&apos;s perspective, Trupanion is the only major pet insurer
+          Across the 11 major pet insurance carriers, Trupanion is the only one
           that pays the practice directly at checkout, eliminating the
           submit-and-wait reimbursement gap that strands owners with a $5,000
           emergency bill. Healthy Paws delivers the fastest reimbursement (around
@@ -67,12 +67,14 @@ export default function VetsPetInsurancePage() {
           <div>
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+            <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
 
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">From the Vet Side</div>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why It Matters</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only insurer where the veterinarian can submit the claim and be paid directly while you&apos;re standing at my front desk. For major emergencies, this matters enormously.
+                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only carrier whose policy contract obligates them to pay the veterinary practice directly at checkout (rather than the standard submit-receipt-and-wait reimbursement model). For major emergencies, this matters enormously.
               </p>
             </div>
 
