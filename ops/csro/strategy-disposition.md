@@ -38,10 +38,22 @@ Each domain resolves to **EARN** or **SELL** — but per §0, the road to SELL a
 > plausible strategic and no traffic path (e.g. hardmoneyloans; DogPicture pending).
 
 > **Default = HOLD-AND-COMPOUND (Carlo, 2026-05-30).** At $20–50k/mo net the enterprise is worth more built than
-> sold, and sells at a higher multiple later as a going concern. So sales are **opportunistic** (take a great
-> offer like Dog.com's), not the goal. Buyers are found THROUGH traffic — building is the demand engine. See
-> `thesis.md §0b`. Every in-scope domain with a traffic path = build-and-hold; "flip" = "build to earn, sell only
-> on a strong offer."
+> sold, and sells at a higher multiple later as a going concern. Sales are **opportunistic**, not the goal.
+>
+> **⚠️ IR-Bot stage-gate (2026-05-31, F4/F5/F8) — BUILD is NOT automatic.** "Plausible buyer" or "has a traffic
+> path" does **not** by itself justify a build (building costs real effort + execution risk). Before any domain
+> graduates from HOLD to BUILD, it must clear a **stage-gate**:
+> 1. **Demand signal** — existing traffic OR a real keyword/search-volume opportunity (not assumed).
+> 2. **Monetization path** — a concrete EPC/RPM/lead model, not "ads exist."
+> 3. **Buyer thesis OR income thesis** — either a validated buyer signal or a standalone earn case.
+> 4. **Cheap validation first** — for buyer-driven builds (Horses/Saddle), do low-cost probes (buyer mapping,
+>    keyword math, a thin concept) BEFORE committing build effort.
+> 5. **Expected-value rank** — score buyer-fit × demand × monetization × (1/effort). A named buyer *raises*
+>    priority; it does **not override** low demand or high effort (F8).
+>
+> Domains that clear the gate → BUILD. Domains that don't → HOLD (cheap) or REDIRECT into a hero. "Flip" = "build
+> to earn, sell only on a strong offer." **EARN-NOW sites (Ferret, PetFood) already clear the gate on traffic** —
+> they are the proven priority; speculative builds sit behind them.
 
 **Exit-multiple reality `[RESEARCH — see valuation-comps.md, sandbox-unverified]`:** content/affiliate sites trade
 **~24–34× trailing monthly net profit** in the 2025–2026 market (Empire Flippers data; the older 30–45× I'd used
@@ -65,10 +77,10 @@ sale price follows.**
 | **PetFood.com** | ~5,000 | **EARN-NOW #2** | Correct buy-box home (NOT PetFoods, ~30 — PR#174 wrong site, §2a). Chewy/Amazon on existing pages. |
 | **Dog.com** | ~36,000 | SELL-NOW (groom)+monetize | $2.3M offer; target $10M+. 36K/mo = the trajectory that justifies the step-up. Ensure affiliate surfaces live+clean. No for-sale sign. Protect-asset absolute. |
 | **Fish.com** | ~7,000 | SELL-NOW (groom)+monetize | $1.45M offer. Saltwater funnel built — confirm it converts; extend to top pages. Protect-asset. |
-| **Horses.com** | ~1,000 | **BUILD → strategic exit** | *Corrected (Carlo): named acquirer exists (Equine Network).* Build into a credible traffic/content asset to trigger the conversation. Racing angle pending Racing Bot. Behind Ferret/PetFood on *immediate cash*, but a prioritized strategic build — NOT a pause. See `strategic-acquirers.md`. |
+| **Horses.com** | ~1,000 | **VALIDATE-FIRST** (then build) | *IR-Bot correction (F5): not an auto-build.* Run the stage-gate (§0 gate): keyword/demand math, monetization model, buyer probe — BEFORE committing build effort. Racing fork also gated (`dir-016`). Behind Ferret/PetFood. Strong name, but low traffic + unvalidated buyer ≠ greenlight. |
 | **Lizard.com** | ~765 | **BUILD toward traffic** | *Corrected:* illiquid name isn't realizable without demand. Build toward traffic/authority; the name helps at exit but doesn't substitute for it. |
-| **Saddle.com** | ~214 | **BUILD → strategic exit** | *Corrected (Carlo): NOT sell-raw.* Named acquirer (Equine Network) would want it; the aftermarket is illiquid (sat ~20yrs). Building traffic is what makes it sellable. Prioritized strategic build alongside the horse cluster. |
-| **Vets.co** | ~0 (pre-DNS) | **FINISH-TO-EARN — parallel now** | *Revised: insurance engine already BUILT* (hub + 11 carriers + ~2,912 programmatic pages + affiliate routes). Not a 6–9mo build — the job is trust-audit + carrier-enrollment realism + go-live. Track 1 (insurance) runs parallel with Ferret; Track 2 (directory) gated on data decision. Highest revenue/visitor ceiling. QC §1 absolute. |
+| **Saddle.com** | ~214 | **VALIDATE-FIRST** (then build) | *IR-Bot correction (F5): not sell-raw AND not auto-build.* Premium name, but 214 visitors + unvalidated buyer. Stage-gate first (keyword math, monetization concept, cheap buyer probe). Build only if it clears. Not a "prioritized strategic build" until validated. |
+| **Vets.co** | ~0 (pre-DNS) | **FINISH-TO-EARN (gated launch)** | Insurance engine built (hub + 11 carriers + ~2,912 programmatic pages). **IR-Bot correction (F6): do NOT launch 2,912 programmatic insurance pages at once** — thin/duplicative/compliance risk on high-trust insurance content. **Launch a small hand-audited index first; keep bulk pages `noindex`/gated** until QA + carrier enrollment + FTC disclosures + factual review confirmed. Highest revenue/visitor ceiling but **SPECULATIVE** until funnel proven (F3). QC §1 absolute. |
 | **AskTheVet.com** | ~0 | BUILD-TO-EARN — long-term | High GEO + insurance/telehealth affiliate; no traffic → speculative. Behind Ferret/PetFood. QC §1 absolute. |
 | **SeniorPetPharmacy.com** | ~0 | BUILD-TO-EARN — long-term | Recurring-Rx LTV; niche; no traffic → speculative. |
 | **PetFoods.com** | ~30 | REDIRECT → PetFood.com | Dead standalone. 301 into PetFood.com; brand-DB angle becomes a section there. |
@@ -168,12 +180,12 @@ Sites that can't clear (2) soon should be re-dispositioned to SELL-DOMAIN rather
 4. **Vets.co — finish-and-launch the EXISTING insurance hub** in parallel (revised: it's already built — hub +
    11 carriers + ~2,912 programmatic pages + affiliate routes). Job = trust-audit + carrier-enrollment realism +
    go-live, NOT a 6–9mo build. Directory (Track 2) gated on the data-source decision. (`csro-dir-007`)
-5. **BUILD the horse cluster (Saddle.com, Horses.com) toward the named strategic (Equine Network)** — *corrected
-   from "pause."* A named acquirer exists, so the build ROI is de-risked; building traffic is what makes these
-   illiquid premium names sellable. Sequenced after the immediate-cash monetization (steps 1–3, which need no
-   build), but these are genuine build priorities, not deferrals. See `strategic-acquirers.md`. Lizard.com: build
-   toward traffic similarly.
-6. **Hold all DNS until the §5 gate is met per site.** Build the long tail toward whichever buyer each can summon.
+5. **VALIDATE the horse cluster (Saddle.com, Horses.com) before building** — *IR-Bot correction (F5): not an
+   auto-build.* Run the §0 stage-gate (keyword/demand math, monetization model, cheap buyer probe). The Equine
+   Network *hypothesis* raises priority but doesn't greenlight build. Build only what clears the gate. Lizard.com:
+   same — validate demand before investing.
+6. **Hold all DNS until the §5 readiness gate is met per site.** Long-tail domains: redirect into a hero or HOLD;
+   build only what clears the stage-gate (§0). No speculative builds on hypothesis alone.
 
 > Lane note: the monetization wiring in steps 1–3 is the **Monetization Bot's lane** (`affiliate-routes.ts`,
 > buy-boxes, funnels). CSRO directs + prioritizes; CSRO does not wire. Briefs go via `ops/handoffs/`.
