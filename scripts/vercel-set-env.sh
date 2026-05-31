@@ -53,7 +53,6 @@ SITES=(
   "askthevet"
   "seniorpets"
   "dogpicture"
-  "petsupplies"
   "hardmoneyloans"
 )
 

@@ -23,7 +23,6 @@ export type SiteId =
   | 'askthevet'         // S2 — AI symptom checker
   | 'seniorpets'        // S9 — senior pet Rx + content
   | 'dogpicture'        // S8 — AI pet portraits + POD
-  | 'petsupplies'       // S1 — comparison engine
   | 'hardmoneyloans'    // S11 — off-vertical lead gen
 
 // ─────────────────────────────────────────────
@@ -471,31 +470,6 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   // ─── PetSupplies.com — NerdWallet for pet products (Architect S1) ─────
-  'petsupplies': {
-    primary: '#475569',
-    primaryLight: '#64748B',
-    primaryPale: '#F1F5F9',
-    primaryDark: '#334155',
-    dark: '#0F172A',
-    surface: '#F8FAFC',
-    white: '#FFFFFF',
-    textDark: '#0F172A',
-    textMid: '#334155',
-    textLight: '#64748B',
-    border: '#E2E8F0',
-    success: '#16A34A',
-    warning: '#D97706',
-    danger: '#DC2626',
-    fontDisplay: 'Inter',
-    fontBody: 'Inter',
-    fontDisplayWeights: [400, 600, 700, 900],
-    fontBodyWeights: [300, 400, 500, 600, 700],
-    siteName: 'PetSupplies.com',
-    siteTagline: 'Independent Pet Product Comparisons',
-    siteUrl: 'https://petsupplies.com',
-    logoText: 'PetSupplies.com',
-    twPrimary: 'slate',
-  },
 
   // ─── HardMoneyLoans.com — off-vertical lead gen (Architect S11) ───────
   'hardmoneyloans': {
@@ -1038,25 +1012,6 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [{ label: 'Home', href: '/' }],
     footerLinks: [{ heading: 'DogPicture', links: [{ label: 'Home', href: '/' }] }],
     defaultOgImage: 'https://dogpicture.com/og-default.jpg',
-  },
-
-  // ─── PetSupplies.com ──────────────────────────────────────────────────
-  'petsupplies': {
-    id: 'petsupplies',
-    theme: themes['petsupplies'],
-    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-XXXXXXXXXX',
-    affiliates: {
-      amazon: true,
-      chewy: true,
-      trupanion: false,
-      healthyPaws: false,
-      vetster: false,
-      sharesale: true,
-    },
-    mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
-    nav: [{ label: 'Home', href: '/' }],
-    footerLinks: [{ heading: 'PetSupplies.com', links: [{ label: 'Home', href: '/' }] }],
-    defaultOgImage: 'https://petsupplies.com/og-default.jpg',
   },
 
   // ─── HardMoneyLoans.com ───────────────────────────────────────────────
