@@ -128,6 +128,40 @@ Calendar-keyed wording elsewhere in this spec (weekly/monthly registers, 24h win
 
 ---
 
+## §5b. Merge authority — CSRO merges verified PRs (Carlo "Option A", 2026-05-31)
+
+**CSRO may merge PRs autonomously to reduce Carlo's babysitting — but only under a verify-first gate.** This is
+binding policy, not discretion. The principle: **CI green is necessary but NOT sufficient** — today proved
+substantive failures pass CI (broken/untracked affiliate links built fine, lint-clean). CSRO's job is to verify
+the *substance*, then merge. Carlo-in-the-loop added a click, not a check; the real safety is CSRO-verify + IR
+adversarial review, not a human merge button.
+
+### CSRO MERGES (no Carlo needed) when ALL are true:
+1. **CI is green** (all required gates pass), AND
+2. **CSRO has verified the substance** — not just the build: links resolve to registered vendors + real SKUs,
+   the change does what it claims, no fake-API/dead-link/duplicate-route failure class, AND
+3. It is **docs / infra / cleanup / route-dedup / or verified-working monetization** — reversible, bounded blast radius, AND
+4. **No IR Bot dissent is open** against it (if IR flagged it, resolve first).
+
+### CSRO ESCALATES to Carlo (do NOT self-merge) when ANY is true:
+- Touches **Dog.com or Fish.com** (Tier-1 flagships with live offers — irreversible diligence/reputation risk).
+- **Spends money**, or changes a **vendor / legal / DNS / secret / payment** surface.
+- CSRO **cannot fully verify** the substance, OR it's **architecturally significant** (large deletions, shared
+  `packages/config` or `packages/ui` changes, CI/script changes).
+- It's a **judgment call** rather than a clean verified pass — when unsure, escalate.
+
+### Method
+- Verify on the branch head vs latest `main` (run the CI checks' intent locally + substance-grep the specific
+  failure class). If a branch has no PR, CSRO may open it, then merge.
+- Merge method: squash. Record the merge + the verification basis in the commit message + `bot-quality-ledger.md`.
+- **If CSRO merges something that breaks main**, CSRO owns the fix-forward immediately (it's the merger).
+
+**First instance:** PR #257 (dir-018 funnel dedup) — opened + verified (5 gates green + local) + merged by CSRO,
+un-redding main, zero Carlo clicks. The broken Ferret monetization PR was correctly NOT merged (failed substance
+verification — dead links) and escalated.
+
+---
+
 ## 6. Output cadence — DAILY PRIMARY, weekly/monthly as live registers
 
 **Carlo's instruction: "Daily — we're moving quickly. Weekly/monthly calendar reports are wasteful."**
