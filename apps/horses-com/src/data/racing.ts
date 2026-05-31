@@ -13,9 +13,19 @@ export interface RacingReference {
   url: string;
 }
 
+/** Sub-theme used to group spokes on the hub for topical-authority structure. */
+export type RacingCategory = 'The Big Races' | 'Understanding the Sport' | 'Ownership & Breeding';
+
+export const RACING_CATEGORY_ORDER: RacingCategory[] = [
+  'The Big Races',
+  'Understanding the Sport',
+  'Ownership & Breeding',
+];
+
 export interface RacingTopic {
   slug: string;
   name: string;
+  category: RacingCategory;
   /** Short SERP-friendly meta title fragment (site name suffix added by buildMetadata). */
   metaTitle: string;
   tagline: string;
@@ -35,6 +45,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'triple-crown',
     name: 'The American Triple Crown',
+    category: 'The Big Races',
     metaTitle: 'The American Triple Crown Explained',
     tagline: 'Three races, five weeks, one of the hardest feats in all of sport.',
     summary:
@@ -97,6 +108,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'how-horse-racing-works',
     name: 'How Thoroughbred Racing Works',
+    category: 'Understanding the Sport',
     metaTitle: 'How Horse Racing Works — A Newcomer\'s Guide',
     tagline: 'A plain-language guide to the sport for first-time spectators.',
     summary:
@@ -164,6 +176,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'bloodstock-and-breeding',
     name: 'Bloodstock & Breeding Basics',
+    category: 'Ownership & Breeding',
     metaTitle: 'Bloodstock & Thoroughbred Breeding Basics',
     tagline: 'How pedigrees, sales, and breeding shape the racehorse.',
     summary:
@@ -225,6 +238,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'racehorse-ownership',
     name: 'Owning a Racehorse',
+    category: 'Ownership & Breeding',
     metaTitle: 'Owning a Racehorse — Syndicates & Partnerships',
     tagline: 'How ownership actually works — from sole ownership to syndicates.',
     summary:
@@ -286,6 +300,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'reading-the-form',
     name: 'How to Read a Racing Program',
+    category: 'Understanding the Sport',
     metaTitle: 'How to Read a Racing Program & Past Performances',
     tagline: 'Make sense of the numbers — as a fan, not a tout.',
     summary:
@@ -346,6 +361,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'kentucky-derby',
     name: 'The Kentucky Derby',
+    category: 'The Big Races',
     metaTitle: 'The Kentucky Derby Explained — History & Format',
     tagline: '"The most exciting two minutes in sports" — the first jewel of the Triple Crown.',
     summary:
@@ -408,6 +424,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'breeders-cup',
     name: "The Breeders' Cup",
+    category: 'The Big Races',
     metaTitle: "The Breeders' Cup Explained — World Championships",
     tagline: 'Year-end championships that crown the best horses across every division.',
     summary:
@@ -463,6 +480,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'famous-racehorses',
     name: 'Famous Racehorses in History',
+    category: 'Understanding the Sport',
     metaTitle: 'Famous Racehorses in History — Secretariat & More',
     tagline: 'The legends whose names outlived their racing days.',
     summary:
@@ -528,6 +546,7 @@ export const racingTopics: RacingTopic[] = [
   {
     slug: 'racehorse-aftercare',
     name: 'What Happens to Racehorses After Racing',
+    category: 'Ownership & Breeding',
     metaTitle: 'Racehorse Aftercare & Retirement Explained',
     tagline: 'Second careers, retraining, and the aftercare movement.',
     summary:
@@ -601,4 +620,12 @@ export function allRacingSlugs(): string[] {
 
 export function getRacingTopic(slug: string): RacingTopic | undefined {
   return racingTopics.find((t) => t.slug === slug);
+}
+
+/** Topics grouped by sub-theme, in canonical category order. */
+export function racingTopicsByCategory(): Array<{ category: RacingCategory; topics: RacingTopic[] }> {
+  return RACING_CATEGORY_ORDER.map((category) => ({
+    category,
+    topics: racingTopics.filter((t) => t.category === category),
+  })).filter((g) => g.topics.length > 0);
 }

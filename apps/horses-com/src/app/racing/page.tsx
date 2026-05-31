@@ -5,7 +5,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildMetadata, Breadcrumb } from '@carloOS/ui';
-import { racingTopics } from '../../data/racing';
+import { racingTopicsByCategory } from '../../data/racing';
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
@@ -33,16 +33,25 @@ export default function RacingPage() {
           the Triple Crown to bloodstock and how to follow a race day. Educational and
           fan-focused, not betting or handicapping advice.
         </p>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {racingTopics.map((t) => (
-            <Link
-              key={t.slug}
-              href={`/racing/${t.slug}`}
-              className="rounded-lg border border-brand-border p-5 no-underline transition hover:border-brand-primary hover:shadow-md"
-            >
-              <h2 className="font-display text-xl font-bold text-brand-dark">{t.name}</h2>
-              <p className="mt-2 text-sm text-brand-text-mid">{t.tagline}</p>
-            </Link>
+        <div className="mt-10 space-y-12">
+          {racingTopicsByCategory().map(({ category, topics }) => (
+            <section key={category}>
+              <h2 className="border-b border-brand-border pb-2 font-display text-2xl font-bold text-brand-dark">
+                {category}
+              </h2>
+              <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {topics.map((t) => (
+                  <Link
+                    key={t.slug}
+                    href={`/racing/${t.slug}`}
+                    className="rounded-lg border border-brand-border p-5 no-underline transition hover:border-brand-primary hover:shadow-md"
+                  >
+                    <h3 className="font-display text-xl font-bold text-brand-dark">{t.name}</h3>
+                    <p className="mt-2 text-sm text-brand-text-mid">{t.tagline}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </div>
