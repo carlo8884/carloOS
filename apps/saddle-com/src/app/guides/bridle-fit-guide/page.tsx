@@ -9,6 +9,9 @@ import {
   DropCap,
   ArticleByline,
   FAQAccordion,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -224,6 +227,63 @@ export default function BridleFitGuidePage() {
           <li><strong>Gaping mouth.</strong> Almost always either bit pain (height, thickness, or sharp dental edge) or noseband suppression that the horse is fighting. Loosen the noseband to standard two-finger fit first to expose what the mouth is actually doing &mdash; if the mouth still gapes, address the bit.</li>
           <li><strong>One-sided contact / leaning on one rein.</strong> Check the cheekpieces for asymmetry (one tighter than the other), check the bridle is not twisted, and have a dental check &mdash; a sharp point on one side of the mouth produces consistently one-sided rein contact.</li>
         </ul>
+
+        <AffiliateDisclosure variant="inline" siteId="saddle-com" />
+
+        <h2 id="picks">Bridle-Fit Picks</h2>
+        <p>
+          Two picks tied directly to the article above — a noseband taper gauge (the ISES-standard tool the article references for the two-finger / 1.5–2 cm noseband check), and an anatomic-crownpiece bridle (the &quot;crownpiece and poll pressure&quot; section makes the case for these over flat-strap traditional crownpieces). This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+        </p>
+        <ScoreMethodology />
+        <ReviewCard
+          id="noseband-taper-gauge"
+          badge="ISES Standard"
+          badgeEmoji="📐"
+          name="Calibrated Noseband Taper Gauge (ISES Standard)"
+          subtitle="The measurement tool behind the article&apos;s two-finger noseband rule"
+          score={8.7}
+          winner
+          description={
+            <p>The International Society for Equitation Science (ISES) taper-gauge standard is the most-cited measurement tool for cavesson noseband fit. Slides between the noseband and the nasal bone at the standard reference point on the front of the nose; calibrated markings show whether the noseband is at the safe 1.5–2 cm (two-finger) setting or tighter. Useful before any show where a steward may check noseband fit (FEI Veterinary Regulations require the same standard) and useful as the household check after any bridle adjustment.</p>
+          }
+          specs={[
+            { label: 'Standard', value: 'ISES / FEI 1.5–2 cm reference', highlight: 'good' },
+            { label: 'Use case', value: 'Noseband-fit check after any adjustment' },
+            { label: 'Application', value: 'Front of nasal bone, standard reference point' },
+            { label: 'Replacement cadence', value: 'Lifetime' },
+          ]}
+          pros={['Objective measurement replaces guesswork', 'Same standard FEI stewards use', 'One-time purchase']}
+          cons={['Some horses object to the gauge — same handling skill as bridling', 'Plastic versions flex over years — buy steel or stiff-plastic if doing many checks per week']}
+          price="$15–35"
+          ctaText="Find noseband taper gauges"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="noseband-taper-gauge"
+        />
+        <ReviewCard
+          id="anatomic-bridle"
+          badge="Anatomic Crownpiece"
+          badgeEmoji="🐴"
+          name="Anatomic-Crownpiece English Snaffle Bridle"
+          subtitle="Contoured crownpiece that relieves the ear-base and poll pressure points"
+          score={8.5}
+          description={
+            <p>The article&apos;s &quot;Crownpiece and Poll Pressure&quot; section makes the case for contoured anatomic crownpieces over flat-strap traditional models. Anatomic crownpieces (PS of Sweden, Schockemöhle, Stübben Freedom, Bobby&apos;s, others) cut back behind the ears and reshape the central pressure band to distribute load more evenly. Particularly worth the upgrade for horses showing head-tossing or rein evasion that turns out to be poll pressure rather than bit issues. Many ship with a padded noseband and reins that also follow anatomic principles.</p>
+          }
+          specs={[
+            { label: 'Crownpiece', value: 'Anatomic / contoured', highlight: 'good' },
+            { label: 'Behind-ear cutaway', value: 'Yes', highlight: 'good' },
+            { label: 'Discipline', value: 'Dressage, jumping, all-purpose' },
+            { label: 'Material', value: 'Quality bridle leather' },
+          ]}
+          pros={['Distributes poll pressure more evenly', 'Often resolves head-tossing the bit is unfairly blamed for', 'Long product life with normal leather care']}
+          cons={['Premium price relative to flat-strap bridles', 'Will not fix a true bit-fit or saddle-fit problem — diagnose those first']}
+          price="$200–550"
+          ctaText="Find anatomic-crownpiece bridles"
+          ctaHref="https://www.smartpakequine.com/"
+          ctaAffiliateProgram="smartpak"
+          ctaAffiliateProduct="anatomic-snaffle-bridle"
+        />
 
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} includeSchema={false} allowMultiple />
