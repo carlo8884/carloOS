@@ -30,5 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/reviews/best-equine-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/best-winter-horse-blankets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/supplements/joint-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://horses.com/tools/body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }

@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://vets.co', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
-    { url: 'https://vets.co/(funnels)/pet-insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/breeds/beagle-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/breeds/chihuahua-health', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -54,11 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/legal/privacy-policy', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://vets.co/legal/terms', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://vets.co/medications', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://vets.co/pet-insurance', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/reviews/best-pet-insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/specialists', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/symptoms', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/telehealth', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://vets.co/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://vets.co/tools/insurance-reimbursement-estimator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://vets.co/vets', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
   ]
 }

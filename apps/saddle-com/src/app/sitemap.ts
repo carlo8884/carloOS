@@ -67,6 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/reviews/pessoa-saddle-review', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/reviews/stubben-saddle-review', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/saddle-fit-checklist', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://saddle.com/tools/tree-size-estimator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://saddle.com/western', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
   ]
 }
