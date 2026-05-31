@@ -1,14 +1,6 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
+import { buildRobots } from '@carloOS/config/robots'
 
 export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/'],
-      },
-    ],
-    sitemap: 'https://saddle.com/sitemap.xml',
-  }
+  return buildRobots('https://saddle.com')
 }
