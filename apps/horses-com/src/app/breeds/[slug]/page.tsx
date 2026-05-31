@@ -119,6 +119,27 @@ function yesNo(b: boolean): string {
 }
 
 /**
+ * Racing-cluster cross-links — rendered in the sidebar only for breeds with a
+ * genuine racing/competition connection, linking into the /racing module.
+ * Keeps the internal-link graph honest: no racing link on breeds that don't race.
+ */
+const RACING_BREED_LINKS: Record<string, Array<{ label: string; href: string }>> = {
+  thoroughbred: [
+    { label: 'The American Triple Crown', href: '/racing/triple-crown' },
+    { label: 'Bloodstock & Breeding Basics', href: '/racing/bloodstock-and-breeding' },
+    { label: 'How Thoroughbred Racing Works', href: '/racing/how-horse-racing-works' },
+  ],
+  standardbred: [
+    { label: 'How Racing Works', href: '/racing/how-horse-racing-works' },
+    { label: 'Owning a Racehorse', href: '/racing/racehorse-ownership' },
+  ],
+  arabian: [
+    { label: 'How Racing Works', href: '/racing/how-horse-racing-works' },
+    { label: 'Bloodstock & Breeding Basics', href: '/racing/bloodstock-and-breeding' },
+  ],
+}
+
+/**
  * Cross-link a health condition to a related /health/* or /supplements/*
  * guide on Horses.com when one of the breed's knownHealthCrossLinks matches.
  * Returns href if a fit is found, otherwise undefined.
@@ -584,6 +605,13 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                     .replace(/\b\w/g, (c) => c.toUpperCase()),
                   href,
                 }))}
+              />
+            )}
+
+            {RACING_BREED_LINKS[breed.slug] && (
+              <RelatedLinks
+                title="Racing & Heritage"
+                links={RACING_BREED_LINKS[breed.slug]}
               />
             )}
 

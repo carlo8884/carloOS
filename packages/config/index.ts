@@ -893,12 +893,26 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Breeds', href: '/breeds' },
+      { label: 'Disciplines', href: '/disciplines' },
+      { label: 'Racing', href: '/racing' },
+      { label: 'First Horse', href: '/first-horse-roadmap', highlight: true },
     ],
     footerLinks: [
       {
-        heading: 'Horses.com',
+        heading: 'Reference',
         links: [
-          { label: 'Home', href: '/' },
+          { label: 'Breeds', href: '/breeds' },
+          { label: 'Disciplines', href: '/disciplines' },
+          { label: 'Racing', href: '/racing' },
+        ],
+      },
+      {
+        heading: 'Get Started',
+        links: [
+          { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
+          { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { label: 'Disclosure', href: '/disclosure' },
         ],
       },
     ],

@@ -101,6 +101,13 @@ export default function QuarterHorseBreedPage() {
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
             ]}
           />
+          <RelatedLinks
+            title="Racing & Heritage"
+            links={[
+              { label: 'How Racing Works', href: '/racing/how-horse-racing-works' },
+              { label: 'Owning a Racehorse', href: '/racing/racehorse-ownership' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
