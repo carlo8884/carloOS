@@ -18,10 +18,45 @@ acquirer** by building the domain into a credible traffic/content asset they wan
 
 | Acquirer | Likely targets | Source | Why they'd want it | CSRO action |
 |---|---|---|---|---|
-| **Equine Network** | **saddle.com, horses.com** + broader horse cluster (barnsupplies, horsesupplies, equine.net, equinetack, ridershealth, safehorsefence) | **`[CARLO]`** — Carlo knows the owners; they'd be interested | Category roll-up: Equine Network owns equestrian media/SaaS; premium one-word horse .coms = brand + SEO moat + audience | **BUILD the horse cluster into credible traffic assets** to trigger the conversation. This is now a *prioritized build*, not a pause. |
+| **Equine Network** | **saddle.com, horses.com** + horse cluster (barnsupplies, horsesupplies, equine.net, equinetack, ridershealth, safehorsefence) | **`[CARLO]`** + `[RESEARCH]` profile below | Confirmed serial PE-backed consolidator; owns premium category .coms (Equine.com, TheHorse.com, Roping.com) + runs a "domains in development" pipeline | **BUILD — but to their actual value drivers (audience + commerce/membership), NOT plain content.** See §1a. |
 | **Chewy / large pet retailer** | dog.com, petfood.com, petsupplies-class names | `[HYP]` | Brand + SEO moat + ad-spend savings on category head terms | dog.com already protect-asset; petfood.com earn-now strengthens the case |
 | **Pet-insurance carrier (Lemonade/Trupanion/etc.)** | vets.co, askthevet.com | `[HYP]` | Owning the comparison/authority surface that feeds them leads | vets.co insurance hub build = directly builds this acquirer's interest |
 | **Standing offerors (undisclosed)** | dog.com ($2.3M), fish.com ($1.45M) | `[CARLO]` | Already at the table | protect-asset; build revenue trajectory to justify step-up |
+
+## §1a Equine Network — acquirer profile `[RESEARCH 2026-05-30, sandbox-unverified search summaries]`
+
+**Who they are:** the largest US for-profit equestrian sports/media company. **As of Jan 2026, CVC Capital Partners
+(via Global Sport Group) is acquiring a controlling stake — deal values Equine Network ~$300M, close ~Q2 2026.**
+Prior PE owner: Growth Catalyst Partners (spun it out of Active Interest Media in 2021). CEO Tom Winsor has led
+~10+ acquisitions since 2021.
+
+**They own premium category .coms + run a domain pipeline `[RESEARCH]`:** Equine.com (horse classifieds),
+TheHorse.com, EquiSearch.com, Roping.com, MyHorse.com, EventingTraining.com — and explicitly describe "other
+domains in development." **This is direct evidence they value and buy premium horse generics.** Good for us.
+
+**⚠️ The critical nuance — what they actually pay UP for (this reshapes HOW we build):**
+Their 2026 CVC thesis is **events + membership + SVOD + commerce economics, NOT pure SEO content.** A content-only
+horse site reads to them as a **low-value tuck-in feeder**, not a standalone acquisition. To command real money,
+saddle.com / horses.com must demonstrate:
+1. **Audience capture** — email list / membership, not just anonymous pageviews.
+2. **Commerce or membership monetization** — affiliate/commerce revenue or a subscription surface (feeds their
+   membership + SVOD flywheel), not ad RPM alone.
+3. **Defensible, attached traffic** — traffic that comes *with* the brand, demonstrably.
+
+**→ Build directive consequence:** build the horse cluster as **audience + commerce assets** (email capture,
+tack/supply affiliate commerce, maybe a content-subscription angle), explicitly mirroring what Equine Network
+already monetizes — not as thin programmatic SEO. That's the difference between a tuck-in price and a real number.
+
+**Approach channel `[RESEARCH]`:** historically CEO Tom Winsor (+ VP Marketing Services tied to Equine.com) for
+sub-scale assets; larger deals now route through the CVC/GSG sponsor. **Outreach is Carlo's** (relationship/NDA).
+William Blair is a banker in their orbit.
+
+**Adjacent strategics (same horse cluster):** CVC/Global Sport Group (apex), Growth Catalyst Partners (proven
+equine-media thesis), Friday Media Group (UK, owns HorseClicks), independent classifieds (EquineNow, DreamHorse).
+Roper Technologies "equine" connection: **NOT FOUND** (likely confusion with Roper Western apparel — disregard).
+
+**Open / unverified:** individual tuck-in deal sizes (none public); their web properties' current traffic; exact
+press dates — re-verify off-sandbox before quoting to Carlo externally.
 
 ## §2 The operating principle this creates
 

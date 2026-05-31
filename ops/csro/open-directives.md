@@ -14,7 +14,8 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - [x] **Exit-valuation model** — DONE: `valuation-model.md`. Key insight: for premium-but-thin domains (Horses/Lizard/Saddle) the *name* holds the value → building content is value-destructive vs effort. Firmed Saddle→sell-domain.
 - [x] **Dog.com / Fish.com acquirer narrative** — DONE: `2026-05-30-csro-dogfish-acquirer-narrative.md` (scarcity thesis + $500K provenance anchor + 4 step-up levers).
 - [x] **Strategic-acquirers map** — DONE: `strategic-acquirers.md` (Equine Network → horse cluster `[CARLO]`; reframes build-vs-sell around illiquid market). Corrected valuation-model §3 + thesis §0.
-- [ ] **Equine Network M&A profile** — research agent launched (what they've acquired, size, how to position the horse cluster). *(running)*
+- [x] **Equine Network M&A profile** — DONE: `strategic-acquirers.md §1a` (CVC-controlled ~$300M; serial acquirer of premium horse .coms; KEY: pays for audience+commerce+membership, not thin content).
+- [x] **Horse-cluster build spec** — DONE: `2026-05-30-csro-horse-cluster-build-spec.md` (3 layers: audience capture → commerce → traffic; built to Equine Network's value drivers). → `dir-012`.
 - [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains, now using the buyer-filter ("which buyer can this build summon?") not name-value. NEXT after Equine research.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
@@ -30,6 +31,13 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - **Carlo gate:** joining is free (rev-share, no spend), but it's a new vendor/outward-facing surface → quick Carlo confirm. **Not a hard blocker to plan**; Mon Bot can stage the integration while confirm is pending.
 - **Done-when:** Carlo confirms; Mediavine applied for on qualifying sites post-launch; ads live with no UX/trust regression.
 - **Status:** open (Carlo confirm + post-launch sequencing).
+
+### csro-dir-2026-W22-012 → COO + Monetization Bot + Visual Bot — horse-cluster strategic build (new 2026-05-30)
+- **Action:** Build saddle.com + horses.com toward the named acquirer (Equine Network) per `ops/handoffs/2026-05-30-csro-horse-cluster-build-spec.md`. 3 layers, in order: **(1) audience capture** (EmailCapture + lead magnets on high-intent pages — highest acquirer value, works on existing thin traffic), **(2) commerce depth** (tack-allow-list buy-boxes on review/guide pages), **(3) traffic growth** (deepen high-intent pages, don't mass-produce thin ones).
+- **Why:** Equine Network (CVC-controlled, serial acquirer of premium horse .coms) pays for **audience + commerce + membership**, NOT thin content. Both apps are already substantially built (~55 / ~25 routes) but thin-trafficked with no audience capture. Build to the buyer's value drivers. `[CARLO buyer signal + RESEARCH profile]`
+- **Sequencing:** behind immediate-cash monetization (`dir-009`); Layer 1 first.
+- **Done-when:** email capture live on key pages; commerce buy-boxes on intent pages; list growing.
+- **Status:** open.
 
 ### csro-dir-2026-W22-010 → COO — free-tier vet-directory prep (no spend) (new 2026-05-30)
 - **Action:** Scope/prototype a $0 directory slice: OpenStreetMap `amenity=veterinary` (ODbL) + the ~20 states publishing free license CSVs + AAHA-accredited public listings as a "premium tier." Research/prep only — no build commitment, no spend.
