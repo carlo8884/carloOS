@@ -17,7 +17,8 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - [x] **Equine Network M&A profile** — DONE: `strategic-acquirers.md §1a` (CVC-controlled ~$300M; serial acquirer of premium horse .coms; KEY: pays for audience+commerce+membership, not thin content).
 - [x] **Horse-cluster build spec** — DONE: `2026-05-30-csro-horse-cluster-build-spec.md` (3 layers: audience capture → commerce → traffic; built to Equine Network's value drivers). → `dir-012`.
 - [x] **Launch-readiness call** — DONE: `launch-readiness.md`. Key unlock: money-now (Path 1, monetize existing traffic, no launch needed) vs launch (Path 2, ~1-2wk + Carlo's ~80min DNS/email/GA4). First greenlight: Ferret, then Vets insurance.
-- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains, using the buyer-filter + hold-and-compound default. NEXT.
+- [~] **Subscribe to critical PRs** — Carlo asked CSRO to watch PRs as they open. Attempted 2026-05-31; GitHub API returned "Unable to verify repository access" (transient, same as the earlier rate-limit flakiness). **Routed around per autonomy rule.** Retry on next active session. Target PRs to watch (tied to CSRO directives / revenue critical path): **#181** (dog-com breed-insurance + review-fix, touches `dir-015` area), **#176** (petfood buy-boxes = `dir-009` EARN-NOW), **#178** (Horses racing intel = Racing Bot activation, draft), **#194/#193** (Fish/Tier-1 GEO), **#224** (vet-dir feasibility = `dir-010`), **#221** (petsupplies decommission = `dir-005`).
+- [x] **Per-cluster build-priority pass** — DONE: `build-priority-pass.md`. Scored ~40 unbuilt in-scope names: ~17 REDIRECT→hero, ~13 BUILD-LITE, ~10 HOLD, **0 SELL** (every name fits a hero or holds — redirects compound hero authority at ~zero cost = highest-ROI of the tail). Trophy holds: allpets.com (portfolio hub), equine.net (Equine Network chip). petcostumes.com has an October deadline.
 - [ ] **Competitive read-through** — Ferret / PetFood / Vets-insurance: who ranks/monetizes the same queries; the gap.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
@@ -26,6 +27,19 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 ---
 
 ## Open
+
+### csro-dir-2026-W22-016 → Racing Bot — Horses.com fork: decision-grade research brief (new 2026-05-31) ⬆ DECISION GATE
+- **Action:** Per Carlo's 2026-05-31 redirect — STOP building content; deliver a decision-grade brief: "Should Horses.com become a racing-intelligence platform, a general equine editorial asset, or a hybrid?" Full prompt + CSRO refinements + Carlo's 2026-05-31 addendum: `ops/handoffs/2026-05-31-csro-horses-racing-fork-gate.md`. CSRO refinements: (1) headline = the buyer-set tradeoff; (2) label claims FACT/RESEARCH/HYPOTHESIS + cite; (3) wagering-adjacent = legal hard-stop. **Carlo addendum:** keep going; test the "informative + licensed racing-data-API analysis" hypothesis specifically (find real APIs + terms: Equibase/Timeform/etc.); tag every avenue 🟢easy/🟡moderate/🔴hard on legal-licensing friction — **default NO on 🔴 unless value is overwhelming + Carlo opts in; "easy and valuable" wins**; judge by highest-and-best-use across ALL buyers, not Equine Network.
+- **Why:** Carlo caught the Racing Bot building content (lane breach — it's a research specialist). The fork is the #2 cluster's identity question; resolve deliberately, don't default to content. `[FACT]`
+- **Build boundary during gate:** PAUSE racing-direction/identity build; CONTINUE fork-agnostic audience-capture + Saddle tack-commerce (`dir-012` L1–2).
+- **Done-when:** brief delivered → CSRO reviews same-session → Carlo decides fork.
+- **Status:** open — DECISION GATE. CSRO endorses Carlo's redirect.
+
+### csro-dir-2026-W22-015 → Monetization Bot — fix 4 IR-verified affiliate issues (new 2026-05-31) ⬆ HIGH
+- **Action:** Fix the IR Bot's verified affiliate findings (brief: `ops/handoffs/2026-05-31-csro-to-monetization-ir-fixes.md`). **#1 HIGH:** Dog.com DNA funnel links to unregistered `/go/embark-vet` + `/go/basepaws` → 404s on a live revenue funnel. #2 vets.co has out-of-policy `amazon-brand`/`chewy-brand` routes (latent, remove). #3 Dog.com Skimlinks sitewide w/ footer-only disclosure (surface on monetized pages — Tier-1 protect-asset). #4 env-var name mismatch (lost attribution).
+- **Why:** Finding #1 is broken affiliate links losing money now; #2–4 are compliance/trust hygiene. All verified by CSRO against main. `[CONFIRMED]`
+- **Done-when:** DNA CTAs resolve; vets-co policy-clean; Dog.com disclosure surfaced; env names reconciled.
+- **Status:** open. IR loop closed via `ops/handoffs/2026-05-31-csro-response-to-ir-findings.md`.
 
 ### csro-dir-2026-W22-011 → Carlo (confirm) + Monetization Bot (execute) — display ads now clear the threshold (new 2026-05-30)
 - **Action:** Apply to **Mediavine Journey** (entry tier, now just **≥1,000 sessions/mo**, eff. 2026-01-15) for the trafficked sites: Dog (36K), Ferret (11K), Fish (7K), PetFood (5K), Horses (~1K) all qualify. Stack display ads **on top of** affiliate to monetize the ~98% of traffic that never clicks an affiliate link.
