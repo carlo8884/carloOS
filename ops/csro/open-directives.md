@@ -27,6 +27,12 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 
 ## Open
 
+### csro-dir-2026-W22-015 → Monetization Bot — fix 4 IR-verified affiliate issues (new 2026-05-31) ⬆ HIGH
+- **Action:** Fix the IR Bot's verified affiliate findings (brief: `ops/handoffs/2026-05-31-csro-to-monetization-ir-fixes.md`). **#1 HIGH:** Dog.com DNA funnel links to unregistered `/go/embark-vet` + `/go/basepaws` → 404s on a live revenue funnel. #2 vets.co has out-of-policy `amazon-brand`/`chewy-brand` routes (latent, remove). #3 Dog.com Skimlinks sitewide w/ footer-only disclosure (surface on monetized pages — Tier-1 protect-asset). #4 env-var name mismatch (lost attribution).
+- **Why:** Finding #1 is broken affiliate links losing money now; #2–4 are compliance/trust hygiene. All verified by CSRO against main. `[CONFIRMED]`
+- **Done-when:** DNA CTAs resolve; vets-co policy-clean; Dog.com disclosure surfaced; env names reconciled.
+- **Status:** open. IR loop closed via `ops/handoffs/2026-05-31-csro-response-to-ir-findings.md`.
+
 ### csro-dir-2026-W22-011 → Carlo (confirm) + Monetization Bot (execute) — display ads now clear the threshold (new 2026-05-30)
 - **Action:** Apply to **Mediavine Journey** (entry tier, now just **≥1,000 sessions/mo**, eff. 2026-01-15) for the trafficked sites: Dog (36K), Ferret (11K), Fish (7K), PetFood (5K), Horses (~1K) all qualify. Stack display ads **on top of** affiliate to monetize the ~98% of traffic that never clicks an affiliate link.
 - **Why:** CLAUDE.md said "avoid display ads pre-Mediavine threshold" — **that threshold dropped to 1K sessions, so display is now ON-thesis, not premature.** $0 to join (rev-share); RPM ~$11–15+ at entry. Incremental recurring revenue + lifts sale multiple. `[RESEARCH — valuation-comps.md §4]`
