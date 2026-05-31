@@ -179,6 +179,7 @@ export default function RaceCenterPage() {
             { href: '/experiences', label: 'Experiences', desc: 'Plan a day at the races & racing travel' },
             { href: '/gear', label: 'Gear', desc: 'Honest equestrian buyer’s guides' },
             { href: '/newsletter', label: 'Newsletter', desc: 'The Form — the sport explained weekly' },
+            { href: '/predict', label: 'Predict the Finish', desc: 'Test your eye against the model — just for fun' },
           ].map((c) => (
             <Link
               key={c.href}
