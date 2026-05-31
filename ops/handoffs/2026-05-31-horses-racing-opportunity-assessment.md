@@ -205,3 +205,34 @@ will keep its PR in draft. Flagging via this handoff per `bot-coordination.md §
 
 *Status: Q1–Q5 answered; supporting content shipped this PR. Awaiting CSRO confirm on the tier hold-lift and the
 §6 disposition. Not blocked — proceeding to queue item #2 (internal-link pass).*
+
+---
+
+## Progress log — 2026-05-31 (end of autonomous session)
+
+**Queue items 1–7 all shipped + extras (PR #178, all green: horses-com type-check + build 104/104; trust-guard /
+link-check / metadata-policy clean):**
+- ✅ #1 Opportunity assessment (this doc) + `/racing` module.
+- ✅ #2 Internal-link pass — nav rebuilt (was Home-only), footer groups, data-driven breed→racing cross-links.
+- ✅ #3 Module expanded to 9 spokes: + Kentucky Derby, Breeders' Cup, Famous Racehorses, **Racehorse Aftercare**.
+- ✅ #4 Commerce-adjacency brief → Monetization (`2026-05-31-racing-to-monetization-commerce-adjacency.md`).
+- ✅ #5+#6 Competitive deep-read + buyer-fit brief → CSRO (`2026-05-31-racing-to-csro-competitive-and-buyer-fit.md`).
+- ✅ #7 (extras) Layer-1 EmailCapture on all racing pages; hub grouped into 3 sub-themes; homepage Racing card;
+  cross-portfolio racing→Saddle.com link (`packages/config` ContentType `racing`).
+
+**Carlo decision (2026-05-31):** standalone `apps/horse-racing` betting app → **PARK** (confirmed). PR #178 stays
+draft; no further investment; safe parts to fold into `/racing` over time.
+
+**Layer-1 audit (dir-012):** every *high-intent* horses.com content page already has EmailCapture; only hub/index
+pages lack it (intentional). Layer-1 coverage effectively complete.
+
+**State: in-lane non-blocked content work is at a clean stopping point.** Remaining work is others' lanes —
+Layer-2 commerce wiring (Monetization), Layer-3 deeper traffic on non-racing pages (COO) — or blocked on CSRO
+(tier-hold lift) / Carlo (sportsbook+equine-insurance vendors). Racing cluster = 10 pages, fully interlinked,
+trust-safe, audience-capturing. Next racing content only when traffic data justifies specific pages (no thin
+mass-production per build spec).
+
+**Refreshed standby queue (for next activation):** (1) execute the park→fold of `apps/horse-racing` safe content
+once CSRO sequences it; (2) deepen `/racing/racehorse-ownership` if Monetization wires commerce there; (3) add
+demand-led spokes (maiden/graded-stakes, Preakness-vs-Belmont) only if traffic data shows pull; (4) bloodstock
+glossary micro-cluster if CSRO greenlights more racing depth; (5) monitor PR #178 CI + reviews.*
