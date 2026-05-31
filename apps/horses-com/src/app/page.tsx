@@ -12,7 +12,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -420,6 +420,11 @@ export default function HomePage() {
             </span>
           ))}
         </div>
+      </div>
+
+      {/* ── HERO PHOTO (manifest-managed) ───────────────────────────── */}
+      <div className="bg-brand-surface">
+        <StockImage manifestKey="horses-com:hero" aspect="16:9" variant="inline" />
       </div>
 
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
