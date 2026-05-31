@@ -264,9 +264,9 @@
   },
 
   "vets-co:hero": {
-    "query": "veterinarian examining dog gentle",
+    "query": "stethoscope warm wood texture",
     "provider": "either",
-    "alt": "A veterinarian examining a calm dog during a routine visit",
+    "alt": "A stethoscope resting on warm wood — clinical reference, no human subjects",
     "orientation": "landscape"
   },
   "vets-co:category-find-a-vet": {
