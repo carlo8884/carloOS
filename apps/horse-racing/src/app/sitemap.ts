@@ -9,6 +9,7 @@ import {
 } from '../data/racing/profiles'
 import { allTermSlugs } from '../data/racing/glossary'
 import { allGuideSlugs } from '../data/racing/guides'
+import { allOwnershipSlugs } from '../data/racing/ownership'
 
 /**
  * Sitemap — hub pages, every racecard, every profile, and every glossary term.
@@ -36,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const tracks = allTrackSlugs().map((s) => entry(`/tracks/${s}`, 'weekly', 0.6))
   const glossary = allTermSlugs().map((s) => entry(`/glossary/${s}`, 'monthly', 0.6))
   const guides = allGuideSlugs().map((s) => entry(`/guides/${s}`, 'monthly', 0.7))
+  const ownership = allOwnershipSlugs().map((s) => entry(`/ownership/${s}`, 'monthly', 0.7))
 
   return [
     entry('', 'daily', 1.0),
@@ -48,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/tracks', 'daily', 0.7),
     entry('/glossary', 'weekly', 0.8),
     entry('/guides', 'weekly', 0.8),
+    entry('/ownership', 'weekly', 0.9),
+    entry('/ownership/playbook', 'monthly', 0.8),
     ...racecards,
     ...horses,
     ...trainers,
@@ -55,5 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tracks,
     ...glossary,
     ...guides,
+    ...ownership,
   ]
 }

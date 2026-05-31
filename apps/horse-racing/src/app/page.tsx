@@ -175,6 +175,7 @@ export default function RaceCenterPage() {
             { href: '/tracks', label: 'Racecourses', desc: 'Going, surface & cards' },
             { href: '/guides', label: 'Guides', desc: 'How to read cards, odds & form' },
             { href: '/glossary', label: 'Glossary', desc: 'Every racing term explained' },
+            { href: '/ownership', label: 'Ownership', desc: 'Get into racehorse ownership, honestly' },
           ].map((c) => (
             <Link
               key={c.href}
