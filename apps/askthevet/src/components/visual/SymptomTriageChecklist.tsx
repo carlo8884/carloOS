@@ -125,7 +125,7 @@ export function SymptomTriageChecklist() {
           const isChecked = checked.has(flag.id)
           return (
             <li key={flag.id}>
-              <label className={`flex cursor-pointer items-start gap-3 rounded border p-3 transition ${isChecked ? 'border-brand-primary bg-brand-surface' : 'border-brand-border bg-brand-surface/50 hover:border-brand-text-muted'}`}>
+              <label className={`flex cursor-pointer items-start gap-3 rounded border p-3 transition ${isChecked ? 'border-brand-primary bg-brand-surface' : 'border-brand-border bg-brand-surface/50 hover:border-brand-text-mid'}`}>
                 <input
                   type="checkbox"
                   checked={isChecked}
