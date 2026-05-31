@@ -62,6 +62,23 @@ export default function OwnershipHubPage() {
           ))}
         </div>
 
+        {/* Conversion point — the routes into ownership */}
+        <Link
+          href="/ownership/ways-in"
+          className="mt-6 block rounded-xl border border-brand-border bg-brand-surface p-5 no-underline transition hover:border-brand-primary"
+        >
+          <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Compare routes
+          </p>
+          <h2 className="mt-1 font-display text-lg font-bold text-brand-text-dark">
+            Ways Into Racehorse Ownership
+          </h2>
+          <p className="mt-1 text-sm text-brand-text-mid">
+            Filter the routes — fractional, syndicate, or partnership — by cost and involvement,
+            and find the right fit.
+          </p>
+        </Link>
+
         {/* Interactive tool — citation magnet + engagement */}
         <Link
           href="/ownership/cost-calculator"
