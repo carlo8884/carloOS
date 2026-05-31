@@ -2,7 +2,7 @@
  * Veterinary specialty deep-dive — /specialists/[slug]
  *
  * Programmatic template that consumes apps/vets-co/src/data/specialties.ts
- * and renders a long-form specialist guide for one of eight board-certified
+ * and renders a long-form specialist guide for one of nine board-certified
  * specialties. Each page reads the same:
  *
  *   Overview → When to See → Common Conditions → What to Expect
@@ -126,6 +126,18 @@ export default function SpecialistPage({ params }: PageProps) {
     authorName: 'Vets.co Editorial',
     lastReviewed: '2026-05-29',
   })
+  // MedicalSpecialty schema — declares the page as describing a recognized
+  // veterinary specialty. Heavyweight extraction target for AI Overviews,
+  // Perplexity, and ChatGPT when users ask "what does a veterinary X do".
+  const medSpecialtySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalSpecialty',
+    name: s.specialtyName,
+    alternateName: s.shortName,
+    description: s.whenToSeeSummary,
+    url,
+    relevantSpecialty: s.boardCertificationOrg.split(' — ')[0].split(' (')[0],
+  }
   const faqSchema = buildFAQSchema({ questions: faqs })
   const breadcrumbSchema = buildBreadcrumbSchema({
     items: [
@@ -134,7 +146,13 @@ export default function SpecialistPage({ params }: PageProps) {
       { name: s.specialtyName, url },
     ],
   })
-  const combined = combineSchemas(articleSchema, medSchema, faqSchema, breadcrumbSchema)
+  const combined = combineSchemas(
+    articleSchema,
+    medSchema,
+    medSpecialtySchema,
+    faqSchema,
+    breadcrumbSchema,
+  )
 
   return (
     <ArticleLayout

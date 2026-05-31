@@ -1,5 +1,5 @@
 /**
- * Programmatic SEO data: 8 veterinary specialty deep-dive entries for
+ * Programmatic SEO data: 9 veterinary specialty deep-dive entries for
  * /specialists/[slug].
  *
  * Pet owners search "veterinary cardiologist near me" / "what does a
@@ -888,7 +888,143 @@ export const Specialties: Specialty[] = [
     ],
   },
 
-  // ─── 8. EMERGENCY & CRITICAL CARE ────────────────────────────────────
+  // ─── 8. ORTHOPEDIC SURGERY ───────────────────────────────────────────
+  {
+    slug: 'veterinary-orthopedic-surgery',
+    specialtyName: 'Veterinary Orthopedic Surgery',
+    shortName: 'Orthopedic Surgery',
+    boardCertificationOrg:
+      'ACVS (American College of Veterinary Surgeons) — Small Animal Surgery. Diplomates use the credential "DACVS-SA" (board-certified small-animal surgeons handle orthopedic and soft-tissue cases).',
+    boardCertificationDirectoryUrl: 'https://www.acvs.org/find-a-surgeon/',
+    whenToSeeSummary:
+      'Cruciate ligament rupture, hip or elbow dysplasia, fractures, luxating patella, growth-plate problems, or joint disease that needs surgical evaluation.',
+    whenToSee: [
+      'Sudden non-weight-bearing lameness in a hind leg, especially after a "twist and yelp" event — classic for cranial cruciate ligament (CCL) rupture.',
+      'Persistent or progressive lameness that has not improved with rest and primary-vet medication.',
+      'Bilateral hind-end weakness or "bunny-hopping" gait — a possible sign of hip dysplasia in young large-breed dogs.',
+      'Forelimb lameness in young large-breed dogs (Labrador, Golden, Bernese, Rottweiler) — suspected elbow dysplasia.',
+      'A skipping or hopping gait in a small-breed dog — luxating patella evaluation.',
+      'A fracture confirmed on primary-vet radiographs that needs internal fixation rather than splinting.',
+      'Joint swelling, instability, or grating that the primary vet has not been able to resolve.',
+      'A working, sporting, or service dog whose performance is declining — for a structured orthopedic workup.',
+      'Pre-purchase or pre-breeding orthopedic screening (PennHIP, OFA hip/elbow radiographs).',
+    ],
+    commonConditionsTreated: [
+      {
+        name: 'Cranial cruciate ligament (CCL) rupture',
+        summary:
+          'The most common orthopedic injury in dogs. Surgical stabilization with TPLO (tibial plateau leveling osteotomy), TTA, or extracapsular techniques is the standard of care for most candidates. The contralateral knee ruptures in a substantial fraction of dogs within a year or two.',
+      },
+      {
+        name: 'Hip dysplasia',
+        summary:
+          'Hereditary developmental disease of the hip joint, most common in large-breed dogs. Treatment ranges from medical management and rehabilitation to femoral head ostectomy (FHO) or total hip replacement (THR), depending on age, weight, and severity.',
+      },
+      {
+        name: 'Elbow dysplasia',
+        summary:
+          'An umbrella diagnosis covering fragmented coronoid process, ununited anconeal process, osteochondritis dissecans, and elbow incongruity. Arthroscopic surgery and/or osteotomies are common, ideally before significant secondary arthritis develops.',
+      },
+      {
+        name: 'Luxating patella',
+        summary:
+          'Kneecap that slides out of its groove, most common in small-breed dogs but also seen in larger breeds. Graded 1–4 by severity. Grade 2 and higher with clinical signs are typical surgical candidates; surgery combines groove deepening, soft-tissue release, and tibial tuberosity transposition as needed.',
+      },
+      {
+        name: 'Fractures requiring internal fixation',
+        summary:
+          'Long-bone, articular, and pelvic fractures often need plate, screw, intramedullary pin, or external skeletal fixator stabilization. Articular fractures in particular benefit from precise specialty repair to preserve joint function.',
+      },
+      {
+        name: 'Osteochondritis dissecans (OCD)',
+        summary:
+          'A developmental cartilage disease of the shoulder, elbow, stifle, or hock in young large-breed dogs. Arthroscopic debridement is the typical surgical approach.',
+      },
+      {
+        name: 'Osteoarthritis (multimodal management)',
+        summary:
+          'Long-term joint disease often follows surgical or congenital orthopedic conditions. A surgeon coordinates with rehabilitation, weight management, joint-protective medication, and disease-modifying treatments as part of a long-term plan.',
+      },
+    ],
+    whatToExpectAtVisit: [
+      'A focused orthopedic exam that isolates the painful joint or structure — palpation, range-of-motion testing, gait observation, and specific provocative tests (cranial drawer, tibial thrust, Ortolani sign).',
+      'Review of any primary-vet radiographs and a discussion of whether sedated orthopedic radiographs, CT, or MRI are needed for surgical planning.',
+      'A written treatment plan with surgical and non-surgical options, expected recovery time, and rehabilitation requirements.',
+      'A frank conversation about post-operative restrictions — most orthopedic recoveries require 8–12 weeks of strict activity limitation, which is often the hardest part for families.',
+      'Coordination with a rehabilitation team and with your primary vet for routine care, suture removal, and recheck radiographs.',
+    ],
+    typicalDiagnostics: [
+      'Sedated orthopedic radiographs (often required for accurate joint positioning).',
+      'CT scan for complex fractures, elbow dysplasia, and surgical planning.',
+      'MRI for soft-tissue and cartilage detail in selected cases.',
+      'Arthroscopy — both diagnostic and therapeutic for joint disease.',
+      'Joint fluid analysis (arthrocentesis) for inflammatory or infectious joint disease.',
+      'PennHIP or OFA hip and elbow screening radiographs for breeding and pre-purchase evaluation.',
+      'Force-plate or pressure-mat gait analysis at some teaching hospitals.',
+    ],
+    averageCostRanges: [
+      { service: 'Initial orthopedic consultation', range: '$200–500 (typical US range)' },
+      { service: 'Sedated orthopedic radiographs', range: '$300–700 (typical US range)' },
+      { service: 'CT scan under general anesthesia', range: '$1,000–2,500 (typical US range)' },
+      {
+        service: 'TPLO surgery for CCL rupture (single knee)',
+        range: '$4,500–7,500 (typical US range)',
+      },
+      {
+        service: 'Extracapsular CCL repair (single knee)',
+        range: '$2,500–4,500 (typical US range)',
+      },
+      {
+        service: 'Total hip replacement (THR, single hip)',
+        range: '$6,000–10,000 (typical US range)',
+      },
+      { service: 'Femoral head ostectomy (FHO)', range: '$2,000–4,500 (typical US range)' },
+      { service: 'Luxating patella surgery', range: '$2,000–4,500 per knee (typical US range)' },
+      {
+        service: 'Fracture repair with internal fixation',
+        range: '$3,000–7,500 (typical US range, varies with complexity)',
+      },
+      {
+        service: 'Post-operative rehabilitation program',
+        range: '$1,500–4,000 across the recovery (typical US range)',
+      },
+    ],
+    insuranceCoverageNotes:
+      'Orthopedic surgery is one of the highest-claim categories in pet insurance, and most accident-and-illness plans reimburse CCL repair, hip surgery, elbow surgery, and fracture fixation when the condition post-dates enrollment and any waiting period. Orthopedic-specific waiting periods are common — many insurers apply a 6- or 12-month CCL or orthopedic waiting period, and some treat a CCL rupture on one knee as making the contralateral knee pre-existing. Hereditary disease language matters for breeds at known risk for hip and elbow dysplasia. Read the orthopedic clauses before assuming coverage.',
+    howToFindOne: [
+      'Ask your primary vet for a referral — most CCL, hip, and fracture cases come through primary-care triage, and the surgeon will need the radiographs and exam notes.',
+      'Use the ACVS "Find a Surgeon" directory to locate board-certified diplomates by state and subspecialty interest.',
+      'Veterinary teaching hospitals (Cornell, UC Davis, Texas A&M, University of Pennsylvania) run orthopedic services that often offer total hip replacement and complex fracture repair.',
+      'For total hip replacement specifically, ask about case volume — this is a procedure where surgical experience strongly correlates with outcome.',
+      'Verify "DACVS-SA" board certification on the surgeon\'s profile — board certification requires a 3-year residency and passing the ACVS specialty exam.',
+      'For an open fracture, severely luxated joint, or pet who cannot bear weight, go to a 24-hour emergency hospital first; orthopedic referral can follow once initial pain control and splinting are in place.',
+    ],
+    questionsToAskTheSpecialist: [
+      'What is the diagnosis, and what are all the surgical and non-surgical options for it?',
+      'For my pet\'s size, age, and activity level, which technique do you recommend and why?',
+      'What is your case volume for this procedure, and what are your typical outcomes?',
+      'What does the recovery look like week-by-week, and what activity restrictions are required?',
+      'What rehabilitation is recommended, and when does it start?',
+      'What are the realistic complication rates — infection, implant failure, second-knee involvement?',
+      'What home pain control will be used, and how will we know if we need to escalate?',
+    ],
+    citedSources: [
+      { name: 'ACVS — American College of Veterinary Surgeons', url: ACVS },
+      {
+        name: 'ACVS Animal Health Topic — Cranial Cruciate Ligament Disease',
+        url: 'https://www.acvs.org/small-animal/cranial-cruciate-ligament-disease',
+      },
+      {
+        name: 'ACVS Animal Health Topic — Hip Dysplasia',
+        url: 'https://www.acvs.org/small-animal/canine-hip-dysplasia',
+      },
+      { name: 'OFA — Hip and Elbow Screening Programs', url: 'https://www.ofa.org/' },
+      { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
+      { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
+    ],
+  },
+
+  // ─── 9. EMERGENCY & CRITICAL CARE ────────────────────────────────────
   {
     slug: 'veterinary-emergency-critical-care',
     specialtyName: 'Veterinary Emergency and Critical Care',
