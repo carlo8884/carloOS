@@ -9,7 +9,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { buildMetadata, Breadcrumb, SchemaScript, buildFAQSchema } from '@carloOS/ui';
+import { buildMetadata, Breadcrumb, SchemaScript, buildFAQSchema, EmailCapture } from '@carloOS/ui';
 import { allRacingSlugs, getRacingTopic } from '../../../data/racing';
 import { getBreedBySlug } from '../../../data/breeds';
 
@@ -107,6 +107,19 @@ export default function RacingTopicPage({ params }: { params: { slug: string } }
             </div>
           </section>
         )}
+
+        {/* Layer-1 audience capture — the highest-acquirer-value asset per the
+            horse-cluster build spec. List wiring is Monetization Bot's lane;
+            placement is ours. */}
+        <section className="mt-10">
+          <EmailCapture
+            variant="section"
+            siteId="horses-com"
+            title="Follow the sport, season by season"
+            subtitle="Plain-language racing & ownership explainers from Horses.com — no betting tips, no spam."
+            source={`racing-${t.slug}`}
+          />
+        </section>
 
         <section className="mt-10 border-t border-brand-border pt-6">
           <h2 className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-text-light">
