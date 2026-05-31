@@ -38,13 +38,33 @@ resort with no buyer and no traffic path — sold raw.
 - The trust bar (no fake credentials, no AI humans, FTC disclosure) is an **asset-preservation moat**, not
   just compliance — diligence-clean editorial is what makes a 5–10× exit defensible.
 
-## Strategic priorities (this phase)
+## §0b Default = BUILD THE ENTERPRISE; sales are opportunistic (Carlo, 2026-05-30)
 
-1. **Protect Tier 1.** Diligence-readiness > revenue on Dog.com / Fish.com.
-2. **Resolve scale uncertainty.** The 75-vs-15 gap must close before resource allocation is trustworthy (`csro-dir-2026-W22-001`).
-3. **Promote one Tier-2.** Vets.co is the strongest Tier-1 promotion candidate — drive its 5 criteria.
-4. **Kill duplication.** PetFood/PetFoods and Ferret/Ferrets cannibalize each other; decide consolidate-vs-distinct.
-5. **Cut dead weight.** Sunset hardmoneyloans; defer unbuilt scaffolds without demand evidence.
+Two Carlo directives that override the earlier "sell vs earn" framing:
+
+1. **Buyers are found THROUGH traffic, not before it.** Equine Network is one *named* buyer; most buyers will
+   surface *because* an asset is visibly growing. So we do **not** gate builds on "is there a buyer yet" — building
+   traffic/revenue is the demand-generation engine for buyers across every cluster. (`strategic-acquirers.md`
+   stays a tracker, not a prerequisite.)
+2. **At $20–50k/mo net, the math flips from sell to build-the-enterprise.** A domain/site sale is a one-time event;
+   a portfolio compounding at $20–50k/mo net is a far more valuable enterprise — and, if ever sold, sells at a
+   higher multiple as a going concern. **So the default disposition for in-scope domains is now HOLD-AND-COMPOUND.**
+   Sales become **opportunistic** (take a great strategic offer like Dog.com's), not the objective. Build value first.
+
+**Consequence:** `SELL-DOMAIN` shrinks further — reserved only for true off-thesis dead weight (hardmoneyloans,
+maybe DogPicture). Everything with a traffic path is **build-and-hold**. The "flip" dispositions become "build to
+earn, sell only if a strong offer appears."
+
+## Strategic priorities (this phase) — revised
+
+1. **Get to real revenue, fast, on existing traffic.** Ferret + PetFood monetization (`dir-009`) — the leak is the
+   first dollars. This is the start of the $20–50k/mo path.
+2. **Protect Tier 1.** Diligence-readiness on Dog.com / Fish.com; build the revenue trajectory that supports the offers.
+3. **Finish-and-launch Vets.co insurance** (highest revenue/visitor; already built — `dir-007`).
+4. **Build the horse cluster toward audience+commerce** (`dir-012`) — Equine Network-grade, but the audience/revenue
+   is valuable regardless of whether they ever buy.
+5. **Compound:** consolidate duplication (PetFoods→PetFood, Ferrets→Ferret), stack display ads (`dir-011`), grow lists.
+6. **Cut only true dead weight** (hardmoneyloans). Hold the rest and build.
 
 ## Framework collision to resolve
 

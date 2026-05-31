@@ -33,9 +33,15 @@ Each domain resolves to **EARN** or **SELL** — but per §0, the road to SELL a
 | **SELL-DOMAIN (last resort)** | Only when NO acquirer + NO traffic path exists (true dead weight) | Efty/marketplace — accepting the market is illiquid |
 | **SET-ASIDE** | Personal / other-business / out of scope | n/a |
 
-> **`SELL-DOMAIN` is now a last resort, not a default for thin sites.** Per §0, a thin premium domain is illiquid
-> raw — the move is to BUILD it toward a buyer, not list it and wait. Reserve SELL-DOMAIN for off-thesis names with
-> no plausible strategic and no traffic path (e.g. DogPicture, hardmoneyloans).
+> **`SELL-DOMAIN` is a last resort, not a default for thin sites.** Per §0, a thin premium domain is illiquid raw —
+> the move is to BUILD it toward a buyer, not list it and wait. Reserve SELL-DOMAIN for off-thesis names with no
+> plausible strategic and no traffic path (e.g. hardmoneyloans; DogPicture pending).
+
+> **Default = HOLD-AND-COMPOUND (Carlo, 2026-05-30).** At $20–50k/mo net the enterprise is worth more built than
+> sold, and sells at a higher multiple later as a going concern. So sales are **opportunistic** (take a great
+> offer like Dog.com's), not the goal. Buyers are found THROUGH traffic — building is the demand engine. See
+> `thesis.md §0b`. Every in-scope domain with a traffic path = build-and-hold; "flip" = "build to earn, sell only
+> on a strong offer."
 
 **Exit-multiple reality `[RESEARCH — see valuation-comps.md, sandbox-unverified]`:** content/affiliate sites trade
 **~24–34× trailing monthly net profit** in the 2025–2026 market (Empire Flippers data; the older 30–45× I'd used

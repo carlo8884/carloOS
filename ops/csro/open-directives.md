@@ -16,7 +16,9 @@ Per the §17 autonomy mandate — when blocked, pull the next item here. Keep �
 - [x] **Strategic-acquirers map** — DONE: `strategic-acquirers.md` (Equine Network → horse cluster `[CARLO]`; reframes build-vs-sell around illiquid market). Corrected valuation-model §3 + thesis §0.
 - [x] **Equine Network M&A profile** — DONE: `strategic-acquirers.md §1a` (CVC-controlled ~$300M; serial acquirer of premium horse .coms; KEY: pays for audience+commerce+membership, not thin content).
 - [x] **Horse-cluster build spec** — DONE: `2026-05-30-csro-horse-cluster-build-spec.md` (3 layers: audience capture → commerce → traffic; built to Equine Network's value drivers). → `dir-012`.
-- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains, now using the buyer-filter ("which buyer can this build summon?") not name-value. NEXT after Equine research.
+- [x] **Launch-readiness call** — DONE: `launch-readiness.md`. Key unlock: money-now (Path 1, monetize existing traffic, no launch needed) vs launch (Path 2, ~1-2wk + Carlo's ~80min DNS/email/GA4). First greenlight: Ferret, then Vets insurance.
+- [ ] **Per-cluster build-priority pass** — score the ~48 owned-but-unbuilt in-scope domains, using the buyer-filter + hold-and-compound default. NEXT.
+- [ ] **Competitive read-through** — Ferret / PetFood / Vets-insurance: who ranks/monetizes the same queries; the gap.
 - [ ] **Free-tier vet-directory prep** (dir-010) — OSM + free-CSV-state + AAHA scoping; zero spend.
 - [ ] **Competitive read-through** — for each EARN-NOW site (Ferret, PetFood, Vets insurance), who ranks/monetizes the same queries; what's the gap.
 - [ ] **Bot-quality ledger refresh** — review COO/Monetization/Visual PRs as they land against the strategy.
