@@ -55,6 +55,11 @@ export async function generateMetadata({
     description: `Best pet insurance for ${b.breedName}s in ${s.name}. Breed-specific carrier picks, regulatory context, sample premiums.`,
     path: `/pet-insurance/breeds/${breed}/${state}`,
     type: 'article',
+    // IR F6 gate (dir-007): the 2,912 breed×state cross-product pages stay
+    // noindex until carrier-enrollment realism (1.1), FTC review (1.3), and
+    // factual audit of sample premiums clear. Hub + breed-only + state-only
+    // pages remain indexed as the curated launch surface.
+    noIndex: true,
   })
 }
 
