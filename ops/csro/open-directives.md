@@ -12,9 +12,11 @@ Codex auto-revert may strip edits to this file. Re-apply and re-push if a revert
 
 Format: `ID · summary · owner · status`
 
+2026-W23-004 · IR post-polish re-review: Dog/Horses Amazon-brand + Dog Chewy-brand env-tag gap (lost attribution) → COO · DONE (2026-06-01, set-affiliate-tag.sh)
+2026-W23-003 · IR post-polish re-review: §1.5.a consumer-dose residue on dog-com/nutrition/dog-supplements (glucosamine mg/kg + CBD mg/kg) → COO · DONE (2026-06-01)
 2026-W23-002 · dir-007 IR F6 noindex-gate on 2,912 breed×state insurance pages → COO · DONE (2026-06-01)
 2026-W23-001 · dir-014 closeout — CI Turbo Remote-Cache wiring + Carlo dashboard handoff (Steps 1–3) → COO · DONE code-side (PR #268); awaiting Carlo dashboard
-2026-W22-022 · Ferret brand-route tags untagged (IR #4) → Monetization · HIGH · OPEN
+2026-W22-022 · Ferret brand-route tags untagged (IR #4) → Monetization · DONE (2026-06-01; ferret-com now in AMAZON_BRAND + CHEWY_BRAND env mappings)
 2026-W22-021 · Visual curated images + $0 wordmark identity → Visual · P0 · OPEN
 2026-W22-020 · Bot Wakeup Queue implementation → COO · DONE (PR #264)
 2026-W22-019 · 110 untracked affiliate links (+ Horses/Saddle 51 CTAs, IR #7) → Monetization · HIGH · OPEN
@@ -50,3 +52,4 @@ Format: `ID · summary · owner · status`
 
 QC-1 · Fish.com fake calibration/NIST testing claims removed + trust-guard gap closed → CSRO · DONE
 QC-2 · Rx dose ranges removed portfolio-wide (ferret/dog/horses/vets) + QC §1.5.a policy → CSRO · DONE
+QC-3 · §1.5.a residue swept on dog-com/nutrition/dog-supplements (glucosamine mg/kg → NASC-label/vet; CBD mg/kg → research-protocol framing) → COO · DONE (2026-06-01, IR re-review)

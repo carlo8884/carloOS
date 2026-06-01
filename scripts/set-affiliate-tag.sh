@@ -67,8 +67,8 @@ declare -A SITES_FOR_VENDOR=(
   # vets-co is included because it currently registers both routes on
   # main; PR #241 (dir-015 #2) removes them — when that lands, drop
   # vets-co from these two lines too.
-  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co ferret-com'
-  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co ferret-com'
+  [AMAZON_BRAND]='dog-com fish-com lizard-com saddle-com horses-com petfood-com petfoods-com vets-co ferret-com'
+  [CHEWY_BRAND]='dog-com fish-com lizard-com saddle-com petfood-com petfoods-com vets-co ferret-com'
 
   # Pet insurance — dog-com gets all; vets-co gets all (insurance-only per policy)
   [TRUPANION]='dog-com vets-co'
