@@ -46,6 +46,7 @@ export default function SaddleReviewsPage() {
         <Link key="best-riding-helmets" href="/reviews/best-riding-helmets" className="text-sm text-brand-primary no-underline hover:underline">Best Riding Helmets</Link>
         <Link key="best-saddle-pads" href="/reviews/best-saddle-pads" className="text-sm text-brand-primary no-underline hover:underline">Best Saddle Pads</Link>
         <Link key="best-stirrup-irons" href="/reviews/best-stirrup-irons" className="text-sm text-brand-primary no-underline hover:underline">Best Stirrup Irons</Link>
+        <Link key="best-stirrups" href="/reviews/best-stirrups" className="text-sm text-brand-primary no-underline hover:underline">Best Stirrups</Link>
         <Link key="best-western-saddles" href="/reviews/best-western-saddles" className="text-sm text-brand-primary no-underline hover:underline">Best Western Saddles</Link>
         <Link key="collegiate-saddle-review" href="/reviews/collegiate-saddle-review" className="text-sm text-brand-primary no-underline hover:underline">Collegiate Saddle Review</Link>
         <Link key="pessoa-saddle-review" href="/reviews/pessoa-saddle-review" className="text-sm text-brand-primary no-underline hover:underline">Pessoa Saddle Review</Link>
