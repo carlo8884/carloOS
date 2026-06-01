@@ -153,20 +153,17 @@ export default function BestJointSupplementsPage() {
               name="CBD for Dogs (Vetri-CBD, ElleVet)"
               subtitle="2018 Cornell study · Pain reduction in arthritic dogs · Use vet-formulated brands"
               score={8.4}
-              description={<p>A 2018 Cornell University study (JAVMA) showed statistically significant reduction in pain and improvement in mobility in arthritic dogs given CBD at 2mg/kg twice daily vs placebo — measured by force plate analysis and pain scoring. The evidence base is early but the 2018 Cornell study is the most rigorous clinical trial in the field to date. The major caveat: the CBD market has minimal quality control — many products contain significantly less CBD than labeled, or contain THC (toxic to dogs). If trying CBD: use products with a Certificate of Analysis from a third-party lab (ElleVet and Vetri-Science are both transparent on this), use dog-specific formulations, and discuss dose with your vet. Do not use human CBD products on dogs.</p>}
+              description={<p>A 2018 Cornell University study (JAVMA) showed statistically significant reduction in pain and improvement in mobility in arthritic dogs given CBD versus placebo — measured by force plate analysis and pain scoring. The evidence base is early but the 2018 Cornell study is the most rigorous clinical trial in the field to date. The major caveat: the CBD market has minimal quality control — many products contain significantly less CBD than labeled, or contain THC (toxic to dogs). CBD is not a substitute for veterinary care; if you are considering it, use products with a Certificate of Analysis from a third-party lab, use dog-specific formulations, and have your veterinarian determine whether it is appropriate and at what dose. Do not use human CBD products on dogs.</p>}
               specs={[
                 { label: 'Evidence Level', value: 'Emerging — Cornell 2018 study', highlight: 'good' },
-                { label: 'Study Finding', value: 'Cornell 2018 trial; discuss dosing with your vet' },
+                { label: 'Dosing', value: 'Veterinarian-determined only' },
                 { label: 'Quality Control', value: 'Highly variable — use COA-verified brands', highlight: 'warn' },
                 { label: 'THC', value: 'Must be 0% — toxic to dogs', highlight: 'warn' },
               ]}
-              pros={['Cornell clinical trial shows real effect', 'Non-NSAID mechanism useful as adjunct', 'ElleVet and Vetri-CBD are quality-verified']}
-              cons={['Market quality control is poor — many products misrepresented', 'More expensive than glucosamine', 'Discuss dose and brand with your vet before using']}
-              price="$40–80/month at therapeutic dose"
-              ctaText="Shop ElleVet CBD →"
-              ctaHref="https://www.ellevetsciences.com"
-              ctaAffiliateProgram="ellevet"
-              ctaAffiliateProduct="ellevet-cbd"
+              pros={['Cornell clinical trial shows real effect', 'Non-NSAID mechanism useful as adjunct', 'Look for COA-verified, dog-specific formulations']}
+              cons={['Market quality control is poor — many products misrepresented', 'More expensive than glucosamine', 'Discuss appropriateness, brand, and dose with your vet first']}
+              ctaText="Find a Vet to Discuss CBD →"
+              ctaHref="/find-a-vet"
             />
           </div>
 
