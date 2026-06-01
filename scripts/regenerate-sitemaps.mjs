@@ -88,8 +88,30 @@ function ferretsExtraRoutes() {
   return Array.from(new Set(out))
 }
 
+// Dog.com /compare/[slug] pairs live in data/breed-comparisons.ts as
+// `{ breedASlug: 'a', breedBSlug: 'b', ... }`; slug = `${a}-vs-${b}`. Parsing
+// the data file keeps the sitemap in sync as pairs are added/removed.
+function dogComExtraRoutes() {
+  let src = ''
+  try {
+    src = readFileSync(
+      join(ROOT, 'apps/dog-com/src/data/breed-comparisons.ts'),
+      'utf8'
+    )
+  } catch {
+    return []
+  }
+  const out = []
+  for (const m of src.matchAll(
+    /breedASlug:\s*'([a-z0-9-]+)',\s*breedBSlug:\s*'([a-z0-9-]+)'/g
+  )) {
+    out.push(`/compare/${m[1]}-vs-${m[2]}`)
+  }
+  return Array.from(new Set(out))
+}
+
 const SITES = [
-  { id: 'dog-com', domain: 'dog.com' },
+  { id: 'dog-com', domain: 'dog.com', extraRoutes: dogComExtraRoutes() },
   { id: 'fish-com', domain: 'fish.com' },
   { id: 'lizard-com', domain: 'lizard.com' },
   {
@@ -140,6 +162,7 @@ function listRoutes(siteId) {
           entry.name.startsWith('.') ||
           entry.name === 'api' ||
           entry.name === 'admin' ||
+          entry.name === 'dashboard' ||
           entry.name.includes('[') ||
           entry.name === 'node_modules'
         ) {
