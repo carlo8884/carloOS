@@ -238,7 +238,7 @@ export default function SaddleHomePage() {
           style={{
             backgroundImage: [
               'radial-gradient(ellipse 85% 65% at 82% 18%, rgba(182,136,48,0.20) 0%, transparent 55%)',
-              'radial-gradient(ellipse 70% 70% at 10% 92%, rgba(94,59,21,0.55) 0%, transparent 60%)',
+              'radial-gradient(ellipse 70% 70% at 10% 92%, rgba(94,59,21,0.25) 0%, transparent 60%)',
               'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(140,90,42,0.05) 0%, transparent 70%)',
               'linear-gradient(180deg, rgba(16,10,4,0) 0%, rgba(16,10,4,0.55) 95%)',
             ].join(','),
