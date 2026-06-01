@@ -29,6 +29,36 @@ const INGREDIENTS = [
     description:
       'Natural (mixed tocopherols, rosemary) vs synthetic (BHA, BHT, ethoxyquin) preservatives — what the toxicology evidence says.',
   },
+  {
+    slug: 'legumes-peas-and-lentils',
+    title: 'Legumes — Peas, Lentils, Chickpeas',
+    description:
+      'Why pulses rose with grain-free, their protein contribution and isolates, the DCM connection, and reading a pulse-heavy panel.',
+  },
+  {
+    slug: 'whole-grains-rice-oats-barley',
+    title: 'Whole Grains — Rice, Oats, Barley',
+    description:
+      'What grains contribute, digestibility of rice vs corn, the gluten question, and why grain-inclusive is a sound default for most pets.',
+  },
+  {
+    slug: 'fish-and-marine-ingredients',
+    title: 'Fish and Marine Ingredients',
+    description:
+      'Salmon, whitefish, fish meal, and fish oil — the omega-3 benefit, the thiamine and mercury considerations, and sourcing.',
+  },
+  {
+    slug: 'ingredient-splitting',
+    title: 'Ingredient Splitting on Labels',
+    description:
+      'How splitting one ingredient into fractions games the descending-weight order, with worked examples and how to read past it.',
+  },
+  {
+    slug: 'additives-and-supplements-on-labels',
+    title: 'Additives on Pet Food Labels',
+    description:
+      'Decoding the vitamin and mineral premix, palatants, emulsifiers, and colors at the bottom of the ingredient panel.',
+  },
 ]
 
 export default function IngredientsHubPage() {
