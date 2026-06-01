@@ -44,6 +44,22 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
+        <div className="max-w-2xl">
+          <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">Why a ferret food tool exists at all</h2>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            Ferrets are obligate carnivores with a punishingly short digestive tract, which makes them far less forgiving of the wrong diet than a dog or cat. The marketing on a bag rarely tells you what matters. What matters is the guaranteed analysis &mdash; the small panel of protein, fat, fiber, and ash percentages every label is required to print &mdash; and the first few ingredients. The trouble is that reading those numbers against published ferret nutrient targets is fiddly, and most owners have nothing to check them against in the pet-store aisle. That gap is exactly what this hub is built to close.
+          </p>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups.
+          </p>
+          <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Where it fits with the rest of the site</h2>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            A verdict is only as useful as the reasoning behind it. If the evaluator flags a food, the next question is usually why those numbers matter, and that is covered in depth in our <Link href="/diet" className="text-brand-primary underline-offset-2 hover:underline">ferret diet</Link> reference. If a food scores poorly because of a chronic condition you are managing, the <Link href="/health" className="text-brand-primary underline-offset-2 hover:underline">ferret health</Link> section explains how diet intersects with the issues ferrets are prone to. The tool is the fast answer; the editorial sections are the explanation. Everything here is source-cited and written by the Ferret.com editorial team from published references, with more keeper calculators planned as the reference set grows.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (

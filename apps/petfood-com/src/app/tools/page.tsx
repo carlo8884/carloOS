@@ -54,6 +54,22 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
+        <div className="max-w-2xl">
+          <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">Turning a price tag into a real cost</h2>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            A bag price tells you almost nothing about what a food actually costs to feed. A premium kibble fed in small portions can be cheaper per day than a budget food fed in large ones, and a smaller bag that looks inexpensive on the shelf can quietly cost more per cup. The number that matters for a household budget is cost per day &mdash; and then per month and per year &mdash; because that is what you actually pay over the life of a pet. These tools exist to do that arithmetic so you do not have to keep a spreadsheet open in the pet-food aisle.
+          </p>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            The <Link href="/tools/food-cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">Pet Food Cost Calculator</Link> takes three numbers off the bag &mdash; your pet&apos;s cups per day, the bag size, and the price &mdash; and returns cost per day, per month, per year, and per cup. Its side-by-side mode puts two foods next to each other on the same terms, so a comparison that usually relies on guesswork becomes a clean apples-to-apples figure. It is the fastest way to settle whether the food you are eyeing is genuinely more expensive or just packaged to look that way.
+          </p>
+          <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Cost is one input, not the whole decision</h2>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            Price per cup only means something once you know the foods are comparable in quality, so this hub is designed to sit alongside the rest of PetFood.com&apos;s reference material. Once the calculator narrows your shortlist, our <Link href="/compare" className="text-brand-primary underline-offset-2 hover:underline">food comparison</Link> pages and <Link href="/nutrition" className="text-brand-primary underline-offset-2 hover:underline">nutrition</Link> references explain what separates the options on the things money cannot measure, and the <Link href="/feeding" className="text-brand-primary underline-offset-2 hover:underline">feeding guides</Link> help you confirm the cups-per-day figure you typed in is right for your pet&apos;s size and life stage. The tools give you the math; the editorial sections give you the judgment. Everything here is built and maintained by the PetFood.com editorial team and sourced from cited references, with additional calculators planned as the reference set expands.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (
