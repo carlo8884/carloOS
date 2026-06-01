@@ -193,7 +193,6 @@ export default function DogHealthHubPage() {
         <Link key="dog-mange" href="/health/dog-mange" className="text-sm text-brand-primary no-underline hover:underline">Dog Mange</Link>
         <Link key="dog-obesity" href="/health/dog-obesity" className="text-sm text-brand-primary no-underline hover:underline">Dog Obesity</Link>
         <Link key="dog-pyoderma" href="/health/dog-pyoderma" className="text-sm text-brand-primary no-underline hover:underline">Dog Pyoderma</Link>
-        <Link key="dog-pyoderma-guide" href="/health/dog-pyoderma-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Pyoderma Guide</Link>
         <Link key="dog-seizures" href="/health/dog-seizures" className="text-sm text-brand-primary no-underline hover:underline">Dog Seizures</Link>
         <Link key="dog-skin-allergies" href="/health/dog-skin-allergies" className="text-sm text-brand-primary no-underline hover:underline">Dog Skin Allergies</Link>
         <Link key="dog-symptoms-guide" href="/health/dog-symptoms-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Symptoms Guide</Link>

@@ -6,7 +6,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
@@ -23,6 +23,23 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Breeds', url: 'https://dog.com/breeds' },
   ],
 })
+
+// ItemList of every profiled breed — gives AI Overviews / Perplexity a
+// structured, citable index of the breed cluster (GEO authority signal).
+const breedListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Breeds Profiled at Dog.com',
+  numberOfItems: Breeds.length,
+  itemListElement: Breeds.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://dog.com/breeds/${b.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, breedListSchema)
 
 
 const BREED_IMAGES: Record<string, string> = {
@@ -70,7 +87,7 @@ export default async function BreedsPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
