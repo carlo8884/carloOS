@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide — Enclosure, UVB, Diet | Lizard.com', description: 'Complete bearded dragon care guide. 4x2x2 enclosure minimum, Arcadia 12% UVB required, calcium supplementation, diet ratios.', path: '/species/bearded-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bearded Dragon Care Guide', description: 'Enclosure, UVB, diet, supplementation, and health for bearded dragons.', url: 'https://lizard.com/species/bearded-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -31,6 +31,8 @@ export default function BeardedDragonPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <StockImage manifestKey="lizard-com:species-bearded-dragon" aspect="16:9" variant="inline" caption="A bearded dragon (Pogona vitticeps) basking under enclosure lighting." priority />
 
         <h2 id="enclosure">Enclosure</h2>
         <DropCap letter="M"><strong>Minimum adult enclosure: 4 feet long × 2 feet wide × 2 feet tall.</strong> This is not a guideline — a smaller enclosure prevents the thermal gradient a bearded dragon needs to thermoregulate. A juvenile can live in a 3x1.5x1.5 enclosure, but you will need to upgrade within the first year. Buy the adult size from the start.</DropCap>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { Conditions, RESERVED_HEALTH_SLUGS, type ConditionCategory } from '../../data/conditions'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,10 @@ export default function LizardHealthPage() {
           Journal of Herpetological Medicine and Surgery, and the Association of Reptilian and
           Amphibian Veterinarians (ARAV).
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="lizard-com:category-health" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="px-container-sm sm:px-container py-12">

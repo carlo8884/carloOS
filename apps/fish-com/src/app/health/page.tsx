@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Guides — Disease, Chemistry & Disease | Fish.com', description: 'Aquarium health guides — the nitrogen cycle, water chemistry, fish disease identification and treatment.', path: '/health' })
@@ -30,6 +30,9 @@ export default function FishHealthPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Aquarium Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Water chemistry, disease identification, and the nitrogen cycle — everything that keeps your fish alive.</p>
+      </div>
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:category-health" aspect="16:9" variant="wide" priority />
       </div>
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">

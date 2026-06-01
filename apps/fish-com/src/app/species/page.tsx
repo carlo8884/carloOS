@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
@@ -77,6 +77,10 @@ export default async function SpeciesIndexPage() {
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:category-species" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* Category filters */}
