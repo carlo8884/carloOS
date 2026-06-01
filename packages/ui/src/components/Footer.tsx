@@ -20,7 +20,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-brand-dark">
+    <footer className="bg-brand-dark border-t border-white/10">
       {/* Main grid */}
       <div className="px-container-sm sm:px-container py-16">
         <div className="mx-auto max-w-container-wide">
