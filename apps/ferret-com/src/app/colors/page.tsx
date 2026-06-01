@@ -4,16 +4,16 @@ import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture } from
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Colors, Patterns & Choosing One | Ferret.com',
+  title: 'Ferret Colors & Patterns — Sable, Albino, DEW, Cinnamon & More | Ferret.com',
   description:
-    'Ferret colors and patterns — sable, albino, dark-eyed white, cinnamon — plus lifespan, male vs. female differences, and how to choose a healthy ferret.',
+    'A field guide to ferret colors and coat patterns — sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — plus lifespan and how to choose a healthy ferret.',
   path: '/colors',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Colors & Choosing', url: 'https://ferret.com/colors' },
+    { name: 'Colors & Patterns', url: 'https://ferret.com/colors' },
   ],
 })
 
@@ -27,45 +27,66 @@ interface ColorCard {
 const COLOR_CARDS: ColorCard[] = [
   {
     slug: 'ferret-colors-and-patterns',
-    eyebrow: 'The overview',
+    eyebrow: 'Start here',
     title: 'Colors & Patterns',
     description:
-      'The full ferret color and pattern map — sable, champagne, chocolate, cinnamon, black, albino, and DEW — plus pattern types like mitt, panda, blaze, and roan.',
+      'The full ferret color and pattern map — sable, champagne, chocolate, cinnamon, black, albino, and DEW — plus pattern overlays like mitt, panda, blaze, and roan.',
   },
   {
     slug: 'sable-ferrets',
     eyebrow: 'Most common color',
     title: 'Sable Ferrets',
     description:
-      'The classic "wild" ferret look: warm brown guard hairs over a pale undercoat with a dark mask. Why sable is the most common color and how it changes with the seasons.',
+      'The classic "wild" ferret look: warm-brown guard hairs over a pale undercoat with a dark bandit mask. Why sable is the most common color and how it shifts with the seasons.',
   },
   {
     slug: 'albino-ferrets',
     eyebrow: 'White, red-eyed',
     title: 'Albino Ferrets',
     description:
-      'True albinos: pure white coat, pink nose, red eyes, and no melanin. The genetics behind albinism, the laboratory history, and care notes for these striking ferrets.',
+      'True albinos: white coat, pink nose, ruby eyes, and no melanin. The genetics behind albinism, the laboratory history, sun sensitivity, and the deafness myth.',
   },
   {
     slug: 'dark-eyed-white-ferrets',
     eyebrow: 'White, dark-eyed',
     title: 'Dark-Eyed White (DEW)',
     description:
-      'White coat but burgundy-to-black eyes — not albinos. How DEW ferrets differ genetically from albinos, why the distinction matters, and what to know.',
+      'White coat but burgundy-to-black eyes — not albinos. How DEW ferrets differ genetically, the link to coat-color deafness, and what panda and blaze share with them.',
   },
   {
     slug: 'cinnamon-ferrets',
     eyebrow: 'Rare & warm-toned',
     title: 'Cinnamon Ferrets',
     description:
-      'A reddish-brown coat with a brick-toned undercoat — one of the rarer recognized colors. What "cinnamon" means, how it differs from champagne and chocolate, and the naming confusion.',
+      'A reddish-brown coat over a golden undercoat — one of the rarest and most contested labels, often confused with champagne and chocolate.',
+  },
+  {
+    slug: 'champagne-ferrets',
+    eyebrow: 'Diluted sable',
+    title: 'Champagne Ferrets',
+    description:
+      'A pale, milky-coffee dilution of the sable coat with a faint mask and pinkish nose. How to tell champagne from cinnamon and chocolate, and why the line is blurry.',
+  },
+  {
+    slug: 'black-ferrets',
+    eyebrow: 'Deepest pigment',
+    title: 'Black Ferrets',
+    description:
+      'Black sable and true black coats with blackish noses and near-black guard hairs — the darkest end of the spectrum, and how it differs from a standard sable.',
+  },
+  {
+    slug: 'chocolate-ferrets',
+    eyebrow: 'Warm brown',
+    title: 'Chocolate Ferrets',
+    description:
+      'Milk-chocolate guard hairs over a white-to-amber undercoat with a brown nose. Where chocolate sits between sable and champagne on the warm-brown gradient.',
   },
   {
     slug: 'ferret-lifespan',
     eyebrow: 'How long they live',
     title: 'Ferret Lifespan',
     description:
-      'Typical ferret lifespan, life stages from kit to senior, the factors that influence longevity, and how to support a long, healthy ferret life.',
+      'The typical 5–8 year span, the factors that shorten or lengthen it, and the honest answer to whether coat color has anything to do with longevity.',
   },
   {
     slug: 'male-vs-female-ferrets',
@@ -79,7 +100,7 @@ const COLOR_CARDS: ColorCard[] = [
     eyebrow: 'Before you adopt',
     title: 'Choosing a Healthy Ferret',
     description:
-      'A pre-adoption checklist — what a healthy kit or adult looks like, the questions to ask, breeder vs. shelter vs. pet store, and the red flags to walk away from.',
+      'A head-to-tail checklist for picking a bright, sound ferret — coat, eyes, ears, body condition, temperament — and the color-linked health notes worth knowing first.',
   },
 ]
 
@@ -99,7 +120,7 @@ export default function ColorsHubPage() {
           <div style={{ marginBottom: '16px' }}>
             <span className="eyebrow">
               <span className="eyebrow-rule" />
-              Colors &amp; Choosing
+              Colors &amp; Patterns
             </span>
           </div>
           <h1
@@ -113,21 +134,22 @@ export default function ColorsHubPage() {
               margin: '0 0 16px',
             }}
           >
-            Ferret Colors &amp; Choosing One
+            Ferret Colors &amp; Patterns
           </h1>
           <p
             style={{
               fontSize: '1.0625rem',
               fontWeight: 300,
               color: 'rgba(251, 245, 232, 0.65)',
-              maxWidth: '600px',
+              maxWidth: '640px',
               lineHeight: 1.65,
               margin: 0,
             }}
           >
-            Ferrets do not come in breeds — they come in colors and patterns. This hub maps the
-            full palette from sable to albino, explains lifespan and the hob-versus-jill question,
-            and walks you through choosing a healthy ferret before you bring one home.
+            Sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — ferret coats
+            come in a small but gorgeously confusing palette. This is the field guide: what each
+            color actually looks like, how the labels overlap, and where coat color does (and
+            doesn&apos;t) connect to health and lifespan.
           </p>
         </div>
       </div>
@@ -146,10 +168,10 @@ export default function ColorsHubPage() {
       >
         <Link href="/" className="amber-link" style={{ fontWeight: 600 }}>Home</Link>
         <span>›</span>
-        <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Choosing</span>
+        <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Patterns</span>
       </nav>
 
-      {/* Cards */}
+      {/* Intro */}
       <div
         style={{
           maxWidth: '1180px',
@@ -162,16 +184,18 @@ export default function ColorsHubPage() {
             fontSize: '0.9375rem',
             color: 'var(--brand-text-light)',
             marginBottom: '40px',
-            maxWidth: '680px',
+            maxWidth: '700px',
             lineHeight: 1.65,
           }}
         >
           One quick myth-bust before you dive in: domestic ferrets (<em>Mustela furo</em>) are a
-          single species, not a set of breeds. The terms you will hear at a shelter or pet store —
-          sable, albino, cinnamon, DEW — describe coat color and pattern, not breed. For health and
-          day-to-day care, browse our{' '}
-          <Link href="/health" className="amber-link" style={{ fontWeight: 600 }}>health</Link> and{' '}
-          <Link href="/care" className="amber-link" style={{ fontWeight: 600 }}>care</Link> references.
+          single species, not a set of breeds. Color names are descriptive, not genetic — the same
+          animal can be labeled differently by two breeders, and a coat shifts shade between the
+          heavy winter coat and the sparse summer one. Use these guides for the look and the
+          language, then see{' '}
+          <Link href="/health" className="amber-link" style={{ fontWeight: 600 }}>Health</Link> and{' '}
+          <Link href="/care" className="amber-link" style={{ fontWeight: 600 }}>Care</Link> for what
+          actually keeps a ferret of any color thriving.
         </p>
 
         <ul
@@ -275,12 +299,12 @@ export default function ColorsHubPage() {
         <EmailCapture
           variant="section"
           siteId="ferret-com"
-          title="The Ferret.com Reference"
-          subtitle="New articles on ferret colors, health, and care. Cited. No product pushes."
+          title="The Ferret.com Field Notes"
+          subtitle="New color guides, care references, and health explainers. Cited. No product pushes."
           ctaText="Subscribe"
           source="colors-hub"
           perks={[
-            'Evidence-based only',
+            'Plain-English field guides',
             'Citation-anchored',
             'No paid placements',
             'Unsubscribe anytime',
