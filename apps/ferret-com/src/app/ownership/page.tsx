@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Ownership & Lifestyle — Cost, Legality, Adoption | Ferret.com',
   description:
-    'Eight references for prospective and new ferret owners: true cost of ownership, state legality, adopting vs buying, ferrets with other pets and kids, naming, glossary, and a first-week checklist.',
+    'Ten references for new ferret owners: cost of ownership, state legality, adopting vs buying, ferrets with pets and kids, supplies, naming, and a first week.',
   path: '/ownership',
 })
 
@@ -81,6 +81,20 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
     description:
       'A day-by-day plan for the first seven days: cage setup, vet booking, quarantine for multi-ferret homes, litter and bite training, and bonding without overwhelming a new ferret.',
   },
+  {
+    slug: 'ferret-supplies-checklist',
+    eyebrow: 'Setup',
+    title: 'Supplies Checklist',
+    description:
+      'Everything a new ferret actually needs, by category — cage, bedding, litter, food, grooming, carrier, enrichment — what to buy first, what can wait, and what to avoid entirely.',
+  },
+  {
+    slug: 'is-a-ferret-right-for-you',
+    eyebrow: 'Decision',
+    title: 'Is a Ferret Right for You?',
+    description:
+      'An honest self-assessment: the daily time, real veterinary cost, odor, legality, household fit, and six-to-ten-year commitment that make a ferret a great fit for some homes and a poor one for others.',
+  },
 ]
 
 export default function OwnershipHubPage() {
@@ -125,10 +139,10 @@ export default function OwnershipHubPage() {
               margin: 0,
             }}
           >
-            Before the cage and the kibble comes the decision itself. Eight references for people
+            Before the cage and the kibble comes the decision itself. Ten references for people
             deciding whether — and how — to bring a ferret home: real cost, where ferrets are legal,
-            adopting versus buying, living with other pets and children, naming, vocabulary, and the
-            first week. Practical, honest, and pushy about nothing.
+            adopting versus buying, living with other pets and children, naming, vocabulary, a
+            supplies checklist, and the first week. Practical, honest, and pushy about nothing.
           </p>
         </div>
       </div>
