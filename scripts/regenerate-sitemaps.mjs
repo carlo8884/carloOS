@@ -15,13 +15,31 @@
  * Run: node scripts/regenerate-sitemaps.mjs
  */
 
-import { readdirSync, writeFileSync, statSync } from 'node:fs'
+import { readdirSync, writeFileSync, statSync, readFileSync } from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const ROOT = resolve(__dirname, '..')
+
+/**
+ * Extract `slug: '...'` (or "...") literals from a data file so dynamic
+ * [slug] routes whose params are known at build time can be enumerated in
+ * the sitemap. Used for petfoods-com's data-driven ingredient/brand catalog.
+ */
+function slugsFromDataFile(relPath) {
+  try {
+    const src = readFileSync(join(ROOT, relPath), 'utf8')
+    const out = new Set()
+    const re = /\bslug:\s*['"]([a-z0-9-]+)['"]/g
+    let m
+    while ((m = re.exec(src)) !== null) out.add(m[1])
+    return Array.from(out)
+  } catch {
+    return []
+  }
+}
 
 // Per-site registry of dynamic-route slugs that should appear in the sitemap.
 // These are routes served by [slug] dynamic pages where the slug set is known
@@ -53,7 +71,23 @@ const SITES = [
   // so sitemap regeneration is comprehensive post-mega-wave.
   { id: 'horses-com', domain: 'horses.com' },
   { id: 'petfood-com', domain: 'petfood.com' },
-  { id: 'petfoods-com', domain: 'petfoods.com' },
+  {
+    id: 'petfoods-com',
+    domain: 'petfoods.com',
+    // Data-driven [slug] catalog: enumerate ingredient + brand + review slugs
+    // (union) so the full reference catalog is crawler-discoverable.
+    extraRoutes: [
+      ...slugsFromDataFile('apps/petfoods-com/src/data/ingredients.ts').map(
+        (s) => `/ingredients/${s}`
+      ),
+      ...[
+        ...new Set([
+          ...slugsFromDataFile('apps/petfoods-com/src/data/brands.ts'),
+          ...slugsFromDataFile('apps/petfoods-com/src/data/brand-reviews.ts'),
+        ]),
+      ].map((s) => `/brands/${s}`),
+    ],
+  },
   { id: 'ferret-com', domain: 'ferret.com' },
   { id: 'ferrets-com', domain: 'ferrets.com' },
 ]
