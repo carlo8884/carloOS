@@ -10,6 +10,7 @@ export default function BoxerPage() {
       hero={{ title: 'Boxer Breed Guide', subtitle: 'Playful, loyal, and perpetually puppy-like well into adulthood. Boxers are one of the most beloved family breeds — and one of the most health-compromised. They have the highest cancer rate of any breed, significant cardiac disease predisposition, and a shortened average lifespan of 9–12 years.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Boxer', href: '/breeds/boxer' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

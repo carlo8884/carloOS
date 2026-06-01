@@ -9,6 +9,7 @@ export default function YorkiePage() {
       hero={{ title: 'Yorkshire Terrier Breed Guide', subtitle: 'Yorkies pack terrier tenacity into a 4–7 lb body. They are bold, intelligent, and affectionate — and require specific health management for their small size. Hypoglycemia in puppies, tracheal damage from collars, and severe dental disease are the primary concerns every Yorkie owner should understand from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>
