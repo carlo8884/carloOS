@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pre-Existing Conditions & Pet Insurance Explained | Vets.co", description: "Pre-existing conditions are the most important pet insurance concept. Learn the difference between curable and incurable, and why enrolling early matters.", path: '/insurance/pre-existing-conditions', type: 'article' })
@@ -51,6 +51,57 @@ export default function PreExistingPage() {
 
           <h2>The Practical Takeaway</h2>
           <p>Because pre-existing exclusions are permanent and broadly defined, the value of pet insurance is highest when you enroll a young, healthy pet with a clean record. Waiting until a pet shows symptoms — or worse, until after a diagnosis — locks out coverage for exactly the conditions most likely to generate large bills. If your pet already has a condition, insurance can still cover unrelated future problems, so it is rarely pointless, but enrolling early remains the most powerful decision an owner can make.</p>
+
+          <h2 id="quote">Carriers and Curable Conditions</h2>
+          <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="embrace"
+            badge="Curable-Condition Policy"
+            badgeEmoji="📋"
+            name="Embrace"
+            subtitle="May re-cover curable pre-existing conditions after a symptom-free period"
+            score={8.5}
+            winner
+            description={
+              <p>Embrace distinguishes curable from incurable pre-existing conditions and, per its policy terms, can resume covering a curable condition after a defined symptom-free period. That makes it worth quoting if your pet has a resolved past issue. Permanent conditions remain excluded — confirm the exact terms and waiting windows when you quote.</p>
+            }
+            specs={[
+              { label: 'Curable conditions', value: 'May re-cover', highlight: 'good' },
+              { label: 'Incurable', value: 'Excluded' },
+              { label: 'Wellness option', value: 'Available' },
+            ]}
+            pros={['Policy distinguishes curable conditions', 'Optional wellness add-on', 'Covers many hereditary conditions']}
+            cons={['Incurable conditions stay excluded', 'Symptom-free window applies']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/embrace/home?s=insurance-pre-existing-conditions"
+            ctaAffiliateProgram="embrace"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="aspca"
+            badge="Established Carrier"
+            badgeEmoji="🏛️"
+            name="ASPCA Pet Health Insurance"
+            subtitle="Accident-and-illness with curable pre-existing flexibility"
+            score={8.1}
+            description={
+              <p>An established accident-and-illness program that, per its policy terms, may cover certain curable pre-existing conditions after a symptom-free period. Worth comparing alongside Embrace if a past condition has resolved. As always, the policy&apos;s own definitions govern — read them before enrolling.</p>
+            }
+            specs={[
+              { label: 'Curable conditions', value: 'May re-cover', highlight: 'good' },
+              { label: 'Core', value: 'Accident and illness' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Curable-condition flexibility', 'Established program', 'Optional preventive add-on']}
+            cons={['Incurable conditions excluded', 'Read symptom-free terms carefully']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/aspca/home?s=insurance-pre-existing-conditions"
+            ctaAffiliateProgram="aspca"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
