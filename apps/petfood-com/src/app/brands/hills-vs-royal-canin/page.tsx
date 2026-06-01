@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
   BuyBox,
 } from '@carloOS/ui'
 
@@ -73,6 +74,13 @@ export default function HillsVsRoyalCaninPage() {
               { label: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
             ]}
           />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="hills-vs-royal-canin"
+          />
         </>
       }
     >
@@ -98,8 +106,8 @@ export default function HillsVsRoyalCaninPage() {
             {
               name: "Hill's Science Diet",
               vendors: [
-                { vendor: 'chewy', href: '/go/chewy-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc' },
-                { vendor: 'amazon', href: '/go/amazon-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc' },
+                { vendor: 'chewy', href: "/go/chewy-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc" },
+                { vendor: 'amazon', href: "/go/amazon-brand/Hill%27s%20Science%20Diet?s=hills-vs-rc" },
               ],
             },
             {

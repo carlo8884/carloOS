@@ -9,6 +9,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -127,6 +129,7 @@ export default function FerretAdrenalDiseasePage() {
                 { label: 'Surgery — Left vs Right', href: '#surgery' },
                 { label: 'Prognosis', href: '#prognosis' },
                 { label: 'Finding an Exotic-Pet Vet', href: '#vet' },
+                { label: 'Comfort & Supportive Care', href: '#supportive' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -576,6 +579,34 @@ export default function FerretAdrenalDiseasePage() {
               searchable.
             </li>
           </ul>
+
+          <h2 id="supportive">Comfort &amp; Supportive Care</h2>
+          <p className="text-sm font-medium text-brand-primary mb-3">
+            The products below are comfort and general-care items for ferrets living with adrenal disease — they do NOT treat adrenal disease. Adrenal disease requires diagnosis and a treatment plan from a veterinarian experienced with ferrets.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <ReviewCard
+            id="ferret-fleece-sleep-sack"
+            name="Ferret Fleece Sleep Sack"
+            subtitle="Enclosed fleece bedding — warmth and burrowing comfort for alopecic or post-surgical ferrets"
+            score={8.8}
+            description={
+              <p>Ferrets with adrenal disease often experience progressive hair loss (alopecia) that reduces their ability to retain body heat — particularly relevant in ferrets recovering from adrenalectomy. An enclosed fleece sleep sack provides warmth and satisfies the burrowing instinct simultaneously. Machine washable, ferret-specific sizing. Replace every 3–6 months or when fabric thins. This is a comfort and warmth tool; it does not treat adrenal disease.
+              </p>
+            }
+            specs={[
+              { label: 'Use case', value: 'Warmth and comfort for alopecic ferrets' },
+              { label: 'Material', value: 'Machine-washable fleece' },
+              { label: 'Ferret-specific sizing', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Warmth for ferrets with alopecia-reduced coat', 'Satisfies burrowing instinct', 'Machine washable', 'Low cost per unit']}
+            cons={['Not a treatment — see your exotic vet', 'Some ferrets chew fleece', 'Replace regularly as fabric thins']}
+            price="$10–18"
+            ctaText="Find ferret fleece sleep sacks"
+            ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="ferret+fleece+sleep+sack+hammock"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

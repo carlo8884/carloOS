@@ -5,6 +5,7 @@ import {
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
+  EmailCapture,
   BuyBox,
 } from '@carloOS/ui'
 
@@ -73,6 +74,13 @@ export default function BlueBuffaloEvaluationPage() {
               { label: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="blue-buffalo-evaluation"
           />
         </>
       }

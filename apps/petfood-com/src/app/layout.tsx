@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter, JetBrains_Mono } from 'next/font/google'
-import { Nav, Footer, buildMetadata } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
+import { displayAds } from '../data/display-ads'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -90,6 +91,11 @@ export default function RootLayout({
         <Nav siteId="petfood-com" />
         <main>{children}</main>
         <Footer siteId="petfood-com" showAffiliateDisclosure />
+
+        {/* Mediavine Journey display ads — gated on
+            NEXT_PUBLIC_MEDIAVINE_PUBLISHER_ID env var.
+            Per csro-dir-2026-W22-011. */}
+        <DisplayAds config={displayAds} />
       </body>
     </html>
   )

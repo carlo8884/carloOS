@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -66,6 +66,7 @@ export default function FerretInsulinomaPage() {
                 { label: 'Treatment Ladder', href: '#treatment' },
                 { label: 'Emergency Crisis Protocol', href: '#emergency' },
                 { label: 'Prognosis', href: '#prognosis' },
+                { label: 'Supportive Nutrition', href: '#supportive' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -197,6 +198,35 @@ export default function FerretInsulinomaPage() {
           <p>
             Quality of life on appropriate management is generally good. Most insulinoma ferrets continue to eat well, play, and engage with their household between episodes. The trajectory is not "rapid decline"; it is "stable on management with intermittent breakthrough episodes that become more frequent over time".
           </p>
+
+          <h2 id="supportive">Supportive Nutrition</h2>
+          <p className="text-sm font-medium text-brand-primary mb-3">
+            The products below are supportive-nutrition tools used alongside veterinary treatment — they do NOT treat or cure insulinoma. Insulinoma requires diagnosis and a management plan from a veterinarian experienced with ferrets.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <ReviewCard
+            id="oxbow-carnivore-care"
+            name="Oxbow Animal Health Critical Care — Carnivore"
+            subtitle="High-calorie recovery supplement for obligate carnivores; used in ferret convalescent care"
+            score={9.2}
+            description={
+              <p>Carnivore Care is a veterinarian-recommended critical-care supplement for carnivores that cannot maintain adequate caloric intake. For insulinoma ferrets, it is used as a high-calorie between-meal supplement and as the go-to food offered during or after a hypoglycemic episode — protein and fat based, not sugar-based, which avoids the rebound insulin spike that pure sugar causes. Syringe-fed or offered from a spoon. Does not treat insulinoma; it is a nutritional support tool under veterinary guidance.
+              </p>
+            }
+            specs={[
+              { label: 'Use case', value: 'Recovery nutrition / hypoglycemia support' },
+              { label: 'Caloric density', value: 'High — designed for convalescent feeding' },
+              { label: 'Protein-based', value: 'Yes — appropriate for obligate carnivores', highlight: 'good' },
+              { label: 'Sugar-based', value: 'No — avoids rebound insulin spike', highlight: 'good' },
+            ]}
+            pros={['Protein/fat-based — no rebound insulin spike', 'Vet-recommended critical care product', 'Syringe-compatible for compromised ferrets', 'Widely available through Chewy, Amazon, and exotic-pet supply']}
+            cons={['Not a meal replacement long-term', 'Not a treatment for insulinoma — vet visit required', 'Some ferrets dislike the texture']}
+            price="$15–25"
+            ctaText="Check price — Carnivore Care"
+            ctaHref="/go/chewy-brand/oxbow+carnivore+care+critical+care?s=health-insulinoma"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="oxbow+carnivore+care+critical+care"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

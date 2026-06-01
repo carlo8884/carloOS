@@ -510,7 +510,7 @@ export default function FerretBathingGroomingPage() {
             cons={['Marshall also sells tea-tree variants — read the label every time', 'Bottle is small for the price']}
             price="$8–14"
             ctaText="Find Marshall ferret shampoo"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-shampoo-original"
           />
@@ -533,9 +533,9 @@ export default function FerretBathingGroomingPage() {
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
             ctaText="Find pet ear cleaner"
-            ctaHref="/go/chewy-brand/epi-otic-ear-cleaner"
+            ctaHref="/go/chewy-brand/epi-otic+pet+ear+cleaner?s=care-bathing-and-grooming"
             ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="pet-ear-cleaner"
+            ctaAffiliateProduct="epi-otic+pet+ear+cleaner"
           />
           <ReviewCard
             id="pet-nail-kit"
@@ -556,9 +556,9 @@ export default function FerretBathingGroomingPage() {
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
             price="$10–18"
             ctaText="Find small-pet nail clippers"
-            ctaHref="/go/chewy-brand/small-pet-nail-clipper-styptic"
+            ctaHref="/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
             ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="small-pet-nail-clipper-styptic"
+            ctaAffiliateProduct="small+pet+nail+clipper+styptic+powder"
           />
 
           <h2 id="faq">FAQ</h2>

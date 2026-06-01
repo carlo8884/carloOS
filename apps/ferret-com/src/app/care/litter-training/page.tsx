@@ -505,7 +505,7 @@ export default function FerretLitterTrainingPage() {
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
             price="$10–18"
             ctaText="Find Marshall Lock-N-Litter pans"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/lock-n-litter-pan?s=care-litter-training"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="lock-n-litter-pan"
           />
@@ -530,9 +530,9 @@ export default function FerretLitterTrainingPage() {
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="$12–25 / 15-30 lb"
             ctaText="Find Yesterday's News paper-pellet litter"
-            ctaHref="/go/chewy-brand/yesterdays-news-litter"
+            ctaHref="/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"
             ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="yesterdays-news-paper-pellet"
+            ctaAffiliateProduct="yesterdays+news+paper+pellet+litter"
           />
 
           <h2 id="faq">FAQ</h2>

@@ -84,6 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/species/swordtail-fish', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/species/white-cloud-mountain-minnow', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: 'https://fish.com/tools/aquarium-cycling-estimator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/aquarium-volume-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/co2-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/heater-wattage-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },

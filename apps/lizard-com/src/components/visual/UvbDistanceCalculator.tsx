@@ -122,7 +122,7 @@ const toneClasses: Record<Verdict['tone'], string> = {
   success: 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200',
   warn: 'border-amber-700/40 bg-amber-950/30 text-amber-200',
   danger: 'border-red-700/40 bg-red-950/30 text-red-200',
-  neutral: 'border-brand-border bg-brand-surface text-brand-text-muted',
+  neutral: 'border-brand-border bg-brand-surface text-brand-text-mid',
 }
 
 export function UvbDistanceCalculator() {
@@ -141,14 +141,14 @@ export function UvbDistanceCalculator() {
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="uvb-species" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="uvb-species" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Species
           </label>
           <select
             id="uvb-species"
             value={speciesSlug}
             onChange={(e) => setSpeciesSlug(e.target.value)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {SPECIES.map((s) => (
               <option key={s.slug} value={s.slug}>
@@ -156,18 +156,18 @@ export function UvbDistanceCalculator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{species.habitat}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{species.habitat}</p>
         </div>
 
         <div>
-          <label htmlFor="uvb-bulb" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="uvb-bulb" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Bulb type &amp; strength
           </label>
           <select
             id="uvb-bulb"
             value={bulbId}
             onChange={(e) => setBulbId(e.target.value)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {BULBS.map((b) => (
               <option key={b.id} value={b.id}>
@@ -175,11 +175,11 @@ export function UvbDistanceCalculator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{bulb.notes}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{bulb.notes}</p>
         </div>
 
         <div>
-          <label htmlFor="uvb-distance" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="uvb-distance" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Distance from bulb to basking surface (inches)
           </label>
           <input
@@ -190,22 +190,22 @@ export function UvbDistanceCalculator() {
             step={1}
             value={distance}
             onChange={(e) => setDistance(Math.max(1, Number(e.target.value) || 0))}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p className="mt-1 text-xs text-brand-text-muted">
+          <p className="mt-1 text-xs text-brand-text-mid">
             Measure to the surface the animal actually occupies — top of the basking branch, top of the slate, etc. Not the floor.
           </p>
         </div>
 
         <div>
-          <label htmlFor="uvb-screen" className="mb-2 block text-sm font-medium text-brand-text-muted">
+          <label htmlFor="uvb-screen" className="mb-2 block text-sm font-medium text-brand-text-mid">
             Screen / barrier between bulb and basking surface
           </label>
           <select
             id="uvb-screen"
             value={screen}
             onChange={(e) => setScreen(e.target.value as ScreenAttenuation)}
-            className="w-full rounded border border-brand-border bg-brand-bg px-3 py-2 text-brand-text"
+            className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {(Object.entries(SCREEN) as Array<[ScreenAttenuation, (typeof SCREEN)[ScreenAttenuation]]>).map(([key, val]) => (
               <option key={key} value={key}>
@@ -213,7 +213,7 @@ export function UvbDistanceCalculator() {
               </option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-muted">{SCREEN[screen].note}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{SCREEN[screen].note}</p>
         </div>
       </div>
 
@@ -222,11 +222,11 @@ export function UvbDistanceCalculator() {
         <p className="mt-1 text-sm">{verdict.detail}</p>
       </div>
 
-      <div className="mt-6 rounded border border-brand-border bg-brand-bg p-4 text-sm text-brand-text-muted">
-        <p className="font-semibold text-brand-text">{target.label}</p>
+      <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4 text-sm text-brand-text-mid">
+        <p className="font-semibold text-brand-text-dark">{target.label}</p>
         <p className="mt-1">{target.description}</p>
         <p className="mt-2">
-          Target UVI range at basking surface: <span className="text-brand-text">{target.min}-{target.max}</span>.
+          Target UVI range at basking surface: <span className="text-brand-text-dark">{target.min}-{target.max}</span>.
         </p>
       </div>
     </div>

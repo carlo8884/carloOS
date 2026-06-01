@@ -78,3 +78,10 @@ img { max-width: 100%; height: auto; display: block; }
   transition: color 0.15s ease;
 }
 .amber-link:hover { color: var(--brand-primary); }
+
+/* ReviewCard Ferret amber accent — winner band nods to the brand's
+   amber-on-chocolate identity instead of the global chocolate primary. */
+[data-review-card="winner"] {
+  border-top-color: var(--brand-amber) !important;
+  box-shadow: 0 2px 12px rgba(201, 157, 95, 0.08);
+}

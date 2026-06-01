@@ -18,7 +18,11 @@ Read ops/bot-queue/CSRO.md + the latest ops/csro/daily/. Run the CSRO loop: git 
 | 5 | Competitive read-through (Ferret/PetFood/Vets) | LOW | queued | Behind first-dollar |
 
 ## Status
+<<<<<<< HEAD
 - **Done:** merged PR #257 (un-red main), filed dir-019 (110-link leak), built IR-Guard (PR #260), IR strategy loop closed.
+=======
+- **Done:** merged PR #251 (un-red main via funnel dedup), filed dir-019 (110-link leak), built IR-Guard (PR #260 merged), IR strategy loop closed.
+>>>>>>> main
 - **Blocked:** nothing on me. Waiting on Carlo: launch ops (~80min DNS), Efty URLs, racing-fork decision.
 - **Carlo needed?** Only for the escalation-tier items above.
 

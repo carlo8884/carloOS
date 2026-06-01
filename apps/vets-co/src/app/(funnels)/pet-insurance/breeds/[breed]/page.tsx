@@ -99,7 +99,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
 
       {/* ─── Top pick ─────────────────────────────────────────────────────── */}
       {recommended && (
-        <section className="mt-10 border-l-4 border-brand-primary bg-brand-bg p-6 rounded-r-lg">
+        <section className="mt-10 border-l-4 border-brand-primary bg-brand-surface p-6 rounded-r-lg">
           <div className="text-xs uppercase tracking-wide text-brand-text-light mb-1">
             Top pick for {b.breedName}s
           </div>

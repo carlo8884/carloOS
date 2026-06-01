@@ -68,6 +68,7 @@ export function ReviewCard({
   return (
     <div
       id={id}
+      data-review-card={winner ? 'winner' : 'standard'}
       className={[
         'bg-brand-white border border-brand-border rounded-lg p-8 mb-6',
         'transition-shadow duration-200 hover:shadow-card-hover',

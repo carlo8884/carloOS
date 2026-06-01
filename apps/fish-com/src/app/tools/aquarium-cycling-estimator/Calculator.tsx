@@ -172,7 +172,7 @@ export default function Calculator() {
                 <p className="font-semibold text-brand-dark">{stage.label}</p>
                 <p className="text-xs text-brand-text-light whitespace-nowrap">Days {stage.rangeDays[0]}–{stage.rangeDays[1]}</p>
               </div>
-              <p className="mt-1 text-sm text-brand-text">{stage.description}</p>
+              <p className="mt-1 text-sm text-brand-text-dark">{stage.description}</p>
             </li>
           ))}
         </ul>

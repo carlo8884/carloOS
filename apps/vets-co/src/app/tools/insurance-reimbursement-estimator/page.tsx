@@ -216,7 +216,7 @@ export default function InsuranceReimbursementEstimatorPage() {
           <li>Carrier-published Sample Policies and Schedules of Benefits referenced under <Link href="/reviews/best-pet-insurance">Best Pet Insurance</Link> and <Link href="/pet-insurance">Pet Insurance hub</Link>.</li>
           <li>State Departments of Insurance (DOI) filings — carrier-specific filed rates by state, where public.</li>
         </ul>
-        <p className="text-sm text-brand-text-muted">
+        <p className="text-sm text-brand-text-mid">
           Vets.co Editorial cites these as the published basis for the standard pet-insurance reimbursement math implemented by the estimator. No carrier ranking or endorsement is implied by the estimator itself.
         </p>
 
