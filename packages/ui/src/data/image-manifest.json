@@ -111,12 +111,67 @@
   "dog-com:category-breeds": {
     "provider": "unsplash",
     "id": "1552053831-71594a27632d",
-    "url": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop",
-    "width": 1200,
-    "height": 800,
+    "url": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
     "sourceUrl": "https://unsplash.com/photos/1552053831-71594a27632d",
     "alt": "A Golden Retriever in natural light",
     "query": "golden retriever portrait outdoor",
+    "curated": true
+  },
+  "dog-com:category-health": {
+    "provider": "unsplash",
+    "id": "1576201836106-db1758fd1c97",
+    "url": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1576201836106-db1758fd1c97",
+    "alt": "A calm dog during a routine veterinary visit",
+    "query": "veterinarian gentle exam dog",
+    "curated": true
+  },
+  "dog-com:category-nutrition": {
+    "provider": "unsplash",
+    "id": "1568640347023-a616a30bc3bd",
+    "url": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1568640347023-a616a30bc3bd",
+    "alt": "A dog eating from a food bowl",
+    "query": "dog eating bowl natural ingredients",
+    "curated": true
+  },
+  "dog-com:category-training": {
+    "provider": "unsplash",
+    "id": "1601758228041-f3b2795255f1",
+    "url": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1601758228041-f3b2795255f1",
+    "alt": "A dog working on a training cue with its handler",
+    "query": "dog training outdoors handler",
+    "curated": true
+  },
+  "dog-com:category-reviews": {
+    "provider": "unsplash",
+    "id": "1583337130417-3346a1be7dee",
+    "url": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1583337130417-3346a1be7dee",
+    "alt": "A dog with everyday gear and toys",
+    "query": "dog with toys gear products",
+    "curated": true
+  },
+  "dog-com:breed-labrador-retriever": {
+    "provider": "unsplash",
+    "id": "1579213838058-2aeeda8d6e2d",
+    "url": "https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1579213838058-2aeeda8d6e2d",
+    "alt": "A Labrador Retriever in natural light",
+    "query": "labrador retriever portrait outdoor",
     "curated": true
   },
   "fish-com:hero": {

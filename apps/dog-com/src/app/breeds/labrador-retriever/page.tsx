@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Labrador Retriever Guide — POMC Gene, Hip Dysplasia | Dog.com', description: 'Labradors have a specific genetic mutation (POMC) causing food obsession and obesity. Hip and elbow dysplasia common. One of the most trainable breeds', path: '/breeds/labrador-retriever', type: 'article' })
@@ -27,6 +27,8 @@ export default function LabradorPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <StockImage manifestKey="dog-com:breed-labrador-retriever" aspect="16:9" variant="wide" priority />
 
         <h2>The POMC Gene — Why Labs Are Obsessed With Food</h2>
         <DropCap>A 2016 study published in Cell Metabolism identified a specific genetic mutation in the POMC (pro-opiomelanocortin) gene that is associated with increased appetite, food-seeking behavior, and obesity in Labrador Retrievers and Flat-Coated Retrievers. Approximately 23% of pet Labradors carry at least one copy of the deletion; in assistance (guide and service) dog populations, the rate is higher — dogs with this mutation may be selected for training because their food motivation makes them exceptionally trainable.</DropCap>

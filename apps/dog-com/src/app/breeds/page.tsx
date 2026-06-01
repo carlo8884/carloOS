@@ -6,7 +6,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
@@ -93,6 +93,11 @@ export default async function BreedsPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
+
+      {/* Hero image */}
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:category-breeds" aspect="16:9" variant="wide" priority />
+      </div>
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">

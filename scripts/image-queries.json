@@ -38,6 +38,18 @@
     "alt": "A dog working on a training cue with its handler",
     "orientation": "landscape"
   },
+  "dog-com:category-reviews": {
+    "query": "dog with toys gear products",
+    "provider": "either",
+    "alt": "A dog with everyday gear and toys",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labrador-retriever": {
+    "query": "labrador retriever portrait outdoor",
+    "provider": "either",
+    "alt": "A Labrador Retriever in natural light",
+    "orientation": "landscape"
+  },
 
   "horses-com:hero": {
     "query": "horse galloping field",

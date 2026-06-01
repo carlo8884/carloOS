@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
@@ -94,6 +94,9 @@ export default function DogHealthHubPage() {
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">100+ health guides drawing on current veterinary guidance. Breed-specific conditions, emergency protocols, preventive care, and honest product comparisons.</p>
+      </div>
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:category-health" aspect="16:9" variant="wide" priority />
       </div>
       <div className="px-container-sm sm:px-container py-14">
         {SECTIONS.map(section => (
