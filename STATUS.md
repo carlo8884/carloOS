@@ -97,7 +97,7 @@ All remaining launch work is operational, not engineering.
 | 6 | Mailchimp / MailerLite / Beehiiv decision (deferred per cost) | ~30 min | P3 |
 | 7 | Email forwarding `editor@<domain>.com` (10 domains) | ~20 min | P3 |
 | 8 | Rotate Anthropic API key after `/ask` MVP validation | ~2 min | P3 |
-| 9 | Vercel project bootstrap for 5 new scaffolds (askthevet/seniorpets/dogpicture/petsupplies/hardmoneyloans) — note: hardmoneyloans is sunset, skip | ~10 min | P3 |
+| 9 | Vercel project bootstrap for 3 active new scaffolds (askthevet/seniorpets/dogpicture) — petsupplies decommissioned (PR #221), hardmoneyloans sunset | ~10 min | P3 |
 
 **Already done:** Amazon Associates tag `boltonpets20-20` portfolio-wide · Skimlinks publisher live on Dog.com · Impact.com site-verification meta tag installed · 10 production Vercel projects bootstrapped.
 
