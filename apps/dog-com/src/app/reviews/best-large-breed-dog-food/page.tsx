@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2025 — WSAVA Picks for 50+ lb Dogs | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2025', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -35,6 +35,7 @@ export default function BestLargeBreedFoodPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas. Large breed puppy formulas have controlled calcium and phosphorus and lower caloric density to slow growth rate, preventing the rapid growth that contributes to hip dysplasia and other developmental orthopedic diseases. Switch to adult large breed formula at 12–18 months depending on breed size.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="royal-canin" badge="Best Overall" badgeEmoji="🏆" name="Royal Canin Large Adult" subtitle="Glucosamine + chondroitin · Tailored kibble texture · WSAVA top tier" score={9.3} winner
               description={<p>Royal Canin Large Adult is formulated with joint health as a central priority — glucosamine (200mg/kg) and chondroitin sulfate (160mg/kg) are included at levels shown to support cartilage health in dogs predisposed to joint disease. The kibble texture is tailored for large breed biting patterns — encouraging thorough chewing rather than bolting food, which reduces bloat risk in deep-chested large breeds. EPA from fish oil provides anti-inflammatory support for joints. Royal Canin is one of three <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-recommended manufacturers with full veterinary nutritionist oversight. Available in multiple size variations — Large Adult (for dogs 55–100 lbs) and Giant Adult (for dogs over 100 lbs).</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Glucosamine', value: '200mg/kg + chondroitin', highlight: 'good' }, { label: 'EPA', value: 'Fish oil — anti-inflammatory' }, { label: 'Kibble', value: 'Tailored for large jaw mechanics' }]}
@@ -42,9 +43,9 @@ export default function BestLargeBreedFoodPage() {
               cons={['More expensive', 'Chicken-based — not for chicken-sensitive dogs']}
               price="$60–80 / 30 lb"
               ctaText="Shop Royal Canin Large Adult →"
-              ctaHref="https://www.chewy.com/s?query=royal+canin+large+adult"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="rc-large-adult"
+              ctaHref="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="royal+canin+large+adult"
             />
             <ReviewCard id="purina" badge="Best High-Protein" badgeEmoji="⭐" name="Purina Pro Plan Large Breed Adult" subtitle="Chicken & rice · EPA + glucosamine · Live probiotics" score={9.2}
               description={<p>Purina Pro Plan Large Breed Adult provides 26% protein (real chicken as first ingredient) and incorporates EPA from fish oil plus glucosamine for joint support. The inclusion of live probiotics (Bacillus coagulans) for digestive health is a meaningful differentiator at this price point. Purina's research investment — including BREATHE trials on respiratory health, joint studies, and cognitive research — backs a formula that balances joint support, digestive health, and overall nutrition for large breed adults. The most widely recommended formula by general practice veterinarians for large breed adults. Also available in salmon and trout variety for dogs with chicken sensitivity.</p>}
@@ -53,9 +54,9 @@ export default function BestLargeBreedFoodPage() {
               cons={['Glucosamine levels not as high as Royal Canin']}
               price="$50–70 / 34 lb"
               ctaText="Shop Purina Pro Plan Large Breed →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+large+breed+adult"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="pp-large-breed"
+              ctaHref="/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="purina+pro+plan+large+breed+adult"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

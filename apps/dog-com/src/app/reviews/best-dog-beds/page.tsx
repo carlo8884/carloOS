@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2025 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2025', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -32,6 +32,7 @@ export default function BestDogBedsPage() {
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="big-barker" badge="Best Orthopedic" badgeEmoji="🏆" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
               description={<p>Big Barker is the only dog bed with clinical research data behind it. A 2018 study in the American Journal of Veterinary Research found that large dogs with arthritis sleeping on Big Barker beds showed significant reductions in pain, stiffness, and lameness compared to dogs sleeping on standard beds. The 7-inch foam is American-manufactured and comes with a 10-year warranty against flattening — a meaningful commitment given most dog beds flatten within months. Built specifically for large and giant breeds (65 lbs+). The price ($279–399 depending on size) is substantial, but the clinical evidence and durability justify it for arthritic large breed dogs.</p>}
               specs={[{ label: 'Foam depth', value: '7 inches — therapeutic grade', highlight: 'good' }, { label: 'Clinical evidence', value: 'Published AJVR study', highlight: 'good' }, { label: 'Warranty', value: '10 years no-flatten', highlight: 'good' }, { label: 'Best for', value: 'Large/giant breeds, arthritis' }]}
@@ -39,9 +40,9 @@ export default function BestDogBedsPage() {
               cons={['Expensive ($279–399)', 'Cover is not machine washable (spot clean only)', 'Heavy — difficult to move']}
               price="$279–399"
               ctaText="Shop Big Barker →"
-              ctaHref="https://www.chewy.com/s?query=big+barker+orthopedic+dog+bed"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="big-barker-orthopedic"
+              ctaHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="big+barker+orthopedic+dog+bed"
             />
             <ReviewCard id="casper" badge="Best Premium" badgeEmoji="⭐" name="Casper Dog Bed" subtitle="Removable machine-washable cover · Durable foam · Memory foam top layer" score={9.1}
               description={<p>Casper translated their human mattress expertise into a well-engineered dog bed. The removable zippered cover is fully machine-washable — a practical necessity for most dogs. The foam construction layers memory foam over a supportive base, providing pressure relief and joint support without the premium cost of Big Barker. Available in multiple sizes from small (for dogs up to 20 lbs) through large (up to 90 lbs). The foam quality is notably better than most beds in this price range — it does not flatten within the first few months of use. Good choice for medium to large breeds without severe arthritis who need a quality bed at a more accessible price.</p>}
@@ -50,9 +51,9 @@ export default function BestDogBedsPage() {
               cons={['Less therapeutic than Big Barker for severe arthritis', 'Cover zippers can be chewed by destructive dogs']}
               price="$125–175"
               ctaText="Shop Casper Dog Bed →"
-              ctaHref="https://www.chewy.com/s?query=casper+dog+bed"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="casper-dog-bed"
+              ctaHref="/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="casper+dog+bed"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

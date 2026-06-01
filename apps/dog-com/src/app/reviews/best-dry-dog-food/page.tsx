@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -87,6 +87,7 @@ export default function BestDogFoodPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
@@ -125,9 +126,9 @@ export default function BestDogFoodPage() {
               price="$55–110 / 30 lbs"
               priceNote="Varies by formula and bag size"
               ctaText="Shop Royal Canin →"
-              ctaHref="https://www.chewy.com/royal-canin"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="royal-canin"
+              ctaHref="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="royal+canin+dry+dog+food"
             />
 
             <ReviewCard
@@ -163,9 +164,9 @@ export default function BestDogFoodPage() {
               ]}
               price="$45–90 / 30 lbs"
               ctaText="Shop Pro Plan →"
-              ctaHref="https://www.chewy.com/purina-pro-plan"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="purina-pro-plan"
+              ctaHref="/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="purina+pro+plan+dry+dog+food"
             />
 
             <ReviewCard
@@ -198,9 +199,9 @@ export default function BestDogFoodPage() {
               price="$60–120 / 30 lbs (Science Diet)"
               priceNote="Prescription Diet varies"
               ctaText="Shop Hill's →"
-              ctaHref="https://www.chewy.com/hills-science-diet"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="hills-science-diet"
+              ctaHref="/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="hills+science+diet+dry+dog+food"
             />
 
             <ReviewCard
@@ -225,9 +226,9 @@ export default function BestDogFoodPage() {
               cons={['Weaker WSAVA compliance than Royal Canin/Purina', 'Premium price', 'Not ideal for dogs with health conditions']}
               price="$90–150 / 25 lbs"
               ctaText="Shop Orijen →"
-              ctaHref="https://www.chewy.com/orijen"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="orijen"
+              ctaHref="/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="orijen+dry+dog+food"
             />
 
             {/* Key buying guidance */}

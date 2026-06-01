@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,6 +70,7 @@ export default function BestDogCratesPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -94,9 +95,9 @@ export default function BestDogCratesPage() {
               price="$40–80"
               priceNote="By size"
               ctaText="Shop MidWest iCrate →"
-              ctaHref="https://www.amazon.com/s?k=midwest+icrate"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="midwest-icrate"
+              ctaHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="midwest+icrate+dog+crate"
             />
 
             <ReviewCard
@@ -120,9 +121,9 @@ export default function BestDogCratesPage() {
               cons={['Significant weight — not portable', 'Premium price point', 'Overkill for calm dogs']}
               price="$300–500"
               ctaText="Shop Impact Crates →"
-              ctaHref="https://impactdogcrates.com"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="impact-dog-crate"
+              ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="impact+high+anxiety+dog+crate"
             />
 
             <ReviewCard
@@ -147,9 +148,9 @@ export default function BestDogCratesPage() {
               price="$40–120"
               priceNote="By size"
               ctaText="Shop Petmate Sky Kennel →"
-              ctaHref="https://www.amazon.com/s?k=petmate+sky+kennel"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="petmate-sky-kennel"
+              ctaHref="/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="petmate+sky+kennel"
             />
 
             <ReviewCard
@@ -173,9 +174,9 @@ export default function BestDogCratesPage() {
               cons={['Not chew-resistant', 'Less ventilation than wire', 'Not for escape artists or puppies', 'Harder to clean']}
               price="$80–160"
               ctaText="Shop Frisco Furniture Crates →"
-              ctaHref="https://www.chewy.com/b/furniture-style-crates-3858"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="frisco-furniture-crate"
+              ctaHref="/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="frisco+furniture+style+dog+crate"
             />
           </div>
 
