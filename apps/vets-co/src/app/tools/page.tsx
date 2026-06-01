@@ -57,6 +57,16 @@ export default function ToolsHub() {
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-3xl mb-12">
+          <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s in the toolkit</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Three references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>did this insurance policy actually pay what I expected</em>, <em>is this an ER right now or a same-day appointment</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            They&apos;re free, do not require a sign-up, and do not collect or sell personal data. The insurance estimator is a pure-browser calculation — your quote inputs never leave the page.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (
             <Link
@@ -69,6 +79,35 @@ export default function ToolsHub() {
               <p className="text-sm leading-relaxed text-brand-text-mid">{tool.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-brand-white px-container-sm sm:px-container py-section">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">How each tool is built</h2>
+          <div className="space-y-5 text-base text-brand-text-mid leading-relaxed">
+            <p>
+              <strong>The reimbursement estimator</strong> models the four levers that every consumer pet-insurance contract uses: the monthly premium, the annual deductible, the reimbursement percentage applied after the deductible is met, and the annual payout cap. For a given expected claim total, it computes the annual reimbursement, the total cost (premium minus reimbursement), and the net benefit vs. paying out of pocket. The math is the standard claims-side accounting — no carrier marketing, no &ldquo;estimated savings&rdquo; that double-counts. If the inputs match what your carrier actually wrote on the quote, the output matches what they will actually pay.
+            </p>
+            <p>
+              <strong>The emergency triage card</strong> is built from the AAHA / VECCS published triage references — owner-side signs that warrant an immediate ER visit, a same-day appointment with your primary vet, or watchful waiting. It is printable so it can live on the fridge. It is not a substitute for calling your veterinarian when something is wrong; it is a decision-support reference for the case where an owner has to make the first move at 11pm.
+            </p>
+            <p>
+              <strong>The find-a-vet directory</strong> indexes practices by state and city with specialty filters. Profile pages link to the practice&apos;s own website rather than wrapping it — Vets.co does not gate the relationship, charge for premium listings, or sell leads to practices. Coverage is partial and being built out; if your veterinarian is not yet listed, the directory will fall through to the AAHA/AVMA national directories on the same page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s not here (and why)</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            We deliberately do not ship a &ldquo;pet symptom checker&rdquo; or anything that would simulate a triage diagnosis from an owner&apos;s description. The clinical evidence on consumer-facing symptom checkers — both human and veterinary — is that they push more emergency referrals than the underlying disease prevalence warrants, and miss the cases where the owner&apos;s judgement of severity differs from the symptom description. We instead point owners at the emergency triage card and at named specialists.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            We also do not ship breed-specific health calculators or genetic-risk estimators. Those exist as breed-specific reference content under <Link href="/breeds" className="text-brand-primary no-underline hover:underline">/breeds</Link> and condition-specific content under <Link href="/health" className="text-brand-primary no-underline hover:underline">/health</Link>, with citations to the published breed-prevalence data. A calculator would imply a precision the underlying data does not support.
+          </p>
         </div>
       </section>
 
