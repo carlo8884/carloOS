@@ -39,6 +39,7 @@ export default function GoldenRetrieverHealthPage() {
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'Golden Retriever Health Guide',
         subtitle: 'More than 60% of Golden Retrievers develop cancer in their lifetime. Understanding the conditions they\'re prone to — and the monitoring schedule that catches problems early — is the most important thing a Golden owner can do.',

@@ -63,6 +63,7 @@ export default function HillsVsRoyalCaninPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="brand"
       hero={{
         title: "Hill's vs Royal Canin",
         subtitle:

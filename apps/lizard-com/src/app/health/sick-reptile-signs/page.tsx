@@ -95,6 +95,7 @@ export default function SickReptileSignsPage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
+      contentType="health"
       hero={{
         title: '12 Signs Your Reptile Is Sick',
         subtitle: 'Reptiles are prey animals — they conceal illness as a survival mechanism. By the time obvious symptoms appear, disease is often advanced. These are the signs to watch for, and what to do about them.',

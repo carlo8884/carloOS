@@ -112,6 +112,7 @@ export default function BasicCommandsPage() {
       <SchemaScript schema={combinedTrainingSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{
         title: 'Basic Dog Commands — The 5 Every Dog Must Know',
         subtitle: 'Sit, down, stay, come, and leave it — taught in this order, with the correct protocol. Teaching order matters: each behavior builds on the last, and stay is not a separate cue from sit.',

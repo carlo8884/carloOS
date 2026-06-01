@@ -1123,6 +1123,7 @@ export type ContentType =
   | 'training'
   | 'care'
   | 'directory'
+  | 'discipline'
   | 'review'
   | 'guide'
 

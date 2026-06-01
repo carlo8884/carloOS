@@ -24,6 +24,7 @@ export default function TeguPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="lizard-com"
+        contentType="species"
         hero={{ title: 'Argentine Black & White Tegu Care Guide', subtitle: 'Salvator merianae — the Argentine black and white tegu is one of the most intelligent, interactive, and physically demanding reptiles in the trade. A 4-foot, 10+ kg omnivore with a 15–20 year lifespan, dog-like behavior, and serious enclosure requirements.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Argentine Tegu', href: '/species/tegu' }]}
         sidebar={<>

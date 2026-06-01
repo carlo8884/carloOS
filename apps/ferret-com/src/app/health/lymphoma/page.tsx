@@ -99,6 +99,7 @@ export default function FerretLymphomaPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Lymphoma in Ferrets',
           subtitle:

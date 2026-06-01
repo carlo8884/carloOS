@@ -92,6 +92,7 @@ export default function FerretBathingGroomingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Bathing and Grooming',
           subtitle:

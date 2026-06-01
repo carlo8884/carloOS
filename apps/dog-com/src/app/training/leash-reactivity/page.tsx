@@ -43,6 +43,7 @@ export default function LeashReactivityPage() {
       <SchemaScript schema={combinedTrainingSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{
         title: 'Leash Reactivity — Why It Happens & How to Reduce It',
         subtitle: 'Leash reactivity (barking, lunging, or snapping at other dogs while on leash) is the most common behavior complaint from dog owners. Understanding why it happens makes the solution logical and achievable.',

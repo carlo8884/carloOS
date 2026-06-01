@@ -26,6 +26,7 @@ export default function LeatherCareGuidePage() {
   return (
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Leather Saddle Care Guide',
         subtitle: 'A complete reference guide to cleaning, conditioning, and storing leather — the habits that extend saddle life by decades and the mistakes that cut it short.',

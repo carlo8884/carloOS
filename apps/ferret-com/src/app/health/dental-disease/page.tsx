@@ -99,6 +99,7 @@ export default function FerretDentalDiseasePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Dental Disease',
           subtitle:

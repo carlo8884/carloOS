@@ -57,6 +57,7 @@ export default function RawPetFoodEvaluationPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="guide"
       hero={{
         title: 'Evaluating Raw Pet Food',
         subtitle:

@@ -35,6 +35,7 @@ export default function GermanShepherdHealthPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'German Shepherd Health Guide',
         subtitle: 'German Shepherds are one of the most capable working breeds in the world — and one of the most predisposed to serious degenerative conditions. Here\'s what every GSD owner must understand.',
