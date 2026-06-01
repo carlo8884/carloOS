@@ -15,9 +15,10 @@
  */
 
 import type { ReactNode } from 'react'
-import type { SiteId } from '@carloOS/config'
+import type { SiteId, ContentType } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
 import { Breadcrumb } from './Breadcrumb'
+import { CrossPortfolioCard } from './CrossPortfolioCard'
 import { SchemaScript, buildBreadcrumbSchema } from './SEOHead'
 
 interface ArticleHero {
@@ -43,6 +44,13 @@ interface ArticleLayoutProps {
   schema?: Record<string, unknown> | Array<Record<string, unknown>>
   /** Footer internal link suggestions */
   relatedLinks?: Array<{ title: string; href: string; category?: string }>
+  /**
+   * If set, renders a CrossPortfolioCard footer pulling 0–3 curated sibling
+   * recommendations from `getCrossPortfolioRecommendations(siteId, contentType)`.
+   * Opt-in — leaves the page unchanged when omitted, so pages that already
+   * place the card inline do not get a duplicate.
+   */
+  contentType?: ContentType
 }
 
 export function ArticleLayout({
@@ -53,6 +61,7 @@ export function ArticleLayout({
   sidebar,
   schema,
   relatedLinks,
+  contentType,
 }: ArticleLayoutProps) {
   // Auto-derive BreadcrumbList JSON-LD from the visual breadcrumb prop.
   // GEO/SEO: a breadcrumb schema is one of the highest-leverage structured-
@@ -206,6 +215,15 @@ export function ArticleLayout({
             ))}
           </div>
         </div>
+      )}
+
+      {/* Cross-portfolio sister-site recommendations (opt-in via contentType) */}
+      {contentType && (
+        <CrossPortfolioCard
+          currentSite={siteId}
+          contentType={contentType}
+          variant="footer"
+        />
       )}
     </>
   )

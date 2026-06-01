@@ -12,6 +12,7 @@ export default function RottweilerPage() {
       hero={{ title: 'Rottweiler Breed Guide', subtitle: 'One of the most powerful working breeds — Rottweilers excel as protection dogs, herders, search-and-rescue animals, and service dogs. Their loyalty and trainability make them exceptional in the right hands. Their significant health predispositions — particularly bone cancer — make informed ownership critical.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Rottweiler', href: '/breeds/rottweiler' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Health Screening</div>
