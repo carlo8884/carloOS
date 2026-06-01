@@ -39,7 +39,7 @@ export default function AllergicReactionsPage() {
           <p><strong>Medications (injected more than oral):</strong> Penicillin, cephalosporins, and some other injectable medications can trigger allergic reactions. Any injectable medication given at a veterinary clinic may cause a reaction — clinics monitor for this routinely after injections.</p>
 
           <h2>Benadryl — When It Helps and When It Doesn't</h2>
-          <p>Diphenhydramine (Benadryl) is appropriate for mild reactions — localized hives without facial swelling, without vomiting, and without any systemic signs. Dose: 1mg/kg orally (plain diphenhydramine only — Benadryl products with decongestants like Benadryl-D are toxic to dogs). This blunts the histamine-driven component of the reaction.</p>
+          <p>Diphenhydramine (Benadryl) is appropriate for mild reactions — localized hives without facial swelling, without vomiting, and without any systemic signs. The correct dose must be confirmed with a veterinarian before giving it, and only plain diphenhydramine should be used — Benadryl products with decongestants like Benadryl-D are toxic to dogs. This blunts the histamine-driven component of the reaction.</p>
           <p><strong>Benadryl is NOT appropriate for:</strong> facial swelling (which can progress to airway obstruction — veterinary steroids and monitoring are needed), vomiting (which indicates a more systemic reaction), any difficulty breathing, or any sign of shock. For these, the dog needs veterinary care, not antihistamines. Anaphylaxis requires epinephrine — antihistamines do not reverse cardiovascular shock.</p>
 
           <h2>After a Reaction — What to Discuss With Your Vet</h2>

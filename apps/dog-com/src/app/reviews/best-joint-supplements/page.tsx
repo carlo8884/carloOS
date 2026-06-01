@@ -156,7 +156,7 @@ export default function BestJointSupplementsPage() {
               description={<p>A 2018 Cornell University study (JAVMA) showed statistically significant reduction in pain and improvement in mobility in arthritic dogs given CBD at 2mg/kg twice daily vs placebo — measured by force plate analysis and pain scoring. The evidence base is early but the 2018 Cornell study is the most rigorous clinical trial in the field to date. The major caveat: the CBD market has minimal quality control — many products contain significantly less CBD than labeled, or contain THC (toxic to dogs). If trying CBD: use products with a Certificate of Analysis from a third-party lab (ElleVet and Vetri-Science are both transparent on this), use dog-specific formulations, and discuss dose with your vet. Do not use human CBD products on dogs.</p>}
               specs={[
                 { label: 'Evidence Level', value: 'Emerging — Cornell 2018 study', highlight: 'good' },
-                { label: 'Effective Dose', value: '2mg/kg twice daily (Cornell)' },
+                { label: 'Study Finding', value: 'Cornell 2018 trial; discuss dosing with your vet' },
                 { label: 'Quality Control', value: 'Highly variable — use COA-verified brands', highlight: 'warn' },
                 { label: 'THC', value: 'Must be 0% — toxic to dogs', highlight: 'warn' },
               ]}

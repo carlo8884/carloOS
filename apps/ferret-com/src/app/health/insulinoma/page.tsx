@@ -162,16 +162,16 @@ export default function FerretInsulinomaPage() {
 
           <h2 id="treatment">Treatment Ladder</h2>
           <p>
-            Standard exotic-pet veterinary practice is a stepped approach. The protocols below summarize the framework described in Quesenberry &amp; Carpenter and in the <em>Vet Clinics NA Exotic Animal Practice</em> ferret endocrine-disease reviews. Doses are listed for orientation only — actual dosing must come from the prescribing veterinarian.
+            Standard exotic-pet veterinary practice is a stepped approach. The protocols below summarize the framework described in Quesenberry &amp; Carpenter and in the <em>Vet Clinics NA Exotic Animal Practice</em> ferret endocrine-disease reviews. These medications are veterinarian-prescribed; dosing must be determined by a veterinarian based on the ferret&apos;s condition, glucose trends, and overall health.
           </p>
           <p>
             <strong>Step 1 — Diet management.</strong> Frequent small meals of a high-protein, low-carbohydrate diet. No fasting. No sugary treats. Many early-stage insulinoma ferrets are stable on diet alone for months.
           </p>
           <p>
-            <strong>Step 2 — Prednisone (prednisolone).</strong> Glucocorticoids promote hepatic gluconeogenesis and counter the hypoglycemic effect of inappropriate insulin secretion. Typical starting dose in the literature is in the range of 0.5–1 mg/kg PO every 12 hours, titrated against fasting glucose and clinical signs. This is the workhorse medication and the majority of medically-managed cases are on prednisolone alone for the duration of treatment.
+            <strong>Step 2 — Prednisone (prednisolone).</strong> Glucocorticoids promote hepatic gluconeogenesis and counter the hypoglycemic effect of inappropriate insulin secretion. This is the workhorse medication, and the majority of medically-managed cases are on prednisolone alone for the duration of treatment. It is titrated by the veterinarian against fasting glucose and clinical signs.
           </p>
           <p>
-            <strong>Step 3 — Diazoxide.</strong> When prednisone alone no longer holds glucose adequately, diazoxide (a direct inhibitor of insulin secretion) is added. Typical dose range in published protocols is 5–30 mg/kg/day divided BID, again titrated to effect. Cost and availability are real barriers for some owners.
+            <strong>Step 3 — Diazoxide.</strong> When prednisone alone no longer holds glucose adequately, a veterinarian may add diazoxide (a direct inhibitor of insulin secretion). Cost and availability are real barriers for some owners.
           </p>
           <p>
             <strong>Step 4 — Surgical partial pancreatectomy and nodulectomy.</strong> Exploratory laparotomy with removal of visible pancreatic nodules, partial pancreatectomy of the affected lobe, and biopsy/removal of any abnormal-appearing tissue. Surgery does not "cure" insulinoma in most ferrets — microscopic disease remains and recurrence is the rule rather than the exception — but it materially extends the period of normoglycemia and reduces or eliminates the need for medication for a meaningful interval. Should be performed by a veterinarian experienced in ferret abdominal surgery.

@@ -6,7 +6,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Best Aquarium Heaters 2025 — Calibrated for Accuracy | Fish.com',
+  title: 'Best Aquarium Heaters 2025 — Ranked for Accuracy | Fish.com',
   description: 'Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports.',
   path: '/reviews/best-aquarium-heaters',
   type: 'article',
@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Best Aquarium Heaters 2025',
-  description: 'Aquarium heaters calibrated for accuracy — Eheim, Fluval, Cobalt ranked.',
+  description: 'Aquarium heaters ranked for accuracy using published specs and aggregated keeper reports — Eheim, Fluval, Cobalt.',
   url: 'https://fish.com/reviews/best-aquarium-heaters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -35,12 +35,12 @@ export default function BestHeatersPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚡ Calibrated Testing · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editorial Comparison · May 2025</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Aquarium Heaters 2025 — Tested for Temperature Accuracy
+          Best Aquarium Heaters 2025 — Ranked for Temperature Accuracy
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We calibrated 8 heaters against a NIST-traceable reference. Here&apos;s what actually holds temperature.
+          A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We ranked 8 heaters using manufacturer-published accuracy specs and aggregated keeper reports. Here&apos;s what holds temperature best on the record.
         </p>
       </div>
       <QuickPicks items={PICKS} />
@@ -69,11 +69,11 @@ export default function BestHeatersPage() {
               badge="Best Overall"
               badgeEmoji="🏆"
               name="Eheim Jager TruTemp"
-              subtitle="Most accurate tested · Recalibratable · German engineering"
+              subtitle="Most accurate on published spec · Recalibratable · German engineering"
               score={9.4}
               winner
               description={<div>
-                <p>The Eheim Jager is the standard against which other aquarium heaters are measured. In our calibration testing, the Jager maintained temperature within ±0.5°F of the set point — the tightest tolerance of any heater tested. The recalibration dial (the small wheel on the side, separate from the main dial) allows fine-tuning to compensate for any drift over time.</p>
+                <p>The Eheim Jager is the standard against which other aquarium heaters are measured. Per manufacturer-published accuracy and aggregated keeper reports, the Jager holds temperature within ±0.5°F of the set point — the tightest tolerance among the heaters compared here. The recalibration dial (the small wheel on the side, separate from the main dial) allows fine-tuning to compensate for any drift over time.</p>
                 <p>The Jager also has an auto shut-off when removed from water — critical for preventing the heater from burning out during water changes when it can inadvertently run in air. Glass construction means it can shatter if dropped, but the thermal stability and accuracy justify the premium position.</p>
               </div>}
               specs={[
@@ -84,7 +84,7 @@ export default function BestHeatersPage() {
                 { label: 'Made In', value: 'Germany' },
                 { label: 'Sizes', value: '25W to 300W' },
               ]}
-              pros={['Most accurate heater tested (±0.5°F)', 'Recalibratable — compensates for drift', 'Auto shut-off prevents burn-out', 'Long track record of reliability', 'Full wattage range available']}
+              pros={['Most accurate on published spec (±0.5°F)', 'Recalibratable — compensates for drift', 'Auto shut-off prevents burn-out', 'Long track record of reliability', 'Full wattage range available']}
               cons={['Glass construction — can shatter', 'Dial is approximate (calibration required)', 'Larger footprint than flat heaters']}
               price="$25–55"
               priceNote="By wattage"
@@ -155,7 +155,7 @@ export default function BestHeatersPage() {
                 { label: 'Housing', value: 'Shatterproof', highlight: 'good' },
                 { label: 'Availability', value: 'All pet stores', highlight: 'good' },
               ]}
-              pros={['Best price of heaters tested', 'Shatterproof — beginner-safe', 'Widely available', 'Adequate for robust community fish']}
+              pros={['Best price of heaters compared', 'Shatterproof — beginner-safe', 'Widely available', 'Adequate for robust community fish']}
               cons={['Less accurate than premium options', 'Not suitable for temperature-sensitive species']}
               price="$18–30"
               ctaText="Shop Aqueon Pro →"

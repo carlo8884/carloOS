@@ -37,7 +37,7 @@ export default function CushingsPage() {
           <p>Abdominal ultrasound differentiates PDH (both adrenals enlarged) from ADH (one adrenal enlarged, one atrophied) and screens for adrenal mass, metastasis, and concurrent abdominal disease.</p>
 
           <h2>Trilostane — Current Standard Treatment</h2>
-          <p>Trilostane (Vetoryl) blocks an enzyme in the adrenal cortex required for cortisol synthesis. Given once or twice daily with food. Starting dose: 1-2 mg/kg once daily. The goal is to reduce cortisol production to the lower half of the normal range — not to eliminate it (adrenal insufficiency from overdosing is a life-threatening complication).</p>
+          <p>Trilostane (Vetoryl) blocks an enzyme in the adrenal cortex required for cortisol synthesis. It is veterinarian-prescribed and given once or twice daily with food; the starting dose must be determined by a veterinarian based on the dog's condition and overall health. The goal is to reduce cortisol production to the lower half of the normal range — not to eliminate it (adrenal insufficiency from overdosing is a life-threatening complication).</p>
           <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Target post-ACTH cortisol: 1-5 μg/dL. Above 9 μg/dL = underdosed. Below 1 μg/dL = overdosed, risk of adrenal crisis. Signs of adrenal crisis from trilostane overdose: vomiting, diarrhea, lethargy, weakness, shaking — a medical emergency requiring IV fluids and steroid supplementation.</p>
 
           <h2>Iatrogenic Cushing's — Steroid-Induced</h2>
