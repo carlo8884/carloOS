@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Condition-Specific Therapeutic Diets | PetFood.com',
   description:
-    'Reference hub for six condition-specific therapeutic diets: food allergies, kidney disease, weight management, diabetes, urinary stones, and gastrointestinal sensitivity.',
+    'Reference hub for six therapeutic diets: food allergies, kidney disease, weight management, diabetes, urinary stones, and GI sensitivity.',
   path: '/conditions',
   type: 'article',
 })

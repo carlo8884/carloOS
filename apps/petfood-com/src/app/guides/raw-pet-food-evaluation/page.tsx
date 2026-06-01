@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Evaluating Raw Pet Food — A Reference',
   description:
-    'Commercial raw vs home-prepared raw, HPP (High Pressure Processing), pathogen risk (Salmonella, Listeria, Campylobacter), the position of WSAVA / AVMA / AAHA / FDA CVM, the Stockman 2013 home-prep diet completeness data, and a harm-reduction framework.',
+    'Commercial vs home-prepared raw, HPP, pathogen risk (Salmonella, Listeria), the WSAVA / AVMA / AAHA / FDA CVM position, and a harm-reduction framework.',
   path: '/guides/raw-pet-food-evaluation',
   type: 'article',
 })

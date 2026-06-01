@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Lifespan — How Long Do Ferrets Live? | Ferret.com',
   description:
-    'How long ferrets live: the typical 5-8 year lifespan, life stages from kit to senior, the factors that influence longevity, and how to support a long, healthy ferret life.',
+    'How long ferrets live: the typical 5-8 year lifespan, life stages from kit to senior, and how to support a long, healthy ferret life.',
   path: '/colors/ferret-lifespan',
   type: 'article',
 })

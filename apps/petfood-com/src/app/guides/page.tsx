@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Pet Food Foundational Guides | PetFood.com',
   description:
-    'Foundational reference guides on pet food — AAFCO completeness, reading labels, our scoring methodology, raw-diet evaluation, recalls, dental nutrition, and choosing a food.',
+    'Foundational pet food guides — AAFCO completeness, reading labels, our scoring methodology, raw-diet evaluation, recalls, and choosing a food.',
   path: '/guides',
 })
 

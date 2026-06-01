@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Seasonal Coat & Shedding — Spring and Fall Molts | Ferret.com',
   description:
-    "Ferrets molt twice a year as daylight changes. What a normal spring and fall coat change looks like, how to manage the shed, and the symmetric hair loss that is not normal.",
+    'Ferrets molt twice a year as daylight changes. What normal spring and fall coat changes look like, how to manage the shed, and abnormal hair loss.',
   path: '/care/seasonal-coat-and-shedding',
   type: 'article',
 })

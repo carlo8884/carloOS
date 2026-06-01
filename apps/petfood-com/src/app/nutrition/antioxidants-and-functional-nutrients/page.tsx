@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Antioxidants and Functional Nutrients in Pet Food | PetFood.com',
   description:
-    'What antioxidants, postbiotics, and functional nutrients do in pet diets, the evidence for vitamin E, selenium, and carotenoids, and how to read functional claims.',
+    'What antioxidants, postbiotics, and functional nutrients do in pet diets — the evidence for vitamin E, selenium, and carotenoids, and reading claims.',
   path: '/nutrition/antioxidants-and-functional-nutrients',
   type: 'article',
 })

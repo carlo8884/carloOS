@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Traveling With a Ferret — Car, Air & Overnight Planning | Ferret.com',
   description:
-    "How to travel safely with a ferret: secure carriers, temperature limits, car-trip basics, the realities of air travel and legality at your destination, and when to leave them home.",
+    'How to travel safely with a ferret: secure carriers, temperature limits, car-trip basics, the realities of air travel, and when to leave them home.',
   path: '/ownership/traveling-with-a-ferret',
   type: 'article',
 })

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Nail Trimming — Technique, Frequency & the Quick | Ferret.com',
   description:
-    'How to trim a ferret’s nails safely: how often, finding the quick, the tools that work, the distraction trick keepers swear by, and what to do if you cut too far.',
+    'How to trim a ferret’s nails safely: how often, finding the quick, the right tools, the distraction trick, and what to do if you cut too far.',
   path: '/care/nail-trimming',
   type: 'article',
 })

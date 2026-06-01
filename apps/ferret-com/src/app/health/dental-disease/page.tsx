@@ -24,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Dental Disease — Brushing, Scaling, Periodontitis | Ferret.com',
   description:
-    'Ferrets accumulate tartar fast and develop gingivitis by age 2-3. Daily brushing, annual scaling under anesthesia, stages of periodontal disease, and why ferret mouths are uniquely at risk.',
+    'Ferrets accumulate tartar fast and develop gingivitis by age 2-3. Daily brushing, annual scaling, the stages of periodontal disease, and the risk factors.',
   path: '/health/dental-disease',
   type: 'article',
 })

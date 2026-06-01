@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Weight-Loss and Weight-Management Diets for Pets | PetFood.com',
   description:
-    'How weight-loss diets work — calorie restriction, protein-sparing, fiber satiety, the difference between light and therapeutic metabolic diets, and safe rate of loss.',
+    'How weight-loss diets work — calorie restriction, protein-sparing, fiber satiety, light vs therapeutic metabolic diets, and safe rate of loss.',
   path: '/diets/weight-management-diets',
   type: 'article',
 })

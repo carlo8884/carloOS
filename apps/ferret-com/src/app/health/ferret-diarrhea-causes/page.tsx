@@ -21,9 +21,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Diarrhea — Causes, Stool Color Clues & When to Worry | Ferret.com',
+  title: 'Ferret Diarrhea — Causes, Stool Clues & When to Worry | Ferret.com',
   description:
-    "Diarrhea in ferrets ranges from a passing diet upset to a sign of serious disease. The common causes — diet change, ECE, Helicobacter, parasites, foreign body, inflammatory and systemic disease — what stool color and consistency reveal, the dehydration risk, and when it is an emergency.",
+    'Diarrhea in ferrets ranges from a passing diet upset to serious disease. Common causes, what stool color and consistency reveal, and when it is an emergency.',
   path: '/health/ferret-diarrhea-causes',
   type: 'article',
 })

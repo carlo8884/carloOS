@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Food Allergy and Elimination Diets for Pets | PetFood.com',
   description:
-    'How cutaneous adverse food reactions are diagnosed, the elimination-diet trial, novel-protein vs hydrolyzed diets, and why over-the-counter limited-ingredient foods often fail.',
+    'How food allergies are diagnosed, the elimination-diet trial, novel-protein vs hydrolyzed diets, and why OTC limited-ingredient foods often fail.',
   path: '/diets/food-allergy-and-elimination-diets',
   type: 'article',
 })

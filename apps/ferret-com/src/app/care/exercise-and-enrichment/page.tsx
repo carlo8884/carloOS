@@ -23,9 +23,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Exercise & Enrichment — Out-of-Cage Time, Tunnels, Dig Boxes | Ferret.com',
+  title: 'Ferret Exercise & Enrichment — Out-of-Cage Time | Ferret.com',
   description:
-    'Ferrets need 4+ hours of out-of-cage time daily. Ferret-proofing the room, tunnels, dig boxes, ball pits, food puzzles, toy rotation, and the environmental-enrichment-vs-adrenal-disease question.',
+    'Ferrets need 4+ hours of out-of-cage time daily. Ferret-proofing, tunnels, dig boxes, ball pits, food puzzles, and toy rotation.',
   path: '/care/exercise-and-enrichment',
   type: 'article',
 })

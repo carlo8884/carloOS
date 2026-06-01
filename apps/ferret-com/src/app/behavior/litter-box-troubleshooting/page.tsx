@@ -20,7 +20,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Litter Box Troubleshooting for Ferrets — Why Misses Happen | Ferret.com',
+  title: 'Ferret Litter Box Troubleshooting — Why Misses Happen | Ferret.com',
   description:
     'A systematic guide to ferret litter-box problems: box placement, corner instinct, cleaning, the right litter, and the medical causes behind a sudden change.',
   path: '/behavior/litter-box-troubleshooting',

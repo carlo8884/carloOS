@@ -24,9 +24,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Bathing & Grooming — Why Less Is More, Ear and Nail Care | Ferret.com',
+  title: 'Ferret Bathing & Grooming — Why Less Is More | Ferret.com',
   description:
-    "Why over-bathing makes ferrets smell worse, not better. Bathing frequency (every 2-3 months max), shampoo choice, ear cleaning, nail trimming, dental routines, and seasonal coat changes.",
+    'Why over-bathing makes ferrets smell worse, not better — bathing frequency, shampoo choice, ear cleaning, nail trimming, and seasonal coat changes.',
   path: '/care/bathing-and-grooming',
   type: 'article',
 })

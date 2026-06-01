@@ -20,9 +20,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Odor & Scent Control — Why Ferrets Smell and What Actually Works | Ferret.com',
+  title: 'Ferret Odor & Scent Control — What Actually Works | Ferret.com',
   description:
-    "Where ferret odor really comes from, why descenting and over-bathing don't fix it, and the husbandry that does: cage and bedding hygiene, diet quality, litter management, and realistic expectations about the natural musk.",
+    "Where ferret odor comes from, why descenting and over-bathing don't fix it, and the husbandry that does: cage hygiene, diet, and litter management.",
   path: '/care/odor-and-scent-control',
   type: 'article',
 })

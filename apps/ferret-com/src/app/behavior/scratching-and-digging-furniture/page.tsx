@@ -20,7 +20,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: "Ferret Scratching & Digging at Furniture — Why & How to Redirect | Ferret.com",
+  title: 'Ferret Scratching & Digging at Furniture | Ferret.com',
   description:
     'Why ferrets dig at couches, carpet edges, and houseplants, the polecat instinct behind it, and how to redirect the drive with dig boxes instead of fighting it.',
   path: '/behavior/scratching-and-digging-furniture',

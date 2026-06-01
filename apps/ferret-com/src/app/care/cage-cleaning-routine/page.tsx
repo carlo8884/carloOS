@@ -20,9 +20,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Cage Cleaning Routine — Daily, Weekly & Deep-Clean Schedule | Ferret.com',
+  title: 'Ferret Cage Cleaning Routine — Daily & Weekly Schedule | Ferret.com',
   description:
-    "A realistic cage-cleaning schedule for ferrets: daily litter and food tasks, weekly bedding and surface cleaning, the monthly deep clean, which disinfectants are ferret-safe, and why over-cleaning can backfire on odor and litter habits.",
+    'A realistic ferret cage-cleaning schedule: daily litter and food tasks, weekly bedding, the monthly deep clean, and ferret-safe disinfectants.',
   path: '/care/cage-cleaning-routine',
   type: 'article',
 })

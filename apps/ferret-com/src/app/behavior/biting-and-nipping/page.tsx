@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Why Ferrets Bite & Nip — And How to Stop It | Ferret.com',
   description:
-    'Why ferrets bite and nip: kit teething, play, fear, and pain. A calm, no-punishment plan to teach bite inhibition, plus when a sudden bite is a medical red flag.',
+    'Why ferrets bite and nip: kit teething, play, fear, and pain. A calm plan to teach bite inhibition, plus when a sudden bite is a medical red flag.',
   path: '/behavior/biting-and-nipping',
   type: 'article',
 })

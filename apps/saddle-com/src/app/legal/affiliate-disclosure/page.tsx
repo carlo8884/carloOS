@@ -4,7 +4,7 @@ import { buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Affiliate Disclosure | Saddle.com',
+  title: 'Affiliate Disclosure Policy | Saddle.com',
   description: 'Saddle.com affiliate disclosure — how we earn commissions and how it affects (and doesn\'t affect) our editorial recommendations.',
   path: '/legal/affiliate-disclosure',
 })

@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Vet Visit Prep — What to Expect, Bloodwork, Cost | Ferret.com',
   description:
-    'How to prep for a ferret annual or sick-visit exam: finding an exotic-pet vet, carrier setup, what bloodwork to expect, typical costs, fasting rules, and what to bring with you.',
+    'How to prep for a ferret annual or sick visit: finding an exotic-pet vet, carrier setup, bloodwork to expect, costs, fasting rules, and what to bring.',
   path: '/health/vet-visit-prep',
   type: 'article',
 })

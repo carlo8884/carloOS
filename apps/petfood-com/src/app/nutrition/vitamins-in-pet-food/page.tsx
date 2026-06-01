@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Vitamins in Pet Food — Fat- and Water-Soluble | PetFood.com',
   description:
-    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in dog and cat diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
+    'The fat-soluble (A, D, E, K) and water-soluble (B-complex, C) vitamins in pet diets, deficiency and toxicity signs, and why cats need pre-formed vitamin A.',
   path: '/nutrition/vitamins-in-pet-food',
   type: 'article',
 })

@@ -4,9 +4,9 @@ import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, Stock
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Colors & Patterns — Sable, Albino, DEW, Cinnamon & More | Ferret.com',
+  title: 'Ferret Colors & Patterns — Sable, Albino, DEW & More | Ferret.com',
   description:
-    'A field guide to ferret colors and coat patterns — sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — plus lifespan and how to choose a healthy ferret.',
+    'A field guide to ferret colors and patterns — sable, albino, dark-eyed white, cinnamon, champagne, black, chocolate — plus lifespan and choosing one.',
   path: '/colors',
 })
 

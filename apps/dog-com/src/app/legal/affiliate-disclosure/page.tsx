@@ -4,7 +4,7 @@ import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Affiliate Disclosure | Dog.com',
+  title: 'Affiliate Disclosure Policy | Dog.com',
   description: 'Dog.com affiliate disclosure — how we earn commissions and how it affects (and doesn\'t affect) our editorial recommendations.',
   path: '/legal/affiliate-disclosure',
 })

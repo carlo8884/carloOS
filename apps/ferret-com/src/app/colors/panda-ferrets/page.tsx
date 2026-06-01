@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Panda Ferrets — The White-Headed Pattern | Ferret.com',
   description:
-    "Panda ferrets have a fully white head and shoulders over a colored body, with white feet and a colored saddle. What defines the panda pattern, how it relates to deafness, and how it differs from blaze.",
+    'Panda ferrets have a white head and shoulders over a colored body with white feet. What defines the panda pattern, the deafness link, and vs blaze.',
   path: '/colors/panda-ferrets',
   type: 'article',
 })

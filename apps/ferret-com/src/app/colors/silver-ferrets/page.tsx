@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Silver Ferrets — The Greying, Shifting Coat | Ferret.com',
   description:
-    "Silver ferrets carry white-tipped guard hairs that give a frosted, grey-over-dark look. Why silver is a transitional coat, how it differs from DEW, and what it tells you about age.",
+    'Silver ferrets carry white-tipped guard hairs for a frosted, grey-over-dark look. Why silver is a transitional coat and how it differs from DEW.',
   path: '/colors/silver-ferrets',
   type: 'article',
 })

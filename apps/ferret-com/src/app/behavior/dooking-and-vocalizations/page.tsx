@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Sounds Decoded — Dooking, Hissing & Screaming | Ferret.com',
   description:
-    'What ferret sounds mean: the happy dook, the warning hiss, the alarm scream, chirps, whimpers, and barks. A field guide to ferret vocalizations and what each one tells you.',
+    'What ferret sounds mean: the happy dook, warning hiss, alarm scream, chirps, whimpers, and barks — a field guide to ferret vocalizations.',
   path: '/behavior/dooking-and-vocalizations',
   type: 'article',
 })

@@ -4,7 +4,7 @@ import { buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
-  title: 'Affiliate Disclosure | Lizard.com',
+  title: 'Affiliate Disclosure Policy | Lizard.com',
   description: 'Lizard.com affiliate disclosure — how we earn commissions and how it affects (and doesn\'t affect) our editorial recommendations.',
   path: '/legal/affiliate-disclosure',
 })

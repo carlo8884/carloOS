@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Sable Ferrets — The Classic Masked Look | Ferret.com',
   description:
-    'Sable is the most common ferret color: warm brown guard hairs, cream undercoat, and a dark bandit mask. How sable differs from black sable, and how it shifts each season.',
+    'Sable is the most common ferret color: warm brown guard hairs, cream undercoat, and a dark mask. How it differs from black sable and shifts seasonally.',
   path: '/colors/sable-ferrets',
   type: 'article',
 })

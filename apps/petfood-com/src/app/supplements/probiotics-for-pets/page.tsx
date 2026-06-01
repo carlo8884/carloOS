@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Probiotics for Dogs and Cats — The Evidence | PetFood.com',
   description:
-    'How probiotics and prebiotics support the gut, the strain-specific evidence, why human probiotics are not interchangeable, viability and quality, and proper use.',
+    'How probiotics and prebiotics support the gut — strain-specific evidence, why human products differ, viability and quality, and proper use.',
   path: '/supplements/probiotics-for-pets',
   type: 'article',
 })

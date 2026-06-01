@@ -20,7 +20,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Leash & Harness Training for Ferrets — A Step-by-Step Plan | Ferret.com',
+  title: 'Leash & Harness Training for Ferrets — Step by Step | Ferret.com',
   description:
     'Why ferrets need an H-style harness over a collar, the two-finger fit rule, an indoor break-in schedule, and how to introduce outdoor walks safely.',
   path: '/behavior/leash-and-harness-training',

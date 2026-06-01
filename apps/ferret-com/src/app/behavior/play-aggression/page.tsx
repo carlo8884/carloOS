@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Play Aggression — Rough Play vs. Real Fighting | Ferret.com',
   description:
-    'How to tell normal rough ferret play from real aggression: the weasel war dance, neck-biting, dominance dragging, and when to step in. Plus how to calm an over-aroused ferret.',
+    'Telling normal rough ferret play from real aggression: the weasel war dance, neck-biting, dominance dragging, and how to calm an over-aroused ferret.',
   path: '/behavior/play-aggression',
   type: 'article',
 })

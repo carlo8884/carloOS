@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Is a Ferret Right for You? An Honest Self-Assessment | Ferret.com',
   description:
-    'A candid decision guide for prospective ferret owners: time, cost, smell, legality, other pets, lifespan, and the realities that make a ferret a great fit for some homes and a poor one for others.',
+    'A candid decision guide for prospective ferret owners: time, cost, smell, legality, other pets, and lifespan — who a ferret fits, and who it does not.',
   path: '/ownership/is-a-ferret-right-for-you',
   type: 'article',
 })

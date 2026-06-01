@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Albino Ferrets — White Coat, Red Eyes, the Genetics | Ferret.com',
   description:
-    'Albino ferrets: pure white coats, pink noses, and red eyes from a total lack of melanin. The genetics of albinism, the lab history, and care notes for white ferrets.',
+    'Albino ferrets: pure white coats, pink noses, and red eyes from a lack of melanin. The genetics of albinism and care notes for white ferrets.',
   path: '/colors/albino-ferrets',
   type: 'article',
 })

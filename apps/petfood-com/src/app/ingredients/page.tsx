@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Pet Food Ingredients — Reference Library | PetFood.com',
   description:
-    'Independent reference on commonly-discussed pet food ingredients — animal protein sources, grain-free and DCM, preservatives — anchored to FDA CVM and AAFCO sources.',
+    'Independent reference on pet food ingredients — animal protein sources, grain-free and DCM, and preservatives — anchored to FDA CVM and AAFCO sources.',
   path: '/ingredients',
 })
 

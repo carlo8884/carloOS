@@ -4,7 +4,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Transitioning a Ferret to a New Food — A Slow, Safe Method | Ferret.com',
+  title: 'Transitioning a Ferret to New Food — A Safe Method | Ferret.com',
   description:
     'Why ferrets imprint on food and resist change, a gradual mixing schedule, the soup-and-scent tricks for stubborn ferrets, and the warning signs to stop.',
   path: '/diet/transitioning-foods',

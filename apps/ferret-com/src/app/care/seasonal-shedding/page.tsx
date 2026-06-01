@@ -20,9 +20,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Seasonal Shedding — Coat Blows, Grooming & Hairball Risk | Ferret.com',
+  title: 'Ferret Seasonal Shedding — Grooming & Hairball Risk | Ferret.com',
   description:
-    "Ferrets blow their coat twice a year in response to changing daylight. What a normal seasonal shed looks like, how to groom through it, the hairball-obstruction risk, and when heavy shedding signals adrenal disease instead.",
+    'Ferrets blow their coat twice a year as daylight changes. What a normal shed looks like, how to groom through it, and the hairball risk.',
   path: '/care/seasonal-shedding',
   type: 'article',
 })

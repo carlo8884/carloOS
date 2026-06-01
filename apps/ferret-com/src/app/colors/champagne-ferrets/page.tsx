@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Champagne Ferrets — The Diluted Sable Coat | Ferret.com',
   description:
-    'Champagne is a pale, milky-coffee dilution of the sable coat with a faint mask and pinkish nose. What champagne looks like, how it differs from cinnamon and chocolate, and why the line is blurry.',
+    'Champagne is a pale, milky-coffee dilution of the sable coat with a faint mask. What it looks like, how it differs from cinnamon and chocolate.',
   path: '/colors/champagne-ferrets',
   type: 'article',
 })

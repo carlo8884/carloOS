@@ -4,7 +4,7 @@ import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Multi-Level Ferret Housing — Levels, Ramps & Vertical Layout | Ferret.com',
+  title: 'Multi-Level Ferret Housing — Ramps & Vertical Layout | Ferret.com',
   description:
     'How to plan a multi-level ferret cage: usable habitat per square foot, ramp safety and fall risk, level spacing, zoning food/litter/sleep, and connecting cages.',
   path: '/care/multi-level-housing',

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret-Proofing Your Home — Room-by-Room Hazard Checklist | Ferret.com',
   description:
-    'A room-by-room ferret-proofing guide: gap-blocking, recliner and appliance dangers, ingestion hazards, toxic houseplants, and how to build a safe free-roam space.',
+    'A room-by-room ferret-proofing guide: gap-blocking, recliner and appliance dangers, ingestion hazards, and building a safe free-roam space.',
   path: '/care/ferret-proofing-your-home',
   type: 'article',
 })

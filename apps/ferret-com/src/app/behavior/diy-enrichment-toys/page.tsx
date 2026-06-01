@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'DIY Ferret Enrichment Toys — Cheap, Safe & Fun | Ferret.com',
   description:
-    'Build cheap, safe ferret enrichment at home: tunnels, dig boxes, ball pits, and foraging games. Plus the safety rules that keep DIY toys from becoming a blockage hazard.',
+    'Build cheap, safe ferret enrichment at home: tunnels, dig boxes, ball pits, and foraging games — plus safety rules that prevent blockage hazards.',
   path: '/behavior/diy-enrichment-toys',
   type: 'article',
 })

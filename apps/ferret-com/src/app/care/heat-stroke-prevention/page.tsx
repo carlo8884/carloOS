@@ -4,9 +4,9 @@ import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Heat Stroke Prevention — Safe Temperatures & Warning Signs | Ferret.com',
+  title: 'Ferret Heat Stroke Prevention — Safe Temperatures | Ferret.com',
   description:
-    'Ferrets overheat dangerously fast. Safe ambient temperature ranges, why ferrets cannot sweat, the early warning signs of heat stress, prevention setups, and emergency cooling steps.',
+    'Ferrets overheat dangerously fast. Safe temperature ranges, why ferrets cannot sweat, early heat-stress signs, and emergency cooling steps.',
   path: '/care/heat-stroke-prevention',
   type: 'article',
 })

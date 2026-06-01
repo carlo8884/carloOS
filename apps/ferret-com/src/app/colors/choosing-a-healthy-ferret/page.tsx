@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Choosing a Healthy Ferret — Pre-Adoption Checklist | Ferret.com',
   description:
-    'A head-to-tail checklist for choosing a healthy ferret: what a sound kit or adult looks like, the questions to ask, breeder vs. shelter vs. pet store, and red flags to avoid.',
+    'A head-to-tail checklist for choosing a healthy ferret: what a sound kit or adult looks like, the questions to ask, and red flags to avoid.',
   path: '/colors/choosing-a-healthy-ferret',
   type: 'article',
 })

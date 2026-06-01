@@ -21,9 +21,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Signs of Pain in Ferrets — How to Recognize a Hurting Ferret | Ferret.com',
+  title: 'Signs of Pain in Ferrets — How to Recognize It | Ferret.com',
   description:
-    "Ferrets hide pain by instinct. The behavioral and physical signs that a ferret is hurting — teeth-grinding, hunched posture, appetite loss, lethargy, and pawing at the mouth — plus why pain control is a veterinarian's call and when to treat it as an emergency.",
+    'Ferrets hide pain by instinct. The signs a ferret is hurting — teeth-grinding, hunched posture, appetite loss, lethargy — and when it is an emergency.',
   path: '/health/signs-of-pain',
   type: 'article',
 })

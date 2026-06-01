@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: "Hill's vs Royal Canin — Veterinary Channel Comparison",
   description:
-    "Side-by-side reference comparison of Hill's Pet Nutrition (Colgate-Palmolive) and Royal Canin (Mars Petcare) — corporate context, manufacturing, recall history, AAFCO posture, veterinary diet lines, and WSAVA-aligned criteria.",
+    "Hill's Pet Nutrition vs Royal Canin compared — corporate ownership, manufacturing, recall history, AAFCO posture, vet diet lines, and WSAVA-aligned criteria.",
   path: '/brands/hills-vs-royal-canin',
   type: 'article',
 })

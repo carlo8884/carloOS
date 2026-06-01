@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Ear Cleaning — Technique, Frequency & Ear Mites | Ferret.com',
   description:
-    'How to clean a ferret’s ears safely: normal reddish-brown wax versus a problem, gentle technique, what never to use, and how to tell ear mites from routine buildup.',
+    'How to clean a ferret’s ears safely: normal reddish-brown wax versus a problem, gentle technique, and telling ear mites from buildup.',
   path: '/care/ear-cleaning',
   type: 'article',
 })

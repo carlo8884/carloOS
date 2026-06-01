@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Kibble vs Canned Food for Cats — The Feline Case | PetFood.com',
   description:
-    'Why the wet-vs-dry question is sharper for cats — obligate-carnivore physiology, hydration, carbohydrate, weight, and urinary health all favor wet for many cats.',
+    'Why wet vs dry is sharper for cats — obligate-carnivore physiology, hydration, carbohydrate, weight, and urinary health often favor wet food.',
   path: '/compare/kibble-vs-canned-for-cats',
   type: 'article',
 })

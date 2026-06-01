@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Senior Dog and Cat Diets — What Changes | PetFood.com',
   description:
-    'What senior nutrition actually means without an AAFCO senior life stage, the energy and protein debate, supporting muscle mass, and tailoring to age-related disease.',
+    'What senior nutrition means without an AAFCO senior life stage — the energy and protein debate, muscle mass, and tailoring to age-related disease.',
   path: '/diets/senior-pet-diets',
   type: 'article',
 })

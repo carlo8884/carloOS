@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Insurance Basics — How Exotic-Pet Coverage Works | Ferret.com',
   description:
-    "A plain-English explainer on exotic-pet insurance for ferrets: what it typically covers, common exclusions, waiting periods, and how to weigh it against a dedicated vet savings fund.",
+    'A plain-English explainer on ferret insurance: what it typically covers, common exclusions, waiting periods, and weighing it against a vet savings fund.',
   path: '/ownership/ferret-insurance-basics',
   type: 'article',
 })

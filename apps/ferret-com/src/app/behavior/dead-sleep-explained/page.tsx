@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Dead Sleep Explained — Why Ferrets Sleep So Deeply | Ferret.com',
   description:
-    "Ferret 'dead sleep' (SHDS) is a deep, hard-to-wake state that terrifies new owners. Learn why ferrets sleep so heavily, how to tell it from an emergency, and what is normal.",
+    "Ferret 'dead sleep' (SHDS) is a deep, hard-to-wake state. Learn why ferrets sleep so heavily, how to tell it from an emergency, and what is normal.",
   path: '/behavior/dead-sleep-explained',
   type: 'article',
 })

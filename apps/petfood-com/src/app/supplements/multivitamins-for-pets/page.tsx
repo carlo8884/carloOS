@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Do Pets Need Multivitamins? — The Evidence | PetFood.com',
   description:
-    'Why animals on complete diets rarely need a multivitamin, the over-supplementation risk for fat-soluble vitamins, when supplementation is justified, and quality.',
+    'Why pets on complete diets rarely need a multivitamin — the over-supplementation risk for fat-soluble vitamins, when it is justified, and quality.',
   path: '/supplements/multivitamins-for-pets',
   type: 'article',
 })
