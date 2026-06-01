@@ -150,7 +150,7 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'vets-co': {
-    primary: '#0A8A7A',
+    primary: '#0A6B5E',
     primaryLight: '#12B09C',
     primaryPale: '#E6F5F3',
     primaryDark: '#076B5E',
@@ -176,7 +176,7 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'fish-com': {
-    primary: '#0E6B8A',
+    primary: '#0E5F7E',
     primaryLight: '#1490B8',
     primaryPale: '#E6F4F9',
     primaryDark: '#0A5470',
@@ -202,7 +202,7 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'saddle-com': {
-    primary: '#A07840',
+    primary: '#8C5A2A',
     primaryLight: '#C8A060',
     primaryPale: '#F2EBE0',
     primaryDark: '#7A5C28',
@@ -228,7 +228,7 @@ export const themes: Record<SiteId, SiteTheme> = {
   },
 
   'lizard-com': {
-    primary: '#7AB52A',
+    primary: '#9AD140',
     primaryLight: '#9AD040',
     primaryPale: '#F0F7E6',
     primaryDark: '#5C8A1A',
@@ -255,7 +255,7 @@ export const themes: Record<SiteId, SiteTheme> = {
 
   'horses-com': {
     // Warm equestrian palette — saddle leather browns, cream, dark green accents.
-    primary: '#6E4A28',
+    primary: '#1F3A2F',
     primaryLight: '#8C6238',
     primaryPale: '#F4ECDF',
     primaryDark: '#523618',
@@ -282,7 +282,7 @@ export const themes: Record<SiteId, SiteTheme> = {
 
   'petfood-com': {
     // Clean food-brand palette — warm white background with a single warm accent.
-    primary: '#D9622A',
+    primary: '#3F5C3A',
     primaryLight: '#E87A40',
     primaryPale: '#FBEEE3',
     primaryDark: '#B04A18',
@@ -336,7 +336,7 @@ export const themes: Record<SiteId, SiteTheme> = {
 
   // ─── Ferrets.com — muted reference / directory sister site ────────────
   'ferrets-com': {
-    primary: '#4A3828',
+    primary: '#6E4A28',
     primaryLight: '#6E5538',
     primaryPale: '#EFE8DC',
     primaryDark: '#2E2218',
