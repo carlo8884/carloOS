@@ -1,7 +1,6 @@
 {
   "$schema": "Image query manifest. Each key maps to a search query + provider preference + alt text template.",
   "$instructions": "When adding new image needs, append entries here. Run `node scripts/sync-images.mjs` to populate the manifest with actual URLs + photographer credits.",
-
   "dog-com:hero": {
     "query": "dog portrait natural light",
     "provider": "either",
@@ -50,7 +49,6 @@
     "alt": "A Labrador Retriever in natural light",
     "orientation": "landscape"
   },
-
   "horses-com:hero": {
     "query": "horse galloping field",
     "provider": "either",
@@ -75,7 +73,6 @@
     "alt": "A dressage horse and rider in competition",
     "orientation": "landscape"
   },
-
   "petfood-com:hero": {
     "query": "raw ingredients pet food close-up",
     "provider": "either",
@@ -118,7 +115,6 @@
     "alt": "A scoring clipboard and notebook — methodology reference, no human subject",
     "orientation": "landscape"
   },
-
   "petfoods-com:hero": {
     "query": "pet food ingredients comparison",
     "provider": "either",
@@ -137,7 +133,6 @@
     "alt": "Raw meat, fish, and vegetables — common pet food ingredients",
     "orientation": "landscape"
   },
-
   "ferret-com:hero": {
     "query": "ferret pet playing",
     "provider": "either",
@@ -192,7 +187,6 @@
     "alt": "A ferret resting comfortably",
     "orientation": "landscape"
   },
-
   "ferrets-com:hero": {
     "query": "two ferrets playing",
     "provider": "either",
@@ -205,7 +199,6 @@
     "alt": "Portrait of a ferret's face",
     "orientation": "landscape"
   },
-
   "fish-com:hero": {
     "query": "planted freshwater aquarium",
     "provider": "either",
@@ -248,7 +241,6 @@
     "alt": "A portrait of a betta fish with flaring fins",
     "orientation": "landscape"
   },
-
   "saddle-com:hero": {
     "query": "english jumping saddle leather",
     "provider": "either",
@@ -291,7 +283,6 @@
     "alt": "Close-up of vintage saddle leather and stitching",
     "orientation": "landscape"
   },
-
   "lizard-com:hero": {
     "query": "crested gecko portrait macro",
     "provider": "either",
@@ -334,7 +325,6 @@
     "alt": "A bioactive vivarium with live plants and substrate",
     "orientation": "landscape"
   },
-
   "vets-co:hero": {
     "query": "stethoscope warm wood texture macro",
     "provider": "either",
@@ -371,7 +361,6 @@
     "alt": "A stethoscope on a clinician's desk — texture-led, no human subject",
     "orientation": "landscape"
   },
-
   "lizard-com:tool-uvb-calculator": {
     "query": "reptile basking lamp terrarium",
     "provider": "either",
@@ -384,63 +373,54 @@
     "alt": "A naturalistic bioactive reptile enclosure with live plants and hides",
     "orientation": "landscape"
   },
-
   "saddle-com:tool-tree-size": {
     "query": "saddle fitting horse withers",
     "provider": "either",
     "alt": "A saddle being assessed for fit on a horse's withers",
     "orientation": "landscape"
   },
-
   "vets-co:tool-insurance-estimator": {
     "query": "insurance paperwork pen close-up",
     "provider": "either",
     "alt": "Insurance paperwork and a pen — texture-led, no human subject",
     "orientation": "landscape"
   },
-
   "horses-com:tool-bcs-calculator": {
     "query": "horse body condition assessment",
     "provider": "either",
     "alt": "A horse standing square for body condition assessment",
     "orientation": "landscape"
   },
-
   "petfood-com:tool-food-cost": {
     "query": "dog food bowl measuring cup",
     "provider": "either",
     "alt": "A measuring cup beside a bowl of kibble",
     "orientation": "landscape"
   },
-
   "ferret-com:tool-food-evaluator": {
     "query": "ferret eating bowl",
     "provider": "either",
     "alt": "A pet ferret eating from its food bowl",
     "orientation": "landscape"
   },
-
   "fish-com:tool-cycling-estimator": {
     "query": "aquarium test kit ammonia",
     "provider": "either",
     "alt": "An aquarium water test kit measuring ammonia and nitrite",
     "orientation": "landscape"
   },
-
   "askthevet:tool-symptom-triage": {
     "query": "pet owner calling vet phone",
     "provider": "either",
     "alt": "A pet owner consulting their veterinarian by phone",
     "orientation": "landscape"
   },
-
   "seniorpets:tool-wellness-checkin": {
     "query": "senior dog veterinary exam",
     "provider": "either",
     "alt": "A senior dog being examined during a wellness visit",
     "orientation": "landscape"
   },
-
   "petfood-com:nutrition-hero": {
     "query": "grains legumes seeds bowls",
     "provider": "unsplash",
@@ -471,7 +451,6 @@
     "alt": "An arrangement of contrasting ingredients viewed from above",
     "orientation": "landscape"
   },
-
   "vets-co:health-hero": {
     "query": "medical reference books shelf",
     "provider": "unsplash",
@@ -494,6 +473,114 @@
     "query": "clinic building entrance architecture",
     "provider": "unsplash",
     "alt": "The exterior entrance of a clinic building",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-sable": {
+    "query": "sable ferret coat portrait",
+    "provider": "either",
+    "alt": "A sable ferret showing warm brown guard hairs and a dark facial mask",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-albino": {
+    "query": "albino white ferret portrait",
+    "provider": "either",
+    "alt": "A light-coated ferret resting, representative of pale ferret coats",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-dark-eyed-white": {
+    "query": "dark eyed white ferret",
+    "provider": "either",
+    "alt": "A ferret with a pale coat looking toward the camera",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-cinnamon": {
+    "query": "cinnamon ferret coat",
+    "provider": "either",
+    "alt": "A warm-toned ferret showing reddish-brown coat coloring",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-champagne": {
+    "query": "champagne ferret coat",
+    "provider": "either",
+    "alt": "A pale milky-coffee toned ferret being held gently",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-black": {
+    "query": "black ferret coat dark",
+    "provider": "either",
+    "alt": "A dark-coated ferret mid-movement showing deep pigment",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-chocolate": {
+    "query": "chocolate brown ferret coat",
+    "provider": "either",
+    "alt": "A warm-brown coated ferret looking toward the camera",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-silver": {
+    "query": "silver grey ferret coat",
+    "provider": "either",
+    "alt": "A frosted grey-toned ferret resting",
+    "orientation": "landscape"
+  },
+  "ferret-com:color-panda": {
+    "query": "panda pattern ferret white head",
+    "provider": "either",
+    "alt": "A ferret showing a white-headed coat pattern",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-overview": {
+    "query": "ferret colors patterns reference",
+    "provider": "either",
+    "alt": "A close ferret portrait showing coat color and markings",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-adrenal": {
+    "query": "ferret resting adrenal health",
+    "provider": "either",
+    "alt": "A ferret resting calmly, illustrating an adrenal-disease reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-insulinoma": {
+    "query": "ferret resting insulinoma",
+    "provider": "either",
+    "alt": "A ferret resting quietly, illustrating an insulinoma reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-dental": {
+    "query": "ferret face teeth dental",
+    "provider": "either",
+    "alt": "A close ferret portrait suited to a dental-health reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-aging": {
+    "query": "senior ferret resting aging",
+    "provider": "either",
+    "alt": "An older ferret resting calmly, suited to aging-care content",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-cage-setup": {
+    "query": "ferret cage habitat exploring",
+    "provider": "either",
+    "alt": "A curious ferret exploring, suited to a cage-setup guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-grooming": {
+    "query": "ferret grooming handling bath",
+    "provider": "either",
+    "alt": "A ferret held gently during grooming and handling",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-nail-trim": {
+    "query": "ferret nail trim handling",
+    "provider": "either",
+    "alt": "A ferret held securely during routine handling",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-diet-basics": {
+    "query": "ferret eating diet food",
+    "provider": "either",
+    "alt": "A ferret near its food, suited to a diet-basics guide",
     "orientation": "landscape"
   }
 }

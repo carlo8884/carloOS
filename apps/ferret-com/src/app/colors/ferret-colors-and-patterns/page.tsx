@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  StockImage,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -126,6 +127,11 @@ export default function FerretColorsPatternsPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:colors-overview"
+            aspect="16:9"
+            variant="inline"
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"

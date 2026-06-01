@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -80,6 +80,11 @@ export default function FerretCageSetupPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:care-cage-setup"
+            aspect="16:9"
+            variant="inline"
+          />
           <h2 id="sizing">Cage Sizing and Bar Spacing</h2>
           <p>
             The American Ferret Association recommends a minimum cage floor area of roughly 24 × 24 inches with a minimum height of 18 inches per ferret, with strong preference for multi-level cages that increase usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — most keepers settle on a 36 × 24-inch or larger footprint with at least three levels.

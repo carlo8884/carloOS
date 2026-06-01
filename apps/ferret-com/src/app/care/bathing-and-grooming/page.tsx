@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  StockImage,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -145,6 +146,11 @@ export default function FerretBathingGroomingPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:care-grooming"
+            aspect="16:9"
+            variant="inline"
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"

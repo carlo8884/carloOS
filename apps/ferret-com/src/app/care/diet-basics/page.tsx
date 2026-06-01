@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -88,6 +88,11 @@ export default function FerretDietBasicsPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:care-diet-basics"
+            aspect="16:9"
+            variant="inline"
+          />
           <h2 id="physiology">Obligate Carnivore Physiology</h2>
           <p>
             Ferrets descend from the European polecat and retain a strictly carnivorous digestive system. The gastrointestinal tract is short (roughly 5× body length, compared to 8–9× in cats and 4–6× in dogs) and lacks the long fermenting colon that grain-eating mammals use to extract energy from plant cell walls. Transit time from ingestion to defecation is approximately 3–4 hours. The pancreas does not produce the carbohydrate-handling enzyme profile seen in omnivores, and there is no functional cecum.
