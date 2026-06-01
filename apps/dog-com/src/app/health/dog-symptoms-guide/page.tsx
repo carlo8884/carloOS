@@ -6,7 +6,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: '15 Dog Symptoms You Should Never Ignore | Dog.com',
-  description: 'A board-certified emergency vet explains 15 dog symptoms requiring immediate care — and how to tell when something can wait vs. when to go to the ER at 2am.',
+  description: '15 dog symptoms that warrant emergency care, with the ER-vs-wait criteria from veterinary emergency medicine — which signs can wait, and which cannot.',
   path: '/health/dog-symptoms-guide',
   type: 'article',
 })
@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'dog-com',
   title: '15 Dog Symptoms You Should Never Ignore',
-  description: 'Emergency vet explains which symptoms need immediate care vs. which can wait.',
+  description: 'Which dog symptoms need immediate care vs. which can wait, using veterinary emergency-medicine criteria.',
   url: 'https://dog.com/health/dog-symptoms-guide',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -108,7 +108,7 @@ export default function DogSymptomsGuidePage() {
       contentType="health"
       hero={{
         title: '15 Dog Symptoms You Should Never Ignore',
-        subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. A board-certified emergency and critical care veterinarian explains exactly what warrants a 2am ER visit.',
+        subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. This guide lays out 15 symptoms that warrant emergency care, using the ER-vs-wait criteria from veterinary emergency medicine.',
         category: 'Emergency Guide',
         authorName: 'Dog.com Editorial',
         authorAvatar: '🐾',
