@@ -305,7 +305,7 @@ export default function EquineDentalCarePage() {
             subtitle="Long-handled soft-bristle brush + curved scaler for between-float hygiene"
             score={8.5}
             description={
-              <p>For owners coached by their dentist to do between-visit hygiene work — a long-handle brush plus a curved soft-end scaler reaches the cheek-side of premolars where feed packs into periodontal pockets. Best paired with chlorhexidine-based oral rinse on dentist instruction. Does not substitute for the sedated float; reduces tartar accumulation and food packing in horses with diastema or active periodontal disease, when used as directed by the dental practitioner.</p>
+              <p>For owners coached by their dentist to do between-visit hygiene work — a long-handle brush plus a curved soft-end scaler reaches the cheek-side of premolars where feed packs into periodontal pockets. Does not substitute for the sedated float; reduces tartar accumulation and food packing in horses with diastema or active periodontal disease, when used as directed by the dental practitioner.</p>
             }
             specs={[
               { label: 'Use case', value: 'Between-visit hygiene only' },
@@ -320,28 +320,6 @@ export default function EquineDentalCarePage() {
             ctaHref="/go/amazon-brand/equine+dental+hygiene+brush+kit?s=guides-equine-dental-care"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="equine+dental+hygiene+brush+kit"
-          />
-          <ReviewCard
-            id="equine-oral-rinse"
-            name="Chlorhexidine 0.12% Oral Rinse (Veterinary Strength)"
-            subtitle="Antimicrobial oral rinse for use under veterinary direction in periodontal cases"
-            score={8.2}
-            description={
-              <p>0.12% chlorhexidine gluconate oral rinse is the standard antimicrobial used in small- and large-animal periodontal protocols. In horses with documented periodontal pocketing or EOTRH-related gingival inflammation, applying chlorhexidine to the affected gum line — on the schedule set by the treating veterinarian — reduces bacterial load between professional cleanings. This is prescription-territory home care: use only under direct veterinary instruction with a confirmed diagnosis.</p>
-            }
-            specs={[
-              { label: 'Concentration', value: '0.12% chlorhexidine gluconate', highlight: 'good' },
-              { label: 'Use case', value: 'Adjunct to professional periodontal care' },
-              { label: 'Prescription?', value: 'Vet-directed; OTC formulations vary by region', highlight: 'warn' },
-              { label: 'Substitute for float?', value: 'No', highlight: 'bad' },
-            ]}
-            pros={['Standard periodontal antimicrobial', 'Reduces between-visit bacterial load in diagnosed cases', 'Widely available in veterinary supply channels']}
-            cons={['Requires veterinary direction to use correctly', 'Not a self-diagnosis or self-treatment product', 'Some horses reject the taste']}
-            price="$15–35"
-            ctaText="Find chlorhexidine oral rinse"
-            ctaHref="/go/amazon-brand/chlorhexidine+0.12+oral+rinse+veterinary?s=guides-equine-dental-care"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="chlorhexidine+0.12+oral+rinse+veterinary"
           />
 
           <h2 id="faq">Frequently Asked Questions</h2>
