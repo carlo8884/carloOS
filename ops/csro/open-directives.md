@@ -12,6 +12,8 @@ Codex auto-revert may strip edits to this file. Re-apply and re-push if a revert
 
 Format: `ID · summary · owner · status`
 
+2026-W23-006 · Monetization audit P0: vets-co /disclosure asserted "no product affiliate / no Chewy / insurance-only" — false after #358 telehealth referrals → COO · DONE (2026-06-01, rewrote to insurance + telehealth channels, Chewy scoped to Connect-with-a-Vet)
+2026-W23-005 · §5 amendment — vets-co allow-list expanded from insurance-only to insurance + veterinary-telehealth service referrals (Vetster/AskVet/Chewy Connect-with-a-Vet). Carlo-approved 2026-06-01 (verbal, this session). Retail product Chewy remains BANNED on vets-co → CSRO · DECIDED (formalize in bot-coordination.md §5 next doc pass)
 2026-W23-004 · IR post-polish re-review: Dog/Horses Amazon-brand + Dog Chewy-brand env-tag gap (lost attribution) → COO · DONE (2026-06-01, set-affiliate-tag.sh)
 2026-W23-003 · IR post-polish re-review: §1.5.a consumer-dose residue on dog-com/nutrition/dog-supplements (glucosamine mg/kg + CBD mg/kg) → COO · DONE (2026-06-01)
 2026-W23-002 · dir-007 IR F6 noindex-gate on 2,912 breed×state insurance pages → COO · DONE (2026-06-01)
