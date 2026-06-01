@@ -52,15 +52,17 @@ Legend: ✅ pass · 🟡 partial · ⬜ not started
 
 | Site | trust | meta | links | no-thin | structure | visual | no-leak | disclosures | commercial-monet | tools | IR/advisor |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| dog-com | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (7 img) | ✅ | ✅ | 🟡 (14 review pgs) | 🟡 | ⬜ |
-| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ (1 img — agent in flight) | 🟡 | 🟡 | 🟡 (7, agent in flight) | 🟡 | ⬜ |
-| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (25 img) | ✅ | ✅ | 🟡 (18) | 🟡 | 🟡 |
-| petfood-com | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (6 hero) | ✅ | n/a | ⬜ (agent in flight) | 🟡 | ⬜ |
-| vets-co | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (5 hero) | 🟡 | 🟡 | ⬜ (agent in flight) | 🟡 | ⬜ |
+| dog-com | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (7 img) | ✅ | ✅ | ✅ (25 /go pgs) | ✅ | ⬜ |
+| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (9 img) | ✅ | ✅ | ✅ (63 /go pgs) | ✅ | ⬜ |
+| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (25 img) | ✅ | ✅ | ✅ (21 /go pgs) | ✅ | 🟡 |
+| petfood-com | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (6 hero) | ✅ | ✅ | ✅ (17 /go pgs) | ✅ | ⬜ |
+| vets-co | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (5 hero) | ✅ | ✅ | ✅ (11 /go, insurance) | ✅ | ⬜ |
 
-**Progress 2026-06-01 (polish wave):** dog-com monetized (14 review pages, leak fixed) + 7 imagery;
-ferret 25-page imagery (closest to launch-quality — visual ✅); petfood/vets hub heroes (6/5). In
-flight: petfood/vets monetization, fish/lizard monetization + visual. Next gates after these land:
-the QA thin-page sweep (no-thin column) + tools acceptance + end-state IR/advisor review.
+**Progress 2026-06-01 (polish wave — 10 of 11 gates green):** All cohort-5 monetization + visual +
+disclosure + tools gates CLOSED. Monetization: fish 63 /go pages, lizard 46, dog 25, ferret 21,
+petfood 17, vets 11. Imagery across all. FTC disclosure gap (17 pages) closed → 0. All 11 cohort-5
+calculators acceptance-passed (no bugs). Remaining: **no-thin** (thin-page audit agent in flight) +
+**IR/advisor** end-state review. Open follow-ups: saddle/horses direct-CTA leak fix (agent in flight,
+not cohort-5); FerretFoodEvaluator Lewington-edition citation nit (editorial).
 
 CSRO refreshes this after each merge wave. A site is launch-quality only when its row is all ✅/n-a.
