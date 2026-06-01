@@ -179,82 +179,83 @@ export default function BehaviorHubPage() {
             gap: '20px',
           }}
         >
-          <li>
-            <Link
-              href="/behavior/training-and-bonding"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '24px 22px',
-                background: 'var(--brand-white)',
-                border: '1px solid var(--brand-border)',
-                borderRadius: '12px',
-                textDecoration: 'none',
-                color: 'inherit',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-            >
-              <span
-                aria-hidden
+          {BEHAVIOR_CARDS.map((card) => (
+            <li key={card.slug}>
+              <Link
+                href={`/behavior/${card.slug}`}
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '3px',
-                  background: 'var(--brand-amber)',
-                  opacity: 0.7,
-                }}
-              />
-              <div
-                style={{
-                  fontSize: '0.6875rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: 'var(--brand-amber-dark)',
-                  marginBottom: '8px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '24px 22px',
+                  background: 'var(--brand-white)',
+                  border: '1px solid var(--brand-border)',
+                  borderRadius: '12px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
               >
-                Training & socialization
-              </div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '1.25rem',
-                  fontWeight: 800,
-                  color: 'var(--brand-text-dark)',
-                  marginBottom: '8px',
-                  lineHeight: 1.2,
-                }}
-              >
-                Training & Bonding
-              </div>
-              <p
-                style={{
-                  fontSize: '0.9rem',
-                  lineHeight: 1.55,
-                  color: 'var(--brand-text-mid)',
-                  margin: '0 0 14px',
-                  flex: 1,
-                }}
-              >
-                Litter training, kit bite inhibition, scruffing as a calming reflex (not
-                punishment), H-style harness training, slow ferret-to-ferret introductions,
-                and multi-ferret group dynamics.
-              </p>
-              <span
-                style={{
-                  fontSize: '0.8125rem',
-                  fontWeight: 700,
-                  color: 'var(--brand-primary)',
-                }}
-              >
-                Read →
-              </span>
-            </Link>
-          </li>
+                <span
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '3px',
+                    background: 'var(--brand-amber)',
+                    opacity: 0.7,
+                  }}
+                />
+                <div
+                  style={{
+                    fontSize: '0.6875rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.13em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber-dark)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  {card.eyebrow}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.25rem',
+                    fontWeight: 800,
+                    color: 'var(--brand-text-dark)',
+                    marginBottom: '8px',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {card.title}
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9rem',
+                    lineHeight: 1.55,
+                    color: 'var(--brand-text-mid)',
+                    margin: '0 0 14px',
+                    flex: 1,
+                  }}
+                >
+                  {card.description}
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.8125rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-primary)',
+                  }}
+                >
+                  Read →
+                </span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
