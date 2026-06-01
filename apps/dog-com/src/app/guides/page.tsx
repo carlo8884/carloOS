@@ -56,7 +56,23 @@ export default function GuidesHubPage() {
         <span className="text-brand-text-mid font-medium">Guides</span>
       </nav>
 
-      <div className="px-container-sm sm:px-container py-14 max-w-container-wide mx-auto">
+      <div className="px-container-sm sm:px-container py-12 max-w-container-wide mx-auto">
+        <div className="max-w-2xl">
+          <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">What these guides cover</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Most everyday dog questions have quick answers. The decisions on this page do not. They are the foundational, evidence-dependent choices that shape a dog&apos;s long-term health: how to read body condition correctly, how to time a spay or neuter against the latest research, and how to weigh trade-offs where the &ldquo;right&rdquo; answer changes by breed, sex, and life stage. Each guide here is built to be a reference you return to, not a listicle you skim once.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            The guides are written to work together. <Link href="/guides/dog-body-condition-score" className="text-brand-primary font-medium hover:underline">Dog body condition scoring</Link> gives you the 1&ndash;9 framework vets use to judge whether a dog is underweight, ideal, or carrying risk &mdash; the single most useful skill for catching weight problems before they become disease. From there, the <Link href="/guides/dog-spay-neuter-timing" className="text-brand-primary font-medium hover:underline">spay and neuter timing guide</Link> walks through what current evidence says about when to schedule the procedure, because the calculus differs sharply between a small companion breed and a large, slow-maturing one.
+          </p>
+          <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 mt-8 leading-tight">Who this is for</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            This hub is for owners who want the reasoning, not just the recommendation &mdash; new puppy owners planning the first year, anyone managing a dog&apos;s weight, and people who want to walk into a vet appointment already understanding the choices on the table. Everything here is research-anchored and written in plain language, with the underlying evidence cited so you can check it yourself. Guides are added and updated as the foundational questions evolve; the topics below are the starting set, chosen because they affect nearly every dog and because getting them right early compounds across a whole lifespan.
+          </p>
+        </div>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-14 max-w-container-wide mx-auto">
         <div className="grid sm:grid-cols-2 gap-4">
           {GUIDES.map((item) => (
             <Link
