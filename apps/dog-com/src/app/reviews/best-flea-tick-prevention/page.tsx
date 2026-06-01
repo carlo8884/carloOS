@@ -42,9 +42,7 @@ export default function FleaTickPreventionPage() {
               cons={['Prescription required', 'More expensive per dose (but similar annual cost)', 'Isoxazoline seizure risk in predisposed dogs']}
               price="$50–60 per 12-week dose"
               ctaText="Ask Your Vet About Bravecto →"
-              ctaHref="https://www.chewy.com/s?query=bravecto+chew+dogs"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="bravecto-chew"
+              ctaHref="/find-a-vet"
             />
             <ReviewCard id="nexgard" badge="Best Monthly" badgeEmoji="⭐" name="NexGard Chew (Afoxolaner)" subtitle="Monthly · 5 tick species · Most prescribed oral prevention" score={9.2}
               description={<p>NexGard is the most widely prescribed oral flea and tick prevention and has the longest post-market safety record of the isoxazoline class — first approved in 2013. Monthly dosing maintains high compliance when dogs are on a consistent schedule. Covers 5 tick species including Deer tick, American dog tick, Brown dog tick, Gulf Coast tick, and Lone Star tick. Kills fleas before they lay eggs — important for breaking the flea lifecycle in the environment. Beef-flavored chew most dogs eat readily. Prescription required; your veterinarian likely has it in stock.</p>}
@@ -53,9 +51,7 @@ export default function FleaTickPreventionPage() {
               cons={['Monthly dosing — 12 doses/year', '5 tick species vs Bravecto\'s 7', 'Prescription required']}
               price="$20–25 per monthly dose"
               ctaText="Ask Your Vet About NexGard →"
-              ctaHref="https://www.chewy.com/s?query=nexgard+chew+dogs"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="nexgard-chew"
+              ctaHref="/find-a-vet"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
