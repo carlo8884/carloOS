@@ -1,7 +1,7 @@
 # COO — Wakeup Queue
 
 **Owner:** COO · **Lane:** content pages, build orchestration, CI/workflows, routing, STATUS/DASHBOARD/BACKLOG
-**Last updated:** 2026-06-01 (by COO — dir-014 closeout merged #268; dir-007 IR F6 noindex-gate shipped)
+**Last updated:** 2026-06-01 (by COO — 9-PR SEO/GEO/build-cost sweep landed alongside dir-014 + dir-007)
 
 ## RESTART PROMPT
 ```
@@ -22,8 +22,18 @@ Pull latest origin/main. Read ops/bot-queue/COO.md, do the top queued item, comm
     wired; `vercel-ignore.sh` patterns broadened; Carlo dashboard checklist
     filed at `ops/handoffs/2026-06-01-coo-to-carlo-vercel-cost-dashboard-steps.md`
   - `dir-007` IR F6 noindex-gate on the 2,912 breed×state cross-product
-    pages (`(funnels)/pet-insurance/breeds/[breed]/[state]/page.tsx`).
+    pages (`(funnels)/pet-insurance/breeds/[breed]/[state]/page.tsx`) — #269.
     Hub + breed-only + state-only pages stay indexed.
+  - **SEO/GEO sweep (9 PRs, all merged):**
+    - #274 sitemap regen — 6 new section-hub URLs across ferret/horses/saddle
+    - #276 ArticleLayout auto-builds BreadcrumbList JSON-LD for ~300 pages
+    - #278 saddle-com /reviews internal-link orphan fix (best-stirrups)
+    - #280 FAQPage JSON-LD on 2 PetFood.com brand-evaluation pages
+    - #283 MedicalWebPage JSON-LD on 13 lizard-com health pages
+    - #284 MedicalWebPage JSON-LD on 4 dog-com health pages (40/40 coverage)
+    - #287 Product JSON-LD on 3 buyer-guide top picks
+    - #289 HowTo JSON-LD on fish-com /setup
+    - #290 vercel-ignore regression test added to qc workflow
 - **Done prior sessions:**
   - `dir-018` funnel-tree dedup (un-red main) — #251
   - `dir-020` Bot Wakeup Queue v1 adoption — #264
