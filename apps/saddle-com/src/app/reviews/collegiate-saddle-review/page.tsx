@@ -117,8 +117,8 @@ export default function CollegiateReviewPage() {
               price="$400–800"
               priceNote="Synthetic vs leather/synthetic"
               ctaText="Find a Collegiate Dealer →"
-              ctaHref="https://www.collegiate.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/collegiate+convertible+all+purpose+saddle?s=reviews-collegiate-saddle-review"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="collegiate-convertible-ap"
             />
 
@@ -140,8 +140,8 @@ export default function CollegiateReviewPage() {
               cons={['Less versatile than AP for flatwork', 'Entry-level build quality', 'Not for serious competition']}
               price="$350–700"
               ctaText="Find a Collegiate Dealer →"
-              ctaHref="https://www.collegiate.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/collegiate+diploma+jumping+saddle?s=reviews-collegiate-saddle-review"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="collegiate-diploma"
             />
 
@@ -162,8 +162,8 @@ export default function CollegiateReviewPage() {
               cons={['Fixed tree — no width adjustability', 'Most basic build quality in range', 'Minimal resale value']}
               price="$200–450"
               ctaText="Find a Collegiate Dealer →"
-              ctaHref="https://www.collegiate.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/collegiate+apprentice+all+purpose+saddle?s=reviews-collegiate-saddle-review"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="collegiate-apprentice"
             />
 

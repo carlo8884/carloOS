@@ -105,8 +105,8 @@ export default function BestRidingBootsPage() {
               cons={['$900–1,400 price point', 'Long break-in (40–60+ hours)', 'Not ideal as a schooling boot — too stiff for daily wear']}
               price="$900–$1,400"
               ctaText="Find a Tucci Dealer →"
-              ctaHref="https://tucci.it"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/tucci+marilyn+dress+riding+boot?s=reviews-best-riding-boots"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="tucci-marilyn"
             />
 
@@ -120,8 +120,8 @@ export default function BestRidingBootsPage() {
               cons={['$1,200–2,500+ depending on stock vs custom', 'Long lead time for custom', 'Requires a dealer fitter for the measure']}
               price="$1,200–$2,500+"
               ctaText="Find a Konig Dealer →"
-              ctaHref="https://konig.de"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/konig+favorit+tall+riding+boot?s=reviews-best-riding-boots"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="konig-favorit"
             />
 

@@ -80,4 +80,15 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://greatamericaninsurancegroup.com/equine?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
+
+  // ─── Brand-search variant (dir-019 — direct-CTA leak fix) ────────────────
+  // Routes brand-own retailer CTAs (manufacturer sites with no affiliate
+  // program of their own — e.g. supplement makers Platinum Performance, KER,
+  // Equithrive, Standlee) to a tracked Amazon brand-search, since those brands
+  // sell through Amazon. Mirrors the saddle-com amazon-brand entry.
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

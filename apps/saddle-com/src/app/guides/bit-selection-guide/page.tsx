@@ -72,7 +72,7 @@ export default function BitSelectionGuidePage() {
           cons={['Some horses object to the gauge — same handling skill as bridling', 'Cheap plastic gauges flex and read inaccurately — get steel']}
           price="$10–25"
           ctaText="Find equine bit gauges"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/bit-gauge?s=guides-bit-selection-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="bit-gauge"
         />
@@ -96,7 +96,7 @@ export default function BitSelectionGuidePage() {
           cons={['Wrong for horses with low palates (use Mullen instead)', 'Not a strong-enough bit for horses requiring leverage — that is a separate conversation with an experienced trainer']}
           price="$30–80"
           ctaText="Find eggbutt French-link snaffles"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/eggbutt-french-link-snaffle?s=guides-bit-selection-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="eggbutt-french-link-snaffle"
         />

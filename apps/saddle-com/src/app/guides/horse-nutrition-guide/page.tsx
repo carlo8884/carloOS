@@ -138,7 +138,7 @@ export default function HorseNutritionGuidePage() {
           cons={['Front teeth wear over years on small-mesh nets (mitigate with rotation)', 'Senior horses with reduced chewing may struggle with smallest mesh sizes']}
           price="$25–80"
           ctaText="Find slow-feeder hay nets"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/slow-feeder-hay-net?s=guides-horse-nutrition-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="slow-feeder-hay-net"
         />
@@ -161,7 +161,7 @@ export default function HorseNutritionGuidePage() {
           cons={['Some horses ignore blocks — pair with loose salt to guarantee intake', 'Mineralised blocks (Himalayan, trace) cost more without strongly better outcomes for most horses']}
           price="$5–25"
           ctaText="Find horse salt blocks and electrolyte"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/equine-salt-electrolyte?s=guides-horse-nutrition-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="equine-salt-electrolyte"
         />
@@ -185,7 +185,7 @@ export default function HorseNutritionGuidePage() {
           cons={['Slow visible payoff (one hoof growth cycle)', 'Will not fix a structural / shoeing problem — get the farrier work right first', 'Some products bundle with high-NSC carriers — read the label for metabolic horses']}
           price="$25–70 / month"
           ctaText="Find biotin hoof supplements"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/biotin-hoof-supplement?s=guides-horse-nutrition-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="biotin-hoof-supplement"
         />

@@ -41,7 +41,7 @@ export default function HorseBlanketPage() {
               cons={['Higher price point', 'Neck attachment limits options for horses needing separate neck coverage']}
               price="$140–200 depending on fill"
               ctaText="Shop Rambo Wug Turnout →"
-              ctaHref="https://www.smartpakequine.com/s/rambo-wug"
+              ctaHref="/go/smartpak/rambo-wug?s=reviews-best-horse-blankets"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="rambo-wug"
             />

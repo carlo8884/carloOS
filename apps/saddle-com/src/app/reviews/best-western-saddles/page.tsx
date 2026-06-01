@@ -100,8 +100,8 @@ export default function BestWesternSaddlesPage() {
               price="$1,800–$3,500+"
               priceNote="Custom options available"
               ctaText="Find a Martin Dealer →"
-              ctaHref="https://martinsaddlery.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/martin+saddlery+reiner+western+saddle?s=reviews-best-western-saddles"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="martin-reiner"
             />
 
@@ -123,8 +123,8 @@ export default function BestWesternSaddlesPage() {
               cons={['Not for performance disciplines (reining, cutting)', 'Heavier than some competitors']}
               price="$900–$1,600"
               ctaText="Find a Circle Y Dealer →"
-              ctaHref="https://circley.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/circle+y+park+and+trail+saddle?s=reviews-best-western-saddles"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="circle-y-trail"
             />
 
@@ -146,8 +146,8 @@ export default function BestWesternSaddlesPage() {
               cons={['Not comfortable for trail or long leisure rides', 'Purpose-specific — one discipline']}
               price="$700–$1,400"
               ctaText="Find a Circle Y Dealer →"
-              ctaHref="https://circley.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/circle+y+barrel+racing+saddle?s=reviews-best-western-saddles"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="circle-y-barrel"
             />
 
@@ -169,8 +169,8 @@ export default function BestWesternSaddlesPage() {
               cons={['Not for performance disciplines', 'Less refined than premium makers', 'Lower resale value than Circle Y or Martin']}
               price="$500–$900"
               ctaText="Find a Billy Cook Dealer →"
-              ctaHref="https://billycooksaddlery.com"
-              ctaAffiliateProgram="sharesale"
+              ctaHref="/go/amazon-brand/billy+cook+trail+saddle?s=reviews-best-western-saddles"
+              ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="billy-cook-trail"
             />
           </div>
