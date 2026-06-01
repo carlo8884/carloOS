@@ -27,7 +27,7 @@ export default function BestHeartwormPreventionPage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Heartworm prevention costs $8–15/month. Treatment costs $1,000–2,000+ and requires months of strict rest. All options listed here require a prescription — your vet will recommend one based on your dog's risk profile and region.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Heartworm Prevention</span>
