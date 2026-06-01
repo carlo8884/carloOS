@@ -46,3 +46,15 @@ jobs:
           node-version: '20'
       - name: Run trust-guard
         run: node scripts/ci/trust-guard.mjs
+
+  vercel-ignore:
+    name: Vercel build-cost wrapper (dir-014 regression)
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run vercel-ignore-test
+        run: node scripts/ci/vercel-ignore-test.mjs

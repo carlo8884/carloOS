@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -11,7 +11,8 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(
+  buildArticleSchema({
   siteId: 'dog-com',
   title: 'German Shepherd Health Guide',
   description: 'DM, hip dysplasia, bloat, EPI and preventive care for German Shepherds.',
@@ -20,7 +21,15 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({
+  name: 'German Shepherd Health Guide',
+  description: 'DM, hip dysplasia, bloat, EPI and preventive care for German Shepherds.',
+  url: 'https://dog.com/health/german-shepherd-health',
+  authorName: 'Dog.com Editorial',
+  lastReviewed: '2025-05-01',
+  medicalAudience: 'Caregiver',
+}),
+)
 
 export default function GermanShepherdHealthPage() {
   return (
