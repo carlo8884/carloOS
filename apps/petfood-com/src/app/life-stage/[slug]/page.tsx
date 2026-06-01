@@ -501,6 +501,22 @@ export default async function LifeStagePage({ params }: PageProps) {
                 {b.line}
               </div>
               <div style={{ fontSize: '13px', color: 'var(--brand-text-mid)' }}>{b.note}</div>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '10px', flexWrap: 'wrap' }}>
+                <a
+                  href={`/go/chewy-brand/${encodeURIComponent(b.brand)}?s=life-stage-${slug}`}
+                  rel="sponsored noopener"
+                  style={{ fontSize: '12px', padding: '4px 10px', background: 'var(--brand-primary, #d2691e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}
+                >
+                  Search on Chewy →
+                </a>
+                <a
+                  href={`/go/amazon-brand/${encodeURIComponent(b.brand)}?s=life-stage-${slug}`}
+                  rel="sponsored noopener"
+                  style={{ fontSize: '12px', padding: '4px 10px', background: 'var(--brand-dark, #232f3e)', color: 'white', textDecoration: 'none', borderRadius: '4px', fontWeight: 600 }}
+                >
+                  Search on Amazon →
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -508,7 +524,9 @@ export default async function LifeStagePage({ params }: PageProps) {
           The three brand examples above are common reference points in the WSAVA Global Nutrition
           Committee&apos;s manufacturer-selection framework; they are not the only manufacturers that
           meet the criteria. Brand inclusion in this catalog is descriptive of label disclosure,
-          not a ranking of formulation quality.
+          not a ranking of formulation quality. PetFood.com earns an affiliate commission when you
+          purchase through these links — at no extra cost to you; commission does not influence
+          editorial inclusion.
         </p>
 
         <h2 id="pitfalls">Common Pitfalls</h2>
