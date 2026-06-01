@@ -44,7 +44,16 @@ export default function NeonTetraPage() {
 
         <h2>Neon vs Cardinal Tetra</h2>
         <p>The cardinal tetra (Paracheirodon axelrodi) is the neon's larger cousin — 2 inches versus 1.25 inches, with the red coloration extending the full length of the belly rather than only the posterior half as in neons. Cardinals are generally considered more vivid and more impressive in large schools, but they are more sensitive to water quality than neons and prefer more strictly soft, acidic conditions. Cardinals also tend to be more expensive as they are predominantly wild-caught rather than farm-raised. For planted blackwater setups targeting optimal display with slightly acidic soft water, cardinals are the upgrade. For general community tanks with harder or more neutral water, neons are more appropriate.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Neon Tetra — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for neon tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Neon Tetra Setup on Amazon →</a>
+            <a href="/go/chewy-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

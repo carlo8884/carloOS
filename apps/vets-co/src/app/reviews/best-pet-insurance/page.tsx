@@ -79,7 +79,7 @@ export default function VetsPetInsurancePage() {
             </div>
 
             <CalloutBox variant="warning" title="Always read the policy fine print">
-              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;.
+              Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary no-underline hover:underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios.
             </CalloutBox>
 
             <ScoreMethodology />

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -10,7 +10,8 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(
+  buildArticleSchema({
   siteId: 'dog-com',
   title: 'Senior Dog Care Guide',
   description: 'What changes after 7 and how to adapt care for maximum quality of life.',
@@ -19,7 +20,15 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({
+  name: 'Senior Dog Care Guide',
+  description: 'What changes after 7 and how to adapt care for maximum quality of life.',
+  url: 'https://dog.com/health/senior-dog-care',
+  authorName: 'Dog.com Editorial',
+  lastReviewed: '2025-05-01',
+  medicalAudience: 'Caregiver',
+}),
+)
 
 const FAQ_ITEMS = [
   {
@@ -53,6 +62,7 @@ export default function SeniorDogCarePage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'Senior Dog Care Guide',
         subtitle: 'The senior years can be some of the best years with your dog — if you know what\'s changing physically, what to watch for, and how to adapt care and expectations for maximum quality of life.',

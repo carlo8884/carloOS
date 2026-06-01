@@ -33,6 +33,7 @@ export default function AnimalProteinSourcesPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="nutrition"
       hero={{
         title: 'Animal Protein Sources in Pet Food',
         subtitle:

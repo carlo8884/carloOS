@@ -64,16 +64,10 @@ declare -A SITES_FOR_VENDOR=(
   # vars are distinct because each is keyed off the route name. Without
   # these the brand-search redirects fall back to PLACEHOLDER → lost
   # attribution on every brand-search click (IR finding, dir-015 #4).
-  # ferret-com added 2026-06-01 (dir-022, IR #4 — PR #229 added the
-  #   amazon-brand/chewy-brand routes to ferret-com; the env-var sweep
-  #   wasn't updated, so brand clicks were untagged silently).
-  # horses-com added 2026-06-01 (PR #265 adds amazon-brand/chewy-brand
-  #   routes to horses-com — needs matching env-var sweep entry).
-  # vets-co removed 2026-06-01 (PR #241 dir-015 #2 deleted the brand
-  #   routes from vets-co — keeping it in the sweep here would set an
-  #   env var for a non-existent route).
-  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com horses-com'
-  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com horses-com'
+  # ferret-com + horses-com added 2026-06-01 (dir-022, IR #4 / PR #265).
+  # vets-co kept until PR #241 (dir-015 #2) lands removing the brand routes.
+  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co ferret-com horses-com'
+  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co ferret-com horses-com'
 
   # Pet insurance — dog-com gets all; vets-co gets all (insurance-only per policy)
   [TRUPANION]='dog-com vets-co'

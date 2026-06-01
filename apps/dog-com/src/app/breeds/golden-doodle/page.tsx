@@ -9,6 +9,7 @@ export default function GoldendoodlePage() {
       hero={{ title: 'Goldendoodle Breed Guide', subtitle: 'The Goldendoodle (Golden Retriever × Poodle) is one of the most popular "designer breeds" in the US. They combine the Golden\'s temperament with Poodle intelligence and low-shedding coat potential. The key word: potential. Goldendoodles vary significantly in coat, shedding, and health — generation matters enormously.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Goldendoodle', href: '/breeds/golden-doodle' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Generations Explained</div>

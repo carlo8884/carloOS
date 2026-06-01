@@ -99,6 +99,7 @@ export default function FerretDentalDiseasePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Dental Disease',
           subtitle:
@@ -111,7 +112,7 @@ export default function FerretDentalDiseasePage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/dental-disease' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Dental Disease', href: '/health/dental-disease' },
         ]}
         sidebar={

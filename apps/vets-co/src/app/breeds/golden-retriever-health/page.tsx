@@ -38,6 +38,7 @@ export default function VetsGoldenRetrieverHealthPage() {
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
       siteId="vets-co"
+      contentType="breed"
       hero={{
         title: 'Golden Retriever Health — Owner Guide',
         subtitle: 'Golden Retrievers are one of the most common breeds in general practice. The points most worth giving every Golden owner: the cancer statistics are real, the monitoring matters, and early detection is the single most impactful thing you can do.',

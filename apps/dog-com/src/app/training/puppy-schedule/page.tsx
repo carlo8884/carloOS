@@ -45,6 +45,7 @@ export default function PuppySchedulePage() {
       <SchemaScript schema={combinedTrainingSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{ title: 'Puppy Schedule — Week by Week Guide', subtitle: 'A structured schedule is the single most effective puppy training tool. It sets the puppy up for success by making accidents nearly impossible and building reliable habits from day one.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Schedule', href: '/training/puppy-schedule' }]}
       schema={schema}

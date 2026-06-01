@@ -82,6 +82,7 @@ export default function DogSocializationWindowPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="dog-com"
+        contentType="training"
         hero={{
           title: 'Dog Socialization Window — The 3–14 Week Critical Period',
           subtitle:

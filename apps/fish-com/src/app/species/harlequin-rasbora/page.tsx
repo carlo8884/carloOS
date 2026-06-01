@@ -35,7 +35,16 @@ export default function HarlequinPage() {
 
         <h2>Breeding</h2>
         <p>Harlequin rasboras are egg-scatterers with a distinctive behavior: eggs are deposited on the underside of broad leaves (Echinodorus, Anubias) rather than scattered randomly. The male and female perform a looping, upside-down spawning embrace beneath a selected leaf, depositing adhesive eggs that stick to the leaf's underside. Breeding requires soft, very acidic water (pH 5.5–6.0, GH under 4) and is difficult to trigger in harder water. Eggs hatch in 24-48 hours; parents may eat eggs if left in the breeding tank. Fry are very small and require infusoria before graduating to baby brine shrimp.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Harlequin Rasbora — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for harlequin rasbora care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Harlequin Rasbora Setup on Amazon →</a>
+            <a href="/go/chewy-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

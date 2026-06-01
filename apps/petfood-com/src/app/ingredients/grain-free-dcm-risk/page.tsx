@@ -33,6 +33,7 @@ export default function GrainFreeDCMRiskPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="nutrition"
       hero={{
         title: 'Grain-Free Dog Food and DCM',
         subtitle:

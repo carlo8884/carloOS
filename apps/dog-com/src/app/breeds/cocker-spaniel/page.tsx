@@ -9,6 +9,7 @@ export default function CockerSpanielPage() {
       hero={{ title: 'Cocker Spaniel Breed Guide', subtitle: 'The American Cocker Spaniel — originally bred as a hunting dog for woodcock, now primarily a companion and show dog. Gentle, affectionate, and beautiful, with a coat that requires significant maintenance and health predispositions that reward attentive owners who recognize the early warning signs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cocker Spaniel', href: '/breeds/cocker-spaniel' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Health Priorities</div>

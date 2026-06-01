@@ -43,7 +43,16 @@ export default function BoaPage() {
 
         <h2>Feeding</h2>
         <p>Frozen/thawed is strongly preferred over live for the same reasons as all constrictors — live prey bites cause significant wounds in boas, particularly during the strikes-and-wraps feeding sequence. Adults feed on frozen/thawed adult rats every 10–14 days; large adults may require rabbits or multiple large rats. Prey size: slightly smaller than the widest part of the snake's body (boas are thicker than corn snakes — appropriately sized prey is larger). Boas fed too frequently become obese — every 2 weeks for adults is adequate.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Boa Constrictor — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for boa constrictor care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/boa%20constrictor%20setup?s=species-boa-constrictor" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Boa Constrictor Setup on Amazon →</a>
+            <a href="/go/chewy-brand/boa%20constrictor%20setup?s=species-boa-constrictor" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

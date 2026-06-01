@@ -13,6 +13,7 @@ CSRO directive `csro-dir-2026-W22-007` named three deliverables for Vets.co insu
 1. ✅ **Trust/diligence audit** — shipped via PR #230 (hub fabricated-authority fixes + FTC disclosure)
 2. ✅ **Funnel pages audited** — PR #230 confirmed `(funnels)/pet-insurance/*` clean (no fabricated-vet patterns; AffiliateDisclosure present on all 4)
 3. ⏳ **Prep cutover checklist** — this doc
+4. ✅ **IR F6 noindex-gate on 2,912 cross-product pages** — shipped 2026-06-01 (`(funnels)/pet-insurance/breeds/[breed]/[state]/page.tsx` now returns `robots: { index: false, follow: false }`). Hub + breed-only + state-only pages stay indexed as the curated launch surface; the breed×state cross-product is dark until 1.1 (carrier realism) + 1.3 (FTC) + factual audit of `sampleMonthlyPremium` clear.
 
 This is the operational handoff. Owners and SLAs per item.
 

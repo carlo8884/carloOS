@@ -27,6 +27,7 @@ export default function HouseTrainingPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{ title: 'House Training Guide', subtitle: 'House training is not about punishing accidents — it\'s about setting the dog up to eliminate outside consistently enough that it becomes the habit. The schedule method does this faster and more reliably than any other approach.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'House Training', href: '/training/house-training' }]}
       schema={schema}

@@ -3,15 +3,21 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-05-31 (6-bot fleet activated, tier policy in force, ~166 net new pages from today's mega-wave)
+**Last updated:** 2026-06-01 evening (Carlo polish-pivot — phase 5: launch-quality polish, not launch-imminent; do NOT push DNS or other launch-ops items at the top of any queue)
 
 ---
 
 ## 1. Current Phase
 
-**Phase 4+ — autonomous fleet operation, Tier 1 protect-the-asset mode.**
+**Phase 5 — launch-quality polish (Carlo 2026-06-01 amendment to Phase 4 fleet operation).**
 
-The portfolio is now operated by a **6-bot fleet + Carlo** under explicit tier policy:
+The 35-PR mega-wave and the 20+ PR overnight SEO/GEO/build-cost sweep created enough breadth. The next phase is depth and credibility: polish, QA, monetization wiring, visual quality, content cleanup — on a chosen cohort of 3–5 sites — until each one meets the launch-quality bar (CLAUDE.md §8a). DNS / GA4 / Mailchimp / email forwarding / Vercel scaffold bootstrap are DEFERRED until cohort-5 is ready. **Do not push Carlo on launch ops.**
+
+Cohort-5 polish targets (CSRO to confirm; pending `ops/csro/launch-quality-criteria.md`): **Dog.com, Fish.com, Ferret.com, PetFood.com, Vets.co.**
+
+Per-actor scope in this phase: see CLAUDE.md §8a.
+
+The portfolio is operated by a **6-bot fleet + Carlo** under explicit tier policy:
 
 | Tier | Sites | Posture | Target exit |
 |---|---|---|---|
@@ -83,23 +89,71 @@ Specs: `ops/policies/bot-fleet.md` (coordination map) · `ops/policies/bot-coord
 ### Closed (stale / superseded / sunset)
 #19, #26, #27, #59, #60, #61, #144, #167 (8 closed)
 
-## 4. Soft-Launch Blockers (Carlo-only)
+## 3a. Overnight COO sweep (2026-06-01)
 
-All remaining launch work is operational, not engineering.
+20+ merged PRs hardening the portfolio against the post-mega-wave gaps. CSRO queue items 1 + 5–13 worked top-down.
 
-| # | Item | Time | Priority |
+### Build cost (csro-dir-014)
+| PR | What |
+|---|---|
+| #268 | CI `TURBO_TOKEN`/`TURBO_TEAM` env wiring; `vercel-ignore.sh` patterns broadened (`.claude/*`, `.gitattributes`, `CODEOWNERS`, `*.txt`); Carlo dashboard click-by-click filed |
+| #290 | New CI job `vercel-ignore` regression-tests the bash-case pattern set against 30 representative paths |
+
+### Vets.co launch-readiness (dir-007)
+| PR | What |
+|---|---|
+| #269 | IR F6 noindex-gate on the 2,912 breed×state cross-product insurance pages; hub + breed-only + state-only stay indexed |
+
+### Sitemap / robots / 404 sweep (queue #7, #10)
+| PR | What |
+|---|---|
+| #274 | Regenerate sitemaps post-mega-wave — 6 missing section-hub URLs across ferret/horses/saddle picked up |
+| #303 | Extend `scripts/ci/link-check.mjs` to all 10 sites; fix 31 broken links — 15 legal/editorial stub pages on horses/petfood/petfoods/ferret/ferrets sites, plus `/reviews`, `/supplements`, `/brands`, `/ingredients` hubs |
+
+### Schema / structured data (queue #8)
+| PR | What |
+|---|---|
+| #276 | `ArticleLayout` auto-derives BreadcrumbList JSON-LD from existing `breadcrumbs` prop — ~300 editorial pages instantly schema-enriched |
+| #280 | FAQPage on 2 PetFood.com brand-evaluation pages |
+| #283 | MedicalWebPage on 13 lizard-com health pages (full cluster coverage) |
+| #284 | MedicalWebPage on 4 remaining dog-com health pages — 40/40 coverage |
+| #287 | Product schema on 3 buyer-guide top picks (best-horse-blankets, best-aquarium-heaters, best-aquarium-lighting) |
+| #289 | HowTo schema on fish-com `/setup` |
+| #294 | Product schema on 9 brand-review sub-products (Stubben/Pessoa/Collegiate lineups) |
+| #295 | FAQPage on `petfood-com/guides/raw-pet-food-evaluation` |
+
+### Internal linking (queue #6)
+| PR | What |
+|---|---|
+| #278 | saddle-com `/reviews` orphan-link fix (`best-stirrups` was unlinked from the hub) |
+| #293 | Refactor saddle-com `/reviews` to data-driven (`src/data/reviews.ts`) — drift-proof for future review additions |
+| #296 | `ArticleLayout` `contentType` prop opt-in for `CrossPortfolioCard`; 27 dog-com breed pages get auto-rendered Vets.co recommendations |
+| #301 | Wave-2 `contentType` opt-in across 91 editorial pages (dog/vets/lizard/ferret/horses/saddle/petfood) — total 118 pages |
+| #305 | Tool ↔ content reciprocal links — 7 high-affinity content pages now point at their related calculators |
+
+### Doc disposition (queue #11, #12)
+| PR | What |
+|---|---|
+| #292 | Initial queue update reflecting the 9-PR sweep |
+| #304 | petsupplies scaffold marked decommissioned in CLAUDE/STATUS/BACKLOG (PR #221 had removed the source tree but the overview docs still listed it) |
+
+## 4. Launch ops (Carlo-only) — DEFERRED until cohort-5 polish complete
+
+Per Carlo's 2026-06-01 directive, launch ops are NOT on the critical path. Do not push these. They re-enter the queue when cohort-5 sites pass the §8a launch-quality bar.
+
+| # | Item | Time | Polish-mode status |
 |---|---|---|---|
-| 1 | DNS pointing (10 production domains → Vercel) at Network Solutions | ~30 min | **P1 — blocks launch** |
-| 2 | Rotate Vercel token (exposed in chat earlier this session) | ~2 min | P2 — security hygiene |
-| 3 | Apply to Chewy Partners | ~5 min | P2 — free revenue stream |
-| 4 | Apply to ImpactRadius (biggest LTV unlock — pet-insurance roster) | ~15 min | P2 |
-| 5 | GA4 property + 10 data streams + set `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ~15 min | P2 — analytics blackout otherwise |
-| 6 | Mailchimp / MailerLite / Beehiiv decision (deferred per cost) | ~30 min | P3 |
-| 7 | Email forwarding `editor@<domain>.com` (10 domains) | ~20 min | P3 |
-| 8 | Rotate Anthropic API key after `/ask` MVP validation | ~2 min | P3 |
-| 9 | Vercel project bootstrap for 5 new scaffolds (askthevet/seniorpets/dogpicture/petsupplies/hardmoneyloans) — note: hardmoneyloans is sunset, skip | ~10 min | P3 |
+| 1 | DNS pointing for the chosen 3–5 launch sites (Network Solutions) | ~30 min | DEFERRED — depends on which sites CSRO names launch-ready |
+| 2 | Rotate Vercel token (security hygiene) | ~2 min | Keep — security, do whenever convenient |
+| 3 | Apply to Chewy Partners | ~5 min | DEFERRED — Monetization sweep in flight; revisit when affiliate plumbing is clean |
+| 4 | Apply to ImpactRadius (pet-insurance LTV) | ~15 min | DEFERRED — same logic |
+| 5 | GA4 property + per-launch-site stream + `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ~15 min | DEFERRED to launch-day |
+| 6 | Mailchimp / MailerLite / Beehiiv decision | ~30 min | DEFERRED — cost-deferred per Carlo |
+| 7 | Email forwarding `editor@<domain>.com` | ~20 min | DEFERRED to launch-day |
+| 8 | Rotate Anthropic API key after `/ask` MVP validation | ~2 min | Keep — security |
+| 9 | Vercel project bootstrap for 3 active scaffolds (askthevet/seniorpets/dogpicture) — petsupplies decommissioned (PR #221), hardmoneyloans sunset | ~10 min | DEFERRED — scaffolds aren't in the polish cohort |
 
-**Already done:** Amazon Associates tag `boltonpets20-20` portfolio-wide · Skimlinks publisher live on Dog.com · Impact.com site-verification meta tag installed · 10 production Vercel projects bootstrapped.
+**Already done:** Amazon Associates tag `boltonpets20-20` portfolio-wide · Skimlinks publisher live on Dog.com · Impact.com site-verification meta tag installed · 10 production Vercel projects bootstrapped · `dir-014` Vercel build-cost cuts shipped (PR #268, #290) · 31 broken links fixed portfolio-wide (PR #303).
 
 ## 5. Conflict-blocked PRs (bots own their rebases)
 

@@ -33,7 +33,16 @@ export default function EmberTetraPage() {
         <h2>Water and Care</h2>
         <p>Ember tetras prefer soft, slightly acidic water (pH 5.5–7.0) and tolerate a temperature range of 73–82°F — compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior. They are active, confident fish in groups — more reclusive and less colorful when kept in small numbers.</p>
         <p>Feeding: very small food — they are 0.8 inches with a proportionally tiny mouth. Micro pellets (crushed fine), micro-size live foods (micro worms, baby brine shrimp), and very small flake. They compete well at feeding time within their small size class but will be outcompeted by larger, faster fish — keep with similarly sized species or provide targeted feeding near the bottom where ember tetras forage.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Ember Tetra — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Ember Tetra Setup on Amazon →</a>
+            <a href="/go/chewy-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

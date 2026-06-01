@@ -92,6 +92,7 @@ export default function FerretExerciseEnrichmentPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Exercise and Enrichment',
           subtitle:
@@ -104,7 +105,7 @@ export default function FerretExerciseEnrichmentPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/exercise-and-enrichment' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
         ]}
         sidebar={
@@ -508,7 +509,7 @@ export default function FerretExerciseEnrichmentPage() {
             cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
             price="$15–30"
             ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="pop-n-play-tunnel"
           />

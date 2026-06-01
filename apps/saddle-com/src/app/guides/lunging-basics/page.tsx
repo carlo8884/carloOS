@@ -90,6 +90,7 @@ export default function LungingBasicsPage() {
       <SchemaScript schema={combinedSchema} />
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Lunging Basics — Equipment, Why, and the Mistakes That Hurt Horses',
         subtitle:

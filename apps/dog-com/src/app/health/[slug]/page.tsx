@@ -243,7 +243,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
       <SchemaScript schema={combined} />
 
       {/* Breadcrumb */}
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/conditions" className="hover:text-brand-primary no-underline">Conditions</Link>

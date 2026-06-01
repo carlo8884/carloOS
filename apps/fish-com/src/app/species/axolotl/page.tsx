@@ -39,7 +39,16 @@ export default function AxolotlPage() {
 
         <h2>Morphs and Colors</h2>
         <p>Wild-type axolotls are dark brown-green with iridescent speckles. Captive breeding has produced several widely kept color morphs: leucistic (pale pink body with dark eyes — the most common "white axolotl"), albino (white with red eyes and gold iridophores), golden albino (yellow-gold), melanoid (fully dark, reduced iridophores), and piebald (patches of dark and leucistic). All morphs have identical care requirements. Leucistic axolotls are particularly susceptible to bright light — provide shaded areas in their enclosure.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Axolotl — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for axolotl care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/axolotl%20tank%20setup?s=species-axolotl" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Axolotl Setup on Amazon →</a>
+            <a href="/go/chewy-brand/axolotl%20tank%20setup?s=species-axolotl" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

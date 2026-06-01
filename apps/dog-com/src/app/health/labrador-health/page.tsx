@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -11,7 +11,8 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(
+  buildArticleSchema({
   siteId: 'dog-com',
   title: 'Labrador Retriever Health Guide',
   description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',
@@ -20,12 +21,21 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({
+  name: 'Labrador Retriever Health Guide',
+  description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',
+  url: 'https://dog.com/health/labrador-health',
+  authorName: 'Dog.com Editorial',
+  lastReviewed: '2025-05-01',
+  medicalAudience: 'Caregiver',
+}),
+)
 
 export default function LabradorHealthPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'Labrador Retriever Health Guide',
         subtitle: 'Labs have a genetic mutation that prevents normal satiety signaling — they don\'t feel full the way other dogs do. This single biological fact drives the most common health problems in America\'s most popular breed.',

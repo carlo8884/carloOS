@@ -40,7 +40,16 @@ export default function HillstreamLoachPage() {
 
         <h2>Compatible Tankmates</h2>
         <p>Tankmates must be able to tolerate the high flow and cooler temperatures that hillstream loaches require. This limits options significantly: white cloud mountain minnows (ideal — same temperature range, active schoolers), celestial pearl danios (tolerate cooler water, beautiful contrast), small rasboras that prefer moderate-cool temperatures, and other hillstream loaches (they coexist peacefully with conspecifics in most cases). Avoid tropical community fish that require 78-82°F — the temperature compromise will harm one group or the other. Avoid fin-nippers and aggressive species that target the hillstream's flowing fins.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Hillstream Loach — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for hillstream loach care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/hillstream%20loach%20tank%20setup?s=species-hillstream-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Hillstream Loach Setup on Amazon →</a>
+            <a href="/go/chewy-brand/hillstream%20loach%20tank%20setup?s=species-hillstream-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

@@ -11,6 +11,7 @@ export default function GreatPyreneesPage() {
       hero={{ title: 'Great Pyrenees Breed Guide', subtitle: 'Majestic, gentle, and deeply independent — Great Pyrenees were bred for thousands of years to guard livestock in remote mountain terrain without human supervision. The traits that made them exceptional livestock guardian dogs (LGDs) — independence, territorial behavior, nighttime activity, loud barking — are the same traits that make them challenging household pets without appropriate management.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Pyrenees', href: '/breeds/great-pyrenees' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

@@ -9,6 +9,7 @@ export default function WeimaranerPage() {
       hero={{ title: 'Weimaraner Breed Guide', subtitle: 'The Gray Ghost — the Weimaraner\'s silver-gray coat, pale amber or blue-gray eyes, and intense, aristocratic bearing make them immediately distinctive. Bred as all-purpose hunting dogs by German nobility, they combine exceptional prey drive, high intelligence, deep loyalty, and significant intensity in a package that is deeply rewarding for owners who can match them.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Weimaraner', href: '/breeds/weimaraner' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

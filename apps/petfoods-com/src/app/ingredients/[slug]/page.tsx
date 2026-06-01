@@ -1239,7 +1239,8 @@ export default async function IngredientPage({ params }: PageProps) {
             title="Companion References"
             links={[
               { label: 'Ingredient Catalog (all)', href: '/ingredients' },
-              { label: 'Brand Index (35)', href: '/brands' },
+              { label: 'Brand Index (A–Z)', href: '/brands' },
+              { label: 'Label Glossary', href: '/glossary' },
               { label: 'Pet Food Recall Database', href: '/recalls' },
               ...(linkToPreservativesHub
                 ? [{ label: 'Preservatives in Pet Food — Editorial', href: '/ingredients/preservatives-pet-food' }]

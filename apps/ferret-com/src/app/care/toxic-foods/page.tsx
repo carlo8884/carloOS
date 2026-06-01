@@ -89,6 +89,7 @@ export default function FerretToxicFoodsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Toxic Foods and Household Hazards for Ferrets',
           subtitle:
@@ -101,7 +102,7 @@ export default function FerretToxicFoodsPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/toxic-foods' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Toxic Foods', href: '/care/toxic-foods' },
         ]}
         sidebar={
