@@ -6,7 +6,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
@@ -16,6 +16,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Breeds', url: 'https://dog.com/breeds' },
+  ],
+})
+
 
 const BREED_IMAGES: Record<string, string> = {
   'golden-retriever': 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&auto=format&fit=crop',
@@ -62,6 +70,8 @@ export default async function BreedsPage() {
 
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
@@ -197,5 +207,6 @@ export default async function BreedsPage() {
       </section>
       {/* agent1-browse-all-end */}
 </>
+  </>
   )
 }
