@@ -24,6 +24,13 @@ export interface ImageCardProps {
   alt: string
   caption?: string
   credit?: string
+  /**
+   * When set, the credit text becomes a link to this URL — typically the
+   * source page where photographer attribution lives (Unsplash photo page,
+   * Wikimedia file page, etc.). Required by QC §1 when the credit string
+   * does not name the photographer directly.
+   */
+  creditUrl?: string
   aspect?: ImageCardAspect
   variant?: ImageCardVariant
   /** Optional priority load (hero images above the fold) */
@@ -42,6 +49,7 @@ export function ImageCard({
   alt,
   caption,
   credit,
+  creditUrl,
   aspect = '16:9',
   variant = 'inline',
   priority = false,
@@ -105,7 +113,18 @@ export function ImageCard({
           {caption && credit && ' '}
           {credit && (
             <span className="not-italic text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light ml-1">
-              {credit}
+              {creditUrl ? (
+                <a
+                  href={creditUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-brand-text-light hover:text-brand-primary no-underline hover:underline"
+                >
+                  {credit}
+                </a>
+              ) : (
+                credit
+              )}
             </span>
           )}
         </figcaption>
