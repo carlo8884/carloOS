@@ -4,6 +4,12 @@
 **CSRO directive: STOP new page expansion on the top-7 cohort until every defect below is closed.**
 New pages only to fill a CSRO-named gap; otherwise all throughput goes to defect-closure.
 
+> **2026-06-01 escalation (Carlo): the bar is now PREMIUM.** Credibility (this checklist) is
+> necessary but not sufficient. Each priority site must also clear the **Premium Domain Launch Bar**
+> (`ops/csro/premium-domain-launch-bar.md`) — premium category destination, not content library.
+> **COO content-expansion freeze extended: no new content on priority sites until Visual ships the
+> premium first-screen standard and applies it.** Visual leads the homepage redesign pass.
+
 Cohort (top 7): Dog · Fish · Ferret · PetFood · Vets · Horses · Lizard.
 
 ## Per-site launch-polish gate — every box must be ✅ before a site is advisor-ready
