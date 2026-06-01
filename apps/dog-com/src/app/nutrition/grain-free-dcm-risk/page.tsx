@@ -27,6 +27,7 @@ export default function GrainFreeDCMPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{
         title: 'Grain-Free Dog Food & DCM Risk — What the FDA Actually Found',
         subtitle: 'The FDA\'s investigation into dilated cardiomyopathy (DCM) and grain-free diets produced concerning findings that most dog food marketing ignores. Here\'s what the data actually shows.',

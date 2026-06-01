@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
 
   return (
     <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
-      <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
+      <nav aria-label="Breadcrumb" className="text-xs text-brand-text-light flex gap-2 mb-8">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid">Privacy Policy</span>

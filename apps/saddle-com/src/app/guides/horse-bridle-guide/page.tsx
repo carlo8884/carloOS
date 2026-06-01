@@ -79,6 +79,7 @@ export default function HorseBridleGuidePage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="saddle-com"
+        contentType="guide"
         hero={{
           title: 'Horse Bridle Guide 2025',
           subtitle: 'Bridle selection follows your discipline, your horse\'s training level, and the work you are doing — not personal preference or aesthetics. This guide covers what each bridle type does, who it is for, and how to fit it correctly.',

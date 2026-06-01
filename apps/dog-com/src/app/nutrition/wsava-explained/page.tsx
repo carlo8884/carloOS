@@ -27,6 +27,7 @@ export default function WSAVAExplainedPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{
         title: 'WSAVA Dog Food Guidelines Explained',
         subtitle: 'The World Small Animal Veterinary Association (WSAVA) published guidelines for evaluating pet food manufacturers — not ingredients, but the companies making the food. Here\'s what compliance actually means.',

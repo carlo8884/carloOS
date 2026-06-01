@@ -42,7 +42,16 @@ export default function UromastcyxPage() {
         <p><strong>U. ornata (Ornate uromastyx):</strong> The most colorful — males display vivid blue, green, and orange patterns. Native to Egypt and the Middle East. 14–16 inches. The most popular and widely available.</p>
         <p><strong>U. geyri (Saharan uromastyx):</strong> Yellow-orange coloration, slightly smaller at 10–13 inches. More docile temperament than ornata — often recommended for beginners to the species.</p>
         <p><strong>U. maliensis (Mali uromastyx):</strong> Dark base with yellow or red patterning. Robust and adaptable. 10–14 inches. One of the hardier species for beginners.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Uromastyx — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for uromastyx care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/uromastyx%20setup?s=species-uromastyx" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Uromastyx Setup on Amazon →</a>
+            <a href="/go/chewy-brand/uromastyx%20setup?s=species-uromastyx" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

@@ -17,7 +17,27 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = process.cwd()
-const APPS = ['dog-com', 'fish-com', 'lizard-com', 'saddle-com', 'vets-co']
+// All 10 production sites — extended portfolio-wide from the original Tier-1 5
+// per CSRO queue #10 (404 / broken-route sweep). Adding here is enough; the
+// gate iterates each site independently. Per-site failures fail the build.
+const APPS = [
+  'dog-com',
+  'fish-com',
+  'lizard-com',
+  'saddle-com',
+  'vets-co',
+  'horses-com',
+  'petfood-com',
+  'petfoods-com',
+  'ferret-com',
+  'ferrets-com',
+]
+
+// Sites in the warn-only band: their broken links are reported but don't fail
+// the build. Use for sites under active in-progress cleanup by another bot,
+// so the gate can be expanded without blocking concurrent work. Empty band
+// is the goal state — every site held to strict.
+const WARN_ONLY_SITES = new Set([])
 
 function listFiles(dir, exts) {
   if (!exists(dir)) return []
@@ -109,6 +129,10 @@ function collectHrefs(site) {
       while ((m = re.exec(src)) !== null) {
         const v = m[1] || m[2] || m[3] || m[4] || m[5]
         if (!v || !v.startsWith('/') || v.startsWith('//')) continue
+        // Skip template-literal interpolations — `/foo/${slug}` can't be
+        // statically resolved here; the dynamic-route walker checks the
+        // pattern shape separately via dynamicPatterns.
+        if (v.includes('${')) continue
         const line = src.slice(0, m.index).split('\n').length
         hrefs.push({ source: f.replace(ROOT + '/', ''), line, href: v })
       }
@@ -165,7 +189,8 @@ function collectHrefs(site) {
   return hrefs
 }
 
-let totalBroken = 0
+let totalStrictBroken = 0
+let totalWarnBroken = 0
 const report = []
 
 for (const site of APPS) {
@@ -181,9 +206,12 @@ for (const site of APPS) {
       broken.push(h)
     }
   }
+  const warnOnly = WARN_ONLY_SITES.has(site)
   if (broken.length > 0) {
-    totalBroken += broken.length
-    report.push(`\n## ${site}: ${broken.length} broken internal link${broken.length === 1 ? '' : 's'}`)
+    if (warnOnly) totalWarnBroken += broken.length
+    else totalStrictBroken += broken.length
+    const tag = warnOnly ? ' (warn-only)' : ''
+    report.push(`\n## ${site}: ${broken.length} broken internal link${broken.length === 1 ? '' : 's'}${tag}`)
     for (const b of broken) {
       report.push(`  ${b.source}:${b.line} — href=${JSON.stringify(b.href)}`)
     }
@@ -194,11 +222,18 @@ for (const site of APPS) {
 
 console.log(report.join('\n'))
 
-if (totalBroken > 0) {
-  console.error(`\nFAIL: ${totalBroken} broken internal link(s) found across the repo.`)
+if (totalStrictBroken > 0) {
+  console.error(`\nFAIL: ${totalStrictBroken} broken internal link(s) in strict-mode sites.`)
+  if (totalWarnBroken > 0) {
+    console.error(`(plus ${totalWarnBroken} warn-only entries — non-blocking, see above)`)
+  }
   console.error('Fix the href, repoint to an existing page, or de-link the breadcrumb.')
   process.exit(1)
 } else {
-  console.log('\nPASS: 0 broken internal links across all 5 sites.')
+  if (totalWarnBroken > 0) {
+    console.log(`\nPASS: 0 strict-mode broken links (${totalWarnBroken} warn-only entries reported above).`)
+  } else {
+    console.log(`\nPASS: 0 broken internal links across all ${APPS.length} sites.`)
+  }
   process.exit(0)
 }

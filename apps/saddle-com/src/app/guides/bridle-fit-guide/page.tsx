@@ -93,6 +93,7 @@ export default function BridleFitGuidePage() {
       <SchemaScript schema={combinedSchema} />
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Bridle Fit Guide — Crown, Browband, Noseband, Bit',
         subtitle:

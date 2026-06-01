@@ -162,6 +162,38 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Birmingham', 'Montgomery', 'Mobile', 'Huntsville', 'Tuscaloosa'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Alabama has no statewide ferret restriction; rabies vaccination is required under state law.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal to own as pets throughout Alabama with no state possession permit. Rabies vaccination is required under state animal-health law, and local licensing may apply.",
+    lawCitation: "Alabama Department of Conservation and Natural Resources regulations on restricted/non-native species do not enumerate the domesticated ferret. General companion-animal and rabies-vaccination statutes (Ala. Code Title 3) govern ownership.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Alabama and the broader Southeast.",
+      },
+      {
+        name: "Petfinder — Alabama Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/al/",
+        blurb: "Alabama Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Auburn University College of Veterinary Medicine",
+        city: "Auburn",
+        specialty: "Teaching hospital with zoological/exotic referral capability; a common in-state referral point for adrenal and insulinoma workups.",
+        url: "https://vetmed.auburn.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — AL filter",
+        city: 'Statewide',
+        specialty: "Birmingham and Huntsville hold the densest concentration of exotic-mammal practices; Mobile-area owners often refer toward the Gulf Coast or Auburn.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'alaska',
@@ -170,6 +202,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Anchorage', 'Fairbanks', 'Juneau', 'Wasilla'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Exotic-pet vets are concentrated in the Anchorage and Fairbanks metro areas; rural owners should plan for long-distance referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Alaska. They appear on the state's clean list of animals that may be possessed without a permit, alongside dogs and cats.",
+    lawCitation: "Alaska Department of Fish and Game regulations (5 AAC 92.029, the list of animals that may be possessed without a permit) include the domesticated ferret. No state possession permit is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; in-state ferret rescues are scarce, so many Alaska owners acquire from a vetted breeder or relocate an existing ferret.",
+      },
+      {
+        name: "Petfinder — Alaska Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ak/",
+        blurb: "Alaska Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — AK filter",
+        city: 'Statewide',
+        specialty: "Exotic-experienced clinics cluster in Anchorage and Fairbanks. Rural and bush-community owners should arrange a relationship with an Anchorage referral practice in advance.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'arizona',
@@ -223,6 +281,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Little Rock', 'Fort Smith', 'Fayetteville', 'Springdale', 'Jonesboro'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Arkansas permits ferrets; rabies vaccination is the standard state requirement.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets statewide in Arkansas with no special possession permit. Rabies vaccination is the standard state requirement.",
+    lawCitation: "Arkansas Game and Fish Commission captive-wildlife rules address native and large exotic species; the domesticated ferret is not classified as restricted captive wildlife. Rabies vaccination is required under Arkansas Department of Health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Arkansas and the South-Central region.",
+      },
+      {
+        name: "Petfinder — Arkansas Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ar/",
+        blurb: "Arkansas Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — AR filter",
+        city: 'Statewide',
+        specialty: "The Little Rock metro and the northwest corridor (Fayetteville–Springdale–Rogers) hold most exotic-mammal capacity; expect referral travel from the Delta.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'california',
@@ -290,6 +374,38 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Boulder'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Colorado permits ferrets; the Denver–Boulder corridor has the highest density of exotic-mammal practices in the state.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Colorado. They are explicitly listed as unregulated wildlife that does not require a state license to possess.",
+    lawCitation: "Colorado Parks and Wildlife regulations (Chapter W-0, the unregulated-wildlife list) classify the domesticated ferret as unregulated — no state possession license is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Colorado and the Mountain West.",
+      },
+      {
+        name: "Petfinder — Colorado Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/co/",
+        blurb: "Colorado Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Colorado State University James L. Voss Veterinary Teaching Hospital",
+        city: "Fort Collins",
+        specialty: "Major teaching hospital with an exotic/avian service; a regional referral center for ferret oncology and endocrine cases.",
+        url: "https://vth.colostate.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — CO filter",
+        city: 'Statewide',
+        specialty: "The Denver–Boulder corridor has the densest exotic-mammal practice concentration in the Mountain West, and Colorado State University in Fort Collins is a major referral hospital.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'connecticut',
@@ -298,6 +414,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Bridgeport', 'New Haven', 'Hartford', 'Stamford', 'Waterbury'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Connecticut permits ferrets; rabies vaccination is required under CGS §22-339b.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Connecticut with no state possession permit. State law requires rabies vaccination for ferrets, the same as for dogs and cats.",
+    lawCitation: "Connecticut General Statutes §22-339b requires rabies vaccination of dogs, cats, and ferrets. The domesticated ferret is not on the state's potentially-dangerous-animal or restricted list, so no possession permit is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Connecticut and the broader New England / tri-state region.",
+      },
+      {
+        name: "Petfinder — Connecticut Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ct/",
+        blurb: "Connecticut Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — CT filter",
+        city: 'Statewide',
+        specialty: "The dense Northeast corridor means owners in lower Connecticut are within driving distance of multiple boarded exotic-mammal specialists in Connecticut, New York, and Massachusetts.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'delaware',
@@ -306,6 +448,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Wilmington', 'Dover', 'Newark', 'Middletown'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Delaware permits ferrets statewide; the Wilmington–Philadelphia corridor includes several boarded exotic-mammal specialists within driving distance.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets statewide in Delaware with no state possession permit. Standard rabies vaccination and local licensing rules apply.",
+    lawCitation: "Delaware Department of Natural Resources and Environmental Control rules govern native wildlife and large exotics; the domesticated ferret is not classified as restricted. Rabies vaccination is required under Delaware animal-health law.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Delaware and the mid-Atlantic / Delaware Valley region.",
+      },
+      {
+        name: "Petfinder — Delaware Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/de/",
+        blurb: "Delaware Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — DE filter",
+        city: 'Statewide',
+        specialty: "Wilmington-area owners can reach boarded exotic-mammal specialists in the Philadelphia metro within an hour; the University of Pennsylvania's exotic service is a regional referral option.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'florida',
@@ -444,6 +612,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Boise', 'Meridian', 'Nampa', 'Idaho Falls', 'Pocatello'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Idaho permits ferrets; exotic-pet vets are concentrated in the Treasure Valley (Boise metro).`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Idaho with no state possession permit for the domesticated ferret. Rabies vaccination and local rules apply.",
+    lawCitation: "Idaho Department of Agriculture and Idaho Fish and Game rules regulate deleterious exotic animals and native wildlife; the domesticated ferret is treated as a companion animal rather than a regulated exotic. Confirm current Idaho Dept. of Agriculture guidance.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse in the Intermountain West, so vetted breeders and out-of-state transfers are common.",
+      },
+      {
+        name: "Petfinder — Idaho Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/id/",
+        blurb: "Idaho Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — ID filter",
+        city: 'Statewide',
+        specialty: "The Treasure Valley (Boise metro) holds most of the state's exotic-mammal capacity; eastern and panhandle owners should plan referral travel or telemedicine triage.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'illinois',
@@ -497,6 +691,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Indianapolis', 'Fort Wayne', 'Evansville', 'South Bend', 'Bloomington'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Indiana permits ferrets; the Purdue University College of Veterinary Medicine accepts ferret referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Indiana with no state possession permit. Rabies vaccination is required, and Indianapolis and other cities may add licensing rules.",
+    lawCitation: "Indiana Department of Natural Resources wild-animal-possession permit rules (312 IAC 9-11) cover native and certain exotic species; the domesticated ferret is not a regulated wild animal. Rabies vaccination is required under Indiana animal-health law.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Indiana and the Great Lakes region.",
+      },
+      {
+        name: "Petfinder — Indiana Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/in/",
+        blurb: "Indiana Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Purdue University Veterinary Hospital",
+        city: "West Lafayette",
+        specialty: "Teaching hospital with an exotic/avian service; a primary in-state referral point for ferret endocrine and oncology cases.",
+        url: "https://vethospital.purdue.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — IN filter",
+        city: 'Statewide',
+        specialty: "Indianapolis is the exotic-mammal hub; Purdue University's veterinary teaching hospital in West Lafayette is a major in-state referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'iowa',
@@ -505,6 +731,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Des Moines', 'Cedar Rapids', 'Davenport', 'Iowa City', 'Sioux City'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Iowa permits ferrets; Iowa State University's Lloyd Veterinary Medical Center accepts ferret referrals in Ames.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Iowa with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Iowa Department of Natural Resources rules regulate dangerous wild animals (Iowa Code Chapter 717F) but exempt domesticated species; the ferret is not a dangerous wild animal under that chapter. Rabies vaccination is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Iowa and the Upper Midwest.",
+      },
+      {
+        name: "Petfinder — Iowa Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ia/",
+        blurb: "Iowa Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Iowa State University Lloyd Veterinary Medical Center",
+        city: "Ames",
+        specialty: "Teaching hospital with an exotics service; a regional referral center for ferret adrenal disease and insulinoma.",
+        url: "https://vetmed.iastate.edu/hospital",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — IA filter",
+        city: 'Statewide',
+        specialty: "Des Moines and the Iowa City–Cedar Rapids corridor hold most exotic-mammal capacity; Iowa State University in Ames is a major teaching-hospital referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'kansas',
@@ -513,6 +771,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Wichita', 'Overland Park', 'Kansas City', 'Topeka', 'Olathe', 'Lawrence'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Kansas permits ferrets; Kansas State University's College of Veterinary Medicine in Manhattan accepts exotic-mammal referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Kansas with no state possession permit. Rabies vaccination is required, and local ordinances may apply.",
+    lawCitation: "Kansas Department of Wildlife and Parks regulates native wildlife and certain dangerous regulated animals; the domesticated ferret is not a regulated dangerous animal. Rabies vaccination is required under Kansas animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Kansas and the Central Plains.",
+      },
+      {
+        name: "Petfinder — Kansas Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ks/",
+        blurb: "Kansas Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Kansas State University Veterinary Health Center",
+        city: "Manhattan",
+        specialty: "Teaching hospital with an exotics service; a regional referral center for ferret oncology and endocrine workups.",
+        url: "https://www.ksvdl.org/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — KS filter",
+        city: 'Statewide',
+        specialty: "The Kansas City and Wichita metros hold most exotic-mammal capacity; Kansas State University in Manhattan is a major teaching-hospital referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'kentucky',
@@ -521,6 +811,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Louisville', 'Lexington', 'Bowling Green', 'Owensboro', 'Covington'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Kentucky permits ferrets; rabies vaccination is required under KRS §258.015.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Kentucky with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Kentucky Department of Fish and Wildlife Resources rules (301 KAR 2:082) classify certain inherently-dangerous and native species; the domesticated ferret is not an inherently-dangerous animal under that rule. Rabies vaccination is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Kentucky and the Ohio Valley.",
+      },
+      {
+        name: "Petfinder — Kentucky Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ky/",
+        blurb: "Kentucky Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — KY filter",
+        city: 'Statewide',
+        specialty: "Louisville and Lexington hold most exotic-mammal capacity; northern-Kentucky owners often refer across the river into the Cincinnati metro.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'louisiana',
@@ -529,6 +845,38 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['New Orleans', 'Baton Rouge', 'Shreveport', 'Lafayette', 'Lake Charles'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Louisiana permits ferrets; LSU School of Veterinary Medicine in Baton Rouge accepts exotic-mammal referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Louisiana with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Louisiana Department of Wildlife and Fisheries regulates potentially-dangerous wild quadrupeds and native species; the domesticated ferret is not on that restricted list. Rabies vaccination is required under Louisiana animal-health law.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Louisiana and the Gulf South.",
+      },
+      {
+        name: "Petfinder — Louisiana Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/la/",
+        blurb: "Louisiana Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "LSU Veterinary Teaching Hospital",
+        city: "Baton Rouge",
+        specialty: "Teaching hospital with a zoological-medicine service; a primary in-state referral point for ferret endocrine and oncology cases.",
+        url: "https://www.lsu.edu/vetmed/veterinary_hospital/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — LA filter",
+        city: 'Statewide',
+        specialty: "New Orleans and Baton Rouge hold most exotic-mammal capacity; LSU's veterinary teaching hospital in Baton Rouge is the major in-state referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'maine',
@@ -537,6 +885,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Portland', 'Lewiston', 'Bangor', 'South Portland', 'Auburn'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Maine permits ferrets; exotic-pet practices are concentrated in the Portland and Bangor metros.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Maine. The state has historically allowed ferrets without an individual possession permit, but Maine maintains an unrestricted/restricted species framework worth confirming.",
+    lawCitation: "Maine Department of Inland Fisheries and Wildlife maintains lists of unrestricted, restricted, and prohibited species (09-137 CMR Chapter 7). The domesticated ferret has been treated as allowable; confirm its current classification with MDIFW before acquiring.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Maine and northern New England.",
+      },
+      {
+        name: "Petfinder — Maine Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/me/",
+        blurb: "Maine Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — ME filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity concentrates in the Portland metro; northern and Down East owners should plan referral travel toward Portland or into New Hampshire.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'maryland',
@@ -545,6 +919,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Baltimore', 'Frederick', 'Rockville', 'Gaithersburg', 'Bowie', 'Annapolis'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Maryland permits ferrets; the Baltimore–DC corridor has the highest density of boarded exotic-mammal specialists on the East Coast.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Maryland with no state possession permit. Rabies vaccination is required, and Baltimore and other jurisdictions may add licensing rules.",
+    lawCitation: "Maryland Department of Natural Resources restricts certain native and exotic species (COMAR 08.03.11); the domesticated ferret is not on the prohibited list. Rabies vaccination is required under Maryland animal-health law.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Maryland and the mid-Atlantic / DC region.",
+      },
+      {
+        name: "Petfinder — Maryland Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/md/",
+        blurb: "Maryland Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — MD filter",
+        city: 'Statewide',
+        specialty: "The Baltimore–DC corridor has strong exotic-mammal capacity; the University of Pennsylvania exotic service to the north is a regional referral option.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'massachusetts',
@@ -643,6 +1043,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Minneapolis', 'St. Paul', 'Rochester', 'Duluth', 'Bloomington'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Minnesota permits ferrets; the University of Minnesota Veterinary Medical Center in St. Paul accepts exotic-mammal referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Minnesota with no state possession permit. Rabies vaccination is recommended/required and local licensing may apply.",
+    lawCitation: "Minnesota regulates regulated animals (Minn. Stat. §346.155) — primarily large cats, bears, and primates — and the domesticated ferret is not a regulated animal under that statute. The DNR's restricted-species rules likewise do not reach domesticated ferrets.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Minnesota and the Upper Midwest.",
+      },
+      {
+        name: "Petfinder — Minnesota Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/mn/",
+        blurb: "Minnesota Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "University of Minnesota Veterinary Medical Center",
+        city: "St. Paul",
+        specialty: "Teaching hospital with an exotics service; a regional referral center for ferret adrenal disease, insulinoma, and lymphoma.",
+        url: "https://www.vmc.umn.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — MN filter",
+        city: 'Statewide',
+        specialty: "The Twin Cities metro holds the state's densest exotic-mammal capacity; the University of Minnesota's veterinary medical center in St. Paul is a major referral hospital.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'mississippi',
@@ -651,6 +1083,38 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Jackson', 'Gulfport', 'Southaven', 'Hattiesburg', 'Biloxi'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Mississippi permits ferrets; Mississippi State University's College of Veterinary Medicine accepts exotic referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Mississippi with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Mississippi Department of Wildlife, Fisheries, and Parks regulates inherently-dangerous and native wildlife; the domesticated ferret is not classified as inherently dangerous. Rabies vaccination is required under Mississippi animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Mississippi and the Deep South.",
+      },
+      {
+        name: "Petfinder — Mississippi Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ms/",
+        blurb: "Mississippi Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Mississippi State University College of Veterinary Medicine",
+        city: "Starkville",
+        specialty: "Teaching hospital with referral capability for exotic companion mammals; an in-state option for complex ferret cases.",
+        url: "https://www.cvm.msstate.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — MS filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity is limited; the Jackson metro and the Memphis catchment (for north Mississippi) are the practical referral points. Mississippi State University in Starkville is the in-state teaching hospital.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'missouri',
@@ -659,6 +1123,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Kansas City', 'St. Louis', 'Springfield', 'Columbia', 'Independence'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Missouri permits ferrets; the University of Missouri Veterinary Health Center in Columbia accepts exotic-mammal referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Missouri with no state possession permit. Rabies vaccination is required and local licensing may apply.",
+    lawCitation: "Missouri Wildlife Code (3 CSR 10) and the dangerous-wild-animal statute (Mo. Rev. Stat. §578.023) regulate large carnivores and native wildlife; the domesticated ferret is not a dangerous wild animal under those provisions. Rabies vaccination is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Missouri and the Lower Midwest.",
+      },
+      {
+        name: "Petfinder — Missouri Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/mo/",
+        blurb: "Missouri Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "University of Missouri Veterinary Health Center",
+        city: "Columbia",
+        specialty: "Teaching hospital with an exotics service; a regional referral center for ferret endocrine and oncology cases.",
+        url: "https://www.cvm.missouri.edu/veterinary-health-center/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — MO filter",
+        city: 'Statewide',
+        specialty: "St. Louis and Kansas City hold most exotic-mammal capacity; the University of Missouri veterinary teaching hospital in Columbia is a major in-state referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'montana',
@@ -667,6 +1163,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Billings', 'Missoula', 'Great Falls', 'Bozeman', 'Helena'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Montana permits ferrets; exotic-pet practices are sparse outside the Billings and Missoula metros — plan for travel.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Montana with no state possession permit for the domesticated ferret. Rabies vaccination is recommended and local rules may apply.",
+    lawCitation: "Montana Fish, Wildlife and Parks regulates the import and possession of wild and exotic animals; the domesticated ferret is treated as a companion animal rather than controlled wildlife. Confirm current MFWP guidance and any local ordinance.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse across the Northern Rockies, so vetted breeders and out-of-state transfers are common.",
+      },
+      {
+        name: "Petfinder — Montana Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/mt/",
+        blurb: "Montana Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — MT filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity concentrates in Billings, Missoula, and Bozeman; rural owners should establish a referral relationship in advance and plan for travel.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'nebraska',
@@ -675,6 +1197,32 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Omaha', 'Lincoln', 'Bellevue', 'Grand Island', 'Kearney'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Nebraska permits ferrets; exotic-mammal practices are concentrated in Omaha and Lincoln.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Nebraska with no state possession permit. Rabies vaccination is required and local licensing may apply.",
+    lawCitation: "Nebraska Game and Parks Commission regulates captive wildlife and the Department of Agriculture regulates certain exotics; the domesticated ferret is not classified as controlled wildlife. Rabies vaccination is required under Nebraska animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Nebraska and the Central Plains.",
+      },
+      {
+        name: "Petfinder — Nebraska Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ne/",
+        blurb: "Nebraska Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — NE filter",
+        city: 'Statewide',
+        specialty: "The Omaha and Lincoln metros hold most exotic-mammal capacity in the state; western-Nebraska owners should plan referral travel.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'nevada',
@@ -683,6 +1231,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Las Vegas', 'Henderson', 'Reno', 'North Las Vegas', 'Sparks'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Nevada permits ferrets; heat-stress prevention is a clinical concern in the Las Vegas metro (ferrets do not tolerate temperatures above ~80°F).`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Nevada. The state does not require a permit to possess a domesticated ferret.",
+    lawCitation: "Nevada Administrative Code 503.110 lists species that may not be possessed without a permit and species exempt from permit requirements; the domesticated ferret is not among the restricted live wildlife and may be possessed without a state permit.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Nevada and the Desert Southwest.",
+      },
+      {
+        name: "Petfinder — Nevada Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/nv/",
+        blurb: "Nevada Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — NV filter",
+        city: 'Statewide',
+        specialty: "The Las Vegas and Reno metros hold the state's exotic-mammal capacity; rural owners should plan referral travel to one of those two hubs.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'new-hampshire',
@@ -691,6 +1265,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Manchester', 'Nashua', 'Concord', 'Dover', 'Rochester'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} New Hampshire permits ferrets; many owners cross into Massachusetts for referrals to Tufts.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in New Hampshire with no state possession permit. Rabies vaccination is required and local rules may apply.",
+    lawCitation: "New Hampshire Fish and Game controlled-species rules (Fis 800) regulate wildlife possession; the domesticated ferret is treated as a companion animal rather than controlled wildlife. Rabies vaccination is required under New Hampshire animal-health law.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving New Hampshire and northern New England.",
+      },
+      {
+        name: "Petfinder — New Hampshire Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/nh/",
+        blurb: "New Hampshire Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — NH filter",
+        city: 'Statewide',
+        specialty: "The southern-tier metros (Manchester, Nashua) sit within the Boston exotic-vet catchment, giving owners strong referral access.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'new-jersey',
@@ -699,6 +1299,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Newark', 'Jersey City', 'Paterson', 'Elizabeth', 'Edison', 'Trenton'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} New Jersey permits ferrets; the New York City prohibition does not extend across the river — North Jersey owners are sometimes the closest option for NYC-area ferret owners seeking care.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in New Jersey with no state possession permit. The state's potentially-dangerous-species permit framework does not reach the domesticated ferret.",
+    lawCitation: "New Jersey Division of Fish and Wildlife exotic and nongame species rules (N.J.A.C. 7:25-4) require permits for potentially-dangerous species; the domesticated ferret is not a potentially-dangerous species under that rule. Rabies vaccination is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving New Jersey and the tri-state / mid-Atlantic region.",
+      },
+      {
+        name: "Petfinder — New Jersey Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/nj/",
+        blurb: "New Jersey Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — NJ filter",
+        city: 'Statewide',
+        specialty: "Northern New Jersey sits inside the New York metro exotic-vet catchment; the University of Pennsylvania exotic service is within reach for South Jersey owners.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'new-mexico',
@@ -707,6 +1333,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Albuquerque', 'Las Cruces', 'Rio Rancho', 'Santa Fe', 'Roswell'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} New Mexico permits ferrets; exotic-pet practices are concentrated in Albuquerque and Santa Fe.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in New Mexico with no state possession permit for the domesticated ferret. Rabies vaccination and local rules apply.",
+    lawCitation: "New Mexico Department of Game and Fish regulates importation and possession of certain live wildlife; the domesticated ferret is treated as a companion animal rather than regulated wildlife. Confirm current Game and Fish guidance and any local ordinance.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse in the Desert Southwest, so vetted breeders and out-of-state transfers are common.",
+      },
+      {
+        name: "Petfinder — New Mexico Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/nm/",
+        blurb: "New Mexico Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — NM filter",
+        city: 'Statewide',
+        specialty: "The Albuquerque metro holds most exotic-mammal capacity; Santa Fe and Las Cruces owners typically refer toward Albuquerque or El Paso.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'new-york',
@@ -816,6 +1468,32 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Fargo', 'Bismarck', 'Grand Forks', 'Minot', 'West Fargo'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} North Dakota permits ferrets; exotic-pet practices are concentrated in Fargo — rural owners should plan for travel.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in North Dakota with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "North Dakota Game and Fish and the Department of Agriculture regulate nontraditional livestock and certain captive wildlife categories; the domesticated ferret is treated as a companion animal. Rabies vaccination is required under North Dakota rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse on the Northern Plains, so out-of-state transfers and vetted breeders are common.",
+      },
+      {
+        name: "Petfinder — North Dakota Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/nd/",
+        blurb: "North Dakota Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — ND filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity concentrates in Fargo and Bismarck; many owners use the Fargo–Moorhead metro's catchment, which extends into Minnesota.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'ohio',
@@ -870,6 +1548,38 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Oklahoma City', 'Tulsa', 'Norman', 'Broken Arrow', 'Edmond'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Oklahoma permits ferrets; Oklahoma State University Center for Veterinary Health Sciences in Stillwater accepts exotic referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Oklahoma with no state possession permit. Rabies vaccination is required and local licensing may apply.",
+    lawCitation: "Oklahoma Department of Wildlife Conservation regulates native wildlife and certain exotics; the domesticated ferret is not classified as controlled wildlife. Rabies vaccination is required under Oklahoma animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Oklahoma and the South-Central region.",
+      },
+      {
+        name: "Petfinder — Oklahoma Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ok/",
+        blurb: "Oklahoma Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Oklahoma State University Veterinary Medical Hospital",
+        city: "Stillwater",
+        specialty: "Teaching hospital with an avian/exotic service; an in-state referral center for ferret endocrine and oncology cases.",
+        url: "https://vetmed.okstate.edu/hospital/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — OK filter",
+        city: 'Statewide',
+        specialty: "The Oklahoma City and Tulsa metros hold most exotic-mammal capacity; Oklahoma State University in Stillwater is a major in-state teaching-hospital referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'oregon',
@@ -878,6 +1588,38 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Portland', 'Salem', 'Eugene', 'Gresham', 'Hillsboro', 'Beaverton'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Oregon permits ferrets; Oregon State University's Carlson College of Veterinary Medicine in Corvallis accepts exotic referrals. The Portland metro has multiple exotic-pet practices.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Oregon. The state's prohibited and controlled-species rules exempt the domesticated ferret, so no permit is required.",
+    lawCitation: "Oregon Department of Fish and Wildlife prohibited-species rules (OAR 635-056) list controlled and prohibited species; the domesticated ferret is exempt and may be kept as a pet without a permit.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Oregon and the Pacific Northwest.",
+      },
+      {
+        name: "Petfinder — Oregon Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/or/",
+        blurb: "Oregon Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Oregon State University Veterinary Teaching Hospital",
+        city: "Corvallis",
+        specialty: "Teaching hospital with referral capability for exotic companion mammals; an in-state option for complex ferret cases.",
+        url: "https://vetmed.oregonstate.edu/hospital",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — OR filter",
+        city: 'Statewide',
+        specialty: "The Portland metro has dense exotic-mammal capacity; Oregon State University's veterinary teaching hospital in Corvallis is a major in-state referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'pennsylvania',
@@ -941,6 +1683,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Providence', 'Warwick', 'Cranston', 'Pawtucket', 'East Providence'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Rhode Island permits ferrets; many owners cross into Massachusetts for referrals to Tufts.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Rhode Island. Rhode Island regulates exotic-animal possession closely, so confirming the current ferret rule with state authorities is especially important here.",
+    lawCitation: "Rhode Island Department of Environmental Management regulates the importation and possession of wild and exotic animals (R.I. Gen. Laws Chapter 4-18 and DEM rules). The domesticated ferret has been treated as allowable; confirm its current classification and any permit or rabies-vaccination requirement with RI DEM before acquiring.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Rhode Island and southern New England.",
+      },
+      {
+        name: "Petfinder — Rhode Island Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ri/",
+        blurb: "Rhode Island Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — RI filter",
+        city: 'Statewide',
+        specialty: "Rhode Island's small size places nearly all owners within the Providence–Boston exotic-vet catchment, giving good referral access.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'south-carolina',
@@ -949,6 +1717,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Charleston', 'Columbia', 'North Charleston', 'Mount Pleasant', 'Greenville'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} South Carolina permits ferrets; exotic-pet practices are concentrated in the Columbia, Charleston, and Greenville metros.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in South Carolina with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "South Carolina Department of Natural Resources regulates certain wildlife and large carnivores; the domesticated ferret is not classified as restricted wildlife. Rabies vaccination is required under South Carolina animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving South Carolina and the Southeast.",
+      },
+      {
+        name: "Petfinder — South Carolina Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/sc/",
+        blurb: "South Carolina Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — SC filter",
+        city: 'Statewide',
+        specialty: "The Charleston, Columbia, and Greenville metros hold most exotic-mammal capacity; upstate owners can also reach the Charlotte (NC) catchment.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'south-dakota',
@@ -957,6 +1751,32 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Sioux Falls', 'Rapid City', 'Aberdeen', 'Brookings'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} South Dakota permits ferrets; exotic-pet practices are concentrated in Sioux Falls and Rapid City.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in South Dakota with no state possession permit. Rabies vaccination is recommended and local rules may apply.",
+    lawCitation: "South Dakota Game, Fish and Parks and the Animal Industry Board regulate nondomestic and captive wildlife; the domesticated ferret is treated as a companion animal. Confirm current Animal Industry Board guidance and any local ordinance.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse on the Northern Plains, so out-of-state transfers and vetted breeders are common.",
+      },
+      {
+        name: "Petfinder — South Dakota Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/sd/",
+        blurb: "South Dakota Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — SD filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity concentrates in Sioux Falls and Rapid City; eastern owners can also use the broader Sioux Falls catchment that extends toward Minnesota and Iowa.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'tennessee',
@@ -1057,6 +1877,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Salt Lake City', 'West Valley City', 'Provo', 'West Jordan', 'Orem', 'Ogden'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Utah permits ferrets; exotic-pet practices are concentrated along the Wasatch Front (Salt Lake City through Provo).`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Utah. The state classifies the domesticated ferret as exempt from the controlled-species certificate-of-registration requirement.",
+    lawCitation: "Utah Division of Wildlife Resources rules (Utah Admin. Code R657-3) classify species as prohibited, controlled, or exempt (noncontrolled); the domesticated ferret is treated as noncontrolled and may be kept without a certificate of registration.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Utah and the Mountain West.",
+      },
+      {
+        name: "Petfinder — Utah Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/ut/",
+        blurb: "Utah Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — UT filter",
+        city: 'Statewide',
+        specialty: "The Salt Lake City–Provo corridor (Wasatch Front) holds nearly all of the state's exotic-mammal capacity; rural owners should plan referral travel.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'vermont',
@@ -1065,6 +1911,32 @@ export const States: StateEntry[] = [
     region: 'Northeast',
     majorCities: ['Burlington', 'Essex', 'South Burlington', 'Colchester', 'Rutland'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Vermont permits ferrets; many owners cross into Massachusetts for referrals to Tufts.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Vermont with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Vermont Fish and Wildlife rules on unrestricted and restricted species treat the domesticated ferret as an allowable companion animal; it is not on the prohibited list. Rabies vaccination is required under Vermont animal-health rules.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Vermont and northern New England.",
+      },
+      {
+        name: "Petfinder — Vermont Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/vt/",
+        blurb: "Vermont Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — VT filter",
+        city: 'Statewide',
+        specialty: "The Burlington metro holds most of the state's exotic-mammal capacity; southern-Vermont owners often refer into New Hampshire, Massachusetts, or New York.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'virginia',
@@ -1163,6 +2035,32 @@ export const States: StateEntry[] = [
     region: 'South',
     majorCities: ['Charleston', 'Huntington', 'Morgantown', 'Parkersburg', 'Wheeling'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} West Virginia permits ferrets; exotic-pet practices are concentrated in the Charleston, Huntington, and Morgantown metros.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in West Virginia with no state possession permit. Rabies vaccination is required and local rules may apply.",
+    lawCitation: "West Virginia Division of Natural Resources and Department of Agriculture dangerous-wild-animal rules regulate large carnivores and certain exotics; the domesticated ferret is not a dangerous wild animal under those provisions. Rabies vaccination is required.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving West Virginia and the central Appalachian region.",
+      },
+      {
+        name: "Petfinder — West Virginia Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/wv/",
+        blurb: "West Virginia Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — WV filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity is limited in-state; Morgantown-area owners can reach the Pittsburgh catchment, and Eastern Panhandle owners reach the DC–Baltimore corridor.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'wisconsin',
@@ -1171,6 +2069,38 @@ export const States: StateEntry[] = [
     region: 'Midwest',
     majorCities: ['Milwaukee', 'Madison', 'Green Bay', 'Kenosha', 'Racine', 'Appleton'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Wisconsin permits ferrets; the University of Wisconsin–Madison School of Veterinary Medicine accepts exotic-mammal referrals.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Wisconsin with no state possession permit. Rabies vaccination is required under state law.",
+    lawCitation: "Wisconsin Department of Natural Resources captive-wildlife rules regulate native and certain exotic species; the domesticated ferret is not classified as captive wildlife requiring a license. Rabies vaccination is required under Wisconsin animal-health law (Wis. Stat. Chapter 95).",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA-affiliated shelters serving Wisconsin and the Upper Midwest.",
+      },
+      {
+        name: "Petfinder — Wisconsin Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/wi/",
+        blurb: "Wisconsin Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "UW–Madison Veterinary Care",
+        city: "Madison",
+        specialty: "Teaching hospital with a special-species service; a regional referral center for ferret endocrine and oncology cases.",
+        url: "https://www.uwveterinarycare.wisc.edu/",
+      },
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — WI filter",
+        city: 'Statewide',
+        specialty: "The Milwaukee and Madison metros hold most exotic-mammal capacity; the University of Wisconsin veterinary teaching hospital in Madison is a major in-state referral center.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'wyoming',
@@ -1179,6 +2109,32 @@ export const States: StateEntry[] = [
     region: 'West',
     majorCities: ['Cheyenne', 'Casper', 'Laramie', 'Gillette', 'Rock Springs'],
     exoticVetSearchHint: `${BOILERPLATE_HINT} Wyoming permits ferrets; exotic-pet practices are sparse — many owners travel to Colorado's Front Range for boarded specialists.`,
+    legalStatus: 'legal',
+    legalSummary: "Ferrets are legal as pets in Wyoming with no state possession permit for the domesticated ferret. Rabies vaccination is recommended and local rules may apply.",
+    lawCitation: "Wyoming Game and Fish regulates live wildlife and certain exotics; the domesticated ferret is treated as a companion animal rather than regulated wildlife. Confirm current Game and Fish guidance and any local ordinance.",
+    adoptionResources: [
+      {
+        name: "American Ferret Association (AFA) — Shelter Directory",
+        type: 'directory',
+        url: "https://www.ferret.org/links/shelters.html",
+        blurb: "AFA national directory; ferret rescues are sparse across the Northern Rockies, so vetted breeders and out-of-state transfers are common.",
+      },
+      {
+        name: "Petfinder — Wyoming Ferret Search",
+        type: 'directory',
+        url: "https://www.petfinder.com/search/ferrets-for-adoption/us/wy/",
+        blurb: "Wyoming Petfinder listings, refreshed as partner shelters post.",
+      },
+    ],
+    veterinaryResources: [
+      {
+        name: "Association of Exotic Mammal Veterinarians (AEMV) — WY filter",
+        city: 'Statewide',
+        specialty: "Exotic-mammal capacity is very limited in-state; Cheyenne and Casper owners often refer toward the Colorado Front Range (Fort Collins, Denver) or into neighboring states.",
+        url: "https://www.aemv.org/find-a-vet",
+      },
+    ],
+    localFerretAssociations: [],
   },
   {
     slug: 'district-of-columbia',

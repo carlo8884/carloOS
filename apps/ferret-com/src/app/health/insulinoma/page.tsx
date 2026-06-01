@@ -39,6 +39,7 @@ export default function FerretInsulinomaPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Insulinoma in Ferrets',
           subtitle:
@@ -51,7 +52,7 @@ export default function FerretInsulinomaPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/insulinoma' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Insulinoma', href: '/health/insulinoma' },
         ]}
         sidebar={
@@ -162,16 +163,16 @@ export default function FerretInsulinomaPage() {
 
           <h2 id="treatment">Treatment Ladder</h2>
           <p>
-            Standard exotic-pet veterinary practice is a stepped approach. The protocols below summarize the framework described in Quesenberry &amp; Carpenter and in the <em>Vet Clinics NA Exotic Animal Practice</em> ferret endocrine-disease reviews. Doses are listed for orientation only — actual dosing must come from the prescribing veterinarian.
+            Standard exotic-pet veterinary practice is a stepped approach. The protocols below summarize the framework described in Quesenberry &amp; Carpenter and in the <em>Vet Clinics NA Exotic Animal Practice</em> ferret endocrine-disease reviews. These medications are veterinarian-prescribed; dosing must be determined by a veterinarian based on the ferret&apos;s condition, glucose trends, and overall health.
           </p>
           <p>
             <strong>Step 1 — Diet management.</strong> Frequent small meals of a high-protein, low-carbohydrate diet. No fasting. No sugary treats. Many early-stage insulinoma ferrets are stable on diet alone for months.
           </p>
           <p>
-            <strong>Step 2 — Prednisone (prednisolone).</strong> Glucocorticoids promote hepatic gluconeogenesis and counter the hypoglycemic effect of inappropriate insulin secretion. Typical starting dose in the literature is in the range of 0.5–1 mg/kg PO every 12 hours, titrated against fasting glucose and clinical signs. This is the workhorse medication and the majority of medically-managed cases are on prednisolone alone for the duration of treatment.
+            <strong>Step 2 — Prednisone (prednisolone).</strong> Glucocorticoids promote hepatic gluconeogenesis and counter the hypoglycemic effect of inappropriate insulin secretion. This is the workhorse medication, and the majority of medically-managed cases are on prednisolone alone for the duration of treatment. It is titrated by the veterinarian against fasting glucose and clinical signs.
           </p>
           <p>
-            <strong>Step 3 — Diazoxide.</strong> When prednisone alone no longer holds glucose adequately, diazoxide (a direct inhibitor of insulin secretion) is added. Typical dose range in published protocols is 5–30 mg/kg/day divided BID, again titrated to effect. Cost and availability are real barriers for some owners.
+            <strong>Step 3 — Diazoxide.</strong> When prednisone alone no longer holds glucose adequately, a veterinarian may add diazoxide (a direct inhibitor of insulin secretion). Cost and availability are real barriers for some owners.
           </p>
           <p>
             <strong>Step 4 — Surgical partial pancreatectomy and nodulectomy.</strong> Exploratory laparotomy with removal of visible pancreatic nodules, partial pancreatectomy of the affected lobe, and biopsy/removal of any abnormal-appearing tissue. Surgery does not "cure" insulinoma in most ferrets — microscopic disease remains and recurrence is the rule rather than the exception — but it materially extends the period of normoglycemia and reduces or eliminates the need for medication for a meaningful interval. Should be performed by a veterinarian experienced in ferret abdominal surgery.
@@ -203,30 +204,9 @@ export default function FerretInsulinomaPage() {
           <p className="text-sm font-medium text-brand-primary mb-3">
             The products below are supportive-nutrition tools used alongside veterinary treatment — they do NOT treat or cure insulinoma. Insulinoma requires diagnosis and a management plan from a veterinarian experienced with ferrets.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-          <ReviewCard
-            id="oxbow-carnivore-care"
-            name="Oxbow Animal Health Critical Care — Carnivore"
-            subtitle="High-calorie recovery supplement for obligate carnivores; used in ferret convalescent care"
-            score={9.2}
-            description={
-              <p>Carnivore Care is a veterinarian-recommended critical-care supplement for carnivores that cannot maintain adequate caloric intake. For insulinoma ferrets, it is used as a high-calorie between-meal supplement and as the go-to food offered during or after a hypoglycemic episode — protein and fat based, not sugar-based, which avoids the rebound insulin spike that pure sugar causes. Syringe-fed or offered from a spoon. Does not treat insulinoma; it is a nutritional support tool under veterinary guidance.
-              </p>
-            }
-            specs={[
-              { label: 'Use case', value: 'Recovery nutrition / hypoglycemia support' },
-              { label: 'Caloric density', value: 'High — designed for convalescent feeding' },
-              { label: 'Protein-based', value: 'Yes — appropriate for obligate carnivores', highlight: 'good' },
-              { label: 'Sugar-based', value: 'No — avoids rebound insulin spike', highlight: 'good' },
-            ]}
-            pros={['Protein/fat-based — no rebound insulin spike', 'Vet-recommended critical care product', 'Syringe-compatible for compromised ferrets', 'Widely available through Chewy, Amazon, and exotic-pet supply']}
-            cons={['Not a meal replacement long-term', 'Not a treatment for insulinoma — vet visit required', 'Some ferrets dislike the texture']}
-            price="$15–25"
-            ctaText="Check price — Carnivore Care"
-            ctaHref="/go/chewy-brand/oxbow+carnivore+care+critical+care?s=health-insulinoma"
-            ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="oxbow+carnivore+care+critical+care"
-          />
+          <p>
+            A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance.
+          </p>
 
           <h2 id="sources">Sources</h2>
           <p>

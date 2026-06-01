@@ -26,6 +26,7 @@ export default function UsedSaddleBuyingGuidePage() {
   return (
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Buying a Used Saddle — Complete Inspection Checklist',
         subtitle: 'A used saddle from a reputable brand can deliver exceptional value — or a structural problem that injures your horse and costs more to repair than a new saddle. This guide covers every inspection point, in the order the Society of Master Saddlers recommends for an inspection.',

@@ -101,6 +101,7 @@ export default function FerretAdrenalDiseasePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Adrenal Disease in Ferrets',
           subtitle:
@@ -113,7 +114,7 @@ export default function FerretAdrenalDiseasePage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/adrenal-disease' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Adrenal Disease', href: '/health/adrenal-disease' },
         ]}
         sidebar={

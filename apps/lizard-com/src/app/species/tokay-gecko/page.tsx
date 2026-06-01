@@ -37,7 +37,16 @@ export default function TokayGeckoPage() {
 
         <h2>Enclosure and Care</h2>
         <p>Tropical species requiring 60-80% humidity and warm temperatures (80-90°F warm end). Tall enclosure with lots of vertical structure — cork bark tubes mounted vertically, large branches, pothos and Ficus plants. Tokays are nocturnal and emerge at night to hunt; daytime hides should be secure and enclosed enough that the gecko feels truly hidden. Feed primarily large dubia roaches, superworms, and appropriately sized feeder mice for adults. Calcium dust every feeding; multivitamin 2× weekly. Misting twice daily maintains humidity and provides drinking water.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Tokay Gecko — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for tokay gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/tokay%20gecko%20setup?s=species-tokay-gecko" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Tokay Gecko Setup on Amazon →</a>
+            <a href="/go/chewy-brand/tokay%20gecko%20setup?s=species-tokay-gecko" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

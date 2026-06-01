@@ -24,12 +24,30 @@ interface ManifestEntry {
   width: number
   height: number
   color?: string
-  photographer: string
-  photographerUrl: string
+  /**
+   * Real photographer name (post-sync). Curated entries (sandbox-added,
+   * no API access) intentionally OMIT this field — see `curated` below.
+   */
+  photographer?: string
+  /**
+   * Real photographer profile URL (post-sync). Curated entries omit it.
+   */
+  photographerUrl?: string
   sourceUrl: string
   description?: string
   alt: string
   query: string
+  /**
+   * Hand-curated entries (sandbox-added because sandbox cannot reach the
+   * Unsplash / Pexels API per Carlo policy 2026-05-31). Set this flag and
+   * OMIT photographer / photographerUrl. The render renders "Source:
+   * <Provider>" linked to `sourceUrl` (the photo page where the canonical
+   * photographer credit lives) — no placeholder name reaches the reader.
+   * Per CSRO IR #6: never ship placeholder attribution as if it were real.
+   * `sync-images.mjs --force` overwrites the entry with full attribution
+   * when next run on Carlo's machine.
+   */
+  curated?: boolean
 }
 
 const manifest = manifestData as unknown as Record<string, ManifestEntry>
@@ -56,9 +74,13 @@ export function StockImage({
   const entry = manifest[manifestKey]
 
   if (!entry) {
+    // Production: render a neutral slot that reserves layout without leaking
+    // dev instructions to readers. Dev: show the actionable hint inline so
+    // contributors know what to do when they see an empty slot.
+    const isDev = process.env.NODE_ENV !== 'production'
     return (
       <div
-        aria-label={`Image not yet synced (${manifestKey})`}
+        aria-label={`Image pending sync (${manifestKey})`}
         className="my-8 rounded-lg flex items-center justify-center"
         style={{
           aspectRatio: aspect.replace(':', ' / '),
@@ -68,13 +90,24 @@ export function StockImage({
           fontStyle: 'italic',
         }}
       >
-        Image pending sync — run <code style={{ marginLeft: 4 }}>node scripts/sync-images.mjs</code>
+        {isDev && (
+          <>
+            Image pending sync — run <code style={{ marginLeft: 4 }}>node scripts/sync-images.mjs</code>
+          </>
+        )}
       </div>
     )
   }
 
   const providerLabel = entry.provider === 'unsplash' ? 'Unsplash' : 'Pexels'
-  const credit = `Photo: ${entry.photographer} via ${providerLabel}`
+  // Curated entries don't carry a real photographer name yet (sandbox has
+  // no API access). Render "Source: <Provider>" with a link to sourceUrl
+  // where the real photographer credit lives — honest, QC §1 safe.
+  // Non-curated entries fall through the same path if photographer is missing
+  // (defensive — never fabricate "undefined" or empty names into the credit).
+  const credit = entry.curated || !entry.photographer
+    ? `Source: ${providerLabel}`
+    : `Photo: ${entry.photographer} via ${providerLabel}`
 
   return (
     <ImageCard
@@ -82,6 +115,7 @@ export function StockImage({
       alt={alt || entry.alt}
       caption={caption}
       credit={credit}
+      creditUrl={entry.sourceUrl}
       aspect={aspect}
       variant={variant}
       priority={priority}

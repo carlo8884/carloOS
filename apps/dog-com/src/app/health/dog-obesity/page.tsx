@@ -82,6 +82,7 @@ export default function DogObesityPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="dog-com"
+        contentType="health"
         hero={{
           title: 'Dog Obesity — Health Risks, Causes & Weight Loss Plan',
           subtitle:

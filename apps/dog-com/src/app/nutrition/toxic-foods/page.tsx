@@ -145,6 +145,7 @@ export default function ToxicFoodsPage() {
       <SchemaScript schema={faqSchema} />
       <ArticleLayout
         siteId="dog-com"
+        contentType="nutrition"
         hero={{
           title: 'Foods Toxic to Dogs — Complete List',
           subtitle: 'Xylitol, chocolate, grapes, onions, and 20+ more toxic foods — with toxicity levels, symptoms, and the emergency protocol for each. research-based.',

@@ -92,6 +92,7 @@ export default function FerretBathingGroomingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Bathing and Grooming',
           subtitle:
@@ -104,7 +105,7 @@ export default function FerretBathingGroomingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/bathing-and-grooming' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Bathing and Grooming', href: '/care/bathing-and-grooming' },
         ]}
         sidebar={
@@ -532,10 +533,6 @@ export default function FerretBathingGroomingPage() {
             pros={['Used in exotic-pet practice for ferret ear cleaning', 'Gentle on ferret canal', 'Available without prescription on most pet retailers']}
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
-            ctaText="Find pet ear cleaner"
-            ctaHref="/go/chewy-brand/epi-otic+pet+ear+cleaner?s=care-bathing-and-grooming"
-            ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="epi-otic+pet+ear+cleaner"
           />
           <ReviewCard
             id="pet-nail-kit"

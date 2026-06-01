@@ -36,6 +36,7 @@ export default function SafeHumanFoodsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'Human Foods Safe for Dogs', subtitle: 'Not all human food is dangerous for dogs — many whole foods are safe treats and training rewards. Here\'s what\'s actually safe to share, with portion guidance and the preparation rules that matter.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Safe Human Foods', href: '/nutrition/safe-human-foods' }]}
       schema={schema}

@@ -90,6 +90,7 @@ export default function HorseBootTypesPage() {
       <SchemaScript schema={combinedSchema} />
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Horse Boot Types — Brushing, Tendon, Bell, Open-Front, Polo Wraps',
         subtitle:

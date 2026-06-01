@@ -17,6 +17,7 @@ export default function HowMuchToFeedPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'How Much to Feed Your Dog', subtitle: 'There is no universal feeding amount — caloric needs depend on weight, ideal weight, age, activity level, and whether your dog is spayed or neutered. This guide gives you the framework.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]}
       schema={schema}

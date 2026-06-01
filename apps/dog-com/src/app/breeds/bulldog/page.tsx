@@ -12,6 +12,7 @@ export default function BulldogPage() {
       hero={{ title: 'English Bulldog Breed Guide', subtitle: 'The English Bulldog\'s conformation — flat face, compacted airways, compact body, heavy skin folds — causes a cascade of health issues that are important to understand before acquiring one. They are affectionate dogs with significant veterinary costs.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Bulldog', href: '/breeds/bulldog' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

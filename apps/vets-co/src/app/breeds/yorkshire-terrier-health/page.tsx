@@ -100,6 +100,7 @@ export default function VetsYorkshireTerrierHealthPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="vets-co"
+        contentType="breed"
         hero={{
           title: 'Yorkshire Terrier Health — A Veterinarian\'s Perspective',
           subtitle:

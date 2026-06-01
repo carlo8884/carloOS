@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://saddle.com/english', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/fit', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/guides', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/guides/bit-selection-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/bridle-fit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/guides/buying-first-horse', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

@@ -9,6 +9,7 @@ export default function ShihTzuPage() {
       hero={{ title: 'Shih Tzu Breed Guide', subtitle: 'Originally bred as companion dogs for Chinese royalty, Shih Tzus are adaptable, affectionate, and surprisingly sturdy for their size. Their flattened face and prominent eyes come with specific health management requirements that every Shih Tzu owner needs to understand.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shih Tzu', href: '/breeds/shih-tzu' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

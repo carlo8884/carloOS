@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -18,22 +20,50 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: "Hill's vs Royal Canin — Veterinary Channel Comparison",
-  description:
-    "Independent comparison of Hill's Pet Nutrition and Royal Canin — the two largest brands in the U.S. veterinary therapeutic channel — across corporate ownership, manufacturing transparency, recall history, AAFCO statement types, and prescription/therapeutic diet portfolios.",
-  url: 'https://petfood.com/brands/hills-vs-royal-canin',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: "Is Hill's better than Royal Canin (or vice versa)?",
+    answer:
+      'No general answer. The two brands are substantively comparable on the WSAVA criteria, comparable on owned-plant manufacturing footprint, comparable on board-certified nutritionist staffing, and comparable on overall AAFCO substantiation breadth. Within a specific therapeutic indication — renal, urinary, hydrolyzed-protein, novel-protein — the SKUs differ in clinically meaningful ways and the choice should be made by the treating clinician on the basis of the case, not by brand loyalty.',
+  },
+  {
+    question: "Why do my vet's shelves stock one and not the other?",
+    answer:
+      'Most U.S. small-animal clinics stock both, but inventory depth often favors one based on historical sales rep relationships, training the clinic team has received, and case mix. Vet-stocked inventory is not, in our view, a quality signal — it is a channel-and-relationship signal. The veterinarian\'s prescription is the signal that matters.',
+  },
+  {
+    question: 'Can I switch between brands within a therapeutic indication?',
+    answer:
+      "For most indications, yes — under veterinary supervision. The formulations differ enough that a stepped transition over 7-10 days is appropriate; clinical monitoring (bloodwork, weight, urine specific gravity, etc. depending on indication) should accompany the switch if the patient's baseline is unstable. This is a clinical question, not one this page can answer for an individual animal.",
+  },
+  {
+    question:
+      'Are the maintenance lines (Science Diet, Royal Canin retail) the same as the therapeutic lines?',
+    answer:
+      'No. The therapeutic Prescription Diet and Veterinary Diet lines are formulated for specific disease states, are substantiated against different targets (e.g., phosphorus restriction for renal, mineral profile for urinary), and are intended for veterinary authorization. Substituting a maintenance SKU for a therapeutic SKU is not interchangeable and can be clinically harmful for the indication.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: "Hill's vs Royal Canin — Veterinary Channel Comparison",
+    description:
+      "Independent comparison of Hill's Pet Nutrition and Royal Canin — the two largest brands in the U.S. veterinary therapeutic channel — across corporate ownership, manufacturing transparency, recall history, AAFCO statement types, and prescription/therapeutic diet portfolios.",
+    url: 'https://petfood.com/brands/hills-vs-royal-canin',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 export default function HillsVsRoyalCaninPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="brand"
       hero={{
         title: "Hill's vs Royal Canin",
         subtitle:

@@ -377,6 +377,47 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           ))}
         </div>
 
+        <h2 id="shop">Where to Shop</h2>
+        <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
+          Browse the {category.categoryName.toLowerCase()} category on Amazon or Chewy. Fish.com
+          earns an affiliate commission when you purchase through these links — at no extra cost
+          to you. Commission does not influence editorial picks.
+        </p>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', margin: '8px 0 24px' }}>
+          <a
+            href={`/go/amazon-brand/${encodeURIComponent(category.categoryName)}?s=equipment-${category.slug}`}
+            rel="sponsored noopener"
+            style={{
+              display: 'inline-block',
+              padding: '10px 18px',
+              background: 'var(--brand-dark, #232f3e)',
+              color: 'white',
+              fontSize: '14px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              borderRadius: '6px',
+            }}
+          >
+            Shop {category.categoryName} on Amazon →
+          </a>
+          <a
+            href={`/go/chewy-brand/${encodeURIComponent(category.categoryName)}?s=equipment-${category.slug}`}
+            rel="sponsored noopener"
+            style={{
+              display: 'inline-block',
+              padding: '10px 18px',
+              background: 'var(--brand-primary, #1e90ff)',
+              color: 'white',
+              fontSize: '14px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              borderRadius: '6px',
+            }}
+          >
+            Shop {category.categoryName} on Chewy →
+          </a>
+        </div>
+
         <h2 id="further-reading">Further Reading</h2>
         <p>
           For specific brand and model recommendations within this category, the Fish.com editorial

@@ -36,7 +36,7 @@ export default function AddisonsDiseaseePage() {
 
           <h2>Treatment — DOCP or Fludrocortisone</h2>
           <p>Treatment requires lifelong hormone supplementation:</p>
-          <p><strong>DOCP (Percorten-V / desoxycorticosterone pivalate):</strong> Injectable mineralocorticoid given every 25-28 days (the standard) or every 21-30 days depending on electrolyte response. Most widely used in the US. Requires a separate glucocorticoid (prednisone at physiologic dose — 0.1-0.2 mg/kg daily) since DOCP provides only mineralocorticoid activity. Dogs typically do very well on this regimen.</p>
+          <p><strong>DOCP (Percorten-V / desoxycorticosterone pivalate):</strong> Injectable mineralocorticoid given every 25-28 days (the standard) or every 21-30 days depending on electrolyte response. Most widely used in the US. Requires a separate veterinarian-prescribed glucocorticoid (typically prednisone at a low physiologic dose determined by a veterinarian) since DOCP provides only mineralocorticoid activity. Dogs typically do very well on this regimen.</p>
           <p><strong>Fludrocortisone (Florinef):</strong> Oral tablet daily. Provides both mineralocorticoid and some glucocorticoid activity. Easier for owners who struggle with injections. Some dogs require an additional low-dose prednisone supplement. Requires daily dosing compliance.</p>
           <p>During periods of stress (travel, veterinary procedures, illness, boarding), the glucocorticoid dose is temporarily increased ("stress dosing") to cover the increased demand — typically 2-3× the maintenance dose for the duration of the stressor. Owners should keep oral prednisone on hand specifically for this purpose and know when to administer it.</p>
 

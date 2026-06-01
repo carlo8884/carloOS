@@ -11,6 +11,7 @@ export default function CavalierPage() {
       hero={{ title: 'Cavalier King Charles Spaniel', subtitle: 'One of the most affectionate and gentle family dogs in existence — and one of the most health-compromised breeds due to decades of selective breeding without sufficient health screening. Understanding the health landscape before acquiring a Cavalier changes the experience of owning one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

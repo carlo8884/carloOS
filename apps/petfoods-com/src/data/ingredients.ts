@@ -833,6 +833,1000 @@ export const Ingredients: Ingredient[] = [
     ],
     relatedSlugs: ['chicken-by-product-meal', 'soybean-meal'],
   },
+
+  // ─── WAVE 3: PROTEINS — POULTRY, RED MEAT, NOVEL ─────────────────────────
+  {
+    slug: 'deboned-chicken',
+    name: 'Deboned Chicken',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, the AAFCO term is "Chicken" — defined as "the clean combination of flesh and skin with or without accompanying bone, derived from the parts or whole carcasses of chicken, exclusive of feathers, heads, feet and entrails." Marketing terms such as "deboned chicken" or "fresh deboned chicken" describe the bone-removed form of the same AAFCO ingredient.',
+    aafcoSection: '§9.3 (Chicken)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh muscle meat. Carries species disclosure. Note that fresh chicken is roughly 70% water; on the ingredient panel it is weighed wet (pre-cooking), so a formula listing fresh chicken first can still derive most of its dry-matter protein from a meal listed lower.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'nutro', 'fromm', 'natural-balance', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-meal', 'chicken-by-product-meal', 'chicken-fat', 'deboned-turkey'],
+  },
+  {
+    slug: 'deboned-turkey',
+    name: 'Deboned Turkey',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "Turkey" is defined as the clean combination of flesh and skin with or without accompanying bone, derived from the parts or whole carcasses of turkey, exclusive of feathers, heads, feet and entrails. "Deboned turkey" describes the bone-removed wet form of the same AAFCO ingredient.',
+    aafcoSection: '§9 (Turkey)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh muscle meat with full species disclosure. Like all fresh meats it is weighed wet on the panel. Turkey is a common base protein in limited-ingredient diets because it is moderately novel for dogs previously fed chicken or beef.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'natural-balance', 'nutro', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['turkey-meal', 'deboned-chicken', 'duck-meal'],
+  },
+  {
+    slug: 'turkey-meal',
+    name: 'Turkey Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: turkey meal is the dry rendered product from a combination of clean turkey flesh and skin with or without accompanying bone, exclusive of feathers, heads, feet and entrails, derived from the parts or whole carcasses of turkey.',
+    aafcoSection: '§9 (Turkey Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal — concentrated protein on a dry-matter basis with species disclosure. Functionally parallel to chicken meal; chosen for palatability variety or as a moderately novel protein.',
+    commonIn: ['acana', 'orijen', 'fromm', 'victor', 'nutro', 'wellness', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-meal', 'deboned-turkey', 'duck-meal'],
+  },
+  {
+    slug: 'duck-meal',
+    name: 'Duck Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: duck meal is the dry rendered product from a combination of clean duck flesh and skin with or without accompanying bone, exclusive of feathers, heads, feet and entrails, derived from the parts or whole carcasses of duck.',
+    aafcoSection: '§9 (Duck Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Duck is one of the more common novel proteins used in limited-ingredient and elimination-style diets because fewer dogs have prior exposure to it than to chicken or beef.',
+    commonIn: ['acana', 'orijen', 'fromm', 'natural-balance', 'nulo', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['turkey-meal', 'lamb-meal', 'deboned-turkey'],
+  },
+  {
+    slug: 'lamb-meal',
+    name: 'Lamb Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: lamb meal is the rendered product from lamb tissues, exclusive of blood, hair, hoof, horn, hide trimmings, manure, and stomach and rumen contents except in such amounts as may occur unavoidably in good processing practices.',
+    aafcoSection: '§9 (Lamb Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Lamb became a popular "novel protein" in the 1990s; widespread use since then means it is no longer truly novel for many dogs, which matters for elimination-diet selection.',
+    commonIn: ['natural-balance', 'nutro', 'merrick', 'victor', 'diamond-pet-foods', 'taste-of-the-wild'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'WSAVA Global Nutrition Committee — Selecting a Pet Food Manufacturer',
+    ],
+    relatedSlugs: ['beef-meal', 'duck-meal', 'venison'],
+  },
+  {
+    slug: 'venison',
+    name: 'Venison',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "venison" / "deer" describes the clean flesh derived from deer (cervid) carcasses. As with all species-named meats, naming the species under AAFCO Model Regulation PF3 commits the manufacturer to that species as the source material.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species meat with species disclosure. Venison is one of the most-used genuinely novel proteins for canine elimination diets, because very few pets have prior dietary exposure to deer. Supply is limited and the price tier is correspondingly high.',
+    commonIn: ['natural-balance', 'taste-of-the-wild', 'instinct', 'ziwipeak'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['lamb-meal', 'rabbit', 'bison'],
+  },
+  {
+    slug: 'rabbit',
+    name: 'Rabbit',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "rabbit" describes the clean flesh derived from rabbit carcasses. Species naming under AAFCO Model Regulation PF3 commits the manufacturer to rabbit as the source material when the species is named on the principal display panel.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species meat. Rabbit is a genuinely novel protein for most pets and is a frequent choice in veterinary elimination diets. Low fat content and limited supply make it a premium-tier ingredient.',
+    commonIn: ['instinct', 'natural-balance', 'ziwipeak'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['venison', 'bison', 'lamb-meal'],
+  },
+  {
+    slug: 'bison',
+    name: 'Bison',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "bison" / "buffalo" describes the clean flesh derived from bison carcasses. Naming the species under AAFCO Model Regulation PF3 commits the manufacturer to bison as the named source.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species red meat. Often positioned in "ancestral"/"prairie" grain-free lines. Bison is moderately novel — less common than beef but more common than venison or rabbit, so its novelty for an individual dog depends on exposure history.',
+    commonIn: ['taste-of-the-wild', 'instinct', 'diamond-pet-foods'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['beef-meal', 'venison', 'rabbit'],
+  },
+  {
+    slug: 'pork-meal',
+    name: 'Pork Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: pork meal is the rendered product from clean pork tissues, exclusive of blood, hair, hoof, hide trimmings, manure, and stomach and rumen contents except in amounts unavoidable in good processing.',
+    aafcoSection: '§9 (Pork Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Pork is moderately novel for dogs (less common than chicken/beef in mainstream diets) and is highly palatable. Used both as a primary protein and as a palatant.',
+    commonIn: ['victor', 'nulo', 'instinct'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['beef-meal', 'lamb-meal', 'chicken-meal'],
+  },
+  {
+    slug: 'meat-and-bone-meal',
+    name: 'Meat and Bone Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Meat and Bone Meal is the rendered product from mammal tissues, including bone, exclusive of any added blood, hair, hoof, horn, hide trimmings, manure, stomach and rumen contents except in such amounts as may occur unavoidably in good processing practices." It must not contain extraneous materials and the calcium-to-phosphorus ratio is specified.',
+    aafcoSection: '§9 (Meat and Bone Meal)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic — no species disclosure. "Meat" under AAFCO denotes mammalian tissue without identifying which mammal, so this ingredient carries a low disclosure tier. The ingredient itself is AAFCO-defined and not inherently unsafe; the disclosure gap is the reason for the scoring.',
+    commonIn: ['pedigree', 'beneful', 'cesar'],
+    concernsIfAny: [
+      'No species disclosure — "meat" denotes unspecified mammalian tissue. For allergy-management diets this provides insufficient information for protein avoidance.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['poultry-by-product-meal', 'meat-by-product', 'beef-meal'],
+  },
+  {
+    slug: 'poultry-by-product-meal',
+    name: 'Poultry By-Product Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Poultry By-Product Meal consists of the ground, rendered, clean parts of the carcass of slaughtered poultry, such as necks, feet, undeveloped eggs and intestines, exclusive of feathers except in such amounts as might occur unavoidably in good processing practices."',
+    aafcoSection: '§9 (Poultry By-Product Meal)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic poultry — "poultry" can mean chicken, turkey, or a mix, so this ingredient does not disclose the source species. The "by-product" portion covers nutritionally dense organ tissue and is not a quality indictment; the low scoring is driven by the missing species name, not by the by-product category.',
+    commonIn: ['pedigree', 'friskies', 'iams', 'eukanuba'],
+    concernsIfAny: [
+      'No species disclosure — "poultry" can be chicken, turkey, or a mix. Named-species forms ("chicken by-product meal") carry more disclosure.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'WSAVA Global Nutrition Committee — Selecting a Pet Food Manufacturer',
+    ],
+    relatedSlugs: ['chicken-by-product-meal', 'meat-and-bone-meal', 'meat-by-product'],
+  },
+  {
+    slug: 'meat-by-product',
+    name: 'Meat By-Product',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Meat By-Products is the non-rendered, clean parts, other than meat, derived from slaughtered mammals." It includes lungs, spleen, kidneys, brain, livers, blood, bone, and stomachs and intestines freed of their contents; it does not include hair, horns, teeth, and hooves.',
+    aafcoSection: '§9 (Meat By-Products)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic and non-rendered — "meat" denotes unspecified mammalian tissue. Organ content is nutritionally dense, so "by-product" is not a quality verdict; the low disclosure tier reflects the absence of a species name. Common in wet/canned mass-market formulas.',
+    commonIn: ['pedigree', 'cesar', 'friskies', 'fancy-feast'],
+    concernsIfAny: [
+      'No species disclosure — provides insufficient information for protein-avoidance diets.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-by-product-meal', 'meat-and-bone-meal', 'poultry-by-product-meal'],
+  },
+  {
+    slug: 'egg-product',
+    name: 'Egg Product',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Dried Egg Product" is the dried whole poultry egg (or a combination of whole egg, egg whites, and yolks), free of shell or other non-egg materials except in unavoidable trace amounts. Whole egg delivers a near-ideal amino-acid profile.',
+    aafcoSection: '§9 (Dried Egg Product)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Egg protein has one of the highest biological values of any food protein and is a digestibility benchmark in nutrition science. Disclosure is clear (egg). Used as a high-quality supplemental protein and binder.',
+    commonIn: ['orijen', 'acana', 'fromm', 'wellness', 'nulo', 'instinct'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['deboned-chicken', 'chicken-meal'],
+  },
+  {
+    slug: 'dried-plain-beet-pulp',
+    name: 'Beet Pulp',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Dried Plain Beet Pulp is the dried residue from sugar beets which has been cleaned and freed from crowns, leaves, and sand, and which has been extracted in the process of manufacturing sugar." It contains essentially no residual sugar after extraction.',
+    aafcoSection: '§9 (Dried Plain Beet Pulp)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A moderately fermentable fiber that supports stool quality and provides substrate for hindgut microbiota. The "sugar beet" name leads to a common misconception that it adds sugar — the sugar is removed during extraction. Not a low-quality filler; it serves a specific fiber function.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'iams', 'eukanuba', 'purina-pro-plan'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['pumpkin', 'chicory-root-inulin', 'cellulose'],
+  },
+
+  // ─── WAVE 4: FISH & MARINE ───────────────────────────────────────────────
+  {
+    slug: 'menhaden-fish-meal',
+    name: 'Menhaden Fish Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: fish meal is the clean, dried, ground tissue of undecomposed whole fish or fish cuttings. "Menhaden fish meal" names the source species (Atlantic or Gulf menhaden, a small oily forage fish) and is the most common single-species fish meal in North American pet food.',
+    aafcoSection: '§9.45 (Fish Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish meal with species disclosure. Menhaden is a managed forage fishery and the dominant US fish-meal source. Contributes long-chain omega-3s (EPA/DHA). The ethoxyquin supplier-carryover question applies, as with all fish meals.',
+    commonIn: ['victor', 'diamond-pet-foods', 'taste-of-the-wild', 'nutro'],
+    concernsIfAny: [
+      'Preservation by ethoxyquin at the renderer can carry over to the finished product without appearing on the consumer-facing label.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['salmon-meal', 'whitefish-meal', 'herring-meal', 'fish-oil'],
+  },
+  {
+    slug: 'herring-meal',
+    name: 'Herring Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: herring meal is the clean, dried, ground tissue of undecomposed whole herring or herring cuttings, with or without the extraction of part of the oil. The named species commits the manufacturer to herring under AAFCO product-naming rules.',
+    aafcoSection: '§9.45 (Fish Meal); PF3 species naming',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish meal with high omega-3 density (herring is an oily fish). Carries species disclosure. Common in premium grain-free and biologically appropriate formulations. The supplier-side ethoxyquin question applies.',
+    commonIn: ['acana', 'orijen', 'nulo', 'solid-gold', 'open-farm'],
+    concernsIfAny: [
+      'Supplier-side preservation (ethoxyquin) can carry over without finished-product label disclosure.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['salmon-meal', 'menhaden-fish-meal', 'salmon-oil'],
+  },
+  {
+    slug: 'deboned-salmon',
+    name: 'Deboned Salmon',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "salmon" describes the clean flesh of salmon. "Deboned salmon" / "fresh salmon" describes the wet, bone-removed form. Naming the species under AAFCO Model Regulation PF3 commits the manufacturer to salmon as the source.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh fish with species disclosure. As a fresh ingredient it is weighed wet (roughly 70% water) on the panel, so dry-matter protein contribution is lower than its panel position suggests; salmon meal lower in the list often carries more of the dry-matter protein.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'natural-balance', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['salmon-meal', 'salmon-oil', 'deboned-chicken'],
+  },
+  {
+    slug: 'krill-meal',
+    name: 'Krill Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, krill meal is the dried, ground product of whole Antarctic krill (Euphausia superba), a small crustacean. It supplies protein, phospholipid-bound omega-3 fatty acids, and the carotenoid astaxanthin.',
+    aafcoSection: 'Chapter 9 (krill products)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-source marine ingredient. Krill omega-3s are largely phospholipid-bound, which some research suggests improves bioavailability versus triglyceride-bound fish-oil omega-3s, though companion-animal head-to-head data are limited. Premium-tier inclusion. MSC certification on the Antarctic krill fishery is a sustainability signal worth checking.',
+    commonIn: ['orijen', 'acana', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['salmon-oil', 'fish-oil', 'herring-meal'],
+  },
+  {
+    slug: 'menhaden-oil',
+    name: 'Menhaden Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, menhaden oil is the oil obtained from menhaden (a forage fish). As a named-species fish oil it discloses the source species, unlike generic "fish oil," and is a concentrated source of long-chain omega-3 fatty acids (EPA and DHA).',
+    aafcoSection: '§9 (fish oil); PF3 species naming',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish oil with species disclosure. The most common single-species omega-3 oil in North American pet food. Polyunsaturated and oxidation-prone, so preservation system (mixed tocopherols) and storage matter. Supplier-side ethoxyquin carryover question applies.',
+    commonIn: ['victor', 'diamond-pet-foods', 'nutro'],
+    concernsIfAny: [
+      'Polyunsaturated and oxidation-prone; preservation system and storage affect EPA/DHA retention.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['fish-oil', 'salmon-oil', 'menhaden-fish-meal'],
+  },
+
+  // ─── WAVE 5: GRAINS & CARBOHYDRATES ──────────────────────────────────────
+  {
+    slug: 'whole-grain-corn',
+    name: 'Whole Grain Corn',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "ground yellow corn" / "corn" / "whole grain corn" is the entire corn kernel ground or chopped. It supplies digestible carbohydrate energy, linoleic acid, and (when whole) the bran and germ fractions with their fiber and micronutrients.',
+    aafcoSection: '§9 (corn / ground yellow corn)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain. The "filler" characterization is marketing, not regulatory: ground corn is a digestible energy source (when properly cooked) and supplies linoleic acid. Corn is a relatively uncommon allergen in dogs compared with beef, dairy, and chicken. Medium scoring reflects clear disclosure of a generic but well-defined ingredient.',
+    commonIn: ['purina-pro-plan', 'purina-one', 'iams', 'eukanuba', 'pedigree', 'hills-science-diet'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['corn-gluten-meal', 'brown-rice', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'whole-grain-sorghum',
+    name: 'Sorghum (Milo)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, sorghum (also called milo) is a cereal grain. Ground sorghum supplies digestible carbohydrate energy and a moderate-glycemic starch profile relative to some other cereals.',
+    aafcoSection: '§9 (sorghum / milo)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain with a relatively low glycemic profile among cereals, sometimes selected for that reason in metabolic-support formulations. Gluten-free. Clear disclosure of a well-defined generic grain.',
+    commonIn: ['hills-science-diet', 'nutro', 'royal-canin'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['whole-grain-corn', 'barley', 'brown-rice'],
+  },
+  {
+    slug: 'barley',
+    name: 'Barley',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, barley / pearled barley is a cereal grain. It supplies digestible carbohydrate and a meaningful soluble-fiber (beta-glucan) fraction, similar in fiber chemistry to oats.',
+    aafcoSection: '§9 (barley / pearled barley)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain with a soluble-fiber (beta-glucan) contribution that supports stool quality and a moderate glycemic profile. Contains gluten. A whole-grain inclusion in many grain-inclusive premium diets.',
+    commonIn: ['fromm', 'wellness', 'nutro', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['oatmeal', 'brown-rice', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'millet',
+    name: 'Millet',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, millet is a small-seeded cereal grain. It is gluten-free and supplies digestible carbohydrate energy along with a modest micronutrient contribution.',
+    aafcoSection: '§9 (millet)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined gluten-free cereal. Used in grain-inclusive diets positioned as "ancient grain" formulations, often as an alternative to corn or wheat for owners avoiding those grains. Clear disclosure of a well-defined grain.',
+    commonIn: ['fromm', 'the-honest-kitchen', 'open-farm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['quinoa', 'barley', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'quinoa',
+    name: 'Quinoa',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, quinoa is a pseudo-cereal seed used as a carbohydrate and supplemental protein source. It is gluten-free and supplies a more complete amino-acid profile than most true cereal grains.',
+    aafcoSection: 'Chapter 9 (quinoa)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-recognized pseudo-cereal. Naturally coated with saponins (washed off in processing), gluten-free, and with a relatively complete amino-acid profile. Positioned in premium "ancient grain" lines. Clear disclosure of a defined ingredient.',
+    commonIn: ['the-honest-kitchen', 'open-farm', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['millet', 'barley', 'oatmeal'],
+  },
+  {
+    slug: 'white-potato',
+    name: 'White Potato',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "potato" / "dried potato" is the white potato tuber (Solanum tuberosum) used as a carbohydrate source. It supplies digestible starch energy and modest micronutrients.',
+    aafcoSection: '§9 (potato / dried potato product)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined grain-free carbohydrate. White potato appears in grain-free formulations as a non-cereal, non-pulse starch. Higher-glycemic than sweet potato. Not itself a focus of the FDA CVM grain-free DCM investigation, which centers on pulse-heavy formulations.',
+    commonIn: ['taste-of-the-wild', 'natural-balance', 'instinct', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['sweet-potato', 'tapioca-starch', 'pea-protein'],
+  },
+  {
+    slug: 'wheat-gluten',
+    name: 'Wheat Gluten',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, wheat gluten is the protein fraction isolated from wheat flour, typically about 75-80% crude protein on a dry-matter basis. It is used as a concentrated plant protein and as a binder, especially in wet/canned formulations.',
+    aafcoSection: '§9 (wheat gluten)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Concentrated plant protein and binder. The 2007 melamine pet-food recall involved wheat gluten (and rice protein concentrate) adulterated with melamine at the supplier in China — a contamination event, not an inherent property of wheat gluten. Modern supply-chain testing addresses that specific failure. Disclosure of the ingredient is clear; sourcing transparency is the relevant question.',
+    commonIn: ['royal-canin', 'fancy-feast', 'friskies'],
+    concernsIfAny: [
+      'The 2007 melamine recall involved supplier-adulterated wheat gluten; the contamination was a sourcing/QC failure, not an inherent ingredient property.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Melamine Pet Food Recall of 2007',
+    ],
+    relatedSlugs: ['wheat-flour', 'corn-gluten-meal', 'soybean-meal'],
+  },
+
+  // ─── WAVE 6: LEGUMES / PULSES ────────────────────────────────────────────
+  {
+    slug: 'chickpeas',
+    name: 'Chickpeas (Garbanzo Beans)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, chickpeas (garbanzo beans) are a pulse (grain legume) used in pet food as a carbohydrate and supplemental plant-protein source. They supply starch, fiber, and protein.',
+    aafcoSection: '§9 (chickpeas / garbanzo beans)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse ingredient central to the FDA CVM grain-free DCM investigation, which has observed an association (not established causation) between grain-free diets with pulses in the first several panel positions and reported canine DCM cases. The investigation remains open. The disclosure question is the cumulative pulse density across all pulse ingredients in a formula, which the panel does not total for the reader.',
+    commonIn: ['acana', 'taste-of-the-wild', 'natural-balance', 'merrick', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+      'Cumulative pulse density across multiple pulse ingredients is not totaled on the panel.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+      'Tufts University Cummings School — Petfoodology blog',
+    ],
+    relatedSlugs: ['pea-protein', 'lentils', 'legume-blends', 'faba-beans'],
+  },
+  {
+    slug: 'lentils',
+    name: 'Lentils',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, lentils are a pulse used in pet food as a carbohydrate and supplemental plant-protein source, supplying starch, dietary fiber, and protein.',
+    aafcoSection: '§9 (lentils)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse named repeatedly in the FDA CVM grain-free DCM investigation. The agency observed an association between pulse-heavy grain-free diets and reported DCM cases; causation is not established and the investigation is open. As with all pulses, the cumulative density across the formula is the relevant context the panel does not total.',
+    commonIn: ['acana', 'taste-of-the-wild', 'merrick', 'natural-balance', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+      'Tufts University Cummings School — Petfoodology blog',
+    ],
+    relatedSlugs: ['chickpeas', 'pea-protein', 'legume-blends', 'faba-beans'],
+  },
+  {
+    slug: 'faba-beans',
+    name: 'Faba Beans (Fava Beans)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, faba beans (fava beans) are a pulse used in pet food as a carbohydrate and supplemental plant-protein source.',
+    aafcoSection: '§9 (faba beans)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse explicitly named in FDA CVM grain-free DCM investigation communications. The agency observed an association with reported DCM cases; causation is not established and the investigation is open. Cumulative pulse density across the formula is the relevant context.',
+    commonIn: ['acana', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['chickpeas', 'lentils', 'pea-protein', 'legume-blends'],
+  },
+  {
+    slug: 'whole-peas',
+    name: 'Whole Peas (Field Peas)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, peas (field peas) are a pulse supplying carbohydrate, fiber, and protein. "Peas," "pea fiber," "pea starch," and "pea protein" are distinct fractions of the same legume listed separately on some panels.',
+    aafcoSection: '§9 (peas / field peas)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse central to the FDA CVM grain-free DCM investigation. A specific labeling concern is "ingredient splitting": listing peas, pea protein, pea starch, and pea fiber separately can lower each fraction in the panel order even when their combined weight would rank higher. Verify the total pea-fraction density, not just the position of "peas."',
+    commonIn: ['taste-of-the-wild', 'acana', 'merrick', 'natural-balance', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM.',
+      'Ingredient splitting (peas/pea protein/pea starch/pea fiber listed separately) can understate the combined pulse density in panel order.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['pea-protein', 'chickpeas', 'lentils', 'legume-blends'],
+  },
+
+  // ─── WAVE 7: VEGETABLES & FRUITS ─────────────────────────────────────────
+  {
+    slug: 'tomato-pomace',
+    name: 'Tomato Pomace',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, tomato pomace is a mixture of tomato skins, pulp, and crushed seeds remaining after tomato processing. It supplies dietary fiber and is used as a fiber source.',
+    aafcoSection: '§9 (tomato pomace)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A by-product fiber ingredient. Sometimes mischaracterized as a low-quality filler; it is a legitimate source of soluble and insoluble fiber and the carotenoid lycopene. Disclosure of the ingredient is clear. Not a cost-free filler — it serves a fiber function.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'pumpkin', 'cellulose'],
+  },
+  {
+    slug: 'green-peas-vegetable',
+    name: 'Green Peas (as Vegetable)',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, green peas are the immature pea seed used as a vegetable ingredient. When listed as a whole vegetable near the end of a panel, the inclusion is generally small; the pulse-density concern applies primarily when peas and pea fractions anchor the formula.',
+    aafcoSection: '§9 (peas)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Distinct in context from "pea protein" or "field peas" as a primary pulse. As a minor vegetable inclusion, green peas contribute fiber and micronutrients at modest levels. The FDA CVM DCM concern is about high cumulative pulse density, not trace vegetable-tier inclusion.',
+    commonIn: ['merrick', 'wellness', 'natural-balance'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['whole-peas', 'carrots', 'pumpkin'],
+  },
+  {
+    slug: 'kelp',
+    name: 'Kelp (Dried Seaweed)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, dried kelp is dried seaweed used as a source of trace minerals, notably iodine. AAFCO specifies maximum iodine guarantees because kelp iodine content varies and excess iodine has thyroid implications.',
+    aafcoSection: '§9 (dried kelp)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A trace-mineral and iodine source. Because kelp iodine content is variable, formulators must control inclusion to stay within AAFCO iodine guidance; both deficiency and excess iodine affect thyroid function. Disclosure is clear; the relevant question is iodine control, which the guaranteed analysis or brand can confirm.',
+    commonIn: ['orijen', 'acana', 'the-honest-kitchen', 'open-farm', 'solid-gold'],
+    concernsIfAny: [
+      'Variable iodine content; excess dietary iodine has thyroid implications, so inclusion must be controlled to AAFCO iodine guidance.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'choline-chloride'],
+  },
+
+  // ─── WAVE 8: FATS & FIBERS ───────────────────────────────────────────────
+  {
+    slug: 'sunflower-oil',
+    name: 'Sunflower Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, sunflower oil is the oil from sunflower seeds, used as an energy source and a source of the omega-6 fatty acid linoleic acid. High-linoleic and high-oleic variants exist.',
+    aafcoSection: '§9 (sunflower oil)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A named plant oil supplying linoleic acid (an essential omega-6 fatty acid for dogs and cats). It does not supply long-chain omega-3s (EPA/DHA), which come from marine sources. Clear disclosure of a well-defined oil.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro', 'merrick', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicken-fat', 'canola-oil', 'flaxseed'],
+  },
+  {
+    slug: 'canola-oil',
+    name: 'Canola Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, canola oil is the oil from canola (a cultivar of rapeseed bred for low erucic acid). It supplies energy, monounsaturated fat, and a modest amount of plant-derived alpha-linolenic acid (ALA, an omega-3).',
+    aafcoSection: '§9 (canola oil)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A named plant oil. Supplies ALA, but ALA-to-EPA/DHA conversion is limited in dogs and very limited in cats, so it is not a substitute for marine omega-3s. Clear disclosure. The "low erucic acid" cultivar definition addresses the historical rapeseed erucic-acid concern.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'iams'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['sunflower-oil', 'flaxseed', 'chicken-fat'],
+  },
+  {
+    slug: 'coconut-oil',
+    name: 'Coconut Oil (MCTs)',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, coconut oil is the oil from coconut, notable for its medium-chain triglyceride (MCT) content. MCTs are metabolized differently from long-chain fats, being more readily used for energy.',
+    aafcoSection: '§9 (coconut oil)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A named plant oil rich in MCTs. Marketing claims around MCTs (cognitive support in senior dogs, energy) have some research interest but are not established at typical pet-food inclusion levels. It supplies no essential fatty acids that other oils do not; it is a saturated-fat energy source. Clear disclosure; efficacy claims warrant scrutiny.',
+    commonIn: ['halo', 'solid-gold'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicken-fat', 'sunflower-oil', 'canola-oil'],
+  },
+  {
+    slug: 'cellulose',
+    name: 'Powdered Cellulose',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, powdered cellulose is purified, mechanically disintegrated cellulose (plant cell-wall fiber). It is an insoluble, largely non-fermentable fiber used to add bulk and lower caloric density.',
+    aafcoSection: '§9 (powdered cellulose)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'An insoluble bulk fiber widely used in weight-management and hairball formulations to dilute calories and add stool bulk. Often labeled a "filler," but it serves a defined functional role (satiety, caloric dilution, stool bulk). The trade-off is that it ferments little and so contributes less to hindgut microbiota than soluble fibers.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'psyllium', 'pumpkin'],
+  },
+  {
+    slug: 'chicory-root-inulin',
+    name: 'Chicory Root (Inulin)',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, dried chicory root supplies inulin, a fructan prebiotic fiber. Inulin and the related fructooligosaccharides (FOS) are fermented by hindgut microbiota and act as prebiotics.',
+    aafcoSection: '§9 (dried chicory root)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A prebiotic fiber source (inulin/FOS) that selectively feeds beneficial hindgut bacteria. One of the more functionally substantiated fiber additions in companion-animal nutrition. Clear disclosure; the prebiotic claim has reasonable research support relative to many other marketing-front ingredients.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'wellness', 'nutro', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'psyllium', 'pumpkin'],
+  },
+  {
+    slug: 'psyllium',
+    name: 'Psyllium Husk',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, psyllium seed husk is a soluble, gel-forming fiber from Plantago seeds. It is used to support stool consistency and is included in some gastrointestinal and fiber-responsive formulations.',
+    aafcoSection: '§9 (psyllium seed husk)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A soluble, gel-forming fiber with a well-characterized role in stool consistency and fiber-responsive large-bowel conditions in veterinary medicine. Clear disclosure and a functionally substantiated fiber. Used in both maintenance and therapeutic formulations.',
+    commonIn: ['hills-science-diet', 'royal-canin'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicory-root-inulin', 'dried-plain-beet-pulp', 'cellulose'],
+  },
+
+  // ─── WAVE 9: VITAMINS ────────────────────────────────────────────────────
+  {
+    slug: 'vitamin-e-supplement',
+    name: 'Vitamin E Supplement (Tocopherols)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin E supplement provides tocopherols, the fat-soluble antioxidant vitamin. It serves a dual role: it is an essential nutrient and, as mixed tocopherols, also a natural antioxidant preservative for fats.',
+    aafcoSection: 'Chapter 9 (vitamin E supplement / mixed tocopherols)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient (the Dog and Cat Food Nutrient Profiles set a minimum). When listed as "mixed tocopherols" near other fats, it also functions as the natural-preservative alternative to BHA/BHT. Clear disclosure and a dual nutritional/preservative role.',
+    commonIn: ['orijen', 'acana', 'wellness', 'fromm', 'merrick', 'nulo', 'blue-buffalo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['bha', 'bht', 'vitamin-a-supplement'],
+  },
+  {
+    slug: 'vitamin-a-supplement',
+    name: 'Vitamin A Supplement',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin A supplement (typically retinyl acetate or retinyl palmitate) provides preformed vitamin A. Cats require preformed vitamin A because they cannot efficiently convert beta-carotene; dogs can use both.',
+    aafcoSection: 'Chapter 9 (vitamin A supplement)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient with both a minimum and a maximum in the nutrient profiles (vitamin A is fat-soluble and toxic in excess). Cats specifically require this preformed form. Clear disclosure; the maximum exists because hypervitaminosis A is a documented concern.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'fancy-feast', 'wellness'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-e-supplement', 'vitamin-d3-supplement', 'carrots'],
+  },
+  {
+    slug: 'vitamin-d3-supplement',
+    name: 'Vitamin D3 Supplement (Cholecalciferol)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin D3 supplement (cholecalciferol) provides the form of vitamin D used by dogs and cats, which (unlike many species) cannot synthesize adequate vitamin D from sunlight and must obtain it from diet.',
+    aafcoSection: 'Chapter 9 (vitamin D3 supplement)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient with both a minimum and a maximum (vitamin D toxicity is serious and has been the cause of multiple pet-food recalls from formulation errors). Dogs and cats depend on dietary D3. Clear disclosure; the formulation-error recall history makes the maximum and QC controls especially relevant.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'blue-buffalo'],
+    concernsIfAny: [
+      'Vitamin D toxicity from formulation/overdose errors has caused multiple pet-food recalls; the AAFCO maximum and manufacturer QC are the relevant safeguards.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'FDA CVM — Recalls & Withdrawals (vitamin D formulation-error recalls)',
+    ],
+    relatedSlugs: ['vitamin-a-supplement', 'vitamin-e-supplement', 'calcium-carbonate'],
+  },
+  {
+    slug: 'ascorbic-acid',
+    name: 'Vitamin C (Ascorbic Acid)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, ascorbic acid (vitamin C) is used in pet food as a supplemental antioxidant. Dogs and cats synthesize their own vitamin C, so AAFCO does not list it as a required dietary nutrient; its role in pet food is as an antioxidant and processing aid.',
+    aafcoSection: 'Chapter 9 (ascorbic acid)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Not an AAFCO-required nutrient for dogs and cats (both synthesize vitamin C), so its presence is an added antioxidant rather than a nutritional requirement. Marketing claims framing vitamin C as essential supplementation overstate the case for healthy animals. Clear disclosure; the function is antioxidant/processing, not correcting a dietary deficiency.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-e-supplement', 'mixed-tocopherols-rosemary'],
+  },
+
+  // ─── WAVE 10: MINERALS ───────────────────────────────────────────────────
+  {
+    slug: 'zinc-sulfate',
+    name: 'Zinc Sulfate / Zinc Proteinate',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, zinc sulfate and chelated forms (zinc proteinate, zinc amino acid complex) supply the essential trace mineral zinc. Chelated ("proteinate") forms are organically bound and are marketed for higher bioavailability than inorganic sulfate/oxide forms.',
+    aafcoSection: 'Chapter 9 (zinc sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral with a profile minimum. The distinction between inorganic (sulfate, oxide) and chelated (proteinate) forms is a bioavailability question; chelated forms generally have better absorption, which premium brands cite. Clear disclosure; both forms meet AAFCO requirements.',
+    commonIn: ['orijen', 'acana', 'hills-science-diet', 'royal-canin', 'wellness', 'fromm', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['iron-supplement', 'kelp', 'calcium-carbonate'],
+  },
+  {
+    slug: 'calcium-carbonate',
+    name: 'Calcium Carbonate',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, calcium carbonate is a calcium source. Calcium and phosphorus are essential macrominerals with both AAFCO minimums and a regulated calcium-to-phosphorus ratio, which is especially important in large-breed growth formulations.',
+    aafcoSection: 'Chapter 9 (calcium carbonate)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A common calcium source. The clinically important context is the calcium-to-phosphorus ratio and total calcium in large-breed puppy diets — excess calcium during growth is associated with skeletal developmental disease, which is why the AAFCO large-breed growth profile caps calcium. Clear disclosure; the ratio and growth-stage context matter.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'blue-buffalo', 'eukanuba'],
+    concernsIfAny: [
+      'In large-breed puppy diets, excess calcium during growth is associated with skeletal developmental disease; AAFCO caps calcium in the large-breed growth profile.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-d3-supplement', 'zinc-sulfate', 'iron-supplement'],
+  },
+  {
+    slug: 'iron-supplement',
+    name: 'Iron Supplement (Ferrous Sulfate)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, iron sources include ferrous sulfate and chelated forms (iron proteinate). Iron is an essential trace mineral; note that iron oxide is a coloring agent and is not a nutritionally available iron source.',
+    aafcoSection: 'Chapter 9 (iron sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral. A common point of confusion is that "iron oxide" used as a red/brown colorant is nutritionally inert, whereas ferrous sulfate and iron proteinate are the bioavailable nutritional sources. Clear disclosure when the specific form is named.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'wellness'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'calcium-carbonate'],
+  },
+  {
+    slug: 'potassium-chloride',
+    name: 'Potassium Chloride',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, potassium chloride is a potassium source. Potassium is an essential macromineral with an AAFCO minimum; it is also used to meet electrolyte balance targets in formulation.',
+    aafcoSection: 'Chapter 9 (potassium chloride)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential macromineral. A routine formulation ingredient to meet the potassium minimum and balance electrolytes. Its appearance on the panel is standard nutritional completion, not a marketing flourish. Clear disclosure.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'eukanuba'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['calcium-carbonate', 'zinc-sulfate', 'choline-chloride'],
+  },
+  {
+    slug: 'selenium-yeast',
+    name: 'Selenium (Selenium Yeast)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, selenium sources include sodium selenite and organic selenium yeast. Selenium is an essential trace mineral with a narrow margin between requirement and toxicity, so AAFCO sets both a minimum and a maximum.',
+    aafcoSection: 'Chapter 9 (selenium sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral with a notably narrow safe range — both deficiency and excess are documented concerns, which is why AAFCO caps it. Organic selenium yeast is often cited as having better bioavailability and a wider safety margin than inorganic sodium selenite. Clear disclosure; the narrow range makes QC important.',
+    commonIn: ['orijen', 'acana', 'hills-science-diet', 'wellness', 'fromm'],
+    concernsIfAny: [
+      'Narrow margin between requirement and toxicity; AAFCO sets a maximum and manufacturer QC is relevant.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'iron-supplement', 'vitamin-e-supplement'],
+  },
+
+  // ─── WAVE 11: ADDITIVES / PRESERVATIVES / COLORS ─────────────────────────
+  {
+    slug: 'mixed-tocopherols-rosemary',
+    name: 'Mixed Tocopherols & Rosemary Extract',
+    category: 'Preservative',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, mixed tocopherols (natural vitamin E forms) and rosemary extract are natural antioxidant preservatives used to slow fat rancidity. They are the principal natural-preservative alternatives to the synthetic phenolics BHA, BHT, and ethoxyquin.',
+    aafcoSection: 'Chapter 9 (mixed tocopherols; rosemary extract)',
+    scoringRubric: 'High',
+    scoringNote:
+      'The natural preservative system most often used by brands marketing "no BHA/BHT/ethoxyquin." Effective antioxidants with no regulatory toxicology concern, but a shorter functional shelf life than the synthetic phenolics, which affects packaging, storage guidance, and date coding. Clear disclosure.',
+    commonIn: ['orijen', 'acana', 'wellness', 'fromm', 'merrick', 'nulo', 'blue-buffalo', 'nutro'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['bha', 'bht', 'ethoxyquin', 'vitamin-e-supplement'],
+  },
+  {
+    slug: 'propylene-glycol',
+    name: 'Propylene Glycol',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, propylene glycol is a humectant used to retain moisture and texture, notably in semi-moist dog foods. FDA prohibits its use in CAT food because of documented Heinz-body anemia (erythrocyte damage) in cats; it remains permitted in dog food.',
+    aafcoSection: 'Chapter 9 (propylene glycol); 21 CFR 589.1001 (prohibited in cat food)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A documented species-specific concern: FDA prohibits propylene glycol in cat food because it causes Heinz-body anemia in cats, while it remains a permitted humectant in dog food. This is one of the clearest cases where a dog-food ingredient is specifically unsafe for cats. Verify it is absent from any cat product; in dog food its presence is permitted.',
+    commonIn: [],
+    concernsIfAny: [
+      'FDA prohibits propylene glycol in cat food (Heinz-body anemia in cats); it remains permitted in dog food.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — 21 CFR 589.1001 (propylene glycol prohibited in cat food)',
+    ],
+    relatedSlugs: ['bha', 'natural-flavors', 'caramel-color'],
+  },
+  {
+    slug: 'caramel-color',
+    name: 'Caramel Color',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, caramel color is a permitted coloring agent produced by controlled heating of carbohydrates. It is used for visual appearance (often to give kibble or wet food a "meatier" brown tone) and has no nutritional function.',
+    aafcoSection: 'Chapter 9 (caramel color); 21 CFR 73/582 color additives',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A purely cosmetic additive — its function is to influence the buyer\'s perception of the food, not the pet\'s nutrition (dogs and cats do not select food by color). AAFCO/FDA permit it. The disclosure question for the buyer is whether a color additive signals a marketing-led rather than nutrition-led formulation; it is not a safety concern at permitted levels.',
+    commonIn: ['pedigree', 'beneful', 'cesar'],
+    concernsIfAny: [
+      'Purely cosmetic; serves human visual perception, not pet nutrition. AAFCO/FDA permit it at specified levels.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Color Additives (21 CFR Parts 73 and 82)',
+    ],
+    relatedSlugs: ['artificial-colors', 'natural-flavors', 'propylene-glycol'],
+  },
+  {
+    slug: 'artificial-colors',
+    name: 'Artificial Colors (FD&C Dyes)',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, certified artificial colors (FD&C dyes such as Red 40, Yellow 5, Yellow 6, Blue 2) are permitted color additives. In pet food their function is cosmetic, typically to produce multi-colored kibble pieces marketed to human buyers.',
+    aafcoSection: 'Chapter 9; 21 CFR 74 (certified color additives)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'Cosmetic additives with no nutritional role; dogs and cats do not choose food by color, so multi-colored kibble is a human marketing feature. FDA-certified dyes are permitted at specified levels. Owners who prefer to avoid synthetic dyes can choose products without them; the question is cosmetic preference, not an established safety hazard at permitted levels.',
+    commonIn: ['beneful', 'pedigree', 'friskies'],
+    concernsIfAny: [
+      'Cosmetic only; serve human buyers, not pet nutrition. FDA-certified dyes are permitted at specified levels.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Color Additives Permitted for Use (21 CFR Part 74)',
+    ],
+    relatedSlugs: ['caramel-color', 'natural-flavors', 'propylene-glycol'],
+  },
 ]
 
 // ─── Selectors ────────────────────────────────────────────────────────────
