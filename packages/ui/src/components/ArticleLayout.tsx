@@ -16,8 +16,9 @@
 
 import type { ReactNode } from 'react'
 import type { SiteId } from '@carloOS/config'
+import { getSiteConfig } from '@carloOS/config'
 import { Breadcrumb } from './Breadcrumb'
-import { SchemaScript } from './SEOHead'
+import { SchemaScript, buildBreadcrumbSchema } from './SEOHead'
 
 interface ArticleHero {
   title: string
@@ -45,7 +46,7 @@ interface ArticleLayoutProps {
 }
 
 export function ArticleLayout({
-  siteId: _siteId,
+  siteId,
   hero,
   breadcrumbs,
   children,
@@ -53,10 +54,34 @@ export function ArticleLayout({
   schema,
   relatedLinks,
 }: ArticleLayoutProps) {
+  // Auto-derive BreadcrumbList JSON-LD from the visual breadcrumb prop.
+  // GEO/SEO: a breadcrumb schema is one of the highest-leverage structured-
+  // data signals for AI Overviews + classic SERP, and was previously absent
+  // on ~300 editorial pages that pass `breadcrumbs` but only an Article
+  // schema. Skip if the page already supplied a BreadcrumbList (no dupes)
+  // or if any breadcrumb item is missing an href (incomplete graph).
+  const mergedSchema = (() => {
+    if (!breadcrumbs || breadcrumbs.length === 0) return schema
+    if (breadcrumbs.some((b) => !b.href)) return schema
+    const existing = Array.isArray(schema) ? schema : schema ? [schema] : []
+    const hasBreadcrumb = existing.some(
+      (s) => (s as { '@type'?: string })?.['@type'] === 'BreadcrumbList',
+    )
+    if (hasBreadcrumb) return schema
+    const siteUrl = getSiteConfig(siteId).theme.siteUrl
+    const auto = buildBreadcrumbSchema({
+      items: breadcrumbs.map((b) => ({
+        name: b.name,
+        url: b.href!.startsWith('http') ? b.href! : `${siteUrl}${b.href}`,
+      })),
+    })
+    return [...existing, auto]
+  })()
+
   return (
     <>
       {/* JSON-LD Schema */}
-      {schema && <SchemaScript schema={schema} />}
+      {mergedSchema && <SchemaScript schema={mergedSchema} />}
 
       {/* Breadcrumb */}
       {breadcrumbs && breadcrumbs.length > 0 && (
