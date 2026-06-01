@@ -2,7 +2,7 @@
 
 Single prioritized queue of deferred work + COO ready-task queue under the 6-bot fleet's autonomous operation.
 
-**Last updated:** 2026-05-31 (fleet operational, tier policy in force, autonomy rule active)
+**Last updated:** 2026-06-01 evening (Carlo polish-pivot — P-NOW rewritten for cohort-5 polish; P0 launch-ops marked DEFERRED)
 
 **Rules:**
 - Items here are deferred by design — "not blocking, will revisit after."
@@ -12,41 +12,43 @@ Single prioritized queue of deferred work + COO ready-task queue under the 6-bot
 
 ---
 
-## P-NOW — COO autonomous-mode ready queue (min 5 at all times)
+## P-NOW — COO polish-mode ready queue (Carlo 2026-06-01 pivot)
 
-Per Carlo's 2026-05-31 standing rule: COO works the queue without waiting for permission on in-lane work. Tasks below pass the Tier 1 protect-the-asset filter + lane filter + trust-bar filter.
+Cohort-5 = **Dog.com · Fish.com · Ferret.com · PetFood.com · Vets.co**. Each polish item runs as one branch+PR so review stays scoped. Stop building new clusters.
 
-| Status | Task | Estimated effort | Why it's queued |
+| Status | Task | Effort | Why |
 |---|---|---|---|
-| 🟢 In flight | Dog.com `/conditions` authority hub | S | Tier 1 authority cluster; mirrors `/symptoms` hub for diagnosed conditions |
-| 🟢 In flight | Fish.com `/water-parameters` reference hub + 8 deep-dives | S-M | Tier 1 authority cluster; dense citation magnet |
-| ⏳ Next | Cross-portfolio internal-linking sweep | M | Tier 2/3 pages deep-link into Tier 1 funnels (per tier architecture) |
-| ⏳ Next | Sitemap freshness check + regenerate across all sites post-mega-wave | S | Many new routes added; sitemaps stale |
-| ⏳ Next | `robots.txt` + AI-crawler hygiene audit | S | Explicit allow for GPTBot/ClaudeBot/PerplexityBot/Gemini/Bingbot with rate limits |
-| ⏳ Next | IndexNow protocol install (Bing/Yandex instant indexing) | XS | Build once, every site benefits forever; ranks new pages faster |
-| ⏳ Next | Coordination handoff to Visual/Monetization bots on the 6 conflict-blocked PRs | S | They own rebases per §8; handoff makes the ask explicit |
-| ⏳ Next | Dog.com `/breeds` hub refresh — if missing, build (mirrors `/symptoms` + `/conditions` pattern) | S | Tier 1 authority structure consistency |
-| ⏳ Next | Vets.co `/specialists/*` 8 explainer pages (was P1, promoted to Tier 2-promotion-path content) | M | Supports Vets.co Tier 1 promotion criteria #2 (monetization stack viability) |
+| ⏳ Next | Dog.com polish pass — broken-link + orphan + thin-page + duplicate-title + missing-schema + missing-breadcrumb audit | M | Tier-1 acquisition target ($2.3M offer); cohort-5 anchor |
+| ⏳ Next | Fish.com polish pass — same checklist + tools/calculators acceptance pass | M | Tier-1 acquisition target ($1.45M offer); cohort-5 anchor |
+| ⏳ Next | Ferret.com polish pass — same checklist; **avoid Monetization touch points** (`data/affiliate-routes.ts`, `care/*`, `behavior/*`, `health/*` buy-box pages) | M | 11K/mo traffic, first-dollar candidate; cohort-5 |
+| ⏳ Next | PetFood.com polish pass — same checklist + brand-eval / ingredient depth consistency | M | Polish-cohort site; strong topical authority candidate |
+| ⏳ Next | Vets.co polish pass — same checklist; 2,912 breed×state pages stay noindex; hub + breed + state pages launch-quality | M | Polish-cohort site; insurance funnel is the monetization anchor |
+| ⏳ Then | Portfolio thin/duplicate-page audit script (`scripts/ci/thin-page-audit.mjs`) | S | Catches the "broad-but-shallow" risk pre-launch |
+| ⏳ Then | Cross-site duplicate-title audit extension to `metadata-policy.mjs` | XS | Same |
+| ⏳ Then | Hub → spoke link symmetry audit generalized from PR #305 | S | Compounding internal-link strength |
+| ⏳ Then | Tools/calculators acceptance pass on the rest of `/tools/*` (PR #305 wired 7) | S | Confirms tools "actually work" per launch-quality bar |
 
-When this list drops below 5, COO extends it. When CSRO files a directive that supersedes one of these, COO rebases priorities.
+When this drops below 5 items, COO files a CSRO handoff asking which polish gap to slot in next — not new content.
 
 ---
 
-## P0 — Soft-launch operational (Carlo-only, ~75 min total)
+## P0 — Launch ops (Carlo-only, ~75 min total) — DEFERRED
 
-| Step | Time | Status |
+Per Carlo's 2026-06-01 directive these items DO NOT enter the queue until cohort-5 sites pass the launch-quality bar (CLAUDE.md §8a). Do not push, do not nudge. Listed only for traceability.
+
+| Step | Time | Polish-mode status |
 |---|---|---|
-| DNS cutover for 10 production domains → Vercel (Network Solutions) | ~30 min | Pending Carlo — blocks launch |
-| Rotate Vercel token (exposed in chat) | ~2 min | Pending Carlo — security hygiene |
-| Apply to Chewy Partners | ~5 min | Pending Carlo — free revenue stream |
-| Apply to ImpactRadius | ~15 min | Pending Carlo — biggest LTV unlock (pet-insurance) |
-| GA4 property + 10 streams + set `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ~15 min | Pending Carlo — analytics blackout otherwise |
-| Mailchimp / MailerLite / Beehiiv decision | ~30 min | Deferred per Carlo (cost) |
-| Email forwarding `editor@<domain>.com` (10 domains) | ~20 min | Pending Carlo |
-| Rotate Anthropic API key after `/ask` MVP validation | ~2 min | Pending Carlo — security hygiene |
-| CSRO bot session spawn + paste `ops/csro/CSRO-PROMPT.md` | ~3 min | Pending Carlo — fleet activation |
-| IR Bot Codex session spawn + paste `ops/csro/IR-BOT-PROMPT.md` | ~3 min | Pending Carlo — fleet activation |
-| Vercel bootstrap for 3 active new scaffolds (askthevet, seniorpets, dogpicture) — petsupplies decommissioned per PR #221, hardmoneyloans sunset | ~10 min | Pending Carlo |
+| DNS cutover for the chosen launch sites (Network Solutions) | ~30 min | DEFERRED — depends on which sites CSRO names launch-ready |
+| Rotate Vercel token (exposed in chat) | ~2 min | Keep — security hygiene whenever convenient |
+| Apply to Chewy Partners | ~5 min | DEFERRED |
+| Apply to ImpactRadius | ~15 min | DEFERRED |
+| GA4 property + per-launch-site streams + `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ~15 min | DEFERRED to launch-day |
+| Mailchimp / MailerLite / Beehiiv decision | ~30 min | DEFERRED (cost-deferred per Carlo) |
+| Email forwarding `editor@<domain>.com` | ~20 min | DEFERRED to launch-day |
+| Rotate Anthropic API key after `/ask` MVP validation | ~2 min | Keep — security |
+| CSRO bot session spawn + paste `ops/csro/CSRO-PROMPT.md` | ~3 min | Already up — re-spawn if degraded |
+| IR Bot Codex session spawn + paste `ops/csro/IR-BOT-PROMPT.md` | ~3 min | Already up |
+| Vercel bootstrap for 3 active scaffolds (askthevet, seniorpets, dogpicture) | ~10 min | DEFERRED — scaffolds aren't in the polish cohort |
 
 ---
 
