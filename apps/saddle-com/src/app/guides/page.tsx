@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'Horse & Saddle Guides — Fit, Riding, Tack Care | Saddle.com',
   description:
-    '24 guides on saddle fit, bridle and bit selection, riding disciplines, tack care, and horse ownership — SMS and FEI criteria throughout.',
+    '70+ guides on saddle fit and construction, tack, rider gear, leather care, buying, brands, and riding disciplines — SMS and FEI criteria throughout.',
   path: '/guides',
 })
 
@@ -30,12 +30,53 @@ const SADDLE_FIT: GuideEntry[] = [
   { slug: 'western-saddle-guide', title: 'Western Saddle Guide', desc: 'Tree fit, gullet width, skirt types, and discipline-specific western saddle selection.' },
 ]
 
+const SADDLE_TYPES: GuideEntry[] = [
+  { slug: 'saddle-tree-types', title: 'Saddle Tree Types', desc: 'Wood-spring, laminate, synthetic, adjustable, and treeless trees — the skeleton that decides fit.' },
+  { slug: 'saddle-flocking-guide', title: 'Saddle Flocking Guide', desc: 'Wool, foam, and air panels compared — feel, maintenance, and reflock intervals.' },
+  { slug: 'saddle-panel-types', title: 'Saddle Panel Types', desc: 'Full, short, K, trapezius, and gusseted panels — shaping the bearing surface.' },
+  { slug: 'monoflap-vs-double-flap-saddles', title: 'Monoflap vs Double-Flap', desc: 'Single-flap closeness against conventional billet flexibility — by discipline.' },
+  { slug: 'close-contact-vs-all-purpose', title: 'Close Contact vs All-Purpose', desc: 'English saddle styles — flap angle, seat depth, and which discipline each suits.' },
+  { slug: 'half-tree-treeless-saddles', title: 'Treeless & Flex-Tree Saddles', desc: 'Treeless, half-tree, and flex-tree designs — load distribution and the honest trade-offs.' },
+  { slug: 'gullet-plate-guide', title: 'Gullet Plate Guide', desc: 'Adjustable gullet plates — how they change width and what they cannot fix.' },
+  { slug: 'saddle-anatomy-glossary', title: 'Saddle Anatomy Glossary', desc: 'Pommel to billets, gullet to tree points — the vocabulary of the saddle.' },
+]
+
 const TACK_FIT: GuideEntry[] = [
   { slug: 'bridle-fit-guide', title: 'Bridle Fit Guide', desc: 'Crown, browband, noseband, and bit height — a fitting framework for every head shape.' },
   { slug: 'horse-bridle-guide', title: 'Horse Bridle Guide', desc: 'Snaffle, double, and bitless bridle types — structure, use, and fitting.' },
   { slug: 'bit-selection-guide', title: 'Bit Selection Guide', desc: 'Snaffle, pelham, kimberwicke — how bit mechanics translate to rein aids.' },
+  { slug: 'bit-materials-guide', title: 'Bit Materials Guide', desc: 'Stainless, copper, sweet iron, and synthetics — how metal affects acceptance.' },
+  { slug: 'double-bridle-guide', title: 'Double Bridle Guide', desc: 'Bradoon and Weymouth, the curb chain, and four reins — for upper-level dressage.' },
+  { slug: 'hackamore-bitless-guide', title: 'Hackamore & Bitless Guide', desc: 'Sidepull, cross-under, bosal, and mechanical hackamore — pressure points and action.' },
   { slug: 'stirrup-iron-guide', title: 'Stirrup Iron Guide', desc: 'Safety stirrups, fillis irons, flex stirrups — sizing and safety criteria.' },
+  { slug: 'stirrup-leathers-guide', title: 'Stirrup Leathers Guide', desc: 'Standard, nylon-lined, and webbers — stretch, sizing, and safety inspection.' },
+  { slug: 'girth-types-guide', title: 'Girth Types Guide', desc: 'Anatomic, stud-guard, dressage, and western cinches — materials and shapes.' },
+  { slug: 'girth-fit-guide', title: 'Girth Fit Guide', desc: 'Length, billet placement, elbow clearance, and preventing girth galls.' },
+  { slug: 'saddle-pad-materials', title: 'Saddle Pad Materials', desc: 'Cotton, wool felt, sheepskin, foam, and gel — and what a pad cannot fix.' },
+  { slug: 'half-pad-guide', title: 'Half Pad Guide', desc: 'Sheepskin, riser, and shimmable pads — legitimate uses and the over-correction risk.' },
+  { slug: 'breastplate-martingale-guide', title: 'Breastplate & Martingale Guide', desc: 'Running, standing, bib, and Irish martingales plus breastplate types and fit.' },
+  { slug: 'reins-types-guide', title: 'Reins Types Guide', desc: 'Plain, laced, rubber, web, and western split and mecate reins — grip and feel.' },
   { slug: 'horse-boot-types', title: 'Horse Boot Types', desc: 'Brushing, tendon, bell, polo, and fetlock boots — when each type is appropriate.' },
+]
+
+const RIDER_GEAR: GuideEntry[] = [
+  { slug: 'riding-helmet-safety-standards', title: 'Helmet Safety Standards', desc: 'ASTM/SEI, PAS 015, VG1, Snell, and MIPS — what each certification covers.' },
+  { slug: 'helmet-fit-guide', title: 'Helmet Fit Guide', desc: 'Sizing, head shape, harness, and the shake test that confirms a helmet stays on.' },
+  { slug: 'tall-boots-vs-paddock-boots', title: 'Tall Boots vs Paddock Boots', desc: 'Field, dress, paddock, and western boots — when each is correct and how they fit.' },
+  { slug: 'breeches-fabric-guide', title: 'Breeches Fabric Guide', desc: 'Full-seat vs knee-patch, silicone grip, and four-way-stretch fabrics by discipline.' },
+  { slug: 'riding-gloves-guide', title: 'Riding Gloves Guide', desc: 'Leather, synthetic, mesh, and winter gloves — grip and feel through the rein.' },
+  { slug: 'body-protector-guide', title: 'Body Protector & Air Vest Guide', desc: 'BETA levels, foam protectors, and air vests — torso protection for jumping and eventing.' },
+  { slug: 'spurs-guide', title: 'Spurs Guide', desc: 'Neck length, end types, and competition rules — refinement, not force.' },
+  { slug: 'show-attire-guide', title: 'Show Attire Guide', desc: 'Dressage, hunter, jumper, and western turnout — the current rules by discipline.' },
+]
+
+const DISCIPLINE_TACK: GuideEntry[] = [
+  { slug: 'dressage-tack-guide', title: 'Dressage Tack Guide', desc: 'Dressage saddle, snaffle and double bridles, legal bits, and FEI-aligned equipment.' },
+  { slug: 'show-jumping-tack-guide', title: 'Show Jumping Tack Guide', desc: 'Close-contact saddles, bits, breastplates, studs, and protective boots.' },
+  { slug: 'western-tack-guide', title: 'Western Tack Guide', desc: 'Western saddle, headstalls and bosals, curb bits, rigging, and cinches.' },
+  { slug: 'eventing-tack-guide', title: 'Eventing Tack Guide', desc: 'Three phases, three setups — dressage, cross-country, and show jumping, with safety gear.' },
+  { slug: 'trail-riding-gear', title: 'Trail Riding Gear', desc: 'Comfortable saddles, secure tack, hoof protection, saddlebags, and the safety kit.' },
+  { slug: 'endurance-tack-guide', title: 'Endurance Tack Guide', desc: 'Lightweight saddles, anatomic girths, hydration, and obsessive rub-free fit.' },
 ]
 
 const RIDING: GuideEntry[] = [
@@ -47,8 +88,29 @@ const RIDING: GuideEntry[] = [
 
 const TACK_CARE: GuideEntry[] = [
   { slug: 'leather-care-guide', title: 'Leather Care Guide', desc: 'Cleaning, conditioning, and storage — how to extend the life of a quality saddle.' },
+  { slug: 'leather-conditioner-guide', title: 'Leather Conditioner Guide', desc: 'Neatsfoot oil, balms, and glycerine — and the over-oiling mistake to avoid.' },
+  { slug: 'leather-restoration-guide', title: 'Leather Restoration Guide', desc: 'Reviving dry, stiff, neglected tack — and recognizing leather that is beyond saving.' },
+  { slug: 'mold-removal-tack', title: 'Removing Mold from Tack', desc: 'A safe method to remove mold from leather, and the storage that prevents it.' },
+  { slug: 'saddle-storage-guide', title: 'Saddle Storage Guide', desc: 'Racks, humidity, covers, and long-term storage that protects tree and leather.' },
+  { slug: 'billet-care-guide', title: 'Billet Care Guide', desc: 'Inspecting, caring for, and replacing the safety-critical strap that holds the saddle on.' },
   { slug: 'tack-cleaning-schedule', title: 'Tack Cleaning Schedule', desc: 'Weekly, monthly, and seasonal tack maintenance broken into a practical routine.' },
   { slug: 'tack-room-organization', title: 'Tack Room Organization', desc: 'Storage, humidity control, saddle racks, and bridle hooks — the functional tack room.' },
+]
+
+const BUYING: GuideEntry[] = [
+  { slug: 'saddle-budget-guide', title: 'Saddle Budget Guide', desc: 'Price tiers, where money matters, hidden costs, and when used beats new.' },
+  { slug: 'where-to-buy-saddles', title: 'Where to Buy a Saddle', desc: 'Fitters, dealers, tack shops, online, and used — trade-offs and trial periods.' },
+  { slug: 'new-vs-used-saddle', title: 'New vs Used Saddle', desc: 'The case for used premium over new budget — value, risk, and fitting either way.' },
+  { slug: 'saddle-resale-value', title: 'Saddle Resale Value', desc: 'What holds value and why — brands, materials, rebuildability, and protecting resale.' },
+  { slug: 'saddle-brands-by-price', title: 'Saddle Brands by Price', desc: 'Entry, mid-range, and premium tiers, and which brands sit where.' },
+]
+
+const BRANDS: GuideEntry[] = [
+  { slug: 'english-saddle-makers', title: 'English Saddle Makers', desc: 'Stübben, County, Bates, Wintec, Custom, and Pessoa — origins and house styles.' },
+  { slug: 'french-saddle-makers', title: 'French Saddle Makers', desc: 'Antares, Devoucoux, CWD, Delgrange, and Childeric — the bespoke close-contact tradition.' },
+  { slug: 'western-saddle-makers', title: 'Western Saddle Makers', desc: 'Circle Y, Billy Cook, Reinsman, Tucker, and custom tree-builders.' },
+  { slug: 'antares-saddle-overview', title: 'Antares Saddle Overview', desc: 'The bespoke French jumping saddle — models, leather, and resale.' },
+  { slug: 'devoucoux-saddle-overview', title: 'Devoucoux Saddle Overview', desc: 'French bespoke fitting plus back-mapping technology — models and feel.' },
 ]
 
 const HORSE_CARE: GuideEntry[] = [
@@ -64,9 +126,14 @@ const HORSE_CARE: GuideEntry[] = [
 
 const SECTIONS = [
   { heading: 'Saddle Fit & Selection', entries: SADDLE_FIT },
-  { heading: 'Tack Fitting', entries: TACK_FIT },
+  { heading: 'Saddle Types & Construction', entries: SADDLE_TYPES },
+  { heading: 'Tack: Bridles, Bits, Girths & Pads', entries: TACK_FIT },
+  { heading: 'Rider Gear & Apparel', entries: RIDER_GEAR },
+  { heading: 'Discipline-Specific Tack', entries: DISCIPLINE_TACK },
   { heading: 'Riding Disciplines', entries: RIDING },
-  { heading: 'Tack Care', entries: TACK_CARE },
+  { heading: 'Leather Care & Tack Maintenance', entries: TACK_CARE },
+  { heading: 'Buying Guides', entries: BUYING },
+  { heading: 'Brands & Makers', entries: BRANDS },
   { heading: 'Horse Care', entries: HORSE_CARE },
 ]
 
@@ -99,9 +166,9 @@ export default function GuidesHubPage() {
             Horse &amp; Saddle Guides
           </h1>
           <p className="text-base lg:text-lg font-light text-white/60 max-w-2xl leading-relaxed">
-            24 reference guides on saddle fit, bridle and bit selection, riding disciplines,
-            tack care, and horse ownership — written to Society of Master Saddlers and FEI
-            criteria.
+            70+ reference guides on saddle fit and construction, tack, rider gear, leather
+            care, buying, brands, riding disciplines, and horse ownership — written to Society
+            of Master Saddlers and FEI criteria.
           </p>
         </div>
       </div>
