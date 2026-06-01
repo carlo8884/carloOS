@@ -24,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Moving With a Ferret — Ban States, Permits, Cross-Country & Abroad',
   description:
-    'How to relocate with a ferret: what to do when moving to a ban state, permit steps for Florida and Pennsylvania, the cross-country move checklist, international relocation, and finding a vet after moving.',
+    'Relocating with a ferret: ban-state moves, permit steps for Florida and Pennsylvania, the cross-country checklist, international moves, and finding a vet.',
   path: '/moving',
   type: 'website',
   category: 'Moving',
