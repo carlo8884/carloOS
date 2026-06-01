@@ -802,8 +802,9 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Species Guides', href: '/species' },
-      { label: 'Reptile Health', href: '/health/sick-reptile-signs' },
+      { label: 'Health', href: '/health' },
       { label: 'Enclosure Setup', href: '/setup' },
+      { label: 'Tools', href: '/tools' },
       { label: 'Reviews', href: '/reviews' },
     ],
     footerLinks: [
@@ -834,6 +835,15 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Terrariums', href: '/reviews/best-reptile-terrariums' },
           { label: 'Thermostats', href: '/reviews/best-thermostats' },
           { label: 'All Reviews', href: '/reviews' },
+        ],
+      },
+      {
+        heading: 'Tools & Reference',
+        links: [
+          { label: 'Reptile Calculators', href: '/tools' },
+          { label: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator' },
+          { label: 'Health Hub', href: '/health' },
+          { label: 'Legality by State', href: '/states' },
         ],
       },
     ],
