@@ -509,7 +509,7 @@ export default function FerretExerciseEnrichmentPage() {
             cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
             price="$15–30"
             ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="https://www.marshallpet.com/"
+            ctaHref="/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="pop-n-play-tunnel"
           />
