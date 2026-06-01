@@ -338,18 +338,34 @@ export default async function StateLegalityPage({
           </li>
           <li>
             <Link
-              href="/directory/rescues"
+              href="/adopt"
               className="text-brand-primary font-medium hover:underline"
             >
-              Ferret rescue &amp; adoption guide &rarr;
+              Adopting a ferret &rarr;
             </Link>
           </li>
           <li>
             <Link
-              href="/care"
+              href="/acquiring"
               className="text-brand-primary font-medium hover:underline"
             >
-              Care library &rarr;
+              Acquiring a ferret &rarr;
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/legality"
+              className="text-brand-primary font-medium hover:underline"
+            >
+              Legality topics &rarr;
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/directory/rescues"
+              className="text-brand-primary font-medium hover:underline"
+            >
+              Ferret rescue &amp; adoption guide &rarr;
             </Link>
           </li>
         </ul>
