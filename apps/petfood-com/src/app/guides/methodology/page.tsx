@@ -33,6 +33,7 @@ export default function MethodologyPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="guide"
       hero={{
         title: 'How PetFood.com Scores',
         subtitle:

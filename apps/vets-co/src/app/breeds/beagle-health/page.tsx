@@ -100,6 +100,7 @@ export default function VetsBeagleHealthPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="vets-co"
+        contentType="breed"
         hero={{
           title: 'Beagle Health — A Veterinarian\'s Perspective',
           subtitle:

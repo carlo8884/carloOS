@@ -99,6 +99,7 @@ export default function FerretVetVisitPrepPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Vet Visit Prep',
           subtitle:
@@ -111,7 +112,7 @@ export default function FerretVetVisitPrepPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/vet-visit-prep' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
         ]}
         sidebar={

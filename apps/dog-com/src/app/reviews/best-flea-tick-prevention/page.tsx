@@ -22,7 +22,7 @@ export default function FleaTickPreventionPage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Flea & Tick Prevention</span>
@@ -41,7 +41,7 @@ export default function FleaTickPreventionPage() {
               pros={['12-week duration — fewest doses', 'Broadest tick species coverage', 'Consistent efficacy throughout window', 'Beef-flavored — most dogs take readily']}
               cons={['Prescription required', 'More expensive per dose (but similar annual cost)', 'Isoxazoline seizure risk in predisposed dogs']}
               price="$50–60 per 12-week dose"
-              ctaText="Ask Your Vet About Bravecto →"
+              ctaText="Find a Vet to Discuss Bravecto →"
               ctaHref="/find-a-vet"
             />
             <ReviewCard id="nexgard" badge="Best Monthly" badgeEmoji="⭐" name="NexGard Chew (Afoxolaner)" subtitle="Monthly · 5 tick species · Most prescribed oral prevention" score={9.2}
@@ -50,7 +50,7 @@ export default function FleaTickPreventionPage() {
               pros={['Longest safety track record in class', 'Most widely available', 'Kills fleas before egg laying', 'Monthly predictability']}
               cons={['Monthly dosing — 12 doses/year', '5 tick species vs Bravecto\'s 7', 'Prescription required']}
               price="$20–25 per monthly dose"
-              ctaText="Ask Your Vet About NexGard →"
+              ctaText="Find a Vet to Discuss NexGard →"
               ctaHref="/find-a-vet"
             />
           </div>

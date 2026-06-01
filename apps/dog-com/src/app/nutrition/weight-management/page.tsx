@@ -9,6 +9,7 @@ export default function WeightManagementPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey) — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Weight Management', href: '/nutrition/weight-management' }]}
       schema={schema}

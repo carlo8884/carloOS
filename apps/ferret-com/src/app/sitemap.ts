@@ -10,7 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://ferret.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
+    { url: 'https://ferret.com/behavior', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/behavior/training-and-bonding', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/care', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/care/bathing-and-grooming', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/care/cage-setup', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/care/diet-basics', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
@@ -20,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferret.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/ferret-starter-kit', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/first-year-schedule', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://ferret.com/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/health/adrenal-disease', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/health/aging-ferret-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/health/dental-disease', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

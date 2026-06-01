@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles — Retained Shed, Causes | Lizard.com', description: 'Dysecdysis (retained shed) is almost always caused by low humidity or dehydration. Safe soaking protocol, how to remove stuck shed from toes and eyes.', path: '/health/dysecdysis', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Dysecdysis in Reptiles (Retained Shed)', description: 'Causes, safe removal, and prevention of retained shed (dysecdysis) in reptiles.', url: 'https://lizard.com/health/dysecdysis', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function DysecdysisPage() {
   return (
     <ArticleLayout siteId="lizard-com"
@@ -48,7 +48,16 @@ export default function DysecdysisPage() {
 
         <h2>Prevention</h2>
         <p>Maintain species-appropriate humidity consistently — not only when in shed. Provide a moist hide (a container lined with dampened sphagnum moss) in the enclosure year-round for species that benefit from it (most snakes, many geckos). Ensure the reptile is adequately hydrated — fresh water always available, soaking opportunities for species that need them. Provide rough surfaces (cork bark, rocks with texture) that the reptile can use to anchor and rub during shedding. Check for mites if dysecdysis occurs repeatedly in a well-maintained setup.</p>
+        <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Shed-Support Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Husbandry equipment that helps with shedding: humid hides, sphagnum moss, ultrasonic humidifiers. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/reptile%20humid%20hide%20moss%20sphagnum?s=health-dysecdysis" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/reptile%20humid%20hide%20moss%20sphagnum?s=health-dysecdysis" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

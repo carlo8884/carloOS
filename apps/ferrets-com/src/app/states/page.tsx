@@ -408,6 +408,68 @@ export default function StatesHubPage() {
           </ul>
         </section>
 
+        {/* ─── Related clusters ──────────────────────────────────────── */}
+        <section aria-labelledby="related" className="mb-12">
+          <h2
+            id="related"
+            className="font-display font-bold text-brand-text-dark mb-5"
+            style={{ fontSize: 'clamp(22px, 3vw, 28px)' }}
+          >
+            Beyond your state page
+          </h2>
+          <ul
+            className="list-none p-0 m-0 grid gap-4"
+            style={{
+              gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+            }}
+          >
+            <li className="p-5 rounded-xl border border-brand-border bg-brand-surface">
+              <h3 className="font-display font-bold text-brand-text-dark mb-1 text-lg">
+                <Link href="/legality" className="text-brand-text-dark hover:text-brand-primary no-underline">
+                  Legality topics
+                </Link>
+              </h3>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                Why bans exist, city-vs-state law, rabies and travel rules,
+                renting, and how the rules change.
+              </p>
+            </li>
+            <li className="p-5 rounded-xl border border-brand-border bg-brand-surface">
+              <h3 className="font-display font-bold text-brand-text-dark mb-1 text-lg">
+                <Link href="/adopt" className="text-brand-text-dark hover:text-brand-primary no-underline">
+                  Adopting a ferret
+                </Link>
+              </h3>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                Regional adoption guides, rescue vs. breeder, the application
+                process, costs, and the first 30 days.
+              </p>
+            </li>
+            <li className="p-5 rounded-xl border border-brand-border bg-brand-surface">
+              <h3 className="font-display font-bold text-brand-text-dark mb-1 text-lg">
+                <Link href="/acquiring" className="text-brand-text-dark hover:text-brand-primary no-underline">
+                  Acquiring a ferret
+                </Link>
+              </h3>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                The checklist, permits and licensing, vaccination and records,
+                transport, and setup.
+              </p>
+            </li>
+            <li className="p-5 rounded-xl border border-brand-border bg-brand-surface">
+              <h3 className="font-display font-bold text-brand-text-dark mb-1 text-lg">
+                <Link href="/moving" className="text-brand-text-dark hover:text-brand-primary no-underline">
+                  Moving with a ferret
+                </Link>
+              </h3>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                Relocating to a ban or permit state, cross-country and
+                international moves, and re-establishing vet care.
+              </p>
+            </li>
+          </ul>
+        </section>
+
         {/* ─── FAQ ──────────────────────────────────────────────────── */}
         <section aria-labelledby="faq" className="mb-12">
           <h2

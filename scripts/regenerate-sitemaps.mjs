@@ -15,13 +15,31 @@
  * Run: node scripts/regenerate-sitemaps.mjs
  */
 
-import { readdirSync, writeFileSync, statSync } from 'node:fs'
+import { readdirSync, writeFileSync, statSync, readFileSync } from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const ROOT = resolve(__dirname, '..')
+
+/**
+ * Extract `slug: '...'` (or "...") literals from a data file so dynamic
+ * [slug] routes whose params are known at build time can be enumerated in
+ * the sitemap. Used for petfoods-com's data-driven ingredient/brand catalog.
+ */
+function slugsFromDataFile(relPath) {
+  try {
+    const src = readFileSync(join(ROOT, relPath), 'utf8')
+    const out = new Set()
+    const re = /\bslug:\s*['"]([a-z0-9-]+)['"]/g
+    let m
+    while ((m = re.exec(src)) !== null) out.add(m[1])
+    return Array.from(out)
+  } catch {
+    return []
+  }
+}
 
 // Per-site registry of dynamic-route slugs that should appear in the sitemap.
 // These are routes served by [slug] dynamic pages where the slug set is known
@@ -39,6 +57,37 @@ const SADDLE_BRAND_SLUGS = [
   'wintec',
 ]
 
+// Ferrets.com dynamic-route slugs, derived from the per-cluster data files so
+// the sitemap stays in sync with the [slug] catch-all pages.
+function ferretsExtraRoutes() {
+  const out = []
+  const read = (rel) => {
+    try {
+      return readFileSync(join(ROOT, 'apps/ferrets-com/src', rel), 'utf8')
+    } catch {
+      return ''
+    }
+  }
+  const slugsFrom = (src) =>
+    [...src.matchAll(/^  '?([a-z0-9][a-z0-9-]*)'?:\s*\{/gm)]
+      .map((m) => m[1])
+      .filter(Boolean)
+  // States (50 + DC) live in data/states.ts as `slug: '...'`.
+  for (const m of read('data/states.ts').matchAll(/slug: '([a-z-]+)'/g)) {
+    out.push(`/states/${m[1]}`)
+    out.push(`/find-a-vet/${m[1]}`)
+  }
+  for (const s of slugsFrom(read('data/guides/adopt.ts')))
+    out.push(`/adopt/${s}`)
+  for (const s of slugsFrom(read('data/guides/acquiring.ts')))
+    out.push(`/acquiring/${s}`)
+  for (const s of slugsFrom(read('data/guides/legality.ts')))
+    out.push(`/legality/${s}`)
+  for (const s of slugsFrom(read('data/guides/moving.ts')))
+    out.push(`/moving/${s}`)
+  return Array.from(new Set(out))
+}
+
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
   { id: 'fish-com', domain: 'fish.com' },
@@ -53,9 +102,29 @@ const SITES = [
   // so sitemap regeneration is comprehensive post-mega-wave.
   { id: 'horses-com', domain: 'horses.com' },
   { id: 'petfood-com', domain: 'petfood.com' },
-  { id: 'petfoods-com', domain: 'petfoods.com' },
+  {
+    id: 'petfoods-com',
+    domain: 'petfoods.com',
+    // Data-driven [slug] catalog: enumerate ingredient + brand + review slugs
+    // (union) so the full reference catalog is crawler-discoverable.
+    extraRoutes: [
+      ...slugsFromDataFile('apps/petfoods-com/src/data/ingredients.ts').map(
+        (s) => `/ingredients/${s}`
+      ),
+      ...[
+        ...new Set([
+          ...slugsFromDataFile('apps/petfoods-com/src/data/brands.ts'),
+          ...slugsFromDataFile('apps/petfoods-com/src/data/brand-reviews.ts'),
+        ]),
+      ].map((s) => `/brands/${s}`),
+    ],
+  },
   { id: 'ferret-com', domain: 'ferret.com' },
-  { id: 'ferrets-com', domain: 'ferrets.com' },
+  {
+    id: 'ferrets-com',
+    domain: 'ferrets.com',
+    extraRoutes: ferretsExtraRoutes(),
+  },
 ]
 
 function listRoutes(siteId) {

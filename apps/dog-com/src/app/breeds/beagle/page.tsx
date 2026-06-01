@@ -13,6 +13,7 @@ export default function BeaglePage() {
       hero={{ title: 'Beagle Breed Guide', subtitle: 'One of the most popular breeds in America — for good reason. Beagles are sturdy, friendly, and endlessly curious. They are also motivated by their nose in ways that require specific management strategies.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Beagle', href: '/breeds/beagle' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

@@ -39,7 +39,16 @@ export default function DwarfGouramiPage() {
 
         <h2>Bubble Nest Building</h2>
         <p>Male gouramis build floating bubble nests at the water surface — a cluster of air bubbles coated in saliva, anchored to floating plants or the tank edge. Nest building is a sign of a comfortable, well-conditioned male. Eggs are deposited in the nest during spawning, and the male guards the nest aggressively (temporarily — remove the female after spawning to prevent harassment). Fry hatch in 24-36 hours and are very small — fed on infusoria initially. This behavior is one of the most interesting aspects of gourami keeping to observe even without intent to breed.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Gourami — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for dwarf gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/dwarf%20gourami%20tank%20setup?s=species-dwarf-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Dwarf Gourami Setup on Amazon →</a>
+            <a href="/go/chewy-brand/dwarf%20gourami%20tank%20setup?s=species-dwarf-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

@@ -100,6 +100,7 @@ export default function VetsChihuahuaHealthPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="vets-co"
+        contentType="breed"
         hero={{
           title: 'Chihuahua Health — A Veterinarian\'s Perspective',
           subtitle:

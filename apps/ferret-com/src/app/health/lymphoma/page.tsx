@@ -99,6 +99,7 @@ export default function FerretLymphomaPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Lymphoma in Ferrets',
           subtitle:
@@ -111,7 +112,7 @@ export default function FerretLymphomaPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/lymphoma' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Lymphoma', href: '/health/lymphoma' },
         ]}
         sidebar={

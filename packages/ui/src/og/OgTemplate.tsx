@@ -195,7 +195,10 @@ export function OgTemplate({
         {title}
       </div>
 
-      {/* Bottom bar: thin rule + copyright + wordmark with brand dot */}
+      {/* Bottom bar: thin rule + copyright + wordmark with TLD-dot accent
+          (matches on-site <Logo> treatment for visual consistency across the
+          portfolio — every shared link now renders the same identity as the
+          page itself). */}
       <div
         style={{
           display: 'flex',
@@ -215,26 +218,41 @@ export function OgTemplate({
         >
           {site.name} · {new Date().getFullYear()}
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div
-            style={{
-              width: '8px',
-              height: '8px',
-              borderRadius: '50%',
-              background: site.primary,
-            }}
-          />
-          <span
-            style={{
-              fontSize: '20px',
-              fontWeight: 900,
-              color: 'white',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            {displayWordmark}
-          </span>
-        </div>
+        {(() => {
+          // Split at LAST dot — accent the TLD dot, not earlier dots
+          // (e.g. "Dog.com" → "Dog" + "." + "com"; "Vets.co" → "Vets" + "." + "co").
+          const lastDot = displayWordmark.lastIndexOf('.')
+          const body = lastDot > 0 ? displayWordmark.slice(0, lastDot) : displayWordmark
+          const tld = lastDot > 0 ? displayWordmark.slice(lastDot + 1) : ''
+          return (
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'baseline',
+                fontSize: '20px',
+                fontWeight: 900,
+                color: 'white',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              <span>{body}</span>
+              {tld && (
+                <>
+                  <span
+                    style={{
+                      color: site.primary,
+                      fontWeight: 900,
+                      margin: '0 0.02em',
+                    }}
+                  >
+                    .
+                  </span>
+                  <span>{tld}</span>
+                </>
+              )}
+            </div>
+          )
+        })()}
       </div>
     </div>
   )

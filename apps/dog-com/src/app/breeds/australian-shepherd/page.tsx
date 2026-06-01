@@ -9,6 +9,7 @@ export default function AustralianShepherdPage() {
       hero={{ title: 'Australian Shepherd Breed Guide', subtitle: 'Working herding dogs bred for intelligence, endurance, and problem-solving ability. In a family home with inadequate exercise and mental stimulation, these traits produce a dog that herds children, destroys furniture, and creates challenges. In an active home that channels the breed\'s capabilities appropriately, Aussies are extraordinary companions.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Australian Shepherd', href: '/breeds/australian-shepherd' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

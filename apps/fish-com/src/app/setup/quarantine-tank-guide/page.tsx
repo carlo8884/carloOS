@@ -58,6 +58,15 @@ export default function QuarantineGuidePage() {
           <h2>Duration — Why 4 Weeks Is the Minimum</h2>
           <p>The 4-week minimum is based on the incubation and latency periods of the most common fish diseases. Ich (Ichthyophthirius): can be subclinical for 2–3 weeks as the parasite completes multiple cycles before enough trophonts are attached to cause visible white spots. Velvet (Oodinium): shorter latency but invisible early — the flashlight test daily catches it before clinical signs appear. Lymphocystis: slow-growing viral infection that may not be visible for 3–4 weeks. Bacterial infections: most become apparent within 1–2 weeks. The 4-week window catches essentially all of these.</p>
           <p>Six weeks is better for wild-caught fish from unfamiliar regions, discus (which carry internal parasites that emerge slowly), and any fish from a source where disease history is unknown. Two weeks is not sufficient for any situation — skip quarantine entirely rather than use a 2-week period that provides false assurance without capturing the diseases that appear in weeks 3–4.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Quarantine Tank Essentials — Where to Shop</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
         </div>
       </ArticleLayout>
     </>

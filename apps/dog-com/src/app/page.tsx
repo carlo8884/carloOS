@@ -290,7 +290,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {FEATURED_BREEDS.map((breed) => (
             <Link
               key={breed.name}
@@ -438,7 +438,7 @@ export default function HomePage() {
 
       {/* ── INSURANCE & COST PLANNING ──────────────────────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-0.5 bg-brand-primary" />

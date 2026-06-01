@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -11,7 +11,8 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(
+  buildArticleSchema({
   siteId: 'dog-com',
   title: 'French Bulldog Health Guide',
   description: 'BOAS, IVDD, heat danger, skin folds — complete French Bulldog health guide.',
@@ -20,12 +21,21 @@ const schema = buildArticleSchema({
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({
+  name: 'French Bulldog Health Guide',
+  description: 'BOAS, IVDD, heat danger, skin folds — complete French Bulldog health guide.',
+  url: 'https://dog.com/health/french-bulldog-health',
+  authorName: 'Dog.com Editorial',
+  lastReviewed: '2025-05-01',
+  medicalAudience: 'Caregiver',
+}),
+)
 
 export default function FrenchBulldogHealthPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'French Bulldog Health Guide',
         subtitle: 'French Bulldogs are among the most popular dogs in the world — and among the most medically complex. Their anatomy creates near-inevitable health challenges every owner must understand before purchase and throughout the dog\'s life.',

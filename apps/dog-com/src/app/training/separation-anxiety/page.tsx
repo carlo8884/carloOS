@@ -42,6 +42,7 @@ export default function SeparationAnxietyPage() {
       <SchemaScript schema={combinedTrainingSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{
         title: 'Dog Separation Anxiety — What Actually Works',
         subtitle: 'Most dogs labeled with "separation anxiety" are bored, under-exercised, or have a habit of destructive behavior when unsupervised — not clinically anxious. Distinguishing these is the first step to the correct protocol.',

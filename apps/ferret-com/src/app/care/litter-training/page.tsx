@@ -92,6 +92,7 @@ export default function FerretLitterTrainingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Litter Training',
           subtitle:
@@ -104,7 +105,7 @@ export default function FerretLitterTrainingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/litter-training' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Litter Training', href: '/care/litter-training' },
         ]}
         sidebar={

@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import {
+  buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
+  SchemaScript,
+} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -10,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Pessoa Saddle Review 2025',
   description: 'Pessoa Gen X Pro, Legacy, and Optimum compared using CSF reviewer notes and published rider reports.',
@@ -20,6 +25,37 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
+
+const schema = combineSchemas(
+  articleSchema,
+  buildProductSchema({
+    name: 'Pessoa Gen X Pro',
+    description:
+      'Close-contact Pessoa jumping saddle with forward-flap geometry — Saddle.com Best Jumping pick in the Pessoa lineup.',
+    url: 'https://saddle.com/reviews/pessoa-saddle-review#gen-x',
+    imageUrl: '',
+    ratingValue: 9.2,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Pessoa Legacy',
+    description:
+      'Close-contact Pessoa with a slightly more versatile flap — well-suited to flatwork as well as jumping.',
+    url: 'https://saddle.com/reviews/pessoa-saddle-review#legacy',
+    imageUrl: '',
+    ratingValue: 9.0,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Pessoa Optimum',
+    description:
+      'Best-value Pessoa with solid close-contact geometry at a lower price entry point.',
+    url: 'https://saddle.com/reviews/pessoa-saddle-review#optimum',
+    imageUrl: '',
+    ratingValue: 8.6,
+    reviewCount: 1,
+  }),
+)
 
 const PICKS = [
   { label: 'Best Jumping', emoji: '🏆', name: 'Pessoa Gen X Pro', subtitle: '9.2 · Most close-contact geometry', href: '#gen-x' },

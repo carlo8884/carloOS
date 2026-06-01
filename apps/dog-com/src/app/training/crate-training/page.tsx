@@ -27,6 +27,7 @@ export default function CrateTrainingPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Crate Training', href: '/training/crate-training' }]}
       schema={schema}

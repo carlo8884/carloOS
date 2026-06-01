@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -18,22 +20,44 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Blue Buffalo — An Independent Evaluation',
-  description:
-    "Independent evaluation of Blue Buffalo against the PetFood.com five-dimension scoring rubric — corporate context (General Mills 2018 acquisition), product lines, LifeSource Bits, recall history per FDA CVM, the 2018-2019 grain-free DCM investigation listing, and manufacturing footprint.",
-  url: 'https://petfood.com/brands/blue-buffalo-evaluation',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Is Blue Buffalo a "bad" brand?',
+    answer:
+      "No. Blue Buffalo is a brand with above-average ingredient transparency, average AAFCO substantiation, a higher-than-peer recall frequency, and a marketing-claim depth larger than its published-evidence depth. None of those facts make it categorically unacceptable, and many BLUE SKUs are perfectly reasonable feeding choices. The evidence-based verdict is mixed, and an owner's decision should be made on the specific SKU and the specific animal's clinical context.",
+  },
+  {
+    question: 'Should I switch off BLUE Wilderness because of the DCM listing?',
+    answer:
+      'That is a veterinary question, especially for owners of dogs in DCM-predisposed or atypical-signal breeds. The 2019 FDA CVM listing is informational, not regulatory, and the underlying investigation has not produced a settled mechanism. The conservative position for at-risk breeds is to discuss the diet with the treating veterinarian; the conservative position for low-risk breeds is to be aware of the listing as one factor in the evaluation.',
+  },
+  {
+    question: 'Has the General Mills acquisition changed the formulation?',
+    answer:
+      'The published Blue Buffalo material since the 2018 acquisition does not indicate a fundamental reformulation. The brand has been operated as a stand-alone subsidiary and has continued to publish under the same recipe and ingredient frameworks. General Mills acquisitions of consumer brands in the packaged-foods space have historically been low-touch on formulation; the same pattern appears to apply here.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Blue Buffalo — An Independent Evaluation',
+    description:
+      "Independent evaluation of Blue Buffalo against the PetFood.com five-dimension scoring rubric — corporate context (General Mills 2018 acquisition), product lines, LifeSource Bits, recall history per FDA CVM, the 2018-2019 grain-free DCM investigation listing, and manufacturing footprint.",
+    url: 'https://petfood.com/brands/blue-buffalo-evaluation',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 export default function BlueBuffaloEvaluationPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="brand"
       hero={{
         title: 'Blue Buffalo — An Independent Evaluation',
         subtitle:

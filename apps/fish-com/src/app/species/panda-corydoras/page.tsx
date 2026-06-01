@@ -1,0 +1,48 @@
+import type { Metadata } from 'next'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide — The Cool-Water Cory | Fish.com', description: "Panda corydoras are a small, panda-marked cory catfish that prefers cooler water and pristine conditions. Keep a group of 6+ over soft sand.", path: '/species/panda-corydoras', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide', description: 'Temperature, group needs, water quality, and breeding for Corydoras panda.', url: 'https://fish.com/species/panda-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+export default function PandaCorydorasPage() {
+  return (
+    <ArticleLayout siteId="fish-com"
+      hero={{ title: 'Panda Corydoras Care Guide', subtitle: "Corydoras panda — named for the black patches over its eyes, dorsal fin, and tail base on a creamy body, the panda cory is among the most charming and sought-after small catfish. It is slightly more demanding than the bronze cory: it prefers cooler water and is less tolerant of poor conditions, but in a clean, well-planted tank a group of pandas is endlessly entertaining.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '8 min' }}
+      breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Panda Corydoras', href: '/species/panda-corydoras' }]}
+      schema={schema}
+      sidebar={<>
+        <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
+          {[['Scientific name', 'Corydoras panda'], ['Adult size', '1.5–2 inches'], ['Temperature', '68–77°F (cooler preferred)'], ['pH', '6.0–7.4'], ['Group size', '6 minimum, 8+ better'], ['Substrate', 'Soft sand'], ['Lifespan', '5–10 years']].map(([k, v]) => (
+            <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+            </div>
+          ))}
+        </div>
+        <RelatedLinks title="Related Guides" links={[{ label: 'Bronze Corydoras', href: '/species/bronze-corydoras' }, { label: 'Corydoras Overview', href: '/species/corydoras' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
+        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-panda-corydoras" />
+      </>}
+    >
+      <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+
+        <h2>The Cooler-Water Cory</h2>
+        <DropCap>The panda corydoras differs from most aquarium catfish in one important respect: it comes from cooler, faster-flowing foothill streams of the Peruvian Amazon rather than the warm lowland waters most tropical fish inhabit. As a result it does best at the lower end of the tropical range, between 68 and 77°F, and tends to struggle and shorten its lifespan in the high-70s-to-low-80s temperatures kept for discus or many gouramis. This makes the panda a poor tankmate for warm-water specialists but an excellent companion for other cool-tolerant species such as white cloud mountain minnows, neon tetras, and many rasboras. Keepers who lose pandas quickly have very often kept them too warm.</DropCap>
+        <p>Pandas are also more sensitive to water quality than the bronze cory. They need a fully cycled, mature tank with stable parameters, zero ammonia and nitrite, and low nitrate. They are not a good fish for a brand-new aquarium.</p>
+
+        <h2>A Group Animal — Always</h2>
+        <p>Like all corydoras, pandas are obligately social and must be kept in groups of at least six, with eight or more producing the most natural behavior. In a proper group they forage together across the substrate in daylight, occasionally bursting into bouts of playful, darting activity. A lone or paired panda will hide, eat poorly, and slowly decline. Because they are so small, even a 20-gallon tank can comfortably house a sizeable, active shoal.</p>
+
+        <CalloutBox variant="info" title="Keep them cool">
+          Panda corydoras originate from cooler highland streams and do best at 68–77°F. Avoid pairing them with warm-water species kept above 78°F, which shortens their lifespan.
+        </CalloutBox>
+
+        <h2>Substrate and Tank Setup</h2>
+        <p>Soft sand is strongly preferred for pandas. Their fine barbels are easily eroded by sharp gravel, and sand lets them perform their natural sifting feeding behavior. Provide gentle-to-moderate water movement to echo their stream origins, along with plenty of plant cover and shaded retreats — driftwood, broad-leaved plants, and caves all help these somewhat shy fish feel secure and stay visible. Good oxygenation is appreciated, reflecting their well-aerated native waters.</p>
+
+        <h2>Feeding and Breeding</h2>
+        <p>Pandas are not scavengers and need dedicated sinking foods: quality sinking pellets and wafers, plus frequent frozen or live offerings such as bloodworms, daphnia, and baby brine shrimp. To trigger spawning, condition the group heavily, then perform a large water change with slightly cooler water to simulate the rainy-season trigger. Females deposit sticky eggs on glass, plants, and decor. Eggs hatch in three to five days; the fry are sensitive and require scrupulous water quality and fine foods. Panda breeding is a satisfying intermediate-level project once a stable, mature group is established.</p>
+      </div>
+    </ArticleLayout>
+  )
+}
