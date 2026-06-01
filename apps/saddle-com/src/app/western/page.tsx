@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Western Saddles 2025 — By Discipline & Budget | Saddle.com', description: 'Western saddles ranked by discipline — barrel racing, roping, trail, reining, and general use. Expert tested with price guides and brand comparisons.', path: '/western' })
 
@@ -30,6 +30,9 @@ export default function WesternSaddlesPage() {
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 52px)' }}>Western Saddles — By Discipline</h1>
           <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">The right western saddle depends entirely on what you do with it. Barrel saddles are wrong for roping. Trail saddles are wrong for reining. Here&apos;s how to navigate the market by discipline.</p>
         </div>
+      </div>
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="saddle-com:hub-western" aspect="16:9" variant="wide" priority />
       </div>
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">

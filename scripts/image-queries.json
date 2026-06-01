@@ -283,6 +283,78 @@
     "alt": "Close-up of vintage saddle leather and stitching",
     "orientation": "landscape"
   },
+  "saddle-com:hub-reviews": {
+    "query": "show jumping saddle close up",
+    "provider": "either",
+    "alt": "A horse and rider clearing a fence — saddle reviews hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-guides": {
+    "query": "saddle buying guide horse rider",
+    "provider": "either",
+    "alt": "A horse and rider in a schooling session — saddle buying guides hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-english": {
+    "query": "english dressage saddle leather",
+    "provider": "either",
+    "alt": "A dressage horse in English tack at the canter — English saddle hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-western": {
+    "query": "western saddle leather working horse",
+    "provider": "either",
+    "alt": "A working horse and rider — Western saddle hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-fit": {
+    "query": "saddle fit horse withers",
+    "provider": "either",
+    "alt": "A horse and rider assessing balance and contact — saddle fit hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-accessories": {
+    "query": "equestrian tack leather bridle stirrup",
+    "provider": "either",
+    "alt": "A horse in full tack — saddle accessories and tack hub",
+    "orientation": "landscape"
+  },
+  "saddle-com:hub-brands": {
+    "query": "saddle brand leather competition",
+    "provider": "either",
+    "alt": "A horse and rider in competition tack — saddle brands hub",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-ball-python-hero": {
+    "query": "ball python coiled branch",
+    "provider": "either",
+    "alt": "A ball python (Python regius) coiled on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-husbandry": {
+    "query": "reptile husbandry terrarium lighting",
+    "provider": "either",
+    "alt": "A bearded dragon under enclosure lighting — reptile husbandry reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-builds": {
+    "query": "bioactive terrarium build plants substrate",
+    "provider": "either",
+    "alt": "A planted terrarium under enclosure lighting — bioactive build reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-reviews": {
+    "query": "reptile gear review macro",
+    "provider": "either",
+    "alt": "A leopard gecko in profile — reptile gear reviews hub",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-states": {
+    "query": "reptile macro portrait",
+    "provider": "either",
+    "alt": "A close-up reptile macro — reptile legality by state reference",
+    "orientation": "landscape"
+  },
   "lizard-com:hero": {
     "query": "crested gecko portrait macro",
     "provider": "either",

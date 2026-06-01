@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -84,6 +84,10 @@ export default function EnglishSaddlesPage() {
             A dressage saddle on a jumping horse is the wrong tool for the job. English discipline saddles are meaningfully different — here&apos;s how to navigate the market by what you actually do.
           </p>
         </div>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="saddle-com:hub-english" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* Discipline grid */}

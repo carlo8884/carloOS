@@ -22,6 +22,7 @@ import {
   EmailCapture,
   CalloutBox,
   ArticleByline,
+  StockImage,
 } from '@carloOS/ui'
 import {
   StateReptileLaws,
@@ -263,6 +264,13 @@ export default function StatesHubPage() {
           a regulatory-posture overview and a link to the enforcing agency
           while coverage is in progress.
         </p>
+      </div>
+
+      <div
+        className="relative z-10 px-container-sm sm:px-container pt-8"
+        style={{ background: '#0D1A0D' }}
+      >
+        <StockImage manifestKey="lizard-com:category-states" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* ─── Editorial byline (top of hub) ──────────────────────────── */}

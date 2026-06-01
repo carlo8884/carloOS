@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, Breadcrumb } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
 import { buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { SADDLE_BRANDS } from '@/data/saddle-brands'
 
@@ -61,6 +61,10 @@ export default function BrandsHubPage() {
         siteId="saddle-com"
         items={[{ name: 'Home', href: '/' }, { name: 'Brands' }]}
       />
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="saddle-com:hub-brands" aspect="16:9" variant="wide" priority />
+      </div>
 
       <div className="px-container-sm sm:px-container py-12">
         <section className="mb-12">

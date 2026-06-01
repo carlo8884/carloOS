@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import {
   SADDLE_REVIEWS,
   FEATURED_SADDLE_REVIEWS,
@@ -38,6 +38,9 @@ export default function SaddleReviewsPage() {
             Honest editorial criteria — we rank what actually fits and performs.
           </p>
         </div>
+      </div>
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="saddle-com:hub-reviews" aspect="16:9" variant="wide" priority />
       </div>
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">

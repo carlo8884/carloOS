@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -112,6 +112,10 @@ export default function GuidesHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Guides</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-content-wide mx-auto">
+        <StockImage manifestKey="saddle-com:hub-guides" aspect="16:9" variant="wide" priority />
+      </div>
 
       {/* Guide sections */}
       <div className="px-container-sm sm:px-container py-12 max-w-content-wide mx-auto space-y-14">

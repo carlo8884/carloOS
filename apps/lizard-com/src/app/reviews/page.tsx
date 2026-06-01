@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
 
@@ -18,6 +18,9 @@ export default function LizardReviewsPage() {
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment Reviews</span></div>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Reptile Equipment Reviews</h1>
         <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Tested by experienced keepers with real data — not marketing copy.</p>
+      </div>
+      <div className="relative z-10 px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="lizard-com:category-reviews" aspect="16:9" variant="wide" priority />
       </div>
       <div className="relative z-10 px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content mx-auto">

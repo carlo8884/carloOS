@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { HusbandryTopics } from '../../data/husbandry-topics'
 
 export const metadata: Metadata = buildMetadata({
@@ -48,6 +48,10 @@ export default function HusbandryHubPage() {
           Herpetological Medicine and Surgery, ARAV continuing-education materials, and peer-
           reviewed Reptiles Magazine content.
         </p>
+      </div>
+
+      <div className="relative z-10 px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="lizard-com:category-husbandry" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="relative z-10 px-container-sm sm:px-container py-14">

@@ -10,7 +10,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { VivariumBuilds, difficultyLabel } from '../../data/vivarium-builds'
 
 export const metadata: Metadata = buildMetadata({
@@ -50,6 +50,10 @@ export default function VivariumBuildsHubPage() {
           and Surgery (RAMS), the Journal of Herpetological Medicine and Surgery, ARAV
           continuing-education materials, and AAV reference texts.
         </p>
+      </div>
+
+      <div className="relative z-10 px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="lizard-com:category-builds" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="relative z-10 px-container-sm sm:px-container py-14">
