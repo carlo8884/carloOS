@@ -76,6 +76,28 @@ medalists than any other", "Best-in-class {X}" must be either:
 Statistical or clinical statements ("studies show", "strongest evidence",
 percentage rates) must have an inline source pointer or be softened.
 
+### 1.5.a No consumer-facing medication dose ranges (added 2026-06-01, Carlo policy)
+
+**No consumer-facing CarloOS animal-health page may list specific medication
+dose ranges** (e.g. `mg/kg`, `PO/IV q12h`, `mg/kg/day divided BID`) for
+prescription drugs. Species-specific dosing creates avoidable liability and
+can encourage unsafe self-dosing — citations + a disclaimer do not make it
+safe.
+
+**Keep:** drug names, mechanism/purpose, source citations, and clear wording
+that these are veterinarian-prescribed treatments.
+**Remove:** the actual numbers. Replace with language like *"Veterinarians may
+prescribe medications such as X or Y depending on the animal's condition and
+overall health. Dosing must be determined by a veterinarian."*
+
+**Exemptions:** (1) nutritional/supplement intake guidance for non-prescription
+items (e.g. omega-3 EPA/DHA, glucosamine) is not "medication dosing"; (2) AAFCO
+feed-formulation specs (e.g. choline `1,200 mg/kg DM`) describe a formulation
+requirement, not a dose to administer.
+
+**Override:** only Carlo may approve dose ranges, and only on an explicitly
+veterinary-professional-reviewed clinical-reference product.
+
 ### 1.6 Editorial standards page
 
 Every site must carry an `/editorial-standards` page that accurately
