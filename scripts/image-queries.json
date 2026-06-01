@@ -28,21 +28,45 @@
   },
 
   "petfood-com:hero": {
-    "query": "pet food bowl ingredients",
+    "query": "raw ingredients pet food close-up",
     "provider": "either",
-    "alt": "A bowl of pet food surrounded by raw ingredients",
+    "alt": "Raw ingredients arranged for a pet-food comparison — the independent-reference hero for PetFood.com",
     "orientation": "landscape"
   },
   "petfood-com:category-nutrition": {
-    "query": "dog eating bowl",
+    "query": "natural pet food bowl macro",
     "provider": "either",
-    "alt": "A dog eating from a food bowl",
+    "alt": "A bowl of pet food shot in natural light",
     "orientation": "landscape"
   },
   "petfood-com:category-life-stage": {
-    "query": "puppy dog food",
+    "query": "puppy senior dog food bowls",
     "provider": "either",
-    "alt": "A puppy eating from a food bowl",
+    "alt": "Life-stage-specific pet food in measured bowls",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-conditions": {
+    "query": "prescription veterinary diet bag",
+    "provider": "either",
+    "alt": "A prescription veterinary diet bag photographed in clinical light",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-brands": {
+    "query": "premium pet food bag shelf",
+    "provider": "either",
+    "alt": "A premium pet food bag on a retail shelf",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-ingredients": {
+    "query": "single ingredient meat fish vegetable",
+    "provider": "either",
+    "alt": "Single-ingredient protein and vegetable sources",
+    "orientation": "landscape"
+  },
+  "petfood-com:cornerstone-methodology": {
+    "query": "scoring notebook clipboard checklist",
+    "provider": "either",
+    "alt": "A scoring clipboard and notebook — methodology reference, no human subject",
     "orientation": "landscape"
   },
 
