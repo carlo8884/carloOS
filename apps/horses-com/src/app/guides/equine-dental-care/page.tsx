@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,7 @@ export default function EquineDentalCarePage() {
             { label: 'EOTRH — Senior Horses', href: '#eotrh' },
             { label: 'Other Common Conditions', href: '#other' },
             { label: 'Cost &amp; Practitioners', href: '#cost' },
+            { label: 'Home Care Picks', href: '#picks' },
             { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
@@ -292,6 +293,56 @@ export default function EquineDentalCarePage() {
           <p><strong>Choosing a practitioner:</strong> equine dentistry is now a specialty. Look for a veterinarian who performs dentistry as a regular part of practice, ideally with continuing-education hours in equine dentistry. The American Veterinary Dental College (AVDC) certifies board-certified veterinary dentists; the equine specialty within AVDC is small but growing. The International Association of Equine Dentistry (IAED) certifies non-veterinary equine dental practitioners, who in some jurisdictions can work alongside or under the supervision of licensed veterinarians. State veterinary practice acts vary on what non-veterinary dental practitioners can legally do — sedation and extractions everywhere require a licensed veterinarian.</p>
 
           <p>Questions worth asking a prospective dental practitioner: How long is a typical visit? Do you use sedation routinely? Do you use a full-mouth speculum? Do you take radiographs when indicated? What is your protocol for finding and addressing periodontal disease? Are you a licensed veterinarian, or are you working under veterinary supervision? Practitioners whose answers don&apos;t include sedation, speculum, examination, and radiograph capability are working at a lower standard than the AVDC and AAEP recommend.</p>
+
+          <h2 id="picks">Home Care Picks</h2>
+          <p className="text-sm font-medium text-brand-primary mb-3">
+            Home dental care does NOT replace the annual sedated float by a qualified veterinarian. The picks below are between-visit hygiene tools — they support oral health, they do not treat dental disease. Any horse showing the signs in the section above needs a vet, not a product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <ReviewCard
+            id="equine-toothbrush-kit"
+            name="Equine Dental Hygiene Brush + Long-Handle Kit"
+            subtitle="Long-handled soft-bristle brush + curved scaler for between-float hygiene"
+            score={8.5}
+            description={
+              <p>For owners coached by their dentist to do between-visit hygiene work — a long-handle brush plus a curved soft-end scaler reaches the cheek-side of premolars where feed packs into periodontal pockets. Best paired with chlorhexidine-based oral rinse on dentist instruction. Does not substitute for the sedated float; reduces tartar accumulation and food packing in horses with diastema or active periodontal disease, when used as directed by the dental practitioner.</p>
+            }
+            specs={[
+              { label: 'Use case', value: 'Between-visit hygiene only' },
+              { label: 'Bristles', value: 'Soft (avoid stiff bristles)', highlight: 'good' },
+              { label: 'Handle length', value: 'Long-handled (~12 in+)' },
+              { label: 'Substitute for float?', value: 'No', highlight: 'bad' },
+            ]}
+            pros={['Reaches cheek-side molars', 'Soft bristles do not damage gingiva', 'Owner-deployable between vet visits', 'Inexpensive — under $25']}
+            cons={['Does not treat dental disease', 'Some horses object to mouth handling', 'Requires dentist instruction on technique']}
+            price="$15–30"
+            ctaText="Find equine dental hygiene kits"
+            ctaHref="/go/amazon-brand/equine+dental+hygiene+brush+kit?s=guides-equine-dental-care"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="equine+dental+hygiene+brush+kit"
+          />
+          <ReviewCard
+            id="equine-oral-rinse"
+            name="Chlorhexidine 0.12% Oral Rinse (Veterinary Strength)"
+            subtitle="Antimicrobial oral rinse for use under veterinary direction in periodontal cases"
+            score={8.2}
+            description={
+              <p>0.12% chlorhexidine gluconate oral rinse is the standard antimicrobial used in small- and large-animal periodontal protocols. In horses with documented periodontal pocketing or EOTRH-related gingival inflammation, applying chlorhexidine to the affected gum line — on the schedule set by the treating veterinarian — reduces bacterial load between professional cleanings. This is prescription-territory home care: use only under direct veterinary instruction with a confirmed diagnosis.</p>
+            }
+            specs={[
+              { label: 'Concentration', value: '0.12% chlorhexidine gluconate', highlight: 'good' },
+              { label: 'Use case', value: 'Adjunct to professional periodontal care' },
+              { label: 'Prescription?', value: 'Vet-directed; OTC formulations vary by region', highlight: 'warn' },
+              { label: 'Substitute for float?', value: 'No', highlight: 'bad' },
+            ]}
+            pros={['Standard periodontal antimicrobial', 'Reduces between-visit bacterial load in diagnosed cases', 'Widely available in veterinary supply channels']}
+            cons={['Requires veterinary direction to use correctly', 'Not a self-diagnosis or self-treatment product', 'Some horses reject the taste']}
+            price="$15–35"
+            ctaText="Find chlorhexidine oral rinse"
+            ctaHref="/go/amazon-brand/chlorhexidine+0.12+oral+rinse+veterinary?s=guides-equine-dental-care"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="chlorhexidine+0.12+oral+rinse+veterinary"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
