@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -55,6 +55,10 @@ export default function GuidesHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Guides</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-12">
+        <StockImage manifestKey="dog-com:category-guides" aspect="16:9" variant="wide" priority />
+      </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-container-wide mx-auto">
         <div className="max-w-2xl">
