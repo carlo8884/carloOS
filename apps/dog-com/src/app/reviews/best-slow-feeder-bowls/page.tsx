@@ -25,7 +25,7 @@ export default function BestSlowFeederBowlsPage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A $15 bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Slow Feeder Bowls</span>
