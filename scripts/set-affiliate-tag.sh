@@ -67,8 +67,12 @@ declare -A SITES_FOR_VENDOR=(
   # vets-co is included because it currently registers both routes on
   # main; PR #241 (dir-015 #2) removes them — when that lands, drop
   # vets-co from these two lines too.
-  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co'
-  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co'
+  # horses-com added 2026-06-01 (this PR — dir-019: this PR adds
+  # amazon-brand + chewy-brand routes to horses-com's affiliate-routes.ts;
+  # the env-var sweep needs the matching site so brand-search clicks
+  # don't fall back to PLACEHOLDER).
+  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co horses-com'
+  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com vets-co horses-com'
 
   # Pet insurance — dog-com gets all; vets-co gets all (insurance-only per policy)
   [TRUPANION]='dog-com vets-co'
