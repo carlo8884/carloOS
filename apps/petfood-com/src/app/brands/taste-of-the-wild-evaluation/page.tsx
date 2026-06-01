@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function TasteOfTheWildEvaluationPage() {
               { label: 'Research and Nutritionists', href: '#research' },
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,34 @@ export default function TasteOfTheWildEvaluationPage() {
         <p>Diamond Pet Foods manufactures Taste of the Wild in its own facilities, which supports control but also means the brand inherits the facilities&apos; quality-control track record. The manufacturing dimension is best evaluated on disclosed quality-control and audit practices and on the recall history below. Manufacturer transparency on sourcing and process is the signal to seek. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
         <h2 id="recall">Recall History</h2>
         <p>Diamond Pet Foods was at the center of a major 2012 Salmonella recall affecting multiple brands made at one of its facilities, an event that sickened pets and people and remains the most significant mark on the manufacturer&apos;s record. This history is material under our recall dimension. Recalls should be judged by cause, severity, and the corrective response, and the FDA CVM database holds the current record. A serious past recall warrants attention to whether manufacturing controls have since been strengthened. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Taste of the Wild is a grain-free, legume-inclusive line, and the most important thing to carry into a purchase decision is the unresolved diet-associated DCM question above — for owners of DCM-predisposed breeds, discuss a legume-heavy grain-free diet with a veterinarian first. With that caveat understood, the brand-search link below surfaces the current lineup. We earn an affiliate commission on purchases through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="taste-of-the-wild-retail"
+          badge="Grain-Free Mid-Tier"
+          badgeEmoji="🦬"
+          name="Taste of the Wild"
+          subtitle="Novel-protein, grain-free recipes — read with the DCM caution"
+          score={7.0}
+          description={
+            <p>A popular mid-priced grain-free line using novel proteins (bison, venison, fish) and legume- and potato-based carbohydrate. The novel proteins and price are the draw; the legume-inclusive grain-free formulation is also the pattern at the center of the FDA diet-associated DCM investigation, which is an open question rather than a proven cause. Manufactured by Diamond Pet Foods, whose record includes the major 2012 Salmonella recall. Worth a veterinary conversation for at-risk dogs.</p>
+          }
+          specs={[
+            { label: 'Positioning', value: 'Grain-free novel protein' },
+            { label: 'DCM question', value: 'Legume-heavy pattern', highlight: 'warn' },
+            { label: 'Manufacturer', value: 'Diamond Pet Foods' },
+            { label: 'Price', value: 'Mid-tier' },
+          ]}
+          pros={['Novel proteins available', 'Mid-tier pricing', 'Widely stocked']}
+          cons={['Legume-heavy grain-free — DCM investigation pattern', 'Thinner research disclosure than top brands', 'Manufacturer recall history']}
+          price="$$ mid-tier"
+          ctaText="Search Taste of the Wild on Chewy"
+          ctaHref="/go/chewy-brand/Taste%20of%20the%20Wild?s=eval-taste-of-the-wild"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="Taste%20of%20the%20Wild"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>
