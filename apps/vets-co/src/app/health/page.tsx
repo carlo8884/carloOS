@@ -41,6 +41,7 @@ export default function VetsHealthHubPage() {
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="allergic-reactions-dogs" href="/health/allergic-reactions-dogs" className="text-sm text-brand-primary no-underline hover:underline">Allergic Reactions Dogs</Link>
+        <Link key="anxiety-in-dogs" href="/health/anxiety-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Anxiety In Dogs</Link>
         <Link key="arthritis-in-dogs" href="/health/arthritis-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Arthritis In Dogs</Link>
         <Link key="canine-influenza" href="/health/canine-influenza" className="text-sm text-brand-primary no-underline hover:underline">Canine Influenza</Link>
         <Link key="cognitive-dysfunction" href="/health/cognitive-dysfunction" className="text-sm text-brand-primary no-underline hover:underline">Cognitive Dysfunction</Link>
@@ -51,6 +52,11 @@ export default function VetsHealthHubPage() {
         <Link key="dog-eye-conditions" href="/health/dog-eye-conditions" className="text-sm text-brand-primary no-underline hover:underline">Dog Eye Conditions</Link>
         <Link key="dog-vaccinations-guide" href="/health/dog-vaccinations-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Vaccinations Guide</Link>
         <Link key="ear-infections-dogs" href="/health/ear-infections-dogs" className="text-sm text-brand-primary no-underline hover:underline">Ear Infections Dogs</Link>
+        <Link key="flea-tick-prevention" href="/health/flea-tick-prevention" className="text-sm text-brand-primary no-underline hover:underline">Flea Tick Prevention</Link>
+        <Link key="kennel-cough" href="/health/kennel-cough" className="text-sm text-brand-primary no-underline hover:underline">Kennel Cough</Link>
+        <Link key="parvovirus-in-puppies" href="/health/parvovirus-in-puppies" className="text-sm text-brand-primary no-underline hover:underline">Parvovirus In Puppies</Link>
+        <Link key="seizures-in-dogs" href="/health/seizures-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Seizures In Dogs</Link>
+        <Link key="vomiting-diarrhea-pets" href="/health/vomiting-diarrhea-pets" className="text-sm text-brand-primary no-underline hover:underline">Vomiting Diarrhea Pets</Link>
         <Link key="emergency-signs" href="/health/emergency-signs" className="text-sm text-brand-primary no-underline hover:underline">Emergency Signs</Link>
         <Link key="bloat-gdv-dogs" href="/health/bloat-gdv-dogs" className="text-sm text-brand-primary no-underline hover:underline">Bloat GDV Dogs</Link>
         <Link key="feline-lower-urinary-tract-disease" href="/health/feline-lower-urinary-tract-disease" className="text-sm text-brand-primary no-underline hover:underline">Feline Lower Urinary Tract Disease</Link>
