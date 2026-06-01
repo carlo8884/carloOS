@@ -49,7 +49,7 @@ A site is **premium-launch-ready** only when it clears all 7 PLUS the launch-pol
 |---|---|---|---|
 | **Dog.com** | The dog owner's operating system — emotional, mass-market, trusted | Strong, emotional dog photography (real dogs, owner moments) | Symptom checker / breed selector / puppy-schedule as an interactive product, not nav links |
 | **Fish.com** | A tank control center | Aquarium / aquascape photography | Live calculators (volume, stocking, water-change) + problem-diagnosis flow front-and-center |
-| **Horses.com** | **DECISION GATE** — racing intelligence vs general equine authority (see below) | depends on decision | depends on decision |
+| **Horses.com** | Category-defining premium equine authority — equine ownership + performance, investment-grade, NOT cute pet content; racing is a flagship vertical inside it | Premium, athletic, intelligent, investment-grade equine imagery (owners, riders, performance — not cute) | High-value decision tools (buying, health, training, tack, nutrition, insurance, bloodlines, performance) + a prominent Racing Intelligence vertical entry (`/racing`) |
 | **Vets.co** | Clinical trust — clean, modern, primary-source; NOT generic medical | Texture-led, non-human clinical imagery (per the widened directive) | Cost-of-care / insurance comparison tool + condition lookup on the first screen |
 | **PetFood.com** | A food comparison/scoring PRODUCT, not a blog | On-brand ingredient/food imagery (no dog-with-bowl cliché) | The scoring engine / compare-two-foods tool as the hero surface |
 | **Saddle.com** | A premium tack & equipment buyer's guide — luxury, distinct from Horses.com | Luxury tack/leather/saddle photography (its OWN hero, not the Horses hero) | Saddle fit-finder / tack comparison workflow |
@@ -58,14 +58,22 @@ A site is **premium-launch-ready** only when it clears all 7 PLUS the launch-pol
 
 ---
 
-## Horses.com positioning — CSRO recommendation (gates Visual)
+## Horses.com positioning — DECIDED (Carlo, 2026-06-01) — Visual unblocked
 
-The bare premium domain **Horses.com** is most valuable as **the definitive general equine
-authority** — a buyer of "Horses.com" expects the comprehensive horse destination, and breadth is
-the domain's moat. **Recommendation: Horses.com = general equine authority; treat RACING INTELLIGENCE
-(the #178 build) as a flagship sub-vertical / `/racing` product or its own brand — not the homepage
-identity.** This keeps the flagship premium-general while preserving the racing asset and the
-Equine-Network-aligned value. *Confirming with Carlo before Visual sets direction (acquisition call).*
+**Hybrid.** Horses.com = **category-defining premium equine authority**; Racing Intelligence =
+**flagship sub-product/vertical inside it** (not the homepage identity, not a buried content section).
+
+- **Homepage identity:** premium equine ownership + performance authority.
+- **Primary audience:** serious horse owners, riders, buyers, breeders, trainers, equine pros.
+- **Racing Intelligence:** prominent branded vertical at `/racing` (or `racing.horses.com`) — surfaced,
+  not buried; but the whole domain is NOT narrowed to racing unless CSRO later proves racing is the
+  highest-value use of the bare domain.
+- **General content is NOT generic encyclopedia content.** It supports high-value decisions: buying,
+  health, training, tack, nutrition, insurance, ownership, bloodlines, performance, racing.
+- **Visual direction:** premium, athletic, intelligent, investment-grade — NOT cute pet content.
+
+Rationale: the bare one-word domain is too broad and valuable to narrow entirely to racing; breadth is
+the moat and what a buyer of "Horses.com" expects, while racing is preserved as a flagship asset.
 
 ---
 
