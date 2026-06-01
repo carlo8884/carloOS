@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Best aquarium lights tested for PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/reviews/best-aquarium-lighting#hygger', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const schema = combineSchemas(articleSchema, hyggerSchema)
 
 const PICKS = [
   { label: 'Best Planted (Budget)', emoji: '🌿', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · Under $60', href: '#hygger' },
