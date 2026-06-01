@@ -32,7 +32,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -231,6 +231,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── HERO PHOTO — flagship visual moment, manifest-managed ──────── */}
+      <div className="bg-brand-white px-container-sm sm:px-container">
+        <StockImage manifestKey="dog-com:hero" priority aspect="16:9" variant="inline" />
+      </div>
 
       {/* ── TRUST BAR — softened (no "expert", no "reviewed") ──────────── */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
