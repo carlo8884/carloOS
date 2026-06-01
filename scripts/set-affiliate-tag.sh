@@ -67,11 +67,13 @@ declare -A SITES_FOR_VENDOR=(
   # ferret-com added 2026-06-01 (dir-022, IR #4 — PR #229 added the
   #   amazon-brand/chewy-brand routes to ferret-com; the env-var sweep
   #   wasn't updated, so brand clicks were untagged silently).
+  # horses-com added 2026-06-01 (PR #265 adds amazon-brand/chewy-brand
+  #   routes to horses-com — needs matching env-var sweep entry).
   # vets-co removed 2026-06-01 (PR #241 dir-015 #2 deleted the brand
   #   routes from vets-co — keeping it in the sweep here would set an
   #   env var for a non-existent route).
-  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com'
-  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com'
+  [AMAZON_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com horses-com'
+  [CHEWY_BRAND]='fish-com lizard-com saddle-com petfood-com petfoods-com ferret-com horses-com'
 
   # Pet insurance — dog-com gets all; vets-co gets all (insurance-only per policy)
   [TRUPANION]='dog-com vets-co'
