@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -9,6 +9,14 @@ export const metadata: Metadata = buildMetadata({
     'Common pet food myths checked against the evidence — by-products, grain, fillers, corn, the BEG-diet debate, and marketing claims that do not hold up.',
   path: '/myths',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://petfood.com/' },
+    { name: 'Myths', url: 'https://petfood.com/myths' },
+  ],
+})
+
 
 const MYTHS = [
   {
@@ -46,6 +54,8 @@ const MYTHS = [
 export default function MythsHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
@@ -64,7 +74,7 @@ export default function MythsHubPage() {
         </p>
       </div>
 
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Myths</span>
@@ -103,5 +113,6 @@ export default function MythsHubPage() {
         />
       </section>
     </>
+  </>
   )
 }
