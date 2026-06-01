@@ -34,6 +34,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'petfood-com', name: 'PetFood.com', url: 'https://petfood.com' }),
+  buildWebSiteSchema({ siteId: 'petfood-com', name: 'PetFood.com', url: 'https://petfood.com' }),
+)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -159,6 +165,7 @@ export default function HomePage() {
 
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="max-w-container mx-auto px-6 md:px-10">

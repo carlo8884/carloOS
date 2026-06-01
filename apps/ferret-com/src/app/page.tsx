@@ -37,6 +37,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'ferret-com', name: 'Ferret.com', url: 'https://ferret.com' }),
+  buildWebSiteSchema({ siteId: 'ferret-com', name: 'Ferret.com', url: 'https://ferret.com' }),
+)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -163,6 +169,7 @@ const FEATURED_ARTICLES = [
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ════════════════════════════════════════════════════════════════
           HERO
           ════════════════════════════════════════════════════════════════ */}
