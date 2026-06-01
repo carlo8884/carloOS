@@ -4,10 +4,11 @@
  * Renders each site's `logoText` (from `@carloOS/config`) in the site's
  * display font, with the top-level-domain dot accented in brand-primary.
  *
- * Letter-spacing values are conservative-by-default (-0.01em to -0.015em)
- * and tuned NOT to crowd the serifs of Playfair Display / Bodoni / Cormorant
- * / Baskerville at small sizes. Heavier tightening was overshooting the
- * editorial restraint on Saddle.com and PetFood.com previews.
+ * Letter-spacing is `0` across all sizes (CSRO IR #4 fix-back). Negative
+ * tracking is non-standard for serif body text; tightness is achieved via
+ * weight + size, not by squeezing letterforms past their designed spacing.
+ * The display fonts (Playfair Display / Bodoni / Cormorant / Baskerville)
+ * already have negative bearing in the typeface itself.
  *
  * Sizing variants:
  *   - 'nav'    — top-of-page nav usage (default)
@@ -54,23 +55,27 @@ const SIZE_STYLES: Record<
   LogoSize,
   { fontSize: string; letterSpacing: string; fontWeight: number }
 > = {
-  // Nav: small + dense, slight negative tracking only.
-  // -0.01em respects Playfair / Bodoni serif spacing at ~18-22px.
+  // letterSpacing: '0' across all sizes per CSRO IR #4 — negative tracking
+  // is non-standard for serif body text; tightness is achieved via weight
+  // + size, not by squeezing letterforms past their designed spacing.
+  // The display fonts (Playfair / Bodoni / Cormorant / Baskerville) already
+  // have negative bearing built into the typeface — adding more crowds the
+  // serifs at small sizes.
   nav: {
-    fontSize: 'clamp(1.1rem, 1.5vw, 1.3rem)',
-    letterSpacing: '-0.01em',
+    fontSize: 'clamp(1.15rem, 1.6vw, 1.35rem)',
+    letterSpacing: '0',
     fontWeight: 800,
   },
-  // Footer: slightly larger; still restrained.
   footer: {
-    fontSize: 'clamp(1.25rem, 1.8vw, 1.5rem)',
-    letterSpacing: '-0.01em',
+    fontSize: 'clamp(1.3rem, 1.9vw, 1.55rem)',
+    letterSpacing: '0',
     fontWeight: 800,
   },
-  // Hero: large enough that -0.015em looks intentional rather than jammed.
+  // Hero stays at weight 900; size bumped slightly to retain visual density
+  // without negative tracking.
   hero: {
-    fontSize: 'clamp(2.5rem, 6.5vw, 4.5rem)',
-    letterSpacing: '-0.015em',
+    fontSize: 'clamp(2.6rem, 6.8vw, 4.7rem)',
+    letterSpacing: '0',
     fontWeight: 900,
   },
 }

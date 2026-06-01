@@ -24,19 +24,28 @@ interface ManifestEntry {
   width: number
   height: number
   color?: string
-  photographer: string
-  photographerUrl: string
+  /**
+   * Real photographer name (post-sync). Curated entries (sandbox-added,
+   * no API access) intentionally OMIT this field — see `curated` below.
+   */
+  photographer?: string
+  /**
+   * Real photographer profile URL (post-sync). Curated entries omit it.
+   */
+  photographerUrl?: string
   sourceUrl: string
   description?: string
   alt: string
   query: string
   /**
-   * Hand-curated entries (added manually because sandbox/CI cannot reach
-   * the Unsplash/Pexels API per Carlo policy 2026-05-31) set this flag.
-   * The credit renders as "Source: <Provider>" linked to the source page
-   * where the real photographer credit lives, instead of fabricating a
-   * placeholder name. `sync-images.mjs --force` overwrites the entry with
-   * full attribution when next run on Carlo's machine.
+   * Hand-curated entries (sandbox-added because sandbox cannot reach the
+   * Unsplash / Pexels API per Carlo policy 2026-05-31). Set this flag and
+   * OMIT photographer / photographerUrl. The render renders "Source:
+   * <Provider>" linked to `sourceUrl` (the photo page where the canonical
+   * photographer credit lives) — no placeholder name reaches the reader.
+   * Per CSRO IR #6: never ship placeholder attribution as if it were real.
+   * `sync-images.mjs --force` overwrites the entry with full attribution
+   * when next run on Carlo's machine.
    */
   curated?: boolean
 }
@@ -92,9 +101,11 @@ export function StockImage({
 
   const providerLabel = entry.provider === 'unsplash' ? 'Unsplash' : 'Pexels'
   // Curated entries don't carry a real photographer name yet (sandbox has
-  // no API access). Render "Source: <Provider>" with a link to the source
-  // page where the real photographer credit lives — honest, QC §1 safe.
-  const credit = entry.curated
+  // no API access). Render "Source: <Provider>" with a link to sourceUrl
+  // where the real photographer credit lives — honest, QC §1 safe.
+  // Non-curated entries fall through the same path if photographer is missing
+  // (defensive — never fabricate "undefined" or empty names into the credit).
+  const credit = entry.curated || !entry.photographer
     ? `Source: ${providerLabel}`
     : `Photo: ${entry.photographer} via ${providerLabel}`
 
