@@ -57,6 +57,37 @@ const SADDLE_BRAND_SLUGS = [
   'wintec',
 ]
 
+// Ferrets.com dynamic-route slugs, derived from the per-cluster data files so
+// the sitemap stays in sync with the [slug] catch-all pages.
+function ferretsExtraRoutes() {
+  const out = []
+  const read = (rel) => {
+    try {
+      return readFileSync(join(ROOT, 'apps/ferrets-com/src', rel), 'utf8')
+    } catch {
+      return ''
+    }
+  }
+  const slugsFrom = (src) =>
+    [...src.matchAll(/^  '?([a-z0-9][a-z0-9-]*)'?:\s*\{/gm)]
+      .map((m) => m[1])
+      .filter(Boolean)
+  // States (50 + DC) live in data/states.ts as `slug: '...'`.
+  for (const m of read('data/states.ts').matchAll(/slug: '([a-z-]+)'/g)) {
+    out.push(`/states/${m[1]}`)
+    out.push(`/find-a-vet/${m[1]}`)
+  }
+  for (const s of slugsFrom(read('data/guides/adopt.ts')))
+    out.push(`/adopt/${s}`)
+  for (const s of slugsFrom(read('data/guides/acquiring.ts')))
+    out.push(`/acquiring/${s}`)
+  for (const s of slugsFrom(read('data/guides/legality.ts')))
+    out.push(`/legality/${s}`)
+  for (const s of slugsFrom(read('data/guides/moving.ts')))
+    out.push(`/moving/${s}`)
+  return Array.from(new Set(out))
+}
+
 const SITES = [
   { id: 'dog-com', domain: 'dog.com' },
   { id: 'fish-com', domain: 'fish.com' },
@@ -89,7 +120,11 @@ const SITES = [
     ],
   },
   { id: 'ferret-com', domain: 'ferret.com' },
-  { id: 'ferrets-com', domain: 'ferrets.com' },
+  {
+    id: 'ferrets-com',
+    domain: 'ferrets.com',
+    extraRoutes: ferretsExtraRoutes(),
+  },
 ]
 
 function listRoutes(siteId) {
