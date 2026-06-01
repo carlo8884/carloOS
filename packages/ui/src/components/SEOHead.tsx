@@ -210,6 +210,64 @@ export function buildProductSchema(params: ProductSchemaParams) {
 }
 
 // ─────────────────────────────────────────────
+// ORGANIZATION SCHEMA
+// Site-level publisher identity — wire into homepages
+// ─────────────────────────────────────────────
+
+interface OrganizationSchemaParams {
+  siteId: SiteId
+  name: string
+  url: string
+  logoUrl?: string
+}
+
+export function buildOrganizationSchema(params: OrganizationSchemaParams) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: params.name,
+    url: params.url,
+    ...(params.logoUrl ? { logo: params.logoUrl } : {}),
+  }
+}
+
+// ─────────────────────────────────────────────
+// WEBSITE SCHEMA
+// Site-level identity — wire into homepages.
+// Include a SearchAction only when the site has a
+// user-facing search results route.
+// ─────────────────────────────────────────────
+
+interface WebSiteSchemaParams {
+  siteId: SiteId
+  name: string
+  url: string
+  /** Results-page template containing {search_term_string}; provide only when a search route exists */
+  searchUrlTemplate?: string
+}
+
+export function buildWebSiteSchema(params: WebSiteSchemaParams) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: params.name,
+    url: params.url,
+    ...(params.searchUrlTemplate
+      ? {
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: params.searchUrlTemplate,
+            },
+            'query-input': 'required name=search_term_string',
+          },
+        }
+      : {}),
+  }
+}
+
+// ─────────────────────────────────────────────
 // HOW-TO SCHEMA
 // For step-by-step training and care guides
 // ─────────────────────────────────────────────
