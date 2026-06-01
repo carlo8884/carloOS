@@ -106,6 +106,7 @@ export default function SaddleFitGuidePage() {
 
         <h2 id="rider">Rider Fit — The Other Half of the Equation</h2>
         <p>A saddle can fit the horse perfectly and not fit the rider — or vice versa. Both must be addressed. For rider fit, the critical measurements are: seat size (see our <a href="/guides/seat-size-guide">seat size guide</a>), flap length (should allow knee to sit slightly behind the flap seam in the correct position), and tree width effect on rider position (a tree that is too narrow or too wide changes the rider&apos;s leg position regardless of rider size).</p>
+        <p>For a directional starting point on tree width before booking a professional fitter, use the <a href="/tools/tree-size-estimator" className="text-brand-primary no-underline hover:underline">tree-size estimator</a> — wither-shape inputs map to a narrow/medium/wide tree band. It is a starting point, not a substitute for an in-person fitter.</p>
         <p>A rider sitting in a saddle that is too small is perched on the cantle with limited freedom of movement. A rider in a saddle that is too large has no stability and cannot communicate effectively. Both are significant problems.</p>
 
         <h2 id="fitter">When to Call a Professional Fitter</h2>
