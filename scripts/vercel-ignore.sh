@@ -21,10 +21,11 @@ if [ -z "$CHANGED" ]; then
 fi
 
 # If every changed file matches docs/ops patterns → skip build immediately.
+# Note: bash case `*` matches `/`, so `*.md` covers nested markdown anywhere.
 DOCS_ONLY=true
 while IFS= read -r f; do
   case "$f" in
-    ops/*|*.md|README*|.gitignore|.github/*|LICENSE*)
+    ops/*|*.md|README*|.gitignore|.gitattributes|.github/*|.claude/*|LICENSE*|CODEOWNERS|*.txt)
       continue
       ;;
     *)
