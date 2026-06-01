@@ -37,6 +37,22 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://amazon.com/dp/{sku}?tag=PLACEHOLDER',
     requiresSku: true,
   },
+  'amazon-brand': {
+    // Network: Amazon Associates. Carlo-approved per policy §5.
+    // Search-style variant: `{sku}` is a URL-encoded search query, not an
+    // ASIN — used by review/buy-box CTAs that point at a product search
+    // rather than a single ASIN. Mirrors fish-com / ferret-com usage.
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    // Network: Impact (Chewy umbrella). Carlo-approved per policy §5.
+    // Search-style variant: `{sku}` is a URL-encoded search query.
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
   chewy: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Chewy',

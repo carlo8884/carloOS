@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2025 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2025', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -34,6 +34,7 @@ export default function BestDentalChewsPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The Veterinary Oral Health Council awards its seal to products that demonstrate plaque or tartar reduction in controlled clinical studies. This is the correct filter for dental products — not ingredient claims, not packaging promises. The full VOHC-accepted product list is at vohc.org. Dental chews supplement toothbrushing — they do not replace it, and they do not substitute for professional cleaning.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="greenies" badge="Best Overall" badgeEmoji="🏆" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Most widely recommended · All sizes from teenie to large" score={9.2} winner
               description={<p>Greenies are the most widely recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
@@ -41,9 +42,9 @@ export default function BestDentalChewsPage() {
               cons={['Must count calories', 'Some dogs wolf them down too fast for dental benefit', 'Not ideal for dogs with wheat sensitivity (contains wheat)']}
               price="$25–35 / 27-count"
               ctaText="Shop Greenies →"
-              ctaHref="https://www.chewy.com/s?query=greenies+dental+chews+dogs"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="greenies-dental-chews"
+              ctaHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="greenies+dental+chews+dogs"
             />
             <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" badgeEmoji="🌿" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies" score={9.0}
               description={<p>Whimzees are made from plant-based ingredients — potato starch, glycerin, and cellulose — with no artificial colors, preservatives, or animal products. VOHC accepted for plaque reduction. The texture is slightly firmer than Greenies but still pliable and tooth-safe. Many owners report their dogs spend longer chewing Whimzees than Greenies — more time chewing means more tooth surface contact and more mechanical plaque removal. Good choice for dogs with animal protein sensitivities or owners preferring plant-based options. Available in several fun shapes (toothbrush, hedgehog, crocodile) that all achieve similar dental effect.</p>}
@@ -52,9 +53,9 @@ export default function BestDentalChewsPage() {
               cons={['VOHC for plaque only (not tartar)', 'Higher calorie density than Greenies per chew']}
               price="$20–30 / 14-count"
               ctaText="Shop Whimzees →"
-              ctaHref="https://www.chewy.com/s?query=whimzees+dental+chews+dogs"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="whimzees-dental"
+              ctaHref="/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="whimzees+dental+chews+dogs"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

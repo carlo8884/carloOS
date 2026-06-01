@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -90,6 +90,7 @@ export default function BestPetInsurancePage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="trupanion"
               badge="Best Overall"
@@ -115,9 +116,9 @@ export default function BestPetInsurancePage() {
               price="$40–120/month"
               priceNote="Breed and age dependent. Get a quote."
               ctaText="Get Trupanion Quote →"
-              ctaHref="https://trupanion.com"
+              ctaHref="/go/trupanion/reviews-best-pet-insurance?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="trupanion"
-              ctaAffiliateProduct="dog-insurance"
+              ctaAffiliateProduct="reviews-best-pet-insurance"
             />
 
             <ReviewCard
@@ -143,9 +144,9 @@ export default function BestPetInsurancePage() {
               cons={['Reimburses you, not vet — float required for large bills', 'No 24/7 vet helpline', 'No wellness add-on available']}
               price="$30–100/month"
               ctaText="Get Healthy Paws Quote →"
-              ctaHref="https://healthypawspetinsurance.com"
+              ctaHref="/go/healthy-paws/reviews-best-pet-insurance?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="healthy-paws"
-              ctaAffiliateProduct="dog-insurance"
+              ctaAffiliateProduct="reviews-best-pet-insurance"
             />
 
             <ReviewCard
@@ -167,9 +168,9 @@ export default function BestPetInsurancePage() {
               cons={['Complex plan options can be confusing', 'Claims take longer than Healthy Paws', 'Premiums increase more steeply with age']}
               price="$35–110/month"
               ctaText="Get Embrace Quote →"
-              ctaHref="https://embracepetinsurance.com"
+              ctaHref="/go/embrace/reviews-best-pet-insurance?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="embrace"
-              ctaAffiliateProduct="dog-insurance"
+              ctaAffiliateProduct="reviews-best-pet-insurance"
             />
 
             <ReviewCard
@@ -191,9 +192,9 @@ export default function BestPetInsurancePage() {
               cons={['Annual limits lower than Trupanion/Healthy Paws', 'Not ideal for breeds with very high-cost condition risk']}
               price="$25–80/month"
               ctaText="Get Figo Quote →"
-              ctaHref="https://figopetinsurance.com"
+              ctaHref="/go/figo/reviews-best-pet-insurance?s=reviews-best-pet-insurance"
               ctaAffiliateProgram="figo"
-              ctaAffiliateProduct="dog-insurance"
+              ctaAffiliateProduct="reviews-best-pet-insurance"
             />
 
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>

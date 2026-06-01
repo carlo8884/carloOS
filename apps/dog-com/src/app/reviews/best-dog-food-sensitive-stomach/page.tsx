@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2025', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -34,6 +34,7 @@ export default function SensitiveStomachFoodPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Recurring vomiting, chronic diarrhea, blood in stool, significant weight loss, or GI symptoms that have not improved after a proper 8-12 week dietary trial require veterinary workup — not just food switching. A dietary change without diagnosis is guessing. Your vet can determine if the issue is diet, IBD, food allergy, parasites, or another condition requiring specific treatment.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="purina" badge="Best Overall" badgeEmoji="🏆" name="Purina Pro Plan Sensitive Skin & Stomach" subtitle="Salmon & rice · No corn/wheat/soy · Live probiotics · WSAVA top tier" score={9.4} winner
               description={<p>Purina Pro Plan Sensitive Skin & Stomach (salmon and rice formula) is the standard veterinary recommendation for dogs with GI sensitivity and the most consistently recommended sensitive stomach food in general practice. The formula uses salmon as the single animal protein, rice as the primary carbohydrate, and contains no corn, wheat, or soy — common dietary components that some dogs with GI sensitivity react to. The inclusion of live probiotics (Bacillus coagulans) supports digestive health. High digestibility coefficients across all nutrients. WSAVA top-tier compliance with full veterinary nutritionist oversight and feeding trial data. Available in multiple sizes and a cat version for multi-pet households.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: 'Salmon — single animal protein', highlight: 'good' }, { label: 'Probiotic', value: 'Live B. coagulans', highlight: 'good' }, { label: 'Excludes', value: 'Corn, wheat, soy' }]}
@@ -41,9 +42,9 @@ export default function SensitiveStomachFoodPage() {
               cons={['Not appropriate for fish/salmon allergies', 'Not a hydrolyzed diet for true food allergy diagnosis']}
               price="$55–75 / 30 lb"
               ctaText="Shop Purina Pro Plan Sensitive →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+sensitive+skin+stomach"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="pp-sensitive"
+              ctaHref="/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="purina+pro+plan+sensitive+skin+stomach"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

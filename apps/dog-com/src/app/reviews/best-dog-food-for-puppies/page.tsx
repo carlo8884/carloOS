@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function BestPuppyFoodPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
@@ -92,9 +93,9 @@ export default function BestPuppyFoodPage() {
               cons={['Higher price than Purina or Hill\'s', 'Some dogs do not like the kibble shape', 'Must transition to RC adult at appropriate age']}
               price="$65–90 per 30 lb bag"
               ctaText="Shop Royal Canin →"
-              ctaHref="https://www.amazon.com/s?k=royal+canin+large+breed+puppy"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="royal-canin-large-puppy"
+              ctaHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="royal+canin+large+breed+puppy"
             />
 
             <ReviewCard
@@ -116,9 +117,9 @@ export default function BestPuppyFoodPage() {
               cons={['No breed-specific lines (unlike Royal Canin)', 'Chicken as primary protein — not suitable for chicken-sensitive dogs']}
               price="$55–75 per 34 lb bag"
               ctaText="Shop Purina Pro Plan →"
-              ctaHref="https://www.chewy.com/s?query=purina+pro+plan+puppy+large+breed"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="purina-pro-plan-puppy-large"
+              ctaHref="/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="purina+pro+plan+puppy+large+breed"
             />
 
             <ReviewCard
@@ -139,9 +140,9 @@ export default function BestPuppyFoodPage() {
               cons={['Premium price', 'Not for large breeds — use Hill\'s Large Breed formula instead']}
               price="$55–80 per 28.5 lb bag"
               ctaText="Shop Hill's Science Diet →"
-              ctaHref="https://www.chewy.com/s?query=hills+science+diet+puppy+small+paws"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="hills-puppy-small-paws"
+              ctaHref="/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="hills+science+diet+puppy+small+paws"
             />
 
             <ReviewCard
@@ -162,9 +163,9 @@ export default function BestPuppyFoodPage() {
               cons={['Less research investment than top 3', 'AAFCO formulation (not feeding trial) on some lines', 'Lower-quality protein sourcing than premium options']}
               price="$30–50 per 30 lb bag"
               ctaText="Shop Iams →"
-              ctaHref="https://www.chewy.com/s?query=iams+proactive+health+puppy+large+breed"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="iams-puppy-large-breed"
+              ctaHref="/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="iams+proactive+health+puppy+large+breed"
             />
           </div>
 

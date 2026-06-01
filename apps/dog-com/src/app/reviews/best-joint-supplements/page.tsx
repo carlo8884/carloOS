@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function BestJointSupplementsPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
@@ -92,9 +93,9 @@ export default function BestJointSupplementsPage() {
               cons={['More expensive than basic glucosamine', 'Takes 4–6 weeks for effect — long evaluation window', 'Not a substitute for NSAIDs in severe arthritis']}
               price="$40–70 for 84-count"
               ctaText="Shop Dasuquin →"
-              ctaHref="https://www.amazon.com/s?k=dasuquin+with+msm"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="dasuquin-msm"
+              ctaHref="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="dasuquin+with+msm"
             />
 
             <ReviewCard
@@ -117,9 +118,9 @@ export default function BestJointSupplementsPage() {
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content"
               ctaText="Shop Nordic Naturals →"
-              ctaHref="https://www.amazon.com/s?k=nordic+naturals+omega+pet"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="nordic-naturals-omega-pet"
+              ctaHref="/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="nordic+naturals+omega+pet"
             />
 
             <ReviewCard
@@ -141,9 +142,9 @@ export default function BestJointSupplementsPage() {
               cons={['Less evidence than Dasuquin (no ASU)', 'Significant non-response rate in some dogs']}
               price="$25–45 for 120-count"
               ctaText="Shop Cosequin DS →"
-              ctaHref="https://www.amazon.com/s?k=cosequin+ds+maximum+strength"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="cosequin-ds"
+              ctaHref="/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="cosequin+ds+maximum+strength"
             />
 
             <ReviewCard

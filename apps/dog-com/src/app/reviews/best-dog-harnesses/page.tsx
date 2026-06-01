@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2025 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -39,6 +39,7 @@ export default function BestDogHarnessesPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Front-clip harnesses attach the leash at the dog's chest — when the dog pulls forward, the leash redirects them to the side, interrupting the pulling motion without pain. Back-clip harnesses attach at the back — they allow full forward movement and are appropriate for dogs that already walk well on leash. For pullers: front-clip only.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="easy-walk" badge="Best No-Pull" badgeEmoji="🏆" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" score={9.3} winner
               description={<p>The Easy Walk is the most widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: 'Under $30', highlight: 'good' }]}
@@ -46,9 +47,9 @@ export default function BestDogHarnessesPage() {
               cons={['Not for dogs with shoulder issues', 'Can rotate on small barrel-chested breeds', 'Needs correct fit to work']}
               price="$20–30"
               ctaText="Shop PetSafe Easy Walk →"
-              ctaHref="https://www.chewy.com/s?query=petsafe+easy+walk+harness"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="petsafe-easy-walk"
+              ctaHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="petsafe+easy+walk+harness"
             />
             <ReviewCard id="ruffwear" badge="Best Outdoor" badgeEmoji="🥾" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated" score={9.2}
               description={<p>Ruffwear builds outdoor gear for dogs and the Front Range is their flagship harness — padded chest piece, aluminum V-ring at the back for normal walking, and a leash attachment loop at the front for pulling management. The padding is meaningful for long hiking days. Reflective trim for low-light visibility. Two leash attachment points allow switching between pulling management (front) and general walking (back). Built to last — Ruffwear gear is well-constructed with quality hardware. More expensive than the PetSafe Easy Walk but significantly more durable for active outdoor use.</p>}
@@ -57,9 +58,9 @@ export default function BestDogHarnessesPage() {
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
               ctaText="Shop Ruffwear Front Range →"
-              ctaHref="https://www.chewy.com/s?query=ruffwear+front+range+harness"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="ruffwear-front-range"
+              ctaHref="/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"
+              ctaAffiliateProgram="chewy-brand"
+              ctaAffiliateProduct="ruffwear+front+range+harness"
             />
             <ReviewCard id="julius" badge="Best Escape-Proof" badgeEmoji="🔒" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches" score={9.0}
               description={<p>For dogs that back out of or destroy harnesses — the Julius-K9 IDC Powerharness is the industry standard for escape prevention and durability. Used by working dogs internationally. The chest and back straps are wide and padded, multiple adjustment points allow precise fit, and the hardware is rated for the forces a large dog can generate. The Velcro side patches accept custom ID patches. Not a no-pull harness (back clip only) — its value is durability and escape resistance, not pulling management. For escape-prone dogs used alongside leash training.</p>}
@@ -68,9 +69,9 @@ export default function BestDogHarnessesPage() {
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
               ctaText="Shop Julius-K9 →"
-              ctaHref="https://www.amazon.com/s?k=julius+k9+idc+powerharness"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="julius-k9-idc"
+              ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
+              ctaAffiliateProgram="amazon-brand"
+              ctaAffiliateProduct="julius+k9+idc+powerharness"
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
