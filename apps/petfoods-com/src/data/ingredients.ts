@@ -1321,6 +1321,260 @@ export const Ingredients: Ingredient[] = [
     ],
     relatedSlugs: ['wheat-flour', 'corn-gluten-meal', 'soybean-meal'],
   },
+
+  // ─── WAVE 6: LEGUMES / PULSES ────────────────────────────────────────────
+  {
+    slug: 'chickpeas',
+    name: 'Chickpeas (Garbanzo Beans)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, chickpeas (garbanzo beans) are a pulse (grain legume) used in pet food as a carbohydrate and supplemental plant-protein source. They supply starch, fiber, and protein.',
+    aafcoSection: '§9 (chickpeas / garbanzo beans)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse ingredient central to the FDA CVM grain-free DCM investigation, which has observed an association (not established causation) between grain-free diets with pulses in the first several panel positions and reported canine DCM cases. The investigation remains open. The disclosure question is the cumulative pulse density across all pulse ingredients in a formula, which the panel does not total for the reader.',
+    commonIn: ['acana', 'taste-of-the-wild', 'natural-balance', 'merrick', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+      'Cumulative pulse density across multiple pulse ingredients is not totaled on the panel.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+      'Tufts University Cummings School — Petfoodology blog',
+    ],
+    relatedSlugs: ['pea-protein', 'lentils', 'legume-blends', 'faba-beans'],
+  },
+  {
+    slug: 'lentils',
+    name: 'Lentils',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, lentils are a pulse used in pet food as a carbohydrate and supplemental plant-protein source, supplying starch, dietary fiber, and protein.',
+    aafcoSection: '§9 (lentils)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse named repeatedly in the FDA CVM grain-free DCM investigation. The agency observed an association between pulse-heavy grain-free diets and reported DCM cases; causation is not established and the investigation is open. As with all pulses, the cumulative density across the formula is the relevant context the panel does not total.',
+    commonIn: ['acana', 'taste-of-the-wild', 'merrick', 'natural-balance', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+      'Tufts University Cummings School — Petfoodology blog',
+    ],
+    relatedSlugs: ['chickpeas', 'pea-protein', 'legume-blends', 'faba-beans'],
+  },
+  {
+    slug: 'faba-beans',
+    name: 'Faba Beans (Fava Beans)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, faba beans (fava beans) are a pulse used in pet food as a carbohydrate and supplemental plant-protein source.',
+    aafcoSection: '§9 (faba beans)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse explicitly named in FDA CVM grain-free DCM investigation communications. The agency observed an association with reported DCM cases; causation is not established and the investigation is open. Cumulative pulse density across the formula is the relevant context.',
+    commonIn: ['acana', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM (association observed, causation not established).',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['chickpeas', 'lentils', 'pea-protein', 'legume-blends'],
+  },
+  {
+    slug: 'whole-peas',
+    name: 'Whole Peas (Field Peas)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, peas (field peas) are a pulse supplying carbohydrate, fiber, and protein. "Peas," "pea fiber," "pea starch," and "pea protein" are distinct fractions of the same legume listed separately on some panels.',
+    aafcoSection: '§9 (peas / field peas)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A pulse central to the FDA CVM grain-free DCM investigation. A specific labeling concern is "ingredient splitting": listing peas, pea protein, pea starch, and pea fiber separately can lower each fraction in the panel order even when their combined weight would rank higher. Verify the total pea-fraction density, not just the position of "peas."',
+    commonIn: ['taste-of-the-wild', 'acana', 'merrick', 'natural-balance', 'nulo'],
+    concernsIfAny: [
+      'Part of the FDA CVM open investigation into grain-free diets and canine DCM.',
+      'Ingredient splitting (peas/pea protein/pea starch/pea fiber listed separately) can understate the combined pulse density in panel order.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['pea-protein', 'chickpeas', 'lentils', 'legume-blends'],
+  },
+
+  // ─── WAVE 7: VEGETABLES & FRUITS ─────────────────────────────────────────
+  {
+    slug: 'tomato-pomace',
+    name: 'Tomato Pomace',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, tomato pomace is a mixture of tomato skins, pulp, and crushed seeds remaining after tomato processing. It supplies dietary fiber and is used as a fiber source.',
+    aafcoSection: '§9 (tomato pomace)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A by-product fiber ingredient. Sometimes mischaracterized as a low-quality filler; it is a legitimate source of soluble and insoluble fiber and the carotenoid lycopene. Disclosure of the ingredient is clear. Not a cost-free filler — it serves a fiber function.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'pumpkin', 'cellulose'],
+  },
+  {
+    slug: 'green-peas-vegetable',
+    name: 'Green Peas (as Vegetable)',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, green peas are the immature pea seed used as a vegetable ingredient. When listed as a whole vegetable near the end of a panel, the inclusion is generally small; the pulse-density concern applies primarily when peas and pea fractions anchor the formula.',
+    aafcoSection: '§9 (peas)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Distinct in context from "pea protein" or "field peas" as a primary pulse. As a minor vegetable inclusion, green peas contribute fiber and micronutrients at modest levels. The FDA CVM DCM concern is about high cumulative pulse density, not trace vegetable-tier inclusion.',
+    commonIn: ['merrick', 'wellness', 'natural-balance'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['whole-peas', 'carrots', 'pumpkin'],
+  },
+  {
+    slug: 'kelp',
+    name: 'Kelp (Dried Seaweed)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, dried kelp is dried seaweed used as a source of trace minerals, notably iodine. AAFCO specifies maximum iodine guarantees because kelp iodine content varies and excess iodine has thyroid implications.',
+    aafcoSection: '§9 (dried kelp)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A trace-mineral and iodine source. Because kelp iodine content is variable, formulators must control inclusion to stay within AAFCO iodine guidance; both deficiency and excess iodine affect thyroid function. Disclosure is clear; the relevant question is iodine control, which the guaranteed analysis or brand can confirm.',
+    commonIn: ['orijen', 'acana', 'the-honest-kitchen', 'open-farm', 'solid-gold'],
+    concernsIfAny: [
+      'Variable iodine content; excess dietary iodine has thyroid implications, so inclusion must be controlled to AAFCO iodine guidance.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'choline-chloride'],
+  },
+
+  // ─── WAVE 8: FATS & FIBERS ───────────────────────────────────────────────
+  {
+    slug: 'sunflower-oil',
+    name: 'Sunflower Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, sunflower oil is the oil from sunflower seeds, used as an energy source and a source of the omega-6 fatty acid linoleic acid. High-linoleic and high-oleic variants exist.',
+    aafcoSection: '§9 (sunflower oil)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A named plant oil supplying linoleic acid (an essential omega-6 fatty acid for dogs and cats). It does not supply long-chain omega-3s (EPA/DHA), which come from marine sources. Clear disclosure of a well-defined oil.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro', 'merrick', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicken-fat', 'canola-oil', 'flaxseed'],
+  },
+  {
+    slug: 'canola-oil',
+    name: 'Canola Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, canola oil is the oil from canola (a cultivar of rapeseed bred for low erucic acid). It supplies energy, monounsaturated fat, and a modest amount of plant-derived alpha-linolenic acid (ALA, an omega-3).',
+    aafcoSection: '§9 (canola oil)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A named plant oil. Supplies ALA, but ALA-to-EPA/DHA conversion is limited in dogs and very limited in cats, so it is not a substitute for marine omega-3s. Clear disclosure. The "low erucic acid" cultivar definition addresses the historical rapeseed erucic-acid concern.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'iams'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['sunflower-oil', 'flaxseed', 'chicken-fat'],
+  },
+  {
+    slug: 'coconut-oil',
+    name: 'Coconut Oil (MCTs)',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, coconut oil is the oil from coconut, notable for its medium-chain triglyceride (MCT) content. MCTs are metabolized differently from long-chain fats, being more readily used for energy.',
+    aafcoSection: '§9 (coconut oil)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'A named plant oil rich in MCTs. Marketing claims around MCTs (cognitive support in senior dogs, energy) have some research interest but are not established at typical pet-food inclusion levels. It supplies no essential fatty acids that other oils do not; it is a saturated-fat energy source. Clear disclosure; efficacy claims warrant scrutiny.',
+    commonIn: ['halo', 'solid-gold'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicken-fat', 'sunflower-oil', 'canola-oil'],
+  },
+  {
+    slug: 'cellulose',
+    name: 'Powdered Cellulose',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, powdered cellulose is purified, mechanically disintegrated cellulose (plant cell-wall fiber). It is an insoluble, largely non-fermentable fiber used to add bulk and lower caloric density.',
+    aafcoSection: '§9 (powdered cellulose)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'An insoluble bulk fiber widely used in weight-management and hairball formulations to dilute calories and add stool bulk. Often labeled a "filler," but it serves a defined functional role (satiety, caloric dilution, stool bulk). The trade-off is that it ferments little and so contributes less to hindgut microbiota than soluble fibers.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'psyllium', 'pumpkin'],
+  },
+  {
+    slug: 'chicory-root-inulin',
+    name: 'Chicory Root (Inulin)',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, dried chicory root supplies inulin, a fructan prebiotic fiber. Inulin and the related fructooligosaccharides (FOS) are fermented by hindgut microbiota and act as prebiotics.',
+    aafcoSection: '§9 (dried chicory root)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A prebiotic fiber source (inulin/FOS) that selectively feeds beneficial hindgut bacteria. One of the more functionally substantiated fiber additions in companion-animal nutrition. Clear disclosure; the prebiotic claim has reasonable research support relative to many other marketing-front ingredients.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'wellness', 'nutro', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['dried-plain-beet-pulp', 'psyllium', 'pumpkin'],
+  },
+  {
+    slug: 'psyllium',
+    name: 'Psyllium Husk',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, psyllium seed husk is a soluble, gel-forming fiber from Plantago seeds. It is used to support stool consistency and is included in some gastrointestinal and fiber-responsive formulations.',
+    aafcoSection: '§9 (psyllium seed husk)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A soluble, gel-forming fiber with a well-characterized role in stool consistency and fiber-responsive large-bowel conditions in veterinary medicine. Clear disclosure and a functionally substantiated fiber. Used in both maintenance and therapeutic formulations.',
+    commonIn: ['hills-science-diet', 'royal-canin'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['chicory-root-inulin', 'dried-plain-beet-pulp', 'cellulose'],
+  },
 ]
 
 // ─── Selectors ────────────────────────────────────────────────────────────
