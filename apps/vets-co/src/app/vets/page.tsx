@@ -29,6 +29,7 @@ export const metadata: Metadata = buildMetadata({
     'Browse veterinarians by state, city, and specialty. General practice, emergency, surgery, cardiology, and board-certified specialty care.',
   path: '/vets',
   type: 'website',
+  noIndex: true, // placeholder/sample directory — not indexed until a verified data source lands (IR P1-1)
 })
 
 export default function VetDirectoryHubPage() {

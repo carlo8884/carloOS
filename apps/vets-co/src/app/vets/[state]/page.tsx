@@ -53,6 +53,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     description: `Find veterinarians in ${state.name}. Browse by city and specialty — general practice, emergency, surgery, cardiology, and more.`,
     path: `/vets/${state.slug}`,
     type: 'website',
+    noIndex: true, // placeholder/sample directory — not indexed until a verified data source lands (IR P1-1)
   })
 }
 
