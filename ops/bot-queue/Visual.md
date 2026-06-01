@@ -12,13 +12,21 @@ Pull latest origin/main. Read ops/bot-queue/Visual.md and do the top queued item
 
 | # | Directive | Priority | Status | Next action | Deadline |
 |---|---|---|---|---|---|
-| 1 | **Curated images + visual identity** (`dir-021`) | 🔴 P0 launch-blocking | queued | Execute `ops/handoffs/2026-05-31-csro-to-visual-curated-images-and-identity.md`. Hand-curate real photos into the manifest (NO API/keys/secrets, no build dependency). Tier-1: Dog→Fish→Horses→Vets→PetFood. ⚠️ Dog.com has ZERO slots in image-queries.json — add them first. Then wire `<StockImage>` into Tier-1 homepages + top hubs (give each a real hero). $0 typographic wordmark `<Logo>` for identity. Quality bar = Carlo's policy in the brief. | this wave |
-| 2 | Wire remaining sites' manifest keys | MED | queued | After Tier-1 proven: ferret/ferrets/saddle/lizard/petfoods curate + wire. | — |
-| 3 | Phase-2 API expansion proposal | LOW | queued | ONLY after curated set proves direction. Propose to CSRO with quality filters + attribution + no build fragility. Do not build yet. | — |
+| 0 | **🚧 PR #263 fix-backs** (IR #4 + #6) | 🔴 P0 BLOCKS MERGE | queued | Before #263 merges: **(A)** Logo `letterSpacing` is negative (-0.025/-0.02/-0.03em) in `packages/ui/src/components/Logo.tsx` — set to `0` (frontend standard), adjust weight/size for tightness instead. **(B)** Manifest still has 6 `photographer: "Unsplash contributor"` placeholders — either replace with REAL photographer names + verified source URLs for those 6, OR keep them OUT of production-wired pages until real attribution exists (don't ship placeholder attribution as if real). | this session |
+| 1 | **Curated images + visual identity** (`dir-021`) | 🔴 P0 launch-blocking | queued | Execute `ops/handoffs/2026-05-31-csro-to-visual-curated-images-and-identity.md`. Hand-curate real photos into the manifest (NO API/keys/secrets, no build dependency). Tier-1: Dog→Fish→Horses→Vets→PetFood. ⚠️ Dog.com has ZERO slots in image-queries.json — add them first. Then wire `<StockImage>` into Tier-1 homepages + top hubs (give each a real hero). $0 typographic wordmark `<Logo>` for identity. Real photographer attribution per image (no "Unsplash contributor" placeholders). | this wave |
+| 2 | Wire remaining sites' manifest keys | MED | queued | After Tier-1 proven: ferret/ferrets/saddle/lizard/petfoods curate + wire heroes. | — |
+| 3 | **Per-site theme differentiation** | MED | queued | Each site should FEEL distinct, not a recolored template. Per `packages/config` theme tokens: Saddle=luxury serif/restraint, Lizard=dark-mode field-guide, Vets=clinical-authority, Fish=aquarium-magazine, Dog=mass-market warm. Audit + tighten typography scale, spacing rhythm, color usage per positioning. No new deps. | — |
+| 4 | **Homepage scroll-appeal pass (Tier-1)** | MED | queued | Beyond hero: section rhythm, visual hierarchy, card density, whitespace — make Dog/Fish/Horses homepages invite scrolling (Carlo's complaint). Use existing components; no AI imagery. | — |
+| 5 | **Mobile-padding/regression sweep** | MED | queued | Re-check the mobile-padding issues flagged earlier across Tier-1 + tool pages; ensure consistent container padding, tap targets, no overflow. | — |
+| 6 | **ArticleLayout polish (structure-safe)** | LOW | queued | Refine ArticleLayout readability (measure, line-height, heading scale, drop-cap/pull-quote usage) WITHOUT structural change — COO owns structure; propose via PR if structural. | — |
+| 7 | **OG-image + favicon coverage audit** | LOW | queued | Confirm every site has a coherent OG image + favicon; list gaps; fill with $0 typographic/brand-color treatments (no AI humans). | — |
+| 8 | **Tool/calculator visual consistency** | LOW | queued | The `/tools` pages across sites — unify the CalculatorShell visual treatment so tools feel like one product family. | — |
+| 9 | Phase-2 API expansion proposal | LOW | queued | ONLY after curated set proves direction. Propose to CSRO with quality filters + attribution + no build fragility. Do not build yet. | — |
 
 ## Status notes
-- **What's done:** functional UI to date (calculators, BuyBox, `/tools` hubs, audience-capture) — NOT visual identity. That's the gap dir-021 closes.
-- **What's blocked:** nothing — curation needs no API key (manual). Build on your own branch (main is green).
+- **What's done:** functional UI to date (calculators, BuyBox, `/tools` hubs, audience-capture) + dir-021 first pass (StockImage wiring, hero photos, Logo). Item 0 = the IR-caught polish before #263 merges.
+- **What's blocked:** nothing executable — curation/identity need no API key. (The 6 placeholder attributions block only the MERGE of those entries, not your other work.)
+- **Overnight rule:** work top-down; one branch+PR per item or logical group; when a PR is awaiting CI, start the next item. Items 0–9 are >1 night. Update the status column as you close each.
 - **Carlo needed?** No to execute. He WILL eyeball Tier-1 (Dog/Fish/Horses) fit — keep those in early commits.
 
 ## DO NOT TOUCH
