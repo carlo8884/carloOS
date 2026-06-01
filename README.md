@@ -3,7 +3,7 @@
 **Five premium domain properties. One codebase. Shared infrastructure.**
 
 <!-- pagecount-intro:start -->
-**781 pages** across 10 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co · horses.com · petfood.com · petfoods.com · ferret.com · ferrets.com
+**782 pages** across 10 sites: dog.com · fish.com · lizard.com · saddle.com · vets.co · horses.com · petfood.com · petfoods.com · ferret.com · ferrets.com
 <!-- pagecount-intro:end -->
 
 _Page counts auto-update via `scripts/dashboard.mjs`._
@@ -86,7 +86,7 @@ npx tsx scripts/seed-fish.ts
 | vets-co | vets.co | 100 | Tier 2 |
 | horses-com | horses.com | 33 | Tier 2 |
 | petfood-com | petfood.com | 102 | Tier 2 |
-| petfoods-com | petfoods.com | 11 | Tier 3 |
+| petfoods-com | petfoods.com | 12 | Tier 3 |
 | ferret-com | ferret.com | 106 | Tier 2 |
 | ferrets-com | ferrets.com | 11 | Tier 3 |
 <!-- pagecount-table:end -->
