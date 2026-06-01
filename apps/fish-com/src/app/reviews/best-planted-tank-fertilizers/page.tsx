@@ -46,7 +46,7 @@ export default function BestPlantedFertilizersPage() {
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
               ctaText="Shop Easy Green →"
-              ctaHref="https://www.aquariumcoop.com/products/easy-green-all-in-one-fertilizer"
+              ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"
             />
