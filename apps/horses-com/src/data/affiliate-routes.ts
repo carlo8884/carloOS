@@ -80,4 +80,21 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     template: 'https://greatamericaninsurancegroup.com/equine?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
+
+  // ─── Brand-search variants (dir-019 cont. — IR #7 horses-com sweep) ───
+  // Fallback for ReviewCards that target a brand/category without a direct
+  // affiliate program. `{sku}` carries the URL-encoded search query.
+  // Mirrors the saddle-com / fish-com / lizard-com / dog-com pattern.
+  // NOTE: also added in PR #265; if both PRs merge, identical addition
+  // resolves cleanly at rebase time.
+  'amazon-brand': {
+    name: 'Amazon',
+    template: 'https://amazon.com/s?k={sku}&tag=PLACEHOLDER',
+    requiresSku: true,
+  },
+  'chewy-brand': {
+    name: 'Chewy',
+    template: 'https://chewy.com/s?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
+    requiresSku: true,
+  },
 }

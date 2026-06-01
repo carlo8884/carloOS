@@ -75,7 +75,7 @@ export default function HorseFirstAidPage() {
           cons={['Plastic thermometers crack if dropped on concrete', 'Cheap stethoscopes have shorter tubing — get 22-inch minimum for equine work']}
           price="$25–60 combined"
           ctaText="Find equine thermometer + stethoscope"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-horse-first-aid-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="equine-thermometer-stethoscope"
         />
@@ -100,7 +100,7 @@ export default function HorseFirstAidPage() {
           cons={['Cheap kits skimp on bandaging (the highest-use category)', 'Some kits include expired wound cleaner — check dates', 'Will not include thermometer or stethoscope — buy those separately']}
           price="$50–150"
           ctaText="Find pre-stocked equine first-aid kits"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-horse-first-aid-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="equine-first-aid-kit"
         />

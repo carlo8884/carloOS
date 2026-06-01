@@ -43,7 +43,7 @@ export default function BestStirrupIronsPage() {
               cons={['Premium price ($120–160/pair)', 'Adjustment period as body adapts to new alignment']}
               price="$120–160/pair"
               ctaText="Shop Sprenger Bow Balance →"
-              ctaHref="https://www.smartpakequine.com/pt/sprenger-stirrups"
+              ctaHref="/go/smartpak/sprenger-stirrups?s=reviews-best-stirrup-irons"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="sprenger-bow-balance"
             />

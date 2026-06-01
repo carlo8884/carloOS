@@ -70,7 +70,7 @@ export default function HorseTrailerGuidePage() {
           cons={['Sensors can be stolen if left on the trailer publicly — bring them with you for long-term parking', 'Cab unit needs reliable power source (most have battery + USB)', 'Initial pairing is fiddly on some brands']}
           price="$150–350"
           ctaText="Find trailer TPMS"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-horse-trailer-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="trailer-tpms"
         />
@@ -94,7 +94,7 @@ export default function HorseTrailerGuidePage() {
           cons={['Nylon bags fade and weaken in UV after a few seasons of outdoor storage', 'Cheap velcro closures fail on rough roads — buy snap-closure', 'Will not replace stopping for water on long hauls']}
           price="$20–55"
           ctaText="Find trailer hay bags"
-          ctaHref="https://www.smartpakequine.com/"
+          ctaHref="/go/smartpak/home?s=guides-horse-trailer-guide"
           ctaAffiliateProgram="smartpak"
           ctaAffiliateProduct="trailer-hay-bag"
         />
