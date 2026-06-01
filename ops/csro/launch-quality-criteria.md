@@ -52,10 +52,15 @@ Legend: ✅ pass · 🟡 partial · ⬜ not started
 
 | Site | trust | meta | links | no-thin | structure | visual | no-leak | disclosures | commercial-monet | tools | IR/advisor |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| dog-com | ✅ | ✅ | ✅ | 🟡 | ✅ | ⬜ | 🟡 | 🟡 | ⬜ | 🟡 | ⬜ |
-| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | 🟡 | 🟡 | 🟡 | 🟡 | ⬜ |
-| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | 🟡 | 🟡 | 🟡 |
-| petfood-com | ✅ | ✅ | ✅ | 🟡 | ✅ | ⬜ | ✅ | n/a | ⬜ | 🟡 | ⬜ |
-| vets-co | ✅ | ✅ | ✅ | 🟡 | ✅ | ⬜ | 🟡 | 🟡 | ⬜ | 🟡 | ⬜ |
+| dog-com | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (7 img) | ✅ | ✅ | 🟡 (14 review pgs) | 🟡 | ⬜ |
+| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ (1 img — agent in flight) | 🟡 | 🟡 | 🟡 (7, agent in flight) | 🟡 | ⬜ |
+| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (25 img) | ✅ | ✅ | 🟡 (18) | 🟡 | 🟡 |
+| petfood-com | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (6 hero) | ✅ | n/a | ⬜ (agent in flight) | 🟡 | ⬜ |
+| vets-co | ✅ | ✅ | ✅ | 🟡 | ✅ | 🟡 (5 hero) | 🟡 | 🟡 | ⬜ (agent in flight) | 🟡 | ⬜ |
+
+**Progress 2026-06-01 (polish wave):** dog-com monetized (14 review pages, leak fixed) + 7 imagery;
+ferret 25-page imagery (closest to launch-quality — visual ✅); petfood/vets hub heroes (6/5). In
+flight: petfood/vets monetization, fish/lizard monetization + visual. Next gates after these land:
+the QA thin-page sweep (no-thin column) + tools acceptance + end-state IR/advisor review.
 
 CSRO refreshes this after each merge wave. A site is launch-quality only when its row is all ✅/n-a.
