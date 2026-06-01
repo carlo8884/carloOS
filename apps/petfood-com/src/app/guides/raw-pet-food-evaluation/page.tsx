@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -17,17 +19,39 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
-  siteId: 'petfood-com',
-  title: 'Evaluating Raw Pet Food — A Reference',
-  description:
-    'Reference page on commercial and home-prepared raw pet food — the category landscape, HPP treatment, pathogen risk, the WSAVA / AVMA / AAHA / FDA CVM positions, and a harm-reduction approach for owners who decide to feed raw despite the veterinary consensus.',
-  url: 'https://petfood.com/guides/raw-pet-food-evaluation',
-  imageUrl: '',
-  authorName: 'PetFood.com Editorial',
-  publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
-})
+const FAQ = [
+  {
+    question: 'Is raw "more natural" than kibble?',
+    answer:
+      "The naturalistic argument — that dogs and cats evolved on raw whole prey and therefore do best on raw whole prey — is intuitive but oversimplified. Modern dogs descend from a 15,000-30,000-year domestication process that included substantial dietary adaptation, including expanded amylase gene copy numbers that increase starch digestion in most modern dogs. Modern cats are closer to their ancestral diet but still eat in a household environment that is itself unnatural relative to their ancestral foraging context. The relevant question is not whether raw is more natural but whether the specific raw diet being fed meets the animal's actual nutritional requirements safely.",
+  },
+  {
+    question: 'Does HPP destroy the "benefits" of raw?',
+    answer:
+      'HPP does not significantly denature most proteins, does not heat the product, and does not appreciably reduce vitamin content at typical processing pressures. The measurable nutritional change from HPP at use-pressures is small. The pathogen-control benefit is substantial. The trade-off favors HPP on the published evidence.',
+  },
+  {
+    question:
+      "My dog has been on raw for years with no issues. Doesn't that mean it's safe?",
+    answer:
+      'The absence of an obvious adverse outcome in an individual animal is not the same as population-level safety. Many raw-fed dogs do well; some develop clinical issues attributable to the diet; the household-transmission risk is independent of whether the dog itself shows clinical illness. Individual experience is real but does not settle the population-level question.',
+  },
+]
+
+const schema = combineSchemas(
+  buildArticleSchema({
+    siteId: 'petfood-com',
+    title: 'Evaluating Raw Pet Food — A Reference',
+    description:
+      'Reference page on commercial and home-prepared raw pet food — the category landscape, HPP treatment, pathogen risk, the WSAVA / AVMA / AAHA / FDA CVM positions, and a harm-reduction approach for owners who decide to feed raw despite the veterinary consensus.',
+    url: 'https://petfood.com/guides/raw-pet-food-evaluation',
+    imageUrl: '',
+    authorName: 'PetFood.com Editorial',
+    publishedAt: '2026-05-29T00:00:00Z',
+    modifiedAt: '2026-05-29T00:00:00Z',
+  }),
+  buildFAQSchema({ questions: FAQ }),
+)
 
 export default function RawPetFoodEvaluationPage() {
   return (
