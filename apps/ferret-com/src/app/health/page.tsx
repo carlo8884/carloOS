@@ -144,6 +144,27 @@ const HEALTH_CARDS: HealthCard[] = [
     description:
       'Fleas, mites, heartworm, and intestinal parasites. Why ferret size makes parasite control a precision job and every preventive is veterinarian-guided.',
   },
+  {
+    slug: 'signs-of-pain',
+    eyebrow: 'Recognizing illness',
+    title: 'Signs of Pain',
+    description:
+      'Ferrets hide pain by instinct. The behavioral and physical signs of a hurting ferret — teeth-grinding, hunched posture, appetite loss — and why analgesia is a vet decision.',
+  },
+  {
+    slug: 'ferret-diarrhea-causes',
+    eyebrow: 'Gastrointestinal',
+    title: 'Diarrhea Causes',
+    description:
+      'From diet upset to ECE, ulcers, parasites, and obstruction. What stool color and consistency reveal, the fast dehydration risk, and when loose stool is an emergency.',
+  },
+  {
+    slug: 'annual-checkup-guide',
+    eyebrow: 'Preventive care',
+    title: 'Annual Checkup Guide',
+    description:
+      'What a wellness exam covers and how often to go. Why ferrets over three need twice-yearly visits, the screening bloodwork, and how to prepare for the appointment.',
+  },
 ]
 
 export default function HealthHubPage() {
