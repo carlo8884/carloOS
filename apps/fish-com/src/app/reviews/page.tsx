@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -8,6 +8,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, fertilizers, and water test kits — ranked with real data.',
   path: '/reviews',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://fish.com/' },
+    { name: 'Reviews', url: 'https://fish.com/reviews' },
+  ],
+})
+
 
 const REVIEWS = [
   {
@@ -57,6 +65,8 @@ const REVIEWS = [
 export default function FishReviewsPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       {/* HERO */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">
@@ -129,5 +139,6 @@ export default function FishReviewsPage() {
         </div>
       </section>
     </>
+  </>
   )
 }

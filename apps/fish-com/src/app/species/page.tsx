@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,6 +10,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Complete care guides for 200+ aquarium fish species. Freshwater, saltwater, beginner to advanced — tank size, water parameters, diet, compatibility, and health.',
   path: '/species',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://fish.com/' },
+    { name: 'Species', url: 'https://fish.com/species' },
+  ],
+})
+
 
 const FEATURED = [
   { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', img: 'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=400&q=80&auto=format&fit=crop' },
@@ -55,6 +63,8 @@ export default async function SpeciesIndexPage() {
 
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
@@ -195,5 +205,6 @@ export default async function SpeciesIndexPage() {
       </section>
       {/* agent1-browse-all-end */}
 </>
+  </>
   )
 }

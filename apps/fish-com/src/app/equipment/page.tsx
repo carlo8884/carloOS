@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { EquipmentCategories } from '../../data/equipment-categories'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,6 +10,14 @@ export const metadata: Metadata = buildMetadata({
     'Editorial buyer guides for filters, heaters, lighting, substrates, test kits, and CO2 systems — how to choose, tradeoffs, and price ranges.',
   path: '/equipment',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://fish.com/' },
+    { name: 'Equipment', url: 'https://fish.com/equipment' },
+  ],
+})
+
 
 const BADGES: Record<string, string> = {
   'aquarium-filters': 'Filtration',
@@ -32,6 +40,8 @@ const EMOJIS: Record<string, string> = {
 export default function EquipmentHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       {/* HERO */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">
@@ -54,7 +64,7 @@ export default function EquipmentHubPage() {
       </div>
 
       {/* BREADCRUMB */}
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">
           Home
         </Link>
@@ -135,5 +145,6 @@ export default function EquipmentHubPage() {
         </div>
       </section>
     </>
+  </>
   )
 }
