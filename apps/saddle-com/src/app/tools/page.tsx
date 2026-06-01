@@ -50,6 +50,60 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-2xl font-semibold text-brand-text-dark mb-4">
+            How to use these tools before you book a fitter
+          </h2>
+          <div className="space-y-4 text-sm leading-relaxed text-brand-text-mid">
+            <p>
+              A good saddle fit is the most expensive variable in any tack
+              purchase to get wrong, and the hardest to judge from a catalogue.
+              The tools gathered here are meant to be used in the days before a
+              professional fitting — to narrow the field, frame the right
+              questions, and arrive at the appointment with a horse profile
+              already in hand. None of them is a substitute for a qualified
+              saddler running their hands down the animal&rsquo;s back; they are
+              the preparation that makes that visit shorter, sharper, and less
+              likely to end in a costly return.
+            </p>
+            <p>
+              Start with the{' '}
+              <Link href="/tools/tree-size-estimator" className="text-brand-primary hover:underline">
+                tree size estimator
+              </Link>
+              , which turns horse type, withers profile, and back length into a
+              starting English or Western tree width — the single figure that
+              rules whole shelves of saddles in or out before you handle one. Take
+              its output to the{' '}
+              <Link href="/saddle-fit-checklist" className="text-brand-primary hover:underline">
+                12-point saddle fit checklist
+              </Link>
+              , a printable reference for the try-on itself, covering wither
+              clearance, panel contact, balance, and gullet width point by point.
+              For the reasoning behind each of those checks, the{' '}
+              <Link href="/guides/saddle-fit-guide" className="text-brand-primary hover:underline">
+                saddle fit guide
+              </Link>{' '}
+              walks through why a tree that bridges or rocks does the damage it
+              does.
+            </p>
+            <p>
+              These pages suit a rider buying a first saddle, re-fitting a horse
+              that has changed shape with work or age, or vetting a secondhand
+              find before money changes hands. Every estimate here is deliberately
+              conservative and flagged as a starting point — the numbers exist to
+              inform the conversation with a saddler, not to close it. When the
+              fit question is settled, the wider{' '}
+              <Link href="/fit" className="text-brand-primary hover:underline">
+                fit reference library
+              </Link>{' '}
+              carries the detail forward into pads, flocking, and ongoing checks.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (
