@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import {
+  buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
+  SchemaScript,
+} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -10,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Stubben Saddle Review 2025',
   description: 'Stubben Roxane, Portos, and Aramis compared using CSF reviewer notes and published rider reports.',
@@ -20,6 +25,37 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
+
+const schema = combineSchemas(
+  articleSchema,
+  buildProductSchema({
+    name: 'Stubben Roxane',
+    description:
+      'Flagship Stubben dressage saddle with the Quick-Change tree and a deep seat — Saddle.com Best Dressage pick.',
+    url: 'https://saddle.com/reviews/stubben-saddle-review#roxane',
+    imageUrl: '',
+    ratingValue: 9.5,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Stubben Portos',
+    description:
+      'Stubben show-jumping saddle with a forward-cut flap and the Quick-Change tree.',
+    url: 'https://saddle.com/reviews/stubben-saddle-review#portos',
+    imageUrl: '',
+    ratingValue: 9.1,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Stubben Aramis',
+    description:
+      'All-purpose Stubben saddle for eventing and versatile flap geometry — best AP/eventing in the brand lineup.',
+    url: 'https://saddle.com/reviews/stubben-saddle-review#aramis',
+    imageUrl: '',
+    ratingValue: 8.8,
+    reviewCount: 1,
+  }),
+)
 
 const PICKS = [
   { label: 'Best Dressage', emoji: '🏆', name: 'Stubben Roxane', subtitle: '9.5 · Best all-round dressage', href: '#roxane' },
