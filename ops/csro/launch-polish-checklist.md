@@ -51,3 +51,34 @@ For EACH site:
 4. CSRO holds page-expansion until this checklist is all ✅ per site, then re-runs IR + advisor
 
 CSRO refreshes this after each defect-closure wave.
+
+## Cohort PR wave — 2026-06-01 (COO conveyor)
+
+Merged this session (verify-gated, merge-on-green): #364 (docs), #365
+(metadata-policy redirect-stub exemption + ferret stubs/tools schema),
+#366 (petfood nav/footer), #367 (vets trust + telehealth schema), #368
+(fish footer + tools ItemList + /data priority), #369 (ferret homepage
+trust line + sister-site section removed), #370 (saddle footer +
+western trust copy), #371 (lizard nav/footer + first-year-care href +
+sitemap), #372 (ferret Visual premium-redesign brief), #373 (ferret
+`/find-an-exotic-vet` editorial route), #374 (saddle Stubben first-person
+claims fixed), #375 (vets `/vets` placeholder noIndex + sitemap).
+
+In flight (open, verify-gated):
+- **#376** — ferrets-com `/moving` meta desc ≤160 (was main-red on an
+  enforced site; **blocks #377/#378 metadata-policy until merged**).
+- **#377** — dog-com symptom-guide fabricated vet-authorship removed (QC §1 P0).
+- **#378** — dog-com orphaned `/compare` + `/which-pet` tools surfaced in
+  nav/footer (cohort-#6 audit P0-2) + audit doc persisted.
+
+Routed (not COO execution):
+- Ferret homepage premium first-screen redesign (incl. real ferret hero,
+  6-path owner-intent first screen) → **Visual** (brief #372).
+- Dog homepage first-screen tool promotion → **Visual**.
+- Dog "symptom checker" promise resolves to static `/symptoms` →
+  **CSRO/Carlo** product-gap decision (reframe vs. build interactive triage).
+
+Dog.com P1 backlog (COO, post-merge): sitemap `/dashboard/revenue`+`/data`
+hygiene, `/breeds` ItemList JSON-LD, `/compare/[slug]` in sitemap,
+duplicate-topic canonical review. See
+`ops/handoffs/2026-06-01-dog-com-launch-audit.md`.
