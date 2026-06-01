@@ -1,7 +1,7 @@
 # COO — Wakeup Queue
 
 **Owner:** COO · **Lane:** content pages, build orchestration, CI/workflows, routing, STATUS/DASHBOARD/BACKLOG
-**Last updated:** 2026-06-01 (by COO — 9-PR SEO/GEO/build-cost sweep landed alongside dir-014 + dir-007)
+**Last updated:** 2026-06-01 evening (by COO — Carlo's polish-pivot directive received; queue rewritten to cohort-5 polish passes)
 
 ## RESTART PROMPT
 ```
@@ -16,21 +16,42 @@ duplicate-route/duplicate-title sweep → fix; improve internal linking across n
 homepage→hub→spoke; fix metadata-policy failures; run trust-guard + metadata-policy + link-check before
 every push. Make each site feel COHERENT, not just large. One branch+PR per site. Do NOT push DNS/launch.
 
-## Queue (priority order)
-| # | Directive | Priority | Status | Next action | Deadline |
-|---|---|---|---|---|---|
-| 1 | **Vets.co insurance launch-readiness** (`dir-007`) | HIGH | in_progress | Trust audit + ops portions closed (#230, #239). IR F6 noindex-gate on the 2,912 breed×state pages shipped 2026-06-01. Remaining: carrier-stack realism (Monetization 1.1) + Track-2 directory data source (Carlo). | — |
-| 2 | **Efty footer component** (`dir-008`) | MED | blocked | Build closed (#226). Carlo provides per-tier Efty URLs (`dir-006`) → COO wires per-tier in <5 min. | — |
-| 3 | **Free-tier vet-directory prep** (`dir-010`) | MED | blocked | Research closed (#224). Go/no-go on 10-state pilot → Carlo. | — |
-| 4 | **Consolidation redirects** | MED | blocked | PetFoods→PetFood, Ferrets→Ferret. Sequencing-blocked behind Monetization `dir-009` per CSRO redirect-map ("monetize → migrate → 301"). | — |
-| 5 | **Vercel cost: turbo-ignore coverage** | 🔴 HIGH | queued | UNBLOCKED. Confirm EVERY app's `vercel.json` has a working `ignoreCommand` (turbo-ignore) so unaffected apps skip builds; the 5 scaffolds too. List any app missing it; add. Biggest recurring cost lever. | — |
-| 6 | **Internal-linking graph audit** | 🔴 HIGH | queued | UNBLOCKED. Per CLAUDE.md §6 (hub→cluster→spoke). For Tier-1 (Dog/Fish/Horses/Vets/PetFood): map orphan pages (no inbound internal links) + hubs missing spoke links; add reciprocal links. Run link-check after. Pure SEO/GEO value, no Carlo. | — |
-| 7 | **Sitemap + robots hygiene sweep** | HIGH | queued | UNBLOCKED. Verify each site's `sitemap.ts` emits clean canonical URLs (no route-group segments — the bug fixed on some sites; check ALL), correct lastmod, and robots.txt allows AI crawlers per §6. Fix gaps. | — |
-| 8 | **JSON-LD / schema coverage** | MED | queued | UNBLOCKED. Audit Tier-1 article/review/FAQ pages for Article/Review/FAQ/Breadcrumb JSON-LD (GEO citation magnet). List pages missing schema; add via existing `buildArticleSchema`/`SchemaScript` helpers. | — |
-| 9 | **Breadcrumb coverage** | MED | queued | UNBLOCKED. Ensure every deep page has a `<Breadcrumb>` wired to real parents (nav + schema). List + fill gaps Tier-1 first. | — |
-| 10 | **404 / broken-route sweep** | MED | queued | UNBLOCKED. Run link-check portfolio-wide; for any internal link with no target route, either create a stub hub or fix the link. Zero broken internal links is the bar. | — |
-| 11 | **STATUS/DASHBOARD/BACKLOG refresh** | MED | queued | UNBLOCKED. Reconcile these docs to reality after this merge wave — page counts, what's live, active directives. Ops-only (no build). | — |
-| 12 | **Scaffold disposition (petsupplies, dir-005)** | MED | queued | UNBLOCKED (decision is CSRO's, already made: out of scope). Decommission `apps/petsupplies` from CarloOS or mark clearly do-not-launch; note in STATUS. | — |
+## Queue (polish-mode priority order — Carlo 2026-06-01 pivot)
+
+Cohort-5 = **Dog.com · Fish.com · Ferret.com · PetFood.com · Vets.co**.
+Each polish item is per-site. One branch+PR per site so review stays scoped.
+
+| # | Directive | Priority | Status | Next action |
+|---|---|---|---|---|
+| 1 | **Dog.com polish pass** | 🔴 P0 | queued | Audit: broken-link + orphan + thin-page + duplicate-title + missing-schema + missing-breadcrumb. Verify homepage → hub → spoke. CSRO/IR sign-off before declaring complete. |
+| 2 | **Fish.com polish pass** | 🔴 P0 | queued | Same checklist. Tools/calculators must all run with sane defaults. |
+| 3 | **Ferret.com polish pass** | 🔴 P0 | queued | Same checklist. **Coordinate with Monetization** — they're mid-pass on buy-boxes; do not touch `data/affiliate-routes.ts` or `care/**`, `behavior/**`, `health/**` buy-box pages while their PR is in flight. |
+| 4 | **PetFood.com polish pass** | 🔴 P0 | queued | Same checklist. Brand-eval pages + ingredient refs must have consistent depth (no thin entries). |
+| 5 | **Vets.co polish pass** | 🔴 P0 | queued | Same checklist. The 2,912 breed×state programmatic pages stay noindex (PR #269); confirm hub + 56 breed + 52 state pages are launch-quality and indexable. |
+| 6 | **Portfolio thin/duplicate-page audit** | HIGH | queued | Build `scripts/ci/thin-page-audit.mjs` (word count, h2 count, unique-byte ratio); fail above per-site thresholds. List candidates for beef-up vs. archive vs. consolidate. |
+| 7 | **Cross-site duplicate-title audit** | HIGH | queued | Extend `metadata-policy.mjs` (already gates length + intra-site dupes) to flag near-duplicate titles across sites that aren't intentional cross-portfolio references. |
+| 8 | **Hub → spoke link symmetry audit** | MED | queued | Every section hub (`/health`, `/breeds`, `/reviews`): every child page must link back to the hub AND to ≥1 sibling. PR #305 covered a sample; generalize. |
+| 9 | **Tools/calculators acceptance pass** | MED | queued | Per `/tools/*` on cohort-5: verify the calculator computes a non-degenerate output, copy is professional, tie-back link exists. PR #305 wired 7; finish the rest. |
+| 10 | **Stale `.next`/`.turbo` cleanup + decommissioned-app audit** | LOW | queued | Petsupplies stub dirs cleared in PR #304; verify hardmoneyloans similarly clean. CI note so no decommissioned app re-shows in a sitemap or nav. |
+
+### Closed (pre-pivot launch-prep — all merged 2026-06-01)
+| Old # | Item | Closing PR |
+|---|---|---|
+| 5 | turbo-ignore portfolio coverage | #268, #290 |
+| 6 | internal-linking graph (first wave) | #278, #293, #296, #301, #305 |
+| 7 | sitemap + robots hygiene | #274, #303 |
+| 8 | JSON-LD / schema coverage | #276, #280, #283, #284, #287, #289, #294, #295 |
+| 9 | breadcrumb coverage (auto via ArticleLayout) | #276 |
+| 10 | 404 / broken-route sweep | #303 |
+| 11 | STATUS/DASHBOARD/BACKLOG refresh | #292, #306 |
+| 12 | petsupplies disposition | #304 |
+| 13 | tool-page hub interlinking (first wave) | #305 |
+
+### Carlo-blocked — DEFERRED in polish mode (do not push, do not nudge)
+- `dir-006` Efty per-tier URLs · `dir-008` footer component
+- `dir-010` Free-tier vet-directory pilot
+- Consolidation redirects (PetFoods→PetFood, Ferrets→Ferret) — sequenced behind Monetization `dir-009`
+- DNS / GA4 / Mailchimp / email forwarding / Vercel scaffold bootstrap — deferred per 2026-06-01 directive (CLAUDE.md §8a). Do NOT escalate to Carlo on these until cohort-5 passes the launch-quality bar.
 | 13 | **Tool-page hub interlinking** | LOW | queued | UNBLOCKED. Each site's `/tools` hub should link to/from its relevant content cluster (calculator ↔ the guide it supports). Strengthens the graph. | — |
 
 ## Status
