@@ -53,6 +53,21 @@ fish + lizard + saddle (P2, finish to 100) → vets + petfoods + ferrets (P3, st
   the ONLY remaining step is Carlo's DNS + Vercel domain + Amazon tag (~15 min, his hands only).
 - Move to next domain. Maintain the per-domain cluster maps in `ops/csro/<domain>-build-map.md`.
 
+## OVERNIGHT AUTONOMOUS RUN (Carlo asleep 2026-06-01 → morning)
+**Directive:** drive every big domain to ≥100 pages by morning, domain-by-domain, no asking.
+**Execution loop (repeat until all domains ≥100 or morning):**
+1. Pick current domain (order: ferret→petfood→horses→petfoods→ferrets→saddle→lizard→vets→fish; dog done).
+2. Compute gap to 100 (`find apps/<d>/src/app -name page.tsx | wc -l`).
+3. Dispatch ≤3 content agents on NON-OVERLAPPING clusters (rate-limit safe; bump if budget free).
+4. As each agent batch lands: verify (completeness + apostrophe scan `: '[^'\]*'[a-zA-Z]` + `mg/kg` dose scan + trust-guard + link-check) → fold any fix into same commit → push.
+5. Per domain, also ensure: legal pages exist (privacy/terms/affiliate-disclosure — ferret pattern), nav exposes all hubs, no broken internal links.
+6. Domain ≥100 + clean → mark launch-ready in this doc → next domain.
+**Build-safety lesson (cost us 4 bugs):** agents emit unescaped apostrophes in single-quoted JS
+strings (`'ferret's'`) = TS1002 build-breaker. ALWAYS scan each batch; fold fix into the page's own commit.
+**Rate-limit lesson:** shared API budget with other bots; if agents die at ~6 tool calls, throttle to 1-2.
+**Status log (update as domains complete):**
+- ferret-com: IN PROGRESS (87→100+), legal pages ✅, 6 hubs ✅, visual ✅
+
 ## What still requires Carlo (the only non-bot steps)
 DNS pointing (Network Solutions) · Vercel production domain attach · Amazon/affiliate tag env vars.
 Everything else — build, structure, visual, monetization — the fleet does without him.
