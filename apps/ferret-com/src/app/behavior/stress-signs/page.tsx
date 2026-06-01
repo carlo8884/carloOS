@@ -59,7 +59,7 @@ const FAQS = [
       "They can. Ferrets are social animals, and a single ferret in a quiet household with little interaction can become under-stimulated and stressed. Many ferrets do better in pairs or small groups, which provide constant companionship. A solo ferret needs more human time, more enrichment, and more out-of-cage play to compensate.",
   },
   {
-    question: 'How do I reduce my ferret's stress?',
+    question: "How do I reduce my ferret's stress?",
     answer:
       "Address the cause. Provide ample out-of-cage time and enrichment, keep routines predictable, ensure a quiet sleeping area, avoid sudden environmental changes, and consider a compatible companion for a lonely ferret. Because stress and illness look so similar, persistent signs that don't resolve when the environment improves warrant an exotic-mammal vet visit.",
   },

@@ -74,6 +74,76 @@ const HEALTH_CARDS: HealthCard[] = [
     description:
       'Finding an exotic-mammal vet, carrier setup, what bloodwork to expect, fasting rules, and what to bring to an annual or sick visit.',
   },
+  {
+    slug: 'emergency-warning-signs',
+    eyebrow: 'Urgent care',
+    title: 'Emergency Warning Signs',
+    description:
+      'The ferret symptoms that can’t wait: collapse, seizures, labored breathing, not eating, straining, and pale gums — and what each can mean.',
+  },
+  {
+    slug: 'gastrointestinal-blockage',
+    eyebrow: 'Surgical emergency',
+    title: 'GI Blockage',
+    description:
+      'Ferrets swallow rubber and foam, and their gut is narrow. Warning signs of obstruction, how it’s diagnosed, surgery, and ferret-proofing that prevents it.',
+  },
+  {
+    slug: 'ferret-ulcers',
+    eyebrow: 'Gastrointestinal',
+    title: 'Stomach Ulcers',
+    description:
+      'Gastric ulcers tied to Helicobacter mustelae. Teeth-grinding, dark tarry stool, the diagnostic workup, and why ulcers rarely travel alone.',
+  },
+  {
+    slug: 'heart-disease',
+    eyebrow: 'Cardiology',
+    title: 'Heart Disease',
+    description:
+      'Dilated cardiomyopathy is the most common ferret heart disease. Subtle early signs, echocardiogram diagnosis, management, and heartworm prevention.',
+  },
+  {
+    slug: 'spaying-and-neutering',
+    eyebrow: 'Reproductive',
+    title: 'Spaying & Neutering',
+    description:
+      'Intact female ferrets risk fatal estrogen toxicity. The biology behind it, the early-spay-neuter and adrenal-disease debate, and descenting.',
+  },
+  {
+    slug: 'anesthesia-and-surgery-risk',
+    eyebrow: 'Perioperative care',
+    title: 'Anesthesia & Surgery Risk',
+    description:
+      'Why ferret anesthesia is different: short fasting (insulinoma), blood-sugar and temperature control, monitoring, and choosing a ferret-experienced clinic.',
+  },
+  {
+    slug: 'canine-distemper-in-ferrets',
+    eyebrow: 'Infectious disease',
+    title: 'Canine Distemper',
+    description:
+      'Almost always fatal in unvaccinated ferrets, and able to reach even indoor pets. How it spreads, the classic signs, and why vaccination is non-negotiable.',
+  },
+  {
+    slug: 'ferret-influenza',
+    eyebrow: 'Infectious disease',
+    title: 'Ferret Influenza',
+    description:
+      'Ferrets catch human flu and can give it back. Signs, why ferrets are the classic flu model, supportive care, and protecting a ferret when you’re sick.',
+  },
+  {
+    slug: 'ear-mites',
+    eyebrow: 'Parasites',
+    title: 'Ear Mites',
+    description:
+      'Otodectes cynotis is the most common ferret external parasite. Dark waxy debris, ear-swab diagnosis, and why the whole household is treated together.',
+  },
+  {
+    slug: 'fleas-and-parasites',
+    eyebrow: 'Parasites',
+    title: 'Fleas & Parasites',
+    description:
+      'Fleas, mites, heartworm, and intestinal parasites. Why ferret size makes parasite control a precision job and every preventive is veterinarian-guided.',
+  },
 ]
 
 export default function HealthHubPage() {
@@ -118,9 +188,10 @@ export default function HealthHubPage() {
               margin: 0,
             }}
           >
-            Seven evidence-based references on the conditions ferret owners encounter most often,
-            from the two most common neoplasms to preventive care and aging. Citations from
-            peer-reviewed exotic-mammal veterinary literature throughout.
+            Evidence-based references on the conditions ferret owners encounter most often — from
+            the two most common neoplasms to infectious disease, emergencies, surgery, parasites,
+            preventive care, and aging. Citations from peer-reviewed exotic-mammal veterinary
+            literature throughout.
           </p>
         </div>
       </div>

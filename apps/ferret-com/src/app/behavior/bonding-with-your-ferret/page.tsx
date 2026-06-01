@@ -59,7 +59,7 @@ const FAQS = [
       "Ferrets navigate the world by smell far more than by sight. Putting a worn, unwashed shirt in the cage, or wearing the same shirt for a few days before handling, teaches the ferret that your scent means safety and good things. Familiar smell lowers a ferret's guard well before it is comfortable being touched.",
   },
   {
-    question: 'My rescue ferret hides and won't come to me — what do I do?',
+    question: "My rescue ferret hides and won't come to me — what do I do?",
     answer:
       "Go slow and let the ferret set the pace. Sit quietly on the floor at its level, offer treats from a flat palm, and avoid grabbing or chasing — both feel like predation. Hand-feeding through the cage bars builds positive association before any handling. If a ferret is still hiding or actively avoiding contact after six to eight weeks of patient socialization, ask an exotic-pet vet to rule out a medical contributor, since pain and illness can drive avoidance.",
   },
