@@ -147,7 +147,16 @@ export default function ReptileFeedingGuidePage() {
           <li><strong>Illness:</strong> If refusal continues beyond seasonal norms with other symptoms (weight loss, lethargy, abnormal feces), vet visit is warranted.</li>
         </ul>
         <p>Track weight monthly. A snake that hasn&apos;t eaten for 3 months but maintains weight is probably fine. A snake that has lost 15% of body weight warrants veterinary attention.</p>
+        <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Feeders + Gutload</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Live and freeze-dried feeders (Dubia roaches, BSFL, crickets), gutload mix, and calcium dusting powder. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/dubia%20roaches%20feeder%20insect%20gutload%20calcium?s=health-reptile-feeding-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/dubia%20roaches%20feeder%20insect%20gutload%20calcium?s=health-reptile-feeding-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

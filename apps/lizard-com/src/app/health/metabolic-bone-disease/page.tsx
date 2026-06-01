@@ -50,7 +50,16 @@ export default function MBDPage() {
 
         <h2>Prevention Protocol</h2>
         <p>For diurnal lizards on an insect diet: Arcadia T5 12% (desert species) or 6% (forest species) UVB tube, replaced every 12 months (output degrades before appearance fails). Calcium carbonate (no D3) dusted on all feeder insects at every feeding for juveniles, every other feeding for adults. Calcium with D3 once weekly for adult indoor animals (backup D3 source). Multivitamin dusting 2× weekly. Feeder insects gut-loaded with calcium-rich foods (collard greens, endive, escarole, commercial gut-load) for minimum 24 hours before feeding.</p>
+        <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Calcium + UVB Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>MBD prevention is calcium-with-correct-UVB. Browse calcium supplements (Repashy Calcium Plus, Rep-Cal) and UVB bulbs (Arcadia, Zoo Med). This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/reptile%20calcium%20powder%20uvb%20bulb%20arcadia?s=health-metabolic-bone-disease" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/reptile%20calcium%20powder%20uvb%20bulb%20arcadia?s=health-metabolic-bone-disease" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

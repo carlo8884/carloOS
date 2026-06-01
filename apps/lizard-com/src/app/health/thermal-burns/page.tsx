@@ -38,7 +38,16 @@ export default function ThermalBurnsPage() {
         <h2>First Aid and Veterinary Care</h2>
         <p><strong>First aid:</strong> Remove the animal from the heat source immediately. Cool the burn gently with room-temperature (not cold) water for 5–10 minutes. Do not apply butter, petroleum jelly, or any home remedy to the burn. Cover loosely with a clean damp cloth. Veterinary evaluation is required for any burn beyond superficial reddening.</p>
         <p><strong>Veterinary treatment:</strong> Debridement of necrotic tissue, topical antimicrobial (silver sulfadiazine cream is commonly used), systemic antibiotics for infected burns, and pain management. Burns in reptiles heal slowly — weeks to months depending on depth and extent. The reptile must be kept in a clean, sterile substrate during healing to prevent wound contamination. Full recovery from significant burns may require extended veterinary management.</p>
+        <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Prevention — Digital Thermostat</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Thermal-burn prevention is non-negotiable: every heat element on a digital thermostat (Herpstat, Jump Start, Inkbird ITC-308). No exceptions. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/reptile%20digital%20thermostat%20herpstat%20jumpstart?s=health-thermal-burns" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/reptile%20digital%20thermostat%20herpstat%20jumpstart?s=health-thermal-burns" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }
