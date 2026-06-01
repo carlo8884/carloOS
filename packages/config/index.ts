@@ -563,6 +563,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Dog Health', href: '/health' },
       { label: 'Nutrition', href: '/nutrition' },
       { label: 'Training', href: '/training' },
+      { label: 'Compare Breeds', href: '/compare' },
       { label: 'Reviews', href: '/reviews' },
       { label: 'Find a Vet', href: '/find-a-vet', highlight: true },
     ],
@@ -597,6 +598,15 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Dog Beds', href: '/reviews/best-dog-beds' },
           { label: 'All Reviews', href: '/reviews' },
           { label: 'FAQ', href: '/faq' },
+        ],
+      },
+      {
+        heading: 'Tools & Guides',
+        links: [
+          { label: 'Compare Breeds', href: '/compare' },
+          { label: 'Which Pet Quiz', href: '/which-pet' },
+          { label: 'Puppy Schedule', href: '/puppy-schedule' },
+          { label: 'Care Guides', href: '/guides' },
         ],
       },
     ],
