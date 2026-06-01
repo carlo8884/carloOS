@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function HelmetGuidePage() {
             { label: "Correct Fit", href: "#fit" },
             { label: "When to Replace", href: "#replace" },
             { label: "Care and Common Mistakes", href: "#care" },
+            { label: "Certified Helmet Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -101,6 +102,8 @@ export default function HelmetGuidePage() {
           <h2 id="why">Why Helmets Matter</h2>
           <p>Riders sit well above the ground on a powerful, sometimes unpredictable animal, and a fall onto the head can cause traumatic brain injury. Head injuries are the leading cause of riding-related death and serious disability, and a correctly fitted, certified helmet absorbs and distributes the energy of an impact, substantially reducing the severity of head trauma. No level of experience makes a rider immune -- many serious accidents happen to skilled riders on quiet horses.</p>
 
+          <StockImage manifestKey="horses-com:tack-helmet" aspect="16:9" />
+
           <h2 id="standards">Safety Standards</h2>
           <p>A riding helmet must be certified to a recognized equestrian safety standard, not merely styled to look like one. Common certifications include ASTM/SEI (United States), PAS 015 and the kitemark and VG1 (United Kingdom and Europe), and Snell equestrian standards. These certifications mean the helmet has passed impact testing for equestrian use. Bicycle and other sport helmets are not substitutes -- they are tested for different impacts. Look for the certification label inside the helmet.</p>
 
@@ -124,6 +127,89 @@ export default function HelmetGuidePage() {
             <li><strong>Replace after impacts</strong> and at the manufacturer-advised interval, rather than riding in an aged or damaged helmet.</li>
             <li><strong>Choose certification over looks</strong> and fit over fashion every time.</li>
           </ul>
+
+          <h2 id="picks">Certified Helmet Picks</h2>
+          <p>The following are widely-stocked, certified equestrian helmets across the common price tiers. Certification and correct fit matter far more than brand or price — any helmet below must be tried on and fitted to the individual head before it protects. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing, and no helmet here is endorsed over a fitter&apos;s professional measurement.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="troxel-spirit"
+            badge="Best Value"
+            badgeEmoji="💲"
+            name="Troxel Spirit"
+            subtitle="ASTM/SEI-certified schooling helmet at an entry price"
+            score={8.4}
+            winner
+            description={<>
+              <p>The Troxel Spirit is one of the most widely-stocked entry-tier schooling helmets in US equestrian retail. It carries ASTM/SEI certification — the floor requirement for any riding helmet — at a price point that makes replacing a helmet after a fall financially painless, which matters because a spent helmet must be retired regardless of cost.</p>
+              <p>Reasonable choice for: a new or growing rider, a lesson-barn spare, or anyone who wants a certified helmet they will not hesitate to replace after an impact. Fit must be confirmed on the head; an entry price does not change the fit requirement.</p>
+            </>}
+            specs={[
+              { label: 'Certification', value: 'ASTM/SEI', highlight: 'good' },
+              { label: 'Adjustment', value: 'Dial-fit system' },
+              { label: 'Best use case', value: 'Schooling, new riders, spares' },
+            ]}
+            pros={['ASTM/SEI certified', 'Low replacement cost after a fall', 'Dial-fit adjustability', 'Very widely stocked']}
+            cons={['Heavier and less ventilated than premium helmets', 'Fewer shape options for hard-to-fit heads']}
+            price="$40–60"
+            ctaText="Compare at Riding Warehouse →"
+            ctaHref="/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide"
+            ctaAffiliateProgram="ridingwarehouse"
+            ctaAffiliateProduct="troxel-spirit-helmet"
+          />
+
+          <ReviewCard
+            id="ovation-deluxe"
+            badge="Best Mid-Range"
+            badgeEmoji="🎩"
+            name="Ovation Deluxe Schooler"
+            subtitle="Certified all-purpose helmet with broader fit range"
+            score={8.6}
+            description={<>
+              <p>The Ovation Deluxe Schooler sits in the mid price tier and is a common all-purpose choice for riders who school across disciplines. It carries the required equestrian certification and offers more ventilation and a wider fit range than entry models, making it easier to fit a broader set of head shapes.</p>
+              <p>Most relevant for the established amateur rider who wants better ventilation and fit refinement than an entry helmet without moving to a show-tier price.</p>
+            </>}
+            specs={[
+              { label: 'Certification', value: 'ASTM/SEI', highlight: 'good' },
+              { label: 'Ventilation', value: 'Multiple vents' },
+              { label: 'Best use case', value: 'All-purpose schooling' },
+            ]}
+            pros={['Certified for equestrian use', 'Better ventilation than entry tier', 'Wider fit range', 'Moderate price']}
+            cons={['Not a show-ring aesthetic', 'Still requires individual fitting']}
+            price="$70–110"
+            ctaText="Compare at Dover Saddlery →"
+            ctaHref="/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide"
+            ctaAffiliateProgram="dover"
+            ctaAffiliateProduct="ovation-deluxe-schooler-helmet"
+          />
+
+          <ReviewCard
+            id="charles-owen-ayr8"
+            badge="Premium / Show"
+            badgeEmoji="🏆"
+            name="Charles Owen AYR8 Plus"
+            subtitle="Multi-standard certified show helmet"
+            score={9.1}
+            description={<>
+              <p>The Charles Owen AYR8 Plus is a long-standing premium show helmet certified to multiple equestrian standards (commonly PAS 015, VG1, and ASTM/SEI depending on model variant). Riders choose it for the refined fit, ventilation, and show-appropriate appearance — but the protective value still comes from certification and correct fit, not the price.</p>
+              <p>Most relevant for the competitive rider who shows regularly and wants a multi-standard-certified helmet. As with every helmet, retire it after any significant impact.</p>
+            </>}
+            specs={[
+              { label: 'Certification', value: 'Multi-standard (PAS 015 / VG1 / ASTM-SEI by variant)', highlight: 'good' },
+              { label: 'Ventilation', value: 'High-flow vented shell' },
+              { label: 'Best use case', value: 'Showing, competitive riders' },
+            ]}
+            pros={['Multiple safety-standard certifications', 'Refined fit and ventilation', 'Show-appropriate appearance', 'Long manufacturer track record']}
+            cons={['Premium price', 'Still single-use after a real impact', 'Professional fitting strongly advised']}
+            price="$280–400"
+            ctaText="Compare at Riding Warehouse →"
+            ctaHref="/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide"
+            ctaAffiliateProgram="ridingwarehouse"
+            ctaAffiliateProduct="charles-owen-ayr8-plus-helmet"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

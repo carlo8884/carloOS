@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,8 @@ export default function ForageBasicsPage() {
         <div className="carloOS-article">
           <h2 id="fiber">Why Fiber First</h2>
           <p>The horse evolved grazing fibrous grasses for 16 or more hours a day. Its teeth, its small stomach that secretes acid continuously, and its enormous fermenting hindgut are all built for a constant flow of fiber. Feeding a forage-based diet keeps that system working as designed: it buffers stomach acid, keeps the gut moving, generates body heat, and occupies the horse mentally. Diets short on forage and heavy in grain are behind much of the colic, ulceration, and behavioral trouble seen in domestic horses.</p>
+
+          <StockImage manifestKey="horses-com:nutrition-forage" aspect="16:9" />
 
           <h2 id="hindgut">How the Hindgut Works</h2>
           <p>Behind the small intestine sit the cecum and large colon -- a vast fermentation vat where billions of microbes break down fiber (cellulose) that the horse itself cannot digest, releasing volatile fatty acids that supply much of the horse&apos;s energy. This microbial population is sensitive: it thrives on steady forage and is disrupted by sudden diet changes and large grain meals, which can spill undigested starch into the hindgut, sour the fermentation, and trigger colic and laminitis. Protecting the hindgut microbes is a central goal of good feeding.</p>
