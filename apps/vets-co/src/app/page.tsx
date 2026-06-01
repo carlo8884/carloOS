@@ -141,7 +141,7 @@ const TRUST_CLAIMS = [
   'Research-anchored content',
   'AAHA-aligned guidance',
   'No paid placements',
-  'Board-certified-specialist directory',
+  'Insurance & telehealth compared',
 ]
 
 const CATEGORIES: {
