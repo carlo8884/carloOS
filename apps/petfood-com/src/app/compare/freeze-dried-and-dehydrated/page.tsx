@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function FreezeDriedAndDehydratedPage() {
               { label: 'Pathogen Considerations', href: '#pathogen' },
               { label: 'Complete vs Topper', href: '#completetopper' },
               { label: 'Evaluating the Product', href: '#evaluating' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,58 @@ export default function FreezeDriedAndDehydratedPage() {
         <p>Some freeze-dried products are complete and balanced diets; many are toppers, mixers, or treats intended only to supplement a complete diet, and carry the intermittent-or-supplemental-feeding statement rather than a complete-and-balanced one. Feeding a topper as the sole diet causes nutritional imbalance. Always check the AAFCO statement to know which you have. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
         <h2 id="evaluating">Evaluating the Product</h2>
         <p>Check whether the product is raw or cooked (for the safety profile), whether it carries a complete-and-balanced AAFCO statement for the life stage or is intended only as a topper, the calorie density (these diets are energy-dense by dry weight, so portions are small), and the manufacturer&apos;s transparency and kill-step practices. The convenience and palatability are real; the safety and completeness depend on the specific product.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Before buying, settle the two questions that define this category: is the product raw or cooked (which sets the handling-safety profile), and is it a complete-and-balanced diet or a topper meant only to supplement a complete food? The brand-search links below surface the category at the major retailers; check the AAFCO statement and the raw-vs-cooked label on the specific product. We earn an affiliate commission on purchases through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="freeze-dried-complete"
+          badge="Complete Diet"
+          badgeEmoji="❄️"
+          name="Freeze-Dried Complete Diets"
+          subtitle="Shelf-stable, minimally heated, rehydrate before feeding"
+          score={8.0}
+          winner
+          description={
+            <p>Freeze-dried complete diets preserve most heat-sensitive nutrients with minimal heat and are usually rehydrated before serving. Many are raw-based, so they carry raw-food handling considerations — prefer products with a validated kill step (such as high-pressure processing) and a complete-and-balanced AAFCO statement for the life stage. Energy-dense by dry weight, so portions are small.</p>
+          }
+          specs={[
+            { label: 'Processing', value: 'Low-heat freeze-dry', highlight: 'good' },
+            { label: 'Check', value: 'Raw vs cooked label', highlight: 'warn' },
+            { label: 'AAFCO', value: 'Confirm complete-and-balanced' },
+            { label: 'Serving', value: 'Usually rehydrated' },
+          ]}
+          pros={['Preserves heat-sensitive nutrients', 'Shelf-stable convenience', 'High palatability']}
+          cons={['Often raw-based — handling caution', 'Premium price', 'Drying is not a reliable kill step']}
+          price="Premium per calorie"
+          ctaText="Search Freeze-Dried Diets on Chewy"
+          ctaHref="/go/chewy-brand/freeze%20dried%20complete%20dog%20food?s=compare-freeze-dried-and-dehydrated"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="freeze%20dried%20complete%20dog%20food"
+        />
+        <ReviewCard
+          id="dehydrated-complete"
+          badge="Dehydrated"
+          badgeEmoji="🌬️"
+          name="Dehydrated Complete Diets"
+          subtitle="Warm-air dried, gently cooked or raw, rehydrate to serve"
+          score={7.8}
+          description={
+            <p>Dehydrated diets use warm air to remove moisture — gentler than extrusion but more heat than freeze-drying — and may be gently cooked or raw depending on temperature. Rehydrate per the manufacturer&apos;s instructions to restore moisture and aroma. Confirm whether the product is a complete diet or a topper, and check the calorie density.</p>
+          }
+          specs={[
+            { label: 'Processing', value: 'Warm-air dehydration' },
+            { label: 'Base', value: 'Cooked or raw — check label', highlight: 'warn' },
+            { label: 'AAFCO', value: 'Confirm complete vs topper' },
+          ]}
+          pros={['Gentler than extrusion', 'Shelf-stable', 'Rehydrates for moisture benefit']}
+          cons={['Some are toppers, not complete diets', 'Premium price', 'Check the kill-step practice']}
+          price="Premium per calorie"
+          ctaText="Search Dehydrated Diets on Amazon"
+          ctaHref="/go/amazon-brand/dehydrated%20complete%20dog%20food?s=compare-freeze-dried-and-dehydrated"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="dehydrated%20complete%20dog%20food"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>
