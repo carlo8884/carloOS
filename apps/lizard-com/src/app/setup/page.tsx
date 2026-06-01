@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Enclosure Setup Guide | Lizard.com', description: 'Complete reptile enclosure setup guides — temperatures, UVB lighting, humidity, substrate, and enrichment for all major species.', path: '/setup' })
 
@@ -19,8 +19,16 @@ const GUIDES = [
 ]
 
 export default function LizardSetupHubPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://lizard.com/' },
+      { name: 'Enclosure Setup', url: 'https://lizard.com/setup' },
+    ],
+  })
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="relative z-10 px-container-sm sm:px-container py-16" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-5"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Enclosure Setup</span></div>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 52px)' }}>Reptile Enclosure Setup</h1>

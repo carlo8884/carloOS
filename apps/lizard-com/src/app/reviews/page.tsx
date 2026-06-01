@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Equipment Reviews 2025 — Ranked & Compared | Lizard.com', description: 'Reptile equipment reviews with honest editorial criteria. UVB bulbs, terrariums, thermostats, thermometers — ranked with real data.', path: '/reviews' })
 
@@ -12,8 +12,16 @@ const REVIEWS = [
 ]
 
 export default function LizardReviewsPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://lizard.com/' },
+      { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' },
+    ],
+  })
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment Reviews</span></div>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Reptile Equipment Reviews</h1>

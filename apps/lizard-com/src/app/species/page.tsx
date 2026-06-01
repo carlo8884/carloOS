@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -36,8 +36,16 @@ const LEVEL_COLORS = {
 }
 
 export default function SpeciesIndexPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://lizard.com/' },
+      { name: 'Species', url: 'https://lizard.com/species' },
+    ],
+  })
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-5">
