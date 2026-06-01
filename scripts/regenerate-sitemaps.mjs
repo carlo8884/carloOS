@@ -176,7 +176,22 @@ function listRoutes(siteId) {
         const nextPrefix = isRouteGroup ? prefix : `${prefix}/${entry.name}`
         walk(path, nextPrefix)
       } else if (/^page\.(tsx|ts|jsx|js)$/.test(entry.name)) {
-        routes.add(prefix === '' ? '/' : prefix)
+        // Skip redirect stubs (a `next/navigation` `redirect()` page with no
+        // buildMetadata) — they exist only to 308 a duplicate URL to its
+        // canonical and must not compete as their own sitemap entries.
+        let src = ''
+        try {
+          src = readFileSync(path, 'utf8')
+        } catch {
+          src = ''
+        }
+        const isRedirectStub =
+          /from\s+['"]next\/navigation['"]/.test(src) &&
+          /\bredirect\(/.test(src) &&
+          !/buildMetadata\(/.test(src)
+        if (!isRedirectStub) {
+          routes.add(prefix === '' ? '/' : prefix)
+        }
       }
     }
   }

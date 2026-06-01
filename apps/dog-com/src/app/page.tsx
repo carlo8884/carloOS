@@ -12,7 +12,7 @@
  *     /health/dog-allergies
  *   /nutrition, /nutrition/weight-management, /nutrition/wsava-explained,
  *     /nutrition/puppy-nutrition
- *   /training, /training/puppy-schedule, /training/socialization-window
+ *   /training, /training/puppy-schedule, /training/dog-socialization-window
  *   /reviews, /reviews/best-dry-dog-food, /reviews/best-pet-insurance,
  *     /reviews/best-large-breed-dog-food, /reviews/best-flea-tick-prevention,
  *     /reviews/best-joint-supplements, /reviews/best-dental-chews
@@ -159,7 +159,7 @@ const FOOD_TOOLS = [
 
 const TRAINING_DECISIONS = [
   { title: 'Puppy schedule (8-16 weeks)', desc: 'Sleep, feeding, potty, socialization, vet visits by week.', href: '/puppy-schedule', badge: 'Free download' },
-  { title: 'Socialization window', desc: 'The 3-14 week window that shapes adult temperament.', href: '/training/socialization-window' },
+  { title: 'Socialization window', desc: 'The 3-14 week window that shapes adult temperament.', href: '/training/dog-socialization-window' },
   { title: 'All training methods', desc: 'Positive reinforcement, marker training, crate training, more.', href: '/training' },
 ]
 
