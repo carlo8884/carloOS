@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Whole-Prey vs Kibble for Ferrets — Which Diet Model? | Ferret.com',
   description:
-    'The central ferret feeding decision compared: whole-prey/raw versus commercial kibble on biological fit, convenience, cost, dental wear, food safety, and nutritional reliability.',
+    'The central ferret feeding decision compared: whole-prey/raw versus commercial kibble on biological fit, convenience, cost, dental wear, and food safety.',
   path: '/diet/whole-prey-vs-kibble',
   type: 'article',
 })

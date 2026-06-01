@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Protein & Fat Requirements — Macronutrient Targets | Ferret.com',
   description:
-    'The published macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis and animal sourcing change how you read a label.',
+    'The macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis changes how you read a label.',
   path: '/diet/protein-and-fat-requirements',
   type: 'article',
 })

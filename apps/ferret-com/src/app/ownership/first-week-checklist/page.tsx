@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'New Ferret First-Week Checklist — Day by Day | Ferret.com',
   description:
-    'A day-by-day plan for a new ferret’s first week: cage setup, vet booking, quarantine for multi-ferret homes, litter and bite training, and bonding without overwhelming the ferret.',
+    'A day-by-day plan for a new ferret’s first week: cage setup, vet booking, quarantine, litter and bite training, and bonding without overwhelming the ferret.',
   path: '/ownership/first-week-checklist',
   type: 'article',
 })

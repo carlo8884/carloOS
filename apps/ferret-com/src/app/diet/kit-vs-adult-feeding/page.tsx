@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Kit vs Adult Ferret Feeding — Imprinting & Life Stages | Ferret.com',
   description:
-    'How ferret feeding changes by life stage: why the first six months set lifelong preferences, food imprinting and fixation, weaning, and the shift from kit to adult to senior.',
+    'How ferret feeding changes by life stage: why the first six months set lifelong preferences, food imprinting and fixation, weaning, and senior feeding.',
   path: '/diet/kit-vs-adult-feeding',
   type: 'article',
 })

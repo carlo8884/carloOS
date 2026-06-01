@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Legality by State — Where Ferrets Are Banned | Ferret.com',
   description:
-    'Where ferrets are legal in the US: the California and Hawaii bans, city and county restrictions, permit rules, and how to verify current legality before you bring a ferret home.',
+    'Where ferrets are legal in the US: the California and Hawaii bans, city and county restrictions, and how to verify current legality before you bring one home.',
   path: '/ownership/ferret-legality-by-state',
   type: 'article',
 })

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferrets & Other Pets — Dogs, Cats & Prey Animals | Ferret.com',
   description:
-    'How ferrets get along with dogs and cats, and the prey species — rabbits, rodents, birds, reptiles, fish — that should never share unsupervised space with a hunting carnivore.',
+    'How ferrets get along with dogs and cats, and the prey species — rabbits, rodents, birds, reptiles — that should never share unsupervised space with a ferret.',
   path: '/ownership/ferrets-and-other-pets',
   type: 'article',
 })

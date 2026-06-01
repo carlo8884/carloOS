@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Names — Themed Ideas & Naming Guide | Ferret.com',
   description:
-    'A ferret naming reference: themed name lists, what tends to suit a ferret’s personality, naming by coat color, and whether ferrets actually respond to their names.',
+    'A ferret naming reference: themed lists, names that suit a ferret’s personality, naming by coat color, and whether ferrets respond to their names.',
   path: '/ownership/ferret-names',
   type: 'article',
 })

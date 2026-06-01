@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferrets With Kids — Are Ferrets Good Family Pets? | Ferret.com',
   description:
-    'Are ferrets good with children? Supervision, age-appropriate handling, nip training, hygiene, and an honest look at which households suit a ferret and which do not.',
+    'Are ferrets good with children? Supervision, age-appropriate handling, nip training, hygiene, and an honest look at which households suit a ferret.',
   path: '/ownership/ferrets-with-kids',
   type: 'article',
 })

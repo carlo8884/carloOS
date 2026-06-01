@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Raw Feeding Guide for Ferrets — Frankenprey & Whole Prey | Ferret.com',
   description:
-    'A practical raw-feeding reference for ferrets: frankenprey ratios, whole-prey sourcing, freezing and thawing protocols, calcium-to-phosphorus balance, and pathogen harm-reduction.',
+    'A practical raw-feeding reference for ferrets: frankenprey ratios, whole-prey sourcing, freezing protocols, calcium balance, and pathogen harm-reduction.',
   path: '/diet/raw-feeding-guide',
   type: 'article',
 })

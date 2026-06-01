@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Supplements & Vitamins — What Helps, What to Skip | Ferret.com',
   description:
-    'Which ferret supplements are useful, which are redundant on a complete diet, and which warrant caution: fatty-acid coat supplements, the hairball-paste debate, and over-supplementation risks.',
+    'Which ferret supplements are useful, which are redundant on a complete diet, and which warrant caution: coat supplements, hairball pastes, and vitamin risks.',
   path: '/diet/supplements-and-vitamins',
   type: 'article',
 })

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Cost of Owning a Ferret — Startup & Recurring Budget | Ferret.com',
   description:
-    'A realistic ferret budget: startup costs for the animal, cage, and supplies, recurring food and litter, vaccinations and routine vet care, and the surgery line item owners underestimate.',
+    'A realistic ferret budget: startup costs for cage and supplies, recurring food and litter, routine vet care, and the surgery line item owners underestimate.',
   path: '/ownership/cost-of-owning-a-ferret',
   type: 'article',
 })

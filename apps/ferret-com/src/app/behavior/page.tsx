@@ -17,6 +17,79 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+interface BehaviorCard {
+  slug: string
+  eyebrow: string
+  title: string
+  description: string
+}
+
+const BEHAVIOR_CARDS: BehaviorCard[] = [
+  {
+    slug: 'training-and-bonding',
+    eyebrow: 'Training & socialization',
+    title: 'Training & Bonding',
+    description:
+      'Litter training, kit bite inhibition, scruffing as a calming reflex (not punishment), H-style harness training, slow ferret-to-ferret introductions, and multi-ferret group dynamics.',
+  },
+  {
+    slug: 'biting-and-nipping',
+    eyebrow: 'Behavior fixes',
+    title: 'Biting & Nipping',
+    description:
+      'Why ferrets bite — play, teething, fear, or pain — and a calm, no-punishment plan to teach bite inhibition. Plus when a sudden bite is a medical red flag.',
+  },
+  {
+    slug: 'play-aggression',
+    eyebrow: 'Reading body language',
+    title: 'Play Aggression',
+    description:
+      'How to tell exuberant rough play — the weasel war dance, neck-biting, dominance dragging — from genuine aggression, and exactly when to step in.',
+  },
+  {
+    slug: 'dooking-and-vocalizations',
+    eyebrow: 'Ferret sounds',
+    title: 'Dooking & Vocalizations',
+    description:
+      'A field guide to ferret sounds: the happy dook, the warning hiss, the alarm scream, chirps, whimpers, and what each one is telling you.',
+  },
+  {
+    slug: 'dead-sleep-explained',
+    eyebrow: 'Don’t panic',
+    title: 'Dead Sleep Explained',
+    description:
+      'Why ferrets sleep so deeply that they seem unresponsive, how to wake them safely, and how to tell a normal deep sleep from a true emergency.',
+  },
+  {
+    slug: 'digging-and-burrowing',
+    eyebrow: 'The polecat instinct',
+    title: 'Digging & Burrowing',
+    description:
+      'Why ferrets dig at carpet, plants, and litter, and how to build a dig box that channels the instinct and saves your floor.',
+  },
+  {
+    slug: 'stress-signs',
+    eyebrow: 'Welfare',
+    title: 'Stress Signs',
+    description:
+      'The subtle behavioural and physical signs of a stressed ferret, common causes, and the critical overlap between stress and early illness.',
+  },
+  {
+    slug: 'bonding-with-your-ferret',
+    eyebrow: 'Building trust',
+    title: 'Bonding With Your Ferret',
+    description:
+      'A week-by-week plan to earn a new, shy, or rescue ferret’s trust — scent transfer, hand-feeding, floor time, and reading the trust signals.',
+  },
+  {
+    slug: 'diy-enrichment-toys',
+    eyebrow: 'Cheap & safe',
+    title: 'DIY Enrichment Toys',
+    description:
+      'Build cheap, safe ferret enrichment at home — tunnels, dig boxes, ball pits, foraging games — plus the safety rules that prevent a blockage emergency.',
+  },
+]
+
 export default function BehaviorHubPage() {
   return (
     <>

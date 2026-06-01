@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Safe Treats for Ferrets — What to Feed & What to Skip | Ferret.com',
   description:
-    'A vetted list of safe ferret treats and the marketed "ferret treats" to avoid: meat-based options, eggs, the no-sugar rule, dangerous foods, and how treats fit a carnivore diet.',
+    'A vetted list of safe ferret treats and the marketed "ferret treats" to avoid: meat-based options, eggs, the no-sugar rule, and dangerous foods.',
   path: '/diet/safe-treats',
   type: 'article',
 })

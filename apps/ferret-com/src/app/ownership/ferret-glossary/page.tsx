@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Glossary — Hob, Jill, Kit, Dooking & More | Ferret.com',
   description:
-    'The vocabulary of ferret keeping defined: hob, jill, kit, gib, sprite, business, dooking, the war dance, sploot, and the husbandry and health terms new owners encounter.',
+    'The vocabulary of ferret keeping defined: hob, jill, kit, gib, sprite, business, dooking, the war dance, and the husbandry and health terms owners meet.',
   path: '/ownership/ferret-glossary',
   type: 'article',
 })

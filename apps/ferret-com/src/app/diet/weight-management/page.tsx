@@ -4,9 +4,9 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Weight Management — Body Condition & Seasonal Swing | Ferret.com',
+  title: 'Ferret Weight Management — Body Condition Guide | Ferret.com',
   description:
-    'How to read a ferret’s weight: body-condition scoring, the normal seasonal weight swing, telling healthy gain from illness, and the feeding errors behind over- and underweight ferrets.',
+    'How to read a ferret’s weight: body-condition scoring, the normal seasonal weight swing, telling healthy gain from illness, and the feeding errors behind both.',
   path: '/diet/weight-management',
   type: 'article',
 })

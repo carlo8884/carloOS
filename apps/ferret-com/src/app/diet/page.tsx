@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Diet & Nutrition — Feeding the Obligate Carnivore | Ferret.com',
   description:
-    'Nine evidence-based references on feeding ferrets: whole-prey vs kibble, raw feeding, protein and fat targets, safe treats, supplements, hydration, kit vs adult, and weight management.',
+    'Nine evidence-based references on feeding ferrets: whole-prey vs kibble, raw feeding, protein and fat targets, treats, supplements, hydration, and weight.',
   path: '/diet',
 })
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'How to Choose a Ferret Kibble — Reading the Panel | Ferret.com',
   description:
-    'How to evaluate a ferret kibble: animal-first ingredient panels, the protein/fat/carbohydrate window, the three commercial tiers, and the red flags that mark an inappropriate formula.',
+    'How to evaluate a ferret kibble: animal-first ingredient panels, the protein/fat/carbohydrate window, the three commercial tiers, and the red flags to avoid.',
   path: '/diet/best-ferret-kibble',
   type: 'article',
 })

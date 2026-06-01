@@ -4,9 +4,9 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Hydration & Water — Bowl vs Bottle, Intake & Safety | Ferret.com',
+  title: 'Ferret Hydration & Water — Bowl vs Bottle | Ferret.com',
   description:
-    'How ferrets drink and how to keep them hydrated: bowl versus bottle, daily water intake, dehydration warning signs, dietary moisture, and water safety in hot weather.',
+    'How ferrets drink and stay hydrated: bowl versus bottle, daily intake, dehydration warning signs, dietary moisture, and water safety in hot weather.',
   path: '/diet/hydration-and-water',
   type: 'article',
 })
