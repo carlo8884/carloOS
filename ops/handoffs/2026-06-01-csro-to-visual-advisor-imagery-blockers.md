@@ -35,6 +35,13 @@ CSRO has verified the manifest state; exact keys + bad IDs below.
   `<Logo>` wordmark / favicon / apple-icon against the dark-mode field-guide identity and fix
   whatever's off (likely the wordmark treatment or icon glyph).
 
+## 4. Horses.com `category-disciplines` manifest query mismatch  ⟵ P1 (cosmetic)
+- **Key:** `horses-com:category-disciplines` (manifest ~L309–318), photoId `1474546652694-a33dd8161d66`.
+- Alt says "show jumper mid-flight over a fence" (matches the image), but the `query` string is
+  the stale "dressage horse rider." Image + alt are consistent; only the query is wrong.
+- **Fix:** update the query to match (e.g. "show jumper over fence"), or swap to a dressage image
+  if a dressage subject was intended for the disciplines hub. Low priority — not user-facing-wrong.
+
 ## Constraints (unchanged trust-bar)
 - No AI-generated animals/humans. No fabricated photographer attribution. Honest "Source: Unsplash"
   curated pattern only. Verify any new photo ID actually depicts the intended subject before

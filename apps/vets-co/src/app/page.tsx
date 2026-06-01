@@ -154,7 +154,7 @@ const CATEGORIES: {
     icon: 'find-a-vet',
     title: 'Find a Vet',
     desc:
-      'Search a directory of veterinary specialists by city and discipline — neurology, cardiology, oncology, ophthalmology, and more.',
+      'Browse veterinary specialties by city and discipline — neurology, cardiology, oncology, ophthalmology, and more.',
     href: '/find-a-vet',
   },
   {
@@ -337,7 +337,7 @@ export default function VetsHomePage() {
               We translate professional guidance — AVMA position statements, AAHA
               guidelines, ACVIM consensus papers — into plain English for the
               person who has to make the decision at the kitchen table. A
-              directory of board-certified specialists, condition references for
+              directory organized by veterinary specialty, condition references for
               every common emergency, breed-specific risk profiles, and pet
               insurance compared on payout behavior. Citations on every claim.
               No paid placements. No fake bylines.
