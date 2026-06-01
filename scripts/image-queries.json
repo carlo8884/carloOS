@@ -227,9 +227,9 @@
   },
 
   "vets-co:hero": {
-    "query": "veterinarian examining dog gentle",
+    "query": "stethoscope warm wood texture macro",
     "provider": "either",
-    "alt": "A veterinarian examining a calm dog during a routine visit",
+    "alt": "A stethoscope resting on warm wood — clinical reference, no human subjects (per page-level QC §1 directive)",
     "orientation": "landscape"
   },
   "vets-co:category-find-a-vet": {
@@ -257,9 +257,9 @@
     "orientation": "landscape"
   },
   "vets-co:cornerstone-breed-health": {
-    "query": "veterinarian listening to dog heart",
+    "query": "stethoscope clinical desk close-up",
     "provider": "either",
-    "alt": "A veterinarian using a stethoscope on a dog's chest",
+    "alt": "A stethoscope on a clinician's desk — texture-led, no human subject",
     "orientation": "landscape"
   },
 
@@ -284,9 +284,9 @@
   },
 
   "vets-co:tool-insurance-estimator": {
-    "query": "veterinarian receipt pet",
+    "query": "insurance paperwork pen close-up",
     "provider": "either",
-    "alt": "A pet owner reviewing a veterinary bill",
+    "alt": "Insurance paperwork and a pen — texture-led, no human subject",
     "orientation": "landscape"
   },
 
