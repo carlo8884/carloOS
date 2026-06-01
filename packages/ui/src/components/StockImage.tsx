@@ -65,9 +65,14 @@ export function StockImage({
   const entry = manifest[manifestKey]
 
   if (!entry) {
+    // Production: render a neutral placeholder that reserves the layout
+    // slot without leaking dev instructions to readers. The aria-label still
+    // identifies which manifest key needs syncing for accessibility audits.
+    // Development: show the actionable hint inline.
+    const isDev = process.env.NODE_ENV !== 'production'
     return (
       <div
-        aria-label={`Image not yet synced (${manifestKey})`}
+        aria-label={`Image pending sync (${manifestKey})`}
         className="my-8 rounded-lg flex items-center justify-center"
         style={{
           aspectRatio: aspect.replace(':', ' / '),
@@ -77,7 +82,11 @@ export function StockImage({
           fontStyle: 'italic',
         }}
       >
-        Image pending sync — run <code style={{ marginLeft: 4 }}>node scripts/sync-images.mjs</code>
+        {isDev && (
+          <>
+            Image pending sync — run <code style={{ marginLeft: 4 }}>node scripts/sync-images.mjs</code>
+          </>
+        )}
       </div>
     )
   }
