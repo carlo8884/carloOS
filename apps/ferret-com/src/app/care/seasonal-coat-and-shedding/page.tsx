@@ -62,7 +62,6 @@ export default function FerretSeasonalCoatPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
-                { label: 'Bathing Frequency', href: '/care/ferret-bathing-frequency' },
                 { label: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
               ]}
@@ -106,7 +105,7 @@ export default function FerretSeasonalCoatPage() {
 
           <h2 id="grooming">Grooming Through a Shed</h2>
           <p>
-            The right approach to a heavy molt is mechanical removal of loose fur, not bathing. Bathing actually works against you during a molt: it strips coat oils and triggers the sebaceous glands to overcompensate, and it does little to remove the loose undercoat. See <a href="/care/ferret-bathing-frequency">Bathing Frequency</a> for why over-bathing backfires.
+            The right approach to a heavy molt is mechanical removal of loose fur, not bathing. Bathing actually works against you during a molt: it strips coat oils and triggers the sebaceous glands to overcompensate, and it does little to remove the loose undercoat. See <a href="/care/bathing-and-grooming">Bathing Frequency</a> for why over-bathing backfires.
           </p>
           <ul>
             <li><strong>A soft slicker brush or a rubber grooming mitt</strong> pulls loose fur efficiently. A few minutes during peak shed, paired with a treat, keeps most ferrets cooperative.</li>
@@ -119,7 +118,7 @@ export default function FerretSeasonalCoatPage() {
 
           <h2 id="hairballs">Hairballs and Ingestion Risk</h2>
           <p>
-            Ferrets groom themselves and each other, and during a heavy molt they swallow fur. Unlike cats, ferrets do not readily vomit up hairballs, so ingested fur can accumulate in the stomach. In a narrow ferret gut this is a genuine, if uncommon, obstruction risk — and the molt seasons are exactly when it rises. The practical defenses are removing loose fur by brushing before the ferret can ingest it, and keeping bedding clean. For a fuller treatment of prevention and the warning signs of a developing obstruction, see <a href="/health/hairball-prevention">Hairball Prevention</a>.
+            Ferrets groom themselves and each other, and during a heavy molt they swallow fur. Unlike cats, ferrets do not readily vomit up hairballs, so ingested fur can accumulate in the stomach. In a narrow ferret gut this is a genuine, if uncommon, obstruction risk — and the molt seasons are exactly when it rises. The practical defenses are removing loose fur by brushing before the ferret can ingest it, and keeping bedding clean. For a fuller treatment of prevention and the warning signs of a developing obstruction, see <a href="/health/gastrointestinal-blockage">Hairball Prevention</a>.
           </p>
 
           <h2 id="abnormal">When Hair Loss Is Not a Molt</h2>
