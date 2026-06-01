@@ -896,12 +896,44 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     mailchimpAudienceId: process.env.MAILCHIMP_AUDIENCE_ID ?? '',
     nav: [
       { label: 'Home', href: '/' },
+      { label: 'Compare Foods', href: '/compare' },
+      { label: 'Brands', href: '/brands' },
+      { label: 'Conditions', href: '/conditions' },
+      { label: 'Ingredients', href: '/ingredients' },
+      { label: 'Life Stage', href: '/life-stage' },
+      { label: 'Guides', href: '/guides' },
+      { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
       {
-        heading: 'PetFood.com',
+        heading: 'Browse',
         links: [
-          { label: 'Home', href: '/' },
+          { label: 'Compare Foods', href: '/compare' },
+          { label: 'Brands', href: '/brands' },
+          { label: 'Conditions', href: '/conditions' },
+          { label: 'Therapeutic Diets', href: '/diets' },
+          { label: 'Ingredients', href: '/ingredients' },
+          { label: 'Nutrition', href: '/nutrition' },
+          { label: 'Feeding', href: '/feeding' },
+          { label: 'Life Stage', href: '/life-stage' },
+          { label: 'Supplements', href: '/supplements' },
+          { label: 'Species', href: '/species' },
+        ],
+      },
+      {
+        heading: 'Reference',
+        links: [
+          { label: 'Guides', href: '/guides' },
+          { label: 'Scoring Methodology', href: '/guides/methodology' },
+          { label: 'Myths', href: '/myths' },
+          { label: 'Tools', href: '/tools' },
+        ],
+      },
+      {
+        heading: 'About',
+        links: [
+          { label: 'Editorial Standards', href: '/editorial-standards' },
+          { label: 'Affiliate Disclosure', href: '/disclosure' },
         ],
       },
     ],
