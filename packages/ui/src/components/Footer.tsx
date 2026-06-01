@@ -8,6 +8,7 @@ import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
+import { Logo } from './Logo'
 
 interface FooterProps {
   siteId: SiteId
@@ -28,11 +29,8 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link
-              href="/"
-              className="font-display text-2xl font-black text-brand-white no-underline tracking-tight block mb-4"
-            >
-              {config.theme.siteName}
+            <Link href="/" className="no-underline block mb-4" aria-label={config.theme.siteName}>
+              <Logo config={config} size="footer" color="var(--brand-white)" />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               {config.theme.siteTagline}

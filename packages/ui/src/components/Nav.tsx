@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
+import { Logo } from './Logo'
 
 interface NavProps {
   siteId: SiteId
@@ -50,13 +51,13 @@ export function Nav({ siteId, activePath }: NavProps) {
         ].join(' ')}
         aria-label="Main navigation"
       >
-        {/* Logo */}
+        {/* Logo — $0 typographic wordmark with brand-primary TLD dot */}
         <Link
           href="/"
-          className="font-display text-xl font-black tracking-tight text-brand-dark no-underline"
+          className="text-brand-dark no-underline"
           onClick={() => setMobileOpen(false)}
         >
-          {config.theme.siteName}
+          <Logo config={config} size="nav" />
         </Link>
 
         {/* Desktop links */}
