@@ -180,7 +180,7 @@ export function InsuranceReimbursementEstimator() {
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Reimbursed this year</p>
           <p className="mt-1 text-2xl font-display text-brand-text-dark">{dollars(result.reimbursed)}</p>
           {annualLimit !== null && result.reimbursableBeforeCap > result.reimbursed && (
-            <p className="mt-1 text-xs text-amber-300">Capped by annual limit (would have been {dollars(result.reimbursableBeforeCap)} uncapped).</p>
+            <p className="mt-1 text-xs text-brand-warning">Capped by annual limit (would have been {dollars(result.reimbursableBeforeCap)} uncapped).</p>
           )}
         </div>
         <div className="rounded border border-brand-border bg-brand-surface p-4">
