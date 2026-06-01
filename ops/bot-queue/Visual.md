@@ -1,7 +1,7 @@
 # Visual Bot — Wakeup Queue
 
 **Owner bot:** Visual Bot · **Lane:** photography, composition, motion, visual identity, `src/components/visual/*`, image manifest
-**Last updated:** 2026-06-01 (by Visual Bot — dir-021 in progress, one-PR-per-item)
+**Last updated:** 2026-06-01 (Visual Bot — wave-1 + wave-2 partial shipped, 8 PRs open)
 
 ## RESTART PROMPT (paste to wake this bot)
 ```
@@ -12,23 +12,55 @@ Pull latest origin/main. Read ops/bot-queue/Visual.md, work top-down from item 0
 
 | # | Directive | Priority | Status | Next action | Deadline |
 |---|---|---|---|---|---|
-| 0 | **Logo letterSpacing + attribution fix-backs** (foundation for dir-021) | 🔴 P0 | **in-flight (this PR)** | Ship `<Logo>` with conservative letterSpacing tuned for serif display fonts (Playfair / Bodoni / Cormorant / Baskerville). Ship `ImageCard.creditUrl` + `StockImage` curated-entry support so curated photos can render honest "Source: Unsplash" credit linked to source page (no fabricated photographer names while sandbox lacks API access). Hide dev-only placeholder text in production. | this wave |
-| 1a | **dir-021 Dog.com curation** (split from #1) | 🔴 P0 | queued (after #0 merges) | Add 6 Dog.com slots to `image-queries.json` (flagship has none). Curate 2–3 verified-in-production Unsplash IDs (`1587300003388-59208cc962cb` and the breed portraits) into the manifest as `curated: true` entries. Wire `<StockImage>` on Dog.com homepage as a real hero photo strip. ONE PR. Carlo eyeballs first. | this wave |
-| 1b | **dir-021 Fish.com curation** | 🔴 P0 | queued (after 1a) | Same pattern as 1a using `1535591273668-578e31182c4f` (Betta — already the og:image) and the other 3 species IDs already in production. ONE PR. | this wave |
-| 1c | **dir-021 Horses.com curation** | 🔴 P0 | queued (after 1b) | Use the 3 Horses production IDs already in the codebase (`1469820838967-…`, `1474546652694-…`, `1553284965-…`). Per-site brass accent on ReviewCard winner band can ship in same PR. ONE PR. | this wave |
-| 1d | **dir-021 Vets.co curation** | 🔴 P0 | queued (after 1c) | Reconcile `vets-co:hero` query first — page-level TODO at `apps/vets-co/src/app/page.tsx:279–290` prohibits the vet-with-puppy cliché. Acceptable directions: stethoscope on warm wood / dim clinic interior / vector medical diagram. Wiring only valid after Carlo runs sync-images.mjs with API key for the texture-led slot. May ship empty-wired (no StockImage yet) per QC §1. | this wave |
-| 1e | **dir-021 PetFood.com curation** | 🔴 P0 | queued (after 1d) | PetFood has 0 production Unsplash IDs to draw from + no slot in image-queries.json yet. Add `petfood-com:hero` slot (already exists, query "pet food bowl ingredients"). Skip wiring on homepage until a verified ingredient photo exists. | this wave |
-| 2 | Wire remaining sites' manifest keys | MED | queued | After Tier-1 proven: ferret/ferrets/saddle/lizard/petfoods curate + wire. | — |
+| 0 | **Logo letterSpacing + attribution fix-backs** (foundation) | 🔴 P0 | **PR #275 open** | Merge to land foundation primitives. | this wave |
+| 1a | **dir-021 Dog.com curation** | 🔴 P0 | **PR #277 open** (base: foundation) | Merge after #275 — re-targets to main automatically. | this wave |
+| 1b | **dir-021 Fish.com curation** | 🔴 P0 | **PR #279 open** (base: foundation) | Merge after #275. | this wave |
+| 1c | **dir-021 Horses.com curation + brass ReviewCard winner** | 🔴 P0 | **PR #281 open** (base: foundation) | Merge after #275. | this wave |
+| 1d | **dir-021 Vets.co slot reconciliation** | 🔴 P0 | **PR #282 open** (base: foundation) | Merge after #275. Wiring deferred — Carlo runs sync first. | this wave |
+| 1e | **dir-021 PetFood.com slot expansion** | 🔴 P0 | **PR #285 open** (base: foundation) | Merge after #275. Wiring deferred. | this wave |
+| 2a | **dir-021 Saddle.com manifest curation** | MED | **PR #286 open** (base: foundation) | Merge after #275. No wiring (Saddle hero is intentional). | this wave |
+| 2b | **dir-021 Lizard.com manifest curation** | MED | **PR #288 open** (base: foundation) | Merge after #275. No wiring (Lizard hero is intentional). | this wave |
+| 2c | dir-021 Ferret.com curation | MED | **BLOCKED on Carlo sync** | Ferret.com codebase has 0 verified-in-production Unsplash IDs to draw on. Slot definitions exist (`ferret-com:hero`, `category-care`, `category-health`). After `sync-images.mjs --force` runs Carlo-side, wire StockImage onto Ferret homepage. | — |
+| 2d | dir-021 Ferrets.com curation | MED | **BLOCKED on Carlo sync** | Same blocker as 2c — 0 production IDs, only slot definitions. | — |
+| 2e | dir-021 PetFoods.com curation | MED | **BLOCKED on Carlo sync** | Same blocker — 0 production IDs. | — |
+| 1d/1e wiring follow-up | StockImage on Vets/PetFood after sync | MED | **BLOCKED on Carlo sync** | Once `vets-co:hero` (texture-led) + `petfood-com:hero` (ingredients) manifest entries exist, wire StockImage onto both homepages. | next wave |
 | 3 | Phase-2 API expansion proposal | LOW | queued | ONLY after curated set proves direction. Propose to CSRO with quality filters + attribution + no build fragility. Do not build yet. | — |
 
 ## Status notes
-- **What's done (this session):** item 0 in-flight in `visual/logo-attribution-foundation` branch — Logo with conservative letter-spacing, ImageCard.creditUrl link support, StockImage curated-entry handling, production-safe placeholder.
-- **What's blocked:** real photographer names — sandbox/WebFetch returns 403 from Unsplash. Curated entries render "Source: Unsplash" linked to the photo page (QC §1 compliant — points at the canonical attribution surface, doesn't fabricate). Carlo runs `node scripts/sync-images.mjs --force` on his machine post-merge to overwrite with real names.
-- **Carlo needed?** No to execute. He WILL eyeball Tier-1 (Dog/Fish/Horses) fit — those PRs land in order 1a → 1b → 1c.
+
+### What shipped (this session, 8 PRs — one branch+PR per item per Carlo directive)
+
+| PR | Item | Branch | Subject |
+|----|------|--------|---------|
+| #275 | 0 | `visual/logo-attribution-foundation` | Logo + StockImage attribution + ImageCard.creditUrl + production-safe placeholder |
+| #277 | 1a | `visual/dir-021-1a-dog-com` | 6 Dog slots + 2 manifest entries + homepage hero strip |
+| #279 | 1b | `visual/dir-021-1b-fish-com` | 3 Fish manifest entries + homepage hero strip |
+| #281 | 1c | `visual/dir-021-1c-horses-com` | 3 Horses manifest entries + hero strip + brass winner band |
+| #282 | 1d | `visual/dir-021-1d-vets-co` | 3 Vets slot reconciliations (no humans per page TODO) |
+| #285 | 1e | `visual/dir-021-1e-petfood-com` | 4 new PetFood slots (conditions/brands/ingredients/methodology) |
+| #286 | 2a | `visual/dir-021-2a-saddle-com` | 3 Saddle manifest entries |
+| #288 | 2b | `visual/dir-021-2b-lizard-com` | 3 Lizard manifest entries (incl. scientific-name alt text) |
+
+All wave-1 PRs (1a–1e) and wave-2 PRs (2a, 2b) branch off `visual/logo-attribution-foundation` so each per-site PR is independent of the others; each re-targets to `main` automatically when #275 lands.
+
+### Attribution honesty
+
+All curated manifest entries are tagged `curated: true`. The `StockImage` component (PR #275) renders the credit as **"Source: Unsplash"** linked to the photo page where the canonical photographer credit lives, rather than fabricating a name. When Carlo runs `node scripts/sync-images.mjs --force` with `UNSPLASH_ACCESS_KEY` set, the entries are overwritten with real photographer names and the credit becomes "Photo: \<Name\> via Unsplash" automatically — no code change needed.
+
+### Sandbox limits documented
+
+- WebFetch returns 403 from Unsplash, so the bot cannot extract real photographer names directly.
+- The 26 verified-in-production Unsplash IDs in the codebase (across Dog/Fish/Horses/Saddle/Lizard) are the curatable pool — Ferret/Ferrets/PetFood/PetFoods/Vets have 0 production IDs to draw on, so their wave-2 curation is genuinely blocked on Carlo's sync.
+
+### Carlo needed?
+
+- **Eyeball** Dog (#277) / Fish (#279) / Horses (#281) preview deploys — homepage hero photo strips ship in those PRs
+- **1-minute sync run**: `export UNSPLASH_ACCESS_KEY=...; node scripts/sync-images.mjs --force` — unblocks (a) real photographer names on every `curated: true` entry across the 8 PRs and (b) wave-2 follow-up wiring for Vets/PetFood/Ferret/Ferrets/PetFoods
 
 ## DO NOT TOUCH
+
 - Other bots' lanes (COO routing/CI, Monetization affiliate/funnels, CSRO registers).
-- `Nav.tsx`/`Footer.tsx`/`ArticleLayout.tsx` are SHARED — coordinate via PR before structural change. (Item 0 touches Nav + Footer for Logo adoption — minimal, drop-in for inline text; coordination request in the item-0 PR description.)
+- `Nav.tsx` / `Footer.tsx` / `ArticleLayout.tsx` are SHARED — coordinate via PR before structural change. PR #275 wires `<Logo>` as a drop-in for the inline text in Nav + Footer — minimal, stylistic, not structural.
 - Never commit API keys/secrets. No CI/Vercel photo-API wiring (Carlo policy 2026-05-31).
 - **No spend on logos.** $0 typographic wordmarks only.
 - QC §1: no AI-generated humans or animals, no fake headshots, preserve photographer attribution.
