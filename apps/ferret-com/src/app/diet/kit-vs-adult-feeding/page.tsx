@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function KitVsAdultFeedingPage() {
                 { label: 'Adult Maintenance', href: '#adult' },
                 { label: 'Senior Feeding', href: '#senior' },
                 { label: 'Pregnant & Lactating Jills', href: '#jills' },
+                { label: 'A Ferret-Specific Diet to Build On', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -116,6 +117,38 @@ export default function KitVsAdultFeedingPage() {
           <p>
             Reproducing females have the highest nutritional demands of any life stage. A pregnant or lactating jill needs abundant high-protein, high-fat, calorie-dense food available free-choice to support the litter and her own condition, sitting at or above the top of the ferret macronutrient range. Underfeeding at this stage risks both the jill and the kits. Breeding-stage nutrition is specialized, and anyone breeding ferrets should work with a veterinarian and experienced mentor rather than relying on general guidance.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Ferret-Specific Diet to Build On</h2>
+          <p>
+            Whichever life stage your ferret is in, a ferret-specific kibble that hits the macronutrient window is a sound foundation — and rotating two or three such diets from kithood is the best defense against food fixation. The pick below is one widely stocked option; pair it with a second appropriate brand for variety. Documented-spec selection, not a hands-on test.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-premium-diet"
+            badge="Ferret-Specific Diet"
+            badgeEmoji="🛒"
+            name="Marshall Premium Ferret Diet"
+            subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
+            score={8.0}
+            description={
+              <p>Formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a sensible component of the two-to-three-brand rotation this page recommends to prevent food fixation. The ingredient panel is imperfect (some plant protein) but acceptable for healthy animals, and it is widely available at short notice.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
+              { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'National chain pet retail' },
+            ]}
+            pros={['Ferret-specific formulation', 'Works across life stages', 'Widely available for rotation', 'Affordable per pound']}
+            cons={['Higher carb than premium tier', 'Plant protein in ingredient list — rotate with a premium diet']}
+            price="$15–25 / 4 lb"
+            ctaText="Find Marshall Premium Ferret Diet"
+            ctaHref="/go/marshall/premium-ferret-diet?s=diet-kit-vs-adult-feeding"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="premium-ferret-diet"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

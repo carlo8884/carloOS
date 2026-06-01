@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -66,6 +66,7 @@ export default function WholePreyVsKibblePage() {
                 { label: 'Food Safety', href: '#safety' },
                 { label: 'Nutritional Reliability', href: '#reliability' },
                 { label: 'A Realistic Recommendation', href: '#recommendation' },
+                { label: 'A Starter Pick for Each Model', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -134,6 +135,63 @@ export default function WholePreyVsKibblePage() {
           <p>
             There is no single correct answer, but a few defensible patterns emerge. For a first-time owner without an exotic-mammal vet already lined up, a high-quality low-carb kibble is the lower-risk starting point — it is forgiving, safe, and nutritionally reliable. For a committed keeper with freezer space and good kitchen discipline, a well-balanced raw or whole-prey diet is the closest match to ferret physiology and may pay dividends in dental health and stool quality. A pragmatic middle path — premium kibble as a base, with whole-prey or raw supplementation a few times a week — captures much of the upside of both while keeping a safe, convenient fallback. Whatever you choose, transition gradually: ferrets imprint on food in their first six months and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>).
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Starter Pick for Each Model</h2>
+          <p>
+            If the comparison above leaves you leaning one way, here is a defensible starting point for each model — and, for the pragmatic middle path, both together: a premium low-carb kibble as the base with frozen whole prey for supplementation. These are documented-spec selections, not hands-on tests.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Kibble Model"
+            badgeEmoji="🥇"
+            name="Wysong Epigen 90"
+            subtitle="Starch-free premium kibble — the lower-risk base diet"
+            score={9.3}
+            winner
+            description={
+              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use, and the lower-risk starting point for a first-time owner. Shelf-stable, easy to free-feed, and trivial to hand to a sitter — the convenience advantages that make kibble the practical default — while still landing close to the obligate-carnivore macro window. Also the natural base for the middle-path approach.</p>
+            }
+            specs={[
+              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Convenience', value: 'High — shelf-stable', highlight: 'good' },
+              { label: 'Food-safety risk', value: 'Low', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct + specialty pet retail' },
+            ]}
+            pros={['Lowest commercial carb load in wide ferret use', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Good base for the middle path']}
+            cons={['Premium price', 'Less dental abrasion than whole prey']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
+          <ReviewCard
+            id="frozen-feeder-prey"
+            badge="Whole-Prey Model"
+            badgeEmoji="🧊"
+            name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
+            subtitle="Pre-balanced whole prey for the raw model or middle-path supplementation"
+            score={8.4}
+            description={
+              <p>For the committed keeper with freezer space and kitchen discipline, frozen whole prey is the closest match to ferret physiology — intact muscle, organ, and bone in natural proportions, with the dental and stool-quality benefits raw feeders report. It also serves the middle path well as a few-times-a-week supplement on top of a kibble base. Freeze for at least 30 days, thaw in the refrigerator, and follow the food-safety discipline in our <a href="/diet/raw-feeding-guide">raw feeding guide</a>.</p>
+            }
+            specs={[
+              { label: 'Biological fit', value: 'Closest to natural diet', highlight: 'good' },
+              { label: 'Calcium balance', value: 'Built-in (intact bone)', highlight: 'good' },
+              { label: 'Food-safety effort', value: 'Higher', highlight: 'warn' },
+              { label: 'Freezer space', value: 'Required', highlight: 'warn' },
+            ]}
+            pros={['Best biological match', 'Natural calcium-to-phosphorus ratio', 'Strong dental abrasion', 'Works as a supplement or a sole diet']}
+            cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
+            price="Varies by size and quantity"
+            ctaText="Browse Frozen Feeder Prey"
+            ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="frozen-feeder-mice"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

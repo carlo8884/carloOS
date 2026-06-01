@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -63,6 +63,7 @@ export default function TransitioningFoodsPage() {
                 { label: 'Tricks for Stubborn Ferrets', href: '#tricks' },
                 { label: 'Switching Between Diet Types', href: '#types' },
                 { label: 'Warning Signs to Stop', href: '#warnings' },
+                { label: 'A Meat-Based Topper Pick', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -184,6 +185,38 @@ export default function TransitioningFoodsPage() {
             <li><strong>Refusal to eat the mixed food</strong> — return to the old food to maintain calories, then slow down.</li>
             <li><strong>Lethargy, weakness, or weight loss</strong> — stop and contact an exotic-pet veterinarian; these can signal more than a fussy palate.</li>
           </ul>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Meat-Based Topper Pick</h2>
+          <p>
+            A meat-based, sugar-free topper or broth over the new food is one of the most reliable tricks for coaxing a hesitant ferret to start eating it. The key is a clean panel — animal protein, no added sugar or grain. Documented-spec selection, not a hands-on test.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="meat-topper"
+            badge="Transition Aid"
+            badgeEmoji="🥄"
+            name="Meat-Based Food Topper / Gravy (Sugar-Free)"
+            subtitle="Animal-protein topper to coax a reluctant eater onto new food"
+            score={8.1}
+            description={
+              <p>A meat-based topper or broth, drizzled over the new food, lends the familiar smell of meat to an unfamiliar kibble and can tip a hesitant ferret into trying it. Choose a single-protein, sugar-free formulation — skip anything sweetened with molasses, honey, or fruit, per our <a href="/diet/safe-treats">safe treats guide</a>. Use a small amount and count it against the day's intake; the topper is a bridge, not a meal.</p>
+            }
+            specs={[
+              { label: 'Base', value: 'Animal protein', highlight: 'good' },
+              { label: 'Added sugar', value: 'None (choose plain)', highlight: 'good' },
+              { label: 'Use', value: 'Transition aid, sparingly' },
+              { label: 'Texture', value: 'Pourable gravy / broth' },
+            ]}
+            pros={['Lends familiar meat aroma to new food', 'Sugar-free options widely available', 'Useful for medication and recovery feeding too']}
+            cons={['Calorie-dense — portion carefully', 'Read the panel; many toppers are sweetened']}
+            price="$5–12"
+            ctaText="Find a Meat-Based Topper"
+            ctaHref="/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="meat-based-food-topper"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

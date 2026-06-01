@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function SafeTreatsPage() {
                 { label: 'Dangerous Foods', href: '#dangerous' },
                 { label: 'How Much, How Often', href: '#dosing' },
                 { label: 'Treats as Training Tools', href: '#training' },
+                { label: 'A Meat-Based Treat Pick', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -126,6 +127,38 @@ export default function SafeTreatsPage() {
           <p>
             A high-value meat treat is the most effective reward for litter and bite training and for building trust with a new ferret. A meat-based paste is especially useful because it is delivered slowly and holds a ferret's attention. Used this way — small, frequent, meat-based — treats earn their place. The temptation to reach for the convenient sugary products on the shelf is exactly what to resist.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Meat-Based Treat Pick</h2>
+          <p>
+            A single-ingredient freeze-dried meat treat is the cleanest way to honour the one rule above — no sugar, no grain, just animal protein. This is a documented-spec selection based on published ingredient panels, not a hands-on test.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-freeze-dried-treats"
+            badge="Meat-Based Treat"
+            badgeEmoji="🥩"
+            name="Wysong Single-Ingredient Freeze-Dried Treats"
+            subtitle="Single-protein freeze-dried treat, no added sugar or grain"
+            score={8.6}
+            description={
+              <p>A freeze-dried treat whose ingredient panel is a single named animal protein — the structure this page recommends. No molasses, honey, fruit, or grain fillers. High-value and palatable, which makes it useful for litter and recall training as well as bonding. Use sparingly: treats sit on top of the base diet, not in place of it.</p>
+            }
+            specs={[
+              { label: 'Ingredient', value: 'Single named meat', highlight: 'good' },
+              { label: 'Added sugar', value: 'None', highlight: 'good' },
+              { label: 'Grain', value: 'None', highlight: 'good' },
+              { label: 'Format', value: 'Freeze-dried' },
+            ]}
+            pros={['Single-ingredient animal protein', 'No added sugar or grain', 'High-value training reward', 'Long shelf life']}
+            cons={['Pricier per ounce than bulk treats', 'Still calorie-dense — portion carefully']}
+            price="$8–15 / pack"
+            ctaText="Find Wysong Freeze-Dried Treats"
+            ctaHref="/go/wysong/freeze-dried-treats?s=diet-safe-treats"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="freeze-dried-treats"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>
