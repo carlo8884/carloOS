@@ -833,6 +833,266 @@ export const Ingredients: Ingredient[] = [
     ],
     relatedSlugs: ['chicken-by-product-meal', 'soybean-meal'],
   },
+
+  // ─── WAVE 3: PROTEINS — POULTRY, RED MEAT, NOVEL ─────────────────────────
+  {
+    slug: 'deboned-chicken',
+    name: 'Deboned Chicken',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, the AAFCO term is "Chicken" — defined as "the clean combination of flesh and skin with or without accompanying bone, derived from the parts or whole carcasses of chicken, exclusive of feathers, heads, feet and entrails." Marketing terms such as "deboned chicken" or "fresh deboned chicken" describe the bone-removed form of the same AAFCO ingredient.',
+    aafcoSection: '§9.3 (Chicken)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh muscle meat. Carries species disclosure. Note that fresh chicken is roughly 70% water; on the ingredient panel it is weighed wet (pre-cooking), so a formula listing fresh chicken first can still derive most of its dry-matter protein from a meal listed lower.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'nutro', 'fromm', 'natural-balance', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-meal', 'chicken-by-product-meal', 'chicken-fat', 'deboned-turkey'],
+  },
+  {
+    slug: 'deboned-turkey',
+    name: 'Deboned Turkey',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "Turkey" is defined as the clean combination of flesh and skin with or without accompanying bone, derived from the parts or whole carcasses of turkey, exclusive of feathers, heads, feet and entrails. "Deboned turkey" describes the bone-removed wet form of the same AAFCO ingredient.',
+    aafcoSection: '§9 (Turkey)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh muscle meat with full species disclosure. Like all fresh meats it is weighed wet on the panel. Turkey is a common base protein in limited-ingredient diets because it is moderately novel for dogs previously fed chicken or beef.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'natural-balance', 'nutro', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['turkey-meal', 'deboned-chicken', 'duck-meal'],
+  },
+  {
+    slug: 'turkey-meal',
+    name: 'Turkey Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: turkey meal is the dry rendered product from a combination of clean turkey flesh and skin with or without accompanying bone, exclusive of feathers, heads, feet and entrails, derived from the parts or whole carcasses of turkey.',
+    aafcoSection: '§9 (Turkey Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal — concentrated protein on a dry-matter basis with species disclosure. Functionally parallel to chicken meal; chosen for palatability variety or as a moderately novel protein.',
+    commonIn: ['acana', 'orijen', 'fromm', 'victor', 'nutro', 'wellness', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-meal', 'deboned-turkey', 'duck-meal'],
+  },
+  {
+    slug: 'duck-meal',
+    name: 'Duck Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: duck meal is the dry rendered product from a combination of clean duck flesh and skin with or without accompanying bone, exclusive of feathers, heads, feet and entrails, derived from the parts or whole carcasses of duck.',
+    aafcoSection: '§9 (Duck Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Duck is one of the more common novel proteins used in limited-ingredient and elimination-style diets because fewer dogs have prior exposure to it than to chicken or beef.',
+    commonIn: ['acana', 'orijen', 'fromm', 'natural-balance', 'nulo', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['turkey-meal', 'lamb-meal', 'deboned-turkey'],
+  },
+  {
+    slug: 'lamb-meal',
+    name: 'Lamb Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: lamb meal is the rendered product from lamb tissues, exclusive of blood, hair, hoof, horn, hide trimmings, manure, and stomach and rumen contents except in such amounts as may occur unavoidably in good processing practices.',
+    aafcoSection: '§9 (Lamb Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Lamb became a popular "novel protein" in the 1990s; widespread use since then means it is no longer truly novel for many dogs, which matters for elimination-diet selection.',
+    commonIn: ['natural-balance', 'nutro', 'merrick', 'victor', 'diamond-pet-foods', 'taste-of-the-wild'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'WSAVA Global Nutrition Committee — Selecting a Pet Food Manufacturer',
+    ],
+    relatedSlugs: ['beef-meal', 'duck-meal', 'venison'],
+  },
+  {
+    slug: 'venison',
+    name: 'Venison',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "venison" / "deer" describes the clean flesh derived from deer (cervid) carcasses. As with all species-named meats, naming the species under AAFCO Model Regulation PF3 commits the manufacturer to that species as the source material.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species meat with species disclosure. Venison is one of the most-used genuinely novel proteins for canine elimination diets, because very few pets have prior dietary exposure to deer. Supply is limited and the price tier is correspondingly high.',
+    commonIn: ['natural-balance', 'taste-of-the-wild', 'instinct', 'ziwipeak'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['lamb-meal', 'rabbit', 'bison'],
+  },
+  {
+    slug: 'rabbit',
+    name: 'Rabbit',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "rabbit" describes the clean flesh derived from rabbit carcasses. Species naming under AAFCO Model Regulation PF3 commits the manufacturer to rabbit as the source material when the species is named on the principal display panel.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species meat. Rabbit is a genuinely novel protein for most pets and is a frequent choice in veterinary elimination diets. Low fat content and limited supply make it a premium-tier ingredient.',
+    commonIn: ['instinct', 'natural-balance', 'ziwipeak'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['venison', 'bison', 'lamb-meal'],
+  },
+  {
+    slug: 'bison',
+    name: 'Bison',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "bison" / "buffalo" describes the clean flesh derived from bison carcasses. Naming the species under AAFCO Model Regulation PF3 commits the manufacturer to bison as the named source.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species red meat. Often positioned in "ancestral"/"prairie" grain-free lines. Bison is moderately novel — less common than beef but more common than venison or rabbit, so its novelty for an individual dog depends on exposure history.',
+    commonIn: ['taste-of-the-wild', 'instinct', 'diamond-pet-foods'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'AAFCO Model Regulations for Pet Food and Specialty Pet Food (PF3, product naming)',
+    ],
+    relatedSlugs: ['beef-meal', 'venison', 'rabbit'],
+  },
+  {
+    slug: 'pork-meal',
+    name: 'Pork Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: pork meal is the rendered product from clean pork tissues, exclusive of blood, hair, hoof, hide trimmings, manure, and stomach and rumen contents except in amounts unavoidable in good processing.',
+    aafcoSection: '§9 (Pork Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species rendered meal with species disclosure. Pork is moderately novel for dogs (less common than chicken/beef in mainstream diets) and is highly palatable. Used both as a primary protein and as a palatant.',
+    commonIn: ['victor', 'nulo', 'instinct'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['beef-meal', 'lamb-meal', 'chicken-meal'],
+  },
+  {
+    slug: 'meat-and-bone-meal',
+    name: 'Meat and Bone Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Meat and Bone Meal is the rendered product from mammal tissues, including bone, exclusive of any added blood, hair, hoof, horn, hide trimmings, manure, stomach and rumen contents except in such amounts as may occur unavoidably in good processing practices." It must not contain extraneous materials and the calcium-to-phosphorus ratio is specified.',
+    aafcoSection: '§9 (Meat and Bone Meal)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic — no species disclosure. "Meat" under AAFCO denotes mammalian tissue without identifying which mammal, so this ingredient carries a low disclosure tier. The ingredient itself is AAFCO-defined and not inherently unsafe; the disclosure gap is the reason for the scoring.',
+    commonIn: ['pedigree', 'beneful', 'cesar'],
+    concernsIfAny: [
+      'No species disclosure — "meat" denotes unspecified mammalian tissue. For allergy-management diets this provides insufficient information for protein avoidance.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['poultry-by-product-meal', 'meat-by-product', 'beef-meal'],
+  },
+  {
+    slug: 'poultry-by-product-meal',
+    name: 'Poultry By-Product Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Poultry By-Product Meal consists of the ground, rendered, clean parts of the carcass of slaughtered poultry, such as necks, feet, undeveloped eggs and intestines, exclusive of feathers except in such amounts as might occur unavoidably in good processing practices."',
+    aafcoSection: '§9 (Poultry By-Product Meal)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic poultry — "poultry" can mean chicken, turkey, or a mix, so this ingredient does not disclose the source species. The "by-product" portion covers nutritionally dense organ tissue and is not a quality indictment; the low scoring is driven by the missing species name, not by the by-product category.',
+    commonIn: ['pedigree', 'friskies', 'iams', 'eukanuba'],
+    concernsIfAny: [
+      'No species disclosure — "poultry" can be chicken, turkey, or a mix. Named-species forms ("chicken by-product meal") carry more disclosure.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'WSAVA Global Nutrition Committee — Selecting a Pet Food Manufacturer',
+    ],
+    relatedSlugs: ['chicken-by-product-meal', 'meat-and-bone-meal', 'meat-by-product'],
+  },
+  {
+    slug: 'meat-by-product',
+    name: 'Meat By-Product',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Meat By-Products is the non-rendered, clean parts, other than meat, derived from slaughtered mammals." It includes lungs, spleen, kidneys, brain, livers, blood, bone, and stomachs and intestines freed of their contents; it does not include hair, horns, teeth, and hooves.',
+    aafcoSection: '§9 (Meat By-Products)',
+    scoringRubric: 'Low',
+    scoringNote:
+      'Generic and non-rendered — "meat" denotes unspecified mammalian tissue. Organ content is nutritionally dense, so "by-product" is not a quality verdict; the low disclosure tier reflects the absence of a species name. Common in wet/canned mass-market formulas.',
+    commonIn: ['pedigree', 'cesar', 'friskies', 'fancy-feast'],
+    concernsIfAny: [
+      'No species disclosure — provides insufficient information for protein-avoidance diets.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['chicken-by-product-meal', 'meat-and-bone-meal', 'poultry-by-product-meal'],
+  },
+  {
+    slug: 'egg-product',
+    name: 'Egg Product',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Dried Egg Product" is the dried whole poultry egg (or a combination of whole egg, egg whites, and yolks), free of shell or other non-egg materials except in unavoidable trace amounts. Whole egg delivers a near-ideal amino-acid profile.',
+    aafcoSection: '§9 (Dried Egg Product)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Egg protein has one of the highest biological values of any food protein and is a digestibility benchmark in nutrition science. Disclosure is clear (egg). Used as a high-quality supplemental protein and binder.',
+    commonIn: ['orijen', 'acana', 'fromm', 'wellness', 'nulo', 'instinct'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['deboned-chicken', 'chicken-meal'],
+  },
+  {
+    slug: 'dried-plain-beet-pulp',
+    name: 'Beet Pulp',
+    category: 'Fiber',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: "Dried Plain Beet Pulp is the dried residue from sugar beets which has been cleaned and freed from crowns, leaves, and sand, and which has been extracted in the process of manufacturing sugar." It contains essentially no residual sugar after extraction.',
+    aafcoSection: '§9 (Dried Plain Beet Pulp)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A moderately fermentable fiber that supports stool quality and provides substrate for hindgut microbiota. The "sugar beet" name leads to a common misconception that it adds sugar — the sugar is removed during extraction. Not a low-quality filler; it serves a specific fiber function.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'iams', 'eukanuba', 'purina-pro-plan'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['pumpkin', 'chicory-root-inulin', 'cellulose'],
+  },
 ]
 
 // ─── Selectors ────────────────────────────────────────────────────────────
