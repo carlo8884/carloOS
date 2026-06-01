@@ -50,15 +50,20 @@ export default function VetsHealthHubPage() {
         <Link key="diabetes-in-dogs-cats" href="/health/diabetes-in-dogs-cats" className="text-sm text-brand-primary no-underline hover:underline">Diabetes In Dogs Cats</Link>
         <Link key="dog-eye-conditions" href="/health/dog-eye-conditions" className="text-sm text-brand-primary no-underline hover:underline">Dog Eye Conditions</Link>
         <Link key="dog-vaccinations-guide" href="/health/dog-vaccinations-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Vaccinations Guide</Link>
+        <Link key="ear-infections-dogs" href="/health/ear-infections-dogs" className="text-sm text-brand-primary no-underline hover:underline">Ear Infections Dogs</Link>
         <Link key="emergency-signs" href="/health/emergency-signs" className="text-sm text-brand-primary no-underline hover:underline">Emergency Signs</Link>
+        <Link key="bloat-gdv-dogs" href="/health/bloat-gdv-dogs" className="text-sm text-brand-primary no-underline hover:underline">Bloat GDV Dogs</Link>
+        <Link key="feline-lower-urinary-tract-disease" href="/health/feline-lower-urinary-tract-disease" className="text-sm text-brand-primary no-underline hover:underline">Feline Lower Urinary Tract Disease</Link>
         <Link key="heartworm-in-dogs" href="/health/heartworm-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Heartworm In Dogs</Link>
         <Link key="heat-stroke-dogs" href="/health/heat-stroke-dogs" className="text-sm text-brand-primary no-underline hover:underline">Heat Stroke Dogs</Link>
         <Link key="hyperthyroidism-cats" href="/health/hyperthyroidism-cats" className="text-sm text-brand-primary no-underline hover:underline">Hyperthyroidism Cats</Link>
+        <Link key="hypothyroidism-dogs" href="/health/hypothyroidism-dogs" className="text-sm text-brand-primary no-underline hover:underline">Hypothyroidism Dogs</Link>
         <Link key="intestinal-parasites" href="/health/intestinal-parasites" className="text-sm text-brand-primary no-underline hover:underline">Intestinal Parasites</Link>
         <Link key="kidney-disease-cats" href="/health/kidney-disease-cats" className="text-sm text-brand-primary no-underline hover:underline">Kidney Disease Cats</Link>
         <Link key="leptospirosis" href="/health/leptospirosis" className="text-sm text-brand-primary no-underline hover:underline">Leptospirosis</Link>
         <Link key="pain-management-dogs" href="/health/pain-management-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pain Management Dogs</Link>
         <Link key="pancreatitis-in-dogs" href="/health/pancreatitis-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pancreatitis In Dogs</Link>
+        <Link key="periodontal-disease-pets" href="/health/periodontal-disease-pets" className="text-sm text-brand-primary no-underline hover:underline">Periodontal Disease Pets</Link>
         <Link key="pain-signs-dogs" href="/health/pain-signs-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pain Signs Dogs</Link>
         <Link key="preventive-care-schedule" href="/health/preventive-care-schedule" className="text-sm text-brand-primary no-underline hover:underline">Preventive Care Schedule</Link>
         <Link key="senior-bloodwork-guide" href="/health/senior-bloodwork-guide" className="text-sm text-brand-primary no-underline hover:underline">Senior Bloodwork Guide</Link>
