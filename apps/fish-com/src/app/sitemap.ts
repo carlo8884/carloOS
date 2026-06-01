@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: 'https://fish.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
-    { url: 'https://fish.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://fish.com/data', lastModified: now, changeFrequency: 'monthly', priority: 0.30 },
     { url: 'https://fish.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://fish.com/equipment', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
