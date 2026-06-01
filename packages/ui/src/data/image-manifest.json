@@ -184,5 +184,38 @@
     "alt": "A horse and rider in an all-purpose schooling session",
     "query": "horse stable grooming",
     "curated": true
+  },
+  "saddle-com:hero": {
+    "provider": "unsplash",
+    "id": "1553284965-83fd3e82fa5a",
+    "url": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1553284965-83fd3e82fa5a",
+    "alt": "A dressage horse in tack at the canter — Saddle.com hero photo (existing inline use already verified-in-production)",
+    "query": "english jumping saddle leather",
+    "curated": true
+  },
+  "saddle-com:cornerstone-fit": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse and rider in an all-purpose schooling session — saddle fit reference",
+    "query": "saddle fit horse withers",
+    "curated": true
+  },
+  "saddle-com:category-jumping": {
+    "provider": "unsplash",
+    "id": "1474546652694-a33dd8161d66",
+    "url": "https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1474546652694-a33dd8161d66",
+    "alt": "A show jumper mid-flight over a fence",
+    "query": "show jumping saddle close up",
+    "curated": true
   }
 }
