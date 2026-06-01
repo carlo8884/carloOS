@@ -721,6 +721,13 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'CO2 (KH/pH)', href: '/tools/co2-calculator' },
         ],
       },
+      {
+        heading: 'Fish.com',
+        links: [
+          { label: 'Aquarium Calculators', href: '/tools' },
+          { label: 'Data Partnerships', href: '/data' },
+        ],
+      },
     ],
     defaultOgImage: 'https://fish.com/og-default.jpg',
   },

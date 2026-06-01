@@ -62,10 +62,32 @@ const TOOLS = [
   },
 ]
 
+// ItemList enumerating the calculator suite — the GEO citation magnet for the
+// flagship tools hub (AI answer engines surface the individual SoftwareApplications).
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Fish.com aquarium calculators',
+  itemListElement: TOOLS.map((tool, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'SoftwareApplication',
+      name: tool.title,
+      description: tool.desc,
+      url: `https://fish.com${tool.href}`,
+      applicationCategory: 'UtilityApplication',
+      operatingSystem: 'Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+  })),
+}
+
 export default function ToolsHub() {
   return (
     <>
       <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={itemListSchema} />
       <>
       {/* HERO */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
