@@ -217,7 +217,7 @@ export default function HomePage() {
       </section>
 
       {/* ── HERO PHOTO — flagship visual moment ──────────────────────────── */}
-      <div className="bg-brand-dark">
+      <div className="bg-brand-white px-container-sm sm:px-container">
         <StockImage manifestKey="fish-com:hero" priority aspect="16:9" variant="inline" />
       </div>
 
