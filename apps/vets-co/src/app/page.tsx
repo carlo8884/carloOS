@@ -13,7 +13,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -365,6 +365,16 @@ export default function VetsHomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── HERO PHOTO — clinical/equipment, no staged scenes, manifest-managed ── */}
+      <div
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-white)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          <StockImage manifestKey="vets-co:hero" priority aspect="16:9" variant="wide" />
+        </div>
+      </div>
 
       {/* ── DARK TRUST BAR ──────────────────────────────────────────── */}
       <div

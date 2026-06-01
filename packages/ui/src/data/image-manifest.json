@@ -305,5 +305,128 @@
     "alt": "A bearded dragon (Pogona vitticeps) basking under enclosure lighting",
     "query": "bearded dragon basking",
     "curated": true
+  },
+
+  "petfood-com:hero": {
+    "provider": "unsplash",
+    "id": "1490818387583-1baba5e638af",
+    "url": "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1490818387583-1baba5e638af",
+    "alt": "Whole-food ingredients — grains, pulses, and produce — arranged on a wooden surface",
+    "query": "raw ingredients flat lay wood board",
+    "curated": true
+  },
+  "petfood-com:nutrition-hero": {
+    "provider": "unsplash",
+    "id": "1505253716362-afaea1d3d1af",
+    "url": "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1505253716362-afaea1d3d1af",
+    "alt": "Bowls of dried grains, legumes, and seeds on a neutral background",
+    "query": "grains legumes seeds bowls",
+    "curated": true
+  },
+  "petfood-com:diets-hero": {
+    "provider": "unsplash",
+    "id": "1540420773420-3366772f4999",
+    "url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1540420773420-3366772f4999",
+    "alt": "Fresh leafy green vegetables prepared on a board",
+    "query": "fresh vegetables greens prepared board",
+    "curated": true
+  },
+  "petfood-com:brands-hero": {
+    "provider": "unsplash",
+    "id": "1589924691995-400dc9ecc119",
+    "url": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1589924691995-400dc9ecc119",
+    "alt": "Close-up of dry kibble pet food",
+    "query": "kibble dry pet food close up",
+    "curated": true
+  },
+  "petfood-com:ingredients-hero": {
+    "provider": "unsplash",
+    "id": "1607623814075-e51df1bdc82f",
+    "url": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1607623814075-e51df1bdc82f",
+    "alt": "Raw protein and whole-food ingredients on a clean surface",
+    "query": "raw meat protein on clean surface",
+    "curated": true
+  },
+  "petfood-com:compare-hero": {
+    "provider": "unsplash",
+    "id": "1556910103-1c02745aae4d",
+    "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1556910103-1c02745aae4d",
+    "alt": "An arrangement of contrasting whole-food ingredients viewed from above",
+    "query": "ingredients flat lay neutral",
+    "curated": true
+  },
+
+  "vets-co:hero": {
+    "provider": "unsplash",
+    "id": "1581595219315-a187dd40c322",
+    "url": "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1581595219315-a187dd40c322",
+    "alt": "A stethoscope resting on a warm wooden surface",
+    "query": "stethoscope on wooden desk",
+    "curated": true
+  },
+  "vets-co:health-hero": {
+    "provider": "unsplash",
+    "id": "1532012197267-da84d127e765",
+    "url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1532012197267-da84d127e765",
+    "alt": "Reference books arranged on a library shelf",
+    "query": "medical reference books shelf",
+    "curated": true
+  },
+  "vets-co:insurance-hero": {
+    "provider": "unsplash",
+    "id": "1554224155-6726b3ff858f",
+    "url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1554224155-6726b3ff858f",
+    "alt": "Paperwork and a calculator on a desk",
+    "query": "documents paperwork desk calculator",
+    "curated": true
+  },
+  "vets-co:guides-hero": {
+    "provider": "unsplash",
+    "id": "1519494026892-80bbd2d6fd0d",
+    "url": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1519494026892-80bbd2d6fd0d",
+    "alt": "A clean, well-lit clinical interior",
+    "query": "clinic interior equipment",
+    "curated": true
+  },
+  "vets-co:find-a-vet-hero": {
+    "provider": "unsplash",
+    "id": "1516841273335-e39b37888115",
+    "url": "https://images.unsplash.com/photo-1516841273335-e39b37888115?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1516841273335-e39b37888115",
+    "alt": "The exterior entrance of a clinic building",
+    "query": "clinic building entrance architecture",
+    "curated": true
   }
 }

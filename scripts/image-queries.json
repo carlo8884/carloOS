@@ -439,5 +439,61 @@
     "provider": "either",
     "alt": "A senior dog being examined during a wellness visit",
     "orientation": "landscape"
+  },
+
+  "petfood-com:nutrition-hero": {
+    "query": "grains legumes seeds bowls",
+    "provider": "unsplash",
+    "alt": "Bowls of grains, legumes, and seeds on a neutral background",
+    "orientation": "landscape"
+  },
+  "petfood-com:diets-hero": {
+    "query": "fresh vegetables greens prepared board",
+    "provider": "unsplash",
+    "alt": "Fresh leafy vegetables prepared on a board",
+    "orientation": "landscape"
+  },
+  "petfood-com:brands-hero": {
+    "query": "kibble dry pet food close up",
+    "provider": "unsplash",
+    "alt": "Close-up of dry kibble pet food",
+    "orientation": "landscape"
+  },
+  "petfood-com:ingredients-hero": {
+    "query": "raw meat protein on clean surface",
+    "provider": "unsplash",
+    "alt": "Raw meat protein on a clean surface",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-hero": {
+    "query": "spices ingredients flat lay neutral",
+    "provider": "unsplash",
+    "alt": "An arrangement of contrasting ingredients viewed from above",
+    "orientation": "landscape"
+  },
+
+  "vets-co:health-hero": {
+    "query": "medical reference books shelf",
+    "provider": "unsplash",
+    "alt": "Medical reference books on a shelf",
+    "orientation": "landscape"
+  },
+  "vets-co:insurance-hero": {
+    "query": "documents paperwork desk calculator",
+    "provider": "unsplash",
+    "alt": "Paperwork and a calculator on a desk",
+    "orientation": "landscape"
+  },
+  "vets-co:guides-hero": {
+    "query": "clinic interior equipment",
+    "provider": "unsplash",
+    "alt": "A clean clinical interior with equipment",
+    "orientation": "landscape"
+  },
+  "vets-co:find-a-vet-hero": {
+    "query": "clinic building entrance architecture",
+    "provider": "unsplash",
+    "alt": "The exterior entrance of a clinic building",
+    "orientation": "landscape"
   }
 }

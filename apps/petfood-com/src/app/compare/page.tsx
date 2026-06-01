@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -103,6 +103,10 @@ export default function CompareHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Compare</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-12">
+        <StockImage manifestKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" />
+      </div>
 
       <div className="px-container-sm sm:px-container py-12">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0 max-w-content-wide">

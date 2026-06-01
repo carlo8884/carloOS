@@ -33,7 +33,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -200,6 +200,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── HERO PHOTO — ingredient-forward, manifest-managed ─────────── */}
+      <div className="bg-brand-surface">
+        <div className="max-w-container mx-auto px-6 md:px-10 pb-16">
+          <StockImage manifestKey="petfood-com:hero" priority aspect="16:9" variant="wide" />
+        </div>
+      </div>
 
       {/* ── TRUST BAR (dark masthead) ─────────────────────────────────── */}
       <section className="bg-brand-dark text-brand-white py-6">
