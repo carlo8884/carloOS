@@ -67,7 +67,7 @@ export default function BestHeatersPage() {
             <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
             <CalloutBox variant="tip" title="Right-sizing wattage">
-              Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer.
+              Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer. Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link> to size for your tank volume and target temperature.
             </CalloutBox>
 
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">

@@ -161,6 +161,11 @@ export default function LifeStageHubPage() {
             <Link href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM</Link> — relevant
             context for adult dogs and large-breed-growth diet selection.
           </li>
+          <li>
+            <Link href="/tools/food-cost-calculator">Food Cost Calculator</Link> — compare $/day
+            across SKUs at a given feeding rate to make life-stage diet choices on cost-comparable
+            footing.
+          </li>
         </ul>
 
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

@@ -95,6 +95,15 @@ export default function HealthHubPage() {
             </li>
           ))}
         </ul>
+
+        <p className="text-sm text-brand-text-light mt-8 max-w-2xl">
+          Tracking weight changes across the year is the most reliable early-warning signal for
+          colic risk, ulcers, and metabolic conditions. Score your horse with the{' '}
+          <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
+            equine body-condition score tool
+          </Link>{' '}
+          (Henneke 1–9 scale, photo-anchored).
+        </p>
       </div>
 
       {/* Email Capture */}

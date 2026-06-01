@@ -31,7 +31,7 @@ export default function BestAquariumLightingPage() {
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">PAR — What Actually Matters</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine. Running CO2 with these high-PAR lights? Use the <Link href="/tools/co2-calculator" className="text-brand-primary no-underline hover:underline">CO2 calculator</Link> to set a safe drop-checker target.</p>
             </div>
             <ScoreMethodology />
             <ReviewCard id="hygger" badge="Best Planted (Budget)" badgeEmoji="🌿" name="Hygger 957 LED Aquarium Light" subtitle="Programmable · Good PAR efficiency · Under $60 · 7 independently controlled channels" score={9.2} winner
