@@ -43,7 +43,16 @@ export default function BlueTonguedSkinkPage() {
         <p><strong>Tiliqua scincoides scincoides (Eastern BTS / Australian):</strong> Wild-caught imports are not legally available in the US — US population is captive-bred. Typically the most docile personality and the most recommended for beginners. Northern BTS (T. s. intermedia) are the most commonly captive-bred in the US.</p>
         <p><strong>Tiliqua gigas (Indonesian/Merauke/Irian Jaya):</strong> Various Indonesian locality BTS legally imported. Generally slightly more variable in personality — some animals are more defensive initially than Australian species. All become manageable with consistent handling.</p>
         <p><strong>Pygmy blue-tongued skink (T. adelaidensis):</strong> Critically endangered, rarely captive-bred, entirely different care — not a practical pet option and their conservation status makes collecting inappropriate.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Blue Tongued Skink — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for blue tongued skink care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/blue%20tongued%20skink%20setup?s=species-blue-tongued-skink" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Blue Tongued Skink Setup on Amazon →</a>
+            <a href="/go/chewy-brand/blue%20tongued%20skink%20setup?s=species-blue-tongued-skink" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

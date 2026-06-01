@@ -41,7 +41,16 @@ export default function FrilledDragonPage() {
 
         <h2>Handling — Gradual Trust Building</h2>
         <p>Wild-caught frilled dragons are very difficult to tame and spend considerable time in defensive displays. Captive-bred juveniles, handled gently and consistently from 6-8 weeks old, become remarkably calm and interactive adults. The key is not forcing interaction but building positive associations: offer food from tongs then from the hand, allow the dragon to climb onto you voluntarily rather than grabbing, and keep initial sessions very short (5 minutes). A well-socialized adult frilled dragon is a genuinely impressive animal — large, responsive, and active in a way that smaller lizards cannot match.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Frilled Dragon — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for frilled dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/frilled%20dragon%20setup?s=species-frilled-dragon" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Frilled Dragon Setup on Amazon →</a>
+            <a href="/go/chewy-brand/frilled%20dragon%20setup?s=species-frilled-dragon" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }
