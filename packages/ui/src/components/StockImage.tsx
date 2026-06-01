@@ -30,6 +30,15 @@ interface ManifestEntry {
   description?: string
   alt: string
   query: string
+  /**
+   * Hand-curated entries (added without running sync-images.mjs from
+   * inside the sandbox where API access is blocked) set this flag.
+   * The credit string renders as "Source: <Provider>" with a link to
+   * the source URL instead of fabricating a photographer name.
+   * sync-images.mjs --force overwrites the entry with real attribution
+   * when next run with API keys.
+   */
+  curated?: boolean
 }
 
 const manifest = manifestData as unknown as Record<string, ManifestEntry>
@@ -74,7 +83,12 @@ export function StockImage({
   }
 
   const providerLabel = entry.provider === 'unsplash' ? 'Unsplash' : 'Pexels'
-  const credit = `Photo: ${entry.photographer} via ${providerLabel}`
+  // For curated entries we don't know the photographer yet (sandbox has no
+  // API access). Render "Source: Unsplash" with a link to the photo page —
+  // honest, points to where the photographer credit actually lives.
+  const credit = entry.curated
+    ? `Source: ${providerLabel}`
+    : `Photo: ${entry.photographer} via ${providerLabel}`
 
   return (
     <ImageCard
@@ -82,6 +96,7 @@ export function StockImage({
       alt={alt || entry.alt}
       caption={caption}
       credit={credit}
+      creditUrl={entry.sourceUrl}
       aspect={aspect}
       variant={variant}
       priority={priority}
