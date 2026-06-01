@@ -41,7 +41,16 @@ export default function DiscusGuidePage() {
 
         <h2>Starting With Discus — Practical Advice</h2>
         <p>Source matters enormously. Wild-caught discus from reputable importers carry disease risk but can be magnificent in coloration and size. Farm-raised discus from quality breeders (particularly Southeast Asian farms — Thailand, Malaysia — known for consistency) offer more predictable health profiles. Avoid bulk-lot discount discus — the savings are illusory when disease management costs are factored in. Purchase from a vendor you can communicate with about the fish's history, what they have been fed, and what treatments have been given. A discus that arrives with a detailed care history is a discus you can continue caring for correctly.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Discus Guide — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for discus guide care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/discus%20guide%20tank%20setup?s=species-discus-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Discus Guide Setup on Amazon →</a>
+            <a href="/go/chewy-brand/discus%20guide%20tank%20setup?s=species-discus-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

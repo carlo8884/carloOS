@@ -50,7 +50,16 @@ export default function DiscusPage() {
 
         <h2>Group Dynamics</h2>
         <p>Discus are cichlids — they establish social hierarchies. A group of 6+ distributes aggression across the group so no single fish bears the full burden. Fewer than 6 often results in 1–2 dominant fish relentlessly harassing the submissive fish until they stop eating and die. 6 minimum; 8–10 in a 75+ gallon tank allows stable hierarchies to form. Remove any fish that is being singled out for persistent aggression — isolated from the group, dark in color, and refusing food.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Discus — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for discus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/discus%20tank%20setup?s=species-discus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Discus Setup on Amazon →</a>
+            <a href="/go/chewy-brand/discus%20tank%20setup?s=species-discus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }
