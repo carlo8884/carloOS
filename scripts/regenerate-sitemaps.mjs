@@ -112,14 +112,27 @@ function dogComExtraRoutes() {
 
 const SITES = [
   { id: 'dog-com', domain: 'dog.com', extraRoutes: dogComExtraRoutes() },
-  { id: 'fish-com', domain: 'fish.com' },
+  {
+    id: 'fish-com',
+    domain: 'fish.com',
+    // /data is a low-priority data-partnerships page, deliberately downranked
+    // below editorial hubs (PR #368).
+    priorityOverrides: { '/data': 0.3 },
+  },
   { id: 'lizard-com', domain: 'lizard.com' },
   {
     id: 'saddle-com',
     domain: 'saddle.com',
     extraRoutes: SADDLE_BRAND_SLUGS.map((s) => `/brands/${s}`),
   },
-  { id: 'vets-co', domain: 'vets.co' },
+  {
+    id: 'vets-co',
+    domain: 'vets.co',
+    // /vets directory hub + [state]/[city] pages are noIndex placeholder/sample
+    // data until a verified data source lands ([state]/[city] are dynamic and
+    // already excluded; the bare /vets hub must be excluded explicitly). IR P1-1.
+    noIndexRoutes: ['/vets'],
+  },
   // Added 2026-05-31: extend coverage to the remaining 5 production sites
   // so sitemap regeneration is comprehensive post-mega-wave.
   { id: 'horses-com', domain: 'horses.com' },
@@ -223,9 +236,11 @@ function frequencyFor(route) {
 
 function generateSitemap(site, routes) {
   const baseUrl = `https://${site.domain}`
+  const priorityOverrides = site.priorityOverrides || {}
   const lines = routes.map((route) => {
     const url = route === '/' ? baseUrl : `${baseUrl}${route}`
-    const priority = priorityFor(route)
+    const priority =
+      route in priorityOverrides ? priorityOverrides[route] : priorityFor(route)
     const freq = frequencyFor(route)
     return `    { url: '${url}', lastModified: now, changeFrequency: '${freq}', priority: ${priority.toFixed(2)} },`
   })
@@ -252,6 +267,10 @@ for (const site of SITES) {
   const walked = listRoutes(site.id)
   const merged = new Set(walked)
   for (const r of site.extraRoutes || []) merged.add(r)
+  // Per-site noIndex overrides: routes whose page is rendered with
+  // `noIndex: true` metadata (placeholder/sample data, etc.). The walker
+  // can't see metadata, so these are listed explicitly and kept out.
+  for (const r of site.noIndexRoutes || []) merged.delete(r)
   const routes = Array.from(merged).sort((a, b) => a.localeCompare(b))
   totalRoutes += routes.length
   const sitemapPath = join(ROOT, 'apps', site.id, 'src/app/sitemap.ts')
