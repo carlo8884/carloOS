@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 import Link from 'next/link'
@@ -89,6 +89,8 @@ export default function AquariumSetupPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />
 
         <h2 id="size">Step 1 — Choose the Right Tank Size</h2>
         <p>The most common beginner mistake is starting with a small tank. Small tanks are harder to maintain, not easier — water parameters swing more dramatically, small errors have larger consequences, and you have fewer species options. Our recommendation: start with at least 20 gallons.</p>

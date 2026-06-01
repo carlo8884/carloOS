@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide — Warm Hide, Diet | Lizard.com', description: 'Complete leopard gecko care. Why they need a warm hide (not a basking spot), belly heat, diet of dubia and crickets, and how to prevent stuck shed on toes.', path: '/species/leopard-gecko', type: 'article' })
@@ -41,6 +41,8 @@ export default function LeopardGeckoPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+          <StockImage manifestKey="lizard-com:species-leopard-gecko" aspect="16:9" variant="inline" caption="A leopard gecko (Eublepharis macularius) in profile." priority />
 
           <p className="text-lg leading-relaxed italic mb-6" style={{ color: 'rgba(238,240,228,0.78)' }}>
             <strong className="not-italic">TL;DR.</strong> Leopard geckos thermoregulate via belly heat, not basking — set the warm hide floor to 88–92°F using a thermostat-controlled heat mat or deep heat projector. Provide three hides (warm, cool, moist), feed insect prey no wider than the gap between the eyes, dust calcium at every feeding, and check toes after every shed for stuck skin that strangulates circulation.

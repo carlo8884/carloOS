@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -82,6 +82,10 @@ export default function FishReviewsPage() {
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           Filters, heaters, lighting, and testing gear — ranked by aquarists using real performance data, not box claims.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:category-reviews" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* REVIEWS GRID */}

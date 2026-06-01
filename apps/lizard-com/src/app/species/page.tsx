@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -51,6 +51,10 @@ export default function SpeciesIndexPage() {
         <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: 'rgba(238,240,228,0.55)' }}>
           Science-based care guides for 50+ reptile and amphibian species. Every guide covers enclosure, temperatures, UVB requirements, feeding, and health.
         </p>
+      </div>
+
+      <div className="relative z-10 px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="lizard-com:category-species" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="relative z-10 px-container-sm sm:px-container py-12">

@@ -9,6 +9,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
+  StockImage,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -156,6 +157,7 @@ export default function BettaFishPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage manifestKey="fish-com:cornerstone-species-betta" aspect="16:9" variant="inline" caption="A betta (Betta splendens) displaying its fins in a planted aquarium." priority />
           <h2>The Bowl Myth — Why Bettas Die Young</h2>
           <p>
             The betta in a small unheated bowl or vase is not thriving; it is surviving, slowly, in

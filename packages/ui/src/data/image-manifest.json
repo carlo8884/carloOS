@@ -207,6 +207,83 @@
     "query": "neon tetra school",
     "curated": true
   },
+  "fish-com:category-species": {
+    "provider": "unsplash",
+    "id": "1583377993497-f2f1b2b13c54",
+    "url": "https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1583377993497-f2f1b2b13c54",
+    "alt": "A vividly colored betta fish displaying its fins in a planted aquarium",
+    "query": "aquarium fish species portrait",
+    "curated": true
+  },
+  "fish-com:category-setup": {
+    "provider": "unsplash",
+    "id": "1535591273668-578e31182c4f",
+    "url": "https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1535591273668-578e31182c4f",
+    "alt": "A planted freshwater aquarium with healthy aquascaping",
+    "query": "planted aquarium aquascape",
+    "curated": true
+  },
+  "fish-com:category-health": {
+    "provider": "unsplash",
+    "id": "1522926193341-e9ffd686c60f",
+    "url": "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1522926193341-e9ffd686c60f",
+    "alt": "A goldfish swimming in clear aquarium water",
+    "query": "goldfish aquarium water",
+    "curated": true
+  },
+  "fish-com:category-equipment": {
+    "provider": "unsplash",
+    "id": "1520637836862-4d197d17c55a",
+    "url": "https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1520637836862-4d197d17c55a",
+    "alt": "An aquarium scene with substrate and equipment in a freshwater tank",
+    "query": "aquarium equipment substrate",
+    "curated": true
+  },
+  "fish-com:category-reviews": {
+    "provider": "unsplash",
+    "id": "1544552866-d3ed42536cfd",
+    "url": "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1544552866-d3ed42536cfd",
+    "alt": "A discus fish in a well-maintained planted display aquarium",
+    "query": "display aquarium discus",
+    "curated": true
+  },
+  "fish-com:species-neon-tetra": {
+    "provider": "unsplash",
+    "id": "1522069213448-443a614da9b6",
+    "url": "https://images.unsplash.com/photo-1522069213448-443a614da9b6?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1522069213448-443a614da9b6",
+    "alt": "A school of neon tetras (Paracheirodon innesi) in a planted aquarium",
+    "query": "neon tetra school aquarium",
+    "curated": true
+  },
+  "fish-com:species-goldfish": {
+    "provider": "unsplash",
+    "id": "1522926193341-e9ffd686c60f",
+    "url": "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1522926193341-e9ffd686c60f",
+    "alt": "A goldfish (Carassius auratus) swimming in an aquarium",
+    "query": "goldfish aquarium",
+    "curated": true
+  },
   "horses-com:hero": {
     "provider": "unsplash",
     "id": "1553284965-83fd3e82fa5a",
@@ -678,5 +755,49 @@
     "description": "A ferret near its food bowl",
     "alt": "A ferret near its food, suited to a diet-basics guide",
     "query": "ferret eating diet food"
+  },
+  "lizard-com:species-crested-gecko": {
+    "provider": "unsplash",
+    "id": "1548155810-af5c30a49059",
+    "url": "https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1548155810-af5c30a49059",
+    "alt": "A crested gecko (Correlophus ciliatus) perched on a branch",
+    "query": "crested gecko branch macro",
+    "curated": true
+  },
+  "lizard-com:category-species": {
+    "provider": "unsplash",
+    "id": "1597484661643-2f5fef640dd1",
+    "url": "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1597484661643-2f5fef640dd1",
+    "alt": "A leopard gecko in profile — reptile species reference",
+    "query": "reptile species macro portrait",
+    "curated": true
+  },
+  "lizard-com:category-setup": {
+    "provider": "unsplash",
+    "id": "1585110396000-c9ffd4e4b308",
+    "url": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1585110396000-c9ffd4e4b308",
+    "alt": "A bearded dragon basking under enclosure lighting — enclosure setup reference",
+    "query": "reptile terrarium enclosure lighting",
+    "curated": true
+  },
+  "lizard-com:category-health": {
+    "provider": "unsplash",
+    "id": "1548155810-af5c30a49059",
+    "url": "https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1548155810-af5c30a49059",
+    "alt": "A close-up reptile macro — reptile health reference",
+    "query": "reptile health macro",
+    "curated": true
   }
 }

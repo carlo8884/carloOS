@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Goldfish Care Guide — Tank Size, Lifespan | Fish.com', description: 'Goldfish are not bowl fish. Common goldfish need 75+ gallons and can live 20+ years. Fancy goldfish have different needs than single-tail varieties.', path: '/species/goldfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -26,6 +26,7 @@ export default function GoldfishPage() {
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="fish-com:species-goldfish" aspect="16:9" variant="inline" caption="A goldfish (Carassius auratus) in a properly sized, filtered aquarium." priority />
         <h2>The Bowl Myth — Why Goldfish Don't Belong in Bowls</h2>
         <p>Goldfish in bowls die quickly for predictable reasons: inadequate water volume (a 1-gallon bowl with a 4-inch fish has a toxically high fish-to-water ratio), no filtration (ammonia accumulates rapidly in standing water), and no nitrogen cycle (no beneficial bacteria to convert waste). A common goldfish produces significant waste — they are heavy feeders with fast metabolisms and generate more ammonia per inch than most tropical fish. The "goldfish only live 3 years" belief persists because that is roughly how long goldfish survive in bowls — it is not their natural lifespan.</p>
         <p>Correct housing: a common, comet, or shubunkin goldfish requires a minimum of 30 gallons for the first fish plus 10 gallons per additional fish — and this is the minimum for juveniles. Adults require significantly more, or a pond. A well-filtered 75-gallon tank or 300+ gallon pond allows a small group of single-tail goldfish to reach their full potential — beautiful, 12-inch animals that recognize their owners, swim actively, and live for two decades.</p>

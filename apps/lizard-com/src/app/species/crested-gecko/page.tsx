@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching.', path: '/species/crested-gecko', type: 'article' })
@@ -26,6 +26,8 @@ export default function CrestedGeckoPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+
+        <StockImage manifestKey="lizard-com:species-crested-gecko" aspect="16:9" variant="inline" caption="A crested gecko (Correlophus ciliatus) perched on a branch." priority />
 
         <h2>No Heat Lamp Required — The Key Advantage</h2>
         <DropCap>Crested geckos are native to New Caledonia's cool highland forests — not the tropical lowlands most people imagine. Their optimal temperature range (72–78°F) matches the room temperature of most North American homes for most of the year. A basking lamp is not required and is in fact contraindicated — temperatures above 82°F cause heat stress, and sustained temperatures above 85°F are lethal. This makes crested geckos uniquely low-infrastructure among reptiles: no thermostat, no basking bulb, no temperature gradient management. A ceramic heat emitter on a thermostat may be needed in cooler homes during winter to maintain the floor at 68°F+ — but often even this is unnecessary.</DropCap>

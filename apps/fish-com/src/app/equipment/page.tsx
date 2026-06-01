@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 import { EquipmentCategories } from '../../data/equipment-categories'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +61,10 @@ export default function EquipmentHubPage() {
           survives its first six months. Each guide explains how to pick the right sub-type for
           your setup, then funnels you to ranked product picks.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:category-equipment" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* BREADCRUMB */}
