@@ -71,6 +71,42 @@
     "alt": "A pet ferret playing",
     "orientation": "landscape"
   },
+  "ferret-com:health-hero": {
+    "query": "ferret resting health",
+    "provider": "either",
+    "alt": "A ferret resting calmly",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-hero": {
+    "query": "ferret care handling",
+    "provider": "either",
+    "alt": "A ferret held gently during daily care",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-hero": {
+    "query": "ferret playing behavior",
+    "provider": "either",
+    "alt": "An alert, playful ferret mid-movement",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-hero": {
+    "query": "ferret coat color portrait",
+    "provider": "either",
+    "alt": "A close portrait of a ferret showing its coat markings",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-hero": {
+    "query": "ferret eating diet",
+    "provider": "either",
+    "alt": "A ferret near its food bowl",
+    "orientation": "landscape"
+  },
+  "ferret-com:ownership-hero": {
+    "query": "ferret owner ownership",
+    "provider": "either",
+    "alt": "A pet ferret with its owner",
+    "orientation": "landscape"
+  },
   "ferret-com:category-care": {
     "query": "ferret close up",
     "provider": "either",

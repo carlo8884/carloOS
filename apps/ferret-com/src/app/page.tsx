@@ -36,7 +36,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -274,6 +274,15 @@ export default function HomePage() {
             >
               Read the diet guide
             </Link>
+          </div>
+
+          <div style={{ maxWidth: '880px', margin: '48px auto 0' }}>
+            <StockImage
+              manifestKey="ferret-com:hero"
+              aspect="16:9"
+              variant="wide"
+              priority
+            />
           </div>
         </div>
       </section>
