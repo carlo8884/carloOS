@@ -203,6 +203,13 @@ export default function HomePage() {
                 Read the label
                 <span aria-hidden>→</span>
               </Link>
+              <Link
+                href="/tools/food-cost-calculator"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-white text-brand-text-dark text-sm font-semibold rounded border border-brand-border hover:border-brand-primary transition-colors"
+              >
+                Cost calculator
+                <span aria-hidden>→</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -352,11 +359,12 @@ export default function HomePage() {
               </p>
               <div className="space-y-3 text-xs text-brand-text-mid leading-relaxed">
                 <p>
-                  PetFood.com is an independent reference. Scores are produced by the
-                  published rubric and are not influenced by any commercial relationship
-                  with brands or manufacturers. We do not accept product samples in
-                  exchange for review. Products discussed are bought at retail with
-                  receipts kept on file.
+                  PetFood.com is an independent reference. Scores are produced solely by
+                  the published rubric applied to publicly available product data —
+                  ingredient panels, AAFCO nutritional-adequacy statements, and
+                  manufacturer disclosures. No manufacturer pays for, previews, or
+                  influences a score, and we do not accept payment or product in exchange
+                  for a favorable rating.
                 </p>
                 <p>
                   Where retailer affiliate links appear (e.g., Chewy, Amazon), they are
