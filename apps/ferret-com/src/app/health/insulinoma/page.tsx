@@ -51,7 +51,7 @@ export default function FerretInsulinomaPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/insulinoma' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Insulinoma', href: '/health/insulinoma' },
         ]}
         sidebar={

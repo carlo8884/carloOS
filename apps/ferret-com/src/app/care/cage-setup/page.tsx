@@ -42,7 +42,7 @@ export default function FerretCageSetupPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/cage-setup' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Cage Setup', href: '/care/cage-setup' },
         ]}
         sidebar={

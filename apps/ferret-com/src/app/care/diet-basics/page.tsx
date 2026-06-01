@@ -51,7 +51,7 @@ export default function FerretDietBasicsPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/diet-basics' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Diet Basics', href: '/care/diet-basics' },
         ]}
         sidebar={

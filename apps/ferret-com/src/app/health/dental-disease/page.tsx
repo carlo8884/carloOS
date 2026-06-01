@@ -111,7 +111,7 @@ export default function FerretDentalDiseasePage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/dental-disease' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Dental Disease', href: '/health/dental-disease' },
         ]}
         sidebar={

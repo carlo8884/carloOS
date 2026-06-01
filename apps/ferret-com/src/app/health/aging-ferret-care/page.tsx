@@ -114,7 +114,7 @@ export default function FerretAgingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/aging-ferret-care' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
         ]}
         sidebar={

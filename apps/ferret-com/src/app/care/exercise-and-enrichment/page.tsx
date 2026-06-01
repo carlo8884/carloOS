@@ -104,7 +104,7 @@ export default function FerretExerciseEnrichmentPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/exercise-and-enrichment' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
         ]}
         sidebar={

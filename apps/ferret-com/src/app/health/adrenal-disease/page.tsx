@@ -113,7 +113,7 @@ export default function FerretAdrenalDiseasePage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/adrenal-disease' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Adrenal Disease', href: '/health/adrenal-disease' },
         ]}
         sidebar={

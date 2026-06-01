@@ -104,7 +104,7 @@ export default function FerretBathingGroomingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/bathing-and-grooming' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Bathing and Grooming', href: '/care/bathing-and-grooming' },
         ]}
         sidebar={

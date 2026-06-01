@@ -111,7 +111,7 @@ export default function FerretLymphomaPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/lymphoma' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Lymphoma', href: '/health/lymphoma' },
         ]}
         sidebar={

@@ -56,6 +56,46 @@ const TRUST_CLAIMS = [
   'No marketplace listings here',
 ]
 
+// ── Cluster hubs ────────────────────────────────────────────────────────────
+// The six top-level authority hubs. Surfaced on the homepage so the site reads
+// as complete/deep on first load and every cluster has a homepage entry point
+// (hub → cluster → spoke internal-link graph, per CLAUDE.md §6). These point at
+// the hub index pages only; the per-hub card arrays live on each hub's own
+// page.tsx (owned by the content agents).
+
+const HUBS = [
+  {
+    href: '/health',
+    label: 'Health',
+    blurb: 'Insulinoma, adrenal disease, lymphoma, dental — conditions, diagnosis, and treatment ladders.',
+  },
+  {
+    href: '/care',
+    label: 'Care',
+    blurb: 'Cage setup, litter training, grooming, exercise, and the ferret-proofing checklist.',
+  },
+  {
+    href: '/behavior',
+    label: 'Behavior',
+    blurb: 'Training, bonding, nipping, and reading the body language of a working-curious carnivore.',
+  },
+  {
+    href: '/colors',
+    label: 'Colors',
+    blurb: 'Coat colors, patterns, and markings — sable, albino, panda, blaze, and the rest.',
+  },
+  {
+    href: '/diet',
+    label: 'Diet',
+    blurb: 'Obligate-carnivore feeding — macros, kibble vs. raw, treats, and what to never feed.',
+  },
+  {
+    href: '/ownership',
+    label: 'Ownership',
+    blurb: 'Adoption, costs, legality, supplies, and what the first year of ownership actually demands.',
+  },
+]
+
 // ── Featured categories ─────────────────────────────────────────────────────
 
 const CATEGORIES = [
@@ -287,6 +327,107 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          CLUSTER HUBS — six top-level authority hubs
+          ════════════════════════════════════════════════════════════════ */}
+      <section
+        style={{
+          background: 'var(--brand-surface)',
+          padding: 'clamp(64px, 8vw, 96px) 24px',
+          borderBottom: '1px solid var(--brand-border)',
+        }}
+      >
+        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+          <header style={{ marginBottom: '40px', textAlign: 'center' }}>
+            <div style={{ marginBottom: '14px' }}>
+              <span className="eyebrow">
+                <span className="eyebrow-rule" />
+                Explore the library
+              </span>
+            </div>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)',
+                fontWeight: 800,
+                letterSpacing: '-0.015em',
+                color: 'var(--brand-text-dark)',
+                lineHeight: 1.15,
+                margin: 0,
+              }}
+            >
+              Six libraries, one reference
+            </h2>
+          </header>
+
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '20px',
+            }}
+          >
+            {HUBS.map((hub) => (
+              <li key={hub.href}>
+                <Link
+                  href={hub.href}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    padding: '26px 24px',
+                    background: 'var(--brand-white)',
+                    border: '1px solid var(--brand-border)',
+                    borderRadius: '14px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    transition: 'all 0.22s ease',
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '1.5rem',
+                      fontWeight: 800,
+                      color: 'var(--brand-text-dark)',
+                      marginBottom: '10px',
+                      lineHeight: 1.2,
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
+                    {hub.label}
+                  </div>
+                  <p
+                    style={{
+                      fontSize: '0.9375rem',
+                      lineHeight: 1.55,
+                      color: 'var(--brand-text-mid)',
+                      margin: '0 0 16px',
+                      flex: 1,
+                    }}
+                  >
+                    {hub.blurb}
+                  </p>
+                  <span
+                    style={{
+                      fontSize: '0.875rem',
+                      fontWeight: 700,
+                      color: 'var(--brand-primary)',
+                      letterSpacing: '0.01em',
+                    }}
+                  >
+                    Browse {hub.label.toLowerCase()} →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
