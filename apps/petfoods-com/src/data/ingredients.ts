@@ -1093,6 +1093,234 @@ export const Ingredients: Ingredient[] = [
     ],
     relatedSlugs: ['pumpkin', 'chicory-root-inulin', 'cellulose'],
   },
+
+  // ─── WAVE 4: FISH & MARINE ───────────────────────────────────────────────
+  {
+    slug: 'menhaden-fish-meal',
+    name: 'Menhaden Fish Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: fish meal is the clean, dried, ground tissue of undecomposed whole fish or fish cuttings. "Menhaden fish meal" names the source species (Atlantic or Gulf menhaden, a small oily forage fish) and is the most common single-species fish meal in North American pet food.',
+    aafcoSection: '§9.45 (Fish Meal)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish meal with species disclosure. Menhaden is a managed forage fishery and the dominant US fish-meal source. Contributes long-chain omega-3s (EPA/DHA). The ethoxyquin supplier-carryover question applies, as with all fish meals.',
+    commonIn: ['victor', 'diamond-pet-foods', 'taste-of-the-wild', 'nutro'],
+    concernsIfAny: [
+      'Preservation by ethoxyquin at the renderer can carry over to the finished product without appearing on the consumer-facing label.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['salmon-meal', 'whitefish-meal', 'herring-meal', 'fish-oil'],
+  },
+  {
+    slug: 'herring-meal',
+    name: 'Herring Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9: herring meal is the clean, dried, ground tissue of undecomposed whole herring or herring cuttings, with or without the extraction of part of the oil. The named species commits the manufacturer to herring under AAFCO product-naming rules.',
+    aafcoSection: '§9.45 (Fish Meal); PF3 species naming',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish meal with high omega-3 density (herring is an oily fish). Carries species disclosure. Common in premium grain-free and biologically appropriate formulations. The supplier-side ethoxyquin question applies.',
+    commonIn: ['acana', 'orijen', 'nulo', 'solid-gold', 'open-farm'],
+    concernsIfAny: [
+      'Supplier-side preservation (ethoxyquin) can carry over without finished-product label disclosure.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['salmon-meal', 'menhaden-fish-meal', 'salmon-oil'],
+  },
+  {
+    slug: 'deboned-salmon',
+    name: 'Deboned Salmon',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, "salmon" describes the clean flesh of salmon. "Deboned salmon" / "fresh salmon" describes the wet, bone-removed form. Naming the species under AAFCO Model Regulation PF3 commits the manufacturer to salmon as the source.',
+    aafcoSection: 'PF3 (species naming); Chapter 9',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fresh fish with species disclosure. As a fresh ingredient it is weighed wet (roughly 70% water) on the panel, so dry-matter protein contribution is lower than its panel position suggests; salmon meal lower in the list often carries more of the dry-matter protein.',
+    commonIn: ['blue-buffalo', 'wellness', 'merrick', 'natural-balance', 'halo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['salmon-meal', 'salmon-oil', 'deboned-chicken'],
+  },
+  {
+    slug: 'krill-meal',
+    name: 'Krill Meal',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, krill meal is the dried, ground product of whole Antarctic krill (Euphausia superba), a small crustacean. It supplies protein, phospholipid-bound omega-3 fatty acids, and the carotenoid astaxanthin.',
+    aafcoSection: 'Chapter 9 (krill products)',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-source marine ingredient. Krill omega-3s are largely phospholipid-bound, which some research suggests improves bioavailability versus triglyceride-bound fish-oil omega-3s, though companion-animal head-to-head data are limited. Premium-tier inclusion. MSC certification on the Antarctic krill fishery is a sustainability signal worth checking.',
+    commonIn: ['orijen', 'acana', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['salmon-oil', 'fish-oil', 'herring-meal'],
+  },
+  {
+    slug: 'menhaden-oil',
+    name: 'Menhaden Oil',
+    category: 'Fat',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, menhaden oil is the oil obtained from menhaden (a forage fish). As a named-species fish oil it discloses the source species, unlike generic "fish oil," and is a concentrated source of long-chain omega-3 fatty acids (EPA and DHA).',
+    aafcoSection: '§9 (fish oil); PF3 species naming',
+    scoringRubric: 'High',
+    scoringNote:
+      'Named-species fish oil with species disclosure. The most common single-species omega-3 oil in North American pet food. Polyunsaturated and oxidation-prone, so preservation system (mixed tocopherols) and storage matter. Supplier-side ethoxyquin carryover question applies.',
+    commonIn: ['victor', 'diamond-pet-foods', 'nutro'],
+    concernsIfAny: [
+      'Polyunsaturated and oxidation-prone; preservation system and storage affect EPA/DHA retention.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['fish-oil', 'salmon-oil', 'menhaden-fish-meal'],
+  },
+
+  // ─── WAVE 5: GRAINS & CARBOHYDRATES ──────────────────────────────────────
+  {
+    slug: 'whole-grain-corn',
+    name: 'Whole Grain Corn',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "ground yellow corn" / "corn" / "whole grain corn" is the entire corn kernel ground or chopped. It supplies digestible carbohydrate energy, linoleic acid, and (when whole) the bran and germ fractions with their fiber and micronutrients.',
+    aafcoSection: '§9 (corn / ground yellow corn)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain. The "filler" characterization is marketing, not regulatory: ground corn is a digestible energy source (when properly cooked) and supplies linoleic acid. Corn is a relatively uncommon allergen in dogs compared with beef, dairy, and chicken. Medium scoring reflects clear disclosure of a generic but well-defined ingredient.',
+    commonIn: ['purina-pro-plan', 'purina-one', 'iams', 'eukanuba', 'pedigree', 'hills-science-diet'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['corn-gluten-meal', 'brown-rice', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'whole-grain-sorghum',
+    name: 'Sorghum (Milo)',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, sorghum (also called milo) is a cereal grain. Ground sorghum supplies digestible carbohydrate energy and a moderate-glycemic starch profile relative to some other cereals.',
+    aafcoSection: '§9 (sorghum / milo)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain with a relatively low glycemic profile among cereals, sometimes selected for that reason in metabolic-support formulations. Gluten-free. Clear disclosure of a well-defined generic grain.',
+    commonIn: ['hills-science-diet', 'nutro', 'royal-canin'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['whole-grain-corn', 'barley', 'brown-rice'],
+  },
+  {
+    slug: 'barley',
+    name: 'Barley',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, barley / pearled barley is a cereal grain. It supplies digestible carbohydrate and a meaningful soluble-fiber (beta-glucan) fraction, similar in fiber chemistry to oats.',
+    aafcoSection: '§9 (barley / pearled barley)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined cereal grain with a soluble-fiber (beta-glucan) contribution that supports stool quality and a moderate glycemic profile. Contains gluten. A whole-grain inclusion in many grain-inclusive premium diets.',
+    commonIn: ['fromm', 'wellness', 'nutro', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['oatmeal', 'brown-rice', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'millet',
+    name: 'Millet',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, millet is a small-seeded cereal grain. It is gluten-free and supplies digestible carbohydrate energy along with a modest micronutrient contribution.',
+    aafcoSection: '§9 (millet)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined gluten-free cereal. Used in grain-inclusive diets positioned as "ancient grain" formulations, often as an alternative to corn or wheat for owners avoiding those grains. Clear disclosure of a well-defined grain.',
+    commonIn: ['fromm', 'the-honest-kitchen', 'open-farm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['quinoa', 'barley', 'whole-grain-sorghum'],
+  },
+  {
+    slug: 'quinoa',
+    name: 'Quinoa',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, quinoa is a pseudo-cereal seed used as a carbohydrate and supplemental protein source. It is gluten-free and supplies a more complete amino-acid profile than most true cereal grains.',
+    aafcoSection: 'Chapter 9 (quinoa)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-recognized pseudo-cereal. Naturally coated with saponins (washed off in processing), gluten-free, and with a relatively complete amino-acid profile. Positioned in premium "ancient grain" lines. Clear disclosure of a defined ingredient.',
+    commonIn: ['the-honest-kitchen', 'open-farm', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['millet', 'barley', 'oatmeal'],
+  },
+  {
+    slug: 'white-potato',
+    name: 'White Potato',
+    category: 'Carb',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, "potato" / "dried potato" is the white potato tuber (Solanum tuberosum) used as a carbohydrate source. It supplies digestible starch energy and modest micronutrients.',
+    aafcoSection: '§9 (potato / dried potato product)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'AAFCO-defined grain-free carbohydrate. White potato appears in grain-free formulations as a non-cereal, non-pulse starch. Higher-glycemic than sweet potato. Not itself a focus of the FDA CVM grain-free DCM investigation, which centers on pulse-heavy formulations.',
+    commonIn: ['taste-of-the-wild', 'natural-balance', 'instinct', 'merrick'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA CVM — Investigation into Potential Link between Certain Diets and Canine Dilated Cardiomyopathy',
+    ],
+    relatedSlugs: ['sweet-potato', 'tapioca-starch', 'pea-protein'],
+  },
+  {
+    slug: 'wheat-gluten',
+    name: 'Wheat Gluten',
+    category: 'Protein',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, Chapter 9, wheat gluten is the protein fraction isolated from wheat flour, typically about 75-80% crude protein on a dry-matter basis. It is used as a concentrated plant protein and as a binder, especially in wet/canned formulations.',
+    aafcoSection: '§9 (wheat gluten)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Concentrated plant protein and binder. The 2007 melamine pet-food recall involved wheat gluten (and rice protein concentrate) adulterated with melamine at the supplier in China — a contamination event, not an inherent property of wheat gluten. Modern supply-chain testing addresses that specific failure. Disclosure of the ingredient is clear; sourcing transparency is the relevant question.',
+    commonIn: ['royal-canin', 'fancy-feast', 'friskies'],
+    concernsIfAny: [
+      'The 2007 melamine recall involved supplier-adulterated wheat gluten; the contamination was a sourcing/QC failure, not an inherent ingredient property.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Melamine Pet Food Recall of 2007',
+    ],
+    relatedSlugs: ['wheat-flour', 'corn-gluten-meal', 'soybean-meal'],
+  },
 ]
 
 // ─── Selectors ────────────────────────────────────────────────────────────
