@@ -31,7 +31,21 @@ export default function VetsInsuranceHubPage() {
       <div className="px-container-sm sm:px-container pt-12">
         <StockImage manifestKey="vets-co:insurance-hero" priority aspect="16:9" variant="wide" />
       </div>
-      <div className="px-container-sm sm:px-container py-14">
+      <div className="px-container-sm sm:px-container pt-14 pb-2">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-2xl font-bold text-brand-dark mb-4 leading-tight">What this hub covers</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Pet insurance is one of the few financial decisions an owner makes years before they know whether they will need it, and the industry&apos;s language is built to obscure rather than clarify. This hub is a structured, jargon-free education in how coverage actually works &mdash; written from a clinical perspective so the explanations connect the policy mechanics to the real veterinary situations they are meant to cover. It is deliberately editorial: Vets.co does not sell insurance, take commissions on enrollments, or rank insurers for payment, so the guidance here is about understanding the product, not steering you toward one.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            The pages are organized to be read in sequence, from foundations to the finer trade-offs. Start with <Link href="/insurance/how-pet-insurance-works" className="text-brand-primary font-medium hover:underline">how pet insurance works</Link>, which explains the reimbursement model and the four levers &mdash; premium, deductible, reimbursement rate, and annual limit &mdash; that define every policy. From there, timing is the decision most owners get wrong, so <Link href="/insurance/when-to-enroll" className="text-brand-primary font-medium hover:underline">when to enroll your pet</Link> explains why premiums and exclusions both work against waiting. Before signing anything, <Link href="/insurance/reading-the-fine-print" className="text-brand-primary font-medium hover:underline">reading the fine print</Link> walks through the clauses &mdash; waiting periods, bilateral exclusions, condition-specific limits &mdash; that quietly decide whether a future claim is paid.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            The remaining guides go deeper on the issues that separate a good policy from a costly one: what is and is not covered, how pre-existing conditions are treated, how deductibles and reimbursement interact, how breed shapes risk and price, and how wellness plans differ from true insurance. Everything is written and maintained by the Vets.co editorial team and sourced from cited references and insurer disclosures. The aim is to leave you able to compare any two policies on your own terms and to bring informed questions to your veterinarian about the conditions your specific pet is most likely to face.
+          </p>
+        </div>
+      </div>
+      <div className="px-container-sm sm:px-container pb-14 pt-4">
         {GUIDES.map(section => (
           <div key={section.category} className="mb-10">
             <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
