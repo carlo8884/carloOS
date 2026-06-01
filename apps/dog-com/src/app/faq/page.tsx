@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -92,9 +92,16 @@ const FAQ_SECTIONS = [
   },
 ]
 
+const faqSchema = buildFAQSchema({
+  questions: FAQ_SECTIONS.flatMap((section) =>
+    section.items.map((item) => ({ question: item.question, answer: item.answer })),
+  ),
+})
+
 export default function FAQPage() {
   return (
     <>
+      <SchemaScript schema={faqSchema} />
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">
