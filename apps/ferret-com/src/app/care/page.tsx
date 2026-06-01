@@ -123,6 +123,27 @@ const CARE_CARDS: CareCard[] = [
     description:
       'Quarantine first, neutral-territory meetings, reading normal rough play versus real aggression, and the realistic bonding timeline.',
   },
+  {
+    slug: 'seasonal-shedding',
+    eyebrow: 'Grooming',
+    title: 'Seasonal Shedding',
+    description:
+      'Ferrets blow their coat twice a year on a daylight cycle. Normal molts, grooming through a shed, the hairball-obstruction risk, and the hair loss that signals adrenal disease.',
+  },
+  {
+    slug: 'cage-cleaning-routine',
+    eyebrow: 'Husbandry',
+    title: 'Cage Cleaning Routine',
+    description:
+      'A realistic daily, weekly, and deep-clean schedule — litter and bedding hygiene, ferret-safe disinfectants, and why over-cleaning can backfire on litter habits.',
+  },
+  {
+    slug: 'odor-and-scent-control',
+    eyebrow: 'Husbandry',
+    title: 'Odor & Scent Control',
+    description:
+      'Where ferret smell really comes from, why descenting and frequent baths fail, and the husbandry — hygiene, diet, spay/neuter — that actually reduces odor.',
+  },
 ]
 
 export default function CareHubPage() {
