@@ -1,45 +1,59 @@
 ---
 from: CSRO
 to: Visual
-status: open
-priority: P0 (Carlo: Ferret.com fails the premium launch bar — 2026-06-01)
+status: open — SUPERSEDES earlier draft (Carlo full spec 2026-06-01)
+priority: P0 (Ferret.com fails premium bar; full visual/homepage reset)
 created: 2026-06-01
-re: Ferret.com premium homepage + key-page redesign (NOT launch-ready)
+re: Ferret.com — full visual + homepage reset
 ---
 
-# Ferret.com — premium redesign brief (Carlo directive)
+# Ferret.com — full visual/homepage reset (Carlo spec)
 
-Carlo 2026-06-01: **Ferret.com does NOT pass the premium launch bar.** It still reads as a cheap
-content site. Ferret is reclassified **NOT launch-ready** until Visual delivers a proper homepage +
-key-page redesign. This is the first real application of the Premium Domain Launch Bar
-(`ops/csro/premium-domain-launch-bar.md`).
+Carlo 2026-06-01: Ferret.com needs a **full visual/homepage reset**. It does not pass. Do NOT call
+Ferret.com launch-ready until this is done.
 
-Target feel: **the best modern ferret-owner reference on the internet** — warm but serious, practical
-and visual, real-ferret-first, built by people who understand ferret owners. NOT a generic SEO site.
+**Reference examples** (NOT premium, but more user-friendly than current Ferret.com because they show
+real ferrets immediately and speak to first-time owners): Texas Avian "first-time ferret owner"
+article · Oxbow "All About Ferrets" · AVMA "selecting a pet ferret".
 
-## Visual-lane P0s (you own)
-1. **Replace the hero image with a real ferret** — Carlo still sees a dog/wrong hero. Verify
-   `ferret-com:hero` in `packages/ui/src/data/image-manifest.json` actually renders a real ferret on
-   the homepage; if the manifest is right but the render is wrong, fix the render. Real ferret, full stop.
-2. **Redesign the homepage first screen** so it feels like a premium niche authority, not an article
-   template (per the 7-gate bar: 2-second identity, product-on-homepage, distinct identity, memorable).
-3. **Remove the oversized/awkward hero photo treatment** — fix the composition/scale.
-4. **Image attribution placement** — do NOT show "Photo: [name] via Unsplash" prominently in the
-   hero/homepage. **Keep attribution (Unsplash/Pexels TOS + QC §1 — never strip it)** but move it to a
-   subtle image credit or footer-level attribution. This lives in the shared image/hero component
-   (Visual lane); COO did not touch it.
-8. **Add real ferret imagery to key pages**, not just the homepage (health/care/diet/behavior hubs).
-9. **Stronger brand system** — warmer, specialist, niche-owner, real-ferret-first.
+**Direction:** Ferret.com should feel like **the best modern ferret-owner guide on the internet**.
 
-## COO-lane items — DONE this pass (PR on `claude/ferret-premium-coo`)
-- #6 Long medical/source-base paragraph removed from the homepage footer; relocated into
-  `/editorial-standards` ("Sources We Cite"). Homepage now carries a short trust line linking there.
-- #7 "Sister site · coming soon" Ferrets.com promo section **removed** from the homepage (stays gone
-  until Ferrets.com is live and useful).
+**Visual bar (acceptance test):** a visitor lands and instantly thinks — *"This is clearly about
+ferrets, it feels trustworthy, and it's easier to use than the vet blogs ranking above it."*
 
-## Shared — handed to Monetization
-- #5 Affiliate disclosure: keep it (FTC), but redesign so it reads like a professional publisher, not
-  boilerplate. Brief: `ops/handoffs/2026-06-01-csro-to-monetization-ferret-disclosure-polish.md`.
+## Homepage requirements
+1. **Large, high-quality REAL ferret hero above the fold.**
+2. **Remove any dog/wrong-species imagery immediately.** (Carlo still sees a wrong hero — verify
+   `ferret-com:hero` in `packages/ui/src/data/image-manifest.json` AND what actually renders.)
+3. **No prominent "Photo: [name] via Unsplash" text in the homepage hero.** Keep attribution
+   (Unsplash/Pexels TOS + QC §1 — never strip) but make it subtle: image credits / footer / editorial
+   standards. (Lives in the shared image/hero component — Visual lane.)
+6. **First screen organized around OWNER INTENT**, six paths:
+   - New ferret owner → `/ownership` (or `/first-year-schedule`)
+   - Diet & food → `/diet`
+   - Cage / setup → `/care/cage-setup` (or `/care`)
+   - Health warning signs → `/health`
+   - Behavior / nipping → `/behavior/biting-and-nipping` (or `/behavior`)
+   - **Find an exotic vet → ⚠️ NO ROUTE EXISTS** (see "Open decision" below — do not wire until resolved)
+7. **Add real ferret imagery to key pages** (health/care/diet/behavior hubs), not just homepage.
+8. **Warmer + more useful.** Less textbook, less generic SEO; a practical owner journey.
+
+## Already DONE by COO (merged #369) — do not redo
+- #4 "Sister site / coming soon" Ferrets.com promo **removed** from homepage.
+- #5 Long source-base/medical paragraph **removed** from homepage; relocated to `/editorial-standards`
+  ("Sources We Cite"); homepage now has a short trust line linking there.
+
+## Monetization (briefed separately)
+- #9 Affiliate disclosure: keep legally compliant, redesign to feel like a professional publisher.
+  `ops/handoffs/2026-06-01-csro-to-monetization-ferret-disclosure-polish.md`.
+
+## Open decision for Carlo (gates the 6th owner-intent path)
+**"Find an exotic vet" has no Ferret.com page.** Options: (a) COO writes a short editorial
+"Finding an Exotic-Pet Vet" page (net-new content during freeze — needs your slot); (b) cross-link to
+**Vets.co** once its directory is live (today it's sample/placeholder — not ready); (c) drop the path
+for launch. CSRO recommendation: (a) a short editorial page is the most owner-useful and on-brand;
+confirm and COO will build it.
 
 ## Gate
-Ferret is NOT launch-ready until Visual ships 1–4,8,9 and CSRO re-runs the 7-gate premium bar + IR.
+Ferret NOT launch-ready until Visual ships 1,2,3,6,7,8 + Monetization #9 + the vet-path decision, then
+CSRO re-runs the 7-gate premium bar + IR.
