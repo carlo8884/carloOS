@@ -217,5 +217,38 @@
     "alt": "A show jumper mid-flight over a fence",
     "query": "show jumping saddle close up",
     "curated": true
+  },
+  "lizard-com:hero": {
+    "provider": "unsplash",
+    "id": "1548155810-af5c30a49059",
+    "url": "https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1548155810-af5c30a49059",
+    "alt": "A close-up reptile macro — the hero photo for Lizard.com (verified-in-production)",
+    "query": "crested gecko portrait macro",
+    "curated": true
+  },
+  "lizard-com:species-leopard-gecko": {
+    "provider": "unsplash",
+    "id": "1597484661643-2f5fef640dd1",
+    "url": "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1597484661643-2f5fef640dd1",
+    "alt": "A leopard gecko (Eublepharis macularius) in profile",
+    "query": "leopard gecko macro",
+    "curated": true
+  },
+  "lizard-com:species-bearded-dragon": {
+    "provider": "unsplash",
+    "id": "1585110396000-c9ffd4e4b308",
+    "url": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1585110396000-c9ffd4e4b308",
+    "alt": "A bearded dragon (Pogona vitticeps) basking under enclosure lighting",
+    "query": "bearded dragon basking",
+    "curated": true
   }
 }
