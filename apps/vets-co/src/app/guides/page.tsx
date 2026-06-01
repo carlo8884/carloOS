@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://vets.co/' },
+    { name: 'Guides', url: 'https://vets.co/guides' },
+  ],
+})
+
 
 const SECTIONS = [
   { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: '💵 Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
@@ -13,6 +21,8 @@ const SECTIONS = [
 export default function VetsGuidesHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Owner Guides</span></div>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Vet Visit & Cost-of-Care Guides</h1>
@@ -37,5 +47,6 @@ export default function VetsGuidesHubPage() {
         <EmailCapture variant="section" siteId="vets-co" title="Free Pet Owner Newsletter" subtitle="Practical, vet-informed guidance every week." source="guides-hub" ctaText="Subscribe Free" perks={['✓ Practical', '📬 Weekly', '🐾 Owner-focused']} />
       </div>
     </>
+  </>
   )
 }

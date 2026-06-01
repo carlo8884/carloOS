@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { States, type CensusRegion } from '../../data/states'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://vets.co/' },
+    { name: 'Find a Vet', url: 'https://vets.co/find-a-vet' },
+  ],
+})
+
 const SPECIALISTS = [
   { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', icon: '🚨', color: '#C84A2A' },
   { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', icon: '🔬', color: '#2563EB' },
@@ -17,7 +25,9 @@ const SPECIALISTS = [
 ]
 export default function FindAVetPage() {
   return (
-    <div>
+    <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <div>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Veterinary Directory</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>Find the Right Vet</h1>
@@ -28,7 +38,7 @@ export default function FindAVetPage() {
           <Link href="#emergency" className="bg-brand-danger text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">Emergency</Link>
         </div>
       </div>
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Find a Vet</span>
       </nav>
@@ -107,5 +117,6 @@ export default function FindAVetPage() {
         </section>
       </div>
     </div>
+  </>
   )
 }

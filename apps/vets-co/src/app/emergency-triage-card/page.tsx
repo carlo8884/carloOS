@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, buildBreadcrumbSchema } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -10,6 +10,14 @@ export const metadata: Metadata = buildMetadata({
   path: '/emergency-triage-card',
   type: 'article',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://vets.co/' },
+    { name: 'Emergency Triage Card', url: 'https://vets.co/emergency-triage-card' },
+  ],
+})
+
 
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
@@ -152,6 +160,8 @@ const FIRST_AID_KIT = {
 export default function EmergencyTriageCardPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <SchemaScript schema={allSchemas} />
 
       {/* HERO with above-the-fold capture */}
@@ -430,5 +440,6 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
     </>
+  </>
   )
 }
