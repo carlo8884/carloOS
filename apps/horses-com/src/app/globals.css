@@ -74,6 +74,17 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
 }
 ::selection { background: rgba(31, 58, 47, 0.18); color: var(--brand-text-dark); }
+
+/* ReviewCard Horses.com brass accent — winner band uses the brand-accent
+   (#B68830) rather than the deep forest --brand-primary. Brass reads as
+   a trophy/award cue, fits the editorial-equine voice, and is visually
+   distinct from the navigation/body greens. Targets the data-review-card
+   hook on the shared ReviewCard component (added in a prior Visual Bot PR). */
+[data-review-card="winner"] {
+  border-top-color: var(--brand-accent) !important;
+  box-shadow: 0 2px 12px rgba(182, 136, 48, 0.10);
+}
+
 .font-vars, :root {
   --font-playfair: Georgia, 'Times New Roman', serif;
   --font-source-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
