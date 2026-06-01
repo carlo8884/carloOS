@@ -185,7 +185,7 @@ export default function BestEquineSupplementsPage() {
               cons={['Higher price tier', 'Loading dose adds first-month cost', 'Pellet palatability variable across horses']}
               price="$80–110/mo"
               ctaText="Shop at SmartPak →"
-              ctaHref="https://www.smartpakequine.com"
+              ctaHref="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="cosequin-asu-plus"
             />
@@ -214,9 +214,9 @@ export default function BestEquineSupplementsPage() {
               cons={['Premium price tier', 'Same nutrient targets cheaper as separate products', 'Auto-ship lock-in pricing structure']}
               price="$95–140/mo"
               ctaText="Shop at Platinum →"
-              ctaHref="https://www.platinumperformance.com"
-              ctaAffiliateProgram="platinum-performance"
-              ctaAffiliateProduct="equine"
+              ctaHref="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"
+              ctaAffiliateProgram="amazon"
+              ctaAffiliateProduct="platinum-performance-equine"
             />
 
             <h2>Gastric Support</h2>
@@ -244,7 +244,7 @@ export default function BestEquineSupplementsPage() {
               cons={['Not a substitute for omeprazole in active disease', 'Some ingredients have modest evidence at best', 'Palatability variable in picky eaters']}
               price="$60–80/mo"
               ctaText="Shop at SmartPak →"
-              ctaHref="https://www.smartpakequine.com"
+              ctaHref="/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="smartgut-ultra"
             />
@@ -274,9 +274,9 @@ export default function BestEquineSupplementsPage() {
               cons={['Liquid format messier than pellets in cold weather', 'Shelf life once opened is shorter than pellets', 'Premium pricing in the category']}
               price="$55–85/mo"
               ctaText="Shop at KER →"
-              ctaHref="https://ker.com"
-              ctaAffiliateProgram="ker"
-              ctaAffiliateProduct="eo-3"
+              ctaHref="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"
+              ctaAffiliateProgram="amazon"
+              ctaAffiliateProduct="ker-eo-3"
             />
 
             <h2>Resveratrol &amp; Anti-Inflammatory</h2>
@@ -303,9 +303,9 @@ export default function BestEquineSupplementsPage() {
               cons={['Complement to other joint support, not a standalone', 'Evidence base smaller than ASU / glucosamine', 'Lower brand visibility than mainstream alternatives']}
               price="$45–65/mo"
               ctaText="Shop at Equithrive →"
-              ctaHref="https://equithrive.com"
-              ctaAffiliateProgram="equithrive"
-              ctaAffiliateProduct="original-pellets"
+              ctaHref="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"
+              ctaAffiliateProgram="amazon"
+              ctaAffiliateProduct="equithrive-original-pellets"
             />
 
             <h2>Forage and Forage-Replacement</h2>
@@ -333,9 +333,9 @@ export default function BestEquineSupplementsPage() {
               cons={['Cost-per-pound higher than local baled hay', 'Not a "supplement" in the marketing sense']}
               price="Varies by product"
               ctaText="Shop at Standlee →"
-              ctaHref="https://standleeforage.com"
-              ctaAffiliateProgram="standlee"
-              ctaAffiliateProduct="premium-forage"
+              ctaHref="/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements"
+              ctaAffiliateProgram="amazon"
+              ctaAffiliateProduct="standlee-premium-forage"
             />
 
             <h2>Electrolytes</h2>
@@ -362,7 +362,7 @@ export default function BestEquineSupplementsPage() {
               cons={['Commoditized category — many similar alternatives', 'Powder format requires consistent water access to be effective']}
               price="$20–35/mo"
               ctaText="Shop at SmartPak →"
-              ctaHref="https://www.smartpakequine.com"
+              ctaHref="/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="adams-plus-electrolyte"
             />
