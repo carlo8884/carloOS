@@ -96,6 +96,27 @@ const COLOR_CARDS: ColorCard[] = [
       'Size, temperament, and care differences between hobs (males) and jills (females), the role of spaying and neutering, and which might fit your home.',
   },
   {
+    slug: 'silver-ferrets',
+    eyebrow: 'Frosted & shifting',
+    title: 'Silver Ferrets',
+    description:
+      'White-tipped guard hairs over a darker base for a steely, frosted grey — and the famously unstable coat that often whitens with every molt. How silver differs from dark-eyed white.',
+  },
+  {
+    slug: 'panda-ferrets',
+    eyebrow: 'White-headed pattern',
+    title: 'Panda Ferrets',
+    description:
+      'A fully white head and shoulders over a colored saddle, with white mitts. What defines the panda pattern, how it differs from blaze, and why most pandas warrant a hearing check.',
+  },
+  {
+    slug: 'blaze-and-roan-patterns',
+    eyebrow: 'Stripe & salt-and-pepper',
+    title: 'Blaze & Roan Patterns',
+    description:
+      'Blaze is a white stripe up the head; roan is a salt-and-pepper mix of white and colored guard hairs. How the two overlap, and the deafness flag that travels with the blaze.',
+  },
+  {
     slug: 'choosing-a-healthy-ferret',
     eyebrow: 'Before you adopt',
     title: 'Choosing a Healthy Ferret',

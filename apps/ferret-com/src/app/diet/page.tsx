@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Diet & Nutrition — Feeding the Obligate Carnivore | Ferret.com',
   description:
-    'Nine evidence-based references on feeding ferrets: whole-prey vs kibble, raw feeding, protein and fat targets, treats, supplements, hydration, and weight.',
+    'Evidence-based references on feeding ferrets: whole-prey vs kibble, raw feeding, protein and fat targets, treats, labels, life-stage, transitions, and weight.',
   path: '/diet',
 })
 
@@ -88,6 +88,27 @@ const DIET_CARDS: DietCard[] = [
     description:
       'Body-condition scoring, the normal seasonal weight swing, distinguishing healthy gain from illness, and the feeding errors behind over- and underweight ferrets.',
   },
+  {
+    slug: 'reading-food-labels',
+    eyebrow: 'Label literacy',
+    title: 'Reading Food Labels',
+    description:
+      'Decode the ingredient split and guaranteed analysis, convert to a dry-matter basis, estimate carbohydrate by difference, and spot red-flag ingredients.',
+  },
+  {
+    slug: 'senior-ferret-nutrition',
+    eyebrow: 'Life stage',
+    title: 'Senior Ferret Nutrition',
+    description:
+      'Feeding the older ferret: why protein stays high, softening food for worn teeth, watching body condition, and the diseases that reshape the diet.',
+  },
+  {
+    slug: 'transitioning-foods',
+    eyebrow: 'Switching diets',
+    title: 'Transitioning Foods',
+    description:
+      'Why ferrets imprint on food and resist change, a gradual mixing schedule, soup-and-scent tricks for stubborn eaters, and the warning signs to stop.',
+  },
 ]
 
 export default function DietHubPage() {
@@ -133,9 +154,9 @@ export default function DietHubPage() {
             }}
           >
             Ferrets are obligate carnivores with a short gut and a roughly three-hour transit time —
-            diet is the single largest controllable input on lifespan. Nine references on feeding
-            decisions, from the whole-prey-versus-kibble question to macronutrient targets, treats,
-            hydration, and weight. Cited from exotic-mammal veterinary literature throughout.
+            diet is the single largest controllable input on lifespan. A growing set of references on
+            feeding decisions, from the whole-prey-versus-kibble question to macronutrient targets, treats,
+            food labels, life-stage feeding, and weight. Cited from exotic-mammal veterinary literature throughout.
           </p>
         </div>
       </div>

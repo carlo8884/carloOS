@@ -89,6 +89,27 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
       'Everything a new ferret actually needs, by category — cage, bedding, litter, food, grooming, carrier, enrichment — what to buy first, what can wait, and what to avoid entirely.',
   },
   {
+    slug: 'ferret-vocabulary-for-beginners',
+    eyebrow: 'Vocabulary',
+    title: 'Ferret Vocabulary for Beginners',
+    description:
+      'The starter language of ferret keeping — hob, jill, kit, gib, sprite, dooking, the war dance, a business of ferrets, descenting, altering — the words you meet in your first week.',
+  },
+  {
+    slug: 'traveling-with-a-ferret',
+    eyebrow: 'On the move',
+    title: 'Traveling With a Ferret',
+    description:
+      'Safe car and air travel: escape-proof carriers, the heat sensitivity that makes a parked car deadly, hydration, destination legality, and when the kind choice is a sitter.',
+  },
+  {
+    slug: 'ferret-insurance-basics',
+    eyebrow: 'Planning',
+    title: 'Ferret Insurance Basics',
+    description:
+      'A plain-English explainer on how exotic-pet insurance works for ferrets — coverage, exclusions, waiting periods, pre-existing conditions — and how it compares to a vet savings fund.',
+  },
+  {
     slug: 'is-a-ferret-right-for-you',
     eyebrow: 'Decision',
     title: 'Is a Ferret Right for You?',

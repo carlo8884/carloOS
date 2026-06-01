@@ -88,6 +88,27 @@ const BEHAVIOR_CARDS: BehaviorCard[] = [
     description:
       'Build cheap, safe ferret enrichment at home — tunnels, dig boxes, ball pits, foraging games — plus the safety rules that prevent a blockage emergency.',
   },
+  {
+    slug: 'leash-and-harness-training',
+    eyebrow: 'Outdoor walks',
+    title: 'Leash & Harness Training',
+    description:
+      'Why ferrets need an H-style harness over a collar, the two-finger fit rule, an indoor break-in schedule, and how to start outdoor walks safely.',
+  },
+  {
+    slug: 'litter-box-troubleshooting',
+    eyebrow: 'House training',
+    title: 'Litter Box Troubleshooting',
+    description:
+      'Why ferrets miss the box — placement, the corner instinct, cleaning, and litter choice — plus the medical causes behind a sudden regression.',
+  },
+  {
+    slug: 'multi-ferret-introductions',
+    eyebrow: 'Group dynamics',
+    title: 'Multi-Ferret Introductions',
+    description:
+      'A staged protocol for adding a ferret: quarantine, neutral-ground sessions, what normal dominance posturing looks like, and when a pairing is not working.',
+  },
 ]
 
 export default function BehaviorHubPage() {
