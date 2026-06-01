@@ -42,6 +42,14 @@ export default function PandaCorydorasPage() {
 
         <h2>Feeding and Breeding</h2>
         <p>Pandas are not scavengers and need dedicated sinking foods: quality sinking pellets and wafers, plus frequent frozen or live offerings such as bloodworms, daphnia, and baby brine shrimp. To trigger spawning, condition the group heavily, then perform a large water change with slightly cooler water to simulate the rainy-season trigger. Females deposit sticky eggs on glass, plants, and decor. Eggs hatch in three to five days; the fry are sensitive and require scrupulous water quality and fine foods. Panda breeding is a satisfying intermediate-level project once a stable, mature group is established.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Panda Corydoras — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, soft sand substrate, and sinking food sized for panda corydoras care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/panda%20corydoras%20tank%20setup?s=species-panda-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Panda Corydoras Setup on Amazon →</a>
+            <a href="/go/chewy-brand/panda%20corydoras%20tank%20setup?s=species-panda-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )

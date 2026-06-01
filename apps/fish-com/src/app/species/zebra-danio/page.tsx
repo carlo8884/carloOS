@@ -43,6 +43,14 @@ export default function ZebraDanioPage() {
 
         <h2>Breeding — The Lab Fish</h2>
         <p>Zebra danios are egg-scatterers and among the easiest egg-layers to breed. A well-conditioned group will spawn readily at first light, scattering non-adhesive eggs that fall to the bottom. Because the adults eagerly eat their own eggs, breeders use a layer of marbles or a mesh on the tank floor so eggs fall out of reach. Eggs hatch in two to three days; fry require infusoria or commercial liquid fry food until large enough for baby brine shrimp. Their transparent embryos and rapid development are exactly why Danio rerio became a cornerstone of developmental biology research.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Zebra Danio — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, secure lids, and food sized for zebra danio care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/zebra%20danio%20tank%20setup?s=species-zebra-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Zebra Danio Setup on Amazon →</a>
+            <a href="/go/chewy-brand/zebra%20danio%20tank%20setup?s=species-zebra-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )

@@ -42,6 +42,14 @@ export default function SparklingGouramiPage() {
 
         <h2>Bubble-Nest Breeding</h2>
         <p>Sparkling gouramis are bubble-nest builders, though some populations nest near the surface among plants and others build under broad leaves or in caves. The male tends the nest and guards the eggs and fry. Spawning is often preceded by especially intense croaking. Fry are tiny and require infusoria and other very fine first foods before graduating to baby brine shrimp. A species-only or heavily planted shrimp-safe tank gives the best fry survival.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Sparkling Gourami — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Sparkling Gourami Setup on Amazon →</a>
+            <a href="/go/chewy-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )

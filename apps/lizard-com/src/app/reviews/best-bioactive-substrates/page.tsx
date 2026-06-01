@@ -38,7 +38,7 @@ export default function BestBioactiveSubstratesPage() {
               cons={['More expensive than DIY', 'Heavy shipping cost', 'Available online only']}
               price="$30–60 depending on volume"
               ctaText="Shop BioDude Terra Sahara →"
-              ctaHref="https://thebiodude.com/collections/substrate"
+              ctaHref="/go/amazon-brand/biodude+terra+sahara+bioactive+substrate?s=reviews-best-bioactive-substrates"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="biodude-terra-sahara"
             />

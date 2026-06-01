@@ -118,8 +118,8 @@ export default function BestTerrariumsPage() {
               cons={['6–10 week lead time', 'US shipping only', 'Industrial aesthetic — not for display setups']}
               price="$180–600"
               priceNote="Varies significantly by size and configuration"
-              ctaText="View at Animal Plastics →"
-              ctaHref="https://www.animalplastics.com"
+              ctaText="Shop PVC Reptile Enclosures →"
+              ctaHref="/go/amazon-brand/animal+plastics+pvc+reptile+enclosure?s=reviews-best-reptile-terrariums"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="animal-plastics-t8"
             />

@@ -41,6 +41,14 @@ export default function DwarfPufferPage() {
 
         <h2>Tank Setup and Water Quality</h2>
         <p>A dense forest of plants is essential — it breaks up territories, provides hunting cover, and reduces stress. Pea puffers are sensitive to poor water quality and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical. Telling sex apart is possible in mature fish: males develop a dark belly stripe and wrinkle-like lines behind the eyes, while females are rounder and more heavily spotted. Their intelligence, hunting behavior, and color-shifting moods reward keepers willing to meet their demanding needs.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Puffer — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and snail-culture supplies sized for dwarf puffer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/dwarf%20puffer%20nano%20tank%20setup?s=species-dwarf-puffer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Dwarf Puffer Setup on Amazon →</a>
+            <a href="/go/chewy-brand/dwarf%20puffer%20nano%20tank%20setup?s=species-dwarf-puffer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
