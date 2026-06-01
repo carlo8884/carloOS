@@ -57,6 +57,7 @@ export default function BlueBuffaloEvaluationPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="brand"
       hero={{
         title: 'Blue Buffalo — An Independent Evaluation',
         subtitle:

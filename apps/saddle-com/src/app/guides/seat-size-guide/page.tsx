@@ -34,6 +34,7 @@ export default function SeatSizeGuidePage() {
   return (
     <ArticleLayout
       siteId="saddle-com"
+      contentType="guide"
       hero={{
         title: 'Saddle Seat Size Guide — Find Your Correct Size',
         subtitle: 'Seat size has nothing to do with how tall you are or how much you weigh. The correct size is determined by one measurement: the distance between your seat bones. Everything else follows from that.',

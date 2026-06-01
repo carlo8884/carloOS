@@ -34,6 +34,7 @@ export default function OrijenVsAcanaComparisonPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="brand"
       hero={{
         title: 'Orijen vs Acana',
         subtitle:

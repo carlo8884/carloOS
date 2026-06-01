@@ -9,6 +9,7 @@ export default function VizslaPage() {
       hero={{ title: 'Vizsla Breed Guide', subtitle: 'The Hungarian pointing dog — lean, golden-rust, and deeply attached to their people. Vizslas are called the "velcro dog" by their owners because they are physically attached to their person from the moment they wake up to the moment they sleep. This is not metaphorical — they follow from room to room, sleep pressed against their person, and are genuinely distressed by extended separation.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Vizsla', href: '/breeds/vizsla' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

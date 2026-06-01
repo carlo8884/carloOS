@@ -39,6 +39,7 @@ export default function FerretDietBasicsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Diet Basics',
           subtitle:

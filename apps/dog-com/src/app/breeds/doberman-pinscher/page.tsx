@@ -11,6 +11,7 @@ export default function DobermanPage() {
       hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

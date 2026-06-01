@@ -92,6 +92,7 @@ export default function FerretLitterTrainingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Litter Training',
           subtitle:

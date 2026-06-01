@@ -101,6 +101,7 @@ export default function FerretAdrenalDiseasePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Adrenal Disease in Ferrets',
           subtitle:

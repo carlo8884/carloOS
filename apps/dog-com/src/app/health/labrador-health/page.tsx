@@ -35,6 +35,7 @@ export default function LabradorHealthPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'Labrador Retriever Health Guide',
         subtitle: 'Labs have a genetic mutation that prevents normal satiety signaling — they don\'t feel full the way other dogs do. This single biological fact drives the most common health problems in America\'s most popular breed.',

@@ -30,6 +30,7 @@ export default function FerretCageSetupPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Cage Setup',
           subtitle:

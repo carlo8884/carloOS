@@ -2,42 +2,47 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'ferret-com', title: 'Terms of Use | Ferret.com', description: 'Ferret.com terms of use.', path: '/legal/terms' })
+export const metadata: Metadata = buildMetadata({
+  siteId: 'ferret-com',
+  title: 'Terms of Use | Ferret.com',
+  description: 'Ferret.com terms of use — site usage, intellectual property, disclaimers, and liability limits.',
+  path: '/legal/terms',
+})
 
-export default function TermsPage() {
+export default function TermsOfUsePage() {
+  const lastUpdated = 'June 2026'
   return (
     <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
       <nav className="text-xs text-brand-text-light flex gap-2 mb-8">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
         <span className="text-brand-text-mid">Terms of Use</span>
       </nav>
+
       <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-2">Terms of Use</h1>
-      <p className="text-sm text-brand-text-light mb-10">Last updated: June 2026</p>
+      <p className="text-sm text-brand-text-light mb-10">Last updated: {lastUpdated}</p>
+
       <div className="carloOS-article">
-        <h2>Acceptance of Terms</h2>
-        <p>By using Ferret.com, you agree to these Terms of Use. If you do not agree, do not use the site.</p>
-        <h2>Not a Substitute for Professional Veterinary Advice</h2>
-        <p><strong>Important:</strong> All content on Ferret.com is for educational and informational purposes only. Nothing on this site constitutes veterinary advice, diagnosis, or treatment. Always consult a licensed veterinarian — ideally one experienced with exotic mammals — for any health concerns about your ferret. In an emergency, contact your veterinarian or an emergency veterinary clinic immediately. Ferret.com is not responsible for actions taken based on information found on this site.</p>
-        <h2>Affiliate Disclosure</h2>
-        <p>Ferret.com participates in affiliate programs and earns commissions on qualifying purchases. This does not affect the editorial independence of our rankings and recommendations. See our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
-        <h2>Intellectual Property</h2>
-        <p>All content on Ferret.com — text, images, graphics, and code — is owned by Bolton Properties, LLC or its content contributors and is protected by copyright law. You may not reproduce, distribute, or create derivative works without express written permission.</p>
-        <h2>User Conduct</h2>
-        <p>You agree not to use Ferret.com to: violate any applicable law; scrape, crawl, or index content without permission; attempt to gain unauthorized access to any system; or engage in any activity that interferes with the site&apos;s normal operation.</p>
-        <h2>Disclaimer of Warranties</h2>
-        <p>Ferret.com is provided "as is" without warranties of any kind, express or implied. We do not warrant that the site will be error-free, uninterrupted, or free of viruses or other harmful components.</p>
-        <h2>Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, Bolton Properties, LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of Ferret.com.</p>
-        <h2>Governing Law</h2>
-        <p>These terms are governed by the laws of the State of New York, without regard to conflict of law principles.</p>
-        <h2>Contact</h2>
-        <p>Legal questions: legal@ferret.com</p>
-      </div>
-      <div className="mt-12 pt-8 border-t border-brand-border flex gap-6 text-sm">
-        <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>
-        <Link href="/legal/affiliate-disclosure" className="text-brand-primary hover:underline">Affiliate Disclosure</Link>
-        <Link href="/disclosure" className="text-brand-primary hover:underline">Disclosure</Link>
-      </div>
+      <p>By using Ferret.com, you agree to these terms. Ferret.com is published by Bolton Properties, LLC. The terms apply to all visitors and authenticated users.</p>
+
+      <h2>Use of the Site</h2>
+      <p>You may use Ferret.com for personal, non-commercial reference. Bulk scraping, automated download of substantially all of the site, and republication without attribution are not permitted.</p>
+
+      <h2>Editorial Content Is Not Professional Advice</h2>
+      <p>Ferret.com publishes reference and educational content. It is not a substitute for professional veterinary, medical, legal, or financial advice. Decisions about an individual animal should be made with a qualified veterinarian who can examine the specific case.</p>
+
+      <h2>Affiliate Links</h2>
+      <p>Many pages on Ferret.com include affiliate links. We earn a commission on qualifying purchases made through these links. The commission does not influence our editorial rankings, which are documented in our <Link href="/editorial-standards" className="text-brand-primary no-underline hover:underline">editorial standards</Link>.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>All editorial text, photography by Ferret.com, layouts, and source code are the property of Bolton Properties, LLC, except where third-party rights are credited (e.g., Unsplash and Pexels photographer attribution, which remains with the photographer).</p>
+
+      <h2>Disclaimer and Limits of Liability</h2>
+      <p>Ferret.com content is provided “as is” without warranty. To the maximum extent permitted by law, Bolton Properties, LLC is not liable for any indirect, incidental, or consequential damages arising from your use of the site.</p>
+
+      <h2>Changes to These Terms</h2>
+      <p>We may revise these terms periodically. Material changes will be reflected in the “Last updated” date below.</p>
+</div>
     </div>
   )
 }

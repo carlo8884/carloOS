@@ -33,6 +33,7 @@ export default function PositiveReinforcementPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{
         title: 'Positive Reinforcement Training — How It Works',
         subtitle: 'Positive reinforcement is not a soft alternative to "real" training — it is the method with the strongest scientific support, the best outcomes, and the best effect on the human-dog relationship. Here\'s how it works and how to use it.',

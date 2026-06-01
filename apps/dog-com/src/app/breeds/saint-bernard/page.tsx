@@ -9,6 +9,7 @@ export default function SaintBernardPage() {
       hero={{ title: 'Saint Bernard Breed Guide', subtitle: 'The Alpine rescue dogs of the Great St. Bernard Pass — Saint Bernards are among the most massive dogs in existence, combining legendary gentleness with significant health considerations that prospective owners must understand before acquisition. At 120–180+ pounds, the decisions made about their health management have outsized consequences.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Saint Bernard', href: '/breeds/saint-bernard' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">At a Glance</div>

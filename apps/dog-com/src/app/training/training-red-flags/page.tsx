@@ -18,6 +18,7 @@ export default function TrainingRedFlagsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{ title: 'Dog Training Red Flags', subtitle: 'Dog training is unregulated — anyone can call themselves a trainer and use any method they choose. These are the approaches that behavioral science has consistently found harmful, and what the alternatives accomplish.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Red Flags', href: '/training/training-red-flags' }]}
       schema={schema}

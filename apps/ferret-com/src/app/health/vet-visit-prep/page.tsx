@@ -99,6 +99,7 @@ export default function FerretVetVisitPrepPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Vet Visit Prep',
           subtitle:

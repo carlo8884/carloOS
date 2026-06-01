@@ -46,7 +46,7 @@ When this list drops below 5, COO extends it. When CSRO files a directive that s
 | Rotate Anthropic API key after `/ask` MVP validation | ~2 min | Pending Carlo — security hygiene |
 | CSRO bot session spawn + paste `ops/csro/CSRO-PROMPT.md` | ~3 min | Pending Carlo — fleet activation |
 | IR Bot Codex session spawn + paste `ops/csro/IR-BOT-PROMPT.md` | ~3 min | Pending Carlo — fleet activation |
-| Vercel bootstrap for 4 of 5 new scaffolds (askthevet, seniorpets, dogpicture, petsupplies — hardmoneyloans is sunset) | ~10 min | Pending Carlo |
+| Vercel bootstrap for 3 active new scaffolds (askthevet, seniorpets, dogpicture) — petsupplies decommissioned per PR #221, hardmoneyloans sunset | ~10 min | Pending Carlo |
 
 ---
 

@@ -24,6 +24,7 @@ export default function SavannahMonitorPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="lizard-com"
+        contentType="species"
         hero={{ title: 'Savannah Monitor Care Guide', subtitle: 'Varanus exanthematicus — the African savannah monitor is a powerful, intelligent, burrowing insectivore that is among the most consistently mis-kept reptiles in the pet trade. Done right, a 15–20 year companion; done wrong, an obese 6-year tragedy.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Savannah Monitor', href: '/species/savannah-monitor' }]}
         sidebar={<>

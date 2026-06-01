@@ -71,7 +71,12 @@ export default function AquariumSetupPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="aquarium-algae-control" href="/setup/aquarium-algae-control" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Algae Control</Link>
         <Link key="aquarium-cycling-guide" href="/setup/aquarium-cycling-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Cycling Guide</Link>
+        <Link key="aquascaping-guide" href="/setup/aquascaping-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquascaping Guide</Link>
+        <Link key="gh-kh-water-hardness" href="/setup/gh-kh-water-hardness" className="text-sm text-brand-primary no-underline hover:underline">GH and KH Water Hardness</Link>
+        <Link key="low-tech-planted-tank" href="/setup/low-tech-planted-tank" className="text-sm text-brand-primary no-underline hover:underline">Low-Tech Planted Tank</Link>
+        <Link key="nano-tank-setup" href="/setup/nano-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Nano Tank Setup</Link>
         <Link key="planted-tank-setup" href="/setup/planted-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Planted Tank Setup</Link>
         <Link key="pond-guide" href="/setup/pond-guide" className="text-sm text-brand-primary no-underline hover:underline">Pond Guide</Link>
         <Link key="quarantine-tank-guide" href="/setup/quarantine-tank-guide" className="text-sm text-brand-primary no-underline hover:underline">Quarantine Tank Guide</Link>
@@ -93,6 +98,9 @@ export default function AquariumSetupPage() {
           <li><strong>20 gallons long</strong> — the beginner recommendation. Stable water parameters, good species options, forgiving of minor errors.</li>
           <li><strong>40+ gallons</strong> — easiest to maintain, widest species selection, most stable parameters. If space allows, start here.</li>
         </ul>
+        <p className="text-sm text-brand-text-mid">
+          Sizing a specific tank? Use the <Link href="/tools/aquarium-volume-calculator" className="text-brand-primary no-underline hover:underline">aquarium volume calculator</Link> to convert dimensions to gallons, and the <Link href="/tools/stocking-calculator" className="text-brand-primary no-underline hover:underline">stocking calculator</Link> to plan how many fish a given tank supports.
+        </p>
 
         <h2 id="equipment">Step 2 — Equipment You Actually Need</h2>
         <p><strong>Non-negotiable:</strong></p>
@@ -104,6 +112,9 @@ export default function AquariumSetupPage() {
           <li><strong>Liquid test kit</strong> — API Master Test Kit ($30). Tests ammonia, nitrite, nitrate, and pH. This is how you know when your tank is cycled and when water changes are needed. Test strips are inaccurate.</li>
         </ul>
         <p><strong>Useful but not mandatory at setup:</strong> gravel vacuum, protein skimmer (saltwater only), CO2 system (planted tanks), UV sterilizer.</p>
+        <p className="text-sm text-brand-text-mid">
+          Need the heater wattage for your tank size and target temperature? Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link>.
+        </p>
 
         <h2 id="setup">Step 3 — Set Up the Tank</h2>
         <ol style={{ marginBottom: '16px', paddingLeft: '24px' }}>
@@ -119,6 +130,9 @@ export default function AquariumSetupPage() {
         <p>This is the step most beginners skip that causes most fish deaths. The nitrogen cycle establishes the bacterial colonies that convert toxic ammonia (fish waste) into less harmful compounds. Without it, ammonia accumulates and kills fish.</p>
         <p><strong>Fishless cycling method (recommended):</strong> Add a small amount of pure ammonia (Dr. Tim&apos;s Ammonium Chloride) to establish a food source for bacteria. Dose to 2–4 ppm ammonia. Test every 2–3 days. When ammonia drops rapidly and nitrite appears, the first bacteria have colonized. When nitrite also drops rapidly and nitrate appears, cycling is complete. Do a 50% water change and add fish.</p>
         <p><strong>Speed it up:</strong> Add a bottle of Tetra SafeStart Plus or Dr. Tim&apos;s One &amp; Only on day one. Use filter media from an established tank. Maintain temperature at 78–80°F — bacteria grow faster in warmer water.</p>
+        <p className="text-sm text-brand-text-mid">
+          Tracking week-by-week progress: the <Link href="/tools/aquarium-cycling-estimator" className="text-brand-primary no-underline hover:underline">aquarium cycling estimator</Link> tells you when each step of the nitrogen cycle should complete based on your starting conditions.
+        </p>
 
         <h2 id="test">Step 5 — Test Before You Add Fish</h2>
         <p>Your cycle is complete when: ammonia reads 0 ppm, nitrite reads 0 ppm, and nitrate is present (proof the full conversion chain is working). Perform a 25–30% water change before adding fish to bring nitrate below 20 ppm.</p>

@@ -102,6 +102,7 @@ export default function FerretAgingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Aging Ferret Care',
           subtitle:

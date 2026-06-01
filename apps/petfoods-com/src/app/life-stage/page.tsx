@@ -61,7 +61,7 @@ const STAGES: LifeStageCard[] = [
       'Growth diets are calorically denser. Feeding-trial AAFCO substantiation for growth is more clinically informative than formulation-only because the trial covers the full growth phase. Large-breed puppy diets specifically restrict calcium absolute levels — feeding an adult or all-life-stages diet to a large-breed puppy can supply too much calcium, even when the percentage looks compliant.',
     watchOuts:
       'A diet labeled “all life stages” without an explicit large-breed growth qualifier may not be appropriate for a large-breed puppy. WSAVA guidance recommends reading the AAFCO statement and the Ca/P disclosure rather than relying on marketing claims.',
-    href: '/life-stage/growth',
+    href: '#growth',
   },
   {
     id: 'maintenance',
@@ -79,7 +79,7 @@ const STAGES: LifeStageCard[] = [
       'Most commercial adult formulas substantiate AAFCO compliance by formulation, not feeding trial. The PetFood.com methodology weights feeding-trial substantiation higher because it verifies the calculated profile in living animals.',
     watchOuts:
       'Adult maintenance formulas are not interchangeable across species — adult cat food fed to a dog underprovides several nutrients and overprovides others. Feeding-guideline portion sizes on the bag tend to be inflated; body-condition score is the more honest gauge.',
-    href: '/life-stage/maintenance',
+    href: '#maintenance',
   },
   {
     id: 'senior',
@@ -97,7 +97,7 @@ const STAGES: LifeStageCard[] = [
       'Because there is no AAFCO senior profile, a senior label means whatever the manufacturer has decided it means. Two brand-name “senior” formulas may differ in protein content by more than 10 percentage points. Reading the guaranteed analysis is the only honest comparison.',
     watchOuts:
       'A senior diagnosis that motivates a senior diet — for example, early chronic kidney disease — is a veterinary call, not a marketing one. Therapeutic renal or hepatic diets are a different category (regulated under FDA prescription-diet framework) and are not interchangeable with retail “senior” formulas.',
-    href: '/life-stage/senior',
+    href: '#senior',
   },
   {
     id: 'all-stages',
@@ -114,7 +114,7 @@ const STAGES: LifeStageCard[] = [
       'For an adult dog, an all-life-stages diet is nutritionally adequate but caloric density may be higher than needed, contributing to overfeeding if portion sizes are not adjusted downward. For a small or medium-breed puppy, all-life-stages is generally appropriate.',
     watchOuts:
       'Check for the large-breed-growth qualifier specifically if feeding a large-breed puppy. Absence of the qualifier is not a safety claim; AAFCO permits the all-life-stages designation without it.',
-    href: '/life-stage/all-stages',
+    href: '#all-stages',
   },
 ]
 

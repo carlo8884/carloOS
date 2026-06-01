@@ -33,6 +33,7 @@ export default function AafcoCompletenessExplainedPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="guide"
       hero={{
         title: 'AAFCO Completeness Explained',
         subtitle:

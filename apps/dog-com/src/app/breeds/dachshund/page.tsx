@@ -10,6 +10,7 @@ export default function DachshundPage() {
       hero={{ title: 'Dachshund Breed Guide', subtitle: 'The long body and short legs that make Dachshunds distinctive also make their spine uniquely vulnerable. With a 25% lifetime risk of intervertebral disc disease (IVDD), spinal health management is not optional for Dachshund owners — it is a daily practice that begins day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Dachshund', href: '/breeds/dachshund' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">IVDD Prevention Checklist</div>

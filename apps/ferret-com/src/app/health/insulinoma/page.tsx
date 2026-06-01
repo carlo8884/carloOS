@@ -39,6 +39,7 @@ export default function FerretInsulinomaPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Insulinoma in Ferrets',
           subtitle:

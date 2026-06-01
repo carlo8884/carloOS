@@ -112,6 +112,7 @@ export default function WesternPleasurePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="discipline"
         hero={{
           title: 'Western Pleasure',
           subtitle:

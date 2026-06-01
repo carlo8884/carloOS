@@ -35,6 +35,7 @@ export default function FrenchBulldogHealthPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'French Bulldog Health Guide',
         subtitle: 'French Bulldogs are among the most popular dogs in the world — and among the most medically complex. Their anatomy creates near-inevitable health challenges every owner must understand before purchase and throughout the dog\'s life.',

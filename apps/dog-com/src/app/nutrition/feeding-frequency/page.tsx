@@ -9,6 +9,7 @@ export default function FeedingFrequencyPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'How Often to Feed Your Dog', subtitle: 'Meal frequency has real consequences for digestion, housetraining, bloat risk, and blood sugar regulation. Here\'s the evidence-based schedule for each life stage.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '6 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Feeding Frequency', href: '/nutrition/feeding-frequency' }]}
       schema={schema}
