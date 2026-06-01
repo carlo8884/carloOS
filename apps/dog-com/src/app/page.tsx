@@ -33,6 +33,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
+  buildWebSiteSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
+)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -169,6 +175,7 @@ const PRODUCT_GUIDES = [
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO: "What do you need help with for your dog today?" ─────── */}
       <section className="bg-brand-dark relative overflow-hidden">
         <div

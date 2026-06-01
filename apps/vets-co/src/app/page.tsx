@@ -14,6 +14,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'vets-co', name: 'Vets.co', url: 'https://vets.co' }),
+  buildWebSiteSchema({ siteId: 'vets-co', name: 'Vets.co', url: 'https://vets.co' }),
+)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -251,6 +257,7 @@ const FEATURED_GUIDES: {
 export default function VetsHomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
         {/* CSS-only environmental wash — no clinical photography per QC §1.

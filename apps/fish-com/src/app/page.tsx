@@ -39,6 +39,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'fish-com', name: 'Fish.com', url: 'https://fish.com' }),
+  buildWebSiteSchema({ siteId: 'fish-com', name: 'Fish.com', url: 'https://fish.com' }),
+)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -162,6 +168,7 @@ const CALCULATORS = [
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="bg-brand-dark relative overflow-hidden">
         <div
