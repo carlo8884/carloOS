@@ -8,6 +8,14 @@
 Pull latest origin/main. Read ops/bot-queue/COO.md, do the top queued item, commit+push to your own branch, open a PR rebased on main. Keep main green (run scripts/ci/*.mjs before pushing). Update this file before stopping. Don't idle; don't ask Carlo unless empty/blocked.
 ```
 
+## 🎯 MODE SHIFT (Carlo 2026-06-01): content-expansion → LAUNCH-QUALITY POLISH
+Stop building breadth. Make the **cohort-5 sites launch-quality** (criteria: `ops/csro/launch-quality-criteria.md`).
+**Cohort-5: Dog.com, Fish.com, Ferret.com, PetFood.com, Vets.co.** Your job = QA + structure on these:
+broken-link/orphan-page/missing-hub/weak-metadata/missing-breadcrumb/missing-schema/thin-page/
+duplicate-route/duplicate-title sweep → fix; improve internal linking across new clusters; ensure clean
+homepage→hub→spoke; fix metadata-policy failures; run trust-guard + metadata-policy + link-check before
+every push. Make each site feel COHERENT, not just large. One branch+PR per site. Do NOT push DNS/launch.
+
 ## Queue (priority order)
 | # | Directive | Priority | Status | Next action | Deadline |
 |---|---|---|---|---|---|

@@ -11,8 +11,13 @@ Pull latest origin/main. Read ops/bot-queue/Monetization.md and do the top queue
 ## ⏰ AMAZON 180-DAY CLOCK (NEW 2026-05-31)
 Amazon Associates **APPROVED 2026-05-31**. Account closes if no **3 qualifying sales by ~2026-11-27**. Every `/go/amazon/*` link is now a LIVE earner. This makes dir-009 + dir-019 a countdown, not a backlog. Real constraint is now traffic (launch/DNS = Carlo), not wiring.
 
-## 🎯 MISSION (Carlo 2026-06-01): Definition-of-Done GATE 3 across the WHOLE portfolio
-No site is "done" until EVERY commercial-intent page has a buy-box. Today monetization is near-zero: **dog-com 156pg/0 buy-boxes, petfood 102/0, vets 100/1, lizard 102/4, fish 103/7.** Work site-by-site to FULL coverage — not a few pages. Tracker: `ops/csro/definition-of-done.md`. Rules everywhere: `ctaHref="/go/<vendor>/<sku>?s=<slug>"` (NEVER bare URLs), real SKUs, `<AffiliateDisclosure>` above the first buy-box, registered vendors only, **§1.5.b NO buy-boxes on clinical/medicated/Rx-adjacent products**. One branch+PR per site. Verify each: `node scripts/ci/affiliate-link-integrity.mjs` → 0 untracked + trust-guard PASS.
+## 🎯 MODE SHIFT (Carlo 2026-06-01): LAUNCH-QUALITY POLISH — fix LEAKAGE before adding more
+Order of operations (do in this sequence, do NOT skip ahead):
+1. **Fix ALL affiliate leakage first** — every commercial CTA through `/go` (run `node scripts/ci/affiliate-link-integrity.mjs`; drive to 0 untracked portfolio-wide). dog-com slow-feeder bare-Amazon, Horses/Saddle 51 direct CTAs (+schneiders/schneider slug fix), any remaining bare URLs.
+2. **Clinical/medicated buy-box sweep** (§1.5.b) — grep every buy-box for Rx/medicated/antiseptic/antimicrobial/clinical products; remove CTA, keep informational. (Note: CSRO already did ferret insulinoma/aging/ear-cleaner + dog flea-tick/CBD — verify, don't redo.)
+3. **Disclosures** — `<AffiliateDisclosure>` above the first buy-box on every monetized page.
+4. **THEN** add buy-boxes to high-intent/traffic pages on the **cohort-5 (Dog, Fish, Ferret, PetFood, Vets)** — prioritize pages likely to convert. Finish Ferret first (furthest along).
+Rules everywhere: `ctaHref="/go/<vendor>/<sku>?s=<slug>"`, real SKUs, registered vendors only, §1.5.b. One branch+PR per site. Criteria: `ops/csro/launch-quality-criteria.md`. Do NOT push DNS/launch.
 
 ## Queue (priority order)
 

@@ -8,8 +8,8 @@
 Pull latest origin/main. Read ops/bot-queue/Visual.md and do the top queued item. Commit + push to your own branch, open a PR rebased on main. When done, update this queue file (finished/remaining/blocked/next/Carlo-needed) before ending. Stay in lane; QC §1 trust bar (no AI humans/animals, no fake headshots, preserve photographer attribution). Don't idle — next item if blocked. Don't ask Carlo unless queue is empty/blocked.
 ```
 
-## 🎯 MISSION (Carlo 2026-06-01): Definition-of-Done GATE 2 across the WHOLE portfolio
-No site is "done" until it has identity + hero imagery + in-page images THROUGHOUT (not just hubs). Today visual is near-zero: **9 of 10 sites have ZERO StockImage usage; only ferret has heroes (hubs only).** This is the single biggest portfolio gap alongside monetization. Tracker: `ops/csro/definition-of-done.md`. Per site: $0 typographic wordmark (letterSpacing 0), real-photo hero on homepage + every hub, in-page imagery on key content pages, real photographer attribution (NO "Unsplash contributor" placeholders), NO API/keys/secrets, NO AI humans/animals, preserve attribution. One branch+PR per site. Carlo eyeballs Tier-1 (Dog/Fish/Horses) — keep those in early commits.
+## 🎯 MODE SHIFT (Carlo 2026-06-01): LAUNCH-QUALITY POLISH — cohort-5 first
+Make the cohort-5 sites look credible + premium, NOT templated/generic. **Order: Dog → Fish → Ferret → PetFood → Vets.** Per site: $0 typographic wordmark (letterSpacing 0), curate REAL photography (hand-picked, real photographer attribution — NO "Unsplash contributor" placeholders, NO API/keys/secrets, NO AI humans/animals), hero on homepage + every hub, in-page imagery on high-value pages (breed/species/review/calculator/condition). Improve homepage, hubs, calculators/tools, and high-value pages specifically. Ensure pages don't read as templated. Criteria: `ops/csro/launch-quality-criteria.md`. One branch+PR per site. Carlo eyeballs Dog/Fish — keep premium. Do NOT push DNS/launch.
 
 ## Queue (priority order)
 
