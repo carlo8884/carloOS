@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function ProbioticsForPetsPage() {
               { label: 'Strain Specificity', href: '#strain' },
               { label: 'Viability and Quality', href: '#viability' },
               { label: 'Using Probiotics Well', href: '#using' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,58 @@ export default function ProbioticsForPetsPage() {
         <p>Probiotics must contain live organisms at the labeled count at the time of use, and independent testing has repeatedly found pet probiotics with far fewer viable organisms than claimed, or contaminating organisms. Live bacteria are sensitive to heat, moisture, and time, so storage and shelf life matter. Prefer products with a guaranteed live count through the expiration date, a NASC seal or third-party testing, and proper storage. A dead probiotic does nothing.</p>
         <h2 id="using">Using Probiotics Well</h2>
         <p>Use a veterinary-grade probiotic with evidence for the intended purpose, at the studied dose, stored correctly. For acute diarrhea, an appropriate probiotic is a reasonable adjunct, but persistent or severe GI signs need diagnosis, not just a supplement. Probiotics complement, rather than replace, an appropriate diet and veterinary care. See <a href="/diets/fiber-and-digestive-health">Fiber and Digestive Health Diets</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Pet probiotics are over-the-counter supplements, and the category&apos;s biggest problem is viability — independent testing has repeatedly found far fewer live organisms than labeled. So the buying rule is specific: choose a product with a guaranteed live count through the expiration date, strains studied in dogs or cats for your intended use, and a NASC seal or third-party testing. The picks below reflect that filter, not a hands-on trial. Persistent or severe GI signs need diagnosis, not just a supplement.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="veterinary-probiotic"
+          badge="Guaranteed Live Count"
+          badgeEmoji="🦠"
+          name="Veterinary-Grade Pet Probiotics"
+          subtitle="Strain-specific, guaranteed CFU through expiration"
+          score={8.5}
+          winner
+          description={
+            <p>The best-supported use of probiotics is shortening acute diarrhea episodes, and the products with evidence are strain-specific veterinary-grade powders and pastes that guarantee a live count through the expiration date. Buy on disclosed strains and guaranteed CFU, not on broad wellness claims. Store as directed — live bacteria are sensitive to heat, moisture, and time.</p>
+          }
+          specs={[
+            { label: 'Live count', value: 'Guaranteed to expiry', highlight: 'good' },
+            { label: 'Strains', value: 'Disclosed, pet-studied', highlight: 'good' },
+            { label: 'Best evidence', value: 'Acute diarrhea' },
+            { label: 'Quality filter', value: 'NASC / third-party', highlight: 'good' },
+          ]}
+          pros={['Strain-specific evidence for diarrhea', 'Guaranteed live count', 'Low risk']}
+          cons={['Broad wellness claims unsubstantiated', 'Viability varies between products', 'Not a replacement for diagnosis']}
+          price="$25–45"
+          ctaText="Find Veterinary Probiotics"
+          ctaHref="/go/chewy-brand/dog+probiotic+guaranteed+cfu?s=supplements-probiotics-for-pets"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="dog+probiotic+guaranteed+cfu"
+        />
+        <ReviewCard
+          id="synbiotic-prebiotic"
+          badge="Synbiotic"
+          badgeEmoji="🌾"
+          name="Synbiotic & Prebiotic Supplements"
+          subtitle="Probiotics plus the prebiotic fiber that feeds them"
+          score={7.8}
+          description={
+            <p>Synbiotics pair live probiotic strains with prebiotic fibers (FOS, inulin) that nourish beneficial gut bacteria. They are a reasonable adjunct during diet transitions, antibiotic-associated upset, and stress-related diarrhea. Apply the same filters: disclosed strains, guaranteed live count, and a quality seal.</p>
+          }
+          specs={[
+            { label: 'Contains', value: 'Probiotic + prebiotic' },
+            { label: 'Use', value: 'Transitions / mild upset' },
+            { label: 'Quality filter', value: 'NASC / third-party', highlight: 'good' },
+          ]}
+          pros={['Combines live cultures with prebiotic fiber', 'Useful during diet transitions', 'Low risk']}
+          cons={['Same viability caveats apply', 'Not for severe or persistent GI disease']}
+          price="$20–40"
+          ctaText="Compare Synbiotic Supplements"
+          ctaHref="/go/amazon-brand/dog+synbiotic+probiotic+prebiotic?s=supplements-probiotics-for-pets"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="dog+synbiotic+probiotic+prebiotic"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>
