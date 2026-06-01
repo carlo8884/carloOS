@@ -1575,6 +1575,258 @@ export const Ingredients: Ingredient[] = [
     ],
     relatedSlugs: ['chicory-root-inulin', 'dried-plain-beet-pulp', 'cellulose'],
   },
+
+  // ─── WAVE 9: VITAMINS ────────────────────────────────────────────────────
+  {
+    slug: 'vitamin-e-supplement',
+    name: 'Vitamin E Supplement (Tocopherols)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin E supplement provides tocopherols, the fat-soluble antioxidant vitamin. It serves a dual role: it is an essential nutrient and, as mixed tocopherols, also a natural antioxidant preservative for fats.',
+    aafcoSection: 'Chapter 9 (vitamin E supplement / mixed tocopherols)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient (the Dog and Cat Food Nutrient Profiles set a minimum). When listed as "mixed tocopherols" near other fats, it also functions as the natural-preservative alternative to BHA/BHT. Clear disclosure and a dual nutritional/preservative role.',
+    commonIn: ['orijen', 'acana', 'wellness', 'fromm', 'merrick', 'nulo', 'blue-buffalo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['bha', 'bht', 'vitamin-a-supplement'],
+  },
+  {
+    slug: 'vitamin-a-supplement',
+    name: 'Vitamin A Supplement',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin A supplement (typically retinyl acetate or retinyl palmitate) provides preformed vitamin A. Cats require preformed vitamin A because they cannot efficiently convert beta-carotene; dogs can use both.',
+    aafcoSection: 'Chapter 9 (vitamin A supplement)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient with both a minimum and a maximum in the nutrient profiles (vitamin A is fat-soluble and toxic in excess). Cats specifically require this preformed form. Clear disclosure; the maximum exists because hypervitaminosis A is a documented concern.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'fancy-feast', 'wellness'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-e-supplement', 'vitamin-d3-supplement', 'carrots'],
+  },
+  {
+    slug: 'vitamin-d3-supplement',
+    name: 'Vitamin D3 Supplement (Cholecalciferol)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, vitamin D3 supplement (cholecalciferol) provides the form of vitamin D used by dogs and cats, which (unlike many species) cannot synthesize adequate vitamin D from sunlight and must obtain it from diet.',
+    aafcoSection: 'Chapter 9 (vitamin D3 supplement)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential nutrient with both a minimum and a maximum (vitamin D toxicity is serious and has been the cause of multiple pet-food recalls from formulation errors). Dogs and cats depend on dietary D3. Clear disclosure; the formulation-error recall history makes the maximum and QC controls especially relevant.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'blue-buffalo'],
+    concernsIfAny: [
+      'Vitamin D toxicity from formulation/overdose errors has caused multiple pet-food recalls; the AAFCO maximum and manufacturer QC are the relevant safeguards.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'FDA CVM — Recalls & Withdrawals (vitamin D formulation-error recalls)',
+    ],
+    relatedSlugs: ['vitamin-a-supplement', 'vitamin-e-supplement', 'calcium-carbonate'],
+  },
+  {
+    slug: 'ascorbic-acid',
+    name: 'Vitamin C (Ascorbic Acid)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, ascorbic acid (vitamin C) is used in pet food as a supplemental antioxidant. Dogs and cats synthesize their own vitamin C, so AAFCO does not list it as a required dietary nutrient; its role in pet food is as an antioxidant and processing aid.',
+    aafcoSection: 'Chapter 9 (ascorbic acid)',
+    scoringRubric: 'Medium',
+    scoringNote:
+      'Not an AAFCO-required nutrient for dogs and cats (both synthesize vitamin C), so its presence is an added antioxidant rather than a nutritional requirement. Marketing claims framing vitamin C as essential supplementation overstate the case for healthy animals. Clear disclosure; the function is antioxidant/processing, not correcting a dietary deficiency.',
+    commonIn: ['blue-buffalo', 'wellness', 'nutro', 'fromm'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-e-supplement', 'mixed-tocopherols-rosemary'],
+  },
+
+  // ─── WAVE 10: MINERALS ───────────────────────────────────────────────────
+  {
+    slug: 'zinc-sulfate',
+    name: 'Zinc Sulfate / Zinc Proteinate',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, zinc sulfate and chelated forms (zinc proteinate, zinc amino acid complex) supply the essential trace mineral zinc. Chelated ("proteinate") forms are organically bound and are marketed for higher bioavailability than inorganic sulfate/oxide forms.',
+    aafcoSection: 'Chapter 9 (zinc sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral with a profile minimum. The distinction between inorganic (sulfate, oxide) and chelated (proteinate) forms is a bioavailability question; chelated forms generally have better absorption, which premium brands cite. Clear disclosure; both forms meet AAFCO requirements.',
+    commonIn: ['orijen', 'acana', 'hills-science-diet', 'royal-canin', 'wellness', 'fromm', 'nulo'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['iron-supplement', 'kelp', 'calcium-carbonate'],
+  },
+  {
+    slug: 'calcium-carbonate',
+    name: 'Calcium Carbonate',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, calcium carbonate is a calcium source. Calcium and phosphorus are essential macrominerals with both AAFCO minimums and a regulated calcium-to-phosphorus ratio, which is especially important in large-breed growth formulations.',
+    aafcoSection: 'Chapter 9 (calcium carbonate)',
+    scoringRubric: 'High',
+    scoringNote:
+      'A common calcium source. The clinically important context is the calcium-to-phosphorus ratio and total calcium in large-breed puppy diets — excess calcium during growth is associated with skeletal developmental disease, which is why the AAFCO large-breed growth profile caps calcium. Clear disclosure; the ratio and growth-stage context matter.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'blue-buffalo', 'eukanuba'],
+    concernsIfAny: [
+      'In large-breed puppy diets, excess calcium during growth is associated with skeletal developmental disease; AAFCO caps calcium in the large-breed growth profile.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['vitamin-d3-supplement', 'zinc-sulfate', 'iron-supplement'],
+  },
+  {
+    slug: 'iron-supplement',
+    name: 'Iron Supplement (Ferrous Sulfate)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, iron sources include ferrous sulfate and chelated forms (iron proteinate). Iron is an essential trace mineral; note that iron oxide is a coloring agent and is not a nutritionally available iron source.',
+    aafcoSection: 'Chapter 9 (iron sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral. A common point of confusion is that "iron oxide" used as a red/brown colorant is nutritionally inert, whereas ferrous sulfate and iron proteinate are the bioavailable nutritional sources. Clear disclosure when the specific form is named.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'wellness'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'calcium-carbonate'],
+  },
+  {
+    slug: 'potassium-chloride',
+    name: 'Potassium Chloride',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, potassium chloride is a potassium source. Potassium is an essential macromineral with an AAFCO minimum; it is also used to meet electrolyte balance targets in formulation.',
+    aafcoSection: 'Chapter 9 (potassium chloride)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential macromineral. A routine formulation ingredient to meet the potassium minimum and balance electrolytes. Its appearance on the panel is standard nutritional completion, not a marketing flourish. Clear disclosure.',
+    commonIn: ['hills-science-diet', 'royal-canin', 'purina-pro-plan', 'eukanuba'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['calcium-carbonate', 'zinc-sulfate', 'choline-chloride'],
+  },
+  {
+    slug: 'selenium-yeast',
+    name: 'Selenium (Selenium Yeast)',
+    category: 'Supplement',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, selenium sources include sodium selenite and organic selenium yeast. Selenium is an essential trace mineral with a narrow margin between requirement and toxicity, so AAFCO sets both a minimum and a maximum.',
+    aafcoSection: 'Chapter 9 (selenium sources)',
+    scoringRubric: 'High',
+    scoringNote:
+      'AAFCO-required essential trace mineral with a notably narrow safe range — both deficiency and excess are documented concerns, which is why AAFCO caps it. Organic selenium yeast is often cited as having better bioavailability and a wider safety margin than inorganic sodium selenite. Clear disclosure; the narrow range makes QC important.',
+    commonIn: ['orijen', 'acana', 'hills-science-diet', 'wellness', 'fromm'],
+    concernsIfAny: [
+      'Narrow margin between requirement and toxicity; AAFCO sets a maximum and manufacturer QC is relevant.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025 — Dog Food Nutrient Profile and Cat Food Nutrient Profile',
+      'NRC, Nutrient Requirements of Dogs and Cats (2006)',
+    ],
+    relatedSlugs: ['zinc-sulfate', 'iron-supplement', 'vitamin-e-supplement'],
+  },
+
+  // ─── WAVE 11: ADDITIVES / PRESERVATIVES / COLORS ─────────────────────────
+  {
+    slug: 'mixed-tocopherols-rosemary',
+    name: 'Mixed Tocopherols & Rosemary Extract',
+    category: 'Preservative',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, mixed tocopherols (natural vitamin E forms) and rosemary extract are natural antioxidant preservatives used to slow fat rancidity. They are the principal natural-preservative alternatives to the synthetic phenolics BHA, BHT, and ethoxyquin.',
+    aafcoSection: 'Chapter 9 (mixed tocopherols; rosemary extract)',
+    scoringRubric: 'High',
+    scoringNote:
+      'The natural preservative system most often used by brands marketing "no BHA/BHT/ethoxyquin." Effective antioxidants with no regulatory toxicology concern, but a shorter functional shelf life than the synthetic phenolics, which affects packaging, storage guidance, and date coding. Clear disclosure.',
+    commonIn: ['orijen', 'acana', 'wellness', 'fromm', 'merrick', 'nulo', 'blue-buffalo', 'nutro'],
+    concernsIfAny: [],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA Center for Veterinary Medicine — Animal Food Ingredients Approved for Use in Animal Food',
+    ],
+    relatedSlugs: ['bha', 'bht', 'ethoxyquin', 'vitamin-e-supplement'],
+  },
+  {
+    slug: 'propylene-glycol',
+    name: 'Propylene Glycol',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, propylene glycol is a humectant used to retain moisture and texture, notably in semi-moist dog foods. FDA prohibits its use in CAT food because of documented Heinz-body anemia (erythrocyte damage) in cats; it remains permitted in dog food.',
+    aafcoSection: 'Chapter 9 (propylene glycol); 21 CFR 589.1001 (prohibited in cat food)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A documented species-specific concern: FDA prohibits propylene glycol in cat food because it causes Heinz-body anemia in cats, while it remains a permitted humectant in dog food. This is one of the clearest cases where a dog-food ingredient is specifically unsafe for cats. Verify it is absent from any cat product; in dog food its presence is permitted.',
+    commonIn: [],
+    concernsIfAny: [
+      'FDA prohibits propylene glycol in cat food (Heinz-body anemia in cats); it remains permitted in dog food.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — 21 CFR 589.1001 (propylene glycol prohibited in cat food)',
+    ],
+    relatedSlugs: ['bha', 'natural-flavors', 'caramel-color'],
+  },
+  {
+    slug: 'caramel-color',
+    name: 'Caramel Color',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, caramel color is a permitted coloring agent produced by controlled heating of carbohydrates. It is used for visual appearance (often to give kibble or wet food a "meatier" brown tone) and has no nutritional function.',
+    aafcoSection: 'Chapter 9 (caramel color); 21 CFR 73/582 color additives',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'A purely cosmetic additive — its function is to influence the buyer\'s perception of the food, not the pet\'s nutrition (dogs and cats do not select food by color). AAFCO/FDA permit it. The disclosure question for the buyer is whether a color additive signals a marketing-led rather than nutrition-led formulation; it is not a safety concern at permitted levels.',
+    commonIn: ['pedigree', 'beneful', 'cesar'],
+    concernsIfAny: [
+      'Purely cosmetic; serves human visual perception, not pet nutrition. AAFCO/FDA permit it at specified levels.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Color Additives (21 CFR Parts 73 and 82)',
+    ],
+    relatedSlugs: ['artificial-colors', 'natural-flavors', 'propylene-glycol'],
+  },
+  {
+    slug: 'artificial-colors',
+    name: 'Artificial Colors (FD&C Dyes)',
+    category: 'Concerning',
+    aafcoDefinition:
+      'Per AAFCO Official Publication 2025, certified artificial colors (FD&C dyes such as Red 40, Yellow 5, Yellow 6, Blue 2) are permitted color additives. In pet food their function is cosmetic, typically to produce multi-colored kibble pieces marketed to human buyers.',
+    aafcoSection: 'Chapter 9; 21 CFR 74 (certified color additives)',
+    scoringRubric: 'Verify per product',
+    scoringNote:
+      'Cosmetic additives with no nutritional role; dogs and cats do not choose food by color, so multi-colored kibble is a human marketing feature. FDA-certified dyes are permitted at specified levels. Owners who prefer to avoid synthetic dyes can choose products without them; the question is cosmetic preference, not an established safety hazard at permitted levels.',
+    commonIn: ['beneful', 'pedigree', 'friskies'],
+    concernsIfAny: [
+      'Cosmetic only; serve human buyers, not pet nutrition. FDA-certified dyes are permitted at specified levels.',
+    ],
+    citations: [
+      'AAFCO Official Publication 2025, Chapter 9 Feed Ingredient Definitions',
+      'FDA — Color Additives Permitted for Use (21 CFR Part 74)',
+    ],
+    relatedSlugs: ['caramel-color', 'natural-flavors', 'propylene-glycol'],
+  },
 ]
 
 // ─── Selectors ────────────────────────────────────────────────────────────
