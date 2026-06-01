@@ -71,7 +71,12 @@ export default function AquariumSetupPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Setup Guides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="aquarium-algae-control" href="/setup/aquarium-algae-control" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Algae Control</Link>
         <Link key="aquarium-cycling-guide" href="/setup/aquarium-cycling-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquarium Cycling Guide</Link>
+        <Link key="aquascaping-guide" href="/setup/aquascaping-guide" className="text-sm text-brand-primary no-underline hover:underline">Aquascaping Guide</Link>
+        <Link key="gh-kh-water-hardness" href="/setup/gh-kh-water-hardness" className="text-sm text-brand-primary no-underline hover:underline">GH and KH Water Hardness</Link>
+        <Link key="low-tech-planted-tank" href="/setup/low-tech-planted-tank" className="text-sm text-brand-primary no-underline hover:underline">Low-Tech Planted Tank</Link>
+        <Link key="nano-tank-setup" href="/setup/nano-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Nano Tank Setup</Link>
         <Link key="planted-tank-setup" href="/setup/planted-tank-setup" className="text-sm text-brand-primary no-underline hover:underline">Planted Tank Setup</Link>
         <Link key="pond-guide" href="/setup/pond-guide" className="text-sm text-brand-primary no-underline hover:underline">Pond Guide</Link>
         <Link key="quarantine-tank-guide" href="/setup/quarantine-tank-guide" className="text-sm text-brand-primary no-underline hover:underline">Quarantine Tank Guide</Link>
