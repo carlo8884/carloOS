@@ -7,6 +7,7 @@ import {
   EmailCapture,
   RelatedLinks,
   ScoreMethodology,
+  AffiliateDisclosure,
   FAQAccordion,
   ArticleByline,
   CalloutBox,
@@ -200,6 +201,7 @@ export default function BestSaddlePadsPage() {
             <h2 id="half-pads" className="font-display font-bold text-brand-dark text-2xl mt-10 mb-4">Half Pads — Sheepskin, Gel, Memory Foam</h2>
             <p className="text-base text-brand-text-mid leading-relaxed mb-5">Half pads are the most-misused saddle-pad category. Riders reach for them to &ldquo;fix&rdquo; a saddle that pinches or rocks — almost never the right answer. The three legitimate cases for a half pad are: (1) <strong>temporary shim correction</strong> under a fitter&apos;s supervision while a saddle is being reflocked or a horse&apos;s topline is changing; (2) <strong>shock absorption</strong> for sound horses worked over fences or on hard footing; and (3) <strong>thermal management</strong> for hot-backed or sensitive horses where sheepskin fiber breathing matters.</p>
 
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="mattes"
               badge="Best Half Pad (Fit Correction)"

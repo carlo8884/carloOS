@@ -7,6 +7,7 @@ import {
   EmailCapture,
   RelatedLinks,
   ScoreMethodology,
+  AffiliateDisclosure,
   FAQAccordion,
   ArticleByline,
   CalloutBox,
@@ -187,6 +188,7 @@ export default function BestStirrupsPage() {
             <h2 id="safety" className="font-display font-bold text-brand-dark text-2xl mt-10 mb-4">Safety Stirrups &mdash; FreeJump, Tech, Equipe, Peacock</h2>
             <p className="text-base text-brand-text-mid leading-relaxed mb-5">Modern safety stirrups use one of four release mechanisms: a <strong>flexible outside arm</strong> (FreeJump &mdash; the arm bends outward under sideways load, releasing the foot), a <strong>magnetic outside catch</strong> (Tech &mdash; the outside branch releases when a magnetic catch is loaded laterally), an <strong>articulated outside branch</strong> (Equipe Phoenix &mdash; the outside branch hinges open under load), or a <strong>rubber-band release</strong> (Korsteel Peacock &mdash; the outside is a rubber band that snaps if the rider falls). All four work; cost, durability, weight, and aesthetics differ.</p>
 
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="freejump"
               badge="Best Safety Stirrup"
