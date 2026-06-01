@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -8,6 +8,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Science-based dog training guides. Positive reinforcement principles, puppy socialization windows, common behavior problems.',
   path: '/training',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Training', url: 'https://dog.com/training' },
+  ],
+})
+
 
 const SECTIONS = [
   {
@@ -49,6 +57,8 @@ const SECTIONS = [
 export default function TrainingHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
           <span className="w-6 h-0.5 bg-brand-primary" />
@@ -139,5 +149,6 @@ export default function TrainingHubPage() {
       </section>
       {/* agent1-browse-all-end */}
     </>
+  </>
   )
 }

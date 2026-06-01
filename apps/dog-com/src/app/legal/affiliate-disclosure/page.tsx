@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -9,9 +9,19 @@ export const metadata: Metadata = buildMetadata({
   path: '/legal/affiliate-disclosure',
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Affiliate Disclosure', url: 'https://dog.com/legal/affiliate-disclosure' },
+  ],
+})
+
+
 export default function AffiliateDisclosurePage() {
   return (
-    <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
+    <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
       <nav aria-label="Breadcrumb" className="text-xs text-brand-text-light flex gap-2 mb-8">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Affiliate Disclosure</span>
@@ -50,5 +60,6 @@ export default function AffiliateDisclosurePage() {
         <Link href="/editorial-standards" className="text-brand-primary hover:underline">Editorial Standards</Link>
       </div>
     </div>
+  </>
   )
 }
