@@ -12,6 +12,8 @@
  * Scans buildMetadata({...}) calls in app page.tsx files. Skips:
  *   - [slug] catch-all routes (metadata generated at runtime)
  *   - /admin (intentionally disallowed in robots.ts)
+ *   - pure redirect stubs (a page that only redirect()s to a canonical URL
+ *     emits no indexable HTML, so it legitimately has no metadata)
  *
  * Exit code: 0 if clean, 1 if any violation.
  *
@@ -76,6 +78,19 @@ function listPages(siteId) {
   return out
 }
 
+/**
+ * A pure redirect stub is a page whose only job is to redirect() to a
+ * canonical URL (e.g. /calculators → /tools). It renders no indexable HTML
+ * and exports no metadata, so the missing-title rule does not apply.
+ */
+function isRedirectStub(src) {
+  return (
+    /from\s+['"]next\/navigation['"]/.test(src) &&
+    /\bredirect\s*\(\s*['"`]/.test(src) &&
+    !/buildMetadata\s*\(/.test(src)
+  )
+}
+
 function routeOf(siteRoot, file) {
   const rel = file.slice(siteRoot.length).replace(/\/page\.[tj]sx?$/, '')
   return rel === '' ? '/' : rel
@@ -119,6 +134,11 @@ for (const app of APPS) {
     if (route.includes('[slug]') || route === '/admin') continue
 
     const src = readFileSync(file, 'utf8')
+
+    // Skip pure redirect stubs — they emit no indexable HTML and have no
+    // metadata by design (false positive for missing-title).
+    if (isRedirectStub(src)) continue
+
     let { title, description } = extractMetadata(src)
 
     // Client components ('use client') can't export metadata. Next.js falls

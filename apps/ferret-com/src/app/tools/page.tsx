@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -18,9 +18,36 @@ const TOOLS = [
   },
 ]
 
+// Breadcrumb + ItemList so the tools hub is a citable product surface for AI
+// answer engines (Perplexity/AI Overviews), not just a link list.
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: 'Ferret.com', url: 'https://ferret.com/' },
+  { name: 'Tools', url: 'https://ferret.com/tools' },
+])
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret.com keeper tools',
+  itemListElement: TOOLS.map((tool, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'WebApplication',
+      name: tool.title,
+      description: tool.desc,
+      url: `https://ferret.com${tool.href}`,
+      applicationCategory: 'UtilityApplication',
+      operatingSystem: 'Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+  })),
+}
+const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={combinedSchema} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
