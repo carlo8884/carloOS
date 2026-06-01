@@ -57,6 +57,7 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 // Search
 export { SearchBar } from './components/SearchBar'
 export { buildHowToSchema, buildMedicalWebPageSchema, combineSchemas } from './components/SEOHead'
+export { buildOrganizationSchema, buildWebSiteSchema } from './components/SEOHead'
 
 // Editorial component library
 export { PullQuote } from './components/PullQuote'

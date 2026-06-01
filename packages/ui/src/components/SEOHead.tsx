@@ -280,6 +280,53 @@ export function buildMedicalWebPageSchema(params: MedicalWebPageSchemaParams) {
 }
 
 // ─────────────────────────────────────────────
+// ORGANIZATION SCHEMA
+// Site-level publisher identity — drop on each homepage
+// ─────────────────────────────────────────────
+
+interface OrganizationSchemaParams {
+  siteId: SiteId
+  name: string
+  url: string
+  logoUrl?: string
+}
+
+export function buildOrganizationSchema(params: OrganizationSchemaParams) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${params.url}#organization`,
+    name: params.name,
+    url: params.url,
+    ...(params.logoUrl ? { logo: params.logoUrl } : {}),
+  }
+}
+
+// ─────────────────────────────────────────────
+// WEBSITE SCHEMA
+// Site-level WebSite entity — drop on each homepage.
+// SearchAction is omitted unless the site exposes a user-facing
+// search results route (none currently do).
+// ─────────────────────────────────────────────
+
+interface WebSiteSchemaParams {
+  siteId: SiteId
+  name: string
+  url: string
+}
+
+export function buildWebSiteSchema(params: WebSiteSchemaParams) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${params.url}#website`,
+    name: params.name,
+    url: params.url,
+    publisher: { '@id': `${params.url}#organization` },
+  }
+}
+
+// ─────────────────────────────────────────────
 // MULTI-SCHEMA HELPER
 // Combine multiple schemas into an array for one SchemaScript call
 // ─────────────────────────────────────────────
