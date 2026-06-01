@@ -44,6 +44,60 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-2xl font-semibold text-brand-text-dark mb-4">
+            Where the calculators fit in a husbandry plan
+          </h2>
+          <div className="space-y-4 text-sm leading-relaxed text-brand-text-mid">
+            <p>
+              Most reptile-keeping failures trace back to numbers that were never
+              checked: a basking surface a few degrees off target, a UVB lamp
+              mounted too far away, an enclosure too small for the animal&apos;s
+              activity range. The tools collected here exist to turn those guesses
+              into figures you can write down before an animal ever moves into the
+              enclosure. They are estimators, not verdicts — a starting point that
+              a reading from a calibrated meter or a thermometer placed at the
+              basking site should always confirm.
+            </p>
+            <p>
+              The{' '}
+              <Link href="/tools/uvb-distance-calculator" className="text-brand-primary hover:underline">
+                UVB distance calculator
+              </Link>{' '}
+              is the anchor of this hub. It works the Ferguson Zone framework
+              backwards: instead of asking how much UVB a bulb emits, it asks how
+              much actually reaches the surface the animal occupies once mounting
+              distance and screen mesh have taken their cut. That figure only
+              means something alongside the rest of the lighting picture, which is
+              why it pairs closely with the{' '}
+              <Link href="/setup/uvb-lighting-guide" className="text-brand-primary hover:underline">
+                UVB lighting guide
+              </Link>{' '}
+              and the broader{' '}
+              <Link href="/setup/lighting-guide" className="text-brand-primary hover:underline">
+                enclosure lighting reference
+              </Link>
+              , which cover photoperiod, lamp placement, and bulb replacement
+              intervals a single estimate cannot capture on its own.
+            </p>
+            <p>
+              These pages are written for keepers setting up a new enclosure,
+              auditing an established one, or troubleshooting an animal that
+              isn&apos;t thriving. Every input maps to a number you can verify on
+              the bench, and every output is hedged against the limits of a
+              rule-of-thumb estimate. Before committing to a build, it is worth
+              reading the relevant{' '}
+              <Link href="/species" className="text-brand-primary hover:underline">
+                species care sheet
+              </Link>{' '}
+              first, since the Ferguson Zone target — and therefore every figure
+              the calculators produce — is set by the animal, not the equipment.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (

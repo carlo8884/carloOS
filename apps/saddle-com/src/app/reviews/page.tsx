@@ -42,6 +42,63 @@ export default function SaddleReviewsPage() {
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="saddle-com:hub-reviews" aspect="16:9" variant="wide" priority />
       </div>
+      <div className="px-container-sm sm:px-container pt-12">
+        <div className="max-w-content-wide mx-auto">
+          <h2 className="font-display font-bold text-brand-dark text-2xl mb-4">
+            How we read a saddle &mdash; and what these reviews are weighing
+          </h2>
+          <div className="space-y-4 text-brand-text-mid leading-relaxed">
+            <p>
+              A saddle is the rare piece of equipment a rider buys once and lives
+              with for a decade, and the rare purchase where the wrong choice is
+              felt by two bodies at once. The reviews collected on this hub exist
+              to make that decision legible: not to crown a single best saddle,
+              but to separate the discipline-specific tools, the price tiers, and
+              the build qualities that actually move a horse comfortably under
+              saddle. Each review is assembled from published manufacturer
+              specifications, Society of Master Saddlers reference material, and
+              aggregated rider reports &mdash; cited, not invented &mdash; so the
+              ranking reflects fit and construction rather than marketing.
+            </p>
+            <p>
+              The hub splits along the line every buyer starts from. English
+              riders should begin with the{' '}
+              <Link href="/reviews/best-english-saddles" className="text-brand-primary no-underline hover:underline">
+                best English saddles
+              </Link>{' '}
+              roundup, which sorts dressage, jumping, and all-purpose trees by
+              discipline before brand; western riders have a parallel guide to the{' '}
+              <Link href="/reviews/best-western-saddles" className="text-brand-primary no-underline hover:underline">
+                best western saddles
+              </Link>
+              . From there, the brand-level deep-dives &mdash; the{' '}
+              <Link href="/reviews/stubben-saddle-review" className="text-brand-primary no-underline hover:underline">
+                Stubben review
+              </Link>{' '}
+              and its peers below &mdash; carry the detail forward into tree
+              systems, leather grade, panel construction, and resale value, the
+              factors that decide whether a saddle holds up over years of work.
+            </p>
+            <p>
+              A ranking is only ever a shortlist. The recurring conclusion across
+              every review here is that fit by a qualified saddler outranks any
+              badge on the flap: a well-fitted budget saddle will out-ride a
+              premium one that bridges or rocks. Treat these pages as the way to
+              narrow the field to a few candidates worth trying on the horse, then
+              carry the question into the{' '}
+              <Link href="/fit" className="text-brand-primary no-underline hover:underline">
+                saddle-fit reference
+              </Link>{' '}
+              and the broader{' '}
+              <Link href="/guides" className="text-brand-primary no-underline hover:underline">
+                buying guides
+              </Link>{' '}
+              before money changes hands. The review tells you what is worth
+              trying; the horse tells you what fits.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {FEATURED_SADDLE_REVIEWS.map((r) => (
