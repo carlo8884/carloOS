@@ -59,6 +59,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     description: `Find a veterinarian in ${city.city}, ${state.name}. General practice, 24-hour emergency, and board-certified specialty care — directory listings and how to choose.`,
     path: `/vets/${state.slug}/${city.slug}`,
     type: 'website',
+    noIndex: true, // placeholder/sample directory — not indexed until a verified data source lands (IR P1-1)
   })
 }
 
