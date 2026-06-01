@@ -207,6 +207,79 @@ export default function EquineUlcersPage() {
 
           <p><strong>Tier 6 — Aloe vera, slippery elm, marshmallow root:</strong> Anecdotal use is common; controlled trials are essentially absent in horses. A controlled trial of aloe vera vs omeprazole (Bush J et al., <em>Equine Veterinary Journal</em>, 2018) found omeprazole significantly more effective. These products may be benign but should not replace evidence-based therapy.</p>
 
+          <div
+            style={{
+              background: 'var(--brand-surface, #f8f8f8)',
+              border: '1px solid var(--brand-border, #e5e7eb)',
+              borderRadius: '10px',
+              padding: '18px',
+              margin: '24px 0',
+            }}
+          >
+            <div
+              style={{
+                fontSize: '13px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: 'var(--brand-text-mid, #6b7280)',
+                marginBottom: '6px',
+              }}
+            >
+              Where to source OTC supportive supplements
+            </div>
+            <p
+              style={{
+                fontSize: '13.5px',
+                margin: '0 0 12px',
+                color: 'var(--brand-text-mid, #6b7280)',
+                lineHeight: 1.55,
+              }}
+            >
+              The non-prescription options in Tiers 2–6 above (calcium-based buffers,
+              pectin-lecithin blends, sea-buckthorn formulations, hindgut buffers) are widely
+              available through equestrian retailers. Tier 1 drugs (omeprazole / GastroGard /
+              UlcerGard, sucralfate, misoprostol) are prescription — work with your veterinarian
+              for those, not a retail search. Horses.com earns an affiliate commission on
+              qualifying purchases — at no extra cost to you; commission does not influence
+              the editorial evidence ladder above.
+            </p>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a
+                href="/go/smartpak/home?s=health-equine-ulcers"
+                rel="sponsored noopener"
+                style={{
+                  display: 'inline-block',
+                  padding: '8px 14px',
+                  background: 'var(--brand-primary, #c0392b)',
+                  color: 'white',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  borderRadius: '4px',
+                }}
+              >
+                Shop ulcer-care supplements at SmartPak →
+              </a>
+              <a
+                href="/go/dover/home?s=health-equine-ulcers"
+                rel="sponsored noopener"
+                style={{
+                  display: 'inline-block',
+                  padding: '8px 14px',
+                  background: 'var(--brand-dark, #2c3e50)',
+                  color: 'white',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  borderRadius: '4px',
+                }}
+              >
+                Shop ulcer-care supplements at Dover →
+              </a>
+            </div>
+          </div>
+
           <h2 id="call-vet">When to Call the Vet</h2>
           <p>Same-day veterinary attention is warranted for any of: a horse off feed for more than 12–24 hours, repeated or severe colic, signs of dehydration, fever, or marked behavioral change. EGUS itself is rarely a life-threatening acute event, but the differential diagnoses for the same signs — impaction colic, sand colic, gastric impaction, gastric rupture, intussusception — can be life-threatening and time-sensitive.</p>
 
