@@ -75,7 +75,7 @@ export default function StubbenReviewPage() {
             Stubben Saddle Review 2025 — Roxane, Portos & Aramis
           </h1>
           <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-            Stubben has been making saddles in Germany since 1894. We reviewed their three flagship models — the Quick-Change tree system, leather quality, and who each model suits.
+            Stubben has been making saddles in Germany since 1894. This guide compares their three flagship models — the Quick-Change tree system, leather quality, and who each model suits — on published geometry and aggregated rider reports.
           </p>
           <div className="mt-4 text-xs text-white/30">Saddle.com Editorial · Updated May 2025</div>
         </div>
@@ -105,7 +105,7 @@ export default function StubbenReviewPage() {
               winner
               description={<div>
                 <p>The Roxane is Stubben&apos;s flagship dressage saddle and the benchmark by which other dressage saddles are measured. Quick-Change tree width adjustment, hand-finished German leather that wears exceptionally well, and a deep seat geometry developed over decades of feedback from FEI-level dressage riders.</p>
-                <p>The panel construction is notably supple and conforms well to a range of back types. We have seen Roxanes fitting horses that other saddle brands struggled with. The leather develops a beautiful patina over years of care — a well-maintained 10-year-old Roxane often looks better than a new competitor saddle. Resale value is consistently strong, making the initial investment more reasonable amortized over the saddle&apos;s life.</p>
+                <p>The panel construction is notably supple and conforms well to a range of back types. Riders report Roxanes fitting horses that other saddle brands struggled with. The leather develops a beautiful patina over years of care — a well-maintained 10-year-old Roxane often looks better than a new competitor saddle. Resale value is consistently strong, making the initial investment more reasonable amortized over the saddle&apos;s life.</p>
               </div>}
               specs={[
                 { label: 'Tree', value: 'Quick-Change (5 widths)', highlight: 'good' },
