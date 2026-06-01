@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Reading Pet Insurance Fine Print — What to Check | Vets.co", description: "Waiting periods, exam-fee coverage, payout schedules, and exclusions hide in the policy document. Use this checklist to read a pet insurance policy properly.", path: '/insurance/reading-the-fine-print', type: 'article' })
@@ -51,6 +51,57 @@ export default function FinePrintPage() {
 
           <h2>Practical Reading Strategy</h2>
           <p>Approach the policy with a checklist: waiting periods (especially orthopedic), payout model (percentage vs. schedule), exam-fee coverage, annual limit, and the full exclusions list. Compare two or three plans on these same points side by side rather than on price alone. A few minutes reading the fine print before enrollment prevents the far more painful discovery, during a claim, that the coverage you thought you had does not apply.</p>
+
+          <h2 id="quote">Compare Two or Three Policies</h2>
+          <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="spot"
+            badge="Customizable"
+            badgeEmoji="🔎"
+            name="Spot Pet Insurance"
+            subtitle="Adjustable limits and an optional preventive add-on"
+            score={8.2}
+            winner
+            description={
+              <p>Offers a range of annual-limit and deductible combinations plus an optional preventive-care add-on, which gives you several policy structures to read side by side. Use the fine-print checklist above — waiting periods, exam-fee coverage, exclusions — to compare its sample policy against another carrier before enrolling.</p>
+            }
+            specs={[
+              { label: 'Limits', value: 'Adjustable', highlight: 'good' },
+              { label: 'Exam fees', value: 'Often covered', highlight: 'good' },
+              { label: 'Preventive', value: 'Optional add-on' },
+            ]}
+            pros={['Several policy structures to compare', 'Exam-fee coverage available', 'Optional preventive package']}
+            cons={['Read waiting-period terms', 'Preventive add-on is not insurance']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/spot/home?s=insurance-reading-the-fine-print"
+            ctaAffiliateProgram="spot"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="manypets"
+            badge="Straightforward Terms"
+            badgeEmoji="📄"
+            name="ManyPets"
+            subtitle="Single comprehensive plan, clearer fine print"
+            score={8.0}
+            description={
+              <p>Built around a single comprehensive plan rather than a tier maze, which can make the fine print easier to read and compare. Still apply the checklist — confirm waiting periods, bilateral and hereditary terms, and the annual limit. A clear sample policy is exactly what you want when learning to read coverage documents.</p>
+            }
+            specs={[
+              { label: 'Plan', value: 'Single comprehensive' },
+              { label: 'Fine print', value: 'Relatively clear', highlight: 'good' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Simpler single plan to read', 'Clear sample policy', 'Covers many conditions']}
+            cons={['Fewer structures to mix and match', 'Availability varies by state']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/manypets/home?s=insurance-reading-the-fine-print"
+            ctaAffiliateProgram="manypets"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
