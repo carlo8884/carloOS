@@ -21,16 +21,40 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = process.cwd()
+// All 10 production sites are scanned for cross-site duplicate-title detection
+// (polish-mode queue #7 — Carlo's 2026-06-01 launch-quality-polish pivot).
+// `enforce` controls whether per-site length/missing/dup-title violations FAIL
+// the build: original Tier-1/promotion-path 5 sites stay strict; the 5 newer
+// sites are advisory until each clears its polish pass and a per-site
+// metadata sweep lands.
 const APPS = [
-  { id: 'dog-com',   suffixes: [' | Dog.com', ' — Dog.com', ' - Dog.com'] },
-  { id: 'fish-com',  suffixes: [' | Fish.com', ' — Fish.com', ' - Fish.com'] },
-  { id: 'lizard-com',suffixes: [' | Lizard.com', ' — Lizard.com', ' - Lizard.com'] },
-  { id: 'saddle-com',suffixes: [' | Saddle.com', ' — Saddle.com', ' - Saddle.com'] },
-  { id: 'vets-co',   suffixes: [' | Vets.co', ' — Vets.co', ' - Vets.co'] },
+  { id: 'dog-com',     enforce: true,  suffixes: [' | Dog.com',     ' — Dog.com',     ' - Dog.com']     },
+  { id: 'fish-com',    enforce: true,  suffixes: [' | Fish.com',    ' — Fish.com',    ' - Fish.com']    },
+  { id: 'lizard-com',  enforce: true,  suffixes: [' | Lizard.com',  ' — Lizard.com',  ' - Lizard.com']  },
+  { id: 'saddle-com',  enforce: true,  suffixes: [' | Saddle.com',  ' — Saddle.com',  ' - Saddle.com']  },
+  { id: 'vets-co',     enforce: true,  suffixes: [' | Vets.co',     ' — Vets.co',     ' - Vets.co']     },
+  { id: 'horses-com',  enforce: false, suffixes: [' | Horses.com',  ' — Horses.com',  ' - Horses.com']  },
+  { id: 'petfood-com', enforce: false, suffixes: [' | PetFood.com', ' — PetFood.com', ' - PetFood.com'] },
+  { id: 'petfoods-com',enforce: false, suffixes: [' | PetFoods.com',' — PetFoods.com',' - PetFoods.com']},
+  { id: 'ferret-com',  enforce: false, suffixes: [' | Ferret.com',  ' — Ferret.com',  ' - Ferret.com']  },
+  { id: 'ferrets-com', enforce: false, suffixes: [' | Ferrets.com', ' — Ferrets.com', ' - Ferrets.com'] },
 ]
 
 const TITLE_MAX = 70
 const DESC_MAX = 160
+
+/**
+ * Strip any of the per-site suffixes from a title so we can compare "base"
+ * titles across sites. Returns the title unchanged if no known suffix matches.
+ */
+function stripSiteSuffix(title) {
+  for (const app of APPS) {
+    for (const sfx of app.suffixes) {
+      if (title.endsWith(sfx)) return title.slice(0, -sfx.length).trim()
+    }
+  }
+  return title
+}
 
 function listPages(siteId) {
   const root = join(ROOT, 'apps', siteId, 'src/app')
@@ -77,7 +101,10 @@ function extractMetadata(src) {
 }
 
 let totalViolations = 0
+let totalWarnings = 0
 const report = []
+// site:route → fullTitle, keyed by the base title (after stripping known suffix)
+const crossSiteBaseTitles = new Map()
 
 for (const app of APPS) {
   const siteRoot = join(ROOT, 'apps', app.id, 'src/app')
@@ -117,6 +144,11 @@ for (const app of APPS) {
     if (!titleToRoutes.has(title)) titleToRoutes.set(title, [])
     titleToRoutes.get(title).push(route)
 
+    // Track cross-site base titles for the post-loop check.
+    const base = stripSiteSuffix(title)
+    if (!crossSiteBaseTitles.has(base)) crossSiteBaseTitles.set(base, [])
+    crossSiteBaseTitles.get(base).push({ site: app.id, route, fullTitle: title })
+
     if (title.length > TITLE_MAX) {
       issues.push({ route, type: 'title-too-long', detail: `${title.length} chars` })
     }
@@ -135,8 +167,10 @@ for (const app of APPS) {
   }
 
   if (issues.length > 0) {
-    totalViolations += issues.length
-    report.push(`\n## ${app.id}: ${issues.length} issue${issues.length === 1 ? '' : 's'}`)
+    if (app.enforce) totalViolations += issues.length
+    else totalWarnings += issues.length
+    const tag = app.enforce ? '' : ' (advisory, not enforced)'
+    report.push(`\n## ${app.id}: ${issues.length} issue${issues.length === 1 ? '' : 's'}${tag}`)
     for (const i of issues) {
       report.push(`  [${i.type}] ${i.route}${i.detail ? ' — ' + i.detail : ''}`)
     }
@@ -145,13 +179,62 @@ for (const app of APPS) {
   }
 }
 
+// Cross-site near-duplicate title detection (polish-mode queue item #7,
+// Carlo's 2026-06-01 launch-quality-polish pivot). Two sites carrying the
+// same base title is usually unintentional duplication (templated content
+// or a copy-paste). Cross-portfolio bridges that intentionally share a
+// title belong in `EXPECTED_CROSS_SITE_TITLE_DUPES` below.
+//
+// This check is currently informational — it warns but does not fail. Once
+// the polish wave clears the false positives, promote to a hard fail.
+const EXPECTED_CROSS_SITE_TITLE_DUPES = new Set([
+  // Legal + editorial standards pages intentionally use the same base title
+  // on every site — each is a per-site copy of the same FTC/policy content
+  // (Bolton Properties, LLC as the canonical entity across the portfolio).
+  'Privacy Policy',
+  'Terms of Use',
+  'Affiliate Disclosure',
+  'Editorial Standards',
+  'Editorial Standards — How We Create Content',
+])
+const crossSiteIssues = []
+for (const [base, occurrences] of crossSiteBaseTitles) {
+  if (occurrences.length < 2) continue
+  const sites = new Set(occurrences.map((o) => o.site))
+  if (sites.size < 2) continue
+  if (EXPECTED_CROSS_SITE_TITLE_DUPES.has(base)) continue
+  crossSiteIssues.push({ base, occurrences })
+}
+if (crossSiteIssues.length > 0) {
+  report.push('')
+  report.push(`## Cross-site near-duplicate base titles (informational): ${crossSiteIssues.length}`)
+  report.push('Two sites sharing the same base title (after stripping the per-site suffix) is usually unintentional. If intentional, add the base title to `EXPECTED_CROSS_SITE_TITLE_DUPES` in `scripts/ci/metadata-policy.mjs`.')
+  for (const issue of crossSiteIssues) {
+    report.push(`  [cross-site-dup-title] "${issue.base}"`)
+    for (const o of issue.occurrences) {
+      report.push(`    - ${o.site}${o.route} → "${o.fullTitle}"`)
+    }
+  }
+}
+
 console.log(report.join('\n'))
 
+const advisoryCounts =
+  (totalWarnings ? `${totalWarnings} advisory-site issue(s)` : '') +
+  (totalWarnings && crossSiteIssues.length ? ' + ' : '') +
+  (crossSiteIssues.length ? `${crossSiteIssues.length} cross-site dup warning(s)` : '')
+
 if (totalViolations > 0) {
-  console.error(`\nFAIL: ${totalViolations} metadata-policy violation(s).`)
+  console.error(`\nFAIL: ${totalViolations} metadata-policy violation(s) in enforced sites.`)
+  if (advisoryCounts) console.error(`(plus ${advisoryCounts} — informational, non-blocking)`)
   console.error('Per QC-STANDARDS.md §2: titles ≤ 70 chars, descriptions ≤ 160 chars, no duplicate titles.')
   process.exit(1)
 } else {
-  console.log('\nPASS: metadata policy clean across all 5 sites.')
+  const enforcedCount = APPS.filter((a) => a.enforce).length
+  if (advisoryCounts) {
+    console.log(`\nPASS: metadata policy clean across ${enforcedCount} enforced sites (${advisoryCounts} — informational).`)
+  } else {
+    console.log(`\nPASS: metadata policy clean across all ${APPS.length} sites.`)
+  }
   process.exit(0)
 }
