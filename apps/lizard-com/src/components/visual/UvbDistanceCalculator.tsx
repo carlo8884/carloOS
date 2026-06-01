@@ -122,7 +122,7 @@ const toneClasses: Record<Verdict['tone'], string> = {
   success: 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200',
   warn: 'border-amber-700/40 bg-amber-950/30 text-amber-200',
   danger: 'border-red-700/40 bg-red-950/30 text-red-200',
-  neutral: 'border-brand-border bg-brand-surface text-brand-text-mid',
+  neutral: 'border-brand-border bg-brand-surface text-brand-text-mid ring-1 ring-white/8',
 }
 
 export function UvbDistanceCalculator() {

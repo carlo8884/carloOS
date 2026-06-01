@@ -99,6 +99,7 @@ export default function FerretVaccinationsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Vaccination Schedule',
           subtitle:
@@ -111,7 +112,7 @@ export default function FerretVaccinationsPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/vaccinations' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Vaccinations', href: '/health/vaccinations' },
         ]}
         sidebar={

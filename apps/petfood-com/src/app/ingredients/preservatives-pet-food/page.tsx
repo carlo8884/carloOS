@@ -33,6 +33,7 @@ export default function PreservativesPetFoodPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="nutrition"
       hero={{
         title: 'Preservatives in Pet Food',
         subtitle:

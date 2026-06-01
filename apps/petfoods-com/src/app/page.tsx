@@ -55,6 +55,13 @@ const sections: Section[] = [
       'Year-by-year structured catalog of US commercial pet food recalls reported to the FDA Center for Veterinary Medicine since 2018, with Class I/II/III explanations and recall-alert signup.',
     status: 'Year index live · live tracker in development',
   },
+  {
+    title: 'Label Glossary',
+    href: '/glossary',
+    blurb:
+      'What the regulated and marketing terms on a pet food label actually mean — the AAFCO 95%/25%/with/flavor naming rules, complete & balanced, human-grade, natural, organic, and the marketing-only terms with no enforceable definition.',
+    status: 'Live · cross-linked to the ingredient catalog',
+  },
 ]
 
 export default function HomePage() {

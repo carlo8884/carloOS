@@ -11,13 +11,22 @@ Read-only adversarial review (IR-BOT.md §3a). Read current main: new high-risk 
 ## Queue
 | # | Item | Priority | Status | Next action |
 |---|---|---|---|---|
-| 1 | Audit Ferret/PetFood monetization PRs | 🔴 HIGH | queued | Verify SKUs resolve, /go routing (not bare URLs), disclosure present, health pages no treatment claims. |
-| 2 | Adversarial pass on CSRO registers | ongoing | active | Find over-confidence (you already landed 10 findings; keep going). |
-| 3 | Pressure-test valuation [EST] figures | MED | queued | Flag anything unverified before it reaches Carlo as fact. |
+| 0 | **🚀 FERRET 105-PAGE LAUNCH AUDIT** (NEW 2026-06-01) | 🔴 P0 pre-launch | queued | Ferret.com was built 34→105 pages overnight by parallel agents + is going LIVE. FIRE THIS FIRST. Adversarial pass on the new pages: (1) QC §1 — any fake credentials, "we tested", first-person hands-on, AI-animal claims? (2) §1.5.a — any consumer medication dose ranges (mg/kg) on health pages? (3) §1.5.b — any buy-box/CTA on clinical/medicated products (esp. diet/supplements after Monetization adds buy-boxes)? (4) any unescaped-apostrophe build-breakers CSRO's scan missed? (5) thin/duplicate/templated pages that read as filler (site-level quality risk)? (6) broken internal links / 404 hub cards? Report findings IN CHAT severity-tagged. This is the last check before a public launch — be thorough. |
+| 1 | Re-verify PR #265/#266/#263 AFTER fix-backs | 🔴 HIGH | queued | Confirm the CSRO fix-backs actually landed: #266 chlorhexidine card gone, #265 horses-com in AMAZON_BRAND/CHEWY_BRAND, #263 Logo letterSpacing=0 + no placeholder attribution on wired pages. Report pass/fail per item. |
+| 2 | QC §1.5.b portfolio sweep | 🔴 HIGH | queued | Independently grep every buy-box/ReviewCard for medicated/clinical products (antiseptic/antimicrobial/rinse/medicated/Rx-adjacent). Flag any monetized clinical product CSRO/Mon missed. |
+| 3 | QC §1.5.a portfolio sweep | 🔴 HIGH | queued | Re-grep all health pages for surviving consumer dose ranges (mg/kg, PO q12h) beyond the exempt supplements/AAFCO. Flag stragglers. |
+| 4 | Audit each new monetization PR as it opens | 🔴 HIGH | ongoing | For every Mon PR: SKUs resolve, `/go` routing (no bare URLs), in-page disclosure above first CTA, no clinical monetization, no trust-bar claim. |
+| 5 | Audit each new Visual PR as it opens | HIGH | ongoing | No AI humans/animals, no fake headshots, photographer attribution present + real (not "Unsplash contributor"), no fabricated testing/credentials. |
+| 6 | Trust-guard coverage gaps | MED | queued | Find user-facing trust claims the regex gates would MISS (new phrasings of "we tested/measured", implied credentials, fake review counts). Propose new patterns. |
+| 7 | Affiliate-integrity false-negative hunt | MED | queued | Try to find untracked/dead affiliate links the `affiliate-link-integrity.mjs` check does NOT catch (e.g. links built via variables, non-ReviewCard CTAs). |
+| 8 | Adversarial pass on CSRO registers | ongoing | active | Keep attacking over-confidence in strategy/valuation/disposition docs. |
+| 9 | Pressure-test valuation [EST] figures | MED | queued | Flag anything unverified before it reaches Carlo as fact. |
+| 10 | Metadata/SEO integrity spot-check | LOW | queued | Sample programmatic pages (vets funnels, petfoods brands) for duplicate titles/descriptions, thin content, canonical issues. |
 
 ## Status
-- **Done:** caught dir-015 affiliate bugs + 10-finding strategy pass + 2 bugs in PR #246. High value.
+- **Done:** caught dir-015 affiliate bugs + 10-finding strategy pass + 2 bugs in #246 + the 2026-06-01 pass (Fish fake-testing, ferret rx-dosing, #265 untagged horses, #266 chlorhexidine, #263 Logo/attribution). Very high value — all confirmed.
 - **Env:** read-only — reports in chat, cannot write/pull. Carlo relays to CSRO.
+- **Overnight rule:** work top-down; report EACH item's findings in chat severity-tagged as you go; if an item is clean say "clean, nothing to flag" and move on — never idle, never write stub files.
 - **Carlo needed?** Only to relay findings + on blocker/Tier-1.
 
 ## DO NOT TOUCH

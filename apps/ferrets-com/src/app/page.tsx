@@ -29,25 +29,60 @@ interface SectionCard {
 
 const SECTIONS: SectionCard[] = [
   {
-    eyebrow: 'Reference',
-    title: 'Care Library',
+    eyebrow: 'Directory',
+    title: 'Are Ferrets Legal in Your State?',
     blurb:
-      'Diet, housing, hygiene, enrichment, travel, multi-ferret households, and senior care — grounded in the exotic-mammal veterinary literature.',
-    href: '/care',
+      'A color-coded legality directory for all 50 states and DC — cited state-code framing, permit notes, official-department links, and AFA adoption pointers per state.',
+    href: '/states',
+  },
+  {
+    eyebrow: 'Legality',
+    title: 'Ferret Legality Topics',
+    blurb:
+      'Where ferrets are banned and why, how city rules override state law, rabies and travel law, renting with a ferret, and how the rules change.',
+    href: '/legality',
+  },
+  {
+    eyebrow: 'Adoption',
+    title: 'Adopting a Ferret',
+    blurb:
+      'Regional adoption guides, rescue vs. breeder, the application process, real costs, the first 30 days, and responsible rehoming.',
+    href: '/adopt',
+  },
+  {
+    eyebrow: 'How-to',
+    title: 'Acquiring a Ferret',
+    blurb:
+      'The pre-acquisition checklist, permits and licensing, vaccination and records, choosing a healthy ferret, transport, and setup — in order.',
+    href: '/acquiring',
+  },
+  {
+    eyebrow: 'Logistics',
+    title: 'Moving With a Ferret',
+    blurb:
+      'What to do when relocating to a ban state or permit state, the cross-country move checklist, international relocation, and re-establishing vet care.',
+    href: '/moving',
   },
   {
     eyebrow: 'Directory',
     title: 'Find an Exotic-Pet Vet',
     blurb:
-      'Most general-practice vets see fewer than ten ferrets a year. Seven questions to ask, the AEMV directory, and the state-by-state index in build.',
+      'Most general-practice vets see fewer than ten ferrets a year. Seven questions to ask, the AEMV directory, and the state-by-state index.',
     href: '/find-a-vet',
   },
   {
     eyebrow: 'Directory',
     title: 'Ferret Rescues',
     blurb:
-      'How rescue works, what to look for, the American Ferret Association accredited-shelter program, and the state-by-state rescue index in build.',
+      'How rescue works, what to look for, the American Ferret Association accredited-shelter program, and the rescue vetting checklist.',
     href: '/directory/rescues',
+  },
+  {
+    eyebrow: 'Reference',
+    title: 'Care Library',
+    blurb:
+      'Diet, housing, hygiene, enrichment, travel, multi-ferret households, and senior care — grounded in the exotic-mammal veterinary literature.',
+    href: '/care',
   },
 ]
 

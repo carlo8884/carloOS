@@ -54,7 +54,16 @@ export default function PantherChameleonPage() {
 
         <h2>Lifespan — Female vs Male</h2>
         <p>Female panther chameleons have a significantly shorter lifespan than males — 3–5 years vs 5–7 years for males. This is directly related to egg production. Even unmated females produce infertile clutches — the metabolic cost of egg production shortens their lives. Some keepers use hormonal interventions to suppress egg production, but this is controversial and should only be done under veterinary guidance. Males, which do not bear the metabolic cost of egg production, live longer and are generally considered the better choice for first-time chameleon keepers.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Panther Chameleon — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for panther chameleon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/panther%20chameleon%20setup?s=species-panther-chameleon" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Panther Chameleon Setup on Amazon →</a>
+            <a href="/go/chewy-brand/panther%20chameleon%20setup?s=species-panther-chameleon" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

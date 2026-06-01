@@ -49,7 +49,21 @@ const FORBIDDEN = [
   { pattern: /\bcertified\s+equestrian\s+professional\b/i, reason: 'Fake "certified equestrian professional" credential — removed in PR #3b' },
   { pattern: /\bRanked\s+by\s+(?:a\s+)?Veterinary\s+Nutritionist\b/i, reason: '"Ranked by a Veterinary Nutritionist" — removed in PR #3b' },
   { pattern: /\bRanked\s+by\s+Vets\b/i, reason: '"Ranked by Vets" — removed in PR #3b' },
+
+  // First-person hands-on / lab-testing claims (QC §1: no "we tested/calibrated/measured").
+  // Caught live on fish-com heater page (IR finding, 2026-05-31) — trust-guard had no pattern.
+  // allowNegated: skip when the line DENIES the claim ("No 'we tested' claims", "no in-house
+  // bench testing") — disclaimers are honest and must not trip the guard.
+  { pattern: /\bwe\s+(?:calibrated|tested|measured|benchmarked|bench-tested|ran|trialed|trialled)\b/i, allowNegated: true, reason: 'First-person hands-on testing claim ("we tested/calibrated/measured…") — QC §1 forbids hands-on claims' },
+  { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our calibration…") — QC §1' },
+  { pattern: /\bcalibration\s+testing\b/i, allowNegated: true, reason: '"calibration testing" implies a test we ran — QC §1' },
+  { pattern: /\bNIST[\s-]?traceable\b/i, allowNegated: true, reason: '"NIST-traceable" testing claim — implies metrology we did not perform — QC §1' },
+  { pattern: /\b(?:heaters?|products?|units?|models?|items?)\s+tested\b/i, allowNegated: true, reason: '"N heaters/products tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
 ]
+
+// Negation cues: if a rule is allowNegated and the line denies the claim, it's an honest
+// disclaimer, not a violation. Conservative (a line that both asserts and denies is rare).
+const NEGATION = /\b(?:no|not|never|without|don'?t|doesn'?t|avoid|zero|fabricated)\b/i
 
 // Files we scan: user-facing TSX in apps/* and shared UI components.
 function listScanFiles() {
@@ -83,6 +97,7 @@ for (const file of files) {
     const line = lines[i]
     for (const rule of FORBIDDEN) {
       if (rule.pattern.test(line)) {
+        if (rule.allowNegated && NEGATION.test(line)) continue
         hits.push({
           file: file.replace(ROOT + '/', ''),
           line: i + 1,

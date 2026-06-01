@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import {
+  buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
+  SchemaScript,
+} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -10,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'saddle-com',
   title: 'Collegiate Saddle Review 2025',
   description: 'Collegiate Convertible, Diploma, and Apprentice compared using CSF reviewer notes and published rider reports.',
@@ -20,6 +25,37 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
+
+const schema = combineSchemas(
+  articleSchema,
+  buildProductSchema({
+    name: 'Collegiate Convertible AP',
+    description:
+      'Adjustable-gullet all-purpose Collegiate saddle (5 widths) with optional CAIR panels — Saddle.com Best Value Collegiate pick.',
+    url: 'https://saddle.com/reviews/collegiate-saddle-review#convertible',
+    imageUrl: '',
+    ratingValue: 8.4,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Collegiate Diploma',
+    description:
+      'Close-contact-oriented Collegiate with a forward-cut flap — best Collegiate option for budget jumping riders.',
+    url: 'https://saddle.com/reviews/collegiate-saddle-review#diploma',
+    imageUrl: '',
+    ratingValue: 8.1,
+    reviewCount: 1,
+  }),
+  buildProductSchema({
+    name: 'Collegiate Apprentice',
+    description:
+      'Lowest price-entry Collegiate, all-purpose flap with basic fit — appropriate for beginners and short-term recreational use.',
+    url: 'https://saddle.com/reviews/collegiate-saddle-review#apprentice',
+    imageUrl: '',
+    ratingValue: 7.8,
+    reviewCount: 1,
+  }),
+)
 
 const PICKS = [
   { label: 'Best Collegiate', emoji: '🏆', name: 'Collegiate Convertible AP', subtitle: '8.4 · Adjustable gullet · Best value', href: '#convertible' },

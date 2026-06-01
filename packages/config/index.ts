@@ -916,6 +916,9 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Health', href: '/health' },
       { label: 'Care', href: '/care' },
       { label: 'Behavior', href: '/behavior' },
+      { label: 'Colors', href: '/colors' },
+      { label: 'Diet', href: '/diet' },
+      { label: 'Ownership', href: '/ownership' },
       { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [
@@ -926,6 +929,9 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Health', href: '/health' },
           { label: 'Care', href: '/care' },
           { label: 'Behavior', href: '/behavior' },
+          { label: 'Colors', href: '/colors' },
+          { label: 'Diet', href: '/diet' },
+          { label: 'Ownership', href: '/ownership' },
           { label: 'First-Year Schedule', href: '/first-year-schedule' },
           { label: 'Tools', href: '/tools' },
         ],
@@ -1123,6 +1129,7 @@ export type ContentType =
   | 'training'
   | 'care'
   | 'directory'
+  | 'discipline'
   | 'review'
   | 'guide'
 

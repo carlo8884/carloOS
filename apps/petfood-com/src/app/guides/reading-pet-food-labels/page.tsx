@@ -33,6 +33,7 @@ export default function ReadingPetFoodLabelsPage() {
   return (
     <ArticleLayout
       siteId="petfood-com"
+      contentType="guide"
       hero={{
         title: 'Reading a Pet Food Label',
         subtitle:

@@ -40,6 +40,7 @@ export default function EquineUlcersPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="health"
         hero={{
           title: 'Equine Gastric Ulcer Syndrome (EGUS)',
           subtitle:
@@ -126,7 +127,7 @@ export default function EquineUlcersPage() {
           <p>Diets greater than approximately 2 g starch/kg body weight/meal increase volatile fatty acid (VFA) production in the stomach, which contributes to squamous mucosal injury. The mechanism is independent of HCl — VFA-mediated injury — and is the reason that the simple equation &ldquo;more grain = more ulcers&rdquo; is well supported even when acid production itself is not the rate-limiting step.</p>
 
           <h3>NSAID use</h3>
-          <p>Phenylbutazone, flunixin meglumine, and firocoxib reduce the prostaglandin-mediated mucosal defense of the glandular stomach. Phenylbutazone at therapeutic doses (4.4 mg/kg twice daily) for as little as 5–7 days can induce glandular ulceration in healthy horses. Firocoxib is the COX-2-selective agent most often promoted as gastric-sparing, and while studies do show lower rates of glandular injury compared to phenylbutazone (Doucet MY et al., <em>Equine Veterinary Journal</em>, 2008), the risk is not zero — long-term firocoxib still carries EGGD risk.</p>
+          <p>Phenylbutazone, flunixin meglumine, and firocoxib reduce the prostaglandin-mediated mucosal defense of the glandular stomach. Phenylbutazone at therapeutic doses for as little as 5–7 days can induce glandular ulceration in healthy horses. Firocoxib is the COX-2-selective agent most often promoted as gastric-sparing, and while studies do show lower rates of glandular injury compared to phenylbutazone (Doucet MY et al., <em>Equine Veterinary Journal</em>, 2008), the risk is not zero — long-term firocoxib still carries EGGD risk.</p>
 
           <h3>Stress, transport, and stabling</h3>
           <p>Transport and stabling are independently associated with both ESGD and EGGD. Mechanisms include cortisol-mediated reduction of mucosal blood flow, behavioral disruption of feeding patterns, and social stress (single-stall confinement, weaning, group reshuffles). Horses transported &gt;12 hours have measurable mucosal changes on subsequent gastroscopy.</p>
@@ -163,16 +164,16 @@ export default function EquineUlcersPage() {
           <p>The pharmacologic foundation of EGUS treatment is omeprazole, a proton-pump inhibitor that irreversibly binds the H+/K+ ATPase in gastric parietal cells. At therapeutic doses, omeprazole reduces 24-hour gastric acid secretion by &gt;90 percent within 3–5 days.</p>
 
           <h3>GastroGard (branded omeprazole paste)</h3>
-          <p>4 mg/kg orally once daily for 28 days is the FDA-approved treatment regimen for ESGD. GastroGard is the only equine omeprazole product with established bioavailability and dosing data from FDA approval. Healing rates in published trials reach 75–87 percent for ESGD at 28 days (Andrews FM et al., <em>Equine Veterinary Journal Supplement</em>, 1999; Sykes BW et al., 2015).</p>
+          <p>GastroGard is a veterinarian-prescribed oral omeprazole paste carrying an FDA-approved treatment regimen for ESGD; the exact dose and duration must be determined by a veterinarian. It is the only equine omeprazole product with established bioavailability and dosing data from FDA approval. Healing rates in published trials reach 75–87 percent for ESGD at 28 days (Andrews FM et al., <em>Equine Veterinary Journal Supplement</em>, 1999; Sykes BW et al., 2015).</p>
 
           <h3>UlcerGard (prevention)</h3>
-          <p>1 mg/kg orally once daily — same active ingredient, lower dose, marketed for prevention rather than treatment. Indicated for horses entering high-risk periods (shipping, competition, training intensification). UlcerGard is not labeled or dosed for treatment of established ulcers.</p>
+          <p>Same active ingredient as GastroGard but a lower prevention-oriented dose, marketed for prevention rather than treatment; dosing must be determined by a veterinarian. Indicated for horses entering high-risk periods (shipping, competition, training intensification). UlcerGard is not labeled or dosed for treatment of established ulcers.</p>
 
           <h3>Compounded omeprazole</h3>
           <p>Compounded omeprazole is widely used at lower cost than GastroGard. The pharmacokinetic problem: omeprazole is acid-labile, and the GastroGard formulation includes a proprietary acid-stable vehicle that protects the active ingredient through the equine stomach. Compounded paste and oral suspension products have repeatedly demonstrated lower bioavailability than GastroGard in controlled comparisons (Nieto JE et al., <em>American Journal of Veterinary Research</em>, 2002; multiple subsequent studies). Healing rates with compounded products are highly variable — some trials show 60–70 percent healing, others substantially less. Discuss the cost-vs-bioavailability trade-off with the prescribing veterinarian; an enteric-coated commercial alternative may be more reliable than compounded paste.</p>
 
           <h3>EGGD adjuncts</h3>
-          <p>EGGD often does not respond to omeprazole monotherapy. Standard practice now combines omeprazole with sucralfate (12–20 mg/kg orally three times daily, given 30 minutes after omeprazole to allow gastric pH to drop) or with misoprostol (a prostaglandin E1 analog, 5 μg/kg orally three times daily). Misoprostol is teratogenic — pregnant women must not handle it without gloves, and it must not be given to pregnant mares.</p>
+          <p>EGGD often does not respond to omeprazole monotherapy. Standard practice now combines omeprazole with sucralfate (given after omeprazole to allow gastric pH to drop) or with misoprostol (a prostaglandin E1 analog). These are veterinarian-prescribed, and dosing must be determined by a veterinarian. Misoprostol is teratogenic — pregnant women must not handle it without gloves, and it must not be given to pregnant mares.</p>
 
           <h3>Treatment duration and rescoping</h3>
           <p>The ECEIM consensus is to treat ESGD for a minimum of 28 days, rescope, and continue if not healed. EGGD typically requires 60–90 days of treatment; healing rates remain lower than ESGD even with appropriate combination therapy. Stopping omeprazole abruptly produces rebound hyperacidity; tapering is reasonable but not strongly evidence-based for horses.</p>
@@ -206,6 +207,79 @@ export default function EquineUlcersPage() {
           <p><strong>Tier 5 — Hindgut buffers, probiotics, glutamine, kaolin-pectin:</strong> Theoretical mechanisms exist; the controlled-trial evidence for ulcer-healing benefit is weak to absent. These products are often sold as &ldquo;ulcer supplements&rdquo; on marketing claims that exceed the data. Use with realistic expectations — they are not a replacement for the Tier 1 drugs they are sometimes marketed against.</p>
 
           <p><strong>Tier 6 — Aloe vera, slippery elm, marshmallow root:</strong> Anecdotal use is common; controlled trials are essentially absent in horses. A controlled trial of aloe vera vs omeprazole (Bush J et al., <em>Equine Veterinary Journal</em>, 2018) found omeprazole significantly more effective. These products may be benign but should not replace evidence-based therapy.</p>
+
+          <div
+            style={{
+              background: 'var(--brand-surface, #f8f8f8)',
+              border: '1px solid var(--brand-border, #e5e7eb)',
+              borderRadius: '10px',
+              padding: '18px',
+              margin: '24px 0',
+            }}
+          >
+            <div
+              style={{
+                fontSize: '13px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: 'var(--brand-text-mid, #6b7280)',
+                marginBottom: '6px',
+              }}
+            >
+              Where to source OTC supportive supplements
+            </div>
+            <p
+              style={{
+                fontSize: '13.5px',
+                margin: '0 0 12px',
+                color: 'var(--brand-text-mid, #6b7280)',
+                lineHeight: 1.55,
+              }}
+            >
+              The non-prescription options in Tiers 2–6 above (calcium-based buffers,
+              pectin-lecithin blends, sea-buckthorn formulations, hindgut buffers) are widely
+              available through equestrian retailers. Tier 1 drugs (omeprazole / GastroGard /
+              UlcerGard, sucralfate, misoprostol) are prescription — work with your veterinarian
+              for those, not a retail search. Horses.com earns an affiliate commission on
+              qualifying purchases — at no extra cost to you; commission does not influence
+              the editorial evidence ladder above.
+            </p>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a
+                href="/go/smartpak/home?s=health-equine-ulcers"
+                rel="sponsored noopener"
+                style={{
+                  display: 'inline-block',
+                  padding: '8px 14px',
+                  background: 'var(--brand-primary, #c0392b)',
+                  color: 'white',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  borderRadius: '4px',
+                }}
+              >
+                Shop ulcer-care supplements at SmartPak →
+              </a>
+              <a
+                href="/go/dover/home?s=health-equine-ulcers"
+                rel="sponsored noopener"
+                style={{
+                  display: 'inline-block',
+                  padding: '8px 14px',
+                  background: 'var(--brand-dark, #2c3e50)',
+                  color: 'white',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  borderRadius: '4px',
+                }}
+              >
+                Shop ulcer-care supplements at Dover →
+              </a>
+            </div>
+          </div>
 
           <h2 id="call-vet">When to Call the Vet</h2>
           <p>Same-day veterinary attention is warranted for any of: a horse off feed for more than 12–24 hours, repeated or severe colic, signs of dehydration, fever, or marked behavioral change. EGUS itself is rarely a life-threatening acute event, but the differential diagnoses for the same signs — impaction colic, sand colic, gastric impaction, gastric rupture, intussusception — can be life-threatening and time-sensitive.</p>

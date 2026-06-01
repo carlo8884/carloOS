@@ -17,6 +17,11 @@ jobs:
       NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
       NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
       NEXT_PUBLIC_GA_MEASUREMENT_ID: G-PLACEHOLDER
+      # Turbo Remote Cache — shared with Vercel team to avoid cold rebuilds
+      # (csro-dir-014 Vercel build-cost reduction, lever #1).
+      # Secrets are optional: builds fall back to local .turbo cache if unset.
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -40,7 +40,16 @@ export default function SulcataTortoisePage() {
         <h2>Who Sulcatas Are Appropriate For</h2>
         <p>Sulcatas are appropriate for: people who own or have permanent access to a minimum half-acre of appropriate outdoor land in a warm climate, have resources to build appropriate substantial fencing, can provide lifelong care or have a credible long-term plan for the animal's future, and have experience with large reptiles or are connecting with experienced mentors. They make genuinely spectacular animals for the right keeper — their longevity, impressive size, and the relationship that develops with a well-cared-for sulcata over decades are extraordinary. But the barriers to providing appropriate care are real and high.</p>
         <p>For people who want a tortoise but cannot meet sulcata requirements: Russian tortoises are the recommended alternative — manageable size, similar personality, cold-tolerant, and appropriate for a much wider range of living situations.</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Sulcata Tortoise — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for sulcata tortoise care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/sulcata%20tortoise%20setup?s=species-sulcata-tortoise" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Sulcata Tortoise Setup on Amazon →</a>
+            <a href="/go/chewy-brand/sulcata%20tortoise%20setup?s=species-sulcata-tortoise" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

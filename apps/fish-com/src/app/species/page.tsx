@@ -154,6 +154,8 @@ export default async function SpeciesIndexPage() {
         <Link key="betta-fish-tank-mates" href="/species/betta-fish-tank-mates" className="text-sm text-brand-primary no-underline hover:underline">Betta Fish Tank Mates</Link>
         <Link key="blue-ram" href="/species/blue-ram" className="text-sm text-brand-primary no-underline hover:underline">Blue Ram</Link>
         <Link key="boesemani-rainbowfish" href="/species/boesemani-rainbowfish" className="text-sm text-brand-primary no-underline hover:underline">Boesemani Rainbowfish</Link>
+        <Link key="bristlenose-pleco" href="/species/bristlenose-pleco" className="text-sm text-brand-primary no-underline hover:underline">Bristlenose Pleco</Link>
+        <Link key="bronze-corydoras" href="/species/bronze-corydoras" className="text-sm text-brand-primary no-underline hover:underline">Bronze Corydoras</Link>
         <Link key="cardinal-tetra" href="/species/cardinal-tetra" className="text-sm text-brand-primary no-underline hover:underline">Cardinal Tetra</Link>
         <Link key="celestial-pearl-danio" href="/species/celestial-pearl-danio" className="text-sm text-brand-primary no-underline hover:underline">Celestial Pearl Danio</Link>
         <Link key="cherry-barb" href="/species/cherry-barb" className="text-sm text-brand-primary no-underline hover:underline">Cherry Barb</Link>
@@ -163,7 +165,9 @@ export default async function SpeciesIndexPage() {
         <Link key="discus" href="/species/discus" className="text-sm text-brand-primary no-underline hover:underline">Discus</Link>
         <Link key="discus-guide" href="/species/discus-guide" className="text-sm text-brand-primary no-underline hover:underline">Discus Guide</Link>
         <Link key="dwarf-gourami" href="/species/dwarf-gourami" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Gourami</Link>
+        <Link key="dwarf-puffer" href="/species/dwarf-puffer" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Puffer</Link>
         <Link key="ember-tetra" href="/species/ember-tetra" className="text-sm text-brand-primary no-underline hover:underline">Ember Tetra</Link>
+        <Link key="endlers-livebearer" href="/species/endlers-livebearer" className="text-sm text-brand-primary no-underline hover:underline">Endlers Livebearer</Link>
         <Link key="goldfish" href="/species/goldfish" className="text-sm text-brand-primary no-underline hover:underline">Goldfish</Link>
         <Link key="guppy" href="/species/guppy" className="text-sm text-brand-primary no-underline hover:underline">Guppy</Link>
         <Link key="harlequin-rasbora" href="/species/harlequin-rasbora" className="text-sm text-brand-primary no-underline hover:underline">Harlequin Rasbora</Link>
@@ -177,12 +181,16 @@ export default async function SpeciesIndexPage() {
         <Link key="oscar" href="/species/oscar" className="text-sm text-brand-primary no-underline hover:underline">Oscar</Link>
         <Link key="otocinclus" href="/species/otocinclus" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus</Link>
         <Link key="otocinclus-guide" href="/species/otocinclus-guide" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus Guide</Link>
+        <Link key="panda-corydoras" href="/species/panda-corydoras" className="text-sm text-brand-primary no-underline hover:underline">Panda Corydoras</Link>
+        <Link key="pearl-gourami" href="/species/pearl-gourami" className="text-sm text-brand-primary no-underline hover:underline">Pearl Gourami</Link>
         <Link key="platy-fish" href="/species/platy-fish" className="text-sm text-brand-primary no-underline hover:underline">Platy Fish</Link>
         <Link key="pleco" href="/species/pleco" className="text-sm text-brand-primary no-underline hover:underline">Pleco</Link>
         <Link key="puffer-fish" href="/species/puffer-fish" className="text-sm text-brand-primary no-underline hover:underline">Puffer Fish</Link>
         <Link key="rainbow-fish" href="/species/rainbow-fish" className="text-sm text-brand-primary no-underline hover:underline">Rainbow Fish</Link>
+        <Link key="sparkling-gourami" href="/species/sparkling-gourami" className="text-sm text-brand-primary no-underline hover:underline">Sparkling Gourami</Link>
         <Link key="swordtail-fish" href="/species/swordtail-fish" className="text-sm text-brand-primary no-underline hover:underline">Swordtail Fish</Link>
         <Link key="white-cloud-mountain-minnow" href="/species/white-cloud-mountain-minnow" className="text-sm text-brand-primary no-underline hover:underline">White Cloud Mountain Minnow</Link>
+        <Link key="zebra-danio" href="/species/zebra-danio" className="text-sm text-brand-primary no-underline hover:underline">Zebra Danio</Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}

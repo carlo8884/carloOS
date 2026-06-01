@@ -37,7 +37,16 @@ export default function BoesemaniPage() {
 
         <h2>Conservation Note</h2>
         <p>Boesemani rainbowfish come from a very restricted native range — Lake Ajamaru and a few connected lakes in West Papua. Wild populations have declined due to aquarium collection pressure in the past (most current aquarium fish are captive-bred, significantly reducing wild collection). Responsible breeding by hobbyists maintains genetic diversity in captive populations and reduces pressure on wild stocks. When purchasing, captive-bred fish from reputable breeders are preferable to wild-caught imports.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Boesemani Rainbowfish — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for boesemani rainbowfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/boesemani%20rainbowfish%20tank%20setup?s=species-boesemani-rainbowfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Boesemani Rainbowfish Setup on Amazon →</a>
+            <a href="/go/chewy-brand/boesemani%20rainbowfish%20tank%20setup?s=species-boesemani-rainbowfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

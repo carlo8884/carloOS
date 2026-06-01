@@ -82,6 +82,7 @@ export default function DogTreatsGuidePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="dog-com"
+        contentType="nutrition"
         hero={{
           title: 'Dog Treats Guide — Caloric Budget, Dental, Jerky Safety',
           subtitle:

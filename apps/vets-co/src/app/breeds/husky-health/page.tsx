@@ -100,6 +100,7 @@ export default function VetsHuskyHealthPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="vets-co"
+        contentType="breed"
         hero={{
           title: 'Siberian Husky Health — A Veterinarian\'s Perspective',
           subtitle:

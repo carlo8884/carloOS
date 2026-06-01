@@ -10,6 +10,7 @@ export default function PoodlePage() {
       hero={{ title: 'Poodle Breed Guide', subtitle: 'The most intelligent dog breed by most behavioral assessments — Poodles excel at every task they are trained for, from elite obedience to water retrieving to circus performance. They are also one of the few breeds with three distinctly different sizes (Standard, Miniature, Toy) that carry meaningfully different health profiles.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Poodle', href: '/breeds/poodle' }]}
       schema={schema}
+      contentType="breed"
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Size</div>

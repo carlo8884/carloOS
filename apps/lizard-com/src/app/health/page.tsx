@@ -60,6 +60,20 @@ const EXISTING_HEALTH_PAGES: Array<{ slug: string; label: string }> = [
   { slug: 'stomatitis', label: 'Stomatitis (Mouth Rot)' },
   { slug: 'thermal-burns', label: 'Thermal Burns' },
   { slug: 'vitamin-a-deficiency', label: 'Vitamin A Deficiency' },
+  { slug: 'prolapse-first-aid', label: 'Cloacal Prolapse (Emergency)' },
+  { slug: 'reptile-obesity', label: 'Obesity in Reptiles' },
+  { slug: 'gout-prevention', label: 'Gout in Reptiles' },
+  { slug: 'abscess-treatment', label: 'Abscesses in Reptiles' },
+  { slug: 'snake-mite-eradication', label: 'Snake Mites' },
+  { slug: 'retained-eye-caps', label: 'Retained Eye Caps' },
+  { slug: 'anorexia-in-reptiles', label: 'Anorexia (Food Refusal)' },
+  { slug: 'constipation-impaction', label: 'Constipation & Impaction' },
+  { slug: 'gut-loading-guide', label: 'Gut-Loading Feeders' },
+  { slug: 'feeder-insects-compared', label: 'Feeder Insects Compared' },
+  { slug: 'dubia-roach-care', label: 'Dubia Roach Care' },
+  { slug: 'feeding-frozen-thawed-rodents', label: 'Feeding Frozen-Thawed Rodents' },
+  { slug: 'calcium-d3-supplementation', label: 'Calcium & D3 Supplementation' },
+  { slug: 'herbivore-reptile-diet', label: 'Herbivore Reptile Diet' },
 ]
 
 const CATEGORY_ORDER: ConditionCategory[] = [

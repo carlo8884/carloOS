@@ -102,6 +102,7 @@ export default function FerretAgingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Aging Ferret Care',
           subtitle:
@@ -114,7 +115,7 @@ export default function FerretAgingPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Health', href: '/health/aging-ferret-care' },
+          { name: 'Ferret Health', href: '/health' },
           { name: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
         ]}
         sidebar={
@@ -556,34 +557,13 @@ export default function FerretAgingPage() {
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
             price="$10–25 each"
             ctaText="Find ferret floor sleep sacks"
-            ctaHref="/go/marshall/home?s=health-aging-ferret-care"
+            ctaHref="/go/marshall/ferret-floor-sleep-sack?s=health-aging-ferret-care"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-floor-sleep-sack"
           />
-          <ReviewCard
-            id="recovery-diet"
-            badge="Inappetent Senior"
-            badgeEmoji="🥄"
-            name="Meat-Based Recovery / Supportive Feeding Diet"
-            subtitle="High-calorie meat-based paste for ferrets who are eating less — vet-directed use only"
-            score={8.7}
-            description={
-              <p>A high-calorie meat-based paste (Oxbow Carnivore Care, Hill's a/d, or similar) is the standard tool for syringe-feeding a ferret who is eating less because of dental pain, insulinoma-related lethargy, post-surgical recovery, or end-of-life inappetence. This is a vet-directed product: amount, frequency, and underlying condition all need a clinician's guidance. The diet does not treat the underlying disease; it maintains caloric intake while the underlying disease is being addressed (or, in palliative care, while quality of life remains acceptable).</p>
-            }
-            specs={[
-              { label: 'Form', value: 'Paste, syringe-feedable' },
-              { label: 'Macros', value: 'High-protein, high-fat, meat-based', highlight: 'good' },
-              { label: 'Use case', value: 'Vet-directed supportive feeding only' },
-              { label: 'Shelf life (opened)', value: 'Short — discard promptly' },
-            ]}
-            pros={['Maintains caloric intake during illness or recovery', 'Easy to syringe-feed a reluctant ferret', 'Same product widely used in exotic-pet practice']}
-            cons={['Not a treatment for the underlying disease', 'Use without veterinary direction can delay needed care', 'Some ferrets reject the texture — switch brand or warm before serving']}
-            price="$8–15 / can"
-            ctaText="Find recovery / supportive feeding diet"
-            ctaHref="/go/chewy-brand/carnivore-care-recovery-diet"
-            ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="recovery-diet"
-          />
+          <p>
+            For a senior eating less because of dental pain, insulinoma-related lethargy, post-surgical recovery, or end-of-life inappetence, a high-calorie meat-based paste (such as Oxbow Carnivore Care or Hill&apos;s a/d) is the standard tool for syringe-feeding. This is a vet-directed product: amount, frequency, and the underlying condition all need a clinician&apos;s guidance. It does not treat the underlying disease — it maintains caloric intake while that disease is being addressed, or while quality of life remains acceptable in palliative care. Note that some supportive-feeding diets (e.g. Hill&apos;s a/d) are prescription-only; ask your veterinarian.
+          </p>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

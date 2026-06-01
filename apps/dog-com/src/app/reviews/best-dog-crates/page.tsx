@@ -51,7 +51,7 @@ export default function BestDogCratesPage() {
 
       <QuickPicks items={PICKS} title="Jump to Your Pick" />
 
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>

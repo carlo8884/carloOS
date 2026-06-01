@@ -30,6 +30,7 @@ export default function FerretCageSetupPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Cage Setup',
           subtitle:
@@ -42,7 +43,7 @@ export default function FerretCageSetupPage() {
         }}
         breadcrumbs={[
           { name: 'Home', href: '/' },
-          { name: 'Ferret Care', href: '/care/cage-setup' },
+          { name: 'Ferret Care', href: '/care' },
           { name: 'Cage Setup', href: '/care/cage-setup' },
         ]}
         sidebar={

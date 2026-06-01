@@ -47,7 +47,16 @@ export default function CrestedGeckoPage() {
 
         <h2>Tail Autotomy — No Regrowth in Cresties</h2>
         <p>Crested geckos can drop their tails as a predator defense — tail autotomy. Unlike many gecko species, crested geckos do not regenerate their tails after dropping them. A tailless crested gecko (called a "frogbutt") is permanent. This does not affect health, longevity, or quality of life — tailless crested geckos live full, normal lives. However, it does affect value if the animal is to be sold. Avoid situations that stress the gecko into tail drop: rough handling, being grabbed by the tail, loud noises, and encounters with aggressive tankmates (crested geckos should be housed individually except during supervised breeding).</p>
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Crested Gecko — Setup Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for crested gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/crested%20gecko%20setup?s=species-crested-gecko" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Crested Gecko Setup on Amazon →</a>
+            <a href="/go/chewy-brand/crested%20gecko%20setup?s=species-crested-gecko" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

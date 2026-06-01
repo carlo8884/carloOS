@@ -37,7 +37,16 @@ export default function KuhliLoachPage() {
 
         <h2>Escape Artist Warning</h2>
         <p>Kuhli loaches are adept at escaping through any gap in the aquarium cover. They can fit through filter intake holes, overflow pipes, and tiny openings between the lid and the tank edge. A tank with even modest gaps is likely to produce a dried loach somewhere on the floor within the first few weeks of ownership. Ensure all openings are covered — filter intakes should have sponge pre-filters that kuhli loaches cannot enter. Check the area around the tank for escapees, particularly in the first weeks after introduction when the fish is most likely to explore unfamiliar territory.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Kuhli Loach Guide — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for kuhli loach guide care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/kuhli%20loach%20guide%20tank%20setup?s=species-kuhli-loach-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Kuhli Loach Guide Setup on Amazon →</a>
+            <a href="/go/chewy-brand/kuhli%20loach%20guide%20tank%20setup?s=species-kuhli-loach-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

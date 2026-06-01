@@ -277,7 +277,7 @@ export const Diseases: Disease[] = [
     ],
     treatmentTiers: [
       'IV fluids and aggressive supportive care for AKI',
-      'Doxycycline 5 mg/kg PO/IV q12h × 2 weeks (clears renal carrier state)',
+      'Veterinarian-prescribed doxycycline (clears renal carrier state); dosing and duration determined by a veterinarian',
       'Initial penicillin/ampicillin if doxycycline not tolerated, then transition',
       'Hemodialysis at referral centers for severe acute kidney injury',
     ],
@@ -319,7 +319,7 @@ export const Diseases: Disease[] = [
       'CBC/chemistry to assess renal status',
     ],
     treatmentTiers: [
-      'Doxycycline 10 mg/kg PO q24h × 4 weeks for symptomatic dogs',
+      'Veterinarian-prescribed doxycycline for symptomatic dogs; dosing and duration determined by a veterinarian',
       'NSAID (carprofen, meloxicam) for joint pain in first days',
       'ACE inhibitor and renal diet if proteinuria is present',
       'Treatment of asymptomatic seropositive dogs is debated per ACVIM consensus',
@@ -1944,7 +1944,7 @@ export const Diseases: Disease[] = [
     treatmentTiers: [
       'Isoxazoline (fluralaner, sarolaner, afoxolaner) — single or two-dose protocol',
       'Selamectin or moxidectin spot-on as alternatives',
-      'Ivermectin 0.2–0.4 mg/kg q14 days (avoid in herding breeds with MDR1)',
+      'Veterinarian-prescribed ivermectin (avoid in herding breeds with MDR1); dosing determined by a veterinarian',
       'Treat all in-contact dogs',
       'Environmental decontamination — wash bedding, treat household',
     ],
@@ -2663,8 +2663,8 @@ export const Diseases: Disease[] = [
       'PCR for assemblage typing',
     ],
     treatmentTiers: [
-      'Fenbendazole 50 mg/kg PO once daily × 3–5 days — first-line',
-      'Metronidazole 25 mg/kg PO BID × 5–7 days',
+      'Veterinarian-prescribed fenbendazole — first-line; dosing and duration determined by a veterinarian',
+      'Veterinarian-prescribed metronidazole; dosing and duration determined by a veterinarian',
       'Combination fenbendazole + metronidazole for resistant cases',
       'Bath the dog at the end of treatment to remove cysts from coat',
       'Environmental decontamination — bleach 1:10, quaternary ammonium',
@@ -2793,7 +2793,7 @@ export const Diseases: Disease[] = [
       'Rule out demodectic mange',
     ],
     treatmentTiers: [
-      'Immunosuppressive prednisolone — 2 mg/kg/day with slow taper over weeks',
+      'Veterinarian-prescribed immunosuppressive prednisolone with slow taper over weeks; dosing determined by a veterinarian',
       'Antibiotics for secondary bacterial infection (cephalexin)',
       'Gentle warm compresses and saline cleansing',
       'Avoid scrubbing or harsh cleansers — worsens lesions',
