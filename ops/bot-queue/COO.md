@@ -1,7 +1,7 @@
 # COO — Wakeup Queue
 
 **Owner:** COO · **Lane:** content pages, build orchestration, CI/workflows, routing, STATUS/DASHBOARD/BACKLOG
-**Last updated:** 2026-06-01 (by COO — closed dir-014 code-side levers + Carlo dashboard handoff)
+**Last updated:** 2026-06-01 (by COO — dir-014 closeout merged #268; dir-007 IR F6 noindex-gate shipped)
 
 ## RESTART PROMPT
 ```
@@ -11,17 +11,19 @@ Pull latest origin/main. Read ops/bot-queue/COO.md, do the top queued item, comm
 ## Queue (priority order)
 | # | Directive | Priority | Status | Next action | Deadline |
 |---|---|---|---|---|---|
-| 1 | **Vets.co insurance launch-readiness** (`dir-007`) | HIGH | in_progress | Trust audit + ops portions closed (#230, #239). Remaining: noindex-gate the 2,912 programmatic pages (IR F6) until QA + carrier + disclosure. Track-2 directory data source still pending Carlo. | — |
+| 1 | **Vets.co insurance launch-readiness** (`dir-007`) | HIGH | in_progress | Trust audit + ops portions closed (#230, #239). IR F6 noindex-gate on the 2,912 breed×state pages shipped 2026-06-01. Remaining: carrier-stack realism (Monetization 1.1) + Track-2 directory data source (Carlo). | — |
 | 2 | **Efty footer component** (`dir-008`) | MED | blocked | Build closed (#226). Carlo provides per-tier Efty URLs (`dir-006`) → COO wires per-tier in <5 min. | — |
 | 3 | **Free-tier vet-directory prep** (`dir-010`) | MED | blocked | Research closed (#224). Go/no-go on 10-state pilot → Carlo. | — |
 | 4 | **Consolidation redirects** | MED | blocked | PetFoods→PetFood, Ferrets→Ferret. Sequencing-blocked behind Monetization `dir-009` per CSRO redirect-map ("monetize → migrate → 301"). | — |
 
 ## Status
 - **Done this session (2026-06-01):**
-  - `dir-014` code-side closeout: CI `TURBO_TOKEN`/`TURBO_TEAM` wired in
-    `ci.yml`; `vercel-ignore.sh` patterns broadened (`.claude/*`, `.gitattributes`,
-    `CODEOWNERS`, `*.txt`); Carlo dashboard click-by-click filed at
-    `ops/handoffs/2026-06-01-coo-to-carlo-vercel-cost-dashboard-steps.md`
+  - `dir-014` code-side closeout merged — #268. CI `TURBO_TOKEN`/`TURBO_TEAM`
+    wired; `vercel-ignore.sh` patterns broadened; Carlo dashboard checklist
+    filed at `ops/handoffs/2026-06-01-coo-to-carlo-vercel-cost-dashboard-steps.md`
+  - `dir-007` IR F6 noindex-gate on the 2,912 breed×state cross-product
+    pages (`(funnels)/pet-insurance/breeds/[breed]/[state]/page.tsx`).
+    Hub + breed-only + state-only pages stay indexed.
 - **Done prior sessions:**
   - `dir-018` funnel-tree dedup (un-red main) — #251
   - `dir-020` Bot Wakeup Queue v1 adoption — #264
