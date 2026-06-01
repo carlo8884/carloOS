@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 import { Conditions, RESERVED_HEALTH_SLUGS, type ConditionCategory } from '../../data/conditions'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,8 +97,16 @@ const CATEGORY_DESCRIPTION: Record<ConditionCategory, string> = {
 export default function LizardHealthPage() {
   const dynamicConditions = Conditions.filter((c) => !RESERVED_HEALTH_SLUGS.has(c.slug))
 
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    items: [
+      { name: 'Home', url: 'https://lizard.com/' },
+      { name: 'Reptile Health', url: 'https://lizard.com/health' },
+    ],
+  })
+
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1
           className="font-display font-bold text-white tracking-tight mb-3"
