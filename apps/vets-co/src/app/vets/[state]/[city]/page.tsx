@@ -114,7 +114,7 @@ export default function CityHubPage({ params }: PageProps) {
       <SchemaScript schema={schema} />
 
       {/* Breadcrumb */}
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <Link href="/vets" className="hover:text-brand-primary no-underline">Vet Directory</Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -8,6 +8,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Free veterinary-finance tools. Pet insurance reimbursement estimator (premium / deductible / reimbursement % / cap) for any carrier you can quote.',
   path: '/tools',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://vets.co/' },
+    { name: 'Tools', url: 'https://vets.co/tools' },
+  ],
+})
+
 
 const TOOLS = [
   {
@@ -33,6 +41,8 @@ const TOOLS = [
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
@@ -84,5 +94,6 @@ export default function ToolsHub() {
         </div>
       </section>
     </>
+  </>
   )
 }
