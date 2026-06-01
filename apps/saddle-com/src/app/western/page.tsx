@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Western Saddles 2025 — By Discipline & Budget | Saddle.com', description: 'Western saddles ranked by discipline — barrel racing, roping, trail, reining, and general use. Expert tested with price guides and brand comparisons.', path: '/western' })
+export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Western Saddles 2025 — By Discipline & Budget | Saddle.com', description: 'Western saddles ranked by discipline — barrel racing, roping, trail, reining, and general use. Editorially ranked, with price guides and brand comparisons.', path: '/western' })
 
 const DISCIPLINES = [
   { title: 'Barrel Racing Saddles', desc: 'High rise forks, free swing stirrups, lightweight construction — what actually matters', href: '/reviews/best-western-saddles#barrel-racing', badge: 'Performance' },
