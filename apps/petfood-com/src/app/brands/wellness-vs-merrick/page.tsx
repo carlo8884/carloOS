@@ -1,0 +1,112 @@
+import type { Metadata } from 'next'
+import {
+  buildMetadata,
+  buildArticleSchema,
+  ArticleLayout,
+  TableOfContents,
+  RelatedLinks,
+  EmailCapture,
+} from '@carloOS/ui'
+
+export const metadata: Metadata = buildMetadata({
+  siteId: 'petfood-com',
+  title: 'Wellness vs Merrick — Brand Comparison | PetFood.com',
+  description:
+    'Side-by-side evaluation of two natural-positioned brands — corporate ownership, formulation philosophy, AAFCO posture, manufacturing, and recall history.',
+  path: '/brands/wellness-vs-merrick',
+  type: 'article',
+})
+
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Wellness vs Merrick — Brand Comparison | PetFood.com',
+  description:
+    'Side-by-side evaluation of two natural-positioned brands — corporate ownership, formulation philosophy, AAFCO posture, manufacturing, and recall history.',
+  url: 'https://petfood.com/brands/wellness-vs-merrick',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+})
+
+export default function WellnessVsMerrickPage() {
+  return (
+    <ArticleLayout
+      siteId="petfood-com"
+      contentType="nutrition"
+      hero={{
+        title: 'Wellness vs Merrick',
+        subtitle:
+          'Wellness and Merrick are two natural-positioned premium brands that occupy similar shelf space, both now under large corporate ownership despite their independent-brand image. This independent comparison runs both through the PetFood.com five-dimension rubric — ownership, formulation, AAFCO posture, manufacturing, and recalls. Never paid placement.',
+        category: 'Brand Evaluation',
+        publishedAt: 'May 2026',
+        readTime: '11 min',
+      }}
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Brands' },
+        { name: 'Wellness vs Merrick', href: '/brands/wellness-vs-merrick' },
+      ]}
+      schema={schema}
+      sidebar={
+        <>
+          <TableOfContents
+            items={[
+              { label: 'Two Natural Brands', href: '#twobrands' },
+              { label: 'Corporate Ownership', href: '#ownership' },
+              { label: 'Formulation Philosophy', href: '#formulation' },
+              { label: 'AAFCO Posture', href: '#aafco' },
+              { label: 'Manufacturing', href: '#manufacturing' },
+              { label: 'Recall History', href: '#recall' },
+              { label: 'Sources', href: '#sources' },
+            ]}
+          />
+          <RelatedLinks
+            title="Related References"
+            links={[
+              { label: 'The By-Products Myth', href: '/myths/by-products-myth' },
+              { label: 'Pet Food Marketing Terms', href: '/myths/marketing-terms-decoded' },
+              { label: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+            ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="wellness-vs-merrick"
+          />
+        </>
+      }
+    >
+      <div className="carloOS-article">
+        <p>Wellness and Merrick are premium brands positioned on natural ingredients and recognizable whole foods, and both compete for the same buyer. This comparison evaluates them side by side on the PetFood.com five-dimension rubric, independent of any commercial relationship. A recurring theme is that both, despite an artisanal brand image, are owned by large corporations — a reminder that brand image and corporate reality often differ. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+        <h2 id="twobrands">Two Natural Brands</h2>
+        <p>Both brands lean on natural and whole-ingredient marketing, with named meats, recognizable produce, and an emphasis on what they exclude (artificial colors, certain by-products). As covered elsewhere, natural is a narrowly defined AAFCO term and not a quality guarantee, and the absence of by-products is a marketing position rather than a nutritional upgrade. The brands should be judged on substance, not the natural framing. See <a href="/myths/by-products-myth">The By-Products Myth</a>.</p>
+        <h2 id="ownership">Corporate Ownership</h2>
+        <p>Wellness (Wellness Pet Company) and Merrick are both owned by large corporate parents — Merrick was acquired by Nestle Purina, and Wellness sits within a large pet-nutrition holding company. The independent-artisan brand image of both predates and obscures this corporate ownership. Corporate ownership is neither inherently good nor bad; it matters insofar as it brings (or fails to bring) research and quality-control resources. The point for buyers is to evaluate the reality, not the image.</p>
+        <h2 id="formulation">Formulation Philosophy</h2>
+        <p>Both offer grain-inclusive and grain-free lines; as with all grain-free, the legume-inclusive formulas intersect with the DCM question and the grain-free-is-not-low-carb point. Both emphasize named animal proteins early in the ingredient list, which is a transparency positive, though ingredient order can be affected by fresh-meat-first ranking and ingredient splitting. Judge the specific formula on its panel and analysis, not the brand&apos;s general philosophy. See <a href="/ingredients/ingredient-splitting">Ingredient Splitting</a> and <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
+        <h2 id="aafco">AAFCO Posture</h2>
+        <p>The key questions for both are whether diets are substantiated by feeding trial or formulation alone, whether the company employs a board-certified veterinary nutritionist, and whether it conducts research — the WSAVA-favored signals. Larger corporate ownership can bring more of this capacity, but it must be verified per brand and per formula. Owners should confirm the AAFCO statement on the specific product and ask the WSAVA questions of each company. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
+        <h2 id="manufacturing">Manufacturing</h2>
+        <p>Manufacturing arrangements (owned plants versus co-packing) and disclosed quality-control practices differ and should be evaluated per brand. Corporate ownership by a large manufacturer can provide established quality-control infrastructure. As always, the meaningful signal is transparency about where and how the food is made and what testing is done, rather than the brand&apos;s marketing. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
+        <h2 id="recall">Recall History</h2>
+        <p>Both brands have had recalls over the years, as most established brands have; they should be assessed by cause, severity, and response rather than count. The FDA CVM Recalls and Withdrawals database is the source of record for each brand&apos;s current history. A balanced comparison weighs the recall record alongside the other four dimensions rather than treating any single recall as decisive. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="sources">Sources</h2>
+        <ul>
+          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
+          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
+          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
+          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
+        </ul>
+        <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
+          PetFood.com is reference material. We do not provide individualized veterinary advice.
+          Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a
+          licensed veterinarian and, where indicated, a board-certified veterinary nutritionist.
+        </p>
+      </div>
+    </ArticleLayout>
+  )
+}

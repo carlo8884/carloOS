@@ -29,6 +29,30 @@ const BRANDS = [
     description:
       'Both Champion Petfoods (Mars 2022 acquisition) — comparing the premium and mid-tier lines on ingredients, sourcing, recall history, and price.',
   },
+  {
+    slug: 'purina-pro-plan-evaluation',
+    title: 'Purina Pro Plan',
+    description:
+      'Five-dimension evaluation of the Nestle Purina premium line — research and nutritionist depth, feeding-trial substantiation, manufacturing, and recalls.',
+  },
+  {
+    slug: 'taste-of-the-wild-evaluation',
+    title: 'Taste of the Wild',
+    description:
+      'Grain-free, novel-protein line made by Diamond Pet Foods — the DCM question, manufacturing, and the 2012 Salmonella recall context.',
+  },
+  {
+    slug: 'wellness-vs-merrick',
+    title: 'Wellness vs Merrick',
+    description:
+      'Two natural-positioned premium brands now under large corporate ownership — formulation, AAFCO posture, manufacturing, and recall history.',
+  },
+  {
+    slug: 'kirkland-signature-evaluation',
+    title: 'Kirkland Signature',
+    description:
+      "Costco's store brand — a strong value proposition, the who-makes-it question, AAFCO posture, transparency limits, and recall exposure.",
+  },
 ]
 
 export default function BrandsHubPage() {

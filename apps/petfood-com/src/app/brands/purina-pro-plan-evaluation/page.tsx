@@ -1,0 +1,112 @@
+import type { Metadata } from 'next'
+import {
+  buildMetadata,
+  buildArticleSchema,
+  ArticleLayout,
+  TableOfContents,
+  RelatedLinks,
+  EmailCapture,
+} from '@carloOS/ui'
+
+export const metadata: Metadata = buildMetadata({
+  siteId: 'petfood-com',
+  title: 'Purina Pro Plan — Independent Evaluation | PetFood.com',
+  description:
+    'Five-dimension evaluation of Purina Pro Plan — Nestle Purina corporate context, research and nutritionist depth, manufacturing, AAFCO posture, and recall history.',
+  path: '/brands/purina-pro-plan-evaluation',
+  type: 'article',
+})
+
+const schema = buildArticleSchema({
+  siteId: 'petfood-com',
+  title: 'Purina Pro Plan — Independent Evaluation | PetFood.com',
+  description:
+    'Five-dimension evaluation of Purina Pro Plan — Nestle Purina corporate context, research and nutritionist depth, manufacturing, AAFCO posture, and recall history.',
+  url: 'https://petfood.com/brands/purina-pro-plan-evaluation',
+  imageUrl: '',
+  authorName: 'PetFood.com Editorial',
+  publishedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-06-01T00:00:00Z',
+})
+
+export default function PurinaProPlanEvaluationPage() {
+  return (
+    <ArticleLayout
+      siteId="petfood-com"
+      contentType="nutrition"
+      hero={{
+        title: 'Purina Pro Plan — An Independent Evaluation',
+        subtitle:
+          'Purina Pro Plan is one of the highest-volume mainstream premium lines and one of the brands the WSAVA selection criteria tend to favor, because its parent invests heavily in nutrition research and feeding trials. This independent evaluation runs Pro Plan through the PetFood.com five-dimension rubric — corporate context, research depth, manufacturing, AAFCO posture, and recall history. Never paid placement.',
+        category: 'Brand Evaluation',
+        publishedAt: 'May 2026',
+        readTime: '11 min',
+      }}
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Brands' },
+        { name: 'Purina Pro Plan — An Independent Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+      ]}
+      schema={schema}
+      sidebar={
+        <>
+          <TableOfContents
+            items={[
+              { label: 'Corporate Context', href: '#corporate' },
+              { label: 'Research and Nutritionists', href: '#research' },
+              { label: 'Product Lines', href: '#lines' },
+              { label: 'Manufacturing', href: '#manufacturing' },
+              { label: 'AAFCO Posture', href: '#aafco' },
+              { label: 'Recall History', href: '#recall' },
+              { label: 'Sources', href: '#sources' },
+            ]}
+          />
+          <RelatedLinks
+            title="Related References"
+            links={[
+              { label: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+              { label: 'Scoring Methodology', href: '/guides/methodology' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+            ]}
+          />
+          <EmailCapture
+            variant="sidebar"
+            siteId="petfood-com"
+            title="Free Label Decoder"
+            subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
+            source="purina-pro-plan-evaluation"
+          />
+        </>
+      }
+    >
+      <div className="carloOS-article">
+        <p>Purina Pro Plan is the premium line of Nestle Purina PetCare, evaluated here against the PetFood.com five-dimension rubric: corporate context, ingredient sourcing and research, manufacturing, AAFCO substantiation, and recall history. The evaluation is independent and never influenced by any commercial relationship. Pro Plan is notable for the depth of nutrition research and feeding-trial substantiation behind it, which aligns with the WSAVA selection criteria. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
+        <h2 id="corporate">Corporate Context</h2>
+        <p>Nestle Purina PetCare is one of the largest pet food companies in the world, a division of Nestle, with deep resources for research and manufacturing. Scale brings both advantages (research budgets, quality-control infrastructure, feeding-trial capacity) and the usual scrutiny that attaches to large corporate ownership. For evaluating a diet, the relevant corporate question is whether that scale is directed toward nutritional rigor — and Purina is among the manufacturers that most visibly invest in it.</p>
+        <h2 id="research">Research and Nutritionists</h2>
+        <p>Purina employs board-certified veterinary nutritionists and PhD animal nutritionists and operates a substantial research program, publishing peer-reviewed studies (including a notable lifetime study on the lifespan benefit of lean body condition in dogs). On the WSAVA criteria — qualified nutritionists on staff, feeding-trial testing, and published research — Pro Plan scores strongly. This research depth is one of the clearest points in its favor on our rubric. See <a href="/guides/pet-obesity-epidemic">The Pet Obesity Epidemic</a>.</p>
+        <h2 id="lines">Product Lines</h2>
+        <p>Pro Plan spans a wide range — life-stage diets, large- and small-breed formulas, sensitive-skin-and-stomach lines, performance diets, and specialized formulas — plus the separate Purina Pro Plan Veterinary Diets therapeutic range sold through veterinarians. The breadth means an owner can usually match a specific need within the line, and the veterinary therapeutic diets carry disease-specific formulation and, in cases, supporting evidence. See <a href="/compare/prescription-vs-otc-diets">Prescription vs OTC Diets</a>.</p>
+        <h2 id="manufacturing">Manufacturing</h2>
+        <p>Purina owns and operates its manufacturing facilities rather than relying on anonymous co-packing, which supports quality-control accountability — a positive signal under our manufacturing dimension and the WSAVA criteria. Owning the plants allows direct control over process, sourcing verification, and testing. As with any manufacturer, the meaningful detail is the specific quality-control and audit posture, which Purina discloses more than many smaller brands. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
+        <h2 id="aafco">AAFCO Posture</h2>
+        <p>Many Pro Plan diets are substantiated by AAFCO feeding trials rather than formulation alone — the higher-evidence pathway — which is a meaningful strength on our rubric, since feeding-trial substantiation is one of the WSAVA-favored signals. Owners should still confirm the specific formula and life-stage statement on the bag they buy, since substantiation can vary by product. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
+        <h2 id="recall">Recall History</h2>
+        <p>Like nearly every large manufacturer, Purina has had recalls over the years, which should be evaluated by cause, severity, and response rather than by count alone — a large-volume manufacturer naturally has more total product subject to recall. The relevant questions are whether recalls were handled transparently and what corrective action followed. The FDA CVM Recalls and Withdrawals database is the source of record for the current picture. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="sources">Sources</h2>
+        <ul>
+          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
+          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
+          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
+          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
+        </ul>
+        <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
+          PetFood.com is reference material. We do not provide individualized veterinary advice.
+          Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a
+          licensed veterinarian and, where indicated, a board-certified veterinary nutritionist.
+        </p>
+      </div>
+    </ArticleLayout>
+  )
+}
