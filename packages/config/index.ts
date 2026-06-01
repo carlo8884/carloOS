@@ -781,6 +781,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' },
           { label: 'Bit Selection', href: '/guides/bit-selection-guide' },
           { label: 'Bridle Guide', href: '/guides/horse-bridle-guide' },
+          { label: 'Accessories', href: '/accessories' },
         ],
       },
     ],
