@@ -17,6 +17,16 @@ const SPECIES = [
   { name: 'Ball Python', sci: 'Python regius', level: 'Beginner', zone: 'Zone 2–3', slug: 'ball-python', img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop' },
   { name: 'Corn Snake', sci: 'Pantherophis guttatus', level: 'Beginner', zone: 'Zone 2', slug: 'corn-snake', img: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop' },
   { name: 'Blue-Tongue Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongue-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
+  { name: 'African Fat-Tailed Gecko', sci: 'Hemitheconyx caudicinctus', level: 'Beginner', zone: 'Zone 1', slug: 'african-fat-tailed-gecko', img: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Western Hognose', sci: 'Heterodon nasicus', level: 'Beginner', zone: 'Zone 1–2', slug: 'western-hognose-snake', img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Kenyan Sand Boa', sci: 'Gongylophis colubrinus', level: 'Beginner', zone: 'Zone 1', slug: 'kenyan-sand-boa', img: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Green Anole', sci: 'Anolis carolinensis', level: 'Intermediate', zone: 'Zone 2–3', slug: 'green-anole', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Chinese Water Dragon', sci: 'Physignathus cocincinus', level: 'Intermediate', zone: 'Zone 2–3', slug: 'chinese-water-dragon', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Fire Skink', sci: 'Lepidothyris fernandi', level: 'Intermediate', zone: 'Zone 2', slug: 'fire-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Leachianus Gecko', sci: 'Rhacodactylus leachianus', level: 'Intermediate', zone: 'Zone 1–2', slug: 'leachianus-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Mourning Gecko', sci: 'Lepidodactylus lugubris', level: 'Beginner', zone: 'Zone 1–2', slug: 'mourning-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Argentine Tegu', sci: 'Salvator merianae', level: 'Advanced', zone: 'Zone 3–4', slug: 'argentine-black-and-white-tegu', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Nile Monitor', sci: 'Varanus niloticus', level: 'Advanced', zone: 'Zone 3–4', slug: 'nile-monitor', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
 ]
 
 const LEVEL_COLORS = {
@@ -106,6 +116,24 @@ export default function SpeciesIndexPage() {
         <Link key="tokay-gecko" href="/species/tokay-gecko" className="text-sm text-brand-primary no-underline hover:underline">Tokay Gecko</Link>
         <Link key="uromastyx" href="/species/uromastyx" className="text-sm text-brand-primary no-underline hover:underline">Uromastyx</Link>
         <Link key="veiled-chameleon" href="/species/veiled-chameleon" className="text-sm text-brand-primary no-underline hover:underline">Veiled Chameleon</Link>
+        <Link key="african-fat-tailed-gecko" href="/species/african-fat-tailed-gecko" className="text-sm text-brand-primary no-underline hover:underline">African Fat-Tailed Gecko</Link>
+        <Link key="argentine-black-and-white-tegu" href="/species/argentine-black-and-white-tegu" className="text-sm text-brand-primary no-underline hover:underline">Argentine Black and White Tegu</Link>
+        <Link key="chinese-water-dragon" href="/species/chinese-water-dragon" className="text-sm text-brand-primary no-underline hover:underline">Chinese Water Dragon</Link>
+        <Link key="fire-skink" href="/species/fire-skink" className="text-sm text-brand-primary no-underline hover:underline">Fire Skink</Link>
+        <Link key="green-anole" href="/species/green-anole" className="text-sm text-brand-primary no-underline hover:underline">Green Anole</Link>
+        <Link key="kenyan-sand-boa" href="/species/kenyan-sand-boa" className="text-sm text-brand-primary no-underline hover:underline">Kenyan Sand Boa</Link>
+        <Link key="leachianus-gecko" href="/species/leachianus-gecko" className="text-sm text-brand-primary no-underline hover:underline">Leachianus Gecko</Link>
+        <Link key="mourning-gecko" href="/species/mourning-gecko" className="text-sm text-brand-primary no-underline hover:underline">Mourning Gecko</Link>
+        <Link key="nile-monitor" href="/species/nile-monitor" className="text-sm text-brand-primary no-underline hover:underline">Nile Monitor</Link>
+        <Link key="western-hognose-snake" href="/species/western-hognose-snake" className="text-sm text-brand-primary no-underline hover:underline">Western Hognose Snake</Link>
+        </div>
+        <h2 className="font-display font-bold text-brand-dark text-lg mb-4 mt-8">Choosing a Reptile</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Link key="best-beginner-reptiles" href="/species/best-beginner-reptiles" className="text-sm text-brand-primary no-underline hover:underline">Best Beginner Reptiles</Link>
+        <Link key="beginner-vs-advanced-reptiles" href="/species/beginner-vs-advanced-reptiles" className="text-sm text-brand-primary no-underline hover:underline">Beginner vs Advanced Reptiles</Link>
+        <Link key="reptiles-that-dont-need-uvb" href="/species/reptiles-that-dont-need-uvb" className="text-sm text-brand-primary no-underline hover:underline">Reptiles That Do Not Need UVB</Link>
+        <Link key="low-maintenance-reptiles" href="/species/low-maintenance-reptiles" className="text-sm text-brand-primary no-underline hover:underline">Low-Maintenance Reptiles</Link>
+        <Link key="reptile-buying-checklist" href="/species/reptile-buying-checklist" className="text-sm text-brand-primary no-underline hover:underline">Reptile Buying Checklist</Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}

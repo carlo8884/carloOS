@@ -123,6 +123,20 @@ export default function HusbandryHubPage() {
               {t.topicName}
             </Link>
           ))}
+          <Link
+            key="brumation-guide"
+            href="/husbandry/brumation-guide"
+            className="text-sm text-brand-primary no-underline hover:underline"
+          >
+            Brumation Guide
+          </Link>
+          <Link
+            key="shedding-guide"
+            href="/husbandry/shedding-guide"
+            className="text-sm text-brand-primary no-underline hover:underline"
+          >
+            Shedding Guide
+          </Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}
