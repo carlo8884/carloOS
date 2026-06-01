@@ -257,9 +257,12 @@ export default function HealthHubPage() {
           }}
         >
           These reference pages do not replace veterinary consultation. Ferrets in the United States
-          should be seen by a veterinarian with exotic-mammal experience. The AEMV (Association of
-          Exotic Mammal Veterinarians) member directory is the best starting point if your general-practice
-          vet does not treat ferrets.
+          should be seen by a veterinarian with exotic-mammal experience. If your general-practice vet
+          does not treat ferrets, our guide on{' '}
+          <Link href="/find-an-exotic-vet" className="amber-link" style={{ fontWeight: 600 }}>
+            how to find an exotic-pet vet
+          </Link>{' '}
+          walks through the directories to check and the questions to ask.
         </p>
 
         <ul
