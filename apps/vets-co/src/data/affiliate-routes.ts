@@ -112,6 +112,37 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     requiresSku: true,
   },
 
+  // ─── Veterinary telehealth (service referral) — Carlo-approved 2026-06-01 ───
+  // Telehealth is a clinical SERVICE referral, not a product buy-box, and is
+  // permitted on vets-co under standard FTC disclosure (see /telehealth and
+  // /legal/affiliate-disclosure). This is NOT a product-affiliate exception to
+  // the policy §5 "insurance only on products" rule — no physical product is
+  // sold here. Tracking IDs stay as PLACEHOLDER and are swapped at request time
+  // from AFF_<VENDOR>_TAG env vars (handler convention). These three vendors
+  // back the existing /telehealth comparison CTAs (Vetster, AskVet, Chewy
+  // Connect) and the emergency-triage email sequence /go/vetster/* links.
+  vetster: {
+    // Telehealth. Carlo-approved 2026-06-01 (one-time, Monetization lane).
+    name: 'Vetster (Veterinary Telehealth)',
+    template: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
+  askvet: {
+    // Telehealth. Carlo-approved 2026-06-01 (one-time, Monetization lane).
+    name: 'AskVet (Veterinary Telehealth)',
+    template: 'https://askvet.app/?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
+  chewy: {
+    // Telehealth (Chewy Connect with a Vet). Carlo-approved 2026-06-01.
+    // Scoped to the telehealth SERVICE referral only — vets-co does NOT
+    // register Chewy as a product/pharmacy retailer (policy §5: insurance
+    // only on products). Destination is the Connect-with-a-Vet page.
+    name: 'Chewy Connect with a Vet (Telehealth)',
+    template: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+    requiresSku: false,
+  },
+
   // ─── NO product affiliate routes on vets.co ───
   // Per ops/policies/bot-coordination.md §5 (vets-co row): vets.co is
   // PET INSURANCE ONLY — no product affiliates. Amazon/Chewy/PetSmart

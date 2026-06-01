@@ -36,19 +36,19 @@ export default function TelehealthPage() {
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: '< 15 min typical', highlight: 'good' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
               pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'No monthly commitment', 'Prescription capability']}
               cons={['Higher per-consult cost than subscription services', 'Wait times can extend during peak hours']}
-              price="$50–100 per consultation" ctaText="Book a Consultation →" ctaHref="https://vetster.com" ctaAffiliateProgram="vetster" ctaAffiliateProduct="telehealth" />
+              price="$50–100 per consultation" ctaText="Book a Consultation →" ctaHref="/go/vetster/telehealth" ctaAffiliateProgram="vetster" ctaAffiliateProduct="telehealth" />
             <ReviewCard id="askvet" badge="Best Subscription" badgeEmoji="📋" name="AskVet" subtitle="Unlimited monthly consultations · $30/month" score={8.8}
               description={<p>AskVet offers an unlimited monthly subscription model — $30/month for unlimited chat consultations with licensed veterinarians. For pet owners who have frequent questions (new puppy, senior pet, multiple pets, chronic conditions), the subscription model represents excellent value compared to per-consult pricing. Chat-only (no video) limits the depth of physical assessment, but the convenience and value are genuine for appropriate use cases.</p>}
               specs={[{ label: 'Consultation Type', value: 'Chat only' }, { label: 'Monthly Cost', value: '$30/month unlimited', highlight: 'good' }, { label: 'Wait Time', value: '< 5 min typical', highlight: 'good' }, { label: 'Specialists', value: 'General practice only' }, { label: 'Prescriptions', value: 'Limited' }]}
               pros={['Unlimited consultations for $30/month', 'Very fast response times', 'Good for frequent questions']}
               cons={['Chat only — no video examination', 'Limited specialist access', 'Less comprehensive than Vetster for complex cases']}
-              price="$30/month unlimited" ctaText="Start Free Trial →" ctaHref="https://askvet.app" ctaAffiliateProgram="askvet" ctaAffiliateProduct="telehealth" />
+              price="$30/month unlimited" ctaText="Start Free Trial →" ctaHref="/go/askvet/telehealth" ctaAffiliateProgram="askvet" ctaAffiliateProduct="telehealth" />
             <ReviewCard id="chewy" badge="Best for Chewy Customers" badgeEmoji="🐾" name="Chewy Connect with a Vet" subtitle="Integrated with Chewy pharmacy · Free with Chewy+ membership" score={8.4}
               description={<p>Chewy Connect with a Vet is included with Chewy+ membership ($19.99/month, which also provides free shipping and other benefits). The integration with Chewy&apos;s pharmacy is the standout feature — prescriptions from Connect consultations can be filled directly through Chewy and shipped to your door. Best suited for Chewy customers who already have the membership for shipping benefits; the telehealth access is a meaningful bonus rather than the primary value proposition.</p>}
               specs={[{ label: 'Cost', value: 'Included with Chewy+', highlight: 'good' }, { label: 'Chewy Pharmacy', value: 'Direct integration', highlight: 'good' }, { label: 'Consultation Type', value: 'Video + chat' }, { label: 'Availability', value: 'Extended hours' }]}
               pros={['Included with Chewy+ membership', 'Direct Chewy pharmacy integration', 'Convenient for existing Chewy customers']}
               cons={['Only valuable if you already use Chewy+', 'Less specialist access than Vetster']}
-              price="Included with Chewy+ ($19.99/month)" ctaText="Explore Chewy+ →" ctaHref="https://chewy.com" ctaAffiliateProgram="chewy" ctaAffiliateProduct="chewy-connect" />
+              price="Included with Chewy+ ($19.99/month)" ctaText="Explore Chewy+ →" ctaHref="/go/chewy/chewy-connect" ctaAffiliateProgram="chewy" ctaAffiliateProduct="chewy-connect" />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
