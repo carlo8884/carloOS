@@ -931,5 +931,93 @@
     "alt": "A close-up reptile macro — reptile health reference",
     "query": "reptile health macro",
     "curated": true
+  },
+  "horses-com:category-breeds": {
+    "provider": "unsplash",
+    "id": "1553284965-83fd3e82fa5a",
+    "url": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1553284965-83fd3e82fa5a",
+    "alt": "A horse at the canter — breed reference hero for the Horses.com breed guide",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:category-health": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse and rider in a schooling session — equine health reference hero",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:category-nutrition": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse in work condition — equine nutrition reference hero",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:category-tack": {
+    "provider": "unsplash",
+    "id": "1474546652694-a33dd8161d66",
+    "url": "https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1474546652694-a33dd8161d66",
+    "alt": "A tacked-up horse mid-jump — tack and gear reference hero",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:category-ownership": {
+    "provider": "unsplash",
+    "id": "1553284965-83fd3e82fa5a",
+    "url": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1553284965-83fd3e82fa5a",
+    "alt": "A horse and rider partnership — horse ownership reference hero",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:tack-helmet": {
+    "provider": "unsplash",
+    "id": "1474546652694-a33dd8161d66",
+    "url": "https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1474546652694-a33dd8161d66",
+    "alt": "A rider in a certified helmet and full tack at the jump",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:nutrition-forage": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse in good body condition on a forage-based diet",
+    "query": "",
+    "curated": true
+  },
+  "horses-com:care-hoof": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse standing square — hoof and routine care reference",
+    "query": "",
+    "curated": true
   }
 }

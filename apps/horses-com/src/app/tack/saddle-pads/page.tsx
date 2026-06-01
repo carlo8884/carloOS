@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function SaddlePadsPage() {
             { label: "Western Pads and Blankets", href: "#western" },
             { label: "Materials", href: "#materials" },
             { label: "What a Pad Cannot Fix", href: "#cannot" },
+            { label: "Pad Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -123,6 +124,89 @@ export default function SaddlePadsPage() {
 
           <h2 id="cannot">What a Pad Cannot Fix</h2>
           <p>The central truth about pads is that they cannot correct a saddle that does not fit. A saddle too narrow pinches, and adding a thick pad makes it tighter, like putting on an extra sock inside a tight shoe. A saddle too wide sits low on the withers, and padding it up only perches it and shifts pressure. Persistent back soreness, dry spots in the sweat pattern, white hairs, or behavioral resistance point to a fit problem that needs a saddle fitter and possibly a veterinarian -- not a new pad. Use pads to keep a well-fitting saddle clean and comfortable, not to paper over fit faults.</p>
+
+          <h2 id="picks">Pad Picks</h2>
+          <p>A few widely-stocked pad types covering the common English and Western needs. These support a correctly fitting saddle — none of them, as the section above makes clear, can correct a saddle that does not fit. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="cotton-quilted-numnah"
+            badge="Everyday English"
+            badgeEmoji="🐴"
+            name="Quilted Cotton All-Purpose Pad"
+            subtitle="Washable everyday numnah for schooling"
+            score={8.3}
+            winner
+            description={<>
+              <p>A quilted cotton all-purpose or dressage-cut pad is the everyday English workhorse: washable, breathable, and inexpensive enough to keep several in rotation so a clean, dry pad is always available. Keeping the pad clean and dry matters more for back health than any premium feature.</p>
+              <p>Reasonable choice for: daily schooling under a correctly fitting saddle, and as a baseline pad before considering any specialty half pad.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Quilted cotton', highlight: 'good' },
+              { label: 'Care', value: 'Machine washable' },
+              { label: 'Best use case', value: 'Everyday English schooling' },
+            ]}
+            pros={['Inexpensive enough to keep several', 'Machine washable', 'Breathable everyday material']}
+            cons={['No structural fit correction (none can)', 'Wears faster than wool or felt']}
+            price="$20–45"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="quilted-all-purpose-saddle-pad"
+          />
+
+          <ReviewCard
+            id="sheepskin-half-pad"
+            badge="Half Pad"
+            badgeEmoji="🐑"
+            name="Sheepskin Half Pad"
+            subtitle="Friction reduction and wicking under a fitting saddle"
+            score={8.5}
+            description={<>
+              <p>A sheepskin (or quality synthetic-fleece) half pad sits under or over the numnah to reduce friction and wick moisture at the saddle edges. Some include shimmable pockets to fine-tune balance between professional fittings — a legitimate use, but not a substitute for a fitter when the saddle is genuinely the wrong width.</p>
+              <p>Most relevant for a rider managing minor balance refinement under guidance from a saddle fitter, or for added comfort under a correctly fitting saddle.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Sheepskin or synthetic fleece' },
+              { label: 'Feature', value: 'Some offer shim pockets' },
+              { label: 'Best use case', value: 'Friction reduction, minor balance tuning' },
+            ]}
+            pros={['Excellent friction reduction', 'Good wicking at saddle edges', 'Shimmable versions aid fit tuning']}
+            cons={['Cannot fix a wrong-width saddle', 'Real sheepskin needs careful washing', 'Premium versions are pricey']}
+            price="$60–160"
+            ctaText="Compare at Dover Saddlery →"
+            ctaHref="/go/dover/sheepskin-half-pad?s=tack-saddle-pads"
+            ctaAffiliateProgram="dover"
+            ctaAffiliateProduct="sheepskin-half-pad"
+          />
+
+          <ReviewCard
+            id="western-felt-pad"
+            badge="Western"
+            badgeEmoji="🤠"
+            name="Wool-Felt Western Pad"
+            subtitle="Cushion and durability for heavier saddles and long rides"
+            score={8.7}
+            description={<>
+              <p>A wool-felt Western pad cushions the heavier Western saddle over the long rides typical of the discipline. Wool felt is valued for breathability, durability, and the way it conforms to the back. Many riders layer a woven blanket over the felt for tradition and additional protection.</p>
+              <p>Most relevant for trail, ranch, and Western performance riders whose saddles are heavier and rides longer than typical English work.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Wool felt', highlight: 'good' },
+              { label: 'Use', value: 'Often layered under a woven blanket' },
+              { label: 'Best use case', value: 'Western, long working rides' },
+            ]}
+            pros={['Durable and breathable', 'Conforms to the back over time', 'Cushions heavier Western saddles']}
+            cons={['Heavier and bulkier than English pads', 'Quality felt is more expensive', 'Still cannot correct saddle fit']}
+            price="$80–200"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="wool-felt-western-pad"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

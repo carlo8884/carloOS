@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function BootsWrapsPage() {
             { label: "Wraps and Bandages", href: "#wraps" },
             { label: "The Dangers of Wrapping Wrong", href: "#dangers" },
             { label: "Do Boots Support Tendons?", href: "#support" },
+            { label: "Boot and Wrap Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -123,6 +124,89 @@ export default function BootsWrapsPage() {
 
           <h2 id="support">Do Boots Support Tendons?</h2>
           <p>Owners often assume boots meaningfully support the tendons and ligaments. In reality, the forces on a galloping or landing horse&apos;s tendons are enormous, and boots provide impact protection rather than genuine structural support against those loads. Their real value is preventing the cuts, knocks, and brushing injuries that come from strikes and interference. Choosing boots for protection, fitting them snugly but not tightly, and keeping them clean and dry inside (grit under a boot causes rubs) matters more than chasing support claims.</p>
+
+          <h2 id="picks">Boot and Wrap Picks</h2>
+          <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="brushing-boots"
+            badge="Everyday Protection"
+            badgeEmoji="🛡️"
+            name="Synthetic Brushing / Splint Boots"
+            subtitle="Impact and interference protection for schooling"
+            score={8.5}
+            winner
+            description={<>
+              <p>Synthetic brushing (splint) boots are the everyday workhorse for protecting the lower leg from interference strikes during schooling and turnout. Modern neoprene-lined or perforated designs are washable and dry quickly, which matters because grit trapped under a boot causes rubs.</p>
+              <p>Reasonable choice for: flatwork, lunging, and general schooling where brushing or interference is a concern. Fit snugly but not tightly, and clean after each use.</p>
+            </>}
+            specs={[
+              { label: 'Protection', value: 'Impact / interference', highlight: 'good' },
+              { label: 'Care', value: 'Washable, quick-dry liners' },
+              { label: 'Best use case', value: 'Schooling, lunging, turnout' },
+            ]}
+            pros={['Reliable interference protection', 'Washable and quick-drying', 'Widely available in all sizes']}
+            cons={['No genuine tendon support (none provides it)', 'Trapped grit can cause rubs', 'Must be fitted correctly']}
+            price="$25–70 per pair"
+            ctaText="Compare at Riding Warehouse →"
+            ctaHref="/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps"
+            ctaAffiliateProgram="ridingwarehouse"
+            ctaAffiliateProduct="synthetic-brushing-boots"
+          />
+
+          <ReviewCard
+            id="bell-boots"
+            badge="Overreach Protection"
+            badgeEmoji="🔔"
+            name="Pull-On Bell Boots"
+            subtitle="Protects the heel bulbs and shoes from overreaching"
+            score={8.4}
+            description={<>
+              <p>Bell boots protect the heel bulbs and coronet from overreach injuries — when a hind foot strikes the back of a front foot — and help prevent a horse from pulling a front shoe. Pull-on styles stay secure; hook-and-loop styles are easier to fit but can come loose in deep footing.</p>
+              <p>Most relevant for horses that overreach, forge, or repeatedly pull front shoes, and for jumping and fast work where overreach risk is higher.</p>
+            </>}
+            specs={[
+              { label: 'Protection', value: 'Heel bulbs, coronet, front shoes' },
+              { label: 'Closure', value: 'Pull-on or hook-and-loop' },
+              { label: 'Best use case', value: 'Overreaching / shoe-pulling horses' },
+            ]}
+            pros={['Prevents overreach and shoe-pulling injuries', 'Inexpensive insurance against lost shoes', 'Pull-on styles stay secure']}
+            cons={['Pull-on styles are harder to put on', 'Can rub if oversized', 'Need cleaning after muddy work']}
+            price="$12–35 per pair"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="pull-on-bell-boots"
+          />
+
+          <ReviewCard
+            id="standing-wraps"
+            badge="Stable Wraps"
+            badgeEmoji="🧵"
+            name="Standing Wraps with Quilted Liners"
+            subtitle="Stable bandaging — only with correct technique"
+            score={8.0}
+            description={<>
+              <p>Standing wraps over quilted liners (no-bow style) are used for stable support, mild swelling management, and protecting the lower leg in the stall or trailer. The critical caveat from the section above applies: incorrect wrapping can cause real tendon damage, so technique matters more than the product. Even tension, correct direction, and appropriate padding are non-negotiable.</p>
+              <p>Most relevant for owners who have been taught correct wrapping technique. If you are not confident wrapping, learn hands-on from a professional before relying on standing wraps.</p>
+            </>}
+            specs={[
+              { label: 'Use', value: 'Stable / trailer support' },
+              { label: 'Requirement', value: 'Correct wrapping technique', highlight: 'warn' },
+              { label: 'Best use case', value: 'Stall rest, travel, mild swelling' },
+            ]}
+            pros={['Versatile stable and travel protection', 'Quilted liner distributes pressure', 'Reusable and washable']}
+            cons={['Wrapped wrong, can cause tendon damage', 'Requires learned technique', 'Time-consuming to apply correctly']}
+            price="$15–40 per set"
+            ctaText="Compare at Dover Saddlery →"
+            ctaHref="/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps"
+            ctaAffiliateProgram="dover"
+            ctaAffiliateProduct="standing-wraps-and-quilts"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

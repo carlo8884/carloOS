@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +101,8 @@ export default function HoofCareBasicsPage() {
         <div className="carloOS-article">
           <h2 id="why">Why the Foot Matters</h2>
           <p>The hoof bears and dissipates enormous loads, helps pump blood back up the leg, and provides traction and feel. A neglected foot is the root of an outsized share of lameness, from abscesses and thrush to long-term imbalance that strains joints and tendons higher up the limb. Good hoof care is cheap insurance against expensive lameness.</p>
+
+          <StockImage manifestKey="horses-com:care-hoof" aspect="16:9" />
 
           <h2 id="anatomy">Hoof Anatomy</h2>
           <p>The outer hoof wall is a tough, nerveless horn that grows continuously downward from the coronary band at roughly 6 to 10 millimeters a month, taking the better part of a year to grow from top to ground. The sole forms the bottom, the frog is the V-shaped rubbery cushion that aids traction and circulation, and the white line marks the junction of wall and sole. Inside sit the coffin bone, the navicular bone, the digital cushion, and the sensitive laminae that suspend the coffin bone from the wall.</p>

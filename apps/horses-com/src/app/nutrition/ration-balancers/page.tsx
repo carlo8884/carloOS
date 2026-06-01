@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function RationBalancersPage() {
             { label: "Who Benefits Most", href: "#who" },
             { label: "Balancer vs Regular Feed", href: "#vs" },
             { label: "Using a Balancer", href: "#using" },
+            { label: "Ration Balancer Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -118,6 +119,89 @@ export default function RationBalancersPage() {
 
           <h2 id="using">Using a Balancer</h2>
           <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small, it is often mixed with a handful of chaff or soaked fiber to make it palatable and slow eating. Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
+
+          <h2 id="picks">Ration Balancer Picks</h2>
+          <p>A few widely-available ration balancers covering the common grass-forage, low-sugar/low-starch, and senior needs. Match the balancer to the horse and the forage type, and feed at the label rate. Ration balancers are widely sold through feed stores; the links below route to a tracked brand search since these are typically stocked outside specialist tack retail. This is a documented-spec comparison drawing on standard US retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="grass-forage-balancer"
+            badge="Grass-Forage Diets"
+            badgeEmoji="🌾"
+            name="Purina Enrich Plus Ration Balancer"
+            subtitle="Concentrated protein, vitamins, and minerals for forage-based diets"
+            score={8.7}
+            winner
+            description={<>
+              <p>Purina Enrich Plus is one of the most widely-stocked ration balancers in US feed retail, designed to supply concentrated protein, vitamins, and minerals to a forage-based diet without the calories of a full feed. The small serving fills the trace-mineral and amino-acid gaps left by grass hay and pasture in horses that do not need the calories of a fortified grain.</p>
+              <p>Reasonable choice for: easy keepers and horses at good weight on a mostly-forage diet who still need their vitamin and mineral requirements met.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Protein / vitamin / mineral balancer', highlight: 'good' },
+              { label: 'Calories', value: 'Low — small daily serving' },
+              { label: 'Best use case', value: 'Forage-based diets, easy keepers' },
+            ]}
+            pros={['Fills gaps without adding calories', 'Small, economical serving', 'Very widely available']}
+            cons={['Not a calorie source for hard keepers', 'Must match the forage type', 'Small serving needs accurate measuring']}
+            price="$28–45 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/purina+enrich+plus+ration+balancer?s=nutrition-ration-balancers"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="purina-enrich-plus"
+          />
+
+          <ReviewCard
+            id="low-starch-balancer"
+            badge="Metabolic / Low-Starch"
+            badgeEmoji="⚖️"
+            name="Triple Crown 30% Ration Balancer"
+            subtitle="Low-NSC option for metabolic and easy-keeper horses"
+            score={8.6}
+            description={<>
+              <p>Triple Crown 30% is a low-sugar, low-starch (low-NSC) ration balancer formulated for horses that need tight control of non-structural carbohydrates — including easy keepers and horses with metabolic considerations — while still meeting protein, vitamin, and mineral requirements. As the section above notes, build the specifics with your veterinarian or an equine nutritionist for any metabolic horse.</p>
+              <p>Most relevant for metabolic, insulin-dysregulated, or easy-keeper horses whose diets must stay low in sugar and starch.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Low-NSC ration balancer', highlight: 'good' },
+              { label: 'Sugar / starch', value: 'Low (NSC-controlled)', highlight: 'good' },
+              { label: 'Best use case', value: 'Metabolic and easy-keeper horses' },
+            ]}
+            pros={['Low sugar and starch', 'Meets requirements on small calories', 'Suited to metabolic horses']}
+            cons={['Use under veterinary / nutritionist guidance', 'Not a calorie source', 'Higher cost per bag than some balancers']}
+            price="$35–55 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/triple+crown+30+ration+balancer?s=nutrition-ration-balancers"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="triple-crown-30"
+          />
+
+          <ReviewCard
+            id="senior-balancer"
+            badge="Senior Forage Diets"
+            badgeEmoji="🐴"
+            name="Nutrena Empower Topline Balancer"
+            subtitle="Amino-acid-focused balancer to support topline on forage"
+            score={8.4}
+            description={<>
+              <p>Nutrena Empower Topline Balancer emphasizes quality amino acids (lysine, methionine) alongside vitamins and minerals to support topline and muscle maintenance in horses kept primarily on forage. It suits older horses or those whose topline has slipped on a forage-only diet but who do not need the calories of a senior feed.</p>
+              <p>Most relevant for aging or topline-poor horses on a forage base that still chew and digest hay adequately, as a gap-filler rather than a calorie feed.</p>
+            </>}
+            specs={[
+              { label: 'Focus', value: 'Amino acids + vitamins / minerals' },
+              { label: 'Calories', value: 'Low — balancer serving' },
+              { label: 'Best use case', value: 'Topline support on forage diets' },
+            ]}
+            pros={['Amino-acid-focused for topline', 'Low calorie load', 'Forage-diet gap filler']}
+            cons={['Not a replacement for senior feed if chewing fails', 'Not a calorie source', 'Match to forage and horse']}
+            price="$30–48 per 50 lb"
+            ctaText="Search on Amazon →"
+            ctaHref="/go/amazon-brand/nutrena+empower+topline+balancer?s=nutrition-ration-balancers"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="nutrena-empower-topline"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

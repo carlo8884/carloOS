@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function SaltElectrolytesPage() {
             { label: "Equine Sweat Is Salty", href: "#sweat" },
             { label: "When to Supplement", href: "#when" },
             { label: "Using Electrolytes Safely", href: "#safe" },
+            { label: "Salt and Electrolyte Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -124,6 +125,64 @@ export default function SaltElectrolytesPage() {
             <li><strong>Match the dose to the work and losses</strong> rather than over-supplementing an idle horse.</li>
             <li><strong>Consult your vet</strong> for horses with kidney issues or specific medical conditions before adding electrolytes.</li>
           </ul>
+
+          <h2 id="picks">Salt and Electrolyte Picks</h2>
+          <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="plain-salt-block"
+            badge="Year-Round Baseline"
+            badgeEmoji="🧂"
+            name="Plain White Salt Block / Loose Salt"
+            subtitle="The free-choice baseline every horse needs"
+            score={8.7}
+            winner
+            description={<>
+              <p>Plain white salt — as a free-choice block or, better for reliable intake, loose salt top-dressed on feed — is the year-round baseline every horse needs to meet sodium requirements. Loose salt is easier for most horses to consume in adequate amounts than a hard block, which some horses underuse. Inexpensive and foundational; address baseline salt before any flavored electrolyte.</p>
+              <p>Reasonable choice for: every horse, year-round, as the foundation under any work-related electrolyte plan.</p>
+            </>}
+            specs={[
+              { label: 'Type', value: 'Plain sodium chloride', highlight: 'good' },
+              { label: 'Form', value: 'Block or loose' },
+              { label: 'Best use case', value: 'Year-round baseline for all horses' },
+            ]}
+            pros={['Meets baseline sodium need', 'Very inexpensive', 'Loose form ensures adequate intake', 'No sugar fillers']}
+            cons={['Hard blocks can be underconsumed', 'Not sufficient alone for heavy sweat losses']}
+            price="$8–25"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/plain-loose-salt?s=nutrition-salt-and-electrolytes"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="plain-loose-salt"
+          />
+
+          <ReviewCard
+            id="sweat-electrolyte"
+            badge="Sweat Replacement"
+            badgeEmoji="💧"
+            name="Salt-First Sweat-Replacement Electrolyte"
+            subtitle="For horses in heavy work or hot, humid conditions"
+            score={8.5}
+            description={<>
+              <p>A quality sweat-replacement electrolyte supplies sodium, chloride, and potassium in proportions that reflect equine sweat losses — for horses working hard, traveling, or sweating in heat and humidity. The key selection criterion from the section above: salt should be the leading ingredient, not sugar. Always offer water alongside, and match the dose to actual work and losses rather than over-supplementing an idle horse.</p>
+              <p>Most relevant for performance, endurance, and traveling horses, and any horse sweating heavily in hot, humid weather.</p>
+            </>}
+            specs={[
+              { label: 'Electrolytes', value: 'Na, Cl, K (sweat-matched)', highlight: 'good' },
+              { label: 'Leading ingredient', value: 'Salt (avoid sugar-first products)', highlight: 'good' },
+              { label: 'Best use case', value: 'Heavy work, heat, travel' },
+            ]}
+            pros={['Replaces sweat-specific losses', 'Supports recovery after hard work', 'Paste and powder formats available']}
+            cons={['Useless without water alongside', 'Sugar-heavy products are poor value', 'Over-dosing an idle horse is wasteful']}
+            price="$20–50"
+            ctaText="Compare at Riding Warehouse →"
+            ctaHref="/go/ridingwarehouse/sweat-replacement-electrolyte?s=nutrition-salt-and-electrolytes"
+            ctaAffiliateProgram="ridingwarehouse"
+            ctaAffiliateProduct="sweat-replacement-electrolyte"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

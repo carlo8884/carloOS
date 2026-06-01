@@ -654,5 +654,47 @@
     "provider": "either",
     "alt": "A ferret near its food, suited to a diet-basics guide",
     "orientation": "landscape"
+  },
+  "horses-com:category-health": {
+    "query": "horse veterinary health",
+    "provider": "either",
+    "alt": "A horse in a health and wellness context",
+    "orientation": "landscape"
+  },
+  "horses-com:category-nutrition": {
+    "query": "horse eating hay forage",
+    "provider": "either",
+    "alt": "A horse eating hay on a forage-based diet",
+    "orientation": "landscape"
+  },
+  "horses-com:category-tack": {
+    "query": "horse english tack saddle bridle",
+    "provider": "either",
+    "alt": "A tacked-up horse in English saddle and bridle",
+    "orientation": "landscape"
+  },
+  "horses-com:category-ownership": {
+    "query": "horse owner with horse",
+    "provider": "either",
+    "alt": "A horse owner with their horse",
+    "orientation": "landscape"
+  },
+  "horses-com:tack-helmet": {
+    "query": "equestrian rider helmet",
+    "provider": "either",
+    "alt": "A rider wearing a certified equestrian helmet",
+    "orientation": "landscape"
+  },
+  "horses-com:nutrition-forage": {
+    "query": "horse grazing pasture grass",
+    "provider": "either",
+    "alt": "A horse grazing on pasture forage",
+    "orientation": "landscape"
+  },
+  "horses-com:care-hoof": {
+    "query": "horse hoof farrier",
+    "provider": "either",
+    "alt": "A horse hoof being cared for",
+    "orientation": "landscape"
   }
 }

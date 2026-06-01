@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function GirthsCinchesPage() {
             { label: "Western Cinches", href: "#western" },
             { label: "Fit and Tightening", href: "#fit" },
             { label: "Girth Galls and Girthiness", href: "#galls" },
+            { label: "Girth Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -117,6 +118,89 @@ export default function GirthsCinchesPage() {
 
           <h2 id="galls">Girth Galls and Girthiness</h2>
           <p>Girth galls are painful sores or rubs in the girth area, caused by friction, dirt, a poorly fitting girth, or skin pinched in wrinkles. Prevent them with a clean girth and coat, correct fit, gradual tightening, and a girth shape suited to the horse. Girthiness -- the horse pinning its ears, biting, or tensing when girthed -- can be learned discomfort from past galls or rough girthing, but can also signal pain such as gastric ulcers, so persistent girthiness warrants checking fit and, if it continues, a veterinary look rather than just discipline.</p>
+
+          <h2 id="picks">Girth Picks</h2>
+          <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+
+          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+
+          <ScoreMethodology />
+
+          <ReviewCard
+            id="anatomic-english-girth"
+            badge="English Everyday"
+            badgeEmoji="🐴"
+            name="Anatomic / Shaped English Girth"
+            subtitle="Contoured shape to relieve the elbow and reduce galls"
+            score={8.6}
+            winner
+            description={<>
+              <p>A shaped or anatomic English girth is cut back behind the elbow to reduce pinching and rubbing in the girth groove — a common upgrade for horses prone to galls or girthiness from a straight girth. Synthetic and leather versions both work; the key is a clean surface, the right size, and gradual tightening.</p>
+              <p>Reasonable choice for: any English-saddle horse, and especially one showing girth-area rubs or sensitivity under a straight girth.</p>
+            </>}
+            specs={[
+              { label: 'Shape', value: 'Anatomic / elbow-relief cut', highlight: 'good' },
+              { label: 'Material', value: 'Leather or synthetic' },
+              { label: 'Best use case', value: 'English schooling and showing' },
+            ]}
+            pros={['Relieves elbow-area pinching', 'Reduces girth-gall risk', 'Available in leather and synthetic']}
+            cons={['Anatomic leather versions are pricier', 'Still needs correct size and clean surface']}
+            price="$45–140"
+            ctaText="Compare at Dover Saddlery →"
+            ctaHref="/go/dover/anatomic-english-girth?s=tack-girths-and-cinches"
+            ctaAffiliateProgram="dover"
+            ctaAffiliateProduct="anatomic-english-girth"
+          />
+
+          <ReviewCard
+            id="mohair-cinch"
+            badge="Western"
+            badgeEmoji="🤠"
+            name="Mohair / Roper Western Cinch"
+            subtitle="Breathable natural-fiber cinch for long rides"
+            score={8.5}
+            description={<>
+              <p>A mohair (or mohair-blend) roper cinch is a traditional Western choice valued for breathability and the way natural fibers wick moisture and resist galling on long working rides. Straight or roper cuts suit most working horses; correct width and gradual tightening matter as much as material.</p>
+              <p>Most relevant for trail, ranch, and Western performance riders who want a breathable natural-fiber cinch for extended time in the saddle.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Mohair or mohair blend', highlight: 'good' },
+              { label: 'Cut', value: 'Straight or roper' },
+              { label: 'Best use case', value: 'Western, long working rides' },
+            ]}
+            pros={['Breathable and moisture-wicking', 'Natural fiber resists galling', 'Traditional, durable construction']}
+            cons={['Natural fiber needs cleaning to last', 'Pure mohair costs more than synthetic', 'Width must match the horse']}
+            price="$40–120"
+            ctaText="Compare at Schneiders →"
+            ctaHref="/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches"
+            ctaAffiliateProgram="schneider"
+            ctaAffiliateProduct="mohair-roper-cinch"
+          />
+
+          <ReviewCard
+            id="fleece-girth-cover"
+            badge="Gall Prevention"
+            badgeEmoji="🐑"
+            name="Sheepskin / Fleece Girth Cover"
+            subtitle="Cushioning sleeve to reduce friction on sensitive horses"
+            score={8.1}
+            description={<>
+              <p>A sheepskin or fleece girth cover slips over an existing girth to add a soft, friction-reducing layer for horses with thin skin or a history of galls. It is a supportive measure, not a fix for a wrong-size or dirty girth — keep both the cover and the coat clean, since trapped dirt under fleece can itself cause rubs.</p>
+              <p>Most relevant for gall-prone or thin-skinned horses already in a correctly sized girth that still shows minor friction.</p>
+            </>}
+            specs={[
+              { label: 'Material', value: 'Sheepskin or synthetic fleece' },
+              { label: 'Use', value: 'Slips over an existing girth' },
+              { label: 'Best use case', value: 'Gall-prone, thin-skinned horses' },
+            ]}
+            pros={['Adds friction-reducing cushioning', 'Fits over most existing girths', 'Inexpensive insurance for sensitive horses']}
+            cons={['Not a fix for a wrong-size girth', 'Traps dirt if not cleaned', 'Adds bulk that can affect fit']}
+            price="$18–45"
+            ctaText="Compare at SmartPak →"
+            ctaHref="/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches"
+            ctaAffiliateProgram="smartpak"
+            ctaAffiliateProduct="fleece-girth-cover"
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />

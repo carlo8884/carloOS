@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
@@ -73,6 +73,9 @@ export default function BreedsIndexPage() {
           disciplines, breed-specific health risks, and recommended genetic-test panels.
         </p>
       </div>
+
+      {/* Hero image */}
+      <StockImage manifestKey="horses-com:category-breeds" aspect="16:9" variant="full-bleed" priority />
 
       {/* Breadcrumb */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -112,6 +112,8 @@ export default function OwnershipHubPage() {
           Practical references for the decisions and responsibilities of owning a horse, from buying and budgeting to insurance, body language, and finding a vet.
         </p>
       </div>
+
+      <StockImage manifestKey="horses-com:category-ownership" aspect="16:9" variant="full-bleed" priority />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
