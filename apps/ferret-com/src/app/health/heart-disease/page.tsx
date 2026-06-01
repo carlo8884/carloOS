@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Heart Disease — Cardiomyopathy & Signs | Ferret.com',
   description:
-    'Dilated cardiomyopathy is the most common ferret heart disease. Subtle early signs, echocardiogram diagnosis, the role of valvular disease, and what veterinary management looks like.',
+    'Dilated cardiomyopathy is the most common ferret heart disease. Subtle early signs, echocardiogram diagnosis, management, and heartworm prevention.',
   path: '/health/heart-disease',
   type: 'article',
 })

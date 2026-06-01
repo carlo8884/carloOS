@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Stomach Ulcers — Helicobacter & Bruxism | Ferret.com',
   description:
-    'Gastric ulcers are common and painful in ferrets, often linked to Helicobacter mustelae. Teeth-grinding, dark tarry stool, the diagnostic workup, and why ulcers ride alongside other ferret illnesses.',
+    'Gastric ulcers in ferrets, often linked to Helicobacter mustelae. Teeth-grinding, dark tarry stool, the diagnostic workup, and why ulcers rarely travel alone.',
   path: '/health/ferret-ulcers',
   type: 'article',
 })

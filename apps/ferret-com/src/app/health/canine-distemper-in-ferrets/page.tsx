@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Canine Distemper in Ferrets — Nearly Always Fatal | Ferret.com',
   description:
-    'Canine distemper virus is almost universally fatal in unvaccinated ferrets. How it spreads, the classic signs, why vaccination is non-negotiable, and what makes it so dangerous.',
+    'Canine distemper is almost always fatal in unvaccinated ferrets and can reach indoor pets. How it spreads, the signs, and why vaccination is essential.',
   path: '/health/canine-distemper-in-ferrets',
   type: 'article',
 })

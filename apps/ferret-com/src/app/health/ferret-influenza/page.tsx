@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Influenza — The Two-Way Human-Ferret Flu | Ferret.com',
   description:
-    'Ferrets catch human influenza and can give it back. Signs, why ferrets are the classic flu research model, supportive care, and how to protect a ferret when you have the flu.',
+    'Ferrets catch human flu and can give it back. Signs, why ferrets are the classic flu model, supportive care, and protecting a ferret when you are sick.',
   path: '/health/ferret-influenza',
   type: 'article',
 })

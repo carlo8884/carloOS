@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Spaying & Neutering Ferrets — Why Females Must Be Spayed | Ferret.com',
   description:
-    'Intact female ferrets risk fatal estrogen toxicity if not bred or spayed. The biology behind it, the early-spay-neuter debate, descenting, and what desexing means for ferret health.',
+    'Intact female ferrets risk fatal estrogen toxicity if not bred or spayed. The biology behind it, the early-spay-neuter debate, and descenting.',
   path: '/health/spaying-and-neutering',
   type: 'article',
 })

@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Emergency Warning Signs — When to Rush to the Vet | Ferret.com',
   description:
-    'The ferret symptoms that cannot wait: collapse, seizures, labored breathing, not eating, straining, bloated belly, and pale gums. What each can mean and why ferrets crash fast.',
+    'The ferret symptoms that cannot wait: collapse, seizures, labored breathing, not eating, straining, and pale gums — what each means and why ferrets crash fast.',
   path: '/health/emergency-warning-signs',
   type: 'article',
 })

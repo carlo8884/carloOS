@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Ear Mites — Otodectes, Diagnosis & Treatment | Ferret.com',
   description:
-    'Otodectes cynotis is the most common external parasite in ferrets. Dark waxy debris, head-shaking, diagnosis by ear-swab cytology, and why every ferret in a household is treated together.',
+    'Otodectes cynotis is the most common external parasite in ferrets. Dark waxy debris, head-shaking, ear-swab diagnosis, and treating the whole household.',
   path: '/health/ear-mites',
   type: 'article',
 })

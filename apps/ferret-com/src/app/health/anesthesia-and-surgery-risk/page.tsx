@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Anesthesia & Surgery Risk — Fasting & Monitoring | Ferret.com',
   description:
-    'Ferret anesthesia carries species-specific risks. Why long fasting is dangerous (insulinoma), the role of monitoring, blood-sugar and temperature control, and how to choose a ferret-experienced clinic.',
+    'Ferret anesthesia carries species-specific risks. Why long fasting is dangerous, blood-sugar and temperature control, monitoring, and choosing a clinic.',
   path: '/health/anesthesia-and-surgery-risk',
   type: 'article',
 })

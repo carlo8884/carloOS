@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret GI Blockage — Foreign Body & Hairball Emergency | Ferret.com',
   description:
-    'Gastrointestinal blockage is one of the most common ferret surgical emergencies. Why ferrets swallow rubber, the warning signs, how blockages are diagnosed, and ferret-proofing that prevents them.',
+    'GI blockage is a common ferret surgical emergency. Why ferrets swallow rubber, the warning signs, how it is diagnosed, and ferret-proofing that prevents it.',
   path: '/health/gastrointestinal-blockage',
   type: 'article',
 })

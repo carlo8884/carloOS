@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Fleas & Parasites — Internal and External | Ferret.com',
   description:
-    'Fleas, ear mites, heartworm, and intestinal parasites in ferrets. Why ferret size makes parasite control a precision job, the signs of each, and why prevention is veterinarian-guided.',
+    'Fleas, mites, heartworm, and intestinal parasites in ferrets. Why ferret size makes parasite control a precision, vet-guided job, and the signs of each.',
   path: '/health/fleas-and-parasites',
   type: 'article',
 })
