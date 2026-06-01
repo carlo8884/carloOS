@@ -161,7 +161,7 @@ const CATEGORIES: {
     icon: 'first-year',
     title: 'First-Year Care',
     desc: 'A staged reference for the first twelve months: setup checks, feed schedule, growth curves.',
-    href: '/setup',
+    href: '/first-year-care-schedule',
   },
 ]
 
