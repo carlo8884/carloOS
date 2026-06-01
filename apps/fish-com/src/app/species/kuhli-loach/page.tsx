@@ -39,7 +39,16 @@ export default function KuhliLoachPage() {
         <h2>Water Parameters and Compatibility</h2>
         <p>Prefer soft, slightly acidic water (pH 6.0–7.0) with good warmth (75–82°F). Adaptable to neutral community tank conditions. Compatible with virtually all peaceful community fish — they occupy bottom territory that does not overlap with mid-water or surface fish. Compatible with peaceful shrimp (they may eat very small shrimp but ignore adult cherry shrimp and larger). Avoid aggressive cichlids and any fish large enough to eat a 4-inch loach.</p>
         <p>Warning: kuhli loaches can squeeze through extremely small gaps in tank lids and equipment — check for any openings in filter inlets (use a pre-filter sponge) and lid gaps before adding them. They will find any gap and explore it.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Kuhli Loach — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for kuhli loach care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Kuhli Loach Setup on Amazon →</a>
+            <a href="/go/chewy-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }

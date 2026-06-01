@@ -38,7 +38,16 @@ export default function OtocinclsPage() {
 
         <h2>Compatibility</h2>
         <p>Completely peaceful — compatible with all community fish, nano fish, dwarf shrimp (cherry shrimp, amano shrimp), and snails. They will not bother snail eggs, shrimp fry, or other small invertebrates. One of the few fish appropriate for shrimp tanks where most other species pose a risk. They share tank space with betta fish successfully in most cases — bettas typically ignore them due to their small size and rapid movement along surfaces.</p>
+        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Otocinclus — Tank Setup</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for otocinclus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/otocinclus%20tank%20setup?s=species-otocinclus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Otocinclus Setup on Amazon →</a>
+            <a href="/go/chewy-brand/otocinclus%20tank%20setup?s=species-otocinclus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
+
       </div>
-    </ArticleLayout>
+      </ArticleLayout>
   )
 }
