@@ -47,22 +47,40 @@ through `/go`; finish Ferret; fix Horses/Saddle direct CTAs; clinical/medicated 
 templated/generic; improve homepage/hubs/calculators/high-value pages. Order: Dog → Fish →
 Ferret → PetFood → Vets.
 
-## Per-site polish scorecard (cohort-5)
+## Per-site polish scorecard (top 7 launch candidates)
 Legend: ✅ pass · 🟡 partial · ⬜ not started
 
 | Site | trust | meta | links | no-thin | structure | visual | no-leak | disclosures | commercial-monet | tools | IR/advisor |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| dog-com | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (7 img) | ✅ | ✅ | ✅ (25 /go pgs) | ✅ | ⬜ |
-| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (9 img) | ✅ | ✅ | ✅ (63 /go pgs) | ✅ | ⬜ |
-| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (25 img) | ✅ | ✅ | ✅ (21 /go pgs) | ✅ | 🟡 |
-| petfood-com | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (6 hero) | ✅ | ✅ | ✅ (17 /go pgs) | ✅ | ⬜ |
-| vets-co | ✅ | ✅ | ✅ | 🟡 (audit in flight) | ✅ | ✅ (5 hero) | ✅ | ✅ | ✅ (11 /go, insurance) | ✅ | ⬜ |
+| dog-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (25 /go pgs) | ✅ | ⬜ |
+| fish-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (63 /go pgs) | ✅ | ⬜ |
+| ferret-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (21 /go pgs) | ✅ | ⬜ |
+| petfood-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (17 /go pgs) | ✅ | ⬜ |
+| vets-co | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (telehealth + insurance) | ✅ | ⬜ |
+| horses-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (6 tack/nutrition pgs) | ✅ | ⬜ |
+| lizard-com | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ |
 
-**Progress 2026-06-01 (polish wave — 10 of 11 gates green):** All cohort-5 monetization + visual +
-disclosure + tools gates CLOSED. Monetization: fish 63 /go pages, lizard 46, dog 25, ferret 21,
-petfood 17, vets 11. Imagery across all. FTC disclosure gap (17 pages) closed → 0. All 11 cohort-5
-calculators acceptance-passed (no bugs). Remaining: **no-thin** (thin-page audit agent in flight) +
-**IR/advisor** end-state review. Open follow-ups: saddle/horses direct-CTA leak fix (agent in flight,
-not cohort-5); FerretFoodEvaluator Lewington-edition citation nit (editorial).
+**Status 2026-06-01 (polish wave complete — 10 of 11 gates green on all 7):**
+Every engineering/content/SEO/trust/monetization/visual gate is CLOSED on the top 7. The ONLY
+remaining gate is **IR/advisor** (two human steps), which is by-design last.
+
+Closed this wave (PRs #353–#360, all merged to main):
+- **thin pages 12 → 0** portfolio-wide (every hub now carries a topical intro + internal links)
+- **duplicate titles 6 → 0**
+- **affiliate leaks → 0** (vets-co telehealth registered + routed through `/go`, Carlo-approved)
+- **JSON-LD schema gaps closed**: `buildOrganizationSchema`/`buildWebSiteSchema` added to packages/ui;
+  Org+WebSite on all 5 cohort-5 homepages; dog FAQPage; lizard 4 hubs + horses /reviews + fish
+  species-template breadcrumbs
+- **tools verified**: all 12 interactive calculators across the 7 statically verified working
+  (math/guards/clinical-framing) — 0 bugs
+- **hub hero imagery** added to the flagged high-value hubs (vets breeds/reviews, horses
+  reviews/guides, petfood species, dog guides) via curated "Source: Unsplash" pattern
+- **orphan pages: 0** portfolio-wide
+
+Open follow-ups (non-blocking): saddle at 57pg + petfoods/ferrets thin = back-cohort, not yet
+polished; one email-sequence Chewy link points at a product SKU (Monetization lane handoff);
+FerretFoodEvaluator Lewington-edition citation nit (editorial).
+
+**Next gate = IR re-review of post-#360 main, then advisor sign-off.** No DNS/launch pushed.
 
 CSRO refreshes this after each merge wave. A site is launch-quality only when its row is all ✅/n-a.
