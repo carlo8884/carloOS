@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles — Causes, Signs | Lizard.com', description: 'MBD is the most common nutritional disease in captive reptiles. Caused by calcium deficiency or UVB deprivation. Rubber jaw, tremors.', path: '/health/metabolic-bone-disease', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles', description: 'Causes, signs, and prevention of nutritional secondary hyperparathyroidism (MBD) in reptiles.', url: 'https://lizard.com/health/metabolic-bone-disease', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles', description: 'Causes, signs, and prevention of nutritional secondary hyperparathyroidism (MBD) in reptiles.', url: 'https://lizard.com/health/metabolic-bone-disease', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Metabolic Bone Disease in Reptiles', description: 'Causes, signs, and prevention of nutritional secondary hyperparathyroidism (MBD) in reptiles.', url: 'https://lizard.com/health/metabolic-bone-disease', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function MBDPage() {
   return (
     <ArticleLayout siteId="lizard-com"

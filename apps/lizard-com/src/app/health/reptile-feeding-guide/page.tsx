@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Reptile Feeding Guide',
   description: 'Prey size, feeding frequency, gut-loading, and supplementation for reptiles.',
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({ name: 'Reptile Feeding Guide', description: 'Prey size, feeding frequency, gut-loading, and supplementation for reptiles.', url: 'https://lizard.com/health/reptile-feeding-guide', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 
 const FREQ_TABLE = [
   { species: 'Bearded Dragon (baby)', prey: 'Dubia roaches, crickets', size: '≤ head width', freq: '3–5x daily (juveniles), 1–2x daily (adults)', notes: 'Juveniles 80% insects; adults 80% greens' },

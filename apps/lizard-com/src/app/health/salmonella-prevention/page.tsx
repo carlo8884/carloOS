@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Salmonella & Reptiles — Safe Handling | Lizard.com', description: 'All reptiles carry Salmonella naturally. Children under 5, pregnant women, elderly, and immunocompromised people are at highest risk.', path: '/health/salmonella-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function SalmonellaPage() {
   return (
     <ArticleLayout siteId="lizard-com"

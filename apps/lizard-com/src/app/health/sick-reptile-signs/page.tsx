@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const schema = combineSchemas(buildArticleSchema({
   siteId: 'lizard-com',
   title: '12 Signs Your Reptile Is Sick',
   description: '12 signs requiring veterinary care in reptiles — what to watch for.',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   authorName: 'Lizard.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
-})
+}), buildMedicalWebPageSchema({ name: 'Sick Reptile Signs', description: '12 signs requiring veterinary care in reptiles — what to watch for.', url: 'https://lizard.com/health/sick-reptile-signs', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 
 const SIGNS = [
   {
