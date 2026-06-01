@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Best Aquarium Heaters 2025',
   description: 'Aquarium heaters ranked for accuracy using published specs and aggregated keeper reports — Eheim, Fluval, Cobalt.',
@@ -22,6 +22,18 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
 })
+
+const eheimSchema = buildProductSchema({
+  name: 'Eheim Jager TruTemp',
+  description:
+    'Submersible aquarium heater with ±0.5°F accuracy, recalibration dial, and auto shut-off — Fish.com Best Overall pick.',
+  url: 'https://fish.com/reviews/best-aquarium-heaters#eheim',
+  imageUrl: '',
+  ratingValue: 9.4,
+  reviewCount: 1,
+})
+
+const schema = combineSchemas(articleSchema, eheimSchema)
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim' },
