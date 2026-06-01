@@ -19,12 +19,17 @@
  *   - file_size_bytes < BYTES
  *   - not a dynamic [slug] page (those render template content from data)
  *
+ * Also reports duplicate <title>/<h1> groups within each site (normalized,
+ * site-suffix stripped) — a canonicalization-risk signal for SEO/GEO.
+ *
  * Outputs a markdown report on stdout. Not a CI gate — polish-pass informant.
+ * Always exits 0 (advisory only).
  *
  * Usage:
  *   node scripts/ci/thin-page-audit.mjs            # all sites
  *   node scripts/ci/thin-page-audit.mjs <site>     # one site
  *   node scripts/ci/thin-page-audit.mjs --json     # machine-readable output
+ *                                                  # { thin, duplicateTitles }
  */
 
 import fs from 'node:fs'
@@ -100,15 +105,52 @@ function routeFromPath(appDir, file) {
   return rel || '/'
 }
 
+// Extract the page's primary title for duplicate detection: prefer the
+// metadata `title:` (the canonical <title>), fall back to the first literal
+// <h1>. Returns null if none found.
+function extractTitle(src) {
+  const meta = src.match(/\btitle\s*:\s*(["'`])((?:\\.|(?!\1)[\s\S])*?)\1/)
+  if (meta) return meta[2].replace(/\\(['"\\])/g, '$1')
+  const h1 = src.match(/<h1[^>]*>([^<]+)<\/h1>/)
+  if (h1) return h1[1].trim()
+  return null
+}
+
+// Normalize a title for comparison: drop the site-name suffix after the first
+// pipe, lowercase, strip punctuation, collapse whitespace. Two pages sharing a
+// normalized title are a duplicate-title group (canonicalization risk).
+function normTitle(t) {
+  return t
+    .split('|')[0]
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 const findings = []
+const dupGroups = [] // { site, title, routes[] }
 for (const site of SITES) {
   const appDir = `apps/${site}/src/app`
   if (!fs.existsSync(appDir)) continue
   const pages = walk(appDir, 'page.tsx')
+  const titleMap = new Map() // normalized title -> [routes]
   for (const file of pages) {
     const route = routeFromPath(appDir, file)
     if (/\[/.test(route)) continue // dynamic routes render template content
     if (route === '/') continue // homepages are bespoke; skip
+    const src = fs.readFileSync(file, 'utf8')
+
+    // Duplicate-title accumulation (per site).
+    const title = extractTitle(src)
+    if (title) {
+      const key = normTitle(title)
+      if (key) {
+        if (!titleMap.has(key)) titleMap.set(key, [])
+        titleMap.get(key).push(route)
+      }
+    }
+
     const a = analyzePage(file)
     if (a.words < THRESH_WORDS && a.h2 < THRESH_H2 && a.bytes < THRESH_BYTES) {
       findings.push({
@@ -124,12 +166,15 @@ for (const site of SITES) {
       })
     }
   }
+  for (const [key, routes] of titleMap) {
+    if (routes.length > 1) dupGroups.push({ site, title: key, routes })
+  }
 }
 
 findings.sort((a, b) => a.site.localeCompare(b.site) || a.words - b.words)
 
 if (wantJson) {
-  console.log(JSON.stringify(findings, null, 2))
+  console.log(JSON.stringify({ thin: findings, duplicateTitles: dupGroups }, null, 2))
   process.exit(0)
 }
 
@@ -170,6 +215,22 @@ if (findings.length === 0) {
   out.push('- **Has layout? ✅** — page composes a layout component (ArticleLayout, HubGrid, etc.) that may render substantial DOM not captured by the word counter. Manually verify visual depth before declaring thin.')
   out.push('- **Data-driven? ✅** — page iterates over imported data. The displayed content is much richer than the source bytes suggest. Verify the data file has entries.')
   out.push('- **No layout, no data, low words** — genuinely thin. Either beef-up content, consolidate with a sibling, or archive.')
+  out.push('- **Hub/index pages** (e.g. `/tools`, `/guides`, `/reviews`) legitimately score low on prose — their value is the spoke links they expose, not body copy. Not a defect if breadcrumbs + schema + child links are present.')
+}
+
+out.push('')
+out.push('## Duplicate titles (within-site)')
+out.push('')
+if (dupGroups.length === 0) {
+  out.push('None — every page has a distinct normalized `<title>`/`<h1>` per site.')
+} else {
+  out.push(`Found **${dupGroups.length}** duplicate-title group(s). Same normalized title on multiple routes risks canonicalization confusion.`)
+  out.push('')
+  out.push('| Site | Normalized title | Routes |')
+  out.push('|---|---|---|')
+  for (const g of dupGroups) {
+    out.push(`| ${g.site} | "${g.title}" | ${g.routes.join(', ')} |`)
+  }
 }
 
 console.log(out.join('\n'))
