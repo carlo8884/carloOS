@@ -59,7 +59,7 @@ const FAQS = [
       "While the typical range tops out around 8 years, individual ferrets occasionally live longer with attentive care and good fortune. These are exceptions rather than the rule. Most owners should plan around the 5-to-8-year expectation rather than counting on an unusually long life.",
   },
   {
-    question: 'What shortens a ferret's lifespan?',
+    question: "What shortens a ferret's lifespan?",
     answer:
       "The big drivers are the age-related diseases ferrets are predisposed to — insulinoma, adrenal disease, and lymphoma chief among them — along with preventable problems like intestinal blockage from swallowed objects, poor diet, obesity, and untreated dental disease. Early veterinary care and a species-appropriate diet help on every front.",
   },
