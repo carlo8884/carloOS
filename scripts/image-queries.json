@@ -43,6 +43,12 @@
     "alt": "A dog with everyday gear and toys",
     "orientation": "landscape"
   },
+  "dog-com:category-guides": {
+    "query": "healthy adult dog standing outdoors",
+    "provider": "either",
+    "alt": "A healthy adult dog standing outdoors in natural light",
+    "orientation": "landscape"
+  },
   "dog-com:breed-labrador-retriever": {
     "query": "labrador retriever portrait outdoor",
     "provider": "either",
@@ -73,6 +79,18 @@
     "alt": "A dressage horse and rider in competition",
     "orientation": "landscape"
   },
+  "horses-com:category-reviews": {
+    "query": "horse tack gear jump",
+    "provider": "either",
+    "alt": "A tacked-up horse at the jump — equine gear and supplement review reference hero",
+    "orientation": "landscape"
+  },
+  "horses-com:category-guides": {
+    "query": "horse rider schooling session",
+    "provider": "either",
+    "alt": "A horse and rider in a schooling session — equine owner guides reference hero",
+    "orientation": "landscape"
+  },
   "petfood-com:hero": {
     "query": "raw ingredients pet food close-up",
     "provider": "either",
@@ -83,6 +101,12 @@
     "query": "natural pet food bowl macro",
     "provider": "either",
     "alt": "A bowl of pet food shot in natural light",
+    "orientation": "landscape"
+  },
+  "petfood-com:category-species": {
+    "query": "raw meat protein cuts board",
+    "provider": "either",
+    "alt": "Raw cuts of meat and protein arranged on a board — species-appropriate nutrition reference",
     "orientation": "landscape"
   },
   "petfood-com:category-life-stage": {
@@ -527,6 +551,18 @@
     "query": "medical reference books shelf",
     "provider": "unsplash",
     "alt": "Medical reference books on a shelf",
+    "orientation": "landscape"
+  },
+  "vets-co:category-breeds": {
+    "query": "purebred dog portrait outdoor",
+    "provider": "either",
+    "alt": "A purebred dog in natural light — breed-health reference hero",
+    "orientation": "landscape"
+  },
+  "vets-co:category-reviews": {
+    "query": "documents paperwork desk calculator",
+    "provider": "either",
+    "alt": "Paperwork and a calculator on a desk — pet insurance and service comparison reference",
     "orientation": "landscape"
   },
   "vets-co:insurance-hero": {

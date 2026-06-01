@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -8,6 +8,13 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Independent equine product reviews — joint supplements, winter blankets, and the gear that actually performs. Citation-anchored against AAEP and breed-club references.',
   path: '/reviews',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Reviews', url: 'https://horses.com/reviews' },
+  ],
 })
 
 const REVIEWS = [
@@ -28,6 +35,7 @@ const REVIEWS = [
 export default function HorsesReviewsPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
@@ -52,6 +60,10 @@ export default function HorsesReviewsPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Reviews</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-12">
+        <StockImage manifestKey="horses-com:category-reviews" aspect="16:9" variant="wide" priority />
+      </div>
 
       <div className="px-container-sm sm:px-container pt-12 max-w-3xl">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>

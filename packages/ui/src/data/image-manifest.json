@@ -130,6 +130,17 @@
     "query": "veterinarian gentle exam dog",
     "curated": true
   },
+  "dog-com:category-guides": {
+    "provider": "unsplash",
+    "id": "1583511655857-d19b40a7a54e",
+    "url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1583511655857-d19b40a7a54e",
+    "alt": "A healthy adult dog standing outdoors in natural light",
+    "query": "healthy adult dog standing outdoors",
+    "curated": true
+  },
   "dog-com:category-nutrition": {
     "provider": "unsplash",
     "id": "1568640347023-a616a30bc3bd",
@@ -570,6 +581,17 @@
     "query": "raw meat protein on clean surface",
     "curated": true
   },
+  "petfood-com:category-species": {
+    "provider": "unsplash",
+    "id": "1498654896293-37aacf113fd9",
+    "url": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1498654896293-37aacf113fd9",
+    "alt": "Raw cuts of meat and protein arranged on a board — species-appropriate nutrition reference",
+    "query": "raw meat protein cuts board",
+    "curated": true
+  },
   "petfood-com:compare-hero": {
     "provider": "unsplash",
     "id": "1556910103-1c02745aae4d",
@@ -634,6 +656,28 @@
     "sourceUrl": "https://unsplash.com/photos/1516841273335-e39b37888115",
     "alt": "The exterior entrance of a clinic building",
     "query": "clinic building entrance architecture",
+    "curated": true
+  },
+  "vets-co:category-breeds": {
+    "provider": "unsplash",
+    "id": "1552053831-71594a27632d",
+    "url": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1552053831-71594a27632d",
+    "alt": "A purebred dog in natural light — breed-health reference hero",
+    "query": "purebred dog portrait outdoor",
+    "curated": true
+  },
+  "vets-co:category-reviews": {
+    "provider": "unsplash",
+    "id": "1554224155-6726b3ff858f",
+    "url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop",
+    "width": 1600,
+    "height": 900,
+    "sourceUrl": "https://unsplash.com/photos/1554224155-6726b3ff858f",
+    "alt": "Paperwork and a calculator on a desk — pet insurance and service comparison reference",
+    "query": "documents paperwork desk calculator",
     "curated": true
   },
   "ferret-com:color-sable": {
@@ -985,6 +1029,28 @@
     "sourceUrl": "https://unsplash.com/photos/1553284965-83fd3e82fa5a",
     "alt": "A horse and rider partnership — horse ownership reference hero",
     "query": "",
+    "curated": true
+  },
+  "horses-com:category-reviews": {
+    "provider": "unsplash",
+    "id": "1474546652694-a33dd8161d66",
+    "url": "https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1474546652694-a33dd8161d66",
+    "alt": "A tacked-up horse at the jump — equine gear and supplement review reference hero",
+    "query": "horse tack gear jump",
+    "curated": true
+  },
+  "horses-com:category-guides": {
+    "provider": "unsplash",
+    "id": "1469820838967-83c1450cf56a",
+    "url": "https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=1200&q=80&auto=format&fit=crop",
+    "width": 1200,
+    "height": 800,
+    "sourceUrl": "https://unsplash.com/photos/1469820838967-83c1450cf56a",
+    "alt": "A horse and rider in a schooling session — equine owner guides reference hero",
+    "query": "horse rider schooling session",
     "curated": true
   },
   "horses-com:tack-helmet": {
