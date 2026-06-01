@@ -26,11 +26,137 @@ const HEALTH_ENTRIES = [
       'Spasmodic, impaction, gas, displacement, strangulation, and sand colic. Clinical signs, when to call the vet, diagnostics, medical and surgical treatment, and prevention.',
   },
   {
+    slug: 'laminitis',
+    eyebrow: 'Emergencies',
+    title: 'Equine Laminitis',
+    description:
+      'Endocrinopathic, sepsis-associated, and supporting-limb laminitis. Signs, Obel grading, diagnosis, acute treatment, and prevention.',
+  },
+  {
+    slug: 'abscess',
+    eyebrow: 'Emergencies',
+    title: 'Hoof Abscess',
+    description:
+      'The most common cause of sudden severe lameness. How abscesses form, signs, drainage and soaking, and prevention.',
+  },
+  {
+    slug: 'choke',
+    eyebrow: 'Emergencies',
+    title: 'Choke',
+    description:
+      'Esophageal (not airway) obstruction. Causes, signs, why it is an emergency, treatment, and feeding-management prevention.',
+  },
+  {
+    slug: 'tying-up',
+    eyebrow: 'Emergencies',
+    title: 'Tying-Up',
+    description:
+      'Exertional rhabdomyolysis. Sporadic versus chronic forms (PSSM, RER), signs, why it is urgent, and dietary management.',
+  },
+  {
     slug: 'equine-ulcers',
     eyebrow: 'Gastroenterology',
     title: 'Equine Gastric Ulcers',
     description:
       'EGUS — squamous (ESGD) vs glandular (EGGD) disease, risk factors in performance horses, gastroscopy, omeprazole, and forage-first management.',
+  },
+  {
+    slug: 'equine-metabolic-syndrome',
+    eyebrow: 'Endocrine',
+    title: 'Equine Metabolic Syndrome',
+    description:
+      'Insulin dysregulation, regional adiposity, and laminitis risk. Diagnosis, dietary management, and exercise.',
+  },
+  {
+    slug: 'cushings-ppid',
+    eyebrow: 'Endocrine',
+    title: "Cushing's Disease (PPID)",
+    description:
+      'Pituitary pars intermedia dysfunction in older horses. Mechanism, signs, ACTH testing, pergolide, and laminitis risk.',
+  },
+  {
+    slug: 'navicular-syndrome',
+    eyebrow: 'Lameness',
+    title: 'Navicular Syndrome',
+    description:
+      'Caudal heel pain. Anatomy of the podotrochlear apparatus, signs, nerve-block and MRI diagnosis, farriery, and management.',
+  },
+  {
+    slug: 'osteoarthritis',
+    eyebrow: 'Lameness',
+    title: 'Osteoarthritis',
+    description:
+      'Degenerative joint disease. How cartilage breaks down, commonly affected joints, diagnosis, joint medication, and management.',
+  },
+  {
+    slug: 'ringbone',
+    eyebrow: 'Lameness',
+    title: 'Ringbone',
+    description:
+      'Arthritis of the pastern (high) and coffin (low) joints, articular versus periarticular forms, signs, and management.',
+  },
+  {
+    slug: 'lameness-basics',
+    eyebrow: 'Lameness',
+    title: 'Lameness Basics',
+    description:
+      'Spotting lameness, the AAEP 0-5 grading scale, common causes by location, the diagnostic workup, and when to call the vet.',
+  },
+  {
+    slug: 'strangles',
+    eyebrow: 'Infectious disease',
+    title: 'Strangles',
+    description:
+      'Streptococcus equi infection. Signs, transmission, the guttural-pouch carrier state, biosecurity, and outbreak management.',
+  },
+  {
+    slug: 'equine-influenza',
+    eyebrow: 'Infectious disease',
+    title: 'Equine Influenza',
+    description:
+      'A highly contagious respiratory virus. Signs, spread, the rest rule, vaccination, and biosecurity.',
+  },
+  {
+    slug: 'west-nile-virus',
+    eyebrow: 'Infectious disease',
+    title: 'West Nile Virus',
+    description:
+      'A mosquito-borne neurologic disease. Signs, why horses are dead-end hosts, the core vaccine, and mosquito control.',
+  },
+  {
+    slug: 'heaves',
+    eyebrow: 'Respiratory',
+    title: 'Heaves (Equine Asthma)',
+    description:
+      'Chronic allergic airway disease. Dust and mold triggers, signs, diagnosis, and environmental management.',
+  },
+  {
+    slug: 'thrush',
+    eyebrow: 'Skin & hoof',
+    title: 'Thrush',
+    description:
+      'Bacterial degeneration of the frog. Causes, the telltale black discharge and odor, treatment, and hoof hygiene.',
+  },
+  {
+    slug: 'rain-rot',
+    eyebrow: 'Skin & hoof',
+    title: 'Rain Rot',
+    description:
+      'Dermatophilosis. The bacterial skin infection behind crusty scabs, causes, treatment, and prevention.',
+  },
+  {
+    slug: 'mud-fever',
+    eyebrow: 'Skin & hoof',
+    title: 'Mud Fever',
+    description:
+      'Pastern dermatitis (scratches). The wet-weather skin condition of the lower legs, causes, treatment, and prevention.',
+  },
+  {
+    slug: 'sweet-itch',
+    eyebrow: 'Skin & hoof',
+    title: 'Sweet Itch',
+    description:
+      'Culicoides midge hypersensitivity. The cause of intense seasonal itching and a midge-control management plan.',
   },
 ]
 

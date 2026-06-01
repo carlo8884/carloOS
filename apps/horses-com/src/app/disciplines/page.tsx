@@ -83,6 +83,70 @@ const DISCIPLINES: DisciplineCard[] = [
     governingBodies: 'NATRC · AERC',
     level: 'Recreational',
   },
+  {
+    slug: 'hunter-under-saddle',
+    name: 'Hunters',
+    tagline:
+      'Foxhunting-rooted classes judged subjectively on style, manners, and an effortless way of going on the flat and over fences.',
+    governingBodies: 'USHJA · USEF',
+    level: 'English',
+  },
+  {
+    slug: 'equitation',
+    name: 'Equitation',
+    tagline:
+      'The discipline that judges the rider, not the horse — position, security, and effectiveness, up to the prestigious medal finals.',
+    governingBodies: 'USEF · USHJA',
+    level: 'English',
+  },
+  {
+    slug: 'barrel-racing',
+    name: 'Barrel Racing',
+    tagline:
+      'The rodeo speed event — a cloverleaf sprint around three barrels against the clock, decided in thousandths of a second.',
+    governingBodies: 'WPRA · NBHA',
+    level: 'Western',
+  },
+  {
+    slug: 'cutting',
+    name: 'Cutting',
+    tagline:
+      'Separating a cow from the herd and, on a loose rein, letting the horse work it on its own bred-in cow sense.',
+    governingBodies: 'NCHA · AQHA',
+    level: 'Western',
+  },
+  {
+    slug: 'ranch-riding',
+    name: 'Ranch Riding',
+    tagline:
+      'A pattern class celebrating the forward, natural-moving working ranch horse — the antithesis of artificial slowness.',
+    governingBodies: 'AQHA · APHA · ApHC',
+    level: 'Western',
+  },
+  {
+    slug: 'endurance-riding',
+    name: 'Endurance Riding',
+    tagline:
+      'Long-distance racing up to 100 miles, where to finish is to win and veterinary checks police the horse&apos;s welfare throughout.',
+    governingBodies: 'AERC · FEI',
+    level: 'Recreational',
+  },
+  {
+    slug: 'combined-driving',
+    name: 'Combined Driving',
+    tagline:
+      'The harness equivalent of eventing — driven dressage, a cross-country marathon with hazards, and a precision cones course.',
+    governingBodies: 'ADS · FEI',
+    level: 'Recreational',
+  },
+  {
+    slug: 'vaulting',
+    name: 'Vaulting',
+    tagline:
+      'Gymnastics and dance on a cantering horse worked on the lunge — individually, in pairs, and in spectacular teams.',
+    governingBodies: 'AVA · FEI',
+    level: 'Recreational',
+  },
 ]
 
 export default function DisciplinesIndexPage() {
