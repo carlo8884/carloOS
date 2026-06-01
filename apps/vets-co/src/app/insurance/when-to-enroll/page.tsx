@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
@@ -51,6 +51,57 @@ export default function WhenToEnrollPage() {
 
           <h2>Adopted and Rescue Pets</h2>
           <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. Schedule the enrollment around the new-pet exam so you understand your pet's baseline health and can choose appropriate coverage from the start.</p>
+
+          <h2 id="quote">Carriers to Quote Early</h2>
+          <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="lemonade"
+            badge="Young-Pet Value"
+            badgeEmoji="📱"
+            name="Lemonade Pet"
+            subtitle="Often competitive premiums for young, healthy pets"
+            score={8.4}
+            winner
+            description={
+              <p>App-first accident-and-illness coverage that often prices competitively for young, healthy pets — the enrollment window where premiums are lowest and few conditions are excluded. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+            }
+            specs={[
+              { label: 'Best for', value: 'Young pets', highlight: 'good' },
+              { label: 'Claims', value: 'App-based' },
+              { label: 'Availability', value: 'Varies by state', highlight: 'warn' },
+            ]}
+            pros={['Competitive young-pet premiums', 'Fast app claims', 'Optional preventive package']}
+            cons={['State availability varies', 'Preventive package is not insurance']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/lemonade/home?s=insurance-when-to-enroll"
+            ctaAffiliateProgram="lemonade"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="pets-best"
+            badge="Flexible Plans"
+            badgeEmoji="🐾"
+            name="Pets Best"
+            subtitle="Multiple plan tiers, no upper age limit on enrollment"
+            score={8.2}
+            description={
+              <p>Offers several plan tiers and accepts new enrollments without an upper age limit, which makes it worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
+            }
+            specs={[
+              { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
+              { label: 'Age limit', value: 'No upper limit', highlight: 'good' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['No upper age limit', 'Several plan tiers', 'Good for adopted/senior pets']}
+            cons={['Premiums rise with age', 'Standard exclusions apply']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/pets-best/home?s=insurance-when-to-enroll"
+            ctaAffiliateProgram="pets-best"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
