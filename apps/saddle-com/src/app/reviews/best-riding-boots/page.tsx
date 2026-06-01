@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Boots 2025 — Tall, Paddock, Western | Saddle.com', description: 'Best riding boots by category — tall field and dress boots, paddock boots, western boots, and half-chaps. Ariat, Mountain Horse, Tucci, Konig, Justin, Lucchese.', path: '/reviews/best-riding-boots', type: 'article' })
@@ -79,6 +79,7 @@ export default function BestRidingBootsPage() {
             <h2 className="font-display font-bold text-brand-dark text-2xl mt-6 mb-4">Tall Boots — Field and Dress</h2>
             <p className="text-base text-brand-text-mid leading-relaxed mb-5">A tall boot covers the leg from foot to just below the knee. The two subcategories are <strong>field boots</strong> (ankle laces, jumping disciplines) and <strong>dress boots</strong> (smooth unbroken shaft, dressage). Both are required equipment for most rated English shows from the lower levels up. Full-grain leather is standard above the entry-level price tier; the stiffness of the shaft, the cut of the top (Spanish-cut for dressage, plain or laced for field), and the calf width are the buying decisions that matter.</p>
 
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard id="ariat" badge="Best All-Around Tall Boot" badgeEmoji="🏆" name="Ariat Heritage Contour II Field Zip" subtitle="Full-length zip · ATS technology · Wide and regular calf options" score={9.3} winner
               description={<div>
                 <p>Ariat&apos;s Heritage Contour II is the standard all-day tall boot for serious amateur riders — the ATS (Advanced Torque Stability) footbed technology makes it significantly more comfortable for extended wear than traditional tall boots. The full-length inner zip means easy on and off without boot pulls or a boot jack. Available in multiple calf widths (regular, wide, extra wide), which is the critical fit issue for tall boots — calf fit matters more than foot size.</p>

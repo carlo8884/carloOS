@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Helmets 2025 — MIPS, Safety Ratings | Saddle.com', description: 'Best equestrian helmets ranked by safety certifications, MIPS technology, and discipline requirements. Tipperary, Charles Owen, and Troxel compared.', path: '/reviews/best-riding-helmets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Helmets 2025', description: 'Equestrian helmets ranked by safety certifications, MIPS technology, and discipline.', url: 'https://saddle.com/reviews/best-riding-helmets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -36,6 +36,7 @@ export default function BestRidingHelmetsPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed"><strong>MIPS (Multi-directional Impact Protection System):</strong> Technology that reduces rotational forces on the brain during oblique impacts — the most common type in equestrian falls. Not a certification, but a meaningful additional protection feature worth seeking.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard id="charles-owen" badge="Best Overall" badgeEmoji="🏆" name="Charles Owen AYR8 Plus" subtitle="MIPS technology · ASTM/SEI · Low-profile hunt seat style · Ventilated" score={9.5} winner
               description={<p>Charles Owen is one of the most respected names in equestrian helmet safety — their helmets are tested to standards that exceed minimum requirements. The AYR8 Plus adds MIPS technology (reduces rotational force transmission to the brain in oblique impacts, which accounts for the majority of equestrian falls) while maintaining the traditional hunt seat profile acceptable for most show ring disciplines. The ventilation system (multiple inlet and exhaust vents) makes it suitable for warm-weather riding. Outer cover available in multiple colors. ASTM/SEI certified. This is a significant investment ($200+) but for a piece of equipment responsible for protecting your brain, quality matters more than any other gear purchase.</p>}
               specs={[{ label: 'MIPS', value: 'Yes — rotational impact protection', highlight: 'good' }, { label: 'Certification', value: 'ASTM/SEI + VG1', highlight: 'good' }, { label: 'Style', value: 'Hunt seat — show legal most venues' }, { label: 'Ventilation', value: 'Active ventilation system' }]}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Best aquarium lights tested for PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
@@ -34,6 +34,7 @@ export default function BestAquariumLightingPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine. Running CO2 with these high-PAR lights? Use the <Link href="/tools/co2-calculator" className="text-brand-primary no-underline hover:underline">CO2 calculator</Link> to set a safe drop-checker target.</p>
             </div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="hygger" badge="Best Planted (Budget)" badgeEmoji="🌿" name="Hygger 957 LED Aquarium Light" subtitle="Programmable · Good PAR efficiency · Under $60 · 7 independently controlled channels" score={9.2} winner
               description={<p>The Hygger 957 delivers planted-tank-capable PAR output at a price point that undercuts competitors by 60–80%. Seven independently adjustable channels (red, green, blue, white, UV, cold white, warm white) allow spectrum tuning. Programmable sunrise/sunset and lunar cycles via built-in timer. At a 20" depth in a standard 20-gallon, measured PAR is 45–65 at midday setting — adequate for low-to-medium tech planted tanks without CO2. With CO2 injection, this is enough light for most stem plants, crypts, and midground plants. Not sufficient for demanding high-light plants (HC Cuba carpets, most moss walls) — step up to the Fluval 3.0 for those.</p>}
               specs={[{ label: 'PAR at 20"', value: '45–65 (midday)', highlight: 'good' }, { label: 'Channels', value: '7 independently controlled', highlight: 'good' }, { label: 'Timer', value: 'Built-in programmable', highlight: 'good' }, { label: 'Price', value: 'Under $60', highlight: 'good' }, { label: 'Best For', value: 'Low-medium tech planted tanks' }]}

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,7 @@ export default function BestTerrariumsPage() {
         <div className="grid lg:grid-cols-[1fr_250px] gap-12">
           <div>
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="lizard-com" />
             <ReviewCard
               id="zen"
               badge="Best Overall PVC"
