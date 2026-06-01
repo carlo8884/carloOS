@@ -112,7 +112,7 @@ export default function DressagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
-        contentType="specialty"
+        contentType="discipline"
         hero={{
           title: 'Dressage',
           subtitle:

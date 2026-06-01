@@ -112,7 +112,7 @@ export default function ReiningPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
-        contentType="specialty"
+        contentType="discipline"
         hero={{
           title: 'Reining',
           subtitle:
