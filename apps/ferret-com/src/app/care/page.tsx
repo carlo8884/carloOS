@@ -67,6 +67,62 @@ const CARE_CARDS: CareCard[] = [
     description:
       'Chocolate, onions, raisins, sugar, xylitol, dairy, and the full category-by-category list of what must never reach a ferret.',
   },
+  {
+    slug: 'multi-level-housing',
+    eyebrow: 'Housing',
+    title: 'Multi-Level Housing',
+    description:
+      'Plan a vertical cage: usable habitat per square foot, level spacing and fall risk, ramp design, zoning food/litter/sleep, and connecting cages.',
+  },
+  {
+    slug: 'bedding-and-litter-types',
+    eyebrow: 'Housing',
+    title: 'Bedding & Litter Types',
+    description:
+      'A material-by-material guide to ferret bedding and litter — why fleece beats loose shavings, which litters are safe, and the hazards to avoid.',
+  },
+  {
+    slug: 'heat-stroke-prevention',
+    eyebrow: 'Safety',
+    title: 'Heat Stroke Prevention',
+    description:
+      'Ferrets cannot sweat and overheat fast. Safe temperature range, early warning signs, prevention setups, and emergency cooling steps.',
+  },
+  {
+    slug: 'ferret-proofing-your-home',
+    eyebrow: 'Safety',
+    title: 'Ferret-Proofing Your Home',
+    description:
+      'Room-by-room hazard checklist: gap-blocking, recliner and appliance dangers, ingestion hazards, toxic plants, and a safe free-roam space.',
+  },
+  {
+    slug: 'travel-and-carriers',
+    eyebrow: 'Husbandry',
+    title: 'Travel & Carriers',
+    description:
+      'Choosing a carrier, securing it in the car, temperature and water on the road, reducing travel stress, and the realities of air travel.',
+  },
+  {
+    slug: 'nail-trimming',
+    eyebrow: 'Grooming',
+    title: 'Nail Trimming',
+    description:
+      'How often to trim, finding the quick, the tools that work, the belly-treat distraction trick, and what to do if you cut too far.',
+  },
+  {
+    slug: 'ear-cleaning',
+    eyebrow: 'Grooming',
+    title: 'Ear Cleaning',
+    description:
+      'Normal reddish-brown wax versus a problem, gentle technique, what never to use, and how to tell ear mites from routine buildup.',
+  },
+  {
+    slug: 'introducing-a-second-ferret',
+    eyebrow: 'Behavior',
+    title: 'Introducing a Second Ferret',
+    description:
+      'Quarantine first, neutral-territory meetings, reading normal rough play versus real aggression, and the realistic bonding timeline.',
+  },
 ]
 
 export default function CareHubPage() {
@@ -111,8 +167,8 @@ export default function CareHubPage() {
               margin: 0,
             }}
           >
-            Six references covering the daily and seasonal care a domestic ferret needs — from
-            obligate-carnivore nutrition through housing, grooming, and toxicity safety. Each
+            Fourteen references covering the daily and seasonal care a domestic ferret needs — from
+            obligate-carnivore nutrition through housing, grooming, travel, and toxicity safety. Each
             page cites exotic-mammal veterinary literature.
           </p>
         </div>
