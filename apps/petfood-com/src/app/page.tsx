@@ -180,7 +180,7 @@ export default function HomePage() {
               The independent reference for pet food.
             </p>
             <p className="text-lg text-brand-text-mid max-w-content leading-relaxed mb-10">
-              Not a store, not a brand mouthpiece — we score every commercial pet food on
+              Not a store, not a brand mouthpiece — we score commercial pet foods on
               AAFCO completeness, ingredient sourcing, manufacturing standards, recall
               history, and feeding-outcome literature. The rubric is published, versioned,
               and re-run whenever it changes. Where Dog Food Advisor is advertorial-heavy

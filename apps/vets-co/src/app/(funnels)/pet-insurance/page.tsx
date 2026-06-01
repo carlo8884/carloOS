@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Pet Insurance — Why Your Vet Recommends It | Vets.co',
   description:
-    'Pet insurance lowers the cost of unexpected vet bills. See the carriers vets most often see in practice, with editorial rankings.',
+    'Pet insurance lowers the cost of unexpected vet bills. See the carriers we rank highest, with our editorial methodology.',
   path: '/pet-insurance',
   type: 'article',
 })
@@ -105,7 +105,7 @@ export default function VetsCoInsuranceHub() {
         </div>
 
         <h2 className="font-display text-2xl font-bold tracking-tight mb-6">
-          The 5 carriers we most often discuss in practice
+          The 5 carriers we rank highest
         </h2>
 
         <div className="grid gap-4 mb-12">

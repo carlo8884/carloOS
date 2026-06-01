@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'How PetFood.com Scores — Methodology v1.0',
   description:
-    'Published rubric used to score every pet food brand and formula on PetFood.com. Versioned, citation-anchored, and re-runnable on demand.',
+    'Published rubric used to score pet food brands and formulas on PetFood.com. Versioned, citation-anchored, and re-runnable on demand.',
   url: 'https://petfood.com/guides/methodology',
   imageUrl: '',
   authorName: 'PetFood.com Editorial',
