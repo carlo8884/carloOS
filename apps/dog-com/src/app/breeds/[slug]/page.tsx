@@ -103,6 +103,60 @@ function yesNo(b: boolean): string {
 }
 
 /**
+ * Per-breed "Recommended Reviews" link list — drives traffic from the breed
+ * page to the monetized /reviews/* hubs. Size-derived (food choice maps to
+ * sizeCategory) + universal essentials. Internal links only — no inline
+ * buy-boxes (breed pages stay clinical per protect-asset policy; monetization
+ * lives on the /reviews/* destinations).
+ */
+function buildRecommendedReviewsForBreed(
+  breed: Breed,
+): Array<{ label: string; href: string }> {
+  const links: Array<{ label: string; href: string }> = []
+
+  // Size-derived food review
+  switch (breed.sizeCategory) {
+    case 'Toy':
+    case 'Small':
+      links.push({
+        label: 'Best Food for Small Breeds',
+        href: '/reviews/best-dog-food-small-breed',
+      })
+      break
+    case 'Large':
+    case 'Giant':
+      links.push({
+        label: 'Best Food for Large Breeds',
+        href: '/reviews/best-large-breed-dog-food',
+      })
+      break
+    default:
+      links.push({
+        label: 'Best Dry Dog Food',
+        href: '/reviews/best-dry-dog-food',
+      })
+  }
+
+  // Universal essentials (crates sized to the breed via the destination page)
+  links.push({ label: 'Best Dog Beds', href: '/reviews/best-dog-beds' })
+  links.push({ label: 'Best Dog Crates', href: '/reviews/best-dog-crates' })
+
+  // Health-need-derived (cheap pattern match against documented concerns)
+  const concerns = breed.healthConcerns.join(' ').toLowerCase()
+  if (/hip|elbow|joint|arthritis|cruciate|patella|dysplasia/.test(concerns)) {
+    links.push({
+      label: 'Best Joint Supplements',
+      href: '/reviews/best-joint-supplements',
+    })
+  }
+  if (/anxiety|fear|separation|noise/.test(concerns)) {
+    links.push({ label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' })
+  }
+
+  return links.slice(0, 5)
+}
+
+/**
  * Cross-link a health condition to the closest existing /health/ guide.
  * Returns href if the breed's commonHealthCrossLinks contains a matching URL,
  * otherwise undefined.
@@ -517,6 +571,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 }))}
               />
             )}
+
+            <RelatedLinks
+              title="Recommended Reviews"
+              links={buildRecommendedReviewsForBreed(breed)}
+            />
 
             <CrossPortfolioCard
               currentSite="dog-com"
