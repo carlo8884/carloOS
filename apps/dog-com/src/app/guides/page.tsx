@@ -57,6 +57,16 @@ export default function GuidesHubPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14 max-w-container-wide mx-auto">
+        <div className="max-w-3xl mb-10">
+          <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">What a Dog.com guide is</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            A Dog.com guide is a long-form reference on a foundational decision in a dog&apos;s life — the kind of question where the answer materially affects health, longevity, or quality of life and where the published veterinary evidence has shifted meaningfully over the last decade. Body condition scoring (BCS) and spay/neuter timing are the first two because the evidence on both reframed in the 2010s: BCS replaced bathroom-scale weight as the standard clinical assessment, and large-breed spay/neuter timing recommendations now diverge from the historical &ldquo;six months for everyone&rdquo; default by breed and sex.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            Each guide names its sources (peer-reviewed studies, AAHA / WSAVA / AVMA consensus, breed-club position statements) and is dated. Where the evidence is genuinely mixed we say so. We do not, in any guide, recommend a brand or product as an editorial position — those decisions live on the review pages under <Link href="/reviews" className="text-brand-primary no-underline hover:underline">/reviews</Link>.
+          </p>
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-4">
           {GUIDES.map((item) => (
             <Link
@@ -71,6 +81,33 @@ export default function GuidesHubPage() {
               <div className="text-sm text-brand-text-light leading-relaxed">{item.desc}</div>
             </Link>
           ))}
+        </div>
+      </div>
+
+      <div className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-14">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">How a guide is built</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Topic selection: a guide ships when (a) the evidence base is large enough to support a defensible recommendation, (b) the recommendation has changed in a material way since 2015 or the lay-press framing of the topic continues to be wrong, and (c) we can name the primary sources without paywall. We don&apos;t publish guides on topics where the evidence is still emerging — those are condition pages under <Link href="/health" className="text-brand-primary no-underline hover:underline">/health</Link> with the calibrated &ldquo;here&apos;s what we know, here&apos;s what we don&apos;t&rdquo; framing.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            Sourcing: peer-reviewed veterinary journals first (JAVMA, JVIM, JSAP, AVMA proceedings). Consensus statements from AAHA, WSAVA, and the AVMA second. Breed-club health committees and the OFA / CHIC databases third. We name the citation rather than hyperlinking-and-hoping; if the citation is behind a paywall we say so, and where possible point to the abstract or to a guideline summary that synthesizes the underlying data.
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            Update cadence: every guide carries a &ldquo;last reviewed&rdquo; date and is re-examined when the underlying evidence changes. Body condition scoring is unlikely to be revised — the 1-9 scale is stable. Spay/neuter timing recommendations have shifted enough in the last decade that we expect that page to need real updates as breed-specific studies publish.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-brand-surface border-t border-brand-border px-container-sm sm:px-container py-14">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">More guides coming</h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+            On the roadmap: vaccination interval / titer testing (the post-2017 AAHA guidance shift away from annual core vaccines for most adult dogs), dental-disease prevention (VOHC seal vs. brushing protocol vs. anesthesia-free cleaning, which is a real consumer trap), preventive screening for senior dogs (when to start bloodwork, urinalysis, and abdominal imaging by breed and size), and weight loss for diagnosed-obese dogs (caloric restriction targets that actually move the needle, not the marketing &ldquo;weight management&rdquo; bag).
+          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">
+            Each lands when the evidence and the source-attribution clears the bar above. If you want notice when a specific topic publishes, subscribe below.
+          </p>
         </div>
       </div>
 
