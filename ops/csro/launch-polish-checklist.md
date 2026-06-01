@@ -100,3 +100,21 @@ Brief: `ops/handoffs/2026-06-01-csro-ferret-sprint1.md`. Done-when ALL true:
 - [ ] IR sign-off: no Tier-1 trust/valuation risk — **IR**
 
 Then apply the same bar to PetFood → Vets → Fish → Saddle/Lizard → Dog (last).
+
+### Sprint-1 audit result (2026-06-01) — `ops/handoffs/2026-06-01-qa-ferret-com-launch-audit.md`
+**Verdict: clears §8a hard gates. No P0 launch blockers.** trust-guard / metadata-policy / link-check
+all green; no clinical-dosing overreach; dog-hero defect already resolved (manifest now a real ferret).
+
+COO-lane defects closed this pass:
+- ✅ Orphan dup `/care/seasonal-coat-and-shedding` → redirect to canonical `/care/seasonal-shedding`
+- ✅ Orphan dup `/behavior/scratching-and-digging-furniture` → redirect to `/behavior/digging-and-burrowing`
+- ✅ `/tools` hub: added BreadcrumbList + ItemList/WebApplication JSON-LD (citable product surface)
+
+Handed off (not COO-lane):
+- ⬜ `/legal/affiliate-disclosure` dup of canonical `/disclosure` → **Monetization** (shared §5 FTC lane):
+  `ops/handoffs/2026-06-01-csro-to-monetization-ferret-disclosure-dup.md`
+- ⬜ Surface Food Evaluator on homepage first-screen → **Visual** (gated on premium first-screen standard)
+
+P2 backlog (polish, not launch-gating):
+- ⬜ Standardize breadcrumb pattern (some hubs hand-roll inline nav+schema; some `/diet/*`,`/ownership/*`
+  spokes have neither) → uniform `Breadcrumb` component + BreadcrumbList JSON-LD across ferret-com
