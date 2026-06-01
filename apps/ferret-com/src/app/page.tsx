@@ -796,83 +796,6 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SISTER-SITE TEASER — Ferrets.com
-          ════════════════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--brand-dark)',
-          padding: 'clamp(56px, 7vw, 80px) 24px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '780px',
-            margin: '0 auto',
-            textAlign: 'center',
-            color: 'rgba(251, 245, 232, 0.92)',
-          }}
-        >
-          <div style={{ marginBottom: '14px' }}>
-            <span
-              style={{
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--brand-amber)',
-              }}
-            >
-              <span
-                aria-hidden
-                style={{
-                  display: 'inline-block',
-                  width: '24px',
-                  height: '2px',
-                  background: 'var(--brand-amber)',
-                  marginRight: '10px',
-                  verticalAlign: 'middle',
-                }}
-              />
-              Sister site · coming soon
-            </span>
-          </div>
-          <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.625rem, 3vw, 2.125rem)',
-              fontWeight: 800,
-              letterSpacing: '-0.015em',
-              color: 'var(--brand-white)',
-              lineHeight: 1.2,
-              margin: '0 0 14px',
-            }}
-          >
-            Looking for a community of ferret owners?
-          </h2>
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              lineHeight: 1.65,
-              color: 'rgba(251, 245, 232, 0.72)',
-              margin: 0,
-            }}
-          >
-            <span
-              style={{
-                fontWeight: 700,
-                color: 'var(--brand-amber)',
-              }}
-            >
-              Ferrets.com
-            </span>{' '}
-            (coming soon) — the directory and library sister site, for keeper
-            communities, breeder listings, and shelter networks. Ferret.com is the
-            editorial reference; Ferrets.com will be the connective tissue.
-          </p>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════════════════════════════════
           EDITORIAL FOOTER NOTE (above shared <Footer />)
           ════════════════════════════════════════════════════════════════ */}
       <section
@@ -893,13 +816,14 @@ export default function HomePage() {
           }}
         >
           Ferret.com publishes general reference, not individualized veterinary
-          advice. Source base: Quesenberry &amp; Carpenter,{' '}
-          <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>;{' '}
-          <em>Journal of Exotic Pet Medicine</em>;{' '}
-          <em>Veterinary Clinics of North America: Exotic Animal Practice</em>;
-          American Ferret Association (AFA); Association of Exotic Mammal
-          Veterinarians (AEMV). Work with an exotic-pet vet for clinical
-          decisions.
+          advice — work with an exotic-pet vet for clinical decisions. See our{' '}
+          <Link
+            href="/editorial-standards"
+            style={{ color: 'var(--brand-primary)', textDecoration: 'underline' }}
+          >
+            editorial standards &amp; sources
+          </Link>
+          .
         </p>
       </section>
     </>
