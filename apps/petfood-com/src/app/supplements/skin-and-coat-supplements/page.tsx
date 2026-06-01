@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function SkinAndCoatSupplementsPage() {
               { label: 'Protein and Amino Acids', href: '#protein' },
               { label: 'When the Coat Signals Disease', href: '#disease' },
               { label: 'Diet First', href: '#dietfirst' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,57 @@ export default function SkinAndCoatSupplementsPage() {
         <p>A coat that deteriorates despite a good diet is a flag for underlying disease: hypothyroidism, Cushing&apos;s disease, parasites, allergies, and other conditions all affect the coat. Reaching for a supplement can delay diagnosis of a treatable disease. A persistently poor coat, hair loss, or skin lesions warrant veterinary evaluation rather than a longer trial of supplements.</p>
         <h2 id="dietfirst">Diet First</h2>
         <p>For most coat complaints, the right sequence is: confirm the diet is complete and balanced and adequate in essential fatty acids and protein; rule out parasites and underlying disease with the veterinarian; and only then consider a targeted supplement such as fish oil. A supplement layered onto an inadequate diet or an undiagnosed disease addresses the symptom, not the cause. See <a href="/supplements/multivitamins-for-pets">Multivitamins for Pets</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>The best-supported skin-and-coat supplement is a marine omega-3, because essential fatty acids are the strongest nutritional lever for coat quality — many improvements credited to a coat supplement are really the effect of added EPA and DHA. Confirm the diet is complete and rule out underlying disease first; a supplement layered onto an inadequate diet or an undiagnosed problem treats the symptom, not the cause. These are over-the-counter picks, not a hands-on trial.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="omega-skin-coat"
+          badge="Strongest Lever"
+          badgeEmoji="🐟"
+          name="Marine Omega-3 for Skin & Coat"
+          subtitle="EPA/DHA fish oil — the best-supported coat supplement"
+          score={9.0}
+          winner
+          description={
+            <p>Omega-6 supports the skin barrier and shine while omega-3s (EPA, DHA) reduce skin inflammation, and fish oil is the most reliable omega-3 source. This is the highest-evidence skin-and-coat intervention. Buy on combined EPA/DHA per serving with antioxidant protection. See our <a href="/supplements/fish-oil-omega-3">fish oil and omega-3 reference</a> for the full buying detail.</p>
+          }
+          specs={[
+            { label: 'Active', value: 'EPA + DHA', highlight: 'good' },
+            { label: 'Evidence', value: 'Strongest for coat', highlight: 'good' },
+            { label: 'Source', value: 'Marine fish / algal oil' },
+          ]}
+          pros={['Best-supported coat lever', 'Also benefits joints and skin inflammation', 'Algal option for fish-intolerant pets']}
+          cons={['Adds calories', 'Oxidizes if stored poorly']}
+          price="$15–35"
+          ctaText="Find Omega-3 for Coat"
+          ctaHref="/go/chewy-brand/dog+omega+3+skin+coat+fish+oil?s=supplements-skin-and-coat-supplements"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="dog+omega+3+skin+coat+fish+oil"
+        />
+        <ReviewCard
+          id="skin-coat-multi"
+          badge="Combination Chews"
+          badgeEmoji="✨"
+          name="Skin & Coat Support Chews"
+          subtitle="EFA-forward chews with zinc and biotin"
+          score={7.5}
+          description={
+            <p>Combination skin-and-coat chews bundle essential fatty acids with zinc and biotin. Zinc genuinely helps zinc-responsive dermatosis (under veterinary direction) and biotin matters in the rare true deficiency, but for most pets the active lever is still the fatty acids. Treat these as convenience formats and prefer NASC-sealed or third-party-tested products.</p>
+          }
+          specs={[
+            { label: 'Contains', value: 'EFAs + zinc + biotin' },
+            { label: 'Format', value: 'Soft chew' },
+            { label: 'Quality filter', value: 'NASC / third-party', highlight: 'good' },
+          ]}
+          pros={['Convenient all-in-one format', 'Includes zinc and biotin', 'Palatable chew']}
+          cons={['Fatty acids do most of the work', 'Biotin rarely the missing piece on a complete diet']}
+          price="$18–35"
+          ctaText="Compare Skin & Coat Chews"
+          ctaHref="/go/amazon-brand/dog+skin+coat+supplement+omega+zinc?s=supplements-skin-and-coat-supplements"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="dog+skin+coat+supplement+omega+zinc"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

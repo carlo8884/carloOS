@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function WellnessVsMerrickPage() {
               { label: 'AAFCO Posture', href: '#aafco' },
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'Recall History', href: '#recall' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,56 @@ export default function WellnessVsMerrickPage() {
         <p>Manufacturing arrangements (owned plants versus co-packing) and disclosed quality-control practices differ and should be evaluated per brand. Corporate ownership by a large manufacturer can provide established quality-control infrastructure. As always, the meaningful signal is transparency about where and how the food is made and what testing is done, rather than the brand&apos;s marketing. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
         <h2 id="recall">Recall History</h2>
         <p>Both brands have had recalls over the years, as most established brands have; they should be assessed by cause, severity, and response rather than count. The FDA CVM Recalls and Withdrawals database is the source of record for each brand&apos;s current history. A balanced comparison weighs the recall record alongside the other four dimensions rather than treating any single recall as decisive. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Both are premium natural-positioned brands competing for the same buyer; judge the specific formula on its panel and AAFCO statement rather than the brand image. For grain-free formulas from either brand, the legume-inclusive DCM question applies. The brand-search links below surface the current lineups. We earn an affiliate commission on purchases through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="wellness-retail"
+          badge="Natural Premium"
+          badgeEmoji="🌿"
+          name="Wellness"
+          subtitle="Named-meat-forward natural line (grain-inclusive and grain-free)"
+          score={8.2}
+          description={
+            <p>A premium natural-positioned brand with named animal proteins early on the panel and grain-inclusive and grain-free lines. Owned by a large pet-nutrition holding company despite the artisan image. Evaluate the specific formula on its AAFCO substantiation pathway and ingredient panel; prefer grain-inclusive unless there is a specific reason to choose grain-free.</p>
+          }
+          specs={[
+            { label: 'Positioning', value: 'Natural premium' },
+            { label: 'Lines', value: 'Grain-inclusive + grain-free' },
+            { label: 'Protein listing', value: 'Named meats early', highlight: 'good' },
+          ]}
+          pros={['Named-meat-forward panels', 'Broad lineup', 'Grain-inclusive options']}
+          cons={['Artisan image obscures corporate ownership', 'Grain-free formulas intersect the DCM question']}
+          price="$$ premium"
+          ctaText="Search Wellness on Chewy"
+          ctaHref="/go/chewy-brand/Wellness%20pet%20food?s=wellness-vs-merrick"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="Wellness%20pet%20food"
+        />
+        <ReviewCard
+          id="merrick-retail"
+          badge="Natural Premium"
+          badgeEmoji="🍖"
+          name="Merrick"
+          subtitle="Whole-food natural line, now under Nestle Purina"
+          score={8.2}
+          description={
+            <p>A premium whole-food natural brand with recognizable produce and named meats, acquired by Nestle Purina — which can bring research and quality-control resources behind the natural branding. As with Wellness, judge the specific formula on its panel and AAFCO statement, and treat grain-free legume-heavy recipes with the DCM caution.</p>
+          }
+          specs={[
+            { label: 'Positioning', value: 'Natural premium' },
+            { label: 'Owner', value: 'Nestle Purina' },
+            { label: 'Lines', value: 'Grain-inclusive + grain-free' },
+          ]}
+          pros={['Whole-food ingredient panels', 'Large-parent QC resources', 'Named meats early']}
+          cons={['Natural branding predates corporate ownership', 'Grain-free formulas intersect the DCM question']}
+          price="$$ premium"
+          ctaText="Search Merrick on Chewy"
+          ctaHref="/go/chewy-brand/Merrick%20pet%20food?s=wellness-vs-merrick"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="Merrick%20pet%20food"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

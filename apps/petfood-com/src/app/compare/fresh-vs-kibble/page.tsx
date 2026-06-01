@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function FreshVsKibblePage() {
               { label: 'Completeness and AAFCO', href: '#aafco' },
               { label: 'Cost and Practicality', href: '#cost' },
               { label: 'Evaluating a Fresh Diet', href: '#evaluating' },
+              { label: 'Fresh Food Options', href: '#options' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,58 @@ export default function FreshVsKibblePage() {
         <p>Fresh food costs substantially more per calorie than kibble — often several times more, especially for large dogs — and requires refrigerator or freezer space, thawing, and use within a few days of opening. Subscription models add convenience but lock in the higher cost. For many households the cost is the deciding factor, and a high-quality kibble or canned diet remains a sound choice. See the <a href="/tools/food-cost-calculator">Food Cost Calculator</a>.</p>
         <h2 id="evaluating">Evaluating a Fresh Diet</h2>
         <p>Judge a fresh diet the way you would any other: confirm the AAFCO statement and life-stage match, prefer feeding-trial substantiation, look for manufacturing and sourcing transparency and a board-certified veterinary nutritionist on staff, and check the calorie density so you feed the right amount. Do not assume fresh equals better without checking the formulation; a poorly formulated fresh diet is inferior to a well-formulated kibble. See <a href="/feeding/food-storage-and-safety">Pet Food Storage and Safety</a>.</p>
+
+        <h2 id="options">Fresh Food Options</h2>
+        <p>If you have decided a fresh diet fits your budget and household, the picks below are direct-to-consumer fresh-food brands that publish their formulation and ship complete, AAFCO-substantiated diets on a subscription model. Apply the same evaluation as any food: confirm the AAFCO complete-and-balanced statement and life stage, prefer feeding-trial substantiation, and check the calorie density. We earn an affiliate commission on purchases through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="the-farmers-dog"
+          badge="Fresh Subscription"
+          badgeEmoji="🥘"
+          name="The Farmer's Dog"
+          subtitle="Gently cooked, vet-formulated fresh dog food, portioned to your dog"
+          score={8.8}
+          winner
+          description={
+            <p>A direct-to-consumer fresh dog food that gently cooks human-grade ingredients and portions meals to your dog&apos;s calorie needs from an intake questionnaire. Formulated to AAFCO profiles with a veterinary nutrition team. The fresh-category trade-offs apply: substantially higher cost per calorie than kibble and freezer space required.</p>
+          }
+          specs={[
+            { label: 'Type', value: 'Gently cooked fresh', highlight: 'good' },
+            { label: 'AAFCO', value: 'Complete and balanced', highlight: 'good' },
+            { label: 'Model', value: 'Subscription, pre-portioned' },
+            { label: 'Cost', value: 'Premium per calorie', highlight: 'warn' },
+          ]}
+          pros={['Vet-formulated to AAFCO profiles', 'Pre-portioned to calorie needs', 'Human-grade ingredients']}
+          cons={['Higher cost per calorie than kibble', 'Requires freezer/fridge space', 'Subscription lock-in']}
+          price="Subscription pricing"
+          ctaText="See The Farmer's Dog Plans"
+          ctaHref="/go/farmers-dog/fresh-vs-kibble?s=compare-fresh-vs-kibble"
+          ctaAffiliateProgram="farmers-dog"
+          ctaAffiliateProduct="fresh-vs-kibble"
+        />
+        <ReviewCard
+          id="ollie-fresh"
+          badge="Fresh Subscription"
+          badgeEmoji="🍲"
+          name="Ollie"
+          subtitle="Fresh and gently baked recipes with a published formulation"
+          score={8.3}
+          description={
+            <p>A direct-to-consumer fresh dog food offering both fresh-cooked and gently baked recipes, portioned by a profile questionnaire and formulated to AAFCO profiles. Same category trade-offs as any fresh diet: higher cost than kibble and storage logistics. Confirm the AAFCO statement and life-stage match for the recipe you choose.</p>
+          }
+          specs={[
+            { label: 'Type', value: 'Fresh + gently baked' },
+            { label: 'AAFCO', value: 'Complete and balanced', highlight: 'good' },
+            { label: 'Model', value: 'Subscription, pre-portioned' },
+          ]}
+          pros={['Fresh and baked options', 'Pre-portioned plans', 'Published formulation']}
+          cons={['Premium cost per calorie', 'Storage logistics', 'Subscription model']}
+          price="Subscription pricing"
+          ctaText="See Ollie Plans"
+          ctaHref="/go/ollie/fresh-vs-kibble?s=compare-fresh-vs-kibble"
+          ctaAffiliateProgram="ollie"
+          ctaAffiliateProduct="fresh-vs-kibble"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pet Insurance Deductibles & Reimbursement Explained | Vets.co", description: "Annual vs. per-condition deductibles, reimbursement rates, and annual limits all shape your real cost. Learn how to balance premium against out-of-pocket risk.", path: '/insurance/deductibles-reimbursement', type: 'article' })
@@ -51,6 +51,57 @@ export default function DeductiblesPage() {
 
           <h2>Choosing Your Settings</h2>
           <p>Start from your cash reality. If you keep an emergency fund and want catastrophe protection, choose a high annual limit, a moderate reimbursement rate, and a higher deductible to keep the premium down. If even moderate bills strain your budget, lean toward a lower deductible and higher reimbursement rate, accepting a higher premium for smoother costs. Either way, avoid sacrificing the annual limit, since that is the protection you are really buying.</p>
+
+          <h2 id="quote">Model the Levers on Real Quotes</h2>
+          <p>The fastest way to see how deductible, reimbursement rate, and annual limit move your premium is to run the same pet through a couple of carriers and adjust the sliders. The two below let you do that; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="healthy-paws"
+            badge="Simple Levers"
+            badgeEmoji="⚡"
+            name="Healthy Paws"
+            subtitle="One plan, you set the deductible and reimbursement rate"
+            score={8.7}
+            winner
+            description={
+              <p>A single accident-and-illness plan where you choose the deductible and reimbursement rate, which makes the lever trade-offs easy to model. Known for fast reimbursement on the pay-then-claim model. Confirm the annual-limit structure when you quote — that is the catastrophe protection you are really buying.</p>
+            }
+            specs={[
+              { label: 'Plan', value: 'Single A&I' },
+              { label: 'Adjustable', value: 'Deductible + rate', highlight: 'good' },
+              { label: 'Reimbursement', value: 'Fast', highlight: 'good' },
+            ]}
+            pros={['Easy to model levers', 'Fast claims', 'Simple single plan']}
+            cons={['No wellness add-on', 'Confirm annual-limit structure']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/healthy-paws/home?s=insurance-deductibles-reimbursement"
+            ctaAffiliateProgram="healthy-paws"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="pets-best"
+            badge="Tiered Options"
+            badgeEmoji="🐾"
+            name="Pets Best"
+            subtitle="Multiple deductible and reimbursement combinations"
+            score={8.2}
+            description={
+              <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
+            }
+            specs={[
+              { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
+              { label: 'Lever range', value: 'Wide' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Wide lever range to model', 'Several plan tiers', 'No upper age limit']}
+            cons={['More options to compare', 'Standard exclusions apply']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/pets-best/home?s=insurance-deductibles-reimbursement"
+            ctaAffiliateProgram="pets-best"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

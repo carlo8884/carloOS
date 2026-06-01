@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
@@ -51,6 +51,57 @@ export default function WellnessVsInsurancePage() {
 
           <h2>Making the Choice</h2>
           <p>If you can only choose one, most owners are best served by accident-and-illness insurance, since it guards against the expenses that force the hardest decisions. Layer a wellness plan on top only if its structure genuinely helps you stay current on preventive care. Whatever you choose, keep the two functions distinct in your mind: budget for what you can predict, and insure against what you cannot.</p>
+
+          <h2 id="quote">Insurers That Offer Both</h2>
+          <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="embrace"
+            badge="Insurance + Wellness"
+            badgeEmoji="📋"
+            name="Embrace"
+            subtitle="Accident-and-illness plus an optional Wellness Rewards plan"
+            score={8.6}
+            winner
+            description={
+              <p>Pairs core accident-and-illness insurance with an optional Wellness Rewards plan that reimburses routine care insurance excludes — a clean way to get both functions from one carrier while keeping them distinct. The wellness piece is a budgeted allowance, not insurance; the insurance piece is what guards against the big bills.</p>
+            }
+            specs={[
+              { label: 'Insurance', value: 'Accident and illness', highlight: 'good' },
+              { label: 'Wellness', value: 'Optional rewards plan', highlight: 'good' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Both functions from one carrier', 'Wellness reimburses routine care', 'Diminishing-deductible feature']}
+            cons={['Wellness add-on is not insurance', 'Adds to monthly cost']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/embrace/home?s=insurance-wellness-plans-vs-insurance"
+            ctaAffiliateProgram="embrace"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="pumpkin"
+            badge="Preventive Bundle"
+            badgeEmoji="🎃"
+            name="Pumpkin Pet Insurance"
+            subtitle="Accident-and-illness with an optional preventive essentials package"
+            score={8.2}
+            description={
+              <p>Offers accident-and-illness coverage with an optional preventive-care package that refunds routine services like vaccines and wellness exams. Like any wellness layer, treat it as predictable-cost budgeting rather than catastrophe protection. Compare the insurance terms — annual limit, reimbursement, exclusions — alongside the preventive package value.</p>
+            }
+            specs={[
+              { label: 'Insurance', value: 'Accident and illness', highlight: 'good' },
+              { label: 'Preventive', value: 'Optional package' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Optional preventive package', 'Covers many hereditary conditions', 'Clear reimbursement structure']}
+            cons={['Preventive package is not insurance', 'Compare core insurance terms too']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance"
+            ctaAffiliateProgram="pumpkin"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

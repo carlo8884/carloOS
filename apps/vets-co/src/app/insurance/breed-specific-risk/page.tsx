@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Breed-Specific Insurance Risk — What to Know | Vets.co", description: "Breed predispositions to orthopedic, cardiac, and other conditions shape how — and how early — to insure. Learn how breed risk affects pet insurance decisions.", path: '/insurance/breed-specific-risk', type: 'article' })
@@ -51,6 +51,57 @@ export default function BreedRiskPage() {
 
           <h2>Using Breed Risk Wisely</h2>
           <p>Breed-specific risk is not a reason to avoid insurance; it is a reason to choose it carefully and early. Pair this understanding with our breed health guides to learn the specific conditions your dog or cat may face, then select coverage that protects against them. Predictable risk, planned for in advance, is precisely what insurance handles best.</p>
+
+          <h2 id="quote">Carriers for High-Risk Breeds</h2>
+          <p>For a breed with predictable expensive needs, the policy features that matter most are a high or unlimited annual limit and clear coverage of hereditary and congenital conditions. The two below are worth quoting on those terms; pair this with your <a href="/breeds">breed health guide</a> and the full <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>, and enroll early so breed-typical conditions are not excluded as pre-existing.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="trupanion"
+            badge="Unlimited Payouts"
+            badgeEmoji="🏆"
+            name="Trupanion"
+            subtitle="Unlimited annual payouts, strong for predictable major needs"
+            score={9.0}
+            winner
+            description={
+              <p>The unlimited annual payout structure is a strong fit for breeds with predictable, expensive needs — a single major orthopedic or chronic-disease course will not exhaust an annual cap. Covers hereditary and congenital conditions per its terms. Enroll as a puppy so breed-typical conditions are not later excluded as pre-existing.</p>
+            }
+            specs={[
+              { label: 'Annual limit', value: 'Unlimited', highlight: 'good' },
+              { label: 'Hereditary cover', value: 'Per policy terms', highlight: 'good' },
+              { label: 'Deductible', value: 'Per-condition lifetime' },
+            ]}
+            pros={['Unlimited payouts protect against major needs', 'Covers hereditary/congenital conditions', 'Direct-to-vet payment option']}
+            cons={['Premiums can run higher', 'No wellness add-on']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/trupanion/home?s=insurance-breed-specific-risk"
+            ctaAffiliateProgram="trupanion"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="figo"
+            badge="High-Limit Plans"
+            badgeEmoji="🐶"
+            name="Figo Pet Insurance"
+            subtitle="High and unlimited annual-limit options, app-based claims"
+            score={8.3}
+            description={
+              <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote. Early enrollment remains the most powerful lever for high-risk breeds.</p>
+            }
+            specs={[
+              { label: 'Annual limit', value: 'Up to unlimited', highlight: 'good' },
+              { label: 'Claims', value: 'App-based' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['High/unlimited limit options', 'App-based claims', 'Optional wellness add-on']}
+            cons={['Check orthopedic/bilateral terms', 'Premiums scale with breed risk']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/figo/home?s=insurance-breed-specific-risk"
+            ctaAffiliateProgram="figo"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

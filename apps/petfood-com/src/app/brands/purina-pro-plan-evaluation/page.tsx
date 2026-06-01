@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function PurinaProPlanEvaluationPage() {
               { label: 'Manufacturing', href: '#manufacturing' },
               { label: 'AAFCO Posture', href: '#aafco' },
               { label: 'Recall History', href: '#recall' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,35 @@ export default function PurinaProPlanEvaluationPage() {
         <p>Many Pro Plan diets are substantiated by AAFCO feeding trials rather than formulation alone — the higher-evidence pathway — which is a meaningful strength on our rubric, since feeding-trial substantiation is one of the WSAVA-favored signals. Owners should still confirm the specific formula and life-stage statement on the bag they buy, since substantiation can vary by product. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
         <h2 id="recall">Recall History</h2>
         <p>Like nearly every large manufacturer, Purina has had recalls over the years, which should be evaluated by cause, severity, and response rather than by count alone — a large-volume manufacturer naturally has more total product subject to recall. The relevant questions are whether recalls were handled transparently and what corrective action followed. The FDA CVM Recalls and Withdrawals database is the source of record for the current picture. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>The links below surface the over-the-counter Purina Pro Plan retail lineup — life-stage, breed-size, and sensitive-skin-and-stomach formulas. The separate Purina Pro Plan Veterinary Diets therapeutic range is prescription-channel and sold through your veterinarian; it is not linked here. We earn an affiliate commission on purchases through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="purina-pro-plan-retail"
+          badge="Research-Backed"
+          badgeEmoji="🔬"
+          name="Purina Pro Plan (Retail Line)"
+          subtitle="Feeding-trial substantiation and deep nutrition research"
+          score={9.0}
+          winner
+          description={
+            <p>One of the strongest scorers on the WSAVA selection criteria: board-certified veterinary nutritionists on staff, company-owned manufacturing, published peer-reviewed research, and many diets substantiated by AAFCO feeding trial rather than formulation alone. The breadth of the retail line means most life-stage and special-need cases can be matched. Confirm the specific formula and life-stage statement on the bag you buy.</p>
+          }
+          specs={[
+            { label: 'Research depth', value: 'Strong', highlight: 'good' },
+            { label: 'AAFCO substantiation', value: 'Often feeding trial', highlight: 'good' },
+            { label: 'Manufacturing', value: 'Company-owned plants', highlight: 'good' },
+            { label: 'Line', value: 'OTC retail (not Rx)' },
+          ]}
+          pros={['Feeding-trial substantiation on many diets', 'Board-certified nutritionists on staff', 'Owned manufacturing', 'Broad life-stage lineup']}
+          cons={['Large-corporate scrutiny', 'Some formulas vary in substantiation pathway']}
+          price="$$ premium"
+          ctaText="Search Purina Pro Plan on Chewy"
+          ctaHref="/go/chewy-brand/Purina%20Pro%20Plan?s=eval-purina-pro-plan"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="Purina%20Pro%20Plan"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

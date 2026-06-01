@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Pet Insurance Covers (and Doesn't) | Vets.co", description: "Accident and illness plans cover injuries, illness, surgery, diagnostics, and often hereditary conditions. Learn what is typically covered and what is excluded.", path: '/insurance/what-pet-insurance-covers', type: 'article' })
@@ -51,6 +51,57 @@ export default function WhatCoversPage() {
 
           <h2>Matching Coverage to Your Pet</h2>
           <p>A young mixed-breed dog with no known risks may be well served by a straightforward accident-and-illness plan. A purebred with documented hereditary risk benefits from a plan that clearly covers those conditions with short waiting periods. An owner focused purely on catastrophe protection might choose accident-and-illness with a high deductible and high limit and skip the wellness rider. Understanding what each plan type covers — and excludes — lets you align coverage with your pet's specific risk profile.</p>
+
+          <h2 id="quote">Insurers With Different Coverage Models</h2>
+          <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="embrace"
+            badge="Wellness Add-On"
+            badgeEmoji="📋"
+            name="Embrace"
+            subtitle="Accident-and-illness with an optional wellness rewards plan"
+            score={8.6}
+            winner
+            description={
+              <p>An accident-and-illness insurer that also offers an optional Wellness Rewards plan, which can reimburse routine care that standard insurance excludes — useful if you want both catastrophic protection and help with preventive costs. Coverage and exclusions still apply to the core policy; read them when you quote.</p>
+            }
+            specs={[
+              { label: 'Core', value: 'Accident and illness' },
+              { label: 'Wellness option', value: 'Available add-on', highlight: 'good' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Optional wellness/preventive add-on', 'Covers many hereditary conditions', 'Diminishing deductible feature']}
+            cons={['Wellness add-on is a budgeted benefit, not insurance', 'Standard exclusions apply']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/embrace/home?s=insurance-what-pet-insurance-covers"
+            ctaAffiliateProgram="embrace"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="lemonade"
+            badge="App-First"
+            badgeEmoji="📱"
+            name="Lemonade Pet"
+            subtitle="Accident-and-illness with optional preventive packages"
+            score={8.3}
+            description={
+              <p>An app-first insurer offering accident-and-illness coverage with optional preventive-care packages bundled on top. The digital claims flow is a draw for owners who want fast, app-based submission. Availability varies by state; confirm coverage details and exclusions for your location when you quote.</p>
+            }
+            specs={[
+              { label: 'Core', value: 'Accident and illness' },
+              { label: 'Preventive', value: 'Optional package', highlight: 'good' },
+              { label: 'Claims', value: 'App-based' },
+            ]}
+            pros={['Fast app-based claims', 'Optional preventive packages', 'Often competitive premiums']}
+            cons={['Availability varies by state', 'Preventive package is not insurance']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/lemonade/home?s=insurance-what-pet-insurance-covers"
+            ctaAffiliateProgram="lemonade"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

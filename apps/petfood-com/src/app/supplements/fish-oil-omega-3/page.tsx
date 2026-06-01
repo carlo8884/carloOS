@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function FishOilOmega3Page() {
               { label: 'Dosing', href: '#dosing' },
               { label: 'Quality and Oxidation', href: '#quality' },
               { label: 'Cautions', href: '#cautions' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,58 @@ export default function FishOilOmega3Page() {
         <p>Fish oil oxidizes readily, and oxidized oil is not only ineffective but potentially harmful. Choose products with antioxidant protection (such as added vitamin E), buy quantities that will be used before they go rancid, store as directed (often refrigerated after opening), and discard any oil that smells strongly rancid. Third-party purity testing (for heavy metals and oxidation) is a quality signal. See <a href="/feeding/food-storage-and-safety">Pet Food Storage and Safety</a>.</p>
         <h2 id="cautions">Cautions</h2>
         <p>Omega-3s are generally safe but not risk-free at high doses: they can affect platelet function and bleeding, may cause gastrointestinal upset or diarrhea, add calories (relevant in weight management), and very high intakes can affect immune function and vitamin E status. Animals on medications or with bleeding disorders, and those near surgery, should be supplemented only with veterinary guidance. As with any supplement, more is not automatically better.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Marine omega-3 supplements are over-the-counter products, not prescription medications. The two picks below are widely available formats chosen on the criterion that matters most: stated EPA and DHA per serving, plus antioxidant protection against oxidation. Confirm the actual EPA/DHA dose with your veterinarian, especially for therapeutic use.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="nordic-naturals-omega3-pet"
+          badge="Liquid Pump"
+          badgeEmoji="🐟"
+          name="Nordic Naturals Omega-3 Pet"
+          subtitle="Marine fish oil with disclosed EPA/DHA per pump"
+          score={9.0}
+          winner
+          description={
+            <p>A widely used liquid marine fish oil for dogs and cats with EPA and DHA disclosed per serving and third-party purity testing. Liquid format makes per-weight dosing flexible, which matters because therapeutic doses are calculated by body weight. Buy quantities you will use before they oxidize and store as directed.</p>
+          }
+          specs={[
+            { label: 'Source', value: 'Marine fish oil', highlight: 'good' },
+            { label: 'EPA/DHA disclosed', value: 'Per serving', highlight: 'good' },
+            { label: 'Format', value: 'Liquid pump' },
+            { label: 'Purity testing', value: 'Third-party', highlight: 'good' },
+          ]}
+          pros={['Disclosed EPA/DHA per serving', 'Flexible weight-based dosing', 'Third-party purity tested']}
+          cons={['Refrigerate after opening', 'Oxidizes if stored too long']}
+          price="$20–35"
+          ctaText="Find Nordic Naturals Omega-3 Pet"
+          ctaHref="/go/chewy-brand/nordic-naturals-omega-3-pet?s=supplements-fish-oil-omega-3"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="nordic-naturals-omega-3-pet"
+        />
+        <ReviewCard
+          id="marine-omega-3-formats"
+          badge="Algal / Fish Oil"
+          badgeEmoji="🌊"
+          name="Marine Omega-3 Supplements (Chew & Softgel)"
+          subtitle="Fish-oil and algal-oil formats on the major retailers"
+          score={8.0}
+          description={
+            <p>Beyond liquids, marine omega-3s come as softgels and soft chews, and as algal oil — a vegetarian source of pre-formed DHA useful when fish oil is not tolerated. The buying rule is the same across formats: choose on combined EPA and DHA per serving, not total oil weight, and prefer products with added vitamin E for oxidation protection.</p>
+          }
+          specs={[
+            { label: 'Formats', value: 'Softgel / chew / algal' },
+            { label: 'Algal (DHA) option', value: 'Available', highlight: 'good' },
+            { label: 'Key label figure', value: 'Combined EPA+DHA', highlight: 'good' },
+          ]}
+          pros={['Multiple formats including algal DHA', 'Widely stocked', 'Good for picky or fish-intolerant pets']}
+          cons={['EPA/DHA content varies widely between products', 'Read the label, not the front of the bottle']}
+          price="$15–30"
+          ctaText="Compare Omega-3 Supplements"
+          ctaHref="/go/amazon-brand/pet+omega+3+fish+oil+epa+dha?s=supplements-fish-oil-omega-3"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="pet+omega+3+fish+oil+epa+dha"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

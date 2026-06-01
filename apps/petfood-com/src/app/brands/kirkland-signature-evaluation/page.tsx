@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function KirklandSignatureEvaluationPage() {
               { label: 'AAFCO Posture', href: '#aafco' },
               { label: 'Transparency', href: '#transparency' },
               { label: 'Recall History', href: '#recall' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,35 @@ export default function KirklandSignatureEvaluationPage() {
         <p>The main rubric weakness for store brands is transparency: the contract manufacturer, sourcing, quality-control practices, and nutritionist involvement are often less disclosed than for brands that own their plants and publish their research. This is not a quality verdict — the food may be well made — but the disclosure gap limits how much an owner can verify. Greater supply-chain transparency would strengthen the brand on our rubric. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
         <h2 id="recall">Recall History</h2>
         <p>Because Kirkland pet food has been made by Diamond Pet Foods, its recall exposure is tied to that manufacturer&apos;s record, including the major 2012 Salmonella recall that affected Diamond-made products. Recall history should be evaluated by cause, severity, and corrective response, with the FDA CVM database as the source of record. The store-brand model means recall risk follows the contract manufacturer, which is why identifying the maker matters. See <a href="/guides/pet-food-recalls-and-fda">Pet Food Recalls and the FDA</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Kirkland Signature pet food is sold primarily at Costco, with limited availability through major retailers. If this evaluation leaves you comfortable with the value-versus-transparency trade-off, the brand-search link below surfaces the current lineup. We earn an affiliate commission on purchases made through these links at no extra cost to you, and we never rank by commission.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="kirkland-signature-retail"
+          badge="Best Value"
+          badgeEmoji="🛒"
+          name="Kirkland Signature Pet Food"
+          subtitle="Premium-positioned formula at a notably lower price per pound"
+          score={8.0}
+          winner
+          description={
+            <p>One of the strongest value options for owners who want a premium-positioned, named-meat-forward diet at a notably lower price per pound — especially for large dogs, where food cost is significant. The main rubric weakness is transparency: as a contract-manufactured store brand, sourcing and quality-control disclosure is thinner than for brands that own their plants. Confirm the AAFCO statement and life stage on the specific bag.</p>
+          }
+          specs={[
+            { label: 'Positioning', value: 'Premium value', highlight: 'good' },
+            { label: 'Price per pound', value: 'Below name brands', highlight: 'good' },
+            { label: 'Transparency', value: 'Limited (store brand)', highlight: 'warn' },
+            { label: 'Primary retail', value: 'Costco' },
+          ]}
+          pros={['Strong value per pound', 'Named-meat-forward formulas', 'Grain-inclusive and grain-free options']}
+          cons={['Thinner supply-chain transparency', 'Contract-manufactured', 'Limited retail availability outside Costco']}
+          price="$$ value tier"
+          ctaText="Search Kirkland Signature on Amazon"
+          ctaHref="/go/amazon-brand/Kirkland%20Signature%20pet%20food?s=eval-kirkland"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="Kirkland%20Signature%20pet%20food"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>

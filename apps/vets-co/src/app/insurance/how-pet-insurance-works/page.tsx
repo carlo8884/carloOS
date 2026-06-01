@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How Pet Insurance Works — A Plain-English Guide | Vets.co", description: "Pet insurance reimburses you for covered vet bills after a deductible. Learn how premiums, deductibles, reimbursement rates, and annual limits fit together.", path: '/insurance/how-pet-insurance-works', type: 'article' })
@@ -51,6 +51,57 @@ export default function HowPetInsuranceWorksPage() {
 
           <h2>Choosing a Structure</h2>
           <p>There is no single best plan; the right structure depends on your budget and risk tolerance. If you could comfortably absorb a few thousand dollars but not a $10,000 catastrophe, a higher deductible with a high or unlimited annual limit gives strong protection at a lower premium. If cash flow is tight even for moderate bills, a lower deductible and higher reimbursement rate smooth costs but raise the premium. Understanding the four levers lets you build a plan that matches your situation rather than chasing the cheapest or most expensive option.</p>
+
+          <h2 id="quote">Compare a Couple of Insurers</h2>
+          <p>Once the four levers make sense, the next step is to price your own pet on a couple of carriers and compare the premium against the deductible, reimbursement rate, and annual limit. The two below illustrate different models; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <ReviewCard
+            id="trupanion"
+            badge="Direct-Pay Model"
+            badgeEmoji="🏆"
+            name="Trupanion"
+            subtitle="Pays participating vets directly, per-condition deductible"
+            score={9.0}
+            winner
+            description={
+              <p>Notable for paying participating veterinarians directly at checkout, which sidesteps the pay-then-claim cash-flow burden described above. Uses a per-condition lifetime deductible rather than an annual one. Pricing reflects its model; run a quote for your pet to compare against the four levers.</p>
+            }
+            specs={[
+              { label: 'Payout model', value: 'Direct-to-vet option', highlight: 'good' },
+              { label: 'Deductible', value: 'Per-condition lifetime' },
+              { label: 'Annual limit', value: 'Unlimited', highlight: 'good' },
+            ]}
+            pros={['Direct payment to participating vets', 'Unlimited payouts', 'No per-incident caps']}
+            cons={['Premiums can run higher', 'No wellness/preventive add-on']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/trupanion/home?s=insurance-how-pet-insurance-works"
+            ctaAffiliateProgram="trupanion"
+            ctaAffiliateProduct="home"
+          />
+          <ReviewCard
+            id="healthy-paws"
+            badge="Fast Reimbursement"
+            badgeEmoji="⚡"
+            name="Healthy Paws"
+            subtitle="One simple accident-and-illness plan, fast claims"
+            score={8.7}
+            description={
+              <p>A single straightforward accident-and-illness plan with a reputation for fast reimbursement on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
+            }
+            specs={[
+              { label: 'Plan structure', value: 'Single A&I plan' },
+              { label: 'Reimbursement', value: 'Fast turnaround', highlight: 'good' },
+              { label: 'Model', value: 'Pay-then-claim' },
+            ]}
+            pros={['Simple single plan', 'Fast claim processing', 'Choose deductible and rate']}
+            cons={['No wellness add-on', 'No direct-vet payment']}
+            price="Quote-based"
+            ctaText="Get a Quote →"
+            ctaHref="/go/healthy-paws/home?s=insurance-how-pet-insurance-works"
+            ctaAffiliateProgram="healthy-paws"
+            ctaAffiliateProduct="home"
+          />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

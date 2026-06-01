@@ -6,6 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ReviewCard,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +60,7 @@ export default function GlucosamineAndJointSupportPage() {
               { label: 'The Regulation Gap', href: '#regulation' },
               { label: 'Quality Concerns', href: '#quality' },
               { label: 'Realistic Expectations', href: '#expectations' },
+              { label: 'Where to Buy', href: '#buy' },
               { label: 'Sources', href: '#sources' },
             ]}
           />
@@ -93,6 +96,58 @@ export default function GlucosamineAndJointSupportPage() {
         <p>Independent testing of joint supplements has at times found products containing less active ingredient than labeled. To reduce this risk, prefer products with third-party quality certification, a National Animal Supplement Council (NASC) seal, batch testing, and a reputable manufacturer. A cheap supplement that does not contain what it claims is not a bargain.</p>
         <h2 id="expectations">Realistic Expectations</h2>
         <p>Glucosamine-based supplements are low-risk and may help some animals, but they are not a substitute for the interventions with stronger evidence — weight control, omega-3 fatty acids, and veterinary-directed pain management. Give any joint supplement adequate time (often several weeks) to show effect, evaluate the response honestly, and discuss the joint plan with the veterinarian rather than stacking unproven products. See <a href="/diets/joint-and-mobility-diets">Joint and Mobility Diets</a>.</p>
+
+        <h2 id="buy">Where to Buy</h2>
+        <p>Joint supplements are over-the-counter, not prescription, and the biggest buying risk is label accuracy — independent testing has found products with less active ingredient than claimed. Because of that, the single most useful filter is third-party quality verification (a NASC seal or batch testing). The picks below reflect that filter, not a hands-on trial. These are a low-risk adjunct, not a substitute for weight control, omega-3s, or veterinary pain management.</p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+        <ReviewCard
+          id="nasc-glucosamine-chondroitin"
+          badge="NASC-Seal Filter"
+          badgeEmoji="🦴"
+          name="Glucosamine + Chondroitin Joint Supplements"
+          subtitle="NASC-sealed glucosamine/chondroitin (often with MSM)"
+          score={8.0}
+          winner
+          description={
+            <p>The mainstream joint-supplement category: glucosamine and chondroitin, frequently combined with MSM and manganese, sold as chews and powders. Buy on the quality signal that addresses the label-accuracy problem — a National Animal Supplement Council (NASC) seal and a reputable manufacturer — rather than on price. Give any joint supplement several weeks and evaluate the response honestly with your veterinarian.</p>
+          }
+          specs={[
+            { label: 'Actives', value: 'Glucosamine + chondroitin' },
+            { label: 'Quality filter', value: 'NASC seal', highlight: 'good' },
+            { label: 'Formats', value: 'Chew / powder' },
+            { label: 'Role', value: 'Low-risk adjunct' },
+          ]}
+          pros={['Widely available', 'Low risk profile', 'NASC-sealed options exist']}
+          cons={['Evidence weaker than omega-3 or weight loss', 'Label accuracy varies without third-party testing', 'Not a primary therapy']}
+          price="$20–40"
+          ctaText="Find NASC Joint Supplements"
+          ctaHref="/go/chewy-brand/glucosamine+chondroitin+dog+nasc?s=supplements-glucosamine-and-joint-support"
+          ctaAffiliateProgram="chewy-brand"
+          ctaAffiliateProduct="glucosamine+chondroitin+dog+nasc"
+        />
+        <ReviewCard
+          id="green-lipped-mussel"
+          badge="Whole-Food Option"
+          badgeEmoji="🦪"
+          name="Green-Lipped Mussel Supplements"
+          subtitle="Perna canaliculus — omega-3s plus glycosaminoglycans"
+          score={7.8}
+          description={
+            <p>Green-lipped mussel is a whole-food joint supplement supplying omega-3 fatty acids and glycosaminoglycans, with a modestly more encouraging evidence base than glucosamine alone in some studies. Same buying rule: prefer NASC-sealed or third-party-tested products, and treat it as a low-risk adjunct rather than a cure.</p>
+          }
+          specs={[
+            { label: 'Source', value: 'Perna canaliculus', highlight: 'good' },
+            { label: 'Supplies', value: 'Omega-3s + GAGs' },
+            { label: 'Quality filter', value: 'NASC / third-party', highlight: 'good' },
+          ]}
+          pros={['Whole-food source', 'Somewhat more encouraging evidence in some studies', 'Low risk']}
+          cons={['Quality and dose vary by product', 'Still an adjunct, not a cure']}
+          price="$20–45"
+          ctaText="Compare Green-Lipped Mussel"
+          ctaHref="/go/amazon-brand/green+lipped+mussel+dog+joint?s=supplements-glucosamine-and-joint-support"
+          ctaAffiliateProgram="amazon-brand"
+          ctaAffiliateProduct="green+lipped+mussel+dog+joint"
+        />
 
         <h2 id="sources">Sources</h2>
         <ul>
