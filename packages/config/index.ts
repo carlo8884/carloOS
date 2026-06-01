@@ -987,6 +987,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'Home', href: '/' },
           { label: 'Health', href: '/health' },
+          { label: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { label: 'Care', href: '/care' },
           { label: 'Behavior', href: '/behavior' },
           { label: 'Colors', href: '/colors' },
