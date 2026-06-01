@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function SeniorFerretNutritionPage() {
                 { label: 'Body Condition & Muscle Loss', href: '#condition' },
                 { label: 'Disease-Driven Diet Changes', href: '#disease' },
                 { label: 'Hydration in Older Ferrets', href: '#hydration' },
+                { label: 'A High-Protein Diet That Softens Well', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -191,6 +192,38 @@ export default function SeniorFerretNutritionPage() {
             senior ferret that goes off both food and water needs prompt veterinary
             attention.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A High-Protein Diet That Softens Well</h2>
+          <p>
+            For a senior ferret that needs protein kept high but finds hard kibble difficult, a high-protein, low-carb diet that soaks down to a soft mash is a practical answer — it preserves the macronutrient profile while easing a sore mouth. Documented-spec selection, not a hands-on test; any diet change for a senior with a diagnosis should be cleared with a veterinarian first.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Senior-Friendly Kibble"
+            badgeEmoji="🥇"
+            name="Wysong Epigen 90"
+            subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
+            score={9.0}
+            description={
+              <p>A starch-free, animal-first kibble with protein high and carbohydrate in the single digits — the profile a healthy senior ferret should stay on rather than the reduced-protein senior formulas borrowed from dog and cat lines. It soaks down to a soft mash in warm water, which makes it manageable for a ferret with worn or missing teeth while keeping protein intake up. Reluctance to eat hard food still warrants a dental exam, not just a softer bowl.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Softens when soaked', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct + specialty pet retail' },
+            ]}
+            pros={['Keeps senior protein high', 'Softens cleanly for sore mouths', 'Low-carb — suits insulinoma-prone seniors', 'Animal-first panel']}
+            cons={['Premium price', 'Not a substitute for a dental exam']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="/go/wysong/epigen-90?s=diet-senior-ferret-nutrition"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

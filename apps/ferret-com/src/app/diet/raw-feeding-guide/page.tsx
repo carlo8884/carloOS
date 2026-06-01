@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,7 @@ export default function RawFeedingGuidePage() {
                 { label: 'Freezing & Thawing', href: '#freezing' },
                 { label: 'Food-Safety Harm Reduction', href: '#safety' },
                 { label: 'Transitioning a Ferret', href: '#transition' },
+                { label: 'Sourcing Whole Prey', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -122,6 +123,38 @@ export default function RawFeedingGuidePage() {
           <p>
             Ferrets imprint on food early and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>), so a kibble-raised adult may not recognize raw meat as food at first. Introduce it gradually: warm the meat slightly to release aroma, offer small pieces alongside the familiar diet, and consider a meat-based gravy or a smear on the lips to trigger interest. Patience matters — never let a ferret skip meals for long, as ferrets can become hypoglycemic quickly. Confirm calcium and taurine adequacy with a veterinarian familiar with ferrets before committing to raw as a sole diet.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Sourcing Whole Prey</h2>
+          <p>
+            For keepers who want the whole-prey route, frozen feeder prey from a reptile-feeder supplier is the usual starting point — it arrives pre-balanced and lets you skip engineering the frankenprey ratio yourself. Buy sizes appropriate to a ferret, confirm the supplier handling standards, and follow the freezing protocol above. These are buying-guidance options, not a hands-on test.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="frozen-feeder-prey"
+            badge="Whole-Prey Source"
+            badgeEmoji="🧊"
+            name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
+            subtitle="Pre-balanced whole prey, frozen, sized for a ferret"
+            score={8.4}
+            description={
+              <p>Frozen whole feeder prey — mice, rat pups, day-old chicks — sold for reptile and exotic feeding. The advantage for a ferret keeper is that intact prey supplies muscle, organ, and bone in natural proportions, so calcium-to-phosphorus balance is built in. Freeze for at least 30 days before feeding, thaw in the refrigerator, and choose a size appropriate to a ferret rather than a large reptile.</p>
+            }
+            specs={[
+              { label: 'Calcium balance', value: 'Built-in (intact bone)', highlight: 'good' },
+              { label: 'Format', value: 'Frozen, bulk' },
+              { label: 'Sizing', value: 'Pinkie to small adult prey' },
+              { label: 'Freezer space', value: 'Required', highlight: 'warn' },
+            ]}
+            pros={['Pre-balanced — no ratio engineering', 'Natural calcium-to-phosphorus ratio', 'Cost-effective in bulk', 'Excellent dental abrasion']}
+            cons={['Requires freezer space', 'Not for squeamish households', 'Must verify supplier handling standards']}
+            price="Varies by size and quantity"
+            ctaText="Browse Frozen Feeder Prey"
+            ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-raw-feeding-guide"
+            ctaAffiliateProgram="chewy-brand"
+            ctaAffiliateProduct="frozen-feeder-mice"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function ReadingFoodLabelsPage() {
                 { label: 'Dry-Matter Basis', href: '#dry-matter' },
                 { label: 'Carbohydrate by Difference', href: '#carbs' },
                 { label: 'Red-Flag Ingredients', href: '#red-flags' },
+                { label: 'A Clean-Panel Example', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -189,6 +190,39 @@ export default function ReadingFoodLabelsPage() {
             <li><strong>Added sugars</strong> — molasses, cane sugar, corn syrup, and fruit-derived sweeteners. Chronic sugar intake is associated with the carbohydrate load that ferret owners try to minimize.</li>
             <li><strong>Vague descriptors</strong> — &quot;meat by-products&quot; or &quot;animal digest&quot; without a named species.</li>
           </ul>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Clean-Panel Example</h2>
+          <p>
+            To see what a panel that passes all the checks above looks like, here is one commercial diet whose published ingredient list reads as named animal proteins with no grain or plant-protein filler. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Clean Panel"
+            badgeEmoji="🔍"
+            name="Wysong Epigen 90"
+            subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
+            score={9.1}
+            winner
+            description={
+              <p>A worked example of a panel that survives every check on this page: animal proteins lead, there is no grain or plant-protein concentrate splitting the list, no added sugar, and the carbohydrate-by-difference estimate lands in the single digits. Read it as a template for what a good ferret panel looks like, then hold any other bag to the same standard using the method above.</p>
+            }
+            specs={[
+              { label: 'Leading ingredients', value: 'Named meats', highlight: 'good' },
+              { label: 'Grain', value: 'None', highlight: 'good' },
+              { label: 'Added sugar', value: 'None', highlight: 'good' },
+              { label: 'Carbohydrate by difference', value: 'Single digits', highlight: 'good' },
+            ]}
+            pros={['Named-meat ingredient panel', 'No grain or plant-protein filler', 'No added sugar', 'Clear worked example of a clean label']}
+            cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="/go/wysong/epigen-90?s=diet-reading-food-labels"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

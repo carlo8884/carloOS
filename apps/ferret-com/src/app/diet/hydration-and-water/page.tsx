@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function HydrationAndWaterPage() {
                 { label: 'Signs of Dehydration', href: '#dehydration' },
                 { label: 'Hot Weather & Heat Stress', href: '#heat' },
                 { label: 'Water Quality', href: '#quality' },
+                { label: 'Bowl & Bottle Picks', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -119,6 +120,63 @@ export default function HydrationAndWaterPage() {
           <p>
             Clean, fresh water at all times is the standard. Refresh bowls daily and wash them regularly to prevent biofilm. Tap water that is safe for people is generally fine for ferrets; there is no need for special water unless your local supply has a known problem, in which case the same filtration you would use yourself is appropriate. The priority is simply that the water is present, clean, and actually accessible.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Bowl & Bottle Picks</h2>
+          <p>
+            The setup this page recommends is a heavy ceramic bowl as the primary water source, with a sipper bottle kept as a clean spill-free backup. Two options that fit that pattern, selected on published specs rather than a hands-on test.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="ceramic-water-bowl"
+            badge="Primary Source"
+            badgeEmoji="🥣"
+            name="Heavy Ceramic Pet Water Bowl"
+            subtitle="Low, wide, tip-resistant — lets a ferret lap naturally"
+            score={8.8}
+            winner
+            description={
+              <p>A heavy, low, wide-based ceramic dish is the primary water source most ferrets prefer — it lets them lap in volume the way a sipper bottle cannot, and the weight resists the digging and tipping ferrets are prone to. Refresh at least daily and wash regularly to prevent biofilm. A bar-clip version helps if your ferret still manages to flip a free-standing bowl.</p>
+            }
+            specs={[
+              { label: 'Material', value: 'Glazed ceramic', highlight: 'good' },
+              { label: 'Profile', value: 'Low and wide', highlight: 'good' },
+              { label: 'Tip resistance', value: 'High (heavy base)', highlight: 'good' },
+              { label: 'Cleaning', value: 'Dishwasher-safe (most)' },
+            ]}
+            pros={['Lets a ferret drink in natural volume', 'Heavy base resists tipping', 'Easy to clean, no biofilm traps', 'No mechanical valve to clog']}
+            cons={['Ferrets may still dig in it', 'Needs refreshing more than once a day']}
+            price="$8–18"
+            ctaText="Find a Heavy Ceramic Bowl"
+            ctaHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="heavy-ceramic-water-bowl"
+          />
+          <ReviewCard
+            id="sipper-water-bottle"
+            badge="Backup Source"
+            badgeEmoji="💧"
+            name="Small-Animal Sipper Water Bottle"
+            subtitle="Clean, spill-free backup — never the only source"
+            score={7.5}
+            description={
+              <p>A sipper bottle earns its place as a clean, spill-free backup, not as the sole water supply. The ball valve dispenses slowly and can clog or air-lock in a warm room — the classic failure mode where a ferret looks like it has water but is getting none. If you use one, check daily that it actually dispenses and pair it with the ceramic bowl above.</p>
+            }
+            specs={[
+              { label: 'Role', value: 'Backup, not primary', highlight: 'warn' },
+              { label: 'Spill resistance', value: 'High', highlight: 'good' },
+              { label: 'Failure mode', value: 'Valve can clog', highlight: 'warn' },
+              { label: 'Mounting', value: 'Clips to cage bars' },
+            ]}
+            pros={['Stays clean and spill-free', 'Good travel and backup option', 'Easy cage mounting']}
+            cons={['Slow drop-by-drop delivery', 'Ball valve can clog or air-lock', 'Must be checked daily — not a sole source']}
+            price="$6–12"
+            ctaText="Find a Sipper Water Bottle"
+            ctaHref="/go/amazon-brand/small+animal+sipper+water+bottle?s=diet-hydration-and-water"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="small-animal-water-bottle"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

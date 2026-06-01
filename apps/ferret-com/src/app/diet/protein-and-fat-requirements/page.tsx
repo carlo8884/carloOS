@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,6 +65,7 @@ export default function ProteinAndFatRequirementsPage() {
                 { label: 'Taurine', href: '#taurine' },
                 { label: 'Fiber & Ash', href: '#fiber' },
                 { label: 'Dry-Matter vs As-Fed', href: '#dry-matter' },
+                { label: 'A Diet That Hits the Window', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -122,6 +123,39 @@ export default function ProteinAndFatRequirementsPage() {
           <p>
             The targets above are stated on a <strong>dry-matter basis</strong> — water removed — but kibble labels report a guaranteed analysis on an <strong>as-fed basis</strong>, including moisture. For dry kibble (around 8–10% moisture) the two are close, so an as-fed protein figure of roughly 36% corresponds to a dry-matter figure in the high 30s or low 40s. For anything moist — raw, canned, or fresh prey at 65–75% water — the difference is dramatic, and comparing as-fed numbers across wet and dry foods is meaningless. Carbohydrate is almost never printed; estimate it by difference, subtracting protein, fat, moisture, ash, and fiber from 100. The method for applying all of this at the shelf is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">A Diet That Hits the Window</h2>
+          <p>
+            The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble whose published panel lands close to the high-protein, very-low-carbohydrate target — included on its documented spec, not a hands-on test. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Hits the Window"
+            badgeEmoji="🎯"
+            name="Wysong Epigen 90"
+            subtitle="Animal-first, starch-free — protein high, carbohydrate in single digits"
+            score={9.2}
+            winner
+            description={
+              <p>A worked example of the target window in a real product: protein well above the 32–40% floor, animal-sourced throughout, and carbohydrate by difference driven into the low single digits by a starch-free system. It illustrates what the abstract targets on this page look like on an actual ingredient panel, and it is the default low-carb choice when insulinoma risk is the priority.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~16%' },
+              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Taurine', value: 'Supplemented', highlight: 'good' },
+            ]}
+            pros={['Lands inside the target macro window', 'Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system']}
+            cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function BestFerretKibblePage() {
                 { label: 'Red Flags', href: '#red-flags' },
                 { label: 'Rotation & Food Fixation', href: '#rotation' },
                 { label: 'Transitioning Brands', href: '#transition' },
+                { label: 'Kibbles That Fit the Profile', href: '#picks' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -132,6 +133,89 @@ export default function BestFerretKibblePage() {
           <p>
             Change foods over 7–14 days, mixing an increasing proportion of the new kibble into the old. Abrupt changes can cause loose stool, and a fixated ferret may simply stop eating, which is dangerous given how quickly ferrets can become hypoglycemic. If a ferret refuses the new food entirely, slow down further and consider crushing a little new kibble into a meat-based gravy to introduce the smell. Never let a ferret go without eating for an extended period during a transition.
           </p>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Kibbles That Fit the Profile</h2>
+          <p>
+            Three commercial dry diets whose published ingredient and macronutrient panels line up with the animal-first, low-carbohydrate window described above. This is a documented-spec comparison, not a hands-on test: inclusion reflects published panels and adoption patterns in keeper communities and at exotic-mammal shelters, not a lab evaluation.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="wysong-epigen-90"
+            badge="Premium Tier"
+            badgeEmoji="🥇"
+            name="Wysong Epigen 90"
+            subtitle="Starch-free, animal-first, lowest commercial carb load in wide ferret use"
+            score={9.3}
+            winner
+            description={
+              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits. The default choice when insulinoma risk is the priority. Premium price per pound, and not always stocked in chain pet aisles.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~16%' },
+              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Grain-free', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct + specialty pet retail' },
+            ]}
+            pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
+            cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
+            price="$30–50 / 5 lb"
+            ctaText="Find Wysong Epigen 90"
+            ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
+            ctaAffiliateProgram="wysong"
+            ctaAffiliateProduct="epigen-90"
+          />
+          <ReviewCard
+            id="marshall-premium-diet"
+            badge="Mid Tier"
+            badgeEmoji="🛒"
+            name="Marshall Premium Ferret Diet"
+            subtitle="Ferret-specific formulation, widely stocked, in-range macros"
+            score={8.0}
+            description={
+              <p>The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets rather than adapted from cat food, with a protein and fat profile in the working ferret range. The ingredient panel is imperfect (some plant protein) but acceptable for healthy adults, and the per-pound price is materially lower than the premium tier. The most likely appropriate brand to find on a chain shelf at short notice.</p>
+            }
+            specs={[
+              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
+              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Mid teens', highlight: 'warn' },
+              { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
+              { label: 'Distribution', value: 'National chain pet retail' },
+            ]}
+            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
+            cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
+            price="$15–25 / 4 lb"
+            ctaText="Find Marshall Premium Ferret Diet"
+            ctaHref="/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="premium-ferret-diet"
+          />
+          <ReviewCard
+            id="carniwhole"
+            badge="Direct-to-Consumer"
+            badgeEmoji="📦"
+            name="Carniwhole Ferret Food"
+            subtitle="Direct-to-consumer, published macros, subscription-shipped"
+            score={8.2}
+            description={
+              <p>A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics, no retail backup, and a shorter community track record than Marshall or Wysong.</p>
+            }
+            specs={[
+              { label: 'Protein source', value: 'Animal-first, named meats', highlight: 'good' },
+              { label: 'Distribution', value: 'Direct only (no retail)' },
+              { label: 'Subscription model', value: 'Yes' },
+              { label: 'Smaller-batch sourcing', value: 'Yes', highlight: 'good' },
+            ]}
+            pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
+            cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
+            price="Subscription pricing"
+            ctaText="Visit Carniwhole"
+            ctaHref="/go/carniwhole/ferret-diet?s=diet-best-ferret-kibble"
+            ctaAffiliateProgram="carniwhole"
+            ctaAffiliateProduct="ferret-diet"
+          />
 
           <h2 id="sources">Sources</h2>
           <p>
