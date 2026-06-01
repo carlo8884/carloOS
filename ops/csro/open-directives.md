@@ -12,6 +12,7 @@ Codex auto-revert may strip edits to this file. Re-apply and re-push if a revert
 
 Format: `ID · summary · owner · status`
 
+2026-W23-001 · dir-014 closeout — CI Turbo Remote-Cache wiring + Carlo dashboard handoff (Steps 1–3) → COO · DONE code-side; awaiting Carlo dashboard
 2026-W22-022 · Ferret brand-route tags untagged (IR #4) → Monetization · HIGH · OPEN
 2026-W22-021 · Visual curated images + $0 wordmark identity → Visual · P0 · OPEN
 2026-W22-020 · Bot Wakeup Queue implementation → COO · DONE (PR #264)

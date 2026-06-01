@@ -1,7 +1,7 @@
 # COO — Wakeup Queue
 
 **Owner:** COO · **Lane:** content pages, build orchestration, CI/workflows, routing, STATUS/DASHBOARD/BACKLOG
-**Last updated:** 2026-05-31 (by COO — adopted v1 spec, marked dir-020 + IR-Guard done)
+**Last updated:** 2026-06-01 (by COO — closed dir-014 code-side levers + Carlo dashboard handoff)
 
 ## RESTART PROMPT
 ```
@@ -17,9 +17,14 @@ Pull latest origin/main. Read ops/bot-queue/COO.md, do the top queued item, comm
 | 4 | **Consolidation redirects** | MED | blocked | PetFoods→PetFood, Ferrets→Ferret. Sequencing-blocked behind Monetization `dir-009` per CSRO redirect-map ("monetize → migrate → 301"). | — |
 
 ## Status
-- **Done this session:**
+- **Done this session (2026-06-01):**
+  - `dir-014` code-side closeout: CI `TURBO_TOKEN`/`TURBO_TEAM` wired in
+    `ci.yml`; `vercel-ignore.sh` patterns broadened (`.claude/*`, `.gitattributes`,
+    `CODEOWNERS`, `*.txt`); Carlo dashboard click-by-click filed at
+    `ops/handoffs/2026-06-01-coo-to-carlo-vercel-cost-dashboard-steps.md`
+- **Done prior sessions:**
   - `dir-018` funnel-tree dedup (un-red main) — #251
-  - `dir-020` Bot Wakeup Queue v1 adoption — this PR
+  - `dir-020` Bot Wakeup Queue v1 adoption — #264
   - IR-Guard CI integration review/merge — #260
   - DisplayAds primitive + 5-site wire-up (`dir-011` COO portion) — #256
   - Sitemap route-group fix (Visual handoff) — #252
