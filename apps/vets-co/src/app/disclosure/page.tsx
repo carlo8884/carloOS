@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Affiliate Disclosure',
   description:
-    'How Vets.co makes money: pet insurance referrals only — no product affiliate links, no sponsored editorial, no paid reviews.',
+    'How Vets.co makes money: pet insurance and veterinary telehealth referrals only — no retail product affiliate links, no sponsored editorial, no paid reviews.',
   path: '/disclosure',
   type: 'article',
 })
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Affiliate Disclosure',
   description:
-    'Full FTC-compliant affiliate disclosure for Vets.co — editorial-only on products, with pet insurance referrals as the sole affiliate revenue channel.',
+    'Full FTC-compliant affiliate disclosure for Vets.co — editorial-only on retail products, with pet insurance and veterinary telehealth referrals as the affiliate revenue channels.',
   url: 'https://vets.co/disclosure',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -34,7 +34,7 @@ export default function DisclosurePage() {
       hero={{
         title: 'Affiliate Disclosure',
         subtitle:
-          'How Vets.co makes money. Editorially, this is the most restrictive disclosure across the network — Vets.co carries no product affiliate links, only pet insurance referrals.',
+          'How Vets.co makes money. Editorially, this is among the most restrictive disclosures across the network — Vets.co carries no retail product affiliate links; its only affiliate relationships are pet insurance carriers and veterinary telehealth services that connect you with a licensed vet.',
         category: 'Legal & Transparency',
         authorName: 'Vets.co Editorial — last updated 2026-05-29',
         publishedAt: 'May 2026',
@@ -52,12 +52,13 @@ export default function DisclosurePage() {
         <h2>FTC Affiliate Disclosure (Full Version)</h2>
         <p>
           This is the full, unabridged affiliate disclosure for Vets.co. The
-          short version: Vets.co is editorial-only on products. We do not
-          carry product affiliate links of any kind — no Amazon, no Chewy, no
-          pet supply retailers, no supplement brands. The only affiliate
-          relationship that exists on this site is with pet insurance
-          networks, and even there we never accept payment in exchange for
-          favorable coverage.
+          short version: Vets.co is editorial-only on retail products. We do not
+          carry retail product affiliate links of any kind — no Amazon, no pet
+          supply retailers, no supplement brands. The only affiliate
+          relationships on this site are (1) pet insurance carriers and (2)
+          veterinary telehealth services that connect you with a licensed vet.
+          Even there, we never accept payment in exchange for favorable coverage
+          or placement.
         </p>
         <p>
           The longer version below exists so any reader, advertiser,
@@ -76,20 +77,26 @@ export default function DisclosurePage() {
         <h2>What an Affiliate Link Is</h2>
         <p>
           An affiliate link passes a tracking identifier to the destination
-          when clicked. On Vets.co, the only affiliate links are to pet
-          insurance carriers. If a reader clicks one of those links and
-          purchases a policy, the carrier pays Vets.co a referral fee. The
-          premium the reader pays is the same as if they had navigated to the
-          carrier directly. There is no markup.
+          when clicked. On Vets.co, affiliate links go to two kinds of partners:
+          pet insurance carriers and veterinary telehealth services. If a reader
+          clicks one of those links and buys a policy or starts a telehealth
+          consult, the partner pays Vets.co a referral fee. The price the reader
+          pays is the same as if they had navigated to the carrier or service
+          directly. There is no markup.
         </p>
 
         <h2>Programs We Participate In</h2>
         <p>
-          Vets.co&apos;s affiliate participation is limited to pet insurance
-          carriers, including: Trupanion, Healthy Paws, Embrace, Lemonade Pet,
-          and other carriers administered through Impact Radius. We may add or
-          remove carriers as those relationships evolve. Adding a new carrier
-          never retroactively changes our existing coverage of other carriers.
+          Vets.co&apos;s affiliate participation is limited to two categories.
+          First, pet insurance carriers, including Trupanion, Healthy Paws,
+          Embrace, Lemonade Pet, and other carriers administered through Impact
+          Radius. Second, veterinary telehealth services that connect pet owners
+          with a licensed veterinarian: Vetster, AskVet, and Chewy&apos;s Connect
+          with a Vet. The Chewy relationship is limited to its Connect-with-a-Vet
+          telehealth service only — Vets.co does not carry Chewy retail product
+          links. We may add or remove partners as those relationships evolve.
+          Adding a new partner never retroactively changes our existing coverage
+          of others.
         </p>
 
         <h2>What We Explicitly Do NOT Do</h2>
@@ -101,11 +108,13 @@ export default function DisclosurePage() {
         </p>
         <ul>
           <li>
-            <strong>We carry NO product affiliate links.</strong> Vets.co does
-            not participate in Amazon Associates, Chewy&apos;s affiliate
-            program, or any pet supplement, food, or supply affiliate program.
-            Where we link to a product or supplement, the link is a plain
-            informational link — no tracking, no commission.
+            <strong>We carry NO retail product affiliate links.</strong> Vets.co
+            does not participate in Amazon Associates, Chewy&apos;s retail
+            product program, or any pet supplement, food, or supply affiliate
+            program. Where we link to a product or supplement, the link is a
+            plain informational link — no tracking, no commission. Our only
+            Chewy relationship is its Connect-with-a-Vet telehealth service,
+            disclosed above.
           </li>
           <li>
             <strong>We never accept payment for favorable reviews.</strong> No
@@ -149,6 +158,12 @@ export default function DisclosurePage() {
             Pet insurance referral fees from the carriers listed above. These
             are typically structured as cost-per-acquisition (CPA) flat
             payments rather than percentage-of-sale.
+          </li>
+          <li>
+            Veterinary telehealth referral fees from Vetster, AskVet, and
+            Chewy&apos;s Connect with a Vet when a reader starts a consult. As
+            with insurance, these are referral fees and never change our
+            editorial guidance about when and why to see a vet.
           </li>
           <li>
             Newsletter sponsorships. Sponsorships are clearly labeled inside
