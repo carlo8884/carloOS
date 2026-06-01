@@ -48,6 +48,19 @@ export default function SupplementsHubPage() {
         <span className="text-brand-text-mid font-medium">Supplements</span>
       </nav>
 
+      <div className="px-container-sm sm:px-container pt-12 max-w-3xl">
+        <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">Reading the supplement aisle honestly</h2>
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          Equine supplements occupy an awkward middle ground. They are not drugs, so they are not held to the evidence standard a medication must clear, yet they are marketed with the language of clinical benefit &mdash; &ldquo;supports,&rdquo; &ldquo;promotes,&rdquo; &ldquo;maintains.&rdquo; Many are sold as NASC-listed nutraceuticals, a quality-and-labeling framework rather than a proof-of-efficacy one. The result is an aisle where genuinely useful products sit beside ones whose strongest claim is the confidence of the packaging. This reference exists to help owners tell the difference by category, anchored to AAEP guidance and the peer-reviewed equine literature instead of marketing copy.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          The honest summary is that evidence is uneven across categories, and the strength of the data is the first thing worth knowing before anything else. The most-studied category is joints: our <Link href="/supplements/joint-supplements" className="text-brand-primary underline">joint supplement reference</Link> grades each common ingredient &mdash; glucosamine, chondroitin, MSM, hyaluronic acid and others &mdash; by what the equine literature actually supports, where it falls short, and how to read a label critically. Other categories carry thinner evidence, and the references say so plainly rather than papering over the gaps.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed">
+          A supplement is one input among many, and rarely the most important one. Persistent stiffness, poor coat, or a dull topline are usually questions for the <Link href="/health" className="text-brand-primary underline">health library</Link> and your veterinarian before they are questions for a tub. Forage quality, ration balance, and trace-mineral status &mdash; covered in the <Link href="/nutrition" className="text-brand-primary underline">nutrition reference</Link> &mdash; resolve more &ldquo;needs a supplement&rdquo; situations than any product on a shelf. Read these pages as a way to ask better questions, not as a buying guide.
+        </p>
+      </div>
+
       <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-8 max-w-2xl">
           Supplements are not a substitute for qualified veterinary care. Many supplement claims

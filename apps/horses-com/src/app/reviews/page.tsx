@@ -53,6 +53,19 @@ export default function HorsesReviewsPage() {
         <span className="text-brand-text-mid font-medium">Reviews</span>
       </nav>
 
+      <div className="px-container-sm sm:px-container pt-12 max-w-3xl">
+        <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          The equine gear market runs on confident marketing and very little published data. A blanket is sold on a hero photo; a supplement is sold on a label claim that no peer-reviewed study supports. Our reviews exist to put a layer of evidence between that marketing and your tack-room budget. Every ranking on this hub is built the same way: we start from the published veterinary and breed-club literature, define what &ldquo;good&rdquo; actually means for the category, and only then weigh the products against it. There is no paid placement, and a product cannot buy its way up the list.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed mb-4">
+          The two anchors here sit at opposite ends of the buying problem. The <Link href="/reviews/best-equine-supplements" className="text-brand-primary underline">equine supplements review</Link> tackles a category where claims routinely outrun the evidence, ranking joint, hoof, and gastric products against what the equine literature genuinely shows rather than what the tub promises. The <Link href="/reviews/best-winter-horse-blankets" className="text-brand-primary underline">winter blanket review</Link> is the opposite case &mdash; a category where the right answer is measurable, decided by denier, fill weight, and fit for clipped horses in hard climates.
+        </p>
+        <p className="text-base text-brand-text-mid leading-relaxed">
+          A review is a starting point, not the whole story. When a verdict turns on the science behind an ingredient, the deeper reference lives in the <Link href="/supplements" className="text-brand-primary underline">supplements library</Link>; when it turns on fit and function, the <Link href="/tack" className="text-brand-primary underline">tack section</Link> carries the how-to-fit detail. Use this hub to narrow the field, then follow the links to understand the why before you buy.
+        </p>
+      </div>
+
       <div className="px-container-sm sm:px-container py-12">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0">
           {REVIEWS.map((r) => (

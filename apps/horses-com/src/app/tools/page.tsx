@@ -44,6 +44,21 @@ export default function ToolsHub() {
         </div>
       </section>
 
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-section">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-2xl font-semibold text-brand-text-dark mb-4">Why a horse owner needs the math, not the eyeball</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid mb-4">
+            Most horse-keeping decisions that go wrong start with a guess. Is this gelding genuinely overweight, or just heavy-coated for winter? Is the easy keeper drifting toward laminitis risk, or comfortably maintaining? Eyeballing a horse over the stall door is the least reliable way to answer those questions, because a familiar animal looks &ldquo;normal&rdquo; to the person who sees it every day. The calculators in this hub exist to replace that drift with a repeatable number you can track across seasons, hand to your veterinarian, and check against published reference standards.
+          </p>
+          <p className="text-base leading-relaxed text-brand-text-mid mb-4">
+            The cornerstone here is the <Link href="/tools/body-condition-score" className="text-brand-primary underline">Henneke body condition score</Link>, the 1&ndash;9 scale equine veterinarians and researchers have used since 1983 to standardize how fat cover is assessed. Rather than a single glance, it asks you to palpate and score six discrete regions &mdash; neck, withers, shoulder, ribs, loin, and tailhead &mdash; so that a long winter coat or a deceptive topline cannot skew the result. The tool returns the composite score with a plain-language condition narrative and feeding direction calibrated to where the horse sits on the scale.
+          </p>
+          <p className="text-base leading-relaxed text-brand-text-mid">
+            Treat these tools as the measurement layer beneath the rest of the site, not a standalone novelty. A condition score earns its keep when it feeds a decision: a ration adjustment worked through the <Link href="/nutrition" className="text-brand-primary underline">nutrition reference</Link>, or a conversation about metabolic risk grounded in the <Link href="/health" className="text-brand-primary underline">health library</Link>. Every calculator here is source-cited, free, and built for owners and barn managers who would rather track a trend than trust a feeling.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
           {TOOLS.map((tool) => (
