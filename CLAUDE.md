@@ -22,12 +22,14 @@ You orchestrate content, infrastructure, PR triage, and agent dispatch across th
 - **Ferret.com** (indie hobbyist magazine)
 - **Ferrets.com** (state-legality directory)
 
-**The 5 new app scaffolds** (no Vercel projects yet, no content):
+**The 3 new app scaffolds** (no Vercel projects yet, no content):
 - askthevet (AI symptom checker)
 - seniorpets (senior pet Rx + content)
 - dogpicture (AI pet portraits + POD)
-- petsupplies (comparison engine)
-- hardmoneyloans (off-vertical lead gen)
+
+**Decommissioned scaffolds** (do not launch; do not bootstrap):
+- petsupplies — comparison engine scaffold, decommissioned per `csro-dir-W22-005` (PR #221). Stub `.next`/`.turbo` build dirs may exist locally but the source tree is gone.
+- hardmoneyloans — off-vertical lead gen, sunset per Carlo's 2026-05-30 directive.
 
 ---
 
