@@ -9,6 +9,7 @@ export default function ReadingFoodLabelsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'How to Read a Dog Food Label', subtitle: 'The ingredient list is the least useful part of a dog food label. The AAFCO statement is the most important. Here\'s how to read what actually matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }]}
       schema={schema}

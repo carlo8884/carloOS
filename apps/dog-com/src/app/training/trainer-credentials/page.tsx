@@ -26,6 +26,7 @@ export default function TrainerCredentialsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="training"
       hero={{ title: 'Dog Trainer Credentials — What They Mean', subtitle: 'Dog training is completely unregulated in the United States — anyone can hang a sign and call themselves a trainer. Understanding credentials is the only way to distinguish qualified professionals from those with no relevant education.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Trainer Credentials', href: '/training/trainer-credentials' }]}
       schema={schema}

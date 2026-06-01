@@ -89,6 +89,7 @@ export default function FerretToxicFoodsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Toxic Foods and Household Hazards for Ferrets',
           subtitle:

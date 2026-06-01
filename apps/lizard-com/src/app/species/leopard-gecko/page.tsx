@@ -22,6 +22,7 @@ export default function LeopardGeckoPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="lizard-com"
+        contentType="species"
         hero={{ title: 'Leopard Gecko Care Guide', subtitle: 'Eublepharis macularius — the most forgiving gecko and a genuine beginner reptile. But "beginner" doesn\'t mean low-maintenance: warm hides, correct belly heat, and moist hides for shedding are non-negotiable.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Leopard Gecko', href: '/species/leopard-gecko' }]}
         sidebar={<>

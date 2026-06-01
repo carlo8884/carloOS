@@ -24,6 +24,7 @@ export default function RussianTortoisePage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="lizard-com"
+        contentType="species"
         hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian or Horsfield\'s tortoise is the most popular pet tortoise in North America and one of the best-suited tortoises to captivity. Small (4–8 inches), cold-tolerant, personable, and routinely lives 40+ years. Beginner-friendly in housing complexity; lifelong in commitment.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Russian Tortoise', href: '/species/russian-tortoise' }]}
         sidebar={<>

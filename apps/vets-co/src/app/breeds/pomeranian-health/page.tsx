@@ -100,6 +100,7 @@ export default function VetsPomeranianHealthPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="vets-co"
+        contentType="breed"
         hero={{
           title: 'Pomeranian Health — A Veterinarian\'s Perspective',
           subtitle:

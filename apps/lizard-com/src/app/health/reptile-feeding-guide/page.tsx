@@ -35,6 +35,7 @@ export default function ReptileFeedingGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
+      contentType="health"
       hero={{
         title: 'Reptile Feeding Guide',
         subtitle: 'Prey size, feeding frequency, gut-loading protocols, and the supplementation schedule that prevents metabolic bone disease. Species-specific data for the most common captive reptiles.',

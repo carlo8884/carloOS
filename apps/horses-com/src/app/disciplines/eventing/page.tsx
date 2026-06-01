@@ -112,6 +112,7 @@ export default function EventingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="specialty"
         hero={{
           title: 'Eventing',
           subtitle:

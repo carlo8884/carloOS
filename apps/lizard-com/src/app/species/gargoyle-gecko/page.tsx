@@ -24,6 +24,7 @@ export default function GargoyleGeckoPage() {
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
         siteId="lizard-com"
+        contentType="species"
         hero={{ title: 'Gargoyle Gecko Care Guide', subtitle: 'Rhacodactylus auriculatus — the New Caledonian gargoyle gecko is a hardy, food-motivated, low-maintenance arboreal species. Easier than chameleons, less fragile than cresteds, and one of the few geckos that regrows its tail after autotomy.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '13 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Gargoyle Gecko', href: '/species/gargoyle-gecko' }]}
         sidebar={<>

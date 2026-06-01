@@ -112,6 +112,7 @@ export default function TrailRidingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="specialty"
         hero={{
           title: 'Trail Riding',
           subtitle:

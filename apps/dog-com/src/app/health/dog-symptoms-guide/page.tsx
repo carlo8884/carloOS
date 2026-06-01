@@ -105,6 +105,7 @@ export default function DogSymptomsGuidePage() {
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: '15 Dog Symptoms You Should Never Ignore',
         subtitle: 'Knowing the difference between "wait and see" and "go right now" can save your dog\'s life. A board-certified emergency and critical care veterinarian explains exactly what warrants a 2am ER visit.',

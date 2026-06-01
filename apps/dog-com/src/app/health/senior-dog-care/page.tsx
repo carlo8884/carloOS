@@ -62,6 +62,7 @@ export default function SeniorDogCarePage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="health"
       hero={{
         title: 'Senior Dog Care Guide',
         subtitle: 'The senior years can be some of the best years with your dog — if you know what\'s changing physically, what to watch for, and how to adapt care and expectations for maximum quality of life.',

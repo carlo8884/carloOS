@@ -92,6 +92,7 @@ export default function FerretExerciseEnrichmentPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="care"
         hero={{
           title: 'Ferret Exercise and Enrichment',
           subtitle:

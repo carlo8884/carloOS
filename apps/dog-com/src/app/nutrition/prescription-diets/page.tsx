@@ -19,6 +19,7 @@ export default function PrescriptionDietsPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'Prescription Dog Food Explained', subtitle: 'Prescription diets are not premium marketing — they are clinically formulated foods for specific medical conditions, with meaningful research behind them. Here\'s when each type matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Prescription Diets', href: '/nutrition/prescription-diets' }]}
       schema={schema}

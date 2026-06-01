@@ -92,6 +92,7 @@ export default function ColicPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="health"
         hero={{
           title: 'Equine Colic',
           subtitle:

@@ -40,6 +40,7 @@ export default function QuarterHorseBreedPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout
         siteId="horses-com"
+        contentType="breed"
         hero={{
           title: 'American Quarter Horse',
           subtitle:

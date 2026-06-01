@@ -9,6 +9,7 @@ export default function PuppyNutritionPage() {
   return (
     <ArticleLayout
       siteId="dog-com"
+      contentType="nutrition"
       hero={{ title: 'Puppy Nutrition Guide', subtitle: 'Puppies have fundamentally different nutritional needs than adults — especially large breed puppies, where overfeeding calcium drives orthopedic disease. What every new puppy owner needs to know.', category: 'Puppy Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]}
       schema={schema}

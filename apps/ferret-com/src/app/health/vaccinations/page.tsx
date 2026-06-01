@@ -99,6 +99,7 @@ export default function FerretVaccinationsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        contentType="health"
         hero={{
           title: 'Ferret Vaccination Schedule',
           subtitle:
