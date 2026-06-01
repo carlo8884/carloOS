@@ -21,9 +21,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Lymphoma in Ferrets — Signs, Diagnosis, Chemotherapy, Prognosis | Ferret.com',
+  title: 'Lymphoma in Ferrets — Signs, Chemotherapy & Prognosis | Ferret.com',
   description:
-    "Lymphoma is one of the most common ferret cancers, with juvenile and adult presentations. Clinical signs, diagnostic workup, multi-agent chemotherapy protocols, and prognosis ranges across forms.",
+    'Lymphoma is one of the most common ferret cancers. Juvenile and adult presentations, clinical signs, diagnostic workup, chemotherapy, and prognosis.',
   path: '/health/lymphoma',
   type: 'article',
 })

@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Bonding With Your Ferret — Build Trust Fast | Ferret.com',
   description:
-    'A week-by-week plan for bonding with a new ferret: scent transfer, hand-feeding, floor time, and reading trust signals. How to earn a shy or rescue ferret’s confidence.',
+    'A week-by-week plan for bonding with a new ferret: scent transfer, hand-feeding, floor time, and reading trust signals to win a shy ferret over.',
   path: '/behavior/bonding-with-your-ferret',
   type: 'article',
 })

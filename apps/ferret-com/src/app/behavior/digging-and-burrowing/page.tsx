@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Digging & Burrowing — Why & How to Redirect It | Ferret.com',
   description:
-    'Ferrets dig because their polecat ancestors were tunnelers. Learn why ferrets dig at carpet, plants, and litter — and how to build a dig box that saves your floor.',
+    'Ferrets dig because their polecat ancestors were tunnelers. Why they dig at carpet, plants, and litter — and how a dig box saves your floor.',
   path: '/behavior/digging-and-burrowing',
   type: 'article',
 })

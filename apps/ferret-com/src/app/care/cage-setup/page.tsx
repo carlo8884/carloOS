@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Cage Setup — Size, Bedding, Litter, Enrichment | Ferret.com',
   description:
-    'Ferrets are not cage animals. Minimum cage size, multi-level layout, hammocks vs loose bedding, corner litter boxes, out-of-cage time, and ferret-proofing the home.',
+    'Ferrets are not cage animals. Minimum cage size, multi-level layout, hammocks, corner litter boxes, out-of-cage time, and ferret-proofing.',
   path: '/care/cage-setup',
   type: 'article',
 })

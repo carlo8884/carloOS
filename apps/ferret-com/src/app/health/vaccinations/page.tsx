@@ -21,9 +21,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Vaccination Schedule — Distemper, Rabies, Reaction Protocol | Ferret.com',
+  title: 'Ferret Vaccination Schedule — Distemper & Rabies | Ferret.com',
   description:
-    'Ferret vaccination schedule: canine distemper kit series (8/11/14 weeks) plus annual booster, rabies at 12+ weeks plus annual. Vaccine reaction signs, premedication protocol, and legal-compliance notes.',
+    'Ferret vaccination schedule: distemper kit series plus annual booster, rabies at 12+ weeks plus annual. Reaction signs, premedication, and legal notes.',
   path: '/health/vaccinations',
   type: 'article',
 })

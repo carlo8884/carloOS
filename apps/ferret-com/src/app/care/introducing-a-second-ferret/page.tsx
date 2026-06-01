@@ -4,9 +4,9 @@ import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Introducing a Second Ferret — Quarantine, Bonding & Timeline | Ferret.com',
+  title: 'Introducing a Second Ferret — Quarantine & Bonding | Ferret.com',
   description:
-    'A step-by-step guide to introducing a second ferret: quarantine first, neutral-territory meetings, reading normal rough play versus real aggression, and the realistic bonding timeline.',
+    'A step-by-step guide to introducing a second ferret: quarantine first, neutral-territory meetings, reading rough play vs aggression, and timeline.',
   path: '/care/introducing-a-second-ferret',
   type: 'article',
 })

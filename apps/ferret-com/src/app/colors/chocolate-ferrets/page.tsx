@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Chocolate Ferrets — The Milk-Chocolate Coat | Ferret.com',
   description:
-    'Chocolate ferrets have milk-chocolate guard hairs over a white-to-amber undercoat with a brown nose. Where chocolate sits between sable and champagne, and how to tell it from cinnamon.',
+    'Chocolate ferrets have milk-chocolate guard hairs over a white-to-amber undercoat. Where chocolate sits between sable and champagne, and vs cinnamon.',
   path: '/colors/chocolate-ferrets',
   type: 'article',
 })

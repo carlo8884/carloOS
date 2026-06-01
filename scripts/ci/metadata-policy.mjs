@@ -34,9 +34,9 @@ const APPS = [
   { id: 'saddle-com',  enforce: true,  suffixes: [' | Saddle.com',  ' — Saddle.com',  ' - Saddle.com']  },
   { id: 'vets-co',     enforce: true,  suffixes: [' | Vets.co',     ' — Vets.co',     ' - Vets.co']     },
   { id: 'horses-com',  enforce: false, suffixes: [' | Horses.com',  ' — Horses.com',  ' - Horses.com']  },
-  { id: 'petfood-com', enforce: false, suffixes: [' | PetFood.com', ' — PetFood.com', ' - PetFood.com'] },
+  { id: 'petfood-com', enforce: true,  suffixes: [' | PetFood.com', ' — PetFood.com', ' - PetFood.com'] },
   { id: 'petfoods-com',enforce: false, suffixes: [' | PetFoods.com',' — PetFoods.com',' - PetFoods.com']},
-  { id: 'ferret-com',  enforce: false, suffixes: [' | Ferret.com',  ' — Ferret.com',  ' - Ferret.com']  },
+  { id: 'ferret-com',  enforce: true,  suffixes: [' | Ferret.com',  ' — Ferret.com',  ' - Ferret.com']  },
   { id: 'ferrets-com', enforce: false, suffixes: [' | Ferrets.com', ' — Ferrets.com', ' - Ferrets.com'] },
 ]
 
@@ -194,6 +194,7 @@ const EXPECTED_CROSS_SITE_TITLE_DUPES = new Set([
   'Privacy Policy',
   'Terms of Use',
   'Affiliate Disclosure',
+  'Affiliate Disclosure Policy',
   'Editorial Standards',
   'Editorial Standards — How We Create Content',
 ])

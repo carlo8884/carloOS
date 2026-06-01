@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Purina Pro Plan — Independent Evaluation | PetFood.com',
   description:
-    'Five-dimension evaluation of Purina Pro Plan — Nestle Purina corporate context, research and nutritionist depth, manufacturing, AAFCO posture, and recall history.',
+    'Five-dimension evaluation of Purina Pro Plan — Nestle Purina ownership, research depth, manufacturing, AAFCO posture, and recall history.',
   path: '/brands/purina-pro-plan-evaluation',
   type: 'article',
 })

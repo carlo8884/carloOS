@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Diet Basics — Obligate Carnivore Feeding | Ferret.com',
   description:
-    'Ferrets are strict obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs, no fruit or grain. Commercial diet tiers, raw/whole-prey context, and insulinoma risk.',
+    'Ferrets are strict obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Diet tiers, raw/whole-prey context, and insulinoma risk.',
   path: '/care/diet-basics',
   type: 'article',
 })

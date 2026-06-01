@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Black Ferrets — Black Sable & True Black Coats | Ferret.com',
   description:
-    'Black ferrets sit at the darkest end of the spectrum: near-black guard hairs, blackish noses, and a deep mask. The difference between black sable and true black, and how both differ from a standard sable.',
+    'Black ferrets sit at the darkest end of the spectrum: near-black guard hairs and a deep mask. How black sable and true black differ from a standard sable.',
   path: '/colors/black-ferrets',
   type: 'article',
 })

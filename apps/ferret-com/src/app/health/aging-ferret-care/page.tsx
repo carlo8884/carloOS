@@ -25,9 +25,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Aging Ferret Care (5+ Years) — Senior Diet, Monitoring, Quality of Life | Ferret.com',
+  title: 'Aging Ferret Care (5+ Years) — Senior Diet & Monitoring | Ferret.com',
   description:
-    'Senior ferret care: rising insulinoma and adrenal incidence, dental decline, weight loss, arthritis. Senior diet adjustments, quality-of-life monitoring with the HHHHHMM scale, and the euthanasia conversation.',
+    'Senior ferret care: rising insulinoma and adrenal risk, dental decline, weight loss, and arthritis — diet adjustments, monitoring, and end of life.',
   path: '/health/aging-ferret-care',
   type: 'article',
 })

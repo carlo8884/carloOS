@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Home-Cooked vs Commercial Pet Diets | PetFood.com',
   description:
-    'Why home-cooked diets so often end up unbalanced, the role of board-certified veterinary nutritionists, supplement requirements, and when home cooking is justified.',
+    'Why home-cooked diets so often end up unbalanced, the role of veterinary nutritionists, supplement needs, and when home cooking is justified.',
   path: '/compare/home-cooked-vs-commercial',
   type: 'article',
 })

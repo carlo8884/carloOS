@@ -20,9 +20,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Toxic Foods for Ferrets — Chocolate, Onions, Sugar, Common Poisons | Ferret.com',
+  title: 'Toxic Foods for Ferrets — Chocolate, Onions, Sugar | Ferret.com',
   description:
-    "Foods and substances that are toxic, dangerous, or inappropriate for ferrets: chocolate, onions/garlic, xylitol, grapes/raisins, sugar, dairy, plant material, common household toxins. What to do in case of ingestion.",
+    'Foods and substances toxic to ferrets: chocolate, onions/garlic, xylitol, grapes/raisins, sugar, dairy, and household toxins — plus what to do.',
   path: '/care/toxic-foods',
   type: 'article',
 })

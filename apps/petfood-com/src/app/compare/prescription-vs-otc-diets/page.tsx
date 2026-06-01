@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Prescription vs OTC Pet Diets — What Differs | PetFood.com',
   description:
-    'Why therapeutic diets require veterinary authorization, how they are formulated and tested differently, the cost and access trade-offs, and when each is appropriate.',
+    'Why therapeutic diets require veterinary authorization, how they are formulated differently, cost and access trade-offs, and when each fits.',
   path: '/compare/prescription-vs-otc-diets',
   type: 'article',
 })

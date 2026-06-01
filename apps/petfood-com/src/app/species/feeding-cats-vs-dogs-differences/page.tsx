@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Feeding Cats vs Dogs — Practical Differences | PetFood.com',
   description:
-    'How feeding routines differ between cats and dogs — meal patterns, food motivation, neophobia, free-feeding risks, and translating nutrition into daily practice.',
+    'How feeding routines differ between cats and dogs — meal patterns, food motivation, neophobia, free-feeding risks, and daily practice.',
   path: '/species/feeding-cats-vs-dogs-differences',
   type: 'article',
 })

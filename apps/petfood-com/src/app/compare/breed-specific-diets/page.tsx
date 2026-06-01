@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Are Breed-Specific Pet Diets Worth It? | PetFood.com',
   description:
-    'What breed-specific diets actually change — kibble shape, calorie density, and breed-prevalent-condition targeting — and where the value is real versus marketing.',
+    'What breed-specific diets actually change — kibble shape, calorie density, and condition targeting — and where the value is real versus marketing.',
   path: '/compare/breed-specific-diets',
   type: 'article',
 })

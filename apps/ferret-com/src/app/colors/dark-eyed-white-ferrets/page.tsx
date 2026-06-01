@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Dark-Eyed White (DEW) Ferrets — Not Albinos | Ferret.com',
   description:
-    'Dark-eyed white ferrets have white coats but burgundy-to-black eyes — they are not albinos. The genetics, the deafness link with white markings, and how to tell DEW from albino.',
+    'Dark-eyed white ferrets have white coats but burgundy-to-black eyes — not albinos. The genetics, the deafness link, and how to tell DEW from albino.',
   path: '/colors/dark-eyed-white-ferrets',
   type: 'article',
 })

@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Multi-Ferret Introductions — A Safe, Staged Protocol | Ferret.com',
   description:
-    'How to introduce a new ferret to an existing one: the quarantine period, neutral-territory sessions, normal dominance behavior, and when a pairing is not working.',
+    'How to introduce a new ferret to an existing one: quarantine, neutral-territory sessions, normal dominance, and when a pairing is not working.',
   path: '/behavior/multi-ferret-introductions',
   type: 'article',
 })

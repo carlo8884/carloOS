@@ -26,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Adrenal Disease in Ferrets — Signs, Diagnosis, Treatment | Ferret.com',
   description:
-    'Adrenal gland disease is the second most common middle-aged-ferret disease after insulinoma. Hormone-panel diagnosis, deslorelin (Suprelorin) implants, surgical adrenalectomy, and prognosis.',
+    'Adrenal disease is the second most common middle-aged-ferret disease after insulinoma. Hormone-panel diagnosis, deslorelin implants, surgery, and prognosis.',
   path: '/health/adrenal-disease',
   type: 'article',
 })

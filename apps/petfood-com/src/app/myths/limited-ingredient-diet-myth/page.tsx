@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Are Limited-Ingredient Diets Hypoallergenic? | PetFood.com',
   description:
-    'Why OTC limited-ingredient diets are not reliable allergy tools, the cross-contamination problem, the lack of a hypoallergenic definition, and what works instead.',
+    'Why OTC limited-ingredient diets are not reliable allergy tools — cross-contamination, no hypoallergenic definition, and what works instead.',
   path: '/myths/limited-ingredient-diet-myth',
   type: 'article',
 })

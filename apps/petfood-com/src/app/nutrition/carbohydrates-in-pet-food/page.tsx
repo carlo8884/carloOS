@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Carbohydrates in Pet Food — Are They Necessary? | PetFood.com',
   description:
-    'Whether dogs and cats need dietary carbohydrate, how starch is used in extrusion, fiber types, glycemic considerations, and why "no carbohydrate minimum" is widely misread.',
+    'Whether dogs and cats need dietary carbohydrate, how starch is used in extrusion, fiber types, and why "no carbohydrate minimum" is widely misread.',
   path: '/nutrition/carbohydrates-in-pet-food',
   type: 'article',
 })

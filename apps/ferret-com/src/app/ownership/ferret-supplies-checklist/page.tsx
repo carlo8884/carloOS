@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Supplies Checklist — What You Actually Need | Ferret.com',
   description:
-    'A complete, no-fluff ferret supplies checklist: cage, bedding, litter, food and water, grooming, carrier, and enrichment — what you need before homecoming versus what can wait, and what to avoid entirely.',
+    'A complete ferret supplies checklist: cage, bedding, litter, food and water, grooming, carrier, and enrichment — what you need now versus what can wait.',
   path: '/ownership/ferret-supplies-checklist',
   type: 'article',
 })

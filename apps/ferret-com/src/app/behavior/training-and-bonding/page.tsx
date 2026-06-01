@@ -20,9 +20,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Training & Bonding — Litter, Bite Inhibition, Harness | Ferret.com',
+  title: 'Ferret Training & Bonding — Litter, Biting, Harness | Ferret.com',
   description:
-    'Litter training, kit bite inhibition, scruffing as a calming reflex (not punishment), H-style harness training, slow ferret-to-ferret introductions, and multi-ferret group dynamics.',
+    'Litter training, kit bite inhibition, scruffing as a calming reflex, H-style harness training, and slow ferret-to-ferret introductions.',
   path: '/behavior/training-and-bonding',
   type: 'article',
 })

@@ -23,9 +23,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Litter Training — Corner Pans, Multi-Pan Strategy, Setbacks | Ferret.com',
+  title: 'Ferret Litter Training — Corner Pans & Multi-Pan Strategy | Ferret.com',
   description:
-    'How to litter-train a ferret: corner-pan placement, the multi-pan rule, paper-pellet substrate, kit timeline, free-roam strategy, and how to fix regression. Realistic 90% accuracy expectations.',
+    'How to litter-train a ferret: corner-pan placement, the multi-pan rule, paper-pellet substrate, kit timeline, and how to fix regression.',
   path: '/care/litter-training',
   type: 'article',
 })

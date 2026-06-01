@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Blaze & Roan Patterns in Ferrets | Ferret.com',
   description:
-    "Blaze is a white stripe up the head; roan is a salt-and-pepper mix of white and colored guard hairs. What each pattern means, how they overlap, and the deafness link to watch for.",
+    'Blaze is a white head stripe; roan is a salt-and-pepper mix of white and colored hairs. What each means, how they overlap, and the deafness link.',
   path: '/colors/blaze-and-roan-patterns',
   type: 'article',
 })

@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Blue Buffalo — An Independent Evaluation',
   description:
-    'Independent evaluation of Blue Buffalo (BLUE) — corporate history, product line breakdown, LifeSource Bits marketing claims, recall history per FDA CVM, the 2018 grain-free DCM investigation listing, and the General Mills acquisition context.',
+    'Independent evaluation of Blue Buffalo — history, product lines, LifeSource Bits claims, recalls, the grain-free DCM listing, and General Mills ownership.',
   path: '/brands/blue-buffalo-evaluation',
   type: 'article',
 })

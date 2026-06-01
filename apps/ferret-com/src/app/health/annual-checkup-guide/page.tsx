@@ -21,9 +21,9 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Annual Checkup Guide — What a Wellness Exam Covers by Age | Ferret.com',
+  title: 'Ferret Annual Checkup Guide — What a Wellness Exam Covers | Ferret.com',
   description:
-    "What a ferret wellness exam includes, how often to go, and why ferrets over three need twice-yearly visits. The physical exam, weight tracking, dental and abdominal checks, vaccinations, bloodwork screening for insulinoma and adrenal disease, and how to prepare.",
+    'What a ferret wellness exam includes, how often to go, and why ferrets over three need twice-yearly visits — the exam, bloodwork screening, and how to prepare.',
   path: '/health/annual-checkup-guide',
   type: 'article',
 })

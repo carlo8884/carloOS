@@ -4,7 +4,7 @@ import { buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Affiliate Disclosure | Ferret.com',
+  title: 'Affiliate Disclosure Policy | Ferret.com',
   description: 'Ferret.com affiliate disclosure — how we earn commissions and how it affects (and doesn\'t affect) our editorial recommendations.',
   path: '/legal/affiliate-disclosure',
 })

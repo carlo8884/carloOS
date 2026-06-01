@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Insulinoma in Ferrets — Signs, Diagnosis, Treatment | Ferret.com',
   description:
-    'Insulinoma is the most common neoplasm in middle-aged ferrets. Clinical signs, fasting glucose thresholds, the prednisone–diazoxide–surgery treatment ladder, and emergency hypoglycemia response.',
+    'Insulinoma is the most common neoplasm in middle-aged ferrets. Clinical signs, glucose thresholds, the treatment ladder, and emergency hypoglycemia response.',
   path: '/health/insulinoma',
   type: 'article',
 })

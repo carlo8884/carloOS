@@ -4,9 +4,9 @@ import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Bedding & Litter Types — Safe Materials, What to Avoid | Ferret.com',
+  title: 'Ferret Bedding & Litter Types — Safe Materials | Ferret.com',
   description:
-    'A material-by-material guide to ferret bedding and litter: why fleece and sleep sacks beat loose shavings, which litters are safe, and the respiratory and ingestion hazards to avoid.',
+    'A guide to ferret bedding and litter: why fleece and sleep sacks beat loose shavings, which litters are safe, and the hazards to avoid.',
   path: '/care/bedding-and-litter-types',
   type: 'article',
 })

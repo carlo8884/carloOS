@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Fiber and Digestive Health Diets for Pets | PetFood.com',
   description:
-    'How fiber type and gastrointestinal diets manage diarrhea, constipation, IBD, and colitis — soluble vs insoluble fiber, prebiotics, digestibility, and fat level.',
+    'How fiber type and GI diets manage diarrhea, constipation, IBD, and colitis — soluble vs insoluble fiber, prebiotics, digestibility, and fat level.',
   path: '/diets/fiber-and-digestive-health',
   type: 'article',
 })

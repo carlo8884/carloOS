@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Glucosamine and Joint Supplements for Pets | PetFood.com',
   description:
-    'What the evidence really shows for glucosamine, chondroitin, and green-lipped mussel, the supplement-regulation gap, quality concerns, and realistic expectations.',
+    'What the evidence shows for glucosamine, chondroitin, and green-lipped mussel — the regulation gap, quality concerns, and realistic expectations.',
   path: '/supplements/glucosamine-and-joint-support',
   type: 'article',
 })

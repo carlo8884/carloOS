@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Preservatives in Pet Food — What the Label Actually Means',
   description:
-    'Synthetic preservatives (BHA, BHT, ethoxyquin) and natural antioxidants (mixed tocopherols, rosemary extract, citric acid) — why fat oxidation matters, what the shelf-life trade-off is, and what "naturally preserved" really tells you.',
+    'Synthetic preservatives (BHA, BHT, ethoxyquin) vs natural antioxidants (tocopherols, rosemary) — why fat oxidation matters and what "naturally preserved" means.',
   path: '/ingredients/preservatives-pet-food',
   type: 'article',
 })

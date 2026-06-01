@@ -4,9 +4,9 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Vocabulary for Beginners — Words Every New Owner Hears | Ferret.com',
+  title: 'Ferret Vocabulary for Beginners — Key Terms | Ferret.com',
   description:
-    "A starter glossary of ferret terms: hob, jill, kit, gib, sprite, dook, the war dance, a business of ferrets, descenting, and altering — the language you will meet in your first week.",
+    'A starter glossary of ferret terms: hob, jill, kit, gib, sprite, dook, the war dance, a business of ferrets, descenting, and altering.',
   path: '/ownership/ferret-vocabulary-for-beginners',
   type: 'article',
 })

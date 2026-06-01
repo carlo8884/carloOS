@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Signs of Stress in Ferrets — What to Watch For | Ferret.com',
   description:
-    'How to spot a stressed ferret: appetite loss, hiding, over-grooming, bar-biting, excessive sleep, and behaviour changes — plus common causes and when to call the vet.',
+    'How to spot a stressed ferret: appetite loss, hiding, over-grooming, bar-biting, and excessive sleep — plus causes and when to call the vet.',
   path: '/behavior/stress-signs',
   type: 'article',
 })

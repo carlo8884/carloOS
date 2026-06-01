@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Diabetic Diets for Dogs and Cats | PetFood.com',
   description:
-    'How diet supports diabetes management — the species split between low-carb feline and high-fiber canine approaches, consistency, and the link to weight and remission.',
+    'How diet supports diabetes management — low-carb feline vs high-fiber canine approaches, feeding consistency, and the link to weight and remission.',
   path: '/diets/diabetic-diets',
   type: 'article',
 })

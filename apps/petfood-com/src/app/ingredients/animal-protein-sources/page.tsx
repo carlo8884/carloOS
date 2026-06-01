@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Animal Protein Sources in Pet Food — A Reference',
   description:
-    'AAFCO-defined animal protein ingredient categories — named whole meat, named meal, generic meal, by-products, plant proteins, hydrolysates, and insect protein — with the transparency, amino-acid, and labeling implications of each.',
+    'AAFCO animal protein categories — named meat, named meal, generic meal, by-products, plant proteins, hydrolysates, and insect protein — and what each implies.',
   path: '/ingredients/animal-protein-sources',
   type: 'article',
 })

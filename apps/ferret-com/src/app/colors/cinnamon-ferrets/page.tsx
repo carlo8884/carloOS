@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Cinnamon Ferrets — The Rare Reddish-Brown Coat | Ferret.com',
   description:
-    'Cinnamon ferrets have a reddish, brick-toned brown coat over a golden undercoat — one of the rarest and most debated ferret colors, often confused with champagne and chocolate.',
+    'Cinnamon ferrets have a reddish, brick-toned coat over a golden undercoat — one of the rarest ferret colors, often confused with champagne and chocolate.',
   path: '/colors/cinnamon-ferrets',
   type: 'article',
 })

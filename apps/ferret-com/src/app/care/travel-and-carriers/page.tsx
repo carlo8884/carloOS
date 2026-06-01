@@ -4,9 +4,9 @@ import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Traveling With a Ferret — Carriers, Car Trips & Vet Visits | Ferret.com',
+  title: 'Traveling With a Ferret — Carriers & Car Trips | Ferret.com',
   description:
-    'How to travel safely with a ferret: choosing a carrier, securing it in the car, temperature and water on the road, reducing travel stress, and what air travel actually involves.',
+    'How to travel safely with a ferret: choosing a carrier, securing it in the car, temperature and water on the road, and reducing travel stress.',
   path: '/care/travel-and-carriers',
   type: 'article',
 })

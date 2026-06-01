@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
   title: 'Kidney Disease (Renal) Diets for Dogs and Cats | PetFood.com',
   description:
-    'How therapeutic renal diets work — phosphorus and protein restriction, the IRIS staging framework, omega-3 and buffering, and why these diets require a diagnosis.',
+    'How therapeutic renal diets work — phosphorus and protein restriction, IRIS staging, omega-3 and buffering, and why they require a diagnosis.',
   path: '/diets/kidney-disease-diets',
   type: 'article',
 })
