@@ -21,7 +21,7 @@ export default function BestWaterTestKitsPage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">You cannot manage water quality you do not measure. Ammonia and nitrite are invisible and lethal. Test at least weekly, always after adding new fish, and during any disease or behavior change.</p>
       </div>
       <QuickPicks items={PICKS} />
-      <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
         <span className="text-brand-text-mid">Best Water Test Kits</span>

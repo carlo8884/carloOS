@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -8,6 +8,14 @@ export const metadata: Metadata = buildMetadata({
   description: 'Free aquarium calculators: tank volume in gallons or liters, stocking limits, heater wattage, water-change math, and CO2 from KH/pH. Built by aquarists.',
   path: '/tools',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://fish.com/' },
+    { name: 'Tools', url: 'https://fish.com/tools' },
+  ],
+})
+
 
 const TOOLS = [
   {
@@ -57,6 +65,8 @@ const TOOLS = [
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       {/* HERO */}
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
@@ -134,5 +144,6 @@ export default function ToolsHub() {
         />
       </section>
     </>
+  </>
   )
 }

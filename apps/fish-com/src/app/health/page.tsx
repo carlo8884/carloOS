@@ -1,9 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Guides — Disease, Chemistry & Disease | Fish.com', description: 'Aquarium health guides — the nitrogen cycle, water chemistry, fish disease identification and treatment.', path: '/health' })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://fish.com/' },
+    { name: 'Health', url: 'https://fish.com/health' },
+  ],
+})
+
 
 const GUIDES = [
   { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', badge: '⚡ Essential First Read', desc: 'Why most new tanks fail and how to prevent it' },
@@ -17,6 +25,8 @@ const GUIDES = [
 export default function FishHealthPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
+      <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Aquarium Health Library</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Water chemistry, disease identification, and the nitrogen cycle — everything that keeps your fish alive.</p>
@@ -67,5 +77,6 @@ export default function FishHealthPage() {
         </div>
       </section>
 </>
+  </>
   )
 }
