@@ -48,8 +48,7 @@ export default function BestHeartwormPreventionPage() {
               price="$35–55 / 6-month supply"
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="heartgard-plus"
+              editorial
             />
             <ReviewCard id="interceptor" badge="Broadest GI Spectrum" badgeEmoji="⭐" name="Interceptor Plus" subtitle="Milbemycin oxime + praziquantel · Adds whipworm and tapeworm to Heartgard's spectrum" score={9.2}
               description={<p>Interceptor Plus covers five parasite types in one monthly chew: heartworm, roundworm, hookworm, whipworm, and tapeworm (Taenia species). For dogs with outdoor access, hunting exposure, or known GI parasite issues, the broader spectrum is meaningful. Milbemycin oxime is the heartworm component — also safe for MDR1-positive herding breeds at standard preventive dosing. Chicken-flavored chew. The best choice where GI parasite burden is a concern in addition to heartworm.</p>}
@@ -59,8 +58,7 @@ export default function BestHeartwormPreventionPage() {
               price="$40–60 / 6-month supply"
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="interceptor-plus"
+              editorial
             />
             <ReviewCard id="simparica" badge="Best All-in-One" badgeEmoji="🥇" name="Simparica Trio" subtitle="Sarolaner + moxidectin + pyrantel · HW + fleas + ticks + intestinal parasites" score={9.5}
               description={<p>Simparica Trio is the most complete single monthly chew available — covering heartworm, 5 tick species, fleas (98% kill within 3 hours), roundworm, and hookworm. For most dogs in tick-endemic areas that would otherwise need both a heartworm preventive and a flea/tick product, Simparica Trio replaces two separate monthly products with one. The moxidectin heartworm component is among the strongest available. Note: moxidectin requires caution in MDR1-positive herding breeds at high doses — discuss with your vet for collies, shelties, and Australian Shepherds.</p>}
@@ -70,8 +68,7 @@ export default function BestHeartwormPreventionPage() {
               price="$50–80 / 3-month supply"
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="simparica-trio"
+              editorial
             />
             <ReviewCard id="proheart" badge="Best for Compliance" badgeEmoji="💉" name="ProHeart 12 (Injectable)" subtitle="12-month heartworm prevention · One vet visit · No monthly compliance" score={9.0}
               description={<p>ProHeart 12 is an injectable heartworm preventive administered by a veterinarian that provides 12 months of protection from a single injection. For owners who consistently forget monthly doses — which creates gaps in protection — ProHeart 12 eliminates the compliance problem entirely. Given at the annual wellness visit, it ensures continuous coverage without any owner follow-through required. Moxidectin-based. Does not cover flea/tick or GI parasites — pair with a separate flea/tick preventive. ProHeart 6 (6-month version) is also available for dogs where the 12-month formulation is not preferred.</p>}
@@ -81,8 +78,7 @@ export default function BestHeartwormPreventionPage() {
               price="$70–120 per injection"
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
-              ctaAffiliateProgram="chewy"
-              ctaAffiliateProduct="proheart-12"
+              editorial
             />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

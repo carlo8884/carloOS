@@ -38,6 +38,11 @@ interface ReviewCardProps {
   ctaAffiliateProgram?: string
   ctaAffiliateProduct?: string
 
+  /** Editorial/non-commercial CTA (e.g. clinical product → /find-a-vet). Suppresses the
+   *  affiliate commission note, sponsored rel, and affiliate data-attrs. Use for QC §1.5.b
+   *  clinical/medicated products that must NOT present as monetized buy-boxes. */
+  editorial?: boolean
+
   /** Highlights the card with primary color top border */
   winner?: boolean
 
@@ -62,6 +67,7 @@ export function ReviewCard({
   ctaHref = '#',
   ctaAffiliateProgram,
   ctaAffiliateProduct,
+  editorial,
   winner = false,
   id,
 }: ReviewCardProps) {
@@ -182,10 +188,10 @@ export function ReviewCard({
             <a
               href={ctaHref}
               className="inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
-              data-program={ctaAffiliateProgram}
-              data-product={ctaAffiliateProduct}
-              rel="nofollow sponsored"
-              target="_blank"
+              data-program={editorial ? undefined : ctaAffiliateProgram}
+              data-product={editorial ? undefined : ctaAffiliateProduct}
+              rel={editorial ? undefined : 'nofollow sponsored'}
+              target={editorial ? undefined : '_blank'}
             >
               {ctaText}
             </a>
@@ -193,8 +199,8 @@ export function ReviewCard({
         </div>
       )}
 
-      {/* Affiliate note */}
-      {ctaHref && (
+      {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
+      {ctaHref && !editorial && (
         <p className="text-2xs text-brand-text-light mt-2">
           We earn a commission if you purchase — no extra cost to you.
         </p>
