@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Ferret Adoption & Rescue Hub — Regional Guides, Costs, How-To',
   description:
-    'How to adopt a ferret responsibly: regional adoption guides for all four US regions, rescue-vs-breeder comparison, the application process, real costs, and rehoming guidance.',
+    'How to adopt a ferret responsibly: regional guides for all four US regions, rescue-vs-breeder, the application process, real costs, and rehoming guidance.',
   path: '/adopt',
   type: 'website',
   category: 'Adoption',

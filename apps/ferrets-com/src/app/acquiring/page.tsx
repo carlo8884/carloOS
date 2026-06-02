@@ -26,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Acquiring a Ferret — Permits, Vaccination, Transport & Setup',
   description:
-    'The logistics of getting a ferret the right way: the pre-acquisition checklist, permits and licensing, vaccination and records, choosing a healthy ferret, interstate transport, first supplies, and how many to get.',
+    'Getting a ferret the right way: pre-acquisition checklist, permits and licensing, vaccination and records, choosing a healthy ferret, transport, and supplies.',
   path: '/acquiring',
   type: 'website',
   category: 'Acquiring',
