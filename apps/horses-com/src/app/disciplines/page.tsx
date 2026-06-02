@@ -9,7 +9,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -149,6 +149,23 @@ const DISCIPLINES: DisciplineCard[] = [
   },
 ]
 
+// ItemList of every discipline — structured, citable index of the discipline
+// cluster for AI Overviews / Perplexity (GEO authority signal).
+const disciplineListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Equestrian Disciplines at Horses.com',
+  numberOfItems: DISCIPLINES.length,
+  itemListElement: DISCIPLINES.map((d, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: d.name,
+    url: `https://horses.com/disciplines/${d.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, disciplineListSchema)
+
 export default function DisciplinesIndexPage() {
   const grouped = {
     English: DISCIPLINES.filter((d) => d.level === 'English'),
@@ -158,7 +175,7 @@ export default function DisciplinesIndexPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">

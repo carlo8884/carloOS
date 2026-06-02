@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
@@ -49,11 +49,36 @@ const GROUP_DESCRIPTIONS: Record<BreedType, string> = {
     'Feral or semi-feral breeds adopted from wild populations and gentled for domestic use.',
 }
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Breeds', url: 'https://horses.com/breeds' },
+  ],
+})
+
+// ItemList of every profiled breed — structured, citable index of the breed
+// cluster for AI Overviews / Perplexity (GEO authority signal).
+const breedListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Horse Breeds Profiled at Horses.com',
+  numberOfItems: Breeds.length,
+  itemListElement: Breeds.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://horses.com/breeds/${b.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, breedListSchema)
+
 export default function BreedsIndexPage() {
   const grouped = groupBreedsByType()
 
   return (
     <>
+      <SchemaScript schema={schema} />
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">

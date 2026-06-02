@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -43,9 +43,26 @@ export default function SpeciesIndexPage() {
     ],
   })
 
+  // ItemList of the featured species — structured, citable index of the
+  // species cluster for AI Overviews / Perplexity (GEO authority signal).
+  const speciesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Reptile & Amphibian Species at Lizard.com',
+    numberOfItems: SPECIES.length,
+    itemListElement: SPECIES.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: `https://lizard.com/species/${s.slug}`,
+    })),
+  }
+
+  const schema = combineSchemas(breadcrumbSchema, speciesListSchema)
+
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <div className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <div className="flex items-center gap-2.5 mb-5">

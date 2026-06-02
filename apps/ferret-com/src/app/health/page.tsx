@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -167,10 +167,27 @@ const HEALTH_CARDS: HealthCard[] = [
   },
 ]
 
+// ItemList of the health condition guides — structured, citable index of the
+// health cluster for AI Overviews / Perplexity (GEO authority signal).
+const healthListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Health & Condition Guides at Ferret.com',
+  numberOfItems: HEALTH_CARDS.length,
+  itemListElement: HEALTH_CARDS.map((card, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: card.title,
+    url: `https://ferret.com/health/${card.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, healthListSchema)
+
 export default function HealthHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
       {/* Hero */}
       <div

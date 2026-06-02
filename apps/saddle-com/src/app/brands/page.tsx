@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { SADDLE_BRANDS } from '@/data/saddle-brands'
 
 export const metadata: Metadata = buildMetadata({
@@ -22,6 +22,23 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const ENGLISH = SADDLE_BRANDS.filter((b) => b.discipline.startsWith('English'))
 const WESTERN = SADDLE_BRANDS.filter((b) => b.discipline === 'Western')
 
+// ItemList of every brand rendered on the hub — structured, citable index of
+// the brand cluster for AI Overviews / Perplexity (GEO authority signal).
+const brandListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Saddle Brands Compared at Saddle.com',
+  numberOfItems: ENGLISH.length + WESTERN.length,
+  itemListElement: [...ENGLISH, ...WESTERN].map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `https://saddle.com/brands/${b.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, brandListSchema)
+
 function priceTier(lo: number) {
   if (lo >= 4500) return 'Premium / bespoke'
   if (lo >= 2000) return 'Mid-to-upper'
@@ -31,7 +48,7 @@ function priceTier(lo: number) {
 export default function BrandsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
