@@ -20,6 +20,19 @@
 
 Items are derived from real surface area: every `page.tsx` in `apps/*/src/app/` was enumerated. Counts come from genuine page/cluster/template granularity — ItemList gaps detected by `grep -c "ItemList"` on every hub page, FAQPage gaps detected by comparing `FAQAccordion` usage to `FAQPage` schema presence, breadcrumb gaps from `grep -rL`, ogImage gaps from `grep -rl ogImage`. No item below was invented as filler.
 
+> ### ⚠️ CORRECTION (2026-06-02, post-merge): the FAQPage items below are a FALSE POSITIVE — DO NOT EXECUTE
+> The detector compared `FAQAccordion` usage to **page-level** `buildFAQSchema`. But
+> `packages/ui/src/components/FAQAccordion.tsx` defaults `includeSchema = true` and renders its own
+> `<SchemaScript schema={buildFAQSchema(items)} />` inline. It is a `'use client'` component, but
+> Next.js App Router still **server-renders its initial HTML**, so crawlers/AI indexers already see the
+> FAQPage JSON-LD. Every page that renders `<FAQAccordion … />` **without** `includeSchema={false}`
+> already emits FAQPage schema. Verified: 0/84 horses-com FAQAccordion pages opt out — all already have it.
+> **Therefore every "add FAQPage schema where FAQAccordion exists" item in this file is void**; acting on
+> them would create *duplicate* FAQPage structured data (a regression — see closed PR #410). The only
+> legitimate residual FAQ work: pages that render a hand-rolled Q&A list WITHOUT `FAQAccordion`, or pages
+> that explicitly pass `includeSchema={false}` and supply no replacement. Audit for those specifically
+> before any future FAQ wave. (ItemList, breadcrumb, ogImage, linking, and sitemap items below stand.)
+
 ---
 
 ## Dog.com
