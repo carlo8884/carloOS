@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equine Metabolic Syndrome (EMS) — Signs, Diagnosis, Management",
   description:
-    "Reference guide to equine metabolic syndrome: insulin dysregulation, regional adiposity, laminitis risk, diagnostic testing, and dietary and exercise management.",
+    "Reference guide to equine metabolic syndrome: insulin dysregulation, regional adiposity, laminitis risk, diagnostic testing, and diet and exercise management.",
   path: '/health/equine-metabolic-syndrome',
   type: 'article',
 })

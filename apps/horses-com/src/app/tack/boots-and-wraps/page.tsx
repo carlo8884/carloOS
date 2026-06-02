@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Boots and Leg Wraps — Types, Purpose, and Pitfalls",
   description:
-    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, what they do, and the risks of wrapping wrong.",
+    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, and the risks of wrapping wrong.",
   path: '/tack/boots-and-wraps',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Boots and Leg Wraps — Types, Purpose, and Pitfalls",
   description:
-    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, what they do, and the risks of wrapping wrong.",
+    "Reference guide to horse boots and leg wraps: brushing and tendon boots, bell boots, polo wraps and stable bandages, and the risks of wrapping wrong.",
   url: 'https://horses.com/tack/boots-and-wraps',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

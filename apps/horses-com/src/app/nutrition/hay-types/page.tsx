@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Hay Types Compared — Grass, Legume, and Mixed",
   description:
-    "Reference guide to hay types for horses: grass hays (timothy, orchard, bermuda), legume hays (alfalfa, clover), mixed hays, quality assessment, and matching hay to the horse.",
+    "Reference guide to hay types for horses: grass hays (timothy, orchard), legume hays (alfalfa, clover), quality assessment, and matching hay to the horse.",
   path: '/nutrition/hay-types',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Hay Types Compared — Grass, Legume, and Mixed",
   description:
-    "Reference guide to hay types for horses: grass hays (timothy, orchard, bermuda), legume hays (alfalfa, clover), mixed hays, quality assessment, and matching hay to the horse.",
+    "Reference guide to hay types for horses: grass hays (timothy, orchard), legume hays (alfalfa, clover), quality assessment, and matching hay to the horse.",
   url: 'https://horses.com/nutrition/hay-types',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

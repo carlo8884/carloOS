@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Grain and Concentrates for Horses — When and How to Feed",
   description:
-    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when they are needed, the dangers of large starchy meals, and safe feeding rules.",
+    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when needed, the dangers of large starchy meals, and safe feeding rules.",
   path: '/nutrition/grain-and-concentrates',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Grain and Concentrates for Horses — When and How to Feed",
   description:
-    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when they are needed, the dangers of large starchy meals, and safe feeding rules.",
+    "Reference guide to feeding grain and concentrates to horses: what concentrates are, when needed, the dangers of large starchy meals, and safe feeding rules.",
   url: 'https://horses.com/nutrition/grain-and-concentrates',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

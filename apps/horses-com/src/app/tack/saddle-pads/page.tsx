@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Saddle Pads and Numnahs — Purpose, Types, and What They Cannot Fix",
   description:
-    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a badly fitting saddle.",
+    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a bad-fitting saddle.",
   path: '/tack/saddle-pads',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Saddle Pads and Numnahs — Purpose, Types, and What They Cannot Fix",
   description:
-    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a badly fitting saddle.",
+    "Reference guide to saddle pads and numnahs: what they do, English and western pad types, materials, correct use, and why a pad cannot fix a bad-fitting saddle.",
   url: 'https://horses.com/tack/saddle-pads',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

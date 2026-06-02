@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Care and Husbandry — Hooves, Pasture, Seasons, and Daily Routine",
   description:
-    "Practical horse care and husbandry references: hoof care and the farrier schedule, grooming, blanketing, pasture and fencing, deworming, seasonal care, and transport.",
+    "Practical horse care references: hoof care and farrier schedule, grooming, blanketing, pasture and fencing, deworming, seasonal care, and transport.",
   path: '/care',
 })
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equine Cushing's Disease (PPID) — Signs, Testing, Treatment",
   description:
-    "Reference guide to PPID (pituitary pars intermedia dysfunction), the equine Cushing's disease: hormonal mechanism, signs, ACTH testing, pergolide therapy, and laminitis risk.",
+    "Reference guide to PPID (pituitary pars intermedia dysfunction), equine Cushing's disease: mechanism, signs, ACTH testing, pergolide, and laminitis risk.",
   path: '/health/cushings-ppid',
   type: 'article',
 })

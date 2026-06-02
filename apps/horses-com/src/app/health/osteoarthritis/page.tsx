@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Osteoarthritis in Horses — Joint Disease, Signs, Management",
   description:
-    "Reference guide to equine osteoarthritis (degenerative joint disease): how joint cartilage breaks down, signs, diagnosis, joint medication, farriery, and management.",
+    "Reference guide to equine osteoarthritis (degenerative joint disease): how cartilage breaks down, signs, diagnosis, joint medication, and management.",
   path: '/health/osteoarthritis',
   type: 'article',
 })

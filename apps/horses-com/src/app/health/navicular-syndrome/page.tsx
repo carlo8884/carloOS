@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Navicular Syndrome — Caudal Heel Pain, Diagnosis, Management",
   description:
-    "Reference guide to navicular syndrome (caudal heel pain): anatomy of the podotrochlear apparatus, signs, MRI and nerve-block diagnosis, farriery, and management.",
+    "Reference guide to navicular syndrome (caudal heel pain): podotrochlear apparatus anatomy, signs, MRI and nerve-block diagnosis, farriery, and management.",
   path: '/health/navicular-syndrome',
   type: 'article',
 })

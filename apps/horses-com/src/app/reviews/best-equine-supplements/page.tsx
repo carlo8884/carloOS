@@ -5,9 +5,9 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Best Equine Supplements 2026 — Joint, Gastric, Hoof, Calmer, Electrolyte',
+  title: 'Best Equine Supplements 2026 — Joint, Gastric, Hoof & Electrolyte',
   description:
-    'Buyer&apos;s guide to equine supplements across the major categories. Platinum Performance, Cosequin, SmartPak, KER, Equithrive, Standlee. NASC Quality Seal, FEI prohibited substances, and the evidence behind each category.',
+    'Buyer&apos;s guide to equine supplements by category: Platinum Performance, Cosequin, SmartPak, KER, Equithrive. NASC Quality Seal and FEI rules explained.',
   path: '/reviews/best-equine-supplements',
   type: 'article',
 })

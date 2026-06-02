@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Ownership — Buying, Cost, Boarding, Insurance, and the Basics",
   description:
-    "Horse ownership references: the cost of owning a horse, buying your first horse, the pre-purchase exam, boarding, insurance, leasing, senior care, body language, first aid, and choosing a vet.",
+    "Horse ownership references: cost of ownership, buying your first horse, the pre-purchase exam, boarding, insurance, leasing, senior care, and first aid.",
   path: '/ownership',
 })
 

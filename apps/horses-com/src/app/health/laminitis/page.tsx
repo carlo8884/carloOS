@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Laminitis — Causes, Signs, Treatment, Prevention',
   description:
-    'Reference guide to equine laminitis: endocrinopathic, sepsis-associated, and supporting-limb forms, clinical signs, Obel grading, diagnostics, emergency care, and prevention.',
+    'Reference guide to equine laminitis: endocrinopathic, sepsis-associated, and supporting-limb forms, signs, Obel grading, diagnostics, and emergency care.',
   path: '/health/laminitis',
   type: 'article',
 })

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equine Nutrition — Forage, Feeds, Water, and Feeding for the Job",
   description:
-    "Equine nutrition references: forage-first feeding, hay types, feeding easy and hard keepers, grain, water, electrolytes, ration balancers, seniors, performance, and toxic plants.",
+    "Equine nutrition references: forage-first feeding, hay types, feeding easy and hard keepers, grain, water, ration balancers, seniors, and performance.",
   path: '/nutrition',
 })
 

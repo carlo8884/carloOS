@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding the Hard Keeper — Putting and Keeping Weight On",
   description:
-    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring condition.",
+    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring.",
   path: '/nutrition/feeding-the-hard-keeper',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding the Hard Keeper — Putting and Keeping Weight On",
   description:
-    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring condition.",
+    "Reference guide to feeding hard-keeper horses: ruling out underlying causes, maximizing forage, adding calories safely with fat and fiber, and monitoring.",
   url: 'https://horses.com/nutrition/feeding-the-hard-keeper',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Ration Balancers for Horses — Filling Nutritional Gaps Without Calories",
+  title: "Ration Balancers for Horses — Filling Nutrition Gaps Without Calories",
   description:
     "Reference guide to equine ration balancers: what they are, why forage-only diets need them, who benefits most, and how they differ from regular feeds.",
   path: '/nutrition/ration-balancers',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Ration Balancers for Horses — Filling Nutritional Gaps Without Calories",
+  title: "Ration Balancers for Horses — Filling Nutrition Gaps Without Calories",
   description:
     "Reference guide to equine ration balancers: what they are, why forage-only diets need them, who benefits most, and how they differ from regular feeds.",
   url: 'https://horses.com/nutrition/ration-balancers',

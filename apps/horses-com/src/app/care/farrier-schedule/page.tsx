@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "The Farrier Schedule — How Often, Barefoot vs Shod, Working With Your Farrier",
+  title: "Farrier Schedule — Trim Intervals, Barefoot vs Shod & Your Farrier",
   description:
     "Reference guide to the equine farrier schedule: trim and shoeing intervals, seasonal growth, barefoot vs shod, and how to work effectively with your farrier.",
   path: '/care/farrier-schedule',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "The Farrier Schedule — How Often, Barefoot vs Shod, Working With Your Farrier",
+  title: "Farrier Schedule — Trim Intervals, Barefoot vs Shod & Your Farrier",
   description:
     "Reference guide to the equine farrier schedule: trim and shoeing intervals, seasonal growth, barefoot vs shod, and how to work effectively with your farrier.",
   url: 'https://horses.com/care/farrier-schedule',

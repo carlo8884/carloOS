@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The Reference for Horse Owners',
   description:
-    'Horses.com — research-based reference for horse owners across discipline lines. Breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
+    'Horses.com — research-based reference for horse owners: breed guides, equine health, gear reviews, supplement evaluations, and the 90-day first-horse roadmap.',
   path: '/',
   type: 'website',
 })
