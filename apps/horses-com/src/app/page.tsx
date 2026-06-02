@@ -35,6 +35,7 @@ type CategoryIcon =
   | 'supplements'
   | 'reviews'
   | 'roadmap'
+  | 'racing'
 
 function CategoryIconSvg({ name }: { name: CategoryIcon }) {
   const common = {
@@ -105,6 +106,16 @@ function CategoryIconSvg({ name }: { name: CategoryIcon }) {
           <circle cx="20" cy="17" r="1.4" />
         </svg>
       )
+    case 'racing':
+      // Finish post with motion lines — racing discipline, restrained
+      return (
+        <svg {...common}>
+          <line x1="18" y1="3" x2="18" y2="21" strokeWidth="2" />
+          <path d="M18 5l-6 2-6-2" />
+          <path d="M4 14c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
+          <path d="M4 18c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
+        </svg>
+      )
   }
 }
 
@@ -151,6 +162,12 @@ const CATEGORIES: {
     title: 'First-Horse Roadmap',
     desc: 'A free 90-day plan and 8-email course for the first-time owner.',
     href: '/first-horse-roadmap',
+  },
+  {
+    icon: 'racing',
+    title: 'Racing Intelligence',
+    desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference -- disciplines, governance, and OTTB aftercare.',
+    href: '/racing',
   },
 ]
 
@@ -504,6 +521,7 @@ export default function HomePage() {
               { label: 'Western riders',      href: '/disciplines/western-pleasure' },
               { label: 'Reining',             href: '/disciplines/reining' },
               { label: 'Trail riders',        href: '/disciplines/trail-riding' },
+              { label: 'Racing',              href: '/racing' },
               { label: 'All disciplines',     href: '/disciplines' },
             ].map((chip) => (
               <Link
