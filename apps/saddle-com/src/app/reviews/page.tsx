@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import {
   SADDLE_REVIEWS,
   FEATURED_SADDLE_REVIEWS,
@@ -21,10 +21,25 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Saddle.com Tack & Saddle Reviews',
+  numberOfItems: SADDLE_REVIEWS.length,
+  itemListElement: SADDLE_REVIEWS.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.shortTitle,
+    url: `https://saddle.com/reviews/${r.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function SaddleReviewsPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
