@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -125,10 +125,27 @@ const COLOR_CARDS: ColorCard[] = [
   },
 ]
 
+// ItemList of the color & pattern guides — structured, citable index of the
+// color cluster for AI Overviews / Perplexity (GEO authority signal).
+const colorListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Color & Pattern Guides at Ferret.com',
+  numberOfItems: COLOR_CARDS.length,
+  itemListElement: COLOR_CARDS.map((card, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: card.title,
+    url: `https://ferret.com/colors/${card.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, colorListSchema)
+
 export default function ColorsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
 
       {/* Hero */}
       <div

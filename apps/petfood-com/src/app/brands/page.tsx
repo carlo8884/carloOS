@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -63,10 +63,27 @@ const BRANDS = [
   },
 ]
 
+// ItemList of the brand reference guides — structured, citable index of the
+// brand cluster for AI Overviews / Perplexity (GEO authority signal).
+const brandListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Food Brand Reference Guides at PetFood.com',
+  numberOfItems: BRANDS.length,
+  itemListElement: BRANDS.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.title,
+    url: `https://petfood.com/brands/${b.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, brandListSchema)
+
 export default function BrandsHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +29,23 @@ const FEATURED = [
   { name: 'Guppy', sci: 'Poecilia reticulata', type: 'Freshwater', diff: 'Beginner', slug: 'guppy', img: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop' },
   { name: 'Oscar', sci: 'Astronotus ocellatus', type: 'Freshwater', diff: 'Intermediate', slug: 'oscar', img: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=400&q=80&auto=format&fit=crop' },
 ]
+
+// ItemList of the featured species — structured, citable index of the
+// species cluster for AI Overviews / Perplexity (GEO authority signal).
+const speciesListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Featured Aquarium Fish Species at Fish.com',
+  numberOfItems: FEATURED.length,
+  itemListElement: FEATURED.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.name,
+    url: `https://fish.com/species/${s.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, speciesListSchema)
 
 const DIFF_COLORS = {
   Beginner: 'text-green-700 bg-green-50 border-green-200',
@@ -63,7 +80,7 @@ export default async function SpeciesIndexPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">
