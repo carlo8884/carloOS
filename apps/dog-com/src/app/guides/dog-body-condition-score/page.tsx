@@ -4,7 +4,7 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   TableOfContents,
 } from '@carloOS/ui'
 import {
@@ -121,6 +121,7 @@ export default function DogBodyConditionScorePage() {
                 { label: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
               ]}
             />
+            <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"

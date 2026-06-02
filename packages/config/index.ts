@@ -1355,6 +1355,17 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
   'saddle-com:guide': [
     { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', href: 'https://horses.com/tack' },
   ],
+
+  // ── dog-com guide spokes (general dog-owner guides → clinical + nutrition siblings)
+  'dog-com:guide': [
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Veterinary Care Reference', blurb: 'Conditions, medications, and specialist directories from a clinical-authority desk.', cta: 'Browse vet topics', href: 'https://vets.co/health' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Feeding & Nutrition Guides', blurb: 'AAFCO life-stage profiles, label-reading, and feeding fundamentals.', cta: 'Read nutrition guides', href: 'https://petfood.com/nutrition' },
+  ],
+
+  // ── horses-com guide spokes (equestrian sibling)
+  'horses-com:guide': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack Fit & Care Guides', blurb: 'Saddle fit, leather care, and discipline-specific tack guidance.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+  ],
 }
 
 /**
