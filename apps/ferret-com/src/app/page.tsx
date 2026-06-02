@@ -37,6 +37,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live ferret food evaluator embedded on the homepage — score a food on the
+// first screens, not a link to a tool (premium gate 3).
+import { FerretFoodEvaluator } from '../components/visual/FerretFoodEvaluator'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 const homeSchema = combineSchemas(
@@ -343,6 +346,31 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          LIVE TOOL — ferret food evaluator (premium gate 3)
+          ════════════════════════════════════════════════════════════════ */}
+      <section
+        style={{
+          background: 'var(--brand-surface)',
+          padding: 'clamp(56px, 7vw, 88px) 24px',
+          borderBottom: '1px solid var(--brand-border)',
+        }}
+      >
+        <div style={{ maxWidth: '1180px', marginInline: 'auto' }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-primary)', margin: '0 0 12px' }}>
+            Try it · Ferret food evaluator
+          </p>
+          <h2 style={{ fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, color: 'var(--brand-text-dark)', margin: '0 0 12px', lineHeight: 1.1 }}>
+            Is that food right for a ferret?
+          </h2>
+          <p style={{ fontSize: '0.95rem', color: 'var(--brand-text-mid)', margin: '0 0 28px', maxWidth: '42rem', lineHeight: 1.6 }}>
+            Ferrets are obligate carnivores. Read the first few ingredients off the bag and score
+            the food on protein source, carbs, and fillers — before you buy.
+          </p>
+          <FerretFoodEvaluator />
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
