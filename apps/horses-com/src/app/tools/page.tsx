@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -25,10 +25,20 @@ const TOOLS = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Horses.com Tools & Calculators',
+  numberOfItems: TOOLS.length,
+  itemListElement: TOOLS.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.title, url: `https://horses.com${x.href}` })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function ToolsHub() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
