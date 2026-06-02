@@ -5,6 +5,7 @@ import {
   ReviewCard,
   QuickPicks,
   EmailCapture,
+  CrossPortfolioCard,
   RelatedLinks,
   ScoreMethodology,
   AffiliateDisclosure,
@@ -389,6 +390,7 @@ export default function BestStirrupsPage() {
               subtitle="Reviews and safety gear references."
               source="review-stirrups"
             />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

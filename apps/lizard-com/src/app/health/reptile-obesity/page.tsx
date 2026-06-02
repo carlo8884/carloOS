@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Obesity — Causes, Signs, Management | Lizard.com", description: "Obesity is one of the most common health problems in captive reptiles. How to recognize it, why it shortens lifespan, and how to safely manage weight.", path: "/health/reptile-obesity", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthReptileObesityPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }, { label: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }, { label: "Bearded Dragon Care", href: "/species/bearded-dragon" }, { label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-reptile-obesity"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

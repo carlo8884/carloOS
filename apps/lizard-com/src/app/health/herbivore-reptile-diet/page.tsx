@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Herbivorous Reptile Diet — Tortoises, Uromastyx | Lizard.com", description: "How to feed herbivorous reptiles like tortoises and uromastyx. Greens, calcium-to-phosphorus balance, why protein and fruit are limited, and toxic foods.", path: "/health/herbivore-reptile-diet", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthHerbivoreReptileDietPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Uromastyx Care", href: "/species/uromastyx" }, { label: "Russian Tortoise Care", href: "/species/russian-tortoise" }, { label: "Reptile Gout", href: "/health/gout-prevention" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-herbivore-reptile-diet"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

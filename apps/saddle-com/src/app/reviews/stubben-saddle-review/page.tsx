@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard} from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildProductSchema,
@@ -194,6 +194,7 @@ export default function StubbenReviewPage() {
               { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
             ]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buyer's Guide" subtitle="Saddle reviews and market intelligence." source="review-stubben" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

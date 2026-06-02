@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Dubia Roach Care — Keeping a Feeder Colony | Lizard.com", description: "How to keep and breed Dubia roaches as feeder insects. Colony setup, heat, gut-loading, why they cannot infest your home, and harvesting safely.", path: "/health/dubia-roach-care", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthDubiaRoachCarePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }, { label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }, { label: "Bearded Dragon Care", href: "/species/bearded-dragon" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-dubia-roach-care"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

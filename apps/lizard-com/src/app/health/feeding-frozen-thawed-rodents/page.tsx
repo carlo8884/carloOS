@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeding Frozen-Thawed Rodents to Snakes | Lizard.com", description: "Why feed snakes frozen-thawed instead of live rodents, how to thaw and warm prey safely, correct prey size, and how to handle a stubborn feeder.", path: "/health/feeding-frozen-thawed-rodents", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthFeedingFrozenThawedRodentsPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Kenyan Sand Boa Care", href: "/species/kenyan-sand-boa" }, { label: "Western Hognose Care", href: "/species/western-hognose-snake" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-feeding-frozen-thawed-rodents"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

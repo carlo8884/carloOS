@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Abscesses in Reptiles — Caseous Pus & Treatment | Lizard.com", description: "Reptile abscesses form firm, cheese-like pus that the body cannot drain on its own. Why they need surgical removal, common causes, and prevention.", path: "/health/abscess-treatment", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthAbscessTreatmentPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Stomatitis (Mouth Rot)", href: "/health/stomatitis" }, { label: "Thermal Burns", href: "/health/thermal-burns" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Enclosure Setup", href: "/setup" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-abscess-treatment"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

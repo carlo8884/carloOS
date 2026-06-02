@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Snake Mites — Identification & Eradication | Lizard.com", description: "Snake mites (Ophionyssus natricis) are a common, fast-spreading external parasite. How to spot them, why quarantine matters, and the long road to eradication.", path: "/health/snake-mite-eradication", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthSnakeMiteEradicationPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Parasites", href: "/health/parasites" }, { label: "Parasites Guide", href: "/health/parasites-guide" }, { label: "Enclosure Setup", href: "/setup" }, { label: "Ball Python Care", href: "/species/ball-python" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-snake-mite-eradication"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gout in Reptiles — Causes and Prevention | Lizard.com", description: "Gout in reptiles comes from uric acid buildup, usually chronic dehydration or excess protein. Signs, why it is often irreversible, and prevention.", path: "/health/gout-prevention", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthGoutPreventionPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Dehydration in Reptiles", href: "/health/dehydration-reptiles" }, { label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }, { label: "Uromastyx Care", href: "/species/uromastyx" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-gout-prevention"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

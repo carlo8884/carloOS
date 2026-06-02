@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
+  EmailCapture, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
 } from '@carloOS/ui'
@@ -135,6 +135,7 @@ export default function VetsChihuahuaHealthPage() {
               subtitle="Practical guidance every Tuesday."
               source="breeds-chihuahua"
             />
+            <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
           </>
         }
       >

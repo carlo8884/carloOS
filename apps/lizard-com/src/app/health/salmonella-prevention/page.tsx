@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Salmonella & Reptiles — Safe Handling | Lizard.com', description: 'All reptiles carry Salmonella naturally. Children under 5, pregnant women, elderly, and immunocompromised people are at highest risk.', path: '/health/salmonella-prevention', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
@@ -18,6 +18,7 @@ export default function SalmonellaPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Corn Snake Care', href: '/species/corn-snake' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-salmonella" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

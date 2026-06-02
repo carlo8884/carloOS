@@ -6,6 +6,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -75,6 +76,7 @@ export default function DryMatterBasisExplainedPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="dry-matter-basis-explained"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="nutrition" variant="sidebar" />
         </>
       }
     >

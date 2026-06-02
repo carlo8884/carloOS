@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Anorexia — Why a Reptile Stops Eating | Lizard.com", description: "A reptile refusing food can be normal (brumation, shedding, breeding) or a sign of illness. A structured checklist to find the cause before it becomes serious.", path: "/health/anorexia-in-reptiles", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthAnorexiaInReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Brumation Guide", href: "/husbandry/brumation-guide" }, { label: "Constipation & Impaction", href: "/health/constipation-impaction" }, { label: "Temperature Guide", href: "/setup/temperature-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-anorexia-in-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

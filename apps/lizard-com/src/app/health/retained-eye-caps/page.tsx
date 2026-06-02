@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Retained Eye Caps in Snakes & Geckos | Lizard.com", description: "Retained eye caps (retained spectacles) are a common shedding problem in snakes and geckos. Causes, why never to peel them, and safe removal.", path: "/health/retained-eye-caps", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthRetainedEyeCapsPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Dysecdysis (Shedding Problems)", href: "/health/dysecdysis" }, { label: "Shedding Guide", href: "/husbandry/shedding-guide" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-retained-eye-caps"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

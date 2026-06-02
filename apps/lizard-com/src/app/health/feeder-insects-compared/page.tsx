@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeder Insects Compared — Dubia, Crickets, Worms | Lizard.com", description: "Crickets, dubia roaches, mealworms, superworms, BSFL, hornworms, and waxworms compared on nutrition, fat, and which to use as staples vs treats.", path: "/health/feeder-insects-compared", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthFeederInsectsComparedPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }, { label: "Dubia Roach Care", href: "/health/dubia-roach-care" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }, { label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-feeder-insects-compared"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
