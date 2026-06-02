@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -152,6 +153,7 @@ export default function ReiningPage() {
               { label: 'Western Pleasure Overview', href: '/disciplines/western-pleasure' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

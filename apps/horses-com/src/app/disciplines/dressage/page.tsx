@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -151,6 +152,11 @@ export default function DressagePage() {
               { label: 'Lusitano Breed Profile', href: '/breeds/lusitano' },
               { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="horses-com"
+            contentType="discipline"
+            variant="sidebar"
           />
           <EmailCapture
             variant="sidebar"

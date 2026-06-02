@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -152,6 +153,7 @@ export default function EventingPage() {
               { label: 'Show Jumping Overview', href: '/disciplines/show-jumping' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
