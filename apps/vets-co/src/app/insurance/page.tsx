@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Insurance Education — How It Works | Vets.co', description: 'Plain-English, editorial pet insurance education from a clinical perspective: how coverage works, what is covered, when to enroll, and reading the fine print.', path: '/insurance' })
 
@@ -18,10 +18,25 @@ const GUIDES = [
   { category: 'Risk & Cost', items: [{ title: 'Breed-Specific Insurance Risk', href: '/insurance/breed-specific-risk' }, { title: 'Wellness Plans vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }] },
 ]
 
+const insuranceGuides = GUIDES.flatMap((s) => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Insurance Education Guides',
+  numberOfItems: insuranceGuides.length,
+  itemListElement: insuranceGuides.map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.title,
+    url: `https://vets.co${g.href}`,
+  })),
+}
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function VetsInsuranceHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Insurance Education</span></div>
