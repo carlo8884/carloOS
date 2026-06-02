@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Resource Guarding in Dogs — Trade Game | Dog.com', description: 'Resource guarding is normal dog behavior. How to manage it safely, teach the trade game, and when to involve a professional. Never punish resource guarding.', path: '/training/resource-guarding', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Resource Guarding in Dogs', description: 'The trade game, safety protocol, and management for canine resource guarding.', url: 'https://dog.com/training/resource-guarding', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,6 +28,7 @@ export default function ResourceGuardingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Puppy Biting', href: '/training/puppy-biting' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-resource-guarding" />
         </>}
       >

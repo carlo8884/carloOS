@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
@@ -16,6 +16,7 @@ export default function ReadingFoodLabelsPage() {
       sidebar={<>
         <TableOfContents items={[{ label: 'AAFCO Statement — Most Important', href: '#aafco' }, { label: 'Ingredient List — What It Tells You', href: '#ingredients' }, { label: 'Ingredient List — What It Doesn\'t', href: '#what-it-doesnt' }, { label: 'Guaranteed Analysis', href: '#guaranteed-analysis' }, { label: 'Caloric Content', href: '#calories' }, { label: 'Marketing Claims to Ignore', href: '#marketing' }]} />
         <RelatedLinks title="Related" links={[{ label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-labels" />
       </>}
     >

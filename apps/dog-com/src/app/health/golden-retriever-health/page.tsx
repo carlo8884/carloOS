@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -76,6 +76,7 @@ export default function GoldenRetrieverHealthPage() {
             { label: 'Find a Specialist', href: '/find-a-vet' },
             { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
           ]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com"
             title="Free Dog Health Tips"
             subtitle="Breed spotlights and health alerts every Tuesday."

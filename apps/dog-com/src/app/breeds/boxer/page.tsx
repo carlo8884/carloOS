@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Boxer Breed Guide — Cancer Risk, Aortic Stenosis | Dog.com', description: 'Boxers have the highest cancer rate of any breed. Mast cell tumors, brain tumors, and heart disease (ARVC, SAS) are the primary concerns.', path: '/breeds/boxer', type: 'article' })
@@ -24,6 +24,7 @@ export default function BoxerPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-boxer" />
       </>}
     >

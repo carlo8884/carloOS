@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Training Red Flags — Dominance Theory | Dog.com', description: 'What the behavioral science says about dominance theory, shock collars, prong collars, and alpha rolling — and what the alternatives actually accomplish.', path: '/training/training-red-flags', type: 'article' })
@@ -24,6 +24,7 @@ export default function TrainingRedFlagsPage() {
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-red-flags" />
       </>}
     >
