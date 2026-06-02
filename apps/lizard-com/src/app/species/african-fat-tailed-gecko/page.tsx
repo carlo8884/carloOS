@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "African Fat-Tailed Gecko Care — Leopard Gecko Cousin | Lizard.com", description: "African fat-tailed geckos are a docile, humidity-loving alternative to leopard geckos. Belly heat, a humid hide, insect diet, and tail-as-fat-store basics.", path: "/species/african-fat-tailed-gecko", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Leopard Gecko Care", href: "/species/leopard-gecko" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Shedding Guide", href: "/husbandry/shedding-guide" }, { label: "Metabolic Bone Disease", href: "/health/metabolic-bone-disease" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-african-fat-tailed-gecko"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide — Largest Gecko | Lizard.com", description: "The New Caledonian giant gecko is the largest living gecko. Tall enclosures, moderate temps, a CGD-based diet, and why they must be housed alone.", path: "/species/leachianus-gecko", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesLeachianusGeckoPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Crested Gecko Care", href: "/species/crested-gecko" }, { label: "Gargoyle Gecko Care", href: "/species/gargoyle-gecko" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-leachianus-gecko"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

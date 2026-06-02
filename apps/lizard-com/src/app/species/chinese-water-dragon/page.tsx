@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Chinese Water Dragon Care Guide — Arboreal | Lizard.com", description: "Chinese water dragons need tall planted enclosures, high humidity, strong UVB, and a large water feature. Why snout-rub damage is the main welfare risk.", path: "/species/chinese-water-dragon", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesChineseWaterDragonPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Veiled Chameleon Care", href: "/species/veiled-chameleon" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "UVB Lighting Guide", href: "/setup/uvb-lighting-guide" }, { label: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-chinese-water-dragon"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Argentine Tegu Care Guide — Enclosure, Diet, Brumation | Lizard.com', description: 'Argentine black & white tegu (Salvator merianae) care. 6×3×3 ft minimum adult enclosure, omnivorous diet rotation, brumation behavior, intelligent and tameable.', path: '/species/tegu', type: 'article' })
@@ -39,6 +39,7 @@ export default function TeguPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'Savannah Monitor Care', href: '/species/savannah-monitor' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-tegu" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

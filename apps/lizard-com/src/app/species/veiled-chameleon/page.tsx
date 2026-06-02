@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling.', path: '/species/veiled-chameleon', type: 'article' })
@@ -38,6 +38,7 @@ export default function VeiledChameleonPage() {
           </div>
           <RelatedLinks title="Related Species" links={[{ label: 'Panther Chameleon', href: '/species/panther-chameleon' }, { label: 'Day Gecko', href: '/species/day-gecko' }, { label: 'Egg Binding', href: '/health/egg-binding' }, { label: 'Hypocalcemia', href: '/health/hypocalcemia' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="species-veiled-chameleon" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

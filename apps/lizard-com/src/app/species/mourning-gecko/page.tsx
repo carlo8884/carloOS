@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide — Parthenogenetic Colony | Lizard.com", description: "Mourning geckos are tiny all-female parthenogenetic geckos kept in colonies. Bioactive nano vivariums, CGD plus insects, and why they clone themselves.", path: "/species/mourning-gecko", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesMourningGeckoPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Crested Gecko Care", href: "/species/crested-gecko" }, { label: "Day Gecko Care", href: "/species/day-gecko" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-mourning-gecko"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

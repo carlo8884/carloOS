@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, StockImage } from '@carloOS/ui'
 
@@ -27,6 +27,7 @@ export default function BeardedDragonPage() {
         <TableOfContents items={[{ label: 'Enclosure', href: '#enclosure' }, { label: 'Temperatures', href: '#temps' }, { label: 'UVB — Critical', href: '#uvb' }, { label: 'Diet by Age', href: '#diet' }, { label: 'Supplements', href: '#supplements' }, { label: 'Health Issues', href: '#health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-bearded-dragon" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

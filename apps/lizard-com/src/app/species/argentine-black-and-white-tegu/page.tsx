@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Argentine Black and White Tegu Care — Intelligence | Lizard.com", description: "Argentine tegus are large, intelligent, dog-tame lizards needing huge enclosures, intense heat, UVB, and seasonal brumation. An advanced commitment.", path: "/species/argentine-black-and-white-tegu", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesArgentineBlackAndWhiteTeguPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor", href: "/species/savannah-monitor" }, { label: "Tegu (overview)", href: "/species/tegu" }, { label: "Brumation Guide", href: "/husbandry/brumation-guide" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-argentine-black-and-white-tegu"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

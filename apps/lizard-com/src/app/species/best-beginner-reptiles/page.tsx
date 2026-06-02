@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Best Beginner Reptiles — Easiest Pets to Start | Lizard.com", description: "The best beginner reptiles ranked by how forgiving they are. Leopard gecko, crested gecko, corn snake, ball python, and more, with the honest caveats.", path: "/species/best-beginner-reptiles", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesBestBeginnerReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-best-beginner-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

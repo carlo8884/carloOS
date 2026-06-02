@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Savannah Monitor Care Guide — Burrowing, Heat, Diet | Lizard.com', description: 'Savannah monitor (Varanus exanthematicus) care. 18+ inch substrate for burrowing, 130–150°F basking, insectivorous diet, avoiding the obesity epidemic.', path: '/species/savannah-monitor', type: 'article' })
@@ -39,6 +39,7 @@ export default function SavannahMonitorPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Argentine Tegu Care', href: '/species/tegu' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-savannah-monitor" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

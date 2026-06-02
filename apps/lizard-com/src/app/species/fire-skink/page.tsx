@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Fire Skink Care Guide — Colorful Burrowing Skink | Lizard.com", description: "Fire skinks are vivid, hardy, burrowing West African lizards. Deep substrate, a humid warm enclosure, UVB, and an insect-based diet make them rewarding.", path: "/species/fire-skink", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesFireSkinkPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Blue-Tongued Skink Care", href: "/species/blue-tongued-skink" }, { label: "Bioactive Setup", href: "/setup/bioactive-setup" }, { label: "Humidity Guide", href: "/setup/humidity-guide" }, { label: "Gut-Loading Feeders", href: "/health/gut-loading-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-fire-skink"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

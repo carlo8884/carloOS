@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Mossy Leaf-Tail Gecko Care — Uroplatus sikorae | Lizard.com', description: 'Uroplatus sikorae care for advanced keepers. 75–90% humidity, 68–78°F, Madagascar montane rainforest setup, captive-bred only, IUCN-listed.', path: '/species/mossy-leaf-tail-gecko', type: 'article' })
@@ -39,6 +39,7 @@ export default function MossyLeafTailGeckoPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Crested Gecko Care', href: '/species/crested-gecko' }, { label: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko' }, { label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Parasites Guide', href: '/health/parasites-guide' }, { label: 'Respiratory Infection', href: '/health/respiratory-infection' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-mossy-leaf-tail-gecko" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

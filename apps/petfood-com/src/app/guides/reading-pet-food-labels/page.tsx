@@ -6,6 +6,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -80,6 +81,7 @@ export default function ReadingPetFoodLabelsPage() {
               { label: 'Grain-Free and DCM — The FDA Record', href: '/ingredients/grain-free-dcm-risk' },
             ]}
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >

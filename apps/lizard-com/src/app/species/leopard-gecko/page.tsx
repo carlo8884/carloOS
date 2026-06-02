@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, ArticleByline, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, ArticleByline, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Leopard Gecko Care Guide — Warm Hide, Diet | Lizard.com', description: 'Complete leopard gecko care. Why they need a warm hide (not a basking spot), belly heat, diet of dubia and crickets, and how to prevent stuck shed on toes.', path: '/species/leopard-gecko', type: 'article' })
@@ -37,6 +37,7 @@ export default function LeopardGeckoPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'Hypocalcemia', href: '/health/hypocalcemia' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-leopard-gecko" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
