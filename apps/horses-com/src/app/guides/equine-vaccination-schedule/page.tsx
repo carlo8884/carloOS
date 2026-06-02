@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,6 +134,7 @@ export default function VaccinationSchedulePage() {
               { label: 'First-Horse Roadmap', href: '/first-horse-roadmap' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

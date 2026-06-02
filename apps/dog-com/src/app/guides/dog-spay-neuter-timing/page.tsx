@@ -4,7 +4,7 @@ import {
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   TableOfContents,
 } from '@carloOS/ui'
 import {
@@ -123,6 +123,7 @@ export default function DogSpayNeuterTimingPage() {
                 { label: 'Dog Vaccinations', href: '/health/dog-vaccinations' },
               ]}
             />
+            <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"
