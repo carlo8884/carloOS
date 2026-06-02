@@ -89,13 +89,6 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
       'Everything a new ferret actually needs, by category — cage, bedding, litter, food, grooming, carrier, enrichment — what to buy first, what can wait, and what to avoid entirely.',
   },
   {
-    slug: 'ferret-vocabulary-for-beginners',
-    eyebrow: 'Vocabulary',
-    title: 'Ferret Vocabulary for Beginners',
-    description:
-      'The starter language of ferret keeping — hob, jill, kit, gib, sprite, dooking, the war dance, a business of ferrets, descenting, altering — the words you meet in your first week.',
-  },
-  {
     slug: 'traveling-with-a-ferret',
     eyebrow: 'On the move',
     title: 'Traveling With a Ferret',

@@ -106,7 +106,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferret.com/ownership/ferret-legality-by-state', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/ownership/ferret-names', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/ownership/ferret-supplies-checklist', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://ferret.com/ownership/ferret-vocabulary-for-beginners', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/ownership/ferrets-and-other-pets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/ownership/ferrets-with-kids', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/ownership/first-week-checklist', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
