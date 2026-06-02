@@ -11,8 +11,8 @@ import { buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } f
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Find a Veterinary Specialist — Near You',
-  description: 'Find board-certified veterinary specialists near you. Neurology, orthopedics, oncology, cardiology, ophthalmology, emergency and critical care',
+  title: 'Find a Board-Certified Veterinary Specialist',
+  description: 'Find board-certified veterinary specialists by discipline — neurology, orthopedics, oncology, cardiology, emergency care — via official directories.',
   path: '/find-a-vet',
 })
 
