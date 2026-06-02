@@ -55,6 +55,19 @@ CSRO/COO cannot source photography in-sandbox.
   all 10 sites). The lizard `best-thermostats` fix (#420) was the last one.
 - ⏸ Still blocked: Visual heroes/ogImage (N1–N3), Monetization disclosures/buy-box (N4–N6) — briefs in #424.
   `re-gate-on-output`: CSRO re-checks against the 7-gate / §8a bar the moment a Visual/Mon PR lands.
+- ✅ **Deep launch-quality re-audit (2026-06-02, evening) — 4 dimensions swept, 1 real gap fixed:**
+  - **Tools/calculators (§8a "actually working"):** all 12 cohort calculators QA'd for compute correctness
+    (6 fish + horses BCS / lizard UVB / petfood food-cost / vets insurance / ferret food-eval / saddle tree-size).
+    Formulas verified (volume constants, inverse-square UVB, KH/pH CO2, dilution, Henneke avg, reimbursement
+    math); all wired into tool pages + homepages. **Zero defects — no changes manufactured.**
+  - **Thin/duplicate:** clean — smallest files are intentional redirect stubs / `[slug]` generators; short
+    line-counts are dense single-line-paragraph articles, not thin.
+  - **Indexing hygiene:** all 10 sites have `robots.ts`+`sitemap.ts`; AI crawlers explicitly allowed, `/go/`
+    disallowed, `/racing` in sitemap, zero redirect-stub leakage.
+  - **Hub→spoke completeness:** found + FIXED (#440) 3 lizard species (gargoyle/savannah-monitor/mossy-leaf-tail)
+    absent from the `/species` SPECIES array (so absent from grid + ItemList JSON-LD) and dog `dog-treats-guide`
+    missing from `/nutrition`. `mossy-leaf-tail-gecko` was a true orphan the prior slug-sweep missed.
+  - **Data-aware orphan re-sweep (incl. src/data sources):** now genuinely **ZERO orphans cohort-wide** post-#440.
 
 > **Terminal state for unblocked COO/CSRO launch-polish (2026-06-02):** structural launch-quality is exhausted
 > across the portfolio — schema (ItemList/Breadcrumb/FAQ/DefinedTerm), zero orphans, dedup, reciprocal linking,
@@ -87,6 +100,9 @@ ItemList + review breadcrumb · #417/#418 Fish /reviews ItemList + 7 review brea
 ItemList · #420 Lizard de-orphan best-thermostats + reviews/builds ItemList + breadcrumbs · #421 Horses
 4-hub ItemList + 3 breadcrumbs · #422 Dog /reviews + /health ItemList + 16 review + 3 breed breadcrumbs.
 **(#410 closed: FAQPage "gap" was a false positive — FAQAccordion auto-emits; #411 corrected the inventory.)**
+**Cross-portfolio + hub-graph wave (06-02 PM):** #429–#439 CrossPortfolioCard expansion (~280 spokes + all
+configured keys, full cross-site graph) · #440 hub→spoke fix (3 lizard species into `/species` SPECIES array +
+ItemList; dog `dog-treats-guide` into `/nutrition`; closed the last orphan).
 
 ### ✅ COO-lane cohort launch-polish COMPLETE (all 8 priority sites)
 Per-site COO audits done end-to-end: breadcrumbs, hub ItemList, FAQ/Definition schema, orphans, duplicate
