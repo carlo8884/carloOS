@@ -79,7 +79,7 @@ export default function DiagnosticsHubPage() {
     itemListElement: Diagnostics.map((d, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: d.name,
+      name: d.testName,
       url: `https://vets.co/diagnostics/${d.slug}`,
     })),
   }
