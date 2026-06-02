@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
@@ -25,6 +25,7 @@ export default function GreatPyreneesPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Great Pyrenees vs Newfoundland', href: '/compare/great-pyrenees-vs-newfoundland' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-pyrenees" />
       </>}
     >

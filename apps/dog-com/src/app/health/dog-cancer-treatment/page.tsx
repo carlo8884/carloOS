@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Cancer Treatment — Chemotherapy, Surgery, Radiation | Dog.com', description: 'How cancer is treated in dogs. Chemotherapy in dogs is different from human chemo — most dogs tolerate it well. Surgery, radiation, immunotherapy.', path: '/health/dog-cancer-treatment', type: 'article' })
@@ -23,6 +23,7 @@ export default function DogCancerTreatmentPage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Canine cancer treatment ranges $3,000-$15,000+ depending on stage and modality. Insurance covers it — but only if enrolled before diagnosis.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-treatment" />
         </>}
       >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments.', path: '/health/dog-ear-infections', type: 'article' })
@@ -30,6 +30,7 @@ export default function DogEarInfectionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
         </>}
       >

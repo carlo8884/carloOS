@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency.', path: '/breeds/siberian-husky', type: 'article' })
@@ -25,6 +25,7 @@ export default function SiberianHuskyPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Siberian Husky vs Australian Shepherd', href: '/compare/siberian-husky-vs-australian-shepherd' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-husky" />
       </>}
     >

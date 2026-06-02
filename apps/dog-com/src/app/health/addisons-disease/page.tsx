@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Addison's Disease in Dogs — Vague Signs | Dog.com", description: "Addison's disease (hypoadrenocorticism) is the 'great imitator' — vague signs mimic many conditions. Addisonian crisis is life-threatening.", path: '/health/addisons-disease', type: 'article' })
@@ -22,6 +22,7 @@ export default function AddisonsDiseaseePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Megaesophagus', href: '/health/megaesophagus' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-addisons" />
         </>}
       >

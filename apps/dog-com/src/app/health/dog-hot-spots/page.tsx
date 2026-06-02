@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hot Spots in Dogs (Pyotraumatic Dermatitis) — Causes | Dog.com', description: 'Hot spots are acute moist dermatitis — a rapidly spreading bacterial skin infection triggered by self-trauma. How to treat, why shaving the area matters.', path: '/health/dog-hot-spots', type: 'article' })
@@ -23,6 +23,7 @@ export default function DogHotSpotsPage() {
             <div className="text-2xs text-brand-text-light mt-2">Thick-coated breeds trap moisture — highest risk</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hot-spots" />
         </>}
       >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
@@ -52,6 +52,7 @@ export default function PuppySchedulePage() {
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Schedule Matters', href: '#why' }, { label: 'Sleep Requirements', href: '#sleep' }, { label: 'Sample Daily Schedule', href: '#schedule' }, { label: 'The Socialization Window', href: '#socialization' }, { label: 'Week-by-Week Milestones', href: '#milestones' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Free printable schedule + 8-week course', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-schedule" />
       </>}
     >

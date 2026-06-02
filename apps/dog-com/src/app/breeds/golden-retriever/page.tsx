@@ -6,7 +6,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -196,6 +196,7 @@ export default function GoldenRetrieverBreedPage() {
               { label: 'Golden Retriever vs Labrador Retriever', href: '/compare/golden-retriever-vs-labrador-retriever' },
               { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
             ]} />
+            <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
               subtitle="Practical guidance every Tuesday."

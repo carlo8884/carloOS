@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -65,6 +65,7 @@ export default function GermanShepherdHealthPage() {
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Find a Neurologist', href: '/find-a-vet' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."

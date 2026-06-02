@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3 (AVDC/AAHA). Daily toothbrushing is the most effective intervention.', path: '/health/dog-dental-care', type: 'article' })
@@ -25,6 +25,7 @@ export default function DogDentalCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dental Cleaning Guide', href: '/health/dog-dental-care' }, { label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-dental" />
         </>}
       >

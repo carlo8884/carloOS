@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs | Dog.com', description: 'How to run a proper 8-12 week food allergy elimination diet in dogs. Novel protein selection, what to avoid, how to confirm food allergy.', path: '/nutrition/elimination-diet', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -26,6 +26,7 @@ export default function EliminationDietPage() {
         sidebar={<>
           <TableOfContents items={[{ label: 'Choosing the Diet', href: '#diet-choice' }, { label: 'What to Eliminate', href: '#eliminate' }, { label: 'Duration', href: '#duration' }, { label: 'Food Challenge', href: '#challenge' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies Guide', href: '/health/dog-allergies' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-elimination" />
         </>}
       >

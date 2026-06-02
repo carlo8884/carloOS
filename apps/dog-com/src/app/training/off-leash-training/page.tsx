@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Off-Leash Dog Training — Recall Foundation | Dog.com', description: 'How to train reliable off-leash recall. The long line method, proofing against distractions, and which breeds are safest off-leash.', path: '/training/off-leash-training', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Off-Leash Dog Training', description: 'Recall foundation, long line protocol, and proofing for off-leash reliability.', url: 'https://dog.com/training/off-leash-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -27,6 +27,7 @@ export default function OffLeashTrainingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Marker Training', href: '/training/marker-training' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Basic Commands', href: '/training/basic-commands' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-off-leash" />
         </>}
       >

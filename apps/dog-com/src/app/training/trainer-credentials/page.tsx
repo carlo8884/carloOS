@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Trainer Credentials — CPDT-KA, CBCC-KA | Dog.com', description: 'How to evaluate a dog trainer\'s qualifications. CPDT-KA, CBCC-KA, CAAB, DACVB — what each credential means, what it requires, and red flags to avoid.', path: '/training/trainer-credentials', category: 'Finding a Trainer', type: 'article' })
@@ -33,6 +33,7 @@ export default function TrainerCredentialsPage() {
       sidebar={<>
         <TableOfContents items={[{ label: 'Credentials Ranked', href: '#credentials' }, { label: 'Red Flags', href: '#red-flags' }, { label: 'Questions to Ask', href: '#questions' }, { label: 'Which Credential for Your Problem', href: '#match' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Resource Guarding', href: '/training/resource-guarding' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-credentials" />
       </>}
     >

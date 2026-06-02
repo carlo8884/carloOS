@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'House Training Guide — The Schedule Method That Works | Dog.com', description: 'Complete house training guide for puppies and adult dogs. The schedule method, accident protocol, common mistakes.', path: '/training/house-training', type: 'article' })
@@ -34,6 +34,7 @@ export default function HouseTrainingPage() {
       sidebar={<>
         <TableOfContents items={[{ label: 'The Core Principle', href: '#principle' }, { label: 'The Schedule Method', href: '#schedule' }, { label: 'Accident Protocol', href: '#accidents' }, { label: 'Reinforcing Outside Elimination', href: '#reinforce' }, { label: 'Common Mistakes', href: '#mistakes' }, { label: 'Realistic Timeline', href: '#timeline' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Dog Crates 2025', href: '/reviews/best-dog-crates' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-house" />
       </>}
     >

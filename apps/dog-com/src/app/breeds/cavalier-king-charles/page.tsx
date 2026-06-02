@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cavalier King Charles Spaniel Guide — MVD | Dog.com', description: 'CKCSs develop mitral valve disease — 100% will have a murmur by age 10. MVD Protocol cardiac screening, syringomyelia.', path: '/breeds/cavalier-king-charles', type: 'article' })
@@ -25,6 +25,7 @@ export default function CavalierPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cavalier" />
       </>}
     >

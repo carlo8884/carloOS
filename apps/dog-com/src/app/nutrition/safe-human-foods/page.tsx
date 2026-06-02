@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Human Foods Safe for Dogs — What Can Dogs Actually Eat? | Dog.com', description: 'Complete list of human foods that are safe to share with dogs — with portion guidance and which preparations to avoid. research-based.', path: '/nutrition/safe-human-foods', type: 'article' })
@@ -47,6 +47,7 @@ export default function SafeHumanFoodsPage() {
           <div style={{ fontSize: '12px', color: 'var(--brand-text-light)', marginTop: '4px' }}>ASPCA · 24/7</div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Toxic Foods Guide', href: '/nutrition/toxic-foods' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-safe-foods" />
       </>}
     >

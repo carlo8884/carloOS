@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test", path: '/health/cushing-disease', type: 'article' })
@@ -29,6 +29,7 @@ export default function CushingDiseasePage() {
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane/mitotane, ACTH-stim recheck panels, endocrinology consults — typically runs $3,000-$8,000+ over the dog&apos;s lifetime. Insurance covers it if enrolled before diagnosis.</p>
             <a href="/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
         </>}
       >

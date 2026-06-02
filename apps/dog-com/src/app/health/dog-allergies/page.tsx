@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Atopic, Food, Contact | Dog.com', description: 'Three allergy types in dogs: atopic dermatitis, food allergy, contact allergy. Diagnostic ladder, treatment tiers, and when to refer to a dermatologist.', path: '/health/dog-allergies', type: 'article' })
@@ -36,6 +36,7 @@ export default function DogAllergiesPage() {
             </ul>
           </div>
           <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-allergies" />
         </>}
       >

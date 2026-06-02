@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -140,6 +140,7 @@ export default function DogSymptomsGuidePage() {
           { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."

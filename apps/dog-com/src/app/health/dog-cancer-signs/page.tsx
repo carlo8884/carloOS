@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals.', path: '/health/dog-cancer-signs', type: 'article' })
@@ -35,6 +35,7 @@ export default function DogCancerSignsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-signs" />
         </>}
       >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
@@ -25,6 +25,7 @@ export default function GreatDanePage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Great Dane vs Mastiff', href: '/compare/great-dane-vs-mastiff' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-dane" />
       </>}
     >

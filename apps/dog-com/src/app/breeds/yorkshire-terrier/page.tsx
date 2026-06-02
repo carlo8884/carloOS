@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide — Hypoglycemia | Dog.com', description: 'Yorkshire Terriers have big personalities in a fragile body. Hypoglycemia in puppies, tracheal collapse from collar pressure.', path: '/breeds/yorkshire-terrier', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -25,6 +25,7 @@ export default function YorkiePage() {
           { label: 'Yorkshire Terrier vs Maltese', href: '/compare/yorkshire-terrier-vs-maltese' },
           { label: 'Pomeranian vs Yorkshire Terrier', href: '/compare/pomeranian-vs-yorkshire-terrier' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-yorkie" />
       </>}
     >

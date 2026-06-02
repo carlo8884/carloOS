@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Marker Training for Dogs — How to Start | Dog.com', description: 'Marker training uses a precise signal (click or verbal "yes") to mark the exact moment of correct behavior.', path: '/training/marker-training', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Marker Training for Dogs', description: 'Clicker training and verbal marker protocol for dogs.', url: 'https://dog.com/training/marker-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,6 +28,7 @@ export default function MarkerTrainingPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Basic Commands', href: '/training/basic-commands' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-marker" />
         </>}
       >

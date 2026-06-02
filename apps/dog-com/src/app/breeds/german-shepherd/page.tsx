@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -69,6 +69,7 @@ export default function GermanShepherdBreedPage() {
               { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },
               { label: 'Labrador Retriever vs German Shepherd', href: '/compare/labrador-retriever-vs-german-shepherd' },
             ]} />
+            <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-german-shepherd" />
           </aside>
         </div>

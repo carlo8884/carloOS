@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vomiting Guide', description: 'Acute vs chronic vomiting, yellow bile syndrome, and emergency signs for dog vomiting.', url: 'https://dog.com/health/dog-vomiting', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function DogVomitingPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Pancreatitis', href: '/health/dog-symptoms-guide' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vomiting" />
         </>}
       >

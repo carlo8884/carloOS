@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,6 +97,7 @@ export default function SeniorDogCarePage() {
           { label: 'Dog Dental Care', href: '/health/dog-dental-care' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com"
           title="Free Dog Health Tips"
           subtitle="Practical guidance every Tuesday."

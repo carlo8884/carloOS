@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Luxating Patella in Dogs — Grades, Surgery | Dog.com', description: 'Luxating patella (slipping kneecap) is the most common orthopedic condition in small dogs. Grades 1-4, when surgery is needed.', path: '/health/dog-luxating-patella', type: 'article' })
@@ -22,6 +22,7 @@ export default function LuxatingPatellaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-luxating-patella" />
         </>}
       >

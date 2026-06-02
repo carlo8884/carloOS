@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Border Collie Guide — Intelligence, MDR1 Gene | Dog.com', description: 'Border Collies are the most intelligent dog breed — and the most demanding. MDR1 drug sensitivity affects the breed.', path: '/breeds/border-collie', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Border Collie Breed Guide', description: 'Intelligence requirements, MDR1 gene, Collie Eye Anomaly, and exercise for Border Collies.', url: 'https://dog.com/breeds/border-collie', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -23,6 +23,7 @@ export default function BorderColliePage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Border Collie vs Australian Shepherd', href: '/compare/border-collie-vs-australian-shepherd' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-border-collie" />
       </>}
     >

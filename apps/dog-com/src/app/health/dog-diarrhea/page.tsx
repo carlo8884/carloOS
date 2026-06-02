@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Diarrhea — When to Treat at Home vs See a Vet | Dog.com', description: 'Dog diarrhea: what it looks like, common causes, when home treatment is appropriate, and the specific signs that require immediate veterinary care.', path: '/health/dog-diarrhea', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Diarrhea', description: 'Home treatment vs vet care for dog diarrhea — causes and warning signs.', url: 'https://dog.com/health/dog-diarrhea', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function DogDiarrheaPage() {
             </ul>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diarrhea" />
         </>}
       >

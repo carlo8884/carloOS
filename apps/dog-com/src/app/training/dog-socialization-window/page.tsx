@@ -14,7 +14,7 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -150,6 +150,7 @@ export default function DogSocializationWindowPage() {
                 { label: 'Trainer Credentials', href: '/training/trainer-credentials' },
               ]}
             />
+          <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="dog-com"

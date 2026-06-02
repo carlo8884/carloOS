@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Setter Breed Guide — Epilepsy, PRA | Dog.com', description: 'Irish Setters are exuberantly energetic sporting dogs. Progressive retinal atrophy (PRA) and epilepsy are the primary health concerns.', path: '/breeds/irish-setter', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function IrishSetterPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Seizures', href: '/health/dog-seizures' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-irish-setter" />
       </>}
     >

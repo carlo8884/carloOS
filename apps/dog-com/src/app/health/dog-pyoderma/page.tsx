@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pyoderma in Dogs — Bacterial Skin Infections, Causes | Dog.com', description: 'Pyoderma (bacterial skin infection) is the most common skin disease in dogs. Surface, superficial, and deep pyoderma differ in treatment duration.', path: '/health/dog-pyoderma', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function DogPyodermaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Mange', href: '/health/dog-mange' }]} />
+          <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pyoderma" />
         </>}
       >

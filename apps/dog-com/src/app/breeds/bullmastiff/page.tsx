@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide — Hip Dysplasia, Bloat Risk | Dog.com', description: 'Bullmastiffs are quiet, loyal giant breed dogs. GDV/bloat risk, hip and elbow dysplasia, and cardiac screening are the primary health priorities.', path: '/breeds/bullmastiff', type: 'article' })
@@ -25,6 +25,7 @@ export default function BullmastiffPage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
         ]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-bullmastiff" />
       </>}
     >

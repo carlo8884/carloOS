@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Aggression — Types, Causes | Dog.com', description: 'Dog aggression types: fear-based, resource guarding, redirected, pain-related, and inter-dog. Warning signals, what never to do.', path: '/training/dog-aggression', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Aggression', description: 'Types, causes, warning signals, and professional intervention for dog aggression.', url: 'https://dog.com/training/dog-aggression', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -17,6 +17,7 @@ export default function DogAggressionPage() {
           </ul>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Resource Guarding', href: '/training/resource-guarding' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }]} />
+        <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-aggression" />
       </>}
     >
