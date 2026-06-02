@@ -20,6 +20,10 @@ export default function VizslaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Dog Seizures', href: '/health/dog-seizures' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'German Shorthaired Pointer vs Vizsla', href: '/compare/german-shorthaired-pointer-vs-vizsla' },
+          { label: 'Vizsla vs Weimaraner', href: '/compare/vizsla-vs-weimaraner' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-vizsla" />
       </>}
     >

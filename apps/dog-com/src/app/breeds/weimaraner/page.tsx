@@ -20,6 +20,9 @@ export default function WeimaranerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Vizsla vs Weimaraner', href: '/compare/vizsla-vs-weimaraner' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-weimaraner" />
       </>}
     >

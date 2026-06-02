@@ -46,6 +46,10 @@ import {
   getBreedBySlug,
   type Breed,
 } from '../../../data/breeds'
+import {
+  BREED_COMPARISON_PAIRS,
+  pairSlug,
+} from '../../../data/breed-comparisons'
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -250,6 +254,20 @@ export default async function BreedTemplatePage({ params }: PageProps) {
   if (EXISTING_STATIC_BREED_SLUGS.has(breed.slug)) notFound()
 
   const faqs = buildFAQs(breed)
+
+  // Build reciprocal comparison links for this breed.
+  const comparisonLinks = BREED_COMPARISON_PAIRS
+    .filter((p) => p.breedASlug === breed.slug || p.breedBSlug === breed.slug)
+    .map((p) => {
+      const otherSlug = p.breedASlug === breed.slug ? p.breedBSlug : p.breedASlug
+      const otherBreed = Breeds.find((b) => b.slug === otherSlug)
+      if (!otherBreed) return null
+      return {
+        href: `/compare/${pairSlug(p)}`,
+        label: `${breed.name} vs ${otherBreed.name}`,
+      }
+    })
+    .filter((l): l is { href: string; label: string } => l !== null)
 
   const articleSchema = buildArticleSchema({
     siteId: 'dog-com',
@@ -576,6 +594,13 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               title="Recommended Reviews"
               links={buildRecommendedReviewsForBreed(breed)}
             />
+
+            {comparisonLinks.length > 0 && (
+              <RelatedLinks
+                title="Breed Comparisons"
+                links={comparisonLinks}
+              />
+            )}
 
             <CrossPortfolioCard
               currentSite="dog-com"

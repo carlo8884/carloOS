@@ -22,6 +22,9 @@ export default function SiberianHuskyPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Socialization Window', href: '/training/dog-socialization-window' }, { label: 'Dog Anxiety', href: '/health/dog-anxiety' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Siberian Husky vs Australian Shepherd', href: '/compare/siberian-husky-vs-australian-shepherd' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-husky" />
       </>}
     >

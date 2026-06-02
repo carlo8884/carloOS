@@ -21,6 +21,9 @@ export default function BoxerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Cherry Eye', href: '/health/cherry-eye' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-boxer" />
       </>}
     >

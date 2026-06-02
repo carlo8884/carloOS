@@ -64,6 +64,11 @@ export default function GermanShepherdBreedPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
             <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Breed Comparisons" links={[
+              { label: 'German Shepherd vs Belgian Malinois', href: '/compare/german-shepherd-vs-belgian-malinois' },
+              { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },
+              { label: 'Labrador Retriever vs German Shepherd', href: '/compare/labrador-retriever-vs-german-shepherd' },
+            ]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-german-shepherd" />
           </aside>
         </div>

@@ -192,6 +192,10 @@ export default function GoldenRetrieverBreedPage() {
               { label: 'Labrador Retriever', href: '/breeds/labrador-retriever' },
               { label: 'German Shepherd', href: '/breeds/german-shepherd' },
             ]} />
+            <RelatedLinks title="Breed Comparisons" links={[
+              { label: 'Golden Retriever vs Labrador Retriever', href: '/compare/golden-retriever-vs-labrador-retriever' },
+              { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
+            ]} />
             <EmailCapture variant="sidebar" siteId="dog-com"
               title="Free Dog Health Tips"
               subtitle="Practical guidance every Tuesday."

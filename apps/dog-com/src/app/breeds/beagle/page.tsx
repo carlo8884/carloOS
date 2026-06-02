@@ -25,6 +25,9 @@ export default function BeaglePage() {
         </div>
         <RelatedLinks title="Beagle Health Deep-Dive" links={[{ label: 'Beagle Health Issues & Screenings', href: '/breeds/beagle/health' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Beagle Feeding Guide', href: '/breeds/beagle/feeding' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Beagle vs Basset Hound', href: '/compare/beagle-vs-basset-hound' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
     >
