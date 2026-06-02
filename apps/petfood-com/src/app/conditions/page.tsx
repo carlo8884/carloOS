@@ -57,7 +57,7 @@ const itemListSchema = {
   itemListElement: ConditionDiets.map((c, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
-    name: c.name,
+    name: c.conditionName,
     url: `https://petfood.com/conditions/${c.slug}`,
   })),
 }
