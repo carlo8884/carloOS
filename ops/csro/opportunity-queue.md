@@ -49,6 +49,13 @@ CSRO/COO cannot source photography in-sandbox.
 ### Completed wave log (2026-06-01 → 06-02)
 #364–#388 trust/sitemap/orphan/canonical floor · #389–#392,#396 homepage live-tool embeds (gate 3, all 8)
 · #393 saddle D6 · #394 D5 standard + decisions · #395 lizard D7.
+**GEO schema wave (06-02):** #401 hub ItemList (11 hubs) · #402 FAQPage where missing · #404 BreadcrumbList
+on 15 hub/tool/schedule pages · #405 petfoods DefinedTerm + brand BreadcrumbList · #406 ferrets
+/directory/rescues 404-link gating (51 dead anchors → non-clickable coming-soon).
+**Net:** COO-lane GEO schema coverage (ItemList/FAQ/Breadcrumb/DefinedTerm) now broad cohort-wide; the
+ferrets-com structural papercut from N7 is cleared. Remaining N7 scope (petfoods-com structural) was
+already clean per the #N7 audit. **The remaining launch-gating work is Visual (N1–N3 heroes) +
+Monetization (N4–N6).**
 
 ---
 
