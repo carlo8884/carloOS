@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, FAQAccordion, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -46,7 +46,7 @@ const PICKS = [
 export default function BestPetInsurancePage() {
   return (
     <>
-      <SchemaScript schema={combinedSchema} />
+      <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2025', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"

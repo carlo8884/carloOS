@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -37,7 +37,7 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1, produc
 export default function BestDogFoodPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2025', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">

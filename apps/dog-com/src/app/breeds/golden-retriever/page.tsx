@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -43,7 +43,7 @@ const SCORES = [
 export default function GoldenRetrieverBreedPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'Golden Retriever', url: 'https://dog.com/breeds/golden-retriever' } ] }))} />
 
       {/* Hero */}
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">

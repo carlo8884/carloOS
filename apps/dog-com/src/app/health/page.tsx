@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
@@ -19,6 +19,21 @@ const SECTIONS = [
   { category: '🦷 Preventive Care', items: [{ title: 'Dog Dental Care Guide', href: '/health/dog-dental-care' }, { title: 'Senior Dog Care Guide', href: '/health/senior-dog-care' }, { title: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }, { title: 'Heartworm Prevention', href: '/health/heartworm-prevention' }] },
   { category: '💊 Treatments & Products', items: [{ title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { title: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
 ]
+
+const healthItems = SECTIONS.flatMap(s => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Health Library',
+  numberOfItems: healthItems.length,
+  itemListElement: healthItems.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://dog.com${item.href}`,
+  })),
+}
+const healthSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
 const CATEGORY_ORDER: DiseaseCategory[] = [
   'Infectious',
@@ -88,7 +103,7 @@ export default function DogHealthHubPage() {
 
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={healthSchema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span></div>
