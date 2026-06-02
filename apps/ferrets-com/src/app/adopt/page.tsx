@@ -66,6 +66,20 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const ADOPT_ALL_SLUGS = [...REGIONAL, ...TOPICS]
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Ferret Adoption Guides',
+  numberOfItems: ADOPT_ALL_SLUGS.length,
+  itemListElement: ADOPT_ALL_SLUGS.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (ADOPT_GUIDES[slug].heading ?? ADOPT_GUIDES[slug].title),
+    url: `https://ferrets.com/adopt/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
   buildBreadcrumbSchema({
     items: [
@@ -79,6 +93,7 @@ const schema = combineSchemas(
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function AdoptHubPage() {

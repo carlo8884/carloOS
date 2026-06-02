@@ -112,7 +112,19 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Find a Ferret Vet by State',
+  numberOfItems: States.length,
+  itemListElement: States.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.name,
+    url: `https://ferrets.com/find-a-vet/${s.slug}`,
+  })),
+}
+
+const schema = combineSchemas(faqSchema, breadcrumbSchema, itemListSchema)
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
