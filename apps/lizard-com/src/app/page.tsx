@@ -9,6 +9,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
+// Live UVB-distance tool embedded on the homepage — a calculator you use on
+// the first screens, not a link to one (premium gate 3).
+import { UvbDistanceCalculator } from '../components/visual/UvbDistanceCalculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -438,6 +441,26 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      {/* ── LIVE TOOL — UVB distance calculator (premium gate 3) ────────── */}
+      <section className="relative z-10" style={{ background: 'var(--brand-dark)' }}>
+        <div className="mx-auto max-w-container-wide px-container-sm sm:px-container py-section">
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Try it · UVB distance calculator
+            </span>
+          </div>
+          <h2 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+            How far should the UVB lamp sit?
+          </h2>
+          <p className="text-sm mb-7 max-w-2xl leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+            Pick your species&apos; Ferguson zone and lamp, and get the correct basking-surface
+            distance and mesh-loss adjustment — the most common way new keepers get UVB wrong.
+          </p>
+          <UvbDistanceCalculator />
+        </div>
+      </section>
 
       {/* ── CATEGORY GRID ───────────────────────────────────────────────── */}
       <section

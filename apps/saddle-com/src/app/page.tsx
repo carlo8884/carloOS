@@ -16,6 +16,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture } from '@carloOS/ui'
+// Live tree-size estimator embedded on the homepage — a fit tool you use on
+// the first screens, not a link to one (premium gate 3).
+import { TreeSizeEstimator } from '../components/visual/TreeSizeEstimator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -418,6 +421,23 @@ export default function SaddleHomePage() {
           ))}
         </div>
       </div>
+
+      {/* ── LIVE TOOL — saddle tree-size estimator (premium gate 3) ─── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
+        <div className="mx-auto max-w-container-wide">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Try it · Tree-size estimator
+          </div>
+          <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+            What tree width does your horse need?
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+            Wither profile and breed type point you to a starting tree width — the single
+            biggest fit decision before you shop, and where most ill-fitting saddles go wrong.
+          </p>
+          <TreeSizeEstimator />
+        </div>
+      </section>
 
       {/* ── CATEGORY GRID — six lanes ───────────────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
