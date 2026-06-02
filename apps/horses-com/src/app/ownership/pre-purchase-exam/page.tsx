@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -46,11 +46,16 @@ const FAQS = [
       "A basic exam covers the resting check plus walk and trot; a five-stage adds strenuous exercise, a rest-and-re-exam, and a final trot-up to catch post-exercise lameness. Match the level to the horse's value and use.",
   },
 ]
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function PrePurchaseExamPage() {
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
         contentType="care"

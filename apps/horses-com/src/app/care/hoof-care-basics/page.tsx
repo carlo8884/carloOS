@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -46,11 +46,16 @@ const FAQS = [
       "The wall grows about 6 to 10 mm a month, taking most of a year to reach the ground. This slow growth means hoof corrections take many months.",
   },
 ]
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function HoofCareBasicsPage() {
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
         contentType="care"

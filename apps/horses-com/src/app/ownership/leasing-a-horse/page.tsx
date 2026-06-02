@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -46,11 +46,16 @@ const FAQS = [
       "Yes -- a written agreement is essential. It should cover the term, fee, who pays which costs, permitted use, emergency and vet decisions, insurance and liability, and how to end the lease.",
   },
 ]
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, faqSchema)
 
 export default function LeasingHorsePage() {
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
         contentType="care"

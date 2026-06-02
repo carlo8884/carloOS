@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -32,8 +32,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const combined = combineSchemas(articleSchema, medSchema)
-
 const FAQS = [
   {
     question: "Can a choking horse still breathe?",
@@ -57,6 +55,12 @@ const FAQS = [
       "Always soak beet pulp fully before feeding, since it swells. Combine soaking with slowing fast eaters and good dental care to prevent choke.",
   },
 ]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function ChokePage() {
   return (

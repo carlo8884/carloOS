@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -31,8 +31,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Horses.com Editorial',
   lastReviewed: '2026-05-28',
 })
-
-const combined = combineSchemas(articleSchema, medSchema)
 
 const FAQS = [
   {
@@ -85,6 +83,12 @@ const FAQS = [
       'Standard sedated adult float: $150-300. Wolf-tooth extraction adds $50-150. Radiographs add $50-200. Diseased-tooth extraction ranges $200-1,000+ depending on complexity. EOTRH extractions typically $800-2,000+.',
   },
 ]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function EquineDentalCarePage() {
   return (

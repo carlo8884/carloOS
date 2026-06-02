@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -32,8 +32,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-const combined = combineSchemas(articleSchema, medSchema)
-
 const FAQS = [
   {
     question: "Can a horse give West Nile virus to people?",
@@ -57,6 +55,12 @@ const FAQS = [
       "Many recover with supportive care, but a significant share of symptomatic unvaccinated horses die or have lasting deficits. With no cure, prevention is far more reliable.",
   },
 ]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function WestNilePage() {
   return (

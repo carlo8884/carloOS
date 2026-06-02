@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -31,8 +31,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Horses.com Editorial',
   lastReviewed: '2026-05-28',
 })
-
-const combined = combineSchemas(articleSchema, medSchema)
 
 const FAQS = [
   {
@@ -85,6 +83,12 @@ const FAQS = [
       'Common short-term reactions include injection-site soreness, mild fever, and lethargy lasting 1-3 days. Serious events including anaphylaxis are rare. The benefit-risk balance strongly favors core vaccination.',
   },
 ]
+
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : '') })),
+})
+
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function VaccinationSchedulePage() {
   return (

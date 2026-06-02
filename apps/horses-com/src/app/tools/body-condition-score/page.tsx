@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildHowToSchema,
+  buildFAQSchema,
+  combineSchemas,
   ArticleLayout,
   FAQAccordion,
   EmailCapture,
@@ -118,6 +120,12 @@ const FAQS = [
   },
 ]
 
+const faqSchema = buildFAQSchema({
+  questions: FAQS.map((f) => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : '' })),
+})
+
+const combinedSchema = combineSchemas(schema, faqSchema)
+
 export default function BodyConditionScorePage() {
   return (
     <ArticleLayout
@@ -136,7 +144,7 @@ export default function BodyConditionScorePage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Body Condition Score' },
       ]}
-      schema={schema}
+      schema={combinedSchema}
       sidebar={
         <>
           <TableOfContents
