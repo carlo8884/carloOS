@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Best Bioactive Reptile Substrates 2025 — Desert | Lizard.com', description: 'Best bioactive substrate mixes for reptile enclosures. Josh\'s Frogs, BioDude, and DIY mixes ranked for bearded dragons, leopard geckos, and tropical species.', path: '/reviews/best-bioactive-substrates', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Best Bioactive Reptile Substrates 2025', description: "Josh's Frogs, BioDude, and DIY desert/tropical mixes for reptile bioactive setups.", url: 'https://lizard.com/reviews/best-bioactive-substrates', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const biodude = buildProductSchema({ name: 'BioDude Terra Sahara', description: 'Ready-to-use bioactive substrate mix for desert reptile species.', url: 'https://thebiodude.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
@@ -15,7 +15,7 @@ const PICKS = [
 export default function BestBioactiveSubstratesPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://lizard.com/' }, { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' }, { name: 'Best Bioactive Reptile Substrates 2025', url: 'https://lizard.com/reviews/best-bioactive-substrates' }] }))} />
       <div className="relative px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌱 Buyer's Guide</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Bioactive Reptile Substrates 2025</h1>
