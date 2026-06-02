@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared.', path: '/species/puffer-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function PufferFishPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Oscar Fish', href: '/species/oscar' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }, { label: 'Quarantine Tank', href: '/setup/quarantine-tank-guide' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-puffer" />
       </>}
     >

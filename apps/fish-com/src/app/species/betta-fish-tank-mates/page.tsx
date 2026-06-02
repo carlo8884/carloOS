@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Tank Mates — What Can Live with a Betta? | Fish.com', description: 'Can bettas live with other fish? The answer depends on the individual betta. Compatible tankmates, fish to always avoid.', path: '/species/betta-fish-tank-mates', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Tank Mates', description: 'Compatible and incompatible tankmates for betta fish — a practical guide.', url: 'https://fish.com/species/betta-fish-tank-mates', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -17,6 +17,7 @@ export default function BettaTankMatesPage() {
           </ul>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="species-betta-mates" />
       </>}
     >

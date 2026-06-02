@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Rainbowfish Care Guide — Australian Species | Fish.com', description: 'Rainbowfish are underrated community gems. Boesemani, Turquoise, and Dwarf Neon rainbows need groups of 6+, quality food to develop color.', path: '/species/rainbow-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Rainbowfish Care Guide', description: 'School size, water requirements, and color development for Melanotaeniidae rainbowfish.', url: 'https://fish.com/species/rainbow-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -20,6 +20,7 @@ export default function RainbowFishPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Harlequin Rasbora', href: '/species/harlequin-rasbora' }, { label: 'Neon Tetra', href: '/species/neon-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-rainbowfish" />
       </>}
     >

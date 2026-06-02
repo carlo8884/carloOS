@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Zebra Danio Care Guide — The Hardy Cycling Fish | Fish.com', description: "Zebra danios are among the hardiest beginner fish — fast, active schoolers that tolerate a wide range. School of 6+, cooler water, secure lid.", path: '/species/zebra-danio', type: 'article' })
@@ -20,6 +20,7 @@ export default function ZebraDanioPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }, { label: 'Cherry Barb', href: '/species/cherry-barb' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-zebra-danio" />
       </>}
     >

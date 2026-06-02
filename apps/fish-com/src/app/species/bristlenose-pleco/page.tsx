@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide — The Small Algae Eater | Fish.com', description: "Bristlenose plecos stay under 5 inches, eat algae, and suit tanks the common pleco outgrows. Needs driftwood, vegetables, and a male's signature bristles.", path: '/species/bristlenose-pleco', type: 'article' })
@@ -20,6 +20,7 @@ export default function BristlenosePlecoPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Common Pleco', href: '/species/pleco' }, { label: 'Otocinclus', href: '/species/otocinclus' }, { label: 'Aquarium Algae Control', href: '/setup/aquarium-algae-control' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-bristlenose-pleco" />
       </>}
     >

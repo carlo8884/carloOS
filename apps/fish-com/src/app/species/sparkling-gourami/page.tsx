@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide — The Croaking Nano Fish | Fish.com', description: "Sparkling gouramis are tiny labyrinth fish under 1.5 inches that audibly croak. Ideal for planted nano tanks with gentle flow and calm tankmates.", path: '/species/sparkling-gourami', type: 'article' })
@@ -20,6 +20,7 @@ export default function SparklingGouramiPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Pearl Gourami', href: '/species/pearl-gourami' }, { label: 'Dwarf Gourami', href: '/species/dwarf-gourami' }, { label: 'Nano Tank Setup', href: '/setup/nano-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-sparkling-gourami" />
       </>}
     >

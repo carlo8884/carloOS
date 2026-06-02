@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide — The Cool-Water Cory | Fish.com', description: "Panda corydoras are a small, panda-marked cory catfish that prefers cooler water and pristine conditions. Keep a group of 6+ over soft sand.", path: '/species/panda-corydoras', type: 'article' })
@@ -20,6 +20,7 @@ export default function PandaCorydorasPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Bronze Corydoras', href: '/species/bronze-corydoras' }, { label: 'Corydoras Overview', href: '/species/corydoras' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-panda-corydoras" />
       </>}
     >

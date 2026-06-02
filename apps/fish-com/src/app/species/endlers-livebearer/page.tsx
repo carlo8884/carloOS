@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide — The Nano Guppy | Fish.com", description: "Endler's livebearers are tiny, dazzling, prolific guppy relatives ideal for nano tanks. Easy to keep, easy to breed, and they hybridize freely with guppies.", path: '/species/endlers-livebearer', type: 'article' })
@@ -20,6 +20,7 @@ export default function EndlersLivebearerPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Guppy', href: '/species/guppy' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Nano Tank Setup', href: '/setup/nano-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-endlers-livebearer" />
       </>}
     >

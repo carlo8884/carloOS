@@ -9,6 +9,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { Medications, MedicationsBySlug, type Medication } from '../../../data/medications'
 
@@ -394,6 +395,11 @@ export default function MedicationPage({ params }: PageProps) {
             always follow the prescription written by the veterinarian who has examined your pet.
           </p>
         </section>
+
+        {/* Cross-portfolio recommendations */}
+        <div className="not-prose mt-10">
+          <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="footer" />
+        </div>
 
         {/* Back to medications */}
         <div className="mt-10 pt-8 border-t border-brand-border not-prose">

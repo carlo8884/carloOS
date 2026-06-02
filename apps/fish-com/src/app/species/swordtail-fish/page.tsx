@@ -3,7 +3,7 @@ import {
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
@@ -146,6 +146,7 @@ export default function SwordtailPage() {
                 { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"

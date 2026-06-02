@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Oscar Fish Care Guide — Large Tank, Personality | Fish.com', description: 'Oscars are the most personable large cichlid. They recognize owners, beg for food, and rearrange their tank. 75+ gallons required, high protein diet.', path: '/species/oscar', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Oscar Fish Care Guide', description: 'Large tank requirements, personality, HITH disease, and feeding for Oscar cichlids.', url: 'https://fish.com/species/oscar', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function OscarPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'African Cichlid', href: '/species/african-cichlid' }, { label: 'Puffer Fish', href: '/species/puffer-fish' }, { label: 'Best Canister Filters', href: '/reviews/best-canister-filters' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-oscar" />
       </>}
     >

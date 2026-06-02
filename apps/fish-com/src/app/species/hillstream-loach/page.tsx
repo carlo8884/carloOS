@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Hillstream Loach Care Guide — Fast Flow, High O2 | Fish.com', description: 'Hillstream loaches need very high water flow and oxygenation — they come from fast-moving streams.', path: '/species/hillstream-loach', type: 'article' })
@@ -21,6 +21,7 @@ export default function HillstreamLoachPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Otocinclus Care', href: '/species/otocinclus' }, { label: 'Amano Shrimp', href: '/species/amano-shrimp' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-hillstream" />
       </>}
     >

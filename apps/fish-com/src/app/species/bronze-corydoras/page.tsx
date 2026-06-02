@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide — The Hardy Cory Catfish | Fish.com', description: "Bronze corydoras are the hardiest, most available cory catfish — peaceful bottom-dwelling schoolers that need a group of 6+, sand substrate, and sinking food.", path: '/species/bronze-corydoras', type: 'article' })
@@ -20,6 +20,7 @@ export default function BronzeCorydorasPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Corydoras Overview', href: '/species/corydoras' }, { label: 'Panda Corydoras', href: '/species/panda-corydoras' }, { label: 'Otocinclus', href: '/species/otocinclus' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-bronze-corydoras" />
       </>}
     >

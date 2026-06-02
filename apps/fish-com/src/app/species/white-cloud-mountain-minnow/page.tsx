@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function WhiteCloudPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Axolotl Care', href: '/species/axolotl' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-white-cloud" />
       </>}
     >
