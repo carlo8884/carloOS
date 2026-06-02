@@ -342,7 +342,7 @@ export default function WaterParametersHubPage() {
             {
               title: 'Hard water on soft-water specialists',
               body: 'Discus, wild apistos, and Caridina shrimp are kept on RO/DI water remineralized to a target GH and KH. Dropping soft-water species into tap water above 12 dGH is a common acclimation failure; dilute the source water first.',
-              href: '/species/discus-guide',
+              href: '/species/discus',
             },
             {
               title: 'Pre-dawn DO crash in planted tanks',

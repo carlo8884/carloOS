@@ -63,7 +63,7 @@ export default function BestWaterTestKitsPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Water Chemistry', href: '/water' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="review-test-kits" />
           </aside>
         </div>

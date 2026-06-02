@@ -135,7 +135,7 @@ export default function FishDiseaseGuidePage() {
         <TableOfContents items={DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` }))} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Nitrogen Cycle Guide', href: '/health/nitrogen-cycle-explained' },
-          { label: 'Water Chemistry', href: '/water' },
+          { label: 'Water Chemistry', href: '/water-parameters' },
           { label: 'Tank Setup Guide', href: '/setup' },
         ]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="health-disease-guide" />

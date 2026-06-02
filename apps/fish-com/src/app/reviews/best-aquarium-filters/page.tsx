@@ -191,7 +191,7 @@ export default function BestAquariumFiltersPage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Tank Setup Guide', href: '/setup' },
               { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' },
-              { label: 'Water Chemistry', href: '/water' },
+              { label: 'Water Chemistry', href: '/water-parameters' },
             ]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Equipment picks every Thursday." source="review-filters" />
           </aside>

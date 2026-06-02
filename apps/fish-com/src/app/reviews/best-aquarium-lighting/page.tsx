@@ -70,7 +70,7 @@ export default function BestAquariumLightingPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Equipment picks every Thursday." source="review-lighting" />
           </aside>
         </div>

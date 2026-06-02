@@ -84,7 +84,7 @@ export default function BestPlantedFertilizersPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Planted tank tips every Thursday." source="review-fertilizers" />
           </aside>
         </div>
