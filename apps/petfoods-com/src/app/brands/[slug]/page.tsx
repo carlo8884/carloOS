@@ -505,8 +505,8 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
 
   const breadcrumbSchema = buildBreadcrumbSchema({
     items: [
-      { name: ‘Home’, url: ‘https://petfoods.com/’ },
-      { name: ‘Brands’, url: ‘https://petfoods.com/brands’ },
+      { name: 'Home', url: 'https://petfoods.com/' },
+      { name: 'Brands', url: 'https://petfoods.com/brands' },
       { name: review.brandName, url: `https://petfoods.com/brands/${review.slug}` },
     ],
   })
