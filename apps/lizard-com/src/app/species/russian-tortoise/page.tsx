@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Diet, Burrows, Brumation | Lizard.com', description: 'Complete Russian tortoise (Testudo horsfieldii) care. High-fiber weed diet (no fruit), outdoor enclosures, brumation, 40+ year lifespan — beginner-friendly.', path: '/species/russian-tortoise', type: 'article' })
@@ -39,6 +39,7 @@ export default function RussianTortoisePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Sulcata Tortoise Care', href: '/species/sulcata-tortoise' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="species-russian-tortoise" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

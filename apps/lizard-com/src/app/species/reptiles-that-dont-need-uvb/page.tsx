@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptiles That Do Not Strictly Need UVB | Lizard.com", description: "Which reptiles can be kept without UVB lighting, why nocturnal species differ, the case for low-level UVB anyway, and which species absolutely need it.", path: "/species/reptiles-that-dont-need-uvb", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesReptilesThatDontNeedUvbPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "UVB Lighting Guide", href: "/setup/uvb-lighting-guide" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }, { label: "Leopard Gecko Care", href: "/species/leopard-gecko" }, { label: "Crested Gecko Care", href: "/species/crested-gecko" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-reptiles-that-dont-need-uvb"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

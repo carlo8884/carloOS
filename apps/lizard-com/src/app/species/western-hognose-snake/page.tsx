@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide — Upturned Snout | Lizard.com", description: "Western hognose snakes are small, charismatic beginner snakes known for bluffing and playing dead. Care, feeding, the mild rear-fang concern, and morphs.", path: "/species/western-hognose-snake", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesWesternHognoseSnakePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Kenyan Sand Boa", href: "/species/kenyan-sand-boa" }, { label: "Frozen/Thawed Feeding", href: "/health/feeding-frozen-thawed-rodents" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-western-hognose-snake"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Nile Monitor Care Guide — Advanced Large Monitor | Lizard.com", description: "Nile monitors are large, fast, defensive semi-aquatic monitors for experts only. Room-sized enclosures, intense heat, water, and honest expectations.", path: "/species/nile-monitor", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesNileMonitorPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Savannah Monitor Care", href: "/species/savannah-monitor" }, { label: "Argentine Tegu Care", href: "/species/argentine-black-and-white-tegu" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-nile-monitor"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

@@ -8,6 +8,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function RawPetFoodEvaluationPage() {
             subtitle="One-page printable label decoder, plus our independent brand reviews as we publish them."
             source="raw-pet-food-evaluation"
           />
+          <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="sidebar" />
         </>
       }
     >

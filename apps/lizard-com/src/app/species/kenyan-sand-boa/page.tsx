@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide — Burrowing Snake | Lizard.com", description: "Kenyan sand boas are a beginner-friendly burrowing snake. Belly heat, deep aspen substrate, frozen/thawed mice, and why they spend most of their life buried.", path: "/species/kenyan-sand-boa", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesKenyanSandBoaPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Corn Snake Care", href: "/species/corn-snake" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Frozen/Thawed Feeding", href: "/health/feeding-frozen-thawed-rodents" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-kenyan-sand-boa"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

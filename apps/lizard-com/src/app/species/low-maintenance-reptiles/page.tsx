@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Low-Maintenance Reptiles — Realistically Easy Pets | Lizard.com", description: "The lowest-maintenance reptiles for busy keepers, ranked by feeding frequency, equipment, and daily effort, with honest expectations.", path: "/species/low-maintenance-reptiles", type: 'article' })
@@ -23,6 +23,7 @@ export default function SpeciesLowMaintenanceReptilesPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Crested Gecko Care", href: "/species/crested-gecko" }, { label: "Ball Python Care", href: "/species/ball-python" }, { label: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-low-maintenance-reptiles"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
