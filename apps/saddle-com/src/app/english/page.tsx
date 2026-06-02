@@ -5,8 +5,8 @@ import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
-  title: 'Best English Saddles 2025 — By Discipline & Budget | Saddle.com',
-  description: 'English saddles ranked by discipline: dressage, show jumping, eventing, all-purpose, and close contact.',
+  title: 'English Saddles by Discipline — Dressage, Jumping | Saddle.com',
+  description: 'Browse English saddles by discipline — dressage, show jumping, eventing, and all-purpose. Discipline differences, brand origins, and price ranges explained.',
   path: '/english',
 })
 
@@ -78,10 +78,16 @@ export default function EnglishSaddlesPage() {
           </div>
           <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4"
             style={{ fontSize: 'clamp(28px, 5vw, 54px)' }}>
-            Best English Saddles — By Discipline
+            English Saddles by Discipline
           </h1>
           <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-            A dressage saddle on a jumping horse is the wrong tool for the job. English discipline saddles are meaningfully different — here&apos;s how to navigate the market by what you actually do.
+            A dressage saddle on a jumping horse is the wrong tool for the job. This hub organizes English saddles by discipline — dressage, show jumping, eventing, and all-purpose — so you can browse what fits what you actually ride.
+          </p>
+          <p className="mt-5 text-sm text-white/70">
+            Looking for our ranked picks?{' '}
+            <Link href="/reviews/best-english-saddles" className="font-bold text-brand-primary underline underline-offset-2">
+              See Best English Saddles →
+            </Link>
           </p>
         </div>
       </div>
