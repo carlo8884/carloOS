@@ -9,7 +9,7 @@ export default function HusbandrySheddingGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
       hero={{ title: "Reptile Shedding Guide", subtitle: "Shedding, or ecdysis, is the periodic renewal of the outer skin layer that lets a growing reptile replace worn skin. Done well it is invisible maintenance; done in too-dry conditions it produces retained shed that can constrict toes, tail tips, and eye caps. This guide explains the process across snakes, lizards, and geckos and how to prevent the problems.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
-      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Husbandry", href: "/husbandry" }, { name: "Shedding Guide", href: "/husbandry/shedding-guide" }]}
+      breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Shedding Guide", href: "/husbandry/shedding-guide" }]}
       schema={schema}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>

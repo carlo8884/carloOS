@@ -48,6 +48,21 @@ export default function LizardSetupHubPage() {
           ))}
         </div>
       </div>
+      <div className="relative z-10 px-container-sm sm:px-container pb-4">
+        <div className="max-w-content-wide mx-auto">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Seasonal &amp; cyclical care</div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link href="/husbandry/brumation-guide" className="block rounded-lg p-5 no-underline hover:-translate-y-1 transition-all duration-200" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
+              <div className="font-display font-bold text-brand-white text-base mb-1.5">Brumation Guide</div>
+              <div className="text-xs" style={{ color: 'rgba(238,240,228,0.45)' }}>Safe seasonal cool-down, which species brumate, and telling brumation apart from illness</div>
+            </Link>
+            <Link href="/husbandry/shedding-guide" className="block rounded-lg p-5 no-underline hover:-translate-y-1 transition-all duration-200" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
+              <div className="font-display font-bold text-brand-white text-base mb-1.5">Shedding Guide</div>
+              <div className="text-xs" style={{ color: 'rgba(238,240,228,0.45)' }}>How ecdysis works, humidity needs, and preventing retained shed across reptile groups</div>
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="relative z-10 px-container-sm sm:px-container py-12" style={{ background: '#0D1A0D', borderTop: '1px solid rgba(122,181,42,0.1)' }}>
         <EmailCapture variant="inline" siteId="lizard-com" ctaText="Subscribe Free" source="setup-hub" />
       </div>

@@ -21,7 +21,7 @@ export default function SpeciesReptileBuyingChecklistPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }, { label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }, { label: "Beginner vs Advanced Species", href: "/species/beginner-vs-advanced-reptiles" }, { label: "Enclosure Setup", href: "/setup" }, { label: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-species-reptile-buying-checklist"} ctaText="Download Free" />
       </>}
     >

@@ -210,7 +210,7 @@ export default async function StateReptileLawPage({ params }: PageProps) {
             links={[
               { label: 'All states (hub)', href: '/states' },
               { label: 'Editorial standards', href: '/editorial-standards' },
-              { label: 'Husbandry deep-dives', href: '/husbandry' },
+              { label: 'Enclosure setup guides', href: '/setup' },
               { label: 'Vivarium build guides', href: '/builds' },
             ]}
           />
