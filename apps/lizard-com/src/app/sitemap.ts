@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
     { url: 'https://lizard.com/builds', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://lizard.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
-    { url: 'https://lizard.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://lizard.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://lizard.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://lizard.com/first-year-care-schedule', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://lizard.com/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

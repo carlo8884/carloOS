@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferrets.com/adopt/west', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferrets.com/care', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferrets.com/directory/rescues', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://ferrets.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://ferrets.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://ferrets.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://ferrets.com/find-a-vet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferrets.com/find-a-vet/alabama', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

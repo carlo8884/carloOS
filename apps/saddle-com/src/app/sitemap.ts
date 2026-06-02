@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://saddle.com/brands/reinsman', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/brands/stubben', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://saddle.com/brands/wintec', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://saddle.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://saddle.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://saddle.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://saddle.com/english', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://saddle.com/fit', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

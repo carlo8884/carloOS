@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfoods.com/brands/whole-earth-farms', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfoods.com/brands/wysong', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfoods.com/brands/ziwipeak', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://petfoods.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://petfoods.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://petfoods.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://petfoods.com/glossary', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://petfoods.com/ingredients', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
