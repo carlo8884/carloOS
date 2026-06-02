@@ -34,6 +34,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+// Live decision wizard embedded on the homepage so the flagship's first
+// screens are a product you use, not links to tools (premium gate 3).
+import { WhichPetWizard } from './which-pet/wizard-client'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
@@ -279,6 +282,24 @@ export default function HomePage() {
           </span>
         </div>
       </Link>
+
+      {/* ── LIVE TOOL — "which dog is right for you?" wizard (premium gate 3) ── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-b border-brand-border">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Try it · Breed match wizard
+          </span>
+        </div>
+        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
+          Which dog actually fits your life?
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+          Answer a few questions about your home, time, and experience — get matched to breeds
+          that fit, with the trade-offs spelled out. No email required.
+        </p>
+        <WhichPetWizard />
+      </section>
 
       {/* ── BREED-SPECIFIC RISK CENTER ─────────────────────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
