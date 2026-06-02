@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Seizures — Types, Causes, When to ER | Dog.com', description: 'Dog seizures: focal vs generalized, cluster vs status, idiopathic vs symptomatic causes, anticonvulsants, seizure journaling, and ER red flags.', path: '/health/dog-seizures', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, diagnostic workup, anticonvulsant management, and emergency criteria for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'Types, causes, emergency criteria, diagnostic workup, and anticonvulsant treatment for canine seizures.', url: 'https://dog.com/health/dog-seizures', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
-const combined = combineSchemas(schema, med)
-
 const FAQS = [
   { question: 'My dog just had a first seizure — what do I do right now?', answer: 'During the event: do not put your hands near the dog\'s mouth, do not try to restrain the dog, time the seizure from start to finish, move hazards away, and if possible video the event for your veterinarian. After the seizure: keep the dog in a quiet, dim, soft space. The post-ictal period (confusion, temporary blindness, pacing) can last minutes to hours. Contact your vet the same day for a first seizure. If the dog is under one year old, over five years old, has had a seizure longer than five minutes, or has had more than one seizure in 24 hours, go to an emergency veterinarian immediately.' },
   { question: 'How urgent is a five-minute seizure?', answer: 'Five minutes is the published threshold for operational status epilepticus in both human and veterinary neurology (ACVIM consensus on canine epilepsy, JVIM 2016). At or beyond five minutes the seizure is unlikely to self-terminate, brain injury risk rises, and emergency anticonvulsant therapy (typically IV diazepam, midazolam, or levetiracetam) is indicated. This is an immediate ER visit.' },
@@ -15,6 +13,8 @@ const FAQS = [
   { question: 'Is CBD a useful treatment for canine epilepsy?', answer: 'A small published pilot study (McGrath et al., JAVMA 2019) suggested a possible reduction in seizure frequency in dogs receiving CBD as an adjunct to standard anticonvulsants. The evidence base is preliminary, products are inconsistently labeled, and CBD has documented hepatic enzyme elevations and drug-interaction considerations. CBD is not a replacement for first-line anticonvulsants and should only be used under veterinary direction.' },
   { question: 'When should we see a veterinary neurologist?', answer: 'Reasonable triggers include: first seizure in a dog under one year or over five years (atypical age suggests structural disease), focal seizures, abnormal neurologic exam findings between seizures, cluster seizures or status epilepticus, refractory seizures on first-line medication, or a desire for advanced imaging (MRI) and cerebrospinal fluid analysis. Diplomates of the American College of Veterinary Internal Medicine specialty of Neurology (ACVIM-Neurology) are searchable through the ACVIM directory at acvim.org.' },
 ]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function DogSeizuresPage() {
   return (
