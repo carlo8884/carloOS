@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +107,7 @@ export default function EMSPage() {
               { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

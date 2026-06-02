@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -88,6 +88,7 @@ export default function TraileringPage() {
               { label: "First-Aid Kit", href: "/ownership/first-aid-kit" },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -102,6 +102,7 @@ export default function QuarterHorseBreedPage() {
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
             ]}
           />
+          <CrossPortfolioCard currentSite="horses-com" contentType="breed" variant="sidebar" />
           <EmailCapture
             variant="sidebar"
             siteId="horses-com"
