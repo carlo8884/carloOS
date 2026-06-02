@@ -14,6 +14,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live insurance-reimbursement estimator embedded on the homepage so the
+// first screens are a tool you use, not a link to one (premium gate 3).
+import { InsuranceReimbursementEstimator } from '../components/visual/InsuranceReimbursementEstimator'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 const homeSchema = combineSchemas(
@@ -418,6 +421,24 @@ export default function VetsHomePage() {
           ))}
         </div>
       </div>
+
+      {/* ── LIVE TOOL — insurance reimbursement estimator (premium gate 3) ── */}
+      <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-white)' }}>
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Try it · Insurance reimbursement estimator
+          </span>
+        </div>
+        <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+          What would pet insurance actually pay back?
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+          Enter a bill, deductible, and reimbursement rate to see your real out-of-pocket cost —
+          the NAIC/NAPHIA math, before you compare plans.
+        </p>
+        <InsuranceReimbursementEstimator />
+      </section>
 
       {/* ── CATEGORY GRID (6 cards) ─────────────────────────────────── */}
       <section
