@@ -101,3 +101,27 @@ CSRO owns this bar; Visual owns execution; COO gates content; advisor is final.
 The buildable spec lives in `ops/csro/premium-first-screen-standard.md`. Homepage product-surface
 (gate 3) is already shipped across the cohort (#389–#392); remaining premium work is hero/identity
 (gates 1/5/6) — Visual-executed with D3 photography.
+
+## Decisions locked — 2026-06-02 (continued, D8–D11)
+
+- **D8 Horses `/racing` = BUILD editorial MVP now (option a).** Shipped: **PR #433** — `/racing` hub
+  + 6 education spokes (thoroughbred-flat-racing, harness-racing, quarter-horse-racing,
+  understanding-race-types-and-classes, off-track-thoroughbred-aftercare, racehorse-training-and-conditioning),
+  nav + footer + homepage card + sitemap. Guardrails held: NO betting/odds/picks/handicapping, NO
+  fabricated stats, "Horses.com Editorial" byline, welfare-forward, cited authorities (Jockey Club,
+  USTA, AQHA, TAA, AAEP, HISA). Option (b) data/intelligence product is **parked** pending a CSRO
+  data-source/ROI/legal-friction brief + Carlo spend approval.
+- **D9 Cross-portfolio links = RELEVANCE-PURE (confirmed).** No all-to-all inflation — equestrian↔
+  equestrian (horses↔saddle) + pet-food family (petfood→petfoods) only (#431). Full cross-portfolio
+  card graph now complete (#429/#430/#431).
+- **D10 Ferret comfort-supply on clinical pages = BLESS + microcopy (a+c).** *Verified already
+  satisfied* — adrenal-disease + aging-ferret-care already carry explicit "comfort/supportive, NOT
+  treatment + see an exotic-pet vet" disclaimers; no medications/dosing/Rx-adjacent monetization on
+  disease pages. IR item closed. (Monetization owns further buy-box execution.)
+- **D11 Launch-ready trigger = Visual heroes shipped AND Monetization disclosure/buy-box sweep done
+  AND IR/advisor sign-off.** COO-structural is now LOWER priority — no marginal COO churn. Critical
+  path is **Visual + Monetization + IR**; CSRO re-gates on their output.
+
+> **Terminal state (COO/CSRO lane):** structural launch-quality is exhausted portfolio-wide (schema,
+> zero orphans, dedup, internal + cross-portfolio linking) and D1–D11 are all executed. The first
+> launch cohort now moves on Visual + Monetization + IR — not COO.
