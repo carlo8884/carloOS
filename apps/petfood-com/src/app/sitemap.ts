@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/diets/senior-pet-diets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/diets/urinary-tract-diets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/diets/weight-management-diets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://petfood.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://petfood.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://petfood.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://petfood.com/feeding', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://petfood.com/feeding/body-condition-scoring', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

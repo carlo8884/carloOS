@@ -135,7 +135,13 @@ const SITES = [
   },
   // Added 2026-05-31: extend coverage to the remaining 5 production sites
   // so sitemap regeneration is comprehensive post-mega-wave.
-  { id: 'horses-com', domain: 'horses.com' },
+  {
+    id: 'horses-com',
+    domain: 'horses.com',
+    // /data is a low-priority data/partnerships page, downranked below editorial
+    // hubs (mirrors fish-com; was defaulting to 0.9 as a depth-1 route).
+    priorityOverrides: { '/data': 0.3 },
+  },
   { id: 'petfood-com', domain: 'petfood.com' },
   {
     id: 'petfoods-com',
@@ -218,6 +224,7 @@ function priorityFor(route) {
   const depth = (route.match(/\//g) || []).length
   if (route.startsWith('/legal/')) return 0.2
   if (route === '/editorial-standards') return 0.3
+  if (route === '/disclosure') return 0.3 // FTC utility page, not a content hub
   if (route === '/tools') return 0.95 // calculator hub
   if (route.startsWith('/tools/')) return 0.85 // individual calculator
   if (depth === 1) return 0.9 // category index

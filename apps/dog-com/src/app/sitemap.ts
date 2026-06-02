@@ -74,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/compare/yorkshire-terrier-vs-maltese', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/conditions', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
-    { url: 'https://dog.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://dog.com/dna-testing', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://dog.com/faq', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
