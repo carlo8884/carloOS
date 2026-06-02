@@ -14,6 +14,7 @@ const SPECIES = [
   { name: 'Bearded Dragon', sci: 'Pogona vitticeps', level: 'Beginner', zone: 'Zone 4', slug: 'bearded-dragon', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
   { name: 'Leopard Gecko', sci: 'Eublepharis macularius', level: 'Beginner', zone: 'Zone 1–2', slug: 'leopard-gecko', img: 'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=400&q=80&auto=format&fit=crop' },
   { name: 'Crested Gecko', sci: 'Correlophus ciliatus', level: 'Beginner', zone: 'Zone 2', slug: 'crested-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Gargoyle Gecko', sci: 'Rhacodactylus auriculatus', level: 'Beginner', zone: 'Zone 1', slug: 'gargoyle-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
   { name: 'Ball Python', sci: 'Python regius', level: 'Beginner', zone: 'Zone 2–3', slug: 'ball-python', img: 'https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400&q=80&auto=format&fit=crop' },
   { name: 'Corn Snake', sci: 'Pantherophis guttatus', level: 'Beginner', zone: 'Zone 2', slug: 'corn-snake', img: 'https://images.unsplash.com/photo-1567612529009-afe25813a308?w=400&q=80&auto=format&fit=crop' },
   { name: 'Blue-Tongue Skink', sci: 'Tiliqua spp.', level: 'Intermediate', zone: 'Zone 3–4', slug: 'blue-tongue-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
@@ -25,7 +26,9 @@ const SPECIES = [
   { name: 'Fire Skink', sci: 'Lepidothyris fernandi', level: 'Intermediate', zone: 'Zone 2', slug: 'fire-skink', img: 'https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?w=400&q=80&auto=format&fit=crop' },
   { name: 'Leachianus Gecko', sci: 'Rhacodactylus leachianus', level: 'Intermediate', zone: 'Zone 1–2', slug: 'leachianus-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
   { name: 'Mourning Gecko', sci: 'Lepidodactylus lugubris', level: 'Beginner', zone: 'Zone 1–2', slug: 'mourning-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Mossy Leaf-Tail Gecko', sci: 'Uroplatus sikorae', level: 'Advanced', zone: 'Zone 1', slug: 'mossy-leaf-tail-gecko', img: 'https://images.unsplash.com/photo-1548155810-af5c30a49059?w=400&q=80&auto=format&fit=crop' },
   { name: 'Argentine Tegu', sci: 'Salvator merianae', level: 'Advanced', zone: 'Zone 3–4', slug: 'argentine-black-and-white-tegu', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Savannah Monitor', sci: 'Varanus exanthematicus', level: 'Advanced', zone: 'Zone 3–4', slug: 'savannah-monitor', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
   { name: 'Nile Monitor', sci: 'Varanus niloticus', level: 'Advanced', zone: 'Zone 3–4', slug: 'nile-monitor', img: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80&auto=format&fit=crop' },
 ]
 

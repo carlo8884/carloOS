@@ -41,6 +41,7 @@ const GUIDES = [
     items: [
       { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
       { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
+      { title: 'Dog Treats Guide', desc: 'Caloric budget (the 10% rule), dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
       { title: 'Supplements That Work', desc: 'Fish oil, joint supplements, probiotics — evidence graded', href: '/nutrition/dog-supplements' },
     ],
   },
