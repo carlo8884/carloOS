@@ -63,7 +63,7 @@ export default function AquariumSetupPage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained' },
-          { label: 'Water Chemistry Guide', href: '/water' },
+          { label: 'Water Chemistry Guide', href: '/water-parameters' },
           { label: 'Betta Fish Care', href: '/species/betta-fish' },
         ]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-guide" />

@@ -15,7 +15,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const GUIDES = [
   { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', badge: '⚡ Essential First Read', desc: 'Why most new tanks fail and how to prevent it' },
-  { title: 'Aquarium Water Chemistry', href: '/water', desc: 'pH, ammonia, nitrite, nitrate, KH, GH — all parameters explained' },
+  { title: 'Aquarium Water Chemistry', href: '/water-parameters', desc: 'pH, ammonia, nitrite, nitrate, KH, GH — all parameters explained' },
   { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', desc: 'Identify and treat ich, velvet, fin rot, dropsy' },
   { title: 'Ich Treatment Guide', href: '/health/ich-treatment', desc: 'The most common aquarium disease — complete treatment' },
   { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', desc: 'What it is and exactly how to fix it' },

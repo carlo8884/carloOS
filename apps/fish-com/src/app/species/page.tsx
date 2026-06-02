@@ -137,7 +137,7 @@ export default async function SpeciesIndexPage() {
         <div className="mt-12 grid sm:grid-cols-3 gap-4">
           {[
             { title: 'Aquarium Setup Guide', href: '/setup', desc: 'First tank, step by step' },
-            { title: 'Water Chemistry', href: '/water', desc: 'pH, ammonia, nitrate explained' },
+            { title: 'Water Chemistry', href: '/water-parameters', desc: 'pH, ammonia, nitrate explained' },
             { title: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained', desc: 'Why cycling is essential' },
           ].map(link => (
             <Link key={link.href} href={link.href}
@@ -177,7 +177,6 @@ export default async function SpeciesIndexPage() {
         <Link key="clownfish" href="/species/clownfish" className="text-sm text-brand-primary no-underline hover:underline">Clownfish</Link>
         <Link key="corydoras" href="/species/corydoras" className="text-sm text-brand-primary no-underline hover:underline">Corydoras</Link>
         <Link key="discus" href="/species/discus" className="text-sm text-brand-primary no-underline hover:underline">Discus</Link>
-        <Link key="discus-guide" href="/species/discus-guide" className="text-sm text-brand-primary no-underline hover:underline">Discus Guide</Link>
         <Link key="dwarf-gourami" href="/species/dwarf-gourami" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Gourami</Link>
         <Link key="dwarf-puffer" href="/species/dwarf-puffer" className="text-sm text-brand-primary no-underline hover:underline">Dwarf Puffer</Link>
         <Link key="ember-tetra" href="/species/ember-tetra" className="text-sm text-brand-primary no-underline hover:underline">Ember Tetra</Link>
@@ -188,13 +187,11 @@ export default async function SpeciesIndexPage() {
         <Link key="hillstream-loach" href="/species/hillstream-loach" className="text-sm text-brand-primary no-underline hover:underline">Hillstream Loach</Link>
         <Link key="koi" href="/species/koi" className="text-sm text-brand-primary no-underline hover:underline">Koi</Link>
         <Link key="kuhli-loach" href="/species/kuhli-loach" className="text-sm text-brand-primary no-underline hover:underline">Kuhli Loach</Link>
-        <Link key="kuhli-loach-guide" href="/species/kuhli-loach-guide" className="text-sm text-brand-primary no-underline hover:underline">Kuhli Loach Guide</Link>
         <Link key="molly-fish" href="/species/molly-fish" className="text-sm text-brand-primary no-underline hover:underline">Molly Fish</Link>
         <Link key="mystery-snail" href="/species/mystery-snail" className="text-sm text-brand-primary no-underline hover:underline">Mystery Snail</Link>
         <Link key="neon-tetra" href="/species/neon-tetra" className="text-sm text-brand-primary no-underline hover:underline">Neon Tetra</Link>
         <Link key="oscar" href="/species/oscar" className="text-sm text-brand-primary no-underline hover:underline">Oscar</Link>
         <Link key="otocinclus" href="/species/otocinclus" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus</Link>
-        <Link key="otocinclus-guide" href="/species/otocinclus-guide" className="text-sm text-brand-primary no-underline hover:underline">Otocinclus Guide</Link>
         <Link key="panda-corydoras" href="/species/panda-corydoras" className="text-sm text-brand-primary no-underline hover:underline">Panda Corydoras</Link>
         <Link key="pearl-gourami" href="/species/pearl-gourami" className="text-sm text-brand-primary no-underline hover:underline">Pearl Gourami</Link>
         <Link key="platy-fish" href="/species/platy-fish" className="text-sm text-brand-primary no-underline hover:underline">Platy Fish</Link>

@@ -22,7 +22,7 @@ export default function ClownfishPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water-parameters' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }]} />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-clownfish" />
       </>}
     >

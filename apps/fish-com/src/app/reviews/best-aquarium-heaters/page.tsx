@@ -192,7 +192,7 @@ export default function BestHeatersPage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
               { label: 'Tank Setup Guide', href: '/setup' },
-              { label: 'Water Chemistry Guide', href: '/water' },
+              { label: 'Water Chemistry Guide', href: '/water-parameters' },
             ]} />
             <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Equipment picks every Thursday." source="review-heaters" />
           </aside>
