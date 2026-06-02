@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Guppy Care Guide — Strains, Breeding & "Guppy Disease" | Fish.com', description: 'Guppies breed constantly and are remarkably hardy — but cheap store guppies often carry disease. Fancy guppy strains, selective breeding basics.', path: '/species/guppy', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Guppy Care Guide', description: 'Strains, breeding, disease prevention, and care for fancy guppies.', url: 'https://fish.com/species/guppy', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function GuppyPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Platy Fish', href: '/species/guppy' }, { label: 'Endler\'s Livebearer', href: '/species/guppy' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-guppy" />
       </>}
     >

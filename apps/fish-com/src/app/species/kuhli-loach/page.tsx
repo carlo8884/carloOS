@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Sand Substrate, Groups | Fish.com', description: 'Kuhli loaches are eel-shaped bottom fish that require sand, groups of 6+, and dense hiding spots. Nocturnal scavengers that vanish during the day — care guide.', path: '/species/kuhli-loach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Sand substrate, group size, and hiding requirements for kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function KuhliLoachPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Corydoras Care', href: '/species/corydoras' }, { label: 'Otocinclus Care', href: '/species/otocinclus' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-kuhli-loach" />
       </>}
     >

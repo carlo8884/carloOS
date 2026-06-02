@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Algae, Starvation Risk | Fish.com', description: 'Otocinclus are the best algae eaters for small planted tanks but starve easily without established algae growth. Groups of 6+, established tanks only.', path: '/species/otocinclus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Care Guide', description: 'Algae requirements, starvation prevention, and group care for otocinclus catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function OtocinclsPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Pleco Care', href: '/species/pleco' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Corydoras', href: '/species/corydoras' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-otocinclus" />
       </>}
     >

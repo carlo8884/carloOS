@@ -3,7 +3,7 @@ import {
   buildMetadata,
   ArticleLayout,
   EmailCapture,
-  RelatedLinks,
+  RelatedLinks, CrossPortfolioCard,
   FAQAccordion,
   SchemaScript,
   buildArticleSchema,
@@ -173,6 +173,7 @@ export default function MollyPage() {
                 { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
               ]}
             />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="fish-com"

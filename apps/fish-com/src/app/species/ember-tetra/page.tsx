@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ember Tetra Care Guide — Nano Glowing Orange Fish | Fish.com', description: 'Ember tetras are glowing orange 0.8-inch nano fish. Large schools in planted tanks create a stunning display. Hardy, peaceful, and compatible with shrimp.', path: '/species/ember-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ember Tetra Care Guide', description: 'School size, planted tank setup, and shrimp compatibility for Hyphessobrycon amandae ember tetras.', url: 'https://fish.com/species/ember-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function EmberTetraPage() {
           ))}
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Celestial Pearl Danio', href: '/species/celestial-pearl-danio' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-ember-tetra" />
       </>}
     >

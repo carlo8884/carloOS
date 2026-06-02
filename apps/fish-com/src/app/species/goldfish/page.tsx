@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Goldfish Care Guide — Tank Size, Lifespan | Fish.com', description: 'Goldfish are not bowl fish. Common goldfish need 75+ gallons and can live 20+ years. Fancy goldfish have different needs than single-tail varieties.', path: '/species/goldfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -22,6 +22,7 @@ export default function GoldfishPage() {
           </div>
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Koi Care Guide', href: '/species/koi' }, { label: 'Pond Setup Guide', href: '/setup/pond-guide' }, { label: 'Swim Bladder Disease', href: '/health/swim-bladder-disease' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="species-goldfish" />
       </>}
     >

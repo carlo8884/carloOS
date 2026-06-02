@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide — The Peaceful Centerpiece | Fish.com', description: "Pearl gouramis are among the most peaceful and beautiful gouramis — a labyrinth fish with pearlescent spotting. Needs surface access, calm tankmates.", path: '/species/pearl-gourami', type: 'article' })
@@ -20,6 +20,7 @@ export default function PearlGouramiPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dwarf Gourami', href: '/species/dwarf-gourami' }, { label: 'Sparkling Gourami', href: '/species/sparkling-gourami' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-pearl-gourami" />
       </>}
     >

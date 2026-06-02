@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Koi Fish Care Guide — Pond Size, Filtration | Fish.com', description: 'Koi need 250+ gallons per fish, heavy pond filtration, and regular water changes. Kohaku, Taisho Sanke, Showa, and other varieties.', path: '/species/koi', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function KoiPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Pond Setup Guide', href: '/setup/pond-guide' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]} />
+            <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Pond and fishkeeping tips." source="species-koi" />
       </>}
     >
