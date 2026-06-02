@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025 — Turnout, Stable | Saddle.com', description: 'Horse blankets ranked by denier rating, fill weight, and waterproofing.', path: '/reviews/best-horse-blankets', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025', description: 'Turnout and stable blankets ranked for denier, waterproofing, and value.', url: 'https://saddle.com/reviews/best-horse-blankets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const ramboSchema = buildProductSchema({ name: 'Rambo Wug Turnout', description: '1200D ripstop polyester turnout blanket with ergonomic Wug neck design — Saddle.com Best Overall Turnout pick.', url: 'https://saddle.com/reviews/best-horse-blankets#rambo', imageUrl: '', ratingValue: 9.4, reviewCount: 1, priceRange: '$140–200' })
-const schema = combineSchemas(articleSchema, ramboSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Horse Blankets', url: 'https://saddle.com/reviews/best-horse-blankets' },
+  ],
+})
+const schema = combineSchemas(articleSchema, ramboSchema, breadcrumbSchema)
 const PICKS = [
   { label: 'Best Overall Turnout', emoji: '🏆', name: 'Rambo Wug Turnout', subtitle: '1200D · Waterproof · Ergonomic neck cut', href: '#rambo' },
   { label: 'Best Value', emoji: '💰', name: 'Horseware Amigo Hero', subtitle: '600D · Reliable waterproofing · Budget friendly', href: '#amigo' },

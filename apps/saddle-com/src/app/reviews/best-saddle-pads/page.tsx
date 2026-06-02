@@ -17,6 +17,7 @@ import {
   buildArticleSchema,
   buildProductSchema,
   buildFAQSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -135,6 +136,14 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Saddle Pads', url: 'https://saddle.com/reviews/best-saddle-pads' },
+  ],
+})
+
 const allSchemas = combineSchemas(
   articleSchema,
   mattesSchema,
@@ -143,6 +152,7 @@ const allSchemas = combineSchemas(
   thinlineSchema,
   reinsmanSchema,
   faqSchema,
+  breadcrumbSchema,
 )
 
 const PICKS = [

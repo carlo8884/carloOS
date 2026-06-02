@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best English Saddles 2025 — Dressage, Jumping | Saddle.com', description: 'We ranked the best English saddles by discipline — dressage, show jumping, all-purpose, and eventing. Stubben, Pessoa, Bates.', path: '/reviews/best-english-saddles', type: 'article' })
@@ -16,7 +16,14 @@ const PICKS = [
 
 const productSchema0 = buildProductSchema({ name: 'Stubben Roxane', description: 'German-made dressage saddle with Quick-Change tree width adjustment.', url: 'https://stubben.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const productSchema1 = buildProductSchema({ name: 'Pessoa Gen X Pro', description: 'Close-contact show jumping saddle with top-level showjumping pedigree.', url: 'https://pessoaequestrian.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best English Saddles', url: 'https://saddle.com/reviews/best-english-saddles' },
+  ],
+})
+const allSchemas = combineSchemas(schema, productSchema0, productSchema1, breadcrumbSchema)
 
 export default function BestEnglishSaddlesPage() {
   return (
