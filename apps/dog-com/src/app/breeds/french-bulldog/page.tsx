@@ -68,6 +68,10 @@ export default function FrenchBulldogBreedPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="French Bulldog Health Deep-Dive" links={[{ label: 'French Bulldog Health Issues & Screenings', href: '/breeds/french-bulldog/health' }]} />
             <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Breed Comparisons" links={[
+              { label: 'French Bulldog vs Bulldog', href: '/compare/french-bulldog-vs-bulldog' },
+              { label: 'French Bulldog vs Boston Terrier', href: '/compare/french-bulldog-vs-boston-terrier' },
+            ]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-french-bulldog" />
           </aside>
         </div>

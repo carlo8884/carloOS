@@ -20,6 +20,9 @@ export default function SaintBernardPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Great Dane Guide', href: '/breeds/great-dane' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Saint Bernard vs Newfoundland', href: '/compare/saint-bernard-vs-newfoundland' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-saint-bernard" />
       </>}
     >

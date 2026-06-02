@@ -22,6 +22,9 @@ export default function BerneseMountainDogPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-berner" />
       </>}
     >

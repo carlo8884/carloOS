@@ -21,6 +21,10 @@ export default function GoldendoodlePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever', href: '/breeds/golden-retriever' }, { label: 'Dog Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Grooming', href: '/training/basic-commands' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },
+          { label: 'Labradoodle vs Goldendoodle', href: '/compare/labradoodle-vs-golden-doodle' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
       </>}
     >

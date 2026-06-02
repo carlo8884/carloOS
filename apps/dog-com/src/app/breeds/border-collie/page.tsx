@@ -20,6 +20,9 @@ export default function BorderColliePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Australian Shepherd', href: '/breeds/australian-shepherd' }, { label: 'Socialization Window', href: '/training/dog-socialization-window' }, { label: 'Marker Training', href: '/training/marker-training' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Border Collie vs Australian Shepherd', href: '/compare/border-collie-vs-australian-shepherd' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-border-collie" />
       </>}
     >

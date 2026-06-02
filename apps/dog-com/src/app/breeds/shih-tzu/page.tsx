@@ -20,6 +20,9 @@ export default function ShihTzuPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Cherry Eye', href: '/health/cherry-eye' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Luxating Patella', href: '/health/dog-luxating-patella' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Shih Tzu vs Maltese', href: '/compare/shih-tzu-vs-maltese' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-shih-tzu" />
       </>}
     >

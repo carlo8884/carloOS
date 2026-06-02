@@ -20,6 +20,9 @@ export default function CockerSpanielPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Anemia in Dogs', href: '/health/anemia-in-dogs' }]} />
+        <RelatedLinks title="Breed Comparisons" links={[
+          { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },
+        ]} />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-cocker" />
       </>}
     >
