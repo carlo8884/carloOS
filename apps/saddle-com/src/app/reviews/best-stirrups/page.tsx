@@ -17,6 +17,7 @@ import {
   buildArticleSchema,
   buildProductSchema,
   buildFAQSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -132,7 +133,15 @@ const faqSchema = buildFAQSchema({
   questions: FAQ_ITEMS.map((f) => ({ question: f.question, answer: f.answerText || (typeof f.answer === 'string' ? f.answer : '') })),
 })
 
-const allSchemas = combineSchemas(articleSchema, freejumpSchema, techSchema, acavalloSchema, peacockSchema, fillisSchema, faqSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+    { name: 'Best Stirrups', url: 'https://saddle.com/reviews/best-stirrups' },
+  ],
+})
+
+const allSchemas = combineSchemas(articleSchema, freejumpSchema, techSchema, acavalloSchema, peacockSchema, fillisSchema, faqSchema, breadcrumbSchema)
 
 const PICKS = [
   { label: 'Best Safety Stirrup', emoji: '🏆', name: 'FreeJump Soft Up Pro', subtitle: 'Flexible arm release · French-made · FEI top-level', href: '#freejump' },
