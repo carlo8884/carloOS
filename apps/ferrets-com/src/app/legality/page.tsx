@@ -60,6 +60,18 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Ferret Legality Topics',
+  numberOfItems: TOPICS.length,
+  itemListElement: TOPICS.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (LEGALITY_GUIDES[slug].heading ?? LEGALITY_GUIDES[slug].title),
+    url: `https://ferrets.com/legality/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
   buildBreadcrumbSchema({
     items: [
@@ -73,6 +85,7 @@ const schema = combineSchemas(
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function LegalityHubPage() {

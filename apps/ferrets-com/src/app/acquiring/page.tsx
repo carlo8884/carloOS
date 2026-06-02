@@ -61,6 +61,20 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const ACQUIRING_ORDER_FILTERED = ORDER.filter((slug) => ACQUIRING_SLUGS.includes(slug))
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Acquiring a Ferret — Step-by-Step Guides',
+  numberOfItems: ACQUIRING_ORDER_FILTERED.length,
+  itemListElement: ACQUIRING_ORDER_FILTERED.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (ACQUIRING_GUIDES[slug].heading ?? ACQUIRING_GUIDES[slug].title),
+    url: `https://ferrets.com/acquiring/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
   buildBreadcrumbSchema({
     items: [
@@ -74,6 +88,7 @@ const schema = combineSchemas(
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function AcquiringHubPage() {

@@ -81,6 +81,18 @@ const BRANDS: BrandEntry[] = BRAND_DATA.map((b) => ({
 
 const SORTED = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name))
 
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Pet Food Brand Index (A-Z)',
+  numberOfItems: SORTED.length,
+  itemListElement: SORTED.map((brand, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: brand.name,
+    url: `https://petfoods.com/brands/${brand.slug}`,
+  })),
+}
+
 const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'How is the WSAVA scorecard calculated?',
@@ -136,7 +148,7 @@ export default function BrandsHubPage() {
         { name: 'Home', href: '/' },
         { name: 'Brands', href: '/brands' },
       ]}
-      schema={schema}
+      schema={[schema, itemListSchema]}
       sidebar={
         <>
           <TableOfContents

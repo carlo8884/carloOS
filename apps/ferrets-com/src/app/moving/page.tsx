@@ -56,6 +56,18 @@ const FAQS: FAQItem[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: 'Moving with a Ferret — Guides',
+  numberOfItems: TOPICS.length,
+  itemListElement: TOPICS.map((slug, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: (MOVING_GUIDES[slug].heading ?? MOVING_GUIDES[slug].title),
+    url: `https://ferrets.com/moving/${slug}`,
+  })),
+}
+
 const schema = combineSchemas(
   buildBreadcrumbSchema({
     items: [
@@ -69,6 +81,7 @@ const schema = combineSchemas(
       answer: typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   }),
+  itemListSchema,
 )
 
 export default function MovingHubPage() {
