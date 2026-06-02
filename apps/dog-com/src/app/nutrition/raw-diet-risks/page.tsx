@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Pathogens, AAFCO | Dog.com', description: 'Raw dog diets: Salmonella, Listeria, Campylobacter contamination, AAFCO completeness gaps, household risk, bone hazards, and harm-reduction guidance.', path: '/nutrition/raw-diet-risks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs', description: 'Pathogen contamination, nutritional completeness, household zoonotic risk, and bone hazards in raw dog diets — with WSAVA, AVMA, AAHA, and FDA positions cited.', url: 'https://dog.com/nutrition/raw-diet-risks', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence on pathogen contamination, AAFCO completeness, and household risk in raw dog feeding.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
-const combined = combineSchemas(schema, med)
-
 const FAQS = [
   { question: 'Do veterinary professional organizations actually recommend against raw diets?', answer: 'Yes. The WSAVA Global Nutrition Committee, the AVMA (American Veterinary Medical Association), the AAHA (American Animal Hospital Association), the CDC, and the FDA Center for Veterinary Medicine have all published statements advising against feeding raw or undercooked animal-source protein to pets, primarily citing zoonotic pathogen risk and, secondarily, nutritional adequacy concerns. Specific policy text is linked from each organization\'s website (avma.org, aaha.org, wsava.org).' },
   { question: 'How prevalent is Salmonella contamination in commercial raw dog food?', answer: 'Survey studies vary by sample and method. An FDA Center for Veterinary Medicine survey of commercial raw pet foods (2010–2012) reported Salmonella in roughly 1 in 5 raw samples tested (the agency reported a figure near 24 percent in that survey), with Listeria monocytogenes also frequently detected. Multiple subsequent academic surveys in the Veterinary Record, Journal of Food Protection, and PLOS ONE have reported broadly consistent contamination rates. Cooked commercial diets have shown far lower detection rates in comparable surveys.' },
@@ -15,6 +13,8 @@ const FAQS = [
   { question: 'Are cooked bones safer than raw bones?', answer: 'No — the FDA has issued a specific consumer update advising against giving dogs cooked bones of any kind. Cooking causes bones to dry and splinter, increasing the risk of mouth and esophageal lacerations, gastrointestinal perforation, and obstruction. Raw recreational bones (weight-bearing femurs and similar) carry their own well-documented risks of slab fractures of the carnassial teeth. Neither is considered safe by the AVMA or by board-certified veterinary dentists.' },
   { question: 'What is the safest middle ground if I want a less-processed diet?', answer: 'Options that are commonly raised by veterinary nutritionists: a cooked, complete-and-balanced home-prepared diet formulated by a board-certified veterinary nutritionist (DACVN) using a service such as BalanceIT.com or PetDIETS.com; a gently-cooked commercial fresh food from a manufacturer that publishes its nutritionist credentials, AAFCO substantiation method, and feeding-trial status; or a freeze-dried diet that has been HPP-treated. None of these eliminates risk completely but each addresses specific gaps. Discuss the choice with your primary care vet.' },
 ]
+
+const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
 
 export default function RawDietRisksPage() {
   return (
