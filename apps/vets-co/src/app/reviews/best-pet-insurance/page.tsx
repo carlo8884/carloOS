@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -22,6 +22,15 @@ const schema = buildArticleSchema({
   modifiedAt: new Date().toISOString(),
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://vets.co/' },
+    { name: 'Reviews', url: 'https://vets.co/reviews' },
+    { name: 'Best Pet Insurance', url: 'https://vets.co/reviews/best-pet-insurance' },
+  ],
+})
+const pageSchema = combineSchemas(schema, breadcrumbSchema)
+
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
   { label: 'Fastest Reimbursement', emoji: '⚡', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
@@ -31,7 +40,7 @@ const PICKS = [
 export default function VetsPetInsurancePage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={pageSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
           Owner Reference · May 2025

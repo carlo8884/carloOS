@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Product Reviews — Honest Comparisons | Vets.co', description: 'Pet product reviews from a veterinarian\'s perspective. Pet insurance, telehealth services ranked using public payout data and insurer disclosures.', path: '/reviews' })
 
@@ -17,10 +17,24 @@ const REVIEWS = [
   { title: 'Best Pet Telehealth 2025', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: '📱 Convenient Care' },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Vets.co Pet Product Reviews',
+  numberOfItems: REVIEWS.length,
+  itemListElement: REVIEWS.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.title,
+    url: `https://vets.co${r.href}`,
+  })),
+}
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function VetsReviewsPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 4vw, 44px)' }}>Pet Product Reviews — Honest Comparisons</h1>
