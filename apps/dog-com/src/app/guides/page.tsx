@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -32,10 +32,25 @@ const GUIDES = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog Care Guides',
+  numberOfItems: GUIDES.length,
+  itemListElement: GUIDES.map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.title,
+    url: `https://dog.com${g.href}`,
+  })),
+}
+
+const dogGuidesSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function GuidesHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={dogGuidesSchema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-5">

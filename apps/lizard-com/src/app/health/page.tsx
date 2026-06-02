@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 import { Conditions, RESERVED_HEALTH_SLUGS, type ConditionCategory } from '../../data/conditions'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,9 +104,24 @@ export default function LizardHealthPage() {
     ],
   })
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Reptile Health Library',
+    numberOfItems: EXISTING_HEALTH_PAGES.length,
+    itemListElement: EXISTING_HEALTH_PAGES.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.label,
+      url: `https://lizard.com/health/${p.slug}`,
+    })),
+  }
+
+  const lizardHealthSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={lizardHealthSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1
           className="font-display font-bold text-white tracking-tight mb-3"

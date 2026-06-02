@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -70,10 +70,26 @@ const SECTIONS = [
   { heading: 'Horse Care', entries: HORSE_CARE },
 ]
 
+const ALL_SADDLE_GUIDE_ITEMS = SECTIONS.flatMap((s) => s.entries)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Horse and Saddle Guides',
+  numberOfItems: ALL_SADDLE_GUIDE_ITEMS.length,
+  itemListElement: ALL_SADDLE_GUIDE_ITEMS.map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.title,
+    url: `https://saddle.com/guides/${g.slug}`,
+  })),
+}
+
+const saddleGuidesSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function GuidesHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={saddleGuidesSchema} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14 relative overflow-hidden">

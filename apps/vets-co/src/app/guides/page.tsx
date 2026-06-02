@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -18,10 +18,26 @@ const SECTIONS = [
   { category: 'Urgent vs. Routine', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
 ]
 
+const ALL_GUIDE_ITEMS = SECTIONS.flatMap((s) => s.items)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Vet Visit and Cost-of-Care Guides',
+  numberOfItems: ALL_GUIDE_ITEMS.length,
+  itemListElement: ALL_GUIDE_ITEMS.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `https://vets.co${item.href}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function VetsGuidesHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Owner Guides</span></div>

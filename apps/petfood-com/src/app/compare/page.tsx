@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -75,10 +75,25 @@ const COMPARE = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Food Type Comparisons',
+  numberOfItems: COMPARE.length,
+  itemListElement: COMPARE.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.title,
+    url: `https://petfood.com/compare/${c.slug}`,
+  })),
+}
+
+const compareSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function CompareHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={compareSchema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">

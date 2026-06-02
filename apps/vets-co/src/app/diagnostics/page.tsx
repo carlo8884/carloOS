@@ -71,7 +71,19 @@ export default function DiagnosticsHubPage() {
       { name: 'Diagnostics', url: 'https://vets.co/diagnostics' },
     ],
   })
-  const schema = combineSchemas(breadcrumbSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Veterinary Diagnostic Tests',
+    numberOfItems: Diagnostics.length,
+    itemListElement: Diagnostics.map((d, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: d.name,
+      url: `https://vets.co/diagnostics/${d.slug}`,
+    })),
+  }
+  const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
     <>

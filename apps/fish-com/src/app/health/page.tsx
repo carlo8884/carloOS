@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Health Guides — Disease, Chemistry & Disease | Fish.com', description: 'Aquarium health guides — the nitrogen cycle, water chemistry, fish disease identification and treatment.', path: '/health' })
@@ -22,10 +22,25 @@ const GUIDES = [
   { title: 'Tank Setup Guide', href: '/setup', desc: 'Step-by-step first aquarium setup' },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Aquarium Health Guides',
+  numberOfItems: GUIDES.length,
+  itemListElement: GUIDES.map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.title,
+    url: `https://fish.com${g.href}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function FishHealthPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-12">
         <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Aquarium Health Library</h1>

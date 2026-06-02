@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
-import { buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { DISCIPLINE_FITS } from '@/data/fit-by-discipline'
 
 export const metadata: Metadata = buildMetadata({
@@ -22,10 +22,25 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const ENGLISH = DISCIPLINE_FITS.filter((d) => d.group === 'English')
 const WESTERN = DISCIPLINE_FITS.filter((d) => d.group === 'Western')
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Saddle Fit by Discipline',
+  numberOfItems: DISCIPLINE_FITS.length,
+  itemListElement: DISCIPLINE_FITS.map((d, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `${d.disciplineName} Saddle Fit`,
+    url: `https://saddle.com/fit/${d.slug}`,
+  })),
+}
+
+const fitSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function FitHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={fitSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
