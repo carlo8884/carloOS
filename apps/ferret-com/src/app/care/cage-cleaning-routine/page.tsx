@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -126,6 +127,7 @@ export default function FerretCageCleaningRoutinePage() {
                 { label: 'Litter Training', href: '/care/litter-training' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

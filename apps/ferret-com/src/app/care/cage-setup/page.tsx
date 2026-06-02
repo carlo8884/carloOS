@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function FerretCageSetupPage() {
                 { label: 'Insulinoma', href: '/health/insulinoma' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

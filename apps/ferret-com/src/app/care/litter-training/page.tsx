@@ -12,6 +12,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -133,6 +134,7 @@ export default function FerretLitterTrainingPage() {
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

@@ -13,6 +13,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -143,6 +144,7 @@ export default function FerretAgingPage() {
                 { label: 'Dental Disease', href: '/health/dental-disease' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <div className="bg-brand-dark rounded-lg p-5 mb-4">
               <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">
                 Senior Ferret + Insurance

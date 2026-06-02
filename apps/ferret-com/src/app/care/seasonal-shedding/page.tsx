@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -125,6 +126,7 @@ export default function FerretSeasonalSheddingPage() {
                 { label: 'GI Blockage', href: '/health/gastrointestinal-blockage' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
