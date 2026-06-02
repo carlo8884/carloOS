@@ -10,7 +10,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { VivariumBuilds, difficultyLabel } from '../../data/vivarium-builds'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,9 +21,17 @@ export const metadata: Metadata = buildMetadata({
   path: '/builds',
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://lizard.com/' },
+    { name: 'Vivarium Builds', url: 'https://lizard.com/builds' },
+  ],
+})
+
 export default function VivariumBuildsHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div
         className="relative z-10 px-container-sm sm:px-container py-16"
         style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}

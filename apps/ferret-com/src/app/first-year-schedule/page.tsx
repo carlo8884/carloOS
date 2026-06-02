@@ -5,6 +5,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   buildHowToSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -100,7 +101,14 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://ferret.com/' },
+    { name: 'First-Year Schedule', url: 'https://ferret.com/first-year-schedule' },
+  ],
+})
+
+const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema, breadcrumbSchema)
 
 const QUARTERS = [
   {
