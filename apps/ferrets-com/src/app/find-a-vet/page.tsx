@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Find an Exotic-Pet Vet for Your Ferret | Ferrets.com',
   description:
-    'Most general-practice vets see fewer than ten ferrets a year. Seven questions to ask, the AEMV directory, and a state-by-state index of exotic-pet vets who actually treat ferrets.',
+    'Most general-practice vets see few ferrets a year. Seven questions to ask, the AEMV directory, and a state-by-state index of exotic-pet vets who treat ferrets.',
   path: '/find-a-vet',
   type: 'website',
 })

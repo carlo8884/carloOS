@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
   title: 'Pet Food Brands — Independent Reviews & WSAVA Scorecards',
   description:
-    'Independent reviews of major pet food brands — WSAVA Global Nutrition Committee scorecards, FDA recall history, and corporate-parent context. Companion catalog to PetFood.com.',
+    'Independent reviews of major pet food brands: WSAVA Global Nutrition Committee scorecards, FDA recall history, and corporate-parent context.',
   path: '/brands',
   type: 'article',
 })

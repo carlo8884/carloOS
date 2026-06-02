@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Ferret Legality Topics — Bans, Permits, Travel, Renting & More',
   description:
-    'Cross-cutting ferret-legality topics: where ferrets are illegal, why bans exist, city-vs-state law, rabies vaccination law, traveling and moving with a ferret, renting, and service/ESA status.',
+    'Cross-cutting ferret-legality topics: where ferrets are illegal, why bans exist, city-vs-state law, rabies law, travel, renting, and service/ESA status.',
   path: '/legality',
   type: 'website',
   category: 'Legality',

@@ -18,7 +18,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
   title: 'Find a Ferret Rescue Near You | Ferrets.com',
   description:
-    'A directory of ferret rescues organized by US state, plus the case for rescue adoption, red and green flags, and the American Ferret Association shelter accreditation criteria.',
+    'A directory of ferret rescues by US state, plus the case for rescue adoption, red and green flags, and AFA shelter accreditation criteria.',
   path: '/directory/rescues',
   type: 'website',
 })

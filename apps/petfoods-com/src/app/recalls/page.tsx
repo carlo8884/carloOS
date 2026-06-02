@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
   title: 'Pet Food Recall Database — FDA CVM Record',
   description:
-    'Year-by-year structured record of commercial pet food recalls reported to FDA CVM since 2018. Class I/II/III classification, what to do, and the underlying source.',
+    'Year-by-year structured record of commercial pet food recalls reported to FDA CVM since 2018, with Class I/II/III classification and what to do.',
   path: '/recalls',
   type: 'article',
 })
