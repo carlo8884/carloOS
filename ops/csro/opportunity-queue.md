@@ -43,8 +43,23 @@ CSRO/COO cannot source photography in-sandbox.
 - ▶ **PROMOTED Reserve → Active: Horses `/racing` flagship (D1, #178).** D1 unblocked it. **Scope note:** the
   homepage first-screen entry is **Visual-gated** (D5); the `/racing` vertical content/structure is a larger
   COO/strategic build (L/XL) — confirm data + approach before building. Top strategic item for Carlo.
+- ✅ **Cross-portfolio internal-link graph COMPLETE** (cross-site moat). ferret-com wired (#429, was the only
+  site at zero); fish-com:species + vets-co:medication wired (#430, configured-but-unrendered keys); and the
+  *dark* cards (horses care/gear/health/nutrition/training, petfood:brand, saddle:guide — placed but rendering
+  null on unconfigured keys) activated via curated recommendation data (#431). All placed cards now render.
+- ✅ **Codex review triaged** (2026-06-02): MED find-a-vet "near you" overstatement FIXED (#428, dog-com is a
+  by-discipline directory guide, not a geolocation finder). Codex LOW/MED #2 (ferret comfort-supply monetization
+  on adrenal/aging clinical pages) is correctly-framed/non-blocking → **IR sign-off item** folded into the
+  Monetization buy-box sweep (#424 brief). Codex LOW #3 was its own local workspace (n/a).
+- ✅ **Orphan-page audit: ZERO orphans portfolio-wide** (2026-06-02, slug-presence sweep incl. src/data across
+  all 10 sites). The lizard `best-thermostats` fix (#420) was the last one.
 - ⏸ Still blocked: Visual heroes/ogImage (N1–N3), Monetization disclosures/buy-box (N4–N6) — briefs in #424.
   `re-gate-on-output`: CSRO re-checks against the 7-gate / §8a bar the moment a Visual/Mon PR lands.
+
+> **Terminal state for unblocked COO/CSRO launch-polish (2026-06-02):** structural launch-quality is exhausted
+> across the portfolio — schema (ItemList/Breadcrumb/FAQ/DefinedTerm), zero orphans, dedup, reciprocal linking,
+> and the full cross-portfolio graph are all done + CI-green. The only forward paths are **Visual** (blocked: no
+> in-sandbox photography), **Monetization** (other lane), and **Horses `/racing`** (major-strategy fork → Carlo).
 
 ### Active now (ranked)
 | # | Site | Lane | Pri | Category | Done-when |
