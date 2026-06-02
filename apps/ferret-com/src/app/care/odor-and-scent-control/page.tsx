@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -126,6 +127,7 @@ export default function FerretOdorScentControlPage() {
                 { label: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

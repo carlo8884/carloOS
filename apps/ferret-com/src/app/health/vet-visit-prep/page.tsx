@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -139,6 +140,7 @@ export default function FerretVetVisitPrepPage() {
                 { label: 'First-Year Schedule', href: '/first-year-schedule' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"

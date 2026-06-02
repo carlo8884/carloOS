@@ -12,6 +12,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -132,6 +133,7 @@ export default function FerretExerciseEnrichmentPage() {
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
               ]}
             />
+            <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="ferret-com"
