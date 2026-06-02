@@ -1325,6 +1325,34 @@ const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
     { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', href: 'https://ferret.com/care' },
     { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', href: 'https://ferret.com/health' },
   ],
+
+  // ── horses-com (activate already-placed cards: care/gear/health/nutrition/training)
+  // Equestrian sibling Saddle.com is the relevant cross-portfolio target.
+  'horses-com:health': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Care & First-Aid Guides', blurb: 'Grooming, first aid, dentistry, and trailer-safety guides for owners.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:nutrition': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Nutrition & Body Condition', blurb: 'Body-condition scoring and feeding guidance from the equestrian library.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:care': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack, Grooming & Daily Care', blurb: 'Leather care, tack cleaning, and grooming routines for the well-kept horse.', cta: 'See care guides', href: 'https://saddle.com/guides' },
+  ],
+  'horses-com:gear': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddles, Tack & Accessories', blurb: 'Independent saddle, bridle, and accessory buyer guidance by discipline.', cta: 'Shop the guide', href: 'https://saddle.com/accessories' },
+  ],
+  'horses-com:training': [
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Discipline & Riding Guides', blurb: 'English, western, dressage, and discipline-specific tack and technique.', cta: 'Browse disciplines', href: 'https://saddle.com/guides' },
+  ],
+
+  // ── petfood-com (activate already-placed brand card) — sibling ingredient/brand DB
+  'petfood-com:brand': [
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand & Ingredient Database', blurb: 'WSAVA compliance, ingredient sourcing, and brand evaluations side by side.', cta: 'Compare brands', href: 'https://petfoods.com/brands' },
+  ],
+
+  // ── saddle-com (activate already-placed guide card) — equestrian sibling authority
+  'saddle-com:guide': [
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', href: 'https://horses.com/tack' },
+  ],
 }
 
 /**
