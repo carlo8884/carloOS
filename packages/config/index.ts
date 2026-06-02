@@ -895,6 +895,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Home', href: '/' },
       { label: 'Breeds', href: '/breeds' },
       { label: 'Disciplines', href: '/disciplines' },
+      { label: 'Racing', href: '/racing' },
       { label: 'Health', href: '/health' },
       { label: 'Care', href: '/care' },
       { label: 'Nutrition', href: '/nutrition' },
@@ -907,6 +908,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         links: [
           { label: 'Breeds', href: '/breeds' },
           { label: 'Disciplines', href: '/disciplines' },
+          { label: 'Racing Intelligence', href: '/racing' },
           { label: 'Health', href: '/health' },
           { label: 'Guides', href: '/guides' },
           { label: 'Tools', href: '/tools' },
