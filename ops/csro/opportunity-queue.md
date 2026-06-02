@@ -32,6 +32,20 @@ This is **Visual-executed** under D5 (spec: `ops/csro/premium-first-screen-stand
 (stock-now via `scripts/sync-images.mjs` on Carlo's Mac; commission later; **no spend w/o approval**).
 CSRO/COO cannot source photography in-sandbox.
 
+### 2026-06-02 (cont.) — post-cohort COO lanes (Carlo "do all of the above")
+- ✅ **Cohort COO launch-polish complete** on all 8 priority sites (#414–#422).
+- ✅ **Cohort expansion to the 2 non-priority sites** (#425): ItemList on 6 ferrets/petfoods cluster hubs;
+  5 hubs correctly skipped (anchor-only / external / inline / no-href).
+- ▶ **Reciprocal internal-linking lane OPENED** (charter pillar = internal-link strength). Wave 1 shipped:
+  Dog breed profiles → `/compare` comparison pages (#426, template + 25 static, 5 zero-pair skipped).
+  *Remaining candidates (COO P2, ongoing): fish species ↔ tank-mates, petfood compare ↔ spokes, cross-cluster
+  hub↔spoke reciprocity. Pull as clean gaps are confirmed — not manufactured.*
+- ▶ **PROMOTED Reserve → Active: Horses `/racing` flagship (D1, #178).** D1 unblocked it. **Scope note:** the
+  homepage first-screen entry is **Visual-gated** (D5); the `/racing` vertical content/structure is a larger
+  COO/strategic build (L/XL) — confirm data + approach before building. Top strategic item for Carlo.
+- ⏸ Still blocked: Visual heroes/ogImage (N1–N3), Monetization disclosures/buy-box (N4–N6) — briefs in #424.
+  `re-gate-on-output`: CSRO re-checks against the 7-gate / §8a bar the moment a Visual/Mon PR lands.
+
 ### Active now (ranked)
 | # | Site | Lane | Pri | Category | Done-when |
 |---|---|---|---|---|---|
