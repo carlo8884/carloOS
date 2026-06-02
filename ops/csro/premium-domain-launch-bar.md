@@ -79,3 +79,25 @@ Equine-Network-aligned value. *Confirming with Carlo before Visual sets directio
 5. Each redesigned site re-runs: launch-polish checklist → premium bar (7 gates) → IR → advisor.
 
 CSRO owns this bar; Visual owns execution; COO gates content; advisor is final.
+
+---
+
+## Decisions locked — 2026-06-02 (Carlo via advisor)
+
+- **D1 Horses positioning = HYBRID:** homepage is the broad premium equine authority; **Racing
+  Intelligence is a prominent flagship `/racing` vertical** (or racing.horses.com), surfaced from
+  the homepage, not the homepage identity, not buried.
+- **D2 Dog "symptom checker" = REFRAME** to symptom guide / urgency index (no net-new interactive
+  build pre-launch). *Verified already satisfied — `/symptoms` is titled "Dog Symptoms A–Z — Triage
+  by Urgency"; no "checker" overclaim exists. No code change required.*
+- **D3 Photography = HYBRID:** curated real stock now (via `scripts/sync-images.mjs` on Carlo's Mac),
+  commission original later. **No spend without Carlo approval.**
+- **D4 Horses/Saddle hero = DISTINCT** (no shared art).
+- **D5 Premium first-screen standard:** CSRO defines the spec
+  (`ops/csro/premium-first-screen-standard.md`); **Visual executes.**
+- **D6 Saddle `/english` + `/western` = reframe as discipline hubs** (kept, retitled). Shipped: PR #393.
+- **D7 Lizard `/husbandry` = redirect overlapping spokes to `/setup`**, preserve brumation + shedding.
+
+The buildable spec lives in `ops/csro/premium-first-screen-standard.md`. Homepage product-surface
+(gate 3) is already shipped across the cohort (#389–#392); remaining premium work is hero/identity
+(gates 1/5/6) — Visual-executed with D3 photography.
