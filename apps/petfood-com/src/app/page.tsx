@@ -35,6 +35,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+// Live cost calculator embedded on the homepage — the scoring/compare product
+// is something you DO on the first screen, not a link (premium gate 3).
+import { FoodCostCalculator } from '../components/visual/FoodCostCalculator'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'petfood-com', name: 'PetFood.com', url: 'https://petfood.com' }),
@@ -235,6 +238,23 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* ── LIVE TOOL — compare two foods' real cost (premium gate 3) ──── */}
+      <section className="bg-brand-white py-16 border-b border-brand-border">
+        <div className="max-w-container mx-auto px-6 md:px-10">
+          <p className="font-mono text-2xs uppercase tracking-eyebrow text-brand-primary-dark mb-3">
+            TRY IT · COST CALCULATOR
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-medium tracking-tight text-brand-text-dark leading-tight mb-3">
+            What does that food actually cost per day?
+          </h2>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-8 max-w-2xl">
+            Bag price is not cost. Enter two foods and their feeding amounts to compare the
+            real cost per day, month, and year — the same calculator the buyer&apos;s guide uses.
+          </p>
+          <FoodCostCalculator />
         </div>
       </section>
 

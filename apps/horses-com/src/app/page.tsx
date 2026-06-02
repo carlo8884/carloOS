@@ -13,6 +13,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live body-condition-score tool embedded on the homepage so the first
+// screens are something you DO, not a link to a tool (premium gate 3).
+import { BodyConditionScoreCalculator } from '../components/visual/BodyConditionScoreCalculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -426,6 +429,24 @@ export default function HomePage() {
       <div className="bg-brand-surface px-container-sm sm:px-container">
         <StockImage manifestKey="horses-com:hero" aspect="16:9" variant="inline" />
       </div>
+
+      {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ── */}
+      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Try it · Henneke body condition score
+          </span>
+        </div>
+        <h2 className="font-display font-black text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+          Is your horse the right weight?
+        </h2>
+        <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
+          Score the six Henneke checkpoints and get the 1–9 body-condition score with
+          what to change — the standard vets and nutritionists use.
+        </p>
+        <BodyConditionScoreCalculator />
+      </section>
 
       {/* ── CATEGORIES ─────────────────────────────────────────────── */}
       <section
