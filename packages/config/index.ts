@@ -630,6 +630,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
     nav: [
       { label: 'Find a Vet', href: '/find-a-vet' },
       { label: 'Pet Health', href: '/health' },
+      { label: 'Tools', href: '/tools' },
       { label: 'Telehealth', href: '/telehealth' },
       { label: 'Pet Insurance', href: '/reviews/best-pet-insurance', highlight: true },
     ],
@@ -640,15 +641,26 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Find a Vet', href: '/find-a-vet' },
           { label: 'Telehealth Options', href: '/telehealth' },
           { label: 'Emergency Signs', href: '/health/emergency-signs' },
+          { label: 'Emergency Triage Card', href: '/emergency-triage-card' },
         ],
       },
       {
         heading: 'Pet Health',
         links: [
           { label: 'Pet Health Library', href: '/health' },
+          { label: 'Symptom Checker', href: '/symptoms' },
+          { label: 'Medications', href: '/medications' },
           { label: 'Senior Pet Care', href: '/health/senior-pet-care' },
-          { label: 'Vaccinations Guide', href: '/health/dog-vaccinations-guide' },
           { label: 'Preventive Care', href: '/health/preventive-care-schedule' },
+        ],
+      },
+      {
+        heading: 'Tools & Reference',
+        links: [
+          { label: 'Tools & Calculators', href: '/tools' },
+          { label: 'Diagnostics Guide', href: '/diagnostics' },
+          { label: 'Specialists', href: '/specialists' },
+          { label: 'Pet Health Data', href: '/data' },
         ],
       },
       {
