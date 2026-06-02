@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -45,7 +45,13 @@ const FAQS = [
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
-const allSchemas = combineSchemas(articleSchema, faqSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'Puppy Schedule', url: 'https://dog.com/puppy-schedule' },
+  ],
+})
+const allSchemas = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
 
 const WEEKLY_PREVIEW = [
   { week: '8', focus: 'Settle in', milestones: 'Crate intro · Name recognition · Outdoor potty schedule · First vet visit' },

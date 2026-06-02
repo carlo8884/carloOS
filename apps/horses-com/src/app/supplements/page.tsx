@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -8,6 +8,13 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Reference index of equine supplement categories with evidence-anchored guidance — joint, hoof, gastric, and beyond.',
   path: '/supplements',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Supplements', url: 'https://horses.com/supplements' },
+  ],
 })
 
 const CATEGORIES = [
@@ -22,6 +29,7 @@ const CATEGORIES = [
 export default function SupplementsHubPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />

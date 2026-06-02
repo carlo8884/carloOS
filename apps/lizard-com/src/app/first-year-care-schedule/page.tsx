@@ -5,6 +5,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   buildHowToSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -105,7 +106,14 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://lizard.com/' },
+    { name: 'First-Year Care Schedule', url: 'https://lizard.com/first-year-care-schedule' },
+  ],
+})
+
+const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema, breadcrumbSchema)
 
 const QUARTERS = [
   {

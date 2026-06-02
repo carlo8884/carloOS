@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
   title: 'Reptile Calculators & Tools — UVB, Enclosures, Husbandry | Lizard.com',
   description: 'Free reptile-keeping calculators: UVB distance estimator with Ferguson Zone targets, plus husbandry references sourced from keeper literature.',
   path: '/tools',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://lizard.com/' },
+    { name: 'Tools', url: 'https://lizard.com/tools' },
+  ],
 })
 
 const TOOLS = [
@@ -21,6 +28,7 @@ const TOOLS = [
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
