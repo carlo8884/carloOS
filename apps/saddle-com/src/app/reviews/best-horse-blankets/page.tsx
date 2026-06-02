@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CrossPortfolioCard} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025 — Turnout, Stable | Saddle.com', description: 'Horse blankets ranked by denier rating, fill weight, and waterproofing.', path: '/reviews/best-horse-blankets', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Horse Blankets 2025', description: 'Turnout and stable blankets ranked for denier, waterproofing, and value.', url: 'https://saddle.com/reviews/best-horse-blankets', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -65,6 +65,7 @@ export default function HorseBlanketPage() {
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Horse Grooming Guide', href: '/guides/horse-grooming-guide' }, { label: 'Horse Body Condition', href: '/guides/horse-body-condition-scoring' }, { label: 'Buying First Horse', href: '/guides/buying-first-horse' }]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and fitting guides." source="review-blankets" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

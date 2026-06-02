@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) in reptiles causes tremors, tetany, and seizures. Emergency calcium gluconate by injection. How to distinguish from MBD.', path: '/health/hypocalcemia', type: 'article' })
@@ -38,6 +38,7 @@ export default function HypocalcemiaPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Egg Binding', href: '/health/egg-binding' }, { label: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency' }, { label: 'Leopard Gecko Care', href: '/species/leopard-gecko' }, { label: 'Veiled Chameleon Care', href: '/species/veiled-chameleon' }]} />
           <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-hypocalcemia" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">

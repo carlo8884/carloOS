@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CrossPortfolioCard} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -149,6 +149,7 @@ export default function BestEnglishSaddlesPage() {
             </div>
             <RelatedLinks title="Full Reviews" links={[{ label: 'Stubben Deep Dive', href: '/reviews/stubben-saddle-review' }, { label: 'Pessoa Deep Dive', href: '/reviews/pessoa-saddle-review' }, { label: 'Collegiate Review', href: '/reviews/collegiate-saddle-review' }]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buyer's Guide" subtitle="Reviews and market intelligence." source="review-best-english" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

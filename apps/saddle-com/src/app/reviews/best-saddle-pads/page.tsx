@@ -5,6 +5,7 @@ import {
   ReviewCard,
   QuickPicks,
   EmailCapture,
+  CrossPortfolioCard,
   RelatedLinks,
   ScoreMethodology,
   AffiliateDisclosure,
@@ -402,6 +403,7 @@ export default function BestSaddlePadsPage() {
               { label: 'Best Western Saddles', href: '/reviews/best-western-saddles' },
             ]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Reviews and fitting guides." source="review-saddle-pads" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

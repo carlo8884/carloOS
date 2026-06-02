@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function ReptileFeedingGuidePage() {
           title="Free Care Sheets"
           subtitle="20 species — free for subscribers."
           source="feeding-guide" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

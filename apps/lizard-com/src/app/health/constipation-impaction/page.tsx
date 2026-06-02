@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Constipation & Impaction — Prevention | Lizard.com", description: "Reptile constipation and impaction differ in cause and danger. How to tell them apart, the role of substrate, heat, and hydration, and when it is an emergency.", path: "/health/constipation-impaction", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthConstipationImpactionPage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Leopard Gecko Care", href: "/species/leopard-gecko" }, { label: "Substrate Guide", href: "/setup/substrate-guide" }, { label: "Dehydration in Reptiles", href: "/health/dehydration-reptiles" }, { label: "Cloacal Prolapse", href: "/health/prolapse-first-aid" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-constipation-impaction"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

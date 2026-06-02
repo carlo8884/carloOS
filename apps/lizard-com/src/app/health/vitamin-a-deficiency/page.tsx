@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles — Hypovitaminosis A | Lizard.com', description: 'Vitamin A deficiency (hypovitaminosis A) causes swollen eyes, retained shed, and respiratory symptoms in reptiles. Treatment: retinol supplementation', path: '/health/vitamin-a-deficiency', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Vitamin A Deficiency in Reptiles', description: 'Signs, treatment, and prevention of hypovitaminosis A in reptiles.', url: 'https://lizard.com/health/vitamin-a-deficiency', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
@@ -18,6 +18,7 @@ export default function VitAPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }, { label: 'Dysecdysis Guide', href: '/health/dysecdysis' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-vita" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

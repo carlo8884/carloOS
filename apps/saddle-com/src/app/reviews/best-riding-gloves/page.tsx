@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025 — Summer, Winter | Saddle.com', description: 'Best equestrian riding gloves by season. Roeckl, SSG, and Shires ranked for grip, feel, and durability in summer, winter, and competition use.', path: '/reviews/best-riding-gloves', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Best Riding Gloves 2025', description: 'Roeckl, SSG, and Shires riding gloves ranked for summer, winter, and competition.', url: 'https://saddle.com/reviews/best-riding-gloves', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -73,6 +73,7 @@ export default function BestRidingGlovesPage() {
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Leather Care Guide', href: '/guides/leather-care-guide' }]} />
             <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Reviews and fitting guides." source="review-riding-gloves" />
+            <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
           </aside>
         </div>
       </div>

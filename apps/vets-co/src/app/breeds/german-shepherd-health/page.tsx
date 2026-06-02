@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -15,6 +15,7 @@ export default function GSHealthPage() {
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Neurologist', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Labrador Health', href: '/breeds/labrador-health' }]} />
         <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-german-shepherd" />
+        <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

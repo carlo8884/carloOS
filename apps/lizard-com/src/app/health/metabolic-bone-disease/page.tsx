@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Metabolic Bone Disease in Reptiles — Causes, Signs | Lizard.com', description: 'MBD is the most common nutritional disease in captive reptiles. Caused by calcium deficiency or UVB deprivation. Rubber jaw, tremors.', path: '/health/metabolic-bone-disease', type: 'article' })
@@ -19,6 +19,7 @@ export default function MBDPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-mbd" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

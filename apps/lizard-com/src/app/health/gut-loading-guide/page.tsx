@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gut-Loading Feeder Insects — How & Why | Lizard.com", description: "Gut-loading feeder insects before offering them transfers nutrition to your reptile. What to feed feeders, how long before use, and why it beats dusting alone.", path: "/health/gut-loading-guide", type: 'article' })
@@ -23,6 +23,7 @@ export default function HealthGutLoadingGuidePage() {
         </div>
         <RelatedLinks title={"Related Guides"} links={[{ label: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }, { label: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }, { label: "Reptile Feeding Guide", href: "/health/reptile-feeding-guide" }, { label: "Dubia Roach Care", href: "/health/dubia-roach-care" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-gut-loading-guide"} ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

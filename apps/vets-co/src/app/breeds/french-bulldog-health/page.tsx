@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -29,6 +29,7 @@ export default function VetsFrenchBulldogHealthPage() {
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
         <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-french-bulldog" />
+        <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

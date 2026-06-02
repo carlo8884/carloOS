@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Dehydration in Reptiles — Sunken Eyes, Skin Tenting | Lizard.com', description: 'Dehydration is common in captive reptiles. Sunken eyes, wrinkled skin, retained shed, and elevated uric acid. Warm water soaking.', path: '/health/dehydration-reptiles', type: 'article' })
@@ -19,6 +19,7 @@ export default function ReptileDehydrationPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dysecdysis Guide', href: '/health/dysecdysis' }, { label: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source="health-dehydration" ctaText="Download Free" />
+        <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">

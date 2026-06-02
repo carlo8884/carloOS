@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, CrossPortfolioCard, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -70,6 +70,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           title="Free Pet Health Tips"
           subtitle="Practical guidance every Tuesday."
           source="breeds-golden-retriever" />
+        <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
       </>}
     >
       <div className="carloOS-article">
