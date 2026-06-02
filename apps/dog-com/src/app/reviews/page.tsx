@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2025 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
@@ -18,12 +18,38 @@ const REVIEWS = [
   { title: 'Best Flea & Tick Prevention 2025', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: '🛡️ Prevention' },
   { title: 'Best Dog Beds 2025', desc: 'Orthopedic, elevated, and washable beds tested over 6 months', href: '/reviews/best-dog-beds', badge: '😴 Comfort' },
   { title: 'Best Dog Crates 2025', desc: 'Wire, heavy duty, airline-approved, and furniture style ranked', href: '/reviews/best-dog-crates', badge: '🏠 Housing' },
+  { title: 'Best Dog Food for Sensitive Stomach 2025', desc: 'Purina Pro Plan Sensitive, Hill\'s Sensitive Stomach, Royal Canin Digestive Care ranked', href: '/reviews/best-dog-food-sensitive-stomach' },
+  { title: 'Best Puppy Food 2025', desc: 'WSAVA-compliant puppy foods ranked for large breed, small breed, and all sizes', href: '/reviews/best-dog-food-for-puppies' },
+  { title: 'Best Slow Feeder Bowls for Dogs 2025', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls' },
+  { title: 'Best Dental Chews for Dogs 2025', desc: 'VOHC-accepted dental chews — Greenies, Virbac CET, Whimzees ranked', href: '/reviews/best-dental-chews' },
+  { title: 'Best Joint Supplements for Dogs 2025', desc: 'Cosequin, Dasuquin, and other glucosamine/chondroitin supplements ranked', href: '/reviews/best-joint-supplements' },
+  { title: 'Best Dog GPS Trackers 2025', desc: 'Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy and battery life', href: '/reviews/best-dog-gps-tracker' },
+  { title: 'Best Large Breed Dog Food 2025', desc: 'WSAVA-compliant foods for 50+ lb dogs — Royal Canin, Purina Pro Plan ranked', href: '/reviews/best-large-breed-dog-food' },
+  { title: 'Best Senior Dog Food 2025', desc: 'Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior compared', href: '/reviews/best-dog-food-senior' },
+  { title: 'Best Dog Harnesses 2025', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses' },
+  { title: 'Best Dog Food for Small Breeds 2025', desc: 'WSAVA-compliant small breed foods — Royal Canin, Purina Pro Plan, Hill\'s ranked', href: '/reviews/best-dog-food-small-breed' },
+  { title: 'Best Heartworm Prevention for Dogs 2025', desc: 'Heartgard Plus, Interceptor Plus, Simparica Trio compared for heartworm prevention', href: '/reviews/best-heartworm-prevention' },
 ]
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Dog.com Product & Service Reviews',
+  numberOfItems: REVIEWS.length,
+  itemListElement: REVIEWS.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.title,
+    url: `https://dog.com${r.href}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
 export default function DogReviewsPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Product Reviews</span></div>

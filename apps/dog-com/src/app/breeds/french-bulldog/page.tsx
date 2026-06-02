@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, RelatedLinks } from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -12,7 +12,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Br
 export default function FrenchBulldogBreedPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'French Bulldog', url: 'https://dog.com/breeds/french-bulldog' } ] }))} />
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
         <div className="relative h-64 lg:h-auto">
           <Image src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&auto=format&fit=crop" alt="French Bulldog" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
