@@ -21,7 +21,38 @@ but volume is never confused with strategy.
 
 ---
 
-## ACTIVE SET — top items (ranked) · 2026-06-01
+## 2026-06-02 — STATE REFRESH (supersedes the 2026-06-01 Active Set below)
+
+**Advisor decisions D1–D7 all executed/merged** (#392–#395 + docs). **Premium gate 3 (a live tool
+on the homepage) is now SHIPPED on all 8 priority sites** (#389–#392, #396). COO-lane launch-quality
+floor (trust, sitemaps, orphans, canonical-collisions, nav) cleared cohort-wide.
+
+**The premium gap is now narrow and singular:** gates 1/5/6 — **distinct hero imagery + identity**.
+This is **Visual-executed** under D5 (spec: `ops/csro/premium-first-screen-standard.md`) + D3
+(stock-now via `scripts/sync-images.mjs` on Carlo's Mac; commission later; **no spend w/o approval**).
+CSRO/COO cannot source photography in-sandbox.
+
+### Active now (ranked)
+| # | Site | Lane | Pri | Category | Done-when |
+|---|---|---|---|---|---|
+| N1 | priority 8 | Visual | P0 | visual | Apply D5 standard + D3 stock heroes; distinct per site (D4: Horses≠Saddle); Ferret real-ferret hero; CSRO re-checks 7 gates |
+| N2 | Horses | Visual | P1 | visual/strategic | Build hybrid (D1): authority homepage hero + a prominent `/racing` flagship entry on the first screen |
+| N3 | all | Visual | P1 | visual | Make each embedded homepage tool read as the hero *product* (composition/framing), not a dropped-in widget |
+| N4 | Vets | Monetization | P1 | trust | `/telehealth` inline FTC disclosure above the 3 `/go` CTAs |
+| N5 | Ferret | Monetization | P1 | revenue/trust | Finish Ferret monetization + clinical buy-box sweep; disclosures above monetized surfaces |
+| N6 | Vets/funnels | Monetization | P2 | trust | Soften vendor superlatives ("most comprehensive") on telehealth + pet-insurance |
+| N7 | ferrets-com, petfoods-com | COO | P2 | launch-quality | Structural sweep (orphans/canonical) on the 2 non-priority sites not yet audited |
+
+> N1–N3 are Visual-gated (need photography). N4–N6 are Monetization. **N7 is the next unblocked
+> COO item** (structural sweep of the 2 un-audited sites) — promote when COO bandwidth frees.
+
+### Completed wave log (2026-06-01 → 06-02)
+#364–#388 trust/sitemap/orphan/canonical floor · #389–#392,#396 homepage live-tool embeds (gate 3, all 8)
+· #393 saddle D6 · #394 D5 standard + decisions · #395 lizard D7.
+
+---
+
+## ACTIVE SET — top items (ranked) · 2026-06-01 *(historical — superseded by the 2026-06-02 refresh above)*
 
 > Gating reality: per the premium-preview audit
 > (`ops/handoffs/2026-06-01-visual-to-csro-premium-preview-audit.md`), **all 8 priority sites FAIL
