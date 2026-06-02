@@ -7,6 +7,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   buildHowToSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -66,7 +67,13 @@ const FAQS = [
 ]
 
 const faqSchema = buildFAQSchema({ questions: FAQS })
-const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Saddle Fit Checklist', url: 'https://saddle.com/saddle-fit-checklist' },
+  ],
+})
+const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema, breadcrumbSchema)
 
 const TWELVE_POINTS = [
   { n: '1', point: 'Wither clearance', detail: '2–3 fingers vertical clearance, full length of the wither (SMS reference).' },

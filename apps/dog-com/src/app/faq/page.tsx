@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -98,10 +98,19 @@ const faqSchema = buildFAQSchema({
   ),
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://dog.com/' },
+    { name: 'FAQ', url: 'https://dog.com/faq' },
+  ],
+})
+
+const faqPageSchema = combineSchemas(faqSchema, breadcrumbSchema)
+
 export default function FAQPage() {
   return (
     <>
-      <SchemaScript schema={faqSchema} />
+      <SchemaScript schema={faqPageSchema} />
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4">

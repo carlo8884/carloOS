@@ -5,6 +5,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   buildHowToSchema,
+  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -109,7 +110,14 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema)
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'First Horse Roadmap', url: 'https://horses.com/first-horse-roadmap' },
+  ],
+})
+
+const allSchemas = combineSchemas(articleSchema, faqSchema, howToSchema, breadcrumbSchema)
 
 const TIMELINE = [
   {

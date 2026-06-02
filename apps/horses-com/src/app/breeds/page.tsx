@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
@@ -17,6 +17,13 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Reference profiles for 50 horse breeds: temperament, disciplines, health concerns, and care guidance grounded in AAEP, UC Davis VGL, and breed-club data.',
   path: '/breeds',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Breeds', url: 'https://horses.com/breeds' },
+  ],
 })
 
 const GROUP_ORDER: BreedType[] = [
@@ -54,6 +61,7 @@ export default function BreedsIndexPage() {
 
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-16">
         <div className="flex items-center gap-2.5 mb-4">

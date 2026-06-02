@@ -1,13 +1,20 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
   title: 'English Saddles by Discipline — Dressage, Jumping | Saddle.com',
   description: 'Browse English saddles by discipline — dressage, show jumping, eventing, and all-purpose. Discipline differences, brand origins, and price ranges explained.',
   path: '/english',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'English Saddles', url: 'https://saddle.com/english' },
+  ],
 })
 
 const DISCIPLINES = [
@@ -67,6 +74,7 @@ const BRAND_GUIDE = [
 export default function EnglishSaddlesPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px)' }}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 import {
   SADDLE_REVIEWS,
   FEATURED_SADDLE_REVIEWS,
@@ -14,9 +14,17 @@ export const metadata: Metadata = buildMetadata({
   path: '/reviews',
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://saddle.com/' },
+    { name: 'Reviews', url: 'https://saddle.com/reviews' },
+  ],
+})
+
 export default function SaddleReviewsPage() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"

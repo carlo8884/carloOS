@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Calculators & Tools — Body Condition Score | Horses.com',
   description: 'Free horse-keeping calculators: Henneke body condition score (BCS) with feeding guidance per score, plus husbandry references for owners.',
   path: '/tools',
+})
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com/' },
+    { name: 'Tools', url: 'https://horses.com/tools' },
+  ],
 })
 
 const TOOLS = [
@@ -21,6 +28,7 @@ const TOOLS = [
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={breadcrumbSchema} />
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
