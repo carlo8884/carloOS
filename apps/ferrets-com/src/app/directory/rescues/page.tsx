@@ -357,9 +357,8 @@ export default function RescuesDirectoryPage() {
             below shows the planned navigation structure.
           </p>
           <p className="text-sm text-brand-text-light leading-relaxed mb-6">
-            <em>
-              Coming soon — Q3 2026. State links currently 404 by design.
-            </em>
+            <em>Coming soon — Q3 2026. The state index below previews the
+            planned navigation; entries activate as each state directory ships.</em>
           </p>
           <ul
             className="list-none p-0 m-0 grid gap-2"
@@ -369,13 +368,13 @@ export default function RescuesDirectoryPage() {
           >
             {US_STATES.map((s) => (
               <li key={s.slug}>
-                <Link
-                  href={`/directory/rescues/${s.slug}`}
-                  className="block px-3 py-2 rounded-md border border-brand-border bg-brand-surface text-sm text-brand-text-mid hover:bg-brand-primary/5 hover:border-brand-primary/40 transition-colors no-underline"
-                  aria-label={`${s.name} ferret rescues — directory coming soon`}
+                <span
+                  className="block px-3 py-2 rounded-md border border-brand-border bg-brand-surface text-sm text-brand-text-light no-underline cursor-not-allowed select-none"
+                  aria-disabled="true"
+                  title={`${s.name} ferret rescues — directory coming soon (Q3 2026)`}
                 >
                   {s.name}
-                </Link>
+                </span>
               </li>
             ))}
           </ul>
