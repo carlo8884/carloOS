@@ -92,6 +92,23 @@ export default function LifeStageHubPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Pet Food by Life Stage',
+            numberOfItems: LifeStages.length,
+            itemListElement: LifeStages.map((s, idx) => ({
+              '@type': 'ListItem',
+              position: idx + 1,
+              name: s.name,
+              url: `https://petfood.com/life-stage/${s.slug}`,
+            })),
+          }),
+        }}
+      />
 
       <div className="carloOS-article">
         <h2 id="about">About AAFCO Life Stages</h2>
