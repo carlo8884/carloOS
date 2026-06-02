@@ -39,6 +39,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+// Live, interactive volume calculator embedded on the homepage so the first
+// screen is a tool you use, not a list of links to tools (premium gate 3).
+import VolumeCalculator from './tools/aquarium-volume-calculator/Calculator'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 const homeSchema = combineSchemas(
@@ -289,6 +292,14 @@ export default function HomePage() {
           <Link href="/setup" className="text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
             All setup guides →
           </Link>
+        </div>
+
+        {/* Live volume calculator — the homepage is a tool you use, not a link list */}
+        <div className="bg-brand-white border border-brand-border rounded-xl p-5 sm:p-7 mb-6 shadow-card max-w-3xl">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
+            Step 1 · Size your tank
+          </div>
+          <VolumeCalculator />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
