@@ -143,7 +143,7 @@ export default function UvbDistanceCalculatorPage() {
           <RelatedLinks
             title="Husbandry"
             links={[
-              { label: 'UVB Lighting deep-dive', href: '/husbandry/uvb-lighting' },
+              { label: 'UVB Lighting deep-dive', href: '/setup/uvb-lighting-guide' },
               { label: 'Best UVB bulbs', href: '/reviews/best-uvb-bulbs' },
               { label: 'Enclosure setup', href: '/setup' },
               { label: 'Species library', href: '/species' },
@@ -226,7 +226,7 @@ export default function UvbDistanceCalculatorPage() {
         />
 
         <p className="mt-8 text-sm">
-          For the full deep-dive on bulb selection, mounting, and replacement schedule, see <Link href="/husbandry/uvb-lighting">UVB Lighting for Reptiles</Link>.
+          For the full deep-dive on bulb selection, mounting, and replacement schedule, see the <Link href="/setup/uvb-lighting-guide">UVB Lighting Guide</Link>.
         </p>
       </div>
     </ArticleLayout>

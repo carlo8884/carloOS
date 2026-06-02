@@ -21,7 +21,7 @@ export default function HealthAbscessTreatmentPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Stomatitis (Mouth Rot)", href: "/health/stomatitis" }, { label: "Thermal Burns", href: "/health/thermal-burns" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Stomatitis (Mouth Rot)", href: "/health/stomatitis" }, { label: "Thermal Burns", href: "/health/thermal-burns" }, { label: "Sick Reptile Signs", href: "/health/sick-reptile-signs" }, { label: "Enclosure Setup", href: "/setup" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-abscess-treatment"} ctaText="Download Free" />
       </>}
     >

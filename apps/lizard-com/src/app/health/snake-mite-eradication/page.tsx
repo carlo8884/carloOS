@@ -21,7 +21,7 @@ export default function HealthSnakeMiteEradicationPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Parasites", href: "/health/parasites" }, { label: "Parasites Guide", href: "/health/parasites-guide" }, { label: "Quarantine Protocol", href: "/husbandry/reptile-quarantine-protocol" }, { label: "Ball Python Care", href: "/species/ball-python" }]} />
+        <RelatedLinks title={"Related Guides"} links={[{ label: "Reptile Parasites", href: "/health/parasites" }, { label: "Parasites Guide", href: "/health/parasites-guide" }, { label: "Enclosure Setup", href: "/setup" }, { label: "Ball Python Care", href: "/species/ball-python" }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="Species guides for subscribers." source={"lizard-health-snake-mite-eradication"} ctaText="Download Free" />
       </>}
     >

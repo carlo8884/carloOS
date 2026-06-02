@@ -44,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://lizard.com/health/stomatitis', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/health/thermal-burns', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/health/vitamin-a-deficiency', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://lizard.com/husbandry', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://lizard.com/husbandry/brumation-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/husbandry/shedding-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://lizard.com/legal/affiliate-disclosure', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
