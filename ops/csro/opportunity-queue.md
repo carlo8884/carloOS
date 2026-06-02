@@ -46,8 +46,13 @@ but volume is never confused with strategy.
 | A14 | Lizard | Visual | P2 | visual | Dark habitat hero + distinctive reptile motif (theme already distinct — leverage it). | Real reptile/habitat hero applied |
 | A15 | Vets | COO | P2 | traffic | Down-weight orphan sitemap priorities (`/data`,`/emergency-triage-card` @0.90) once A6 links land. | priorities re-weighted post-linking |
 
-**Batch dispatch now:** Visual → A1 (then A4/A5); CSRO/Carlo → A2/A3 decisions; COO → A6/A7;
+**Batch dispatch now:** Visual → A1 (then A4/A5); CSRO/Carlo → A2/A3 decisions;
 Monetization → A8/A9. Hold A10–A12 until A1 lands. A13–A15 are P2 fillers behind the above.
+
+**✅ Completed (COO) since creation:** A6 + A7 (Vets nav wiring + profile canonical, #385).
+Plus the cross-cohort orphan-hub/canonical sweep (#386/#387) and all sitemap coverage (#382/#383).
+Remaining Active Set is now Visual-gated (A1/A4/A5/A10–A12), Carlo-decision (A2/A3), or
+Monetization (A8/A9/A13).
 
 ---
 
@@ -70,10 +75,19 @@ Monetization → A8/A9. Hold A10–A12 until A1 lands. A13–A15 are P2 fillers 
 - Affiliate-account expansion beyond Skimlinks+Amazon (Chewy/SmartPak/Dover/ImpactRadius) once a
   launch site flips. Mediavine/Raptive gated by pageview thresholds.
 
+**Structural — parked for content judgment (audit-surfaced 2026-06-02):**
+- **saddle-com `/english` + `/western`** — title-twins of `/reviews/best-english-saddles` /
+  `/reviews/best-western-saddles` (same titles, SERP self-competition). Redirect-to-review vs
+  retitle+rel-canonical is a content/SEO call. COO once promoted.
+- **lizard-com `/husbandry`** — full duplicate-cluster of the nav-wired `/setup` (8 overlapping
+  topics) but `/husbandry/brumation-guide` + `/husbandry/shedding-guide` are unique. Redirect spokes
+  to `/setup` (preserving the 2 unique) vs keep+wire — needs a content owner's call. COO once promoted.
+
 **Infra / quality (COO, low-priority, real):**
 - Per-site sitemap override coverage is now complete (all 10 generator-faithful, #382/#383) — monitor
   on future page adds; no action unless drift reappears.
-- Cross-cohort duplicate-topic sweep beyond Dog (petfood/horses/etc.) — audit-driven, promote as found.
+- Cross-cohort orphan-hub + canonical-collision sweep: **COMPLETE** — Dog (#380), Vets (#385),
+  Fish (#387), Horses/Lizard/Saddle nav (#386); PetFood + Ferret were clean. Re-run only on new pages.
 
 > Reserve grows by **real** opportunities surfaced from audits (per-site launch-quality, IR,
 > Monetization, Visual). It is never padded to a count. Weekly: prune merged/stale, promote the next
