@@ -1,13 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
-
-export const metadata: Metadata = buildMetadata({
-  siteId: 'fish-com',
-  title: 'Best Aquarium Equipment Reviews 2025 — Ranked & Compared | Fish.com',
-  description: 'Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, fertilizers, and water test kits — ranked with real data.',
-  path: '/reviews',
-})
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage, combineSchemas } from '@carloOS/ui'
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
@@ -16,6 +9,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+export const metadata: Metadata = buildMetadata({
+  siteId: 'fish-com',
+  title: 'Best Aquarium Equipment Reviews 2025 — Ranked & Compared | Fish.com',
+  description: 'Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, fertilizers, and water test kits — ranked with real data.',
+  path: '/reviews',
+})
 
 const REVIEWS = [
   {
@@ -62,10 +61,25 @@ const REVIEWS = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Fish.com Aquarium Gear Reviews',
+  numberOfItems: REVIEWS.length,
+  itemListElement: REVIEWS.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.title,
+    url: `https://fish.com${r.href}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function FishReviewsPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       {/* HERO */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
