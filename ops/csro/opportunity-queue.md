@@ -52,6 +52,19 @@ CSRO/COO cannot source photography in-sandbox.
 **GEO schema wave (06-02):** #401 hub ItemList (11 hubs) · #402 FAQPage where missing · #404 BreadcrumbList
 on 15 hub/tool/schedule pages · #405 petfoods DefinedTerm + brand BreadcrumbList · #406 ferrets
 /directory/rescues 404-link gating (51 dead anchors → non-clickable coming-soon).
+**Per-cohort COO launch-polish sweep (06-02, cohort order Ferret→PetFood→Vets→Fish→Saddle→Lizard→Horses→Dog):**
+#414 Ferret glossary/vocabulary dedup · #415 PetFood remaining-hub ItemList · #416 Vets insurance/reviews
+ItemList + review breadcrumb · #417/#418 Fish /reviews ItemList + 7 review breadcrumbs · #419 Saddle /reviews
+ItemList · #420 Lizard de-orphan best-thermostats + reviews/builds ItemList + breadcrumbs · #421 Horses
+4-hub ItemList + 3 breadcrumbs · #422 Dog /reviews + /health ItemList + 16 review + 3 breed breadcrumbs.
+**(#410 closed: FAQPage "gap" was a false positive — FAQAccordion auto-emits; #411 corrected the inventory.)**
+
+### ✅ COO-lane cohort launch-polish COMPLETE (all 8 priority sites)
+Per-site COO audits done end-to-end: breadcrumbs, hub ItemList, FAQ/Definition schema, orphans, duplicate
+consolidation, sitemap-priority hygiene — all clean cohort-wide. **No unblocked COO launch-polish items remain
+on the priority 8.** The remaining launch-gating work is **Visual** (N1–N3: premium heroes/ogImage/first-screen)
+and **Monetization** (N4–N6: disclosures + buy-box). N7 (ferrets/petfoods structural) was already clean.
+
 **Net:** COO-lane GEO schema coverage (ItemList/FAQ/Breadcrumb/DefinedTerm) now broad cohort-wide; the
 ferrets-com structural papercut from N7 is cleared. Remaining N7 scope (petfoods-com structural) was
 already clean per the #N7 audit. **The remaining launch-gating work is Visual (N1–N3 heroes) +
