@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -111,10 +111,25 @@ const DIET_CARDS: DietCard[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Diet and Nutrition Guides',
+  numberOfItems: DIET_CARDS.length,
+  itemListElement: DIET_CARDS.map((d, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: d.title,
+    url: `https://ferret.com/diet/${d.slug}`,
+  })),
+}
+
+const ferretDietSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function DietHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={ferretDietSchema} />
 
       {/* Hero */}
       <div

@@ -85,7 +85,19 @@ export default function MedicationsHubPage() {
       { name: 'Medications', url: 'https://vets.co/medications' },
     ],
   })
-  const schema = combineSchemas(breadcrumbSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Pet Medication Library',
+    numberOfItems: Medications.length,
+    itemListElement: Medications.map((m, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: m.name,
+      url: `https://vets.co/medications/${m.slug}`,
+    })),
+  }
+  const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
     <>

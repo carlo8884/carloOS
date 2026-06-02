@@ -96,7 +96,19 @@ export default function SymptomsHubPage() {
       { name: 'Symptoms', url: 'https://vets.co/symptoms' },
     ],
   })
-  const schema = combineSchemas(breadcrumbSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Pet Symptom Triage Library',
+    numberOfItems: Symptoms.length,
+    itemListElement: Symptoms.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: `https://vets.co/symptoms/${s.slug}`,
+    })),
+  }
+  const schema = combineSchemas(breadcrumbSchema, itemListSchema)
 
   return (
     <>

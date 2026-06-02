@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -118,10 +118,25 @@ const OWNERSHIP_CARDS: OwnershipCard[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Ownership and Lifestyle Guides',
+  numberOfItems: OWNERSHIP_CARDS.length,
+  itemListElement: OWNERSHIP_CARDS.map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: o.title,
+    url: `https://ferret.com/ownership/${o.slug}`,
+  })),
+}
+
+const ferretOwnershipSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function OwnershipHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={ferretOwnershipSchema} />
 
       {/* Hero */}
       <div

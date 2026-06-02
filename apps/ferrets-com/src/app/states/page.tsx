@@ -158,7 +158,19 @@ export default function StatesHubPage() {
         typeof f.answer === 'string' ? f.answer : (f.answerText ?? ''),
     })),
   })
-  const schema = combineSchemas(breadcrumbSchema, faqSchema)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'US State Ferret Laws Directory',
+    numberOfItems: States.length,
+    itemListElement: States.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: `https://ferrets.com/states/${s.slug}`,
+    })),
+  }
+  const schema = combineSchemas(breadcrumbSchema, faqSchema, itemListSchema)
 
   return (
     <>

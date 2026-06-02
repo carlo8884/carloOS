@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { EquipmentCategories } from '../../data/equipment-categories'
 
 export const metadata: Metadata = buildMetadata({
@@ -37,10 +37,25 @@ const EMOJIS: Record<string, string> = {
   'aquarium-co2-systems': 'CO2',
 }
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Aquarium Equipment Buyer Guides',
+  numberOfItems: EquipmentCategories.length,
+  itemListElement: EquipmentCategories.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.categoryName,
+    url: `https://fish.com/equipment/${c.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function EquipmentHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       {/* HERO */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">

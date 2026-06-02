@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -111,10 +111,25 @@ const BEHAVIOR_CARDS: BehaviorCard[] = [
   },
 ]
 
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ferret Behavior Guides',
+  numberOfItems: BEHAVIOR_CARDS.length,
+  itemListElement: BEHAVIOR_CARDS.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.title,
+    url: `https://ferret.com/behavior/${b.slug}`,
+  })),
+}
+
+const ferretBehaviorSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+
 export default function BehaviorHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={ferretBehaviorSchema} />
 
       {/* Hero */}
       <div
