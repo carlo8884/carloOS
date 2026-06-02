@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equitation — Judging the Rider, Not the Horse",
   description:
-    "Reference overview of equitation: the discipline that judges the rider position and effectiveness, flat and over-fences equitation, the medal classes, and position basics.",
+    "Reference overview of equitation: the discipline judging rider position and effectiveness, flat and over-fences classes, the medal classes, and position basics.",
   path: '/disciplines/equitation',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Equitation — Judging the Rider, Not the Horse",
   description:
-    "Reference overview of equitation: the discipline that judges the rider position and effectiveness, flat and over-fences equitation, the medal classes, and position basics.",
+    "Reference overview of equitation: the discipline judging rider position and effectiveness, flat and over-fences classes, the medal classes, and position basics.",
   url: 'https://horses.com/disciplines/equitation',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

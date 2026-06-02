@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Combined Driving — The Three-Phase Sport of Driven Horses",
   description:
-    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts and teams, and governing bodies.",
+    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts, and governing bodies.",
   path: '/disciplines/combined-driving',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Combined Driving — The Three-Phase Sport of Driven Horses",
   description:
-    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts and teams, and governing bodies.",
+    "Reference overview of combined driving: the harness sport modeled on eventing, its three phases (dressage, marathon, cones), turnouts, and governing bodies.",
   url: 'https://horses.com/disciplines/combined-driving',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

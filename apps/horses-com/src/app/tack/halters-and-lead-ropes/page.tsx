@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Halters and Lead Ropes — Types, Safety, and Correct Use",
   description:
-    "Reference guide to halters and lead ropes: halter materials and types, rope halters vs flat halters, the dangers of turnout in a halter, lead ropes, and safe handling.",
+    "Reference guide to halters and lead ropes: halter materials and types, rope vs flat halters, the dangers of turnout in a halter, lead ropes, and safe handling.",
   path: '/tack/halters-and-lead-ropes',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Halters and Lead Ropes — Types, Safety, and Correct Use",
   description:
-    "Reference guide to halters and lead ropes: halter materials and types, rope halters vs flat halters, the dangers of turnout in a halter, lead ropes, and safe handling.",
+    "Reference guide to halters and lead ropes: halter materials and types, rope vs flat halters, the dangers of turnout in a halter, lead ropes, and safe handling.",
   url: 'https://horses.com/tack/halters-and-lead-ropes',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

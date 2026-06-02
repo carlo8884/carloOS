@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Equestrian Vaulting — Gymnastics on Horseback",
   description:
-    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and the vaulting horse, compulsories and freestyle, and safety.",
+    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and vaulting horse, compulsories, freestyle, and safety.",
   path: '/disciplines/vaulting',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Equestrian Vaulting — Gymnastics on Horseback",
   description:
-    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and the vaulting horse, compulsories and freestyle, and safety.",
+    "Reference overview of equestrian vaulting: gymnastic and dance moves on a cantering horse, the lunger and vaulting horse, compulsories, freestyle, and safety.",
   url: 'https://horses.com/disciplines/vaulting',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

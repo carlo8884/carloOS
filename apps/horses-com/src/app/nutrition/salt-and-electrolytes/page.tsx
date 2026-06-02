@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Salt and Electrolytes for Horses — Daily Salt and Replacing Sweat Losses",
+  title: "Salt and Electrolytes for Horses — Daily Salt & Replacing Sweat Loss",
   description:
     "Reference guide to equine salt and electrolytes: why every horse needs daily salt, what electrolytes do, when to supplement, and how to use them safely.",
   path: '/nutrition/salt-and-electrolytes',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Salt and Electrolytes for Horses — Daily Salt and Replacing Sweat Losses",
+  title: "Salt and Electrolytes for Horses — Daily Salt & Replacing Sweat Loss",
   description:
     "Reference guide to equine salt and electrolytes: why every horse needs daily salt, what electrolytes do, when to supplement, and how to use them safely.",
   url: 'https://horses.com/nutrition/salt-and-electrolytes',

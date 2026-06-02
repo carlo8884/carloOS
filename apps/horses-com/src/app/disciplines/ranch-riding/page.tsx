@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Ranch Riding — The Working Horse Pattern Class",
   description:
-    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the forward natural way of going, and governing bodies.",
+    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the natural way of going, and governing bodies.",
   path: '/disciplines/ranch-riding',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Ranch Riding — The Working Horse Pattern Class",
   description:
-    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the forward natural way of going, and governing bodies.",
+    "Reference overview of ranch riding: the pattern class celebrating the working ranch horse, gaits and maneuvers, the natural way of going, and governing bodies.",
   url: 'https://horses.com/disciplines/ranch-riding',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

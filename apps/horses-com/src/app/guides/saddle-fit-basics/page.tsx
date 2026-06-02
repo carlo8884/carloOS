@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Saddle Fit Basics — 12-Point Framework for Horse Owners',
   description:
-    'A 12-point framework for evaluating saddle fit: wither clearance, panel contact, tree angle, balance point, billet alignment, sweat patterns, and dynamic checks.',
+    'A 12-point framework for evaluating saddle fit: wither clearance, panel contact, tree angle, balance point, billet alignment, and dynamic checks.',
   path: '/guides/saddle-fit-basics',
   type: 'article',
 })

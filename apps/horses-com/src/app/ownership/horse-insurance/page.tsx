@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Horse Insurance Explained — Mortality, Major Medical, and Liability",
   description:
-    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, exclusions, and deciding what to insure.",
+    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, and deciding what to insure.",
   path: '/ownership/horse-insurance',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Horse Insurance Explained — Mortality, Major Medical, and Liability",
   description:
-    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, exclusions, and deciding what to insure.",
+    "Reference guide to equine insurance: mortality, major medical and surgical, loss-of-use, and liability cover, how policies work, and deciding what to insure.",
   url: 'https://horses.com/ownership/horse-insurance',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

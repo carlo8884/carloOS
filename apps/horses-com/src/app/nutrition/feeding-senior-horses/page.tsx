@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding Senior Horses — Diet for the Aging Horse",
   description:
-    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, dealing with PPID, and keeping older horses thriving.",
+    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, managing PPID, and keeping seniors thriving.",
   path: '/nutrition/feeding-senior-horses',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding Senior Horses — Diet for the Aging Horse",
   description:
-    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, dealing with PPID, and keeping older horses thriving.",
+    "Reference guide to feeding senior horses: dental decline, senior feeds and hay replacers, protein and condition, managing PPID, and keeping seniors thriving.",
   url: 'https://horses.com/nutrition/feeding-senior-horses',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Hoof Care Basics — Anatomy, Daily Care, Healthy Hooves",
   description:
-    "Reference guide to equine hoof care: hoof anatomy, the no foot no horse principle, daily picking, trimming and shoeing cycles, and what a healthy hoof looks like.",
+    "Reference guide to equine hoof care: hoof anatomy, the no-foot-no-horse principle, daily picking, trim and shoeing cycles, and what a healthy hoof looks like.",
   path: '/care/hoof-care-basics',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Hoof Care Basics — Anatomy, Daily Care, Healthy Hooves",
   description:
-    "Reference guide to equine hoof care: hoof anatomy, the no foot no horse principle, daily picking, trimming and shoeing cycles, and what a healthy hoof looks like.",
+    "Reference guide to equine hoof care: hoof anatomy, the no-foot-no-horse principle, daily picking, trim and shoeing cycles, and what a healthy hoof looks like.",
   url: 'https://horses.com/care/hoof-care-basics',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

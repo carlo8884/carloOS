@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "The Pre-Purchase Exam — Vetting a Horse Before You Buy",
   description:
-    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and how to use the results.",
+    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and using the results.",
   path: '/ownership/pre-purchase-exam',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "The Pre-Purchase Exam — Vetting a Horse Before You Buy",
   description:
-    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and how to use the results.",
+    "Reference guide to the equine pre-purchase exam (vetting): what it covers, basic vs extensive exams, radiographs, who the vet works for, and using the results.",
   url: 'https://horses.com/ownership/pre-purchase-exam',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

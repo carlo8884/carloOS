@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Dental Care — Floats, Wolf Teeth, EOTRH, and Annual Care',
   description:
-    'Equine dental anatomy, annual float schedule, signs of dental problems, wolf-tooth extraction, EOTRH in seniors. Aligned with AAEP and American Veterinary Dental College guidance.',
+    'Equine dental anatomy, annual float schedule, signs of dental problems, wolf-tooth extraction, and EOTRH in seniors. Aligned with AAEP and AVDC guidance.',
   path: '/guides/equine-dental-care',
   type: 'article',
 })

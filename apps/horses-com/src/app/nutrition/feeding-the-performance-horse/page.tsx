@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Feeding the Performance Horse — Energy, Recovery, and Safe Fueling",
   description:
-    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and avoiding diet-related problems.",
+    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and diet pitfalls.",
   path: '/nutrition/feeding-the-performance-horse',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Feeding the Performance Horse — Energy, Recovery, and Safe Fueling",
   description:
-    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and avoiding diet-related problems.",
+    "Reference guide to feeding performance horses: matching energy to workload, energy sources, protein and electrolytes, feeding around work, and diet pitfalls.",
   url: 'https://horses.com/nutrition/feeding-the-performance-horse',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

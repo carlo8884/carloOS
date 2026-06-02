@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Senior Horse Care — Keeping the Older Horse Thriving",
   description:
-    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort and exercise, and quality of life.",
+    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort, and quality of life.",
   path: '/ownership/senior-horse-care',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Senior Horse Care — Keeping the Older Horse Thriving",
   description:
-    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort and exercise, and quality of life.",
+    "Reference guide to caring for senior horses: when a horse is old, common age-related conditions, dental and feeding changes, comfort, and quality of life.",
   url: 'https://horses.com/ownership/senior-horse-care',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

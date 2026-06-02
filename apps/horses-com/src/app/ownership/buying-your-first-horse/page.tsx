@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Buying Your First Horse — A Practical Buyer’s Guide",
   description:
-    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, trying a horse, and the pre-purchase exam.",
+    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, and the pre-purchase exam.",
   path: '/ownership/buying-your-first-horse',
   type: 'article',
 })
@@ -15,7 +15,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: "Buying Your First Horse — A Practical Buyer’s Guide",
   description:
-    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, trying a horse, and the pre-purchase exam.",
+    "Reference guide to buying a first horse: being honest about experience, choosing temperament over flash, where to look, and the pre-purchase exam.",
   url: 'https://horses.com/ownership/buying-your-first-horse',
   imageUrl: '',
   authorName: 'Horses.com Editorial',

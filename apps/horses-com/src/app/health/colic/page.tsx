@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Colic — Types, Clinical Signs, When to Call the Vet',
   description:
-    'Reference guide to equine colic — spasmodic, impaction, gas, displacement, strangulation, enteritis, sand. Clinical signs, when it is an emergency, diagnostics, medical and surgical treatment, and prevention.',
+    'Reference guide to equine colic — spasmodic, impaction, gas, displacement, and more. Clinical signs, when it is an emergency, diagnostics, and treatment.',
   path: '/health/colic',
   type: 'article',
 })

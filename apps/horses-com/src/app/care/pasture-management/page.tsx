@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: "Pasture Management for Horses — Grazing, Rotation, Weeds, Poisonous Plants",
+  title: "Pasture Management for Horses — Grazing, Rotation & Poisonous Plants",
   description:
     "Reference guide to equine pasture management: grazing behavior, rotational grazing, weed and poisonous-plant control, soil and reseeding, and overgrazing.",
   path: '/care/pasture-management',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Pasture Management for Horses — Grazing, Rotation, Weeds, Poisonous Plants",
+  title: "Pasture Management for Horses — Grazing, Rotation & Poisonous Plants",
   description:
     "Reference guide to equine pasture management: grazing behavior, rotational grazing, weed and poisonous-plant control, soil and reseeding, and overgrazing.",
   url: 'https://horses.com/care/pasture-management',

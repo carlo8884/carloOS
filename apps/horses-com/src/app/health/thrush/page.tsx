@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: "Thrush in Horses — Causes, Treatment, Prevention",
   description:
-    "Reference guide to equine thrush: bacterial infection of the frog, causes, the telltale black discharge and odor, treatment, and prevention through hoof hygiene.",
+    "Reference guide to equine thrush: bacterial infection of the frog, causes, the telltale black discharge and odor, treatment, and prevention via hoof hygiene.",
   path: '/health/thrush',
   type: 'article',
 })

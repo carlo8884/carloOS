@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Equine Vaccination Schedule — AAEP Core &amp; Risk-Based Vaccines',
   description:
-    'AAEP-aligned vaccination schedule for horses. Core vaccines (tetanus, EEE/WEE, West Nile, rabies) and risk-based (flu, EHV, strangles, PHF, botulism, rotavirus) by life stage and discipline.',
+    'AAEP-aligned vaccination schedule for horses. Core vaccines (tetanus, EEE/WEE, West Nile, rabies) and risk-based vaccines by life stage and discipline.',
   path: '/guides/equine-vaccination-schedule',
   type: 'article',
 })

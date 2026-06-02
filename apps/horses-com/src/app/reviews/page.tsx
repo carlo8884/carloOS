@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horses.com Reviews — Supplements, Blankets, Tack | Horses.com',
   description:
-    'Independent equine product reviews — joint supplements, winter blankets, and the gear that actually performs. Citation-anchored against AAEP and breed-club references.',
+    'Independent equine product reviews — joint supplements, winter blankets, and gear that performs. Citation-anchored against AAEP and breed-club references.',
   path: '/reviews',
 })
 
