@@ -39,8 +39,8 @@ ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new g
 
 ### PetFood.com (launch #2)
 - [x] Glossary / label-term DefinedTermSet (`/glossary`) — ~31 AAFCO / label / ingredient / nutrient / diet-type terms; DefinedTermSet JSON-LD; linked from `/nutrition`; cross-links the food-cost calculator + ingredients. **PR #447.**
-- [ ] Ingredient-quality explainer hub completeness pass — verify the brand/ingredient cluster has a hub→spoke graph. *Inspect.*
-- [ ] Dog vs cat food fundamentals comparison hub — only if a genuine gap. *Inspect.*
+- [x] Ingredient-quality explainer hub completeness pass — INSPECTED: `/ingredients` hub page links all 8 spokes via `href={\`/ingredients/${i.slug}\`}` + ItemList JSON-LD. Complete, not a gap.
+- [x] Dog vs cat food fundamentals comparison hub — INSPECTED: `/species` hub + 4 spokes already cover it (`dog-vs-cat-nutrition-overview`, `cats-are-obligate-carnivores`, `feeding-cats-vs-dogs-differences`, `are-dogs-carnivores-or-omnivores`). Not a gap.
 
 ### Vets.co (launch #3)
 - [x] Pet-insurance + clinical glossary (`/glossary`) DefinedTermSet — pairs with the insurance estimator; linked from /insurance. PR #448.

@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
 
@@ -140,6 +141,10 @@ export default function DiagnosticsHubPage() {
           </a>
           .
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="vets-co:diagnostics-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">

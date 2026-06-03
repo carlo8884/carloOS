@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide — The Peaceful Centerpiece | Fish.com', description: "Pearl gouramis are among the most peaceful and beautiful gouramis — a labyrinth fish with pearlescent spotting. Needs surface access, calm tankmates.", path: '/species/pearl-gourami', type: 'article' })
@@ -44,7 +44,8 @@ export default function PearlGouramiPage() {
 
         <h2>Bubble-Nest Breeding</h2>
         <p>Like bettas, pearl gouramis are bubble-nest builders. A conditioned male constructs a large floating nest, often anchored among floating plants, then entices the female beneath it. After a wrapping embrace the eggs float up into the nest, where the male tends them aggressively. The female should be removed after spawning. Fry hatch in two to three days and are tiny, requiring infusoria before they can take baby brine shrimp. Maintaining warm, humid air above the nest is critical, as the developing fry form their labyrinth organs in the first weeks of life.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Pearl Gourami — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, gentle filters, heaters, live plants, and food sized for pearl gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

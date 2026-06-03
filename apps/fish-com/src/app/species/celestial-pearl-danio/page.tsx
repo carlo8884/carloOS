@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care — Galaxy Rasbora, Groups | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required. Complete care guide.', path: '/species/celestial-pearl-danio', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl Danio Care Guide', description: 'Group requirements, breeding, and care for Danio margaritatus.', url: 'https://fish.com/species/celestial-pearl-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -32,7 +32,8 @@ export default function CPDPage() {
 
         <h2>Breeding — Self-Sustaining in Planted Tanks</h2>
         <p>CPD breed readily among Java moss and fine-leaved plants. Eggs are scattered in vegetation; the parents show mild interest in eating eggs but in dense planting, enough survive to produce periodic batches of fry. Fry are tiny and feed initially on infusoria and micro-organisms naturally present in established planted tanks. A 10-gallon planted CPD colony will produce fry periodically without any deliberate breeding intervention — the population self-sustains at a manageable level.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Celestial Pearl Danio — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

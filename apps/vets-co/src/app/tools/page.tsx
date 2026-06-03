@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -65,6 +65,10 @@ export default function ToolsHub() {
           </p>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="vets-co:tools-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-3xl mb-12">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -49,7 +49,8 @@ export default function PondGuidePage() {
           <h2>Pond Plants — Function and Aesthetics</h2>
           <p>Pond plants serve three functional purposes: oxygenation, nutrient uptake (natural filtration), and shade. Water hyacinth and water lettuce are the most effective surface-floating nutrient absorbers — they take up nitrogen (nitrate) directly from pond water, reducing water change requirements significantly. Water lilies provide shade (reducing algae growth in full-sun ponds) and spawning habitat. Marginal plants (iris, cattail, papyrus) around pond edges naturalize the appearance and provide additional biological filtration.</p>
           <p>In koi ponds: koi eat most plants. Keep plants in separate baskets or caged areas, or choose plants that koi avoid (typically those with bitter or firm tissue). A "veggie filter" — a separate, shallower planting area connected to the main pond via pump — allows heavy planting without koi access.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Backyard Pond Setup — Where to Shop</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon or Chewy. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

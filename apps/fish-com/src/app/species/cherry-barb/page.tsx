@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred.', path: '/species/cherry-barb', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -41,7 +41,8 @@ export default function CherryBarbPage() {
 
         <h2>Breeding</h2>
         <p>Cherry barbs breed readily in the aquarium. Males display (flaring, circling) to females and chase them through plants. Eggs are scattered among fine-leaved plants — Java moss is ideal as a spawning medium. Parents do not exhibit significant parental care and will eat eggs and fry if not removed. Fry are tiny — fed infusoria initially, then baby brine shrimp. A small breeding setup with Java moss, a sponge filter, and a pair or trio produces regular fry with minimal management.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cherry Barb — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cherry barb care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

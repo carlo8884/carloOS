@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper', path: '/species/mystery-snail', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -39,7 +39,8 @@ export default function MysterySnailPage() {
 
         <h2>Breeding — The Egg Clutch</h2>
         <p>Mystery snails are the only commonly kept freshwater snail species that lays eggs above the waterline — a distinctive pink-to-cream colored clutch stuck to the glass above the water surface or on the tank lid. The eggs require air humidity to develop (they dry out and fail if fully submerged, and they drown if pushed into the water). Clutches hatch in 2–4 weeks depending on temperature — hatchlings drop into the water and begin grazing immediately. Unlike nerite snails, mystery snails breed readily in freshwater and populations can grow if both male and female are present — manage population by refrigerating unwanted egg clutches for several days before discarding.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Mystery Snail — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for mystery snail care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Rainbowfish Care Guide — Australian Species | Fish.com', description: 'Rainbowfish are underrated community gems. Boesemani, Turquoise, and Dwarf Neon rainbows need groups of 6+, quality food to develop color.', path: '/species/rainbow-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Rainbowfish Care Guide', description: 'School size, water requirements, and color development for Melanotaeniidae rainbowfish.', url: 'https://fish.com/species/rainbow-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -36,7 +36,8 @@ export default function RainbowFishPage() {
 
         <h2>Compatibility</h2>
         <p>Rainbowfish are peaceful, active mid-water swimmers compatible with most community fish that share similar water preferences — corydoras catfish, bristlenose plecos, livebearers, Australian rainbowfish companions like blue-eyes (Pseudomugil species). They are fast enough to coexist with moderately aggressive species. Avoid keeping with very small, delicate fish (they may eat fish small enough to fit in their mouth) or with soft-water species requiring dramatically different parameters. They are excellent companions for hard-water tetras like Buenos Aires tetras.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Rainbow Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for rainbow fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

@@ -6,6 +6,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -102,6 +103,10 @@ export default function ToolsHub() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Tools</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:tools-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       {/* Tool cards */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide — The Pea Puffer | Fish.com', description: "Dwarf pea puffers are inch-long freshwater puffers with huge personalities. They need live or frozen snails to wear down their teeth and dislike most tankmates.", path: '/species/dwarf-puffer', type: 'article' })
@@ -42,7 +42,8 @@ export default function DwarfPufferPage() {
 
         <h2>Tank Setup and Water Quality</h2>
         <p>A dense forest of plants is essential — it breaks up territories, provides hunting cover, and reduces stress. Pea puffers are sensitive to poor water quality and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical. Telling sex apart is possible in mature fish: males develop a dark belly stripe and wrinkle-like lines behind the eyes, while females are rounder and more heavily spotted. Their intelligence, hunting behavior, and color-shifting moods reward keepers willing to meet their demanding needs.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Puffer — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and snail-culture supplies sized for dwarf puffer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

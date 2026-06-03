@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative.', path: '/species/dwarf-gourami', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -40,7 +40,8 @@ export default function DwarfGouramiPage() {
 
         <h2>Bubble Nest Building</h2>
         <p>Male gouramis build floating bubble nests at the water surface — a cluster of air bubbles coated in saliva, anchored to floating plants or the tank edge. Nest building is a sign of a comfortable, well-conditioned male. Eggs are deposited in the nest during spawning, and the male guards the nest aggressively (temporarily — remove the female after spawning to prevent harassment). Fry hatch in 24-36 hours and are very small — fed on infusoria initially. This behavior is one of the most interesting aspects of gourami keeping to observe even without intent to breed.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Gourami — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for dwarf gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

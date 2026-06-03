@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0, 80-86°F). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -43,7 +43,8 @@ export default function BlueRamPage() {
 
         <h2>Breeding</h2>
         <p>A compatible pair in good condition in appropriate water conditions will spawn regularly — depositing eggs on a flat surface (broad leaf, flat stone, or directly on the substrate) in a cleared spawning site. Both parents guard the eggs and fry. Fry are tiny — fed infusoria or baby brine shrimp. Many first spawns fail as the pair learns parenting; experienced pairs are reliable parents. The challenge is fry survival in a community tank — other fish eat fry readily, and even the parents may eat fry if stressed.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Blue Ram — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for blue ram care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

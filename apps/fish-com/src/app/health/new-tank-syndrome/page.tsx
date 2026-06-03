@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'New Tank Syndrome — Ammonia Spike, Cycling | Fish.com', description: 'New tank syndrome kills fish through ammonia poisoning. Fishless cycling with ammonia takes 4-6 weeks.', path: '/health/new-tank-syndrome', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrome', description: 'Ammonia spikes, cycling protocol, and fish-in emergency management for new aquariums.', url: 'https://fish.com/health/new-tank-syndrome', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -53,7 +53,8 @@ export default function NewTankSyndromePage() {
 
         <h2>When the Cycle Is Complete</h2>
         <p>The cycle is complete — not "almost done," not "getting there" — when both ammonia and nitrite read 0 ppm on a test kit (not strips) 24 hours after dosing the tank with ammonia. A tank that shows 0 ammonia but 0.25 ppm nitrite is not cycled — the nitrite bacteria are still establishing. Introducing fish to a partially cycled tank restarts the stress cycle. Patience at this stage prevents weeks of emergency water changes later.</p>
-        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Test Kit + Dechlorinator</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#4a6573', lineHeight: 1.55 }}>New-tank-syndrome prevention is test-kit + dechlorinator. API Freshwater Master Test Kit covers ammonia/nitrite/nitrate/pH; Seachem Prime detoxifies chlorine + chloramine. This is husbandry equipment, not a substitute for veterinary care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
