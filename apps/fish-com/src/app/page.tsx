@@ -36,7 +36,6 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 // Live, interactive volume calculator embedded on the homepage so the first
@@ -56,7 +55,6 @@ export const metadata: Metadata = buildMetadata({
     'Cloudy water, ammonia spikes, fish gasping, algae, stocking — practical aquarium guides to help you fix or plan your tank.',
   path: '/',
   type: 'website',
-  ogImage: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1200&q=80&auto=format&fit=crop',
 })
 
 // ─── Quick-action problem cards (above the fold) ────────────────────────────
@@ -108,7 +106,7 @@ const FEATURED_SPECIES = [
     type: 'Freshwater · Beginner',
     note: '5 gal min · solitary · tropical',
     href: '/species/betta-fish',
-    image: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'fish-com:species-thumb-betta',
     imageAlt: 'Betta fish in a planted aquarium',
   },
   {
@@ -116,7 +114,7 @@ const FEATURED_SPECIES = [
     type: 'Freshwater · Schooling',
     note: '10 gal min · schools 6+ · peaceful',
     href: '/species/neon-tetra',
-    image: 'https://images.unsplash.com/photo-1522069213448-443a614da9b6?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'fish-com:species-thumb-neon-tetra',
     imageAlt: 'School of neon tetras',
   },
   {
@@ -124,15 +122,15 @@ const FEATURED_SPECIES = [
     type: 'Freshwater · Bottom dweller',
     note: '20 gal · schools 6+ · sand substrate',
     href: '/species/corydoras',
-    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=400&q=80&auto=format&fit=crop',
-    imageAlt: 'Corydoras catfish on aquarium sand',
+    manifestKey: 'fish-com:species-thumb-corydoras',
+    imageAlt: 'Corydoras catfish on sandy aquarium substrate',
   },
   {
     name: 'Goldfish',
     type: 'Coldwater · Large',
     note: '30+ gal · highly bioloaded · long-lived',
     href: '/species/goldfish',
-    image: 'https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'fish-com:species-thumb-goldfish',
     imageAlt: 'Goldfish swimming',
   },
 ]
@@ -528,13 +526,11 @@ export default function HomePage() {
               href={sp.href}
               className="group block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
-                <Image
-                  src={sp.image}
+              <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+                <StockImage
+                  manifestKey={sp.manifestKey}
                   alt={sp.imageAlt}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                  aspect="4:3"
                 />
               </div>
               <div className="p-4">

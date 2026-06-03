@@ -816,5 +816,89 @@
     "provider": "either",
     "alt": "A pet food bag with its ingredient label in focus -- myth-busting reference hub hero",
     "orientation": "landscape"
+  },
+  "dog-com:breed-golden-retriever": {
+    "query": "golden retriever portrait sunlight",
+    "provider": "either",
+    "alt": "A Golden Retriever in natural sunlight",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-french-bulldog": {
+    "query": "french bulldog portrait",
+    "provider": "either",
+    "alt": "A French Bulldog portrait",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shepherd": {
+    "query": "german shepherd dog portrait outdoor",
+    "provider": "either",
+    "alt": "A German Shepherd in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-beagle": {
+    "query": "beagle dog portrait outdoor",
+    "provider": "either",
+    "alt": "A Beagle in natural light",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-poodle": {
+    "query": "poodle dog portrait groomed",
+    "provider": "either",
+    "alt": "A well-groomed Poodle portrait",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-betta": {
+    "query": "betta fish planted aquarium",
+    "provider": "either",
+    "alt": "A betta fish in a planted aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-neon-tetra": {
+    "query": "neon tetra school aquarium",
+    "provider": "either",
+    "alt": "A school of neon tetras in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-clownfish": {
+    "query": "clownfish anemone ocean",
+    "provider": "either",
+    "alt": "A clownfish among sea anemone tentacles",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-goldfish": {
+    "query": "goldfish swimming aquarium",
+    "provider": "either",
+    "alt": "A goldfish swimming in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-angelfish": {
+    "query": "angelfish freshwater aquarium",
+    "provider": "either",
+    "alt": "An angelfish in a freshwater planted aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-discus": {
+    "query": "discus fish colorful aquarium",
+    "provider": "either",
+    "alt": "A colorful discus fish in a planted aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-guppy": {
+    "query": "guppy fish colorful freshwater",
+    "provider": "either",
+    "alt": "A colorful guppy in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-oscar": {
+    "query": "oscar fish cichlid aquarium",
+    "provider": "either",
+    "alt": "An Oscar cichlid in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-thumb-corydoras": {
+    "query": "corydoras catfish aquarium substrate",
+    "provider": "either",
+    "alt": "Corydoras catfish on sandy aquarium substrate",
+    "orientation": "landscape"
   }
 }

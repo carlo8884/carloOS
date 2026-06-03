@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -10,7 +10,6 @@ export const metadata: Metadata = buildMetadata({
   description: 'Over 60% of Golden Retrievers develop cancer (Morris Animal Foundation lifetime study). Complete guide to hemangiosarcoma, lymphoma, hip dysplasia, SAS.',
   path: '/health/golden-retriever-health',
   type: 'article',
-  ogImage: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
 })
 
 const schema = buildArticleSchema({
@@ -18,7 +17,7 @@ const schema = buildArticleSchema({
   title: 'Golden Retriever Health Guide',
   description: 'Complete Golden Retriever health guide covering cancer risk, hip dysplasia, SAS, and preventive care.',
   url: 'https://dog.com/health/golden-retriever-health',
-  imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=1200&q=80&auto=format&fit=crop',
+  imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
@@ -48,8 +47,6 @@ export default function GoldenRetrieverHealthPage() {
         authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '12 min',
-        image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1200&q=80&auto=format&fit=crop',
-        imageAlt: 'Veterinarian examining a Golden Retriever',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -90,6 +87,8 @@ export default function GoldenRetrieverHealthPage() {
       ]}
     >
       <div className="carloOS-article">
+
+        <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />
 
         <p>The Golden Retriever is America&apos;s most beloved family dog — and one of the breeds that most requires informed, proactive health management. The combination of their cancer predisposition, orthopedic vulnerabilities, and cardiac risks means that Golden ownership carries real medical responsibilities that owners deserve to understand from the start.</p>
 

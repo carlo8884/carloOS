@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
@@ -20,14 +19,14 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const FEATURED = [
-  { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', img: 'https://images.unsplash.com/photo-1583377993497-f2f1b2b13c54?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Neon Tetra', sci: 'Paracheirodon innesi', type: 'Freshwater', diff: 'Beginner', slug: 'neon-tetra', img: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Clownfish', sci: 'Amphiprioninae', type: 'Saltwater', diff: 'Beginner', slug: 'clownfish', img: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Goldfish', sci: 'Carassius auratus', type: 'Freshwater', diff: 'Beginner', slug: 'goldfish', img: 'https://images.unsplash.com/photo-1524704654690-b56af7d6b9f1?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Angelfish', sci: 'Pterophyllum scalare', type: 'Freshwater', diff: 'Intermediate', slug: 'angelfish', img: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Discus', sci: 'Symphysodon spp.', type: 'Freshwater', diff: 'Advanced', slug: 'discus', img: 'https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Guppy', sci: 'Poecilia reticulata', type: 'Freshwater', diff: 'Beginner', slug: 'guppy', img: 'https://images.unsplash.com/photo-1520302630591-fd1cb63aa58e?w=400&q=80&auto=format&fit=crop' },
-  { name: 'Oscar', sci: 'Astronotus ocellatus', type: 'Freshwater', diff: 'Intermediate', slug: 'oscar', img: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=400&q=80&auto=format&fit=crop' },
+  { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', manifestKey: 'fish-com:species-thumb-betta' },
+  { name: 'Neon Tetra', sci: 'Paracheirodon innesi', type: 'Freshwater', diff: 'Beginner', slug: 'neon-tetra', manifestKey: 'fish-com:species-thumb-neon-tetra' },
+  { name: 'Clownfish', sci: 'Amphiprioninae', type: 'Saltwater', diff: 'Beginner', slug: 'clownfish', manifestKey: 'fish-com:species-thumb-clownfish' },
+  { name: 'Goldfish', sci: 'Carassius auratus', type: 'Freshwater', diff: 'Beginner', slug: 'goldfish', manifestKey: 'fish-com:species-thumb-goldfish' },
+  { name: 'Angelfish', sci: 'Pterophyllum scalare', type: 'Freshwater', diff: 'Intermediate', slug: 'angelfish', manifestKey: 'fish-com:species-thumb-angelfish' },
+  { name: 'Discus', sci: 'Symphysodon spp.', type: 'Freshwater', diff: 'Advanced', slug: 'discus', manifestKey: 'fish-com:species-thumb-discus' },
+  { name: 'Guppy', sci: 'Poecilia reticulata', type: 'Freshwater', diff: 'Beginner', slug: 'guppy', manifestKey: 'fish-com:species-thumb-guppy' },
+  { name: 'Oscar', sci: 'Astronotus ocellatus', type: 'Freshwater', diff: 'Intermediate', slug: 'oscar', manifestKey: 'fish-com:species-thumb-oscar' },
 ]
 
 // ItemList of the featured species — structured, citable index of the
@@ -123,16 +122,15 @@ export default async function SpeciesIndexPage() {
           {FEATURED.map((species) => (
             <Link key={species.slug} href={`/species/${species.slug}`}
               className="block bg-brand-white border border-brand-border rounded-xl overflow-hidden no-underline hover:border-brand-primary hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200">
-              <div className="relative h-44 overflow-hidden">
-                <Image src={species.img} alt={species.name} fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-2 left-2">
-                  <span className={`text-2xs font-bold px-2 py-0.5 rounded-pill border ${DIFF_COLORS[species.diff as keyof typeof DIFF_COLORS] ?? ''}`}>
-                    {species.diff}
-                  </span>
-                </div>
+              <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+                <StockImage manifestKey={species.manifestKey} alt={species.name} aspect="4:3" />
               </div>
-              <div className="p-4">
+              <div className="px-4 pt-1 pb-0.5">
+                <span className={`text-2xs font-bold px-2 py-0.5 rounded-pill border ${DIFF_COLORS[species.diff as keyof typeof DIFF_COLORS] ?? ''}`}>
+                  {species.diff}
+                </span>
+              </div>
+              <div className="p-4 pt-2">
                 <div className="font-display font-bold text-brand-dark text-base mb-0.5 leading-tight">{species.name}</div>
                 <div className="text-xs italic text-brand-text-light mb-1">{species.sci}</div>
                 <div className="text-xs font-semibold text-brand-primary">{species.type}</div>

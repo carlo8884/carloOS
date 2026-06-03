@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 
@@ -17,7 +17,7 @@ const schema = combineSchemas(
   title: 'Labrador Retriever Health Guide',
   description: 'Obesity, hip dysplasia, EIC, PRA — complete Labrador Retriever health guide.',
   url: 'https://dog.com/health/labrador-health',
-  imageUrl: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=1200&q=80&auto=format&fit=crop',
+  imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
@@ -44,8 +44,6 @@ export default function LabradorHealthPage() {
         authorAvatar: '🐾',
         publishedAt: 'May 2025',
         readTime: '10 min',
-        image: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=1200&q=80&auto=format&fit=crop',
-        imageAlt: 'Labrador Retriever',
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -83,6 +81,9 @@ export default function LabradorHealthPage() {
       ]}
     >
       <div className="carloOS-article">
+
+        <StockImage manifestKey="dog-com:breed-labrador-retriever" alt="A Labrador Retriever in natural light" aspect="16:9" priority />
+
         <p>The Labrador Retriever has been America&apos;s most registered dog breed for over thirty consecutive years — a record earned through exceptional temperament, trainability, and adaptability. Labs are loyal, enthusiastic, and genuinely good-natured. They are also, in many ways, a breed that works against its own health: their legendary appetite is not simply enthusiasm for food. It is biology.</p>
 
         <h2 id="obesity">Obesity — The Central Health Challenge</h2>

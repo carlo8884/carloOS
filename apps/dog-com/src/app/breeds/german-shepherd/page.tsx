@@ -1,21 +1,20 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds', path: '/breeds/german-shepherd', type: 'article', ogImage: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=1200&q=80&auto=format&fit=crop', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds', path: '/breeds/german-shepherd', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 
 export default function GermanShepherdBreedPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(schema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Breeds', url: 'https://dog.com/breeds' }, { name: 'German Shepherd', url: 'https://dog.com/breeds/german-shepherd' } ] }))} />
       <div className="grid lg:grid-cols-2 bg-brand-dark min-h-[440px] overflow-hidden">
-        <div className="relative h-64 lg:h-auto">
-          <Image src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=800&q=80&auto=format&fit=crop" alt="German Shepherd" fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 50vw" />
+        <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+          <StockImage manifestKey="dog-com:breed-german-shepherd" alt="German Shepherd" aspect="4:3" priority />
         </div>
         <div className="flex flex-col justify-center px-container-sm sm:px-container py-12 relative">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(232,98,42,0.3) 0%, transparent 60%)' }} aria-hidden="true" />

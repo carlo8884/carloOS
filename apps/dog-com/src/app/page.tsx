@@ -30,7 +30,6 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
@@ -50,7 +49,6 @@ export const metadata: Metadata = buildMetadata({
     'Breed risks, health decisions, nutrition, training, insurance, and product guides — built to help owners decide, not just read.',
   path: '/',
   type: 'website',
-  ogImage: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80&auto=format&fit=crop',
 })
 
 // ─── Owner-path cards (above the fold) ──────────────────────────────────────
@@ -113,7 +111,7 @@ const FEATURED_BREEDS = [
     type: 'Sporting · Large',
     keyRisk: 'Cancer risk · hip dysplasia',
     href: '/breeds/golden-retriever',
-    image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'dog-com:breed-golden-retriever',
     imageAlt: 'Golden Retriever',
   },
   {
@@ -121,7 +119,7 @@ const FEATURED_BREEDS = [
     type: 'Sporting · Large',
     keyRisk: 'Hip dysplasia · obesity',
     href: '/breeds/labrador-retriever',
-    image: 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'dog-com:breed-labrador-retriever',
     imageAlt: 'Labrador Retriever',
   },
   {
@@ -129,7 +127,7 @@ const FEATURED_BREEDS = [
     type: 'Non-Sporting · Small',
     keyRisk: 'Brachycephalic syndrome · IVDD',
     href: '/breeds/french-bulldog',
-    image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'dog-com:breed-french-bulldog',
     imageAlt: 'French Bulldog',
   },
   {
@@ -137,7 +135,7 @@ const FEATURED_BREEDS = [
     type: 'Herding · Large',
     keyRisk: 'Hip dysplasia · degenerative myelopathy',
     href: '/breeds/german-shepherd',
-    image: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&auto=format&fit=crop',
+    manifestKey: 'dog-com:breed-german-shepherd',
     imageAlt: 'German Shepherd',
   },
 ]
@@ -415,13 +413,11 @@ export default function HomePage() {
               href={breed.href}
               className="group block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-surface">
-                <Image
-                  src={breed.image}
+              <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+                <StockImage
+                  manifestKey={breed.manifestKey}
                   alt={breed.imageAlt}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                  aspect="4:3"
                 />
               </div>
               <div className="p-4">
