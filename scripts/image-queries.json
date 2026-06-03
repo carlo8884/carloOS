@@ -942,5 +942,203 @@
     "provider": "either",
     "alt": "A close portrait of an alert ferret, suited to a ferret terminology glossary",
     "orientation": "landscape"
+  },
+  "horses-com:breed-quarter-horse": {
+    "query": "horse rider schooling session all-purpose",
+    "provider": "either",
+    "alt": "A horse and rider working in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "horses-com:supplement-joint": {
+    "query": "show jumping horse mid-flight fence",
+    "provider": "either",
+    "alt": "A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for",
+    "orientation": "landscape"
+  },
+  "horses-com:guide-saddle-fit": {
+    "query": "dressage horse rider canter tack",
+    "provider": "either",
+    "alt": "A dressage horse and rider working in tack at the canter",
+    "orientation": "landscape"
+  },
+  "horses-com:featured-quarter-horse": {
+    "query": "horse rider schooling arena versatile",
+    "provider": "either",
+    "alt": "A horse and rider in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "horses-com:featured-joint-supplements": {
+    "query": "show jumping horse fence sport",
+    "provider": "either",
+    "alt": "A show jumper mid-flight over a fence",
+    "orientation": "landscape"
+  },
+  "lizard-com:hero-portrait": {
+    "query": "crested gecko portrait branch macro",
+    "provider": "either",
+    "alt": "A crested gecko on a branch in dark atmospheric light",
+    "orientation": "landscape"
+  },
+  "lizard-com:featured-leopard-gecko": {
+    "query": "leopard gecko profile naturalistic",
+    "provider": "either",
+    "alt": "A leopard gecko (Eublepharis macularius) in profile",
+    "orientation": "landscape"
+  },
+  "lizard-com:featured-bearded-dragon": {
+    "query": "bearded dragon basking Pogona",
+    "provider": "either",
+    "alt": "A bearded dragon (Pogona vitticeps) basking",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-corn-snake": {
+    "query": "corn snake macro Pantherophis",
+    "provider": "either",
+    "alt": "A corn snake (Pantherophis guttatus) in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-blue-tongue-skink": {
+    "query": "blue tongue skink Tiliqua macro",
+    "provider": "either",
+    "alt": "A blue-tongue skink (Tiliqua spp.) on a naturalistic surface",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-ball-python": {
+    "query": "ball python coiled macro Python regius",
+    "provider": "either",
+    "alt": "A ball python coiled in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-dressage": {
+    "query": "dressage horse rider tack canter",
+    "provider": "either",
+    "alt": "Dressage horse in tack at the canter",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-jumping": {
+    "query": "show jumping horse mid-flight fence",
+    "provider": "either",
+    "alt": "Show jumper mid-flight over a fence",
+    "orientation": "landscape"
+  },
+  "saddle-com:review-allpurpose": {
+    "query": "horse rider schooling session all-purpose",
+    "provider": "either",
+    "alt": "Horse and rider in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-dressage": {
+    "query": "dressage horse tack arena",
+    "provider": "either",
+    "alt": "A dressage horse in tack",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-jumping": {
+    "query": "show jumping horse fence sport",
+    "provider": "either",
+    "alt": "A show jumping horse clearing a fence",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-eventing": {
+    "query": "eventing horse cross-country rider",
+    "provider": "either",
+    "alt": "An eventing horse and rider on cross-country",
+    "orientation": "landscape"
+  },
+  "saddle-com:discipline-allpurpose": {
+    "query": "horse rider schooling flatwork",
+    "provider": "either",
+    "alt": "A horse and rider working in an all-purpose schooling session",
+    "orientation": "landscape"
+  },
+  "saddle-com:hero-dressage": {
+    "query": "dressage horse profile tack dark background",
+    "provider": "either",
+    "alt": "A dressage horse in profile at the canter",
+    "orientation": "landscape"
+  },
+  "horses-com:hero-section": {
+    "query": "dressage horse canter dark moody equestrian",
+    "provider": "either",
+    "alt": "A dressage horse at the canter in moody equestrian light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-gargoyle-gecko": {
+    "query": "gargoyle gecko Rhacodactylus auriculatus macro",
+    "provider": "either",
+    "alt": "A gargoyle gecko (Rhacodactylus auriculatus) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-african-fat-tailed-gecko": {
+    "query": "fat tailed gecko Hemitheconyx portrait",
+    "provider": "either",
+    "alt": "An African fat-tailed gecko (Hemitheconyx caudicinctus) in profile",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-western-hognose": {
+    "query": "hognose snake Heterodon macro portrait",
+    "provider": "either",
+    "alt": "A western hognose snake (Heterodon nasicus) in a naturalistic setting",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-kenyan-sand-boa": {
+    "query": "kenyan sand boa Gongylophis snake macro",
+    "provider": "either",
+    "alt": "A Kenyan sand boa (Gongylophis colubrinus) coiled",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-green-anole": {
+    "query": "green anole Anolis carolinensis macro",
+    "provider": "either",
+    "alt": "A green anole (Anolis carolinensis) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-chinese-water-dragon": {
+    "query": "chinese water dragon Physignathus macro",
+    "provider": "either",
+    "alt": "A Chinese water dragon (Physignathus cocincinus) in naturalistic light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-fire-skink": {
+    "query": "fire skink Lepidothyris fernandi macro",
+    "provider": "either",
+    "alt": "A fire skink (Lepidothyris fernandi) showing vivid coloration",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-leachianus-gecko": {
+    "query": "leachianus gecko Rhacodactylus leachianus portrait",
+    "provider": "either",
+    "alt": "A leachianus gecko (Rhacodactylus leachianus) on a branch",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-mourning-gecko": {
+    "query": "mourning gecko Lepidodactylus macro portrait",
+    "provider": "either",
+    "alt": "A mourning gecko (Lepidodactylus lugubris) close-up",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-mossy-leaf-tail-gecko": {
+    "query": "leaf tail gecko Uroplatus camouflage macro",
+    "provider": "either",
+    "alt": "A mossy leaf-tail gecko (Uroplatus sikorae) in camouflage",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-argentine-tegu": {
+    "query": "argentine tegu Salvator merianae macro portrait",
+    "provider": "either",
+    "alt": "An Argentine black-and-white tegu (Salvator merianae) close-up",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-savannah-monitor": {
+    "query": "savannah monitor Varanus exanthematicus portrait",
+    "provider": "either",
+    "alt": "A savannah monitor (Varanus exanthematicus) in natural light",
+    "orientation": "landscape"
+  },
+  "lizard-com:species-thumb-nile-monitor": {
+    "query": "nile monitor Varanus niloticus macro portrait",
+    "provider": "either",
+    "alt": "A Nile monitor (Varanus niloticus) in naturalistic setting",
+    "orientation": "landscape"
   }
 }

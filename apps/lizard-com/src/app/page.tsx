@@ -6,9 +6,8 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 // Live UVB-distance tool embedded on the homepage — a calculator you use on
 // the first screens, not a link to one (premium gate 3).
 import { UvbDistanceCalculator } from '../components/visual/UvbDistanceCalculator'
@@ -175,13 +174,11 @@ const FEATURED_ARTICLES: {
   teaser: string
   readTime: string
   /**
-   * Optional cover photo. Photo IDs reuse the species-page Unsplash CDN
-   * URLs already shipped on /species (verified-in-production). Only the
-   * two species-leaning cards carry photos — UVB and Bioactive Setup get
-   * the CSS-only treatment to keep editorial honesty (no stock photo can
-   * stand in for a Solarmeter reading or a real bioactive build).
+   * Optional cover photo manifest key. Resolved via image-manifest.json
+   * (populated by sync-images.mjs) so photographer attribution is always
+   * rendered. Per QC §1: no raw CDN URLs here.
    */
-  image?: string
+  imageKey?: string
   imageAlt?: string
 }[] = [
   {
@@ -191,8 +188,7 @@ const FEATURED_ARTICLES: {
     teaser:
       'Crepuscular ground-dwelling gecko from the Iran–Afghanistan–Pakistan arid belt. Enclosure size, gradient, low-output UVB context, and the calcium-D3 protocol most pet-store guides get wrong.',
     readTime: '18 min',
-    image:
-      'https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=900&q=80&auto=format&fit=crop',
+    imageKey: 'lizard-com:featured-leopard-gecko',
     imageAlt: 'A leopard gecko (Eublepharis macularius) in profile',
   },
   {
@@ -211,8 +207,7 @@ const FEATURED_ARTICLES: {
     teaser:
       'Eight observable changes that warrant an ARAV-board-certified visit, in priority order. What is normal brumation, what is metabolic bone disease, and the husbandry corrections to make on the way to the clinic.',
     readTime: '14 min',
-    image:
-      'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=900&q=80&auto=format&fit=crop',
+    imageKey: 'lizard-com:featured-bearded-dragon',
     imageAlt: 'A bearded dragon (Pogona vitticeps) basking',
   },
   {
@@ -270,31 +265,9 @@ export default function HomePage() {
           style={{ background: 'linear-gradient(90deg, transparent, rgba(154,209,64,0.35), transparent)' }}
         />
 
-        {/* Hero photo — crested gecko on a branch, the dark-mode-friendly
-            atmospheric subject. Photo ID is already shipped on /species
-            (verified-in-production Unsplash CDN URL). Hidden on mobile; on
-            lg+ takes the right 45% of the masthead with a deep-moss edge
-            fade so the photo grades into the brand field. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden lg:block w-[45%] z-0"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1548155810-af5c30a49059?w=1400&q=80&auto=format&fit=crop"
-            alt=""
-            fill
-            sizes="45vw"
-            className="object-cover"
-            priority
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(90deg, rgba(6,10,6,1) 0%, rgba(6,10,6,0.80) 25%, rgba(6,10,6,0.32) 65%, rgba(6,10,6,0.50) 100%)',
-            }}
-          />
-        </div>
+        {/* Hero photo slot — manifest-managed StockImage renders below the hero
+            with photographer attribution. Desktop background removed per QC §1;
+            CSS gradients supply the dark-mode atmospheric wash on all viewports. */}
 
         <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
           <div className="max-w-3xl">
@@ -591,20 +564,16 @@ export default function HomePage() {
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                {/* Cover photo — verified Unsplash species photography,
-                    only renders for species-leaning cards. UVB and Setup
-                    cards stay CSS-only by design (their subject is data
-                    and build sheets, not a single image). */}
-                {a.image && a.imageAlt ? (
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={a.image}
-                      alt={a.imageAlt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
-                  </div>
+                {/* Cover photo — manifest-managed with photographer attribution.
+                    Only renders for species-leaning cards. UVB and Setup
+                    cards stay CSS-only by design. */}
+                {a.imageKey ? (
+                  <StockImage
+                    manifestKey={a.imageKey}
+                    alt={a.imageAlt}
+                    aspect="16:9"
+                    variant="inline"
+                  />
                 ) : null}
                 <div className="p-8">
                 <div
