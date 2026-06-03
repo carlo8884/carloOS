@@ -117,7 +117,11 @@ export default function GuidesHubPage() {
           <p className="text-base lg:text-lg font-light text-white/60 max-w-2xl leading-relaxed">
             24 reference guides on saddle fit, bridle and bit selection, riding disciplines,
             tack care, and horse ownership — written to Society of Master Saddlers and FEI
-            criteria.
+            criteria. New to the terminology?{' '}
+            <Link href="/glossary" className="underline text-white/80 hover:text-white">
+              Browse the tack glossary
+            </Link>
+            .
           </p>
         </div>
       </div>
