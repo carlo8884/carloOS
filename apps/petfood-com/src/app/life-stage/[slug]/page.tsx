@@ -13,6 +13,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -466,6 +467,7 @@ export default async function LifeStagePage({ params }: PageProps) {
           available). Per-SKU AAFCO statements vary within a brand portfolio and must be verified
           on the specific product label.
         </p>
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <div
           style={{
             display: 'grid',

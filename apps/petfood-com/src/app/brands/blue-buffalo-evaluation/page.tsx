@@ -9,6 +9,7 @@ import {
   RelatedLinks,
   EmailCapture,
   BuyBox,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -120,6 +121,7 @@ export default function BlueBuffaloEvaluationPage() {
           investigation. An honest evaluation has to engage all of that.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy Blue Buffalo"
           disclosure="If after reading this evaluation you still want to buy Blue Buffalo, browse the full lineup on Chewy or Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."

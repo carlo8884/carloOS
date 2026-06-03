@@ -7,6 +7,7 @@ import {
   RelatedLinks,
   EmailCapture,
   BuyBox,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +95,7 @@ export default function OrijenVsAcanaComparisonPage() {
           facilities, and distinct price tiers.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy either line"
           disclosure="Both lines are available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."

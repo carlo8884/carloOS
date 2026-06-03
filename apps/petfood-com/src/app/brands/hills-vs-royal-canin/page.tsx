@@ -9,6 +9,7 @@ import {
   RelatedLinks,
   EmailCapture,
   BuyBox,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,6 +129,7 @@ export default function HillsVsRoyalCaninPage() {
           experience.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
           label="Where to buy either brand"
           disclosure="Both brands are widely available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
