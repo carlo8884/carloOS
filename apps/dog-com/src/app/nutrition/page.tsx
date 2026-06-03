@@ -154,6 +154,12 @@ export default function NutritionHubPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <section className="px-container-sm sm:px-container pb-10">
+        <p className="text-sm text-brand-text-light max-w-2xl">
+          Hitting an unfamiliar term? The <Link href="/glossary" className="text-brand-primary hover:underline">dog owner glossary</Link> defines
+          AAFCO, by-product, grain-free/DCM, body condition score, and more in plain English.
+        </p>
+      </section>
     </>
   </>
   )

@@ -50,7 +50,7 @@ ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new g
 - [ ] Stocking-by-species reference completeness pass.
 
 ### Dog.com (launch #5, last + most polish)
-- [ ] Dog-owner glossary / vet-term DefinedTermSet — pairs with breed + health clusters.
+- [x] Dog owner & health glossary (`/glossary`) DefinedTermSet — health/training/nutrition/breeds; linked from /nutrition. PR #450.
 - [ ] Verify breed × health programmatic matrix has no thin outputs before launch.
 
 ---
