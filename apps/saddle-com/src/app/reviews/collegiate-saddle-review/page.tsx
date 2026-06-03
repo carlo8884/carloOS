@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildProductSchema,
@@ -92,6 +92,7 @@ export default function CollegiateReviewPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="convertible"
               badge="Best Collegiate — Most Value"
