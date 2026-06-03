@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Angelfish Care Guide — Cichlid Behavior, Tank Height | Fish.com', description: 'Angelfish are cichlids with cichlid behavior — pairs bond for life, defend territory, and may attack tankmates during breeding. Tall tanks required.', path: '/species/angelfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Angelfish Care Guide', description: 'Cichlid behavior, bonding, territory, and tall tank requirements for freshwater angelfish.', url: 'https://fish.com/species/angelfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -41,7 +41,8 @@ export default function AngelfishPage() {
 
         <h2>Strains and Varieties</h2>
         <p>Decades of selective breeding have produced many angelfish varieties beyond the wild-type silver with black bars: veil angels (extended fins), marble (random black and white pattern), koi (orange, white, and black), gold (solid yellow), black lace (black), platinum (solid white), zebra (extra bars), smoky (brown-gray tones), and others. Veil-tail varieties have the most dramatic fin extensions but are slower and more vulnerable to fin-nipping — avoid keeping them with even mildly nippy species. Wild-type angelfish are hardier and more vigorous spawners than many heavily selectively-bred strains.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Angelfish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for angelfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

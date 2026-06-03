@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -36,7 +36,8 @@ export default function AmanoShrimpPage() {
 
         <h2>Feeding and Behavior</h2>
         <p>Amanos are primarily algae and biofilm grazers but will accept supplemental food — algae wafers, blanched vegetables, and leftover food that sinks to the substrate. They are active during the day (unlike some shrimp that hide) and visibly forage across plants, substrate, and hardscape. A well-fed group of Amanos actively working through a planted tank is genuinely pleasing to observe — they are large enough to follow individually and their methodical grazing behavior is distinctive. Occasional "escape events" from open-topped tanks are possible — they can climb filter intake tubes and tank edges; cover all access points.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Amano Shrimp — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for amano shrimp care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

@@ -23,6 +23,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
+  AffiliateDisclosure,
   CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
@@ -378,6 +379,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         </div>
 
         <h2 id="shop">Where to Shop</h2>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
           Browse the {category.categoryName.toLowerCase()} category on Amazon or Chewy. Fish.com
           earns an affiliate commission when you purchase through these links — at no extra cost

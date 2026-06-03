@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Goldfish Care Guide — Tank Size, Lifespan | Fish.com', description: 'Goldfish are not bowl fish. Common goldfish need 75+ gallons and can live 20+ years. Fancy goldfish have different needs than single-tail varieties.', path: '/species/goldfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -42,7 +42,8 @@ export default function GoldfishPage() {
         <h2>Feeding — Quality Over Quantity</h2>
         <p>Goldfish are omnivores that will eat continuously if food is available — overfeeding is the most common husbandry mistake. Feed once or twice daily, only what they consume in 2 minutes. A high-quality goldfish pellet (Hikari Lionhead, Repashy Soilent Green, Northfin Goldfish) as the staple. Supplement with blanched vegetables (zucchini, spinach, peas — excellent for gut motility in fancy varieties prone to constipation) and gel food. Avoid cheap goldfish flakes as the primary diet — they break down rapidly and cloud the water.</p>
         <p>Feeding temperature matters: below 50°F, goldfish metabolism slows significantly. Reduce feeding at cooler temperatures and stop feeding below 50°F for goldfish in ponds preparing for winter dormancy — undigested food causes intestinal problems in cold-dormant fish.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Goldfish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for goldfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide — The Nano Guppy | Fish.com", description: "Endler's livebearers are tiny, dazzling, prolific guppy relatives ideal for nano tanks. Easy to keep, easy to breed, and they hybridize freely with guppies.", path: '/species/endlers-livebearer', type: 'article' })
@@ -43,7 +43,8 @@ export default function EndlersLivebearerPage() {
 
         <h2>Tankmates and Setup</h2>
         <p>Endlers are perfectly peaceful and pair well with other small, calm species: pygmy corydoras, otocinclus, small rasboras, and dwarf shrimp such as cherry shrimp. Avoid anything large enough to view a one-inch fish as a snack. A heavily planted tank with fine-leaved and floating plants offers fry cover and shows off the males' colors against a green backdrop. Feed small, frequent meals of quality flake, micro-pellets, and frozen baby brine shrimp.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Endler&apos;s Livebearer — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, sponge filters, heaters, live plants, and food sized for Endler&apos;s livebearer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
