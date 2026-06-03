@@ -4,7 +4,6 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
@@ -42,13 +41,13 @@ const breedListSchema = {
 const schema = combineSchemas(breadcrumbSchema, breedListSchema)
 
 
-const BREED_IMAGES: Record<string, string> = {
-  'golden-retriever': 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&auto=format&fit=crop',
-  'labrador-retriever': 'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=400&q=80&auto=format&fit=crop',
-  'french-bulldog': 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&auto=format&fit=crop',
-  'german-shepherd': 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&auto=format&fit=crop',
-  'beagle': 'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=400&q=80&auto=format&fit=crop',
-  'poodle': 'https://images.unsplash.com/photo-1616149955247-48c60b1d4413?w=400&q=80&auto=format&fit=crop',
+const BREED_MANIFEST_KEYS: Record<string, string> = {
+  'golden-retriever': 'dog-com:breed-golden-retriever',
+  'labrador-retriever': 'dog-com:breed-labrador-retriever',
+  'french-bulldog': 'dog-com:breed-french-bulldog',
+  'german-shepherd': 'dog-com:breed-german-shepherd',
+  'beagle': 'dog-com:breed-beagle',
+  'poodle': 'dog-com:breed-poodle',
 }
 
 // Size filters for UI
@@ -128,7 +127,7 @@ export default async function BreedsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {breeds.map((breed) => {
             const careData = breed.care_data
-            const image = BREED_IMAGES[breed.slug]
+            const manifestKey = BREED_MANIFEST_KEYS[breed.slug]
 
             return (
               <Link
@@ -136,17 +135,15 @@ export default async function BreedsPage() {
                 href={`/breeds/${breed.slug}`}
                 className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
               >
-                <div className="relative h-44 bg-brand-surface overflow-hidden">
-                  {image ? (
-                    <Image
-                      src={image}
+                <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden bg-brand-surface">
+                  {manifestKey ? (
+                    <StockImage
+                      manifestKey={manifestKey}
                       alt={breed.common_name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      aspect="4:3"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-5xl">🐕</div>
+                    <div className="flex items-center justify-center text-5xl" style={{ aspectRatio: '4/3' }}>🐕</div>
                   )}
                 </div>
                 <div className="p-4">

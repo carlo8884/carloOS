@@ -28,6 +28,7 @@ import {
   CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
+  StockImage,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../../data/breeds'
 import {
@@ -212,24 +213,18 @@ function pickHealthLink(condition: string, links: string[]): string | undefined 
 }
 
 /**
- * Pre-resolved breed image URLs (Unsplash) — mirrors the BREED_IMAGES
- * map in apps/dog-com/src/app/breeds/page.tsx. Visual Bot owns the
- * source-of-truth manifest; this is a compatible reference only.
- * Falls back to a paw glyph when no image is mapped.
+ * Breed manifest keys — mirrors the BREED_MANIFEST_KEYS map in
+ * apps/dog-com/src/app/breeds/page.tsx. Each key maps to a manifest
+ * entry with photographer attribution rendered by StockImage.
+ * Falls back to a paw glyph when no key is mapped.
  */
-const BREED_IMAGES: Record<string, string> = {
-  'golden-retriever':
-    'https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&auto=format&fit=crop',
-  'labrador-retriever':
-    'https://images.unsplash.com/photo-1579213838058-2aeeda8d6e2d?w=600&q=80&auto=format&fit=crop',
-  'french-bulldog':
-    'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80&auto=format&fit=crop',
-  'german-shepherd':
-    'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600&q=80&auto=format&fit=crop',
-  beagle:
-    'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=600&q=80&auto=format&fit=crop',
-  poodle:
-    'https://images.unsplash.com/photo-1616149955247-48c60b1d4413?w=600&q=80&auto=format&fit=crop',
+const BREED_MANIFEST_KEYS: Record<string, string> = {
+  'golden-retriever': 'dog-com:breed-golden-retriever',
+  'labrador-retriever': 'dog-com:breed-labrador-retriever',
+  'french-bulldog': 'dog-com:breed-french-bulldog',
+  'german-shepherd': 'dog-com:breed-german-shepherd',
+  beagle: 'dog-com:breed-beagle',
+  poodle: 'dog-com:breed-poodle',
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -407,7 +402,7 @@ export default async function ComparePage({ params }: PageProps) {
       `Side-by-side comparison of ${a.name} and ${b.name}: size, energy, lifespan, ` +
       `health, grooming, training, and monthly cost — drawn from AKC and OFA breed data.`,
     url: pageUrl,
-    imageUrl: BREED_IMAGES[a.slug] ?? '',
+    imageUrl: '',
     authorName: 'Dog.com Editorial',
     publishedAt: '2026-05-30T00:00:00Z',
     modifiedAt: '2026-05-30T00:00:00Z',
@@ -422,8 +417,8 @@ export default async function ComparePage({ params }: PageProps) {
   const faqSchema = buildFAQSchema({ questions: faqs })
   const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
 
-  const aImg = BREED_IMAGES[a.slug]
-  const bImg = BREED_IMAGES[b.slug]
+  const aManifestKey = BREED_MANIFEST_KEYS[a.slug]
+  const bManifestKey = BREED_MANIFEST_KEYS[b.slug]
 
   return (
     <>
@@ -468,23 +463,22 @@ export default async function ComparePage({ params }: PageProps) {
         {/* Side-by-side hero cards */}
         <div className="grid sm:grid-cols-2 gap-5 mt-8">
           {[a, b].map((breed, idx) => {
-            const img = idx === 0 ? aImg : bImg
+            const mKey = idx === 0 ? aManifestKey : bManifestKey
             return (
               <Link
                 key={breed.slug}
                 href={`/breeds/${breed.slug}`}
                 className="block bg-white/5 border border-white/10 rounded-xl overflow-hidden no-underline hover:border-brand-primary transition-colors"
               >
-                <div className="relative h-44 bg-brand-surface/20 overflow-hidden">
-                  {img ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={img}
+                <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden bg-brand-surface/20">
+                  {mKey ? (
+                    <StockImage
+                      manifestKey={mKey}
                       alt={breed.name}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      aspect="16:9"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-5xl">
+                    <div className="flex items-center justify-center text-5xl" style={{ aspectRatio: '16/9' }}>
                       🐕
                     </div>
                   )}

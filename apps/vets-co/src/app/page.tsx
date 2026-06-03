@@ -11,7 +11,6 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 // Live insurance-reimbursement estimator embedded on the homepage so the
@@ -204,13 +203,11 @@ const FEATURED_GUIDES: {
   teaser: string
   readTime: string
   /**
-   * Optional cover photo. Per the COO photo-sourcing playbook, Vets.co
-   * uses photography sparingly and avoids clinical-scene clichés. Only
-   * breed-specific cards may carry a verified breed portrait — never an
-   * actor-as-vet shot, never a fake exam scene. Photo IDs reuse the dog
-   * breed CDN URLs already shipped on Dog.com (verified-in-production).
+   * Optional cover photo. Stored as a manifest key so attribution is
+   * rendered automatically via StockImage. Only breed-specific cards
+   * carry a portrait — never an actor-as-vet shot, never a fake exam scene.
    */
-  image?: string
+  manifestKey?: string
   imageAlt?: string
 }[] = [
   {
@@ -239,8 +236,7 @@ const FEATURED_GUIDES: {
     teaser:
       'The most common hereditary risks in the modern Golden line — hemangiosarcoma, lymphoma, hip dysplasia, subaortic stenosis — plus the screening tests that change outcomes if you start early.',
     readTime: '14 min',
-    image:
-      'https://images.unsplash.com/photo-1552053831-71594a27632d?w=900&q=80&auto=format&fit=crop',
+    manifestKey: 'dog-com:breed-golden-retriever',
     imageAlt: 'A Golden Retriever portrait in natural light',
   },
   {
@@ -887,19 +883,13 @@ export default function VetsHomePage() {
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                {/* Cover photo — verified Unsplash breed portrait, only on
-                    cards where a single subject makes editorial sense (not
+                {/* Cover photo — manifest-backed breed portrait via StockImage,
+                    only on cards where a single subject makes editorial sense (not
                     on emergency-triage, insurance, or vaccine-schedule
                     cards, which stay text-led per the Vets.co playbook). */}
-                {art.image && art.imageAlt ? (
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={art.image}
-                      alt={art.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
+                {art.manifestKey ? (
+                  <div className="[&>figure]:my-0 [&>figure]:rounded-none overflow-hidden">
+                    <StockImage manifestKey={art.manifestKey} alt={art.imageAlt} aspect="16:9" />
                   </div>
                 ) : null}
                 <div className="p-7 lg:p-8">
