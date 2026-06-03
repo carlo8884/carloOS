@@ -254,7 +254,7 @@ export default function HomePage() {
               Decide with math, not guesses
             </div>
             <div className="text-sm sm:text-base text-white font-semibold">
-              5 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂
+              6 free aquarist calculators &#x2014; volume, stocking, heater wattage, water changes, CO&#x2082;, cycling
             </div>
           </div>
           <div className="flex gap-2 flex-wrap">
@@ -268,6 +268,158 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── CALCULATORS & TOOLS ────────────────────────────────────────── */}
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Calculators &amp; Tools
+          </span>
+        </div>
+        <h2
+          className="font-display font-black text-white tracking-tight italic mb-3 max-w-3xl"
+          style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}
+        >
+          Get a number, not just an article.
+        </h2>
+        <p className="text-base text-white/60 mb-8 max-w-2xl leading-relaxed">
+          Every calculator is built on published aquarist reference data &#x2014; answer a few
+          questions and get a precise, sourced answer for your tank right now.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          {/* Aquarium Volume Calculator */}
+          <Link
+            href="/tools/aquarium-volume-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F4CF;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              Aquarium Volume Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Enter length, width, and height in any unit &#x2014; get exact gallons and liters,
+              plus bioload math for the fish you&apos;re planning to keep.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Calculate tank volume &#x2192;
+            </span>
+          </Link>
+
+          {/* Stocking Calculator */}
+          <Link
+            href="/tools/stocking-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F41F;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              Stocking Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              How many fish can your tank safely hold? Get bioload-based stocking numbers
+              by species, filter type, and tank footprint &#x2014; not the outdated
+              &quot;inch-per-gallon&quot; rule.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Check your stocking &#x2192;
+            </span>
+          </Link>
+
+          {/* Water-Change Calculator */}
+          <Link
+            href="/tools/water-change-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F4A7;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              Water-Change Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Enter current nitrate level and your target &#x2014; get the exact percentage and
+              gallon volume to change, including time-to-safe estimates.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Plan your water change &#x2192;
+            </span>
+          </Link>
+        </div>
+
+        {/* Second row: heater calc + tools hub + glossary */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Heater Wattage Calculator */}
+          <Link
+            href="/tools/heater-wattage-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F321;&#xFE0F;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              Heater Wattage Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Tank volume, room temperature, and target species temperature &#x2014; get the
+              correct wattage so your heater can actually reach setpoint.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Size your heater &#x2192;
+            </span>
+          </Link>
+
+          {/* All Calculators Hub */}
+          <Link
+            href="/tools"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F9EE;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Tools hub
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              All Calculators
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              CO&#x2082; calculator for planted tanks, cycling time estimator, equipment
+              recommender, and every other aquarist tool &#x2014; with methodology notes.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Browse all tools &#x2192;
+            </span>
+          </Link>
+
+          {/* Aquarist Glossary */}
+          <Link
+            href="/glossary"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F4D6;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Reference
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">
+              Aquarist Glossary
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Plain-English definitions for aquarium terminology &#x2014; from ammonia and
+              GH/KH to reverse osmosis and the nitrogen cycle &#x2014; with source citations.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Browse the glossary &#x2192;
+            </span>
+          </Link>
         </div>
       </section>
 
