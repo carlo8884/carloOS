@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -36,6 +36,8 @@ export default function TemperatureGuidePage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+
         <h2 id="gradient">The Thermal Gradient Principle</h2>
         <DropCap>A thermal gradient is a continuous range of temperatures across the length of the enclosure — from a warm basking zone at one end to a cooler retreat at the other. The animal self-regulates body temperature by choosing where to position itself. This behavioral thermoregulation is the mechanism through which reptiles control digestion, immune function, reproduction, and virtually every metabolic process.</DropCap>
         <p>An enclosure with uniform temperature — even the correct temperature — denies the animal the ability to thermoregulate. The basking zone and the cool end serve different physiological functions; both are required.</p>
@@ -67,6 +69,31 @@ export default function TemperatureGuidePage() {
         <CalloutBox variant="warning" title="Unthermostated heat = dead reptile">
           Every heat source — basking bulb, CHE, DHP, heat mat — must be connected to the correct thermostat. An unthermostated heater can overshoot enclosure temperatures and kill an animal within hours. The thermostat is not an optional accessory; it is part of the heater.
         </CalloutBox>
+
+        <BuyBox
+          label="Heat sources and thermostats"
+          disclosure="We earn a commission when you purchase through these links, at no extra cost to you. We never rank by commission."
+          brands={[
+            {
+              name: 'Arcadia Deep Heat Projector',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/arcadia+deep+heat+projector?s=setup-temperature-guide' },
+              ],
+            },
+            {
+              name: 'Arcadia Pro T-Stat (Pulse Proportional)',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/arcadia+pro+t-stat+thermostat?s=setup-temperature-guide' },
+              ],
+            },
+            {
+              name: 'Inkbird ITC-306A Dimmer Thermostat',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/inkbird+itc-306a+dimmer+thermostat?s=setup-temperature-guide' },
+              ],
+            },
+          ]}
+        />
 
         <h2 id="measuring">Measuring Temperatures Correctly</h2>
         <p>The most critical measurement is basking surface temperature — measured with a temperature gun (infrared) pointed at the exact basking surface the animal contacts. Ambient air temperature is measured with a probe thermometer (Govee H5053) in the cool zone. Both measurements matter; both require accurate instruments.</p>

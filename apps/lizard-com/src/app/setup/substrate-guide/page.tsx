@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
@@ -18,6 +18,7 @@ export default function SubstrateGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <h2>Impaction — The Primary Safety Concern</h2>
         <p>Impaction occurs when a reptile ingests substrate that cannot be passed through the digestive system. It is a life-threatening emergency requiring veterinary intervention and is often fatal. The risk is highest when:</p>
         <ul>
@@ -45,6 +46,31 @@ export default function SubstrateGuidePage() {
           <li><strong>Orchid bark:</strong> Chunky organic material; good for humid arboreal species (crested geckos, chameleons). Low impaction risk due to particle size.</li>
           <li><strong>Sphagnum moss:</strong> Excellent moisture retention for high-humidity species and moist hides. Not practical as a primary substrate for large enclosures due to cost.</li>
         </ul>
+
+        <BuyBox
+          label="Recommended substrates"
+          disclosure="We earn a commission when you purchase through these links, at no extra cost to you. We never rank by commission — substrate recommendations follow impaction risk and species-appropriateness data."
+          brands={[
+            {
+              name: 'Exo Terra Plantation Soil (coconut fiber — tropical species)',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/exo+terra+plantation+soil+coconut+fiber?s=setup-substrate-guide' },
+              ],
+            },
+            {
+              name: 'Zoo Med ReptiSoil (bioactive-ready blend)',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/zoo+med+reptisoil?s=setup-substrate-guide' },
+              ],
+            },
+            {
+              name: 'Flukers Premium Buffered Premium Sand (coarse — desert species only)',
+              vendors: [
+                { vendor: 'amazon', href: '/go/amazon-brand/flukers+premium+sand+desert+reptile?s=setup-substrate-guide' },
+              ],
+            },
+          ]}
+        />
 
         <h3>Tile</h3>
         <p>Slate tile, ceramic tile, or linoleum tile on the enclosure floor. Zero impaction risk, easy to disinfect, helps wear down nails naturally, holds heat well. Disadvantages: no burrowing, humidity management requires other methods, less enriching than naturalistic substrate. Appropriate for: species with higher impaction risk (young bearded dragons) or keepers who want maximum hygiene and easy cleaning.</p>
