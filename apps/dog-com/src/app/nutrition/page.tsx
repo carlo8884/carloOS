@@ -158,6 +158,11 @@ export default function NutritionHubPage() {
         <p className="text-sm text-brand-text-light max-w-2xl">
           Hitting an unfamiliar term? The <Link href="/glossary" className="text-brand-primary hover:underline">dog owner glossary</Link> defines
           AAFCO, by-product, grain-free/DCM, body condition score, and more in plain English.
+          Need to put a number on how much to feed?{' '}
+          <Link href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">
+            The Dog Calorie Calculator
+          </Link>{' '}
+          estimates daily kcal needs using the standard RER formula and WSAVA/AAHA-style life-stage factors.
         </p>
       </section>
     </>
