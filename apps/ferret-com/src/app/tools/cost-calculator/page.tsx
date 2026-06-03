@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Cost Calculator — Setup, Yearly & Lifetime | Ferret.com',
   description:
-    'Estimate the real cost of owning a ferret: one-time setup, yearly recurring costs, and a lifetime total — plus why to budget for adrenal, insulinoma, and blockage care.',
+    'Estimate the real cost of owning a ferret: one-time setup, yearly costs, and a lifetime total — plus why to budget for adrenal, insulinoma, and blockage care.',
   path: '/tools/cost-calculator',
 })
 
