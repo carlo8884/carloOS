@@ -30,11 +30,12 @@ Each launch site should carry, at minimum: a complete cluster graph (done), a gl
 Items below are the gaps found by inspection, ranked.
 
 ### Ferret.com (launch #1)
-- [x] Lifetime Cost Calculator (`/tools/cost-calculator`) — setup + yearly + lifetime, scaled by ferret count; illness-fund prompt. **PR #446.**
-- [ ] Adoption-vs-buy decision guide (`/ownership/adopting-vs-buying`) — shelter/rescue vs breeder vs pet-store, with welfare + cost framing. *Hub→spoke into /ownership.*
-- [ ] "Is a ferret right for me?" readiness checklist tool (`/tools/readiness-quiz`) — scored lifestyle/legality/time/cost fit. *High-intent top-of-funnel.*
-- [ ] State legality reference hub (`/ownership/legality`) — ferret legality by state/city (CA, NYC, HI restrictions etc.), cited to statutes. *Strong GEO + cross-link to ferrets.com directory.*
-- [ ] Ferret-proofing room-by-room guide (`/care/ferret-proofing`) — blockage-prevention angle ties to health. *If not already covered under /care.*
+Already deep: `/ownership` carries cost-of-owning, ferret-legality-by-state, adoption-vs-buying, and a
+ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new gap was an interactive tool.
+- [x] Lifetime Cost Calculator (`/tools/cost-calculator`) — setup + yearly + lifetime, scaled by ferret count; illness-fund prompt; cross-links the existing `/ownership/cost-of-owning-a-ferret` article. **PR #446.**
+- [ ] "Is a ferret right for me?" readiness checklist tool (`/tools/readiness-quiz`) — scored lifestyle/legality/time/cost fit. *High-intent top-of-funnel; the one remaining tool gap.*
+- [~] Verify `/care` covers ferret-proofing (blockage-prevention); only build if a real gap. *Inspect before building.*
+- Note: legality + adoption-vs-buy already exist as editorial pages — NOT gaps (corrected after inspection).
 
 ### PetFood.com (launch #2)
 - [ ] Glossary / label-term DefinedTermSet (`/glossary`) — AAFCO terms, guaranteed analysis, "complete & balanced," by-product, etc. *GEO magnet.*
