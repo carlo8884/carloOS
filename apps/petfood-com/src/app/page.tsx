@@ -258,6 +258,125 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── TOOLS & CALCULATORS ──────────────────────────────────────── */}
+      {/*
+       * Three polished tool cards + a /tools hub link.
+       * Dog.com "Tools & Calculators" pattern adapted to PetFood.com tokens:
+       *   - dark bg (brand-dark) matches the trust bar above for visual weight
+       *   - mono eyebrow labels ("Calculator / Finance", etc.) per brand brief
+       *   - card hover: border-brand-primary, matching FeaturedCard pattern
+       * No images -- data-vis IS the visual (per brand brief, SS Visual strategy).
+       * Additive only; existing FoodCostCalculator embed above is preserved.
+       */}
+      <section className="bg-brand-dark py-20 border-t border-white/10">
+        <div className="max-w-container mx-auto px-6 md:px-10">
+
+          {/* section header */}
+          <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+            <div>
+              <p className="font-mono text-2xs uppercase tracking-eyebrow text-brand-primary-light mb-3">
+                TOOLS &amp; CALCULATORS
+              </p>
+              <h2
+                className="font-display font-bold text-white tracking-tight leading-tight"
+                style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}
+              >
+                Get a number, not just advice.
+              </h2>
+              <p className="text-base text-white/55 mt-3 max-w-2xl leading-relaxed">
+                Interactive tools built on published veterinary nutrition references -- enter your
+                inputs and get a precise, sourced answer for your pet right now.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="font-mono text-xs uppercase tracking-wider text-brand-primary-light hover:text-brand-primary transition-colors whitespace-nowrap self-end"
+            >
+              All tools &#x2192;
+            </Link>
+          </div>
+
+          {/* three tool cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            {/* Card 1 -- Food Cost Calculator */}
+            <Link
+              href="/tools/food-cost-calculator"
+              className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.09] hover:border-brand-primary transition-all duration-200"
+            >
+              <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-4">
+                Calculator &middot; Finance
+              </p>
+              <h3 className="font-display font-bold text-white text-xl leading-tight mb-3">
+                Pet Food Cost Calculator
+              </h3>
+              <p className="text-sm text-white/55 leading-relaxed mb-5">
+                Enter cups-per-day, bag size, and bag price. Returns cost per day, month, and year
+                with per-cup unit cost. Side-by-side mode compares two foods on equal terms.
+              </p>
+              <div className="font-mono text-xs text-brand-primary-light/70 mb-5 space-y-1">
+                <div>Input: cups/day &middot; bag size &middot; price</div>
+                <div>Output: $/day &middot; $/month &middot; $/year &middot; $/cup</div>
+              </div>
+              <span className="inline-flex items-center font-mono text-xs uppercase tracking-wider text-brand-primary-light group-hover:text-brand-primary transition-colors">
+                Open calculator &#x2192;
+              </span>
+            </Link>
+
+            {/* Card 2 -- Portion & Calorie Calculator */}
+            <Link
+              href="/tools/portion-calculator"
+              className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.09] hover:border-brand-primary transition-all duration-200"
+            >
+              <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-4">
+                Calculator &middot; Nutrition
+              </p>
+              <h3 className="font-display font-bold text-white text-xl leading-tight mb-3">
+                Portion &amp; Calorie Calculator
+              </h3>
+              <p className="text-sm text-white/55 leading-relaxed mb-5">
+                Daily caloric needs for dogs and cats via standard RER/MER equations
+                (WSAVA/AAHA-style). Enter weight and life stage; get kcal/day and optional
+                cups/day from the food label.
+              </p>
+              <div className="font-mono text-xs text-brand-primary-light/70 mb-5 space-y-1">
+                <div>Input: weight &middot; species &middot; life stage</div>
+                <div>Output: RER &middot; MER kcal/day &middot; cups/day</div>
+              </div>
+              <span className="inline-flex items-center font-mono text-xs uppercase tracking-wider text-brand-primary-light group-hover:text-brand-primary transition-colors">
+                Open calculator &#x2192;
+              </span>
+            </Link>
+
+            {/* Card 3 -- Glossary */}
+            <Link
+              href="/glossary"
+              className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.09] hover:border-brand-primary transition-all duration-200"
+            >
+              <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-4">
+                Reference &middot; Label Decoder
+              </p>
+              <h3 className="font-display font-bold text-white text-xl leading-tight mb-3">
+                Pet Food Glossary
+              </h3>
+              <p className="text-sm text-white/55 leading-relaxed mb-5">
+                Plain-English definitions for label and nutrition terms -- AAFCO, guaranteed
+                analysis, dry-matter basis, meat meal vs by-product, feeding trials, and more --
+                each with sourced context.
+              </p>
+              <div className="font-mono text-xs text-brand-primary-light/70 mb-5 space-y-1">
+                <div>Covers: label regulation &middot; life stage &middot; ingredients</div>
+                <div>Format: alphabetised by category</div>
+              </div>
+              <span className="inline-flex items-center font-mono text-xs uppercase tracking-wider text-brand-primary-light group-hover:text-brand-primary transition-colors">
+                Browse glossary &#x2192;
+              </span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── METHODOLOGY CALLOUT ───────────────────────────────────────── */}
       <section className="bg-brand-surface py-20">
         <div className="max-w-container mx-auto px-6 md:px-10">
