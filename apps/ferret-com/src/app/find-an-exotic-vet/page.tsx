@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  StockImage,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -136,6 +137,13 @@ export default function FindAnExoticVetPage() {
         }
       >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:find-vet-hero"
+            aspect="16:9"
+            variant="inline"
+            caption="Finding an exotic-pet veterinarian experienced with ferrets is the single most important ownership preparation."
+            priority
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"

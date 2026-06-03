@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, StockImage } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -217,6 +217,10 @@ export default function FerretFirstYearSchedulePage() {
           </div>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="ferret-com:first-year-hero" aspect="16:9" variant="wide" />
+      </div>
 
       {/* QUARTERLY PREVIEW */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
