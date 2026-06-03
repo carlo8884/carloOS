@@ -23,6 +23,12 @@ const TOOLS = [
     desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
     tag: 'Nutrition',
   },
+  {
+    href: '/tools/dog-age-calculator',
+    title: 'Dog Age in Human Years Calculator',
+    desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size (small, medium, large, giant) and outputs a qualitative life-stage label.',
+    tag: 'Life Stage',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
