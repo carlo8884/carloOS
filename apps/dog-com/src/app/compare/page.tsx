@@ -20,6 +20,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../data/breeds'
 import {
@@ -153,6 +154,10 @@ export default function CompareHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Compare Breeds</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:compare-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       {/* Methodology */}
       <div className="px-container-sm sm:px-container py-10 border-b border-brand-border">
