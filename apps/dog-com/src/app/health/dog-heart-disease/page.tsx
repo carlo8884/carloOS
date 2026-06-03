@@ -74,7 +74,7 @@ export default function DogHeartDiseasePage() {
           <p>CHF management is multimodal — medications work in concert. Standard protocol for left-sided CHF from MMVD:</p>
           <ul>
             <li><strong>Pimobendan (Vetmedin):</strong> Already started in the pre-CHF stage for most dogs. Continues through CHF.</li>
-            <li><strong>Furosemide (Lasix):</strong> Loop diuretic — removes excess fluid from the lungs. Dosage adjusted to the minimum effective dose (too much causes dehydration and kidney stress). BID to TID dosing for most CHF dogs.</li>
+            <li><strong>Furosemide (Lasix):</strong> Loop diuretic — removes excess fluid from the lungs. Dosage and frequency are determined and adjusted by the prescribing veterinarian to achieve the minimum effective dose (too much causes dehydration and kidney stress).</li>
             <li><strong>ACE inhibitor (enalapril or benazepril):</strong> Reduces cardiac workload and slows disease progression. Standard in CHF management.</li>
             <li><strong>Spironolactone:</strong> Potassium-sparing diuretic with cardiac protective effects. Often added to furosemide in CHF management.</li>
             <li><strong>Dietary sodium restriction:</strong> Reduces fluid retention — cardiac-specific diets (Hill's h/d, Royal Canin Cardiac) provide appropriate sodium levels.</li>
