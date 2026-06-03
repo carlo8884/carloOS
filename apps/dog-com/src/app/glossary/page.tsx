@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Owner Glossary — Health, Training & Food Terms | Dog.com',
   description:
-    'A plain-language dog glossary: vaccines, spay/neuter, body condition score, brachycephalic, socialization, positive reinforcement, AAFCO, and more terms defined.',
+    'A plain-language dog glossary: vaccines, spay/neuter, body condition score, brachycephalic, socialization, positive reinforcement, AAFCO, and more defined.',
   path: '/glossary',
 })
 
