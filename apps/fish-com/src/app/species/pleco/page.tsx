@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pleco Care Guide — Bristlenose vs Common Pleco | Fish.com', description: 'Plecos: the common pleco grows to 24 inches and does not belong in most tanks. Bristlenose plecos stay at 5 inches and are ideal community fish.', path: '/species/pleco', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -51,7 +51,8 @@ export default function PlecoPage() {
 
         <h2>L-Numbers — Understanding the System</h2>
         <p>Unidentified or newly discovered pleco species are assigned L-numbers (from Loricariidae) by aquarist publications pending formal scientific description. L046 (zebra pleco), L190 (royal pleco), L134 (leopard frog pleco), L066 (king tiger pleco) are popular examples. Some L-number plecos are scientifically described but retain their L-number in the hobby. L-number plecos vary enormously in size, diet, and temperament — research the specific L-number before purchasing.</p>
-        <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Pleco — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for pleco care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
