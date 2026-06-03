@@ -11,6 +11,7 @@ import {
   buildFAQSchema,
   combineSchemas,
   ArticleByline,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({

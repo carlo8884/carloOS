@@ -10,6 +10,7 @@ import {
   buildFAQSchema,
   combineSchemas,
   StockImage,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({

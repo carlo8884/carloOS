@@ -9,6 +9,7 @@ import {
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
