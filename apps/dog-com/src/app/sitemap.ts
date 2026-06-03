@@ -180,6 +180,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/training/separation-anxiety', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/training/trainer-credentials', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/training/training-red-flags', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/tools/dog-calorie-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/which-pet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
   ]
 }
