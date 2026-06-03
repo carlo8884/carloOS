@@ -42,7 +42,7 @@ const schema = buildArticleSchema({
 // Top 5 carriers vets-co recommends (same data as dog.com hub,
 // abbreviated here to keep the page focused).
 const TOP_CARRIERS = [
-  { slug: 'pumpkin', name: 'Pumpkin Pet', vendor: 'pumpkin' as const, blurb: 'Most comprehensive base coverage; no upper age limit.', why: 'Recommended when owners want everything covered out of the box.' },
+  { slug: 'pumpkin', name: 'Pumpkin Pet', vendor: 'pumpkin' as const, blurb: 'Broad base coverage; no upper age limit.', why: 'Recommended when owners want extensive coverage out of the box.' },
   { slug: 'trupanion', name: 'Trupanion', vendor: 'trupanion' as const, blurb: 'Per-condition deductible, direct-pay at participating vets.', why: 'Recommended for chronic and complex conditions where claim totals accumulate.' },
   { slug: 'manypets', name: 'ManyPets', vendor: 'manypets' as const, blurb: 'Curable pre-existing conditions covered after 18 months symptom-free.', why: 'Recommended when the pet has a minor curable condition in history.' },
   { slug: 'embrace', name: 'Embrace', vendor: 'embrace' as const, blurb: 'Healthy Pet Deductible decreases each claim-free year.', why: 'Recommended for younger healthy pets — the deductible discount compounds.' },
