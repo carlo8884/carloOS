@@ -196,7 +196,7 @@ export default function HomePage() {
                 href="/guides/methodology"
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-semibold rounded hover:bg-brand-primary-dark transition-colors"
               >
-                How we score
+                The scoring methodology
                 <span aria-hidden>→</span>
               </Link>
               <Link
@@ -267,13 +267,12 @@ export default function HomePage() {
                 METHODOLOGY · v1.0
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-medium tracking-tight text-brand-text-dark leading-tight mb-5">
-                What we score on
+                The scoring dimensions
               </h2>
               <p className="text-base text-brand-text-mid leading-relaxed mb-6">
                 Every brand and formula reviewed on this site runs through the same five
                 dimensions. The rubric is binding: any score that contradicts what is
-                published on the methodology page is a defect, and we want to hear
-                about it.
+                published on the methodology page is a defect worth reporting.
               </p>
               <Link
                 href="/guides/methodology"
