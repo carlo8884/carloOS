@@ -36,6 +36,7 @@
  */
 
 import type { Metadata } from 'next'
+import type React from 'react'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 // Live, interactive volume calculator embedded on the homepage so the first
@@ -57,41 +58,102 @@ export const metadata: Metadata = buildMetadata({
   type: 'website',
 })
 
+// ─── Inline SVG icons for problem cards ─────────────────────────────────────
+
+function ProblemIconCloud() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M18 10a5 5 0 0 0-9.8-1A4 4 0 1 0 8 17h10a3 3 0 0 0 0-6z" />
+    </svg>
+  )
+}
+
+function ProblemIconBubbles() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="8" cy="15" r="3" />
+      <circle cx="15" cy="10" r="2.2" />
+      <circle cx="11" cy="5" r="1.4" />
+    </svg>
+  )
+}
+
+function ProblemIconWarning() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 4l9 16H3z" />
+      <path d="M12 10v4" />
+      <circle cx="12" cy="17" r="0.7" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function ProblemIconLeaf() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 20c0-7 6-11 6-11S13 6 7 9c-4 2-5 7-5 7s3 1 6 0" />
+      <path d="M5 16l7-7" />
+    </svg>
+  )
+}
+
+function ProblemIconCycle() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 12a9 9 0 0 1 15.5-6.2" />
+      <path d="M21 12a9 9 0 0 1-15.5 6.2" />
+      <path d="M18 5.8l1.7 1-1 1.8" />
+      <path d="M6 18.2l-1.7-1 1-1.8" />
+    </svg>
+  )
+}
+
+function ProblemIconFish() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M18 12c0 0-3-5-9-5S3 12 3 12s3 5 6 5c3.5 0 6-2.5 6-5z" />
+      <path d="M18 12l3-3" />
+      <path d="M18 12l3 3" />
+      <circle cx="10" cy="11" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
 // ─── Quick-action problem cards (above the fold) ────────────────────────────
 
-const PROBLEMS = [
+const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string }[] = [
   {
-    icon: '☁️',
+    icon: <ProblemIconCloud />,
     title: 'Cloudy water',
     desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.',
     href: '/setup/water-chemistry-guide',
   },
   {
-    icon: '🫧',
+    icon: <ProblemIconBubbles />,
     title: 'Fish gasping at the surface',
     desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.',
     href: '/health/fish-disease-guide',
   },
   {
-    icon: '⚠️',
+    icon: <ProblemIconWarning />,
     title: 'Ammonia / nitrite spike',
     desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.',
     href: '/health/new-tank-syndrome',
   },
   {
-    icon: '🌿',
+    icon: <ProblemIconLeaf />,
     title: 'Algae outbreak',
     desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.',
     href: '/setup/planted-tank-setup',
   },
   {
-    icon: '🔄',
+    icon: <ProblemIconCycle />,
     title: 'New tank cycling',
     desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.',
     href: '/setup/aquarium-cycling-guide',
   },
   {
-    icon: '🐟',
+    icon: <ProblemIconFish />,
     title: 'Stocking & compatibility',
     desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.',
     href: '/tools/stocking-calculator',
@@ -208,7 +270,7 @@ export default function HomePage() {
                 href={p.href}
                 className="group block rounded-xl p-5 no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200"
               >
-                <div className="text-3xl mb-3" aria-hidden="true">{p.icon}</div>
+                <div className="mb-3 text-brand-primary-light">{p.icon}</div>
                 <h2 className="font-display font-bold text-white text-base leading-tight mb-2">
                   {p.title}
                 </h2>
@@ -609,6 +671,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EMAIL CAPTURE — "The Weekly Tank" ──────────────────────────── */}
+      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
       <section className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-section">
         <EmailCapture
           variant="section"
@@ -624,6 +687,7 @@ export default function HomePage() {
           ]}
         />
       </section>
+      )}
 
       {/* ── TRUST FOOTER COPY ──────────────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">

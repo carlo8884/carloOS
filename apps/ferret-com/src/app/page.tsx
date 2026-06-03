@@ -663,10 +663,9 @@ export default function HomePage() {
                 <Link
                   href={article.href}
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr auto',
-                    alignItems: 'start',
-                    gap: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0',
                     padding: '28px 32px',
                     background: 'var(--brand-white)',
                     border: '1px solid var(--brand-border)',
@@ -841,9 +840,16 @@ export default function HomePage() {
               >
                 <div
                   aria-hidden
-                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                  style={{ marginBottom: '18px', lineHeight: 1, color: 'var(--brand-amber)' }}
                 >
-                  &#x1F9EA;
+                  {/* Beaker / flask icon */}
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 3h6" />
+                    <path d="M10 3v7l-4 8h12l-4-8V3" />
+                    <path d="M8 17h8" />
+                    <circle cx="14" cy="13" r="0.8" fill="currentColor" stroke="none" />
+                    <circle cx="11" cy="15" r="0.8" fill="currentColor" stroke="none" />
+                  </svg>
                 </div>
                 <div
                   style={{
@@ -915,9 +921,15 @@ export default function HomePage() {
               >
                 <div
                   aria-hidden
-                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                  style={{ marginBottom: '18px', lineHeight: 1, color: 'var(--brand-amber)' }}
                 >
-                  &#x1F4B0;
+                  {/* Coin / cost icon */}
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v10" />
+                    <path d="M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5c0 2-3 2.5-3 4.5" />
+                    <path d="M9 14.5c0 1.4 1.3 2.5 3 2.5s3-1.1 3-2.5" />
+                  </svg>
                 </div>
                 <div
                   style={{
@@ -989,9 +1001,13 @@ export default function HomePage() {
               >
                 <div
                   aria-hidden
-                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                  style={{ marginBottom: '18px', lineHeight: 1, color: 'var(--brand-amber)' }}
                 >
-                  &#x1F4D6;
+                  {/* Open book icon */}
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v13c-3-1-6-1-9 1-3-2-6-2-9-1V5z" />
+                    <path d="M12 6v14" />
+                  </svg>
                 </div>
                 <div
                   style={{
@@ -1066,6 +1082,7 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════════════════════
           EMAIL CAPTURE
           ════════════════════════════════════════════════════════════════ */}
+      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
       <section
         style={{
           background: 'var(--brand-white)',
@@ -1140,6 +1157,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ════════════════════════════════════════════════════════════════
           EDITORIAL FOOTER NOTE (above shared <Footer />)

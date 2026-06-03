@@ -944,6 +944,7 @@ export default function VetsHomePage() {
       </section>
 
       {/* ── EMAIL CAPTURE — emergency triage card lead magnet ──────── */}
+      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
       <section
         className="px-container-sm sm:px-container py-section"
         style={{ background: 'var(--brand-primary-pale)' }}
@@ -965,6 +966,7 @@ export default function VetsHomePage() {
           />
         </div>
       </section>
+      )}
 
       {/* ── PHOTO ATTRIBUTION — restrained credit, Unsplash hygiene ─── */}
       <aside
