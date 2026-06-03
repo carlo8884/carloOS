@@ -62,6 +62,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Breed & Discipline',
   },
   {
+    slug: 'jump-racing',
+    title: 'Jump Racing',
+    tagline:
+      'Steeplechase, hurdles, and American timber racing: racing over obstacles, the horses that contest it, and the National Steeplechase Association.',
+    authorities: 'National Steeplechase Association',
+    category: 'Discipline',
+  },
+  {
     slug: 'understanding-race-types-and-classes',
     title: 'Race Types & Classes Explained',
     tagline:
@@ -108,6 +116,14 @@ const RACING_SPOKES: RacingCard[] = [
       'How racehorses are prepared for competition: general conditioning principles, the role of the trainer, and the AAEP welfare framework.',
     authorities: 'AAEP',
     category: 'Training & Welfare',
+  },
+  {
+    slug: 'the-people-of-racing',
+    title: 'The People of Racing',
+    tagline:
+      'Who does what: owners, breeders, trainers, jockeys, the backstretch team, and the raceday officials who keep the sport running.',
+    authorities: 'The Jockey Club, ARCI',
+    category: 'Structure & Governance',
   },
 ]
 
