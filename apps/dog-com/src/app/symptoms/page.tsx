@@ -29,6 +29,7 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import { getSiteConfig } from '@carloOS/config'
 import {
@@ -313,6 +314,10 @@ export default function SymptomsHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Symptoms</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="dog-com:symptoms-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       {/* Body */}
       <div className="px-container-sm sm:px-container py-12">

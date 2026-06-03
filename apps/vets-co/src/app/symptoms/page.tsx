@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
 } from '@carloOS/ui'
 import { Symptoms, type Symptom, type UrgencyTier } from '../../data/symptoms'
 
@@ -165,6 +166,10 @@ export default function SymptomsHubPage() {
           </a>{' '}
           guidance.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="vets-co:symptoms-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-6xl">

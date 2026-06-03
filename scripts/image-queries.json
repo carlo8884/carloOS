@@ -732,5 +732,89 @@
     "provider": "either",
     "alt": "A horse hoof being cared for",
     "orientation": "landscape"
+  },
+  "dog-com:symptoms-hero": {
+    "query": "dog attentive alert natural light portrait",
+    "provider": "either",
+    "alt": "An alert dog in natural light -- dog symptoms triage hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:conditions-hero": {
+    "query": "dog resting calm veterinary reference",
+    "provider": "either",
+    "alt": "A calm dog resting -- canine conditions reference hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:tools-hero": {
+    "query": "dog with measuring scoop kibble bowl",
+    "provider": "either",
+    "alt": "A dog beside a measuring cup and food bowl -- dog care tools hub hero",
+    "orientation": "landscape"
+  },
+  "dog-com:compare-hero": {
+    "query": "two dog food bags side by side comparison",
+    "provider": "either",
+    "alt": "Two dog food bags placed side by side for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:feeding-hero": {
+    "query": "dog and cat eating from bowls natural light",
+    "provider": "either",
+    "alt": "A dog and cat eating from their respective food bowls in natural light",
+    "orientation": "landscape"
+  },
+  "petfood-com:supplements-hero": {
+    "query": "fish oil capsules omega-3 supplements natural",
+    "provider": "either",
+    "alt": "Fish oil capsules and omega-3 supplements on a neutral surface",
+    "orientation": "landscape"
+  },
+  "petfood-com:tools-hero": {
+    "query": "pet food bag price tag measuring cup math",
+    "provider": "either",
+    "alt": "A pet food bag beside a measuring cup -- cost-per-day calculation reference",
+    "orientation": "landscape"
+  },
+  "petfood-com:guides-hero": {
+    "query": "pet food label nutrition facts close up",
+    "provider": "either",
+    "alt": "A close-up of a pet food bag nutrition label -- foundational guides hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:symptoms-hero": {
+    "query": "stethoscope clinical tools veterinary",
+    "provider": "either",
+    "alt": "Veterinary clinical tools on a clean surface -- pet symptom triage hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:medications-hero": {
+    "query": "veterinary medication pill bottle tablets blister",
+    "provider": "either",
+    "alt": "Veterinary medication tablets and pill bottles on a clean surface",
+    "orientation": "landscape"
+  },
+  "vets-co:diagnostics-hero": {
+    "query": "veterinary laboratory test tubes blood sample",
+    "provider": "either",
+    "alt": "Veterinary laboratory test tubes on a clean clinical surface -- diagnostics hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:specialists-hero": {
+    "query": "veterinary equipment exam table clinical clean",
+    "provider": "either",
+    "alt": "A clean veterinary exam table with clinical equipment -- specialists hub hero",
+    "orientation": "landscape"
+  },
+  "vets-co:tools-hero": {
+    "query": "insurance paperwork clipboard pen calculator desk",
+    "provider": "either",
+    "alt": "Paperwork, a clipboard, pen, and calculator on a desk -- veterinary finance tools hub",
+    "orientation": "landscape"
+  },
+  "petfood-com:myths-hero": {
+    "query": "pet food bag label magnifying glass ingredients",
+    "provider": "either",
+    "alt": "A pet food bag with its ingredient label in focus -- myth-busting reference hub hero",
+    "orientation": "landscape"
   }
 }

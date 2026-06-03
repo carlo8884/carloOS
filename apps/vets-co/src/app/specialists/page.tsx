@@ -20,6 +20,7 @@ import {
   combineSchemas,
   SchemaScript,
   CalloutBox,
+  StockImage,
 } from '@carloOS/ui'
 import { Specialties } from '../../data/specialties'
 
@@ -90,6 +91,10 @@ export default function SpecialistsHubPage() {
           typical US cost ranges, how pet insurance fits in, and how to verify board
           certification. Sourced from ACVIM, ACVD, ACVO, ACVECC, ACVS, AVDC, and AVMA references.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="vets-co:specialists-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       <main className="px-container-sm sm:px-container py-12 max-w-5xl">
