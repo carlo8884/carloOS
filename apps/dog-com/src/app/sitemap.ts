@@ -82,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://dog.com/guides', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/guides/dog-body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/guides/dog-spay-neuter-timing', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/glossary', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/health/addisons-disease', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/health/anemia-in-dogs', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
