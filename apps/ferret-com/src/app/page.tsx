@@ -7,11 +7,13 @@
  * Section order:
  *   1. Hero — H1 + tagline + dual CTAs
  *   2. Trust bar — dark masthead, 4 editorial claims
- *   3. Featured categories grid (4 cards)
- *   4. Featured articles — 3 cornerstones with eyebrow + teaser
- *   5. Email capture (homepage source)
- *   6. Sister-site teaser — Ferrets.com
- *   7. Editorial footer copy (separate from shared <Footer>)
+ *   3. Live tool — FerretFoodEvaluator inline (premium gate 3)
+ *   4. Cluster hubs — six top-level authority hubs
+ *   5. Featured categories grid (4 cards)
+ *   6. Featured articles — 3 cornerstones with eyebrow + teaser
+ *   7. Tools & Calculators — 3 feature cards (food-evaluator, cost-calculator, glossary)
+ *   8. Email capture (homepage source)
+ *   9. Editorial footer copy (separate from shared <Footer>)
  *
  * Visual strategy (per COO photo-sourcing playbook, ops/handoffs/
  * 2026-05-29-photo-sourcing-playbook.md):
@@ -742,6 +744,322 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          TOOLS & CALCULATORS
+          Mirrors the Dog.com "Tools & Calculators" section pattern.
+          The food evaluator runs inline above; this section surfaces the
+          standalone tool pages and the glossary as polished feature cards
+          so owners arriving from search can discover them from the homepage.
+          ════════════════════════════════════════════════════════════════ */}
+      <section
+        style={{
+          background: 'var(--brand-dark)',
+          padding: 'clamp(64px, 8vw, 96px) 24px',
+          borderTop: '1px solid rgba(201, 157, 95, 0.18)',
+          borderBottom: '1px solid rgba(201, 157, 95, 0.18)',
+        }}
+      >
+        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+          {/* Section eyebrow */}
+          <div style={{ marginBottom: '12px' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--brand-amber)',
+              }}
+            >
+              <span
+                aria-hidden
+                style={{ display: 'inline-block', width: '24px', height: '2px', background: 'var(--brand-amber)', flexShrink: 0 }}
+              />
+              Tools &amp; Calculators
+            </span>
+          </div>
+
+          <h2
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(26px, 3.5vw, 44px)',
+              fontWeight: 900,
+              letterSpacing: '-0.025em',
+              lineHeight: 1.08,
+              color: 'rgba(251, 245, 232, 0.97)',
+              margin: '0 0 12px',
+            }}
+          >
+            Get a number, not just advice.
+          </h2>
+          <p
+            style={{
+              fontSize: '1rem',
+              lineHeight: 1.65,
+              color: 'rgba(251, 245, 232, 0.55)',
+              maxWidth: '42rem',
+              margin: '0 0 40px',
+            }}
+          >
+            Interactive tools and reference built on ferret husbandry data &mdash; evaluate
+            a food in the store aisle, plan your first-year budget, or look up the exact
+            term your vet used.
+          </p>
+
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px',
+            }}
+          >
+            {/* Card 1 — Food Evaluator */}
+            <li>
+              <Link
+                href="/tools/food-evaluator"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '28px 26px',
+                  background: 'rgba(251, 245, 232, 0.05)',
+                  border: '1px solid rgba(201, 157, 95, 0.18)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'background 0.22s ease, border-color 0.22s ease',
+                }}
+              >
+                <div
+                  aria-hidden
+                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                >
+                  &#x1F9EA;
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  Nutrition tool
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'rgba(251, 245, 232, 0.97)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  Ferret Food Evaluator
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.55,
+                    color: 'rgba(251, 245, 232, 0.55)',
+                    margin: '0 0 18px',
+                    flex: 1,
+                  }}
+                >
+                  Paste the guaranteed analysis from any kibble bag. Score protein, fat,
+                  fiber, and ash against published ferret nutrient targets and get a clear
+                  &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes.
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-amber)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  Evaluate a food &#x2192;
+                </span>
+              </Link>
+            </li>
+
+            {/* Card 2 — Cost Calculator */}
+            <li>
+              <Link
+                href="/tools/cost-calculator"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '28px 26px',
+                  background: 'rgba(251, 245, 232, 0.05)',
+                  border: '1px solid rgba(201, 157, 95, 0.18)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'background 0.22s ease, border-color 0.22s ease',
+                }}
+              >
+                <div
+                  aria-hidden
+                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                >
+                  &#x1F4B0;
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  Budgeting calculator
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'rgba(251, 245, 232, 0.97)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  Ferret Cost Calculator
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.55,
+                    color: 'rgba(251, 245, 232, 0.55)',
+                    margin: '0 0 18px',
+                    flex: 1,
+                  }}
+                >
+                  Estimate one-time setup, yearly recurring costs, and the lifetime total
+                  of ferret ownership &mdash; scaled by number of ferrets, with a separate
+                  prompt to budget for adrenal, insulinoma, and blockage care.
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-amber)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  Calculate your costs &#x2192;
+                </span>
+              </Link>
+            </li>
+
+            {/* Card 3 — Ferret Glossary */}
+            <li>
+              <Link
+                href="/ownership/ferret-glossary"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  padding: '28px 26px',
+                  background: 'rgba(251, 245, 232, 0.05)',
+                  border: '1px solid rgba(201, 157, 95, 0.18)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'background 0.22s ease, border-color 0.22s ease',
+                }}
+              >
+                <div
+                  aria-hidden
+                  style={{ fontSize: '2.25rem', marginBottom: '18px', lineHeight: 1 }}
+                >
+                  &#x1F4D6;
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber)',
+                    marginBottom: '8px',
+                  }}
+                >
+                  Reference
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'rgba(251, 245, 232, 0.97)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  Ferret Glossary
+                </div>
+                <p
+                  style={{
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.55,
+                    color: 'rgba(251, 245, 232, 0.55)',
+                    margin: '0 0 18px',
+                    flex: 1,
+                  }}
+                >
+                  Hob, jill, kit, gib, sprite, business, dooking, the war dance &mdash; and
+                  the husbandry and health terms owners meet at the vet and in the community.
+                  Plain-English definitions in one place.
+                </p>
+                <span
+                  style={{
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    color: 'var(--brand-amber)',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  Browse the glossary &#x2192;
+                </span>
+              </Link>
+            </li>
+          </ul>
+
+          {/* "See all tools" link */}
+          <div style={{ marginTop: '28px' }}>
+            <Link
+              href="/tools"
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: 'var(--brand-amber)',
+                textDecoration: 'none',
+                letterSpacing: '0.01em',
+              }}
+            >
+              All ferret tools &#x2192;
+            </Link>
+          </div>
         </div>
       </section>
 
