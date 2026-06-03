@@ -521,6 +521,240 @@ export default function VetsHomePage() {
         </div>
       </section>
 
+      {/* ── TOOLS & REFERENCES ──────────────────────────────────────── */}
+      {/*
+       * Three dedicated resources -- the insurance estimator standalone page,
+       * the emergency triage card, and the clinical glossary -- are not
+       * directly linked from the homepage even though each is a high-citation,
+       * high-intent asset.  This section surfaces all three as polished cards
+       * plus the /tools hub link.  Additive only; no hero or global changes.
+       * No AI-generated imagery -- all treatment is CSS/SVG per QC §1.
+       */}
+      <section
+        className="px-container-sm sm:px-container py-section"
+        style={{ background: 'var(--brand-primary-dark)' }}
+      >
+        <div className="mx-auto max-w-container-wide">
+          {/* Section header */}
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8"
+                  style={{ background: 'var(--brand-accent-light)' }}
+                />
+                <span
+                  className="text-2xs font-bold uppercase tracking-eyebrow"
+                  style={{ color: 'var(--brand-accent-light)' }}
+                >
+                  Tools &amp; References
+                </span>
+              </div>
+              <h2
+                className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
+                style={{ lineHeight: 1.1 }}
+              >
+                Use the tools. Know the terms.
+              </h2>
+              <p
+                className="text-sm mt-2 max-w-xl"
+                style={{ color: 'rgba(255,255,255,0.60)' }}
+              >
+                Interactive calculators, a printable triage card, and a plain-English
+                clinical glossary built for owners making decisions at the kitchen table.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="text-sm font-semibold no-underline hover:underline whitespace-nowrap"
+              style={{ color: 'var(--brand-accent-light)' }}
+            >
+              All tools &rarr;
+            </Link>
+          </div>
+
+          {/* Three tool/reference cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            {/* Card 1 -- Insurance Reimbursement Estimator (standalone page) */}
+            <Link
+              href="/tools/insurance-reimbursement-estimator"
+              className="group block rounded-md p-7 no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
+              }}
+            >
+              {/* Shield-with-columns SVG -- finance/protection motif, clinical line style */}
+              <div className="mb-5" style={{ color: 'var(--brand-accent-light)' }}>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+                  <path d="M9 12h2" />
+                  <path d="M13 12h2" />
+                  <path d="M9 15h2" />
+                  <path d="M13 15h2" />
+                  <path d="M10 9h4" />
+                </svg>
+              </div>
+              <div
+                className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Calculator
+              </div>
+              <h3 className="font-display font-bold text-xl leading-snug mb-3 text-white">
+                Insurance Reimbursement Estimator
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-5"
+                style={{ color: 'rgba(255,255,255,0.60)' }}
+              >
+                Enter premium, deductible, reimbursement rate, and annual cap to see your
+                real out-of-pocket cost before you compare plans. NAIC/NAPHIA math, no signup.
+              </p>
+              <span
+                className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Open estimator
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  &rarr;
+                </span>
+              </span>
+            </Link>
+
+            {/* Card 2 -- Emergency Triage Card (dedicated page /emergency-triage-card) */}
+            <Link
+              href="/emergency-triage-card"
+              className="group block rounded-md p-7 no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
+              }}
+            >
+              {/* Triangle-warning SVG -- triage/emergency motif (matches CategoryIconSvg 'emergency-triage') */}
+              <div className="mb-5" style={{ color: 'var(--brand-accent-light)' }}>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 4l9 16H3z" />
+                  <path d="M12 10v4" />
+                  <circle cx="12" cy="17" r="0.7" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <div
+                className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Reference Card
+              </div>
+              <h3 className="font-display font-bold text-xl leading-snug mb-3 text-white">
+                Emergency Triage Card
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-5"
+                style={{ color: 'rgba(255,255,255,0.60)' }}
+              >
+                Wallet and fridge card: species vital-sign ranges, which signs warrant
+                an ER visit, which are same-day, and what to do in the car. Printable. Free.
+              </p>
+              <span
+                className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Get the card
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  &rarr;
+                </span>
+              </span>
+            </Link>
+
+            {/* Card 3 -- Clinical Glossary (/glossary) */}
+            <Link
+              href="/glossary"
+              className="group block rounded-md p-7 no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
+              }}
+            >
+              {/* Open-book SVG -- glossary/reference motif (matches CategoryIconSvg 'health-library') */}
+              <div className="mb-5" style={{ color: 'var(--brand-accent-light)' }}>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v13c-3-1-6-1-9 1-3-2-6-2-9-1V5z" />
+                  <path d="M12 6v14" />
+                </svg>
+              </div>
+              <div
+                className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Glossary
+              </div>
+              <h3 className="font-display font-bold text-xl leading-snug mb-3 text-white">
+                Pet Health &amp; Insurance Glossary
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-5"
+                style={{ color: 'rgba(255,255,255,0.60)' }}
+              >
+                Plain-English definitions for veterinary and insurance terms:
+                deductible, triage, bilateral conditions, ACVIM, referral, and 60+
+                more -- every entry sourced.
+              </p>
+              <span
+                className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                style={{ color: 'var(--brand-accent-light)' }}
+              >
+                Browse glossary
+                <span
+                  aria-hidden="true"
+                  className="ml-1.5 transition-transform group-hover:translate-x-0.5"
+                >
+                  &rarr;
+                </span>
+              </span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── WHY VETS.CO — positioning band ──────────────────────────── */}
       <section
         className="px-container-sm sm:px-container py-section relative overflow-hidden"
