@@ -10,7 +10,6 @@
  */
 
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 // Live body-condition-score tool embedded on the homepage so the first
@@ -178,13 +177,11 @@ const FEATURED_ARTICLES: {
   teaser: string
   readTime: string
   /**
-   * Optional cover photo. Photo IDs are either reused from the CarloOS
-   * Saddle.com codebase (verified-in-production) or sourced via Unsplash
-   * search for equestrian editorial subjects matching the brand mood.
-   * Per playbook: moody single-subject, environmental over isolated,
-   * never the "smiling rider on stock horse" cliché.
+   * Optional cover photo manifest key. Resolved via image-manifest.json
+   * (populated by sync-images.mjs) so photographer attribution is always
+   * rendered. Per QC §1: no raw CDN URLs here.
    */
-  image?: string
+  imageKey?: string
   imageAlt?: string
 }[] = [
   {
@@ -194,12 +191,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration. AQHA registry, the 5-panel genetic test, and what to expect as a first-time owner.',
     readTime: '14 min',
-    // All-purpose horse and rider photo — reused from saddle-com /english
-    // (verified-in-production CarloOS Unsplash ID). Quarter Horse is the
-    // workhorse of multiple disciplines; the schooling-session photo fits
-    // the breed's versatility better than a discipline-specific shot.
-    image:
-      'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=900&q=80&auto=format&fit=crop',
+    // Horse and rider schooling session — manifest-managed with photographer
+    // attribution. Quarter Horse's discipline versatility matches this subject.
+    imageKey: 'horses-com:featured-quarter-horse',
     imageAlt: 'A horse and rider in an all-purpose schooling session',
   },
   {
@@ -234,12 +228,9 @@ const FEATURED_ARTICLES: {
     teaser:
       'Glucosamine, chondroitin, hyaluronic acid, MSM — the four ingredients on most labels. What the literature actually shows, the difference between maintenance and loading doses, and where to skip the marketing.',
     readTime: '13 min',
-    // Show-jumper mid-flight — reused from saddle-com production. Joint
-    // supplements are most relevant to the explosive-impact sport horse;
-    // the airborne jumper makes the subject visible without staging a
-    // bottle-marketing scene.
-    image:
-      'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=900&q=80&auto=format&fit=crop',
+    // Show-jumper mid-flight — manifest-managed with photographer attribution.
+    // Joint supplements are most relevant to the explosive-impact sport horse.
+    imageKey: 'horses-com:featured-joint-supplements',
     imageAlt: 'A show jumper mid-flight over a fence',
   },
   {
@@ -278,28 +269,9 @@ export default function HomePage() {
             over staged. The dressage portrait is the strongest single-
             subject image in the verified catalog and grades cleanly into
             the deep green-black masthead via the multi-stop gradient. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden lg:block w-[55%] z-0"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=80&auto=format&fit=crop"
-            alt=""
-            fill
-            sizes="55vw"
-            className="object-cover"
-            priority
-          />
-          {/* Multi-stop gradient blends photo into the green-black masthead;
-              keeps the left 45% clear for the text block. */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(90deg, rgba(19,36,28,1) 0%, rgba(19,36,28,0.82) 22%, rgba(19,36,28,0.30) 60%, rgba(19,36,28,0.45) 100%)',
-            }}
-          />
-        </div>
+        {/* Hero photo slot — rendered below via manifest-managed StockImage.
+            Desktop right-column removed from here; the separate manifest-backed
+            hero image block renders with photographer attribution below the fold. */}
 
         {/* Atmospheric overlays kept on top of photo for cohesion with the
             CSS-only fallback on mobile. */}
@@ -624,19 +596,15 @@ export default function HomePage() {
                   border: '1px solid var(--brand-border)',
                 }}
               >
-                {/* Cover photo — verified Unsplash equestrian editorial.
-                    Aspect 16/9. Renders only when both image and alt are
-                    provided. */}
-                {art.image && art.imageAlt ? (
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={art.image}
-                      alt={art.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 ease-carloOS group-hover:scale-[1.03]"
-                    />
-                  </div>
+                {/* Cover photo — manifest-managed with photographer attribution.
+                    Renders only when imageKey is set. */}
+                {art.imageKey ? (
+                  <StockImage
+                    manifestKey={art.imageKey}
+                    alt={art.imageAlt}
+                    aspect="16:9"
+                    variant="inline"
+                  />
                 ) : null}
                 <div className="p-7 lg:p-8">
                   {/* Decorative top rule — brass, signals premium */}

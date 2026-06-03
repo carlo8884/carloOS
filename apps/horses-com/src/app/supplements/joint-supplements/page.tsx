@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -51,18 +50,14 @@ export default function JointSupplementsPage() {
         </p>
       </div>
 
-      {/* Cover photo — show-jumper mid-flight. Reuses the verified
-          saddle-com Unsplash ID (CarloOS production catalog). Joint
-          supplements are most consequential for the explosive-impact
-          sport horse; the airborne composition makes the editorial
-          subject visible without bottle-marketing staging. */}
-      <div className="relative w-full aspect-[21/9] md:aspect-[21/7] overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=1600&q=80&auto=format&fit=crop"
+      {/* Cover photo — show-jumper mid-flight. Manifest-managed so photographer
+          attribution is always rendered per QC §1. */}
+      <div className="px-container-sm sm:px-container">
+        <StockImage
+          manifestKey="horses-com:supplement-joint"
           alt="A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for"
-          fill
-          sizes="100vw"
-          className="object-cover"
+          aspect="16:9"
+          variant="wide"
           priority
         />
       </div>

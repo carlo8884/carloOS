@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
@@ -26,7 +25,7 @@ const DISCIPLINES = [
     topPick: 'Stubben Roxane',
     topPickScore: '9.5',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-dressage',
   },
   {
     name: 'Show Jumping', icon: '🏆',
@@ -36,7 +35,7 @@ const DISCIPLINES = [
     topPick: 'Pessoa Gen X Pro',
     topPickScore: '9.2',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1474546652694-a33dd8161d66?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-jumping',
   },
   {
     name: 'Eventing', icon: '⚡',
@@ -46,7 +45,7 @@ const DISCIPLINES = [
     topPick: 'County Perfection',
     topPickScore: '9.0',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1469820838967-83c1450cf56a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-eventing',
   },
   {
     name: 'All-Purpose', icon: '🐎',
@@ -56,7 +55,7 @@ const DISCIPLINES = [
     topPick: 'Bates Caprilli',
     topPickScore: '8.9',
     href: '/reviews/best-english-saddles',
-    img: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80&auto=format&fit=crop',
+    img: 'saddle-com:discipline-allpurpose',
   },
 ]
 
@@ -111,7 +110,7 @@ export default function EnglishSaddlesPage() {
           {DISCIPLINES.map((disc) => (
             <div key={disc.name} className="bg-brand-white border border-brand-border rounded-xl overflow-hidden hover:border-brand-primary hover:shadow-card-hover transition-all duration-200">
               <div className="relative h-40 overflow-hidden">
-                <Image src={disc.img} alt={disc.name} fill className="object-cover" sizes="50vw" />
+                <StockImage manifestKey={disc.img} alt={disc.name} aspect="16:9" variant="inline" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end">
                   <span className="text-2xs font-bold tracking-eyebrow uppercase text-white/80">{disc.icon} {disc.name}</span>
