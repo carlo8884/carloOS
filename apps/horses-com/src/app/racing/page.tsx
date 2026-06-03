@@ -78,6 +78,22 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'History & Reference',
   },
   {
+    slug: 'breeders-cup',
+    title: "The Breeders' Cup",
+    tagline:
+      'The year-end World Championships: the two-day format, the Classic, the principal divisions, the rotating host tracks, and "Win and You\'re In."',
+    authorities: "Breeders' Cup Limited",
+    category: 'History & Reference',
+  },
+  {
+    slug: 'glossary',
+    title: 'Horse Racing Glossary',
+    tagline:
+      'Plain-language definitions of the language of the racetrack: furlong, maiden, claiming, allowance, stakes, going, sire, dam, and more.',
+    authorities: 'Educational Reference',
+    category: 'Structure & Governance',
+  },
+  {
     slug: 'off-track-thoroughbred-aftercare',
     title: 'Off-Track Thoroughbred Aftercare',
     tagline:
