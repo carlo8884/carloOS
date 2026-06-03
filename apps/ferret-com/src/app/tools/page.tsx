@@ -16,6 +16,12 @@ const TOOLS = [
     desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes.',
     tag: 'Nutrition',
   },
+  {
+    href: '/tools/cost-calculator',
+    title: 'Ferret Cost Calculator',
+    desc: 'Estimate one-time setup, yearly recurring costs, and the lifetime total of ferret ownership — scaled by number of ferrets, with a separate prompt to budget for adrenal, insulinoma, and blockage care.',
+    tag: 'Budgeting',
+  },
 ]
 
 // Breadcrumb + ItemList so the tools hub is a citable product surface for AI

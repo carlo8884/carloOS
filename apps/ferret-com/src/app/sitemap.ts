@@ -113,5 +113,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://ferret.com/ownership/traveling-with-a-ferret', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://ferret.com/tools/food-evaluator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://ferret.com/tools/cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
