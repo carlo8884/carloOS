@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
@@ -36,6 +37,7 @@ export default function SetupTerrariumSizeGuidePage() {
             <li>{"Ensure the longest dimension is long enough to establish a real warm-to-cool gradient with distinct zones"}</li>
             <li>{"Bigger is almost always better as long as the animal still has adequate hides and cover so the space does not feel exposed"}</li>
           </ul>
+          <p>{"To get a calculated number from your animal's adult body length and locomotor habit, use the "}<Link href="/tools/enclosure-size-calculator" className="text-brand-primary hover:underline">{"Enclosure Size Calculator"}</Link>{" — it outputs recommended minimum L x W x H, floor footprint in sq ft, and volume in gallons and liters."}</p>
           <h2>{"Minimum Footprints for Popular Species"}</h2>
           <p>{"These are widely cited practical minimums for a single adult; larger is encouraged. Always confirm against a current species-specific care sheet."}</p>
           <ul>
