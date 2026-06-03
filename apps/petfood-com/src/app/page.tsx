@@ -467,6 +467,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EMAIL CAPTURE ─────────────────────────────────────────────── */}
+      {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
       <section className="bg-brand-surface py-20 border-t border-brand-border">
         <div className="max-w-container mx-auto px-6 md:px-10">
           <div className="max-w-content mx-auto">
@@ -486,6 +487,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── FTC / EDITORIAL DISCLOSURE ────────────────────────────────── */}
       <section className="bg-brand-white border-t border-brand-border py-10">
