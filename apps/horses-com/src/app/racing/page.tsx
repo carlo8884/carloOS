@@ -62,6 +62,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Breed & Discipline',
   },
   {
+    slug: 'jump-racing',
+    title: 'Jump Racing',
+    tagline:
+      'Steeplechase, hurdles, and American timber racing: racing over obstacles, the horses that contest it, and the National Steeplechase Association.',
+    authorities: 'National Steeplechase Association',
+    category: 'Discipline',
+  },
+  {
     slug: 'understanding-race-types-and-classes',
     title: 'Race Types & Classes Explained',
     tagline:
@@ -109,6 +117,14 @@ const RACING_SPOKES: RacingCard[] = [
     authorities: 'AAEP',
     category: 'Training & Welfare',
   },
+  {
+    slug: 'the-people-of-racing',
+    title: 'The People of Racing',
+    tagline:
+      'Who does what: owners, breeders, trainers, jockeys, the backstretch team, and the raceday officials who keep the sport running.',
+    authorities: 'The Jockey Club, ARCI',
+    category: 'Structure & Governance',
+  },
 ]
 
 const racingListSchema = {
@@ -147,9 +163,10 @@ export default function RacingHubPage() {
           Horse Racing
         </h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Educational reference for the racing disciplines: Thoroughbred flat
-          racing, harness racing, Quarter Horse sprints, how race classes
-          work, OTTB aftercare, and conditioning principles. Not a betting
+          Educational reference for the sport: the disciplines (flat, harness,
+          Quarter Horse, and jump racing), the marquee events (the Triple Crown
+          and the Breeders&apos; Cup), how race classes work, the people behind
+          a runner, OTTB aftercare, and a plain-language glossary. Not a betting
           resource. Not a handicapping guide.
         </p>
       </div>
