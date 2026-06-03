@@ -22,6 +22,12 @@ const TOOLS = [
     desc: 'Estimate one-time setup, yearly recurring costs, and the lifetime total of ferret ownership — scaled by number of ferrets, with a separate prompt to budget for adrenal, insulinoma, and blockage care.',
     tag: 'Budgeting',
   },
+  {
+    href: '/tools/readiness-quiz',
+    title: 'Ferret Ownership Readiness Quiz',
+    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment. Returns a calibrated readiness tier with plain-English next steps.',
+    tag: 'Decision Tool',
+  },
 ]
 
 // Breadcrumb + ItemList so the tools hub is a citable product surface for AI
