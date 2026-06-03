@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -137,6 +137,7 @@ export default function JointSupplementsPage() {
             <p><strong>&ldquo;Proprietary blends&rdquo; without per-ingredient amounts:</strong> Any product whose label lists ingredients but not the milligram quantity of each cannot be evaluated for clinical relevance. NASC-Quality-Seal products disclose ingredient amounts; choose those preferentially.</p>
 
             <h2>Reviewed Products</h2>
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <ReviewCard
               id="cosequin-asu"
