@@ -155,6 +155,13 @@ export default function NutritionHubPage() {
         </ul>
       </div>
 
+      <div className="px-container-sm sm:px-container pb-4 max-w-content-wide">
+        <p className="text-sm text-brand-text-mid">
+          New to reading labels? Start with the <Link href="/glossary" className="text-brand-primary hover:underline">pet food glossary</Link> —
+          plain-language definitions of AAFCO, guaranteed analysis, meat meal vs by-product, dry-matter basis, and more.
+        </p>
+      </div>
+
       <section
         className="px-container-sm sm:px-container py-12"
         style={{ background: 'var(--brand-primary-pale)' }}

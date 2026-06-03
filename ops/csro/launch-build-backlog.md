@@ -38,9 +38,9 @@ ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new g
 - Note: legality + adoption-vs-buy already exist as editorial pages — NOT gaps (corrected after inspection).
 
 ### PetFood.com (launch #2)
-- [ ] Glossary / label-term DefinedTermSet (`/glossary`) — AAFCO terms, guaranteed analysis, "complete & balanced," by-product, etc. *GEO magnet.*
-- [ ] Ingredient-quality explainer hub completeness pass — verify the brand/ingredient cluster has a hub→spoke graph.
-- [ ] Dog vs cat food fundamentals comparison hub — if a genuine gap.
+- [x] Glossary / label-term DefinedTermSet (`/glossary`) — ~31 AAFCO / label / ingredient / nutrient / diet-type terms; DefinedTermSet JSON-LD; linked from `/nutrition`; cross-links the food-cost calculator + ingredients. **PR #447.**
+- [ ] Ingredient-quality explainer hub completeness pass — verify the brand/ingredient cluster has a hub→spoke graph. *Inspect.*
+- [ ] Dog vs cat food fundamentals comparison hub — only if a genuine gap. *Inspect.*
 
 ### Vets.co (launch #3)
 - [ ] Symptom-to-specialty router reference (`/find-a-vet` already exists on dog; vets.co equivalent) — when to see which DACVIM/DACVS specialty. *Verify gap first.*
