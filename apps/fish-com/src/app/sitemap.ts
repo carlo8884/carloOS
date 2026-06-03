@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://fish.com/setup/quarantine-tank-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/setup/saltwater-tank-setup', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/setup/water-chemistry-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/glossary', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://fish.com/species', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/species/african-cichlid', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/species/amano-shrimp', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

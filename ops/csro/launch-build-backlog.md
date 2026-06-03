@@ -46,7 +46,7 @@ ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new g
 - [x] Pet-insurance + clinical glossary (`/glossary`) DefinedTermSet — pairs with the insurance estimator; linked from /insurance. PR #448.
 
 ### Fish.com (launch #4)
-- [ ] Aquarium glossary DefinedTermSet (`/glossary`) — cycling, nitrogen cycle, GH/KH, dKH, brackish, etc. *Pairs with the 6 calculators.*
+- [x] Aquarium glossary (`/glossary`) DefinedTermSet — nitrogen cycle, water chemistry, filtration, husbandry; linked from /tools; pairs with the 6 calculators. PR #449.
 - [ ] Stocking-by-species reference completeness pass.
 
 ### Dog.com (launch #5, last + most polish)
