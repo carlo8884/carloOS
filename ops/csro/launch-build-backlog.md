@@ -43,8 +43,7 @@ ferret-glossary; `/health` has 21 spokes; `/tools` had food-evaluator. Net-new g
 - [ ] Dog vs cat food fundamentals comparison hub — only if a genuine gap. *Inspect.*
 
 ### Vets.co (launch #3)
-- [ ] Symptom-to-specialty router reference (`/find-a-vet` already exists on dog; vets.co equivalent) — when to see which DACVIM/DACVS specialty. *Verify gap first.*
-- [ ] Pet-insurance terminology glossary (DefinedTermSet) to pair with the insurance-reimbursement estimator. *GEO magnet + tool synergy.*
+- [x] Pet-insurance + clinical glossary (`/glossary`) DefinedTermSet — pairs with the insurance estimator; linked from /insurance. PR #448.
 
 ### Fish.com (launch #4)
 - [ ] Aquarium glossary DefinedTermSet (`/glossary`) — cycling, nitrogen cycle, GH/KH, dKH, brackish, etc. *Pairs with the 6 calculators.*

@@ -58,6 +58,9 @@ export default function VetsInsuranceHubPage() {
           <p className="text-base text-brand-text-mid leading-relaxed">
             The remaining guides go deeper on the issues that separate a good policy from a costly one: what is and is not covered, how pre-existing conditions are treated, how deductibles and reimbursement interact, how breed shapes risk and price, and how wellness plans differ from true insurance. Everything is written and maintained by the Vets.co editorial team and sourced from cited references and insurer disclosures. The aim is to leave you able to compare any two policies on your own terms and to bring informed questions to your veterinarian about the conditions your specific pet is most likely to face.
           </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mt-4">
+            For quick definitions of any term you hit along the way, see the <Link href="/glossary" className="text-brand-primary font-medium hover:underline">pet health &amp; insurance glossary</Link>.
+          </p>
         </div>
       </div>
       <div className="px-container-sm sm:px-container pb-14 pt-4">

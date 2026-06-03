@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://vets.co/guides/questions-to-ask-your-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/what-to-expect-at-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/when-to-go-to-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/glossary', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://vets.co/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/health/allergic-reactions-dogs', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/health/anxiety-in-dogs', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
