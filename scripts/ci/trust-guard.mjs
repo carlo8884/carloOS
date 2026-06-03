@@ -59,6 +59,12 @@ const FORBIDDEN = [
   { pattern: /\bcalibration\s+testing\b/i, allowNegated: true, reason: '"calibration testing" implies a test we ran — QC §1' },
   { pattern: /\bNIST[\s-]?traceable\b/i, allowNegated: true, reason: '"NIST-traceable" testing claim — implies metrology we did not perform — QC §1' },
   { pattern: /\b(?:heaters?|products?|units?|models?|items?)\s+tested\b/i, allowNegated: true, reason: '"N heaters/products tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
+
+  // Uncredited stock photography (Unsplash/Pexels TOS + QC §1). Hardcoded CDN URLs render
+  // images without photographer attribution. Use manifest-backed <StockImage manifestKey=...>
+  // (+ a scripts/image-queries.json entry) so credit renders. Swept portfolio-wide in PRs #475/#481.
+  { pattern: /images\.unsplash\.com/i, reason: 'Hardcoded Unsplash CDN URL — strips photographer attribution (Unsplash TOS + QC §1). Use <StockImage manifestKey> + an image-queries.json entry.' },
+  { pattern: /images\.pexels\.com/i, reason: 'Hardcoded Pexels CDN URL — strips photographer attribution (Pexels TOS + QC §1). Use <StockImage manifestKey> + an image-queries.json entry.' },
 ]
 
 // Negation cues: if a rule is allowNegated and the line denies the claim, it's an honest
