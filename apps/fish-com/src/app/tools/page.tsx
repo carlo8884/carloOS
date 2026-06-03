@@ -150,6 +150,10 @@ export default function ToolsHub() {
             Every calculator is built by people who keep tanks. If you spot a bad answer,{' '}
             <Link href="/editorial-standards" className="text-brand-primary font-semibold">tell us</Link> — we fix it.
           </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mt-3">
+            New to the terms these tools use? The <Link href="/glossary" className="text-brand-primary font-semibold">aquarium glossary</Link> defines
+            the nitrogen cycle, pH, GH/KH, bioload, and the rest in plain English.
+          </p>
         </div>
       </section>
 
