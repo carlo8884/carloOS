@@ -35,6 +35,15 @@ export interface ImageCardProps {
   variant?: ImageCardVariant
   /** Optional priority load (hero images above the fold) */
   priority?: boolean
+  /**
+   * When true, the credit is NOT rendered in the <figcaption> below the
+   * image. Instead it renders as a tiny absolutely-positioned overlay in
+   * the image's bottom-right corner — unobtrusive but still present and
+   * clickable (Unsplash/Pexels TOS + QC §1: attribution must never be
+   * stripped, only made visually subtle). For PRIME visual areas (hero,
+   * image-backed cards). Default false → identical legacy output.
+   */
+  subtleCredit?: boolean
 }
 
 const ASPECT_RATIO: Record<ImageCardAspect, string> = {
@@ -53,6 +62,7 @@ export function ImageCard({
   aspect = '16:9',
   variant = 'inline',
   priority = false,
+  subtleCredit = false,
 }: ImageCardProps) {
   const [loaded, setLoaded] = useState(false)
 
@@ -105,13 +115,39 @@ export function ImageCard({
             transition: 'opacity 240ms ease-out',
           }}
         />
+
+        {/* Subtle-credit overlay — attribution stays present + clickable but
+            unobtrusive in prime visual areas (hero, image-backed cards).
+            QC §1: never strip attribution, only make it visually quiet. */}
+        {subtleCredit && credit && (
+          <span
+            className="absolute bottom-1.5 right-2 text-[10px] leading-none text-white/55 z-10"
+            style={{ textShadow: '0 1px 2px rgba(0,0,0,0.6)' }}
+          >
+            {creditUrl ? (
+              <a
+                href={creditUrl}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="text-white/55 hover:text-white/90 no-underline"
+              >
+                {credit}
+              </a>
+            ) : (
+              credit
+            )}
+          </span>
+        )}
       </div>
 
-      {(caption || credit) && (
+      {/* Caption (+ credit when NOT subtle) below the image. When subtleCredit
+          is on, the credit moves to the overlay above and only the caption (if
+          any) renders here — keeping legacy behavior identical when false. */}
+      {(caption || (credit && !subtleCredit)) && (
         <figcaption className="mt-3 text-sm italic text-brand-text-mid leading-snug px-1">
           {caption}
-          {caption && credit && ' '}
-          {credit && (
+          {caption && credit && !subtleCredit && ' '}
+          {credit && !subtleCredit && (
             <span className="not-italic text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light ml-1">
               {creditUrl ? (
                 <a

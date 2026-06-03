@@ -61,6 +61,12 @@ export interface StockImageProps {
   aspect?: ImageCardAspect
   variant?: ImageCardVariant
   priority?: boolean
+  /**
+   * Pass-through to ImageCard: render attribution as a subtle overlay in the
+   * image corner instead of a figcaption line. For prime visual areas (hero,
+   * image-backed cards). Attribution stays present + linked. Default false.
+   */
+  subtleCredit?: boolean
 }
 
 export function StockImage({
@@ -70,6 +76,7 @@ export function StockImage({
   aspect = '16:9',
   variant = 'inline',
   priority = false,
+  subtleCredit = false,
 }: StockImageProps) {
   const entry = manifest[manifestKey]
 
@@ -119,6 +126,7 @@ export function StockImage({
       aspect={aspect}
       variant={variant}
       priority={priority}
+      subtleCredit={subtleCredit}
     />
   )
 }
