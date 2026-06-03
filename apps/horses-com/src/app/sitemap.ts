@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://horses.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://horses.com/first-horse-roadmap', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://horses.com/glossary', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://horses.com/guides', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://horses.com/guides/equine-dental-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/guides/equine-vaccination-schedule', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
