@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildProductSchema,
@@ -95,6 +95,7 @@ export default function StubbenReviewPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="saddle-com" />
             <ReviewCard
               id="roxane"
               badge="Best Dressage — Top Pick"

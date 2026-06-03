@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -122,6 +122,7 @@ export default function BestEquineSupplementsPage() {
             </div>
 
             <ScoreMethodology />
+            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>How to Read the Equine Supplement Aisle</h2>
             <p>Three filters separate useful equine supplements from money-wasting marketing:</p>

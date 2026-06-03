@@ -131,7 +131,7 @@ export default function HillsVsRoyalCaninPage() {
 
         <AffiliateDisclosure variant="inline" siteId="petfood-com" />
         <BuyBox
-          label="Where to buy either brand"
+          label="Where to buy either brand (OTC retail lines only)"
           disclosure="Both brands are widely available on Chewy and Amazon. We earn an affiliate commission when you purchase through these links — at no extra cost to you."
           secondaryDisclosure="We never rank by commission."
           brands={[
@@ -151,6 +151,13 @@ export default function HillsVsRoyalCaninPage() {
             },
           ]}
         />
+        <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '-8px', marginBottom: '24px' }}>
+          These links surface the over-the-counter retail lines only. Therapeutic and prescription
+          diet lines (Hill&apos;s Prescription Diet, Royal Canin Veterinary Diet) require a
+          veterinary authorization and are dispensed through your veterinarian or a licensed
+          online pharmacy with a valid prescription. Therapeutic diets should be used only under
+          veterinary guidance. This is not medical advice.
+        </p>
 
         <h2 id="corporate">Corporate Context</h2>
         <p>

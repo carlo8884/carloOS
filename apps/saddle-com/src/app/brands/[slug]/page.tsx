@@ -12,6 +12,7 @@ import {
   CalloutBox,
   ArticleByline,
   TableOfContents,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -273,6 +274,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
           )}
 
           <h2 id="buy">Where to Buy a {brand.name}</h2>
+          <AffiliateDisclosure variant="inline" siteId="saddle-com" />
           <ReviewCard
             id="buy-card"
             badge={`${brand.name} — Current Lineup`}

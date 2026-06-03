@@ -26,6 +26,7 @@ import {
   EmailCapture,
   FAQAccordion,
   CalloutBox,
+  StockImage,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { PARAMETERS } from '../../data/water-parameters'
@@ -182,6 +183,10 @@ export default function WaterParametersHubPage() {
         <div className="text-2xs font-medium text-white/40">
           By Fish.com Editorial — sourced from cited references
         </div>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:water-parameters-hero" aspect="16:9" variant="wide" priority />
       </div>
 
       {/* Breadcrumb */}

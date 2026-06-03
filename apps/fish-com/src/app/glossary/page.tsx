@@ -6,6 +6,7 @@ import {
   combineSchemas,
   SchemaScript,
   EmailCapture,
+  StockImage,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,6 +125,10 @@ export default function AquariumGlossaryPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Glossary</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8">
+        <StockImage manifestKey="fish-com:glossary-hero" aspect="16:9" variant="wide" priority />
+      </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-3xl">
         <p className="text-sm text-brand-text-light mb-10">

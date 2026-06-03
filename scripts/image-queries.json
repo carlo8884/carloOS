@@ -901,6 +901,48 @@
     "alt": "Corydoras catfish on sandy aquarium substrate",
     "orientation": "landscape"
   },
+  "fish-com:tools-hero": {
+    "query": "aquarium calculator tools measuring cup water",
+    "provider": "either",
+    "alt": "Aquarium water testing and measuring tools laid out on a surface",
+    "orientation": "landscape"
+  },
+  "fish-com:water-parameters-hero": {
+    "query": "aquarium water test kit ammonia nitrite pH",
+    "provider": "either",
+    "alt": "A freshwater aquarium water test kit with reagent bottles and color chart",
+    "orientation": "landscape"
+  },
+  "fish-com:glossary-hero": {
+    "query": "freshwater aquarium planted tank clear water",
+    "provider": "either",
+    "alt": "A clear, well-maintained planted freshwater aquarium illustrating aquarium terminology",
+    "orientation": "landscape"
+  },
+  "ferret-com:tools-hero": {
+    "query": "ferret food kibble bowl measuring close up",
+    "provider": "either",
+    "alt": "A ferret food bowl with kibble beside a food label, illustrating nutrition tools",
+    "orientation": "landscape"
+  },
+  "ferret-com:first-year-hero": {
+    "query": "ferret kit young small curious",
+    "provider": "either",
+    "alt": "A young ferret kit exploring its new environment, suited to a first-year care guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:find-vet-hero": {
+    "query": "small animal exotic veterinary clinic examination",
+    "provider": "either",
+    "alt": "A clean exotic-pet veterinary examination table with clinical equipment",
+    "orientation": "landscape"
+  },
+  "ferret-com:glossary-hero": {
+    "query": "ferret alert curious face portrait close up",
+    "provider": "either",
+    "alt": "A close portrait of an alert ferret, suited to a ferret terminology glossary",
+    "orientation": "landscape"
+  },
   "horses-com:breed-quarter-horse": {
     "query": "horse rider schooling session all-purpose",
     "provider": "either",
