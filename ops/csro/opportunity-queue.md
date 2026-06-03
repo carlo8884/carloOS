@@ -69,6 +69,26 @@ CSRO/COO cannot source photography in-sandbox.
     missing from `/nutrition`. `mossy-leaf-tail-gecko` was a true orphan the prior slug-sweep missed.
   - **Data-aware orphan re-sweep (incl. src/data sources):** now genuinely **ZERO orphans cohort-wide** post-#440.
 
+### Advisor decisions D12–D16 (2026-06-02 PM) — captured
+- **D12 — Racing Intelligence:** GO on **Tier A** lightweight `/racing` intelligence ($0 data, no approval
+  needed, P2 — pull only when it doesn't displace the launch cohort). **HOLD** Tier B/C licensed-data product.
+  Stay on `/racing` subdir. Full brief: `ops/handoffs/2026-06-02-csro-racing-intelligence-brief.md`. **Do not build the data product.**
+- **D13 — Visual heroes:** stock-now via `scripts/sync-images.mjs` on Carlo's Mac ($0); commission later only
+  with explicit spend approval; do not launch on weak imagery. (Visual lane — N1–N3.)
+- **D14 — Ferret comfort-supply:** IR **blesses with conditions** (non-medical comfort items only; framed as
+  comfort/support; explicit microcopy "Comfort supplies do not treat adrenal disease, insulinoma, or other
+  medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment."; disclosure near CTA;
+  NO meds / prescription-adjacent / disease-treatment claims / dosing / "recommended for adrenal disease").
+  **Note:** no comfort-supply CTA currently exists on the adrenal/aging clinical pages → this is a **Monetization-lane
+  spec to apply when/if a buy-box is added** (folded into the #424 buy-box brief), not a current COO edit.
+- **D15.1 — Saddle /english + /western:** retitle+differentiate. **Already satisfied** — hubs are "…by Discipline"
+  browse/education intent, self-canonical, distinct from "Best …2025" review pages. No edit needed.
+- **D15.2 — Lizard /husbandry:** redirect overlaps to /setup, preserve brumation+shedding. **Already satisfied**
+  (D7-a) — hub + `[slug]` 308-redirect to `/setup`; the 2 unique seasonal guides preserved. No edit needed.
+- **D16 — Launch wave confirmed:** Ferret → PetFood → Vets → Fish → **Dog (last, most extra polish; offer-backed,
+  highest-value)**. DNS stays deferred until Carlo says launch-imminent.
+
+
 > **Terminal state for unblocked COO/CSRO launch-polish (2026-06-02):** structural launch-quality is exhausted
 > across the portfolio — schema (ItemList/Breadcrumb/FAQ/DefinedTerm), zero orphans, dedup, reciprocal linking,
 > and the full cross-portfolio graph are all done + CI-green. The only forward paths are **Visual** (blocked: no
