@@ -114,7 +114,7 @@ const FEATURED: ReferenceCard[] = [
     eyebrow: 'BRAND_VS_BRAND',
     title: 'Orijen vs Acana',
     description:
-      'Two product lines from one manufacturer (Champion Petfoods). We compare animal-ingredient inclusion, AAFCO posture, recall record, and price per kcal — recipe panels in monospace, no marketing copy.',
+      'Two product lines from one manufacturer (Champion Petfoods). PetFood.com compares animal-ingredient inclusion, AAFCO posture, recall record, and price per kcal — recipe panels in monospace, no marketing copy.',
     href: '/brands/orijen-vs-acana-comparison',
     meta: 'Comparison · same rubric · cited',
   },
@@ -123,7 +123,7 @@ const FEATURED: ReferenceCard[] = [
     eyebrow: 'INGREDIENT_RISK',
     title: 'Grain-Free and DCM — The FDA Record',
     description:
-      'What the 2018–2022 FDA CVM investigation actually said about grain-free, legume-heavy diets and dilated cardiomyopathy. Association, not causation. We summarize the data and the open questions.',
+      'What the 2018–2022 FDA CVM investigation actually said about grain-free, legume-heavy diets and dilated cardiomyopathy. Association, not causation. An independent summary of the data and the open questions.',
     href: '/ingredients/grain-free-dcm-risk',
     meta: 'Ingredient reference · FDA-sourced',
   },
@@ -132,7 +132,7 @@ const FEATURED: ReferenceCard[] = [
     eyebrow: 'REGULATORY',
     title: 'AAFCO Completeness Explained',
     description:
-      'The difference between "formulated to meet" and "feeding trials confirm." Which statement appears on which bag, why it matters, and how it weights into our score.',
+      'The difference between "formulated to meet" and "feeding trials confirm." Which statement appears on which bag, why it matters, and how it weights into the PetFood.com score.',
     href: '/guides/aafco-completeness-explained',
     meta: 'Methodology reference',
   },
@@ -183,7 +183,7 @@ export default function HomePage() {
               The independent reference for pet food.
             </p>
             <p className="text-lg text-brand-text-mid max-w-content leading-relaxed mb-10">
-              Not a store, not a brand mouthpiece — we score commercial pet foods on
+              Not a store, not a brand mouthpiece — PetFood.com scores commercial pet foods on
               AAFCO completeness, ingredient sourcing, manufacturing standards, recall
               history, and feeding-outcome literature. The rubric is published, versioned,
               and re-run whenever it changes. Where Dog Food Advisor is advertorial-heavy
