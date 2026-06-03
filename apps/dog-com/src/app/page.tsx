@@ -177,7 +177,7 @@ export default function HomePage() {
   return (
     <>
       <SchemaScript schema={homeSchema} />
-      {/* ── HERO: "What do you need help with for your dog today?" ─────── */}
+      {/* ── HERO: split-column masthead — text left, flagship photo right ── */}
       <section className="bg-brand-dark relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
@@ -187,27 +187,45 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
+        {/* Top band: eyebrow / H1 / tagline  +  hero photo (lg+) */}
         <div className="relative z-10 px-container-sm sm:px-container pt-16 pb-8">
-          <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-              Dog.com — Owner&apos;s reference
-            </span>
+          <div className="grid lg:grid-cols-[5fr_4fr] gap-10 items-center">
+            {/* Left column — text */}
+            <div>
+              <div className="flex items-center gap-2.5 mb-4">
+                <span className="w-6 h-0.5 bg-brand-primary" />
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+                  Dog.com &mdash; Owner&apos;s reference
+                </span>
+              </div>
+              <h1
+                className="font-display font-black text-white tracking-tighter leading-[1.05] mb-4"
+                style={{ fontSize: 'clamp(36px, 5.5vw, 64px)' }}
+              >
+                What do you need help with for your dog today?
+              </h1>
+              <p className="text-base sm:text-lg font-light text-white/65 leading-relaxed max-w-xl">
+                Decisions, not definitions. Pick where you are — symptoms, breed risks, a new puppy,
+                a senior dog, or a product call you&apos;re trying to make — and we&apos;ll route you
+                to sourced guidance.
+              </p>
+            </div>
+
+            {/* Right column — flagship photo, large screens only */}
+            <div className="hidden lg:block">
+              <div className="rounded-xl overflow-hidden ring-1 ring-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
+                <StockImage
+                  manifestKey="dog-com:hero"
+                  aspect="4:3"
+                  variant="wide"
+                  priority
+                />
+              </div>
+            </div>
           </div>
-          <h1
-            className="font-display font-black text-white tracking-tighter leading-[1.05] mb-4 max-w-4xl"
-            style={{ fontSize: 'clamp(36px, 5.5vw, 64px)' }}
-          >
-            What do you need help with for your dog today?
-          </h1>
-          <p className="text-base sm:text-lg font-light text-white/65 leading-relaxed max-w-2xl">
-            Decisions, not definitions. Pick where you are — symptoms, breed risks, a new puppy,
-            a senior dog, or a product call you&apos;re trying to make — and we&apos;ll route you
-            to sourced guidance.
-          </p>
         </div>
 
-        {/* Owner-path cards */}
+        {/* Owner-path cards — full width below the split band */}
         <div className="relative z-10 px-container-sm sm:px-container pb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {OWNER_PATHS.map((path) => (
@@ -232,18 +250,13 @@ export default function HomePage() {
                   {path.desc}
                 </p>
                 <span className="inline-flex items-center text-xs font-bold text-brand-primary group-hover:underline">
-                  {path.cta} →
+                  {path.cta} &#x2192;
                 </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
-
-      {/* ── HERO PHOTO — flagship visual moment, manifest-managed ──────── */}
-      <div className="bg-brand-white px-container-sm sm:px-container">
-        <StockImage manifestKey="dog-com:hero" priority aspect="16:9" variant="inline" />
-      </div>
 
       {/* ── TRUST BAR — softened (no "expert", no "reviewed") ──────────── */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
@@ -509,25 +522,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PUPPY + TRAINING ───────────────────────────────────────────── */}
-      <section className="bg-brand-white px-container-sm sm:px-container py-section">
+      {/* ── PUPPY + TRAINING ── dark anchor section for contrast rhythm ── */}
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                Puppy & training
+                Puppy &amp; training
               </span>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight text-3xl">
+            <h2 className="font-display font-bold text-white tracking-tight text-3xl">
               The first year shapes everything.
             </h2>
-            <p className="text-sm text-brand-text-mid mt-2 max-w-xl">
+            <p className="text-sm text-white/60 mt-2 max-w-xl">
               Schedules, vaccinations, socialization, crate training — what actually works, in order.
             </p>
           </div>
           <Link href="/training" className="text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
-            All training guides →
+            All training guides &#x2192;
           </Link>
         </div>
 
@@ -536,15 +549,15 @@ export default function HomePage() {
             <Link
               key={item.href}
               href={item.href}
-              className="block bg-brand-surface border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200 relative"
+              className="block bg-white/[0.05] border border-white/[0.10] rounded-lg p-5 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200 relative"
             >
               {item.badge && (
-                <span className="absolute top-3 right-3 text-2xs font-bold tracking-eyebrow uppercase text-brand-primary bg-brand-primary-pale border border-brand-primary/30 rounded-full px-2 py-0.5">
+                <span className="absolute top-3 right-3 text-2xs font-bold tracking-eyebrow uppercase text-brand-primary bg-brand-primary/15 border border-brand-primary/30 rounded-full px-2 py-0.5">
                   {item.badge}
                 </span>
               )}
-              <div className="font-display font-bold text-brand-dark text-base mb-2 leading-tight pr-20">{item.title}</div>
-              <div className="text-xs text-brand-text-mid leading-relaxed">{item.desc}</div>
+              <div className="font-display font-bold text-white text-base mb-2 leading-tight pr-20">{item.title}</div>
+              <div className="text-xs text-white/55 leading-relaxed">{item.desc}</div>
             </Link>
           ))}
         </div>
