@@ -167,6 +167,7 @@ export default function CareHubPage() {
       <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-10 max-w-2xl">
           Husbandry references covering the routines that keep a horse healthy and safe. Each guide cites AAEP guidance, extension resources, and the equine veterinary literature.
+          New to equestrian terminology? The <Link href="/glossary" className="text-brand-primary hover:underline">Equestrian Glossary</Link> defines key care, anatomy, and horsemanship terms.
         </p>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
