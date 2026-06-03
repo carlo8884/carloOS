@@ -301,6 +301,91 @@ export default function HomePage() {
         <WhichPetWizard />
       </section>
 
+      {/* ── TOOLS & CALCULATORS ────────────────────────────────────────── */}
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Tools &amp; Calculators
+          </span>
+        </div>
+        <h2
+          className="font-display font-black text-white tracking-tight mb-3 max-w-3xl"
+          style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}
+        >
+          Get a number, not just advice.
+        </h2>
+        <p className="text-base text-white/60 mb-8 max-w-2xl leading-relaxed">
+          Interactive tools built on veterinary reference data — answer a few questions and get
+          a precise, sourced answer for your dog right now.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Calorie Calculator */}
+          <Link
+            href="/tools/dog-calorie-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F356;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2">
+              Dog Calorie Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Enter your dog&apos;s weight, age, and activity level — get their daily calorie target
+              based on AAFCO/NRC resting energy formulas.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Calculate daily calories &#x2192;
+            </span>
+          </Link>
+
+          {/* Age Calculator */}
+          <Link
+            href="/tools/dog-age-calculator"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x23F3;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Calculator
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2">
+              Dog Age Calculator
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Not the &quot;multiply by 7&quot; myth. Uses the genomic aging curve research to convert
+              your dog&apos;s age to a human-equivalent by size class.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Convert dog age &#x2192;
+            </span>
+          </Link>
+
+          {/* Glossary */}
+          <Link
+            href="/glossary"
+            className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200"
+          >
+            <div className="text-4xl mb-4" aria-hidden="true">&#x1F4D6;</div>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Reference
+            </div>
+            <h3 className="font-display font-bold text-white text-xl leading-tight mb-2">
+              Dog Health Glossary
+            </h3>
+            <p className="text-sm text-white/55 leading-relaxed mb-5">
+              Plain-English definitions for vet terminology — from ACTH stimulation tests to
+              zoonotic disease — with source citations.
+            </p>
+            <span className="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline">
+              Browse the glossary &#x2192;
+            </span>
+          </Link>
+        </div>
+      </section>
+
       {/* ── BREED-SPECIFIC RISK CENTER ─────────────────────────────────── */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
