@@ -102,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://horses.com/racing/harness-racing', lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://horses.com/racing/quarter-horse-racing', lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://horses.com/racing/understanding-race-types-and-classes', lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: 'https://horses.com/racing/triple-crown', lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: 'https://horses.com/racing/off-track-thoroughbred-aftercare', lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://horses.com/racing/racehorse-training-and-conditioning', lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: 'https://horses.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

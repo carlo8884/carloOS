@@ -70,6 +70,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Structure & Governance',
   },
   {
+    slug: 'triple-crown',
+    title: 'The Triple Crown',
+    tagline:
+      'The Kentucky Derby, Preakness, and Belmont Stakes: distances, venues, why the sweep is one of sport\'s hardest feats, and the thirteen winners.',
+    authorities: 'Churchill Downs, Pimlico, NYRA',
+    category: 'History & Reference',
+  },
+  {
     slug: 'off-track-thoroughbred-aftercare',
     title: 'Off-Track Thoroughbred Aftercare',
     tagline:
