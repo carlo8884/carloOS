@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -16,7 +16,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const TOOLS = [
   {
     href: '/tools/food-cost-calculator',
@@ -24,12 +23,34 @@ const TOOLS = [
     desc: 'Enter your pet\'s cups-per-day, bag size, and bag price. Returns cost per day, per month, per year, and per cup. Side-by-side mode compares two foods apples-to-apples.',
     tag: 'Finance',
   },
+  {
+    href: '/tools/portion-calculator',
+    title: 'Portion & Calorie Calculator',
+    desc: 'Calculate daily caloric needs for dogs and cats using the standard RER/MER equations (WSAVA/AAHA-style). Enter weight and life stage; get kcal/day and optional cups/day from the food label.',
+    tag: 'Nutrition',
+  },
 ]
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'PetFood.com Calculators & Tools',
+  url: 'https://petfood.com/tools',
+  numberOfItems: TOOLS.length,
+  itemListElement: TOOLS.map((tool, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: tool.title,
+    url: 'https://petfood.com' + tool.href,
+  })),
+}
+
+const hubSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
 export default function ToolsHub() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={hubSchema} />
       <>
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
         <div

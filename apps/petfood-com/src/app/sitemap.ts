@@ -110,5 +110,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://petfood.com/supplements/skin-and-coat-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://petfood.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://petfood.com/tools/food-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://petfood.com/tools/portion-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
   ]
 }
