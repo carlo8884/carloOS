@@ -25,7 +25,7 @@
  *
  * Image strategy (QC §1 + Unsplash/Pexels TOS):
  *   - All imagery comes from the committed manifest via <StockImage>. No
- *     hardcoded URLs (trust-guard blocks images.unsplash.com).
+ *     hardcoded URLs (trust-guard blocks hardcoded stock-CDN URLs).
  *   - Prime visual areas (hero + image-backed tiles) pass `subtleCredit` so
  *     attribution stays present + clickable but unobtrusive.
  *   - Every text-over-image surface has a gradient scrim so copy stays legible
