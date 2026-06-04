@@ -96,8 +96,11 @@ const OWNER_PATHS = [
     desc: 'Vaccines, feeding, crate training, the 8-16 week plan.',
     href: '/puppy-schedule',
     cta: 'See the puppy roadmap',
-    manifestKey: 'dog-com:category-puppy',
-    imageAlt: 'Puppy in its first weeks',
+    // Uses the populated breed-labrador key (a friendly young dog) so the
+    // above-the-fold owner grid is fully real-photo NOW; swaps to a dedicated
+    // puppy photo automatically once dog-com:category-puppy syncs.
+    manifestKey: 'dog-com:breed-labrador-retriever',
+    imageAlt: 'A friendly young dog',
     tone: 'primary' as const,
   },
   {
@@ -122,7 +125,10 @@ const OWNER_PATHS = [
   },
 ]
 
-// ─── Breed-risk featured (6 portraits — visual grid) ─────────────────────────
+// ─── Breed-risk featured (6 highest-traffic — text list) ─────────────────────
+// Rendered as text cards in the featured-dog band; per-breed photos are not
+// synced yet, so we lead the section with one real lifestyle photo instead of
+// a grid of empty per-breed slots.
 
 const FEATURED_BREEDS = [
   {
@@ -130,48 +136,36 @@ const FEATURED_BREEDS = [
     type: 'Sporting · Large',
     keyRisk: 'Cancer risk · hip dysplasia',
     href: '/breeds/golden-retriever',
-    manifestKey: 'dog-com:breed-golden-retriever',
-    imageAlt: 'Golden Retriever',
   },
   {
     name: 'Labrador Retriever',
     type: 'Sporting · Large',
     keyRisk: 'Hip dysplasia · obesity',
     href: '/breeds/labrador-retriever',
-    manifestKey: 'dog-com:breed-labrador-retriever',
-    imageAlt: 'Labrador Retriever',
   },
   {
     name: 'French Bulldog',
     type: 'Non-Sporting · Small',
     keyRisk: 'Brachycephalic syndrome · IVDD',
     href: '/breeds/french-bulldog',
-    manifestKey: 'dog-com:breed-french-bulldog',
-    imageAlt: 'French Bulldog',
   },
   {
     name: 'German Shepherd',
     type: 'Herding · Large',
     keyRisk: 'Hip dysplasia · degenerative myelopathy',
     href: '/breeds/german-shepherd',
-    manifestKey: 'dog-com:breed-german-shepherd',
-    imageAlt: 'German Shepherd',
   },
   {
     name: 'Beagle',
     type: 'Hound · Small',
     keyRisk: 'Obesity · ear infections · IVDD',
     href: '/breeds/beagle',
-    manifestKey: 'dog-com:breed-beagle',
-    imageAlt: 'Beagle',
   },
   {
     name: 'Poodle',
     type: 'Non-Sporting · Varies',
     keyRisk: 'Addison\'s · bloat · hip dysplasia',
     href: '/breeds/poodle',
-    manifestKey: 'dog-com:breed-poodle',
-    imageAlt: 'Poodle',
   },
 ]
 
@@ -531,7 +525,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BREED-SPECIFIC RISK CENTER — 6-portrait visual grid ─────────── */}
+      {/* ── BREED-SPECIFIC RISK CENTER — featured-dog editorial band ──────
+          v2.1: the old 6-portrait grid leaned on per-breed manifest keys that
+          are not synced yet (only breed-labrador is real), so it rendered as a
+          wall of placeholders. Rebuilt as a featured-dog band: ONE large real
+          lifestyle photo (category-breeds / golden) carries the emotion, and
+          the 6 breeds render as a clean, fast text list. No empty image slots. */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
@@ -554,35 +553,48 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {FEATURED_BREEDS.map((breed) => (
-            <Link
-              key={breed.name}
-              href={breed.href}
-              className="group relative block rounded-lg overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200"
-            >
-              <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
-                <StockImage
-                  manifestKey={breed.manifestKey}
-                  alt={breed.imageAlt}
-                  aspect="3:4"
-                  subtleCredit
-                />
-              </div>
-              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-              <div className="relative z-10 flex flex-col justify-end min-h-[200px] sm:min-h-[220px] p-3">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
+          {/* Featured-dog photo panel (real: category-breeds / golden) */}
+          <Link
+            href="/breeds/golden-retriever"
+            className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[280px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+          >
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+              <StockImage
+                manifestKey="dog-com:category-breeds"
+                alt="Golden Retriever portrait"
+                aspect="4:3"
+                subtleCredit
+              />
+            </div>
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+            <div className="relative z-10 flex flex-col justify-end h-full min-h-[280px] p-5">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">Most-searched breed</div>
+              <div className="font-display font-bold text-white text-xl leading-tight mb-1">Golden Retriever</div>
+              <div className="text-xs text-white/75 leading-relaxed">Cancer risk and hip dysplasia drive the screening schedule — see what to test, and when.</div>
+            </div>
+          </Link>
+
+          {/* Breed risk list — clean text cards, no per-breed placeholder slots */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {FEATURED_BREEDS.map((breed) => (
+              <Link
+                key={breed.name}
+                href={breed.href}
+                className="group block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+              >
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
                   {breed.type}
                 </div>
-                <div className="font-display font-bold text-white text-sm mb-1 leading-tight">
+                <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
                   {breed.name}
                 </div>
-                <div className="text-2xs text-white/70 leading-snug">
-                  {breed.keyRisk}
+                <div className="text-xs text-brand-text-mid leading-snug">
+                  Key risks: {breed.keyRisk}
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -592,8 +604,8 @@ export default function HomePage() {
           {/* Symptom hero image */}
           <div className={`order-2 lg:order-1 rounded-xl overflow-hidden ring-1 ring-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.4)] ${FILL_IMAGE}`}>
             <StockImage
-              manifestKey="dog-com:symptoms-hero"
-              alt="Owner watching a dog for symptoms"
+              manifestKey="dog-com:category-health"
+              alt="A dog being checked for health symptoms"
               aspect="4:3"
               variant="wide"
               subtleCredit
@@ -799,7 +811,7 @@ export default function HomePage() {
             >
               <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
                 <StockImage
-                  manifestKey="dog-com:compare-hero"
+                  manifestKey="dog-com:category-reviews"
                   alt="Comparing dog products"
                   aspect="16:9"
                   subtleCredit
