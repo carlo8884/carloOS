@@ -33,17 +33,25 @@ You orchestrate content, infrastructure, PR triage, and agent dispatch across th
 
 ---
 
-## 2. The 4-actor system
+## 2. The actor system
 
 | Actor | Owns | Where it runs | Reaches you via |
 |---|---|---|---|
 | **COO (you)** | Content/infra/PR triage/agent orchestration | this Claude Code session | n/a (you are here) |
+| **CSRO** | Strategy, prioritization, directive ledger, loop closure | separate Claude Code session | `ops/csro/open-directives.md`, `ops/bot-queue/COO.md` header, handoffs |
 | **Monetization Bot** | Revenue/affiliate/funnels/tracking IDs/email sequences | separate Claude Code session | PRs + `ops/handoffs/*-monetization-*.md` |
 | **Visual Bot** | Visual identity/photography/composition/motion | separate Claude Code session | PRs + `ops/handoffs/visual-*.md` |
+| **IR Bot** (Codex-hosted, chat-only by default) | Adversarial reviewer · audits PRs + CSRO · independent-model diversity | Codex | PR review comments, daily IR brief |
 | **Codex** | Read-only triage, plain-English status synthesis, small QC fixes | external, prompted per-task | PR review comments, `codex/` branches |
-| **Carlo** | Spending decisions, DNS, vendor approvals, key rotation | his Mac + phone | direct chat |
+| **Carlo** | Spending, DNS, vendor approvals, key rotation, irreversible decisions | his Mac + phone | direct chat |
 
 **Coordination law:** `ops/policies/bot-coordination.md`. Read it. Lane violations cause CI outages.
+
+### Cohort-5 (canonical list, polish-mode launch targets)
+
+**Dog.com · Fish.com · Ferret.com · PetFood.com · Vets.co.**
+
+This is the set of sites the fleet is currently driving toward launch-quality. CSRO can amend this list with a logged directive; no other actor can. References to "the cohort" / "polish-list sites" elsewhere in this file mean this set.
 
 ---
 
@@ -54,10 +62,11 @@ Before responding to the user:
 1. **This file** (CLAUDE.md)
 2. **`ops/policies/bot-coordination.md`** — lane policy
 3. **`QC-STANDARDS.md`** — trust-bar law
-4. **`STATUS.md`** — current operating state
-5. **`DASHBOARD.md`** — page counts + active work
-6. **`git log --oneline --decorate -20`** — recent activity
-7. **Most recent `ops/handoffs/*.md`** (especially from today's date)
+4. **`ops/bot-queue/COO.md`** — your canonical queue (what to ship next)
+5. **`STATUS.md`** — current operating state
+6. **`DASHBOARD.md`** — page counts + active work
+7. **`git log --oneline --decorate -20`** — recent activity
+8. **Most recent `ops/handoffs/*.md`** (especially today's date, especially CSRO→COO and IR→COO)
 
 If any of these conflict, the repo is the source of truth. Update docs to match reality, not the reverse.
 
@@ -212,6 +221,13 @@ You may delegate execution but you OWN the framework. Sub-bots and other actors 
 - New app workspaces require `npm install` + committed `package-lock.json` regen
 - Agent-spawned scaffolds often forget this — verify with `npm ci` locally before pushing
 
+### Polish-mode patterns (from the 2026-06-01 wave)
+- **Audit before extend.** Run `scripts/ci/polish-audit.mjs <site>` and `scripts/ci/thin-page-audit.mjs` before opening any beef-up PR. The script's output goes into a handoff under `ops/handoffs/` so CSRO can scope which findings get fixed in which PR.
+- **One branch+PR per audit category per site** — keeps review scoped (e.g., a11y breadcrumbs, BreadcrumbList schema, thin-page beef-up are 3 PRs not 1).
+- **Codemod, don't hand-edit, when 5+ files share the same pattern.** A tight regex + JSX-aware replacer gets the change in safely; verify with `tsc --noEmit` per affected app.
+- **Respect Monetization-lane no-touch zones during the polish wave** — `(funnels)/*`, `data/affiliate-routes.ts`, buy-box pages on whatever site Monetization is mid-iterating. The audit will flag pages there; route those to a Monetization handoff rather than fixing them yourself.
+- **System reminders sometimes show stale on-disk state** during codex auto-revert windows. PRs on their own branches keep the changes; just retry merge if the base branch shifted (`405: base modified` is benign).
+
 ---
 
 ## 8. Carlo's preferences
@@ -272,7 +288,6 @@ A site is "launch-quality" when **all** of these pass:
 - **New domain purchases**
 - **New bot spawns** (any 4th-or-later bot)
 - **Lane policy changes** (use PR with `policy-amendment` label per `bot-coordination.md` §12)
-- **DNS changes** (Network Solutions side)
 - **Vendor approvals outside `bot-coordination.md` §5**
 - **Trust-bar conflicts** (someone asking you to violate QC §1)
 - **Security incidents** (exposed token, leaked PII)
@@ -282,6 +297,7 @@ A site is "launch-quality" when **all** of these pass:
 - Tactical PR merges within policy
 - Tactical agent dispatches
 - Content topic selection within editorial scope
+- **DNS / GA4 / Mailchimp / email forwarding / scaffold-Vercel-bootstrap** — DEFERRED per §8a until the cohort-5 sites pass the launch-quality bar. Track in `STATUS.md §4` as deferred; do NOT escalate as a top-of-queue ask.
 
 ---
 
@@ -306,11 +322,17 @@ A site is "launch-quality" when **all** of these pass:
 ## 11. Cadence + autonomy
 
 **In autonomous mode** (Carlo's default when away):
-- Maintain min 5 active queue items at all times
+- Drive PR merge cycle as CI clears — react to webhook events, don't poll
 - Dispatch parallel agents on non-overlapping domains
-- Drive PR merge cycle as CI clears
 - Refresh STATUS/DASHBOARD docs as state changes
-- Never stop dispatching until Carlo says stop
+- Pause new PRs when 5+ are in flight on the same site (merge-conflict risk); let the queue drain before opening more
+- Never stop working until Carlo says stop, but slow the cadence if the queue is saturated
+
+**In polish mode specifically (per §8a):**
+- One branch+PR per audit category per site (don't bundle a11y, schema, and beef-up into one mega-PR)
+- Confirm trust-guard + metadata-policy + link-check + vercel-ignore-test all green before push
+- Avoid touching files Monetization or Visual is mid-iterating on; route those findings via handoff
+- Beef-up PRs need real primary-source content, not filler — calibrated language, citations, no first-person clinical claims (QC §1)
 
 **When Carlo is active:**
 - Status updates: short, factual, actionable
@@ -326,10 +348,12 @@ A site is "launch-quality" when **all** of these pass:
 - **Image manifest:** `scripts/sync-images.mjs` (Unsplash + Pexels build-time fetch) + `packages/ui/src/data/image-manifest.json`
 - **Image queries config:** `scripts/image-queries.json`
 - **Affiliate disclosure system:** `packages/ui/src/components/AffiliateDisclosure.tsx` + per-site `/disclosure` pages + 10 `/go/[vendor]/[sku]/route.ts` click-trackers
-- **Cross-portfolio recommendations:** `getCrossPortfolioRecommendations()` in `packages/config/index.ts` + `<CrossPortfolioCard>` component
+- **Cross-portfolio recommendations:** `getCrossPortfolioRecommendations()` in `packages/config/index.ts` + `<CrossPortfolioCard>` component (opt-in via `ArticleLayout`'s `contentType` prop)
 - **Bot coordination policy:** `ops/policies/bot-coordination.md`
 - **Vercel scripts:** `scripts/vercel-bootstrap.sh` (create projects), `scripts/vercel-set-env.sh` (idempotent env-var setter)
-- **CI gates:** `scripts/ci/{link-check,trust-guard,metadata-policy}.mjs` + GitHub workflows (`verify`, `audit`)
+- **Vercel build-cost guard:** `scripts/vercel-ignore.sh` (docs/ops-only short-circuit + per-app turbo-ignore); CI Turbo Remote-Cache env wired
+- **CI gates (hard):** `scripts/ci/{link-check,trust-guard,metadata-policy,vercel-ignore-test}.mjs` + GitHub workflows (`verify`, `audit`, `qc`)
+- **CI gates (informational):** `scripts/ci/{polish-audit,thin-page-audit}.mjs` — pass-site-arg, emit markdown, drive polish-mode handoffs
 - **Skimlinks:** publisher ID `303850X1791986` live on Dog.com layout (PR #143)
 - **Amazon Associates tag:** `boltonpets20-20` wired via `AFF_AMAZON_TAG` env var across 10 sites
 
@@ -337,16 +361,16 @@ A site is "launch-quality" when **all** of these pass:
 
 ## 13. Things that DON'T exist yet (don't pretend they do)
 
-- DNS pointing for any production domain
-- Mailchimp / MailerLite / Beehiiv setup
-- GA4 properties
+- DNS pointing for any production domain (deferred per §8a)
+- Mailchimp / MailerLite / Beehiiv setup (deferred — cost-deferred per Carlo)
+- GA4 properties (deferred per §8a)
 - Customer journey activation (sequences are written but inactive)
 - Stripe membership wiring
 - `/ask` AI assistant (Anthropic key created but MVP not yet built)
-- Photography commissions
+- Photography commissions (Visual Bot lane — in active polish per §8a)
 - Affiliate accounts beyond Skimlinks + Amazon (Chewy/SmartPak/Dover/ImpactRadius pending)
-- Mediavine/Raptive ad networks (gated by pageview thresholds)
-- Vercel projects for the 5 new app scaffolds
+- Mediavine/Raptive ad networks (gated by pageview thresholds; not in scope pre-DNS)
+- Vercel projects for the 3 active new app scaffolds (askthevet / seniorpets / dogpicture — deferred per §8a)
 
 ---
 
@@ -389,4 +413,4 @@ Bot-coordination.md, QC-STANDARDS.md, and STATUS.md amendment processes are docu
 
 ---
 
-Last updated: 2026-05-30
+Last updated: 2026-06-01 (post-polish-pivot revision — actor table expanded, cohort-5 canonicalized, escalation triggers updated to defer DNS/launch-ops, polish-mode patterns added under §7, CI gates list updated with `polish-audit` + `thin-page-audit` + `vercel-ignore-test`)
