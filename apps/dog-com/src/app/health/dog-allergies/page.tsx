@@ -6,7 +6,7 @@ const SOURCES = [
   { label: 'Olivry T et al. Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals. BMC Vet Res. 2015;11:210.', publisher: 'BMC Vet Research / ICADA' },
   { label: 'Mueller RS et al. Critically appraised topic on adverse food reactions of companion animals: common food allergen sources in dogs and cats. BMC Vet Res. 2016;12:9.', publisher: 'BMC Vet Research' },
   { label: 'AVMA: Skin Allergies and Atopic Dermatitis in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
-  { label: 'FDA CVM: Questions and Answers: FDA's Work on Potential Causes of Non-Hereditary DCM in Dogs (2018-2019 Grain-Free Diet Updates)', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy', publisher: 'FDA CVM' },
+  { label: 'FDA CVM: Questions and Answers: FDA\'s Work on Potential Causes of Non-Hereditary DCM in Dogs (2018-2019 Grain-Free Diet Updates)', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy', publisher: 'FDA CVM' },
 ]
 
 

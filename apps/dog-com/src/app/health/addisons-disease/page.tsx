@@ -5,7 +5,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Hypoadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hypoadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Diagnosis of Hypoadrenocorticism in Dogs and Cats — Consensus Statement', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Addison's Disease in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'AVMA: Addison\'s Disease in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Baumstark ME et al. Alternate-day dosing of desoxycorticosterone pivalate in dogs with hypoadrenocorticism. J Vet Intern Med. 2014;28(4):1214-1220.', publisher: 'JVIM' },
 ]
 

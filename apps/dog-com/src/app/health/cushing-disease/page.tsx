@@ -3,9 +3,9 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing's Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing\'s Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Diagnosis and Treatment of Hyperadrenocorticism in Dogs — Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Cushing's Disease (Hyperadrenocorticism) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'AVMA: Cushing\'s Disease (Hyperadrenocorticism) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Feldman EC et al. Use of low- and high-dose dexamethasone tests for distinguishing pituitary-dependent from adrenal tumor hyperadrenocorticism in dogs. J Am Vet Med Assoc. 1996;209(4):772-775.', publisher: 'JAVMA' },
 ]
 
