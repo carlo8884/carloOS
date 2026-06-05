@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cocker Spaniel Guide — Ear Infections, Eye Conditions | Dog.com', description: 'Cocker Spaniels have the highest rate of ear infections of any breed — their ear structure creates a perfect warm, dark environment for yeast and bacteria.', path: '/breeds/cocker-spaniel', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -29,7 +29,8 @@ export default function CockerSpanielPage() {
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Chronic Ear Infections (Otitis Externa)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Chronic Ear Infections (Otitis Externa)" riskLevel="very-high"
           description="American Cocker Spaniels have the highest rate of chronic ear infections of any breed — their long, pendulous, heavily feathered ear flaps create a warm, dark, poorly-ventilated environment that promotes yeast (Malassezia) and bacterial overgrowth. Allergies — which Cockers are also predisposed to — further inflame the ear canal and promote secondary infection. Without preventive maintenance, most Cockers develop chronic otitis within the first few years of life."
           signs={['Head shaking and ear scratching', 'Odor from the ears (yeast has a characteristic musty smell)', 'Brown or dark discharge when ear is cleaned', 'Redness and swelling of the ear canal opening', 'Pain when ear is touched or examined', 'Head tilt (inner ear involvement in severe cases)']}
           management="Monthly cleaning with a veterinary ear cleaner (not cotton swabs — which push debris deeper). Dry the ear canal after swimming or bathing. At the first sign of infection: veterinary cytology to identify whether yeast, bacteria, or both are present — treatment differs. Allergic ear disease requires management of the underlying allergy (Apoquel, Cytopoint, or allergen-specific immunotherapy) to prevent recurrence." />

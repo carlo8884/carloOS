@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -30,6 +30,7 @@ export default function HowMuchToFeedPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="bcs">Body Condition Score — The Most Important Tool</h2>
         <p>Calorie tables and package guidelines are starting points. The definitive measure of whether you are feeding the right amount is your dog&apos;s body condition score (BCS) — a standardized 9-point scale that assesses body fat relative to muscle and frame. No formula accounts for every individual variation; BCS is how you interpret the result.</p>
         <p>Check your dog&apos;s BCS monthly — the same day each month is easiest to remember. Adjust food based on trajectory, not single readings.</p>

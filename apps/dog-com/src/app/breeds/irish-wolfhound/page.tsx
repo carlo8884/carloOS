@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
@@ -28,7 +28,8 @@ export default function IrishWolfhoundPage() {
       </>}
     >
       <div className="carloOS-article">
-        <h2>The Lifespan Reality — Before You Decide</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>The Lifespan Reality — Before You Decide</h2>
         <p>Irish Wolfhound owners describe the breed as "heartbreak dogs" — because loving them means accepting a much shorter relationship than any other breed. The median lifespan in published studies is 6.2-7.0 years. A significant percentage of Irish Wolfhounds die between 4-6 years from osteosarcoma — the most aggressive bone cancer in dogs. Owners who have had Wolfhounds describe the depth of the relationship, the quality of the years together, and the community of Wolfhound people as compensation. But the grief is real and the timeline is short. This should be known before the decision, not discovered afterward.</p>
 
         <BreedHealthCard name="Osteosarcoma (Bone Cancer)" riskLevel="very-high"

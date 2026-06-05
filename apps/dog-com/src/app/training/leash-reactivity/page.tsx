@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -79,6 +79,7 @@ export default function LeashReactivityPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why Leash Reactivity Happens</h2>
         <p>Leash reactivity is almost always one of two things: frustration or fear — or a combination of both. Understanding which is driving your dog&apos;s behavior shapes the protocol.</p>
         <p><strong>Frustration-based reactivity (barrier frustration):</strong> A social dog that wants to approach and greet other dogs learns that the leash prevents this. The frustration of restrained access to a desired resource — other dogs — produces a classic frustration response: barking, lunging, spinning. These dogs are often described as &quot;great with other dogs off-leash but terrible on-leash.&quot; Their body language tends forward: weight forward, tail up and wagging, straining toward the other dog.</p>

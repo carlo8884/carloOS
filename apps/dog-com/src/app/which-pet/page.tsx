@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getSiteConfig } from '@carloOS/config'
 import {
   ArticleLayout,
+  ArticleByline,
   FAQAccordion,
   SchemaScript,
   buildBreadcrumbSchema,
@@ -202,6 +203,7 @@ export default function WhichPetPage() {
           readTime: '3 min',
         }}
       >
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
           Picking the right species — not just the right breed — is the single biggest predictor of whether a pet relationship works. Roughly 6.3 million companion animals enter U.S. shelters each year (ASPCA, 2024 figures); the most common reason cited at intake is a mismatch between owner expectations and species reality.

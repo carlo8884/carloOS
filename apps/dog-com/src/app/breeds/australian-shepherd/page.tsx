@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts.', path: '/breeds/australian-shepherd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -31,6 +31,7 @@ export default function AustralianShepherdPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <BreedHealthCard name="MDR1 Gene Mutation (Drug Sensitivity)" riskLevel="high"
           description="The MDR1 (ABCB1) gene mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in dogs without the mutation. The MDR1 protein (P-glycoprotein) normally pumps drugs out of the brain — dogs with two mutant copies of the gene lack this protective mechanism, allowing normal doses of certain drugs to accumulate to toxic levels in the brain. The classic example: ivermectin at the low doses used for routine heartworm prevention is safe in all dogs; at the higher doses used in some parasite treatments, MDR1-affected dogs suffer neurological toxicity and death. This affects dozens of drugs including loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs."
           signs={['Drug-specific: ataxia, blindness, seizures, coma after exposure to affected drugs', 'Signs appear within hours of drug administration']}

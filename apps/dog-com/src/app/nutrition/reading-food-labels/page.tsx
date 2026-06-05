@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
@@ -22,6 +22,7 @@ export default function ReadingFoodLabelsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="aafco">The AAFCO Statement — The Most Important Thing on the Bag</h2>
         <p>The <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Association of American Feed Control Officials (AAFCO)</a> establishes nutrient profiles for dog food. Every complete and balanced dog food must include one of two AAFCO statements:</p>
         <p><strong>Feeding trial statement:</strong> &quot;Animal feeding tests using AAFCO procedures substantiate that [product] provides complete and balanced nutrition for [life stage].&quot; This means dogs actually ate this food during a feeding trial and were monitored for health outcomes. This is the more rigorous and meaningful claim.</p>

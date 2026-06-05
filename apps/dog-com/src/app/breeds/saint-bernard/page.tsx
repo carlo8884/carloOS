@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended.', path: '/breeds/saint-bernard', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -29,7 +29,8 @@ export default function SaintBernardPage() {
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="very-high"
           description="Saint Bernards are among the highest-risk breeds for GDV — their deep, barrel chest creates the anatomical predisposition. Prophylactic gastropexy (surgically tacking the stomach to prevent rotation) performed at the time of spay/neuter is one of the most impactful preventive health decisions available for this breed. The procedure adds 15-20 minutes to the surgery and effectively eliminates the rotation component of GDV, the part that is rapidly fatal. GDV without surgery has near-100% mortality; with immediate surgery, 70-80% survival — but you may not make it to an emergency vet in time without the gastropexy already in place."
           signs={['Unproductive retching — attempting to vomit without producing anything', 'Distended abdomen that sounds hollow when tapped', 'Extreme restlessness then sudden profound lethargy', 'Excessive drooling beyond the breed baseline', 'Pale gums and signs of cardiovascular shock']}
           management="Prophylactic gastropexy at spay/neuter — discuss with your veterinarian before the procedure. Know your nearest 24-hour emergency veterinary clinic before you ever need it." />

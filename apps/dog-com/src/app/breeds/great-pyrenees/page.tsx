@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
@@ -31,7 +31,8 @@ export default function GreatPyreneesPage() {
       </>}
     >
       <div className="carloOS-article">
-        <h2>Understanding the Livestock Guardian Dog</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>Understanding the Livestock Guardian Dog</h2>
         <p>The Great Pyrenees was not bred as a companion, an obedience competitor, or a dog that looks to humans for direction. For thousands of years, these dogs lived with flocks in the Pyrenean mountains, patrolling territory, deterring predators, and making independent decisions — entirely on their own, often without a human nearby for days. They were selected for self-sufficiency, noise (to warn away predators), territorial behavior, and the judgment to act without instruction.</p>
         <p>This heritage is still fully present in the breed. A Great Pyrenees that is barking at 2am is not being disobedient — it heard something and is doing its job. A Great Pyrenees that escapes the yard is not being defiant — it is patrolling what it perceives as its territory. A Great Pyrenees that does not respond to recall with a squirrel in sight is not failing its training — it has evolved to make independent decisions. Understanding this context does not eliminate the management challenges, but it reframes them from "behavioral problems" to "breed characteristics requiring appropriate management."</p>
 

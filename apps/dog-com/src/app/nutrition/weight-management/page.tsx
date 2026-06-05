@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols.', path: '/nutrition/weight-management', type: 'article' })
@@ -22,6 +22,7 @@ export default function WeightManagementPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="assess">Is My Dog Overweight? The Body Condition Score</h2>
         <p>Scale weight is misleading without body condition context. A large-framed dog may be 80 lbs and lean; a small-framed dog may be 60 lbs and obese. Body condition scoring (BCS) is the correct tool.</p>
         <p><strong>Run your hands along both sides of your dog&apos;s ribcage.</strong> Can you feel each rib easily without pressing? Can you see a waist when you look down from above? Can you see an abdominal tuck (belly rising toward hindquarters) when viewed from the side? If yes to all three: ideal weight. If ribs are difficult to feel, no waist is visible, and no tuck: overweight. If ribs are buried under fat, abdomen is distended: obese.</p>

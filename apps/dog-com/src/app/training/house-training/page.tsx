@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'House Training Guide — The Schedule Method That Works | Dog.com', description: 'Complete house training guide for puppies and adult dogs. The schedule method, accident protocol, common mistakes.', path: '/training/house-training', type: 'article' })
@@ -40,6 +40,7 @@ export default function HouseTrainingPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="principle">The Core Principle</h2>
         <p>House training works by making outdoor elimination the path of least resistance through consistent scheduling, and by making indoor accidents impossible (via crate or direct supervision) or unrewarding (via neutral cleanup rather than attention). Punishment does not work — a puppy that is punished for indoor accidents learns to hide their accidents, not to go outside. The goal is to reward the right behavior, not to punish the wrong one.</p>
 

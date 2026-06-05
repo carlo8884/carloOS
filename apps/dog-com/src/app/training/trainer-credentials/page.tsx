@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Trainer Credentials — CPDT-KA, CBCC-KA | Dog.com', description: 'How to evaluate a dog trainer\'s qualifications. CPDT-KA, CBCC-KA, CAAB, DACVB — what each credential means, what it requires, and red flags to avoid.', path: '/training/trainer-credentials', category: 'Finding a Trainer', type: 'article' })
@@ -39,6 +39,7 @@ export default function TrainerCredentialsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="credentials">Credential Reference Guide</h2>
         {CREDENTIALS.map(c => (
           <div key={c.acronym} style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '12px', padding: '22px', marginBottom: '16px' }}>

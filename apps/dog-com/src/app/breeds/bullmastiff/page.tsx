@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide — Hip Dysplasia, Bloat Risk | Dog.com', description: 'Bullmastiffs are quiet, loyal giant breed dogs. GDV/bloat risk, hip and elbow dysplasia, and cardiac screening are the primary health priorities.', path: '/breeds/bullmastiff', type: 'article' })
@@ -31,7 +31,8 @@ export default function BullmastiffPage() {
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high"
           description="Bullmastiffs, like most giant breeds, carry significant risk of hip and elbow dysplasia. Their rapid growth rate and substantial adult weight amplify the developmental joint disease risk present in larger breeds generally. OFA certification of both hips and elbows on both parents is the minimum expectation from responsible breeders. Limit high-impact exercise during growth — no forced running or jumping until 18 months."
           signs={['Hind-end weakness or stiffness after rest', 'Altered gait — bunny-hopping or reduced stride', 'Reluctance to rise, climb stairs, or jump', 'Forelimb lameness (elbows)']}
           management="Lean weight maintained throughout life. Fish oil from puppy stage. Joint supplement from young adulthood. NSAIDs or Librela when pain management is needed. Surgical options (TPO, THR, elbow procedures) for appropriate cases." />
