@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -132,6 +132,13 @@ export default function LaminitisPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Laminitis</h2>
           <p>Inside the hoof capsule, the coffin bone (the third phalanx, or P3) is not resting on the sole; it is suspended from the inner hoof wall by interleaved sheets of tissue called the laminae. The epidermal laminae grow from the hoof wall and interlock with the dermal laminae attached to the bone, like two combs pushed together. This suspensory apparatus holds the entire bodyweight of the horse and transmits it to the ground through the hoof wall. Laminitis is the breakdown of that bond.</p>
           <p>When the laminae inflame, lose their attachment, or are starved of blood supply, the mechanical connection between bone and wall weakens. The constant downward pull of the deep digital flexor tendon on the back of the coffin bone, combined with bodyweight, can then rotate the coffin bone away from the dorsal hoof wall (rotational founder) or allow the entire bone to descend within the capsule (sinking, the more dangerous form). In severe cases the tip of the coffin bone can penetrate the sole.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +112,13 @@ export default function QuarterHorseBreedPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="history">History &amp; Origins</h2>
           <p>The American Quarter Horse was, before it was a breed, a working type. Seventeenth-century English colonists in Virginia and the Carolinas crossed imported Galloway and Hobby mares with locally adapted Iberian and Chickasaw stock, then later with the Thoroughbred founder Janus (1746) and other early Thoroughbreds. The result was a compact horse that could outrun anything at distances under a quarter mile — hence "Quarter Horse." Match races on Main Street, often run between two horses for a side bet, were the breed's first proving ground (AQHA, &ldquo;Breed History,&rdquo; aqha.com).</p>
 

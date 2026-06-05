@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -140,6 +141,13 @@ export default function OttbAftercarePage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="ecosystem">The Aftercare Ecosystem</h2>
           <p>The Thoroughbred aftercare ecosystem is a network of organizations, programs, and individuals dedicated to ensuring that horses that retire from racing have a safe, appropriate transition to a second life. It encompasses nonprofit rescue and retraining organizations, breed-specific adoption programs, track-based aftercare initiatives, industry-funded programs, and private individuals who retrain and rehome former racehorses.</p>

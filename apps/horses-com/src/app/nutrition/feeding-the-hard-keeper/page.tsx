@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function HardKeeperPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="cause">Rule Out the Cause First</h2>
           <p>A horse that will not hold weight despite good feeding usually has an underlying reason, and piling on grain without finding it wastes money and can do harm. Common culprits include dental problems that prevent proper chewing, a heavy parasite burden, gastric ulcers, PPID and other endocrine disease, chronic pain, and competition from herdmates at feeding time. A veterinary workup -- including a dental exam, fecal egg count, and consideration of ulcers and PPID -- should come before simply increasing the ration.</p>
 

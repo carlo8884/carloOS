@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -137,6 +138,13 @@ export default function PeopleOfRacingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="owner">The Owner</h2>
           <p>The owner holds title to the horse and bears the financial responsibility for its racing career -- training fees, veterinary care, transport, entry and jockey fees, and the day-to-day costs of keeping a horse in training. Owners range from individuals to large partnerships and syndicates in which many people hold fractional shares. The owner&apos;s registered racing colors, worn by the jockey as silks, identify the horse&apos;s connections on the track. Owners are licensed by the racing commission in each jurisdiction in which they race.</p>

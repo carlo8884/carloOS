@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -151,6 +151,13 @@ export default function VaccinationSchedulePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="core-vs-risk">Core vs Risk-Based — The AAEP Framework</h2>
           <p>The American Association of Equine Practitioners (AAEP) classifies equine vaccines into two categories. <strong>Core vaccines</strong> are those that protect against diseases that are endemic to a region, virulent or highly infectious, of significant public health concern, or required by law — and are recommended for every horse regardless of geographic location or intended use. <strong>Risk-based vaccines</strong> are those whose use is determined by individual horse risk based on exposure pattern, age, geographic location, and use.</p>
 

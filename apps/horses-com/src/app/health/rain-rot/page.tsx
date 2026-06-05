@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -116,6 +116,13 @@ export default function RainRotPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Rain Rot</h2>
           <p>Rain rot is a skin infection caused by Dermatophilus congolensis, a bacterium that behaves in some ways like a fungus. It infects the outer skin layers and provokes an inflammatory response that produces crusty, matted scabs binding tufts of hair, which lift off to leave bare, sometimes raw, patches. It most commonly appears over the topline, back, croup, and hindquarters -- the areas that stay wettest in rain.</p>
 

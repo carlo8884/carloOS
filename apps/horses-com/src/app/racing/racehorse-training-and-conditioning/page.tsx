@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -140,6 +141,13 @@ export default function RacehorseTrainingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="stable">The Training Stable</h2>
           <p>A racing stable is the unit of operation through which racehorses are trained. At the racetrack level, horses are housed in barn facilities on or near the track. A trainer operates a stable of horses belonging to one or many owners, and the stable may range in size from a handful of horses to dozens depending on the trainer&apos;s capacity and reputation. The stable includes a physical barn, an exercise track, and a staff of riders, grooms, and support personnel.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,13 @@ export default function NavicularPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="anatomy">The Anatomy</h2>
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
 

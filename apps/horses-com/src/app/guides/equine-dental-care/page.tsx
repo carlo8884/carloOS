@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -153,6 +153,13 @@ export default function EquineDentalCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Dental Care Matters</h2>
           <p>Horses are unique among domestic species in having <strong>hypsodont teeth</strong> — teeth with very long crowns embedded in the jaw at the time of eruption, designed to continue erupting throughout the animal&apos;s life as the occlusal (chewing) surface wears down. A horse&apos;s incisor and cheek teeth erupt approximately 2–3 mm per year for most of the horse&apos;s working life. This evolutionary design suited the wild horse&apos;s grass-grazing lifestyle — constant slow grinding of high-silica grasses produced predictable, even wear across the dental arcades.</p>
 

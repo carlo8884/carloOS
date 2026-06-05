@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function HorseInsurancePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Insure a Horse</h2>
           <p>Insurance exists because the big costs of horse ownership -- the loss of a valuable horse, an emergency surgery, a long course of treatment, or a claim from someone the horse injures -- can be financially devastating and arrive without warning. Insurance spreads that risk for a recurring premium. Whether it is worth it depends on the horse&apos;s value, the owner&apos;s finances, and their appetite for risk; some owners insure heavily, others self-insure by keeping an emergency fund instead.</p>
 

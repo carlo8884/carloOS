@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -154,6 +154,13 @@ export default function ColicPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what-is-colic">What Is Colic</h2>
           <p>Colic is a clinical sign — abdominal pain — and not a diagnosis. The horse&apos;s gastrointestinal anatomy is uniquely vulnerable to problems that cause pain: roughly 100 feet of intestine arranged in a long, mobile, sharply-folded path that includes the large colon (a 12-foot-long fermentation chamber that doubles back on itself at the pelvic flexure) and a relatively narrow attachment to the body wall that allows substantial movement of the gut. The same anatomy that makes horses efficient fiber fermenters also makes them prone to displacements, torsions, impactions, and gas accumulation that do not occur in carnivores or in ruminants.</p>
 

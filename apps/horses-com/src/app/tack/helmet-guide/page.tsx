@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function HelmetGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Helmets Matter</h2>
           <p>Riders sit well above the ground on a powerful, sometimes unpredictable animal, and a fall onto the head can cause traumatic brain injury. Head injuries are the leading cause of riding-related death and serious disability, and a correctly fitted, certified helmet absorbs and distributes the energy of an impact, substantially reducing the severity of head trauma. No level of experience makes a rider immune -- many serious accidents happen to skilled riders on quiet horses.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,6 +117,13 @@ export default function WestNilePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is West Nile Virus</h2>
           <p>West Nile virus is a flavivirus maintained in nature in a cycle between birds and mosquitoes. Birds are the amplifying hosts; mosquitoes that feed on infected birds can then transmit the virus to mammals, including horses and people. In horses the virus can cross into the nervous system and cause encephalomyelitis -- inflammation of the brain and spinal cord -- with serious neurologic consequences.</p>
 

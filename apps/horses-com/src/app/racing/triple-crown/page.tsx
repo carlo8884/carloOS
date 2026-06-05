@@ -17,6 +17,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -141,6 +142,13 @@ export default function TripleCrownPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What the Triple Crown Is</h2>
           <p>The American Triple Crown is the achievement of winning three specific Thoroughbred races in a single year: the Kentucky Derby, the Preakness Stakes, and the Belmont Stakes. All three are restricted to three-year-old horses, so any individual horse has exactly one season in which it is eligible to attempt the sweep. There is no separate Triple Crown trophy race -- the title is conferred on a horse that wins all three legs in the same spring.</p>

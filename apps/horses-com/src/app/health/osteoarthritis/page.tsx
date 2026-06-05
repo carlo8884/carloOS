@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,6 +117,13 @@ export default function OsteoarthritisPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Osteoarthritis</h2>
           <p>A healthy joint is lined with articular cartilage -- a slick, resilient surface that lets bone glide on bone -- and lubricated by joint (synovial) fluid. Osteoarthritis begins when that cartilage is damaged by wear, repetitive concussion, injury, or inflammation. The damaged cartilage releases enzymes that degrade it further, the joint inflames, the surrounding bone responds by forming new growth (osteophytes), and the cycle becomes self-sustaining. The result is pain, stiffness, and progressive loss of motion.</p>
 

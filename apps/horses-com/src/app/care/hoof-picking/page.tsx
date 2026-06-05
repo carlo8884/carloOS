@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function HoofPickingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Pick Out the Feet</h2>
           <p>Horses pack mud, manure, bedding, and stones into the foot constantly. Left there, debris traps moisture and bacteria that cause thrush, hides a lodged stone that bruises the sole, and conceals early cracks or punctures. Picking out is both cleaning and inspection: it is the single best routine for catching foot problems while they are still small.</p>
 

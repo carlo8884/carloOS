@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function WaterRequirementsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="howmuch">How Much Water</h2>
           <p>An average idle adult horse drinks roughly 20 to 40 liters (about 5 to 10 gallons) of water a day in temperate conditions, though the figure varies widely with size, diet, weather, and work. Horses on dry hay drink more than those on lush, moisture-rich grass; a horse on pasture may drink little because it gets water from the grass. The practical rule is to provide clean water free-choice at all times and never assume a fixed amount is enough.</p>
 

@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -139,6 +140,13 @@ export default function QuarterHorseRacingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What Quarter Horse Racing Is</h2>
           <p>Quarter Horse racing is a form of flat racing conducted at short sprint distances, with the American Quarter Horse as the primary breed. Races are run in a straight line or around a tight oval, depending on the track, and are completed in a matter of seconds. The discipline emphasizes raw acceleration out of the gate over the ability to sustain speed across longer distances. This is the defining difference between Quarter Horse racing and Thoroughbred racing: the Quarter Horse is an explosive sprinter; the Thoroughbred is also built for sustained speed across furlongs and miles.</p>

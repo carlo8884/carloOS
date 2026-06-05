@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -123,6 +123,13 @@ export default function ChokePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Choke Is</h2>
           <p>In horses, choke means an obstruction of the esophagus -- the muscular tube carrying food from the throat to the stomach -- not of the windpipe. Because the airway is usually unaffected, a choking horse can typically still breathe, which distinguishes it from human choking. The obstruction prevents the horse from swallowing, so saliva and feed back up and may spill out of the nose and mouth.</p>
 

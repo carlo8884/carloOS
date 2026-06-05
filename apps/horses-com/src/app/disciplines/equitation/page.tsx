@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function EquitationPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Equitation Is</h2>
           <p>Equitation is the art and judged discipline of correct, effective riding, where the focus is entirely on the rider. The horse is the vehicle; the rider&apos;s seat, position, use of the aids, and overall effectiveness are what the judge assesses. Strong equitation -- a balanced, quiet, secure position from which the rider can influence the horse subtly -- underpins success in every other English discipline, which is why it is the cornerstone of junior and amateur development in the hunter/jumper world.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function BitsGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How a Bit Works</h2>
           <p>A bit communicates through pressure on sensitive structures of the head: the bars (the toothless gum between incisors and molars where the mouthpiece rests), the tongue, the lips and corners of the mouth, and -- with leverage bits -- the poll and chin groove. Rein pressure is transmitted through the bit to these points, and the horse learns to respond by yielding to and seeking relief from that pressure. Because these structures are sensitive, the bit must be matched to the horse and used with educated hands.</p>
 

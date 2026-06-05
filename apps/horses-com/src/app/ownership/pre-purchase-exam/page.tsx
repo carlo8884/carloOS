@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function PrePurchaseExamPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="purpose">What the Exam Is For</h2>
           <p>A pre-purchase exam is a veterinary assessment of a horse&apos;s current health and soundness, carried out for a prospective buyer to inform the buying decision. Its purpose is not to pass or fail the horse, nor to guarantee its future, but to identify any existing problems and assess the horse&apos;s suitability for the buyer&apos;s intended use. A jumping prospect and a quiet trail horse are judged against different demands, so the buyer&apos;s plans shape what matters in the findings.</p>
 

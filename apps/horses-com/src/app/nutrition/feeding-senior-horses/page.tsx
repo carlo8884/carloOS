@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function SeniorFeedingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="aging">How Aging Changes Needs</h2>
           <p>As horses age, several things shift together: teeth wear down and chewing becomes less effective, digestion of fiber and protein becomes somewhat less efficient, the ability to maintain condition declines, and chronic conditions such as PPID become common. Some seniors become hard keepers needing more support, while others -- especially those with PPID and regional fat -- stay overweight and need restriction. The diet must be tailored to the individual aging horse, not a single senior template.</p>
 

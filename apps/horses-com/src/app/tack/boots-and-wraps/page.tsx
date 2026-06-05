@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function BootsWrapsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Use Leg Protection</h2>
           <p>Horses can strike one leg with another (brushing or interfering), overreach with a hind foot onto a front heel, or knock a leg on a fence or jump. Boots and wraps protect against these impacts and abrasions during work, travel, and turnout. Some are also used in veterinary care to hold dressings or provide support during recovery. The key is to use the right protection for the purpose and to fit it correctly.</p>
 

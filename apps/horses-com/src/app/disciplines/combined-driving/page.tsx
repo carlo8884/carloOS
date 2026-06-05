@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function CombinedDrivingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Combined Driving Is</h2>
           <p>Combined driving applies the format of ridden eventing to horses in harness. Instead of being ridden, the horse (or pair or team) pulls a carriage driven by a whip (the driver), assisted by one or more grooms (called the navigator or backstepper, especially in the marathon). Over one to three days, the same turnout competes in three contrasting phases, and the scores combine -- testing obedience and elegance, fitness and boldness, and accuracy in turn.</p>
 
