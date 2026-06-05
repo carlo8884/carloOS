@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure.', path: '/health/dog-heart-disease', type: 'article' })
@@ -80,6 +80,40 @@ export default function DogHeartDiseasePage() {
             <li><strong>Dietary sodium restriction:</strong> Reduces fluid retention — cardiac-specific diets (Hill's h/d, Royal Canin Cardiac) provide appropriate sodium levels.</li>
           </ul>
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
+
+          <ArticleSourcesList
+            sources={[
+              {
+                label: 'BSAVA Manual of Canine and Feline Cardiorespiratory Medicine (2nd ed.) — cardiac disease prevalence in general practice',
+                publisher: 'British Small Animal Veterinary Association',
+              },
+              {
+                label: 'ACVIM Consensus Guidelines for the Diagnosis and Treatment of Myxomatous Mitral Valve Disease in Dogs — staging criteria and pimobendan thresholds',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15488',
+                publisher: 'J Vet Intern Med (Boswood et al., 2019)',
+              },
+              {
+                label: 'EPIC Trial — Effect of Pimobendan in Dogs with Preclinical Myxomatous Mitral Valve Disease and Cardiomegaly',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.14586',
+                publisher: 'J Vet Intern Med (Boswood et al., 2016)',
+              },
+              {
+                label: 'Prevalence of DCM in Doberman Pinschers — longitudinal echocardiographic study',
+                url: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1939-1676.2010.0527.x',
+                publisher: 'J Vet Intern Med (Wess et al., 2010)',
+              },
+              {
+                label: 'WSAVA Global Nutrition Committee — grain-free diet guidance and legume-associated DCM advisory',
+                url: 'https://wsava.org/committees/global-nutrition-committee/',
+                publisher: 'WSAVA',
+              },
+              {
+                label: 'FDA Investigation: Potential Dietary Causes of DCM in Dogs',
+                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+                publisher: 'U.S. Food and Drug Administration',
+              },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>
