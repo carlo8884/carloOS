@@ -27,6 +27,7 @@ export default function DogCancerSignsPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: '12 Warning Signs of Cancer in Dogs', subtitle: 'Cancer is the leading cause of death in dogs over 10 years — approximately 50% of dogs over 10 will develop cancer (Morris Animal Foundation, Golden Retriever Lifetime Study cohort data). Early detection significantly changes outcomes. These 12 warning signs are what veterinary oncologists ask about and owners should watch for.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Cancer Signs', href: '/health/dog-cancer-signs' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Cancer Treatment', href: '/health/dog-cancer-treatment', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">High-Risk Breeds</div>

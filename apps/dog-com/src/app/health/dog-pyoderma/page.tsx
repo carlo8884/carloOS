@@ -12,6 +12,7 @@ export default function DogPyodermaPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Pyoderma in Dogs', subtitle: 'Pyoderma — bacterial skin infection — is the most common skin disease seen in veterinary practice. Staphylococcus pseudintermedius is responsible for the vast majority of cases. The critical insight: pyoderma in most dogs is a secondary condition, not a primary disease. Treating the infection without identifying and managing the underlying cause results in recurrence.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Pyoderma', href: '/health/dog-pyoderma' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Allergies', href: '/health/dog-allergies', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Underlying Causes</div>

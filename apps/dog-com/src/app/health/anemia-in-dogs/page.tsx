@@ -12,6 +12,7 @@ export default function DogAnemiaPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Anemia in Dogs', subtitle: 'Anemia — an abnormally low red blood cell count or hemoglobin concentration — causes the tissues to receive insufficient oxygen. The clinical signs reflect this: pale gums, lethargy, exercise intolerance, and in severe cases, rapid breathing at rest. Anemia is always secondary to an underlying cause, and the cause determines the treatment.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Anemia', href: '/health/anemia-in-dogs' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Cancer Signs', href: '/health/dog-cancer-signs', category: 'Dog Health' }, { title: 'Liver Disease', href: '/health/dog-liver-disease', category: 'Dog Health' }, { title: 'Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of Anemia</div>

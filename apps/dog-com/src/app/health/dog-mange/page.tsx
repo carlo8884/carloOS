@@ -14,6 +14,7 @@ export default function DogMangePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Mange in Dogs', subtitle: 'Two completely different mite species cause two completely different diseases both called "mange." Sarcoptic mange is highly contagious to other animals and humans. Demodectic mange is not contagious but indicates immune compromise. The distinction matters enormously for treatment and household management.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Mange', href: '/health/dog-mange' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Hot Spots', href: '/health/dog-hot-spots', category: 'Dog Health' }, { title: 'Pyoderma in Dogs', href: '/health/dog-pyoderma', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Sarcoptic vs Demodectic</div>

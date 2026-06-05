@@ -77,6 +77,7 @@ export default function SeniorDogCarePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Senior Dog Care', href: '/health/senior-dog-care' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }, { title: 'Dog Cancer Signs', href: '/health/dog-cancer-signs', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[

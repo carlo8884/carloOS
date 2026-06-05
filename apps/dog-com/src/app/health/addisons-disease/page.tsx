@@ -14,6 +14,7 @@ export default function AddisonsDiseaseePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: "Addison's Disease in Dogs", subtitle: "Hypoadrenocorticism (Addison's disease) results from insufficient production of adrenal cortex hormones — glucocorticoids (primarily cortisol) and mineralocorticoids (primarily aldosterone). It is sometimes called 'the great imitator' because its signs are vague and non-specific, leading to misdiagnosis for months or years before the characteristic electrolyte changes point to the diagnosis.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Addison's Disease", href: '/health/addisons-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Hypothyroidism', href: '/health/hypothyroidism', category: 'Dog Health' }, { title: 'Megaesophagus', href: '/health/megaesophagus', category: 'Dog Health' }, { title: 'Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Predisposed Breeds</div>

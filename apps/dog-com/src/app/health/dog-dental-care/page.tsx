@@ -13,6 +13,7 @@ export default function DogDentalCarePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Dental Care Guide', subtitle: 'Periodontal disease — infection and destruction of the supporting structures around the teeth — affects over 80% of dogs by age 3. It is painful, it contributes to systemic inflammation (with implications for heart, kidney, and liver health), and it is almost entirely preventable. The tools are simple; the commitment is daily.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dental Care', href: '/health/dog-dental-care' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Related' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">VOHC-Accepted Products</div>

@@ -14,6 +14,7 @@ export default function LuxatingPatellaPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Luxating Patella in Dogs', subtitle: 'The patella (kneecap) normally sits in a groove (trochlear groove) at the end of the femur. In dogs with luxating patella, the kneecap slips out of this groove — medially (inward) in most small dogs. The classic presentation: a small dog that skips on three legs for a few steps, then returns to normal.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Luxating Patella', href: '/health/dog-luxating-patella' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'French Bulldog Health', href: '/health/french-bulldog-health', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Most Affected Breeds</div>

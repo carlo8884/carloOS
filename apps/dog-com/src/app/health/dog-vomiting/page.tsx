@@ -12,6 +12,7 @@ export default function DogVomitingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Vomiting', subtitle: 'Dogs vomit. Most of the time it is not serious. But vomiting is also a sign of some of the most serious conditions in veterinary medicine — GDV, pancreatitis, toxin ingestion, intestinal obstruction. Knowing which signs escalate to emergency is essential.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Vomiting', href: '/health/dog-vomiting' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs</div>

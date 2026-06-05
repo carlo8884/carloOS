@@ -20,6 +20,7 @@ export default function SpayNeuterGuidePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'When to Spay or Neuter Your Dog', subtitle: 'The standard advice of spay/neuter at 6 months is being revised by research. For large and giant breeds especially, the timing has meaningful health implications. Here\'s what the current evidence shows.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Spay/Neuter Guide', href: '/health/spay-neuter-guide' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'German Shepherd Health', href: '/health/german-shepherd-health', category: 'Dog Health' }, { title: 'Labrador Health', href: '/health/labrador-health', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Timing by Size</div>

@@ -50,6 +50,7 @@ export default function FrenchBulldogHealthPage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'French Bulldog Health', href: '/health/french-bulldog-health' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Luxating Patella', href: '/health/dog-luxating-patella', category: 'Dog Health' }, { title: 'Spay or Neuter Guide', href: '/health/spay-neuter-guide', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[

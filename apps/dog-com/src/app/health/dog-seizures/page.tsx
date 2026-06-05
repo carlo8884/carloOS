@@ -23,6 +23,7 @@ export default function DogSeizuresPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Seizures in Dogs — Types, Causes, and Emergency Criteria', subtitle: 'Watching a dog seize is one of the most distressing experiences in pet ownership. Most single seizures are short and self-limiting; the urgent priorities are safety, accurate observation, and knowing the published thresholds that change a seizure from an outpatient event to an emergency. This page summarizes the ACVIM consensus on canine epilepsy and the standard neurology approach to work-up and treatment.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '13 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Seizures', href: '/health/dog-seizures' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Anxiety', href: '/health/dog-anxiety', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency — Go Now</div>

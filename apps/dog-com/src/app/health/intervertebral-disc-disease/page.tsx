@@ -12,6 +12,7 @@ export default function IVDDPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Intervertebral Disc Disease (IVDD)', subtitle: 'IVDD is the most serious orthopedic condition in chondrodystrophic breeds — Dachshunds, Corgis, Beagles, Basset Hounds, French Bulldogs, and others. When a disc herniates into the spinal canal, the neurological window for surgical recovery is 24–48 hours. Speed matters more than almost anything else in this condition.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'IVDD', href: '/health/intervertebral-disc-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Luxating Patella', href: '/health/dog-luxating-patella', category: 'Dog Health' }, { title: 'French Bulldog Health', href: '/health/french-bulldog-health', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs — Go Now</div>
