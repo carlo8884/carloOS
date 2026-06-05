@@ -13,7 +13,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
-  AffiliateDisclosure,,
+  AffiliateDisclosure,
   ArticleSourcesList
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'

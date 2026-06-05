@@ -30,7 +30,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
-  ArticleByline,,
+  ArticleByline,
   ArticleSourcesList
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
