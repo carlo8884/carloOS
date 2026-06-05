@@ -23,7 +23,7 @@
 | 7 | Fly sheet / fly mask size selector tool (drop-in) | M | M | M | S | ☐ |
 | 8 | Girth/cinch size calculator (drop-in) | M | M | M | S | ☐ |
 | 9 | Bit size & fitting guide tool (drop-in) | M | H | M | S | ☐ |
-| 10 | Product rich-snippet schema spec sheet for Glen | M | H | M | XS | ☐ |
+| 10 | Product rich-snippet schema spec sheet for Glen | M | H | M | XS | ☑ done (`ops/statelinetack/product-schema-spec.md`) |
 
 ---
 
@@ -68,7 +68,7 @@
 - ◐ **C1** Branded deals/coupon page (recapture brand+coupon SERP, starve Honey) — this turn
 - ⛔ **C2** Run redirect-recovery script on statelinetack.com → upload CSV (needs networked machine)
 - ⛔ **C3** Same for horse.com
-- ☐ **C4** Product schema (review stars + price) — spec + paste-ready snippet for Glen
+- ☑ **C4** Product schema (review stars + price) — spec + paste-ready snippet (`product-schema-spec.md`)
 - ☐ **C5** Back-in-stock notification recommendation (app + copy)
 - ☐ **C6** Abandoned-browse / cart email copy drafts (hand to Monetization/Glen)
 - ☐ **C7** Free-shipping AOV-threshold proposal (modeled, framed as margin gift) ⛔ needs order data
