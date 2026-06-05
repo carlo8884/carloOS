@@ -75,7 +75,14 @@ export default function FerretGlossaryPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Vocabulary for Beginners', href: '/ownership/ferret-vocabulary-for-beginners' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Dooking & Vocalizations', href: '/behavior/dooking-and-vocalizations' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:glossary-hero"

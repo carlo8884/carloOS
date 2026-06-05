@@ -86,7 +86,14 @@ export default function SeniorFerretNutritionPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Weight Management', href: '/diet/weight-management' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="when">When a Ferret Becomes Senior</h2>
           <p>

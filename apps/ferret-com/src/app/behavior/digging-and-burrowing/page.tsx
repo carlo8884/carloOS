@@ -129,7 +129,14 @@ export default function FerretDiggingBurrowingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
+          { title: 'Scratching & Digging Furniture', href: '/behavior/scratching-and-digging-furniture' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -124,7 +124,14 @@ export default function FerretDeadSleepPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Dooking & Vocalizations', href: '/behavior/dooking-and-vocalizations' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

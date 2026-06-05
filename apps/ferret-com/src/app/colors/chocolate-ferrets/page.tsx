@@ -125,7 +125,14 @@ export default function ChocolateFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Sable Ferrets', href: '/colors/sable-ferrets' },
+          { title: 'Champagne Ferrets', href: '/colors/champagne-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-chocolate"

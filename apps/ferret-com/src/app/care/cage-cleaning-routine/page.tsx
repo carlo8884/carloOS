@@ -137,7 +137,14 @@ export default function FerretCageCleaningRoutinePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

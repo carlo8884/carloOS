@@ -86,7 +86,14 @@ export default function FirstWeekChecklistPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'First-Year Schedule', href: '/first-year-schedule' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="before">Before You Bring It Home</h2>
           <p>

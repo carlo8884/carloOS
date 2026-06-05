@@ -86,7 +86,14 @@ export default function FerretLegalityByStatePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Traveling With a Ferret', href: '/ownership/traveling-with-a-ferret' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="short">The Short Version</h2>
           <p>

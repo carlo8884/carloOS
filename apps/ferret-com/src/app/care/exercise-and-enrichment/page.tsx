@@ -143,7 +143,14 @@ export default function FerretExerciseEnrichmentPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
+          { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

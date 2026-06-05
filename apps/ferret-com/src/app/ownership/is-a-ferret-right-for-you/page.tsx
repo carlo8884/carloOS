@@ -87,7 +87,14 @@ export default function IsAFerretRightForYouPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="how">How to Use This</h2>
           <p>

@@ -125,7 +125,14 @@ export default function LitterBoxTroubleshootingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Litter Training', href: '/care/litter-training' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

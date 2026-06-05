@@ -125,7 +125,14 @@ export default function AlbinoFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Dark-Eyed White Ferrets', href: '/colors/dark-eyed-white-ferrets' },
+          { title: 'Choosing a Healthy Ferret', href: '/colors/choosing-a-healthy-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-albino"

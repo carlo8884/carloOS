@@ -142,7 +142,14 @@ export default function FerretEarMitesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
+          { title: 'Fleas & Parasites', href: '/health/fleas-and-parasites' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

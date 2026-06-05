@@ -143,7 +143,14 @@ export default function FerretHeartDiseasePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

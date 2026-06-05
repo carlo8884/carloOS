@@ -76,7 +76,14 @@ export default function NailTrimmingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-nail-trim"

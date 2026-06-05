@@ -175,7 +175,14 @@ export default function FerretAgingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-aging"

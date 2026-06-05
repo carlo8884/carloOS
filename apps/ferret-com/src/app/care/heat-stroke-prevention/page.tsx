@@ -76,7 +76,14 @@ export default function HeatStrokePreventionPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why Ferrets Overheat So Easily</h2>
           <p>

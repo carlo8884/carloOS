@@ -140,7 +140,14 @@ export default function FerretToxicFoodsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -86,7 +86,14 @@ export default function SafeTreatsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Toxic Foods', href: '/care/toxic-foods' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="rule">The One Rule</h2>
           <p>

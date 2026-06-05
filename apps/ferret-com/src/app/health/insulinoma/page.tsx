@@ -108,7 +108,14 @@ export default function FerretInsulinomaPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Weight Management', href: '/diet/weight-management' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-insulinoma"

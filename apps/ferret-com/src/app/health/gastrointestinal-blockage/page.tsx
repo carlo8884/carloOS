@@ -142,7 +142,14 @@ export default function FerretGIBlockagePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+          { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
+          { title: 'Anesthesia & Surgery Risk', href: '/health/anesthesia-and-surgery-risk' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

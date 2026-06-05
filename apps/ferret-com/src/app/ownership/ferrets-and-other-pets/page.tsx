@@ -85,7 +85,14 @@ export default function FerretsAndOtherPetsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
+          { title: 'Ferrets With Kids', href: '/ownership/ferrets-with-kids' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="prey-drive">Prey Drive First</h2>
           <p>

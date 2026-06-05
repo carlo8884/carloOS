@@ -87,7 +87,14 @@ export default function ProteinAndFatRequirementsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why the Numbers Are What They Are</h2>
           <p>

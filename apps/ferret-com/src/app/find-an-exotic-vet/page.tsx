@@ -135,7 +135,14 @@ export default function FindAnExoticVetPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:find-vet-hero"

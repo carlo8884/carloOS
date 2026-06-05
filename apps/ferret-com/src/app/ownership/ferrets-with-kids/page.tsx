@@ -85,7 +85,14 @@ export default function FerretsWithKidsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferrets & Other Pets', href: '/ownership/ferrets-and-other-pets' },
+          { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="family">Are Ferrets Good Family Pets?</h2>
           <p>

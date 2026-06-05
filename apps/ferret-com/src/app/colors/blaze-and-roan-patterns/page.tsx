@@ -130,7 +130,14 @@ export default function BlazeAndRoanPatternsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Panda Ferrets', href: '/colors/panda-ferrets' },
+          { title: 'Silver Ferrets', href: '/colors/silver-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

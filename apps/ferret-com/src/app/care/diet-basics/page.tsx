@@ -87,7 +87,14 @@ export default function FerretDietBasicsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Toxic Foods', href: '/care/toxic-foods' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-diet-basics"

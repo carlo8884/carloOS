@@ -86,7 +86,14 @@ export default function HydrationAndWaterPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+          { title: 'Safe Treats', href: '/diet/safe-treats' },
+          { title: 'Ferret Diarrhea Causes', href: '/health/ferret-diarrhea-causes' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>

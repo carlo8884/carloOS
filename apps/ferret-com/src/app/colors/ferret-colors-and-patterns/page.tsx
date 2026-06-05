@@ -125,7 +125,14 @@ export default function FerretColorsPatternsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Sable Ferrets', href: '/colors/sable-ferrets' },
+          { title: 'Albino Ferrets', href: '/colors/albino-ferrets' },
+          { title: 'Blaze & Roan Patterns', href: '/colors/blaze-and-roan-patterns' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:colors-overview"

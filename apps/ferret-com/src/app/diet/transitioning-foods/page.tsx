@@ -85,7 +85,14 @@ export default function TransitioningFoodsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Whole Prey vs. Kibble', href: '/diet/whole-prey-vs-kibble' },
+          { title: 'Kit vs. Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why Ferrets Resist Change</h2>
           <p>

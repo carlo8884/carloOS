@@ -88,7 +88,14 @@ export default function WholePreyVsKibblePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="models">The Two Models</h2>
           <p>

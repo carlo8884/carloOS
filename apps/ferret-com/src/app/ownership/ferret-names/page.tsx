@@ -75,7 +75,14 @@ export default function FerretNamesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Ferret Glossary', href: '/ownership/ferret-glossary' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="how">How to Choose</h2>
           <p>

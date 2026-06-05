@@ -146,7 +146,14 @@ export default function FerretBathingGroomingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
+          { title: 'Nail Trimming', href: '/care/nail-trimming' },
+          { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-grooming"

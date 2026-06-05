@@ -76,7 +76,14 @@ export default function TravelAndCarriersPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Traveling With a Ferret', href: '/ownership/traveling-with-a-ferret' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="carrier">Choosing a Carrier</h2>
           <p>
