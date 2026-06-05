@@ -106,6 +106,12 @@ export default function HorseBootTypesPage() {
         { name: 'Guides' },
         { name: 'Horse Boot Types', href: '/guides/horse-boot-types' },
       ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Bridle Fit Guide', href: '/guides/bridle-fit-guide', category: 'Equipment' },
+        { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+      ]}
       sidebar={
         <>
           <TableOfContents

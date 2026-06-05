@@ -9,6 +9,12 @@ export default function HorseBCSPage() {
       hero={{ title: 'Horse Body Condition Scoring', subtitle: 'The Henneke Body Condition Score (BCS) is the standardized tool veterinarians, equine nutritionists, and horse welfare organizations use to assess a horse\'s nutritional status. A 1–9 scale based on palpation and visual assessment of fat deposits in 6 body locations — objective enough to be reproducible across observers, practical enough to be done at every feeding.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Body Condition Scoring', href: '/guides/horse-body-condition-scoring' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },
+        { title: 'Horse Grooming Guide', href: '/guides/horse-grooming-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Henneke Scale</div>

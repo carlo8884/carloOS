@@ -26,6 +26,12 @@ export default function SaddleFitGuidePage() {
       hero={{ title: 'Saddle Fit Guide — For Horse and Rider', subtitle: 'A poorly fitting saddle is the most common cause of back pain, resistance, and behavior problems in ridden horses. A reference guide to what correct fit looks like and how to check it.', category: 'Fitting Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '12 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides' }, { name: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Why Fit Matters', href: '#why' },

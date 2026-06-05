@@ -121,6 +121,12 @@ export default async function AccessoryPage({ params }: AccessoryPageProps) {
           { name: 'Accessories', href: '/accessories' },
           { name: accessory.categoryName, href: `/accessories/${accessory.slug}` },
         ]}
+        relatedLinks={[
+          { title: 'Accessories Hub', href: '/accessories', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+        ]}
         sidebar={
           <>
             <TableOfContents

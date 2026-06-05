@@ -10,6 +10,12 @@ export default function StirrupIronGuidePage() {
       hero={{ title: 'Stirrup Iron Guide', subtitle: 'The stirrup iron is a safety-critical piece of equipment. A foot caught in a traditional stirrup during a fall drags the rider. Safety stirrups prevent this — and modern designs are both safer and more ergonomic than traditional alternatives.', category: 'Equipment Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Stirrup Iron Guide', href: '/guides/stirrup-iron-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Stirrup Irons', href: '/reviews/best-stirrup-irons', category: 'Reviews' },
+        { title: 'Best Riding Boots', href: '/reviews/best-riding-boots', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Sizing Rule</div>

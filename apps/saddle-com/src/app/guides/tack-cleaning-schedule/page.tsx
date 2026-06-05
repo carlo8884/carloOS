@@ -21,6 +21,12 @@ export default function TackCleaningSchedulePage() {
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Tack Cleaning Schedule', subtitle: 'Leather is a living material that degrades without care and lasts decades with it. A consistent cleaning and conditioning schedule is the difference between tack that lasts 30 years and tack that fails in 5.', category: 'Leather Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Cleaning', href: '/guides/tack-cleaning-schedule' }]}
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+          { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+          { title: 'Tack Room Organization', href: '/guides/tack-room-organization', category: 'Care' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        ]}
         sidebar={<>
           <TableOfContents items={[{ label: 'After Every Ride', href: '#after-ride' }, { label: 'Weekly Deep Clean', href: '#weekly' }, { label: 'Monthly', href: '#monthly' }, { label: 'Annual', href: '#annual' }, { label: 'Products', href: '#products' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />

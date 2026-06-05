@@ -126,6 +126,12 @@ export default async function DisciplineFitPage({ params }: FitPageProps) {
           { name: 'Saddle Fit', href: '/fit' },
           { name: fit.disciplineName, href: `/fit/${fit.slug}` },
         ]}
+        relatedLinks={[
+          { title: 'Saddle Fit Hub', href: '/fit', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+        ]}
         sidebar={
           <>
             <TableOfContents

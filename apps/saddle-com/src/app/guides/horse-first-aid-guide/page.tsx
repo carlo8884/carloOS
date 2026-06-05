@@ -9,6 +9,12 @@ export default function HorseFirstAidPage() {
       hero={{ title: 'Horse First Aid Guide', subtitle: 'Basic first aid knowledge and the ability to take and interpret vital signs are essential for every horse owner. Knowing the difference between a situation you can manage at the barn and one requiring an immediate veterinary call can save your horse\'s life — and knowing your horse\'s normal baseline makes abnormalities obvious.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse First Aid', href: '/guides/horse-first-aid-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },
+        { title: 'Horse Grooming Guide', href: '/guides/horse-grooming-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Normal Vital Signs</div>

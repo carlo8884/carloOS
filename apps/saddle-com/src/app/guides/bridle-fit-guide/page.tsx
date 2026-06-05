@@ -109,6 +109,12 @@ export default function BridleFitGuidePage() {
         { name: 'Guides' },
         { name: 'Bridle Fit Guide', href: '/guides/bridle-fit-guide' },
       ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Bridle Guide', href: '/guides/horse-bridle-guide', category: 'Equipment' },
+        { title: 'Bit Selection Guide', href: '/guides/bit-selection-guide', category: 'Equipment' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+      ]}
       sidebar={
         <>
           <TableOfContents

@@ -9,6 +9,12 @@ export default function WesternRidingGuidePage() {
       hero={{ title: 'Western Riding Guide', subtitle: 'Western riding evolved from the working practices of cattle ranchers in the American West — all of its equipment and techniques reflect the practical demands of managing cattle over long days on diverse terrain. From the deep-seated western saddle (designed for security when roping) to the one-handed neck rein (leaving the other hand free for work), western riding is functionally elegant.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Western Riding Guide', href: '/guides/western-riding-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Western Saddle Guide', href: '/guides/western-saddle-guide', category: 'Equipment' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Essential Equipment</div>
