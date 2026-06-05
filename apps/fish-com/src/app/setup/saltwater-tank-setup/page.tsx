@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
@@ -34,6 +35,7 @@ export default function SaltwaterTankSetupPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>FOWLR vs Reef — Choose First</h2>
           <p><strong>FOWLR (Fish Only With Live Rock):</strong> Saltwater fish in a tank with live rock for biological filtration. No corals or invertebrates. Much more forgiving water chemistry requirements. Standard lighting. Less equipment. Less expensive. The appropriate starting point for most people entering saltwater keeping. Many popular marine fish — tangs, angelfish, triggers, lionfish — are kept in FOWLR tanks.</p>
           <p><strong>Reef tank:</strong> Corals, invertebrates, and fish. Corals require precise alkalinity, calcium, magnesium, and phosphate levels, high-intensity lighting, and low nitrate/phosphate. Significantly higher equipment cost ($500–2000+ for lighting and dosing equipment alone) and daily monitoring requirements. Not appropriate as a first saltwater tank. Recommend 12+ months of FOWLR experience before reef.</p>

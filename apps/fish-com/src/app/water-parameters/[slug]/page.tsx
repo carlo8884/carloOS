@@ -32,6 +32,7 @@ import {
   FAQAccordion,
   CalloutBox,
   EmailCapture,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -302,9 +303,7 @@ export default async function ParameterPage({ params }: PageProps) {
       )}
 
       <div className="carloOS-article">
-        <p>
-          <em>By Fish.com Editorial — sourced from cited references. Published May 2026.</em>
-        </p>
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-05-01T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2 id="at-a-glance">At a Glance</h2>
         <div

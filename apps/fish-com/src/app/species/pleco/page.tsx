@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pleco Care Guide — Bristlenose vs Common Pleco | Fish.com', description: 'Plecos: the common pleco grows to 24 inches and does not belong in most tanks. Bristlenose plecos stay at 5 inches and are ideal community fish.', path: '/species/pleco', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide', description: 'Bristlenose vs common pleco, driftwood requirements, and diet for plecos.', url: 'https://fish.com/species/pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PlecoPage() {
@@ -33,6 +34,7 @@ export default function PlecoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Common Pleco vs Bristlenose — The Critical Distinction</h2>
         <p><strong>Common pleco (Hypostomus plecostomus):</strong> Sold as juvenile algae eaters at 2–3 inches in virtually every fish store. Adults reach 18–24 inches. A 24-inch fish requires a tank of 125+ gallons minimum and produces waste equivalent to a heavily stocked community tank. They also stop eating algae as adults and transition primarily to a bottom-scavenging carnivore diet. The vast majority of common plecos purchased for community tanks are eventually surrendered to stores or left in tanks that cannot support them. <strong>Do not buy a common pleco for a standard community tank.</strong></p>
         <p><strong>Bristlenose pleco (Ancistrus sp.):</strong> Adults at 4–5 inches, heavy algae eaters throughout their lives, peaceful with all community fish, and appropriate for tanks as small as 20 gallons. Males develop distinctive "bristles" on the snout at maturity — the identifying feature. The correct default pleco recommendation for every community tank. They breed readily in captivity — a pair in a well-planted tank with driftwood will produce regular clutches.</p>

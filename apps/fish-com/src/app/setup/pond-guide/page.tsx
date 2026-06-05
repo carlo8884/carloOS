@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
@@ -34,6 +35,7 @@ export default function PondGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>The Most Common Pond Failure — Undersizing</h2>
           <p>The overwhelming majority of failed backyard ponds fail for the same reason: the pond was built too small for the number of fish eventually added. The cognitive sequence that leads to failure: a 500-gallon pond is built "for just a few koi." The koi are purchased at 6 inches — they fit easily. They grow. They produce more waste. Water quality degrades. Fish get sick. More fish are added. The pond spirals into chronic water quality problems and fish illness. The pond is eventually either drained or the fish given away.</p>
           <p>The corrective thinking: plan for the fish at adult size, not juvenile size. A koi purchased at 6 inches will be 18–24 inches in 4–5 years. Plan for that fish, not this fish. Build the largest pond that budget and space allow — you will fill it, and you will be glad of the capacity.</p>

@@ -33,6 +33,7 @@ import {
   buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
+  ArticleByline,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -202,6 +203,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="what-it-is">What It Is</h2>
         <p>{category.whatItIs}</p>
 

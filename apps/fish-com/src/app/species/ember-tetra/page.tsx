@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ember Tetra Care Guide — Nano Glowing Orange Fish | Fish.com', description: 'Ember tetras are glowing orange 0.8-inch nano fish. Large schools in planted tanks create a stunning display. Hardy, peaceful, and compatible with shrimp.', path: '/species/ember-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ember Tetra Care Guide', description: 'School size, planted tank setup, and shrimp compatibility for Hyphessobrycon amandae ember tetras.', url: 'https://fish.com/species/ember-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EmberTetraPage() {
@@ -25,6 +26,7 @@ export default function EmberTetraPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Ember Tetras Excel in Planted Nano Tanks</h2>
         <p>The ember tetra's orange-amber color is enhanced dramatically by: dark substrate (black or dark brown sand creates maximum contrast), green plant background (red-orange against green is one of the highest-contrast color combinations in nature), moderate lighting that illuminates the fish without washing out the coloration, and a group large enough to create the "school of fire" effect — 20+ fish moving together through a planted scape is a compelling sight in even a small tank.</p>
         <p>They are particularly valued in aquascaping ("Nature aquariums" in the Takashi Amano tradition) because their small size allows large apparent schools in modest tank volumes — a 20-gallon tank with 30 ember tetras and dense planting achieves a visual impact that suggests a much larger setup.</p>

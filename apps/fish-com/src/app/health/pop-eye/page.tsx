@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Exophthalmia (Pop-Eye) in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/exophthalmia-in-fish", publisher: "Merck Vet Manual" },
@@ -34,6 +35,7 @@ export default function PopEyePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Causes and the Unilateral vs Bilateral Distinction</h2>
         <p><strong>Unilateral pop-eye (one eye):</strong> Most commonly caused by a localized bacterial infection or physical injury — the fish bumped into something, was nipped by a tankmate, or got a minor scratch that became infected. Bacteria infect the tissue behind the eye, causing localized inflammation and fluid accumulation. Prognosis for unilateral pop-eye caught and treated early is generally good. The eye may not fully return to normal position even after successful treatment — some minor protrusion often remains.</p>
         <p><strong>Bilateral pop-eye (both eyes):</strong> Both eyes involved simultaneously suggests a systemic problem — bacteria throughout the bloodstream, organ failure (often kidney-related), or the same systemic fluid accumulation that causes dropsy. Bilateral pop-eye combined with abdominal distension (a fish that has both pop-eye and a bloated belly) is a sign of systemic organ failure with a poor prognosis, even with aggressive treatment. Treat immediately and aggressively, but prepare for the possibility that the fish will not recover.</p>

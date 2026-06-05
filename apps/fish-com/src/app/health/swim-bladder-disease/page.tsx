@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Swim Bladder Disease in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/swim-bladder-disease-in-fish", publisher: "Merck Vet Manual" },
@@ -32,6 +33,7 @@ export default function SwimBladderPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Causes — What's Actually Wrong</h2>
         <p><strong>Constipation and gas (most common, most treatable):</strong> Intestinal gas from constipation or rapid food intake presses against the swim bladder, displacing or compressing it. This is the most common cause of sudden swim bladder symptoms in goldfish and bettas after feeding — particularly with dry foods that expand in the stomach. The fish that was fine before feeding and now floats after eating has constipation-related swim bladder compression. This is the case the pea protocol addresses.</p>
         <p><strong>Infection:</strong> Bacterial infection of the swim bladder itself, or infection elsewhere that spreads to it. Presents as swim bladder symptoms accompanied by other systemic signs (loss of appetite, fin clamping, lethargy). Treated with appropriate antibiotics.</p>
