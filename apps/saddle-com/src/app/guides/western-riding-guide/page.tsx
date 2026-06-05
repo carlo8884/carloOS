@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Riding Guide — Disciplines | Saddle.com', description: 'Introduction to western riding. Reining, cutting, barrel racing, ranch, and trail disciplines compared. One-handed neck reining, western saddle fit.', path: '/guides/western-riding-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Western Riding Guide', description: 'Western disciplines, neck reining, equipment, and position fundamentals.', url: 'https://saddle.com/guides/western-riding-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -30,6 +30,7 @@ export default function WesternRidingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Western Disciplines — The Spectrum</h2>
         <p><strong>Reining:</strong> Often called "the western dressage" — a precision pattern sport performed entirely at the lope (canter) and gallop. Patterns include sliding stops (horse skids to a stop on its hind feet with dramatic momentum), 360-degree spins (horse pivots on the hindquarters at high speed), and flying lead changes. The degree of collection, athleticism, and partnership required makes reining one of the technically demanding western disciplines. Quarter Horses dominate.</p>
         <p><strong>Cutting:</strong> Horse and rider isolate a single cow from a herd, and the horse must prevent the cow from returning — entirely on its own, without rein contact from the rider once the cow is selected. The horse reads the cow's movements and mirrors them athletically. The rider drops the reins on the horse's neck (the "cow work" phase) and simply maintains balance while the horse works. One of the most impressive athletic displays in all of equestrian sport.</p>

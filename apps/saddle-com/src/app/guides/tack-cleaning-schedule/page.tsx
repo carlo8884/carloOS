@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Cleaning Schedule — Saddle, Bridle | Saddle.com', description: 'Complete tack cleaning schedule and leather care guide. What to clean after every ride, weekly deep clean protocol.', path: '/guides/tack-cleaning-schedule', type: 'article' })
@@ -34,6 +34,7 @@ export default function TackCleaningSchedulePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2 id="after-ride">After Every Ride (5 Minutes)</h2>
           <p>This is the most important step — sweat is the primary enemy of leather. Sweat contains salt, amino acids, and enzymes that break down leather fiber structure. Allowing sweat to dry on leather repeatedly causes irreversible damage — brittleness, cracking, and deterioration of the grain.</p>
           <ul>

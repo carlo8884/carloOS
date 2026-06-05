@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Bit Selection Guide — Snaffle, Pelham | Saddle.com', description: 'How to choose the right bit. Snaffle vs curb action, mouthpiece thickness, ring type, and when to consult an equine dentist before changing bits.', path: '/guides/bit-selection-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Bit Selection Guide', description: 'Snaffle, pelham, and double bridle bit selection for English riding.', url: 'https://saddle.com/guides/bit-selection-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -26,6 +26,7 @@ export default function BitSelectionGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Start With the Horse's Mouth</h2>
         <p>Before selecting a bit style, establish the anatomical reality of the individual horse's mouth. Key factors: palate height (high palate allows more bit room; low palate is easily contacted by mouthpiece), tongue thickness (fleshy thick tongue leaves less space; flat thin tongue has more room), jaw width (determines bit width and ring spacing), and dental condition. Have an equine dentist perform a dental examination before making bit changes — sharp points, wolf teeth, and soft tissue issues cause bitting problems that no bit change will fix.</p>
 

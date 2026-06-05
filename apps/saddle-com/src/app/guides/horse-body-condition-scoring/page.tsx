@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Body Condition Scoring — Henneke Scale Explained | Saddle.com', description: 'The Henneke 1-9 Body Condition Score assesses fat deposits in 6 locations. How to score your horse, what score is ideal.', path: '/guides/horse-body-condition-scoring', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Body Condition Scoring Guide', description: 'The Henneke 1-9 BCS scale — assessing horse body condition by fat deposits.', url: 'https://saddle.com/guides/horse-body-condition-scoring', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -30,6 +30,7 @@ export default function HorseBCSPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Six Locations</h2>
         <p>BCS assessment is based on palpation and visual assessment of fat deposits in six specific body locations. Each area provides different information about the horse's nutritional and metabolic status:</p>
         <div className="grid sm:grid-cols-2 gap-4 mb-6">

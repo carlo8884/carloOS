@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Stirrup Iron Guide 2025 — Safety Stirrups, Sizing | Saddle.com', description: 'Complete stirrup iron guide. Why safety stirrups matter, correct sizing (1 inch wider than boot), and which irons work for dressage, jumping, and trail riding.', path: '/guides/stirrup-iron-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Stirrup Iron Guide', description: 'Safety stirrups, sizing, and discipline selection for riders.', url: 'https://saddle.com/guides/stirrup-iron-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -26,6 +26,7 @@ export default function StirrupIronGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Safety Stirrups Matter</h2>
         <p>Traditional solid-sided stirrups (fillis irons) are a drag-risk in a fall. If the foot does not clear the iron, the rider is dragged. Every year, dragging accidents cause serious injury and death in equestrian sports. Modern safety stirrups — with breakaway sides, angled treads, or open designs — significantly reduce this risk. There is no competitive disadvantage to safety stirrups. There is a meaningful safety advantage. The question is not whether to use them but which design works best for your discipline and riding style.</p>
 

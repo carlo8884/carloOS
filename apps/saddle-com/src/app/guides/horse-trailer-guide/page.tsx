@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Trailer Guide — Buying, Types, Loading | Saddle.com', description: 'Horse trailer types (straight-load, slant-load, stock), what to inspect when buying used, loading a reluctant horse, and trailering safety for horse and driver.', path: '/guides/horse-trailer-guide', type: 'article' })
@@ -32,6 +32,7 @@ export default function HorseTrailerGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Bumper Pull vs Gooseneck</h2>
         <p>The fundamental trailer choice: bumper pull (attaches to a standard receiver hitch on the truck) versus gooseneck (attaches over the truck's bed via a ball hitch in the bed). Bumper pulls are more accessible — most trucks can pull a 2-horse bumper pull with appropriate towing capacity — and more affordable. Gooseneck trailers are more stable, particularly at highway speeds with loaded horses, and the hitch weight is distributed more favorably over the truck's rear axle. For 2-horse local transport, a quality bumper pull is entirely appropriate. For larger capacity, long distances, or show circuit use, the gooseneck's stability advantages become more significant.</p>
 

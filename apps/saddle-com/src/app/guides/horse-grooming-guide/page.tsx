@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Grooming Guide — Tools, Sequence | Saddle.com', description: 'Complete horse grooming guide. The correct grooming sequence, essential tools, how to identify skin problems during grooming.', path: '/guides/horse-grooming-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Grooming Guide', description: 'Grooming sequence, tools, and pre-ride routine for horses.', url: 'https://saddle.com/guides/horse-grooming-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -42,6 +42,7 @@ export default function HorseGroomingGuidePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Why Grooming Matters Beyond Appearance</h2>
           <p>Daily grooming is the primary health monitoring tool for horses. Handlers who groom regularly and thoroughly notice: the developing swelling over a tendon, the new rub mark from ill-fitting tack, the early signs of rain rot or ringworm, the sensitivity when a specific area is touched that indicates pain, the subtle weight loss visible from the topline, and the early discharge from an eye that indicates infection. These findings — discovered during grooming — allow early intervention before minor issues become serious.</p>
 
