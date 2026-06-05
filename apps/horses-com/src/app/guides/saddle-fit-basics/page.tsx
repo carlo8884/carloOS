@@ -45,6 +45,12 @@ export default function SaddleFitBasicsPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Saddle Pads', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: 'Saddle Fit Basics — A 12-Point Framework',
           subtitle:

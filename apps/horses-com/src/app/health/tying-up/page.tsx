@@ -65,6 +65,12 @@ export default function TyingUpPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
+          { title: 'Equine Colic', href: '/health/colic' },
+        ]}
         hero={{
           title: "Tying-Up in Horses",
           subtitle:

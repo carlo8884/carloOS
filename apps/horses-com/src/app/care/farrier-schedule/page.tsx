@@ -54,6 +54,12 @@ export default function FarrierSchedulePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+        ]}
         hero={{
           title: "The Farrier Schedule",
           subtitle:

@@ -54,6 +54,12 @@ export default function HoofPickingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Farrier Schedule', href: '/care/farrier-schedule' },
+          { title: 'Abscess', href: '/health/abscess' },
+        ]}
         hero={{
           title: "Picking Out a Horse's Hooves",
           subtitle:

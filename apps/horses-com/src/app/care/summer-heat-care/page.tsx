@@ -54,6 +54,12 @@ export default function SummerHeatCarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Fly Control', href: '/care/fly-control' },
+          { title: 'Water Requirements', href: '/nutrition/water-requirements' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+        ]}
         hero={{
           title: "Summer Heat Care for Horses",
           subtitle:

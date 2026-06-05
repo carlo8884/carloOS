@@ -54,6 +54,12 @@ export default function WinterCarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Deworming Program', href: '/care/deworming-program' },
+          { title: 'Water Requirements', href: '/nutrition/water-requirements' },
+        ]}
         hero={{
           title: "Winter Horse Care",
           subtitle:

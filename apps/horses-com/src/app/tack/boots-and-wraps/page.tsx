@@ -54,6 +54,12 @@ export default function BootsWrapsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+          { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
+        ]}
         hero={{
           title: "Horse Boots and Leg Wraps",
           subtitle:

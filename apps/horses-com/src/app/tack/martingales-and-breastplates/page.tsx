@@ -54,6 +54,12 @@ export default function MartingalesBreastplatesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bridle Types', href: '/tack/bridle-types' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+        ]}
         hero={{
           title: "Martingales and Breastplates",
           subtitle:

@@ -81,6 +81,12 @@ export default function QuarterHorseRacingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'Harness Racing', href: '/racing/harness-racing' },
+          { title: 'American Quarter Horse Breed', href: '/breeds/quarter-horse' },
+        ]}
         hero={{
           title: 'Quarter Horse Racing',
           subtitle:

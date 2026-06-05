@@ -93,6 +93,12 @@ export default function ColicPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Gastric Ulcers', href: '/health/equine-ulcers' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: 'Equine Colic',
           subtitle:

@@ -54,6 +54,12 @@ export default function PastureManagementPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Pasture Management for Horses",
           subtitle:

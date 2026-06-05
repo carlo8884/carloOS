@@ -54,6 +54,12 @@ export default function BitsGuidePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bridle Types', href: '/tack/bridle-types' },
+          { title: 'Martingales and Breastplates', href: '/tack/martingales-and-breastplates' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+        ]}
         hero={{
           title: "Horse Bits Explained",
           subtitle:

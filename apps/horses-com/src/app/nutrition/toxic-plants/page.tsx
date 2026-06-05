@@ -54,6 +54,12 @@ export default function ToxicPlantsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Toxic Plants for Horses",
           subtitle:

@@ -135,6 +135,12 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: `${data.disciplineName} Equipment`,
           subtitle: `Buyer's guide to ${data.disciplineName.toLowerCase()} tack and apparel — what you need at the starter level, what you can add later, brands, budget tiers, and the governing-body rulebook the rules come from.`,

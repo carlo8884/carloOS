@@ -65,6 +65,12 @@ export default function SweetItchPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Rain Rot', href: '/health/rain-rot' },
+          { title: 'Fly Control', href: '/care/fly-control' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+        ]}
         hero={{
           title: "Sweet Itch in Horses",
           subtitle:

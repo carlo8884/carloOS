@@ -54,6 +54,12 @@ export default function TurnoutStablingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+          { title: 'Boarding Options', href: '/ownership/boarding-options' },
+        ]}
         hero={{
           title: "Turnout vs Stabling",
           subtitle:

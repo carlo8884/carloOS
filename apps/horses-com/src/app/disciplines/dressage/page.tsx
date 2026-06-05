@@ -114,6 +114,12 @@ export default function DressagePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+        ]}
         hero={{
           title: 'Dressage',
           subtitle:

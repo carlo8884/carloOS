@@ -92,6 +92,12 @@ export default function VaccinationSchedulePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: 'Deworming Program', href: '/care/deworming-program' },
+          { title: 'Equine Health Hub', href: '/health' },
+        ]}
         hero={{
           title: 'Equine Vaccination Schedule',
           subtitle:

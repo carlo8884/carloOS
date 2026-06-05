@@ -54,6 +54,12 @@ export default function TraileringPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Ownership Hub', href: '/ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Equine First Aid Kit', href: '/ownership/first-aid-kit' },
+        ]}
         hero={{
           title: "Trailering and Transporting Horses",
           subtitle:

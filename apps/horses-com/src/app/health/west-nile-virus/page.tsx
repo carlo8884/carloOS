@@ -65,6 +65,12 @@ export default function WestNilePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Equine Influenza', href: '/health/equine-influenza' },
+          { title: 'Strangles', href: '/health/strangles' },
+        ]}
         hero={{
           title: "West Nile Virus in Horses",
           subtitle:

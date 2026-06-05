@@ -54,6 +54,12 @@ export default function VaultingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Combined Driving', href: '/disciplines/combined-driving' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+        ]}
         hero={{
           title: "Equestrian Vaulting",
           subtitle:

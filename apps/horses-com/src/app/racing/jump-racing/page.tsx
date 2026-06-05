@@ -82,6 +82,12 @@ export default function JumpRacingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: "The Breeders' Cup", href: '/racing/breeders-cup' },
+          { title: 'Off-Track Thoroughbred Aftercare', href: '/racing/off-track-thoroughbred-aftercare' },
+        ]}
         hero={{
           title: 'Jump Racing',
           subtitle:

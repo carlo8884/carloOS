@@ -54,6 +54,12 @@ export default function FirstAidKitPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Choosing an Equine Vet', href: '/ownership/choosing-a-vet' },
+          { title: 'Equine Health Hub', href: '/health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+        ]}
         hero={{
           title: "Equine First-Aid Kit",
           subtitle:

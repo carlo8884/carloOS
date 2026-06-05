@@ -54,6 +54,12 @@ export default function PerformanceFeedingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Grain and Concentrates', href: '/nutrition/grain-and-concentrates' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+          { title: 'Tying-Up in Horses', href: '/health/tying-up' },
+        ]}
         hero={{
           title: "Feeding the Performance Horse",
           subtitle:

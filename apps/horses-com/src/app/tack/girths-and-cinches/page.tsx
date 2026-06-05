@@ -54,6 +54,12 @@ export default function GirthsCinchesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: "Girths and Cinches",
           subtitle:

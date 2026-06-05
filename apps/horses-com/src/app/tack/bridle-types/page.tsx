@@ -54,6 +54,12 @@ export default function BridleTypesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bits Guide', href: '/tack/bits-guide' },
+          { title: 'Martingales and Breastplates', href: '/tack/martingales-and-breastplates' },
+          { title: 'Halters and Lead Ropes', href: '/tack/halters-and-lead-ropes' },
+        ]}
         hero={{
           title: "Horse Bridle Types",
           subtitle:

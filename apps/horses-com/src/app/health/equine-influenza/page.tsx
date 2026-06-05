@@ -65,6 +65,12 @@ export default function EquineInfluenzaPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Strangles', href: '/health/strangles' },
+          { title: 'Heaves (Equine Asthma)', href: '/health/heaves' },
+        ]}
         hero={{
           title: "Equine Influenza",
           subtitle:

@@ -54,6 +54,12 @@ export default function StirrupsSafetyPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Riding Helmet Guide', href: '/tack/helmet-guide' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: "Stirrups and Rider Safety",
           subtitle:

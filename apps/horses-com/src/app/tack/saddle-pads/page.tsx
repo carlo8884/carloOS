@@ -54,6 +54,12 @@ export default function SaddlePadsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
+          { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
+          { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+        ]}
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:

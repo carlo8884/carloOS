@@ -41,6 +41,12 @@ export default function EquineUlcersPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
+        ]}
         hero={{
           title: 'Equine Gastric Ulcer Syndrome (EGUS)',
           subtitle:

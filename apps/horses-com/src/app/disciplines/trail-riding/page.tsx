@@ -114,6 +114,12 @@ export default function TrailRidingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Endurance Riding', href: '/disciplines/endurance-riding' },
+          { title: 'Equine First Aid Kit', href: '/ownership/first-aid-kit' },
+          { title: 'Horse Trailering', href: '/care/trailering' },
+        ]}
         hero={{
           title: 'Trail Riding',
           subtitle:

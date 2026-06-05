@@ -65,6 +65,12 @@ export default function PPIDPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+        ]}
         hero={{
           title: "Equine Cushing's Disease (PPID)",
           subtitle:

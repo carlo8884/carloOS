@@ -114,6 +114,12 @@ export default function EventingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Equine First Aid Kit', href: '/ownership/first-aid-kit' },
+        ]}
         hero={{
           title: 'Eventing',
           subtitle:

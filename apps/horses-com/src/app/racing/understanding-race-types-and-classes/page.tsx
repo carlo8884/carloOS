@@ -80,6 +80,12 @@ export default function RaceTypesAndClassesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'The Triple Crown', href: '/racing/triple-crown' },
+          { title: 'The People of Racing', href: '/racing/the-people-of-racing' },
+        ]}
         hero={{
           title: 'Race Types & Classes Explained',
           subtitle:

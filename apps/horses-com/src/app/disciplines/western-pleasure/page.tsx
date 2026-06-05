@@ -114,6 +114,12 @@ export default function WesternPleasurePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Ranch Riding', href: '/disciplines/ranch-riding' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Equitation', href: '/disciplines/equitation' },
+        ]}
         hero={{
           title: 'Western Pleasure',
           subtitle:

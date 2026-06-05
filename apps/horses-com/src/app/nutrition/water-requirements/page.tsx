@@ -54,6 +54,12 @@ export default function WaterRequirementsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Winter Care', href: '/care/winter-care' },
+        ]}
         hero={{
           title: "Equine Water Requirements",
           subtitle:

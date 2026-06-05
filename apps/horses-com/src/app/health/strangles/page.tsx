@@ -65,6 +65,12 @@ export default function StranglesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Influenza', href: '/health/equine-influenza' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'West Nile Virus', href: '/health/west-nile-virus' },
+        ]}
         hero={{
           title: "Strangles in Horses",
           subtitle:

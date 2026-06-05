@@ -65,6 +65,12 @@ export default function MudFeverPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Rain Rot', href: '/health/rain-rot' },
+          { title: 'Thrush', href: '/health/thrush' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+        ]}
         hero={{
           title: "Mud Fever in Horses",
           subtitle:

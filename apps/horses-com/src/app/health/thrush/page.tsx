@@ -65,6 +65,12 @@ export default function ThrushPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Mud Fever', href: '/health/mud-fever' },
+        ]}
         hero={{
           title: "Thrush in Horses",
           subtitle:

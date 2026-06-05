@@ -54,6 +54,12 @@ export default function GroomingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Picking Out the Hooves', href: '/care/hoof-picking' },
+          { title: 'Body Clipping', href: '/care/body-clipping' },
+          { title: 'Rain Rot', href: '/health/rain-rot' },
+        ]}
         hero={{
           title: "Grooming a Horse",
           subtitle:

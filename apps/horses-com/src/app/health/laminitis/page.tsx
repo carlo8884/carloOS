@@ -72,6 +72,12 @@ export default function LaminitisPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Metabolic Syndrome', href: '/health/equine-metabolic-syndrome' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        ]}
         hero={{
           title: 'Equine Laminitis',
           subtitle:

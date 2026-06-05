@@ -65,6 +65,12 @@ export default function RainRotPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Mud Fever', href: '/health/mud-fever' },
+          { title: 'Sweet Itch', href: '/health/sweet-itch' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+        ]}
         hero={{
           title: "Rain Rot in Horses",
           subtitle:

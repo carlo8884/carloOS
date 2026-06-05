@@ -65,6 +65,12 @@ export default function AbscessPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Thrush', href: '/health/thrush' },
+        ]}
         hero={{
           title: "Hoof Abscess in Horses",
           subtitle:
