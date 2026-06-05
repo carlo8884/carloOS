@@ -19,6 +19,7 @@ export default function LooseLeashPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Loose Leash Walking', subtitle: 'Pulling on leash is one of the most common reasons dogs are surrendered. It is also one of the most fixable. The method that works is simple: forward motion only happens when the leash is loose.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Loose Leash Walking', href: '/training/loose-leash-walking' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Why Dogs Pull', href: '#why' }, { label: 'Stop-and-Wait Method', href: '#stop' }, { label: '180-Degree Turn', href: '#turn' }, { label: 'Equipment', href: '#equipment' }, { label: 'Common Mistakes', href: '#mistakes' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Basic Commands', href: '/training/basic-commands' }]} />

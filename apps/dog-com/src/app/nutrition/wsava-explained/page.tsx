@@ -42,6 +42,7 @@ export default function WSAVAExplainedPage() {
         { name: 'Nutrition', href: '/nutrition' },
         { name: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' },
       ]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Reading Food Labels', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Grain-Free DCM Risk', href: '/nutrition/grain-free-dcm-risk', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[

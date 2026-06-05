@@ -21,6 +21,7 @@ export default function ExcessiveBarkingPage() {
       contentType="training"
       hero={{ title: 'Excessive Barking — Types, Causes & What Works', subtitle: 'Barking is not a monolithic behavior with one solution. There are six distinct types of excessive barking, each with a different cause and a different appropriate response. Treating them the same way is why most barking interventions fail.', category: 'Behavior Problems', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Excessive Barking', href: '/training/excessive-barking' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Separation Anxiety', href: '/training/separation-anxiety', category: 'Training' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety', href: '/training/separation-anxiety' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }]} />

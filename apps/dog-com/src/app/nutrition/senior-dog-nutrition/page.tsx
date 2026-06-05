@@ -14,6 +14,7 @@ export default function SeniorDogNutritionPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Senior Dog Nutrition', subtitle: 'Dogs age faster than humans and their nutritional needs change with age — but "senior dog food" as a category is less well-defined than many owners realize. Here\'s what the research says about feeding aging dogs well.', category: 'Dog Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Dog Supplements', href: '/nutrition/dog-supplements', category: 'Nutrition' }, { title: 'Best Dog Food Senior', href: '/reviews/best-dog-food-senior', category: 'Reviews' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When Is "Senior"?</div>

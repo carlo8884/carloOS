@@ -12,6 +12,7 @@ export default function FeedingFrequencyPage() {
       contentType="nutrition"
       hero={{ title: 'How Often to Feed Your Dog', subtitle: 'Meal frequency has real consequences for digestion, housetraining, bloat risk, and blood sugar regulation. Here\'s the evidence-based schedule for each life stage.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '6 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Feeding Frequency', href: '/nutrition/feeding-frequency' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food' }]} />

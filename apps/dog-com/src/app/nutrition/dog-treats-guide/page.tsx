@@ -98,6 +98,7 @@ export default function DogTreatsGuidePage() {
           { name: 'Dog Nutrition', href: '/nutrition' },
           { name: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
         ]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents

@@ -12,6 +12,7 @@ export default function PuppyNutritionPage() {
       contentType="nutrition"
       hero={{ title: 'Puppy Nutrition Guide', subtitle: 'Puppies have fundamentally different nutritional needs than adults — especially large breed puppies, where overfeeding calcium drives orthopedic disease. What every new puppy owner needs to know.', category: 'Puppy Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Best Dog Food for Puppies', href: '/reviews/best-dog-food-for-puppies', category: 'Reviews' }, { title: 'Feeding Frequency', href: '/nutrition/feeding-frequency', category: 'Nutrition' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Puppy vs Adult Formula', href: '#formulas' }, { label: 'Large Breed Puppies — Critical Difference', href: '#large-breed' }, { label: 'Feeding Schedule by Age', href: '#schedule' }, { label: 'How Much to Feed', href: '#amount' }, { label: 'When to Switch to Adult', href: '#switch' }, { label: 'What Not to Feed', href: '#avoid' }]} />

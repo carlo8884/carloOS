@@ -12,6 +12,7 @@ export default function WeightManagementPage() {
       contentType="nutrition"
       hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey) — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Weight Management', href: '/nutrition/weight-management' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Is My Dog Overweight?', href: '#assess' }, { label: 'Why Weight Matters', href: '#why' }, { label: 'Safe Caloric Reduction', href: '#reduction' }, { label: 'Weight Management Diets', href: '#diets' }, { label: 'Exercise Protocol', href: '#exercise' }, { label: 'Tracking Progress', href: '#tracking' }]} />

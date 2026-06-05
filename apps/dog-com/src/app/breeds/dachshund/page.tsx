@@ -9,6 +9,7 @@ export default function DachshundPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Dachshund Breed Guide', subtitle: 'The long body and short legs that make Dachshunds distinctive also make their spine uniquely vulnerable. With a 25% lifetime risk of intervertebral disc disease (IVDD), spinal health management is not optional for Dachshund owners — it is a daily practice that begins day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Dachshund', href: '/breeds/dachshund' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Beagle Guide', href: '/breeds/beagle', category: 'Breed Guide' }, { title: 'Yorkshire Terrier Guide', href: '/breeds/yorkshire-terrier', category: 'Breed Guide' }, { title: 'Best Dog Beds', href: '/reviews/best-dog-beds', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

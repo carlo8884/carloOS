@@ -12,6 +12,7 @@ export default function PuppyBitingPage() {
       contentType="training"
       hero={{ title: 'Puppy Biting & Bite Inhibition', subtitle: 'Puppies explore the world with their mouths. Biting during play is completely normal. The goal is not "stop all biting immediately" — it is to teach bite inhibition: a soft mouth that can distinguish between play and real bite pressure.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Puppy Biting', href: '/training/puppy-biting' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }]} />

@@ -8,6 +8,7 @@ export default function IrishSetterPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Irish Setter Breed Guide', subtitle: 'The mahogany-red Irish Setter is one of the most instantly recognizable dog breeds — and one of the most energetic. Bred for all-day upland bird hunting across Irish terrain, they combine a beautiful flowing coat with an exuberance and energy level that requires an active household to channel properly.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Setter', href: '/breeds/irish-setter' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Irish Wolfhound Guide', href: '/breeds/irish-wolfhound', category: 'Breed Guide' }, { title: 'Vizsla Guide', href: '/breeds/vizsla', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

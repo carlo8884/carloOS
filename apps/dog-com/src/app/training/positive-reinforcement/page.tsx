@@ -48,6 +48,7 @@ export default function PositiveReinforcementPage() {
         { name: 'Training', href: '/training' },
         { name: 'Positive Reinforcement', href: '/training/positive-reinforcement' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[

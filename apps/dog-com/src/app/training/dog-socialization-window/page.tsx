@@ -98,6 +98,7 @@ export default function DogSocializationWindowPage() {
           { name: 'Training', href: '/training' },
           { name: 'Dog Socialization Window', href: '/training/dog-socialization-window' },
         ]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Puppy Biting', href: '/training/puppy-biting', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
         sidebar={
           <>
             <TableOfContents

@@ -12,6 +12,7 @@ export default function ReadingFoodLabelsPage() {
       contentType="nutrition"
       hero={{ title: 'How to Read a Dog Food Label', subtitle: 'The ingredient list is the least useful part of a dog food label. The AAFCO statement is the most important. Here\'s how to read what actually matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Grain-Free DCM Risk', href: '/nutrition/grain-free-dcm-risk', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'AAFCO Statement — Most Important', href: '#aafco' }, { label: 'Ingredient List — What It Tells You', href: '#ingredients' }, { label: 'Ingredient List — What It Doesn\'t', href: '#what-it-doesnt' }, { label: 'Guaranteed Analysis', href: '#guaranteed-analysis' }, { label: 'Caloric Content', href: '#calories' }, { label: 'Marketing Claims to Ignore', href: '#marketing' }]} />

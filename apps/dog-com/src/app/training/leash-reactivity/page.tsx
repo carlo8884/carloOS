@@ -58,6 +58,7 @@ export default function LeashReactivityPage() {
         { name: 'Training', href: '/training' },
         { name: 'Leash Reactivity', href: '/training/leash-reactivity' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[

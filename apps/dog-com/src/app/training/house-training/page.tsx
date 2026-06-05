@@ -30,6 +30,7 @@ export default function HouseTrainingPage() {
       contentType="training"
       hero={{ title: 'House Training Guide', subtitle: 'House training is not about punishing accidents — it\'s about setting the dog up to eliminate outside consistently enough that it becomes the habit. The schedule method does this faster and more reliably than any other approach.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'House Training', href: '/training/house-training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Puppy Biting', href: '/training/puppy-biting', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'The Core Principle', href: '#principle' }, { label: 'The Schedule Method', href: '#schedule' }, { label: 'Accident Protocol', href: '#accidents' }, { label: 'Reinforcing Outside Elimination', href: '#reinforce' }, { label: 'Common Mistakes', href: '#mistakes' }, { label: 'Realistic Timeline', href: '#timeline' }]} />

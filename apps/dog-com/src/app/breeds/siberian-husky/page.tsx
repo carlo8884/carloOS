@@ -10,6 +10,7 @@ export default function SiberianHuskyPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Siberian Husky Breed Guide', subtitle: 'Working sled dogs bred for endurance in arctic conditions — Huskies are beautiful, energetic, and frequently misunderstood as family pets. They are not low-maintenance dogs. They require extraordinary exercise, secure containment, and owners who understand that a Husky running loose is a Husky in danger.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Siberian Husky', href: '/breeds/siberian-husky' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Akita Guide', href: '/breeds/akita', category: 'Breed Guide' }, { title: 'Border Collie Guide', href: '/breeds/border-collie', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

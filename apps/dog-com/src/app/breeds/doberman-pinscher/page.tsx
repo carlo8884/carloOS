@@ -10,6 +10,7 @@ export default function DobermanPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Doberman Pinscher Breed Guide', subtitle: 'Athletic, loyal, and highly intelligent — Dobermans are among the most capable working dogs. They are also among the most health-compromised large breeds, with a cardiac disease rate that exceeds any other breed. Understanding the health landscape is not optional for a responsible Doberman owner.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Rottweiler Guide', href: '/breeds/rottweiler', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

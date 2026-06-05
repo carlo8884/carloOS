@@ -10,6 +10,7 @@ export default function IrishWolfhoundPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Irish Wolfhound Breed Guide', subtitle: 'The Irish Wolfhound stands as the tallest dog breed — males average 32-35 inches at the shoulder and weigh 120-180 lbs. They are gentle, quiet, and deeply affectionate. They are also the shortest-lived of any dog breed: the median lifespan is 6-7 years. Prospective owners must understand and accept this before acquisition.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Irish Wolfhound', href: '/breeds/irish-wolfhound' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Dane Guide', href: '/breeds/great-dane', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

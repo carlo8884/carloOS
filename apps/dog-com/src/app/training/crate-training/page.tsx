@@ -30,6 +30,7 @@ export default function CrateTrainingPage() {
       contentType="training"
       hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Crate Training', href: '/training/crate-training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Dog Crates', href: '/reviews/best-dog-crates', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Crate Train', href: '#why' }, { label: 'Right Crate Size', href: '#size' }, { label: 'Introduction Protocol', href: '#intro' }, { label: 'Duration Guidelines', href: '#duration' }, { label: 'Night Training', href: '#night' }, { label: 'Common Problems', href: '#problems' }]} />

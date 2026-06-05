@@ -8,6 +8,7 @@ export default function YorkiePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Yorkshire Terrier Breed Guide', subtitle: 'Yorkies pack terrier tenacity into a 4–7 lb body. They are bold, intelligent, and affectionate — and require specific health management for their small size. Hypoglycemia in puppies, tracheal damage from collars, and severe dental disease are the primary concerns every Yorkie owner should understand from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Dachshund Guide', href: '/breeds/dachshund', category: 'Breed Guide' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

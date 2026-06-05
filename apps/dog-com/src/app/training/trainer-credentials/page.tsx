@@ -29,6 +29,7 @@ export default function TrainerCredentialsPage() {
       contentType="training"
       hero={{ title: 'Dog Trainer Credentials — What They Mean', subtitle: 'Dog training is completely unregulated in the United States — anyone can hang a sign and call themselves a trainer. Understanding credentials is the only way to distinguish qualified professionals from those with no relevant education.', category: 'Finding a Trainer', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Trainer Credentials', href: '/training/trainer-credentials' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Training Red Flags', href: '/training/training-red-flags', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Separation Anxiety', href: '/training/separation-anxiety', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Credentials Ranked', href: '#credentials' }, { label: 'Red Flags', href: '#red-flags' }, { label: 'Questions to Ask', href: '#questions' }, { label: 'Which Credential for Your Problem', href: '#match' }]} />
