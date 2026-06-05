@@ -3,6 +3,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   AffiliateDisclosure,
 } from '@carloOS/ui'
 
@@ -53,6 +54,13 @@ export default function DisclosurePage() {
       ]}
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="Ferrets.com Editorial"
+          publishedAt="2026-05-29T00:00:00Z"
+          updatedAt="2026-05-29T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
+
         <AffiliateDisclosure variant="page" siteId="ferrets-com" />
 
         <h2>FTC Affiliate Disclosure (Full Version)</h2>
