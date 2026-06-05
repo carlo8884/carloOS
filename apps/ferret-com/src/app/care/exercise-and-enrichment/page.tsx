@@ -13,6 +13,7 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  StockImage,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -152,6 +153,13 @@ export default function FerretExerciseEnrichmentPage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:care-exercise"
+            alt="A ferret at play in an enriched environment — exercise and enrichment guide"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"

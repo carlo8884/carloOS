@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,6 +97,13 @@ export default function WholePreyVsKibblePage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:diet-raw-vs-kibble"
+            alt="Raw meat and dry kibble side by side — the ferret whole-prey versus kibble feeding decision"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <h2 id="models">The Two Models</h2>
           <p>
             Ferrets (<em>Mustela putorius furo</em>) are obligate carnivores descended from the European polecat. In the wild, their relatives eat whole small prey — rodents, rabbits, birds — consuming muscle, organ, bone, and a small amount of fur. Two feeding philosophies attempt to meet that requirement in a domestic setting. The <strong>whole-prey / raw model</strong> feeds animal tissue directly: whole frozen-thawed prey, or a "frankenprey" assembly of muscle meat, organ, and raw meaty bone. The <strong>commercial-kibble model</strong> feeds a dry, shelf-stable formula engineered to hit the ferret macronutrient profile from rendered animal ingredients.

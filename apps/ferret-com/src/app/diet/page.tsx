@@ -195,7 +195,119 @@ export default function DietHubPage() {
 
       {/* Hero image */}
       <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:diet-hero" aspect="16:9" variant="wide" priority />
+        <StockImage manifestKey="ferret-com:diet-hero" aspect="16:9" variant="wide" priority subtleCredit />
+      </div>
+
+      {/* Featured diet spokes — three photo-backed pillar articles */}
+      <div
+        style={{
+          maxWidth: '1180px',
+          margin: '0 auto',
+          padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 80px) 0',
+        }}
+      >
+        <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-amber-dark)', margin: '0 0 20px' }}>
+          Start here
+        </p>
+        <ul
+          style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '18px',
+          }}
+        >
+          {[
+            {
+              href: '/diet/whole-prey-vs-kibble',
+              eyebrow: 'Diet model',
+              title: 'Whole-Prey vs Kibble',
+              desc: 'Biological appropriateness, convenience, cost, and dental wear compared across both feeding models.',
+              manifestKey: 'ferret-com:diet-raw-vs-kibble',
+              imageAlt: 'Raw meat and dry kibble — the ferret feeding model decision',
+            },
+            {
+              href: '/diet/protein-and-fat-requirements',
+              eyebrow: 'Macronutrients',
+              title: 'Protein & Fat Requirements',
+              desc: 'The published macronutrient window: 32–40% protein, 18–22% fat, under 3% carbs — and why dry-matter basis matters.',
+              manifestKey: 'ferret-com:care-diet-basics',
+              imageAlt: 'A ferret near its food bowl — protein and fat macronutrient requirements',
+            },
+            {
+              href: '/diet/best-ferret-kibble',
+              eyebrow: 'Commercial diet',
+              title: 'Choosing a Ferret Kibble',
+              desc: 'How to read an ingredient panel, the three commercial tiers, and why most supermarket ferret food fails.',
+              manifestKey: 'ferret-com:tool-food-evaluator',
+              imageAlt: 'Ferret food bowl — choosing the right commercial kibble',
+            },
+          ].map((card) => (
+            <li key={card.href}>
+              <a
+                href={card.href}
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  height: '100%',
+                  minHeight: '260px',
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  boxShadow: 'inset 0 0 0 1px var(--brand-border)',
+                }}
+              >
+                <div
+                  className="[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0 [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full"
+                  style={{ position: 'absolute', inset: 0 }}
+                >
+                  <StockImage
+                    manifestKey={card.manifestKey}
+                    alt={card.imageAlt}
+                    aspect="3:4"
+                    variant="inline"
+                    subtleCredit
+                  />
+                </div>
+                <div
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.35) 55%, rgba(30,20,10,0.08) 100%)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'relative',
+                    zIndex: 10,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
+                    minHeight: '260px',
+                    padding: '22px',
+                  }}
+                >
+                  <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-amber)', marginBottom: '6px' }}>
+                    {card.eyebrow}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: 'rgba(251, 245, 232, 0.98)', lineHeight: 1.2, marginBottom: '8px' }}>
+                    {card.title}
+                  </div>
+                  <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(251, 245, 232, 0.78)', margin: '0 0 10px' }}>
+                    {card.desc}
+                  </p>
+                  <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--brand-amber)' }}>
+                    Read &rarr;
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Cards */}

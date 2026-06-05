@@ -1140,5 +1140,119 @@
     "provider": "either",
     "alt": "A Nile monitor (Varanus niloticus) in naturalistic setting",
     "orientation": "landscape"
+  },
+  "ferret-com:health-gi-blockage": {
+    "query": "domestic ferret curious exploring",
+    "provider": "either",
+    "alt": "A curious ferret exploring its environment — GI blockage prevention begins with ferret-proofing",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-vaccinations": {
+    "query": "domestic ferret portrait calm resting",
+    "provider": "either",
+    "alt": "A calm domestic ferret — ferret vaccination schedule reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-emergency": {
+    "query": "ferret alert watching",
+    "provider": "either",
+    "alt": "An alert ferret — learn to recognise emergency warning signs before they happen",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-training": {
+    "query": "ferret handled gently person hands",
+    "provider": "either",
+    "alt": "A ferret being handled gently — ferret training and bonding guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-biting": {
+    "query": "ferret face close portrait whiskers",
+    "provider": "either",
+    "alt": "A close ferret portrait showing whiskers — ferret biting and nipping behaviour guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-raw-vs-kibble": {
+    "query": "raw meat protein cuts dry kibble",
+    "provider": "either",
+    "alt": "Raw meat protein beside dry kibble — the ferret whole-prey versus kibble feeding decision",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-exercise": {
+    "query": "ferret playing tunnel enrichment active",
+    "provider": "either",
+    "alt": "A ferret actively playing — ferret exercise and enrichment guide",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-adrenal-feature": {
+    "query": "domestic ferret resting portrait close up",
+    "provider": "either",
+    "alt": "A ferret resting calmly — adrenal disease feature reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:health-dental-feature": {
+    "query": "ferret face close portrait macro",
+    "provider": "either",
+    "alt": "A close ferret face portrait suited to a dental health reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-exercise-feature": {
+    "query": "ferret playing tunnels enrichment",
+    "provider": "either",
+    "alt": "An active ferret playing with enrichment tunnels",
+    "orientation": "landscape"
+  },
+  "ferret-com:care-grooming-feature": {
+    "query": "ferret being held gently hands",
+    "provider": "either",
+    "alt": "A ferret held gently — grooming and handling reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-bonding-feature": {
+    "query": "ferret curious exploring alert",
+    "provider": "either",
+    "alt": "An alert, curious ferret exploring its environment — bonding reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:behavior-dooking-feature": {
+    "query": "ferret playful happy active",
+    "provider": "either",
+    "alt": "A happy, active ferret mid-movement — vocalizations and dooking reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-kibble-feature": {
+    "query": "ferret eating food bowl close",
+    "provider": "either",
+    "alt": "A ferret eating from its food bowl — kibble diet reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:diet-raw-feature": {
+    "query": "raw meat protein fresh dark surface",
+    "provider": "either",
+    "alt": "Raw meat protein on a dark surface — raw ferret diet reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-sable-feature": {
+    "query": "ferret dark brown coat portrait",
+    "provider": "either",
+    "alt": "A sable-coated ferret portrait showing warm brown guard hairs",
+    "orientation": "landscape"
+  },
+  "ferret-com:colors-albino-feature": {
+    "query": "white ferret pale coat portrait",
+    "provider": "either",
+    "alt": "A light-coated ferret portrait — albino ferret reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:ownership-cost-feature": {
+    "query": "ferret in hammock cage sleeping cozy",
+    "provider": "either",
+    "alt": "A ferret resting in a hammock inside its cage — cost of ownership reference",
+    "orientation": "landscape"
+  },
+  "ferret-com:ownership-adoption-feature": {
+    "query": "ferret curious exploring home indoor",
+    "provider": "either",
+    "alt": "A ferret curiously exploring its home — adoption and new ownership reference",
+    "orientation": "landscape"
   }
 }
