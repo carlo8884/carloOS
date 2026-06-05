@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -20,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
   description:
@@ -31,6 +33,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Minerals in Pet Food — Macro and Trace | PetFood.com',
+  description:
+    'Calcium, phosphorus, and the Ca:P ratio, the trace minerals (zinc, copper, iron, selenium), chelated vs inorganic forms, and large-breed-puppy calcium ceilings.',
+  url: 'https://petfood.com/nutrition/minerals-in-pet-food',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 const SOURCES = [
     {

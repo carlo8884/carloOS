@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -20,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Guaranteed Analysis on Pet Food Labels Explained | PetFood.com',
   description:
@@ -31,6 +33,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Guaranteed Analysis on Pet Food Labels Explained | PetFood.com',
+  description:
+    'What the guaranteed analysis discloses, the minimum-maximum framing, why it is not a typical analysis, and how to use it without being misled.',
+  url: 'https://petfood.com/nutrition/guaranteed-analysis-explained',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 const SOURCES = [
     {

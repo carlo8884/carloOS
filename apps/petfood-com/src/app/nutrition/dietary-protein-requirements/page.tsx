@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -23,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Dietary Protein Requirements for Dogs and Cats | PetFood.com',
   description:
@@ -34,6 +36,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-30T00:00:00Z',
   modifiedAt: '2026-06-05T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Dietary Protein Requirements for Dogs and Cats | PetFood.com',
+  description:
+    'How protein requirements differ between dogs and cats, what crude protein on the guaranteed analysis does not tell you, and how AAFCO sets the minima.',
+  url: 'https://petfood.com/nutrition/dietary-protein-requirements',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-05',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 export default function DietaryProteinRequirementsPage() {
   return (

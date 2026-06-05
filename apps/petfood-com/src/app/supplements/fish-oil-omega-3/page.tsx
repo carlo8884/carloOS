@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -21,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Fish Oil and Omega-3 Supplements for Pets | PetFood.com',
   description:
@@ -32,6 +34,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Fish Oil and Omega-3 Supplements for Pets | PetFood.com',
+  description:
+    'The evidence for EPA and DHA in joint, skin, kidney, and heart health, dosing and quality concerns, oxidation, and why plant omega-3 sources fall short.',
+  url: 'https://petfood.com/supplements/fish-oil-omega-3',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-01',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 const SOURCES = [
     {
