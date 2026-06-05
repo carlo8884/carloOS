@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Fin Rot in Aquarium Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/fin-rot-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fin Rot in Fish — Causes, Bacterial vs Fungal | Fish.com', description: 'Fin rot is almost always caused by poor water quality. Fraying, ragged edges progressing toward the body. Treatment: water quality first.', path: '/health/fin-rot', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fin Rot in Fish', description: 'Causes, bacterial vs fungal distinction, and treatment for fin rot in aquarium fish.', url: 'https://fish.com/health/fin-rot', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FinRotPage() {
@@ -50,6 +58,7 @@ export default function FinRotPage() {
         <h2>Fin Rot in Bettas — The Specific Case</h2>
         <p>Bettas are disproportionately affected by fin rot because: they are often kept in small, under-filtered tanks where water quality degrades quickly, their long fins are easily damaged by rough decorations or fin-nipping fish, and their elaborate fins provide more surface area for infection. Betta fin rot treatment follows the same protocol — but tank size and filtration upgrade is the most important preventive measure. A betta in a 5-gallon properly filtered tank rarely develops fin rot; a betta in an unfiltered 1-gallon bowl frequently does.</p>
 
+        <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Water Test Kit + Gravel Vacuum</div>

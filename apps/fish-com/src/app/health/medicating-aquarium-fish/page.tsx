@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Treating Sick Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/treating-sick-fish", publisher: "Merck Vet Manual" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Medicating Aquarium Fish — Hospital Tanks & Safe Dosing | Fish.com', description: "How to medicate aquarium fish safely: when to use a hospital tank, accurate dosing, protecting your filter, drug classes, and why medication is a last resort.", path: '/health/medicating-aquarium-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Medicating Aquarium Fish', description: 'Hospital tanks, accurate dosing, filter protection, and safe use of fish medications.', url: 'https://fish.com/health/medicating-aquarium-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function MedicatingFishPage() {
@@ -44,6 +52,7 @@ export default function MedicatingFishPage() {
         <h2>Finishing and Follow-Up</h2>
         <p>Complete the full recommended course of any medication even if the fish appears to recover early — stopping short allows survivors to rebound and, with antibiotics, breeds resistant strains. After treatment, run fresh carbon to strip residual medication from the hospital tank, and continue excellent water quality during recovery. Reintroduce a recovered fish to the display only when fully healed and after observing it for any relapse. Throughout, remember that the surest way to need medication rarely is to prevent disease in the first place through stable water, sensible stocking, and a robust <a href="/setup/quarantine-tank-guide">quarantine routine</a>.</p>
 
+        <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Hospital Tank Equipment</div>

@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Overview of Fish Health — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-fish-health", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -199,6 +206,7 @@ export default function FishDiseaseGuidePage() {
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
           <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

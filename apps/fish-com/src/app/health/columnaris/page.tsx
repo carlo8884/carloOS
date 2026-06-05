@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/columnaris-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Sheppard, B.J., Phillips, B.A. and Lapatra, S.E. Columnaris Disease — UF/IFAS Extension FA-31.", url: "https://edis.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Columnaris in Fish — Saddle Patch, Mouth Rot | Fish.com', description: 'Columnaris (Flavobacterium columnare) causes cotton-like patches, saddle patches, and mouth rot in freshwater fish. Often mistaken for fungus', path: '/health/columnaris', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fish', description: 'Signs, misdiagnosis risks, and antibiotic treatment for Flavobacterium columnare (columnaris) in aquarium fish.', url: 'https://fish.com/health/columnaris', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function ColumnarisguidePage() {
@@ -42,6 +50,7 @@ export default function ColumnarisguidePage() {
 
         <h2>Water Quality and Prevention</h2>
         <p>Columnaris, like most bacterial fish diseases, opportunistically infects fish that are stressed or immunocompromised. The most common predisposing factor: elevated nitrate, ammonia, or nitrite. Overcrowding, rough handling (net injuries), shipping stress, and oxygen-poor water all increase vulnerability. Prevention: pristine water quality, avoid overcrowding, acclimate fish carefully to minimize handling stress, and quarantine new fish before adding to established tanks.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
