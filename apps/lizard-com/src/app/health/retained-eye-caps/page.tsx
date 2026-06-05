@@ -11,6 +11,14 @@ export default function HealthRetainedEyeCapsPage() {
       hero={{ title: "Retained Eye Caps (Retained Spectacles)", subtitle: "Snakes and many geckos have a clear protective scale, the spectacle or eye cap, covering each eye, which is normally shed with the rest of the skin. When it is retained, layers of old spectacle build up over the eye, impairing vision and risking infection. Retained eye caps are almost always a humidity problem and must never be forcibly peeled off.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Retained Eye Caps", href: "/health/retained-eye-caps" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Shedding Guide', href: '/husbandry/shedding-guide', category: 'Husbandry' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

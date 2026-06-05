@@ -9,6 +9,14 @@ export default function BallPythonMorphsPage() {
       hero={{ title: 'Ball Python Morphs Guide', subtitle: 'Ball pythons have the most extensive morph library of any reptile species — over 400 recognized morphs as of 2025, with new combinations being produced constantly. Understanding the ~15 foundational mutations that generate most of this diversity is the key to navigating the morph world, understanding genetics, and predicting breeding outcomes.', category: 'Breed Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species/ball-python' }, { name: 'Morphs', href: '/species/ball-python-morphs' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Boa Constrictor Care', href: '/species/boa-constrictor', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Genetic Types</div>

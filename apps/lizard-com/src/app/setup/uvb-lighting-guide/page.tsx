@@ -49,6 +49,13 @@ export default function UVBLightingGuidePage() {
         { name: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Why UVB Matters', href: '#why' },

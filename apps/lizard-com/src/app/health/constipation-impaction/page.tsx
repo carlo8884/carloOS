@@ -11,6 +11,14 @@ export default function HealthConstipationImpactionPage() {
       hero={{ title: "Constipation and Impaction in Reptiles", subtitle: "Constipation (difficulty passing stool) and impaction (a physical gut blockage) are related but distinct problems, and confusing them can be dangerous. Both trace largely to keeper-controlled factors, substrate, prey size, hydration, and temperature, which is why most cases are preventable. Knowing the difference and the warning signs lets you act before a simple slow-down becomes a surgical emergency.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Constipation & Impaction", href: "/health/constipation-impaction" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

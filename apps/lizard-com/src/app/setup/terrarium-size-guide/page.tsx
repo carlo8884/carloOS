@@ -12,6 +12,13 @@ export default function SetupTerrariumSizeGuidePage() {
       hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Screen vs PVC Enclosures', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Sizing Rules"}</div>

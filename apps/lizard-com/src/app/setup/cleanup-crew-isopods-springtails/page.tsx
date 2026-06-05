@@ -11,6 +11,13 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
       hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Drainage Layer Guide', href: '/setup/drainage-layer-bioactive', category: 'Setup' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

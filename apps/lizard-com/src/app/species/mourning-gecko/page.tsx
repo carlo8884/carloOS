@@ -11,6 +11,14 @@ export default function SpeciesMourningGeckoPage() {
       hero={{ title: "Mourning Gecko Care Guide", subtitle: "Lepidodactylus lugubris, the mourning gecko, is a tiny (3.5 to 4 inch) arboreal gecko famous for being parthenogenetic: populations are all-female and reproduce by cloning, no males required. Sociable, vocal, and easy to keep in bioactive colonies, they are an ideal nano-vivarium species, with the caveat that a single pair can quickly become a population.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Mourning Gecko", href: "/species/mourning-gecko" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Green Anole Care', href: '/species/green-anole', category: 'Species' },
+        { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Cleanup Crew (Isopods + Springtails)', href: '/setup/cleanup-crew-isopods-springtails', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

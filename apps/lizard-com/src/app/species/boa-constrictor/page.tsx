@@ -9,6 +9,14 @@ export default function BoaPage() {
       hero={{ title: 'Boa Constrictor Care Guide', subtitle: 'Boa imperator and Boa constrictor — the boa constrictors of Central and South America. Stunning, intelligent, long-lived (25+ years), and frequently the first large snake in a keeper\'s collection. The decision point is honest: a 7-foot, 20-pound animal with the husbandry requirements and feeding schedule that implies. The reward for those prepared for it is one of the most impressive reptiles in the hobby.', category: 'Species Guide — Intermediate/Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Boa Constrictor', href: '/species/boa-constrictor' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

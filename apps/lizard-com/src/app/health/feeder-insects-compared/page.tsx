@@ -11,6 +11,14 @@ export default function HealthFeederInsectsComparedPage() {
       hero={{ title: "Feeder Insects Compared", subtitle: "Not all feeder insects are equal. Some make excellent nutritional staples, others are fatty treats that cause problems if overused, and a couple are best avoided as primary feeders. This guide compares the common options, crickets, dubia roaches, mealworms, superworms, black soldier fly larvae, hornworms, and waxworms, so you can build a varied, balanced insectivore diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Dubia Roach Care', href: '/health/dubia-roach-care', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Roles"}</div>

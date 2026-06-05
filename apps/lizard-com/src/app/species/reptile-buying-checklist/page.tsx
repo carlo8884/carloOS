@@ -11,6 +11,14 @@ export default function SpeciesReptileBuyingChecklistPage() {
       hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Before You Buy"}</div>

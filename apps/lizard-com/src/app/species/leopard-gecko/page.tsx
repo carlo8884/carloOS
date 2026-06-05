@@ -25,6 +25,14 @@ export default function LeopardGeckoPage() {
         contentType="species"
         hero={{ title: 'Leopard Gecko Care Guide', subtitle: 'Eublepharis macularius — the most forgiving gecko and a genuine beginner reptile. But "beginner" doesn\'t mean low-maintenance: warm hides, correct belly heat, and moist hides for shedding are non-negotiable.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Leopard Gecko', href: '/species/leopard-gecko' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'African Fat-Tailed Gecko Care', href: '/species/african-fat-tailed-gecko', category: 'Species' },
+          { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+          { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+          { title: 'Dysecdysis (Stuck Shed)', href: '/health/dysecdysis', category: 'Health' },
+          { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

@@ -11,6 +11,14 @@ export default function HealthAnorexiaInReptilesPage() {
       hero={{ title: "Anorexia in Reptiles (Food Refusal)", subtitle: "A reptile that stops eating is one of the most common reasons keepers worry, and the cause ranges from completely normal (brumation, shedding, breeding season, a recent move) to genuinely serious illness. The skill is in working through the possibilities systematically, ruling out husbandry and natural cycles first, and knowing when food refusal crosses into a medical emergency.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Anorexia in Reptiles", href: "/health/anorexia-in-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Constipation & Impaction', href: '/health/constipation-impaction', category: 'Health' },
+        { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

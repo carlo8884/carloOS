@@ -111,6 +111,14 @@ export default function SickReptileSignsPage() {
         { name: 'Sick Reptile Signs', href: '/health/sick-reptile-signs' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Respiratory Infection', href: '/health/respiratory-infection', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+        { title: 'Egg Binding', href: '/health/egg-binding', category: 'Health' },
+      ]}
       sidebar={<>
         <div className="rounded-lg p-4" style={{ background: 'rgba(224,90,58,0.08)', border: '1px solid rgba(224,90,58,0.2)' }}>
           <div className="text-2xs font-bold tracking-eyebrow uppercase mb-3 text-brand-danger">Find a Reptile Vet</div>

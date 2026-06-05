@@ -27,6 +27,14 @@ export default function RussianTortoisePage() {
         contentType="species"
         hero={{ title: 'Russian Tortoise Care Guide', subtitle: 'Testudo horsfieldii — the Russian or Horsfield\'s tortoise is the most popular pet tortoise in North America and one of the best-suited tortoises to captivity. Small (4–8 inches), cold-tolerant, personable, and routinely lives 40+ years. Beginner-friendly in housing complexity; lifelong in commitment.', category: 'Species Guide — Beginner / Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Russian Tortoise', href: '/species/russian-tortoise' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Sulcata Tortoise Care', href: '/species/sulcata-tortoise', category: 'Species' },
+          { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+          { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+          { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+          { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>

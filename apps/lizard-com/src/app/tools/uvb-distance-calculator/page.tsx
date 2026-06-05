@@ -129,6 +129,13 @@ export default function UvbDistanceCalculatorPage() {
         { name: 'UVB Distance Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+      ]}
       sidebar={
         <>
           <TableOfContents

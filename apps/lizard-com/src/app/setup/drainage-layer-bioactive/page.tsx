@@ -11,6 +11,13 @@ export default function SetupDrainageLayerBioactivePage() {
       hero={{ title: "Bioactive Drainage Layer Guide", subtitle: "In a humid bioactive enclosure, excess water has to go somewhere other than the substrate, or the soil turns into an anaerobic swamp that kills plants, drowns the cleanup crew, and breeds harmful bacteria. A drainage layer (sometimes called a false bottom) creates a reservoir beneath the substrate to hold that water. This guide covers how to build one and when you actually need it.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Drainage Layer Guide", href: "/setup/drainage-layer-bioactive" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Cleanup Crew Guide', href: '/setup/cleanup-crew-isopods-springtails', category: 'Setup' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

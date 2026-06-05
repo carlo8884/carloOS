@@ -9,6 +9,14 @@ export default function ParasitesPage() {
       hero={{ title: 'Reptile Parasites — Mites, Pinworms & Coccidia', subtitle: 'Parasites are common in wild-caught reptiles and in animals kept in suboptimal conditions. Most are treatable with appropriate medication, but treatment requires a veterinarian — do not attempt to deworm or treat parasites without professional guidance.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Parasites Guide (detailed)', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Snake Mite Eradication', href: '/health/snake-mite-eradication', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Prevention</div>

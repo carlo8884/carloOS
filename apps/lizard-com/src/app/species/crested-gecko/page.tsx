@@ -10,6 +10,14 @@ export default function CrestedGeckoPage() {
       hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Crested Gecko', href: '/species/crested-gecko' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Stuck Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

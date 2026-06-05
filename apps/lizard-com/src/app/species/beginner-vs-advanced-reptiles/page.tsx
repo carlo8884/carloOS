@@ -11,6 +11,14 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
       hero={{ title: "Beginner vs Advanced Reptiles", subtitle: "Reptile care difficulty is not arbitrary; it comes from specific, identifiable factors. Size, husbandry precision, temperament, diet complexity, and how forgiving a species is of mistakes all add up to a difficulty tier. Understanding these factors lets you judge any species honestly, and explains why some cheap, widely sold reptiles are emphatically not beginner animals.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Beginner vs Advanced", href: "/species/beginner-vs-advanced-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Low-Maintenance Reptiles', href: '/species/low-maintenance-reptiles', category: 'Species' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Difficulty Drivers"}</div>

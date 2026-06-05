@@ -11,6 +11,14 @@ export default function SpeciesFireSkinkPage() {
       hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Fire Skink", href: "/species/fire-skink" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Blue-Tongued Skink Care', href: '/species/blue-tongued-skink', category: 'Species' },
+        { title: 'Green Anole Care', href: '/species/green-anole', category: 'Species' },
+        { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

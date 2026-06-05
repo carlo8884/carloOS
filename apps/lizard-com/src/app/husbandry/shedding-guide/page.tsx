@@ -11,6 +11,13 @@ export default function HusbandrySheddingGuidePage() {
       hero={{ title: "Reptile Shedding Guide", subtitle: "Shedding, or ecdysis, is the periodic renewal of the outer skin layer that lets a growing reptile replace worn skin. Done well it is invisible maintenance; done in too-dry conditions it produces retained shed that can constrict toes, tail tips, and eye caps. This guide explains the process across snakes, lizards, and geckos and how to prevent the problems.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Shedding Guide", href: "/husbandry/shedding-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Retained Eye Caps', href: '/health/retained-eye-caps', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

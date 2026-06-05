@@ -11,6 +11,14 @@ export default function HealthAbscessTreatmentPage() {
       hero={{ title: "Abscesses in Reptiles", subtitle: "Abscesses in reptiles look and behave differently from those in mammals. Because reptile immune systems produce thick, cheese-like (caseous) pus rather than the liquid pus mammals form, a reptile abscess becomes a firm, walled-off lump that the body cannot reabsorb or drain on its own. That is why most reptile abscesses require surgical removal by a veterinarian rather than simple lancing.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Abscesses", href: "/health/abscess-treatment" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Respiratory Infection', href: '/health/respiratory-infection', category: 'Health' },
+        { title: 'Stomatitis (Mouth Rot)', href: '/health/stomatitis', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

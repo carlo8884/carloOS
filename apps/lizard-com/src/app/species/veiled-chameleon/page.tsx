@@ -26,6 +26,14 @@ export default function VeiledChameleonPage() {
         contentType="species"
         hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Veiled Chameleon', href: '/species/veiled-chameleon' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Panther Chameleon Care', href: '/species/panther-chameleon', category: 'Species' },
+          { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
+          { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+          { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+          { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

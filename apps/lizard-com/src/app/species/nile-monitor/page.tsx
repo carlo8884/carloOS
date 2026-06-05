@@ -11,6 +11,14 @@ export default function SpeciesNileMonitorPage() {
       hero={{ title: "Nile Monitor Care Guide", subtitle: "Varanus niloticus is a large, powerful, semi-aquatic African monitor reaching 4 to 6 feet. Fast, intelligent, and often defensive, the Nile monitor is an advanced-only species that needs a room-sized custom enclosure, intense heat and UVB, a large water feature, and a keeper with realistic expectations: most do not become tame, and they are a serious safety and space commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Nile Monitor", href: "/species/nile-monitor" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+        { title: 'Argentine Tegu Care', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

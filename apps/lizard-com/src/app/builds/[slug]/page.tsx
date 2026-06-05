@@ -182,6 +182,13 @@ export default async function VivariumBuildPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={combined}
+      relatedLinks={[
+        { title: 'Vivarium Builds Hub', href: '/builds', category: 'Hub' },
+        { title: 'Setup Guides', href: '/setup', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        ...(speciesSlug ? [{ title: `${build.speciesName} Care`, href: `/species/${speciesSlug}`, category: 'Species' }] : []),
+      ]}
       sidebar={
         <>
           <TableOfContents

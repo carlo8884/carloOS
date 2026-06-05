@@ -11,6 +11,14 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
       hero={{ title: "African Fat-Tailed Gecko Care Guide", subtitle: "Hemitheconyx caudicinctus is a ground-dwelling West African gecko closely related to the leopard gecko, with similar care but a need for higher humidity. Calm, slow-moving, and reaching 7 to 9 inches, the African fat-tailed gecko is an excellent docile beginner species whose thick tail, like the leopard gecko’s, is a vital fat reserve.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "African Fat-Tailed Gecko", href: "/species/african-fat-tailed-gecko" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Stuck Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

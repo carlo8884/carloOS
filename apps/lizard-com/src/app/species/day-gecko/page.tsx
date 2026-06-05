@@ -11,6 +11,14 @@ export default function DayGeckoPage() {
       hero={{ title: 'Day Gecko Care Guide', subtitle: 'Phelsuma — the day geckos of Madagascar and surrounding Indian Ocean islands — are among the most visually spectacular lizards in captivity. Vivid emerald green marked with red, orange, and blue depending on species. They are diurnal (active during the day), fast, agile, and very much display animals rather than handling animals. Their beauty is for watching, not holding.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Day Gecko', href: '/species/day-gecko' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Mourning Gecko Care', href: '/species/mourning-gecko', category: 'Species' },
+        { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Popular Species</div>

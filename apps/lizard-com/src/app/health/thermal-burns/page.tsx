@@ -9,6 +9,14 @@ export default function ThermalBurnsPage() {
       hero={{ title: 'Thermal Burns in Reptiles', subtitle: 'Thermal burns are one of the most common reptile injuries seen in veterinary practice and almost entirely preventable. The two main culprits: heated rocks (reptiles cannot detect conductive heat until burned) and loose heat lamps positioned too close or not properly secured. Burns are painful, slow to heal, and frequently become infected.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Thermal Burns', href: '/health/thermal-burns' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Abscess Treatment', href: '/health/abscess-treatment', category: 'Health' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Screen vs PVC Enclosure', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Prevention Checklist</div>

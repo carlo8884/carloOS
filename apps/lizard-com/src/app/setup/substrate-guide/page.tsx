@@ -12,6 +12,13 @@ export default function SubstrateGuidePage() {
       hero={{ title: 'Reptile Substrate Guide', subtitle: 'Substrate choice affects humidity, thermoregulation, psychological wellbeing, and — critically — impaction risk. The range of options spans from bioactive living soil to bare tile.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Substrate Guide', href: '/setup/substrate-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Humidity Guide', href: '/setup/humidity-guide' }, { label: 'Temperature Guide', href: '/setup/temperature-guide' }, { label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }]} />
         <EmailCapture variant="sidebar" siteId="lizard-com" title="Free Care Sheets" subtitle="20 species — free for subscribers." source="setup-substrate" ctaText="Download Free" />

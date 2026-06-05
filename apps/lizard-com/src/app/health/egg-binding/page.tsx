@@ -9,6 +9,14 @@ export default function EggBindingPage() {
       hero={{ title: 'Egg Binding in Reptiles (Dystocia)', subtitle: 'Dystocia — the inability to lay eggs normally — is one of the most common life-threatening emergencies in female reptiles. It affects all oviparous (egg-laying) species and can occur even in unmated females producing infertile clutches. It requires veterinary intervention — not waiting, not home remedies.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Egg Binding', href: '/health/egg-binding' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Prolapse First Aid', href: '/health/prolapse-first-aid', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>Emergency Signs</div>
