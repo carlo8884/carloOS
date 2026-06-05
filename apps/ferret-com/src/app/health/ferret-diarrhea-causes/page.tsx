@@ -148,7 +148,14 @@ export default function FerretDiarrheaCausesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+          { title: 'Ferret Ulcers', href: '/health/ferret-ulcers' },
+          { title: 'Diet Basics', href: '/care/diet-basics' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

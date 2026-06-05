@@ -125,7 +125,14 @@ export default function SableFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Black Ferrets', href: '/colors/black-ferrets' },
+          { title: 'Chocolate Ferrets', href: '/colors/chocolate-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-sable"

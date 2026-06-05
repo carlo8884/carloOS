@@ -151,7 +151,14 @@ export default function FerretVaccinationsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+          { title: 'Canine Distemper in Ferrets', href: '/health/canine-distemper-in-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

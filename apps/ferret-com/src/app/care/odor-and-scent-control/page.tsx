@@ -137,7 +137,14 @@ export default function FerretOdorScentControlPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

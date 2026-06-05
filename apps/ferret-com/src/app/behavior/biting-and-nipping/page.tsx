@@ -125,7 +125,14 @@ export default function FerretBitingNippingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+          { title: 'Play Aggression', href: '/behavior/play-aggression' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

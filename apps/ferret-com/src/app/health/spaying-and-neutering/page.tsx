@@ -142,7 +142,14 @@ export default function FerretSpayNeuterPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Anesthesia & Surgery Risk', href: '/health/anesthesia-and-surgery-risk' },
+          { title: 'Male vs. Female Ferrets', href: '/colors/male-vs-female-ferrets' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

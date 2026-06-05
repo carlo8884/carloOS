@@ -86,7 +86,14 @@ export default function AdoptionVsBuyingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Is a Ferret Right for You?', href: '/ownership/is-a-ferret-right-for-you' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="sources-overview">The Three Sources</h2>
           <p>

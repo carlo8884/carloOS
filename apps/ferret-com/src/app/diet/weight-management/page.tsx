@@ -86,7 +86,14 @@ export default function WeightManagementPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="seasonal">The Seasonal Weight Swing</h2>
           <p>

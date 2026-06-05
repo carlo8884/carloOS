@@ -125,7 +125,14 @@ export default function DarkEyedWhiteFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
+          { title: 'Albino Ferrets', href: '/colors/albino-ferrets' },
+          { title: 'Blaze & Roan Patterns', href: '/colors/blaze-and-roan-patterns' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:color-dark-eyed-white"

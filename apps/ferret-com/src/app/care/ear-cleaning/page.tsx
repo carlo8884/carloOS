@@ -76,7 +76,14 @@ export default function EarCleaningPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Ear Mites', href: '/health/ear-mites' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="normal">What Normal Ferret Ear Wax Looks Like</h2>
           <p>

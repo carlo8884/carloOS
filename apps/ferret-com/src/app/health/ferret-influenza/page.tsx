@@ -142,7 +142,14 @@ export default function FerretInfluenzaPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Canine Distemper in Ferrets', href: '/health/canine-distemper-in-ferrets' },
+          { title: 'Vaccinations', href: '/health/vaccinations' },
+          { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

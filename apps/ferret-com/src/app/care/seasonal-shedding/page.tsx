@@ -136,7 +136,14 @@ export default function FerretSeasonalSheddingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Seasonal Coat & Shedding', href: '/care/seasonal-coat-and-shedding' },
+          { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -125,7 +125,14 @@ export default function FerretBondingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
+          { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
+          { title: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

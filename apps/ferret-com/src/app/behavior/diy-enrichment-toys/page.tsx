@@ -129,7 +129,14 @@ export default function FerretDIYEnrichmentPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Digging & Burrowing', href: '/behavior/digging-and-burrowing' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+          { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

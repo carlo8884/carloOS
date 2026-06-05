@@ -76,7 +76,14 @@ export default function MultiLevelHousingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why-vertical">Why Vertical Layout Wins</h2>
           <p>

@@ -85,7 +85,14 @@ export default function SupplementsAndVitaminsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+          { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="default">The Default: A Complete Diet Needs Little</h2>
           <p>

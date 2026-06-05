@@ -87,7 +87,14 @@ export default function FerretSuppliesChecklistPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'First Week Checklist', href: '/ownership/first-week-checklist' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="priority">Buy First vs Later</h2>
           <p>

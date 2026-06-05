@@ -85,7 +85,14 @@ export default function TravelingWithAFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
+          { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="decide">Before You Decide to Travel</h2>
           <p>

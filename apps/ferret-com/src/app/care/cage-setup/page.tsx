@@ -79,7 +79,14 @@ export default function FerretCageSetupPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Multi-Level Housing', href: '/care/multi-level-housing' },
+          { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-cage-setup"

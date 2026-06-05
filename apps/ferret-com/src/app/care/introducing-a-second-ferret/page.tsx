@@ -76,7 +76,14 @@ export default function IntroducingSecondFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why a Second Ferret Is Usually a Good Idea</h2>
           <p>

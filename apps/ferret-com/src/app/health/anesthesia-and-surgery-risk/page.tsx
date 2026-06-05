@@ -143,7 +143,14 @@ export default function FerretAnesthesiaRiskPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+          { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

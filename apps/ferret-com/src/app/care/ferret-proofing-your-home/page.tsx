@@ -76,7 +76,14 @@ export default function FerretProofingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="how-differ">How Ferret-Proofing Differs From Puppy-Proofing</h2>
           <p>

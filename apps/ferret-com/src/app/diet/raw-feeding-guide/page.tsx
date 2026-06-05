@@ -87,7 +87,14 @@ export default function RawFeedingGuidePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Whole Prey vs. Kibble', href: '/diet/whole-prey-vs-kibble' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why Raw</h2>
           <p>

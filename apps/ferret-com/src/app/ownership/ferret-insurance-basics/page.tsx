@@ -85,7 +85,14 @@ export default function FerretInsuranceBasicsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
+          { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+        ]}
+>
         <div className="carloOS-article">
           <CalloutBox variant="info" title="Educational only">
             <p>

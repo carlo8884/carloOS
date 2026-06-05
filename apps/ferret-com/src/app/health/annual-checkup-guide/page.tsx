@@ -147,7 +147,14 @@ export default function FerretAnnualCheckupGuidePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Vaccinations', href: '/health/vaccinations' },
+          { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+          { title: 'First-Year Schedule', href: '/first-year-schedule' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -141,7 +141,14 @@ export default function FerretEmergencySignsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Signs of Pain', href: '/health/signs-of-pain' },
+          { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
+          { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

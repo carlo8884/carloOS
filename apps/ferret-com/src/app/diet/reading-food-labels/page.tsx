@@ -86,7 +86,14 @@ export default function ReadingFoodLabelsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Supplements & Vitamins', href: '/diet/supplements-and-vitamins' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="why">Why the Label Matters</h2>
           <p>

@@ -124,7 +124,14 @@ export default function MaleVsFemaleFerretsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Colors Hub', href: '/colors' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+          { title: 'Choosing a Healthy Ferret', href: '/colors/choosing-a-healthy-ferret' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

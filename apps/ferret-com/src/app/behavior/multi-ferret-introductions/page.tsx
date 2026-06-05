@@ -126,7 +126,14 @@ export default function MultiFerretIntroductionsPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Behavior Hub', href: '/behavior' },
+          { title: 'Introducing a Second Ferret', href: '/care/introducing-a-second-ferret' },
+          { title: 'Stress Signs', href: '/behavior/stress-signs' },
+          { title: 'Play Aggression', href: '/behavior/play-aggression' },
+        ]}
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

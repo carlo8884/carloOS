@@ -175,7 +175,14 @@ export default function FerretAdrenalDiseasePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Health Hub', href: '/health' },
+          { title: 'Insulinoma', href: '/health/insulinoma' },
+          { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
+          { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+        ]}
+>
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-adrenal"

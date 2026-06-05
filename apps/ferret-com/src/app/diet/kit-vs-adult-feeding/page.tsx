@@ -86,7 +86,14 @@ export default function KitVsAdultFeedingPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
+          { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>

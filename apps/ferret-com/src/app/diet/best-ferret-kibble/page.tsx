@@ -86,7 +86,14 @@ export default function BestFerretKibblePage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Diet Hub', href: '/diet' },
+          { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
+          { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="panel">Read the Panel First</h2>
           <p>

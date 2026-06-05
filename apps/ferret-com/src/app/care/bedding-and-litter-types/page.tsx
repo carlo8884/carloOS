@@ -76,7 +76,14 @@ export default function BeddingAndLitterTypesPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Care Hub', href: '/care' },
+          { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Litter Training', href: '/care/litter-training' },
+          { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>
           <p>

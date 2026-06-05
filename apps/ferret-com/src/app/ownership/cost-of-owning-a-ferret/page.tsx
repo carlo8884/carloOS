@@ -86,7 +86,14 @@ export default function CostOfOwningAFerretPage() {
             />
           </>
         }
-      >
+      
+        relatedLinks={[
+          { title: 'Ferret Ownership Hub', href: '/ownership' },
+          { title: 'Ferret Insurance Basics', href: '/ownership/ferret-insurance-basics' },
+          { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
+          { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
+        ]}
+>
         <div className="carloOS-article">
           <h2 id="numbers">How to Read These Numbers</h2>
           <p>
