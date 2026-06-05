@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Timmons, M.B. and Ebeling, J.M. Recirculating Aquaculture, 3rd ed. Ithaca Publishing, 2013.", publisher: "Ithaca Publishing" },
+  { label: "Francis-Floyd, R. Ammonia Toxicosis in Fish — UF/IFAS Extension FA-36.", url: "https://edis.ifas.ufl.edu/publication/FA036", publisher: "UF/IFAS Extension" },
+  { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol.', path: '/health/nitrogen-cycle-explained', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained', description: 'What it is, how to cycle a tank, and how to know when cycling is complete.', url: 'https://fish.com/health/nitrogen-cycle-explained', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -65,6 +72,7 @@ export default function NitrogenCyclePage() {
           <li><strong>Extended power outage:</strong> Bacteria need oxygenated water flow to survive. A filter off for more than 4–6 hours can crash the colony — test ammonia when power returns.</li>
           <li><strong>Adding too many fish too quickly:</strong> The ammonia produced by a large new population overwhelms the existing colony. Add fish gradually — 20–25% of intended stocking at a time, 2 weeks apart.</li>
         </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Cycling Test Kits</div>

@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Argulus (Fish Lice) and Lernaea (Anchor Worm) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/argulosis-and-lernaesis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Shinn, A.P. et al. Fish parasites — pathobiology and protection. CABI, 2012.", publisher: "CABI" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Lice & Anchor Worm — Visible Parasites | Fish.com', description: 'Fish lice (Argulus) and anchor worm (Lernaea) are visible parasites attached to fish skin. Both enter ponds from wild-caught fish or infected feeders.', path: '/health/fish-lice-anchor-worm', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Lice and Anchor Worm', description: 'Identification, manual removal, and chemical treatment for Argulus fish lice and Lernaea anchor worm.', url: 'https://fish.com/health/fish-lice-anchor-worm', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FishLicePage() {
@@ -41,6 +49,7 @@ export default function FishLicePage() {
         <h2>Sources and Prevention</h2>
         <p>Both parasites enter closed aquariums from: wild-caught fish not quarantined, live feeder fish from pond environments (feeder goldfish from outdoor rearing ponds are a common source), water or plants taken from natural water sources, and pond-reared fish of any species. Prevention: rigorous quarantine of all new fish (4–6 weeks observation — both parasites would be visible well within this window), avoid live feeder fish from unknown sources, and do not introduce water, plants, or substrate from natural water bodies without treating for potential parasites.</p>
         <p>Once established in a pond, both parasites can be extremely persistent — pond treatment with diflubenzuron or potassium permanganate repeated at appropriate intervals is required to break the life cycle.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

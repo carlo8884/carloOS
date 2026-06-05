@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Monogenean Flukes (Gyrodactylus, Dactylogyrus) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/monogenean-flukes-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Shinn, A.P. et al. Fish parasites — pathobiology and protection. CABI, 2012.", publisher: "CABI" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Gill Flukes | Fish.com', description: 'Flukes (Gyrodactylus, Dactylogyrus) cause flashing, rapid breathing, and clamped fins. Praziquantel is the treatment', path: '/health/gill-flukes', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Gill Flukes and Body Flukes in Fish', description: 'Signs, praziquantel treatment, and quarantine protocol for Gyrodactylus and Dactylogyrus flukes.', url: 'https://fish.com/health/gill-flukes', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function FlukesPage() {
@@ -42,6 +50,7 @@ export default function FlukesPage() {
 
         <h2>Distinguishing From Other Conditions</h2>
         <p>If fish are flashing and showing respiratory signs in an established, previously healthy tank: test water quality first (ammonia, nitrite, nitrate, pH). Water quality issues are more common than parasites and should be ruled out before medicating. If water quality is normal: consider velvet (use flashlight check) and flukes (no reliable visual identification without microscopy — treat based on clinical presentation and ruling out other causes). A combined treatment addressing both gill/body flukes (praziquantel) and external protozoa (copper or salt) in a hospital tank is appropriate when the cause is unclear and the fish's condition is declining.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Dropsy in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/dropsy-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dropsy in Fish — Pinecone Scales, Causes & Treatment | Fish.com', description: 'Dropsy causes pinecone-like scale standing from fluid accumulation in body cavity. Usually fatal — indicates organ failure.', path: '/health/dropsy-treatment', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dropsy in Fish — Causes and Treatment', description: 'Pinecone scale standing, organ failure diagnosis, and treatment for fish dropsy.', url: 'https://fish.com/health/dropsy-treatment', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DropsyPage() {
@@ -40,6 +47,7 @@ export default function DropsyPage() {
 
         <h2>Quarantine Remaining Fish</h2>
         <p>When one fish develops dropsy from a bacterial systemic infection, other fish in the same tank are at risk — particularly if they are stressed by the same water quality issues. Monitor all other fish closely. A preemptive course of antibiotics in the display tank is sometimes recommended when multiple fish are showing early signs, but should be weighed against the impact on biological filtration.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

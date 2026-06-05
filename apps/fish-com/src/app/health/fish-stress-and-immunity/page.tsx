@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Barton, B.A. Stress in Fishes: A Diversity of Responses with Particular Reference to Changes in Circulating Corticosteroids. Integrative and Comparative Biology, 2002.", publisher: "Oxford University Press" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Stress and Immunity — The Root of Most Disease | Fish.com', description: "Why chronic stress is behind most aquarium fish disease. The sources of stress, how it suppresses the immune system, and how to build a low-stress tank.", path: '/health/fish-stress-and-immunity', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fish Stress and Immunity', description: 'How stress suppresses fish immunity and drives disease, and how to reduce it.', url: 'https://fish.com/health/fish-stress-and-immunity', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function FishStressPage() {
@@ -44,6 +52,7 @@ export default function FishStressPage() {
         <h2>Stress, Quarantine, and Acclimation</h2>
         <p>Two moments carry concentrated stress risk: bringing home a new fish and acclimating it. New arrivals are already stressed and immunosuppressed from capture, shipping, and retail holding, which is exactly when latent infections flare. Quarantining new fish in a dedicated <a href="/setup/quarantine-tank-guide">quarantine tank</a> lets them recover in calm, pristine conditions and reveals illness before it reaches the display. Acclimate slowly to match temperature and chemistry, dim the lights, and avoid feeding heavily on the first day. Managing stress at these pinch points prevents a large share of the disease that otherwise follows new additions, and complements the broader picture covered in our <a href="/health/bacterial-infections">bacterial infections</a> guide.</p>
 
+        <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Stable Heater + Water Test Kit</div>

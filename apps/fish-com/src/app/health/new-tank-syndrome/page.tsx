@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Timmons, M.B. and Ebeling, J.M. Recirculating Aquaculture, 3rd ed. Ithaca Publishing, 2013.", publisher: "Ithaca Publishing" },
+  { label: "Francis-Floyd, R. Ammonia Toxicosis in Fish — UF/IFAS Extension FA-36.", url: "https://edis.ifas.ufl.edu/publication/FA036", publisher: "UF/IFAS Extension" },
+  { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'New Tank Syndrome — Ammonia Spike, Cycling | Fish.com', description: 'New tank syndrome kills fish through ammonia poisoning. Fishless cycling with ammonia takes 4-6 weeks.', path: '/health/new-tank-syndrome', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrome', description: 'Ammonia spikes, cycling protocol, and fish-in emergency management for new aquariums.', url: 'https://fish.com/health/new-tank-syndrome', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NewTankSyndromePage() {
@@ -54,6 +62,7 @@ export default function NewTankSyndromePage() {
 
         <h2>When the Cycle Is Complete</h2>
         <p>The cycle is complete — not "almost done," not "getting there" — when both ammonia and nitrite read 0 ppm on a test kit (not strips) 24 hours after dosing the tank with ammonia. A tank that shows 0 ammonia but 0.25 ppm nitrite is not cycled — the nitrite bacteria are still establishing. Introducing fish to a partially cycled tank restarts the stress cycle. Patience at this stage prevents weeks of emergency water changes later.</p>
+        <ArticleSourcesList sources={SOURCES} />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Test Kit + Dechlorinator</div>

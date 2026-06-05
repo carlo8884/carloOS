@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Bacterial Diseases of Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish — Signs & Treatment | Fish.com', description: "How to recognize and treat bacterial infections in fish: ulcers, red streaks, septicemia, and mouth fungus. Why water quality is almost always the root cause.", path: '/health/bacterial-infections', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish', description: 'Signs, causes, and treatment of gram-negative bacterial infections in aquarium fish.', url: 'https://fish.com/health/bacterial-infections', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function BacterialInfectionsPage() {
@@ -43,6 +51,7 @@ export default function BacterialInfectionsPage() {
 
         <h2>Prevention</h2>
         <p>Because these infections are opportunistic, prevention is overwhelmingly a matter of husbandry. Keep ammonia and nitrite at zero and nitrate low through a fully established <a href="/health/nitrogen-cycle-explained">nitrogen cycle</a> and regular water changes. Quarantine every new arrival to avoid importing both pathogens and stress. Avoid overcrowding and incompatible tankmates that cause chronic stress and injury. Feed a varied, high-quality diet to support immune function. A fish kept in clean, stable water at appropriate density very rarely succumbs to the bacteria that are always swimming alongside it.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

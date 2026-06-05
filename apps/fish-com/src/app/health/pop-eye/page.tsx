@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Exophthalmia (Pop-Eye) in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/exophthalmia-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pop-Eye in Fish — Exophthalmia Causes | Fish.com', description: 'Pop-eye (exophthalmia) is fluid accumulation behind the eye causing it to bulge outward. Bacterial infection treated with Kanaplex.', path: '/health/pop-eye', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pop-Eye in Fish (Exophthalmia)', description: 'Causes, unilateral vs bilateral presentation, and Kanaplex treatment for pop-eye in fish.', url: 'https://fish.com/health/pop-eye', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PopEyePage() {
@@ -43,6 +50,7 @@ export default function PopEyePage() {
 
         <h2>Prevention</h2>
         <p>Pop-eye prevention is water quality management. The vast majority of pop-eye cases occur in tanks with elevated nitrate, inadequate filtration, or irregular maintenance. Weekly water changes of 25-30%, filter maintenance, and not overstocking are the primary preventive measures. Quarantine new fish before adding to established tanks — new fish stressed from shipping are more susceptible to bacterial infection including orbital infection.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

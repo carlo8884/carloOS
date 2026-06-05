@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Swim Bladder Disease in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/swim-bladder-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
+  { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish — Causes, Pea Treatment | Fish.com', description: 'Swim bladder problems cause floating, sinking, or listing. Constipation is the most common cause in fancy goldfish. The fasting and pea protocol', path: '/health/swim-bladder-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Swim Bladder Disease in Fish', description: 'Causes, constipation treatment, and prognosis for swim bladder disorders in aquarium fish.', url: 'https://fish.com/health/swim-bladder-disease', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function SwimBladderPage() {
@@ -37,6 +44,7 @@ export default function SwimBladderPage() {
 
         <h2>Long-Term Management for Structural Cases</h2>
         <p>Fancy goldfish with chronic swim bladder disorders can live comfortably for years with appropriate management. Key adjustments: feed sinking rather than floating foods (surface feeding causes air ingestion that worsens buoyancy problems), soak all dry foods before feeding (reduces expansion in the stomach), reduce feeding frequency slightly, and maintain excellent water quality (stressed fish with compromised organ function need pristine conditions). Some keepers use shallow water (4-6 inches) for severely affected fish — the reduced depth makes swimming and reaching food much easier for a fish that cannot maintain neutral buoyancy.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
