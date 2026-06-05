@@ -100,6 +100,14 @@ export default function RootLayout({
         )}
       </head>
       <body>
+        {/* Skip-link — first focusable element; hidden until focused (WCAG 2.4.1) */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-brand-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
+        >
+          Skip to content
+        </a>
+
         {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="dog-com" />
 
@@ -119,7 +127,7 @@ export default function RootLayout({
         */}
 
         {/* Page content */}
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
 
         {/* Shared Footer */}
         <Footer siteId="dog-com" showAffiliateDisclosure />

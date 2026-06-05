@@ -93,6 +93,7 @@ export default function DogCalorieCalculator() {
               <button
                 type="button"
                 onClick={() => setUnit('lb')}
+                aria-pressed={unit === 'lb'}
                 className={[
                   'px-3 py-2 font-medium transition-colors',
                   unit === 'lb'
@@ -105,6 +106,7 @@ export default function DogCalorieCalculator() {
               <button
                 type="button"
                 onClick={() => setUnit('kg')}
+                aria-pressed={unit === 'kg'}
                 className={[
                   'px-3 py-2 font-medium transition-colors',
                   unit === 'kg'
@@ -170,7 +172,7 @@ export default function DogCalorieCalculator() {
       </div>
 
       {/* Results */}
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-4">
+      <div aria-live="polite" aria-atomic="true" className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-4">
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Weight (kg)</p>
           <p className="mt-1 font-display text-xl text-brand-dark">
