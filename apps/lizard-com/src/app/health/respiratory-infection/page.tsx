@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -38,6 +38,7 @@ export default function RespiratoryInfectionPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Low Temperatures Cause Respiratory Infections</h2>
         <p>Reptiles are ectothermic — their immune system function is temperature-dependent. A ball python at 75°F ambient has a significantly impaired immune response compared to the same snake at 88°F basking temperature. The bacteria that cause respiratory infections (Pseudomonas, Aeromonas, Mycoplasma, and others) are present in the reptile's environment and even in its own oral flora — they do not cause disease when the immune system is functioning at appropriate temperature. When temperatures are too low or the thermal gradient is insufficient (no warm basking spot), immune function is depressed enough that opportunistic bacteria establish in the respiratory tract.</p>
         <p>High humidity in species that require dry conditions (ball pythons in glass tanks with mesh tops exposed to high ambient humidity) promotes bacterial and fungal growth in the respiratory tissue. Conversely, inadequate humidity in tropical species causes desiccation of mucous membranes, reducing their barrier function. Both extremes from the species-appropriate range predispose to respiratory infection.</p>

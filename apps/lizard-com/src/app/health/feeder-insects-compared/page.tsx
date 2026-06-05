@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeder Insects Compared — Dubia, Crickets, Worms | Lizard.com", description: "Crickets, dubia roaches, mealworms, superworms, BSFL, hornworms, and waxworms compared on nutrition, fat, and which to use as staples vs treats.", path: "/health/feeder-insects-compared", type: 'article' })
@@ -35,6 +35,7 @@ export default function HealthFeederInsectsComparedPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Insectivorous reptiles do best on a varied diet built around a few nutritious staples, with fattier or specialty insects used sparingly for variety, hydration, or enrichment. The two factors that most determine a feeder’s role are its fat content and its calcium-to-phosphorus balance, along with how much hard-to-digest chitin (exoskeleton) it carries. Gut-loading and calcium dusting improve any feeder, but the underlying choice of insect still matters. Here is how the common options stack up."}</p>
           <h2>{"Staple Feeders"}</h2>
           <ul>

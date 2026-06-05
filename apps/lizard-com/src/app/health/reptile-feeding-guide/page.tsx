@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -81,6 +81,7 @@ export default function ReptileFeedingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="prey-size">Prey Size — The Core Rule</h2>
         <p>The universal rule for prey size: <strong>no wider than the widest part of your reptile&apos;s head</strong>. This applies to insects, rodents, and most other prey items. Prey that is too large causes regurgitation, impaction, and in severe cases, injury. When in doubt, go smaller.</p>
         <p>The head-width rule applies to the prey item&apos;s widest point, not its length. A cricket can be longer than the gecko&apos;s head as long as it isn&apos;t wider. For snakes, the rule is slightly different: prey should be 1–1.5x the diameter of the snake&apos;s body at its widest point — snakes can swallow proportionally larger prey because their jaws are not rigidly connected.</p>

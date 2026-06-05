@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Gargoyle Gecko Care Guide — Diet, Humidity, Setup | Lizard.com', description: 'Gargoyle gecko (Rhacodactylus auriculatus) care: powdered CGD, 60–75% humidity, 72–80°F, vertical arboreal setup, tail regeneration.', path: '/species/gargoyle-gecko', type: 'article' })
@@ -51,6 +51,7 @@ export default function GargoyleGeckoPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Gargoyle geckos</strong> (<em>Rhacodactylus auriculatus</em>) are New Caledonian arboreal geckos closely related to crested and leachianus geckos. They are nocturnal, tolerant of household temperatures (72–80°F), and thrive on a base of commercial powdered crested-gecko diet plus occasional insects. A bioactive 18×18×24 inch vertical terrarium with cork branches, live plants, and 60–75% humidity (nightly misting) is sufficient. Unlike crested geckos, gargoyles regenerate dropped tails. House individually — males fight and pairs breed continuously.</p>
 

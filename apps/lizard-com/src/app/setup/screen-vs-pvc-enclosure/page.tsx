@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Screen vs PVC vs Glass Reptile Enclosures | Lizard.com", description: "Screen, glass, and PVC reptile enclosures compared on humidity retention, heat efficiency, cost, and which species each suits best.", path: "/setup/screen-vs-pvc-enclosure", type: 'article' })
@@ -33,6 +33,7 @@ export default function SetupScreenVsPvcEnclosurePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Enclosure material is a humidity and heat decision before it is an aesthetic one. A high-humidity rainforest species fights a losing battle in an all-screen cage, while a desert species can develop respiratory problems in a poorly ventilated solid box kept too damp. Matching the material to the species’ climate makes maintaining correct conditions effortless; mismatching it means constant misting, constant adjustment, and chronic husbandry stress. Here is how the three main options compare."}</p>
           <h2>{"All-Screen Enclosures"}</h2>
           <ul>

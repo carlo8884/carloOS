@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Substrate Guide — Bioactive, Loose Particle | Lizard.com', description: 'Reptile substrate guide — bioactive soil mixes, loose particle substrates, tile, and paper. Impaction risk explained. Best substrate by species.', path: '/setup/substrate-guide', type: 'article' })
@@ -25,6 +25,7 @@ export default function SubstrateGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <h2>Impaction — The Primary Safety Concern</h2>
         <p>Impaction occurs when a reptile ingests substrate that cannot be passed through the digestive system. It is a life-threatening emergency requiring veterinary intervention and is often fatal. The risk is highest when:</p>

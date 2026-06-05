@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthGoutPreventionPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Reptiles excrete most of their nitrogenous waste as uric acid (the white portion of their droppings, called urates), which requires far less water than the urea mammals produce. This water-efficient system works well when the animal is properly hydrated and its kidneys are healthy. When uric acid builds up faster than it can be excreted, it crystallizes and deposits in tissues, causing gout. The condition is most often a slow consequence of chronic husbandry problems rather than a sudden illness, which is why it is frequently advanced by the time it is recognized."}</p>
           <h2>{"Articular Versus Visceral Gout"}</h2>
           <ul>

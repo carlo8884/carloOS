@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gut-Loading Feeder Insects — How & Why | Lizard.com", description: "Gut-loading feeder insects before offering them transfers nutrition to your reptile. What to feed feeders, how long before use, and why it beats dusting alone.", path: "/health/gut-loading-guide", type: 'article' })
@@ -35,6 +35,7 @@ export default function HealthGutLoadingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Feeder insects bought from a shop are often shipped and stored without proper food, arriving dehydrated and nutritionally hollow. An insect in that state passes little of value to the reptile eating it. Gut-loading fixes this: by feeding the insects a nutritious diet for a day or two before they become a meal, you fill their digestive tract and bodies with nutrients that transfer to your reptile. It is the difference between feeding your animal a vitamin-packed insect and feeding it an empty shell."}</p>
           <h2>{"Gut-Loading Versus Dusting"}</h2>
           <p>{"Gut-loading and supplement dusting are complementary, not interchangeable."}</p>

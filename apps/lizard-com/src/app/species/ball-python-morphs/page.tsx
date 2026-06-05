@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide — 400+ Mutations, BEL | Lizard.com', description: 'Ball python morphs: the 15 foundational mutations that create 400+ combinations. Blue Eyed Leucistic combos, spider wobble controversy.', path: '/species/ball-python-morphs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide', description: 'Foundational mutations, BEL combos, spider wobble, and pricing for ball python morphs.', url: 'https://lizard.com/species/ball-python-morphs', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function BallPythonMorphsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Foundational Mutations — The Building Blocks</h2>
         <p><strong>Albino (Amelanistic):</strong> Recessive. Removes black pigment — wild-type black and brown replaced by yellow, orange, white, and red. Classic yellow-and-white with red eyes. One of the first ball python morphs established; still popular and affordable. Combines well with most other morphs.</p>
         <p><strong>Axanthic:</strong> Recessive. Removes yellow/red pigment — leaves black, white, and grey. Produces dramatic black-and-white appearance. Combined with Albino produces Snowflake (white with pale yellow blushing). Multiple allelic forms exist (different axanthic mutations from different breeding lines — some are compatible for breeding, some are not).</p>

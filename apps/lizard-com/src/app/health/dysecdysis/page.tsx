@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -37,6 +37,7 @@ export default function DysecdysisPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why It Happens</h2>
         <p>Healthy shedding requires: adequate hydration (the reptile must be well-hydrated throughout its body for the old skin to separate cleanly from the new), adequate environmental humidity during the active shed period, and appropriate substrate that allows the reptile to find edges to anchor and pull against during shedding. Disruption of any of these produces incomplete sheds in varying degrees of severity.</p>
         <p><strong>Low humidity:</strong> The most common cause. The fluid layer between old skin and new skin dries before the shed can complete — the old skin becomes desiccated and adheres to the new skin rather than releasing. Species-specific humidity requirements must be maintained consistently, not just increased when the shed is already in progress. Humidity management is proactive (always maintained) rather than reactive (increased only when the problem is occurring).</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Humidity Guide — Species Requirements | Lizard.com', description: 'Humidity requirements by species, how to raise and lower humidity, misting schedules, and how to set up a proper moist hide for shedding.', path: '/setup/humidity-guide', type: 'article' })
@@ -36,6 +36,7 @@ export default function HumidityGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Humidity Matters</h2>
         <p><strong>Too low:</strong> Chronic dehydration even if a water dish is provided — reptiles absorb moisture through their environment as well as drinking. Dehydration causes: dysecdysis (stuck shed, particularly dangerous on toes and eye caps where it can cut off circulation), kidney stress, reduced immune function, and poor overall condition.</p>
         <p><strong>Too high:</strong> Respiratory infection. Bacteria and mold thrive in constantly wet environments; humid-loving species require high humidity AND ventilation — the combination of warm, stagnant humid air is what causes respiratory disease, not humidity itself. Enclosures must be designed with appropriate airflow.</p>

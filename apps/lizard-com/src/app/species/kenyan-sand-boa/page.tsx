@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Kenyan Sand Boa Care Guide — Burrowing Snake | Lizard.com", description: "Kenyan sand boas are a beginner-friendly burrowing snake. Belly heat, deep aspen substrate, frozen/thawed mice, and why they spend most of their life buried.", path: "/species/kenyan-sand-boa", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesKenyanSandBoaPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Kenyan sand boa is a fossorial (burrowing) ambush predator native to the dry scrub and semi-desert of East Africa. In captivity it is prized for a small adult size, a docile disposition, decades-long lifespan, and an undemanding husbandry profile that tolerates the small errors beginners make. The trade-off is that it is not a display animal: a healthy sand boa is buried almost all the time, surfacing mainly to feed and occasionally to thermoregulate at night."}</p>
           <h2>{"Enclosure and Substrate"}</h2>
           <p>{"A single adult female is comfortable in a 20-gallon long (30 by 12 inches of floor space); males do well in 10 to 15 gallons. Floor area matters far more than height because this is a terrestrial burrower with no climbing instinct. A secure, low-profile enclosure with a tight lid prevents escape, though sand boas are far less determined escape artists than colubrids."}</p>

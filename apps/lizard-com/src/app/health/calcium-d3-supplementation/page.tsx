@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthCalciumD3SupplementationPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Captive reptile diets and lighting rarely replicate the wild, so most kept species need supplemental calcium and, depending on their lighting, vitamin D3, plus periodic multivitamins. Calcium is the building block of bone and is consumed in countless body processes; vitamin D3 is the hormone-like vitamin that allows the body to absorb and use calcium; and a multivitamin fills in the other micronutrients a captive diet may lack. The single most common preventable disease in captive reptiles, metabolic bone disease, is fundamentally a failure of this calcium-and-D3 system."}</p>
           <h2>{"Calcium With D3 Versus Without D3"}</h2>
 

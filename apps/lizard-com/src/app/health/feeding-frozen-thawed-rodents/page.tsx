@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Feeding Frozen-Thawed Rodents to Snakes | Lizard.com", description: "Why feed snakes frozen-thawed instead of live rodents, how to thaw and warm prey safely, correct prey size, and how to handle a stubborn feeder.", path: "/health/feeding-frozen-thawed-rodents", type: 'article' })
@@ -35,6 +35,7 @@ export default function HealthFeedingFrozenThawedRodentsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Most pet snakes eat rodents, and there are two ways to provide them: live or frozen-thawed (often abbreviated F/T). Frozen-thawed is the strongly preferred standard among experienced keepers and welfare-minded vets for a simple reason: a live rodent is a defensive animal with teeth and claws, and a snake that is not hungry, is shedding, or simply misses its strike can be seriously bitten, scarred, or even killed by the very prey meant to feed it. Frozen-thawed prey carries none of that risk, is more convenient to store and buy in bulk, and is generally regarded as more humane."}</p>
           <h2>{"Why Not Live Prey?"}</h2>
           <ul>

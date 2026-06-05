@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthRetainedEyeCapsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The spectacle (also called the brille or eye cap) is a transparent scale fused over the eye in snakes and in many geckos that lack movable eyelids. It is part of the skin and is normally shed along with the rest of the outer layer during each ecdysis. When a shed is incomplete, the spectacle can be retained; if this happens repeatedly, successive layers accumulate over the eye, progressively clouding vision and creating a space where debris and infection can develop. It is a common and usually preventable consequence of inadequate shedding conditions."}</p>
           <h2>{"Recognizing a Retained Eye Cap"}</h2>
           <ul>

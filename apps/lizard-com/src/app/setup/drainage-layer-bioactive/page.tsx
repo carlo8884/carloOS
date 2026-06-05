@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Drainage Layer Guide — False Bottoms | Lizard.com", description: "How to build a drainage layer (false bottom) in a bioactive reptile enclosure, what materials to use, when you need one, and how to avoid a swamp.", path: "/setup/drainage-layer-bioactive", type: 'article' })
@@ -33,6 +33,7 @@ export default function SetupDrainageLayerBioactivePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A bioactive enclosure is a self-cleaning miniature ecosystem: live plants, a moisture-retaining substrate, and a cleanup crew of invertebrates that break down waste. For humid and frequently misted setups, the system depends on water moving down out of the root zone rather than pooling in it. A drainage layer is the reservoir at the bottom that captures that runoff, keeping the substrate moist but never waterlogged. Without it, repeated misting saturates the soil from the bottom up, suffocating plant roots and beneficial microbes."}</p>
           <h2>{"When You Actually Need a Drainage Layer"}</h2>
 

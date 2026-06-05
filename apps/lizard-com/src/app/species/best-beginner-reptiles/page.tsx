@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Best Beginner Reptiles — Easiest Pets to Start | Lizard.com", description: "The best beginner reptiles ranked by how forgiving they are. Leopard gecko, crested gecko, corn snake, ball python, and more, with the honest caveats.", path: "/species/best-beginner-reptiles", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesBestBeginnerReptilesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A good beginner reptile is forgiving: it tolerates the small husbandry errors new keepers inevitably make, stays a manageable size, is widely available as hardy captive-bred stock, and does not require the most demanding setups. That said, every reptile needs correct temperatures, appropriate diet, and proper care; beginner-friendly means forgiving, not effortless. The species below are the ones experienced keepers most consistently recommend to newcomers, each with the honest caveat that matters most."}</p>
           <h2>{"Leopard Gecko"}</h2>
           <p>{"The leopard gecko is the classic first reptile: small, hardy, long-lived, docile, and undemanding, with no need for a basking lamp (it uses belly heat) and an easy insect diet. It tolerates handling well and forgives minor mistakes better than most. The caveat: it still needs correct belly heat on a thermostat, calcium supplementation, and a humid hide for shedding, and loose substrate can cause impaction in animals with marginal husbandry. See our leopard gecko care guide."}</p>

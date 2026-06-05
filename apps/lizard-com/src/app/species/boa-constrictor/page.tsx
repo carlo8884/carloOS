@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide — Size Reality | Lizard.com', description: 'Boa constrictors reach 6-10 feet — not the beginner snake they\'re sometimes sold as. Common boa (BCI) vs Colombian (BCC) differences, locality color variants.', path: '/species/boa-constrictor', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Boa Constrictor Care Guide', description: 'Size expectations, BCI vs BCC subspecies, locality colors, and adult enclosure requirements for boa constrictors.', url: 'https://lizard.com/species/boa-constrictor', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function BoaPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>BCI vs BCC — Two Different Snakes</h2>
         <p><strong>Boa imperator (Common boa / Central American boa / BCI — formerly Boa constrictor imperator):</strong> The most commonly kept boa in the hobby. Central American and northern South American distribution. Adult size: most males 5–7 feet, most females 6–8 feet. Smaller, lighter, and generally more handleable than the Colombian form. Multiple locality variants with dramatically different coloration (see below).</p>
         <p><strong>Boa constrictor constrictor (Colombian boa / red-tailed boa / BCC):</strong> The larger South American subspecies. Adult females commonly reach 8–10+ feet and 30–60+ pounds. The "red tail" name comes from the vivid red or orange tail pattern more distinct in Colombian animals. BCC are truly large animals requiring substantial enclosures and significant handling experience — they are not a beginner snake regardless of temperament.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Corn Snake Care Guide — Morphs, Feeding | Lizard.com', description: 'Corn snakes are the best beginner snake. 100+ morphs from red wild-type to lavender. Frozen/thawed mice only — no live prey.', path: '/species/corn-snake', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Corn Snake Care Guide', description: 'Morphs, feeding, escape prevention, and complete care for Pantherophis guttatus corn snakes.', url: 'https://lizard.com/species/corn-snake', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function CornSnakePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Morph Overview — 100+ Color Variations</h2>
         <p>The corn snake has the most diverse morph library of any commonly kept snake species — decades of selective breeding have produced mutations affecting every aspect of color and pattern. Understanding the genetic system unlocks the ability to predict breeding outcomes.</p>
         <p><strong>Classic base morphs:</strong> Amel (amelanistic/albino) — removes black pigment, leaving red, orange, and white; vivid and very popular. Anerythristic (anery) — removes red pigment, leaving black, white, and gray. Hypomelanistic (hypo) — reduces black pigment without eliminating it. Snow — amel + anery = white with pale pink patterns.</p>

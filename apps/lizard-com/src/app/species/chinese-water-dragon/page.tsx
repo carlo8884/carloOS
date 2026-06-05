@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Chinese Water Dragon Care Guide — Arboreal | Lizard.com", description: "Chinese water dragons need tall planted enclosures, high humidity, strong UVB, and a large water feature. Why snout-rub damage is the main welfare risk.", path: "/species/chinese-water-dragon", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesChineseWaterDragonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Chinese water dragon is a semi-arboreal, semi-aquatic agamid that lives along forest streams, basking on overhanging branches and diving into the water to escape threats. In captivity it is rewarding but demanding: it needs height, humidity, a large soakable water feature, strong UVB, and, critically, an enclosure designed to prevent the snout injuries that plague this species. Captive-bred animals are far hardier and calmer than the wild-caught imports that still dominate the cheaper end of the trade."}</p>
           <h2>{"The Snout-Rub Problem"}</h2>
 

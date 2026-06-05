@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Uromastyx Care Guide — High Heat, Seed Diet | Lizard.com', description: 'Uromastyx (spiny-tailed lizards) need extreme heat (120°F basking), a dry desert setup, and a primarily seed-based herbivore diet.', path: '/species/uromastyx', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Uromastyx Care Guide', description: 'High basking temps, seed diet, and desert setup for uromastyx spiny-tailed lizards.', url: 'https://lizard.com/species/uromastyx', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function UromastcyxPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Temperature Requirement — Higher Than Almost Any Other Lizard</h2>
         <p>Uromastyx come from some of the hottest desert environments on Earth — North African rock deserts where midday surface temperatures regularly exceed 120°F. In captivity, they require a basking surface of 120–130°F (measured directly on the surface with an infrared thermometer, not air temperature). At lower basking temperatures they cannot properly thermoregulate, digest food, or maintain immune function. The ambient warm-side temperature should be 90–100°F — significantly hotter than most other reptile setups.</p>
         <p>Achieving these temperatures requires high-wattage incandescent or halogen bulbs — a single 100W or 150W basking bulb over a basking rock or slate. Test the surface temperature with an infrared gun and adjust wattage until the correct surface temperature is reached. CHE (ceramic heat emitters) provide ambient warmth but not the radiant heat needed at the basking surface.</p>

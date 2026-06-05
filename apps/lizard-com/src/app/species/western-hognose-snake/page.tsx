@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Western Hognose Snake Care Guide — Upturned Snout | Lizard.com", description: "Western hognose snakes are small, charismatic beginner snakes known for bluffing and playing dead. Care, feeding, the mild rear-fang concern, and morphs.", path: "/species/western-hognose-snake", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesWesternHognoseSnakePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The western hognose is a diurnal, semi-fossorial colubrid from the central plains of North America, where it uses its keeled, upturned rostral scale to dig for toads and reptile eggs. In captivity it is hardy, long-lived, and endlessly entertaining. The defensive display is pure bluff: hognose snakes almost never bite in defense, instead hissing, hooding, false-striking with a closed mouth, and finally feigning death by going limp, gaping, and even emitting a musk."}</p>
           <h2>{"Is a Hognose Venomous?"}</h2>
           <p>{"Western hognose snakes are technically rear-fanged and produce a mild salivary toxin (a Duvernoy gland secretion) used to subdue amphibian prey. They are not considered medically dangerous to humans and are widely kept as pets. Defensive bites are extremely rare because the species bluffs rather than bites. The rare reported reactions to a prolonged feeding-response bite are localized swelling and itching, comparable to an insect sting, and resolve on their own. Anyone with known allergies should exercise extra care, and feeding should always be done with tongs to avoid hand-strikes."}</p>

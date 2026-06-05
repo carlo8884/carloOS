@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Lighting Guide — UVB, Basking, Photoperiod | Lizard.com', description: 'Complete reptile lighting guide. UVB requirements by species, basking vs ambient heat, photoperiod for seasonal species.', path: '/setup/lighting-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Lighting Guide', description: 'UVB requirements, basking lights, photoperiod, and full-spectrum lighting for reptiles.', url: 'https://lizard.com/setup/lighting-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -31,6 +31,7 @@ export default function LightingGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>UVB — What It Does and Why It Matters</h2>
         <p>Ultraviolet B radiation (wavelength 290–320nm) penetrates the skin and triggers the conversion of 7-dehydrocholesterol to previtamin D3, which is then converted to vitamin D3 through heat. Vitamin D3 is essential for calcium absorption from the gut — without adequate D3, reptiles cannot absorb dietary calcium regardless of how much is supplemented, leading to metabolic bone disease (MBD). This is why UVB exposure is not optional for diurnal (active-during-daytime) reptiles: they evolved to receive significant solar UVB exposure and their calcium metabolism depends on it.</p>
         <p>Important clarification: UVB is not heat. A high-wattage incandescent basking bulb produces no UVB. A CHE (ceramic heat emitter) produces no UVB. A standard LED grow light produces no biologically active UVB. Only specialized reptile UVB fluorescent tubes or mercury vapor bulbs produce the wavelengths required for vitamin D3 synthesis.</p>

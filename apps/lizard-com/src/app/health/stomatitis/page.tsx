@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -38,6 +38,7 @@ export default function StomatitisPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Causes Mouth Rot</h2>
         <p>Stomatitis is an opportunistic infection — the bacteria responsible (Pseudomonas, Aeromonas, Klebsiella, and others, often as mixed infections) are normal environmental inhabitants that cause disease when the reptile's immune system is compromised or when the oral mucosa is damaged. Predisposing factors: stress (chronic suboptimal husbandry — incorrect temperatures, humidity, or lighting), physical injury to the mouth (cage biting, rough feeding, prey-item strikes in snakes), nutritional deficiency (particularly vitamin C deficiency in some species), and systemic illness that depresses immune function.</p>
         <p>In snakes: cage biting (striking at glass repeatedly — often from stress or incorrect temperatures) causes small mouth injuries that become infected. In lizards: incorrect temperatures prevent normal immune function and allow oral bacteria to proliferate. In tortoises: respiratory infections may spread to involve the oral cavity.</p>

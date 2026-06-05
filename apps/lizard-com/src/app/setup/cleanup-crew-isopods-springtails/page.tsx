@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Bioactive Cleanup Crew — Isopods & Springtails | Lizard.com", description: "How isopods and springtails keep a bioactive reptile enclosure clean, which species to use, how to seed and feed them, and when a cleanup crew fails.", path: "/setup/cleanup-crew-isopods-springtails", type: 'article' })
@@ -33,6 +33,7 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A bioactive enclosure works because waste does not just sit there; a community of detritivores breaks it down continuously. Isopods (terrestrial crustaceans, also called woodlice, pillbugs, or rollie-pollies) handle the larger organic debris, while springtails (tiny hexapods) graze on mold and microscopic decay. Together with beneficial soil microbes, they form the cleanup crew that processes reptile feces, shed skin, dead plant matter, and uneaten food into a stable, low-odor substrate that supports plant growth."}</p>
           <h2>{"What Each Member Does"}</h2>
           <ul>

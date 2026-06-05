@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthProlapseFirstAidPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"A prolapse occurs when internal tissue is pushed out through the cloaca (the common vent through which reptiles pass waste, eggs, and reproductive structures). Depending on the underlying cause, the protruding tissue may be cloacal lining, a section of intestine, the oviduct, or, in males, a hemipenis. Whatever the tissue, the principle is the same: it is not meant to be outside the body, and once exposed it rapidly dries, swells, becomes contaminated, and loses blood supply. Untreated, the tissue dies and the animal can become septic. This is one of the few reptile problems that genuinely cannot wait."}</p>
           <h2>{"Recognizing a Prolapse"}</h2>
           <ul>

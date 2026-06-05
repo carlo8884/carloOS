@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Day Gecko Care Guide — Phelsuma Species, Vivarium | Lizard.com', description: 'Day geckos (Phelsuma) are vivid green display animals — they are not handling geckos. Giant day gecko, gold dust, and standing\'s guide.', path: '/species/day-gecko', type: 'article' })
@@ -35,6 +35,7 @@ export default function DayGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Display Animal — Setting Expectations</h2>
         <p>Day geckos are not handleable pets in the way leopard geckos or blue-tongued skinks are. They are fast, stress easily when restrained, and their delicate skin and toe pads make them difficult to hold safely — they can drop their tail, lose grip, and suffer skin abrasions from handling attempts. Even in long-term captivity, most day geckos do not become tolerant of handling. The appropriate mindset: day geckos are kept for the pleasure of observing them in a beautifully designed vivarium — a living display that is genuinely engaging to watch.</p>
         <p>Giant day geckos (P. grandis) become semi-tame with consistent, gentle training using food rewards — offering soft ripe fruit from tongs or fingers teaches the gecko to associate the human hand with positive things, and some individuals will approach and accept food from the hand. This is the extent of what most Phelsuma will tolerate, and it is genuinely rewarding to achieve.</p>

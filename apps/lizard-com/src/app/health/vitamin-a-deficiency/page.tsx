@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -38,6 +38,7 @@ export default function VitAPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Vitamin A Does — Why Deficiency Shows in Eyes and Skin</h2>
         <p>Vitamin A (retinol) is essential for maintaining epithelial tissue — the cells lining the skin, eyes, respiratory tract, and GI tract. It regulates cell differentiation: without adequate vitamin A, epithelial cells fail to differentiate and function correctly, leading to accumulation of keratinized cells and fluid, breakdown of barrier function, and increased susceptibility to infection. The eyes are particularly sensitive because the conjunctival epithelium and tear duct epithelium are heavily vitamin A dependent — vitamin A deficiency classically presents as swollen, puffy eyelids (periorbital edema from fluid accumulation in failed epithelium) even before other signs are apparent.</p>
         <p>Amphibians are particularly sensitive to vitamin A deficiency — many short-tongue syndrome cases in dart frogs are vitamin A related — but reptiles across all taxa (tortoises, lizards, snakes) can develop hypovitaminosis A from inadequate dietary sources.</p>

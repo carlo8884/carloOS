@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, BuyBox, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Enclosure Size Guide — Minimums by Species | Lizard.com", description: "How big a reptile enclosure should be, why bigger is better, the myth that snakes prefer cramped tanks, and minimum footprints for popular species.", path: "/setup/terrarium-size-guide", type: 'article' })
@@ -34,6 +34,7 @@ export default function SetupTerrariumSizeGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <AffiliateDisclosure variant="inline" siteId="lizard-com" />
           <p>{"A reptile enclosure has to do more than contain the animal; it has to hold a working thermal gradient, provide cover and enrichment, and give the animal enough room to express natural behaviors like climbing, burrowing, foraging, and exploring. Undersized enclosures make all of this difficult: a short tank cannot maintain a basking-to-cool gradient, a cramped cage offers no exercise, and a barren small box leaves the animal chronically stressed. Modern husbandry favors generous, heavily furnished enclosures over the minimal tanks of decades past."}</p>
           <h2>{"The \"Snakes Like It Small\" Myth"}</h2>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthConstipationImpactionPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Reptiles defecate on a slower, more variable schedule than mammals, and a few days without stool is often normal depending on species, feeding frequency, and temperature. Problems arise when the gut slows or blocks: constipation is difficulty passing stool that is present but not moving well, while impaction is a true mechanical obstruction, often from ingested substrate or oversized prey, that physically blocks the tract. Impaction is the more dangerous of the two and can progress to a life-threatening obstruction requiring surgery."}</p>
           <h2>{"Constipation Versus Impaction"}</h2>
           <ul>

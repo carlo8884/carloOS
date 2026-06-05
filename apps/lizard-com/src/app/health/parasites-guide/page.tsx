@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function ParasiteGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>External Parasites — Mites</h2>
         <p>Ophionyssus natricis (snake mite) is the most common external reptile parasite in captivity. Despite the name, it affects all reptile species, not only snakes. Mites are tiny (0.5–1mm), dark-colored, and found: in the folds of skin (around the eyes, ear openings, ventral scales), in the water dish (mites drown there — finding black specks in the water dish is a classic sign), and occasionally visible moving on the enclosure glass or the handler's skin. Heavy infestations cause: visible irritation (constant soaking, rubbing), scale damage at mite feeding sites, anemia from blood loss, and secondary skin infections.</p>
         <p><strong>Treatment:</strong> Requires treating both the reptile and the entire enclosure simultaneously — mites in the enclosure will reinfest a treated animal. Reptile: Frontline spray (fipronil) at 1 spray per 30 cm of snake, applied to a cloth and wiped over the reptile (not sprayed directly — eyes and face excluded). Nix cream rinse (permethrin) diluted 1:5 in water as an alternative. Enclosure: complete discard of all substrate, cleaning with diluted bleach (1:32), treat all crevices, seal or discard any porous materials that cannot be fully decontaminated. Repeat treatment of the reptile at 7-10 days to catch mites that were in the egg stage during first treatment. Quarantine new animals before introducing to established reptiles — mites transfer readily.</p>
