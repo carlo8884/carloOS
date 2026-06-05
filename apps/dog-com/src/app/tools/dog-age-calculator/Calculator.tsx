@@ -110,7 +110,7 @@ export default function DogAgeCalculator() {
       </div>
 
       {/* Results */}
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div aria-live="polite" aria-atomic="true" className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
         {/* Human age -- primary result */}
         <div className="sm:col-span-2 rounded border-2 border-brand-primary bg-brand-primary-pale p-5">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

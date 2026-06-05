@@ -383,6 +383,7 @@ export default function HomePage() {
         }}
       >
         <ul
+          role="list"
           style={{
             listStyle: 'none',
             padding: 0,
@@ -472,6 +473,7 @@ export default function HomePage() {
           </div>
 
           <ul
+            role="list"
             style={{
               listStyle: 'none',
               padding: 0,
@@ -629,6 +631,7 @@ export default function HomePage() {
           </header>
 
           <ul
+            role="list"
             style={{
               listStyle: 'none',
               padding: 0,
@@ -902,6 +905,7 @@ export default function HomePage() {
           </Link>
 
           <ul
+            role="list"
             style={{
               listStyle: 'none',
               padding: 0,
@@ -1050,6 +1054,7 @@ export default function HomePage() {
           </p>
 
           <ul
+            role="list"
             style={{
               listStyle: 'none',
               padding: 0,

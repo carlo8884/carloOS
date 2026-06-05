@@ -82,7 +82,7 @@ export function Nav({ siteId, activePath }: NavProps) {
 
         {/* Hamburger (mobile) */}
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-1 cursor-pointer border-0 bg-transparent"
+          className="lg:hidden flex flex-col gap-1.5 p-2.5 cursor-pointer border-0 bg-transparent"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}

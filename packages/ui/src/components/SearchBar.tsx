@@ -173,7 +173,7 @@ export function SearchBar({ siteId, placeholder = 'Search…', className = '', f
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && results.length > 0 && setOpen(true)}
           placeholder={placeholder}
-          className={`w-full bg-brand-surface border border-brand-border rounded-lg text-sm pl-9 pr-4 py-2.5 text-brand-text-dark placeholder-brand-text-light outline-none focus:border-brand-primary transition-colors ${fullWidth ? 'py-3.5 text-base pl-11' : ''}`}
+          className={`w-full bg-brand-surface border border-brand-border rounded-lg text-sm pl-9 pr-4 py-2.5 text-brand-text-dark placeholder-brand-text-light outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary focus:border-brand-primary transition-colors ${fullWidth ? 'py-3.5 text-base pl-11' : ''}`}
           aria-label="Search"
           aria-expanded={open}
           aria-haspopup="listbox"

@@ -132,7 +132,7 @@ export function EmailCapture({
         )}
         <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
           ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
-          inputClass="w-full px-3 py-2.5 bg-white/8 border border-white/12 rounded text-brand-white text-xs outline-none mb-2 placeholder:text-white/30 focus:border-brand-primary"
+          inputClass="w-full px-3 py-2.5 bg-white/8 border border-white/12 rounded text-brand-white text-xs outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary mb-2 placeholder:text-white/30 focus:border-brand-primary"
           btnClass="w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded cursor-pointer border-0"
         />
       </div>
@@ -145,7 +145,7 @@ export function EmailCapture({
       <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
         ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
         wrapClass="flex gap-3 flex-wrap"
-        inputClass="flex-1 min-w-48 px-4 py-3 border border-brand-border rounded text-brand-dark text-sm outline-none focus:border-brand-primary"
+        inputClass="flex-1 min-w-48 px-4 py-3 border border-brand-border rounded text-brand-dark text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary focus:border-brand-primary"
         btnClass="px-6 py-3 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
       />
     )
@@ -175,7 +175,7 @@ export function EmailCapture({
       <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
         ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
         wrapClass="flex gap-3 max-w-md mx-auto flex-wrap"
-        inputClass="flex-1 min-w-48 px-4 py-3.5 border border-brand-border rounded-md text-brand-dark text-sm outline-none focus:border-brand-primary bg-brand-white"
+        inputClass="flex-1 min-w-48 px-4 py-3.5 border border-brand-border rounded-md text-brand-dark text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary focus:border-brand-primary bg-brand-white"
         btnClass="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
       />
       <p className="text-xs text-brand-text-light mt-3">
@@ -226,7 +226,7 @@ function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, err
           {status === 'loading' ? 'Subscribing...' : ctaText}
         </button>
       </div>
-      {errorMsg && <p className="text-xs text-brand-danger mt-1.5">{errorMsg}</p>}
+      {errorMsg && <p role="alert" className="text-xs text-brand-danger mt-1.5">{errorMsg}</p>}
     </form>
   )
 }
