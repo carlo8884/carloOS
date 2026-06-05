@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fish Stress and Immunity — The Root of Most Disease | Fish.com', description: "Why chronic stress is behind most aquarium fish disease. The sources of stress, how it suppresses the immune system, and how to build a low-stress tank.", path: '/health/fish-stress-and-immunity', type: 'article' })
@@ -42,6 +42,17 @@ export default function FishStressPage() {
 
         <h2>Stress, Quarantine, and Acclimation</h2>
         <p>Two moments carry concentrated stress risk: bringing home a new fish and acclimating it. New arrivals are already stressed and immunosuppressed from capture, shipping, and retail holding, which is exactly when latent infections flare. Quarantining new fish in a dedicated <a href="/setup/quarantine-tank-guide">quarantine tank</a> lets them recover in calm, pristine conditions and reveals illness before it reaches the display. Acclimate slowly to match temperature and chemistry, dim the lights, and avoid feeding heavily on the first day. Managing stress at these pinch points prevents a large share of the disease that otherwise follows new additions, and complements the broader picture covered in our <a href="/health/bacterial-infections">bacterial infections</a> guide.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Stable Heater + Water Test Kit</div>
+          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>Temperature stability and water quality are the two most controllable stressors in any aquarium. A reliable adjustable heater prevents temperature swings; a liquid test kit (not strips) gives accurate ammonia, nitrite, nitrate, and pH readings. These are husbandry tools — they support a low-stress environment but do not treat disease and are not a substitute for correct diagnosis or veterinary guidance when a fish is unwell.</p>
+          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/aquarium%20adjustable%20heater%20water%20test%20kit%20ammonia%20nitrite?s=health-fish-stress-immunity" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/aquarium%20heater%20water%20quality%20test%20kit?s=health-fish-stress-immunity" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Medicating Aquarium Fish — Hospital Tanks & Safe Dosing | Fish.com', description: "How to medicate aquarium fish safely: when to use a hospital tank, accurate dosing, protecting your filter, drug classes, and why medication is a last resort.", path: '/health/medicating-aquarium-fish', type: 'article' })
@@ -42,6 +42,17 @@ export default function MedicatingFishPage() {
 
         <h2>Finishing and Follow-Up</h2>
         <p>Complete the full recommended course of any medication even if the fish appears to recover early — stopping short allows survivors to rebound and, with antibiotics, breeds resistant strains. After treatment, run fresh carbon to strip residual medication from the hospital tank, and continue excellent water quality during recovery. Reintroduce a recovered fish to the display only when fully healed and after observing it for any relapse. Throughout, remember that the surest way to need medication rarely is to prevent disease in the first place through stable water, sensible stocking, and a robust <a href="/setup/quarantine-tank-guide">quarantine routine</a>.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Hospital Tank Equipment</div>
+          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>A hospital tank requires only three things: an adjustable heater to hold a stable treatment temperature, a sponge filter to maintain gentle biological filtration without harming the patient, and an air pump to drive it and maintain oxygenation during treatment. These are husbandry tools that support safe medication practice; they do not treat disease and are not a substitute for correct diagnosis and veterinary guidance when needed.</p>
+          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/aquarium%20sponge%20filter%20heater%20air%20pump%20hospital%20tank?s=health-medicating-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/aquarium%20sponge%20filter%20hospital%20tank%20setup?s=health-medicating-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )

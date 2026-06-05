@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fin Rot in Fish — Causes, Bacterial vs Fungal | Fish.com', description: 'Fin rot is almost always caused by poor water quality. Fraying, ragged edges progressing toward the body. Treatment: water quality first.', path: '/health/fin-rot', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Fin Rot in Fish', description: 'Causes, bacterial vs fungal distinction, and treatment for fin rot in aquarium fish.', url: 'https://fish.com/health/fin-rot', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -48,6 +48,17 @@ export default function FinRotPage() {
 
         <h2>Fin Rot in Bettas — The Specific Case</h2>
         <p>Bettas are disproportionately affected by fin rot because: they are often kept in small, under-filtered tanks where water quality degrades quickly, their long fins are easily damaged by rough decorations or fin-nipping fish, and their elaborate fins provide more surface area for infection. Betta fin rot treatment follows the same protocol — but tank size and filtration upgrade is the most important preventive measure. A betta in a 5-gallon properly filtered tank rarely develops fin rot; a betta in an unfiltered 1-gallon bowl frequently does.</p>
+
+        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <div style={{ background: '#f7fbfd', border: '1px solid #d4e5ee', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#4a6573', marginBottom: '8px' }}>Water Test Kit + Gravel Vacuum</div>
+          <p style={{ fontSize: '14px', margin: '0 0 8px', color: '#4a6573', lineHeight: 1.55 }}>Fin rot is almost always a water quality problem. Step 1 of the treatment protocol is testing ammonia, nitrite, and nitrate accurately — which requires a liquid test kit, not strips. Step 2 is removing accumulated waste from the substrate with a gravel vacuum during water changes to prevent the ammonia spike from recurring. These are maintenance tools, not disease treatments; they address the environmental root cause. They are not a substitute for correct diagnosis or veterinary guidance when a fish is significantly unwell.</p>
+          <p style={{ fontSize: '12px', margin: '0 0 12px', color: '#7a95a0', lineHeight: 1.4 }}>Fish.com earns an affiliate commission on qualifying purchases at no extra cost to you. Commission does not influence editorial content above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/api%20freshwater%20master%20test%20kit%20gravel%20vacuum%20siphon?s=health-fin-rot" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/chewy-brand/aquarium%20test%20kit%20gravel%20vacuum%20water%20change?s=health-fin-rot" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#1e90ff', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
