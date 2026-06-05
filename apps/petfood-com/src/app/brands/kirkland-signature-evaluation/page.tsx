@@ -8,6 +8,7 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -30,6 +31,29 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Pet Food Labels — General; Animal Food Ingredients: Regulatory Framework; FDA CVM Recalls & Withdrawals",
+      url: "https://www.fda.gov/animal-veterinary/animal-food-feeds/pet-food",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+]
 
 export default function KirklandSignatureEvaluationPage() {
   return (
@@ -132,13 +156,7 @@ export default function KirklandSignatureEvaluationPage() {
           ctaAffiliateProduct="Kirkland%20Signature%20pet%20food"
         />
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-          <li>U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels — General</em>; <em>Animal Food Ingredients: Regulatory Framework</em>; FDA CVM Recalls &amp; Withdrawals database.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

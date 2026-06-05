@@ -6,6 +6,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -28,6 +29,24 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+]
 
 export default function IngredientSplittingPage() {
   return (
@@ -100,12 +119,7 @@ export default function IngredientSplittingPage() {
         <h2 id="trust">What to Trust Instead</h2>
         <p>Because the ingredient order is gameable, do not rely on it alone. Use the guaranteed analysis (on a dry-matter basis), request the typical analysis and the dry-matter nutrient breakdown from the manufacturer, check the AAFCO substantiation, and weigh manufacturer transparency. The ingredient list is one input among several, not the verdict. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em> — Dog and Cat Food Nutrient Profiles (Chapter 4); ingredient definitions and Model Regulations for Pet Food (Chapter 6).</li>
-          <li>National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National Academies Press, 2006 — the authoritative species-specific nutrient-requirement reference underlying the AAFCO profiles.</li>
-          <li>World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee. <em>Global Nutrition Guidelines</em> and <em>Recommendations on Selecting Pet Foods</em> owner handout.</li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, diagnosed disease, and breed-specific nutritional concerns require a

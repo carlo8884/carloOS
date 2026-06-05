@@ -7,6 +7,7 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +30,28 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+const SOURCES = [
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "U.S. Food and Drug Administration. Recalls, Market Withdrawals and Safety Alerts (Animal & Veterinary); FDA CVM Inspection Observations (Form 483) and warning letters.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements. Recognized schemes include SQF, BRCGS, FSSC 22000, and IFS.",
+    },
+    {
+      label: "American College of Veterinary Nutrition (ACVN) Diplomate directory; European College of Veterinary and Comparative Nutrition (ECVCN) Diplomate directory.",
+    },
+]
 
 export default function MethodologyPage() {
   return (
@@ -361,31 +384,7 @@ export default function MethodologyPage() {
           cover.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            World Small Animal Veterinary Association Global Nutrition Committee. <em>Guidelines on
-            Selecting Pet Foods</em> and <em>Recommendations on Selecting Pet Foods</em>.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 6 (Model Regulations for Pet Food and Specialty Pet Food); Dog and Cat Food
-            Nutrient Profiles.
-          </li>
-          <li>
-            U.S. Food and Drug Administration. <em>Recalls, Market Withdrawals and Safety Alerts</em>
-            (Animal &amp; Veterinary); FDA CVM <em>Inspection Observations</em> (Form 483) and
-            warning letters.
-          </li>
-          <li>
-            Global Food Safety Initiative. <em>GFSI Benchmarking Requirements</em>. Recognized
-            schemes include SQF, BRCGS, FSSC 22000, and IFS.
-          </li>
-          <li>
-            American College of Veterinary Nutrition (ACVN) Diplomate directory; European College
-            of Veterinary and Comparative Nutrition (ECVCN) Diplomate directory.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diet selection and management of diagnosed disease require a licensed

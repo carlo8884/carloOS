@@ -10,6 +10,7 @@ import {
   EmailCapture,
   BuyBox,
   AffiliateDisclosure,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -53,6 +54,34 @@ const schema = combineSchemas(
   }),
   buildFAQSchema({ questions: FAQ }),
 )
+
+const SOURCES = [
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+    {
+      label: "General Mills, Inc. Annual Reports and 10-K filings (NYSE: GIS). North America Pet segment financial disclosure. Press release on the February 2018 Blue Buffalo acquisition announcement; closing announcements (April 2018).",
+    },
+    {
+      label: "Blue Buffalo Pet Products, Inc. S-1 filing (2015 IPO) and subsequent 10-K filings (2015-2017, prior to the General Mills acquisition).",
+    },
+    {
+      label: "Federal court records, Blue Buffalo / Nestlé Purina PetCare litigation (2014 filings); Blue Buffalo / Wilbur-Ellis litigation; consumer class-action settlements. Cited as public-record litigation context.",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Association of American Feed Control Officials. 2025 AAFCO Official Publication, Chapter 4 (nutritional adequacy substantiation procedures) and Chapter 6 (ingredient definitions).",
+    },
+    {
+      label: "Adin D, DeFrancesco TC, Keene B, et al. Published peer-reviewed cardiology literature on diet-associated dilated cardiomyopathy in dogs (2018-2024) — see our grain-free and DCM page for the citation set.",
+    },
+]
 
 export default function BlueBuffaloEvaluationPage() {
   return (
@@ -446,45 +475,7 @@ export default function BlueBuffaloEvaluationPage() {
           historically been low-touch on formulation; the same pattern appears to apply here.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>FDA Provides
-            Update on Investigation into Potential Connection Between Certain Diets and Cases
-            of Canine Heart Disease</em> (27 June 2019); subsequent FDA CVM DCM updates
-            through December 2022; <em>Recalls, Market Withdrawals and Safety Alerts</em>{' '}
-            database (Animal &amp; Veterinary).
-          </li>
-          <li>
-            General Mills, Inc. Annual Reports and 10-K filings (NYSE: GIS). North America Pet
-            segment financial disclosure. Press release on the February 2018 Blue Buffalo
-            acquisition announcement; closing announcements (April 2018).
-          </li>
-          <li>
-            Blue Buffalo Pet Products, Inc. S-1 filing (2015 IPO) and subsequent 10-K filings
-            (2015-2017, prior to the General Mills acquisition).
-          </li>
-          <li>
-            Federal court records, Blue Buffalo / Nestlé Purina PetCare litigation (2014
-            filings); Blue Buffalo / Wilbur-Ellis litigation; consumer class-action settlements.
-            Cited as public-record litigation context.
-          </li>
-          <li>
-            World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee.
-            <em> Recommendations on Selecting Pet Foods</em>.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official
-            Publication</em>, Chapter 4 (nutritional adequacy substantiation procedures) and
-            Chapter 6 (ingredient definitions).
-          </li>
-          <li>
-            Adin D, DeFrancesco TC, Keene B, et al. Published peer-reviewed cardiology
-            literature on diet-associated dilated cardiomyopathy in dogs (2018-2024) — see
-            our <a href="/ingredients/grain-free-dcm-risk">grain-free and DCM page</a> for
-            the citation set.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice
           and we do not endorse or condemn Blue Buffalo as a brand. Diet selection for a
