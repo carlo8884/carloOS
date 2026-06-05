@@ -102,19 +102,23 @@ export function AffiliateDisclosure({
   }
 
   if (variant === 'footer') {
+    // Single subtle one-liner (Carlo phone review 2026-06-05): the sitewide
+    // footer disclosure is intentionally ONE short muted line, not a
+    // multi-sentence block. Copy stays generic so every site renders the same
+    // unobtrusive line. The detailed policy lives on the /disclosure page.
     return (
       <p
         data-affiliate-disclosure="footer"
         className={[
-          'mt-8 pt-6 border-t border-white/10 text-xs text-white/65 leading-relaxed max-w-3xl',
+          'mt-8 pt-6 border-t border-white/10 text-2xs text-white/45 leading-relaxed max-w-3xl',
           className ?? '',
         ].join(' ')}
       >
-        Reader-supported. Affiliate links may earn a commission. We never
-        accept payment for favorable reviews.{' '}
+        Reader-supported &mdash; we may earn a commission from qualifying
+        purchases.{' '}
         <Link
           href={href}
-          className="text-white hover:underline no-underline font-medium"
+          className="text-white/70 hover:text-white hover:underline no-underline font-medium"
         >
           Disclosure &rarr;
         </Link>
