@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function IntroducingSecondFerretPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why a Second Ferret Is Usually a Good Idea</h2>
           <p>
             Ferrets are social animals. In most households a single ferret left alone for the hours its owner is at work is an under-stimulated ferret, and the common result is a more demanding, sometimes more frustrated animal. A bonded pair or group entertains itself, sleeps in a companionable pile, and engages in the wrestling play that is central to ferret behavior. For most keepers, two ferrets are not twice the work of one — the marginal effort is small and the welfare gain is large.

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +94,13 @@ export default function SupplementsAndVitaminsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="default">The Default: A Complete Diet Needs Little</h2>
           <p>
             A reputable commercial ferret kibble or a correctly balanced raw/whole-prey diet is formulated to supply complete nutrition, including taurine and the vitamin and mineral spread a ferret needs. For a healthy adult on such a diet, routine supplementation is generally unnecessary and can even be counterproductive — fat-soluble vitamins in particular accumulate, so "more" is not safer. Treat supplements as targeted tools for specific situations, not as daily insurance. If a diet is so marginal that it needs propping up with supplements, the better fix is usually a better base diet (see <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>).

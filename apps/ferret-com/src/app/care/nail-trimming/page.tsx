@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -90,6 +90,13 @@ export default function NailTrimmingPage() {
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Ferrets Need Regular Trims — and How Often</h2>
           <p>
             A ferret's claws are non-retractable and grow continuously. In the wild, digging and rough terrain keep them worn back; an indoor pet ferret has neither, so the nails simply keep growing. Left untrimmed, they cause real problems: they snag and tear on fabric hammocks and carpet, catch painfully in cage bars, alter how the ferret walks, and in the worst case curl far enough to grow into the foot pad.

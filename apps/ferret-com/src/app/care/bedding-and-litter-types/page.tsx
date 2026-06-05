@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function BeddingAndLitterTypesPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>
           <p>
             Two hardwired behaviors govern bedding and litter selection. First, ferrets are <strong>burrowers</strong>: they seek enclosed, dark, fabric-lined spaces to sleep, and they pull bedding around themselves. Second, they are <strong>corner eliminators</strong>: they back into a corner to defecate and urinate, and they will not reliably use an open central tray. Bedding satisfies the first instinct; litter accommodates the second. Confusing the two — using loose substrate as bedding, or expecting a ferret to nest in litter — is the root of most husbandry mistakes.

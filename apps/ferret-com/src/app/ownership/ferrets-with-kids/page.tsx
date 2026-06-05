@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +94,13 @@ export default function FerretsWithKidsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="family">Are Ferrets Good Family Pets?</h2>
           <p>
             For the right family, yes. Ferrets are intelligent, social, and genuinely playful, and many children find them captivating. But they suit a particular kind of household: one with an engaged adult who takes ultimate responsibility, older or well-supervised children, and a willingness to invest in training and an exotic-mammal veterinarian over a 6–10 year life. A ferret is a poor match for a home expecting a low-effort, child-managed pet — they need daily out-of-cage time, careful handling, and a level of supervision that a hamster or fish does not.

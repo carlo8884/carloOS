@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,6 +96,13 @@ export default function RawFeedingGuidePage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Raw</h2>
           <p>
             A correctly formulated raw diet supplies animal protein and fat in the proportions a ferret evolved to digest, with essentially no plant carbohydrate, plus dietary moisture, taurine, and — when bone is included — a natural calcium-to-phosphorus balance. Keepers who feed raw commonly report firmer, less odorous stool, cleaner teeth, and good coat condition. None of this is automatic, however. The benefits belong to a <em>well-formulated</em> raw diet; a poorly assembled one can be worse than a good commercial kibble. For the broader comparison, see <a href="/diet/whole-prey-vs-kibble">whole-prey vs kibble</a>.

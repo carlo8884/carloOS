@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +94,13 @@ export default function FerretsAndOtherPetsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="prey-drive">Prey Drive First</h2>
           <p>
             Ferrets descend from the European polecat and retain a strong, hardwired prey drive. They are obligate carnivores built to hunt small animals, and no amount of domestication removes that instinct. This is the lens through which every cross-species question should be viewed: the issue is rarely whether the ferret will be hurt by a calm dog or cat, but whether the ferret will treat a smaller animal as prey, or whether a larger animal will treat the ferret as one. Everything below follows from that.

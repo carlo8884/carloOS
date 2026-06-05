@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function AdoptionVsBuyingPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="sources-overview">The Three Sources</h2>
           <p>
             Most people acquire a ferret from one of three places: a <strong>shelter or breed-specific rescue</strong>, a <strong>private breeder</strong>, or a <strong>pet store</strong> (which in much of North America means a large-scale commercially bred ferret). Each has a characteristic profile. None is automatically right — the best choice depends on whether you want a kit or are open to an adult, how much background information you need, and your stance on supporting rescue versus breeding. Before any of this, confirm ferrets are legal where you live (see <a href="/ownership/ferret-legality-by-state">legality by state</a>).
