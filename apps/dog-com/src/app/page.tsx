@@ -1,12 +1,16 @@
 /**
  * Dog.com Homepage — / (Owner's Operating System)
  *
- * Image-led, mobile-first reference rebuild (v2, 2026-06-03). Carlo rejected
- * v1 for reading "dark text-first" on a phone: the hero photo was hidden on
- * mobile (`hidden lg:block`). v2 fixes that — a strong dog photo is above the
- * fold on EVERY breakpoint, owner-path entry points are image-backed tiles,
- * and every major lower section carries real dog imagery instead of being a
- * pure text wall.
+ * Image-led, mobile-first reference rebuild (v3, 2026-06-05). Carlo rejected
+ * v2.1 (split-column hero) because on a phone it stacked text-first, dropping
+ * the dog photo below the fold and reading like a dark article index. v3 makes
+ * a real dog photo the FIRST + dominant thing after the nav on every
+ * breakpoint: a full-bleed hero (~62vh mobile) with the H1 + one primary CTA
+ * overlaid on a dark gradient scrim. No disclosure banner sits above it (the
+ * top inline disclosure was removed from layout.tsx; disclosure stays in the
+ * footer one-liner + in-context near buy boxes). Owner-path entry points,
+ * the 6-card breed grid, tools, health, nutrition, training, and product
+ * sections are all image-backed — no section is a text-only list.
  *
  * Reused routes (all verified to exist on origin/main):
  *   /breeds, /breeds/[slug], /breeds/[slug]/feeding, /breeds/[slug]/health
@@ -125,10 +129,13 @@ const OWNER_PATHS = [
   },
 ]
 
-// ─── Breed-risk featured (6 highest-traffic — text list) ─────────────────────
-// Rendered as text cards in the featured-dog band; per-breed photos are not
-// synced yet, so we lead the section with one real lifestyle photo instead of
-// a grid of empty per-breed slots.
+// ─── Breed-risk featured (6 highest-traffic — image grid) ────────────────────
+// v3 (Carlo phone review 2026-06-05): brought back a real visual breed grid.
+// Each card is a photo card. breed-labrador-retriever is a populated/real key;
+// the other five render the BRANDED placeholder (soft brand gradient + paw
+// glyph) which Carlo explicitly accepts as a designed fallback. Every card
+// looks intentional, and each photo swaps to a real one automatically once its
+// manifest key syncs on Carlo's machine.
 
 const FEATURED_BREEDS = [
   {
@@ -136,36 +143,42 @@ const FEATURED_BREEDS = [
     type: 'Sporting · Large',
     keyRisk: 'Cancer risk · hip dysplasia',
     href: '/breeds/golden-retriever',
+    manifestKey: 'dog-com:breed-golden-retriever',
   },
   {
     name: 'Labrador Retriever',
     type: 'Sporting · Large',
     keyRisk: 'Hip dysplasia · obesity',
     href: '/breeds/labrador-retriever',
+    manifestKey: 'dog-com:breed-labrador-retriever',
   },
   {
     name: 'French Bulldog',
     type: 'Non-Sporting · Small',
     keyRisk: 'Brachycephalic syndrome · IVDD',
     href: '/breeds/french-bulldog',
+    manifestKey: 'dog-com:breed-french-bulldog',
   },
   {
     name: 'German Shepherd',
     type: 'Herding · Large',
     keyRisk: 'Hip dysplasia · degenerative myelopathy',
     href: '/breeds/german-shepherd',
+    manifestKey: 'dog-com:breed-german-shepherd',
   },
   {
     name: 'Beagle',
     type: 'Hound · Small',
     keyRisk: 'Obesity · ear infections · IVDD',
     href: '/breeds/beagle',
+    manifestKey: 'dog-com:breed-beagle',
   },
   {
     name: 'Poodle',
     type: 'Non-Sporting · Varies',
     keyRisk: 'Addison\'s · bloat · hip dysplasia',
     href: '/breeds/poodle',
+    manifestKey: 'dog-com:breed-poodle',
   },
 ]
 
@@ -247,77 +260,109 @@ export default function HomePage() {
   return (
     <>
       <SchemaScript schema={homeSchema} />
-      {/* ── HERO: split-column masthead — image-led, mobile-first ──────────
-          Mobile: H1 + primary action + a large hero photo are ALL within the
-          first viewport (image is NOT hidden). Desktop: split column (text
-          left, generous photo right). The hero photo carries subtleCredit. */}
+      {/* ── HERO: full-bleed IMAGE-FIRST masthead (v3, Carlo phone review
+          2026-06-05) ─────────────────────────────────────────────────────
+          v2.1 was a split column (text left, photo right). On a phone that
+          stacks text-first, so the dog photo fell below the fold and the page
+          read as a dark article index. v3 makes a REAL dog photo the first,
+          dominant thing after the nav on EVERY breakpoint: a full-bleed hero
+          image (~62vh mobile / ~78vh desktop) with the H1 + one primary CTA
+          overlaid on a dark gradient scrim so copy stays legible over the
+          real photo. dog-com:hero is a populated/real key. The hero photo
+          carries subtleCredit (attribution present + clickable, QC §1). */}
+      <section className="relative bg-brand-dark">
+        {/* Full-bleed hero photo — first + dominant in the viewport. Uses the
+            inline variant with FILL_IMAGE overrides so the photo simply fills
+            this absolute, full-height wrapper (the 'full-bleed' variant's
+            w-screen/-ml-[50vw] transform fights an absolute parent). */}
+        <div
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+        >
+          <StockImage
+            manifestKey="dog-com:hero"
+            alt="A happy, healthy dog"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
+        </div>
+
+        {/* Dark gradient scrim — bottom-up so the overlaid H1 + CTA stay
+            legible over the real photo (or the branded placeholder). */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/25"
+        />
+        {/* Warm brand wash for depth */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse at 25% 75%, rgba(232,98,42,0.35) 0%, transparent 60%)',
+          }}
+        />
+
+        {/* Overlaid copy + primary action — pinned to the bottom of the photo */}
+        <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh] px-container-sm sm:px-container pt-16 pb-8 sm:pb-12">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Dog.com &mdash; Owner&apos;s reference
+            </span>
+          </div>
+          <h1
+            className="font-display font-black text-white tracking-tighter leading-[1.03] mb-4 max-w-3xl"
+            style={{
+              fontSize: 'clamp(34px, 6vw, 68px)',
+              textShadow: '0 2px 18px rgba(0,0,0,0.45)',
+            }}
+          >
+            Everything your dog needs you to know.
+          </h1>
+          <p
+            className="text-base sm:text-lg font-light text-white/85 leading-relaxed max-w-xl mb-6"
+            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
+          >
+            Decisions, not definitions. Symptoms, breed risks, a new puppy, a
+            senior dog, or a product call &mdash; we route you to sourced guidance.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/symptoms"
+              className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-6 py-3.5 rounded-lg no-underline hover:bg-brand-primary-light transition-colors duration-200 shadow-[0_6px_24px_rgba(232,98,42,0.4)]"
+            >
+              Start with symptoms
+              <IconArrowRight />
+            </Link>
+            <Link
+              href="/breeds"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-bold text-sm px-6 py-3.5 rounded-lg no-underline hover:bg-white/20 hover:border-white/40 transition-colors duration-200"
+            >
+              Find your breed
+              <IconArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OWNER-PATH TILES — image-backed entry points (dark band) ────── */}
       <section className="bg-brand-dark relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: 'radial-gradient(ellipse at 30% 30%, rgba(232,98,42,0.25) 0%, transparent 55%)',
+            backgroundImage: 'radial-gradient(ellipse at 70% 30%, rgba(232,98,42,0.25) 0%, transparent 55%)',
           }}
           aria-hidden="true"
         />
-
-        <div className="relative z-10 px-container-sm sm:px-container pt-10 sm:pt-16 pb-8">
-          <div className="grid lg:grid-cols-[5fr_4fr] gap-7 lg:gap-10 items-center">
-            {/* Left column — text + primary action */}
-            <div className="order-1">
-              <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-6 h-0.5 bg-brand-primary" />
-                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                  Dog.com &mdash; Owner&apos;s reference
-                </span>
-              </div>
-              <h1
-                className="font-display font-black text-white tracking-tighter leading-[1.05] mb-4"
-                style={{ fontSize: 'clamp(32px, 5.5vw, 64px)' }}
-              >
-                Everything your dog needs you to know.
-              </h1>
-              <p className="text-base sm:text-lg font-light text-white/65 leading-relaxed max-w-xl mb-6">
-                Decisions, not definitions. Pick where you are &mdash; symptoms, breed risks, a new
-                puppy, a senior dog, or a product call &mdash; and we&apos;ll route you to sourced
-                guidance.
-              </p>
-              {/* Primary action — above the fold on mobile */}
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/symptoms"
-                  className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded-lg no-underline hover:bg-brand-primary-light transition-colors duration-200"
-                >
-                  Start with symptoms
-                  <IconArrowRight />
-                </Link>
-                <Link
-                  href="/breeds"
-                  className="inline-flex items-center gap-2 bg-white/[0.08] border border-white/15 text-white font-bold text-sm px-6 py-3 rounded-lg no-underline hover:bg-white/[0.14] hover:border-white/30 transition-colors duration-200"
-                >
-                  Find your breed
-                  <IconArrowRight />
-                </Link>
-              </div>
-            </div>
-
-            {/* Right column — flagship photo, prominent on ALL breakpoints */}
-            <div className="order-2">
-              <div className={`rounded-xl overflow-hidden ring-1 ring-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.45)] ${FILL_IMAGE}`}>
-                <StockImage
-                  manifestKey="dog-com:hero"
-                  alt="A happy, healthy dog"
-                  aspect="4:3"
-                  variant="wide"
-                  priority
-                  subtleCredit
-                />
-              </div>
-            </div>
+        <div className="relative z-10 px-container-sm sm:px-container pt-12 pb-16">
+          <div className="flex items-center gap-2.5 mb-5">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+              Where are you starting?
+            </span>
           </div>
-        </div>
-
-        {/* Owner-path cards — image-backed tiles, full width below the hero */}
-        <div className="relative z-10 px-container-sm sm:px-container pb-16">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {OWNER_PATHS.map((path) => (
               <Link
@@ -525,12 +570,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BREED-SPECIFIC RISK CENTER — featured-dog editorial band ──────
-          v2.1: the old 6-portrait grid leaned on per-breed manifest keys that
-          are not synced yet (only breed-labrador is real), so it rendered as a
-          wall of placeholders. Rebuilt as a featured-dog band: ONE large real
-          lifestyle photo (category-breeds / golden) carries the emotion, and
-          the 6 breeds render as a clean, fast text list. No empty image slots. */}
+      {/* ── BREED-SPECIFIC RISK CENTER — real visual breed grid ──────────
+          v3 (Carlo phone review 2026-06-05): brought back a 6-card breed photo
+          grid. Each card carries a breed photo (real for labrador; branded
+          placeholder for the rest — Carlo-accepted designed fallback) with a
+          bottom-up scrim so the breed name + risk stay legible over any photo.
+          subtleCredit keeps attribution present + clickable (QC §1). */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
@@ -553,48 +598,38 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
-          {/* Featured-dog photo panel (real: category-breeds / golden) */}
-          <Link
-            href="/breeds/golden-retriever"
-            className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary transition-all duration-200 min-h-[280px] ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
-          >
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
-              <StockImage
-                manifestKey="dog-com:category-breeds"
-                alt="Golden Retriever portrait"
-                aspect="4:3"
-                subtleCredit
-              />
-            </div>
-            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-            <div className="relative z-10 flex flex-col justify-end h-full min-h-[280px] p-5">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">Most-searched breed</div>
-              <div className="font-display font-bold text-white text-xl leading-tight mb-1">Golden Retriever</div>
-              <div className="text-xs text-white/75 leading-relaxed">Cancer risk and hip dysplasia drive the screening schedule — see what to test, and when.</div>
-            </div>
-          </Link>
-
-          {/* Breed risk list — clean text cards, no per-breed placeholder slots */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {FEATURED_BREEDS.map((breed) => (
-              <Link
-                key={breed.name}
-                href={breed.href}
-                className="group block bg-brand-white border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
-              >
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {FEATURED_BREEDS.map((breed) => (
+            <Link
+              key={breed.name}
+              href={breed.href}
+              className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary hover:shadow-card transition-all duration-200 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+            >
+              {/* Breed photo (real or branded placeholder) fills the card */}
+              <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
+                <StockImage
+                  manifestKey={breed.manifestKey}
+                  alt={`${breed.name} portrait`}
+                  aspect="4:3"
+                  subtleCredit
+                />
+              </div>
+              {/* Bottom-up scrim keeps the label legible over any photo */}
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+              {/* Label */}
+              <div className="relative z-10 flex flex-col justify-end min-h-[180px] sm:min-h-[200px] p-4">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
                   {breed.type}
                 </div>
-                <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                <div className="font-display font-bold text-white text-base sm:text-lg mb-1 leading-tight">
                   {breed.name}
                 </div>
-                <div className="text-xs text-brand-text-mid leading-snug">
+                <div className="text-xs text-white/75 leading-snug">
                   Key risks: {breed.keyRisk}
                 </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
