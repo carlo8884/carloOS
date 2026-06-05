@@ -7,6 +7,7 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,6 +30,27 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-28T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
 })
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "U.S. Food and Drug Administration, Center for Veterinary Medicine. Pet Food Labels — General and Animal Food Ingredients: Regulatory Framework.",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+]
 
 export default function AafcoCompletenessExplainedPage() {
   return (
@@ -346,27 +368,7 @@ export default function AafcoCompletenessExplainedPage() {
           weighting is published on the <a href="/guides/methodology">methodology page</a>.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication.</em>
-            Chapter 4 (Model Feed Bill), Chapter 6 (Model Regulations for Pet Food and Specialty Pet
-            Food), Dog and Cat Food Nutrient Profiles.
-          </li>
-          <li>
-            World Small Animal Veterinary Association Global Nutrition Committee.
-            <em> Guidelines on Selecting Pet Foods</em> and the <em>Recommendations on Selecting Pet Foods</em>
-            owner handout.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Pet Food Labels —
-            General</em> and <em>Animal Food Ingredients: Regulatory Framework</em>.
-          </li>
-          <li>
-            National Research Council. <em>Nutrient Requirements of Dogs and Cats.</em> National
-            Academies Press, 2006.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Therapeutic diets, life-stage transitions for animals with diagnosed disease, and breed-specific

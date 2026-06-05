@@ -6,6 +6,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -28,6 +29,39 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-29T00:00:00Z',
   modifiedAt: '2026-05-29T00:00:00Z',
 })
+
+const SOURCES = [
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "Nutrient Requirements of Dogs and Cats",
+      url: "https://nap.nationalacademies.org/catalog/10668/nutrient-requirements-of-dogs-and-cats",
+      publisher: "National Research Council, National Academies Press, 2006",
+    },
+    {
+      label: "FDA Investigation: Potential Link Between Certain Diets and Canine Dilated Cardiomyopathy",
+      url: "https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy",
+      publisher: "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    },
+    {
+      label: "EFSA Scientific opinions on insect-derived proteins and novel feed ingredients",
+      url: "https://www.efsa.europa.eu/en/topics/topic/animal-feed",
+      publisher: "European Food Safety Authority",
+    },
+    {
+      label: "Olivry T, Bizikova P. A systematic review of reduced allergenicity and clinical benefit of hydrolyzed protein diets in dogs.",
+      url: "https://doi.org/10.1111/vde.12042",
+      publisher: "Veterinary Dermatology, 2015",
+    },
+]
 
 export default function AnimalProteinSourcesPage() {
   return (
@@ -411,41 +445,7 @@ export default function AnimalProteinSourcesPage() {
           </li>
         </ol>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 6 (ingredient definitions: meat, meat meal, poultry, poultry by-product meal,
-            fish meal, and species-named variants); Chapter 4 (nutritional adequacy
-            substantiation). Section 9.36 (meat), 9.40 (meat meal), 9.71 (poultry by-products),
-            9.74 (poultry by-product meal), and the 2021 dried black soldier fly larvae addition.
-          </li>
-          <li>
-            World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee.
-            <em> Global Nutrition Guidelines</em>; <em>Recommendations on Selecting Pet Foods</em>.
-          </li>
-          <li>
-            National Research Council. <em>Nutrient Requirements of Dogs and Cats</em> (2006).
-            Authoritative reference on species-specific amino-acid and micronutrient
-            requirements; underlies the AAFCO profile values.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. Guidance on pet
-            food ingredient and labeling regulations; FDA position on by-product ingredients;
-            <em> FDA Provides Update on Investigation into Potential Connection Between Certain
-            Diets and Cases of Canine Heart Disease</em> (27 June 2019).
-          </li>
-          <li>
-            European Food Safety Authority (EFSA). Scientific opinions on insect-derived proteins
-            in feed; <em>Risk profile related to production and consumption of insects as food
-            and feed</em> (2015) and subsequent updates.
-          </li>
-          <li>
-            Olivry T, Bizikova P. <em>A systematic review of the evidence of reduced
-            allergenicity and clinical benefit of food hydrolysates in dogs with cutaneous
-            adverse food reactions</em>. Veterinary Dermatology (2010) and subsequent reviews.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice.
           Diet selection for a specific animal — especially one with diagnosed food allergy,

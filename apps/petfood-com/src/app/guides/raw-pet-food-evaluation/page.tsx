@@ -9,6 +9,7 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -53,6 +54,40 @@ const schema = combineSchemas(
   }),
   buildFAQSchema({ questions: FAQ }),
 )
+
+const SOURCES = [
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "American Veterinary Medical Association. AVMA Policy on Raw or Undercooked Animal-Source Protein in Cat and Dog Diets (2012, reaffirmed periodically).",
+    },
+    {
+      label: "AAHA/ACVIM Consensus Guidelines — applicable condition-specific nutrition and management",
+      url: "https://www.aaha.org/veterinary-resources/guidelines/",
+      publisher: "American Animal Hospital Association / American College of Veterinary Internal Medicine",
+    },
+    {
+      label: "U.S. Food and Drug Administration, Center for Veterinary Medicine. Get the Facts! Raw Pet Food Diets can be Dangerous to You and Your Pet; raw pet food surveillance studies (2010-2012 and subsequent); Recalls, Market Withdrawals and Safety Alerts database (Animal & Veterinary).",
+    },
+    {
+      label: "Stockman J, Fascetti AJ, Kass PH, Larsen JA. Evaluation of recipes of home- prepared maintenance diets for dogs. Journal of the American Veterinary Medical Association (2013), 242(11):1500-1505.",
+    },
+    {
+      label: "Finley R, Reid-Smith R, Weese JS. Human health implications of Salmonella- contaminated natural pet treats and raw pet food. Clinical Infectious Diseases (2006); Finley R, Ribble C, Aramini J, et al. The risk of salmonellae shedding by dogs fed Salmonella-contaminated commercial raw food diets. Canadian Veterinary Journal (2007), 48(1):69-75.",
+    },
+    {
+      label: "Centers for Disease Control and Prevention. Guidance on Salmonella, Listeria, and Campylobacter transmission in households with pets; pet-associated zoonotic infection surveillance.",
+    },
+    {
+      label: "Pedrinelli V, Gomes M de OS, Carciofi AC. Analysis of recipes of home-prepared diets for dogs and cats. Journal of Nutritional Science (2017) and subsequent replications of the Stockman methodology.",
+    },
+    {
+      label: "Freeman LM, Chandler ML, Hamper BA, Weeth LP. Current knowledge about the risks and benefits of raw meat-based diets for dogs and cats. Journal of the American Veterinary Medical Association (2013), 243(11):1549-1558.",
+    },
+]
 
 export default function RawPetFoodEvaluationPage() {
   return (
@@ -456,55 +491,7 @@ export default function RawPetFoodEvaluationPage() {
           settle the population-level question.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee.
-            <em> Recommendations on Selecting Pet Foods</em>; <em>Global Nutrition Guidelines</em>;
-            guidance on raw-meat-based diets.
-          </li>
-          <li>
-            American Veterinary Medical Association. <em>AVMA Policy on Raw or Undercooked
-            Animal-Source Protein in Cat and Dog Diets</em> (2012, reaffirmed periodically).
-          </li>
-          <li>
-            American Animal Hospital Association. Published position statements on raw feeding;
-            AAHA Nutritional Assessment Guidelines.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Get the
-            Facts! Raw Pet Food Diets can be Dangerous to You and Your Pet</em>; raw pet food
-            surveillance studies (2010-2012 and subsequent); <em>Recalls, Market Withdrawals
-            and Safety Alerts</em> database (Animal &amp; Veterinary).
-          </li>
-          <li>
-            Stockman J, Fascetti AJ, Kass PH, Larsen JA. <em>Evaluation of recipes of home-
-            prepared maintenance diets for dogs</em>. Journal of the American Veterinary
-            Medical Association (2013), 242(11):1500-1505.
-          </li>
-          <li>
-            Finley R, Reid-Smith R, Weese JS. <em>Human health implications of Salmonella-
-            contaminated natural pet treats and raw pet food</em>. Clinical Infectious Diseases
-            (2006); Finley R, Ribble C, Aramini J, et al. <em>The risk of salmonellae
-            shedding by dogs fed Salmonella-contaminated commercial raw food diets</em>.
-            Canadian Veterinary Journal (2007), 48(1):69-75.
-          </li>
-          <li>
-            Centers for Disease Control and Prevention. Guidance on Salmonella, Listeria, and
-            Campylobacter transmission in households with pets; pet-associated zoonotic
-            infection surveillance.
-          </li>
-          <li>
-            Pedrinelli V, Gomes M de OS, Carciofi AC. <em>Analysis of recipes of home-prepared
-            diets for dogs and cats</em>. Journal of Nutritional Science (2017) and subsequent
-            replications of the Stockman methodology.
-          </li>
-          <li>
-            Freeman LM, Chandler ML, Hamper BA, Weeth LP. <em>Current knowledge about the
-            risks and benefits of raw meat-based diets for dogs and cats</em>. Journal of the
-            American Veterinary Medical Association (2013), 243(11):1549-1558.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice
           and we do not endorse or condemn raw feeding. The decision to feed raw is one for

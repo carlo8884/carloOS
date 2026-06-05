@@ -10,6 +10,7 @@ import {
   EmailCapture,
   BuyBox,
   AffiliateDisclosure,
+  ArticleSourcesList
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,6 +60,37 @@ const schema = combineSchemas(
   }),
   buildFAQSchema({ questions: FAQ }),
 )
+
+const SOURCES = [
+    {
+      label: "WSAVA Global Nutrition Guidelines and Recommendations on Selecting Pet Foods",
+      url: "https://wsava.org/committees/global-nutrition-committee/",
+      publisher: "World Small Animal Veterinary Association Global Nutrition Committee",
+    },
+    {
+      label: "U.S. Food and Drug Administration, Center for Veterinary Medicine. Recalls, Market Withdrawals and Safety Alerts database (Animal & Veterinary). Hill's January 2019 voluntary canned dog food recall (elevated vitamin D), expanded March 2019. Industry-wide 2007 melamine-contamination recalls (multiple brands including Royal Canin USA).",
+    },
+    {
+      label: "Colgate-Palmolive Company. Annual Reports and 10-K filings (NYSE: CL). Hill's Pet Nutrition segment financial disclosure.",
+    },
+    {
+      label: "Mars, Incorporated; Mars Petcare. Public communications and segment overviews. Royal Canin acquisition by Mars in 2002.",
+    },
+    {
+      label: "Global Food Safety Initiative. GFSI Benchmarking Requirements; FSSC 22000 and SQF scheme documentation.",
+    },
+    {
+      label: "International Renal Interest Society (IRIS). Staging and dietary management guidance referenced in the renal-diet discussion.",
+    },
+    {
+      label: "AAFCO Official Publication — Dog and Cat Food Nutrient Profiles (Ch. 4); Model Regulations for Pet Food (Ch. 6)",
+      url: "https://www.aafco.org/resources/publications/",
+      publisher: "Association of American Feed Control Officials, 2025",
+    },
+    {
+      label: "FDA Food Safety Modernization Act (FSMA) and the Pet Food Safety Working Group recommendations following the 2007 melamine contamination episode.",
+    },
+]
 
 export default function HillsVsRoyalCaninPage() {
   return (
@@ -480,46 +512,7 @@ export default function HillsVsRoyalCaninPage() {
           not support one.
         </p>
 
-        <h2 id="sources">Sources</h2>
-        <ul>
-          <li>
-            World Small Animal Veterinary Association (WSAVA) Global Nutrition Committee.
-            <em> Recommendations on Selecting Pet Foods</em>; <em>Global Nutrition Guidelines</em>.
-            Published guidance documents.
-          </li>
-          <li>
-            U.S. Food and Drug Administration, Center for Veterinary Medicine. <em>Recalls,
-            Market Withdrawals and Safety Alerts</em> database (Animal &amp; Veterinary).
-            Hill&apos;s January 2019 voluntary canned dog food recall (elevated vitamin D),
-            expanded March 2019. Industry-wide 2007 melamine-contamination recalls (multiple
-            brands including Royal Canin USA).
-          </li>
-          <li>
-            Colgate-Palmolive Company. Annual Reports and 10-K filings (NYSE: CL). Hill&apos;s
-            Pet Nutrition segment financial disclosure.
-          </li>
-          <li>
-            Mars, Incorporated; Mars Petcare. Public communications and segment overviews.
-            Royal Canin acquisition by Mars in 2002.
-          </li>
-          <li>
-            Global Food Safety Initiative. <em>GFSI Benchmarking Requirements</em>; FSSC 22000
-            and SQF scheme documentation.
-          </li>
-          <li>
-            International Renal Interest Society (IRIS). Staging and dietary management guidance
-            referenced in the renal-diet discussion.
-          </li>
-          <li>
-            Association of American Feed Control Officials. <em>2025 AAFCO Official Publication</em>,
-            Chapter 4 (AAFCO nutritional adequacy substantiation procedures: formulation and
-            feeding trial pathways).
-          </li>
-          <li>
-            FDA Food Safety Modernization Act (FSMA) and the Pet Food Safety Working Group
-            recommendations following the 2007 melamine contamination episode.
-          </li>
-        </ul>
+        <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualized veterinary advice and
           we do not endorse either brand. Selection of a therapeutic diet for a specific animal is
