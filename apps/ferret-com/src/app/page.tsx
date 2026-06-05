@@ -1,39 +1,42 @@
 /**
  * Ferret.com — homepage.
  *
- * Editorial reference site for ferret owners. Chocolate-amber palette,
- * Playfair Display + Source Sans 3, full-bleed sections.
+ * Image-led, mobile-first premium rebuild (Dog.com reference rollout,
+ * 2026-06-05). Follows the APPROVED Dog.com pattern (apps/dog-com/src/app/
+ * page.tsx, merged to main #487): a REAL ferret photo is the FIRST + dominant
+ * element after the nav on every breakpoint — a full-bleed hero (~62vh mobile /
+ * ~78vh desktop) with the H1 + one primary CTA overlaid on a dark gradient
+ * scrim. No disclosure banner sits above it (the top inline disclosure was
+ * already removed from layout.tsx; disclosure stays in the footer one-liner +
+ * in-context near monetized surfaces). Cluster hubs, featured categories, and
+ * the live tool are image-backed by REAL synced photography — no PROMINENT
+ * rendered image is a placeholder.
  *
- * Section order:
- *   1. Hero — H1 + tagline + dual CTAs
- *   2. Trust bar — dark masthead, 4 editorial claims
- *   3. Live tool — FerretFoodEvaluator inline (premium gate 3)
- *   4. Cluster hubs — six top-level authority hubs
- *   5. Featured categories grid (4 cards)
- *   6. Featured articles — 3 cornerstones with eyebrow + teaser
- *   7. Tools & Calculators — 3 feature cards (food-evaluator, cost-calculator, glossary)
- *   8. Email capture (homepage source)
- *   9. Editorial footer copy (separate from shared <Footer>)
+ * Adapted from the Dog reference to Ferret's brand:
+ *   - Chocolate-amber palette (CSS variables --brand-*; no new colors)
+ *   - Playfair Display + Source Sans 3
+ *   - Warm cream surfaces, indie-hobbyist-magazine voice
+ * Ferret's homepage keeps its inline-style / CSS-variable convention (the rest
+ * of the site is built that way) rather than copying Dog's Tailwind class set,
+ * so the existing brand tokens stay the single source of truth.
  *
- * Visual strategy (per COO photo-sourcing playbook, ops/handoffs/
- * 2026-05-29-photo-sourcing-playbook.md):
- * - Brand mood: "playful but careful (ferret ownership skews
- *   informed/dedicated). Closest analog: an indie hobbyist magazine."
- * - PHOTO SOURCE: Unsplash has ~5K ferret photos (verifiable subset);
- *   Wikimedia Commons via scientific name "Mustela putorius furo" is
- *   the highest-quality reference; Marshall Pet Products is the
- *   manufacturer affiliate.
- * - NONE of those IDs exist yet in the verified CarloOS Unsplash
- *   catalog, and verification of new IDs from inside the sandbox
- *   workflow is not possible (web search returns gallery pages, not
- *   direct CDN URLs). Per task hard constraint — "ferret photos are
- *   limited but Unsplash has ~5K — verifiable ones only" — the
- *   homepage stays CSS-only until Carlo's next browsing pass selects
- *   the keeper IDs from Unsplash directly.
- * - Cross-site reuse of dog/horse/lizard photos would violate visual
- *   differentiation per playbook ("reuse across sites breaks visual
- *   differentiation — avoid") and would actively undermine the indie-
- *   hobbyist brand mood. Editorial honesty > placeholder photos.
+ * Image strategy (QC §1 + Unsplash/Pexels TOS):
+ *   - All imagery comes from the committed manifest via <StockImage>. No
+ *     hardcoded URLs (trust-guard blocks hardcoded stock-CDN URLs).
+ *   - Prime visual areas (hero + image-backed tiles) pass `subtleCredit` so
+ *     attribution stays present + clickable but unobtrusive.
+ *   - Every text-over-image surface has a gradient scrim so copy stays legible.
+ *   - PROMINENT imagery uses only REAL synced ferret keys (verified to carry a
+ *     url in packages/ui/src/data/image-manifest.json):
+ *       hero, health-hero, care-hero, behavior-hero, colors-hero, diet-hero,
+ *       ownership-hero, care-diet-basics, health-insulinoma, care-cage-setup.
+ *     The not-yet-synced keys (tools-hero, first-year-hero, find-vet-hero,
+ *     glossary-hero) are NEVER passed to a prominent <StockImage>.
+ *
+ * Trust posture (QC §1): no fake authority, no AI-generated humans, no fake
+ * testing. Editorial byline stays "Ferret.com Editorial". FTC affiliate
+ * disclosure preserved in footer (shared <Footer showAffiliateDisclosure />)
+ * + every monetized page's in-context AffiliateDisclosure.
  */
 
 import type { Metadata } from 'next'
@@ -67,55 +70,77 @@ const TRUST_CLAIMS = [
   'No marketplace listings here',
 ]
 
-// ── Cluster hubs ────────────────────────────────────────────────────────────
-// The six top-level authority hubs. Surfaced on the homepage so the site reads
-// as complete/deep on first load and every cluster has a homepage entry point
-// (hub → cluster → spoke internal-link graph, per CLAUDE.md §6). These point at
-// the hub index pages only; the per-hub card arrays live on each hub's own
-// page.tsx (owned by the content agents).
+// ── Owner-path / cluster hubs (image-backed entry tiles) ─────────────────────
+// The six top-level authority hubs. Each tile is image-backed by a REAL synced
+// hub photo (hub → cluster → spoke internal-link graph, per CLAUDE.md §6).
+// These point at the hub index pages only; per-hub card arrays live on each
+// hub's own page.tsx (owned by the content agents).
 
 const HUBS = [
   {
     href: '/health',
     label: 'Health',
     blurb: 'Insulinoma, adrenal disease, lymphoma, dental — conditions, diagnosis, and treatment ladders.',
+    manifestKey: 'ferret-com:health-hero',
+    imageAlt: 'Ferret health reference',
+    cta: 'Browse health',
   },
   {
     href: '/care',
     label: 'Care',
     blurb: 'Cage setup, litter training, grooming, exercise, and the ferret-proofing checklist.',
+    manifestKey: 'ferret-com:care-hero',
+    imageAlt: 'Ferret care reference',
+    cta: 'Browse care',
   },
   {
     href: '/behavior',
     label: 'Behavior',
     blurb: 'Training, bonding, nipping, and reading the body language of a working-curious carnivore.',
+    manifestKey: 'ferret-com:behavior-hero',
+    imageAlt: 'Ferret behavior reference',
+    cta: 'Browse behavior',
   },
   {
     href: '/colors',
     label: 'Colors',
     blurb: 'Coat colors, patterns, and markings — sable, albino, panda, blaze, and the rest.',
+    manifestKey: 'ferret-com:colors-hero',
+    imageAlt: 'Ferret coat colors',
+    cta: 'Browse colors',
   },
   {
     href: '/diet',
     label: 'Diet',
     blurb: 'Obligate-carnivore feeding — macros, kibble vs. raw, treats, and what to never feed.',
+    manifestKey: 'ferret-com:diet-hero',
+    imageAlt: 'Ferret diet reference',
+    cta: 'Browse diet',
   },
   {
     href: '/ownership',
     label: 'Ownership',
     blurb: 'Adoption, costs, legality, supplies, and what the first year of ownership actually demands.',
+    manifestKey: 'ferret-com:ownership-hero',
+    imageAlt: 'Ferret ownership reference',
+    cta: 'Browse ownership',
   },
 ]
 
-// ── Featured categories ─────────────────────────────────────────────────────
+// ── Featured categories (image-backed) ───────────────────────────────────────
+// Four pillar cards. The first three are backed by REAL synced photography;
+// the First-Year Schedule card stays a premium text card because its dedicated
+// key (first-year-hero) has not synced — it is never passed to a rendered photo.
 
-const CATEGORIES = [
+const PHOTO_CATEGORIES = [
   {
     href: '/care/diet-basics',
     eyebrow: 'Care',
     title: 'Diet & Nutrition',
     description:
       'Obligate carnivore feeding — what to buy, what to avoid, and why high-carb diets matter for insulinoma risk.',
+    manifestKey: 'ferret-com:care-diet-basics',
+    imageAlt: 'Ferret diet and nutrition',
   },
   {
     href: '/health/insulinoma',
@@ -123,6 +148,8 @@ const CATEGORIES = [
     title: 'Health Conditions',
     description:
       'The middle-age neoplasms — insulinoma, adrenal disease, dental — recognition, diagnosis, and treatment ladders.',
+    manifestKey: 'ferret-com:health-insulinoma',
+    imageAlt: 'Ferret health conditions',
   },
   {
     href: '/care/cage-setup',
@@ -130,15 +157,19 @@ const CATEGORIES = [
     title: 'Housing & Gear',
     description:
       'Cage minimums, bar spacing, hammocks over bedding, litter, and the ferret-proofing list first-timers miss.',
-  },
-  {
-    href: '/first-year-schedule',
-    eyebrow: 'Roadmap',
-    title: 'First-Year Schedule',
-    description:
-      '52-week structured calendar — vaccines, neuter timing, dental onset, the insulinoma watch window.',
+    manifestKey: 'ferret-com:care-cage-setup',
+    imageAlt: 'Ferret housing and cage setup',
   },
 ]
+
+// First-Year Schedule — premium TEXT card (no image slot; its key isn't synced).
+const ROADMAP_CARD = {
+  href: '/first-year-schedule',
+  eyebrow: 'Roadmap',
+  title: 'First-Year Schedule',
+  description:
+    '52-week structured calendar — vaccines, neuter timing, dental onset, the insulinoma watch window.',
+}
 
 // ── Featured articles ───────────────────────────────────────────────────────
 
@@ -148,7 +179,7 @@ const FEATURED_ARTICLES = [
     eyebrow: 'Ferret Care',
     title: 'Diet Basics: Feeding an Obligate Carnivore',
     teaser:
-      'Ferrets need 32–40% protein, 18–22% fat, under 3% carbohydrate. The carbohydrate target is the one most owners miss — and it is the lifestyle-level variable most consistently linked to insulinoma risk in middle age.',
+      'Ferrets need 32-40% protein, 18-22% fat, under 3% carbohydrate. The carbohydrate target is the one most owners miss — and it is the lifestyle-level variable most consistently linked to insulinoma risk in middle age.',
     readTime: '11 min read',
   },
   {
@@ -156,7 +187,7 @@ const FEATURED_ARTICLES = [
     eyebrow: 'Ferret Health',
     title: 'Insulinoma: The Long-Term Watch Condition',
     teaser:
-      'The most common neoplasm in middle-aged ferrets. Clinical signs are easily mistaken for "old age slowing down." Fasting-glucose thresholds, the prednisone–diazoxide–surgery treatment ladder, and emergency hypoglycemia response.',
+      'The most common neoplasm in middle-aged ferrets. Clinical signs are easily mistaken for "old age slowing down." Fasting-glucose thresholds, the prednisone-diazoxide-surgery treatment ladder, and emergency hypoglycemia response.',
     readTime: '14 min read',
   },
   {
@@ -169,103 +200,153 @@ const FEATURED_ARTICLES = [
   },
 ]
 
+// Strip StockImage's outer margins (it renders my-8 on both the <figure> and
+// the pending-sync placeholder <div>) so it fills a tile edge-to-edge.
+const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
+
 // ── Component ───────────────────────────────────────────────────────────────
 
 export default function HomePage() {
   return (
     <>
       <SchemaScript schema={homeSchema} />
+
       {/* ════════════════════════════════════════════════════════════════
-          HERO
+          HERO — full-bleed IMAGE-FIRST masthead (Dog reference #487)
+          A REAL ferret photo (ferret-com:hero) is the first + dominant thing
+          after the nav on EVERY breakpoint. H1 + one primary CTA overlaid on a
+          dark gradient scrim so copy stays legible over the real photo. The
+          hero carries subtleCredit (attribution present + clickable, QC §1).
           ════════════════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background:
-            'linear-gradient(180deg, var(--brand-surface) 0%, var(--brand-white) 100%)',
-          padding: 'clamp(72px, 10vw, 120px) 24px clamp(60px, 8vw, 96px)',
-          borderBottom: '1px solid var(--brand-border)',
-        }}
-      >
-        <div style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ marginBottom: '24px' }}>
-            <span className="eyebrow">
-              <span className="eyebrow-rule" />
-              Research-based ferret reference
+      <section style={{ position: 'relative', background: 'var(--brand-dark)' }}>
+        {/* Full-bleed hero photo — fills this absolute, full-height wrapper.
+            Uses the inline variant with FILL_IMAGE overrides so the photo
+            simply fills the parent (the 'full-bleed' variant's transform
+            fights an absolute parent). */}
+        <div
+          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          style={{ position: 'absolute', inset: 0 }}
+        >
+          <StockImage
+            manifestKey="ferret-com:hero"
+            alt="A curious, healthy ferret"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
+        </div>
+
+        {/* Dark gradient scrim — bottom-up so the overlaid H1 + CTA stay legible. */}
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'linear-gradient(to top, var(--brand-dark) 0%, rgba(30,20,10,0.66) 45%, rgba(30,20,10,0.22) 100%)',
+          }}
+        />
+        {/* Warm amber wash for depth */}
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            opacity: 0.28,
+            backgroundImage:
+              'radial-gradient(ellipse at 22% 78%, rgba(201,157,95,0.4) 0%, transparent 60%)',
+          }}
+        />
+
+        {/* Overlaid copy + primary action — pinned to the bottom of the photo */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            minHeight: 'clamp(62vh, 70vh, 78vh)',
+            maxWidth: '1180px',
+            margin: '0 auto',
+            padding: 'clamp(64px, 9vw, 88px) clamp(20px, 5vw, 40px) clamp(36px, 5vw, 56px)',
+          }}
+        >
+          <div style={{ marginBottom: '18px' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                fontSize: '0.72rem',
+                fontWeight: 700,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--brand-amber)',
+              }}
+            >
+              <span
+                aria-hidden
+                style={{ display: 'inline-block', width: '24px', height: '2px', background: 'var(--brand-amber)', flexShrink: 0 }}
+              />
+              Ferret.com — Owner&apos;s reference
             </span>
           </div>
 
           <h1
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.5rem, 6.5vw, 4.5rem)',
+              fontSize: 'clamp(2.25rem, 6vw, 4.25rem)',
               fontWeight: 900,
               letterSpacing: '-0.025em',
               lineHeight: 1.04,
-              color: 'var(--brand-text-dark)',
-              marginBottom: '20px',
+              color: 'rgba(251, 245, 232, 0.98)',
+              maxWidth: '20ch',
+              margin: '0 0 18px',
+              textShadow: '0 2px 18px rgba(0,0,0,0.45)',
             }}
           >
-            Ferret.com
+            Everything a ferret needs you to know.
           </h1>
 
           <p
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.25rem, 2.4vw, 1.75rem)',
+              fontSize: 'clamp(1.0625rem, 2.2vw, 1.5rem)',
               fontWeight: 400,
               fontStyle: 'italic',
-              color: 'var(--brand-text-mid)',
-              marginBottom: '28px',
-              lineHeight: 1.3,
+              lineHeight: 1.4,
+              color: 'rgba(251, 245, 232, 0.86)',
+              maxWidth: '34ch',
+              margin: '0 0 28px',
+              textShadow: '0 1px 10px rgba(0,0,0,0.5)',
             }}
           >
-            Research-based reference for ferret owners.
+            Diet, health, housing, and the conditions that surface in years three
+            through seven — grounded in exotic-mammal veterinary literature.
           </p>
 
-          <p
-            style={{
-              fontSize: '1.0625rem',
-              lineHeight: 1.7,
-              color: 'var(--brand-text-mid)',
-              maxWidth: '680px',
-              margin: '0 auto 40px',
-            }}
-          >
-            Most ferret information online is either an outdated forum thread or a
-            pet-store brand mouthpiece. Ferret.com is the modern alternative — an
-            editorial reference grounded in exotic-mammal veterinary literature,
-            written for owners who want straight answers about diet, health,
-            housing, and the conditions that surface in years three through seven.
-          </p>
-
-          <div
-            style={{
-              display: 'flex',
-              gap: '14px',
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
             <Link
               href="/first-year-schedule"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'var(--brand-primary)',
-                color: 'var(--brand-white)',
-                padding: '16px 28px',
+                background: 'var(--brand-amber)',
+                color: 'var(--brand-dark)',
+                padding: '15px 26px',
                 borderRadius: '8px',
                 fontWeight: 700,
                 fontSize: '1rem',
                 textDecoration: 'none',
-                border: '2px solid var(--brand-primary)',
-                transition: 'all 0.2s ease',
-                boxShadow: '0 4px 16px rgba(92, 58, 30, 0.18)',
+                border: '2px solid var(--brand-amber)',
+                boxShadow: '0 6px 24px rgba(201,157,95,0.35)',
               }}
             >
               Get the first-year schedule
-              <span aria-hidden>→</span>
+              <span aria-hidden>&rarr;</span>
             </Link>
             <Link
               href="/care/diet-basics"
@@ -273,28 +354,19 @@ export default function HomePage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'transparent',
-                color: 'var(--brand-primary)',
-                padding: '16px 28px',
+                background: 'rgba(251, 245, 232, 0.1)',
+                color: 'rgba(251, 245, 232, 0.97)',
+                padding: '15px 26px',
                 borderRadius: '8px',
                 fontWeight: 700,
                 fontSize: '1rem',
                 textDecoration: 'none',
-                border: '2px solid var(--brand-amber)',
-                transition: 'all 0.2s ease',
+                border: '1px solid rgba(251, 245, 232, 0.28)',
+                backdropFilter: 'blur(4px)',
               }}
             >
               Read the diet guide
             </Link>
-          </div>
-
-          <div style={{ maxWidth: '880px', margin: '48px auto 0' }}>
-            <StockImage
-              manifestKey="ferret-com:hero"
-              aspect="16:9"
-              variant="wide"
-              priority
-            />
           </div>
         </div>
       </section>
@@ -305,7 +377,8 @@ export default function HomePage() {
       <section
         style={{
           background: 'var(--brand-dark)',
-          padding: '28px 24px',
+          padding: '24px',
+          borderTop: '1px solid rgba(201, 157, 95, 0.18)',
           borderBottom: '1px solid rgba(201, 157, 95, 0.18)',
         }}
       >
@@ -318,7 +391,7 @@ export default function HomePage() {
             marginInline: 'auto',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '18px 32px',
+            gap: '14px 32px',
           }}
         >
           {TRUST_CLAIMS.map((claim) => (
@@ -334,20 +407,168 @@ export default function HomePage() {
                 letterSpacing: '0.01em',
               }}
             >
-              <span
-                aria-hidden
-                style={{
-                  color: 'var(--brand-amber)',
-                  fontSize: '1rem',
-                  fontWeight: 700,
-                }}
-              >
+              <span aria-hidden style={{ color: 'var(--brand-amber)', fontSize: '1rem', fontWeight: 700 }}>
                 ✓
               </span>
               {claim}
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          CLUSTER HUBS — image-backed entry tiles (Dog owner-path pattern)
+          Six top-level authority hubs, each backed by a REAL synced hub photo
+          with a bottom-up scrim keeping the label legible over the image.
+          ════════════════════════════════════════════════════════════════ */}
+      <section style={{ background: 'var(--brand-dark)', position: 'relative', overflow: 'hidden' }}>
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            opacity: 0.1,
+            backgroundImage: 'radial-gradient(ellipse at 72% 28%, rgba(201,157,95,0.3) 0%, transparent 55%)',
+          }}
+        />
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 10,
+            maxWidth: '1180px',
+            margin: '0 auto',
+            padding: 'clamp(56px, 7vw, 80px) clamp(20px, 5vw, 40px)',
+          }}
+        >
+          <div style={{ marginBottom: '28px' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--brand-amber)',
+              }}
+            >
+              <span aria-hidden style={{ display: 'inline-block', width: '24px', height: '2px', background: 'var(--brand-amber)', flexShrink: 0 }} />
+              Explore the library
+            </span>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
+                fontWeight: 800,
+                letterSpacing: '-0.02em',
+                color: 'rgba(251, 245, 232, 0.97)',
+                lineHeight: 1.12,
+                margin: '14px 0 0',
+              }}
+            >
+              Six libraries, one reference
+            </h2>
+          </div>
+
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: '16px',
+            }}
+          >
+            {HUBS.map((hub) => (
+              <li key={hub.href}>
+                <Link
+                  href={hub.href}
+                  style={{
+                    position: 'relative',
+                    display: 'block',
+                    borderRadius: '14px',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    boxShadow: 'inset 0 0 0 1px rgba(251, 245, 232, 0.1)',
+                  }}
+                >
+                  {/* Real hub photo fills the tile */}
+                  <div
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    style={{ position: 'absolute', inset: 0 }}
+                  >
+                    <StockImage
+                      manifestKey={hub.manifestKey}
+                      alt={hub.imageAlt}
+                      aspect="3:4"
+                      variant="inline"
+                      subtleCredit
+                    />
+                  </div>
+                  {/* Bottom-up scrim — keeps label legible over any photo */}
+                  <div
+                    aria-hidden
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background:
+                        'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.4) 50%, rgba(30,20,10,0.1) 100%)',
+                    }}
+                  />
+                  {/* Label content */}
+                  <div
+                    style={{
+                      position: 'relative',
+                      zIndex: 10,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-end',
+                      minHeight: '230px',
+                      padding: '22px 22px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '1.5rem',
+                        fontWeight: 800,
+                        color: 'rgba(251, 245, 232, 0.98)',
+                        marginBottom: '8px',
+                        lineHeight: 1.15,
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {hub.label}
+                    </div>
+                    <p
+                      style={{
+                        fontSize: '0.875rem',
+                        lineHeight: 1.5,
+                        color: 'rgba(251, 245, 232, 0.78)',
+                        margin: '0 0 12px',
+                      }}
+                    >
+                      {hub.blurb}
+                    </p>
+                    <span
+                      style={{
+                        fontSize: '0.8125rem',
+                        fontWeight: 700,
+                        color: 'var(--brand-amber)',
+                        letterSpacing: '0.01em',
+                      }}
+                    >
+                      {hub.cta} &rarr;
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
@@ -364,7 +585,7 @@ export default function HomePage() {
           <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-primary)', margin: '0 0 12px' }}>
             Try it · Ferret food evaluator
           </p>
-          <h2 style={{ fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, color: 'var(--brand-text-dark)', margin: '0 0 12px', lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, color: 'var(--brand-text-dark)', margin: '0 0 12px', lineHeight: 1.1 }}>
             Is that food right for a ferret?
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--brand-text-mid)', margin: '0 0 28px', maxWidth: '42rem', lineHeight: 1.6 }}>
@@ -376,108 +597,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          CLUSTER HUBS — six top-level authority hubs
-          ════════════════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--brand-surface)',
-          padding: 'clamp(64px, 8vw, 96px) 24px',
-          borderBottom: '1px solid var(--brand-border)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <header style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <div style={{ marginBottom: '14px' }}>
-              <span className="eyebrow">
-                <span className="eyebrow-rule" />
-                Explore the library
-              </span>
-            </div>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.875rem, 3.5vw, 2.5rem)',
-                fontWeight: 800,
-                letterSpacing: '-0.015em',
-                color: 'var(--brand-text-dark)',
-                lineHeight: 1.15,
-                margin: 0,
-              }}
-            >
-              Six libraries, one reference
-            </h2>
-          </header>
-
-          <ul
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '20px',
-            }}
-          >
-            {HUBS.map((hub) => (
-              <li key={hub.href}>
-                <Link
-                  href={hub.href}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100%',
-                    padding: '26px 24px',
-                    background: 'var(--brand-white)',
-                    border: '1px solid var(--brand-border)',
-                    borderRadius: '14px',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    transition: 'all 0.22s ease',
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '1.5rem',
-                      fontWeight: 800,
-                      color: 'var(--brand-text-dark)',
-                      marginBottom: '10px',
-                      lineHeight: 1.2,
-                      letterSpacing: '-0.01em',
-                    }}
-                  >
-                    {hub.label}
-                  </div>
-                  <p
-                    style={{
-                      fontSize: '0.9375rem',
-                      lineHeight: 1.55,
-                      color: 'var(--brand-text-mid)',
-                      margin: '0 0 16px',
-                      flex: 1,
-                    }}
-                  >
-                    {hub.blurb}
-                  </p>
-                  <span
-                    style={{
-                      fontSize: '0.875rem',
-                      fontWeight: 700,
-                      color: 'var(--brand-primary)',
-                      letterSpacing: '0.01em',
-                    }}
-                  >
-                    Browse {hub.label.toLowerCase()} →
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════════════════════════════════
-          FEATURED CATEGORIES
+          FEATURED CATEGORIES — three image-backed pillars + one text card
           ════════════════════════════════════════════════════════════════ */}
       <section
         style={{
@@ -486,7 +606,7 @@ export default function HomePage() {
         }}
       >
         <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-          <header style={{ marginBottom: '48px', textAlign: 'center' }}>
+          <header style={{ marginBottom: '40px' }}>
             <div style={{ marginBottom: '14px' }}>
               <span className="eyebrow">
                 <span className="eyebrow-rule" />
@@ -514,96 +634,173 @@ export default function HomePage() {
               padding: 0,
               margin: 0,
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '20px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+              gap: '18px',
             }}
           >
-            {CATEGORIES.map((cat) => (
+            {PHOTO_CATEGORIES.map((cat) => (
               <li key={cat.href}>
                 <Link
                   href={cat.href}
                   style={{
-                    display: 'flex',
-                    flexDirection: 'column',
+                    position: 'relative',
+                    display: 'block',
                     height: '100%',
-                    padding: '28px 26px',
-                    background: 'var(--brand-surface)',
-                    border: '1px solid var(--brand-border)',
+                    minHeight: '300px',
                     borderRadius: '14px',
+                    overflow: 'hidden',
                     textDecoration: 'none',
                     color: 'inherit',
-                    transition: 'all 0.22s ease',
-                    position: 'relative',
-                    overflow: 'hidden',
+                    boxShadow: 'inset 0 0 0 1px var(--brand-border)',
                   }}
                 >
-                  <span
+                  <div
+                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+                    style={{ position: 'absolute', inset: 0 }}
+                  >
+                    <StockImage
+                      manifestKey={cat.manifestKey}
+                      alt={cat.imageAlt}
+                      aspect="3:4"
+                      variant="inline"
+                      subtleCredit
+                    />
+                  </div>
+                  <div
                     aria-hidden
                     style={{
                       position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '3px',
-                      background: 'var(--brand-amber)',
-                      opacity: 0.8,
+                      inset: 0,
+                      background:
+                        'linear-gradient(to top, rgba(30,20,10,0.9) 0%, rgba(30,20,10,0.35) 55%, rgba(30,20,10,0.08) 100%)',
                     }}
                   />
                   <div
                     style={{
-                      fontSize: '0.7rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.14em',
-                      textTransform: 'uppercase',
-                      color: 'var(--brand-amber-dark)',
-                      marginBottom: '10px',
+                      position: 'relative',
+                      zIndex: 10,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-end',
+                      height: '100%',
+                      minHeight: '300px',
+                      padding: '24px 22px',
                     }}
                   >
-                    {cat.eyebrow}
+                    <div
+                      style={{
+                        fontSize: '0.7rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: 'var(--brand-amber)',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      {cat.eyebrow}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '1.375rem',
+                        fontWeight: 800,
+                        color: 'rgba(251, 245, 232, 0.98)',
+                        marginBottom: '8px',
+                        lineHeight: 1.2,
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {cat.title}
+                    </div>
+                    <p
+                      style={{
+                        fontSize: '0.875rem',
+                        lineHeight: 1.5,
+                        color: 'rgba(251, 245, 232, 0.82)',
+                        margin: '0 0 12px',
+                      }}
+                    >
+                      {cat.description}
+                    </p>
+                    <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--brand-amber)', letterSpacing: '0.01em' }}>
+                      Read &rarr;
+                    </span>
                   </div>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '1.375rem',
-                      fontWeight: 800,
-                      color: 'var(--brand-text-dark)',
-                      marginBottom: '10px',
-                      lineHeight: 1.2,
-                      letterSpacing: '-0.01em',
-                    }}
-                  >
-                    {cat.title}
-                  </div>
-                  <p
-                    style={{
-                      fontSize: '0.9375rem',
-                      lineHeight: 1.55,
-                      color: 'var(--brand-text-mid)',
-                      margin: '0 0 16px',
-                      flex: 1,
-                    }}
-                  >
-                    {cat.description}
-                  </p>
-                  <span
-                    style={{
-                      fontSize: '0.875rem',
-                      fontWeight: 700,
-                      color: 'var(--brand-primary)',
-                      letterSpacing: '0.01em',
-                    }}
-                  >
-                    Read →
-                  </span>
                 </Link>
               </li>
             ))}
+
+            {/* First-Year Schedule — premium TEXT card (key not synced) */}
+            <li>
+              <Link
+                href={ROADMAP_CARD.href}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  minHeight: '300px',
+                  padding: '28px 26px',
+                  background: 'var(--brand-surface)',
+                  border: '1px solid var(--brand-border)',
+                  borderRadius: '14px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.22s ease',
+                }}
+              >
+                <span
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '3px',
+                    background: 'var(--brand-amber)',
+                    opacity: 0.85,
+                  }}
+                />
+                <div
+                  style={{
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: 'var(--brand-amber-dark)',
+                    marginBottom: '10px',
+                  }}
+                >
+                  {ROADMAP_CARD.eyebrow}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.375rem',
+                    fontWeight: 800,
+                    color: 'var(--brand-text-dark)',
+                    marginBottom: '10px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {ROADMAP_CARD.title}
+                </div>
+                <p style={{ fontSize: '0.9375rem', lineHeight: 1.55, color: 'var(--brand-text-mid)', margin: '0 0 16px', flex: 1 }}>
+                  {ROADMAP_CARD.description}
+                </p>
+                <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--brand-primary)', letterSpacing: '0.01em' }}>
+                  Open the schedule &rarr;
+                </span>
+              </Link>
+            </li>
           </ul>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          FEATURED ARTICLES — cornerstones
+          FEATURED ARTICLES — cornerstones (with a real care image panel)
           ════════════════════════════════════════════════════════════════ */}
       <section
         style={{
@@ -614,7 +811,7 @@ export default function HomePage() {
         }}
       >
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <header style={{ marginBottom: '48px' }}>
+          <header style={{ marginBottom: '36px' }}>
             <div style={{ marginBottom: '14px' }}>
               <span className="eyebrow">
                 <span className="eyebrow-rule" />
@@ -648,6 +845,61 @@ export default function HomePage() {
               pet-care templates.
             </p>
           </header>
+
+          {/* Real care-hero image banner above the article list */}
+          <Link
+            href="/care"
+            style={{
+              position: 'relative',
+              display: 'block',
+              borderRadius: '14px',
+              overflow: 'hidden',
+              textDecoration: 'none',
+              color: 'inherit',
+              minHeight: '180px',
+              marginBottom: '20px',
+              boxShadow: 'inset 0 0 0 1px var(--brand-border)',
+            }}
+          >
+            <div
+              className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
+              style={{ position: 'absolute', inset: 0 }}
+            >
+              <StockImage
+                manifestKey="ferret-com:care-hero"
+                alt="Ferret care reference"
+                aspect="16:9"
+                variant="inline"
+                subtleCredit
+              />
+            </div>
+            <div
+              aria-hidden
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(30,20,10,0.88) 0%, rgba(30,20,10,0.25) 60%, rgba(30,20,10,0.05) 100%)',
+              }}
+            />
+            <div
+              style={{
+                position: 'relative',
+                zIndex: 10,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                minHeight: '180px',
+                padding: '22px 22px',
+              }}
+            >
+              <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-amber)', marginBottom: '6px' }}>
+                Care hub
+              </div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: 'rgba(251, 245, 232, 0.98)', lineHeight: 1.2 }}>
+                The husbandry that keeps a ferret thriving.
+              </div>
+            </div>
+          </Link>
 
           <ul
             style={{
@@ -719,23 +971,11 @@ export default function HomePage() {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <span
-                        style={{
-                          fontSize: '0.8125rem',
-                          color: 'var(--brand-text-light)',
-                          fontWeight: 500,
-                        }}
-                      >
+                      <span style={{ fontSize: '0.8125rem', color: 'var(--brand-text-light)', fontWeight: 500 }}>
                         {article.readTime}
                       </span>
-                      <span
-                        style={{
-                          fontSize: '0.875rem',
-                          fontWeight: 700,
-                          color: 'var(--brand-primary)',
-                        }}
-                      >
-                        Read →
+                      <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--brand-primary)' }}>
+                        Read &rarr;
                       </span>
                     </div>
                   </div>
@@ -748,10 +988,8 @@ export default function HomePage() {
 
       {/* ════════════════════════════════════════════════════════════════
           TOOLS & CALCULATORS
-          Mirrors the Dog.com "Tools & Calculators" section pattern.
           The food evaluator runs inline above; this section surfaces the
-          standalone tool pages and the glossary as polished feature cards
-          so owners arriving from search can discover them from the homepage.
+          standalone tool pages and the glossary as polished feature cards.
           ════════════════════════════════════════════════════════════════ */}
       <section
         style={{
@@ -817,7 +1055,7 @@ export default function HomePage() {
               padding: 0,
               margin: 0,
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '20px',
             }}
           >
@@ -1080,7 +1318,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          EMAIL CAPTURE
+          EMAIL CAPTURE — env-gated (no empty surface when backend is off)
           ════════════════════════════════════════════════════════════════ */}
       {process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true' && (
       <section
