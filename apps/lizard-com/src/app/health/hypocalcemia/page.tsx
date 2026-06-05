@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Hypocalcemia and Metabolic Bone Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Metabolic Bone Diseases in Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/metabolic-bone-diseases-in-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Baines F.M. — UV-tool: evidence-based UVB and D3 recommendations for reptiles in captivity", publisher: "Journal of Zoo and Aquarium Research", url: "https://jzar.org/jzar/article/view/150" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Hypocalcemia in Reptiles — Tremors, Tetany | Lizard.com', description: 'Acute hypocalcemia (low blood calcium) in reptiles causes tremors, tetany, and seizures. Emergency calcium gluconate by injection. How to distinguish from MBD.', path: '/health/hypocalcemia', type: 'article' })
 
@@ -115,6 +122,7 @@ export default function HypocalcemiaPage() {
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+          <ArticleSourcesList sources={SOURCES} />
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Calcium Supplementation</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Reptile calcium-with-D3 and calcium-without-D3 powders (Repashy, Rep-Cal, Zoo Med). Dose per the husbandry schedule and veterinary direction. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

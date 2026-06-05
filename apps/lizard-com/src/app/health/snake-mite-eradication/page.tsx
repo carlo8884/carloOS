@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Parasitology: Ophionyssus natricis", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — External Parasites of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/external-parasites-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Ophionyssus natricis literature", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Snake Mites — Identification & Eradication | Lizard.com", description: "Snake mites (Ophionyssus natricis) are a common, fast-spreading external parasite. How to spot them, why quarantine matters, and the long road to eradication.", path: "/health/snake-mite-eradication", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites and Reptile Mites", description: "Identifying snake mites (Ophionyssus natricis), their life cycle, eradication strategy, and quarantine to prevent spread.", url: "https://lizard.com/health/snake-mite-eradication", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -65,12 +72,7 @@ export default function HealthSnakeMiteEradicationPage() {
             <li>{"Source animals from clean, reputable keepers and inspect at purchase"}</li>
             <li>{"Treat any mite sighting as an emergency containment situation before it spreads"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), parasitology chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, Ophionyssus natricis literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

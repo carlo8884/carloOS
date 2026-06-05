@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Dystocia and Reproductive Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Reproductive Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/reproductive-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Dystocia case series and reproductive medicine", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia) — Signs, Causes | Lizard.com', description: 'Egg binding (dystocia) is a life-threatening emergency in female reptiles. Signs, causes, and why this requires immediate veterinary care — not home treatment.', path: '/health/egg-binding', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Egg Binding in Reptiles (Dystocia)', description: 'Signs, causes, and emergency treatment for egg binding in reptiles.', url: 'https://lizard.com/health/egg-binding', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Egg Binding in Reptiles (Dystocia)', description: 'Signs, causes, and emergency treatment for egg binding in reptiles.', url: 'https://lizard.com/health/egg-binding', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function EggBindingPage() {
@@ -50,6 +58,7 @@ export default function EggBindingPage() {
 
         <h2>After Resolution — Preventing Recurrence</h2>
         <p>A female that has experienced egg binding once is at higher risk for recurrence. Options to reduce recurrence: hormonal suppression of follicle development (leuprolide acetate — a GnRH agonist administered by injection every 3–6 months by a veterinarian), surgical spay (complete ovariosalpingectomy eliminates the reproductive cycle permanently — the right choice for severely affected individuals), and consistent husbandry optimization (permanent laying site access, calcium supplementation, hydration).</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

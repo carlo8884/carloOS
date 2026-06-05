@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Stomatitis and Oral Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Bacterial Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/bacterial-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Jacobson E.R. — Infectious Diseases and Pathology of Reptiles: Color Atlas and Text, 2nd ed.", publisher: "CRC Press / Taylor & Francis", url: "https://www.taylorfrancis.com/books/mono/10.1201/9781315119632/infectious-diseases-pathology-reptiles-elliott-jacobson" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot) — Signs, Causes | Lizard.com', description: 'Stomatitis (mouth rot) is a bacterial infection of the oral cavity in reptiles. Yellow-white exudate in the mouth, swollen gums, and difficulty eating.', path: '/health/stomatitis', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Stomatitis in Reptiles (Mouth Rot)', description: 'Signs, causes, and treatment of infectious stomatitis (mouth rot) in reptiles.', url: 'https://lizard.com/health/stomatitis', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function StomatitisPage() {
@@ -45,6 +53,7 @@ export default function StomatitisPage() {
 
         <h2>Husbandry Correction — Preventing Recurrence</h2>
         <p>Treating stomatitis without correcting the underlying husbandry deficits that caused it results in recurrence. After treatment: verify temperatures with an infrared thermometer (not just an ambient air thermometer), review humidity and lighting, ensure appropriate hide availability to reduce stress, review diet and supplementation, and eliminate any situations causing oral injury (cage-biting: reduce stress, provide enrichment, consider whether the enclosure needs modification).</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

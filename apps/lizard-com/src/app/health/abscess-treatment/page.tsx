@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Abscesses and Infectious Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Bacterial Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/bacterial-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Aural abscess and infectious disease case reports", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Abscesses in Reptiles — Caseous Pus & Treatment | Lizard.com", description: "Reptile abscesses form firm, cheese-like pus that the body cannot drain on its own. Why they need surgical removal, common causes, and prevention.", path: "/health/abscess-treatment", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Abscesses in Reptiles", description: "Why reptile abscesses are solid (caseous), how they form, why they need surgical removal, and prevention.", url: "https://lizard.com/health/abscess-treatment", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -58,12 +65,7 @@ export default function HealthAbscessTreatmentPage() {
             <li>{"Inspect animals regularly and address wounds, burns, or swellings early with a reptile veterinarian"}</li>
           </ol>
           <p>{"Caught early and removed surgically, most reptile abscesses resolve well; left alone in the hope they will drain or heal, they persist and can seed deeper infection."}</p>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), infectious-disease and surgery chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, abscess and aural-abscess literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

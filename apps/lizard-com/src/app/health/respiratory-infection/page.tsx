@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Respiratory Diseases", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Respiratory Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/respiratory-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Jacobson E.R. — Infectious Diseases and Pathology of Reptiles: Color Atlas and Text, 2nd ed.", publisher: "CRC Press / Taylor & Francis", url: "https://www.taylorfrancis.com/books/mono/10.1201/9781315119632/infectious-diseases-pathology-reptiles-elliott-jacobson" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles — Wheezing | Lizard.com', description: 'Reptile respiratory infections: wheezing, mucus from nostrils, and open-mouth breathing. Almost always caused by incorrect temperatures or humidity.', path: '/health/respiratory-infection', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Respiratory Infections in Reptiles', description: 'Signs, causes, and treatment of respiratory infections in reptiles.', url: 'https://lizard.com/health/respiratory-infection', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function RespiratoryInfectionPage() {
@@ -44,6 +52,7 @@ export default function RespiratoryInfectionPage() {
 
         <h2>Mycoplasma in Chelonians</h2>
         <p>Tortoises and box turtles are susceptible to Mycoplasma agassizii — a specific respiratory pathogen that causes chronic upper respiratory tract disease (URTD). Signs include nasal discharge, open-mouth breathing, and conjunctivitis. Mycoplasma is not eliminated by standard antibiotics — it is managed with azithromycin or enrofloxacin that suppress it without clearing infection. Infected chelonians should not be mixed with Mycoplasma-naive populations — it is highly contagious and can devastate wild tortoise populations if captive animals are released.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Nutrition and Metabolic Bone Disease Chapters", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Baines F.M. — UV-tool: evidence-based UVB and vitamin D3 recommendations for reptiles in captivity", publisher: "Journal of Zoo and Aquarium Research", url: "https://jzar.org/jzar/article/view/150" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Merck Veterinary Manual — Nutritional Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-diseases-of-reptiles" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Calcium & D3 Supplementation for Reptiles | Lizard.com", description: "Supplementing reptiles with calcium, vitamin D3, and multivitamins: calcium with vs without D3, the UVB link, and avoiding over-supplementation.", path: "/health/calcium-d3-supplementation", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3 Supplementation for Reptiles", description: "How to use calcium, vitamin D3, and multivitamin supplements for reptiles, and how supplementation interacts with UVB.", url: "https://lizard.com/health/calcium-d3-supplementation", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -62,12 +69,7 @@ export default function HealthCalciumD3SupplementationPage() {
             <li>{"Excess vitamin A: skin and mucous-membrane problems from over-dosed multivitamins"}</li>
             <li>{"When growth, bone, or movement looks abnormal, have a reptile vet evaluate calcium and D3 status"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), nutrition and metabolic-bone-disease chapters."}</li>
-            <li>{"Baines, F. M., et al., UV index and vitamin D3 synthesis in reptiles."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Ophthalmology and Integumentary Disease", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Eye Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/eye-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Spectacle retention and ophthalmology references", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Retained Eye Caps in Snakes & Geckos | Lizard.com", description: "Retained eye caps (retained spectacles) are a common shedding problem in snakes and geckos. Causes, why never to peel them, and safe removal.", path: "/health/retained-eye-caps", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Retained Eye Caps (Retained Spectacles)", description: "Causes, recognition, safe management, and prevention of retained eye caps (spectacles) in snakes and geckos.", url: "https://lizard.com/health/retained-eye-caps", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -62,12 +69,7 @@ export default function HealthRetainedEyeCapsPage() {
             <li>{"Check the shed skin each cycle to confirm both clear eye caps came off"}</li>
             <li>{"Address mites and any eye irritation promptly, since they interfere with normal shedding"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), ophthalmology and integument chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, spectacle-retention references."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

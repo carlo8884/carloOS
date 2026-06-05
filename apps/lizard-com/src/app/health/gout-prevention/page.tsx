@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Renal Disease and Gout", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Urinary System Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/urinary-system-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Gout and renal disease case literature", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Gout in Reptiles — Causes and Prevention | Lizard.com", description: "Gout in reptiles comes from uric acid buildup, usually chronic dehydration or excess protein. Signs, why it is often irreversible, and prevention.", path: "/health/gout-prevention", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gout in Reptiles", description: "Causes, signs, and prevention of articular and visceral gout in reptiles from dehydration and dietary factors.", url: "https://lizard.com/health/gout-prevention", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -61,12 +68,7 @@ export default function HealthGoutPreventionPage() {
             <li>{"Monitor urates: consistently dry, scant, or discolored urates can signal dehydration well before gout develops"}</li>
           </ol>
           <p>{"Because gout is so often a one-way door, the practical message is preventive: a hydrated reptile on a correct diet rarely develops it, while a chronically dry, over-proteined animal is the classic candidate."}</p>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), renal disease and gout chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, gout case literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

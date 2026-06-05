@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Gastrointestinal Disease Chapters", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Gastrointestinal Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/gastrointestinal-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Impaction case reports and gastrointestinal references", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Constipation & Impaction — Prevention | Lizard.com", description: "Reptile constipation and impaction differ in cause and danger. How to tell them apart, the role of substrate, heat, and hydration, and when it is an emergency.", path: "/health/constipation-impaction", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Constipation and Impaction in Reptiles", description: "Distinguishing reptile constipation from true impaction, causes, prevention via husbandry, and emergency signs.", url: "https://lizard.com/health/constipation-impaction", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -71,12 +78,7 @@ export default function HealthConstipationImpactionPage() {
             <li>{"Supplement calcium correctly to remove substrate-seeking behavior"}</li>
             <li>{"Track defecation in a care log so you notice a slow-down early"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), gastrointestinal chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, impaction case reports."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

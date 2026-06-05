@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "CDC — Healthy Pets, Healthy People: Reptiles and Amphibians", publisher: "U.S. Centers for Disease Control and Prevention", url: "https://www.cdc.gov/healthy-pets/about/reptiles-and-amphibians.html" },
+  { label: "Merck Veterinary Manual — Salmonellosis in Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/bacterial-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Zoonoses", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Salmonella & Reptiles — Safe Handling | Lizard.com', description: 'All reptiles carry Salmonella naturally. Children under 5, pregnant women, elderly, and immunocompromised people are at highest risk.', path: '/health/salmonella-prevention', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Salmonella and Reptiles — Prevention Guide', description: 'CDC-recommended Salmonella prevention practices for reptile owners.', url: 'https://lizard.com/health/salmonella-prevention', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
 export default function SalmonellaPage() {
@@ -52,6 +60,7 @@ export default function SalmonellaPage() {
 
         <h2>Cleaning and Disinfection</h2>
         <p>Enclosure cleaning: remove the reptile to a secure temporary container. Remove and discard substrate (dispose in sealed bag). Clean all surfaces with a reptile-safe disinfectant (F10SC, Veterinary Formula Clinical Care, or diluted bleach solution at 1:32 with water — rinse thoroughly after bleach). Allow to dry completely before adding new substrate and returning the reptile. Do not use household cleaners (many contain phenols or other chemicals toxic to reptiles).</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
