@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Pathogens, AAFCO | Dog.com', description: 'Raw dog diets: Salmonella, Listeria, Campylobacter contamination, AAFCO completeness gaps, household risk, bone hazards, and harm-reduction guidance.', path: '/nutrition/raw-diet-risks', type: 'article' })
@@ -42,6 +42,7 @@ export default function RawDietRisksPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <div style={{ background: 'rgba(60, 90, 140, 0.06)', border: '1px solid rgba(60, 90, 140, 0.20)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '8px' }}>Scope</div>
             <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>This page describes published evidence on documented risks. It is informational and does not replace consultation with a veterinarian or a board-certified veterinary nutritionist (DACVN) about an individual dog&apos;s diet.</p>

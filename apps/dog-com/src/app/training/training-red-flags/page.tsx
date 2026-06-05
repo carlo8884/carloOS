@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Training Red Flags — Dominance Theory | Dog.com', description: 'What the behavioral science says about dominance theory, shock collars, prong collars, and alpha rolling — and what the alternatives actually accomplish.', path: '/training/training-red-flags', type: 'article' })
@@ -30,6 +30,7 @@ export default function TrainingRedFlagsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The AVSAB (American Veterinary Society of Animal Behavior) position statement on punishment summarizes the scientific consensus: &quot;The AVSAB recommends that veterinarians not refer clients to trainers or behavior consultants who routinely use punishment (including choke chains, prong collars, shock collars, alpha rolls, dominance downs, and other aversive methods).&quot; This is not a fringe position — it is the consensus of the professional veterinary behavior community.</p>
         {RED_FLAGS.map((r, i) => (
           <div key={r.flag} style={{ background: i % 2 === 0 ? 'rgba(200,74,42,0.04)' : 'var(--brand-surface)', border: '1px solid rgba(200,74,42,0.12)', borderRadius: '10px', padding: '20px', marginBottom: '12px' }}>

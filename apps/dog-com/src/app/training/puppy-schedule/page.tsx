@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
@@ -58,6 +58,7 @@ export default function PuppySchedulePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why a Schedule Is Your Best Training Tool</h2>
         <p>A consistent schedule accomplishes what training alone cannot: it makes accidents nearly impossible by creating predictable patterns of eating, eliminating, playing, and sleeping. A puppy on a schedule eliminates at predictable times — you can be there to reward outdoor elimination before indoor accidents become a habit. A puppy without a schedule eliminates unpredictably — owners miss opportunities to reinforce correct behavior and the habit of going outside develops more slowly.</p>
         <p>The schedule is also about managing energy. Puppies need substantial sleep — 16–18 hours per day for young puppies. A puppy that is not getting enough sleep becomes overtired, which manifests as biting, zoomies, and inability to focus. Scheduled naps prevent the overtired state that makes puppies appear to have behavior problems they wouldn&apos;t have if well-rested.</p>

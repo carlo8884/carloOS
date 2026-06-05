@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Off-Leash Dog Training — Recall Foundation | Dog.com', description: 'How to train reliable off-leash recall. The long line method, proofing against distractions, and which breeds are safest off-leash.', path: '/training/off-leash-training', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Off-Leash Dog Training', description: 'Recall foundation, long line protocol, and proofing for off-leash reliability.', url: 'https://dog.com/training/off-leash-training', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function OffLeashTrainingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Why Most Recalls Fail</h2>
           <p>The most common recall failure: the dog has been trained to come in low-distraction environments, then is expected to perform in high-distraction environments without being trained there. A dog that comes reliably in the backyard but ignores you at the dog park is not a disobedient dog — it is a dog that has not been trained to come at the dog park.</p>
           <p>The second most common failure: the recall has been poisoned — the dog has learned that coming when called sometimes means something unpleasant (bath, end of fun, nail trimming). The recall loses its positive value and the dog's motivation to respond decreases. This is why the absolute rule of recall training is: never call your dog to you for anything they perceive as unpleasant, and never punish a dog for coming to you, regardless of how long it took.</p>

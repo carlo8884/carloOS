@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency.', path: '/breeds/siberian-husky', type: 'article' })
@@ -31,7 +31,8 @@ export default function SiberianHuskyPage() {
       </>}
     >
       <div className="carloOS-article">
-        <h2>Exercise — What "High Energy" Actually Means</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>Exercise — What "High Energy" Actually Means</h2>
         <p>Siberian Huskies were bred to run 100+ miles per day in freezing temperatures pulling sleds. "High energy dog" undersells this significantly. A Husky needs minimum 2 hours of vigorous exercise daily — not a leisurely walk, but running, hiking at pace, bikejoring, canicross, skijoring (their original purpose), or dog sports. In hot climates this exercise must happen in early morning or evening to prevent heat stroke — Huskies are not adapted to warm weather and overheat quickly in temperatures above 70°F during vigorous activity.</p>
         <p>A Husky that does not receive adequate exercise is a destructive Husky. Huskies denied outlets howl (loudly, at length, in ways that distress neighbors), chew (furniture, trim, doors), dig (extensively — yards and sometimes floors), and escape. These are not behavioral failures — they are the predictable result of an animal with extreme exercise needs being kept sedentary.</p>
 

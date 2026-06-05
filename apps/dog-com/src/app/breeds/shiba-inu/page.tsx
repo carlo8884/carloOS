@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shiba Inu Breed Guide — Dramatic Personality | Dog.com', description: 'Shiba Inus are independent, fastidious, and intensely prey-driven. They are not Labradors in a different body. The Shiba scream, escape artistry.', path: '/breeds/shiba-inu', type: 'article' })
@@ -28,7 +28,8 @@ export default function ShibaInuPage() {
       </>}
     >
       <div className="carloOS-article">
-        <h2>The Shiba Personality — What It Actually Means</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>The Shiba Personality — What It Actually Means</h2>
         <p>Shiba Inus are described as cat-like, and the comparison is accurate: they are clean, self-grooming, fastidious dogs that dislike being dirty or wet. They are independent and do not seek validation the way retrievers or herding breeds do — they observe their owners with cool assessment rather than eager attention. They form deep bonds with their family but show it differently than more demonstratively affectionate breeds — through proximity, attention, and occasional dramatic affection rather than continuous tail-wagging enthusiasm.</p>
         <p>This independence manifests in training: Shibas are intelligent — they understand what you're asking. They may simply decide the reward is not sufficient motivation at this moment. Positive reinforcement with high-value rewards and short, engaging sessions work far better than extended drilling. Harsh corrections produce a dog that shuts down or redirects, not increased compliance. Early socialization and training establishes the patterns that make a Shiba manageable — starting at 8-12 weeks and being consistent through adolescence.</p>
 

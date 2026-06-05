@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Aggression — Types, Causes | Dog.com', description: 'Dog aggression types: fear-based, resource guarding, redirected, pain-related, and inter-dog. Warning signals, what never to do.', path: '/training/dog-aggression', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Aggression', description: 'Types, causes, warning signals, and professional intervention for dog aggression.', url: 'https://dog.com/training/dog-aggression', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -23,6 +23,7 @@ export default function DogAggressionPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Aggression Sequence — Warning Signals</h2>
         <p>Aggression in dogs follows a predictable sequence of escalating warnings. Dogs that bite without warning have almost always had their earlier warning signals ignored, suppressed by punishment, or missed. The full sequence, from subtle to severe: stiffening, direct stare, stillness, lip curl/snarl, growl, snap (air snap), single bite with release, bite with hold/shake. Removing earlier signals — particularly by punishing growling — compresses this sequence and creates dogs that bite without warning. Growling is communication. It should be respected, not punished.</p>
 

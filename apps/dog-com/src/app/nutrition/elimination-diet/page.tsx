@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs | Dog.com', description: 'How to run a proper 8-12 week food allergy elimination diet in dogs. Novel protein selection, what to avoid, how to confirm food allergy.', path: '/nutrition/elimination-diet', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -32,6 +32,7 @@ export default function EliminationDietPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2 id="diet-choice">Choosing the Right Elimination Diet</h2>
           <p>Two options are appropriate for a diagnostic elimination trial:</p>
           <p><strong>Option 1 — Prescription hydrolyzed protein diet:</strong> Proteins broken into fragments too small to trigger an immune response. Royal Canin HP, Hill's z/d, Purina HA. These are the most reliable option because even dogs that are broadly sensitized to multiple proteins can tolerate hydrolyzed diets. Requires veterinary prescription.</p>

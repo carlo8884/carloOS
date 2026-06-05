@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Vizsla Breed Guide — Velcro Dog, Epilepsy | Dog.com', description: 'Vizslas are the "velcro dog" — they attach themselves to their people and cannot be left alone for long. High exercise needs, epilepsy predisposition.', path: '/breeds/vizsla', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Vizsla Breed Guide', description: 'Separation anxiety, epilepsy, exercise requirements, and care for Vizslas.', url: 'https://dog.com/breeds/vizsla', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -30,7 +30,8 @@ export default function VizslaPage() {
       </>}
     >
       <div className="carloOS-article">
-        <h2>The Velcro Dog — What It Actually Means</h2>
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <h2>The Velcro Dog — What It Actually Means</h2>
         <p>Vizsla owners use "velcro dog" affectionately, but prospective owners should understand what it means practically. Vizslas were bred for close human partnership in the field — hunting together with a human partner over long days. Their social attachment reflects generations of selection for close working partnership. A Vizsla left alone for 8 hours while their owner works is not a dog that settles quietly — it is a dog experiencing genuine distress that may manifest as destructive behavior, excessive vocalization, and anxiety-related health problems over time.</p>
         <p>This is not a dealbreaker for working owners — it requires planning. A dog walker at midday, doggy daycare, a second dog for companionship, work-from-home arrangements, or a compatible lifestyle where the dog can accompany their person manages the Vizsla's social needs adequately. What doesn't work: leaving a Vizsla alone for full workdays without enrichment or social contact. The breed's need for human proximity is a fundamental characteristic that cannot be trained away.</p>
 

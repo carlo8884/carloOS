@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Loose Leash Walking — Stop Pulling for Good | Dog.com', description: 'How to teach a dog to walk on a loose leash. The stop-and-wait method, the 180-degree turn, and why punishment-based corrections make pulling worse.', path: '/training/loose-leash-walking', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Loose Leash Walking', description: 'Stop pulling with the stop-and-wait and 180-degree turn methods.', url: 'https://dog.com/training/loose-leash-walking', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,6 +28,7 @@ export default function LooseLeashPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2 id="why">Why Dogs Pull</h2>
           <p>Dogs pull on leash because pulling works. When the dog pulls forward and the human follows (even reluctantly), the dog gets to where it wants to go. Every walk where pulling produces forward movement reinforces the pulling behavior. The solution is not correction — it is making pulling ineffective. When pulling never produces forward motion, and a loose leash always does, dogs learn to walk loosely.</p>
 

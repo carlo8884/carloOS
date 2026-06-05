@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Excessive Barking in Dogs — Types, Causes | Dog.com', description: 'Excessive barking has six distinct types with different causes and different solutions. Identifying the type is the first step — then the correct protocol.', path: '/training/excessive-barking', type: 'article' })
@@ -30,6 +30,7 @@ export default function ExcessiveBarkingPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Diagnose Before You Treat</h2>
         <p>The first step is identifying which type of barking you are dealing with — not guessing. Set up a camera and record your dog when the barking occurs. Watch the footage. Is the barking triggered by something external (alert barking)? Does it happen when the dog is alone (separation anxiety)? Is it during play (excitement)? Does it happen when the dog sees a specific trigger (fear)? The footage tells you what type you have.</p>
         {TYPES.map((t, i) => (

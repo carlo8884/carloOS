@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Crate Training Guide — How to Make the Crate a Good Place | Dog.com', description: 'Step-by-step crate training guide. Introduction protocol, how long is too long, night training, and how to use the crate without it feeling like punishment.', path: '/training/crate-training', type: 'article' })
@@ -40,6 +40,7 @@ export default function CrateTrainingPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="why">Why Crate Training Is Worth It</h2>
         <p>A crate serves multiple functions: it prevents destructive behavior and accidents when unsupervised, provides a den-like retreat that most dogs come to value, makes traveling and vet visits less stressful (a dog comfortable in a crate is dramatically calmer in any confined space), and is an essential housetraining tool (dogs typically avoid soiling their sleeping area).</p>
         <p>The crate should never be used as punishment. Sending a dog to their crate in anger changes the association from safe space to negative consequence. Instead, the crate should always be associated with good things — meals fed in the crate, high-value treats, rest after exercise.</p>

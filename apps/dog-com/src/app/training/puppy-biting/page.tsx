@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Biting & Bite Inhibition — What Works | Dog.com', description: 'Puppy biting is normal. Bite inhibition is essential. Here\'s the protocol that actually works', path: '/training/puppy-biting', type: 'article' })
@@ -21,6 +21,7 @@ export default function PuppyBitingPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Bite Inhibition — Why It Matters More Than Stopping Biting</h2>
         <p>Bite inhibition is a dog&apos;s learned ability to control the pressure of its bite. A dog with good bite inhibition that bites during excitement will cause bruising, not puncture wounds. A dog without bite inhibition that bites will cause serious injury. Bite inhibition is learned during puppyhood through play — primarily with other puppies and with humans who teach it correctly. It cannot be effectively taught to adult dogs.</p>
         <p>This is why the goal is not to immediately stop all biting — it is to first teach the puppy to bite softly (inhibition), then progressively teach the puppy not to put teeth on skin at all. Skipping the inhibition phase and going straight to suppression produces a dog that has simply been punished into not biting until something changes — and then bites hard, without inhibition, because it was never taught otherwise.</p>

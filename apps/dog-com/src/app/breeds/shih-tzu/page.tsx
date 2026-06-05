@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide — Brachycephalic Health, Grooming | Dog.com', description: 'Shih Tzus are brachycephalic with prominent eyes prone to corneal injuries. Daily eye cleaning, professional grooming every 6-8 weeks.', path: '/breeds/shih-tzu', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -29,7 +29,8 @@ export default function ShihTzuPage() {
       </>}
     >
       <div className="carloOS-article">
-        <BreedHealthCard name="Brachycephalic Obstructive Airway Syndrome (BOAS)" riskLevel="high"
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+                <BreedHealthCard name="Brachycephalic Obstructive Airway Syndrome (BOAS)" riskLevel="high"
           description="The Shih Tzu's flat face compresses anatomical structures — stenotic nares (narrow nostrils), an elongated soft palate, and a hypoplastic trachea restrict airflow. Mild BOAS: snoring and occasional snorting. Moderate BOAS: significant exercise intolerance, loud breathing at rest, sleep apnea. Severe BOAS: open-mouth breathing, cyanosis during exertion, collapse risk. Surgical correction (nare widening, soft palate shortening) dramatically improves quality of life in moderate to severe cases."
           signs={['Loud snoring or snorting at rest', 'Exercise intolerance — tires quickly', 'Open-mouth breathing during activity', 'Gagging or regurgitation', 'Sleep apnea — waking suddenly']}
           management="Maintain lean body weight — obesity dramatically worsens BOAS. Avoid exercise in heat (heat sensitivity is severe in brachycephalics). Surgical correction for moderate to severe cases — referral to a surgeon experienced in BOAS procedures." />

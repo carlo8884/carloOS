@@ -20,6 +20,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
+  ArticleByline,
   buildArticleSchema,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -210,6 +211,7 @@ export default async function BreedFeedingPage({ params }: PageProps) {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         {/* MANDATORY: Veterinary consultation callout */}
         <CalloutBox
           variant="warning"

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -78,6 +78,7 @@ export default function SeparationAnxietyPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="distinguish">True Separation Anxiety vs Boredom — How to Tell</h2>
         <p>This distinction matters enormously because the protocols are completely different. Applying the boredom protocol to a dog with true SA makes things worse; applying the SA protocol to a bored dog is unnecessary and slow.</p>
         <p><strong>The best diagnostic tool: a camera.</strong> Set up a phone or security camera to record your dog for 30 minutes after you leave. What you see tells you everything.</p>
