@@ -9,6 +9,7 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  StockImage,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -145,6 +146,13 @@ export default function FerretTrainingBondingPage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:behavior-training"
+            alt="A ferret being handled gently — training starts with trust and patient handling"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"

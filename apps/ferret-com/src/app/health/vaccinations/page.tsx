@@ -11,6 +11,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -184,6 +185,13 @@ export default function FerretVaccinationsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-vaccinations"
+            alt="A ferret during a routine veterinary health visit — preventive care reference"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"

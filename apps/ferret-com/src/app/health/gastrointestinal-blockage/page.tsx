@@ -11,6 +11,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -175,6 +176,13 @@ export default function FerretGIBlockagePage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-gi-blockage"
+            alt="A ferret exploring its environment — GI blockage prevention begins with ferret-proofing"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"

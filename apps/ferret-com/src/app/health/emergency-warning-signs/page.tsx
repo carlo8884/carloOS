@@ -11,6 +11,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  StockImage,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -174,6 +175,13 @@ export default function FerretEmergencySignsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <StockImage
+            manifestKey="ferret-com:health-emergency"
+            alt="A ferret resting calmly — learn to recognise emergency warning signs before they happen"
+            aspect="16:9"
+            variant="inline"
+            subtleCredit
+          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"

@@ -195,7 +195,119 @@ export default function OwnershipHubPage() {
 
       {/* Hero image */}
       <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:ownership-hero" aspect="16:9" variant="wide" priority />
+        <StockImage manifestKey="ferret-com:ownership-hero" aspect="16:9" variant="wide" priority subtleCredit />
+      </div>
+
+      {/* Featured ownership spokes — three photo-backed pillar articles */}
+      <div
+        style={{
+          maxWidth: '1180px',
+          margin: '0 auto',
+          padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 80px) 0',
+        }}
+      >
+        <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-amber-dark)', margin: '0 0 20px' }}>
+          Decide well, start well
+        </p>
+        <ul
+          style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '18px',
+          }}
+        >
+          {[
+            {
+              href: '/ownership/is-a-ferret-right-for-you',
+              eyebrow: 'Decision',
+              title: 'Is a Ferret Right for You?',
+              desc: 'Daily time, real veterinary cost, odor, legality, and the 6–10-year commitment honestly assessed.',
+              manifestKey: 'ferret-com:ownership-hero',
+              imageAlt: 'A ferret being held gently — deciding if a ferret is right for you',
+            },
+            {
+              href: '/ownership/cost-of-owning-a-ferret',
+              eyebrow: 'Budget',
+              title: 'Cost of Owning a Ferret',
+              desc: 'Startup and recurring costs broken out — including the insulinoma/adrenal surgery line item most owners underestimate.',
+              manifestKey: 'ferret-com:care-cage-setup',
+              imageAlt: 'A ferret in its habitat — the real cost of ferret ownership',
+            },
+            {
+              href: '/ownership/adoption-vs-buying',
+              eyebrow: 'Sourcing',
+              title: 'Adoption vs Buying',
+              desc: 'Shelters, breeders, and large-scale farm-bred pet-store ferrets compared on health, early altering, and temperament.',
+              manifestKey: 'ferret-com:health-hero',
+              imageAlt: 'A ferret portrait — adoption versus buying a ferret',
+            },
+          ].map((card) => (
+            <li key={card.href}>
+              <a
+                href={card.href}
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  height: '100%',
+                  minHeight: '260px',
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  boxShadow: 'inset 0 0 0 1px var(--brand-border)',
+                }}
+              >
+                <div
+                  className="[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0 [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full"
+                  style={{ position: 'absolute', inset: 0 }}
+                >
+                  <StockImage
+                    manifestKey={card.manifestKey}
+                    alt={card.imageAlt}
+                    aspect="3:4"
+                    variant="inline"
+                    subtleCredit
+                  />
+                </div>
+                <div
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.35) 55%, rgba(30,20,10,0.08) 100%)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'relative',
+                    zIndex: 10,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
+                    minHeight: '260px',
+                    padding: '22px',
+                  }}
+                >
+                  <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-amber)', marginBottom: '6px' }}>
+                    {card.eyebrow}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: 'rgba(251, 245, 232, 0.98)', lineHeight: 1.2, marginBottom: '8px' }}>
+                    {card.title}
+                  </div>
+                  <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(251, 245, 232, 0.78)', margin: '0 0 10px' }}>
+                    {card.desc}
+                  </p>
+                  <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--brand-amber)' }}>
+                    Read &rarr;
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Cards */}

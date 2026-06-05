@@ -194,7 +194,119 @@ export default function BehaviorHubPage() {
 
       {/* Hero image */}
       <div style={{ maxWidth: '1180px', margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) clamp(20px, 5vw, 80px) 0' }}>
-        <StockImage manifestKey="ferret-com:behavior-hero" aspect="16:9" variant="wide" priority />
+        <StockImage manifestKey="ferret-com:behavior-hero" aspect="16:9" variant="wide" priority subtleCredit />
+      </div>
+
+      {/* Featured behavior spokes — three photo-backed pillar articles */}
+      <div
+        style={{
+          maxWidth: '1180px',
+          margin: '0 auto',
+          padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 80px) 0',
+        }}
+      >
+        <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-amber-dark)', margin: '0 0 20px' }}>
+          Start here
+        </p>
+        <ul
+          style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '18px',
+          }}
+        >
+          {[
+            {
+              href: '/behavior/training-and-bonding',
+              eyebrow: 'Training & socialization',
+              title: 'Training & Bonding',
+              desc: 'Litter training, bite inhibition, harness work, and slow ferret-to-ferret introductions.',
+              manifestKey: 'ferret-com:behavior-training',
+              imageAlt: 'A ferret being handled gently during training',
+            },
+            {
+              href: '/behavior/biting-and-nipping',
+              eyebrow: 'Behavior fixes',
+              title: 'Biting & Nipping',
+              desc: 'Why ferrets bite and a calm, no-punishment plan to teach bite inhibition.',
+              manifestKey: 'ferret-com:behavior-biting',
+              imageAlt: 'A close ferret portrait — biting and nipping behaviour guide',
+            },
+            {
+              href: '/behavior/bonding-with-your-ferret',
+              eyebrow: 'Building trust',
+              title: 'Bonding With Your Ferret',
+              desc: 'A week-by-week plan to earn a new or shy ferret\'s trust — hand-feeding, floor time, and reading trust signals.',
+              manifestKey: 'ferret-com:behavior-hero',
+              imageAlt: 'A ferret at play — building a bond with your ferret',
+            },
+          ].map((card) => (
+            <li key={card.href}>
+              <a
+                href={card.href}
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  height: '100%',
+                  minHeight: '260px',
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  boxShadow: 'inset 0 0 0 1px rgba(251, 245, 232, 0.1)',
+                }}
+              >
+                <div
+                  className="[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0 [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full"
+                  style={{ position: 'absolute', inset: 0 }}
+                >
+                  <StockImage
+                    manifestKey={card.manifestKey}
+                    alt={card.imageAlt}
+                    aspect="3:4"
+                    variant="inline"
+                    subtleCredit
+                  />
+                </div>
+                <div
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.35) 55%, rgba(30,20,10,0.08) 100%)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'relative',
+                    zIndex: 10,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
+                    minHeight: '260px',
+                    padding: '22px',
+                  }}
+                >
+                  <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-amber)', marginBottom: '6px' }}>
+                    {card.eyebrow}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 800, color: 'rgba(251, 245, 232, 0.98)', lineHeight: 1.2, marginBottom: '8px' }}>
+                    {card.title}
+                  </div>
+                  <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(251, 245, 232, 0.78)', margin: '0 0 10px' }}>
+                    {card.desc}
+                  </p>
+                  <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--brand-amber)' }}>
+                    Read &rarr;
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Content */}
