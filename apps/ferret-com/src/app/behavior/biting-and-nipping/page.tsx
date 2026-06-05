@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   StockImage,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -73,6 +74,27 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 
 export default function FerretBitingNippingPage() {
   return (
@@ -328,28 +350,7 @@ export default function FerretBitingNippingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret behaviour and handling chapters.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              behaviour, socialization, and welfare assessment.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing bite-inhibition
-              and socialization guidance.
-            </li>
-            <li>
-              American Veterinary Society of Animal Behavior (AVSAB) — position
-              statements favoring positive-reinforcement over punishment-based
-              training; the conclusions generalize across companion-animal
-              species.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General behaviour information about ferrets, not individualized
             veterinary or behavioural advice. A sudden change to biting in a

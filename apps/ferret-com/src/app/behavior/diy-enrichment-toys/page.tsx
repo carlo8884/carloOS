@@ -12,6 +12,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -75,6 +76,22 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry and GI foreign-body chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — articles on ferret enrichment, welfare, and GI foreign bodies",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — enrichment and toy-safety owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretDIYEnrichmentPage() {
   return (
@@ -353,23 +370,7 @@ export default function FerretDIYEnrichmentPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret husbandry chapters and the gastrointestinal foreign-body
-              literature.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              enrichment, welfare, and GI foreign bodies.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing enrichment and
-              toy-safety guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             General enrichment and behaviour information about ferrets, not
             individualized veterinary advice. Suspected toy ingestion or

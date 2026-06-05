@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -83,6 +84,32 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
+    url: "https://www.aspca.org/pet-care/animal-poison-control",
+    publisher: "ASPCA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret toxicology and emergency medicine",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function FerretToxicFoodsPage() {
   return (
@@ -495,41 +522,7 @@ export default function FerretToxicFoodsPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              ASPCA Animal Poison Control Center — toxic substance
-              database and species-specific exposure guidance.
-            </li>
-            <li>
-              Pet Poison Helpline — toxic food and household substance
-              database covering exotic companion species.
-            </li>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets,
-              Rabbits, and Rodents: Clinical Medicine and Surgery.</em>
-              4th ed. Saunders/Elsevier. Toxicology and gastrointestinal
-              foreign body chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — ferret toxicology and emergency-medicine
-              issues.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing toxic
-              food and household hazard resources.
-            </li>
-            <li>
-              American Veterinary Medical Association (AVMA) — pet
-              poison prevention and household safety guidance.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              continuing-education materials on exotic-mammal
-              toxicology.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general guidance on common toxic exposures in
             ferrets. Any actual ingestion is a clinical event that

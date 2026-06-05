@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,23 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner education on travel, carrier safety, and temperature management",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function TravelAndCarriersPage() {
   return (
@@ -150,10 +167,7 @@ export default function TravelAndCarriersPage() {
             Air travel is more involved and far less routine. Airline policies on ferrets vary widely and many carriers do not accept them in the cabin or as cargo at all; some jurisdictions restrict or prohibit ferrets entirely, which makes destination legality a real concern. Anyone planning to fly with a ferret should confirm the specific airline's current pet policy in writing and verify that ferrets are legal at the destination well before booking. Health documentation and a recent veterinary check are typically required. Because the rules change and differ by carrier and region, treat air travel as something to research case by case rather than assume.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Travel-safety, thermoregulation, and metabolism discussion draws on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. Airline and destination-legality policies vary and should be confirmed directly with the carrier and relevant authorities. This page is general guidance and does not recommend specific products to purchase. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

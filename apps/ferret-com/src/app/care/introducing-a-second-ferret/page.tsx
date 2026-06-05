@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,23 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — social behaviour and infectious-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret social behavior and disease-transmission clinician resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function IntroducingSecondFerretPage() {
   return (
@@ -156,10 +173,7 @@ export default function IntroducingSecondFerretPage() {
             Some ferret pairs bond within days; others take several weeks of patient, repeated sessions. Both are normal. The variables are individual temperament, age, and prior socialization — a young, well-socialized ferret often accepts a companion quickly, while an older ferret long used to being an only pet may need more time. Let the ferrets set the pace, resist the urge to force shared space before the play is consistently friendly, and judge success by a calm, mutually engaged relationship rather than by hitting a deadline.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Social-behavior, quarantine, and introduction guidance draws on American Ferret Association (AFA) owner-education materials and Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Quarantine length and pre-introduction veterinary checks should be confirmed with your own exotics-capable veterinarian. This page is general behavior and husbandry guidance. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

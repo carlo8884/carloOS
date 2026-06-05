@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -83,6 +84,26 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, photoperiod biology, and adrenal-disease chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret integument, seasonal coat change, and GI obstruction",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret hair loss, adrenal disease, and trichobezoar obstruction",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — grooming and seasonal-care owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretSeasonalSheddingPage() {
   return (
@@ -327,29 +348,7 @@ export default function FerretSeasonalSheddingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret dermatology, photoperiod biology, adrenal disease, and
-              gastrointestinal foreign-body chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret integument, seasonal coat
-              change, and gastrointestinal obstruction.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret hair loss, adrenal disease presentation, and trichobezoar
-              (hair-mass) obstruction.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing grooming and
-              seasonal-care guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry information about normal ferret coat
             changes. It is not individualized veterinary advice. Persistent or

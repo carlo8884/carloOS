@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,22 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretProofingPage() {
   return (
@@ -156,10 +172,7 @@ export default function FerretProofingPage() {
             This dedicated room is what makes the daily out-of-cage time workable. Ferrets are not cage animals; they need several hours out every day, and a single thoroughly proofed room is far safer and easier to maintain than ad-hoc whole-house access. From there you can expand to additional proofed rooms as your confidence and the proofing grow.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Foreign-body, appliance-injury, and household-hazard discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), case literature in the <em>Journal of Exotic Pet Medicine</em>, and American Ferret Association (AFA) owner-education materials. Toxic-plant references align with veterinary toxicology resources for small mammals. This page is general safety guidance. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

@@ -14,6 +14,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   StockImage,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -87,6 +88,31 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour, welfare, and enrichment chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — behavioural welfare and enrichment articles for exotic companion mammals",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and welfare assessment",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — cage sizing, out-of-cage time, and enrichment owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner resources on welfare assessment in exotic mammals",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function FerretExerciseEnrichmentPage() {
   return (
@@ -557,35 +583,7 @@ export default function FerretExerciseEnrichmentPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The behaviour and welfare chapters address
-              enrichment and housing standards.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, behavioural welfare
-              studies on housing and enrichment in domestic ferrets,
-              including the environmental-enrichment-and-adrenal-disease
-              research line.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple issues addressing ferret husbandry and
-              welfare assessment.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-education materials
-              on cage sizing, out-of-cage time, and enrichment supply
-              recommendations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              resources on welfare assessment in exotic mammals.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry information for ferret owners.
             It is not individualized veterinary advice. Ferret-proofing
