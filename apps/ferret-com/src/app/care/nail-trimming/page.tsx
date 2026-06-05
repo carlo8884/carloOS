@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,18 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function NailTrimmingPage() {
   return (
@@ -159,10 +171,7 @@ export default function NailTrimmingPage() {
             A single nicked quick needs only home first aid. If bleeding will not stop despite pressure and styptic powder, or the nail looks injured beyond a simple nick, contact your veterinarian — having an exotics-capable clinic identified in advance, as our <a href="/health/vet-visit-prep">vet visit prep</a> guide recommends, makes that call easy.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Nail anatomy, trimming frequency, and grooming technique draw on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. The carbohydrate–insulinoma context for treat choice references the same exotic-mammal literature. This page is general grooming guidance and does not recommend specific products. Pair it with our <a href="/care/bathing-and-grooming">bathing and grooming</a> and <a href="/care/ear-cleaning">ear cleaning</a> guides, or return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

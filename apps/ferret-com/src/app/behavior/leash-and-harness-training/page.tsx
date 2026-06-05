@@ -12,6 +12,7 @@ import {
   ReviewCard,
   ScoreMethodology,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -75,6 +76,23 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — handling, husbandry, and outdoor-exposure chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — harness use and outdoor-safety owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+]
 
 export default function LeashAndHarnessTrainingPage() {
   return (
@@ -352,23 +370,7 @@ export default function LeashAndHarnessTrainingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Handling and husbandry chapters cover
-              restraint and outdoor-exposure considerations.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on
-              harness use and outdoor safety.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret husbandry and thermoregulation.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general behavior information about ferrets, not
             individualized veterinary advice. Discuss outdoor exposure and

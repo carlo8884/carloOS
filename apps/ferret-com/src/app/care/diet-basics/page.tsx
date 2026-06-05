@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,6 +32,31 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-28',
 })
 const combined = combineSchemas(schema, med)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret nutrition and endocrine disease",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "AVMA — policy on raw or undercooked animal-source protein in pet food",
+    url: "https://www.avma.org",
+    publisher: "American Veterinary Medical Association",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease",
+    publisher: "Elsevier",
+  },
+]
 
 export default function FerretDietBasicsPage() {
   return (
@@ -268,10 +293,7 @@ export default function FerretDietBasicsPage() {
             ctaAffiliateProduct="ferret-diet"
           />
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Macronutrient targets and obligate-carnivore physiology are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>, 4th edition, Saunders (Elsevier). Carbohydrate–insulinoma associations are discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> issue on ferret endocrine disease and in the <em>Journal of Exotic Pet Medicine</em>. The American Ferret Association (AFA) maintains an owner-facing nutrition statement consistent with the high-protein, low-carbohydrate framework. The raw-feeding harm-reduction discussion draws on the AVMA policy on raw or undercooked animal-source protein in pet food. None of these sources are linked here directly because URLs change; readers are encouraged to search the primary publications by title.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general information about ferret nutrition. It is not a substitute for individualized veterinary advice. If your ferret has been diagnosed with insulinoma, adrenal disease, or any other endocrine or gastrointestinal condition, work with a veterinarian familiar with ferrets before changing the diet.
           </p>

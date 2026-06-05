@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -83,6 +84,22 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, sebaceous-gland physiology, and reproductive endocrinology",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry, skin/coat, and odor-change clinical significance",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner guidance on ferret odor, descenting, and bathing",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretOdorScentControlPage() {
   return (
@@ -322,24 +339,7 @@ export default function FerretOdorScentControlPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources-list">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret dermatology, sebaceous-gland physiology, reproductive
-              endocrinology, and the descenting discussion.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret husbandry, skin and coat, and
-              the clinical relevance of odor change.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing guidance on ferret
-              odor, descenting, and bathing.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry information. Descenting, spay/neuter
             timing, and any sudden change in a ferret&apos;s odor are matters for

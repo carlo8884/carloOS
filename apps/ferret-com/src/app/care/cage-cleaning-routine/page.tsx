@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -83,6 +84,22 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — husbandry, environmental hygiene, and toxicology chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — articles on ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — cage-care and cleaning guidance for ferret owners",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function FerretCageCleaningRoutinePage() {
   return (
@@ -313,24 +330,7 @@ export default function FerretCageCleaningRoutinePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              husbandry, environmental hygiene, and toxicology chapters
-              relevant to ferret housing.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret husbandry and environmental
-              management.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing cage-care and
-              cleaning guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry guidance. Cleaning-product choices
             should always favor products labeled safe for small mammals, and any

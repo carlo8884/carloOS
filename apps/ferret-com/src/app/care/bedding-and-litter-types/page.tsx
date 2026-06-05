@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,22 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case literature on substrate-related complications in small mammals",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — bedding and litter-material owner-education guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+]
 
 export default function BeddingAndLitterTypesPage() {
   return (
@@ -155,10 +171,7 @@ export default function BeddingAndLitterTypesPage() {
             Litter pans want a daily spot-clean and a full empty-and-wipe weekly. Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Respiratory-irritant and foreign-body discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em>. Bedding and litter-material recommendations align with American Ferret Association (AFA) owner-education guidance. This page covers general material safety and does not claim hands-on product testing. Return to the <a href="/care">Ferret Care hub</a> or pair this with our <a href="/care/cage-setup">cage setup</a> guide.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

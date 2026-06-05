@@ -13,6 +13,7 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -86,6 +87,31 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and substrate-safety chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and behaviour issues",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner guidance on litter training, realistic expectations, and substrate safety",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and substrate-related complications",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on clumping-clay ingestion and substrate complications in small mammals",
+    publisher: "Elsevier",
+  },
+]
 
 export default function FerretLitterTrainingPage() {
   return (
@@ -548,34 +574,7 @@ export default function FerretLitterTrainingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
-              and Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Behavior and husbandry chapters describe
-              ferret elimination behavior and substrate considerations.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, ferret husbandry and behavior issues.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing care and
-              training resources, including realistic litter-training
-              accuracy expectations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              continuing-education materials on ferret husbandry and
-              substrate safety.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — case reports on
-              substrate-related complications in small mammals (clumping
-              clay ingestion, cedar toxicity).
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry guidance. Specific medical
             concerns — including sudden litter regression that may signal

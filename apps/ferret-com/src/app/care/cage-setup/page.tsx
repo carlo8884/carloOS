@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,26 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries",
+    publisher: "Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and environmental management",
+    publisher: "Elsevier",
+  },
+]
 
 export default function FerretCageSetupPage() {
   return (
@@ -284,10 +304,7 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Cage sizing, bar spacing, and out-of-cage time recommendations are drawn from American Ferret Association (AFA) owner-education materials. Bedding, foreign-body, and respiratory-irritant discussions reference Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>. Product picks are widely-stocked cages observed in keeper communities and at exotic-mammal shelters; this page does not claim hands-on testing.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             Affiliate disclosure: Ferret.com may earn a commission on qualifying purchases made through links on this page. Editorial picks are based on documented product specifications and community-reported reliability; commission does not influence inclusion.
           </p>

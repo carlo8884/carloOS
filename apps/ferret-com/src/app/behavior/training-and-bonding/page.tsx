@@ -10,6 +10,7 @@ import {
   ArticleByline,
   DropCap,
   StockImage,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -83,6 +84,32 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and training chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret behaviour and welfare issues",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — behaviour, training, and bite-inhibition owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret behaviour and welfare assessment",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Veterinary Society of Animal Behavior (AVSAB) — position statements on positive-reinforcement training",
+    url: "https://avsab.org",
+    publisher: "AVSAB",
+  },
+]
 
 export default function FerretTrainingBondingPage() {
   return (
@@ -528,38 +555,7 @@ export default function FerretTrainingBondingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The ferret behaviour chapter covers
-              socialization, handling, and behaviour-modification approaches.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, articles on ferret
-              cognition, socialization, and behaviour assessment.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, issues covering ferret behaviour and welfare.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing behaviour and
-              training guidance, including bite-inhibition and harness-use
-              recommendations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret behaviour and welfare assessment.
-            </li>
-            <li>
-              American Veterinary Society of Animal Behavior (AVSAB) —
-              position statements on positive-reinforcement training and
-              against punishment-based methods. The position generalizes
-              across companion-animal species.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general behaviour information about ferrets. It is
             not individualized veterinary or behavioural advice. Sudden

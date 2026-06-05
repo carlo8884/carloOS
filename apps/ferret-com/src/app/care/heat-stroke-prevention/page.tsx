@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,23 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Merck Veterinary Manual — heatstroke and hyperthermia in small mammals",
+    url: "https://www.merckvetmanual.com",
+    publisher: "Merck/MSD",
+  },
+]
 
 export default function HeatStrokePreventionPage() {
   return (
@@ -155,10 +172,7 @@ export default function HeatStrokePreventionPage() {
             Some ferrets are less able to cope with heat and warrant extra caution: senior ferrets and those with the chronic conditions common in older animals (see <a href="/health/aging-ferret-care">aging ferret care</a>), overweight ferrets, very young kits, and any ferret already unwell or recovering from illness. For these animals, hold the environment cooler and watch more closely through warm spells.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Thermoregulation, safe-range, and heat-stroke discussion draws on Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association (AFA) owner-education materials. This page is general husbandry and first-aid guidance, not a substitute for veterinary care; a ferret showing heat-stroke signs needs an exotics-capable veterinarian. Return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

@@ -14,6 +14,7 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -87,6 +88,31 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Veterinary Clinics of North America: Exotic Animal Practice — ferret husbandry and dermatology",
+    publisher: "Elsevier",
+  },
+  {
+    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources",
+    url: "https://www.aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease",
+    publisher: "Elsevier",
+  },
+]
 
 export default function FerretBathingGroomingPage() {
   return (
@@ -576,34 +602,7 @@ export default function FerretBathingGroomingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
-              and Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Integumentary, dental, and grooming
-              chapters describe ferret skin physiology and normal
-              variation.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — ferret husbandry and dermatology issues.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing care
-              guidance on bathing, smell management, and seasonal coat
-              changes.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              continuing-education resources on ferret husbandry and
-              dermatologic disease.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical
-              articles on ferret dermatology and ear disease.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general husbandry guidance. Skin disease,
             chronic ear problems, and abnormal alopecia are clinical

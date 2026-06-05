@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,6 +23,22 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 const combined = combineSchemas(schema)
+
+const SOURCES = [
+  {
+    label: "American Ferret Association (AFA) — cage sizing, level spacing, and out-of-cage time owner guidance",
+    url: "https://www.ferret.org",
+    publisher: "AFA",
+  },
+  {
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — housing and husbandry chapters",
+    publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — case reports on fall injuries and foot abrasion in ferrets",
+    publisher: "Elsevier",
+  },
+]
 
 export default function MultiLevelHousingPage() {
   return (
@@ -160,10 +176,7 @@ export default function MultiLevelHousingPage() {
             Get the vertical layout right and a multi-level cage becomes what it should be: a secure, interesting home base the ferret returns to between the supervised out-of-cage hours that no amount of cage real estate replaces.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Cage sizing, level spacing, and out-of-cage guidance draw on American Ferret Association (AFA) owner-education materials. Fall-injury and foot-abrasion discussion references Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and case literature in the <em>Journal of Exotic Pet Medicine</em>. This page describes general husbandry principles and does not claim hands-on product testing. For the broader habitat picture, start with our <a href="/care/cage-setup">cage setup</a> guide or return to the <a href="/care">Ferret Care hub</a>.
-          </p>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>
