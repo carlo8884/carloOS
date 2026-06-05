@@ -77,6 +77,8 @@ export { ArticleSourcesList } from './components/ArticleSourcesList'
 export type { ArticleSourcesListProps, ArticleSource } from './components/ArticleSourcesList'
 export { ArticleByline } from './components/ArticleByline'
 export type { ArticleBylineProps } from './components/ArticleByline'
+export { EditorialStandardsSignal } from './components/EditorialStandardsSignal'
+export type { EditorialStandardsSignalProps } from './components/EditorialStandardsSignal'
 export { AffiliateDisclosure } from './components/AffiliateDisclosure'
 export type {
   AffiliateDisclosureProps,
