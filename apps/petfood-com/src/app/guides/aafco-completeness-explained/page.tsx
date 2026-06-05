@@ -45,8 +45,13 @@ export default function AafcoCompletenessExplainedPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
       ]}
       schema={schema}
       sidebar={

@@ -44,8 +44,14 @@ export default function MultivitaminsForPetsPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Multivitamins for Pets', href: '/supplements/multivitamins-for-pets' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Fish Oil and Omega-3', href: '/supplements/fish-oil-omega-3' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
+        { title: 'Glucosamine and Joint Support', href: '/supplements/glucosamine-and-joint-support' },
       ]}
       schema={schema}
       sidebar={

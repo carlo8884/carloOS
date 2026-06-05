@@ -46,8 +46,14 @@ export default function TasteOfTheWildEvaluationPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Brands' },
+        { name: 'Brands', href: '/brands' },
         { name: 'Taste of the Wild — An Independent Evaluation', href: '/brands/taste-of-the-wild-evaluation' },
+      ]}
+      relatedLinks={[
+        { title: 'Brands Hub', href: '/brands' },
+        { title: 'Hill\'s vs Royal Canin', href: '/brands/hills-vs-royal-canin' },
+        { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+        { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
       schema={schema}
       sidebar={

@@ -44,8 +44,14 @@ export default function CornInPetFoodMythPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'Corn in Pet Food Myth', href: '/myths/corn-in-pet-food-myth' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The By-Products Myth', href: '/myths/by-products-myth' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
+        { title: 'Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
       ]}
       schema={schema}
       sidebar={

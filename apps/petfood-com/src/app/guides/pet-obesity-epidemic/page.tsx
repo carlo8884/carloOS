@@ -45,8 +45,14 @@ export default function PetObesityEpidemicPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Guides' },
+        { name: 'Guides', href: '/guides' },
         { name: 'The Pet Obesity Epidemic', href: '/guides/pet-obesity-epidemic' },
+      ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides' },
+        { title: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
+        { title: 'How to Choose a Pet Food', href: '/guides/how-to-choose-a-pet-food' },
+        { title: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
       ]}
       schema={schema}
       sidebar={

@@ -151,7 +151,14 @@ export default function ConditionsHubPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
+        { name: 'Guides', href: '/guides' },
         { name: 'Conditions', href: '/conditions' },
+      ]}
+      relatedLinks={[
+        { title: 'Conditions Hub', href: '/conditions' },
+        { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
+        { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
+        { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
       ]}
       schema={combined}
       sidebar={

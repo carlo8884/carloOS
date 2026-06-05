@@ -46,8 +46,13 @@ export default function FreshVsKibblePage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Compare' },
+        { name: 'Compare', href: '/compare' },
         { name: 'Fresh vs Kibble', href: '/compare/fresh-vs-kibble' },
+      ]}
+      relatedLinks={[
+        { title: 'Compare Hub', href: '/compare' },
+        { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
+        { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
       ]}
       schema={schema}
       sidebar={

@@ -46,8 +46,13 @@ export default function GlucosamineAndJointSupportPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Glucosamine and Joint Supplements', href: '/supplements/glucosamine-and-joint-support' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Fish Oil and Omega-3', href: '/supplements/fish-oil-omega-3' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
       ]}
       schema={schema}
       sidebar={

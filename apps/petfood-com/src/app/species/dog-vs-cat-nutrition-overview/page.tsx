@@ -44,8 +44,13 @@ export default function DogVsCatNutritionOverviewPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Dog vs Cat Nutrition', href: '/species/dog-vs-cat-nutrition-overview' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+        { title: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
       ]}
       schema={schema}
       sidebar={

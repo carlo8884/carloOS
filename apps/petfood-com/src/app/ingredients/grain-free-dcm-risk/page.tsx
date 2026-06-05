@@ -52,6 +52,11 @@ export default function GrainFreeDCMRiskPage() {
         { name: 'Ingredients', href: '/ingredients' },
         { name: 'Grain-Free and DCM', href: '/ingredients/grain-free-dcm-risk' },
       ]}
+      relatedLinks={[
+        { title: 'Ingredients Hub', href: '/ingredients' },
+        { title: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
+        { title: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
+      ]}
       schema={schema}
       sidebar={
         <>

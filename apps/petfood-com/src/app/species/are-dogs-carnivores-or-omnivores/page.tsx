@@ -44,8 +44,13 @@ export default function AreDogsCarnivoresOrOmnivoresPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Species' },
+        { name: 'Species', href: '/species' },
         { name: 'Are Dogs Carnivores or Omnivores?', href: '/species/are-dogs-carnivores-or-omnivores' },
+      ]}
+      relatedLinks={[
+        { title: 'Species Hub', href: '/species' },
+        { title: 'Cats Are Obligate Carnivores', href: '/species/cats-are-obligate-carnivores' },
+        { title: 'Dog vs Cat Nutrition Overview', href: '/species/dog-vs-cat-nutrition-overview' },
       ]}
       schema={schema}
       sidebar={
