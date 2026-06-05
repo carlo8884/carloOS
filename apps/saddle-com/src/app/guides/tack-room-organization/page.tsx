@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Tack Room Organization — Storage, Humidity | Saddle.com', description: 'How to organize a tack room for efficiency and leather longevity. Saddle racks, bridle hooks, humidity control.', path: '/guides/tack-room-organization', type: 'article' })
@@ -31,6 +31,7 @@ export default function TackRoomPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Saddle Storage — The Foundation</h2>
         <p>Saddles should never be stored on the floor, on a flat surface, or stacked. Incorrect storage deforms the tree (the rigid internal structure), warps the panels, and causes irreversible shape distortion that affects both saddle fit and rider position. Proper storage: a wall-mounted saddle rack or freestanding rack that supports the saddle's pommel and cantle in the same orientation the saddle sits on the horse — slightly elevated at the front, panels supported evenly on both sides.</p>
         <p>Commercial saddle racks are available in fixed and folding versions. Folding racks (swing-out from the wall) maximize space efficiency in tight tack rooms. Padded racks (covered in carpet or foam) protect the saddle's underside from pressure marks. Each saddle needs its own dedicated rack — saddles stacked or sharing a rack develop permanent indentations at the contact points. Budget one rack per saddle and build around that requirement.</p>

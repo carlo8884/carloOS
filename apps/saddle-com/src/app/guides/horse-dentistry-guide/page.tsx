@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse Dentistry Guide — Floating | Saddle.com', description: 'Horses need annual dental floating — power tools under sedation are the current standard. Signs of dental pain, wolf teeth extraction.', path: '/guides/horse-dentistry-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse Dentistry Guide', description: 'Annual floating schedule, signs of dental pain, and equine dental care.', url: 'https://saddle.com/guides/horse-dentistry-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -27,6 +27,7 @@ export default function HorseDentistryPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>How Horse Teeth Work</h2>
         <p>Horses are hypsodont — they have high-crowned teeth that erupt continuously throughout life, wearing down gradually through forage consumption. A horse has 36–44 permanent teeth including 12 incisors, 12 premolars, 12 molars, and (in most male horses) 4 canine teeth. The upper arcade (top jaw) is slightly wider than the lower arcade — the teeth do not meet evenly across their full surface. As they grind, the outside edge of the upper teeth and the inside edge of the lower teeth develop progressively sharper points that cut the cheeks and tongue during chewing.</p>
 

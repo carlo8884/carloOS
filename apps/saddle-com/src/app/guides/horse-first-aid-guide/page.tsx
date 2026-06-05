@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure, CalloutBox } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, ReviewCard, ScoreMethodology, AffiliateDisclosure, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Horse First Aid Guide — Colic, Wounds, Lameness | Saddle.com', description: 'Every horse owner needs basic first aid knowledge. Colic assessment, wound care, lameness evaluation.', path: '/guides/horse-first-aid-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'saddle-com', title: 'Horse First Aid Guide', description: 'Colic assessment, wound care, lameness evaluation, and vital signs for horse owners.', url: 'https://saddle.com/guides/horse-first-aid-guide', imageUrl: '', authorName: 'Saddle.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -29,6 +29,7 @@ export default function HorseFirstAidPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Know Your Horse's Normal — Before an Emergency</h2>
         <p>The most important first aid preparation: know your individual horse's normal vital signs before any emergency occurs. Take temperature, heart rate, respiratory rate, and gut sounds weekly for a month when the horse is healthy — this establishes a personal baseline. The published "normal" ranges are population averages; your horse's resting heart rate of 36 versus another horse's normal of 28 matters when you're trying to determine whether 42 is alarming. Record the numbers. Keep them accessible at the barn.</p>
 
