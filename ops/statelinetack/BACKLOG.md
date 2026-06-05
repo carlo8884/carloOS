@@ -17,7 +17,7 @@
 | 1 | Horse blanket size calculator (drop-in) | H | H | M | S | ☑ done (`tools/`) |
 | 2 | Redirect-recovery audit script (Shopify CSV) | H | – | M | M | ☑ done (`scripts/seo/`) |
 | 3 | StateLineTack branded deals/coupon page (drop-in draft) | M | L | H | S | ◐ this turn |
-| 4 | Pinterest strategy + board/pin plan (owned channel) | M | M | M | S | ☐ |
+| 4 | Pinterest strategy + board/pin plan (owned channel) | M | M | M | S | ☑ done (`ops/statelinetack/pinterest-strategy.md`) |
 | 5 | Saddle.com "Horse Blanket Buying Guide" hub (funnel → SLT) | H | H | M | M | ☐ |
 | 6 | Horses.com "Winter Blanketing 101" cluster pillar | H | H | M | M | ☐ |
 | 7 | Fly sheet / fly mask size selector tool (drop-in) | M | M | M | S | ☐ |
@@ -76,13 +76,13 @@
 - ☐ **C9** Out-of-stock SEO handling guide (keep equity, avoid soft-404s)
 - ☐ **C10** Image alt-text / accessibility quick-win checklist
 
-## D. Pinterest / owned-channel demand gen
-- ☐ **D1** Board architecture (by category + by use-case) · this is task #4
-- ☐ **D2** 30 keyword-rich pin titles + descriptions (blanket cluster first)
-- ☐ **D3** Pin → landing-page map (to Saddle/Horses funnel, not cold to SLT)
-- ☐ **D4** Seasonal calendar (blanket season Aug–Nov; fly season Apr–Jun)
+## D. Pinterest / owned-channel demand gen — see `pinterest-strategy.md`
+- ☑ **D1** Board architecture (by category + by use-case)
+- ◐ **D2** Pin titles + descriptions — blanket cluster (12) done; fly-season + new-owner sets next
+- ☑ **D3** Pin → landing-page map (to Saddle/Horses funnel, not cold to SLT)
+- ☑ **D4** Seasonal calendar (blanket Jul–Sep lead; fly Feb–Apr)
 - ☐ **D5** Idea-pin / video script outlines (fit how-tos)
-- ☐ **D6** Graphic spec sheet for design tool / Codex (sizes, templates) — *I plan, design tool executes*
+- ☑ **D6** Graphic spec sheet for design tool / Codex (sizes, templates)
 
 ## E. Email / audience (owned list, our leverage)
 - ☐ **E1** Lead-magnet: "Printable horse measuring + size chart" (gated PDF) · SEO M / $ M
