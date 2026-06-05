@@ -223,6 +223,12 @@ export default function IngredientsHubPage() {
         { name: 'Ingredients', href: '/ingredients' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Hub' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Hub' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents

@@ -1219,6 +1219,12 @@ export default async function IngredientPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[
+        { title: 'Ingredient Catalog (all)', href: '/ingredients', category: 'Hub' },
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents

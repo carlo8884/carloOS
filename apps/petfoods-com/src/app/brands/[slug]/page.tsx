@@ -199,6 +199,12 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
         { name: brand.name, href: `/brands/${brand.slug}` },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (all)', href: '/brands', category: 'Hub' },
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
@@ -565,6 +571,12 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
         { name: review.brandName, href: `/brands/${review.slug}` },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Brand Index (all)', href: '/brands', category: 'Hub' },
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents

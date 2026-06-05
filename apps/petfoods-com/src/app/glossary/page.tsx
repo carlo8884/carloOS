@@ -270,6 +270,12 @@ export default function GlossaryHubPage() {
       }}
       breadcrumbs={breadcrumbItems}
       schema={schema}
+      relatedLinks={[
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Brand Index & Reviews', href: '/brands', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents

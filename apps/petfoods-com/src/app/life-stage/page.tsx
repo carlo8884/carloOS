@@ -180,6 +180,12 @@ export default function LifeStageHubPage() {
         { name: 'Life Stage', href: '/life-stage' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Ingredient Catalog (A–Z)', href: '/ingredients', category: 'Hub' },
+        { title: 'Brand Index (A–Z)', href: '/brands', category: 'Hub' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Hub' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
