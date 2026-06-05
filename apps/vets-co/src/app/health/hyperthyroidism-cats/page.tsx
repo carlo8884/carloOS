@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hyperthyroidism in Cats — Signs & Treatment Options | Vets.co", description: "Feline hyperthyroidism causes weight loss with a ravenous appetite in older cats. Compare radioiodine, medication, diet, and surgery treatment options.", path: '/health/hyperthyroidism-cats', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Hyperthyroidism in Cats', description: 'Clinical signs, diagnosis, and treatment of feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "Why does my hyperthyroid cat eat constantly but lose weight?", answer: "Excess thyroid hormone dramatically increases the body's metabolic rate, so a hyperthyroid cat burns calories faster than it can take them in — producing the classic picture of a ravenous appetite alongside steady weight loss. Other common signs include increased thirst and urination, hyperactivity or restlessness, a poor or matted coat, increased vocalization, and sometimes vomiting or diarrhea. Because these signs overlap with other diseases of older cats, bloodwork measuring thyroid hormone (T4) confirms the diagnosis." },
   { question: "Can diet alone control hyperthyroidism?", answer: "An iodine-restricted therapeutic diet can control hyperthyroidism in some cats, but only if it is fed exclusively — no other food, treats, or outdoor hunting — which is difficult in multi-cat households and impossible for cats that go outdoors. It does not cure the disease and the long-term effects of severe iodine restriction are still debated. Diet is a reasonable option for cats that cannot undergo other treatments, but radioiodine and medication are more reliable for most cats." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Hyperthyroidism in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hyperthyroidism-cats', publisher: 'AVMA' },
+  { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/hyperthyroidism/', publisher: 'American Association of Feline Practitioners' },
+]
 export default function HyperthyroidismCatsPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function HyperthyroidismCatsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Hyperthyroidism in Cats', subtitle: 'Hyperthyroidism is the most common hormonal disease of older cats, caused almost always by a benign overgrowth of the thyroid glands that floods the body with thyroid hormone. It is very treatable — often curable — and recognizing the signs early prevents the heart and kidney damage that uncontrolled disease causes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hyperthyroidism in Cats', href: '/health/hyperthyroidism-cats' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats', category: 'Veterinary Guide' },
+          { title: 'Senior Pet Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+          { title: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Four Treatment Options</div>
@@ -59,6 +70,8 @@ export default function HyperthyroidismCatsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

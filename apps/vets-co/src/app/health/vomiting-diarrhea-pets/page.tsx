@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Vomiting and Diarrhea in Pets', description: 'Causes and warning signs of vomiting and diarrhea in dogs and cats.', url: 'https://vets.co/health/vomiting-diarrhea-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "What can I do at home for mild cases?", answer: "For a single mild episode in an otherwise healthy adult pet that remains bright and hydrated, supportive home care under veterinary guidance may be appropriate: ensuring access to water to prevent dehydration and, if advised by your veterinarian, a short period of a bland, easily digestible diet before gradually returning to normal food. Avoid giving human medications, which can be toxic. If signs persist beyond a day, worsen, or are joined by other symptoms, stop home care and contact your veterinarian." },
   { question: "Why is dehydration the main concern?", answer: "Both vomiting and diarrhea cause fluid and electrolyte loss, and pets — especially small, young, old, or already-ill ones — can become dehydrated quickly. Dehydration compounds the original problem and can become dangerous on its own. Signs include lethargy, dry or tacky gums, sunken eyes, and loss of skin elasticity. Because dehydration can escalate faster than the underlying cause, persistent vomiting or diarrhea, or any signs of dehydration, are key reasons to seek prompt veterinary care, where fluids can be given safely." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/gastrointestinal-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Vomiting and Diarrhea in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vomiting-and-diarrhea', publisher: 'AVMA' },
+  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
+]
 export default function VomitingDiarrheaPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function VomitingDiarrheaPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Vomiting and Diarrhea in Pets', subtitle: 'Vomiting and diarrhea are among the most common reasons pets see the veterinarian. Most episodes are mild and self-limiting, but some signal a serious problem — and the rapid dehydration they cause can become dangerous. Knowing which signs warrant watchful waiting and which require prompt care helps you respond appropriately for your dog or cat.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Call the Vet If</div>
@@ -28,7 +39,7 @@ export default function VomitingDiarrheaPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-vomiting-diarrhea" />
         </>}
       >
@@ -56,6 +67,8 @@ export default function VomitingDiarrheaPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

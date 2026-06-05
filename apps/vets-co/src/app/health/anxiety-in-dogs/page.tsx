@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Anxiety in Dogs — Separation, Noise & Treatment | Vets.co", description: "Canine anxiety, including separation and noise anxiety, is a real medical and behavioral condition. Learn the signs and the evidence-based approaches that help.", path: '/health/anxiety-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "Will my dog grow out of anxiety, or get worse?", answer: "Untreated anxiety more often worsens than resolves on its own, because each frightening experience can reinforce the fear. This is why early intervention matters. The good news is that anxiety is treatable: with a structured plan combining behavior modification and, when appropriate, veterinary-prescribed medication or other support, most dogs improve significantly. Waiting in the hope a dog will simply outgrow it can allow the problem to become more entrenched, so seeking guidance sooner generally leads to better outcomes." },
   { question: "Is medication necessary for canine anxiety?", answer: "Not always, but it can be an important part of treatment for moderate to severe anxiety. Behavior modification — desensitization, counter-conditioning, environmental management, and enrichment — is the foundation for all cases. For dogs whose anxiety is severe enough that they cannot learn while distressed, veterinarians may prescribe medication to lower the fear to a level where training can work, with the specific medication and dosing determined by your veterinarian. Medication is a tool that supports behavior work, not a replacement for it." },
 ]
+const SOURCES = [
+  { label: 'AVMA: Behavior Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/behavioral-problems-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
+]
 export default function AnxietyDogsPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function AnxietyDogsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Anxiety in Dogs', subtitle: 'Anxiety is a genuine medical and behavioral condition in dogs, not simply misbehavior — and it causes real suffering. Separation anxiety, noise phobias, and generalized fear are common, often worsen if untreated, and respond well to a structured, evidence-based approach. Recognizing the signs and acting early gives the best chance of a calmer, happier dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Anxiety', href: '/health/anxiety-in-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction', category: 'Veterinary Guide' },
+          { title: 'Senior Pet Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Common Forms</div>
@@ -56,6 +67,8 @@ export default function AnxietyDogsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

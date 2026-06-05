@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Flea & Tick Prevention for Pets — A Complete Guide | Vets.co", description: "Fleas and ticks cause more than itching — they spread serious disease. Learn how prevention works, why year-round control matters, and how to choose products.", path: '/health/flea-tick-prevention', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Flea and Tick Prevention for Pets', description: 'How parasite prevention works and the diseases it prevents.', url: 'https://vets.co/health/flea-tick-prevention', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,12 @@ const FAQS = [
   { question: "Are over-the-counter products as good as prescription ones?", answer: "Effectiveness and safety vary widely, and the right product depends on your pet's species, weight, health, and risk. Some over-the-counter products are effective and others are not, and importantly, some products safe for dogs are highly toxic to cats. Because of these differences — and because dosing must match the individual pet — it is best to choose a flea and tick product on your veterinarian's recommendation rather than by guesswork. Never use a dog product on a cat without veterinary direction." },
   { question: "What diseases do fleas and ticks spread?", answer: "Beyond itching and allergic skin disease, fleas can transmit tapeworms and, in some regions, bacterial infections, and heavy infestations can cause dangerous anemia in small or young pets. Ticks transmit a range of serious illnesses including Lyme disease, anaplasmosis, ehrlichiosis, and others depending on region and tick species, some of which also affect people. Preventing these parasites therefore protects against far more than discomfort — it is genuine protection against potentially serious, sometimes zoonotic, disease." },
 ]
+const SOURCES = [
+  { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/fleas-and-your-pet', publisher: 'AVMA' },
+  { label: 'Companion Animal Parasite Council: Fleas', url: 'https://capcvet.org/guidelines/fleas/', publisher: 'CAPC' },
+  { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
+  { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/pets.html', publisher: 'CDC' },
+]
 export default function FleaTickPage() {
   return (
     <>
@@ -18,6 +24,12 @@ export default function FleaTickPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Flea and Tick Prevention', subtitle: 'Fleas and ticks are more than a nuisance — they transmit tapeworms, cause allergic skin disease and anemia, and spread serious tick-borne illnesses, some of which affect people too. Consistent, year-round prevention is one of the highest-value, lowest-effort things you can do for your pet\'s health. Here is how it works and how to choose the right approach.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Flea & Tick Prevention', href: '/health/flea-tick-prevention' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases', category: 'Veterinary Guide' },
+          { title: 'Intestinal Parasites', href: '/health/intestinal-parasites', category: 'Veterinary Guide' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Why It Matters</div>
@@ -56,6 +68,8 @@ export default function FleaTickPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

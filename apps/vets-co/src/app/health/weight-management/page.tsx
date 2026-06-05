@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight…', path: '/health/weight-management', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
+  { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
+  { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
+]
 
 export default function WeightManagementPage() {
   return (
@@ -14,6 +20,12 @@ export default function WeightManagementPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">BCS 9-Point Scale</div>
@@ -24,7 +36,7 @@ export default function WeightManagementPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-weight-mgmt" />
         </>}
       >
@@ -57,6 +69,8 @@ export default function WeightManagementPage() {
           <p><strong>Count treats.</strong> Treats are calories. Ten medium-sized training treats per day for a small dog may represent 15–20% of daily caloric allowance. Either eliminate treats or switch to very low-calorie options (small pieces of carrot, cucumber, green beans) and count them against the daily total.</p>
           <p><strong>All family members must comply.</strong> One person covertly giving extra food or treats eliminates the deficit. Weight management requires household-wide consistency. Identify who is feeding extra and address it directly — it is the most common reason veterinary weight management fails.</p>
           <p><strong>Weigh monthly.</strong> Expect 1–2% body weight loss per month — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

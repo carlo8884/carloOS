@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs — Hives, Anaphylaxis | Vets.co', description: 'Hives, facial swelling, and vomiting after a bee sting or vaccine can progress to anaphylaxis. When to give Benadryl vs when to rush to the ER.', path: '/health/allergic-reactions-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and emergency management of acute allergic reactions in dogs.', url: 'https://vets.co/health/allergic-reactions-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+
+const SOURCES = [
+  { label: 'AVMA: Allergic Reactions in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/allergic-reactions-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Anaphylaxis', url: 'https://www.merckvetmanual.com/immunology/allergic-disorders/anaphylaxis', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
+]
 
 export default function AllergicReactionsPage() {
   return (
@@ -14,6 +21,12 @@ export default function AllergicReactionsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Allergic Reactions in Dogs', subtitle: 'Acute allergic reactions in dogs — from bee stings, vaccines, medications, or insect bites — range from mild hives (concerning but manageable) to anaphylaxis (life-threatening within minutes). Knowing which situation you are in, and what to do immediately, can be the difference between a vet visit and a fatality.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Allergic Reactions', href: '/health/allergic-reactions-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Veterinary Guide' },
+          { title: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs — Go Now</div>
@@ -44,6 +57,8 @@ export default function AllergicReactionsPage() {
 
           <h2>After a Reaction — What to Discuss With Your Vet</h2>
           <p>Any dog that has experienced a moderate or severe allergic reaction should have a conversation with a veterinarian about: identifying the trigger if possible (to avoid re-exposure), whether an epinephrine auto-injector is appropriate to keep at home, pre-medication protocols for future vaccines, and whether allergy testing is indicated. Dogs with a history of anaphylaxis to bee stings should have an EpiPen Jr prescribed and carried whenever the dog is outdoors during insect season.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

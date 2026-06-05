@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs — Dog Dementia Signs | Vets.co', description: 'CDS (dog dementia) affects 22% of dogs 9-11 years. Disorientation, sleep disruption, house soiling, and anxiety. Purina Bright Mind, Anipryl.', path: '/health/cognitive-dysfunction', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Cognitive Dysfunction Syndrome in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/cognitive-dysfunction-syndrome-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Madari A et al. Assessment of severity and progression of canine cognitive dysfunction syndrome using the CAnine DEmentia Scale (CADES). Appl Anim Behav Sci. 2015;171:138-145.', publisher: 'Applied Animal Behaviour Science' },
+  { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin Small Anim. 2012;42(4):749-768.', publisher: 'Veterinary Clinics of North America' },
+]
 export default function CognitiveDysfunctionPage() {
   return (
     <>
@@ -13,6 +18,12 @@ export default function CognitiveDysfunctionPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+ (Madari et al., Appl Anim Behav Sci). Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
+          { title: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide', category: 'Veterinary Guide' },
+          { title: 'Anxiety in Dogs', href: '/health/anxiety-in-dogs', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">DISHAA Signs</div>
@@ -50,6 +61,8 @@ export default function CognitiveDysfunctionPage() {
 
           <h2>Nighttime Management</h2>
           <p>Nighttime restlessness and vocalization is one of the most disruptive CDS signs for owners. The dog wanders, vocalizes, or appears confused at night — often the only time the owner is aware something is wrong. Management: melatonin as above, maintaining a consistent bedtime routine, keeping the dog in the bedroom where human presence is reassuring, night lights (disorientation is worse in darkness), and ensuring the dog is not in pain (pain can disrupt sleep in senior dogs independent of CDS — pain management may dramatically improve nighttime behavior).</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>
