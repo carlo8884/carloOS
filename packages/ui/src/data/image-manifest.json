@@ -614,5 +614,19 @@
     "description": "yellow fish swimming underwater",
     "alt": "An aquarium water test kit measuring ammonia and nitrite",
     "query": "aquarium test kit ammonia"
+  },
+  "seniorpets:tool-wellness-checkin": {
+    "provider": "unsplash",
+    "id": "P1Ku27zZJDs",
+    "url": "https://images.unsplash.com/photo-1700665537604-412e89a285c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjM3OTh8MHwxfHNlYXJjaHwxfHxzZW5pb3IlMjBkb2clMjB2ZXRlcmluYXJ5JTIwZXhhbXxlbnwxfDB8fHwxNzgwNjIxMjA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "width": 5392,
+    "height": 3588,
+    "color": "#a6a6a6",
+    "photographer": "Jonatan Bustos",
+    "photographerUrl": "https://unsplash.com/@jonatanbustos25?utm_source=carloOS&utm_medium=referral",
+    "sourceUrl": "https://unsplash.com/photos/a-man-and-a-woman-holding-a-dog-in-a-room-P1Ku27zZJDs?utm_source=carloOS&utm_medium=referral",
+    "description": "a man and a woman holding a dog in a room",
+    "alt": "A senior dog being examined during a wellness visit",
+    "query": "senior dog veterinary exam"
   }
 }
