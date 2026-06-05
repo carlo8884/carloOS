@@ -113,7 +113,13 @@ export default function FoodCostCalculatorPage() {
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Tools', href: '/tools' },
-        { name: 'Food Cost Calculator' },
+        { name: 'Food Cost Calculator', href: '/tools/food-cost-calculator' },
+      ]}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools' },
+        { title: 'Portion Calculator', href: '/tools/portion-calculator' },
+        { title: 'How Much to Feed a Dog', href: '/feeding/how-much-to-feed-a-dog' },
+        { title: 'Pet Food Calories and Energy Density', href: '/nutrition/calories-and-energy-density' },
       ]}
       schema={schema}
       sidebar={

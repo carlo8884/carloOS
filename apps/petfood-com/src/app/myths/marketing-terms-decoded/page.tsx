@@ -44,8 +44,13 @@ export default function MarketingTermsDecodedPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'Pet Food Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The By-Products Myth', href: '/myths/by-products-myth' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
       ]}
       schema={schema}
       sidebar={

@@ -44,8 +44,13 @@ export default function ByProductsMythPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Myths' },
+        { name: 'Myths', href: '/myths' },
         { name: 'The By-Products Myth', href: '/myths/by-products-myth' },
+      ]}
+      relatedLinks={[
+        { title: 'Myths Hub', href: '/myths' },
+        { title: 'The Fillers Myth', href: '/myths/fillers-myth' },
+        { title: 'Marketing Terms Decoded', href: '/myths/marketing-terms-decoded' },
       ]}
       schema={schema}
       sidebar={

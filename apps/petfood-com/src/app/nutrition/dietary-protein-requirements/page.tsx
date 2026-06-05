@@ -53,6 +53,11 @@ export default function DietaryProteinRequirementsPage() {
         { name: 'Nutrition', href: '/nutrition' },
         { name: 'Dietary Protein for Dogs and Cats', href: '/nutrition/dietary-protein-requirements' },
       ]}
+      relatedLinks={[
+        { title: 'Nutrition Hub', href: '/nutrition' },
+        { title: 'Dietary Fat and Fatty Acids', href: '/nutrition/dietary-fat-and-fatty-acids' },
+        { title: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
+      ]}
       schema={schema}
       sidebar={
         <>

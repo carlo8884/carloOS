@@ -57,7 +57,14 @@ export default function LifeStageHubPage() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
+        { name: 'Guides', href: '/guides' },
         { name: 'Life Stages', href: '/life-stage' },
+      ]}
+      relatedLinks={[
+        { title: 'Life Stages Hub', href: '/life-stage' },
+        { title: 'Puppy and Kitten Growth Diets', href: '/diets/puppy-and-kitten-growth-diets' },
+        { title: 'Senior Pet Diets', href: '/diets/senior-pet-diets' },
+        { title: 'Feeding Frequency and Schedules', href: '/feeding/feeding-frequency-and-schedules' },
       ]}
       schema={articleSchema}
       sidebar={

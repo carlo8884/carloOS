@@ -46,8 +46,13 @@ export default function FishOilOmega3Page() {
       }}
       breadcrumbs={[
         { name: 'Home', href: '/' },
-        { name: 'Supplements' },
+        { name: 'Supplements', href: '/supplements' },
         { name: 'Fish Oil and Omega-3 Supplements', href: '/supplements/fish-oil-omega-3' },
+      ]}
+      relatedLinks={[
+        { title: 'Supplements Hub', href: '/supplements' },
+        { title: 'Probiotics for Pets', href: '/supplements/probiotics-for-pets' },
+        { title: 'Glucosamine and Joint Support', href: '/supplements/glucosamine-and-joint-support' },
       ]}
       schema={schema}
       sidebar={
