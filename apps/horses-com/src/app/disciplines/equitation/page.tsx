@@ -54,6 +54,12 @@ export default function EquitationPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Hunter Under Saddle', href: '/disciplines/hunter-under-saddle' },
+          { title: 'Show Jumping', href: '/disciplines/show-jumping' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+        ]}
         hero={{
           title: "Equitation",
           subtitle:

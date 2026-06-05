@@ -54,6 +54,12 @@ export default function GrainConcentratesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Ration Balancers', href: '/nutrition/ration-balancers' },
+          { title: 'Equine Colic', href: '/health/colic' },
+        ]}
         hero={{
           title: "Grain and Concentrates for Horses",
           subtitle:

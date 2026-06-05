@@ -54,6 +54,12 @@ export default function HorseInsurancePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+          { title: 'Equine Health Hub', href: '/health' },
+        ]}
         hero={{
           title: "Horse Insurance Explained",
           subtitle:

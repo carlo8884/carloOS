@@ -65,6 +65,12 @@ export default function NavicularPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Osteoarthritis', href: '/health/osteoarthritis' },
+          { title: 'Hoof Care Basics', href: '/care/hoof-care-basics' },
+        ]}
         hero={{
           title: "Navicular Syndrome",
           subtitle:

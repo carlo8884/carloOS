@@ -54,6 +54,12 @@ export default function ChoosingVetPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+        ]}
         hero={{
           title: "Choosing an Equine Vet",
           subtitle:

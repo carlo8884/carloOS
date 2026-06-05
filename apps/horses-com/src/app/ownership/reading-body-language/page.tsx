@@ -54,6 +54,12 @@ export default function BodyLanguagePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit' },
+        ]}
         hero={{
           title: "Reading Horse Body Language",
           subtitle:

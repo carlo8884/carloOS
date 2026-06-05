@@ -54,6 +54,12 @@ export default function HardKeeperPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Beet Pulp for Horses', href: '/nutrition/beet-pulp' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Ration Balancers', href: '/nutrition/ration-balancers' },
+        ]}
         hero={{
           title: "Feeding the Hard Keeper",
           subtitle:

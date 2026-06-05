@@ -81,6 +81,12 @@ export default function RacehorseTrainingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'Off-Track Thoroughbred Aftercare', href: '/racing/off-track-thoroughbred-aftercare' },
+          { title: 'The People of Racing', href: '/racing/the-people-of-racing' },
+        ]}
         hero={{
           title: 'Racehorse Training & Conditioning',
           subtitle:

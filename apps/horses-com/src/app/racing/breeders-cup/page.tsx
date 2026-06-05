@@ -84,6 +84,12 @@ export default function BreedersCupPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="guide"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'The Triple Crown', href: '/racing/triple-crown' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'Race Types & Classes', href: '/racing/understanding-race-types-and-classes' },
+        ]}
         hero={{
           title: "The Breeders' Cup",
           subtitle:

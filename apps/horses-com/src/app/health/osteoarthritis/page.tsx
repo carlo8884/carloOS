@@ -65,6 +65,12 @@ export default function OsteoarthritisPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Ringbone', href: '/health/ringbone' },
+          { title: 'Joint Supplements', href: '/supplements/joint-supplements' },
+        ]}
         hero={{
           title: "Osteoarthritis in Horses",
           subtitle:

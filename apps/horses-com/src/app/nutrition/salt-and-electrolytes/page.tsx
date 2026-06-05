@@ -54,6 +54,12 @@ export default function SaltElectrolytesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Water Requirements', href: '/nutrition/water-requirements' },
+          { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
+          { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
+        ]}
         hero={{
           title: "Salt and Electrolytes for Horses",
           subtitle:

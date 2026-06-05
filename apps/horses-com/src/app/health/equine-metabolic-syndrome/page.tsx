@@ -65,6 +65,12 @@ export default function EMSPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: "Equine Cushing's Disease (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+        ]}
         hero={{
           title: "Equine Metabolic Syndrome",
           subtitle:

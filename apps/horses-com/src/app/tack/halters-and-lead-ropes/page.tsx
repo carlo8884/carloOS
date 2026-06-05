@@ -54,6 +54,12 @@ export default function HaltersLeadRopesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Bridle Types', href: '/tack/bridle-types' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Reading Horse Body Language', href: '/ownership/reading-body-language' },
+        ]}
         hero={{
           title: "Halters and Lead Ropes",
           subtitle:

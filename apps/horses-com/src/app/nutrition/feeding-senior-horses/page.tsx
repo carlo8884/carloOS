@@ -54,6 +54,12 @@ export default function SeniorFeedingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Beet Pulp for Horses', href: '/nutrition/beet-pulp' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+        ]}
         hero={{
           title: "Feeding Senior Horses",
           subtitle:

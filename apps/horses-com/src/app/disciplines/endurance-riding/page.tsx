@@ -54,6 +54,12 @@ export default function EnduranceRidingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Trail Riding', href: '/disciplines/trail-riding' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Salt and Electrolytes', href: '/nutrition/salt-and-electrolytes' },
+        ]}
         hero={{
           title: "Endurance Riding",
           subtitle:

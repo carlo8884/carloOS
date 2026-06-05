@@ -81,6 +81,12 @@ export default function PeopleOfRacingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="guide"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
+          { title: 'Race Types & Classes', href: '/racing/understanding-race-types-and-classes' },
+        ]}
         hero={{
           title: 'The People of Racing',
           subtitle:

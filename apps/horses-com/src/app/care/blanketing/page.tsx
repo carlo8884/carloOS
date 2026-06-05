@@ -54,6 +54,12 @@ export default function BlanketingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Winter Care', href: '/care/winter-care' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+        ]}
         hero={{
           title: "Horse Blanketing Guide",
           subtitle:

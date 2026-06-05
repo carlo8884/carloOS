@@ -81,6 +81,12 @@ export default function ThoroughbredFlatRacingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'The Triple Crown', href: '/racing/triple-crown' },
+          { title: "The Breeders' Cup", href: '/racing/breeders-cup' },
+          { title: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
+        ]}
         hero={{
           title: 'Thoroughbred Flat Racing',
           subtitle:

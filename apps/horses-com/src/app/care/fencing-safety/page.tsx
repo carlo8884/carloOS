@@ -54,6 +54,12 @@ export default function FencingSafetyPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Owning a Horse — Costs', href: '/ownership/cost-of-owning-a-horse' },
+        ]}
         hero={{
           title: "Horse Fencing and Safety",
           subtitle:

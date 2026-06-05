@@ -65,6 +65,12 @@ export default function HeavesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Influenza', href: '/health/equine-influenza' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Hay Types', href: '/nutrition/hay-types' },
+        ]}
         hero={{
           title: "Heaves (Equine Asthma)",
           subtitle:

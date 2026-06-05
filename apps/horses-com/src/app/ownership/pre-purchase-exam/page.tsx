@@ -54,6 +54,12 @@ export default function PrePurchaseExamPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Choosing an Equine Vet', href: '/ownership/choosing-a-vet' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+        ]}
         hero={{
           title: "The Pre-Purchase Exam",
           subtitle:

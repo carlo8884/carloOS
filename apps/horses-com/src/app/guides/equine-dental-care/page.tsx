@@ -92,6 +92,12 @@ export default function EquineDentalCarePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="horses-com"
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+        ]}
         hero={{
           title: 'Equine Dental Care',
           subtitle:

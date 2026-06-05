@@ -54,6 +54,12 @@ export default function RationBalancersPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+          { title: 'Grain and Concentrates', href: '/nutrition/grain-and-concentrates' },
+        ]}
         hero={{
           title: "Ration Balancers for Horses",
           subtitle:

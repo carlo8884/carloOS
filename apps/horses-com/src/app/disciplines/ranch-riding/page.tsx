@@ -54,6 +54,12 @@ export default function RanchRidingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Western Pleasure', href: '/disciplines/western-pleasure' },
+          { title: 'Cutting', href: '/disciplines/cutting' },
+        ]}
         hero={{
           title: "Ranch Riding",
           subtitle:

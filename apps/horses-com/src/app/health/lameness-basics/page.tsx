@@ -65,6 +65,12 @@ export default function LamenessBasicsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Navicular Syndrome', href: '/health/navicular-syndrome' },
+          { title: 'Osteoarthritis', href: '/health/osteoarthritis' },
+          { title: 'Laminitis', href: '/health/laminitis' },
+        ]}
         hero={{
           title: "Equine Lameness Basics",
           subtitle:

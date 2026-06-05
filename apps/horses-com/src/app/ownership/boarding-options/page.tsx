@@ -54,6 +54,12 @@ export default function BoardingOptionsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'Turnout vs Stabling', href: '/care/turnout-vs-stabling' },
+          { title: 'Fencing Safety', href: '/care/fencing-safety' },
+        ]}
         hero={{
           title: "Horse Boarding Options",
           subtitle:

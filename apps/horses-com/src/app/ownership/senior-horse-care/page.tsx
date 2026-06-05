@@ -54,6 +54,12 @@ export default function SeniorHorseCarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+          { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+        ]}
         hero={{
           title: "Senior Horse Care",
           subtitle:

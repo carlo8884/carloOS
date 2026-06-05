@@ -84,6 +84,12 @@ export default function TripleCrownPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="guide"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: "The Breeders' Cup", href: '/racing/breeders-cup' },
+          { title: 'Race Types & Classes', href: '/racing/understanding-race-types-and-classes' },
+        ]}
         hero={{
           title: 'The Triple Crown',
           subtitle:

@@ -54,6 +54,12 @@ export default function BodyClippingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Fly Control for Horses', href: '/care/fly-control' },
+        ]}
         hero={{
           title: "Body Clipping Horses",
           subtitle:

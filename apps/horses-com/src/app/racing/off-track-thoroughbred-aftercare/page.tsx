@@ -81,6 +81,12 @@ export default function OttbAftercarePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+        ]}
         hero={{
           title: 'Off-Track Thoroughbred Aftercare',
           subtitle:

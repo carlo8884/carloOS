@@ -54,6 +54,12 @@ export default function BeetPulpPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Feeding the Hard Keeper', href: '/nutrition/feeding-the-hard-keeper' },
+          { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Beet Pulp for Horses",
           subtitle:

@@ -54,6 +54,12 @@ export default function HayTypesPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+          { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+          { title: 'Heaves (Equine Asthma)', href: '/health/heaves' },
+        ]}
         hero={{
           title: "Horse Hay Types Compared",
           subtitle:

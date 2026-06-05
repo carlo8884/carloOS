@@ -54,6 +54,12 @@ export default function BuyingFirstHorsePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
+          { title: 'Leasing a Horse', href: '/ownership/leasing-a-horse' },
+          { title: 'Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+        ]}
         hero={{
           title: "Buying Your First Horse",
           subtitle:

@@ -65,6 +65,12 @@ export default function RingbonePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
+          { title: 'Osteoarthritis', href: '/health/osteoarthritis' },
+          { title: 'Navicular Syndrome', href: '/health/navicular-syndrome' },
+        ]}
         hero={{
           title: "Ringbone in Horses",
           subtitle:

@@ -114,6 +114,12 @@ export default function ReiningPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Ranch Riding', href: '/disciplines/ranch-riding' },
+          { title: 'Cutting', href: '/disciplines/cutting' },
+          { title: 'Western Pleasure', href: '/disciplines/western-pleasure' },
+        ]}
         hero={{
           title: 'Reining',
           subtitle:

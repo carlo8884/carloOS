@@ -54,6 +54,12 @@ export default function DewormingProgramPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: 'Pasture Management', href: '/care/pasture-management' },
+        ]}
         hero={{
           title: "Equine Deworming Program",
           subtitle:

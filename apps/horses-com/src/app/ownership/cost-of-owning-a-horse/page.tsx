@@ -54,6 +54,12 @@ export default function CostOfOwningPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Ownership Hub', href: '/ownership', category: 'Horse Ownership' },
+          { title: 'Boarding Options', href: '/ownership/boarding-options' },
+          { title: 'Horse Insurance', href: '/ownership/horse-insurance' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+        ]}
         hero={{
           title: "The Cost of Owning a Horse",
           subtitle:

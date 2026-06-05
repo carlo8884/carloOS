@@ -54,6 +54,12 @@ export default function HelmetGuidePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Stirrups and Rider Safety', href: '/tack/stirrups-and-safety' },
+          { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
+          { title: 'Disciplines Hub', href: '/disciplines' },
+        ]}
         hero={{
           title: "Riding Helmet Guide",
           subtitle:

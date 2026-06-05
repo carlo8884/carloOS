@@ -65,6 +65,12 @@ export default function ChokePage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="health"
+        relatedLinks={[
+          { title: 'Equine Health Hub', href: '/health', category: 'Equine Health' },
+          { title: 'Equine Colic', href: '/health/colic' },
+          { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: 'Forage Basics', href: '/nutrition/forage-basics' },
+        ]}
         hero={{
           title: "Choke in Horses",
           subtitle:

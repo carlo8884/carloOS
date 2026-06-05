@@ -54,6 +54,12 @@ export default function FlyControlPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="care"
+        relatedLinks={[
+          { title: 'Horse Care Hub', href: '/care', category: 'Horse Care' },
+          { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
+          { title: 'Grooming a Horse', href: '/care/grooming' },
+          { title: 'Sweet Itch', href: '/health/sweet-itch' },
+        ]}
         hero={{
           title: "Fly Control for Horses",
           subtitle:

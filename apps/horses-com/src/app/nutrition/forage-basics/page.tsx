@@ -54,6 +54,12 @@ export default function ForageBasicsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="nutrition"
+        relatedLinks={[
+          { title: 'Nutrition Hub', href: '/nutrition', category: 'Nutrition' },
+          { title: 'Hay Types', href: '/nutrition/hay-types' },
+          { title: 'Equine Gastric Ulcers', href: '/health/equine-ulcers' },
+          { title: 'Equine Colic', href: '/health/colic' },
+        ]}
         hero={{
           title: "Equine Forage Basics",
           subtitle:

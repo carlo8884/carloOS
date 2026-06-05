@@ -54,6 +54,12 @@ export default function CombinedDrivingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+          { title: 'Dressage', href: '/disciplines/dressage' },
+          { title: 'Equestrian Vaulting', href: '/disciplines/vaulting' },
+        ]}
         hero={{
           title: "Combined Driving",
           subtitle:

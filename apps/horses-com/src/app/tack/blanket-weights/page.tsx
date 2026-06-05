@@ -54,6 +54,12 @@ export default function BlanketWeightsPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="gear"
+        relatedLinks={[
+          { title: 'Tack Hub', href: '/tack', category: 'Tack & Gear' },
+          { title: 'Horse Blanketing Guide', href: '/care/blanketing' },
+          { title: 'Winter Care', href: '/care/winter-care' },
+          { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
+        ]}
         hero={{
           title: "Horse Blanket Weights Explained",
           subtitle:

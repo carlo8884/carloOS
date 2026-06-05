@@ -41,6 +41,12 @@ export default function QuarterHorseBreedPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="breed"
+        relatedLinks={[
+          { title: 'Horse Breeds Hub', href: '/breeds', category: 'Breeds' },
+          { title: 'Disciplines Hub', href: '/disciplines' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Barrel Racing', href: '/disciplines/barrel-racing' },
+        ]}
         hero={{
           title: 'American Quarter Horse',
           subtitle:

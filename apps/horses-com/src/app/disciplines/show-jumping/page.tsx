@@ -114,6 +114,12 @@ export default function ShowJumpingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="discipline"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Eventing', href: '/disciplines/eventing' },
+          { title: 'Hunter Under Saddle', href: '/disciplines/hunter-under-saddle' },
+          { title: 'Equitation', href: '/disciplines/equitation' },
+        ]}
         hero={{
           title: 'Show Jumping',
           subtitle:

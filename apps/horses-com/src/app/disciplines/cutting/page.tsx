@@ -54,6 +54,12 @@ export default function CuttingPage() {
       <ArticleLayout
         siteId="horses-com"
         contentType="training"
+        relatedLinks={[
+          { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },
+          { title: 'Reining', href: '/disciplines/reining' },
+          { title: 'Ranch Riding', href: '/disciplines/ranch-riding' },
+          { title: 'Western Pleasure', href: '/disciplines/western-pleasure' },
+        ]}
         hero={{
           title: "Cutting",
           subtitle:
