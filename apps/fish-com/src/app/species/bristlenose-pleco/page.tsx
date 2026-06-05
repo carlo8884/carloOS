@@ -10,6 +10,7 @@ export default function BristlenosePlecoPage() {
       hero={{ title: 'Bristlenose Pleco Care Guide', subtitle: "Ancistrus spp. — the bristlenose pleco is the algae-eating catfish that actually belongs in a home aquarium. Unlike the common pleco that reaches two feet and outgrows nearly every tank it is sold for, the bristlenose stays under five inches, eats algae throughout its life, and breeds readily. Mature males grow the namesake tentacle-like bristles across the snout.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bristlenose Pleco', href: '/species/bristlenose-pleco' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Pleco", href: "/species/pleco", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }, { title: "Aquarium Algae Control", href: "/setup/aquarium-algae-control", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

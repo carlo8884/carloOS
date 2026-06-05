@@ -107,6 +107,7 @@ export default function WaterChangeCalculatorPage() {
         { name: 'Water Change Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={
         <>
           <TableOfContents

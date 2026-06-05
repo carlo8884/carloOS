@@ -9,6 +9,7 @@ export default function BettaTankMatesPage() {
       hero={{ title: 'Betta Fish Tank Mates', subtitle: 'The question "what can I put with my betta?" depends entirely on the individual fish. Some bettas are highly tolerant; others will attack anything that moves. No compatibility list is universal — every betta is an individual. This guide covers the safest options and explains how to test compatibility.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Put With Bettas</div>

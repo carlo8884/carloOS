@@ -10,6 +10,7 @@ export default function EndlersLivebearerPage() {
       hero={{ title: "Endler's Livebearer Care Guide", subtitle: "Poecilia wingei — the Endler's livebearer is a diminutive cousin of the guppy, prized for the neon-bright metallic patches of orange, green, and black that males display in a body barely an inch long. Hardy, peaceful, and astonishingly prolific, Endlers are one of the best fish for a planted nano aquarium and a favorite of livebearer enthusiasts worldwide.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'June 2026', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: "Endler's Livebearer", href: '/species/endlers-livebearer' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Guppy", href: "/species/guppy", category: "Species Guide" }, { title: "Molly Fish", href: "/species/molly-fish", category: "Species Guide" }, { title: "Platy Fish", href: "/species/platy-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

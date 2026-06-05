@@ -19,6 +19,7 @@ export default function QuarantineGuidePage() {
       <ArticleLayout siteId="fish-com"
         hero={{ title: 'Quarantine Tank Guide', subtitle: 'The single most effective disease-prevention measure in fishkeeping — and the most commonly skipped. A quarantine tank intercepts sick fish before they introduce disease to an established aquarium. Four to six weeks catches most diseases with clinical latency. One disease introduction to an established planted or reef tank can cost more in treatment and fish loss than a lifetime of quarantine supplies.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Quarantine Tank', href: '/setup/quarantine-tank-guide' }]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', category: 'Fish Health' }, { title: 'Medicating Aquarium Fish', href: '/health/medicating-aquarium-fish', category: 'Fish Health' }, { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Fish Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">QT Essentials</div>

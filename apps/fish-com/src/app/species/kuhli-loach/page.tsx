@@ -9,6 +9,7 @@ export default function KuhliLoachPage() {
       hero={{ title: 'Kuhli Loach Care Guide', subtitle: 'Pangio kuhlii — the eel-shaped, tiger-banded loach that spends most of its life invisible under substrate, inside decorations, or tangled in a pile with other kuhli loaches. They are real fish, they are alive, and they are wonderful — you just rarely see them until the lights go out.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Kuhli Loach', href: '/species/kuhli-loach' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

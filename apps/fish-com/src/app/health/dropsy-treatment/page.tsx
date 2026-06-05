@@ -9,6 +9,7 @@ export default function DropsyPage() {
       hero={{ title: 'Dropsy in Fish', subtitle: 'Dropsy is not a disease itself — it is a symptom of severe internal organ failure. The characteristic "pinecone" appearance of scales standing away from the body results from massive fluid accumulation in the body cavity. By the time dropsy is visually apparent, the underlying disease has typically progressed to an advanced state.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Dropsy', href: '/health/dropsy-treatment' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Pop-Eye", href: "/health/pop-eye", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Dropsy Signs</div>

@@ -9,6 +9,7 @@ export default function GuppyPage() {
       hero={{ title: 'Guppy Care Guide', subtitle: 'Poecilia reticulata — the most common aquarium fish in the world, and one of the most misunderstood. Guppies have an undeserved reputation as simple, expendable beginner fish. Quality fancy guppies from reputable breeders are genuinely beautiful, complex, and engaging to keep and breed. Pet store guppies are a different situation.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Guppy', href: '/species/guppy' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Endlers Livebearer", href: "/species/endlers-livebearer", category: "Species Guide" }, { title: "Molly Fish", href: "/species/molly-fish", category: "Species Guide" }, { title: "Platy Fish", href: "/species/platy-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

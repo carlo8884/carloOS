@@ -9,6 +9,7 @@ export default function RainbowFishPage() {
       hero={{ title: 'Rainbowfish Care Guide', subtitle: 'The Melanotaeniidae family — native to Australia, New Guinea, and nearby islands — produces some of the most spectacularly colored fish in the freshwater hobby when kept correctly. The problem: rainbowfish in fish store tanks rarely show their full color potential. A mature male Boesemani rainbowfish in a well-maintained planted tank with good food is a dramatically different animal from the pale juvenile in a stock tank.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Rainbowfish', href: '/species/rainbow-fish' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Boesemani Rainbowfish", href: "/species/boesemani-rainbowfish", category: "Species Guide" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Popular Species</div>

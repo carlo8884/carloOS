@@ -117,6 +117,7 @@ export default function CorydorasPage() {
           { name: 'Species', href: '/species' },
           { name: 'Corydoras', href: '/species/corydoras' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Bronze Corydoras', href: '/species/bronze-corydoras', category: 'Species Guide' }, { title: 'Panda Corydoras', href: '/species/panda-corydoras', category: 'Species Guide' }, { title: 'Kuhli Loach', href: '/species/kuhli-loach', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

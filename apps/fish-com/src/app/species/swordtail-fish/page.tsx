@@ -112,6 +112,7 @@ export default function SwordtailPage() {
           { name: 'Species', href: '/species' },
           { name: 'Swordtail', href: '/species/swordtail-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

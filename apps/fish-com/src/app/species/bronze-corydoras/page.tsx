@@ -10,6 +10,7 @@ export default function BronzeCorydorasPage() {
       hero={{ title: 'Bronze Corydoras Care Guide', subtitle: "Corydoras aeneus — the bronze cory is the most widely kept and forgiving member of the beloved Corydoras genus. A peaceful, armored bottom-dweller with an endearing habit of darting to the surface for a gulp of air, it works the substrate of community tanks in cheerful, social groups. Bronze and albino forms are the two most common varieties in the trade.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bronze Corydoras', href: '/species/bronze-corydoras' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Panda Corydoras", href: "/species/panda-corydoras", category: "Species Guide" }, { title: "Kuhli Loach", href: "/species/kuhli-loach", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

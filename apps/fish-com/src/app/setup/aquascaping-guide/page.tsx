@@ -10,6 +10,7 @@ export default function AquascapingGuidePage() {
       hero={{ title: 'Aquascaping Guide', subtitle: "Aquascaping is the craft of arranging plants, rock, wood, and substrate into an underwater landscape that follows the same compositional principles as painting and garden design. A thoughtfully scaped tank reads as a single, intentional scene rather than a collection of objects. This guide covers the core layout styles, composition rules, and material choices that separate a deliberate aquascape from a decorated box.", category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🌿', publishedAt: 'June 2026', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Aquascaping Guide', href: '/setup/aquascaping-guide' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Layout Styles</div>

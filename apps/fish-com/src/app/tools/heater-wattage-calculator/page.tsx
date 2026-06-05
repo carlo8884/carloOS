@@ -107,6 +107,7 @@ export default function HeaterWattageCalculatorPage() {
         { name: 'Heater Wattage Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
       sidebar={
         <>
           <TableOfContents

@@ -107,6 +107,7 @@ export default function CO2CalculatorPage() {
         { name: 'CO2 Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={
         <>
           <TableOfContents

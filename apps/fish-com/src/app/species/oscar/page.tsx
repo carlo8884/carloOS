@@ -9,6 +9,7 @@ export default function OscarPage() {
       hero={{ title: 'Oscar Fish Care Guide', subtitle: 'Astronotus ocellatus — the most personable large cichlid in the hobby. Oscars recognize their owners, react to their approach, beg for food at feeding time, and rearrange decorations to suit their preferences. They can live 10–15 years and become genuinely interactive animals. The commitment: they require at minimum 75 gallons, produce enormous waste, and will eat anything smaller than themselves.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Oscar', href: '/species/oscar' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "African Cichlid", href: "/species/african-cichlid", category: "Species Guide" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Best Canister Filters", href: "/reviews/best-canister-filters", category: "Reviews" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

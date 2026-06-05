@@ -246,6 +246,7 @@ export default async function DiseasePage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[{ title: 'Fish Health Hub', href: '/health', category: 'Fish Health' }, { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', category: 'Fish Health' }, { title: 'Quarantine Tank Guide', href: '/setup/quarantine-tank-guide', category: 'Tank Setup' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }]}
       sidebar={
         <>
           <TableOfContents

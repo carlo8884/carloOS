@@ -10,6 +10,7 @@ export default function SparklingGouramiPage() {
       hero={{ title: 'Sparkling Gourami Care Guide', subtitle: "Trichopsis pumila — the sparkling or pygmy gourami is a jewel-like labyrinth fish under an inch and a half long, with iridescent blue-green spangling across an amber body and striking red-rimmed eyes. Most remarkably, it produces an audible croaking sound. It is a perfect centerpiece for a quiet, well-planted nano aquarium.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'June 2026', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Sparkling Gourami', href: '/species/sparkling-gourami' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Dwarf Gourami", href: "/species/dwarf-gourami", category: "Species Guide" }, { title: "Pearl Gourami", href: "/species/pearl-gourami", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

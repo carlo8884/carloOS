@@ -9,6 +9,7 @@ export default function OtocinclsPage() {
       hero={{ title: 'Otocinclus Care Guide', subtitle: 'Otocinclus vittatus — the best algae eater for small and nano planted tanks. At 1.5 inches they work glass and leaves without damaging plants, are completely peaceful, and are safe with shrimp. The challenge: they require an established tank with algae growth and starve easily in newly set up aquariums.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Otocinclus', href: '/species/otocinclus' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Bristlenose Pleco", href: "/species/bristlenose-pleco", category: "Species Guide" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Aquarium Algae Control", href: "/setup/aquarium-algae-control", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

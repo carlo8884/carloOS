@@ -10,6 +10,7 @@ export default function AlgaeControlPage() {
       hero={{ title: 'Aquarium Algae Control Guide', subtitle: "Algae is not a disease — it is a symptom. Every algae outbreak is the tank telling you that light, nutrients, and CO2 are out of balance, and that some surplus is being claimed by the fastest-growing organism in the water. Killing algae directly without fixing the imbalance only postpones the next bloom. This guide identifies the common types and treats their actual causes.", category: 'Tank Maintenance', authorName: 'Fish.com Editorial', authorAvatar: '🌿', publishedAt: 'June 2026', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Algae Control', href: '/setup/aquarium-algae-control' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Algae at a Glance</div>

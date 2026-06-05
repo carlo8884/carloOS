@@ -127,6 +127,7 @@ export default function FishDiseaseGuidePage() {
         { name: 'Disease Guide', href: '/health/fish-disease-guide' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }, { title: "Velvet Disease", href: "/health/velvet-disease", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-4">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The #1 Prevention</div>
