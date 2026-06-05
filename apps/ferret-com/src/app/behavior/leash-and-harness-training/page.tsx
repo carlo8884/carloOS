@@ -9,6 +9,9 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ReviewCard,
+  ScoreMethodology,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -104,6 +107,7 @@ export default function LeashAndHarnessTrainingPage() {
                 { label: 'Indoor Break-In Schedule', href: '#indoor' },
                 { label: 'First Outdoor Walks', href: '#outdoor' },
                 { label: 'Heat & Safety', href: '#safety' },
+                { label: 'Harness Picks', href: '#picks' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -279,6 +283,64 @@ export default function LeashAndHarnessTrainingPage() {
               that is fine.
             </li>
           </ul>
+
+          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+
+          <h2 id="picks">Harness Picks</h2>
+          <p>
+            Two harness styles that fit ferret anatomy correctly — an H-style and a vest-style — both stocked through major pet retailers. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+          </p>
+          <ScoreMethodology />
+          <ReviewCard
+            id="marshall-ferret-harness"
+            badge="H-Style"
+            badgeEmoji="🦺"
+            name="Marshall Ferret H-Style Harness & Leash Set"
+            subtitle="Adjustable H-style harness sized for ferret bodies, with 6-ft leash included"
+            score={8.7}
+            winner
+            description={
+              <p>The reference H-style ferret harness in US pet retail. Adjustable at neck and body to accommodate seasonal weight changes; the H-geometry distributes leash pressure across the chest and shoulders rather than the throat. Widely stocked at national chain pet stores. The included leash is adequate for indoor break-in and early outdoor sessions.</p>
+            }
+            specs={[
+              { label: 'Style', value: 'H-style (adjustable)', highlight: 'good' },
+              { label: 'Escape risk', value: 'Low when fitted correctly', highlight: 'good' },
+              { label: 'Leash included', value: 'Yes (6 ft)', highlight: 'good' },
+              { label: 'Sizing', value: 'Ferret-specific', highlight: 'good' },
+              { label: 'Distribution', value: 'National chain pet retail + online' },
+            ]}
+            pros={['Ferret-specific sizing', 'Adjustable for seasonal fit changes', 'Chest-pressure geometry', 'Leash included', 'Widely available']}
+            cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
+            price="$10–18"
+            ctaText="Find Marshall Ferret Harness"
+            ctaHref="/go/marshall/ferret-harness-leash?s=behavior-leash-harness"
+            ctaAffiliateProgram="marshall"
+            ctaAffiliateProduct="ferret-harness-leash"
+          />
+          <ReviewCard
+            id="ferret-vest-harness"
+            badge="Vest-Style"
+            badgeEmoji="🛡️"
+            name="Ferret Vest-Style Harness"
+            subtitle="Wider-body vest harness, harder to back out of than an H-style"
+            score={8.3}
+            description={
+              <p>A wider fabric band that wraps the torso rather than two loops joined by a strap. Harder for a determined escape artist to reverse out of, making it the better choice for ferrets that back out of standard H-harnesses. Slightly more fiddly to put on than an H-style; the trade-off is additional security. Search for a ferret-specific vest harness (cat vest harnesses often do not cinch small enough).</p>
+            }
+            specs={[
+              { label: 'Style', value: 'Vest (full-torso wrap)', highlight: 'good' },
+              { label: 'Escape resistance', value: 'Higher than H-style', highlight: 'good' },
+              { label: 'Fit difficulty', value: 'Moderate' },
+              { label: 'Sizing', value: 'Verify ferret-specific fit before buying' },
+            ]}
+            pros={['Harder to back out of than H-style', 'Good for escape-artist ferrets', 'Distributes pressure well']}
+            cons={['Takes longer to put on', 'Sizing varies by manufacturer — verify it cinches ferret-small']}
+            price="$12–22"
+            ctaText="Find ferret vest harnesses"
+            ctaHref="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="ferret+vest+harness"
+          />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
