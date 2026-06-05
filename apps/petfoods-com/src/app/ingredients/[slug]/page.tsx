@@ -7,6 +7,7 @@ import {
   buildFAQSchema,
   buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -1290,6 +1291,12 @@ export default async function IngredientPage({ params }: PageProps) {
       />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(ingredient)}
         </p>

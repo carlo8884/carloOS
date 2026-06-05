@@ -3,6 +3,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
@@ -209,6 +210,12 @@ export default function LifeStageHubPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> Every US commercial dog or cat food carries an AAFCO statement
           declaring which life stage it is formulated for. The statement is binding: it determines

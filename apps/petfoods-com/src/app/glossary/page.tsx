@@ -6,6 +6,7 @@ import {
   buildFAQSchema,
   buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -312,6 +313,12 @@ export default function GlossaryHubPage() {
       />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-06-01T00:00:00Z"
+          updatedAt="2026-06-01T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> US pet food labels mix terms with strict AAFCO and FDA definitions
           (the 95%/25%/with/flavor naming rules, "complete &amp; balanced," "human-grade," "natural,"

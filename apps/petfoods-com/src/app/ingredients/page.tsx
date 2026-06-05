@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
@@ -252,6 +253,12 @@ export default function IngredientsHubPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> This is the ingredient catalog. Entries are grouped by functional
           category — proteins, carbs, fats, fibers, preservatives, supplements, and disclosure
