@@ -3,6 +3,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
@@ -145,6 +146,12 @@ export default function RecallsHubPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <p id="tldr">
           <strong>TL;DR.</strong> Every commercial pet food recall reported to the FDA Center for
           Veterinary Medicine since 2018, organized as a structured catalog so an owner can check

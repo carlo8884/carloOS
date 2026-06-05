@@ -6,6 +6,7 @@ import {
   buildArticleSchema,
   buildBreadcrumbSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -257,6 +258,12 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
       />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <DisclosureBanner />
 
         <p id="tldr">
@@ -632,6 +639,12 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
       />
 
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <DisclosureBanner />
 
         <BuyBox

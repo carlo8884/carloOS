@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildArticleSchema,
   ArticleLayout,
+  ArticleByline,
   TableOfContents,
   RelatedLinks,
   FAQAccordion,
@@ -182,6 +183,12 @@ export default function BrandsHubPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline
+          siteName="PetFoods.com Editorial"
+          publishedAt="2026-05-28T00:00:00Z"
+          updatedAt="2026-05-28T00:00:00Z"
+          reviewedBy="Editorial team"
+        />
         <div
           style={{
             background: 'var(--brand-surface)',
