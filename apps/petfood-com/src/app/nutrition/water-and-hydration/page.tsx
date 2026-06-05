@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function WaterAndHydrationPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Water makes up roughly 60 to 70 percent of an adult animal&apos;s body and is involved in every physiological process. An animal can lose nearly all its fat and half its protein and survive, but a loss of 10 to 15 percent of body water is life-threatening. Water is not on the AAFCO nutrient profile in the usual sense, but it is correctly described as the most important nutrient, and the way a diet supplies it has real clinical weight, especially for cats.</p>
         <h2 id="important">The Most Important Nutrient</h2>
         <p>Water sources are drinking water, the moisture in food, and metabolic water produced by oxidizing nutrients. A healthy animal self-regulates total intake well when fresh water is freely available and when no medical condition impairs thirst or increases losses. Requirements rise with heat, exercise, lactation, and any disease causing increased urination, vomiting, or diarrhea.</p>

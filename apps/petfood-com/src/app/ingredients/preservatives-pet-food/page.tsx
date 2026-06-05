@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,6 +126,7 @@ export default function PreservativesPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           Pet food contains fat — typically 8-20% of dry kibble on a dry-matter basis — and fat
           oxidizes in the presence of oxygen, heat, light, and trace metals. Oxidation produces

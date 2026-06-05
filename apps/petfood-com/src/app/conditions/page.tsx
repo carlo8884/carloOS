@@ -18,6 +18,7 @@ import {
   RelatedLinks,
   CalloutBox,
   EmailCapture,
+  ArticleByline
 } from '@carloOS/ui'
 import { ConditionDiets } from '../../data/condition-diets'
 
@@ -190,6 +191,7 @@ export default function ConditionsHubPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <CalloutBox variant="warning" title="Therapeutic diets require veterinary guidance">
           <p style={{ margin: 0 }}>
             Therapeutic diets require veterinary guidance. Discuss your pet&rsquo;s specific

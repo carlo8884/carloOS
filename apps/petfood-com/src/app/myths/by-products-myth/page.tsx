@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -109,6 +110,7 @@ export default function ByProductsMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The claim is that by-products are low-quality waste — beaks, hooves, floor sweepings, diseased tissue — used as cheap filler, and that a food free of by-products is therefore superior. This framing has driven significant marketing, but it does not match the AAFCO ingredient definitions or the nutritional reality. By-products are a defined ingredient category consisting largely of nutritious organ meats. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a>.</p>
         <h2 id="claim">The Claim</h2>
         <p>Premium and boutique brands frequently advertise no by-products as a quality marker, leaning on the negative connotation of the word. The implication is that by-products are nutritionally inferior or even unsafe. Examined against the regulatory definition and nutritional science, the claim conflates a transparency issue with a quality issue and overstates both.</p>

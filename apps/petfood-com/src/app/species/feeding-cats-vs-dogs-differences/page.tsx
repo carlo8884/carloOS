@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function FeedingCatsVsDogsDifferencesPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The nutritional differences between cats and dogs translate into different feeding behaviors and routines. A feeding plan that works for a dog can fail for a cat and vice versa. Understanding how each species naturally eats — and where that behavior creates problems in a household — helps owners build routines that support good nutrition and a healthy weight. See <a href="/feeding/feeding-frequency-and-schedules">Feeding Frequency and Schedules</a>.</p>
         <h2 id="patterns">Eating Patterns</h2>
         <p>Dogs, descended from pack hunters, tend to eat quickly and opportunistically — gorging when food is available, which suits meal feeding. Cats, hunters of small prey, naturally eat many small meals throughout the day, which is why cats often graze and why several small measured meals (or a measured portion in a puzzle feeder) suit feline physiology. Forcing a cat into a single large meal works against its nature; letting a dog graze invites overeating.</p>

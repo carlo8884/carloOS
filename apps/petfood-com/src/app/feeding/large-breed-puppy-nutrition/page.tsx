@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function LargeBreedPuppyNutritionPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Puppies expected to reach 70 pounds or more as adults grow over a longer window and are uniquely sensitive to dietary calcium and to over-rapid growth. Feeding them a standard puppy or all-life-stages food not validated for large-size growth, or over-supplementing calcium, raises the risk of developmental orthopedic disease — joint and bone abnormalities that can cause lifelong lameness. This is the clearest case in which the specific diet, and the feeding amount, materially affect long-term health.</p>
         <h2 id="risk">The Unique Risk</h2>
         <p>Unlike small breeds, large-breed puppies cannot fully regulate calcium absorption when dietary calcium is high — excess calcium is absorbed and interferes with normal skeletal development. Combined with the long growth period of large breeds and the temptation to feed for maximum size, this creates a window of vulnerability that the right diet manages and the wrong diet aggravates. See <a href="/diets/puppy-and-kitten-growth-diets">Puppy and Kitten Growth Diets</a>.</p>

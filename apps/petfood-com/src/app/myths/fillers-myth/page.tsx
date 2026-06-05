@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function FillersMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The claim is that low-quality foods are bulked out with fillers — cheap ingredients with no nutritional value added only to pad the bag. The word implies waste and dilution. But filler has no regulatory or scientific definition; it is a rhetorical label applied selectively to grains, fiber sources, and carbohydrate ingredients that, in fact, serve real functions. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>
         <h2 id="claim">The Claim</h2>
         <p>Critics label ingredients such as corn, beet pulp, brewers rice, or bran as fillers, suggesting they are nutritionally empty and present only to cut cost. The term is rarely defined; it functions as a catch-all pejorative. Examined ingredient by ingredient, most so-called fillers have a nutritional or functional role.</p>

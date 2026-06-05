@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function HomeCookedVsCommercialPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Home-cooking lets owners control ingredients, accommodate preferences and some medical needs, and avoid commercial processing. The problem is not the concept but the execution: balancing a complete diet by hand is genuinely difficult, and study after study finds that the large majority of home-prepared recipes — including many published in books and online and even some from veterinarians without nutrition training — fail to meet established nutrient requirements. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="appeal">The Appeal</h2>
         <p>Owners turn to home-cooking for control over ingredient quality, to manage picky eaters or food sensitivities, for animals with multiple conditions that no single commercial diet addresses, and out of distrust of commercial processing. These are understandable motivations, and a properly formulated home diet can be a fine choice — the issue is ensuring proper formulation.</p>

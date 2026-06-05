@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function PancreatitisLowFatDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Pancreatitis is inflammation of the pancreas, in which digestive enzymes activate prematurely and damage the organ. It ranges from mild and self-limiting to severe and fatal. In dogs it is frequently triggered by a high-fat meal — the classic case follows a holiday when the dog ate fatty table food — and dietary fat management is central to prevention. The condition can become chronic and recurrent, making long-term diet a priority.</p>
         <h2 id="whatis">What Pancreatitis Is</h2>
         <p>The pancreas produces digestive enzymes and insulin. In pancreatitis, enzyme activation within the gland causes inflammation, pain, vomiting, and in severe cases systemic illness. Acute pancreatitis requires immediate veterinary care; chronic or recurrent pancreatitis is managed largely through diet. Repeated episodes can damage the pancreas enough to cause diabetes or exocrine pancreatic insufficiency.</p>

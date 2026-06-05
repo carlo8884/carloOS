@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>After the main ingredients, a complete pet food lists a long series of added vitamins, minerals, amino acids, and other additives. The chemical-sounding names can look concerning, but most are the supplement premix that brings the food to AAFCO completeness, plus functional additives for palatability, texture, and preservation. Understanding what each group does removes most of the alarm. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a> and <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="bottom">The Bottom of the Panel</h2>
         <p>Because the panel is ordered by weight, the additives present in tiny amounts cluster at the bottom. Their position reflects their small quantity, not low importance — many are essential nutrients added in milligram or microgram amounts. A long additive tail is normal and expected on a complete diet; its absence would more likely indicate an incomplete product. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a>.</p>

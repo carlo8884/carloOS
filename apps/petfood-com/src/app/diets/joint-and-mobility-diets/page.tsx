@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function JointAndMobilityDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Osteoarthritis (degenerative joint disease) causes cartilage breakdown, joint inflammation, pain, and reduced mobility. It affects a large share of older dogs and is increasingly recognized in cats, where it is easy to miss. Mobility diets and joint supplements are a major commercial category, but the evidence behind the various components varies widely, and the most effective intervention is also the most basic.</p>
         <h2 id="oa">Osteoarthritis in Pets</h2>
         <p>Arthritis management is multimodal: weight control, pain medication where indicated, controlled exercise, physical rehabilitation, and nutritional support. Diet contributes through two well-supported mechanisms — reducing the mechanical load on joints via weight loss, and reducing joint inflammation via omega-3 fatty acids — plus several less-proven additives.</p>

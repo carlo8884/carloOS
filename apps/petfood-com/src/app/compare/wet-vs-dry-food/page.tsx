@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function WetVsDryFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The defining difference between wet and dry food is water content: canned food is roughly 75 to 82 percent water, dry kibble about 6 to 12 percent. Almost every other practical difference flows from that, plus the manufacturing difference (extrusion requires starch; canning does not). Neither format is universally better; the right choice depends on the species, the individual animal, and the household. Nutrient comparisons between them must be done on a dry-matter basis. See <a href="/nutrition/dry-matter-basis-explained">Dry-Matter Basis Explained</a>.</p>
         <h2 id="moisture">The Core Difference — Moisture</h2>
         <p>The high moisture of canned food is its biggest functional advantage, especially for cats. Cats have a weak thirst drive and tend to under-hydrate on dry food, and increased dietary water supports urinary and kidney health. For cats with a history of urinary disease or kidney disease, the moisture of canned food is a genuine clinical benefit. See <a href="/nutrition/water-and-hydration">Water and Hydration</a> and <a href="/diets/urinary-tract-diets">Urinary and Bladder Stone Diets</a>.</p>

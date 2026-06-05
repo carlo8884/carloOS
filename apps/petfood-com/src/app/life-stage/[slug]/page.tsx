@@ -14,7 +14,8 @@ import {
   CalloutBox,
   EmailCapture,
   AffiliateDisclosure,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -384,6 +385,7 @@ export default async function LifeStagePage({ params }: PageProps) {
       />
 
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(stage)}
         </p>

@@ -8,7 +8,8 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -113,6 +114,7 @@ export default function FreezeDriedAndDehydratedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Freeze-drying and dehydration both remove water to make food shelf-stable, but by different methods and at different temperatures, and the starting material may be raw or cooked. The category includes complete diets meant to be the sole food and toppers meant only to enhance a complete diet. Because of this variety, the label and the AAFCO statement matter as much here as anywhere. See <a href="/compare/raw-vs-cooked-diets">Raw vs Cooked Diets</a>.</p>
         <h2 id="howmade">How They Are Made</h2>
         <p>Freeze-drying (lyophilization) freezes the food, then removes water by sublimation under vacuum at low temperature, preserving structure and most nutrients with minimal heat. Dehydration removes water using warm air, which is gentler than extrusion but applies more heat than freeze-drying. Both yield a lightweight, shelf-stable product that is usually rehydrated before feeding. Freeze-drying is more expensive and better at preserving heat-sensitive nutrients.</p>

@@ -9,7 +9,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -152,6 +153,7 @@ export default function RawPetFoodEvaluationPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           The owner asking whether to feed raw is usually asking two different questions at once:
           is raw nutritionally better, and is raw safe? Those questions have different answers,

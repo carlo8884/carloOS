@@ -8,7 +8,8 @@ import {
   EmailCapture,
   BuyBox,
   AffiliateDisclosure,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,6 +118,7 @@ export default function OrijenVsAcanaComparisonPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           The two brands sit close together in the premium grain-free category and are frequently
           cross-shopped. Because they share a parent (Champion Petfoods, headquartered in Edmonton,

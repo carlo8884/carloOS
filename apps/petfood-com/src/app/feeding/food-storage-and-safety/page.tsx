@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function FoodStorageAndSafetyPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Once a bag is opened, pet food begins to degrade through fat oxidation (rancidity), moisture uptake, and exposure to air, light, heat, and pests. Spoiled food loses palatability and nutritional value — oxidation destroys fat-soluble vitamins and essential fatty acids — and contaminated food poses a safety risk. Proper storage preserves quality through the best-by window, and proper handling prevents foodborne illness in pets and people. See <a href="/ingredients/preservatives-pet-food">Preservatives in Pet Food</a>.</p>
         <h2 id="spoils">How Pet Food Spoils</h2>
         <p>The main spoilage pathway for dry food is oxidation of the fats, which produces rancid off-flavors and destroys nutrients, accelerated by air, heat, and light. Foods preserved with natural antioxidants (mixed tocopherols, rosemary) oxidize faster than those with synthetic preservatives, so natural-preserved foods have shorter shelf lives once opened. Moisture uptake also promotes mold, and warmth invites pantry-moth and beetle infestation.</p>

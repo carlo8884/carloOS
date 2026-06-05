@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function HowToTransitionPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>A new food differs from the old one in ingredients, fiber, fat, and nutrient profile, and the digestive system — including the gut microbiome that helps process food — adapts to those differences over days. An abrupt switch can outpace that adaptation, producing soft stool, gas, vomiting, or refusal. A gradual transition gives the gut time to adjust and is the standard recommendation for any food change in a healthy animal.</p>
         <h2 id="why">Why Transition Gradually</h2>
         <p>The gut microbiome shifts its composition in response to diet, and abrupt dietary change disrupts it transiently, which is a common cause of diet-change diarrhea. Mixing increasing proportions of the new food with the old lets the microbiome and digestive enzymes adapt incrementally. The same logic applies whether switching brands, formulas, or formats. See <a href="/diets/fiber-and-digestive-health">Fiber and Digestive Health Diets</a>.</p>

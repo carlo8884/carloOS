@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function CardiacAndLowSodiumDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Cardiac disease — degenerative valve disease and dilated cardiomyopathy in dogs, and various conditions in cats — is managed primarily with medication, but diet supports management and helps counter the muscle loss (cardiac cachexia) that accompanies advanced heart failure. The classic dietary lever is sodium, but cardiac nutrition is more than salt restriction, and it must be staged to the disease and individualized. See <a href="/nutrition/taurine-and-amino-acids">Taurine and Amino Acids</a>.</p>
         <h2 id="role">Diet in Heart Disease</h2>
         <p>Diet in heart disease aims to reduce fluid-retention pressures (via sodium control), preserve lean muscle against cardiac cachexia, ensure adequate taurine and other heart-relevant nutrients, reduce inflammation with omega-3s, and above all maintain caloric intake. It complements, never replaces, cardiac medication and veterinary management. The plan changes as the disease progresses.</p>

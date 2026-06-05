@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function FeedingMultiplePetsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>When several animals share a home, free-choice feeding makes it impossible to know who ate what, and it lets the fastest or most food-motivated animal overeat while a slower or sicker one is crowded out. The solution is structured, separated feeding, with portions matched to each animal&apos;s needs. This matters most when animals differ in size, life stage, body condition, or medical needs.</p>
         <h2 id="problem">The Core Problem</h2>
         <p>Different animals have different calorie needs, different life-stage diets, and sometimes a therapeutic diet that is harmful if eaten by the wrong animal. A shared bowl cannot meet these differing needs and obscures intake. The first principle of multi-pet feeding is that each animal&apos;s portion must be controllable and observable. See <a href="/feeding/how-much-to-feed-a-dog">How Much to Feed a Dog</a>.</p>

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function DiabeticDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Diabetes mellitus results from inadequate insulin action, leading to high blood glucose. The condition is common in middle-aged and older cats and dogs, and while insulin therapy is the foundation of treatment, diet meaningfully influences glycemic control, insulin requirements, and — in cats — the chance of remission. The right dietary approach depends on which species and which form of diabetes is present.</p>
         <h2 id="twodiseases">Two Different Diseases</h2>
         <p>Feline diabetes resembles human type 2 diabetes: it is closely tied to obesity and insulin resistance, and the high-carbohydrate diets historically common in cat food are implicated. Canine diabetes more often resembles type 1, with absolute insulin deficiency, frequently following pancreatitis or immune destruction of the beta cells. Because the underlying problem differs, the dietary strategy differs.</p>

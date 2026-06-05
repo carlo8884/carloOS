@@ -10,7 +10,8 @@ import {
   EmailCapture,
   BuyBox,
   AffiliateDisclosure,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -146,6 +147,7 @@ export default function BlueBuffaloEvaluationPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           Blue Buffalo is one of the most-recognized brands in U.S. pet food, the largest brand
           in the &quot;wholesome natural&quot; segment as it emerged in the late 2000s and early

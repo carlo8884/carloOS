@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function HowMuchToFeedADogPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>How much to feed depends on the dog&apos;s energy requirement and the calorie density of the food — not on a one-size range printed on the bag. Energy needs vary widely with size, age, activity, neuter status, and metabolism, so two dogs of the same weight can have feeding amounts that differ by 50 percent. The reliable method is to estimate daily calories, then divide by the food&apos;s calories per cup. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
         <h2 id="bagguides">Why Bag Guidelines Overfeed</h2>
         <p>Manufacturer feeding charts give a broad weight-based range and tend to target the high end, partly because they assume an active, intact, average-metabolism dog. Most pet dogs are neutered, moderately active, and prone to weight gain. Following the chart without adjusting is one of the most common causes of creeping weight gain. Treat the chart as an upper bound and refine from there.</p>

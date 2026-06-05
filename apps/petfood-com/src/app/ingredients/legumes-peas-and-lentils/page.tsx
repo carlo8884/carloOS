@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function LegumesPeasAndLentilsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Legumes (pulses) include peas, lentils, chickpeas, and beans, along with concentrated derivatives like pea protein and pea starch. They became prominent in pet food as grain-free formulas needed a carbohydrate and binding source to replace cereal grains in extrusion. They are nutritious ingredients, but their heavy use is also at the center of the unresolved diet-associated dilated cardiomyopathy question. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
         <h2 id="rose">Why Legumes Rose</h2>
         <p>Extruded kibble requires starch to form, so a grain-free recipe must replace cereal starch with something — and legumes (plus potato and tapioca) filled that role. Pulses offered the additional marketing advantage of boosting the crude-protein number on the guaranteed analysis, since they are higher in protein than grains. The result was a rapid rise in pulse-heavy formulas. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>

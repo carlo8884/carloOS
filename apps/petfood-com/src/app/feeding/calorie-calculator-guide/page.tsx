@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function CalorieCalculatorGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>A pet calorie calculator estimates how many kilocalories an animal needs per day, from which a feeding amount can be derived. It applies the same resting-energy and activity-factor math a veterinarian uses, packaged into a few inputs. The result is a starting estimate, not a precise prescription, and it should be combined with the food&apos;s calorie statement and ongoing body-condition monitoring. It pairs with the <a href="/tools/food-cost-calculator">Food Cost Calculator</a>.</p>
         <h2 id="computes">What a Calculator Computes</h2>
         <p>The calculator estimates the daily energy requirement (also called maintenance energy requirement) — the calories needed to maintain current weight given the animal&apos;s size, life stage, and activity. From that figure, and the calorie density of the chosen food, the daily portion follows. The calculator does the energy math; the portion still requires the food&apos;s kcal-per-cup. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>

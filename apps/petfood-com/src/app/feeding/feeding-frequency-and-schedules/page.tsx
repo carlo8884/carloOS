@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function FeedingFrequencyAndSchedulesPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Feeding frequency affects body weight control, digestive comfort, and the management of several conditions. While there is flexibility, some patterns are better supported than others: puppies and kittens need frequent meals, most adults do well on two meals a day, and free-choice feeding works against weight control in most pets. The right schedule balances physiology, the household routine, and any medical needs.</p>
         <h2 id="lifestage">Frequency by Life Stage</h2>
         <p>Young puppies and kittens have small stomachs and high energy needs and should be fed three to four times daily, reducing to twice daily as they mature. Most adult dogs and cats do well on two meals a day. Some toy-breed puppies are prone to hypoglycemia and need frequent feeding. Pregnant and lactating animals need increased frequency and amount. See <a href="/diets/puppy-and-kitten-growth-diets">Puppy and Kitten Growth Diets</a>.</p>

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function WholeGrainsRiceOatsBarleyPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Grains — rice, oats, barley, corn, wheat, sorghum — provide digestible carbohydrate energy, fiber, some protein, and B-vitamins and minerals in pet diets. Cooked and ground for pet food, they are well utilized by dogs and cats. The grain-free narrative cast grains as fillers and allergens, but the evidence supports grains as functional, digestible ingredients suitable for most animals. See <a href="/compare/grain-free-vs-grain-inclusive">Grain-Free vs Grain-Inclusive</a>.</p>
         <h2 id="contribute">What Grains Contribute</h2>
         <p>Grains supply the starch that, gelatinized in extrusion, both provides energy and binds kibble together. They also contribute fiber for digestive health, plant protein, essential fatty acids in some cases, and B-vitamins and minerals. As a digestible energy source in a complete diet, grains do real work. See <a href="/nutrition/carbohydrates-in-pet-food">Carbohydrates in Pet Food</a>.</p>

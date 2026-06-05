@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function CarbohydratesInPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         <p>Carbohydrate is the only macronutrient for which AAFCO sets no minimum, because dogs and cats can meet their glucose needs through gluconeogenesis from protein and glycerol. That fact is correct and is the kernel of truth inside grain-free marketing. It does not follow that dietary carbohydrate is harmful, nor that a low-carbohydrate diet is automatically superior. Carbohydrate is a digestible energy source, and starch is functionally necessary to manufacture extruded kibble.</p>
         <h2 id="required">Is Carbohydrate Required?</h2>
         <p>There is no established essential dietary carbohydrate requirement for healthy adult dogs or cats. The brain and certain tissues need glucose, but the body can supply it from non-carbohydrate precursors. The one well-documented exception is reproduction: pregnant and lactating dams (and to some extent kittens) appear to benefit from dietary carbohydrate or face metabolic stress on near-zero-carbohydrate diets. For the general adult population, carbohydrate is best understood as a usable, inexpensive energy source rather than a required nutrient.</p>
