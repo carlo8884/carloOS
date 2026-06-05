@@ -10,7 +10,31 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret infectious disease chapter covering canine distemper virus pathogenesis and near-universal mortality.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Canine Distemper in Ferrets: morbillivirus susceptibility, transmission, clinical course, and vaccination",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/canine-distemper-in-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret vaccination protocols and practitioner continuing-education resources",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Veterinary Medical Association (AVMA) — ferret distemper and rabies vaccination guidance for companion exotic species",
+    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
+    publisher: "AVMA",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -281,26 +305,7 @@ export default function FerretCanineDistemperPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret infectious disease chapter.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret viral disease and vaccination.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              canine distemper in ferrets.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing distemper and
-              vaccination guidance.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about canine distemper in
             ferrets. It is not individualized veterinary advice. Vaccination

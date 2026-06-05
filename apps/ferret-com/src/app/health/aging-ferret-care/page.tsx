@@ -14,7 +14,31 @@ import {
   ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — senior care, endocrine, oncology, and geriatric-ferret chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Management of Older Ferrets: monitoring cadence, common senior-ferret diseases, and quality-of-life indicators",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — senior exotic-mammal care continuing-education materials and practitioner directory",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret geriatric medicine, palliative care, and quality-of-life assessment",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -583,49 +607,7 @@ export default function FerretAgingPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. The senior care, endocrine, and oncology
-              chapters cover the disease incidence and monitoring
-              frameworks summarized here.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, multiple ferret-focused issues covering
-              senior care, neoplasia, and end-of-life management.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em>, clinical articles on
-              ferret geriatric medicine and quality-of-life assessment.
-            </li>
-            <li>
-              <em>Journal of the American Veterinary Medical Association
-              (JAVMA)</em>, case series and retrospective work on
-              ferret-specific senior disease.
-            </li>
-            <li>
-              Villalobos A. <em>HHHHHMM Quality of Life Scale.</em> The
-              companion-animal palliative-care framework now standard in
-              veterinary hospice practice.
-            </li>
-            <li>
-              American Veterinary Medical Association (AVMA) — Companion
-              Animal Quality of Life and end-of-life resources.
-            </li>
-            <li>
-              American Animal Hospital Association (AAHA) / International
-              Association of Animal Hospice and Palliative Care (IAAHPC)
-              joint hospice guidelines.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and continuing-education materials on senior
-              exotic-mammal care.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about senior ferret
             care. It is not individualized veterinary advice. Senior-care
