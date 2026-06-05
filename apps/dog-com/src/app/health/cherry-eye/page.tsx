@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Cherry Eye (Prolapsed Nictitating Membrane Gland)', url: 'https://www.merckvetmanual.com/eye-and-ear/ophthalmology/cherry-eye-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'American College of Veterinary Ophthalmologists (ACVO): Ocular Conditions in Dogs', url: 'https://www.acvo.org/general-public-2/eye-conditions', publisher: 'ACVO' },
+  { label: 'AVMA: Eye Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Mazzucchelli S et al. Retrospective study of 155 dogs undergoing pocket technique for correction of prolapse of the nictitating membrane gland. Vet Rec. 2012;170(4):95.', publisher: 'Vet Record' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cherry Eye in Dogs — What It Is, Surgery | Dog.com", description: "Cherry eye is prolapse of the nictitating membrane gland. The red mass at the eye corner is not painful but requires surgical correction", path: '/health/cherry-eye', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cherry Eye in Dogs', description: 'Prolapsed third eyelid gland — causes, surgical correction, and why manual replacement fails.', url: 'https://dog.com/health/cherry-eye', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -51,6 +59,8 @@ export default function CherryEyePage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

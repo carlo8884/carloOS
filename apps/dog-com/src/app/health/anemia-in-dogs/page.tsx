@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Anemia in Dogs and Cats', url: 'https://www.merckvetmanual.com/circulatory-system/anemia/anemia-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Immune-Mediated Hemolytic Anemia (IMHA) Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'Swann JW et al. ACVIM consensus statement on the treatment of IMHA in dogs. J Vet Intern Med. 2019;33(3):1141-1172.', publisher: 'JVIM' },
+  { label: 'AVMA: Blood Disorders in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Anemia in Dogs', description: 'Regenerative vs non-regenerative anemia — causes, diagnosis, and treatment in dogs.', url: 'https://dog.com/health/anemia-in-dogs', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Anemia in Dogs', description: 'Causes, diagnostic approach, and treatment for canine anemia.', url: 'https://dog.com/health/anemia-in-dogs', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -49,6 +57,8 @@ export default function DogAnemiaPage() {
 
           <h2>Blood Transfusion</h2>
           <p>Transfusion is indicated when PCV (packed cell volume, a measure of red cell percentage) falls below approximately 15–18% in dogs without active compensation, or when clinical signs (collapse, extreme lethargy, respiratory distress at rest) indicate that the anemia is compromising vital organ function regardless of the specific PCV. Canine blood transfusion uses whole blood or packed red blood cells from typed donors. Most specialty and emergency hospitals maintain blood banks. DEA 1.1 is the most important blood type antigen — typing before first transfusion prevents significant transfusion reactions.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

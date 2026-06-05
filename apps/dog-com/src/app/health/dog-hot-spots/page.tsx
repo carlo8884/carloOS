@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Pyotraumatic Dermatitis (Hot Spots) in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyotraumatic-dermatitis-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Skin Conditions in Dogs — Hot Spots and Pyoderma', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'AAHA: Dermatology Guidelines — Secondary Pyoderma and Self-Trauma Management', url: 'https://www.aaha.org/aaha-guidelines/dermatology/', publisher: 'AAHA' },
+  { label: 'Olivry T et al. A systematic review of randomized controlled trials for prevention or treatment of atopic dermatitis in dogs. Vet Dermatol. 2010;21(3):210-222.', publisher: 'Vet Dermatology' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Hot Spots in Dogs (Pyotraumatic Dermatitis) — Causes | Dog.com', description: 'Hot spots are acute moist dermatitis — a rapidly spreading bacterial skin infection triggered by self-trauma. How to treat, why shaving the area matters.', path: '/health/dog-hot-spots', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Hot Spots in Dogs', description: 'Causes, shaving protocol, and treatment for canine pyotraumatic dermatitis (hot spots).', url: 'https://dog.com/health/dog-hot-spots', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -45,6 +53,8 @@ export default function DogHotSpotsPage() {
 
           <h2>Preventing Recurrence</h2>
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>
