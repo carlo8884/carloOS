@@ -117,6 +117,7 @@ export default function CardinalTetraPage() {
           { name: 'Species', href: '/species' },
           { name: 'Cardinal Tetra', href: '/species/cardinal-tetra' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

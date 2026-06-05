@@ -10,6 +10,7 @@ export default function LowTechPlantedTankPage() {
       hero={{ title: 'Low-Tech Planted Tank Guide', subtitle: "A low-tech planted tank runs without pressurized CO2 injection, on modest lighting and minimal fertilization. It grows more slowly than a high-tech setup, which is precisely its advantage: slower growth means less trimming, fewer nutrient swings, and far less algae. For most aquarists, a well-chosen low-tech tank is the most beautiful, most sustainable, and least demanding planted aquarium they can keep.", category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🌿', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Low-Tech Planted Tank', href: '/setup/low-tech-planted-tank' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }, { title: "Aquascaping Guide", href: "/setup/aquascaping-guide", category: "Tank Setup" }, { title: "Aquarium Algae Control", href: "/setup/aquarium-algae-control", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Bulletproof Plants</div>

@@ -10,6 +10,7 @@ export default function DiscusPage() {
       hero={{ title: 'Discus Fish Care Guide', subtitle: 'Symphysodon — the "king of the aquarium." Discus are breathtakingly beautiful, highly intelligent, and the most demanding freshwater fish commonly kept. Their water requirements are strict, their sensitivity to pathogens is high, and their cost is significant. Experienced aquarists only.', category: 'Species Guide — Advanced', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '11 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Discus', href: '/species/discus' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Angelfish", href: "/species/angelfish", category: "Species Guide" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Discus Requirements</div>

@@ -9,6 +9,7 @@ export default function FishLicePage() {
       hero={{ title: 'Fish Lice & Anchor Worm', subtitle: 'Fish lice (Argulus species) and anchor worm (Lernaea species) are macroscopic crustacean parasites visible to the naked eye on fish skin — a rare situation in fishkeeping where the parasite can actually be seen without magnification. Both enter aquariums and ponds from wild-caught fish, live food, or non-quarantined new additions.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Fish Lice & Anchor Worm', href: '/health/fish-lice-anchor-worm' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Gill Flukes", href: "/health/gill-flukes", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Identification</div>

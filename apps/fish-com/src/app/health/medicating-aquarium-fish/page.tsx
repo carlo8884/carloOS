@@ -10,6 +10,7 @@ export default function MedicatingFishPage() {
       hero={{ title: 'Medicating Aquarium Fish', subtitle: "Reaching for medication is often a fishkeeper's first instinct at the sight of a sick fish, but careless dosing causes as many losses as the diseases it targets. Knowing when to medicate, where, how to dose accurately, and how to protect your biological filter turns medication from a gamble into a controlled treatment. This guide covers the principles of treating fish safely.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '💊', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Medicating Fish', href: '/health/medicating-aquarium-fish' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Before You Dose</div>

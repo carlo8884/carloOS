@@ -10,6 +10,7 @@ export default function ZebraDanioPage() {
       hero={{ title: 'Zebra Danio Care Guide', subtitle: "Danio rerio — the zebra danio is one of the toughest, most active fish in the freshwater hobby. Its horizontal blue-and-gold stripes, relentless energy, and tolerance of imperfect water quality have made it both a beginner staple and the most studied fish in biomedical research. A school of these fish turns the upper third of a tank into constant motion.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Zebra Danio', href: '/species/zebra-danio' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "White Cloud Mountain Minnow", href: "/species/white-cloud-mountain-minnow", category: "Species Guide" }, { title: "Cherry Barb", href: "/species/cherry-barb", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

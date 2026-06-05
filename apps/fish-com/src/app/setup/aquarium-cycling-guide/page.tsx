@@ -148,6 +148,7 @@ export default function CyclingGuidePage() {
           { name: 'Setup', href: '/setup' },
           { name: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' },
         ]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }, { title: 'New Tank Syndrome', href: '/health/new-tank-syndrome', category: 'Fish Health' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

@@ -117,6 +117,7 @@ export default function AfricanCichlidPage() {
           { name: 'Species', href: '/species' },
           { name: 'African Cichlid', href: '/species/african-cichlid' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Discus', href: '/species/discus', category: 'Species Guide' }, { title: 'Oscar', href: '/species/oscar', category: 'Species Guide' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

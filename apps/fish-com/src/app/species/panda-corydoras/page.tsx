@@ -10,6 +10,7 @@ export default function PandaCorydorasPage() {
       hero={{ title: 'Panda Corydoras Care Guide', subtitle: "Corydoras panda — named for the black patches over its eyes, dorsal fin, and tail base on a creamy body, the panda cory is among the most charming and sought-after small catfish. It is slightly more demanding than the bronze cory: it prefers cooler water and is less tolerant of poor conditions, but in a clean, well-planted tank a group of pandas is endlessly entertaining.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Panda Corydoras', href: '/species/panda-corydoras' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Corydoras", href: "/species/corydoras", category: "Species Guide" }, { title: "Bronze Corydoras", href: "/species/bronze-corydoras", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

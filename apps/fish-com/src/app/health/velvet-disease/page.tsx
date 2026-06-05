@@ -9,6 +9,7 @@ export default function VelvetDiseasePage() {
       hero={{ title: 'Velvet Disease in Fish', subtitle: 'Velvet — caused by the dinoflagellate parasite Oodinium (Piscinoodinium pillulare in freshwater, Amyloodinium ocellatum in saltwater) — is the second most common fish disease after ich. It is faster-moving than ich, more visually subtle until advanced, and more lethal if not caught and treated promptly.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Velvet Disease', href: '/health/velvet-disease' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Velvet vs Ich</div>

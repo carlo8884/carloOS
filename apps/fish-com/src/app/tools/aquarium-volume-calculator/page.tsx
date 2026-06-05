@@ -106,6 +106,7 @@ export default function VolumeCalculatorPage() {
         { name: 'Aquarium Volume Calculator' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Heater Wattage Calculator", href: "/tools/heater-wattage-calculator", category: "Tools" }, { title: "Stocking Calculator", href: "/tools/stocking-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
       sidebar={
         <>
           <TableOfContents

@@ -19,6 +19,7 @@ export default function PlantedTankSetupPage() {
       <ArticleLayout siteId="fish-com"
         hero={{ title: 'Planted Aquarium Setup Guide', subtitle: 'A well-planted aquarium is one of the most beautiful objects you can put in a room — and planted tanks are healthier environments for fish. Plants consume nitrate, compete with algae for nutrients, and provide shelter and natural behavior cues. This guide covers both low-tech (easy) and high-tech (advanced) approaches.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]}
+        relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Low-Tech Planted Tank', href: '/setup/low-tech-planted-tank', category: 'Tank Setup' }, { title: 'Aquascaping Guide', href: '/setup/aquascaping-guide', category: 'Tank Setup' }, { title: 'Aquarium Algae Control', href: '/setup/aquarium-algae-control', category: 'Tank Setup' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Low-Tech Starter Plants</div>

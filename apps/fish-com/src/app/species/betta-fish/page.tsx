@@ -113,6 +113,7 @@ export default function BettaFishPage() {
           { name: 'Species', href: '/species' },
           { name: 'Betta Fish', href: '/species/betta-fish' },
         ]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates', category: 'Species Guide' }, { title: 'Nano Tank Setup', href: '/setup/nano-tank-setup', category: 'Tank Setup' }, { title: 'Best Nano Tanks', href: '/reviews/best-nano-tanks', category: 'Reviews' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

@@ -9,6 +9,7 @@ export default function WhiteCloudPage() {
       hero={{ title: 'White Cloud Mountain Minnow', subtitle: 'Tanichthys albonubes — the "poor man\'s neon tetra," though the nickname sells them short. These 1.5-inch fish from the mountain streams of southern China are hardier than neons, tolerant of cold water that most tropical fish cannot handle, and in peak condition display iridescent red tails and a brilliant lateral stripe. They are the ideal fish for unheated indoor tanks.', category: 'Species Guide — Cold Water', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Zebra Danio", href: "/species/zebra-danio", category: "Species Guide" }, { title: "Celestial Pearl Danio", href: "/species/celestial-pearl-danio", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

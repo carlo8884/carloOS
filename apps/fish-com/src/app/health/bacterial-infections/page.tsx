@@ -10,6 +10,7 @@ export default function BacterialInfectionsPage() {
       hero={{ title: 'Bacterial Infections in Fish', subtitle: "Bacterial infection is one of the most common — and most misunderstood — categories of fish illness. The great majority are caused by opportunistic gram-negative bacteria that are always present in aquarium water and only turn dangerous when a fish is stressed or injured, almost always by poor water quality. Understanding that distinction is the key to both treating and preventing them.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🦠', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Bacterial Infections', href: '/health/bacterial-infections' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fin Rot", href: "/health/fin-rot", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Warning Signs</div>

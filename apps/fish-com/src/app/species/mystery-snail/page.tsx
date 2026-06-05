@@ -9,6 +9,7 @@ export default function MysterySnailPage() {
       hero={{ title: 'Mystery Snail Care Guide', subtitle: 'Pomacea bridgesii — the mystery snail, named for appearing to give birth to live young (actually they lay eggs above the waterline, and the hatchlings mysteriously appear in the tank). Available in stunning color varieties — gold, blue, ivory, purple, magenta — and completely peaceful with all community fish.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Mystery Snail', href: '/species/mystery-snail' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Amano Shrimp", href: "/species/amano-shrimp", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

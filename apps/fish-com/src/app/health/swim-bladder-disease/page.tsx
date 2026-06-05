@@ -9,6 +9,7 @@ export default function SwimBladderPage() {
       hero={{ title: 'Swim Bladder Disease', subtitle: 'Swim bladder disorder describes any condition affecting the gas-filled organ fish use to control buoyancy. The fish floats helplessly at the surface, sinks to the bottom, or lists sideways — dramatic and distressing to observe. The cause determines the prognosis: constipation-related disorders often resolve; structural or degenerative disorders in fancy goldfish often do not.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Swim Bladder Disease', href: '/health/swim-bladder-disease' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }, { title: "Dropsy Treatment", href: "/health/dropsy-treatment", category: "Fish Health" }, { title: "Medicating Aquarium Fish", href: "/health/medicating-aquarium-fish", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Diagnosis</div>

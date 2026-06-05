@@ -9,6 +9,7 @@ export default function EmberTetraPage() {
       hero={{ title: 'Ember Tetra Care Guide', subtitle: 'Hyphessobrycon amandae — the fire ember tetra is a 0.8-inch Brazilian nano fish that glows amber-orange when healthy and well-lit. In groups of 20+ against a dark substrate and green plants, a school of ember tetras creates one of the most visually striking effects available in nano aquarium keeping.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ember Tetra', href: '/species/ember-tetra' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Neon Tetra", href: "/species/neon-tetra", category: "Species Guide" }, { title: "Celestial Pearl Danio", href: "/species/celestial-pearl-danio", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

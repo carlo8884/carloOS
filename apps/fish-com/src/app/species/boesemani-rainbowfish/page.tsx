@@ -9,6 +9,7 @@ export default function BoesemaniPage() {
       hero={{ title: 'Boesemani Rainbowfish', subtitle: 'Melanotaenia boesemani — the flagship rainbowfish of the aquarium hobby, named after Dr. Marinus Boeseman who first described the species. The split-color pattern — vivid blue-purple on the anterior half, deep orange-red on the posterior — makes Boesemani one of the most photogenic fish in freshwater. Males in peak condition display to each other constantly, intensifying both colors.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Boesemani Rainbowfish', href: '/species/boesemani-rainbowfish' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Rainbow Fish", href: "/species/rainbow-fish", category: "Species Guide" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

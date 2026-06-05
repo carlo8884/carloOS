@@ -9,6 +9,7 @@ export default function GoldfishPage() {
       hero={{ title: 'Goldfish Care Guide', subtitle: 'Carassius auratus — goldfish are among the most misunderstood fish in the hobby. A common goldfish kept correctly — in an appropriately sized tank or pond with proper filtration — can live 20–25 years and grow to 12–14 inches. The fish dying in bowls is not a reflection of their lifespan; it is a reflection of their conditions. Goldfish deserve better, and with correct care they deliver.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Goldfish', href: '/species/goldfish' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Koi", href: "/species/koi", category: "Species Guide" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Single-Tail vs Fancy</div>

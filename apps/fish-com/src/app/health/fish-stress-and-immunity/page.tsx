@@ -10,6 +10,7 @@ export default function FishStressPage() {
       hero={{ title: 'Fish Stress and Immunity', subtitle: "Most aquarium disease is not bad luck — it is the predictable result of stress. The pathogens that cause ich, fin rot, and bacterial infections are present in nearly every tank, kept in check by a healthy fish's immune system. When chronic stress suppresses that immunity, opportunistic disease follows. Understanding and minimizing stress is the most powerful preventive tool a fishkeeper has.", category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐟', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Stress and Immunity', href: '/health/fish-stress-and-immunity' }]}
       schema={schema}
+      relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Common Stressors</div>

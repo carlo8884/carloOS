@@ -45,6 +45,7 @@ export default function DisclosurePage() {
         { name: 'Disclosure', href: '/disclosure' },
       ]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }]}
     >
       <div className="carloOS-article">
         <AffiliateDisclosure variant="page" siteId="fish-com" />

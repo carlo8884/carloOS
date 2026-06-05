@@ -10,6 +10,7 @@ export default function DwarfPufferPage() {
       hero={{ title: 'Dwarf Puffer Care Guide', subtitle: "Carinotetraodon travancoricus — the dwarf, pygmy, or pea puffer is the smallest pufferfish in the world at barely an inch long, and unlike most of its relatives it lives entirely in fresh water. What it lacks in size it makes up for in personality: it hunts with eerie intelligence, follows its keeper around the glass, and demands a specialized snail-based diet.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐡', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Dwarf Puffer', href: '/species/dwarf-puffer' }]}
       schema={schema}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Puffer Fish", href: "/species/puffer-fish", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>

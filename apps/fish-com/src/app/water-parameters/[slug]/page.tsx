@@ -240,6 +240,7 @@ export default async function ParameterPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={articleSchema}
+      relatedLinks={[{ title: 'Water Parameters Hub', href: '/water-parameters', category: 'Water Chemistry' }, { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', category: 'Fish Health' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
       sidebar={
         <>
           <TableOfContents

@@ -10,6 +10,7 @@ export default function GhKhPage() {
       hero={{ title: 'GH and KH — Water Hardness Explained', subtitle: "Water hardness is one of the most misunderstood parameters in fishkeeping, partly because two different measurements — GH and KH — both wear the word hardness. They are not the same thing, they are not interchangeable, and confusing them is behind a great many mysterious pH crashes and stalled fish. This guide explains what each measures, why both matter, and how to adjust them safely.", category: 'Water Chemistry', authorName: 'Fish.com Editorial', authorAvatar: '🧪', publishedAt: 'June 2026', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'GH and KH', href: '/setup/gh-kh-water-hardness' }]}
       schema={schema}
+      relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }, { title: "Aquarium Water Parameters", href: "/water-parameters", category: "Water Chemistry" }, { title: "Aquarium Cycling Guide", href: "/setup/aquarium-cycling-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Reference</div>
