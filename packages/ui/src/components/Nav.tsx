@@ -42,7 +42,7 @@ export function Nav({ siteId, activePath }: NavProps) {
         className={[
           'fixed top-0 left-0 right-0 z-50',
           'flex items-center justify-between',
-          'px-container sm:px-container-sm',
+          'px-container-sm sm:px-container',
           'h-nav',
           'bg-brand-white/95 backdrop-blur-md',
           'border-b border-brand-border',

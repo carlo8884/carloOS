@@ -378,7 +378,7 @@ export default function HomePage() {
               Where are you starting?
             </span>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {OWNER_PATHS.map((path) => (
               <Link
                 key={path.href}
@@ -417,7 +417,7 @@ export default function HomePage() {
                   <h2 className="font-display font-bold text-white text-sm sm:text-base leading-tight mb-1.5">
                     {path.title}
                   </h2>
-                  <p className="hidden sm:block text-xs text-white/70 leading-relaxed mb-2">
+                  <p className="text-xs text-white/70 leading-relaxed mb-2">
                     {path.desc}
                   </p>
                   <span className="inline-flex items-center gap-1 text-xs font-bold text-white group-hover:gap-2 transition-all">
