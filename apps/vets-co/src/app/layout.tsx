@@ -55,6 +55,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Nav siteId="vets-co" />
+
+        {/*
+          FTC disclosure posture (matches the Dog.com reference, PR #487): there
+          is NO top-of-page inline disclosure banner above <main>, so the
+          homepage's first impression is the navy masthead + hero photo, not a
+          compliance notice. Disclosure stays FTC-safe via two surfaces:
+            1. Sitewide footer disclosure — <Footer ... showAffiliateDisclosure />
+               below (one subtle line, AffiliateDisclosure variant="footer").
+            2. In-context disclosures rendered by individual monetized pages
+               (insurance / telehealth render their own
+               <AffiliateDisclosure variant="inline" /> directly above the
+               first affiliate CTA — 16 CFR Part 255 "clear and conspicuous"
+               is satisfied at the point of monetization).
+          Do NOT re-add a top banner here.
+        */}
+
         <main>{children}</main>
         <Footer siteId="vets-co" showAffiliateDisclosure />
       </body>
