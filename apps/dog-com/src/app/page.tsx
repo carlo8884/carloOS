@@ -285,7 +285,7 @@ export default function HomePage() {
           overlaid on a dark gradient scrim so copy stays legible over the
           real photo. dog-com:hero is a populated/real key. The hero photo
           carries subtleCredit (attribution present + clickable, QC §1). */}
-      <section className="relative bg-brand-dark">
+      <section className="relative bg-brand-dark min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh]">
         {/* Full-bleed hero photo — first + dominant in the viewport. Uses the
             inline variant with FILL_IMAGE overrides so the photo simply fills
             this absolute, full-height wrapper (the 'full-bleed' variant's
@@ -385,7 +385,7 @@ export default function HomePage() {
                 href={path.href}
                 className={[
                   'group relative block rounded-xl overflow-hidden no-underline transition-all duration-200',
-                  'ring-1',
+                  'ring-1 min-h-[180px] sm:min-h-[210px]',
                   path.tone === 'urgent'
                     ? 'ring-brand-primary/60 hover:ring-brand-primary'
                     : 'ring-white/10 hover:ring-white/30',

@@ -218,7 +218,7 @@ export default function HomePage() {
           dark gradient scrim so copy stays legible over the real photo. The
           hero carries subtleCredit (attribution present + clickable, QC §1).
           ════════════════════════════════════════════════════════════════ */}
-      <section style={{ position: 'relative', background: 'var(--brand-dark)' }}>
+      <section style={{ position: 'relative', background: 'var(--brand-dark)', minHeight: 'clamp(62vh, 70vh, 78vh)' }}>
         {/* Full-bleed hero photo — fills this absolute, full-height wrapper.
             Uses the inline variant with FILL_IMAGE overrides so the photo
             simply fills the parent (the 'full-bleed' variant's transform
@@ -495,6 +495,7 @@ export default function HomePage() {
                     textDecoration: 'none',
                     color: 'inherit',
                     boxShadow: 'inset 0 0 0 1px rgba(251, 245, 232, 0.1)',
+                    minHeight: '230px',
                   }}
                 >
                   {/* Real hub photo fills the tile */}
