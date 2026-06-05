@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -20,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Pet Food Calories and Energy Density Explained | PetFood.com',
   description:
@@ -31,6 +33,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-05-31T00:00:00Z',
   modifiedAt: '2026-05-31T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Pet Food Calories and Energy Density Explained | PetFood.com',
+  description:
+    'How metabolizable energy is calculated, what kcal/cup and kcal/kg mean, how to read the calorie statement, and why energy density drives portion size.',
+  url: 'https://petfood.com/nutrition/calories-and-energy-density',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-05-31',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 const SOURCES = [
     {

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildMedicalWebPageSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -23,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
-const schema = buildArticleSchema({
+const articleSchema = buildArticleSchema({
   siteId: 'petfood-com',
   title: 'Taurine and Essential Amino Acids in Pet Food | PetFood.com',
   description:
@@ -34,6 +36,18 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-05T00:00:00Z',
 })
+
+const medicalSchema = buildMedicalWebPageSchema({
+  name: 'Taurine and Essential Amino Acids in Pet Food | PetFood.com',
+  description:
+    'Why taurine is essential for cats, the amino-acid profile that defines protein quality, taurine and DCM in dogs, and the AAFCO amino-acid requirements.',
+  url: 'https://petfood.com/nutrition/taurine-and-amino-acids',
+  authorName: 'PetFood.com Editorial',
+  lastReviewed: '2026-06-05',
+  medicalAudience: 'Caregiver',
+})
+
+const schema = combineSchemas(articleSchema, medicalSchema)
 
 export default function TaurineAndAminoAcidsPage() {
   return (
