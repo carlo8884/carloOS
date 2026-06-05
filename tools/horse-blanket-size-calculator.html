@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Horse Blanket Size Calculator</title>
+<!--
+  Horse Blanket Size Calculator — self-contained, offline, zero dependencies.
+  Drop-in: paste this entire file's <style>, <body> markup, and <script> into a
+  page/section, or embed the whole file via <iframe src="...">.
+  No external fonts, CDNs, or trackers. Safe to host anywhere.
+-->
+<style>
+  :root {
+    --slt-ink: #1f2a37;
+    --slt-muted: #5b6b7b;
+    --slt-line: #e2e8f0;
+    --slt-bg: #f7f9fb;
+    --slt-accent: #1f6f54;       /* swap this one color to re-brand */
+    --slt-accent-soft: #e7f2ee;
+    --slt-warn: #b54708;
+    --slt-radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  .blanket-calc {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--slt-ink);
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--slt-line);
+    border-radius: var(--slt-radius);
+    line-height: 1.5;
+  }
+  .blanket-calc h2 { margin: 0 0 4px; font-size: 1.4rem; }
+  .blanket-calc .sub { margin: 0 0 20px; color: var(--slt-muted); font-size: .95rem; }
+  .bc-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .bc-tab {
+    flex: 1 1 auto; padding: 10px 12px; border: 1px solid var(--slt-line);
+    background: var(--slt-bg); border-radius: 999px; cursor: pointer;
+    font-size: .9rem; font-weight: 600; color: var(--slt-muted); text-align: center;
+  }
+  .bc-tab[aria-selected="true"] {
+    background: var(--slt-accent); color: #fff; border-color: var(--slt-accent);
+  }
+  .bc-panel { display: none; }
+  .bc-panel.active { display: block; }
+  .bc-field { margin-bottom: 16px; }
+  .bc-field label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .92rem; }
+  .bc-field .hint { font-weight: 400; color: var(--slt-muted); font-size: .82rem; }
+  .bc-input-row { display: flex; gap: 8px; align-items: stretch; }
+  .bc-input-row input, .bc-input-row select {
+    flex: 1; padding: 12px; font-size: 1rem; border: 1px solid var(--slt-line);
+    border-radius: 8px; background: #fff; color: var(--slt-ink);
+  }
+  .bc-unit-toggle { display: inline-flex; border: 1px solid var(--slt-line); border-radius: 8px; overflow: hidden; }
+  .bc-unit-toggle button {
+    padding: 0 14px; border: 0; background: var(--slt-bg); cursor: pointer;
+    font-weight: 600; color: var(--slt-muted); font-size: .9rem;
+  }
+  .bc-unit-toggle button[aria-pressed="true"] { background: var(--slt-accent); color: #fff; }
+  .bc-btn {
+    width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; cursor: pointer;
+    background: var(--slt-accent); color: #fff; border: 0; border-radius: 8px; margin-top: 4px;
+  }
+  .bc-btn:active { transform: translateY(1px); }
+  .bc-result { margin-top: 20px; padding: 18px; border-radius: var(--slt-radius);
+    background: var(--slt-accent-soft); border: 1px solid var(--slt-accent); display: none; }
+  .bc-result.show { display: block; }
+  .bc-result .size-big { font-size: 2.2rem; font-weight: 800; color: var(--slt-accent); line-height: 1.1; }
+  .bc-result .size-sub { font-size: 1rem; color: var(--slt-ink); margin-top: 2px; }
+  .bc-result .note { font-size: .88rem; color: var(--slt-muted); margin-top: 12px; }
+  .bc-result .note.warn { color: var(--slt-warn); font-weight: 600; }
+  .bc-error { color: var(--slt-warn); font-size: .88rem; margin-top: 8px; display: none; }
+  .bc-error.show { display: block; }
+  .bc-guide { background: var(--slt-bg); border: 1px solid var(--slt-line); border-radius: var(--slt-radius);
+    padding: 16px; margin-bottom: 20px; }
+  .bc-guide summary { font-weight: 600; cursor: pointer; }
+  .bc-guide ol { margin: 12px 0 0; padding-left: 20px; font-size: .9rem; color: var(--slt-muted); }
+  .bc-guide li { margin-bottom: 6px; }
+  .bc-diagram { width: 100%; height: auto; margin: 14px 0 4px; }
+  .bc-foot { font-size: .78rem; color: var(--slt-muted); margin-top: 18px; border-top: 1px solid var(--slt-line); padding-top: 12px; }
+  .bc-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .bc-chip { padding: 10px 12px; border: 1px solid var(--slt-line); border-radius: 8px; background: #fff;
+    cursor: pointer; font-size: .9rem; flex: 1 1 calc(50% - 8px); text-align: left; }
+  .bc-chip[aria-pressed="true"] { border-color: var(--slt-accent); background: var(--slt-accent-soft); }
+  .bc-chip b { display: block; }
+  .bc-chip span { color: var(--slt-muted); font-size: .8rem; }
+</style>
+</head>
+<body>
+<div class="blanket-calc" role="region" aria-label="Horse blanket size calculator">
+  <h2>Horse Blanket Size Calculator</h2>
+  <p class="sub">Find the right size in 10 seconds — and stop returning blankets that don't fit.</p>
+
+  <div class="bc-tabs" role="tablist">
+    <div class="bc-tab" role="tab" aria-selected="true" data-panel="measure" tabindex="0">I measured my horse</div>
+    <div class="bc-tab" role="tab" aria-selected="false" data-panel="estimate" tabindex="0">I don't have a measurement</div>
+  </div>
+
+  <!-- MEASURE PANEL -->
+  <div class="bc-panel active" id="panel-measure" role="tabpanel">
+    <details class="bc-guide">
+      <summary>How to measure (30 seconds, one tape, one helper)</summary>
+      <svg class="bc-diagram" viewBox="0 0 400 180" role="img" aria-label="Diagram of where to measure a horse for a blanket">
+        <!-- simplified horse silhouette -->
+        <path d="M40,120
+                 C45,95 55,90 70,92
+                 C72,80 80,72 92,72
+                 C95,60 102,52 112,52
+                 C118,40 128,34 138,40
+                 C150,30 162,34 168,46
+                 C176,44 184,48 186,58
+                 C200,60 250,58 300,66
+                 C320,68 340,76 352,92
+                 C360,104 362,116 360,128
+                 L350,128 L346,150 L338,150 L340,128
+                 C330,132 300,134 280,132
+                 L284,150 L276,150 L272,132
+                 C220,134 160,132 120,126
+                 L122,150 L114,150 L110,124
+                 C95,120 80,124 70,128
+                 L72,150 L64,150 L60,126
+                 C50,126 44,124 40,120 Z"
+              fill="#dfe7ee" stroke="#aebccb" stroke-width="1.5"/>
+        <!-- measuring line -->
+        <line x1="120" y1="92" x2="352" y2="100" stroke="#b54708" stroke-width="3" stroke-dasharray="6 4"/>
+        <circle cx="120" cy="92" r="5" fill="#b54708"/>
+        <circle cx="352" cy="100" r="5" fill="#b54708"/>
+        <text x="60" y="80" font-size="11" fill="#1f2a37">Start: center of chest</text>
+        <text x="300" y="92" font-size="11" fill="#1f2a37">End: point of buttock</text>
+      </svg>
+      <ol>
+        <li>Stand the horse square on level ground.</li>
+        <li>Start the tape at the <b>center of the chest</b> (the muscle between the front legs).</li>
+        <li>Run it across the <b>point of the shoulder</b>, along the barrel, keeping it level.</li>
+        <li>Finish at the <b>point of the buttock</b> — the very back edge of the hindquarters, by the tail.</li>
+        <li>Read the number in inches. That's your size. Measure twice.</li>
+      </ol>
+    </details>
+
+    <div class="bc-field">
+      <label for="bc-measurement">Your horse's measurement
+        <span class="hint">chest to tail, along the side</span>
+      </label>
+      <div class="bc-input-row">
+        <input type="number" id="bc-measurement" inputmode="decimal" min="20" max="120" step="0.5" placeholder="e.g. 74" />
+        <div class="bc-unit-toggle" role="group" aria-label="Units">
+          <button type="button" id="bc-unit-in" aria-pressed="true">inches</button>
+          <button type="button" id="bc-unit-cm" aria-pressed="false">cm</button>
+        </div>
+      </div>
+      <div class="bc-error" id="bc-error">Enter a measurement between 20 and 120 inches (51–305 cm).</div>
+    </div>
+
+    <button type="button" class="bc-btn" id="bc-calc">Find my size</button>
+
+    <div class="bc-result" id="bc-result" aria-live="polite">
+      <div class="size-big" id="bc-size-us"></div>
+      <div class="size-sub" id="bc-size-uk"></div>
+      <div class="note" id="bc-note"></div>
+    </div>
+  </div>
+
+  <!-- ESTIMATE PANEL -->
+  <div class="bc-panel" id="panel-estimate" role="tabpanel">
+    <p class="sub" style="margin-bottom:14px;">No tape handy? Pick the closest match for a starting estimate — then measure before you buy for an exact fit.</p>
+    <div class="bc-chip-row" id="bc-type-row">
+      <button type="button" class="bc-chip" data-lo="38" data-hi="46"><b>Miniature horse</b><span>under 38" tall</span></button>
+      <button type="button" class="bc-chip" data-lo="45" data-hi="54"><b>Small / medium pony</b><span>up to ~13.2 hh</span></button>
+      <button type="button" class="bc-chip" data-lo="54" data-hi="66"><b>Large pony / small horse</b><span>~13.2–15 hh</span></button>
+      <button type="button" class="bc-chip" data-lo="69" data-hi="78"><b>Average horse</b><span>~15–16.2 hh</span></button>
+      <button type="button" class="bc-chip" data-lo="78" data-hi="84"><b>Large horse / warmblood</b><span>~16.2–17.2 hh</span></button>
+      <button type="button" class="bc-chip" data-lo="84" data-hi="90"><b>Draft</b><span>17.2 hh and up</span></button>
+    </div>
+    <div class="bc-result" id="bc-result-est" aria-live="polite">
+      <div class="size-big" id="bc-est-us"></div>
+      <div class="size-sub" id="bc-est-uk"></div>
+      <div class="note warn">This is an estimate by build, not an exact fit. Always measure chest-to-tail before buying — it's the single biggest reason blankets get returned.</div>
+    </div>
+  </div>
+
+  <p class="bc-foot">Sizes are US (inches) with UK equivalents shown. US and UK blanket sizing measure the same way — the UK label is just the same length in feet &amp; inches (e.g. 72" = 6'0"). Blankets come in 3" increments; when a measurement lands between sizes we round up so the blanket fully covers the hindquarters.</p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  // Available US sizes (inches), 3" increments — typical industry range.
+  var SIZES = [36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87];
+
+  function toUK(inches) {
+    var feet = Math.floor(inches / 12);
+    var rem = inches % 12;
+    return feet + "'" + rem + '"';
+  }
+
+  // Round measurement up to the nearest available size (so it isn't too small).
+  function recommendSize(inches) {
+    for (var i = 0; i < SIZES.length; i++) {
+      if (SIZES[i] >= inches) return SIZES[i];
+    }
+    return SIZES[SIZES.length - 1]; // cap at largest
+  }
+
+  // ---- Tabs ----
+  var tabs = document.querySelectorAll(".bc-tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () { selectTab(tab); });
+    tab.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectTab(tab); }
+    });
+  });
+  function selectTab(tab) {
+    tabs.forEach(function (t) { t.setAttribute("aria-selected", t === tab ? "true" : "false"); });
+    document.querySelectorAll(".bc-panel").forEach(function (p) { p.classList.remove("active"); });
+    document.getElementById("panel-" + tab.dataset.panel).classList.add("active");
+  }
+
+  // ---- Units ----
+  var unitIn = document.getElementById("bc-unit-in");
+  var unitCm = document.getElementById("bc-unit-cm");
+  var usingCm = false;
+  unitIn.addEventListener("click", function () { setUnit(false); });
+  unitCm.addEventListener("click", function () { setUnit(true); });
+  function setUnit(cm) {
+    usingCm = cm;
+    unitIn.setAttribute("aria-pressed", cm ? "false" : "true");
+    unitCm.setAttribute("aria-pressed", cm ? "true" : "false");
+  }
+
+  // ---- Calculate (measured) ----
+  var input = document.getElementById("bc-measurement");
+  var errEl = document.getElementById("bc-error");
+  document.getElementById("bc-calc").addEventListener("click", calc);
+  input.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+
+  function calc() {
+    errEl.classList.remove("show");
+    var raw = parseFloat(input.value);
+    if (isNaN(raw)) { errEl.classList.add("show"); return; }
+    var inches = usingCm ? raw / 2.54 : raw;
+    if (inches < 20 || inches > 120) { errEl.classList.add("show"); return; }
+
+    var size = recommendSize(inches);
+    var rounded = Math.round(inches * 10) / 10;
+    var diff = size - inches;
+
+    document.getElementById("bc-size-us").textContent = size + '" (US)';
+    document.getElementById("bc-size-uk").textContent = "UK equivalent: " + toUK(size);
+
+    var note = "Based on your measurement of " + rounded + '"';
+    if (usingCm) note += " (" + raw + " cm)";
+    note += ". ";
+    if (diff >= 2.5) {
+      note += "You're between sizes — we rounded up to " + size + '" so the blanket isn\'t too short. If your horse is fine-built or you want a snug fit, " + recommendSize(inches) + " may run large; the next size down is " + (size - 3) + '".';
+    } else {
+      note += size + '" is the closest standard size.';
+    }
+    document.getElementById("bc-note").textContent = note;
+    document.getElementById("bc-result").classList.add("show");
+  }
+
+  // ---- Estimate by type ----
+  var typeRow = document.getElementById("bc-type-row");
+  typeRow.querySelectorAll(".bc-chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      typeRow.querySelectorAll(".bc-chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+      chip.setAttribute("aria-pressed", "true");
+      var lo = recommendSize(parseFloat(chip.dataset.lo));
+      var hi = recommendSize(parseFloat(chip.dataset.hi));
+      document.getElementById("bc-est-us").textContent = lo + '"–' + hi + '" (US)';
+      document.getElementById("bc-est-uk").textContent = "UK: " + toUK(lo) + " – " + toUK(hi);
+      document.getElementById("bc-result-est").classList.add("show");
+    });
+  });
+})();
+</script>
+</body>
+</html>
