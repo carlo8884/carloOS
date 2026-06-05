@@ -149,6 +149,12 @@ export default function BrandsHubPage() {
         { name: 'Brands', href: '/brands' },
       ]}
       schema={[schema, itemListSchema]}
+      relatedLinks={[
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Pet Food Recall Database', href: '/recalls', category: 'Safety' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents

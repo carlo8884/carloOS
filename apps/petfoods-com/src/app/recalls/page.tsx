@@ -114,6 +114,12 @@ export default function RecallsHubPage() {
         { name: 'Recalls', href: '/recalls' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Ingredients A–Z Reference', href: '/ingredients', category: 'Reference' },
+        { title: 'Brand Index & Reviews', href: '/brands', category: 'Reference' },
+        { title: 'Pet Food by Life Stage', href: '/life-stage', category: 'Reference' },
+        { title: 'Label Glossary — AAFCO Terms', href: '/glossary', category: 'Reference' },
+      ]}
       sidebar={
         <>
           <TableOfContents
