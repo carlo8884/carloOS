@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide — Loud Calls, Biting | Lizard.com', description: 'Tokay geckos are the most aggressive commonly kept gecko. Their "to-KAY" call is heard at night. Taming protocol works — but takes patience.', path: '/species/tokay-gecko', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function TokayGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Bite — Honest Assessment</h2>
         <p>A tokay gecko bite from an adult is significantly more painful than most gecko bites. Tokays have powerful jaws relative to their size and they do not let go — a defensive tokay that bites will hold on and rotate its head, causing lacerations. The appropriate response: do not pull your hand away (this worsens the injury) — bring the animal near water or use a paper towel to cover its eyes to encourage release. Thick leather gloves provide protection during initial handling sessions until the animal settles.</p>
         <p>This is not shared to discourage tokay keeping — it is shared because owners who are caught off-guard by their first tokay bite sometimes react in ways that injure the animal or damage the taming relationship they have been building. Know what you are getting into, have appropriate protection, and you will be fine.</p>

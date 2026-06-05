@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Leachianus Gecko Care Guide — Largest Gecko | Lizard.com", description: "The New Caledonian giant gecko is the largest living gecko. Tall enclosures, moderate temps, a CGD-based diet, and why they must be housed alone.", path: "/species/leachianus-gecko", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesLeachianusGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Leachianus geckos are arboreal New Caledonian giants prized for their size, longevity (often well over 20 years), and the distinctive growling and barking vocalizations they use to defend territory. Like their crested and gargoyle gecko relatives, they thrive at room-ish temperatures, eat a convenient commercial powdered diet, and do not require UVB to survive, making them comparatively low-fuss for an animal of their impressive size. The one firm rule that beginners overlook is that adult leachies are highly territorial and must be housed individually outside supervised breeding."}</p>
           <h2>{"Why Leachies Must Be Housed Alone"}</h2>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthReptileObesityPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Wild reptiles work for food, travel, hunt, and experience seasons of scarcity. Captive reptiles get abundant, calorie-dense food delivered to a small enclosure where they barely move. The predictable result is obesity, which is now recognized as one of the leading husbandry-driven health problems across kept species. Excess fat is not benign: it accumulates in and around organs, drives fatty liver disease, impairs reproduction, and reduces lifespan. Unlike many reptile diseases, obesity is almost entirely preventable and largely reversible with patient management."}</p>
           <h2>{"Why Captive Reptiles Get Fat"}</h2>
           <ul>

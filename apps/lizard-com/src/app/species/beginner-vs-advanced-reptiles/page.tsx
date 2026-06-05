@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Beginner vs Advanced Reptiles — Difficulty Tiers | Lizard.com", description: "What makes a reptile beginner, intermediate, or advanced, the husbandry factors that raise difficulty, and why some popular reptiles are not for newcomers.", path: "/species/beginner-vs-advanced-reptiles", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesBeginnerVsAdvancedReptilesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The labels beginner, intermediate, and advanced get applied loosely in the reptile hobby, but they map onto real, measurable husbandry factors. A species is harder to keep when it is large, needs precise environmental control, has a difficult temperament, eats a specialized diet, or punishes mistakes with rapid decline. Conversely, the easiest species are small, forgiving, calm, and simple to feed. Learning to read these factors lets you assess any reptile, including ones not covered by a care sheet, and avoid the classic trap of an inexpensive lizard that turns out to be an expert-level animal."}</p>
           <h2>{"The Factors That Raise Difficulty"}</h2>
           <ul>

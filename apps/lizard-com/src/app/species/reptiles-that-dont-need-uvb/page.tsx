@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptiles That Do Not Strictly Need UVB | Lizard.com", description: "Which reptiles can be kept without UVB lighting, why nocturnal species differ, the case for low-level UVB anyway, and which species absolutely need it.", path: "/species/reptiles-that-dont-need-uvb", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesReptilesThatDontNeedUvbPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"UVB radiation lets reptiles synthesize vitamin D3 in the skin, which they need to absorb and use calcium. For most diurnal, sun-basking reptiles, UVB is non-negotiable, without it they develop metabolic bone disease. But a subset of species evolved in low-light niches and receive little natural UV in the wild; these nocturnal and crepuscular reptiles can be maintained without UVB provided their diet supplies vitamin D3. Understanding this distinction prevents two errors: depriving a basker of essential UVB, and assuming UVB is universally optional."}</p>
           <h2>{"Why Nocturnal Species Are Different"}</h2>
 

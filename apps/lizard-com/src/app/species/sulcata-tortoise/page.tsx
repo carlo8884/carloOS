@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed.', path: '/species/sulcata-tortoise', type: 'article' })
@@ -35,6 +35,7 @@ export default function SulcataTortoisePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Rehoming Crisis — Why It Happens</h2>
         <p>Sulcata tortoises are the most surrendered reptile to rescue organizations in the US. The trajectory is predictable: a hatchling is purchased cheaply (they breed prolifically and hatchlings are inexpensive), kept indoors in a tank for 1-3 years while it grows manageable, then moved outdoors as it outgrows indoor housing, then surrendered at 5-15 years old when it is 20+ inches, destroying fencing, digging through landscaping, and consuming $50-100 of produce weekly. Rescue organizations are overwhelmed — many refuse new sulcata surrenders.</p>
         <p>This is not an exaggeration intended to discourage — it is the documented pattern for the majority of sulcata acquisitions that don't go to prepared, experienced keepers with appropriate long-term facilities. Anyone considering a sulcata should look at photographs of 10-year-old and 20-year-old sulcatas, visit a rescue that has adult sulcatas, and honestly assess whether they have the land, infrastructure, and commitment for that animal for the next 70+ years.</p>

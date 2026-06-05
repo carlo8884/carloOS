@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthSnakeMiteEradicationPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The snake mite is the most common external parasite of captive snakes and also affects lizards. These blood-feeding arachnids are small but visible, and an infestation can build with alarming speed because a single fed female can lay many eggs, and the life cycle, from egg to larva to nymph to adult, can complete in as little as one to two weeks under warm conditions. They spread between animals on hands, equipment, and substrate, so an infestation in one enclosure quickly becomes a collection-wide problem if not contained immediately."}</p>
           <h2>{"Identifying Snake Mites"}</h2>
           <ul>

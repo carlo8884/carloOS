@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Russian Tortoise Care Guide — Diet, Burrows, Brumation | Lizard.com', description: 'Complete Russian tortoise (Testudo horsfieldii) care. High-fiber weed diet (no fruit), outdoor enclosures, brumation, 40+ year lifespan — beginner-friendly.', path: '/species/russian-tortoise', type: 'article' })
@@ -51,6 +51,7 @@ export default function RussianTortoisePage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Russian tortoises</strong> (<em>Testudo horsfieldii</em>) are small Central Asian tortoises that adapt well to captivity, tolerate cold better than most pet tortoises, and routinely live 40–50+ years. Outdoor enclosures during warm months are strongly preferred; indoor minimum is 4×8 ft floor. Diet is high-fiber greens, wild weeds, and hay — fruit is contraindicated. Adults brumate for 8–12 weeks at 35–45°F when supported correctly. The lifespan is the biggest underestimated factor — plan for the tortoise to outlive you.</p>
 

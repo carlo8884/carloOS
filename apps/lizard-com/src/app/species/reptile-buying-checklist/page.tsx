@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Buying Checklist — Before You Buy | Lizard.com", description: "A pre-purchase reptile checklist: research the species, set up before buying, choose captive-bred, check health signs, and plan quarantine.", path: "/species/reptile-buying-checklist", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesReptileBuyingChecklistPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Buying a reptile responsibly is mostly about what you do before money changes hands. The animal may live for one to several decades, will grow to an adult size you must be ready for, and needs a working enclosure waiting for it, not one assembled in a panic that evening. The most common mistakes, choosing a species you have not researched, buying before the setup is ready, picking a sick or wild-caught animal, and having no veterinary or quarantine plan, are all avoidable with a checklist. Here is the one to run through every time."}</p>
           <h2>{"1. Research the Species Thoroughly"}</h2>
           <ul>

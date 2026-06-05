@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthAnorexiaInReptilesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Food refusal (anorexia) is a symptom, not a diagnosis. Reptiles are ectotherms with slow metabolisms, and a healthy adult of many species can go weeks, even months, without eating under certain natural circumstances without harm. That same refusal can also be the first sign of a serious problem. The difference lies in the context and, above all, in whether the animal is maintaining its body weight and condition. A structured approach prevents both needless panic and dangerous complacency."}</p>
           <h2>{"First, Track the Weight"}</h2>
 

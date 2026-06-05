@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide — Best Beginner Lizard | Lizard.com', description: 'Blue-tongued skinks are the best beginner lizard for adults. Omnivore diet (50% vegetables, 30% protein, 20% fruit), docile once established.', path: '/species/blue-tongued-skink', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued Skink Care Guide', description: 'Omnivore diet, handling, and setup for blue-tongued skinks — the best beginner lizard for adults.', url: 'https://lizard.com/species/blue-tongued-skink', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function BlueTonguedSkinkPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why BTS Are the Best Beginner Lizard for Adults</h2>
         <p>The beginner lizard recommendation is typically the leopard gecko (for children and those wanting a small, low-maintenance species) or the blue-tongued skink (for adults wanting a larger, interactive, genuinely personable lizard). Blue-tongued skinks win the "best adult beginner" category because: they are large enough to handle comfortably without feeling fragile, they are not climbers or escape artists in the way of arboreal species, they eat a varied omnivore diet that is easy to provide without maintaining live insect colonies, they tolerate handling very well once established, and they are robust enough to tolerate beginner mistakes that would be fatal to more delicate species like chameleons.</p>
         <p>They are also long-lived — a blue-tongued skink purchased at 2 years old will still be with you at 22 years old. This is a commitment worth acknowledging. Their intelligence and recognition of their keepers makes them genuinely rewarding pets rather than simple display animals.</p>

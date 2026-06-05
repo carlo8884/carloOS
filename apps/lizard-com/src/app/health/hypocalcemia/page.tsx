@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
@@ -57,6 +57,7 @@ export default function HypocalcemiaPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <h2>What Hypocalcemia Is</h2>
           <p>Calcium in the blood exists in three forms: ionized (the biologically active fraction, roughly half of the total), protein-bound (mostly to albumin), and complexed with anions such as citrate and bicarbonate. It is the ionized fraction that determines neuromuscular function. When ionized calcium falls below the species-specific threshold, voltage-gated sodium channels in nerve membranes become hyperexcitable — nerves fire spontaneously, muscles contract without voluntary input, and the syndrome of tremor, tetany, and seizure begins. This is what veterinarians and herpetologists mean by acute hypocalcemia.</p>
           <p>The body defends ionized calcium aggressively. Parathyroid hormone (PTH) is released from the parathyroid glands the moment blood calcium drops, and PTH mobilizes calcium from bone, increases renal calcium retention, and (via activation of vitamin D3) increases intestinal calcium absorption. The skeleton acts as a calcium reservoir that the body draws on for years before the reservoir is exhausted. <a href="/health/metabolic-bone-disease">Metabolic bone disease</a> is what that reservoir depletion looks like on radiographs and physical exam: thin cortices, soft jaw, pathological fractures, deformity. Acute hypocalcemia is what happens when even this aggressive buffering is overwhelmed — usually because demand spikes (gravidity, rapid growth) or because the buffering machinery itself fails (severe long-standing deficiency, renal disease).</p>

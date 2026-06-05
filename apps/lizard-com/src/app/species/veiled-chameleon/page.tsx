@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Veiled Chameleon Care Guide — Screen Cages | Lizard.com', description: 'Veiled chameleons are not beginner lizards. Screen cages mandatory, drip watering required, and they stress fatally with excessive handling.', path: '/species/veiled-chameleon', type: 'article' })
@@ -50,6 +50,7 @@ export default function VeiledChameleonPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Screen Cages — The Non-Negotiable</h2>
           <p>Veiled chameleons require screen enclosures — not glass, not plastic tubs, not hybrid enclosures with glass sides and screen tops. Chameleons need maximum airflow throughout the entire enclosure at all times. The warm, stagnant air that accumulates in glass or plastic enclosures causes upper respiratory infections rapidly in chameleons. The screen cage allows air movement that prevents this while still allowing appropriate temperature gradients and humidity fluctuation.</p>
           <p>Minimum dimensions: 24×24×48 inches for adult males. Females are smaller and can be maintained in a 24×24×36 at minimum. Taller is always better — chameleons are arboreal and feel most secure at height. The cage must be densely planted with live plants (pothos is the standard — cheap, fast-growing, non-toxic to chameleons, and tolerant of the humidity cycles) and structured with branches at multiple heights to allow full use of vertical space.</p>

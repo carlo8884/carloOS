@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Fire Skink Care Guide — Colorful Burrowing Skink | Lizard.com", description: "Fire skinks are vivid, hardy, burrowing West African lizards. Deep substrate, a humid warm enclosure, UVB, and an insect-based diet make them rewarding.", path: "/species/fire-skink", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesFireSkinkPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Fire skinks are terrestrial, semi-fossorial forest-floor lizards from West and Central Africa, named for the fiery red and black coloration along their sides. They are hardy and undemanding once established, but their burrowing habit means a shallow, sparse enclosure leaves them stressed and hidden. Provide deep, slightly moist substrate and dense cover and a fire skink will become a confident, visible animal that surfaces to bask and hunt. Many in the trade are wild-caught, so captive-bred stock is worth seeking for hardiness."}</p>
           <h2>{"Enclosure and Substrate"}</h2>
           <p>{"An adult fire skink needs a floor-focused enclosure of at least 36 by 18 inches; height matters less than ground space for a terrestrial burrower. Furnish with cork bark, leaf litter, hides at both temperature ends, and a water dish. A bioactive setup with live plants suits the species and helps hold humidity."}</p>

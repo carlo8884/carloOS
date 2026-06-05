@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "African Fat-Tailed Gecko Care — Leopard Gecko Cousin | Lizard.com", description: "African fat-tailed geckos are a docile, humidity-loving alternative to leopard geckos. Belly heat, a humid hide, insect diet, and tail-as-fat-store basics.", path: "/species/african-fat-tailed-gecko", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesAfricanFatTailedGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The African fat-tailed gecko is the leopard gecko’s humidity-loving cousin: a nocturnal, terrestrial, insectivorous gecko with the same forgiving temperament and similar husbandry, but adapted to the more humid scrub and riverbanks of West Africa. Slow, deliberate, and famously docile, fat-tails are one of the calmest geckos to handle and an ideal first reptile, with the single key difference from leopard geckos being their greater need for ambient and microclimate humidity."}</p>
           <h2>{"Enclosure"}</h2>
           <p>{"A single adult is comfortable in a 20-gallon long (or 30 by 12 inch footprint), with larger always welcome. As a terrestrial species, floor space matters more than height. Provide three hides at minimum: a warm hide, a cool hide, and a humid hide, plus a shallow water dish. A bioactive or naturalistic setup with solid or appropriately moisture-stable substrate works well and helps hold humidity."}</p>

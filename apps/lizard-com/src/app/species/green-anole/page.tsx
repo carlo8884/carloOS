@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Green Anole Care Guide — Bioactive Arboreal Lizard | Lizard.com", description: "Green anoles are tiny diurnal arboreal lizards needing UVB, daily misting, and a planted vertical enclosure. Why they are not a throwaway beginner pet.", path: "/species/green-anole", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesGreenAnolePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The green anole is North America’s only native anole and a familiar sight on fences and shrubs across the Gulf states. Its low purchase price and wide availability create a persistent myth that it is an easy, disposable beginner reptile. In reality, the anoles sold in chain stores are usually wild-caught, stressed, and dehydrated, and they require attentive husbandry, especially UVB and humidity, to live out their natural 4 to 7 year span. They are fast, delicate, and prone to stress, so they reward keepers who treat them as a planted-vivarium display species."}</p>
           <h2>{"Enclosure"}</h2>
           <p>{"Anoles are arboreal and need vertical space and dense cover. A single anole needs an 18 by 18 by 24 inch (or larger) front-opening terrarium oriented for height. A pair or trio (one male, never two males, with one or two females) needs proportionally more. Furnish heavily with branches, cork bark, and live or artificial broad-leaf plants (pothos, philodendron, ficus) to provide climbing structure, sight breaks, and surfaces that hold misting droplets the anoles drink from."}</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Savannah Monitor Care Guide — Burrowing, Heat, Diet | Lizard.com', description: 'Savannah monitor (Varanus exanthematicus) care. 18+ inch substrate for burrowing, 130–150°F basking, insectivorous diet, avoiding the obesity epidemic.', path: '/species/savannah-monitor', type: 'article' })
@@ -51,6 +51,7 @@ export default function SavannahMonitorPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Savannah monitors</strong> (<em>Varanus exanthematicus</em>) are West African burrowing lizards that are routinely mis-kept in the pet trade and routinely die early as a result. Done correctly, they require an 8×4×4 ft minimum adult enclosure with 18+ inches of burrow-grade substrate, 130–150°F basking surface temperatures, Arcadia 12% UVB, and an overwhelmingly insectivorous diet (large dubia roaches, hornworms, crickets, snails) with rodents used minimally if at all. The obesity epidemic in pet savannah monitors — fed all-rodent diets in small enclosures with shallow substrate — is a husbandry failure, not a species failure. Wild-caught imports require strict 60–90 day quarantine with veterinary fecal exams.</p>
 

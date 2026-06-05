@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -38,6 +38,7 @@ export default function SalmonellaPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Salmonella Is and How It Spreads</h2>
         <p>Salmonella is a genus of gram-negative bacteria that lives in the intestinal tracts of reptiles (and many other animals) as normal flora — without causing disease in the reptile. Transmission to humans is fecal-oral: the bacteria present in reptile feces (and on the reptile's skin, which contacts feces during normal movement) can transfer to human hands during handling, and from hands to mouth — either directly or via surfaces, food preparation areas, or food. The bacteria does not need to be visibly present to transmit — contaminated hands touching a face, a mouth, or food preparation surfaces complete the transmission chain.</p>
         <p>Salmonella in the environment can survive on surfaces for extended periods. The enclosure, substrate, water dishes, and any surface the reptile contacts can harbor the bacteria. This is why "my reptile looks clean" or "I cleaned the tank recently" does not eliminate the risk — the bacteria are a permanent feature of the reptile and its environment.</p>

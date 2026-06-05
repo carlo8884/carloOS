@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Low-Maintenance Reptiles — Realistically Easy Pets | Lizard.com", description: "The lowest-maintenance reptiles for busy keepers, ranked by feeding frequency, equipment, and daily effort, with honest expectations.", path: "/species/low-maintenance-reptiles", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesLowMaintenanceReptilesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"For keepers with limited time, some reptiles are far less demanding than others. The lowest-maintenance species share a few traits: they eat infrequently, need relatively simple equipment, tolerate room-ish temperatures or stable setups, and do not require daily handling or constant intervention. That said, low-maintenance is a comparison, not a promise, every reptile needs correct temperatures, clean water, periodic feeding, enclosure maintenance, and attention to health. This guide ranks the realistically easy options and sets honest expectations."}</p>
           <h2>{"What \"Low-Maintenance\" Actually Means"}</h2>
 

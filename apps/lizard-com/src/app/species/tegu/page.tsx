@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Argentine Tegu Care Guide — Enclosure, Diet, Brumation | Lizard.com', description: 'Argentine black & white tegu (Salvator merianae) care. 6×3×3 ft minimum adult enclosure, omnivorous diet rotation, brumation behavior, intelligent and tameable.', path: '/species/tegu', type: 'article' })
@@ -51,6 +51,7 @@ export default function TeguPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Argentine black &amp; white tegus</strong> (<em>Salvator merianae</em>) are large, intelligent, omnivorous lizards from southern South America. Adults reach 3.5–4.5 feet and 4–10+ kg with a 15–20 year lifespan. The minimum responsible adult enclosure is 6×3×3 feet (preferably 8×4×3). They are diurnal baskers needing strong UVB (Arcadia 12%) and a 110–130°F basking surface. Diet is omnivorous: whole prey, insects, lean protein, and fruit on rotation. Most captive tegus brumate in winter and this should be accommodated, not fought. Verify legality before acquiring — restricted in several US states.</p>
 

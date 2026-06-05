@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -36,6 +36,7 @@ export default function ParasitesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>External Parasites — Mites</h2>
         <p>Snake mites (Ophionyssus natricis) are the most common external parasite in captive reptiles. Tiny (pin-head size), fast-moving dots — typically black or red. They live on the reptile and in the enclosure, feeding on blood. Heavy infestations cause anemia, stress, and provide pathways for bacterial infection through the skin.</p>
         <p><strong>Signs:</strong> Reptile soaking constantly (trying to drown mites), unusual restlessness, visible tiny moving dots around the eyes, between scales, and in water bowls. Run a white paper towel along the reptile's body — mites will appear as tiny specks on the towel.</p>

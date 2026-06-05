@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets.', path: '/species/frilled-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function FrilledDragonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Frill — What It Means</h2>
         <p>The frill is a skin membrane supported by elongated hyoid bones that can be rapidly erected by muscular contraction. It is richly vascular and is used for: thermoregulation (angling toward the sun to absorb heat, or fully spreading to increase surface area for cooling), communication between conspecifics (territorial displays between males, courtship displays toward females), and the defensive threat display (full frill erection combined with open mouth, body flattening, bipedal stance, hissing — designed to appear larger and more threatening to a predator). In captivity, a frilled dragon that displays willingly is a comfortable, confident animal. A frilled dragon that never displays is often one that is stressed, cold, or in an environment that suppresses normal behavior.</p>
         <p>The defensive display is not dangerous to humans — it is theatrical rather than functional. A frilled dragon that threat-displays at its keeper is communicating discomfort, not aggression. Regular, gentle interaction from a young age produces adults that display rarely at humans. The display is more commonly seen toward their own reflections in glass, toward other lizards, and when encountering new objects in the enclosure.</p>

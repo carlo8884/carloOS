@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Herbivorous Reptile Diet — Tortoises, Uromastyx | Lizard.com", description: "How to feed herbivorous reptiles like tortoises and uromastyx. Greens, calcium-to-phosphorus balance, why protein and fruit are limited, and toxic foods.", path: "/health/herbivore-reptile-diet", type: 'article' })
@@ -35,6 +35,7 @@ export default function HealthHerbivoreReptileDietPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Herbivorous reptiles evolved to extract nutrition from large volumes of fibrous, relatively low-protein plant matter, fermenting it in a specialized gut. Their bodies are not built to process the protein loads or sugar-rich fruit that omnivores tolerate. Feeding a tortoise or uromastyx an inappropriate high-protein or fruit-heavy diet causes a cascade of problems over time, from shell deformity and rapid unhealthy growth to kidney disease and gout. A correct herbivore diet is built around the right leafy greens and plants, fed generously, with everything else kept to a minimum."}</p>
           <h2>{"The Foundation: Leafy Greens and Weeds"}</h2>
           <ul>

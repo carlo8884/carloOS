@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Dubia Roach Care — Keeping a Feeder Colony | Lizard.com", description: "How to keep and breed Dubia roaches as feeder insects. Colony setup, heat, gut-loading, why they cannot infest your home, and harvesting safely.", path: "/health/dubia-roach-care", type: 'article' })
@@ -35,6 +35,7 @@ export default function HealthDubiaRoachCarePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Dubia roaches have become the feeder of choice for a large share of reptile keepers, and for good reason. They offer an excellent protein-to-fat ratio with a soft body and high meat-to-shell ratio, they are quiet and far less smelly than crickets, they live a long time without the rapid die-off crickets suffer, and, critically, they cannot climb smooth vertical surfaces and cannot establish in typical temperate homes, so an escapee will not start an infestation. A modest colony quickly becomes self-sustaining, giving you a steady supply of pre-gut-loaded feeders."}</p>
           <h2>{"Why Dubia Cannot Infest Your Home"}</h2>
 

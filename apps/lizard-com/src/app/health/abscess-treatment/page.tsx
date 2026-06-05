@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 const SOURCES = [
@@ -42,6 +42,7 @@ export default function HealthAbscessTreatmentPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"An abscess is a localized pocket of infection. In mammals, the immune system produces liquid pus that can be drained, and the cavity then heals. Reptiles produce a fundamentally different, semi-solid caseous (cheese-like) pus, so a reptile abscess becomes a firm, encapsulated mass. The body walls it off but cannot break it down or expel it, which means the infection persists and often slowly enlarges until it is physically removed. Understanding this difference explains why a reptile lump should never simply be squeezed or lanced like a mammalian boil."}</p>
           <h2>{"How Abscesses Form"}</h2>
           <ul>

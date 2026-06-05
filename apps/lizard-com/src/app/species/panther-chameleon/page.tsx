@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide — Locale Colors | Lizard.com', description: 'Panther chameleons display stunning locale-specific colors. Arboreal, solitary, and stress-sensitive. Drip system required, no handling except necessity.', path: '/species/panther-chameleon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Panther Chameleon Care Guide', description: 'Locale color varieties, drip watering, and stress management for Furcifer pardalis panther chameleons.', url: 'https://lizard.com/species/panther-chameleon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -33,6 +33,7 @@ export default function PantherChameleonPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Locale Color Varieties</h2>
         <p>Panther chameleons from different locales in Madagascar display distinct, genetically fixed color patterns. The locale is the region of origin — breeding within locales maintains color integrity. Mixing locales produces uncertain offspring coloration and is discouraged among serious breeders. When buying a panther chameleon, ask for the locale of both parents.</p>
         <div className="grid sm:grid-cols-2 gap-3 mb-6">

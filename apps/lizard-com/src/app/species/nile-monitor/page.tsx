@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Nile Monitor Care Guide — Advanced Large Monitor | Lizard.com", description: "Nile monitors are large, fast, defensive semi-aquatic monitors for experts only. Room-sized enclosures, intense heat, water, and honest expectations.", path: "/species/nile-monitor", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesNileMonitorPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"The Nile monitor is one of the most challenging lizards in the pet trade and is recommended only for experienced keepers who fully understand the commitment. In the wild it is a fast, semi-aquatic predator of rivers and lakes across much of Africa; in captivity it remains powerful, alert, and frequently defensive, with sharp claws, a strong bite, and a punishing tail whip. Cheap, widely sold hatchlings give a false impression of an easy pet; the adult is a large dangerous animal requiring a dedicated room-scale habitat. This care sheet emphasizes realistic expectations as much as parameters."}</p>
           <h2>{"A Realistic Temperament Warning"}</h2>
 

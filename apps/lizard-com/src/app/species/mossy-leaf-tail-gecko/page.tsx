@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Mossy Leaf-Tail Gecko Care — Uroplatus sikorae | Lizard.com', description: 'Uroplatus sikorae care for advanced keepers. 75–90% humidity, 68–78°F, Madagascar montane rainforest setup, captive-bred only, IUCN-listed.', path: '/species/mossy-leaf-tail-gecko', type: 'article' })
@@ -51,6 +51,7 @@ export default function MossyLeafTailGeckoPage() {
         </>}
       >
         <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
           <h2>TL;DR</h2>
           <p><strong>Mossy leaf-tail geckos</strong> (<em>Uroplatus sikorae</em>) are Madagascan rainforest geckos with the most refined dermal-flap and color-change camouflage of any reptile in the trade. They require a tightly controlled humidity envelope (75–90% RH cycling daily), cool stable temperatures (68–78°F day, hard ceiling 80°F), a planted vertical enclosure with strong ventilation, and an experienced keeper. Captive-bred only — wild-caught animals carry heavy parasite loads, fail to acclimate, and contribute to the decline of an IUCN Vulnerable species. Handling is contraindicated as a default.</p>
 

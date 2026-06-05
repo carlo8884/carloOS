@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -40,6 +40,7 @@ export default function EggBindingPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Egg Binding Is</h2>
         <p>Egg binding (dystocia) occurs when a female reptile cannot pass her eggs through the cloaca normally. This may be due to physical obstruction (oversized or malformed eggs, narrow pelvis, uterine inertia), behavioral issues (no suitable laying site provided, causing the animal to retain eggs past the normal laying window), physiological issues (calcium deficiency preventing smooth muscle contraction needed for egg passage, dehydration), or disease affecting the reproductive tract.</p>
         <p>Egg binding affects all oviparous reptile species — bearded dragons, leopard geckos, ball pythons, veiled chameleons, corn snakes, and all others that lay eggs. It also affects viviparous (live-bearing) species that develop fetal retention problems. It can occur in unmated females — many female reptiles develop follicles and produce infertile eggs even without male exposure. Chameleons and bearded dragons are particularly prone.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide — Substrate, CUC | Lizard.com', description: 'Bioactive vivariums use a living substrate, plants, and a cleanup crew (springtails + isopods) to self-maintain.', path: '/setup/bioactive-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Vivarium Setup Guide', description: 'Substrate mix, cleanup crew, plant selection, and setup for tropical and desert bioactive reptile vivariums.', url: 'https://lizard.com/setup/bioactive-setup', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -32,6 +32,7 @@ export default function BioactiveSetupPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>How Bioactive Systems Work</h2>
         <p>A bioactive vivarium functions like a miniature ecosystem: the reptile produces waste (feces, shed skin, uneaten food), the cleanup crew (CUC) — springtails and isopods — consume and break down the waste, beneficial soil microorganisms continue the decomposition into nutrients, and plants uptake those nutrients while roots stabilize the substrate structure. This closed-loop waste processing is why a functioning bioactive setup can go months without substrate changes.</p>
         <p>The key word: functioning. A bioactive setup that does not have an established CUC, sufficient substrate depth for microbial activity, or appropriate moisture conditions does not self-process waste — it is just a decorated tank. The biological system takes time to establish (typically 2-4 months after setup for the CUC to reach working population density) and requires appropriate conditions to maintain. Bioactive is not "set it and forget it" — it is a different kind of ongoing management compared to traditional spot-cleaning setups.</p>

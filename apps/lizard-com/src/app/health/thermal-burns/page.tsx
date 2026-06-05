@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -39,6 +39,7 @@ export default function ThermalBurnsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Hot Rocks Are Dangerous</h2>
         <p>Reptiles thermoregulate by moving between warm and cool areas — they seek radiant heat from above (like the sun) rather than conductive heat from below. Their skin is not adapted to detect conductive heat from a surface until it is already causing tissue damage. An electric hot rock may reach 120–140°F on its surface — far above safe contact temperatures — while the reptile rests on it, unaware that damage is occurring. By the time behavioral signals indicate discomfort, full-thickness burns may be present on the ventral surface.</p>
         <p><strong>Electric hot rocks should never be used.</strong> This is not a recommendation — it is a categorical safety statement. Every reptile veterinarian and organization agrees: heated rocks are inappropriate for reptile husbandry. Appropriate heat sources are overhead (basking lamps, radiant heat panels) and under-tank heaters on thermostats (for belly heat in species that require it — on a thermostat set to appropriate substrate temperature, surface temperature verified with an infrared thermometer).</p>

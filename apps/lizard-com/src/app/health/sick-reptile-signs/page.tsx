@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -144,6 +144,7 @@ export default function SickReptileSignsPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The most important thing to understand about reptile health: by the time a reptile looks obviously sick, it has usually been sick for some time. Prey animals cannot afford to appear vulnerable — their survival instinct suppresses visible illness until the animal can no longer compensate. This means early detection requires active monitoring, not waiting for obvious symptoms.</p>
 
         <p>Know your individual animal&apos;s baseline: normal activity level, normal color, normal feces, normal feeding response. Deviations from the individual&apos;s baseline matter more than general species averages.</p>

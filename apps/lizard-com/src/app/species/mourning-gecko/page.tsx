@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide — Parthenogenetic Colony | Lizard.com", description: "Mourning geckos are tiny all-female parthenogenetic geckos kept in colonies. Bioactive nano vivariums, CGD plus insects, and why they clone themselves.", path: "/species/mourning-gecko", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesMourningGeckoPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Mourning geckos are small, hardy, arboreal geckos found across the tropical Pacific and now popular in the reptile hobby for two unusual reasons: they are parthenogenetic, meaning females produce viable eggs and offspring without any male, and they are genuinely social, thriving in small colonies where they communicate with audible chirps. Their tiny size, room-temperature requirements, and tolerance of bioactive nano enclosures make them an outstanding low-cost, low-space first reptile, provided keepers understand they will breed prolifically."}</p>
           <h2>{"Parthenogenesis and Colony Housing"}</h2>
 
