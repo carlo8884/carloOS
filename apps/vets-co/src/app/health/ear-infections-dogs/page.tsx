@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "Can I use leftover ear medication or home remedies?", answer: "No. Using leftover or over-the-counter products can be harmful: if the eardrum is ruptured (which the infection itself can cause), certain cleaners and medications can damage hearing and balance. The type of organism — bacteria, yeast, or both — and the state of the eardrum determine which medication is safe and effective, and only an exam with otoscopy and often cytology can establish that. Vinegar and peroxide home remedies can worsen inflammation. Always have a veterinarian examine the ear before treating." },
   { question: "How can I prevent ear infections?", answer: "Prevention depends on the underlying cause. For allergic dogs, controlling the allergy is the key, often with veterinary guidance. General measures help too: drying the ears thoroughly after swimming or baths, routine cleaning with a veterinarian-recommended ear cleaner for dogs prone to wax buildup, and keeping up with any prescribed allergy management. Avoid over-cleaning healthy ears, which can cause irritation. If infections keep recurring despite these steps, a workup for allergies or hormonal disease is warranted." },
 ]
+const SOURCES = [
+  { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/ear-disorders/diseases-of-the-outer-ear/otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Ear Infections in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/ear-infections-dogs', publisher: 'AVMA' },
+]
 export default function EarInfectionsDogsPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function EarInfectionsDogsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Ear Infections in Dogs', subtitle: 'Ear infections are among the most common reasons dogs visit the veterinarian. A single infection is easily treated, but recurrent infections are a red flag for an underlying problem — usually allergies. Understanding why infections happen, and treating the root cause, is the difference between a one-time problem and a lifelong cycle.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Ear Infections', href: '/health/ear-infections-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs', category: 'Veterinary Guide' },
+          { title: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Common Signs</div>
@@ -59,6 +70,8 @@ export default function EarInfectionsDogsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

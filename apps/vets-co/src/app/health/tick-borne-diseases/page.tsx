@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'CDC: Lyme Disease', url: 'https://www.cdc.gov/lyme/', publisher: 'CDC' },
+  { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/generalized-conditions/lyme-disease/lyme-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Tick-Borne Diseases in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/tick-paralysis', publisher: 'AVMA' },
+  { label: 'Companion Animal Parasite Council: Tick-Borne Disease', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
+]
 export default function TickBornePage() {
   return (
     <>
@@ -12,6 +19,12 @@ export default function TickBornePage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Tick-Borne Diseases in Dogs', subtitle: 'Four major tick-borne diseases affect dogs in the US: Lyme disease, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever (RMSF). All are transmitted by ticks, all respond to doxycycline, and all are prevented by consistent tick prevention. The variation between them is geographic distribution, severity, and the speed of required treatment.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+          { title: 'Flea and Tick Prevention', href: '/health/flea-tick-prevention', category: 'Veterinary Guide' },
+          { title: 'Heartworm in Dogs', href: '/health/heartworm-in-dogs', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">4Dx Test Detects</div>
@@ -42,6 +55,8 @@ export default function TickBornePage() {
 
           <h2>Annual 4Dx Testing — Why It Matters</h2>
           <p>The annual heartworm test (4Dx SNAP) also detects antibodies for Lyme, Anaplasma, and Ehrlichia — three tick-borne diseases in a single test with the heartworm antigen test. This is one of the primary reasons the 4Dx is standard of care rather than a simple heartworm test — it provides meaningful surveillance for tick-borne disease simultaneously. A positive result on the 4Dx does not automatically mean treatment is needed — many seropositive dogs have been exposed but not clinically affected. A positive 4Dx in a dog with clinical signs is a significant finding warranting treatment. A positive 4Dx in a completely healthy dog warrants a urine protein:creatinine ratio (to screen for Lyme nephritis) and a full workup conversation with your veterinarian about whether treatment is indicated.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

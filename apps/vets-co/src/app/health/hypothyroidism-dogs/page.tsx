@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Clinical signs, testing, and treatment of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "Does hypothyroidism cause weight gain even when eating normally?", answer: "Yes. Thyroid hormone sets the body's metabolic rate, so an underactive thyroid slows metabolism and leads to weight gain despite no increase — or even a decrease — in food intake. This is a hallmark of the disease, alongside lethargy, a dull or thinning coat, skin darkening, recurrent ear or skin infections, and cold intolerance. Because these signs come on gradually and overlap with normal aging, the condition is often missed until bloodwork is done." },
   { question: "Can other illnesses cause a falsely low thyroid result?", answer: "Yes — this is an important diagnostic pitfall. Many unrelated illnesses, as well as certain medications, can lower thyroid hormone levels temporarily without true hypothyroidism, a phenomenon called euthyroid sick syndrome. For this reason veterinarians avoid diagnosing hypothyroidism in a sick dog and may run a fuller thyroid panel that includes free T4 and TSH to confirm the diagnosis before committing a dog to lifelong treatment." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Hypothyroidism in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hypothyroidism-dogs', publisher: 'AVMA' },
+  { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
+]
 export default function HypothyroidismDogsPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function HypothyroidismDogsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — an underactive thyroid gland — is among the most common hormonal diseases in dogs and one of the most rewarding to treat. The signs are easy to mistake for normal aging, but once recognized and confirmed, daily hormone replacement restores most dogs to full health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Cushing Disease in Dogs', href: '/health/cushing-disease-dogs', category: 'Veterinary Guide' },
+          { title: 'Weight Management', href: '/health/weight-management', category: 'Veterinary Guide' },
+          { title: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Common Signs</div>
@@ -56,6 +67,8 @@ export default function HypothyroidismDogsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

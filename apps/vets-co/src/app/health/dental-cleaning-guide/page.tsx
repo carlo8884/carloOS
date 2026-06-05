@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap } from '@carloOS/ui'
+import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Veterinary Dental Cleaning Guide', description: 'Professional dental cleaning under anesthesia — grades, safety, and expectations.', url: 'https://vets.co/health/dental-cleaning-guide', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: 'What is anesthesia-free dentistry?', answer: 'Anesthesia-free dentistry (AFD) scrapes visible plaque from the visible tooth surface while the animal is awake and physically restrained. It cannot scale below the gumline (where periodontal disease occurs), cannot take dental radiographs to evaluate roots and bone, cannot probe periodontal pockets, and cannot extract teeth. The AVDC (American Veterinary Dental College), AAHA, and WSAVA all oppose anesthesia-free dentistry as it provides false assurance of dental health without addressing the subgingival disease that causes pain and tooth loss.' },
   { question: 'How often does my dog need dental cleanings?', answer: 'This depends on the individual dog\'s periodontal disease susceptibility, home care compliance, breed predisposition, and findings at each cleaning. Small breeds typically need cleanings more frequently — annually from age 2-3. Large breeds often go 18-24 months between cleanings with good home care. After any cleaning, the veterinarian grades the disease and recommends the next interval. Daily toothbrushing is the most effective intervention to extend intervals between professional cleanings.' },
 ]
+const SOURCES = [
+  { label: 'AVDC: Companion Animal Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
+  { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
+  { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
+]
 export default function DentalCleaningGuidePage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function DentalCleaningGuidePage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Veterinary Dental Cleaning Guide', subtitle: 'Periodontal disease affects over 80% of dogs over age 3. Professional dental cleaning under anesthesia is the only way to address subgingival (below the gumline) disease — the part of dental disease that causes pain, tooth loss, and systemic infection. Crown scaling alone, whether done under anesthesia or not, does not treat periodontitis.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Dental Cleaning', href: '/health/dental-cleaning-guide' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Periodontal Disease in Pets', href: '/health/periodontal-disease-pets', category: 'Veterinary Guide' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Periodontal Grades</div>
@@ -28,7 +39,7 @@ export default function DentalCleaningGuidePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dental-cleaning" />
         </>}
       >
@@ -54,6 +65,8 @@ export default function DentalCleaningGuidePage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

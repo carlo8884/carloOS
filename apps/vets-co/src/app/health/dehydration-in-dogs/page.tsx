@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/fluid-therapy/fluid-therapy-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Dehydration in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/dehydration-pets', publisher: 'AVMA' },
+  { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
+]
 export default function DehydrationPage() {
   return (
     <>
@@ -12,6 +18,12 @@ export default function DehydrationPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Dehydration in Dogs', subtitle: 'Dehydration occurs when fluid loss exceeds fluid intake — from vomiting, diarrhea, heat exposure, inadequate water intake, or kidney disease. Mild dehydration can be managed at home; moderate to severe dehydration requires veterinary fluid therapy. Knowing which situation you are in is the key skill.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Dehydration', href: '/health/dehydration-in-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+          { title: 'Vomiting and Diarrhea in Pets', href: '/health/vomiting-diarrhea-pets', category: 'Veterinary Guide' },
+          { title: 'Heat Stroke in Dogs', href: '/health/heat-stroke-dogs', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Dehydration Signs</div>
@@ -22,7 +34,7 @@ export default function DehydrationPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Vomiting and Diarrhea', href: '/health/vomiting-diarrhea-pets' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dehydration" />
         </>}
       >
@@ -42,6 +54,8 @@ export default function DehydrationPage() {
           <h2>IV and Subcutaneous Fluid Therapy</h2>
           <p>In-clinic IV fluid therapy (Lactated Ringer's solution, 0.9% NaCl, or Plasmalyte depending on the electrolyte status) corrects dehydration rapidly and allows monitoring of the response. The fluid type, rate, and volume are calculated by the veterinarian based on the degree of dehydration, bodyweight, and concurrent conditions. Most moderately dehydrated dogs respond well to several hours of IV fluids and can go home the same day.</p>
           <p>Subcutaneous (under-the-skin) fluid therapy is a technique some veterinarians teach owners of dogs with chronic conditions (kidney disease, diabetes) that require regular fluid supplementation. It is not appropriate for acute significant dehydration but is valuable for preventing dehydration in dogs with chronic water regulation problems.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

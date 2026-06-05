@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic).', path: '/health/dog-eye-conditions', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'ACVO: Eye Conditions in Dogs', url: 'https://www.acvo.org/public-resources', publisher: 'American College of Veterinary Ophthalmologists' },
+  { label: 'Merck Veterinary Manual: Eye Diseases of Dogs', url: 'https://www.merckvetmanual.com/eye-and-ear/eye-diseases-of-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Eye Care for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/eye-care-pets', publisher: 'AVMA' },
+]
 export default function DogEyeConditionsPage() {
   return (
     <>
@@ -13,6 +18,12 @@ export default function DogEyeConditionsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Eye Conditions in Dogs', subtitle: 'The eye conditions most commonly seen in dogs range from minor irritations to sight-threatening emergencies requiring same-day treatment. Knowing which situation you are looking at — and which ones cannot wait — is the essential skill for any dog owner.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Eye Conditions', href: '/health/dog-eye-conditions' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency — Same Day</div>
@@ -22,7 +33,7 @@ export default function DogEyeConditionsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Cocker Spaniel Guide', href: '/health/preventive-care-schedule' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
           <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-eye-conditions" />
         </>}
       >
@@ -51,6 +62,8 @@ export default function DogEyeConditionsPage() {
 
           <h2>Keratoconjunctivitis Sicca (KCS / Dry Eye)</h2>
           <p>KCS is inadequate tear production causing dry, inflamed corneal and conjunctival surfaces. Signs: thick, mucoid, yellow-green discharge (the body produces mucus as a substitute for tears), red conjunctiva, dull corneal surface, and in chronic cases, corneal pigmentation and scarring that impairs vision. Most commonly caused by immune-mediated destruction of the lacrimal glands — treated with topical cyclosporine or tacrolimus (immunosuppressants that restore tear production in most dogs within 4-8 weeks of daily application). Lifelong treatment is required. Brachycephalic breeds and Cocker Spaniels are predisposed.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

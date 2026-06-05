@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "What is feline idiopathic cystitis?", answer: "Feline idiopathic cystitis (FIC) is the most common cause of FLUTD signs, especially in younger cats, and means painful bladder inflammation with no identifiable infection or stones. It is strongly linked to stress, and flare-ups often follow changes in the household, conflict with other cats, or disruptions to routine. Management centers on reducing stress, increasing water intake, environmental enrichment, and sometimes diet changes, rather than antibiotics, since true bladder infections are actually uncommon in young cats." },
   { question: "How can I reduce my cat's risk of urinary problems?", answer: "Increasing water intake is the most powerful tool — feeding wet food, adding water fountains, and providing multiple clean water sources dilutes the urine and reduces crystal and stone formation. Equally important is reducing stress through a stable routine, plenty of clean litter boxes (a common guideline is one per cat plus one extra), vertical space, play, and minimizing conflict in multi-cat homes. Maintaining a healthy weight and feeding an appropriate diet recommended by your veterinarian also lowers risk." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Feline Lower Urinary Tract Disease', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/feline-lower-urinary-tract-disease', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
+  { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
+]
 export default function FLUTDPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function FLUTDPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Feline Lower Urinary Tract Disease (FLUTD)', subtitle: 'FLUTD is an umbrella term for several conditions that cause cats to strain, urinate frequently, and pass bloody urine. Most cases are uncomfortable but not immediately dangerous — with one critical exception: a male cat that cannot urinate is a life-threatening emergency requiring care within hours.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'FLUTD', href: '/health/feline-lower-urinary-tract-disease' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Urinary Tract Infection', href: '/health/urinary-tract-infection', category: 'Veterinary Guide' },
+          { title: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats', category: 'Veterinary Guide' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs to Watch</div>
@@ -59,6 +70,8 @@ export default function FLUTDPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

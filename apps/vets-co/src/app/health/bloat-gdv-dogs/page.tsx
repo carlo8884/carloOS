@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Bloat (GDV) in Dogs — Emergency Signs & Prevention | Vets.co", description: "Gastric dilatation-volvulus (bloat) is a sudden, life-threatening emergency in deep-chested dogs. Know the warning signs and act within minutes.", path: '/health/bloat-gdv-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Bloat (Gastric Dilatation-Volvulus) in Dogs', description: 'Recognition, risk factors, and prevention of GDV in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "What does bloat look like?", answer: "The classic picture is a large, deep-chested dog with a swollen, firm abdomen who is restless, pacing, and repeatedly trying to vomit but bringing up little or nothing (non-productive retching). Other signs include excessive drooling, obvious distress or anxiety, rapid shallow breathing, pale gums, and collapse as shock sets in. Not every case shows obvious abdominal swelling, especially early or in very deep-chested dogs, so unproductive retching plus distress in an at-risk breed is enough reason to seek emergency care." },
   { question: "Can a preventive surgery stop bloat?", answer: "A procedure called prophylactic gastropexy tacks the stomach to the body wall so it cannot twist, dramatically reducing the risk of life-threatening GDV. It is commonly performed at the same time as spay or neuter in high-risk breeds such as Great Danes and other deep-chested giant breeds. It does not prevent simple gas bloating, but it largely prevents the deadly twisting. Whether your dog is a candidate is a conversation to have with your veterinarian based on breed and risk." },
 ]
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilatation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Bloat — Gastric Dilatation-Volvulus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-gastric-dilatation-volvulus', publisher: 'AVMA' },
+  { label: 'Glickman LT et al. Incidence of and breed-related risk factors for gastric dilatation-volvulus in dogs. JAVMA. 2000;216(1):40-45.', publisher: 'JAVMA' },
+]
 export default function BloatGDVPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function BloatGDVPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Bloat (GDV) in Dogs', subtitle: 'Gastric dilatation-volvulus — known simply as "bloat" — is one of the most rapidly fatal emergencies in dogs. The stomach fills with gas and twists on itself, cutting off blood flow and sending the dog into shock within hours. It is a true minutes-matter emergency, and recognizing it instantly can save a dog\'s life.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Bloat (GDV)', href: '/health/bloat-gdv-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+          { title: 'Vomiting and Diarrhea in Pets', href: '/health/vomiting-diarrhea-pets', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Emergency Red Flags</div>
@@ -56,6 +67,8 @@ export default function BloatGDVPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

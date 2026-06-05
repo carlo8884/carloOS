@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid | Vets.co', description: 'Heat stroke kills dogs in minutes. Rectal temp above 104°F is an emergency. Active cooling with cool (not ice cold) water while driving to the vet.', path: '/health/heat-stroke-dogs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Heat Stroke in Dogs', description: 'Heat stroke emergency — recognition, first aid cooling, and veterinary treatment.', url: 'https://vets.co/health/heat-stroke-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'AVMA: Heat Stroke in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heat-stroke', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Heat Stroke', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/heat-stroke/heat-stroke-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Hyperthermia in Companion Animals', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
+]
 
 export default function HeatStrokePage() {
   return (
@@ -14,6 +20,12 @@ export default function HeatStrokePage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Heat Stroke in Dogs', subtitle: 'Heat stroke is a life-threatening emergency where body temperature rises above the point where normal cellular function can be maintained. Brain damage begins at 106°F and is often irreversible. Dogs die from heat stroke every year — almost always preventably. Speed of recognition and first aid while transporting to the vet determines outcomes.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heat Stroke', href: '/health/heat-stroke-dogs' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+          { title: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+        ]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs</div>
@@ -48,6 +60,8 @@ export default function HeatStrokePage() {
           <h2>High-Risk Breeds — Increased Vigilance Required</h2>
           <p>Brachycephalic breeds (Bulldogs, French Bulldogs, Pugs, Boston Terriers, Boxers, Cavalier King Charles Spaniels) are disproportionately represented in heat stroke cases. Their narrowed airways make panting less effective as a cooling mechanism. These breeds should not be exercised in temperatures above 70°F, should have limited time outdoors in warm weather, and should never be in situations where other dogs of the same breed would be comfortable — the breed's physiology creates a lower heat tolerance ceiling than most owners realize.</p>
           <p>Obese dogs, dark-coated dogs, elderly dogs, and dogs with cardiac or respiratory disease also have elevated heat stroke risk at temperatures that healthy, lean, young dogs handle without difficulty.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

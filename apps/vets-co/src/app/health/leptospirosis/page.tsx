@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Leptospirosis in Dogs — Zoonotic, Vaccine Recommended | Vets.co', description: 'Leptospirosis is a zoonotic bacterial disease from wildlife urine in water. Causes acute kidney and liver failure.', path: '/health/leptospirosis', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
 const combined = combineSchemas(schema, med)
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Leptospirosis in Dogs', url: 'https://www.merckvetmanual.com/generalized-conditions/leptospirosis/leptospirosis-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Leptospirosis', url: 'https://www.avma.org/resources-tools/animal-health-and-welfare/animal-health/leptospirosis', publisher: 'AVMA' },
+  { label: 'CDC: Leptospirosis', url: 'https://www.cdc.gov/leptospirosis/index.html', publisher: 'CDC' },
+  { label: 'WSAVA: Vaccination Guidelines (Leptospirosis)', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
+]
 export default function LeptospirosisPage() {
   return (
     <>
@@ -13,6 +19,12 @@ export default function LeptospirosisPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Leptospirosis in Dogs', subtitle: 'Leptospirosis is a bacterial disease caused by Leptospira spirochetes — transmitted through urine of infected wildlife (raccoons, deer, opossums, rodents) contaminating standing water, soil, and puddles. It can cause acute kidney and liver failure in dogs and is zoonotic — transmissible to humans from infected dog urine.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Leptospirosis', href: '/health/leptospirosis' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
+          { title: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide', category: 'Veterinary Guide' },
+          { title: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases', category: 'Veterinary Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">High-Risk Exposures</div>
@@ -48,6 +60,8 @@ export default function LeptospirosisPage() {
 
           <h2>Vaccination</h2>
           <p>The leptospirosis vaccine is a non-core vaccine — recommended based on lifestyle risk rather than universally. Dogs with outdoor access, dogs in endemic areas, dogs that swim in natural water, hunting dogs, and dogs in suburban areas with wildlife exposure should receive the vaccine. The current 4-serovar vaccine (L4) covers the four most clinically prevalent serovars (Canicola, Icterohaemorrhagiae, Grippotyphosa, Pomona). Boosted annually as immunity wanes faster than core vaccines. A booster 2-4 weeks after initial vaccination is required for puppies and dogs receiving the vaccine for the first time.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

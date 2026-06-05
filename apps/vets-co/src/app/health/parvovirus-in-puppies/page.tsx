@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Parvovirus in Puppies — Signs, Treatment, Prevention | Vets.co", description: "Canine parvovirus is a contagious, life-threatening illness in unvaccinated puppies. Learn the signs, why it is an emergency, and how vaccination prevents it.", path: '/health/parvovirus-in-puppies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -11,6 +11,11 @@ const FAQS = [
   { question: "How is parvo treated?", answer: "There is no medication that kills the virus directly; treatment is intensive supportive care while the puppy's immune system fights it off. This typically means hospitalization with intravenous fluids to combat dehydration, anti-nausea medication, control of secondary bacterial infection, pain management, and nutritional support, with the specific medications and dosing determined by the veterinary team. Survival improves significantly with early, aggressive hospital care, which is why suspected parvo is an emergency requiring immediate veterinary attention." },
   { question: "Can parvo be prevented?", answer: "Yes — vaccination is highly effective and is the cornerstone of prevention. Puppies receive a series of vaccinations starting in early puppyhood, with boosters until they are old enough for full protection, because maternal antibodies can interfere with earlier doses. Until the series is complete, unvaccinated puppies should avoid areas where unvaccinated dogs may have been, since the virus is extremely hardy in the environment. Following the recommended vaccination schedule from your veterinarian is the single best protection against this deadly disease." },
 ]
+const SOURCES = [
+  { label: 'AVMA: Canine Parvovirus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-parvovirus', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/generalized-conditions/canine-parvovirus/overview-of-canine-parvovirus', publisher: 'Merck Vet Manual' },
+  { label: 'AAHA: Canine Vaccination Guidelines (DA2PP)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
+]
 export default function ParvoPage() {
   return (
     <>
@@ -18,6 +23,12 @@ export default function ParvoPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Parvovirus in Puppies', subtitle: 'Canine parvovirus is one of the most serious infectious diseases a puppy can face — highly contagious, environmentally hardy, and frequently fatal without prompt intensive care. It is also almost entirely preventable through vaccination. Recognizing the signs early and acting immediately gives an affected puppy the best chance of survival.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Parvovirus', href: '/health/parvovirus-in-puppies' }]}
+        relatedLinks={[
+          { title: 'Health Conditions', href: '/health', category: 'Hub' },
+          { title: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide', category: 'Veterinary Guide' },
+          { title: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs', category: 'Veterinary Guide' },
+          { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
+        ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Warning Signs</div>
@@ -56,6 +67,8 @@ export default function ParvoPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>
