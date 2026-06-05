@@ -428,9 +428,9 @@
     "orientation": "landscape"
   },
   "vets-co:category-find-a-vet": {
-    "query": "veterinary clinic exterior",
+    "query": "small animal veterinary clinic",
     "provider": "either",
-    "alt": "The exterior of a small veterinary clinic",
+    "alt": "A small animal veterinary clinic",
     "orientation": "landscape"
   },
   "vets-co:category-pet-insurance": {
@@ -452,9 +452,9 @@
     "orientation": "landscape"
   },
   "vets-co:cornerstone-breed-health": {
-    "query": "stethoscope clinical desk close-up",
+    "query": "purebred dog portrait outdoor",
     "provider": "either",
-    "alt": "A stethoscope on a clinician's desk — texture-led, no human subject",
+    "alt": "A purebred dog in natural light -- breed health cornerstone hero",
     "orientation": "landscape"
   },
   "lizard-com:tool-uvb-calculator": {
@@ -734,213 +734,213 @@
     "orientation": "landscape"
   },
   "dog-com:symptoms-hero": {
-    "query": "dog attentive alert natural light portrait",
+    "query": "dog resting looking tired",
     "provider": "either",
-    "alt": "An alert dog in natural light -- dog symptoms triage hub hero",
+    "alt": "A tired-looking dog resting -- dog symptoms triage hub hero",
     "orientation": "landscape"
   },
   "dog-com:conditions-hero": {
-    "query": "dog resting calm veterinary reference",
+    "query": "dog lying down resting calm",
     "provider": "either",
-    "alt": "A calm dog resting -- canine conditions reference hub hero",
+    "alt": "A calm dog lying down -- canine conditions reference hub hero",
     "orientation": "landscape"
   },
   "dog-com:tools-hero": {
-    "query": "dog with measuring scoop kibble bowl",
+    "query": "dog food bowl measuring cup",
     "provider": "either",
-    "alt": "A dog beside a measuring cup and food bowl -- dog care tools hub hero",
+    "alt": "A dog food bowl beside a measuring cup -- dog care tools hub hero",
     "orientation": "landscape"
   },
   "dog-com:compare-hero": {
-    "query": "two dog food bags side by side comparison",
+    "query": "dog food kibble bowl close up",
     "provider": "either",
-    "alt": "Two dog food bags placed side by side for comparison",
+    "alt": "A close-up of dog food kibble in a bowl -- dog food comparison hub hero",
     "orientation": "landscape"
   },
   "petfood-com:feeding-hero": {
-    "query": "dog and cat eating from bowls natural light",
+    "query": "pet food bowl kitchen",
     "provider": "either",
-    "alt": "A dog and cat eating from their respective food bowls in natural light",
+    "alt": "A pet food bowl in a kitchen setting -- feeding guide hub hero",
     "orientation": "landscape"
   },
   "petfood-com:supplements-hero": {
-    "query": "fish oil capsules omega-3 supplements natural",
+    "query": "supplement capsules vitamins natural light",
     "provider": "either",
-    "alt": "Fish oil capsules and omega-3 supplements on a neutral surface",
+    "alt": "Supplement capsules and vitamins on a neutral surface -- pet supplements hub hero",
     "orientation": "landscape"
   },
   "petfood-com:tools-hero": {
-    "query": "pet food bag price tag measuring cup math",
+    "query": "pet food bowl kitchen scale",
     "provider": "either",
-    "alt": "A pet food bag beside a measuring cup -- cost-per-day calculation reference",
+    "alt": "A pet food bowl beside a kitchen scale -- cost-per-day calculation reference",
     "orientation": "landscape"
   },
   "petfood-com:guides-hero": {
-    "query": "pet food label nutrition facts close up",
+    "query": "pet food nutrition label closeup",
     "provider": "either",
-    "alt": "A close-up of a pet food bag nutrition label -- foundational guides hub hero",
+    "alt": "A close-up of a pet food nutrition label -- foundational guides hub hero",
     "orientation": "landscape"
   },
   "vets-co:symptoms-hero": {
-    "query": "stethoscope clinical tools veterinary",
+    "query": "stethoscope desk close up",
     "provider": "either",
-    "alt": "Veterinary clinical tools on a clean surface -- pet symptom triage hub hero",
+    "alt": "A stethoscope on a clean desk -- pet symptom triage hub hero",
     "orientation": "landscape"
   },
   "vets-co:medications-hero": {
-    "query": "veterinary medication pill bottle tablets blister",
+    "query": "pet medication pills bottle",
     "provider": "either",
-    "alt": "Veterinary medication tablets and pill bottles on a clean surface",
+    "alt": "Pet medication pill bottle on a clean surface -- medications hub hero",
     "orientation": "landscape"
   },
   "vets-co:diagnostics-hero": {
-    "query": "veterinary laboratory test tubes blood sample",
+    "query": "veterinary stethoscope tools",
     "provider": "either",
-    "alt": "Veterinary laboratory test tubes on a clean clinical surface -- diagnostics hub hero",
+    "alt": "Veterinary stethoscope and tools on a clean surface -- diagnostics hub hero",
     "orientation": "landscape"
   },
   "vets-co:specialists-hero": {
-    "query": "veterinary equipment exam table clinical clean",
+    "query": "small animal veterinary clinic",
     "provider": "either",
-    "alt": "A clean veterinary exam table with clinical equipment -- specialists hub hero",
+    "alt": "A small animal veterinary clinic interior -- specialists hub hero",
     "orientation": "landscape"
   },
   "vets-co:tools-hero": {
-    "query": "insurance paperwork clipboard pen calculator desk",
+    "query": "veterinary clipboard stethoscope desk",
     "provider": "either",
-    "alt": "Paperwork, a clipboard, pen, and calculator on a desk -- veterinary finance tools hub",
+    "alt": "A clipboard and stethoscope on a clean desk -- veterinary tools hub",
     "orientation": "landscape"
   },
   "petfood-com:myths-hero": {
-    "query": "pet food bag label magnifying glass ingredients",
+    "query": "food label ingredients close up",
     "provider": "either",
-    "alt": "A pet food bag with its ingredient label in focus -- myth-busting reference hub hero",
+    "alt": "A food label with ingredients in focus -- myth-busting reference hub hero",
     "orientation": "landscape"
   },
   "dog-com:breed-golden-retriever": {
-    "query": "golden retriever portrait sunlight",
+    "query": "golden retriever dog",
     "provider": "either",
-    "alt": "A Golden Retriever in natural sunlight",
+    "alt": "A Golden Retriever dog",
     "orientation": "landscape"
   },
   "dog-com:breed-french-bulldog": {
-    "query": "french bulldog portrait",
+    "query": "french bulldog dog",
     "provider": "either",
-    "alt": "A French Bulldog portrait",
+    "alt": "A French Bulldog dog",
     "orientation": "landscape"
   },
   "dog-com:breed-german-shepherd": {
-    "query": "german shepherd dog portrait outdoor",
+    "query": "german shepherd dog",
     "provider": "either",
-    "alt": "A German Shepherd in natural light",
+    "alt": "A German Shepherd dog",
     "orientation": "landscape"
   },
   "dog-com:breed-beagle": {
-    "query": "beagle dog portrait outdoor",
+    "query": "beagle dog",
     "provider": "either",
-    "alt": "A Beagle in natural light",
+    "alt": "A Beagle dog",
     "orientation": "landscape"
   },
   "dog-com:breed-poodle": {
-    "query": "poodle dog portrait groomed",
+    "query": "poodle dog",
     "provider": "either",
-    "alt": "A well-groomed Poodle portrait",
+    "alt": "A Poodle dog",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-betta": {
-    "query": "betta fish planted aquarium",
+    "query": "betta fish",
     "provider": "either",
-    "alt": "A betta fish in a planted aquarium",
+    "alt": "A betta fish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-neon-tetra": {
-    "query": "neon tetra school aquarium",
+    "query": "neon tetra aquarium",
     "provider": "either",
-    "alt": "A school of neon tetras in a freshwater aquarium",
+    "alt": "Neon tetra fish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-clownfish": {
-    "query": "clownfish anemone ocean",
+    "query": "clownfish",
     "provider": "either",
-    "alt": "A clownfish among sea anemone tentacles",
+    "alt": "A clownfish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-goldfish": {
-    "query": "goldfish swimming aquarium",
+    "query": "goldfish",
     "provider": "either",
-    "alt": "A goldfish swimming in a freshwater aquarium",
+    "alt": "A goldfish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-angelfish": {
-    "query": "angelfish freshwater aquarium",
+    "query": "angelfish aquarium",
     "provider": "either",
-    "alt": "An angelfish in a freshwater planted aquarium",
+    "alt": "An angelfish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-discus": {
-    "query": "discus fish colorful aquarium",
+    "query": "discus fish",
     "provider": "either",
-    "alt": "A colorful discus fish in a planted aquarium",
+    "alt": "A discus fish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-guppy": {
-    "query": "guppy fish colorful freshwater",
+    "query": "guppy fish",
     "provider": "either",
-    "alt": "A colorful guppy in a freshwater aquarium",
+    "alt": "A guppy fish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-oscar": {
-    "query": "oscar fish cichlid aquarium",
+    "query": "oscar fish",
     "provider": "either",
-    "alt": "An Oscar cichlid in a freshwater aquarium",
+    "alt": "An Oscar fish",
     "orientation": "landscape"
   },
   "fish-com:species-thumb-corydoras": {
-    "query": "corydoras catfish aquarium substrate",
+    "query": "corydoras catfish",
     "provider": "either",
-    "alt": "Corydoras catfish on sandy aquarium substrate",
+    "alt": "Corydoras catfish",
     "orientation": "landscape"
   },
   "fish-com:tools-hero": {
-    "query": "aquarium calculator tools measuring cup water",
+    "query": "aquarium water test kit",
     "provider": "either",
-    "alt": "Aquarium water testing and measuring tools laid out on a surface",
+    "alt": "An aquarium water test kit -- fish care tools hub hero",
     "orientation": "landscape"
   },
   "fish-com:water-parameters-hero": {
-    "query": "aquarium water test kit ammonia nitrite pH",
+    "query": "aquarium water testing tubes",
     "provider": "either",
-    "alt": "A freshwater aquarium water test kit with reagent bottles and color chart",
+    "alt": "Aquarium water testing tubes and reagents -- water parameters reference hero",
     "orientation": "landscape"
   },
   "fish-com:glossary-hero": {
-    "query": "freshwater aquarium planted tank clear water",
+    "query": "planted aquarium clear water",
     "provider": "either",
-    "alt": "A clear, well-maintained planted freshwater aquarium illustrating aquarium terminology",
+    "alt": "A clear planted aquarium -- aquarium terminology glossary hero",
     "orientation": "landscape"
   },
   "ferret-com:tools-hero": {
-    "query": "ferret food kibble bowl measuring close up",
+    "query": "ferret food bowl",
     "provider": "either",
-    "alt": "A ferret food bowl with kibble beside a food label, illustrating nutrition tools",
+    "alt": "A ferret food bowl -- ferret tools hub hero",
     "orientation": "landscape"
   },
   "ferret-com:first-year-hero": {
-    "query": "ferret kit young small curious",
+    "query": "young ferret kit",
     "provider": "either",
-    "alt": "A young ferret kit exploring its new environment, suited to a first-year care guide",
+    "alt": "A young ferret kit -- first-year care guide hero",
     "orientation": "landscape"
   },
   "ferret-com:find-vet-hero": {
-    "query": "small animal exotic veterinary clinic examination",
+    "query": "small animal veterinary clinic",
     "provider": "either",
-    "alt": "A clean exotic-pet veterinary examination table with clinical equipment",
+    "alt": "A small animal veterinary clinic -- find a vet guide hero",
     "orientation": "landscape"
   },
   "ferret-com:glossary-hero": {
-    "query": "ferret alert curious face portrait close up",
+    "query": "ferret portrait close up",
     "provider": "either",
-    "alt": "A close portrait of an alert ferret, suited to a ferret terminology glossary",
+    "alt": "A close portrait of a ferret -- ferret terminology glossary hero",
     "orientation": "landscape"
   },
   "horses-com:breed-quarter-horse": {
