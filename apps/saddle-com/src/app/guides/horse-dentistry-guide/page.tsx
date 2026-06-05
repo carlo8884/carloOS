@@ -9,6 +9,12 @@ export default function HorseDentistryPage() {
       hero={{ title: 'Horse Dentistry Guide', subtitle: 'Horses\' teeth grow continuously throughout their lives and wear unevenly — creating sharp points on the outer edges of upper teeth and inner edges of lower teeth that lacerate the cheeks and tongue. Annual dental floating (filing these points smooth) under sedation by a veterinarian or equine dental technician is standard preventive care.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Dentistry', href: '/guides/horse-dentistry-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Horse Nutrition Guide', href: '/guides/horse-nutrition-guide', category: 'Horse Care' },
+        { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Signs of Dental Pain</div>

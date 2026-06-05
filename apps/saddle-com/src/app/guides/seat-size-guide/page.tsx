@@ -50,6 +50,12 @@ export default function SeatSizeGuidePage() {
         { name: 'Seat Size Guide', href: '/guides/seat-size-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'The Core Concept', href: '#concept' },

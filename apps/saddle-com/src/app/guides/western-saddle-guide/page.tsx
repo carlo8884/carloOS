@@ -9,6 +9,12 @@ export default function WesternSaddleGuidePage() {
       hero={{ title: 'Western Saddle Guide', subtitle: 'Western saddles are built for specific disciplines — a barrel saddle designed for agility and tight turns is a different tool from a roping saddle built for stopping power and strength, which is different from a comfortable trail saddle designed for 8-hour rides. Choosing the right western saddle starts with understanding what you\'re asking it to do.', category: 'Equipment Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Western Saddle Guide', href: '/guides/western-saddle-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Western Riding Guide', href: '/guides/western-riding-guide', category: 'Disciplines' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Discipline</div>

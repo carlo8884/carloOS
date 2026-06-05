@@ -10,6 +10,12 @@ export default function DressageBasicsGuidePage() {
       hero={{ title: 'Dressage Basics Guide', subtitle: 'Dressage — from the French "dresser," to train — is the art of riding and training horses in a way that develops the horse\'s natural athletic ability and willingness to perform. At its core, dressage is correct, harmonious horsemanship. Every English rider benefits from dressage principles regardless of their primary discipline.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Dressage Basics', href: '/guides/dressage-basics-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'English Riding Guide', href: '/guides/english-riding-guide', category: 'Disciplines' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Training Scale</div>

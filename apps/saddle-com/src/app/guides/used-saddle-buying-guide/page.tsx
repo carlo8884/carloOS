@@ -42,6 +42,12 @@ export default function UsedSaddleBuyingGuidePage() {
         { name: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Before You View', href: '#before' },

@@ -106,6 +106,12 @@ export default function LungingBasicsPage() {
         { name: 'Guides' },
         { name: 'Lunging Basics', href: '/guides/lunging-basics' },
       ]}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'English Riding Guide', href: '/guides/english-riding-guide', category: 'Disciplines' },
+        { title: 'Dressage Basics Guide', href: '/guides/dressage-basics-guide', category: 'Disciplines' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+      ]}
       sidebar={
         <>
           <TableOfContents

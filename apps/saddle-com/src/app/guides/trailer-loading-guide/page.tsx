@@ -19,6 +19,12 @@ export default function TrailerLoadingGuidePage() {
       <ArticleLayout siteId="saddle-com"
         hero={{ title: 'Horse Trailer Loading Guide', subtitle: 'A horse that loads willingly is safer for itself, its handler, and bystanders than one that must be wrestled into a trailer. Forcing a horse that is afraid creates a horse that is more afraid. Building loading through positive association and pressure-release takes longer the first time but produces a horse that loads reliably for life.', category: 'Horse Care Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Trailer Loading', href: '/guides/trailer-loading-guide' }]}
+        relatedLinks={[
+          { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+          { title: 'Horse Trailer Guide', href: '/guides/horse-trailer-guide', category: 'Equipment' },
+          { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+          { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+        ]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Do This</div>

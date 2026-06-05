@@ -126,6 +126,12 @@ export default function TreeSizeEstimatorPage() {
         { name: 'Tree Size Estimator' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Tools Hub', href: '/tools', category: 'Hub' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
+      ]}
       sidebar={
         <>
           <TableOfContents

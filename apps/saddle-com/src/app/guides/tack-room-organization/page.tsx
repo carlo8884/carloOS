@@ -11,6 +11,12 @@ export default function TackRoomPage() {
       hero={{ title: 'Tack Room Organization', subtitle: 'A well-organized tack room is not just about aesthetics — it directly affects the longevity of leather equipment that represents thousands of dollars of investment, the efficiency of your barn routine, and the ease of identifying when something needs maintenance or replacement before it fails during a ride.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Tack Room Organization', href: '/guides/tack-room-organization' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
+        { title: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule', category: 'Care' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Checklist</div>

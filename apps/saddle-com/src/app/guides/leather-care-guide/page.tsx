@@ -42,6 +42,12 @@ export default function LeatherCareGuidePage() {
         { name: 'Leather Care', href: '/guides/leather-care-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule', category: 'Care' },
+        { title: 'Tack Room Organization', href: '/guides/tack-room-organization', category: 'Care' },
+        { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'The Golden Rule', href: '#rule' },

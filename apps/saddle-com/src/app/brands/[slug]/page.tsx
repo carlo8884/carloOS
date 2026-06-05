@@ -134,6 +134,12 @@ export default async function BrandPage({ params }: BrandPageProps) {
           { name: 'Brands', href: '/brands' },
           { name: brand.name, href: `/brands/${brand.slug}` },
         ]}
+        relatedLinks={[
+          { title: 'Brands Hub', href: '/brands', category: 'Hub' },
+          { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+          { title: 'Guides Hub', href: '/guides', category: 'Guides' },
+        ]}
         sidebar={
           <>
             <TableOfContents

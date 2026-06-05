@@ -11,6 +11,12 @@ export default function HorseTrailerGuidePage() {
       hero={{ title: 'Horse Trailer Guide', subtitle: 'A horse trailer is one of the largest equipment investments an equestrian makes — and one of the most safety-critical. A reliable, well-maintained trailer is essential for veterinary emergencies, show travel, and trail riding access. Understanding the types, what to inspect when buying used, and how to operate safely makes the difference between a tool and a liability.', category: 'Equestrian Guide', authorName: 'Saddle.com Editorial', authorAvatar: '🐴', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides/saddle-fit-guide' }, { name: 'Horse Trailer Guide', href: '/guides/horse-trailer-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Guides Hub', href: '/guides', category: 'Hub' },
+        { title: 'Trailer Loading Guide', href: '/guides/trailer-loading-guide', category: 'Horse Care' },
+        { title: 'Buying Your First Horse', href: '/guides/buying-first-horse', category: 'Horse Care' },
+        { title: 'Horse First Aid Guide', href: '/guides/horse-first-aid-guide', category: 'Horse Care' },
+      ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Trailer Types</div>
