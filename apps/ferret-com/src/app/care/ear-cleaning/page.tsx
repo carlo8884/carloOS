@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function EarCleaningPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="normal">What Normal Ferret Ear Wax Looks Like</h2>
           <p>
             Ferrets are naturally waxy-eared animals. Healthy ferret ear wax is typically a <strong>reddish-brown to dark-brown color</strong>, and the amount can look surprising to someone used to dogs or cats. By itself, brownish wax is normal and not a sign of disease. The job of routine ear cleaning is simply to manage that normal buildup so it does not accumulate, not to chase an imaginary problem.

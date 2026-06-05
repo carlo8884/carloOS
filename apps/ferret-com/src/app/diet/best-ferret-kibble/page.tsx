@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function BestFerretKibblePage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="panel">Read the Panel First</h2>
           <p>
             The single most useful skill in ferret nutrition is reading an ingredient panel. Ingredients are listed by weight, so the first three to five entries define the formula. For a ferret kibble, those entries should be <strong>named animal proteins and animal fats</strong> — chicken, chicken meal, turkey, lamb, fish meal, chicken fat. If the first ingredient is a grain ("ground corn," "brewers rice," "wheat") or a plant-protein concentrate ("corn gluten meal," "pea protein," "soybean meal"), the formula is built on plant carbohydrate that a ferret cannot use, regardless of the marketing on the front of the bag.

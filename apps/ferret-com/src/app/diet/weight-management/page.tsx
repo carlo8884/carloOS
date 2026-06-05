@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function WeightManagementPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="seasonal">The Seasonal Weight Swing</h2>
           <p>
             Intact and even many altered ferrets put on a noticeable layer of fat in autumn and shed it again in spring — a normal seasonal cycle tied to coat changes and daylight. A ferret can gain a substantial fraction of its body weight heading into winter and look distinctly rounder, then slim down as the days lengthen. New owners frequently mistake the autumn version for obesity and the spring version for illness; in a ferret that is otherwise bright, active, and eating well, this swing is expected. Knowing the cycle exists prevents both needless worry and the opposite error of dismissing a genuine problem as "just the season."

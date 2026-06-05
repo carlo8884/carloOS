@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -90,6 +90,13 @@ export default function FerretGlossaryPage() {
             variant="inline"
             caption="An alert ferret — the animal whose vocabulary this glossary defines."
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="sex-age">Ferrets by Sex & Age</h2>
           <ul>
             <li><strong>Hob</strong> — an intact (un-neutered) male ferret.</li>

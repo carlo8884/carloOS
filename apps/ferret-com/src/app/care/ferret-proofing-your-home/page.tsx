@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function FerretProofingPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how-differ">How Ferret-Proofing Differs From Puppy-Proofing</h2>
           <p>
             People who have child- or puppy-proofed a home tend to assume they are most of the way there. They are not. Ferrets break three of the assumptions that ordinary baby-proofing relies on. They <strong>squeeze through any opening their skull fits through</strong> — the body deforms around the skeleton, so an opening that looks far too small is not. They <strong>investigate by mouthing soft objects</strong>, which turns a huge range of household items into ingestion hazards. And they <strong>climb anything with texture</strong>, reaching shelves and surfaces a puppy never could. A room that is safe for a crawling baby can be lethal for a loose ferret.

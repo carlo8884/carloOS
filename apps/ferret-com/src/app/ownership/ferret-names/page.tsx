@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -84,6 +84,13 @@ export default function FerretNamesPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How to Choose</h2>
           <p>
             A few practical principles help. Short names with a clear, distinct sound — typically one or two syllables — are easiest for a ferret to learn to recognize, much as with a dog or cat. A name with a hard consonant or a bright vowel tends to cut through household noise better than something soft and mumbly. Beyond that, let the ferret's personality guide you: many owners wait a few days after bringing a ferret home and let a name suggest itself once the animal's character shows. There is no wrong answer; the lists below are starting points, not rules.

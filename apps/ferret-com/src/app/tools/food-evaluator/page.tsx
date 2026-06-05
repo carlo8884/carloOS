@@ -4,6 +4,7 @@ import {
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
+  ArticleByline,
   FAQAccordion,
   EmailCapture,
   TableOfContents,
@@ -160,6 +161,13 @@ export default function FerretFoodEvaluatorPage() {
         ]}
 >
       <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-01"
+            updatedAt="2026-05-01"
+            reviewedBy="Editorial team"
+          />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}

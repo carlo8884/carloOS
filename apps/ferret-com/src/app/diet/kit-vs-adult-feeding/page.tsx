@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function KitVsAdultFeedingPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>
             Ferret kits wean from their mother's milk onto solid food at around six weeks of age and grow rapidly through their first several months. During this period their requirements sit at the high end of the ferret window — more protein and more fat to fuel growth (see <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>). Many keepers and breeders feed a high-quality kit or ferret diet free-choice during this stage, sometimes lightly moistened at first to ease the transition from milk to kibble. Whole-prey and raw feeders introduce appropriate raw food in this window as well. The constant is high-calorie, high-protein, animal-based nutrition available throughout the day, because a growing kit eats often.

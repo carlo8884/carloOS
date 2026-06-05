@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function CostOfOwningAFerretPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="numbers">How to Read These Numbers</h2>
           <p>
             All figures here are general ranges to plan around, not quotes — actual prices vary by region, by retailer, and by veterinarian, and exotic-mammal veterinary care in particular runs higher than care for cats and dogs because fewer practices offer it. Treat the ranges as a planning framework: the goal is to make sure no major category surprises you, especially the veterinary ones. The single most important point on this page is that you should budget for ferret <em>illness</em>, not just ferret <em>upkeep</em>.

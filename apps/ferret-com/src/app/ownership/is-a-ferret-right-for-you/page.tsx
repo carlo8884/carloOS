@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,6 +96,13 @@ export default function IsAFerretRightForYouPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How to Use This</h2>
           <p>
             Read each section below and answer honestly — not how you wish things were, but how they actually are. A ferret is a delightful pet for the right home and a stressful, expensive mistake for the wrong one, and the difference is almost always predictable in advance. There are no wrong answers here, only the right pet for your circumstances. If most sections feel easy to say yes to, a ferret may suit you well. If several give you pause, that is valuable information, not failure.

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function TravelAndCarriersPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="carrier">Choosing a Carrier</h2>
           <p>
             A ferret carrier needs three things a generic small-pet box often lacks: secure latching, ventilation, and an interior the ferret cannot turn into an escape puzzle. A hard-sided plastic carrier of the type sold for cats and small dogs works well and is easy to clean if there is a litter accident. Soft-sided carriers are lighter and cozier but must have zippers a ferret cannot work open — ferrets are skilled at manipulating zippers and latches, and a determined ferret will test every seam.

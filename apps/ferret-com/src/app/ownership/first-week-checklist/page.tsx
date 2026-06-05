@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function FirstWeekChecklistPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="before">Before You Bring It Home</h2>
           <p>
             Have the essentials in place before the ferret arrives, so its first day is calm rather than chaotic. The core setup: a properly sized multi-level cage with hammocks and bedding, litter boxes and ferret-safe litter, food and water dishes (a heavy ceramic bowl plus an optional backup bottle), a starter supply of an appropriate food — ideally the same one the ferret has been eating, to avoid an immediate diet change — and a carrier. Confirm ferrets are legal where you live before any of this (see <a href="/ownership/ferret-legality-by-state">legality by state</a>), and ferret-proof at least one room: ferrets squeeze through gaps as small as an inch or two, chew and swallow soft rubber and foam, and climb into appliances. The full cage and proofing detail is on the <a href="/care/cage-setup">cage setup</a> page.

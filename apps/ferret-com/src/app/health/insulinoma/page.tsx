@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
@@ -145,6 +145,13 @@ export default function FerretInsulinomaPage() {
             aspect="16:9"
             variant="inline"
           />
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="pathophys">What It Is</h2>
           <p>
             Insulinoma is a functional neoplasm of the pancreatic islet beta cells — the cells that produce insulin. The tumor cells continue to secrete insulin in an unregulated manner, independent of the normal feedback loop that suppresses insulin release when blood glucose is low. The result is chronic, intermittent, often severe hypoglycemia. Most ferret insulinomas are classified histopathologically as adenomas or low-grade adenocarcinomas. Metastasis to regional lymph nodes and liver does occur but is less common than the equivalent canine disease.

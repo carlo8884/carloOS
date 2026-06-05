@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -85,6 +85,13 @@ export default function HeatStrokePreventionPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Ferrets Overheat So Easily</h2>
           <p>
             A ferret's thermoregulation is built for cool burrows, not warm rooms. Ferrets have very few functional sweat glands and cannot cool themselves by sweating the way humans do. They also pant far less effectively than dogs, so the two main mammalian cooling routes are both largely unavailable. On top of that, their dense fur traps heat, their compact bodies have limited surface area to shed it, and they cannot tell you they are in trouble until they are already in distress.

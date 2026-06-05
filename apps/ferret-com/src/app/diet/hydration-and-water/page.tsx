@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,13 @@ export default function HydrationAndWaterPage() {
         ]}
 >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Ferret.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>
             Most ferrets drink more readily and more comfortably from a <strong>heavy ceramic bowl</strong> than from a sipper bottle. A bowl lets a ferret lap naturally and in volume; a bottle's ball valve releases water a drop at a time, which is slow and can frustrate a thirsty animal. The practical drawback of a bowl is that ferrets are diggers and tippers, so use a heavy, low, wide-based ceramic dish, or one that clips to the cage bars, and expect to refresh it more than once a day.
