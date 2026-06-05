@@ -11,6 +11,14 @@ export default function SpeciesWesternHognoseSnakePage() {
       hero={{ title: "Western Hognose Snake Care Guide", subtitle: "Heterodon nasicus is a small, stout, upturned-snout colubrid famous for its theatrical defensive bluff: hissing, flattening the neck like a cobra, and ultimately rolling over to play dead. Females reach 24 to 36 inches, males 14 to 24. Their personality and manageable size have made them one of the most popular pet snakes of the last decade.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Western Hognose", href: "/species/western-hognose-snake" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

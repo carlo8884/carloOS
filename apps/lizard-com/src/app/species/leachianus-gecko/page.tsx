@@ -11,6 +11,14 @@ export default function SpeciesLeachianusGeckoPage() {
       hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Leachianus Gecko", href: "/species/leachianus-gecko" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Mossy Leaf-Tail Gecko', href: '/species/mossy-leaf-tail-gecko', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

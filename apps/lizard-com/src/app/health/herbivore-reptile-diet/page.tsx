@@ -11,6 +11,14 @@ export default function HealthHerbivoreReptileDietPage() {
       hero={{ title: "Feeding Herbivorous Reptiles", subtitle: "Herbivorous reptiles, including most tortoises, uromastyx, and largely plant-eating lizards, have digestive systems built for high-fiber, low-protein plant matter. Feeding them like omnivores, with too much protein, fruit, or the wrong greens, causes serious long-term disease. This guide covers building a correct herbivore diet around the right greens and plants, with attention to calcium balance and the foods to avoid.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Herbivore Reptile Diet", href: "/health/herbivore-reptile-diet" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

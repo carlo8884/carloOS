@@ -9,6 +9,14 @@ export default function TokayGeckoPage() {
       hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Tokay Gecko', href: '/species/tokay-gecko' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

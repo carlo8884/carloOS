@@ -11,6 +11,14 @@ export default function SpeciesReptilesThatDontNeedUvbPage() {
       hero={{ title: "Reptiles That Do Not Strictly Need UVB", subtitle: "UVB lighting is essential for most diurnal basking reptiles, but a subset of species, mainly nocturnal and crepuscular ones, can be maintained without it when dietary vitamin D3 is provided. This guide explains which reptiles fall into that category, why, the growing case for offering low-level UVB even to them, and which species absolutely must have UVB.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Calcium D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Guide"}</div>

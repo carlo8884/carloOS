@@ -9,6 +9,14 @@ export default function DysecdysisPage() {
       hero={{ title: 'Dysecdysis (Retained Shed)', subtitle: 'Dysecdysis is the failure to shed skin completely in a single, clean shed. Retained shed — old skin that did not release — is one of the most common health issues in captive reptiles. It is almost entirely preventable and almost entirely caused by inadequate humidity or dehydration during the pre-shed period.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Dysecdysis', href: '/health/dysecdysis' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Shedding Guide', href: '/husbandry/shedding-guide', category: 'Husbandry' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Retained Eye Caps', href: '/health/retained-eye-caps', category: 'Health' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>High-Risk Areas</div>

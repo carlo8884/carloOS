@@ -11,6 +11,14 @@ export default function ParasiteGuidePage() {
       hero={{ title: 'Reptile Parasites', subtitle: 'Parasites are ubiquitous in reptiles — wild-caught animals in particular carry parasite burdens as a normal feature of their biology. The question is not whether parasites are present but whether they are causing harm. Fecal testing of all new reptiles and annual fecal tests for established animals is the standard of care.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Parasites (overview)', href: '/health/parasites', category: 'Health' },
+        { title: 'Snake Mite Eradication', href: '/health/snake-mite-eradication', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Salmonella Prevention', href: '/health/salmonella-prevention', category: 'Health' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Parasite Overview</div>

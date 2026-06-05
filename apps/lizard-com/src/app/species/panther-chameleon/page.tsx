@@ -9,6 +9,14 @@ export default function PantherChameleonPage() {
       hero={{ title: 'Panther Chameleon Care Guide', subtitle: 'Furcifer pardalis — one of the most visually spectacular reptiles in the hobby. Males from different locales in Madagascar display dramatically different colors — Ambilobe males are red and green or blue and red; Nosy Be males are brilliant turquoise blue; Ambanja males show vivid blue-green with red bars. These are not pets in the traditional sense — they are living displays that require expert-level husbandry.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Panther Chameleon', href: '/species/panther-chameleon' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Veiled Chameleon Care', href: '/species/veiled-chameleon', category: 'Species' },
+        { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

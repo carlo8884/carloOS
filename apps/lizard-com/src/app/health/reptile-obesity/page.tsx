@@ -11,6 +11,14 @@ export default function HealthReptileObesityPage() {
       hero={{ title: "Obesity in Reptiles", subtitle: "Obesity is among the most common and most overlooked health problems in captive reptiles. Well-meaning keepers overfeed sedentary animals, and the resulting fat accumulation strains the liver, heart, and reproductive system and shortens lifespan. Recognizing the signs and adjusting feeding frequency, diet composition, and enclosure enrichment reverses most cases.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Obesity", href: "/health/reptile-obesity" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Gout Prevention', href: '/health/gout-prevention', category: 'Health' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

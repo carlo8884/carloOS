@@ -11,6 +11,14 @@ export default function HealthGutLoadingGuidePage() {
       hero={{ title: "Gut-Loading Feeder Insects", subtitle: "Gut-loading is the practice of feeding nutritious food to feeder insects before offering them to your reptile, so the insect becomes a vehicle delivering that nutrition. A cricket fed garbage is mostly empty calories; a cricket gut-loaded for a day or two becomes a far better meal. Done alongside calcium dusting, gut-loading is one of the simplest, cheapest upgrades to a reptile’s diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Gut-Loading Guide", href: "/health/gut-loading-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Dubia Roach Care', href: '/health/dubia-roach-care', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

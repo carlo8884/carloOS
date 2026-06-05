@@ -11,6 +11,14 @@ export default function SpeciesLowMaintenanceReptilesPage() {
       hero={{ title: "Low-Maintenance Reptiles", subtitle: "Some reptiles genuinely fit a busy life, eating infrequently, needing simple equipment, and asking little daily attention. But low-maintenance is relative; no reptile is a set-and-forget pet, and every species needs correct conditions and routine care. This guide ranks the most realistically low-effort reptiles and is honest about what low-maintenance does and does not mean.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'Reptiles That Don\'t Need UVB', href: '/species/reptiles-that-dont-need-uvb', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Lowest Effort"}</div>

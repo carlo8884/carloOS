@@ -11,6 +11,14 @@ export default function SpeciesBestBeginnerReptilesPage() {
       hero={{ title: "Best Beginner Reptiles", subtitle: "Some reptiles tolerate a learning curve; others punish small mistakes. The best beginner species combine modest size, forgiving husbandry, hardiness, calm temperament, and wide availability of captive-bred stock. This guide ranks the genuinely beginner-friendly reptiles and, just as importantly, the honest caveats, because no reptile is truly low-maintenance.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Leopard Gecko Care', href: '/species/leopard-gecko', category: 'Species' },
+        { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
+        { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
+        { title: 'Beginner vs Advanced Reptiles', href: '/species/beginner-vs-advanced-reptiles', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Top Picks"}</div>

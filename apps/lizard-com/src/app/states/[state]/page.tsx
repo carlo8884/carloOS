@@ -202,6 +202,12 @@ export default async function StateReptileLawPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={combined}
+      relatedLinks={[
+        { title: 'State Laws Hub', href: '/states', category: 'Hub' },
+        { title: 'Species Library', href: '/species', category: 'Species' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'Enclosure Setup Guides', href: '/setup', category: 'Setup' },
+      ]}
       sidebar={
         <>
           <TableOfContents items={sectionIds} />

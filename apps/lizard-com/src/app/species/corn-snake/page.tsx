@@ -9,6 +9,14 @@ export default function CornSnakePage() {
       hero={{ title: 'Corn Snake Care Guide', subtitle: 'Pantherophis guttatus — the corn snake is the quintessential beginner snake. Manageable size, docile temperament, extraordinary morph diversity (100+ recognized color and pattern mutations), and forgiving of the small mistakes that beginning keepers make. A well-cared-for corn snake will live 15–20 years.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Corn Snake', href: '/species/corn-snake' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Ball Python Care', href: '/species/ball-python', category: 'Species' },
+        { title: 'Western Hognose Snake', href: '/species/western-hognose-snake', category: 'Species' },
+        { title: 'Kenyan Sand Boa', href: '/species/kenyan-sand-boa', category: 'Species' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

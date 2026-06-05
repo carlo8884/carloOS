@@ -14,6 +14,14 @@ export default function BeardedDragonPage() {
       hero={{ title: 'Bearded Dragon Care Guide', subtitle: 'Pogona vitticeps — the most popular pet lizard in the US. Intelligent, interactive, and demanding. Here\'s what proper husbandry actually looks like — not what the pet store told you.', category: 'Species Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Bearded Dragon', href: '/species/bearded-dragon' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Uromastyx Care Guide', href: '/species/uromastyx', category: 'Species' },
+        { title: 'Blue-Tongued Skink Care', href: '/species/blue-tongued-skink', category: 'Species' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

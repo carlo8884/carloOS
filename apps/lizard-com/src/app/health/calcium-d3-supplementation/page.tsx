@@ -11,6 +11,14 @@ export default function HealthCalciumD3SupplementationPage() {
       hero={{ title: "Calcium and D3 Supplementation for Reptiles", subtitle: "Supplementation, dusting feeders or food with calcium, vitamin D3, and multivitamins, is essential for most captive reptiles because their diets and lighting rarely match the wild. Getting it right prevents metabolic bone disease, the most common nutritional disease in captivity, while getting it wrong in either direction (too little or too much) causes its own problems. This guide explains the products and the logic behind a sensible schedule.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+        { title: 'Hypocalcemia', href: '/health/hypocalcemia', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

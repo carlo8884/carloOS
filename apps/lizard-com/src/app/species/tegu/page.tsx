@@ -27,6 +27,14 @@ export default function TeguPage() {
         contentType="species"
         hero={{ title: 'Argentine Black & White Tegu Care Guide', subtitle: 'Salvator merianae — the Argentine black and white tegu is one of the most intelligent, interactive, and physically demanding reptiles in the trade. A 4-foot, 10+ kg omnivore with a 15–20 year lifespan, dog-like behavior, and serious enclosure requirements.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Argentine Tegu', href: '/species/tegu' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Argentine Tegu Care (Alternate)', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+          { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+          { title: 'Brumation Guide', href: '/husbandry/brumation-guide', category: 'Husbandry' },
+          { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+          { title: 'Gout Prevention', href: '/health/gout-prevention', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>

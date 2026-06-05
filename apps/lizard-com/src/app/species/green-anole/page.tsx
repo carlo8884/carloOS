@@ -11,6 +11,14 @@ export default function SpeciesGreenAnolePage() {
       hero={{ title: "Green Anole Care Guide", subtitle: "Anolis carolinensis is a small (5 to 8 inch) diurnal, arboreal lizard native to the southeastern United States, able to shift color from bright green to brown. Often sold cheaply as a beginner or class pet, it actually needs UVB, high humidity, live insect prey, and a tall planted enclosure to thrive, and is best kept as a display animal rather than a handling pet.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Green Anole", href: "/species/green-anole" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
+        { title: 'Mourning Gecko Care', href: '/species/mourning-gecko', category: 'Species' },
+        { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

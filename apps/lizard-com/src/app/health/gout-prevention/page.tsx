@@ -11,6 +11,14 @@ export default function HealthGoutPreventionPage() {
       hero={{ title: "Gout in Reptiles", subtitle: "Gout in reptiles is the painful deposition of uric acid crystals in joints (articular gout) or around internal organs (visceral gout). It usually results from chronic dehydration or kidney dysfunction, often compounded by an inappropriately high-protein diet. Because the damage is frequently irreversible, prevention through hydration and correct diet matters far more than treatment.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Gout", href: "/health/gout-prevention" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+        { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Savannah Monitor Care', href: '/species/savannah-monitor', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"At a Glance"}</div>

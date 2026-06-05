@@ -11,6 +11,14 @@ export default function SpeciesChineseWaterDragonPage() {
       hero={{ title: "Chinese Water Dragon Care Guide", subtitle: "Physignathus cocincinus is a striking green arboreal agamid from Southeast Asian rainforests, reaching 2 to 3 feet (mostly tail). It needs a tall, heavily planted, humid enclosure with a large water feature for swimming. Its biggest captive welfare problem is rostral (snout) damage from rubbing on enclosure walls when housed too small or too exposed.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Chinese Water Dragon", href: "/species/chinese-water-dragon" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Frilled Dragon Care', href: '/species/frilled-dragon', category: 'Species' },
+        { title: 'Veiled Chameleon Care', href: '/species/veiled-chameleon', category: 'Species' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Bioactive Setup', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Stats"}</div>

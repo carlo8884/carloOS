@@ -29,6 +29,14 @@ export default function HypocalcemiaPage() {
         contentType="health"
         hero={{ title: 'Hypocalcemia in Reptiles', subtitle: 'Hypocalcemia — abnormally low blood calcium — is an acute neuromuscular emergency distinct from the chronic skeletal changes of MBD. When circulating calcium falls below the threshold required for normal nerve and muscle function, tremors, tetany, and seizures follow. Parenteral calcium administered by a veterinarian is the only reliable rescue. This page explains the distinction from MBD, the causes, the clinical course, and a prevention protocol you can build into routine husbandry.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Hypocalcemia', href: '/health/hypocalcemia' }]}
+        relatedLinks={[
+          { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+          { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+          { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+          { title: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency', category: 'Health' },
+          { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+          { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>Emergency Signs</div>

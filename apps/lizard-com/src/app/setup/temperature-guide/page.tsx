@@ -27,6 +27,13 @@ export default function TemperatureGuidePage() {
       hero={{ title: 'Reptile Temperature Setup Guide', subtitle: 'Reptiles are ectotherms — they regulate body temperature by moving between warm and cool areas. Providing a proper thermal gradient is not optional; it is fundamental to every metabolic process the animal depends on.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Temperature Guide', href: '/setup/temperature-guide' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Thermal Burns', href: '/health/thermal-burns', category: 'Health' },
+        { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
+      ]}
       sidebar={<>
         <TableOfContents items={[{ label: 'Thermal Gradient Principle', href: '#gradient' }, { label: 'Heat Sources Compared', href: '#heat-sources' }, { label: 'Thermostats', href: '#thermostats' }, { label: 'Measuring Correctly', href: '#measuring' }, { label: 'By Species', href: '#by-species' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide' }, { label: 'Best Thermometers', href: '/reviews/best-thermometers-hygrometers' }, { label: 'Bearded Dragon Care', href: '/species/bearded-dragon' }]} />

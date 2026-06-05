@@ -10,6 +10,13 @@ export default function MBDPage() {
       hero={{ title: 'Metabolic Bone Disease (MBD)', subtitle: 'Nutritional secondary hyperparathyroidism — the formal name for MBD — is the most common nutritional disease in captive reptiles and one of the most preventable. It is entirely a husbandry failure: inadequate UVB, inadequate calcium supplementation, or an imbalanced calcium-to-phosphorus ratio in the diet. Every MBD case represents a solvable husbandry problem.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Signs (Progressive)</div>

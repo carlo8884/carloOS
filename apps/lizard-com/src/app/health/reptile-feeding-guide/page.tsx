@@ -51,6 +51,14 @@ export default function ReptileFeedingGuidePage() {
         { name: 'Feeding Guide', href: '/health/reptile-feeding-guide' },
       ]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+        { title: 'Gut-Loading Guide', href: '/health/gut-loading-guide', category: 'Health' },
+        { title: 'Feeding Frozen/Thawed Rodents', href: '/health/feeding-frozen-thawed-rodents', category: 'Health' },
+        { title: 'Calcium & D3 Supplementation', href: '/health/calcium-d3-supplementation', category: 'Health' },
+        { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+      ]}
       sidebar={<>
         <TableOfContents items={[
           { label: 'Prey Size — The Core Rule', href: '#prey-size' },

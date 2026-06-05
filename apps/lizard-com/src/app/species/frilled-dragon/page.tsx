@@ -9,6 +9,14 @@ export default function FrilledDragonPage() {
       hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Frilled Dragon', href: '/species/frilled-dragon' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

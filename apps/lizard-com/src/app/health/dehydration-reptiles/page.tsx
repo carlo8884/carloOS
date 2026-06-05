@@ -10,6 +10,14 @@ export default function ReptileDehydrationPage() {
       hero={{ title: 'Dehydration in Reptiles', subtitle: 'Dehydration is one of the most common health problems in captive reptiles — and one of the most frequently underestimated. Reptiles regulate water loss far more efficiently than mammals, which means they can become significantly dehydrated before showing obvious signs. By the time sunken eyes and wrinkled skin appear, dehydration is usually significant.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Dehydration', href: '/health/dehydration-reptiles' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },
+        { title: 'Constipation & Impaction', href: '/health/constipation-impaction', category: 'Health' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Reptile Feeding Guide', href: '/health/reptile-feeding-guide', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Signs of Dehydration</div>

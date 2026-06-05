@@ -11,6 +11,14 @@ export default function SulcataTortoisePage() {
       hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Sulcata Tortoise', href: '/species/sulcata-tortoise' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
+        { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+        { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Size Timeline</div>

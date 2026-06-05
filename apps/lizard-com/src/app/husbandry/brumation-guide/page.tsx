@@ -11,6 +11,13 @@ export default function HusbandryBrumationGuidePage() {
       hero={{ title: "Reptile Brumation Guide", subtitle: "Brumation is the reptilian analogue of hibernation: a seasonal period of dormancy triggered by cooling temperatures and shortening days during which metabolism slows, appetite stops, and activity drops sharply. Understanding it prevents two common mistakes, panicking over a healthy brumating animal and overlooking a sick one that only looks like it is brumating.", category: "Husbandry", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Enclosure Setup", href: "/setup" }, { name: "Brumation Guide", href: "/husbandry/brumation-guide" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Shedding Guide', href: '/husbandry/shedding-guide', category: 'Husbandry' },
+        { title: 'Anorexia in Reptiles', href: '/health/anorexia-in-reptiles', category: 'Health' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Key Points"}</div>

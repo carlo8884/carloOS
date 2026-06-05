@@ -11,6 +11,13 @@ export default function SetupScreenVsPvcEnclosurePage() {
       hero={{ title: "Screen vs PVC vs Glass Reptile Enclosures", subtitle: "The material your enclosure is built from determines how well it holds humidity and heat, how it ventilates, and how easy it is to maintain. The three dominant options, all-screen, glass, and PVC (or sealed wood), each suit different species and climates. Choosing wrong forces you to fight your enclosure to maintain the conditions your animal needs.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Terrarium Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>{"Quick Comparison"}</div>

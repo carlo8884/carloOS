@@ -9,6 +9,14 @@ export default function UromastcyxPage() {
       hero={{ title: 'Uromastyx Care Guide', subtitle: 'The spiny-tailed lizards of North Africa and the Middle East — uromastyx are deceptively charming, surprisingly personable once established, and completely unlike most commonly kept lizards in their dietary and thermal requirements. Their combination of high intelligence and willingness to interact makes them rewarding to keep.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Uromastyx', href: '/species/uromastyx' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
+        { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Stats</div>

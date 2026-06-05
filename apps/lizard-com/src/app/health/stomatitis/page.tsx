@@ -9,6 +9,14 @@ export default function StomatitisPage() {
       hero={{ title: 'Stomatitis in Reptiles (Mouth Rot)', subtitle: 'Infectious stomatitis — commonly called mouth rot — is a bacterial infection of the oral cavity that affects all reptile species. It ranges from mild (superficial gum inflammation) to severe (deep tissue infection with bone involvement). Early treatment is critical — advanced cases can become systemic and fatal.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Stomatitis', href: '/health/stomatitis' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Respiratory Infection', href: '/health/respiratory-infection', category: 'Health' },
+        { title: 'Abscesses in Reptiles', href: '/health/abscess-treatment', category: 'Health' },
+        { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
+        { title: 'Dehydration in Reptiles', href: '/health/dehydration-reptiles', category: 'Health' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Signs</div>

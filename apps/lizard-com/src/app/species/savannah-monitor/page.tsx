@@ -27,6 +27,14 @@ export default function SavannahMonitorPage() {
         contentType="species"
         hero={{ title: 'Savannah Monitor Care Guide', subtitle: 'Varanus exanthematicus — the African savannah monitor is a powerful, intelligent, burrowing insectivore that is among the most consistently mis-kept reptiles in the pet trade. Done right, a 15–20 year companion; done wrong, an obese 6-year tragedy.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '15 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Savannah Monitor', href: '/species/savannah-monitor' }]}
+        relatedLinks={[
+          { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Nile Monitor Care', href: '/species/nile-monitor', category: 'Species' },
+          { title: 'Argentine Tegu Care', href: '/species/argentine-black-and-white-tegu', category: 'Species' },
+          { title: 'Reptile Obesity', href: '/health/reptile-obesity', category: 'Health' },
+          { title: 'Feeder Insects Compared', href: '/health/feeder-insects-compared', category: 'Health' },
+          { title: 'Enclosure Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
+        ]}
         sidebar={<>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(238,240,228,0.4)', marginBottom: '12px' }}>Quick Reference</div>

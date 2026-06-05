@@ -9,6 +9,14 @@ export default function SalmonellaPage() {
       hero={{ title: 'Salmonella & Reptiles', subtitle: 'All reptiles — regardless of species, cleanliness of their enclosure, or how healthy they appear — naturally carry Salmonella bacteria in their GI tract. This is not a disease they have; it is part of their normal flora. For healthy adults, the infection risk with basic precautions is low. For at-risk groups, reptile contact requires careful management.', category: 'Reptile Health & Safety', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Salmonella Prevention', href: '/health/salmonella-prevention' }]}
       schema={schema}
+      relatedLinks={[
+        { title: 'Reptile Health Hub', href: '/health', category: 'Hub' },
+        { title: 'Sick Reptile Signs', href: '/health/sick-reptile-signs', category: 'Health' },
+        { title: 'Parasites Guide', href: '/health/parasites-guide', category: 'Health' },
+        { title: 'Reptile Buying Checklist', href: '/species/reptile-buying-checklist', category: 'Species' },
+        { title: 'Best Beginner Reptiles', href: '/species/best-beginner-reptiles', category: 'Species' },
+        { title: 'First Year Care Schedule', href: '/first-year-care-schedule', category: 'Guide' },
+      ]}
       sidebar={<>
         <div style={{ background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ef4444', marginBottom: '8px' }}>High-Risk Groups — Extra Caution</div>
