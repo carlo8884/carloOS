@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -109,6 +110,7 @@ export default function MarketingTermsDecodedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Pet food marketing relies on terms that sound meaningful but are mostly undefined and unenforceable. The regulated, comparable information — the ingredient list, guaranteed analysis, and AAFCO statement — is on the back of the bag, while the front carries the marketing. Knowing which terms have a definition and which do not is essential to reading a label honestly. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
         <h2 id="frontback">Front vs Back of Bag</h2>
         <p>The front of the bag is designed to sell; the back carries the regulated disclosures. Brand names, imagery, and adjectives on the front are largely outside AAFCO&apos;s enforceable definitions, while the ingredient panel, guaranteed analysis, calorie statement, and nutritional adequacy statement are regulated and comparable. Buying decisions should rest on the back, not the front. See <a href="/nutrition/guaranteed-analysis-explained">The Guaranteed Analysis Explained</a>.</p>

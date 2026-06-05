@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function DogVsCatNutritionOverviewPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Dogs and cats diverged onto different nutritional paths through evolution. The cat is a strict (obligate) carnivore whose metabolism assumes a diet of animal tissue and which has lost the ability to make several nutrients from plant precursors. The dog is a facultative omnivore, more flexible, able to synthesize nutrients the cat must eat pre-formed. The AAFCO Dog and Cat Food Nutrient Profiles encode these differences, and they are the reason the two species need different food. See <a href="/nutrition/dietary-protein-requirements">Dietary Protein Requirements</a>.</p>
         <h2 id="carnivoreomnivore">Carnivore vs Omnivore</h2>
         <p>Cats evolved as desert-dwelling hunters eating whole small prey — high protein, high moisture, very low carbohydrate. Their physiology reflects this: a continuous high rate of protein use, limited carbohydrate-handling enzymes, a weak thirst drive, and obligate dietary requirements for nutrients found only in animal tissue. Dogs, sharing a long domestication history with humans, adapted to a broader diet, including expanded starch-digestion capacity, and can derive nutrition from a wider ingredient base. See <a href="/species/cats-are-obligate-carnivores">Cats Are Obligate Carnivores</a>.</p>

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function HowMuchToFeedACatPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>A cat&apos;s feeding amount, like a dog&apos;s, is best derived from its energy requirement and the food&apos;s calorie density rather than from the bag&apos;s range. Cats are obligate carnivores with relatively high protein needs and, when kept indoors and neutered, comparatively low energy needs — a combination that makes portion control essential. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a> and <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="energy">Cat Energy Requirements</h2>
         <p>Resting energy requirement uses the same formula as for dogs: RER = 70 x (kg)^0.75, or approximately 30 x kg + 70 for typical cats. The daily energy requirement is RER times an activity factor. For cats the factors are lower than for dogs: neutered adult roughly 1.2; intact adult roughly 1.4; weight loss roughly 0.8; inactive or obese-prone roughly 1.0; kitten roughly 2.5. A typical lean 4-kilogram neutered indoor cat needs only on the order of 200 to 250 kcal per day.</p>

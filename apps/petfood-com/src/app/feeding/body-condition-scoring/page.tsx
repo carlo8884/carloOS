@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function BodyConditionScoringPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Body condition score (BCS) is a standardized hands-on assessment of an animal&apos;s fat cover, used by veterinarians worldwide. Unlike body weight, which means nothing without context (is 30 kilograms heavy or light? it depends on the dog), BCS directly answers whether the animal carries too much, too little, or the right amount of fat. It is the practical readout of whether feeding is on target.</p>
         <h2 id="whybcs">Why BCS Beats the Scale</h2>
         <p>A number on the scale has no meaning without a frame of reference, and breed-average weight tables hide enormous individual variation. BCS normalizes for frame: a correctly-conditioned animal scores the same whether it is large or small. This is why feeding decisions should be anchored to BCS, with body weight used to track change once an ideal weight is established. See <a href="/feeding/how-much-to-feed-a-dog">How Much to Feed a Dog</a>.</p>

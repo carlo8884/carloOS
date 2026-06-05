@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function DentalHealthAndNutritionPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Periodontal disease affects a majority of dogs and cats by middle age and contributes to pain, tooth loss, and systemic effects. Diet is frequently invoked as a dental solution — most commonly the claim that dry food cleans teeth — but the evidence is more limited than the marketing suggests. Specially designed dental products have a real but modest effect; ordinary food does not substitute for dental care. See <a href="/compare/wet-vs-dry-food">Wet vs Dry Food</a>.</p>
         <h2 id="scale">The Scale of Dental Disease</h2>
         <p>Plaque (a bacterial film) forms on teeth continuously and mineralizes into tartar, driving gingivitis and periodontal disease. The high prevalence of dental disease in pets reflects how little routine dental care most receive. Because diet contact with the teeth is brief and most food does little mechanical cleaning, nutrition is a minor player in a problem that mainly requires brushing and professional cleaning.</p>

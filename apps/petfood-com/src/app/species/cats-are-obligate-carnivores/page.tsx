@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function CatsAreObligateCarnivoresPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>An obligate carnivore is an animal that must consume animal tissue to obtain certain nutrients it cannot synthesize, because its metabolism has specialized for a meat diet and lost biochemical pathways that omnivores retain. The domestic cat is the textbook example. This is a statement about physiology, not philosophy, and it underlies the entire feline AAFCO nutrient profile. See <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="defined">The Term Defined</h2>
         <p>Obligate means required, and carnivore means meat-eater: the cat is obligated by its biology to eat animal tissue. Over evolution as a hunter of small prey, the cat lost or downregulated several enzymatic pathways that would let it make certain nutrients from plant precursors, because its diet always supplied them pre-formed. The lost flexibility is the defining feature.</p>

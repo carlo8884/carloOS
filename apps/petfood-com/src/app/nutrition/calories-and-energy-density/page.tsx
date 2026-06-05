@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function CaloriesAndEnergyDensityPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-31T00:00:00Z" updatedAt="2026-05-31T00:00:00Z" reviewedBy="Editorial team" />
         <p>A calorie in nutrition is actually a kilocalorie (kcal) — the energy to raise one kilogram of water one degree Celsius. The number that matters for feeding is metabolizable energy: the energy the animal can actually extract from the food after losses to feces and urine. AAFCO and the NRC define how metabolizable energy is calculated and how it must be disclosed.</p>
         <h2 id="me">Metabolizable Energy</h2>
         <p>Metabolizable energy (ME) is gross energy minus the energy lost in feces, urine, and (for ruminants, not relevant here) gas. For dogs and cats, ME is estimated from the protein, fat, and carbohydrate content using modified Atwater factors — approximately 3.5 kcal/g for protein, 8.5 kcal/g for fat, and 3.5 kcal/g for carbohydrate (lower than the human Atwater factors because pet diets are less digestible on average). Manufacturers may also determine ME directly by feeding trial, which is more accurate than calculation.</p>

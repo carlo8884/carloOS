@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Oxidative stress — damage from reactive oxygen species — contributes to aging and disease, and antioxidants are nutrients and compounds that neutralize it. Several antioxidants are essential nutrients with established roles in pet diets, while a growing class of functional ingredients makes broader claims with variable evidence. Separating the established from the speculative is the goal here. See <a href="/nutrition/vitamins-in-pet-food">Vitamins in Pet Food</a>.</p>
         <h2 id="antioxidants">What Antioxidants Do</h2>
         <p>Antioxidants protect cells and dietary fats from oxidative damage, and the body uses a network of them — some made internally, some dietary. In pet food they serve two purposes: protecting the food itself from rancidity (as preservatives) and supporting the animal&apos;s own antioxidant defenses. The most important dietary antioxidants are vitamin E, selenium, vitamin C, and a range of plant compounds. See <a href="/ingredients/preservatives-pet-food">Preservatives in Pet Food</a>.</p>

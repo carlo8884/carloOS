@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function AreDogsCarnivoresOrOmnivoresPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Dogs descend from wolves, and the assumption that they share the wolf&apos;s carnivorous physiology drives much of the meat-maximalist marketing in pet food. But dogs diverged from wolves through a long domestication process that included dietary adaptation, and modern dogs are not metabolically identical to wolves. The evidence points to the dog as a facultative omnivore — able to thrive on a meat-based diet but also adapted to use carbohydrate. See <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="wolf">The Wolf Comparison</h2>
         <p>While dogs and wolves are closely related, domestication over roughly 15,000 to 30,000 years selected for traits suited to living alongside humans, including the ability to digest the starch-rich scraps of human settlements. Treating the modern dog as a captive wolf ignores this adaptation. The wolf comparison is a starting point, not a conclusion about how to feed a dog.</p>

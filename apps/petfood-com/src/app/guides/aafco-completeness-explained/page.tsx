@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,6 +112,7 @@ export default function AafcoCompletenessExplainedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           A pet food bag in the United States is regulated at two levels. The Food and Drug Administration&apos;s
           Center for Veterinary Medicine (FDA CVM) holds federal authority over pet food safety, labeling, and

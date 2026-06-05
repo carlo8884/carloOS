@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +107,7 @@ export default function DietaryFatAndFattyAcidsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-05-30T00:00:00Z" reviewedBy="Editorial team" />
         <p>Fat supplies roughly 8.5 kilocalories of metabolizable energy per gram — more than twice the energy density of protein or carbohydrate. Beyond energy, dietary fat carries the fat-soluble vitamins A, D, E, and K, improves diet palatability, and provides the essential fatty acids the body cannot synthesize. A diet too low in fat produces a dull, flaky coat and impaired fat-soluble vitamin status; a diet too high in fat, fed without matching energy expenditure, drives weight gain and, in predisposed dogs, can trigger pancreatitis.</p>
         <h2 id="why">Why Fat Matters</h2>
         <p>Because fat is so energy-dense, the fat content of a food largely determines its caloric density. Two foods of identical protein can differ substantially in calories per cup driven by fat. This is why feeding guidelines and the energy math on the bag matter: a higher-fat performance food fed at the same volume as a maintenance food delivers more calories. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>

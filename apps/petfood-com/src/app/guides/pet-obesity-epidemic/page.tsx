@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function PetObesityEpidemicPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Surveys consistently find that more than half of dogs and cats in many countries are overweight or obese, making it the most common nutrition-related disorder in companion animals. Unlike many diseases, obesity is largely preventable and reversible through feeding and activity. Its consequences are serious and well-documented, and the benefits of keeping a pet lean are among the clearest findings in companion-animal nutrition. See <a href="/diets/weight-management-diets">Weight-Management Diets</a>.</p>
         <h2 id="widespread">How Widespread</h2>
         <p>Estimates from veterinary surveys regularly put the overweight-or-obese share of pet dogs and cats above 50 percent, and rising over recent decades. The trend mirrors the human obesity trend and shares causes: energy-dense food, sedentary lifestyles, and overfeeding. Because obesity develops gradually and is normalized, it is often unrecognized until it causes a problem. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>

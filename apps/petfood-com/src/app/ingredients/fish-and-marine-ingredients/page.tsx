@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function FishAndMarineIngredientsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Fish and marine ingredients — named fish (salmon, whitefish, herring), fish meal, and fish oil — supply high-quality animal protein and, importantly, the long-chain omega-3 fatty acids EPA and DHA. They are valued both as a primary protein and as a functional omega-3 source. They also carry specific considerations around thiamine, contaminants, and sustainability that distinguish them from land-animal proteins. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a> and <a href="/supplements/fish-oil-omega-3">Fish Oil and Omega-3 Supplements</a>.</p>
         <h2 id="why">Why Fish Is Used</h2>
         <p>Fish provides a complete, highly digestible animal protein and is a leading natural source of EPA and DHA, the omega-3s with evidence for skin, joint, and other benefits. Named fish also serves as a novel protein for some animals in allergy management. These advantages make fish a desirable ingredient in both maintenance and therapeutic diets. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function TreatsAndTheTenPercentRulePage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Treats serve real purposes — training, bonding, enrichment, medication delivery — but they are not nutritionally complete and they add calories. The standard veterinary guideline is that treats and table foods should make up no more than 10 percent of an animal&apos;s daily calorie intake, with the remaining 90 percent coming from a complete and balanced diet. This keeps the complete diet doing its job and prevents treat calories from driving weight gain.</p>
         <h2 id="rule">The 10 Percent Rule</h2>
         <p>The 10 percent guideline exists for two reasons. First, treats are usually not complete and balanced, so a large share of treats dilutes the balanced nutrition of the main diet. Second, treats are calorie-dense, and even a few can represent a substantial fraction of a small animal&apos;s daily allowance. Keeping treats under 10 percent protects both the nutritional balance and the calorie budget.</p>

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function LimitedIngredientDietMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Limited-ingredient diets (LIDs) contain a short ingredient list, typically one protein and one carbohydrate, and are marketed for pets with food sensitivities. The implied promise is that they are hypoallergenic or suitable for an elimination trial. In practice, over-the-counter LIDs frequently fail at both, because the term hypoallergenic has no standard and because independent testing finds undeclared ingredients. See <a href="/diets/food-allergy-and-elimination-diets">Food Allergy and Elimination Diets</a>.</p>
         <h2 id="claim">The Claim</h2>
         <p>The marketing suggests that a short ingredient list reduces allergy risk and that an LID can serve as a diagnostic or management diet for food-allergic pets. Owners often select an LID on their own to address itching or digestive upset, assuming fewer ingredients equals safer. The assumption does not survive scrutiny of how these products are made and labeled.</p>

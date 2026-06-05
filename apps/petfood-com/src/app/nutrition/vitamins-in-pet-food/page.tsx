@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,6 +112,7 @@ export default function VitaminsInPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-31T00:00:00Z" updatedAt="2026-05-31T00:00:00Z" reviewedBy="Editorial team" />
         <p>Vitamins are organic micronutrients required for metabolism, growth, and maintenance. They divide into two groups by solubility: fat-soluble (A, D, E, K), which are stored in the body and can accumulate to toxic levels, and water-soluble (the B-complex and vitamin C), which are largely excreted in excess and must be supplied more regularly. A complete-and-balanced diet supplies all required vitamins; the AAFCO profiles set minima and, for the fat-soluble vitamins, maxima.</p>
         <h2 id="supplied">How Vitamins Are Supplied</h2>
         <p>Raw ingredients contribute some vitamins, but processing — particularly the heat of extrusion and retort canning — degrades several of them. To guarantee the finished food meets profile, manufacturers add a vitamin premix at the mixing stage, formulated to account for processing losses and shelf-life decay. This is why the ingredient panel lists a string of vitamin names near the end. Their presence is normal and necessary, not a red flag.</p>

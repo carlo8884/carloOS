@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -116,6 +117,7 @@ export default function ReadingPetFoodLabelsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
         <p>
           Two bags can sit next to each other on a shelf, both labeled in big type as &quot;Beef Recipe
           Dog Food,&quot; both at a similar price, and yet contain a different proportion of beef, a

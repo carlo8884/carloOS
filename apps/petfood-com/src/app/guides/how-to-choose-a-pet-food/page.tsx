@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,6 +112,7 @@ export default function HowToChooseAPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The pet food aisle offers thousands of options and a barrage of marketing, but a defensible choice rests on a handful of evidence-based criteria. The strongest framework comes from the WSAVA Global Nutrition Committee, which directs owners to ask about a manufacturer&apos;s nutritional expertise, quality control, and research rather than judging by ingredient marketing. This page turns that guidance into a practical process. See <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="completeness">Start with Completeness</h2>
         <p>The first filter is the AAFCO nutritional adequacy statement: confirm the food is complete and balanced for your animal&apos;s life stage, and prefer feeding-trial substantiation over formulation-only where available. A food without a complete-and-balanced statement (carrying instead intermittent or supplemental feeding only) is a treat or topper, not a diet. This single check rules out a great deal. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>

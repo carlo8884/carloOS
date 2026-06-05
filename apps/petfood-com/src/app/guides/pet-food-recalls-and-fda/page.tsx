@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function PetFoodRecallsAndFdaPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Pet food in the United States is overseen federally by the FDA&apos;s Center for Veterinary Medicine (FDA CVM) and enforced at the state level by feed-control officials, with AAFCO providing the model regulations states adopt. Recalls are the mechanism for removing unsafe product from the market, and they occur for contamination, formulation errors, and labeling problems. Understanding the system lets owners track recalls themselves rather than relying on news to reach them. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>
         <h2 id="regulators">Who Regulates Pet Food</h2>
         <p>FDA CVM holds federal authority over pet food safety, ingredient approval, and labeling, and can request or mandate recalls. State departments of agriculture enforce feed law within each state. AAFCO itself is not a regulator — it publishes the model regulations and nutrient profiles states adopt, and does not test, certify, or recall products. The recall authority sits with the FDA and the states. See <a href="/guides/aafco-completeness-explained">AAFCO Completeness Explained</a>.</p>

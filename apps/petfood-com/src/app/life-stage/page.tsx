@@ -8,6 +8,7 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
+  ArticleByline
 } from '@carloOS/ui'
 import { LifeStages } from '../../data/life-stages'
 
@@ -118,6 +119,7 @@ export default function LifeStageHubPage() {
       />
 
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
         <h2 id="about">About AAFCO Life Stages</h2>
         <p>
           The Association of American Feed Control Officials (AAFCO) defines the regulatory

@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function IngredientSplittingPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>AAFCO requires the ingredient list to be ordered by ingoing weight before processing, descending. Owners reasonably read the first few ingredients as what the food is mostly made of. Ingredient splitting exploits this by dividing one component into multiple named fractions, each of which weighs less individually and so appears lower on the list — making a less-desirable ingredient look like a minor one. See <a href="/guides/reading-pet-food-labels">Reading a Pet Food Label</a>.</p>
         <h2 id="rule">The Descending-Order Rule</h2>
         <p>Each ingredient is listed by its weight as it goes into the batch, heaviest first. This single rule drives most label interpretation — and most label confusion. Because the order is by weight, not by nutritional contribution, and because water-heavy fresh ingredients rank higher than their dry contribution warrants, the order can mislead even without deliberate manipulation. See <a href="/ingredients/animal-protein-sources">Animal Protein Sources</a>.</p>

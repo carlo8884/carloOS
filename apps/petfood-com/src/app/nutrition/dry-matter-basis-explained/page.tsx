@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +107,7 @@ export default function DryMatterBasisExplainedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-31T00:00:00Z" updatedAt="2026-05-31T00:00:00Z" reviewedBy="Editorial team" />
         <p>The guaranteed analysis on every pet food bag reports nutrients on an as-fed basis — that is, including the water in the food. Because canned food is mostly water and kibble is mostly dry, the as-fed percentages are not comparable between the two. Dry-matter basis removes water from both sides of the comparison so the nutrient content can be compared honestly. This is standard practice in animal nutrition and the only correct way to compare formats.</p>
         <h2 id="asfed">The As-Fed Problem</h2>
         <p>A typical canned cat food might guarantee 10 percent crude protein. A typical dry cat food might guarantee 34 percent. At first glance the kibble has more than three times the protein. But the canned food is about 78 percent water, so only 22 percent of it is actual food; the dry food is about 10 percent moisture, so 90 percent of it is food. Comparing the two as-fed is comparing a number that includes a lot of water against one that includes very little.</p>

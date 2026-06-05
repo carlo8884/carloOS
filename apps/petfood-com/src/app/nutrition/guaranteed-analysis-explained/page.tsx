@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function GuaranteedAnalysisExplainedPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The guaranteed analysis is required on every pet food label under AAFCO model regulations. It states the manufacturer&apos;s guarantee for certain nutrients, expressed as minimum or maximum percentages on an as-fed basis. The word guarantee is the key: the food will contain at least the stated minimum of protein and fat, and no more than the stated maximum of fiber and moisture. The actual content is usually somewhat different from the guarantee.</p>
         <h2 id="whatis">What It Is</h2>
         <p>The guaranteed analysis exists for regulatory enforcement. A state feed-control official can pull a sample and test whether the food meets its own guarantees; a food that falls below its guaranteed protein minimum or above its guaranteed fiber maximum is misbranded. The guarantee is therefore a floor-and-ceiling commitment, not a description of the average batch.</p>

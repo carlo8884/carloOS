@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function HyperthyroidCatDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Hyperthyroidism — overproduction of thyroid hormone, usually from a benign thyroid tumor — is common in cats over about 10 years and causes weight loss despite a ravenous appetite, hyperactivity, and secondary effects on the heart and kidneys. Among the treatment options, an iodine-restricted therapeutic diet can control the disease by limiting the iodine the thyroid needs to make hormone, but only if fed strictly and exclusively. See <a href="/nutrition/minerals-in-pet-food">Minerals in Pet Food</a>.</p>
         <h2 id="disease">Feline Hyperthyroidism</h2>
         <p>The disease produces excess thyroid hormone, accelerating metabolism. Classic signs are weight loss with a strong appetite, increased thirst and urination, restlessness, and sometimes vomiting; untreated, it strains the heart and can mask or worsen kidney disease. Diagnosis is by blood thyroid-hormone testing. Treatment options include medication, radioiodine, surgery, and the iodine-restricted diet. See <a href="/diets/senior-pet-diets">Senior Pet Diets</a>.</p>

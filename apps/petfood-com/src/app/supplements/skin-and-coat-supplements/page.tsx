@@ -8,7 +8,8 @@ import {
   EmailCapture,
   ReviewCard,
   AffiliateDisclosure,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,6 +109,7 @@ export default function SkinAndCoatSupplementsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>The skin and coat have high nutrient demands — the skin is the body&apos;s largest organ and hair is largely protein — so coat quality is a sensitive readout of nutritional status and overall health. Several supplement ingredients support skin and coat, but the most effective intervention is usually ensuring the diet is complete, adequate in essential fatty acids and high-quality protein, and that no underlying disease is undermining the coat. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>
         <h2 id="drivers">What Drives Coat Quality</h2>
         <p>A healthy coat depends on adequate energy, high-quality protein (hair is keratin, a protein), essential fatty acids, zinc, and several vitamins. Deficiency or imbalance in any of these shows up as a dull, dry, flaky, or thin coat. Because a complete diet supplies all of these, a coat problem in an animal on a good diet often points to a medical cause rather than a nutrient gap.</p>

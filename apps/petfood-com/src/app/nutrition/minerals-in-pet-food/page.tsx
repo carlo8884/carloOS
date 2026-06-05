@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   CrossPortfolioCard,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function MineralsInPetFoodPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Minerals are required in defined amounts, and several of them interact — an excess of one can induce deficiency of another. The AAFCO profiles set minima for the essential minerals and, importantly, maxima for several, because over-supply is as harmful as under-supply. A complete diet meets these targets through ingredients plus a mineral premix; the balance and ratio matter as much as the absolute amounts.</p>
         <h2 id="macrotrace">Macrominerals vs Trace Minerals</h2>
         <p>Macrominerals (calcium, phosphorus, magnesium, sodium, potassium, chloride) are needed in gram quantities and form the structural and electrolyte backbone of the body. Trace minerals (zinc, copper, iron, manganese, selenium, iodine) are needed in milligram or microgram quantities and act largely as enzyme cofactors. Both groups are essential; the difference is quantity, not importance.</p>

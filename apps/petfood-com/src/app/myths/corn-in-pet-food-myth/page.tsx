@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +106,7 @@ export default function CornInPetFoodMythPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Corn is accused of two things in pet food: being an indigestible filler, and being a common allergen. Both claims are widely repeated and weakly supported. Properly cooked corn is well digested by dogs, contributes meaningful nutrients, and is an uncommon cause of food allergy relative to animal proteins. The corn myth is a clear case of marketing outrunning evidence. See <a href="/myths/fillers-myth">Pet Food Fillers Myth</a>.</p>
         <h2 id="claims">The Claims</h2>
         <p>The two charges against corn are that it is cheap filler with little nutritional value, and that it commonly causes allergies. These claims underpin grain-free and corn-free marketing. Examined separately, the digestibility claim is wrong for properly processed corn, and the allergy claim overstates a relatively rare problem.</p>

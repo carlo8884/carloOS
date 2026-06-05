@@ -6,7 +6,8 @@ import {
   TableOfContents,
   RelatedLinks,
   EmailCapture,
-  ArticleSourcesList
+  ArticleSourcesList,
+  ArticleByline
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +111,7 @@ export default function UrinaryTractDietsPage() {
       }
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
         <p>Lower urinary tract disease in dogs and cats includes uroliths (bladder stones), urethral plugs, infection, and — in cats especially — idiopathic cystitis. Diet is a cornerstone of both treating and preventing mineral stones, and stone composition determines everything: the dietary changes that dissolve a struvite stone can worsen a calcium-oxalate stone, so a diagnosis of stone type, ideally by analysis of a retrieved stone, must precede the diet decision.</p>
         <h2 id="lut">The Lower Urinary Tract</h2>
         <p>Uroliths form when urine becomes supersaturated with stone-forming minerals. The two most common types in dogs and cats are struvite (magnesium ammonium phosphate) and calcium oxalate. Their behavior is opposite in important ways: struvite can often be dissolved medically and is influenced by infection and pH, while calcium oxalate cannot be dissolved by diet and must be managed by prevention after surgical or other removal.</p>
