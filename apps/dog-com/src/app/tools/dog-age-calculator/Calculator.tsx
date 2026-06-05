@@ -139,7 +139,7 @@ export default function DogAgeCalculator() {
       </div>
 
       {/* Formula reference row */}
-      <div className="mt-4 grid grid-cols-3 gap-3">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="rounded border border-brand-border bg-brand-white p-3">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Dog age</p>
           <p className="mt-1 font-display text-lg text-brand-dark">
