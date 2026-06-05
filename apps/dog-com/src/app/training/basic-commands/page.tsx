@@ -127,6 +127,7 @@ export default function BasicCommandsPage() {
         { name: 'Training', href: '/training' },
         { name: 'Basic Commands', href: '/training/basic-commands' },
       ]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Loose Leash Walking', href: '/training/loose-leash-walking', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={COMMANDS.map(c => ({ label: c.name, href: `#${c.name.toLowerCase().replace(' ', '-')}` }))} />

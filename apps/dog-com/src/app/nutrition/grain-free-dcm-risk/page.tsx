@@ -42,6 +42,7 @@ export default function GrainFreeDCMPage() {
         { name: 'Nutrition', href: '/nutrition' },
         { name: 'Grain-Free & DCM', href: '/nutrition/grain-free-dcm-risk' },
       ]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Reading Food Labels', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'WSAVA Guidelines', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[

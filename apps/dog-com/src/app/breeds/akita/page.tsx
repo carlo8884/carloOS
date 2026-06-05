@@ -10,6 +10,7 @@ export default function AkitaPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Akita Breed Guide', subtitle: "The Akita is a large Japanese spitz-type breed — national dog of Japan, subject of the famous Hachikō loyalty story, and a breed that demands experienced, committed ownership. They form intense bonds with their immediate family and can be deeply suspicious of strangers and dangerously aggressive toward other dogs of the same sex. The same loyalty that makes them extraordinary companions makes them a liability in the wrong hands.", category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Akita', href: '/breeds/akita' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Shiba Inu Guide', href: '/breeds/shiba-inu', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

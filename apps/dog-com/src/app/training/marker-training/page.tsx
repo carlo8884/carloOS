@@ -17,6 +17,7 @@ export default function MarkerTrainingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Marker Training for Dogs', subtitle: 'Marker training — using a precise, consistent signal to mark the exact moment of correct behavior — is the most powerful positive reinforcement training tool available. The marker (a clicker or verbal "yes") bridges the gap between the behavior and the reward, providing information with millisecond precision that is impossible to achieve with treats alone.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Marker Training', href: '/training/marker-training' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Off-Leash Training', href: '/training/off-leash-training', category: 'Training' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Marker Options</div>

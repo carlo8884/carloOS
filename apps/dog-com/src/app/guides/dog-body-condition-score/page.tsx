@@ -97,6 +97,7 @@ export default function DogBodyConditionScorePage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score' },
         ]}
+        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
         sidebar={
           <>
             <TableOfContents

@@ -8,6 +8,7 @@ export default function ShihTzuPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Shih Tzu Breed Guide', subtitle: 'Originally bred as companion dogs for Chinese royalty, Shih Tzus are adaptable, affectionate, and surprisingly sturdy for their size. Their flattened face and prominent eyes come with specific health management requirements that every Shih Tzu owner needs to understand.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shih Tzu', href: '/breeds/shih-tzu' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Cavalier King Charles Guide', href: '/breeds/cavalier-king-charles', category: 'Breed Guide' }, { title: 'Yorkshire Terrier Guide', href: '/breeds/yorkshire-terrier', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

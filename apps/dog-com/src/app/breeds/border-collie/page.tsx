@@ -8,6 +8,7 @@ export default function BorderColliePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Border Collie Breed Guide', subtitle: 'Ranked first in canine intelligence by virtually every behavioral assessment — Border Collies learn commands after fewer than 5 repetitions and obey them 95% of the time. This is not a breed for inactive households. A Border Collie without adequate mental and physical work becomes a behavioral problem in a way that few other breeds can match.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Border Collie', href: '/breeds/border-collie' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Australian Shepherd Guide', href: '/breeds/australian-shepherd', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Dog Training Hub', href: '/training', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

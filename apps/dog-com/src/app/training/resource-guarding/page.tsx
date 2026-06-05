@@ -18,6 +18,7 @@ export default function ResourceGuardingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Resource Guarding in Dogs', subtitle: 'Resource guarding — growling, snapping, or biting when someone approaches food, toys, or resting spots — is a normal canine behavior. It becomes a problem when it creates safety risks. The solution is not punishment: it is teaching the dog that giving things up results in better things.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Resource Guarding', href: '/training/resource-guarding' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Do This</div>

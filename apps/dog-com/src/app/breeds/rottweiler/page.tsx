@@ -11,6 +11,7 @@ export default function RottweilerPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Rottweiler Breed Guide', subtitle: 'One of the most powerful working breeds — Rottweilers excel as protection dogs, herders, search-and-rescue animals, and service dogs. Their loyalty and trainability make them exceptional in the right hands. Their significant health predispositions — particularly bone cancer — make informed ownership critical.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Rottweiler', href: '/breeds/rottweiler' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Doberman Pinscher Guide', href: '/breeds/doberman-pinscher', category: 'Breed Guide' }, { title: 'Bullmastiff Guide', href: '/breeds/bullmastiff', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

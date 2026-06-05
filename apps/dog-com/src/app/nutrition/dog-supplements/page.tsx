@@ -23,6 +23,7 @@ export default function DogSupplementsPage() {
       contentType="nutrition"
       hero={{ title: 'Dog Supplements — What the Evidence Actually Shows', subtitle: 'The pet supplement market is largely unregulated and full of products with minimal evidence. Here\'s an honest, evidence-graded assessment of what works, what\'s overhyped, and what to skip.', category: 'Nutrition Science', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Dog Supplements', href: '/nutrition/dog-supplements' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Reading Food Labels', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Best Joint Supplements', href: '/reviews/best-joint-supplements', category: 'Reviews' }, { title: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide', category: 'Nutrition' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-4">

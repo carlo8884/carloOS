@@ -10,6 +10,7 @@ export default function CavalierPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Cavalier King Charles Spaniel', subtitle: 'One of the most affectionate and gentle family dogs in existence — and one of the most health-compromised breeds due to decades of selective breeding without sufficient health screening. Understanding the health landscape before acquiring a Cavalier changes the experience of owning one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Cavalier King Charles', href: '/breeds/cavalier-king-charles' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Cocker Spaniel Guide', href: '/breeds/cocker-spaniel', category: 'Breed Guide' }, { title: 'Shih Tzu Guide', href: '/breeds/shih-tzu', category: 'Breed Guide' }, { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

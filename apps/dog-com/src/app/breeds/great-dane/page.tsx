@@ -10,6 +10,7 @@ export default function GreatDanePage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Great Dane Breed Guide', subtitle: 'The largest dog breed — "Apollo of dogs." Great Danes are gentle giants with an unfortunately short lifespan of 7–10 years, driven primarily by their susceptibility to GDV/bloat and cardiac disease. Understanding these risks before acquiring a Great Dane changes how you manage their health from day one.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Great Dane', href: '/breeds/great-dane' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Irish Wolfhound Guide', href: '/breeds/irish-wolfhound', category: 'Breed Guide' }, { title: 'Saint Bernard Guide', href: '/breeds/saint-bernard', category: 'Breed Guide' }, { title: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

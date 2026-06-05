@@ -10,6 +10,7 @@ export default function ShibaInuPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Shiba Inu Breed Guide', subtitle: 'The Shiba Inu is a Japanese hunting breed — small (17-23 lbs), compact, foxy-faced, and independent in a way that surprises owners who expected a small, friendly dog. Shibas are not Labradors in a different body. They are a primitive breed that has been shaped by thousands of years as an independent hunting dog, and their personality reflects that heritage in ways that delight experienced owners and frustrate unprepared ones.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Shiba Inu', href: '/breeds/shiba-inu' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Akita Guide', href: '/breeds/akita', category: 'Breed Guide' }, { title: 'Siberian Husky Guide', href: '/breeds/siberian-husky', category: 'Breed Guide' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

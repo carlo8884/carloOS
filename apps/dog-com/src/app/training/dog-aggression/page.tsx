@@ -8,6 +8,7 @@ export default function DogAggressionPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Dog Aggression', subtitle: 'Aggression is the most misunderstood behavioral problem in dogs — and the most dangerous to address incorrectly. Dominance-based "corrections" and punishment consistently make aggression worse. Understanding the type of aggression and its function determines the correct approach.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Dog Aggression', href: '/training/dog-aggression' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Resource Guarding', href: '/training/resource-guarding', category: 'Training' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">

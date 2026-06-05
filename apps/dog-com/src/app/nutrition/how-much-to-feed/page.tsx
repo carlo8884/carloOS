@@ -20,6 +20,7 @@ export default function HowMuchToFeedPage() {
       contentType="nutrition"
       hero={{ title: 'How Much to Feed Your Dog', subtitle: 'There is no universal feeding amount — caloric needs depend on weight, ideal weight, age, activity level, and whether your dog is spayed or neutered. This guide gives you the framework.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Feeding Frequency', href: '/nutrition/feeding-frequency', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Body Condition Scoring', href: '#bcs' }, { label: 'Using Package Guidelines', href: '#guidelines' }, { label: 'Calorie Calculator', href: '#calculator' }, { label: 'Adjusting for Activity', href: '#activity' }, { label: 'Puppies', href: '#puppies' }, { label: 'Senior Dogs', href: '#seniors' }]} />

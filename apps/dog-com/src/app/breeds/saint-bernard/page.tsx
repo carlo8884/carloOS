@@ -8,6 +8,7 @@ export default function SaintBernardPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Saint Bernard Breed Guide', subtitle: 'The Alpine rescue dogs of the Great St. Bernard Pass — Saint Bernards are among the most massive dogs in existence, combining legendary gentleness with significant health considerations that prospective owners must understand before acquisition. At 120–180+ pounds, the decisions made about their health management have outsized consequences.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Saint Bernard', href: '/breeds/saint-bernard' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Great Pyrenees Guide', href: '/breeds/great-pyrenees', category: 'Breed Guide' }, { title: 'Bernese Mountain Dog Guide', href: '/breeds/bernese-mountain-dog', category: 'Breed Guide' }, { title: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>

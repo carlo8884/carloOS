@@ -19,6 +19,7 @@ export default function OffLeashTrainingPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Off-Leash Dog Training', subtitle: 'A reliable off-leash recall is one of the most valuable skills a dog can have — and one of the most commonly undertrained. Most dogs come when called in the kitchen. Few come reliably when there is a squirrel, another dog, or a smell. The difference is proofing — systematically practicing recall against increasing distractions until reliability is high but never absolute.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Off-Leash Training', href: '/training/off-leash-training' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Marker Training', href: '/training/marker-training', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Loose Leash Walking', href: '/training/loose-leash-walking', category: 'Training' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Never Trust Off-Leash Until...</div>
