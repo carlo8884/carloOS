@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -138,6 +139,13 @@ export default function HarnessRacingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What Harness Racing Is</h2>
           <p>Harness racing is a racing discipline in which the horse is not ridden but driven, pulling a lightweight two-wheeled vehicle called a sulky. The driver sits on the sulky behind the horse and guides it through the reins. Unlike flat racing, where the primary objective is simply to run as fast as possible, harness racing adds a gait constraint: the competing horse must maintain either a trot or a pace throughout the race. A horse that breaks from its prescribed gait must be taken to the outside of the track and slowed until it resumes the correct gait, a significant competitive penalty.</p>

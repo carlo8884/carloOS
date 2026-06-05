@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function PastureManagementPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="grazing">How Horses Graze</h2>
           <p>Horses are selective grazers that crop grass close with their incisors and create distinct lawns and roughs -- short, repeatedly grazed areas and tall, manure-fouled areas they avoid. Left unmanaged, this patchy grazing wastes pasture, concentrates parasite larvae in the roughs, and lets weeds invade the bare lawns. Understanding this behavior is the starting point for managing the land.</p>
 

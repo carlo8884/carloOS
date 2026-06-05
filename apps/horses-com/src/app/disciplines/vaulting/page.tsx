@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function VaultingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Vaulting Is</h2>
           <p>Equestrian vaulting is the performance of gymnastic and balletic movements on the back of a moving horse. The horse canters in a circle controlled by a lunger on a lunge line, wearing a surcingle with handles and a thick back pad (the vaulting roller and pad) rather than a saddle, and the vaulter performs mounts, balances, kneeling and standing positions, swings, and dismounts in time with the horse&apos;s rhythm. It blends athleticism, artistry, and a calm partnership with the horse.</p>
 

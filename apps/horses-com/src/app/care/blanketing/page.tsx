@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function BlanketingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="warmth">How Horses Stay Warm</h2>
           <p>A healthy horse is remarkably cold-hardy. Its winter coat traps an insulating layer of air, and the hairs stand up (piloerection) to thicken that layer; fiber fermentation in the hindgut generates substantial internal heat, effectively an internal furnace fueled by hay. A horse with a full coat, shelter from wind and wet, and plenty of forage is comfortable at temperatures that feel bitter to us. Wind and rain, which flatten the coat and strip its insulation, matter more than cold air alone.</p>
 

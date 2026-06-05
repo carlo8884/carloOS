@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,13 @@ export default function PPIDPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is PPID</h2>
           <p>PPID is a disease of the pars intermedia, the middle lobe of the pituitary gland at the base of the brain. With age, the dopamine-producing neurons that normally restrain this lobe degenerate, the pars intermedia enlarges, and it oversecretes a group of hormones derived from a precursor called proopiomelanocortin (POMC), including ACTH. The result is a cascade of downstream effects on coat, muscle, immune function, and -- critically -- insulin regulation. PPID is most common in horses and ponies over 15, but it can appear earlier.</p>
 

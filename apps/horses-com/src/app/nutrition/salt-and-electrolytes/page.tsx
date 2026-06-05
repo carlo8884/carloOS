@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function SaltElectrolytesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="salt">Why Salt Matters</h2>
           <p>Sodium and chloride -- common salt -- are essential nutrients that forage is usually too low in to meet a horse&apos;s baseline needs, even before any sweating. Adequate salt drives the thirst that maintains water intake, supports nerve and muscle function, and underpins the body&apos;s fluid balance. Every horse should have access to salt, and many benefit from a measured daily amount of loose salt added to feed, which is more reliably consumed than a salt block alone.</p>
 

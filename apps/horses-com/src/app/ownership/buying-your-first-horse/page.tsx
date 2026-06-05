@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function BuyingFirstHorsePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="honest">Be Honest About Your Level</h2>
           <p>The single most important step is an honest assessment of your own experience and goals. A first-time or returning rider needs a calm, well-trained, forgiving horse that already knows its job -- the opposite of the young, green, or athletic prospect that appeals to ambition. The painful truth behind many failed first purchases is the saying that green plus green equals black and blue: an inexperienced rider and an inexperienced horse are a dangerous combination. Buy the horse for who you are now, not who you hope to become.</p>
 

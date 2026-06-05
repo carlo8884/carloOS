@@ -15,6 +15,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -139,6 +140,13 @@ export default function JumpRacingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What Jump Racing Is</h2>
           <p>Jump racing is horse racing contested over obstacles. In Britain and Ireland it is known as National Hunt racing; in the United States it is most often called steeplechasing or simply jump racing. Where flat racing tests speed over a clear track, jump racing adds the demands of jumping at speed and of stamina over longer distances -- jump races are commonly two miles or more. A jump horse must be fast enough to be competitive, athletic enough to clear obstacles cleanly, and sound and experienced enough to do both repeatedly over a long career.</p>

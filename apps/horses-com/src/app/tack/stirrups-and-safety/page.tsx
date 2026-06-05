@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function StirrupsSafetyPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="how">How Stirrups Work</h2>
           <p>Stirrups hang from the saddle by leathers (English) or fenders (western) and give the rider a platform for the ball of the foot, aiding balance, security, and the ability to rise and absorb the horse&apos;s movement. The foot should rest on the tread with the ball of the foot, heel down, so the foot can slip free in a fall rather than being trapped. The stirrup is a support to rest on lightly, not a stirrup to jam the foot through.</p>
 

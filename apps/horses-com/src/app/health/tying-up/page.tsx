@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -123,6 +123,13 @@ export default function TyingUpPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Is Tying-Up</h2>
           <p>Tying-up is the breakdown of skeletal muscle (rhabdomyolysis) in connection with exercise. Damaged muscle cells release their contents -- including the enzyme creatine kinase and the protein myoglobin -- into the bloodstream. The horse experiences cramping, stiffness, and pain, classically over the large muscles of the hindquarters and back. In severe episodes, myoglobin can overload and injure the kidneys, turning the urine dark.</p>
 

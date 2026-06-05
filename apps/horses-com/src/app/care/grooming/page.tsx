@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function GroomingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Groom</h2>
           <p>Grooming removes mud, sweat, and dead hair; massages the skin and stimulates blood flow; spreads the protective oils that keep the coat weatherproof; and prevents girth galls and saddle sores by ensuring no dirt or debris sits under the tack. It is also one of the most reliable ways to handle a horse calmly every day, reinforcing trust and good manners. And it doubles as a daily head-to-toe inspection.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function HunterUnderSaddlePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What the Hunters Are</h2>
           <p>The hunters are a group of English show classes rooted in the traditions of foxhunting, where the prized horse was a calm, brave, comfortable mount with smooth gaits and good jumping form. In the show ring this translates into subjective judging of style and manners rather than the objective faults-and-time scoring of show jumping. There are flat classes (hunter under saddle) and over-fences classes, and the same qualities -- smoothness, consistency, and effortless style -- are sought in both.</p>
 

@@ -13,6 +13,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -138,6 +139,13 @@ export default function RaceTypesAndClassesPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="why">Why a Class Structure Exists</h2>
           <p>Horse racing&apos;s class system exists to create competitive conditions that allow horses of broadly similar ability and experience to compete against each other. Without such a structure, races would be dominated by the best horses, and owners of less distinguished horses would have no competitive outlet. The class structure creates a spectrum of opportunities from entry-level maiden races through the highest-quality stakes events, allowing horses to compete at an appropriate level while providing a pathway for talented horses to advance.</p>

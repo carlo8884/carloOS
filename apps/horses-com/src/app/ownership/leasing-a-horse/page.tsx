@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +104,13 @@ export default function LeasingHorsePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What a Lease Is</h2>
           <p>A horse lease is an arrangement in which a rider gets the use of a horse they do not own, in exchange for covering some or all of its costs and following agreed conditions. The owner keeps ownership but offloads some cost and ensures the horse is ridden; the lessee gets riding time and experience without buying. Leasing is widely used as a stepping stone toward ownership, as a way to ride more than lessons allow, and as a flexible option for outgrown or temporarily idle horses.</p>
 

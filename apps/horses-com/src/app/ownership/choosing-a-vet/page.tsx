@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +104,13 @@ export default function ChoosingVetPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why the Relationship Matters</h2>
           <p>An equine veterinarian does far more than treat illness: they guide vaccination and parasite control, perform dental and routine care, conduct pre-purchase exams, advise on nutrition and management, and are the first call in any emergency. A vet who knows your horse and its history makes faster, better decisions in a crisis. Because emergencies do not wait, the relationship must be established before you need it -- the worst time to be searching for a vet is during a colic at midnight.</p>
 

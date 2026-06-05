@@ -17,6 +17,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -140,6 +141,13 @@ export default function BreedersCupPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What the Breeders&apos; Cup Is</h2>
           <p>The Breeders&apos; Cup is an end-of-season championship event for Thoroughbred racing, first run in 1984. Where the Triple Crown is a spring series for three-year-olds, the Breeders&apos; Cup is a single championship meeting held in late autumn that brings together the best horses of the year across every major division -- from two-year-olds to seasoned older horses, on dirt and on turf, at distances from sprints to a mile and a half. It is frequently described as the &quot;World Championships&quot; of the sport because it draws leading horses from Europe, Japan, and elsewhere alongside the top North American runners.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,13 @@ export default function EquineUlcersPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-05-28"
+            updatedAt="2026-05-28"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="esgd-vs-eggd">ESGD vs EGGD — Two Diseases, Same Stomach</h2>
           <p>The equine stomach has two anatomically and functionally distinct regions, and the two regions develop ulcers for entirely different reasons. This is the single most important fact in EGUS management — &ldquo;ulcers&rdquo; is not one disease, and the right answer for one type can be the wrong answer for the other.</p>
 

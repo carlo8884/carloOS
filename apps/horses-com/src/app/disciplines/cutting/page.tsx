@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function CuttingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Cutting Is</h2>
           <p>Cutting grew directly out of ranch work, where a horse and rider would separate (cut) a specific animal from the herd for branding or doctoring. As a sport it preserves that work: the rider drives into a herd of cattle, isolates one cow, and then must keep it separated for a set time while the horse, working largely on its own, blocks the cow&apos;s attempts to return. The drama is in the horse&apos;s instinctive, athletic anticipation of the cow.</p>
 

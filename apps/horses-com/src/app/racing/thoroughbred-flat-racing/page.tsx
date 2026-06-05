@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
+  ArticleByline,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -139,6 +140,13 @@ export default function ThoroughbredFlatRacingPage() {
         }
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-02"
+            updatedAt="2026-06-02"
+            reviewedBy="Editorial team"
+          />
+
 
           <h2 id="what">What Flat Racing Is</h2>
           <p>Flat racing is a form of horse racing in which horses carry a jockey and compete over a defined distance on a level or gently undulating track, without jumps or obstacles. The winner is determined by which horse crosses the finish line first. It is distinguished from jump racing (steeplechase and hurdles) by the absence of obstacles, and from harness racing by the fact that the horse is ridden rather than driven.</p>

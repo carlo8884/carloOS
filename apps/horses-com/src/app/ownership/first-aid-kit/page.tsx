@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +104,13 @@ export default function FirstAidKitPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="why">Why Be Prepared</h2>
           <p>Injuries and sudden illness happen, often outside business hours and far from help. Being prepared -- with supplies on hand, the skills to do basic first aid, and the knowledge to recognize an emergency -- lets an owner stabilize a situation, control bleeding, protect a wound, and gather the information the vet needs, rather than scrambling in a panic. Preparedness is itself a form of horse care, and the time to assemble a kit and learn the basics is long before they are needed.</p>
 

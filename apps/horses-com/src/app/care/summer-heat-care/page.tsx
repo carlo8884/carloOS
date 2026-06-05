@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,6 +111,13 @@ export default function SummerHeatCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="cooling">How Horses Cool Themselves</h2>
           <p>Horses dump heat mainly through sweating and the evaporation of that sweat, supplemented by increased breathing and blood flow to the skin. Because they are large, muscular, and work hard, they produce a lot of heat and rely heavily on evaporative cooling -- which fails in high humidity, when sweat cannot evaporate. The combination of high heat and high humidity is therefore far more dangerous than dry heat alone.</p>
 

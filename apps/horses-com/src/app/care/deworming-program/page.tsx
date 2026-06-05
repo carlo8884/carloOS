@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +106,13 @@ export default function DewormingProgramPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="old">Why the Old Approach Failed</h2>
           <p>For decades owners rotated dewormers on a fixed calendar regardless of whether a horse carried a meaningful worm burden. This blanket dosing exposed parasite populations to drugs constantly, selecting hard for resistance, while treating many horses that did not need it. With no new classes of equine dewormer on the horizon, the parasitology community -- led by the AAEP guidelines -- shifted to a targeted, evidence-led model.</p>
 

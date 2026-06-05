@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function GrainConcentratesPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Concentrates Are</h2>
           <p>Concentrates are energy-dense feeds fed in addition to forage -- traditional cereal grains such as oats, barley, and corn, and the formulated bagged feeds (textured sweet feeds, pellets, and cubes) that combine grains with added protein, vitamins, minerals, and often fat and fiber. They concentrate calories and nutrients into a small volume, which is their usefulness and, fed wrongly, their danger.</p>
 

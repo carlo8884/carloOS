@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function ForageBasicsPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="fiber">Why Fiber First</h2>
           <p>The horse evolved grazing fibrous grasses for 16 or more hours a day. Its teeth, its small stomach that secretes acid continuously, and its enormous fermenting hindgut are all built for a constant flow of fiber. Feeding a forage-based diet keeps that system working as designed: it buffers stomach acid, keeps the gut moving, generates body heat, and occupies the horse mentally. Diets short on forage and heavy in grain are behind much of the colic, ulceration, and behavioral trouble seen in domestic horses.</p>
 

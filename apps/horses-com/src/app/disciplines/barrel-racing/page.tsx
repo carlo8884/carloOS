@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function BarrelRacingPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="what">What Barrel Racing Is</h2>
           <p>Barrel racing is a timed speed event most associated with rodeo and traditionally a women&apos;s event at the professional level. The horse and rider enter the arena at a gallop, run a set pattern around three barrels, and sprint back across the timer line, with the fastest clean run winning. It is one of the most popular grassroots horse sports in North America, with classes from local jackpots to professional rodeo finals, and an electronic timer to hundredths or thousandths of a second.</p>
 

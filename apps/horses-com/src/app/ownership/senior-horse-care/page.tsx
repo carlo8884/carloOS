@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,6 +105,13 @@ export default function SeniorHorseCarePage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline
+            siteName="Horses.com Editorial"
+            publishedAt="2026-06-01"
+            updatedAt="2026-06-01"
+            reviewedBy="Editorial team"
+          />
+
           <h2 id="when">When Is a Horse Old</h2>
           <p>There is no single age at which a horse becomes a senior -- much depends on the individual, the breed, and a lifetime of management. Many horses are considered geriatric somewhere from the late teens into the twenties, but a well-kept horse may be working soundly at twenty-five while another shows its age at fifteen. Rather than a birthday, the cue to shift into senior care is the appearance of age-related changes, which is why regular monitoring matters more than counting years.</p>
 
