@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Clinical Signs and Triage", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Clinical Examination of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/clinical-examination-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Find a Vet Directory", publisher: "ARAV", url: "https://arav.org/find-a-vet" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -185,6 +191,7 @@ export default function SickReptileSignsPage() {
             Find a Reptile Vet (ARAV) →
           </a>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

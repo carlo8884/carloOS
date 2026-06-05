@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Cloacal Disease and Prolapse", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Cloacal Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/cloacal-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Prolapse case literature", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles — Emergency Care | Lizard.com", description: "Cloacal and organ prolapse in reptiles is a true emergency. Causes, why you must keep the tissue moist, what not to do, and immediate vet steps.", path: "/health/prolapse-first-aid", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolapse in Reptiles", description: "Causes, emergency first aid, and veterinary treatment of cloacal and organ prolapse in reptiles.", url: "https://lizard.com/health/prolapse-first-aid", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -71,12 +78,7 @@ export default function HealthProlapseFirstAidPage() {
             <li>{"Keep up routine parasite screening, especially for wild-caught animals"}</li>
             <li>{"Address straining, abnormal stool, or appetite changes early, before they progress to a prolapse"}</li>
           </ul>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), cloacal-disease chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, prolapse case literature."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

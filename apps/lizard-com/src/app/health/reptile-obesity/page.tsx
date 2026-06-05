@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Nutrition and Hepatic Lipidosis", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Nutritional Diseases of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/nutritional-diseases-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Journal of Herpetological Medicine and Surgery — Reptile nutrition and obesity references", publisher: "ARAV / Allen Press", url: "https://meridian.allenpress.com/jhms" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Obesity — Causes, Signs, Management | Lizard.com", description: "Obesity is one of the most common health problems in captive reptiles. How to recognize it, why it shortens lifespan, and how to safely manage weight.", path: "/health/reptile-obesity", type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Obesity in Reptiles", description: "Recognizing, preventing, and managing obesity in captive reptiles through diet, feeding frequency, and enclosure design.", url: "https://lizard.com/health/reptile-obesity", imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -66,12 +73,7 @@ export default function HealthReptileObesityPage() {
           </ol>
           <h2>{"Prevention"}</h2>
           <p>{"Feed each species on a schedule matched to its age and metabolism, choose lean staple feeders, reserve fatty items as occasional treats, and provide an enclosure large and enriched enough to encourage movement. Regular weighing catches creeping weight gain before it becomes a clinical problem. When in doubt about portions for a specific species, a current care sheet and your reptile veterinarian are better guides than the appetite of an animal that will happily overeat."}</p>
-          <h2>{"Sources & Further Reading"}</h2>
-          <ul>
-            <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), nutrition and hepatic-lipidosis chapters."}</li>
-            <li>{"Journal of Herpetological Medicine and Surgery, reptile nutrition references."}</li>
-            <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

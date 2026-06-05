@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Mader's Reptile and Amphibian Medicine and Surgery, 3rd ed. — Parasitology", publisher: "Divers & Stahl, Elsevier", url: "https://www.elsevier.com/books/maders-reptile-and-amphibian-medicine-and-surgery/divers/978-0-7216-9327-9" },
+  { label: "Merck Veterinary Manual — Internal Parasites of Reptiles", publisher: "Merck/MSD", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/internal-parasites-of-reptiles" },
+  { label: "ARAV — Association of Reptilian and Amphibian Veterinarians: Clinical Resources", publisher: "ARAV", url: "https://arav.org" },
+  { label: "Jacobson E.R. — Infectious Diseases and Pathology of Reptiles: Color Atlas and Text, 2nd ed.", publisher: "CRC Press / Taylor & Francis", url: "https://www.taylorfrancis.com/books/mono/10.1201/9781315119632/infectious-diseases-pathology-reptiles-elliott-jacobson" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Reptile Parasites — Mites, Pinworms, Crypto | Lizard.com', description: 'External parasites (mites) and internal parasites (pinworms, coccidia, Cryptosporidium) in reptiles. Fecal testing, treatment.', path: '/health/parasites-guide', type: 'article' })
 const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' }), buildMedicalWebPageSchema({ name: 'Reptile Parasites Guide', description: 'External mites, internal pinworms, coccidia, and Cryptosporidium in reptiles — diagnosis and treatment.', url: 'https://lizard.com/health/parasites-guide', authorName: 'Lizard.com Editorial', lastReviewed: '2025-05-01', medicalAudience: 'Caregiver' }))
@@ -52,6 +59,7 @@ export default function ParasiteGuidePage() {
 
         <h2>Annual Fecal Testing — Why It Matters</h2>
         <p>Annual fecal examination (float + direct wet prep) by a reptile veterinarian identifies subclinical parasite burdens before they cause clinical disease, catches Cryptosporidium and other serious parasites early, provides a baseline for comparison if the animal becomes ill, and is required for imported reptiles in many jurisdictions. New animals should be fecal tested before or immediately after acquisition. Wild-caught animals in particular should be tested and dewormed as part of acclimation. Captive-bred animals from reputable breeders have lower parasite burdens but are not guaranteed parasite-free.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
