@@ -14,6 +14,7 @@ export default function DogHotSpotsPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Hot Spots in Dogs', subtitle: 'A hot spot appears suddenly — a wet, red, raw, painful lesion that can grow from dime-sized to palm-sized within hours. Formally called pyotraumatic dermatitis or acute moist dermatitis, hot spots develop when a dog scratches, licks, or bites a specific area intensely enough to break the skin, allowing surface bacteria to establish a localized infection.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Hot Spots', href: '/health/dog-hot-spots' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Skin Allergies', href: '/health/dog-skin-allergies', category: 'Dog Health' }, { title: 'Dog Allergies', href: '/health/dog-allergies', category: 'Dog Health' }, { title: 'Pyoderma in Dogs', href: '/health/dog-pyoderma', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">High-Risk Breeds</div>

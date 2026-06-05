@@ -120,6 +120,7 @@ export default function DogSymptomsGuidePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-lg p-4">

@@ -12,6 +12,7 @@ export default function DogDiarrheaPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Diarrhea', subtitle: 'Diarrhea is one of the most common reasons dogs visit the vet — and also one of the most common conditions that resolves on its own. Knowing the difference between "wait and monitor" and "go to the vet now" saves unnecessary vet visits and prevents delayed care when urgency matters.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Diarrhea', href: '/health/dog-diarrhea' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Pancreatitis in Dogs', href: '/health/pancreatitis', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">See Vet Now — These Signs</div>

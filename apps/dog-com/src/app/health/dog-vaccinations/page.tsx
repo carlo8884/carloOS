@@ -17,6 +17,7 @@ export default function DogVaccinationsPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Dog Vaccination Schedule', subtitle: 'Vaccines are among the most impactful preventive health tools in veterinary medicine. Understanding which vaccines are essential, which are lifestyle-dependent, and how often to booster prevents both under-vaccination (disease risk) and over-vaccination (unnecessary procedures).', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Vaccinations', href: '/health/dog-vaccinations' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Heartworm Prevention', href: '/health/heartworm-prevention', category: 'Dog Health' }, { title: 'Dog Dental Care', href: '/health/dog-dental-care', category: 'Dog Health' }, { title: 'Spay or Neuter Guide', href: '/health/spay-neuter-guide', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">Core Vaccines</div>

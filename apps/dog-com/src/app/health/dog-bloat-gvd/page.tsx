@@ -17,6 +17,7 @@ export default function GdvPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'GDV (Bloat) in Dogs — Emergency Guide', subtitle: 'Gastric dilatation-volvulus is fatal without emergency surgery, typically within 4–6 hours of onset. The signs are specific. Knowing them in advance is the difference between life and death.', category: 'Emergency Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'German Shepherd Health', href: '/health/german-shepherd-health', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Emergency Signs — Go Now</div>

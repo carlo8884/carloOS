@@ -14,6 +14,7 @@ export default function CushingDiseasePage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: "Cushing's Disease in Dogs", subtitle: "Hyperadrenocorticism — Cushing's syndrome — is caused by chronic cortisol excess. It is one of the most commonly misdiagnosed conditions in middle-aged and older dogs because its signs resemble normal aging. The classic presentation: a middle-aged dog that is drinking more, has a pot belly, is losing hair, and seems lethargic.", category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: "Cushing's Disease", href: '/health/cushing-disease' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Hypothyroidism', href: '/health/hypothyroidism', category: 'Dog Health' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: "Addison's Disease", href: '/health/addisons-disease', category: 'Dog Health' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Classic Signs', href: '#signs' }, { label: 'PDH vs ADH', href: '#types' }, { label: 'Diagnostic Tests', href: '#tests' }, { label: 'Treatment', href: '#treatment' }, { label: 'Monitoring', href: '#monitoring' }]} />
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

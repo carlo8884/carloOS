@@ -14,6 +14,7 @@ export default function MegaesophagusPage() {
       <ArticleLayout siteId="dog-com"
         hero={{ title: 'Megaesophagus in Dogs', subtitle: 'Megaesophagus is dilation and reduced motility of the esophagus — the tube connecting the mouth to the stomach. A normal esophagus moves food downward through coordinated muscle contractions (peristalsis). In megaesophagus, the esophagus dilates and loses this coordinated movement, causing food to pool rather than transit to the stomach. The result: regurgitation, and the life-threatening risk of aspiration pneumonia.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Megaesophagus', href: '/health/megaesophagus' }]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Addisons Disease in Dogs', href: '/health/addisons-disease', category: 'Dog Health' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Predisposed Breeds</div>

@@ -98,6 +98,7 @@ export default function DogObesityPage() {
           { name: 'Dog Health', href: '/health' },
           { name: 'Dog Obesity', href: '/health/dog-obesity' },
         ]}
+        relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
         sidebar={
           <>
             <TableOfContents

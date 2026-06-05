@@ -50,6 +50,7 @@ export default function GermanShepherdHealthPage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'German Shepherd Health', href: '/health/german-shepherd-health' },
       ]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }, { title: 'Intervertebral Disc Disease', href: '/health/intervertebral-disc-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
