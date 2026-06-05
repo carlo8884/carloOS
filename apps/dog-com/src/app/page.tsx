@@ -9,8 +9,15 @@
  * overlaid on a dark gradient scrim. No disclosure banner sits above it (the
  * top inline disclosure was removed from layout.tsx; disclosure stays in the
  * footer one-liner + in-context near buy boxes). Owner-path entry points,
- * the 6-card breed grid, tools, health, nutrition, training, and product
- * sections are all image-backed — no section is a text-only list.
+ * tools, health, nutrition, training, and product sections are all
+ * image-backed by REAL synced photography — no rendered image is a placeholder.
+ *
+ * v4 (post photo-sync 2026-06-05): the breed section ships ZERO placeholder
+ * image slots. It leads with two photo-featured breeds backed by real synced
+ * photography (Golden Retriever + Labrador) and presents the remaining breeds
+ * as premium text cards (no image slot). The not-yet-synced per-breed keys
+ * (golden, french-bulldog, german-shepherd, beagle, poodle) are never passed
+ * to a rendered <StockImage>.
  *
  * Reused routes (all verified to exist on origin/main):
  *   /breeds, /breeds/[slug], /breeds/[slug]/feeding, /breeds/[slug]/health
@@ -129,21 +136,25 @@ const OWNER_PATHS = [
   },
 ]
 
-// ─── Breed-risk featured (6 highest-traffic — image grid) ────────────────────
-// v3 (Carlo phone review 2026-06-05): brought back a real visual breed grid.
-// Each card is a photo card. breed-labrador-retriever is a populated/real key;
-// the other five render the BRANDED placeholder (soft brand gradient + paw
-// glyph) which Carlo explicitly accepts as a designed fallback. Every card
-// looks intentional, and each photo swaps to a real one automatically once its
-// manifest key syncs on Carlo's machine.
+// ─── Breed-risk featured (v4 — zero-placeholder treatment) ───────────────────
+// v4 (2026-06-05, post photo-sync): the per-breed manifest keys for golden,
+// french-bulldog, german-shepherd, beagle, and poodle have NOT synced yet, so
+// they are deliberately NOT passed to any rendered photo. Instead the section
+// leads with the two breeds backed by REAL synced photography and presents the
+// rest as premium text cards (no image slot) so nothing renders a placeholder.
+//   dog-com:category-breeds          -> real golden retriever portrait
+//   dog-com:breed-labrador-retriever -> real labrador portrait
+// Each photo tile uses subtleCredit so attribution stays present + clickable
+// (QC §1). When the remaining keys sync, they can be promoted back to photos.
 
-const FEATURED_BREEDS = [
+const PHOTO_BREEDS = [
   {
     name: 'Golden Retriever',
     type: 'Sporting · Large',
     keyRisk: 'Cancer risk · hip dysplasia',
     href: '/breeds/golden-retriever',
-    manifestKey: 'dog-com:breed-golden-retriever',
+    manifestKey: 'dog-com:category-breeds',
+    imageAlt: 'Golden Retriever standing outdoors',
   },
   {
     name: 'Labrador Retriever',
@@ -151,34 +162,38 @@ const FEATURED_BREEDS = [
     keyRisk: 'Hip dysplasia · obesity',
     href: '/breeds/labrador-retriever',
     manifestKey: 'dog-com:breed-labrador-retriever',
+    imageAlt: 'Labrador Retriever portrait outdoors',
   },
+]
+
+const TEXT_BREEDS = [
   {
     name: 'French Bulldog',
     type: 'Non-Sporting · Small',
+    trait: 'Affectionate, low-energy companion',
     keyRisk: 'Brachycephalic syndrome · IVDD',
     href: '/breeds/french-bulldog',
-    manifestKey: 'dog-com:breed-french-bulldog',
   },
   {
     name: 'German Shepherd',
     type: 'Herding · Large',
+    trait: 'Loyal, highly trainable working breed',
     keyRisk: 'Hip dysplasia · degenerative myelopathy',
     href: '/breeds/german-shepherd',
-    manifestKey: 'dog-com:breed-german-shepherd',
   },
   {
     name: 'Beagle',
     type: 'Hound · Small',
+    trait: 'Friendly, scent-driven, food-motivated',
     keyRisk: 'Obesity · ear infections · IVDD',
     href: '/breeds/beagle',
-    manifestKey: 'dog-com:breed-beagle',
   },
   {
     name: 'Poodle',
     type: 'Non-Sporting · Varies',
+    trait: 'Bright, eager-to-please, low-shedding',
     keyRisk: 'Addison\'s · bloat · hip dysplasia',
     href: '/breeds/poodle',
-    manifestKey: 'dog-com:breed-poodle',
   },
 ]
 
@@ -570,12 +585,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BREED-SPECIFIC RISK CENTER — real visual breed grid ──────────
-          v3 (Carlo phone review 2026-06-05): brought back a 6-card breed photo
-          grid. Each card carries a breed photo (real for labrador; branded
-          placeholder for the rest — Carlo-accepted designed fallback) with a
-          bottom-up scrim so the breed name + risk stay legible over any photo.
-          subtleCredit keeps attribution present + clickable (QC §1). */}
+      {/* ── BREED-SPECIFIC RISK CENTER — zero-placeholder treatment ───────
+          v4 (post photo-sync 2026-06-05): leads with TWO large photo tiles
+          backed by REAL synced photography (golden retriever via
+          dog-com:category-breeds + labrador via dog-com:breed-labrador-
+          retriever), then presents the remaining breeds as premium text cards
+          with NO image slot. The per-breed keys for french-bulldog, german-
+          shepherd, beagle, and poodle have not synced, so they are NEVER passed
+          to a rendered <StockImage> — the page ships zero placeholder image
+          slots. subtleCredit keeps attribution present + clickable on the photo
+          tiles (QC §1). Promote the text breeds back to photo tiles once their
+          keys sync. */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
@@ -598,39 +618,77 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FEATURED_BREEDS.map((breed) => (
+        {/* Two large photo-featured breeds (real photography only) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          {PHOTO_BREEDS.map((breed) => (
             <Link
               key={breed.name}
               href={breed.href}
               className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary hover:shadow-card transition-all duration-200 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
             >
-              {/* Breed photo (real or branded placeholder) fills the card */}
+              {/* Real breed photo fills the tile */}
               <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
                 <StockImage
                   manifestKey={breed.manifestKey}
-                  alt={`${breed.name} portrait`}
-                  aspect="4:3"
+                  alt={breed.imageAlt}
+                  aspect="16:9"
                   subtleCredit
                 />
               </div>
-              {/* Bottom-up scrim keeps the label legible over any photo */}
+              {/* Bottom-up scrim keeps the label legible over the photo */}
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               {/* Label */}
-              <div className="relative z-10 flex flex-col justify-end min-h-[180px] sm:min-h-[200px] p-4">
+              <div className="relative z-10 flex flex-col justify-end min-h-[220px] sm:min-h-[260px] p-5">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
                   {breed.type}
                 </div>
-                <div className="font-display font-bold text-white text-base sm:text-lg mb-1 leading-tight">
+                <div className="font-display font-bold text-white text-xl sm:text-2xl mb-1.5 leading-tight">
                   {breed.name}
                 </div>
-                <div className="text-xs text-white/75 leading-snug">
+                <div className="text-xs sm:text-sm text-white/80 leading-snug">
                   Key risks: {breed.keyRisk}
                 </div>
               </div>
             </Link>
           ))}
         </div>
+
+        {/* Remaining breeds as premium text cards (no image slot — no placeholder) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {TEXT_BREEDS.map((breed) => (
+            <Link
+              key={breed.name}
+              href={breed.href}
+              className="group block bg-brand-white border border-brand-border rounded-xl p-5 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">
+                    {breed.type}
+                  </div>
+                  <div className="font-display font-bold text-brand-dark text-lg leading-tight mb-1">
+                    {breed.name}
+                  </div>
+                </div>
+                <IconArrowRight className="w-4 h-4 text-brand-text-light group-hover:text-brand-primary shrink-0 mt-1 transition-colors" />
+              </div>
+              <p className="text-sm text-brand-text-mid leading-snug mb-2">
+                {breed.trait}
+              </p>
+              <div className="text-xs text-brand-text-light leading-snug pt-2 border-t border-brand-border">
+                Key risks: {breed.keyRisk}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <Link
+          href="/breeds"
+          className="inline-flex items-center gap-1.5 mt-6 text-sm font-bold text-brand-primary no-underline hover:underline"
+        >
+          Browse all breeds
+          <IconArrowRight className="w-3.5 h-3.5" />
+        </Link>
       </section>
 
       {/* ── WHEN TO CALL THE VET (decision-tree CTAs) ──────────────────── */}
