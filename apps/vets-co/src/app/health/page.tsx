@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Health Library — Sourced Guides | Vets.co', description: 'Complete pet health guides drawing on AVMA, ACVIM, and AAHA guidance. Emergency signs, breed health, preventive care, and specialist guidance.', path: '/health' })
 
@@ -11,6 +11,65 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+// All Health Topics — source-of-truth array; drives both the visible link grid
+// and the ItemList JSON-LD so URLs stay in sync automatically.
+const HEALTH_ARTICLES = [
+  { slug: 'allergic-reactions-dogs', title: 'Allergic Reactions Dogs' },
+  { slug: 'anxiety-in-dogs', title: 'Anxiety In Dogs' },
+  { slug: 'arthritis-in-dogs', title: 'Arthritis In Dogs' },
+  { slug: 'canine-influenza', title: 'Canine Influenza' },
+  { slug: 'cognitive-dysfunction', title: 'Cognitive Dysfunction' },
+  { slug: 'cushing-disease-dogs', title: 'Cushing Disease Dogs' },
+  { slug: 'dehydration-in-dogs', title: 'Dehydration In Dogs' },
+  { slug: 'dental-cleaning-guide', title: 'Dental Cleaning Guide' },
+  { slug: 'diabetes-in-dogs-cats', title: 'Diabetes In Dogs Cats' },
+  { slug: 'dog-eye-conditions', title: 'Dog Eye Conditions' },
+  { slug: 'dog-vaccinations-guide', title: 'Dog Vaccinations Guide' },
+  { slug: 'ear-infections-dogs', title: 'Ear Infections Dogs' },
+  { slug: 'flea-tick-prevention', title: 'Flea Tick Prevention' },
+  { slug: 'kennel-cough', title: 'Kennel Cough' },
+  { slug: 'parvovirus-in-puppies', title: 'Parvovirus In Puppies' },
+  { slug: 'seizures-in-dogs', title: 'Seizures In Dogs' },
+  { slug: 'vomiting-diarrhea-pets', title: 'Vomiting Diarrhea Pets' },
+  { slug: 'emergency-signs', title: 'Emergency Signs' },
+  { slug: 'bloat-gdv-dogs', title: 'Bloat GDV Dogs' },
+  { slug: 'feline-lower-urinary-tract-disease', title: 'Feline Lower Urinary Tract Disease' },
+  { slug: 'heartworm-in-dogs', title: 'Heartworm In Dogs' },
+  { slug: 'heat-stroke-dogs', title: 'Heat Stroke Dogs' },
+  { slug: 'hyperthyroidism-cats', title: 'Hyperthyroidism Cats' },
+  { slug: 'hypothyroidism-dogs', title: 'Hypothyroidism Dogs' },
+  { slug: 'intestinal-parasites', title: 'Intestinal Parasites' },
+  { slug: 'kidney-disease-cats', title: 'Kidney Disease Cats' },
+  { slug: 'leptospirosis', title: 'Leptospirosis' },
+  { slug: 'pain-management-dogs', title: 'Pain Management Dogs' },
+  { slug: 'pancreatitis-in-dogs', title: 'Pancreatitis In Dogs' },
+  { slug: 'periodontal-disease-pets', title: 'Periodontal Disease Pets' },
+  { slug: 'pain-signs-dogs', title: 'Pain Signs Dogs' },
+  { slug: 'preventive-care-schedule', title: 'Preventive Care Schedule' },
+  { slug: 'senior-bloodwork-guide', title: 'Senior Bloodwork Guide' },
+  { slug: 'senior-pet-care', title: 'Senior Pet Care' },
+  { slug: 'spay-neuter-benefits', title: 'Spay Neuter Benefits' },
+  { slug: 'tick-borne-diseases', title: 'Tick Borne Diseases' },
+  { slug: 'urinary-tract-infection', title: 'Urinary Tract Infection' },
+  { slug: 'weight-management', title: 'Weight Management' },
+]
+
+// ItemList structured data — enumerates the health article cluster for
+// AI Overviews / Perplexity / ChatGPT citation (GEO authority signal).
+const healthItemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet Health Library Articles at Vets.co',
+  numberOfItems: HEALTH_ARTICLES.length,
+  itemListElement: HEALTH_ARTICLES.map((article, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: article.title,
+    url: `https://vets.co/health/${article.slug}`,
+  })),
+}
+
+const schema = combineSchemas(breadcrumbSchema, healthItemListSchema)
 
 const GUIDES = [
   { category: 'Emergency', items: [{ title: '15 Signs Your Pet Needs Emergency Care', href: '/health/emergency-signs', badge: '🚨 Must Read' }, { title: 'ASPCA Poison Control: 888-426-4435', href: 'tel:8884264435', badge: '☎️ Save This' }] },
@@ -21,7 +80,7 @@ const GUIDES = [
 export default function VetsHealthHubPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema} />
+      <SchemaScript schema={schema} />
       <>
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health Library</span></div>
@@ -53,44 +112,9 @@ export default function VetsHealthHubPage() {
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Health Topics</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
-        <Link key="allergic-reactions-dogs" href="/health/allergic-reactions-dogs" className="text-sm text-brand-primary no-underline hover:underline">Allergic Reactions Dogs</Link>
-        <Link key="anxiety-in-dogs" href="/health/anxiety-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Anxiety In Dogs</Link>
-        <Link key="arthritis-in-dogs" href="/health/arthritis-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Arthritis In Dogs</Link>
-        <Link key="canine-influenza" href="/health/canine-influenza" className="text-sm text-brand-primary no-underline hover:underline">Canine Influenza</Link>
-        <Link key="cognitive-dysfunction" href="/health/cognitive-dysfunction" className="text-sm text-brand-primary no-underline hover:underline">Cognitive Dysfunction</Link>
-        <Link key="cushing-disease-dogs" href="/health/cushing-disease-dogs" className="text-sm text-brand-primary no-underline hover:underline">Cushing Disease Dogs</Link>
-        <Link key="dehydration-in-dogs" href="/health/dehydration-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Dehydration In Dogs</Link>
-        <Link key="dental-cleaning-guide" href="/health/dental-cleaning-guide" className="text-sm text-brand-primary no-underline hover:underline">Dental Cleaning Guide</Link>
-        <Link key="diabetes-in-dogs-cats" href="/health/diabetes-in-dogs-cats" className="text-sm text-brand-primary no-underline hover:underline">Diabetes In Dogs Cats</Link>
-        <Link key="dog-eye-conditions" href="/health/dog-eye-conditions" className="text-sm text-brand-primary no-underline hover:underline">Dog Eye Conditions</Link>
-        <Link key="dog-vaccinations-guide" href="/health/dog-vaccinations-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Vaccinations Guide</Link>
-        <Link key="ear-infections-dogs" href="/health/ear-infections-dogs" className="text-sm text-brand-primary no-underline hover:underline">Ear Infections Dogs</Link>
-        <Link key="flea-tick-prevention" href="/health/flea-tick-prevention" className="text-sm text-brand-primary no-underline hover:underline">Flea Tick Prevention</Link>
-        <Link key="kennel-cough" href="/health/kennel-cough" className="text-sm text-brand-primary no-underline hover:underline">Kennel Cough</Link>
-        <Link key="parvovirus-in-puppies" href="/health/parvovirus-in-puppies" className="text-sm text-brand-primary no-underline hover:underline">Parvovirus In Puppies</Link>
-        <Link key="seizures-in-dogs" href="/health/seizures-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Seizures In Dogs</Link>
-        <Link key="vomiting-diarrhea-pets" href="/health/vomiting-diarrhea-pets" className="text-sm text-brand-primary no-underline hover:underline">Vomiting Diarrhea Pets</Link>
-        <Link key="emergency-signs" href="/health/emergency-signs" className="text-sm text-brand-primary no-underline hover:underline">Emergency Signs</Link>
-        <Link key="bloat-gdv-dogs" href="/health/bloat-gdv-dogs" className="text-sm text-brand-primary no-underline hover:underline">Bloat GDV Dogs</Link>
-        <Link key="feline-lower-urinary-tract-disease" href="/health/feline-lower-urinary-tract-disease" className="text-sm text-brand-primary no-underline hover:underline">Feline Lower Urinary Tract Disease</Link>
-        <Link key="heartworm-in-dogs" href="/health/heartworm-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Heartworm In Dogs</Link>
-        <Link key="heat-stroke-dogs" href="/health/heat-stroke-dogs" className="text-sm text-brand-primary no-underline hover:underline">Heat Stroke Dogs</Link>
-        <Link key="hyperthyroidism-cats" href="/health/hyperthyroidism-cats" className="text-sm text-brand-primary no-underline hover:underline">Hyperthyroidism Cats</Link>
-        <Link key="hypothyroidism-dogs" href="/health/hypothyroidism-dogs" className="text-sm text-brand-primary no-underline hover:underline">Hypothyroidism Dogs</Link>
-        <Link key="intestinal-parasites" href="/health/intestinal-parasites" className="text-sm text-brand-primary no-underline hover:underline">Intestinal Parasites</Link>
-        <Link key="kidney-disease-cats" href="/health/kidney-disease-cats" className="text-sm text-brand-primary no-underline hover:underline">Kidney Disease Cats</Link>
-        <Link key="leptospirosis" href="/health/leptospirosis" className="text-sm text-brand-primary no-underline hover:underline">Leptospirosis</Link>
-        <Link key="pain-management-dogs" href="/health/pain-management-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pain Management Dogs</Link>
-        <Link key="pancreatitis-in-dogs" href="/health/pancreatitis-in-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pancreatitis In Dogs</Link>
-        <Link key="periodontal-disease-pets" href="/health/periodontal-disease-pets" className="text-sm text-brand-primary no-underline hover:underline">Periodontal Disease Pets</Link>
-        <Link key="pain-signs-dogs" href="/health/pain-signs-dogs" className="text-sm text-brand-primary no-underline hover:underline">Pain Signs Dogs</Link>
-        <Link key="preventive-care-schedule" href="/health/preventive-care-schedule" className="text-sm text-brand-primary no-underline hover:underline">Preventive Care Schedule</Link>
-        <Link key="senior-bloodwork-guide" href="/health/senior-bloodwork-guide" className="text-sm text-brand-primary no-underline hover:underline">Senior Bloodwork Guide</Link>
-        <Link key="senior-pet-care" href="/health/senior-pet-care" className="text-sm text-brand-primary no-underline hover:underline">Senior Pet Care</Link>
-        <Link key="spay-neuter-benefits" href="/health/spay-neuter-benefits" className="text-sm text-brand-primary no-underline hover:underline">Spay Neuter Benefits</Link>
-        <Link key="tick-borne-diseases" href="/health/tick-borne-diseases" className="text-sm text-brand-primary no-underline hover:underline">Tick Borne Diseases</Link>
-        <Link key="urinary-tract-infection" href="/health/urinary-tract-infection" className="text-sm text-brand-primary no-underline hover:underline">Urinary Tract Infection</Link>
-        <Link key="weight-management" href="/health/weight-management" className="text-sm text-brand-primary no-underline hover:underline">Weight Management</Link>
+        {HEALTH_ARTICLES.map((article) => (
+          <Link key={article.slug} href={`/health/${article.slug}`} className="text-sm text-brand-primary no-underline hover:underline">{article.title}</Link>
+        ))}
         </div>
       </section>
       {/* agent1-browse-all-end */}
