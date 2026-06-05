@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--
+  Official Deals page — DROP-IN DRAFT for StateLineTack.
+  Purpose: rank for "statelinetack coupon / promo / deals" so shoppers who are
+  ALREADY searching the brand land on a FIRST-PARTY page with REAL, current offers
+  instead of RetailMeNot/Honey (expired codes + commission skimming + abandoned carts).
+
+  How to use:
+    - Replace the example offers in #deals-list with the store's real current promos.
+    - Keep only LIVE offers. The whole point is that codes here actually work — that's
+      what beats the coupon parasites and what builds trust.
+    - Title/meta are tuned for the branded coupon query. Swap "StateLineTack" if needed.
+    - One CSS var (--accent) re-brands it.
+-->
+<title>StateLineTack Coupons &amp; Deals (Official) — Current Promo Codes &amp; Sales</title>
+<meta name="description" content="Official StateLineTack deals page. Current promo codes, sales, free-shipping offers, and clearance — updated regularly. Real, working offers straight from the source." />
+<link rel="canonical" href="https://www.statelinetack.com/deals" />
+<style>
+  :root { --ink:#1f2a37; --muted:#5b6b7b; --line:#e2e8f0; --bg:#f7f9fb; --accent:#1f6f54; --accent-soft:#e7f2ee; --radius:12px; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); margin:0; background:#fff; line-height:1.55; }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 56px; }
+  h1 { font-size:1.7rem; margin:0 0 6px; }
+  .lede { color:var(--muted); margin:0 0 24px; }
+  .updated { font-size:.82rem; color:var(--muted); margin-bottom:24px; }
+  .updated b { color:var(--accent); }
+  .deal { border:1px solid var(--line); border-radius:var(--radius); padding:18px; margin-bottom:14px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .deal-main { flex:1 1 320px; }
+  .deal h3 { margin:0 0 4px; font-size:1.1rem; }
+  .deal p { margin:0; color:var(--muted); font-size:.92rem; }
+  .deal .terms { font-size:.78rem; margin-top:6px; }
+  .code { display:inline-flex; align-items:center; gap:10px; border:2px dashed var(--accent); background:var(--accent-soft); color:var(--accent);
+    font-weight:800; letter-spacing:.5px; padding:10px 16px; border-radius:8px; font-size:1.05rem; cursor:pointer; user-select:all; }
+  .code small { font-weight:600; font-size:.62rem; letter-spacing:.4px; color:var(--muted); }
+  .cta { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:12px 18px; border-radius:8px; display:inline-block; }
+  .section { margin-top:36px; }
+  .section h2 { font-size:1.25rem; }
+  .faq dt { font-weight:700; margin-top:16px; }
+  .faq dd { margin:4px 0 0; color:var(--muted); }
+  .capture { margin-top:36px; background:var(--bg); border:1px solid var(--line); border-radius:var(--radius); padding:20px; }
+  .capture h2 { margin-top:0; }
+  .capture form { display:flex; gap:8px; flex-wrap:wrap; }
+  .capture input { flex:1 1 240px; padding:12px; border:1px solid var(--line); border-radius:8px; font-size:1rem; }
+  .note { font-size:.78rem; color:var(--muted); margin-top:18px; border-top:1px solid var(--line); padding-top:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>StateLineTack Coupons &amp; Deals — Official</h1>
+  <p class="lede">The current, real offers — straight from the source. No expired codes, no third-party fine print. Bookmark this page; we keep it current.</p>
+  <p class="updated">Last updated: <b id="today"></b></p>
+
+  <div id="deals-list">
+    <!-- REPLACE these with real, currently-live offers. Remove any that expire. -->
+    <div class="deal">
+      <div class="deal-main">
+        <h3>Free shipping on orders over $X</h3>
+        <p>Applied automatically at checkout — no code needed.</p>
+        <p class="terms">Continental US. Some oversized items excluded.</p>
+      </div>
+      <a class="cta" href="/collections/all">Shop now</a>
+    </div>
+    <div class="deal">
+      <div class="deal-main">
+        <h3>$ off your order</h3>
+        <p>Use code at checkout.</p>
+        <p class="terms">Min spend may apply. One use per customer.</p>
+      </div>
+      <span class="code" title="Click to copy">EXAMPLECODE<small>tap to copy</small></span>
+    </div>
+    <div class="deal">
+      <div class="deal-main">
+        <h3>Clearance &amp; closeouts</h3>
+        <p>Seasonal markdowns on blankets, apparel, and tack while supplies last.</p>
+      </div>
+      <a class="cta" href="/collections/sale">View clearance</a>
+    </div>
+  </div>
+
+  <div class="capture">
+    <h2>Get new deals first</h2>
+    <p style="color:var(--muted);margin-top:0;">New promo codes and seasonal sales, sent when they drop.</p>
+    <form onsubmit="return false;">
+      <input type="email" placeholder="you@email.com" aria-label="Email" />
+      <button class="cta" type="submit">Notify me</button>
+    </form>
+    <p style="font-size:.75rem;color:var(--muted);margin-bottom:0;">Wire to the store's email platform. Unsubscribe anytime.</p>
+  </div>
+
+  <div class="section faq">
+    <h2>StateLineTack coupon FAQ</h2>
+    <dl>
+      <dt>Does StateLineTack have a coupon code right now?</dt>
+      <dd>Yes — all current, verified offers are listed above. We update this page when promos change, so codes here actually work (unlike most coupon aggregators).</dd>
+      <dt>Why use this page instead of a coupon site?</dt>
+      <dd>Third-party coupon sites are often full of expired or fake codes. This is the official source, so what you see is live.</dd>
+      <dt>How often are deals updated?</dt>
+      <dd>Regularly, and especially around seasonal sales (winter blanketing, spring fly season, holiday events).</dd>
+    </dl>
+  </div>
+
+  <p class="note">Implementation note (remove before publish): keep only live offers; the SEO/anti-coupon-parasite value depends on codes that work. Add this URL to the sitemap and link it from the footer so it indexes for branded coupon queries.</p>
+</div>
+
+<!-- FAQ JSON-LD for AI Overviews / rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does StateLineTack have a coupon code right now?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All current, verified offers are listed on the official StateLineTack deals page and are updated when promotions change." } },
+    { "@type": "Question", "name": "Why use the official deals page instead of a coupon site?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Third-party coupon sites often list expired or fake codes. The official deals page shows only live, working offers." } },
+    { "@type": "Question", "name": "How often are StateLineTack deals updated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Regularly, with extra updates around seasonal sales such as winter blanketing and spring fly season." } }
+  ]
+}
+</script>
+<script>
+  document.getElementById("today").textContent =
+    new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  // click-to-copy codes
+  document.querySelectorAll(".code").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var code = el.firstChild.textContent.trim();
+      navigator.clipboard && navigator.clipboard.writeText(code);
+      var s = el.querySelector("small"); if (s) { var t = s.textContent; s.textContent = "copied!"; setTimeout(function(){ s.textContent = t; }, 1500); }
+    });
+  });
+</script>
+</body>
+</html>
