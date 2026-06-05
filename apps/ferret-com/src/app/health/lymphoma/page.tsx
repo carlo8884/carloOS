@@ -10,7 +10,31 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret oncology chapter covering lymphoma classification, workup, and treatment frameworks.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Neoplasia of Ferrets: lymphoma epidemiology, juvenile vs adult forms, diagnostic workup, and chemotherapy options",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education materials on ferret oncology",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret lymphoma immunophenotyping, CHOP-based chemotherapy, and treatment response",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -550,47 +574,7 @@ export default function FerretLymphomaPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets,
-              Rabbits, and Rodents: Clinical Medicine and Surgery.</em>
-              4th ed. Saunders/Elsevier. The ferret oncology chapter is
-              the standard reference for lymphoma classification,
-              workup, and treatment frameworks.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, ferret-oncology and lymphoma issues. The
-              deepest peer-reviewed treatments of ferret lymphoma in
-              the journal literature.
-            </li>
-            <li>
-              <em>Journal of the American Veterinary Medical Association
-              (JAVMA)</em> — case series and retrospective work on
-              ferret lymphoma diagnosis, chemotherapy, and outcome.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical
-              articles on ferret oncology including immunophenotyping
-              and treatment response.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing
-              education on ferret cancer awareness and treatment
-              expectations.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              practitioner directory and continuing-education materials
-              on exotic-mammal oncology.
-            </li>
-            <li>
-              Veterinary Cancer Society — companion-animal oncology
-              resources; ferret protocols are adapted from feline
-              lymphoma medicine.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about lymphoma in
             ferrets. It is not individualized veterinary advice.

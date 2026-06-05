@@ -10,7 +10,31 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret parasitology, ectoparasites, and heartworm chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Parasitic Diseases of Ferrets: flea control, ear mites, heartworm prevention, and antiparasitic safety",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/parasitic-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret parasite-control guidance and ectoparasitology continuing-education materials",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret flea infestation, heartworm, and antiparasitic treatment protocols",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -282,26 +306,7 @@ export default function FerretFleasParasitesPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret parasitology and dermatology chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — reviews of ferret ectoparasites and heartworm.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret parasite control.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and parasite-control guidance for exotic mammals.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about ferret parasites. It
             is not individualized veterinary advice. Antiparasitic selection and

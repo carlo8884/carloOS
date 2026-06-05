@@ -10,7 +10,31 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret preventive care, physical examination, and diagnostic workup chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Routine Health Care of Ferrets: what to bring, what to expect at the exam, and standard diagnostic components",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory for finding exotic-mammal-experienced veterinarians",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "American Board of Veterinary Practitioners (ABVP) — Exotic Companion Mammal diplomate directory for finding board-certified exotic-mammal practitioners",
+    url: "https://www.abvp.com/become-certified/species-specific-credentials/exotic-companion-mammal/",
+    publisher: "ABVP",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -503,36 +527,7 @@ export default function FerretVetVisitPrepPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
-              and Rodents: Clinical Medicine and Surgery.</em> 4th ed.
-              Saunders/Elsevier. Preventive care and diagnostic
-              chapters describe the standard ferret workup.
-            </li>
-            <li>
-              American Animal Hospital Association (AAHA) — exotic-mammal
-              preventive-care and life-stage guidelines.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em>, ferret-focused issues covering wellness
-              care and diagnostic standards.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) —
-              practitioner directory.
-            </li>
-            <li>
-              American Board of Veterinary Practitioners (ABVP) — Exotic
-              Companion Mammal diplomate directory.
-            </li>
-            <li>
-              American Ferret Association (AFA) — owner-facing care
-              expectation resources.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general guidance on ferret veterinary visits.
             Specific clinical questions, individualized monitoring

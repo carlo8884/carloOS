@@ -10,7 +10,31 @@ import {
   ArticleByline,
   DropCap,
   CrossPortfolioCard,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastroenterology, epizootic catarrhal enteritis (ECE), Helicobacter, and inflammatory bowel disease chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: diarrhea causes including ECE, proliferative bowel disease, Helicobacter, and foreign bodies",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal disease",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret enteritis, epizootic catarrhal enteritis, and gastrointestinal parasitism",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -347,28 +371,7 @@ export default function FerretDiarrheaCausesPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="sources">Sources</h2>
-          <ul>
-            <li>
-              Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
-              Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret gastroenterology, ECE, Helicobacter, and inflammatory bowel
-              disease chapters.
-            </li>
-            <li>
-              <em>Veterinary Clinics of North America: Exotic Animal
-              Practice</em> — articles on ferret gastrointestinal disease and
-              diagnostic approach to diarrhea.
-            </li>
-            <li>
-              <em>Journal of Exotic Pet Medicine</em> — clinical reports on
-              ferret enteritis, parasitism, and gastrointestinal disease.
-            </li>
-            <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              directory and continuing-education content.
-            </li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about diarrhea in ferrets.
             It is not individualized veterinary advice and does not include

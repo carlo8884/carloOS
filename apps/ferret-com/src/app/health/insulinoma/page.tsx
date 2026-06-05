@@ -1,6 +1,29 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+
+const SOURCES = [
+  {
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret endocrine-disease and insulinoma chapters.",
+    url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
+    publisher: "Elsevier/Saunders",
+  },
+  {
+    label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: insulinoma overview, clinical signs, diagnosis, and treatment",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal practitioner directory and ferret medicine continuing-education resources",
+    url: "https://aemv.org",
+    publisher: "AEMV",
+  },
+  {
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret insulinoma diagnosis, surgical outcomes, and medical management",
+    url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
+    publisher: "Journal of Exotic Pet Medicine",
+  },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -221,18 +244,7 @@ export default function FerretInsulinomaPage() {
             A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance.
           </p>
 
-          <h2 id="sources">Sources</h2>
-          <p>
-            Primary references for this page:
-          </p>
-          <ul>
-            <li>Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery.</em> 4th ed. Saunders/Elsevier. The ferret endocrine-disease chapter is the standard reference for insulinoma diagnosis and management.</li>
-            <li><em>Veterinary Clinics of North America: Exotic Animal Practice</em>, multiple issues covering ferret endocrine disease. The journal’s ferret-focused special issues are the deepest peer-reviewed treatments of insulinoma available.</li>
-            <li><em>Journal of the American Veterinary Medical Association (JAVMA)</em>, case series and retrospective studies on ferret insulinoma diagnosis, surgical outcomes, and medical management.</li>
-            <li><em>Journal of Exotic Pet Medicine</em>, clinical articles on ferret oncology and endocrinology.</li>
-            <li>American Ferret Association (AFA) owner-facing position statements on diet, insulinoma awareness, and emergency response.</li>
-            <li>Association of Exotic Mammal Veterinarians (AEMV), which maintains a directory of exotic-mammal-credentialed clinicians for owners seeking surgical or specialist consultation.</li>
-          </ul>
+          <ArticleSourcesList sources={SOURCES} />
           <p className="text-sm text-brand-text-light">
             This page is general clinical information about insulinoma in ferrets. It is not individualized veterinary advice. Any ferret with signs consistent with hypoglycemia needs to be evaluated by a veterinarian familiar with ferrets — ideally a clinician with active AEMV membership or board certification in exotic-companion-mammal practice.
           </p>
