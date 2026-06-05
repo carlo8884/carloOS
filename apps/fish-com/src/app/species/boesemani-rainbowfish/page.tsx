@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide — Blue-Orange Split | Fish.com', description: 'Boesemani rainbowfish are the most popular rainbowfish — vivid blue-purple front, orange-red rear. Locale-pure breeding matters.', path: '/species/boesemani-rainbowfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BoesemaniPage() {
@@ -25,6 +26,7 @@ export default function BoesemaniPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Color Development — Why Store Fish Look Different</h2>
         <p>Boesemani from fish stores are frequently juvenile males showing pale, washed-out versions of their adult colors — the blue may appear gray, the orange may appear yellowish, and the characteristic split may be barely defined. Full adult coloration in males takes 9–18 months to develop fully and requires: maturity, appropriate water chemistry (harder alkaline water produces better blue coloration), high-quality diet with color-enhancing foods, social stimulation (males displaying to each other and to females), and low nitrate (under 20 ppm — elevated nitrate consistently suppresses rainbowfish color). A Boesemani male in peak condition in ideal water, with a group of rivals and females, displaying with full intensity, is dramatically different from the same fish at 6 months in a fish store tank.</p>
 

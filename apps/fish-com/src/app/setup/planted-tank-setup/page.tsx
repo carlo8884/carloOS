@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com', description: 'How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.', path: '/setup/planted-tank-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Planted Aquarium', description: 'Step-by-step guide to setting up a planted freshwater aquarium.', url: 'https://fish.com/setup/planted-tank-setup', totalTime: 'P7D', steps: [
@@ -35,6 +36,7 @@ export default function PlantedTankSetupPage() {
         </>}
       >
         <div className="carloOS-article">
+          <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
           <h2>Low-Tech vs High-Tech — Choose Before You Buy Anything</h2>
           <p><strong>Low-tech planted tank:</strong> No CO2 injection. Easy plants only (Java fern, Anubias, Cryptocoryne, mosses, hornwort). Standard lighting (moderate PAR). All-in-one liquid fertilizer once weekly. Lower maintenance. Still beautiful — most of the famous Dutch aquascapes and natural-style tanks use low-tech or medium-tech approaches. Appropriate for beginners and most hobbyists.</p>
           <p><strong>High-tech planted tank:</strong> Pressurized CO2 injection (CO2 is the primary limiting factor for plant growth). High-intensity lighting (80+ PAR at substrate). Advanced fertilization. Grows carpeting species (Hemianthus callitrichoides, Eleocharis, Glossostigma), demanding stem plants, and delicate foreground plants. Requires more daily monitoring (CO2 levels, fertilizer adjustments, algae management). Significantly more equipment investment ($200–500+ for CO2 system). Appropriate for experienced hobbyists willing to invest time and money.</p>

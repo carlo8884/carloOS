@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel).', path: '/species/axolotl', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AxolotlPage() {
@@ -25,6 +26,7 @@ export default function AxolotlPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Neoteny — Why Axolotls Stay "Larval"</h2>
         <p>Most salamander species undergo metamorphosis — transitioning from aquatic larvae to terrestrial adults. Axolotls are neotenic: they reach sexual maturity while retaining larval characteristics (external gills, aquatic lifestyle, larval body proportions). The metamorphosis pathway still exists in their genetics — it can be triggered by thyroid hormone administration — but in normal conditions it does not occur. This means an axolotl is not a "baby" that will grow into something different; it is a sexually mature adult in its natural form, permanently aquatic, permanently displaying the feathery external gills and broad, flat head that make them distinctive.</p>
         <p>The feathery structures extending from their heads are external gills — the gill filaments are densely branched to maximize surface area for oxygen uptake. Gill plumage health is an indicator of water quality: full, fluffy, well-branched gills indicate good conditions; thin, receding, or curling gills indicate stress, poor water quality, or disease.</p>

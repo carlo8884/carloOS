@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Dropsy in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/dropsy-in-fish", publisher: "Merck Vet Manual" },
@@ -29,6 +30,7 @@ export default function DropsyPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>What Dropsy Actually Is</h2>
         <p>Dropsy describes the accumulation of fluid (edema and ascites) within the body cavity of a fish, causing the characteristic distension and scale protrusion. It is not caused by a single pathogen — it is a final common endpoint of multiple serious conditions that damage internal organs to the point where normal fluid regulation fails.</p>
         <p>The most common underlying causes: bacterial infection involving the kidneys (Aeromonas, Pseudomonas, Edwardsiella) damaging the renal tubules responsible for fluid regulation; viral infection; parasitic organ infiltration; hepatic (liver) failure from any cause; and neoplasia (internal tumors). Bacterial kidney infection is by far the most common cause in aquarium fish, and this is why the condition is historically associated with poor water quality — elevated nitrate and ammonia predispose fish to systemic bacterial infection.</p>

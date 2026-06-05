@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Fin Rot in Aquarium Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/fin-rot-in-fish", publisher: "Merck Vet Manual" },
@@ -35,6 +36,7 @@ export default function FinRotPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Root Cause — Almost Always Water Quality</h2>
         <p>Healthy fish in clean water do not develop fin rot. The bacteria and fungi that cause fin rot (primarily Aeromonas, Pseudomonas, and Flavobacterium species for bacterial; Saprolegnia for fungal) are present in virtually all aquarium water as normal environmental organisms. They only cause disease when fish are immunocompromised — and the most common cause of immunocompromise in fish is poor water quality.</p>
         <p>Elevated ammonia, elevated nitrite, high nitrate, and temperature stress all suppress fish immune function. The pathway: ammonia accumulates (from overfeeding, overcrowding, or inadequate filtration) → fish immune system compromises → opportunistic bacteria establish infection at fin margins → fin rot develops. Treating fin rot with medication without correcting the water quality allows reinfection after treatment.</p>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Monogenean Flukes (Gyrodactylus, Dactylogyrus) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/monogenean-flukes-in-fish", publisher: "Merck Vet Manual" },
@@ -35,6 +36,7 @@ export default function FlukesPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Signs — Often Nonspecific</h2>
         <p>The challenge with flukes: their signs are nonspecific and shared with several other conditions. Flashing (rubbing against substrate or decorations), clamped fins, rapid gill movement, excess mucus production on the body surface, lethargy, and reduced appetite all describe fluke infestation — and also describe poor water quality, velvet, and bacterial skin infections. This is why flukes are frequently missed and why prophylactic praziquantel during quarantine is so valuable: it eliminates flukes from the differential before the fish enters the display tank, regardless of whether clinical signs are present.</p>
         <p>Distinguishing features when present: gill flukes produce primarily respiratory signs (rapid breathing, fish near the surface or near aeration) with relatively minor external signs. Body flukes produce more visible flashing and skin changes — excess mucus making the fish appear matte rather than shiny, reddened skin areas, and in heavy infestations, ulcerations at attachment sites. Both can occur simultaneously in the same fish.</p>

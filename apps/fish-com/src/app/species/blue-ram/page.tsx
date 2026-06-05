@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0, 80-86°F). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BlueRamPage() {
@@ -25,6 +26,7 @@ export default function BlueRamPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
         <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
         <p><strong>Water preparation for blue rams:</strong> If your tap water is hard, mix with RO/DI water to achieve the target GH and pH. A 50/50 RO/tap mix is a starting point — test the result and adjust. Alternatively, use full RO water remineralized with Seachem Equilibrium (adds GH without raising KH) to achieve GH 5–8 with minimal KH, which allows CO2 or driftwood tannins to set a low, stable pH. Peat filtration and Indian almond leaves add tannins that lower pH and provide antibacterial properties beneficial to rams.</p>

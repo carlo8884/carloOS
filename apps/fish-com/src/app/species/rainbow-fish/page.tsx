@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Rainbowfish Care Guide — Australian Species | Fish.com', description: 'Rainbowfish are underrated community gems. Boesemani, Turquoise, and Dwarf Neon rainbows need groups of 6+, quality food to develop color.', path: '/species/rainbow-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Rainbowfish Care Guide', description: 'School size, water requirements, and color development for Melanotaeniidae rainbowfish.', url: 'https://fish.com/species/rainbow-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function RainbowFishPage() {
@@ -26,6 +27,7 @@ export default function RainbowFishPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Color Development — Why Your Rainbowfish Looks Different</h2>
         <p>Rainbowfish are notoriously dull-looking in fish stores and reach their full color potential only under specific conditions: maturity (full color at 9–18 months — juveniles are pale), clean water (nitrate under 20 ppm — consistent water changes), varied high-quality diet (spirulina-based flakes plus frozen daphnia and brine shrimp develop the carotenoid pigments responsible for red and orange coloration), and social stimulation (males display to each other and to females — a mixed-sex group in the correct ratio produces the best coloration). A Boesemani rainbowfish in a bare tank with poor water and flake food is unimpressive. The same fish in a planted tank with clean water, good food, and other rainbowfish is stunning.</p>
 

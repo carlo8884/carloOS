@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WhiteCloudPage() {
@@ -25,6 +26,7 @@ export default function WhiteCloudPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
         <p>At tropical temperatures (78°F+), white clouds decline: their lifespan shortens significantly, their immune function is compromised, and they are less active and less colorful than at their preferred range. If you are running a heated tropical tank at 78°F, white clouds are not appropriate tankmates — keep them in their preferred temperature range where they thrive.</p>

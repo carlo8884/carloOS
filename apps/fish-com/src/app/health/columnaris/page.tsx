@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/columnaris-disease-in-fish", publisher: "Merck Vet Manual" },
@@ -29,6 +30,7 @@ export default function ColumnarisguidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Signs and Appearance</h2>
         <p>Columnaris produces distinctive but frequently misidentified lesions. The bacterial colonies grow in a characteristic "stacking" pattern that appears cottony or fuzzy — easily confused with Saprolegnia (true fungal infection). Key distinguishing features: columnaris lesions typically appear gray-white to yellowish, while Saprolegnia fungus is pure white and fluffy. Columnaris often appears on the dorsal surface and at the edges of fins (Saprolegnia more commonly starts at injuries). Columnaris progresses much faster than fungal infections — a fish with mild columnaris can deteriorate to severe disease within 24–48 hours at warm temperatures.</p>
         <p>The four characteristic presentations:</p>

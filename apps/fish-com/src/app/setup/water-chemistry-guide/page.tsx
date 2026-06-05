@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.', path: '/setup/water-chemistry-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WaterChemistryGuidePage() {
@@ -25,6 +26,7 @@ export default function WaterChemistryGuidePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>pH — The Scale and What It Means</h2>
         <p>pH is a logarithmic measure of hydrogen ion concentration — pH 7 is neutral, below 7 is acidic, above 7 is alkaline. Because the scale is logarithmic, pH 6 is 10× more acidic than pH 7, and pH 5 is 100× more acidic. Small numerical differences represent large actual differences in water chemistry. A stable pH within the appropriate range for your fish is more important than hitting a precise target number — fish handle a consistent pH that is slightly off-ideal better than they handle pH swings.</p>
         <p>What determines pH: the balance of carbonate buffering (KH), dissolved CO2, and other acids and bases in the water. In CO2-injected planted tanks, pH drops as CO2 dissolves into carbonic acid — this is intentional and managed. Understanding that pH is a result of other parameters (primarily KH and CO2), rather than something to be directly adjusted with pH-Up/pH-Down chemicals, allows for more stable management.</p>

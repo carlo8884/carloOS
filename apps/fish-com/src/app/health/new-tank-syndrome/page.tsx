@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
@@ -33,6 +34,7 @@ export default function NewTankSyndromePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Why Ammonia Kills</h2>
         <p>Ammonia (NH₃) is produced continuously by fish as a metabolic waste product — excreted through the gills and in urine. In a cycled tank, beneficial bacteria convert ammonia to nitrite (still toxic) and then to nitrate (much less toxic) rapidly enough that ammonia never accumulates to harmful levels. In a new, uncycled tank, these bacteria colonies do not yet exist. Ammonia builds up to concentrations that burn gill tissue, damage internal organs, suppress immune function, and kill fish — sometimes within days of the tank being set up.</p>
         <p>The signs of ammonia toxicity: fish hanging near the surface (gasping for oxygen — damaged gills cannot extract it efficiently), lethargy, red streaking on fins and body (hemorrhaging from irritated capillaries), and loss of equilibrium. By the time fish are showing these signs in a new tank, significant damage has occurred. Test the water: ammonia above 0.25 ppm is stressful; above 1 ppm is actively harmful; above 2 ppm is acutely life-threatening to most species.</p>

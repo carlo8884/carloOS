@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Argulus (Fish Lice) and Lernaea (Anchor Worm) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/argulosis-and-lernaesis-in-fish", publisher: "Merck Vet Manual" },
@@ -35,6 +36,7 @@ export default function FishLicePage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Fish Lice (Argulus)</h2>
         <p>Argulus are flat, oval crustacean parasites 5–10mm in diameter — visible to the naked eye as small disc-shaped organisms attached to or moving across the fish's skin. They use sucking mouthparts to pierce the skin and feed on tissue fluid and blood, causing: visible attachment lesions (red, inflamed spots where they attach), intense irritation (fish rubbing against surfaces — flashing — and jumping), secondary bacterial infection at wound sites, and in heavy infestations, anemia and immune suppression from blood loss.</p>
         <p>Argulus can detach from the fish and swim freely in the water column — adults can survive briefly off the host. Eggs are deposited on hard surfaces (rocks, aquarium glass, substrate) and hatch into free-swimming larvae that seek a host. This life cycle means treating the fish alone is insufficient — the aquarium or pond environment must also be treated to kill eggs and larvae.</p>

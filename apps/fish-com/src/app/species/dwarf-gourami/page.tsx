@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
+import { ArticleByline } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative.', path: '/species/dwarf-gourami', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide', description: 'DGD virus risk, honey gourami alternative, and community tank compatibility for Trichogaster lalius.', url: 'https://fish.com/species/dwarf-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DwarfGouramiPage() {
@@ -28,6 +29,7 @@ export default function DwarfGouramiPage() {
       </>}
     >
       <div className="carloOS-article">
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Dwarf Gourami Disease (DGD) — The Critical Issue</h2>
         <p>Dwarf Gourami Disease is caused by Dwarf Gourami Iridovirus (DGIV) — a systemic viral infection that has become endemic in the mass-farm operations that supply most of the global aquarium trade with dwarf gouramis. Estimates suggest that 22% or more of commercially produced dwarf gouramis carry the virus at time of purchase. There is no treatment and no cure. Infected fish may appear healthy for months before showing signs: color fading, lesions on the body, swollen abdomen, lethargy, and eventually death.</p>
         <p>The practical implication: a significant percentage of dwarf gouramis purchased from pet stores will die from DGD within 6-18 months regardless of care quality. This is not a reflection of the keeper's skill — it is a supply chain problem. Fish purchased from specialty fish stores or breeders who source from DGD-free suppliers have much better outcomes. The alternative for those who want a similar look without the disease risk: the honey gourami.</p>
