@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Olivry T et al. Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals. BMC Vet Res. 2015;11:210.', publisher: 'BMC Vet Research / ICADA' },
+  { label: 'Mueller RS et al. Critically appraised topic on adverse food reactions of companion animals: common food allergen sources in dogs and cats. BMC Vet Res. 2016;12:9.', publisher: 'BMC Vet Research' },
+  { label: 'AVMA: Skin Allergies and Atopic Dermatitis in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'FDA CVM: Questions and Answers: FDA's Work on Potential Causes of Non-Hereditary DCM in Dogs (2018-2019 Grain-Free Diet Updates)', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy', publisher: 'FDA CVM' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Allergies — Atopic, Food, Contact | Dog.com', description: 'Three allergy types in dogs: atopic dermatitis, food allergy, contact allergy. Diagnostic ladder, treatment tiers, and when to refer to a dermatologist.', path: '/health/dog-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Allergies Guide', description: 'Atopic, food, and contact allergies in dogs — differential diagnosis, treatment ladder, and specialist referral.', url: 'https://dog.com/health/dog-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
@@ -143,6 +151,8 @@ export default function DogAllergiesPage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

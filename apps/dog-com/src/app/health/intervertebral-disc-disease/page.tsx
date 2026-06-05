@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Intervertebral Disk Disease in Dogs and Cats', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/intervertebral-disk-disease-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'ACVS: American College of Veterinary Surgeons — Intervertebral Disc Disease', url: 'https://www.acvs.org/small-animal/intervertebral-disc-disease', publisher: 'ACVS' },
+  { label: 'AVMA: Intervertebral Disc Disease (IVDD) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Brisson BA. Intervertebral disc disease in dogs. Vet Clin North Am Small Anim Pract. 2010;40(5):829-858.', publisher: 'Vet Clinics Small Animal Practice' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'IVDD in Dogs — Intervertebral Disc Disease Signs | Dog.com', description: 'IVDD causes back pain to paralysis in chondrodystrophic dogs. The surgical window is 24-48 hours for best recovery. Signs, grades, and rehabilitation guide.', path: '/health/intervertebral-disc-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Intervertebral Disc Disease (IVDD) in Dogs', description: 'Signs, grading, surgical timing, and rehabilitation for canine IVDD.', url: 'https://dog.com/health/intervertebral-disc-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Intervertebral Disc Disease in Dogs', description: 'IVDD signs, grades, surgical indications, and rehabilitation.', url: 'https://dog.com/health/intervertebral-disc-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -59,6 +67,8 @@ export default function IVDDPage() {
 
           <h2>Rehabilitation After Surgery</h2>
           <p>Post-surgical rehabilitation significantly improves outcomes. Hydrotherapy (underwater treadmill — allows weight-bearing movement before the dog can walk on land), neuromuscular electrical stimulation, therapeutic exercises, and massage all contribute to faster recovery. A certified canine rehabilitation therapist (CCRP or CCRT) designs the protocol. Recovery timeline varies: Grade 2-3 dogs typically regain ambulation within 2–8 weeks post-surgery. Grade 4-5 dogs may take 3–6 months or longer. Bladder management (manual expression or catheterization for dogs that cannot urinate voluntarily) is a critical component of post-surgical care that owners must learn.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

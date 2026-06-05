@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'WSAVA: Vaccination Guidelines for the Owners and Breeders of Dogs and Cats', url: 'https://wsava.org/committees/vaccination-guidelines-group/', publisher: 'WSAVA' },
+  { label: 'AAHA: Canine Vaccination Guidelines (2022)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/vaccination-canine/', publisher: 'AAHA' },
+  { label: 'AVMA: Vaccination Basics for Dogs and Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccination-basics', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Overview of Vaccination Programs for Dogs', url: 'https://www.merckvetmanual.com/dog-owners/disorders-affecting-multiple-body-systems-of-dogs/vaccination-of-dogs', publisher: 'Merck Vet Manual' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Vaccination Schedule', description: 'Core and non-core vaccines, puppy schedule, and titer testing for dogs.', url: 'https://dog.com/health/dog-vaccinations', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-05-28T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Schedule', description: 'Core vaccines, non-core vaccines, and puppy vaccination schedule.', url: 'https://dog.com/health/dog-vaccinations', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -88,6 +96,8 @@ export default function DogVaccinationsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

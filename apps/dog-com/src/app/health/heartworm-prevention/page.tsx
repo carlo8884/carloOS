@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'American Heartworm Society: Current Canine Heartworm Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
+  { label: 'CAPC: Companion Animal Parasite Council — Heartworm Recommendations', url: 'https://capcvet.org/guidelines/heartworm/', publisher: 'CAPC' },
+  { label: 'AVMA: Heartworm Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
+  { label: 'FDA CVM: Heartworm Prevention Products — Approved Drugs for Dogs', url: 'https://www.fda.gov/animal-veterinary/product-safety-information/heartworm-disease', publisher: 'FDA CVM' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs — Monthly Preventives | Dog.com', description: 'Heartworm disease is preventable and expensive to treat. Monthly preventives, annual testing, and what to do if your dog tests positive.', path: '/health/heartworm-prevention', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -52,6 +60,8 @@ export default function HeartwormPreventionPage() {
 
         <h2>Treatment If Positive</h2>
         <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
     </>

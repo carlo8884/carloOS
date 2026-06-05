@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Podell M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. J Vet Intern Med. 2016;30(2):477-490.', publisher: 'JVIM / ACVIM' },
+  { label: 'De Risio L et al. International veterinary epilepsy task force consensus proposal: diagnostic approach to epilepsy in dogs. BMC Vet Res. 2015;11:148.', publisher: 'BMC Vet Research' },
+  { label: 'Merck Veterinary Manual: Seizure Disorders in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/seizure-disorders/overview-of-seizure-disorders-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Epilepsy and Seizures in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Seizures — Types, Causes, When to ER | Dog.com', description: 'Dog seizures: focal vs generalized, cluster vs status, idiopathic vs symptomatic causes, anticonvulsants, seizure journaling, and ER red flags.', path: '/health/dog-seizures', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Seizures in Dogs', description: 'Seizure types, causes, diagnostic workup, anticonvulsant management, and emergency criteria for dogs.', url: 'https://dog.com/health/dog-seizures', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-28T00:00:00Z' })
@@ -139,6 +147,8 @@ export default function DogSeizuresPage() {
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

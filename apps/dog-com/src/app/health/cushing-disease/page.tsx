@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing's Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Diagnosis and Treatment of Hyperadrenocorticism in Dogs — Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'AVMA: Cushing's Disease (Hyperadrenocorticism) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Feldman EC et al. Use of low- and high-dose dexamethasone tests for distinguishing pituitary-dependent from adrenal tumor hyperadrenocorticism in dogs. J Am Vet Med Assoc. 1996;209(4):772-775.', publisher: 'JAVMA' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: "Cushing's Disease in Dogs — Signs, Testing | Dog.com", description: "Cushing's syndrome (hyperadrenocorticism) causes a pot-bellied appearance, excessive drinking, and hair loss. Testing requires a LDDS or ACTH stim test", path: '/health/cushing-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: "Cushing's Disease in Dogs", description: "Signs, diagnostic testing, and trilostane treatment for canine Cushing's syndrome.", url: 'https://dog.com/health/cushing-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -56,6 +64,8 @@ export default function CushingDiseasePage() {
 
           <h2 id="monitoring">Monitoring on Trilostane</h2>
           <p>ACTH stimulation testing is required 10–14 days after starting or changing trilostane dose, then every 3 months once stable, and any time the dog shows signs of illness or weakness. Target post-ACTH cortisol: 1.45–5.4 μg/dL (lab-specific reference ranges may vary). Values below this indicate over-suppression — dose reduction. Values above this with persistent clinical signs indicate underdosing. Trilostane management requires commitment to regular monitoring — it is not a "set and forget" medication.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

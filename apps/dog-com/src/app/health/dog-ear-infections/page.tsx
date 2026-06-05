@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs and Cats', url: 'https://www.merckvetmanual.com/eye-and-ear/ear-diseases/otitis-externa-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Otitis Externa — Diagnosis and Management', url: 'https://www.acvim.org/Portals/0/PDF/consensus/otitis_consensus.pdf', publisher: 'ACVIM' },
+  { label: 'AVMA: Ear Infections in Dogs (Otitis Externa)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Nuttall T et al. Trends in antimicrobial resistance in canine and feline otitis externa and skin infections. J Small Anim Pract. 2019;60(12):728-739.', publisher: 'JSAP' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Ear Infections — Types, Causes & Treatment | Dog.com', description: 'Ear infections are the #1 reason for vet visits. Yeast vs bacterial vs ear mites — different presentations and different treatments.', path: '/health/dog-ear-infections', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Ear Infections', description: 'Yeast, bacterial, and ear mite infections — diagnosis and treatment.', url: 'https://dog.com/health/dog-ear-infections', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -64,6 +72,8 @@ export default function DogEarInfectionsPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Hepatic Disease in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/hepatic-disease-in-small-animals/hepatic-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'ACVIM: Consensus Statement on the Diagnosis and Management of Chronic Hepatitis in Dogs', url: 'https://www.acvim.org', publisher: 'ACVIM' },
+  { label: 'AVMA: Liver Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Center SA et al. S-adenosylmethionine (SAMe) in hepatic disease. J Vet Intern Med. 2002;16(2):131-140.', publisher: 'JVIM' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Liver Disease in Dogs — ALT, ALP, Portosystemic Shunts | Dog.com', description: 'Liver disease in dogs ranges from reversible elevation of liver enzymes to cirrhosis and portosystemic shunts.', path: '/health/dog-liver-disease', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Liver Disease in Dogs', description: 'ALT, ALP, portosystemic shunts, and dietary management for canine liver disease.', url: 'https://dog.com/health/dog-liver-disease', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Liver Disease in Dogs', description: 'Canine liver disease — enzyme interpretation, portosystemic shunts, and management.', url: 'https://dog.com/health/dog-liver-disease', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -37,6 +45,8 @@ export default function DogLiverDiseasePage() {
 
           <h2 id="diet">Dietary Management for Liver Disease</h2>
           <p>The traditional recommendation of severely protein-restricted diets for all liver disease dogs has been revised — protein restriction is appropriate for hepatic encephalopathy (where protein is a substrate for ammonia production) but not for all liver disease. Most dogs with liver disease benefit from: highly digestible protein sources (egg, cottage cheese, poultry), adequate protein to prevent muscle wasting (the liver needs amino acids for regeneration), moderate fat restriction (biliary disease specifically), and supplementation with vitamin E and SAMe (S-adenosylmethionine — hepatoprotective antioxidant) and milk thistle (silymarin). Denamarin (SAMe + silybin complex) is the most widely used hepatoprotective supplement in veterinary practice — evidence for benefit in chronic hepatitis is supportive. Hill's l/d and Royal Canin Hepatic are the standard prescription liver support diets.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

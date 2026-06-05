@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Luxating Patella (Slipping Kneecap) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'ACVS: American College of Veterinary Surgeons — Patellar Luxation', url: 'https://www.acvs.org/small-animal/patellar-luxation', publisher: 'ACVS' },
+  { label: 'Willauer CC, Vasseur PB. Clinical results of surgical correction of medial luxation of the patella in dogs. Vet Surg. 1987;16(1):31-36.', publisher: 'Vet Surgery' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Luxating Patella in Dogs — Grades, Surgery | Dog.com', description: 'Luxating patella (slipping kneecap) is the most common orthopedic condition in small dogs. Grades 1-4, when surgery is needed.', path: '/health/dog-luxating-patella', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Luxating Patella in Dogs', description: 'Grades, surgical indications, and breed predisposition for luxating patella in dogs.', url: 'https://dog.com/health/dog-luxating-patella', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -56,6 +64,8 @@ export default function LuxatingPatellaPage() {
           <h2>Without Surgery — Grade 1 and Monitoring</h2>
           <p>Grade 1 luxating patella in a dog with minimal clinical signs does not necessarily require surgery. Management: maintain lean body weight (reduces force across the joint with every step), joint supplementation (Dasuquin Advanced — glucosamine and chondroitin), omega-3 fatty acids (EPA/DHA from fish oil — anti-inflammatory), and monitoring every 6 months to assess for progression. If the dog begins showing more frequent skipping, increased lameness, or significant cartilage wear (visible on radiograph), surgical intervention should be reconsidered.</p>
           <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

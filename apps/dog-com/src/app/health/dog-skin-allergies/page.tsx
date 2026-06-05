@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Olivry T et al. Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals (ICADA). BMC Vet Res. 2015;11:210.', publisher: 'BMC Vet Research / ICADA' },
+  { label: 'AVMA: Atopic Dermatitis and Skin Allergies in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'American College of Veterinary Dermatology (ACVD): Atopic Dermatitis and Allergy Management', url: 'https://www.acvd.org', publisher: 'ACVD' },
+  { label: 'Gonzales AJ et al. Oclacitinib (APOQUEL) is a novel Janus kinase inhibitor with activity against cytokines involved in allergy. J Vet Pharmacol Ther. 2014;37(4):317-324.', publisher: 'JVPT' },
+]
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Skin Allergies — Environmental, Food | Dog.com', description: 'Dog skin allergies: environmental (atopy), food allergy, and flea allergy dermatitis. How to distinguish them, the correct diagnostic approach.', path: '/health/dog-skin-allergies', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Skin Allergies', description: 'Environmental, food, and flea allergy in dogs — diagnosis and treatment.', url: 'https://dog.com/health/dog-skin-allergies', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -75,6 +83,8 @@ export default function DogSkinAllergiesPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

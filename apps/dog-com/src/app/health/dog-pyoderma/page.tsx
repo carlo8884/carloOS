@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Merck Veterinary Manual: Pyoderma in Dogs and Cats', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyoderma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Skin Infections (Pyoderma) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Hillier A et al. A randomized controlled trial of the efficacy and safety of pontocaine/polymyxin B ophthalmic solution in canine superficial pyoderma. Vet Dermatol. 2006;17(3):193-201.', publisher: 'Vet Dermatology' },
+  { label: 'Guardabassi L et al. Methicillin-resistant Staphylococci in companion animals. Vet Microbiol. 2004;100(3-4):267-278.', publisher: 'Vet Microbiology' },
+]
+
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Pyoderma in Dogs — Bacterial Skin Infections, Causes | Dog.com', description: 'Pyoderma (bacterial skin infection) is the most common skin disease in dogs. Surface, superficial, and deep pyoderma differ in treatment duration.', path: '/health/dog-pyoderma', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Pyoderma in Dogs', description: 'Bacterial skin infection types, antibiotic treatment, and underlying cause management.', url: 'https://dog.com/health/dog-pyoderma', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Pyoderma in Dogs', description: 'Bacterial skin infections — types, antibiotic treatment, and root cause identification.', url: 'https://dog.com/health/dog-pyoderma', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
@@ -41,6 +49,8 @@ export default function DogPyodermaPage() {
 
           <h2>Topical Therapy — Underutilized and Effective</h2>
           <p>Topical antimicrobial therapy — medicated shampoos (chlorhexidine 2–4%, or chlorhexidine + miconazole), sprays, and wipes — significantly reduces bacterial load and supports systemic antibiotic treatment. Chlorhexidine shampoo used 2–3 times weekly during systemic antibiotic treatment shortens treatment duration and reduces relapse rates in clinical studies. In mild surface and early superficial pyoderma, topical therapy alone can be sufficient. The time investment of bathing (leave-on 10-minute contact time for chlorhexidine shampoos to work) limits compliance for many owners, but the efficacy is real.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

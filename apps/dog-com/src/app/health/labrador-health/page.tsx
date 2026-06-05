@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
+import { ArticleSourcesList } from '@carloOS/ui'
+const SOURCES = [
+  { label: 'Orthopedic Foundation for Animals (OFA): Labrador Retriever Hip and Elbow Dysplasia Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
+  { label: 'Raffan E et al. A deletion in the canine POMC gene is associated with weight and appetite in obesity-prone Labrador Retriever dogs. Cell Metab. 2016;23(5):893-900.', publisher: 'Cell Metabolism' },
+  { label: 'AVMA: Labrador Retriever Common Health Conditions', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Hip Dysplasia in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/hip-dysplasia-in-dogs', publisher: 'Merck Vet Manual' },
+]
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -170,6 +178,8 @@ export default function LabradorHealthPage() {
         <p>Color matters less than breeders imply. The data suggesting chocolate Labs have shorter lifespans and more health issues likely reflects historic breeding practices in chocolate lines (less health testing) rather than coat color itself. In any color, what matters is health testing of the parents.</p>
 
         <p>Minimum health testing for a reputable Lab breeder: OFA hip evaluation, OFA elbow evaluation, CAER eye examination (current, annual), OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test. Request documentation for all of these — not verbal assurances. A breeder who cannot provide this documentation is not a reputable breeder regardless of how nice their website looks.</p>
+
+          <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )
