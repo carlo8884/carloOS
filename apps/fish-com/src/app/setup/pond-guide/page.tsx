@@ -30,7 +30,7 @@ export default function PondGuidePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Koi Care Guide', href: '/species/koi' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Koi Care Guide', href: '/species/koi' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }]} />
           <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Pond and fishkeeping guides." source="setup-pond" />
         </>}
       >

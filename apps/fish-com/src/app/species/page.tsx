@@ -149,9 +149,10 @@ export default async function SpeciesIndexPage() {
         </div>
 
         {/* Quick links */}
-        <div className="mt-12 grid sm:grid-cols-3 gap-4">
+        <div className="mt-12 grid sm:grid-cols-4 gap-4">
           {[
             { title: 'Aquarium Setup Guide', href: '/setup', desc: 'First tank, step by step' },
+            { title: 'Equipment Reviews', href: '/reviews', desc: 'Filters, heaters, lighting ranked' },
             { title: 'Water Chemistry', href: '/water-parameters', desc: 'pH, ammonia, nitrate explained' },
             { title: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained', desc: 'Why cycling is essential' },
           ].map(link => (
