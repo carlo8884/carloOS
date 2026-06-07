@@ -37,7 +37,9 @@ import {
   buildMedicalWebPageSchema,
   combineSchemas,
   SchemaScript,
+  StockImage,
   EmailCapture,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   Diseases,
@@ -49,6 +51,48 @@ import {
 // All slugs are known at build time — force static.
 export const dynamic = 'force-static'
 export const dynamicParams = false
+
+/**
+ * Category → owner next-step money path (QC §1.5 trust split).
+ *
+ * For categories where a genuinely useful NON-CLINICAL management product
+ * exists (joint supplements, VOHC dental chews, sensitive-stomach diet), we
+ * surface the relevant Dog.com comparison guide as a secondary CTA. These are
+ * supportive-care gear, never a substitute for treatment, and the copy never
+ * makes a treatment claim. AffiliateDisclosure renders directly above the CTA.
+ *
+ * Every condition ALSO gets the vet-finder and pet-insurance (cost-planning)
+ * paths regardless of category — those are the safe primary actions for
+ * clinical content and are rendered for all conditions. Categories not listed
+ * here (Oncology, Cardiac, Renal, Endocrine, Neurological, Infectious,
+ * Respiratory, Reproductive, Genetic, Behavioral, Ocular, Skin) deliberately
+ * get NO product-hawking block — vet-finder + insurance only.
+ */
+const CATEGORY_GEAR: Partial<
+  Record<
+    Disease['category'],
+    { href: string; label: string; blurb: string }
+  >
+> = {
+  Orthopedic: {
+    href: '/reviews/best-joint-supplements',
+    label: 'Compare joint supplements',
+    blurb:
+      'For dogs managing joint or mobility conditions, glucosamine/chondroitin and omega-3 supplements are a common adjunct. We compare evidence and per-day cost — discuss any supplement with your vet first.',
+  },
+  Dental: {
+    href: '/reviews/best-dental-chews',
+    label: 'Compare VOHC dental chews',
+    blurb:
+      'Daily home dental care slows plaque between cleanings. We compare VOHC-accepted chews on efficacy and per-day cost — not a substitute for a veterinary dental exam.',
+  },
+  GI: {
+    href: '/reviews/best-dog-food-sensitive-stomach',
+    label: 'Compare sensitive-stomach diets',
+    blurb:
+      'For dogs prone to digestive upset, a consistent, easily-digested diet can reduce flare-ups. We compare sensitive-stomach formulas — confirm any diet change with your vet.',
+  },
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -205,6 +249,10 @@ function humanizePath(href: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
+// Strip StockImage's outer margins so a hero/tile photo fills its wrapper
+// edge-to-edge (StockImage renders my-8 on the figure + pending-sync div).
+const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
+
 export default async function DiseaseTemplatePage({ params }: PageProps) {
   const { slug } = await params
   const disease = getDiseaseBySlug(slug)
@@ -238,6 +286,10 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
   const tldr = buildTldr(disease)
   const erTriggerSummary = disease.whenToER[0]
 
+  // Owner next-step (money path). Non-clinical management gear only for the
+  // categories in CATEGORY_GEAR; everything else gets vet-finder + insurance.
+  const gear = CATEGORY_GEAR[disease.category]
+
   return (
     <>
       <SchemaScript schema={combined} />
@@ -253,31 +305,56 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
         <span className="text-brand-text-mid font-medium">{disease.name}</span>
       </nav>
 
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
-        <div className="flex flex-wrap gap-2 mb-4">
-          <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">
-            {disease.category}
-          </span>
-          <span className={`text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill border ${urgencyClass(disease.urgency)}`}>
-            {disease.urgency}
-          </span>
-          <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/70">
-            {disease.prevalence}
-          </span>
+      {/* Hero — image-backed masthead. A real, on-brand clinical-context photo
+          (dog-com:category-health) fills the band with a bottom-up scrim so the
+          badges, H1, and intro stay legible over the photo. fallbackKey points
+          at the populated site hero so the slot always renders a real photo even
+          if the category key is ever unsynced. subtleCredit keeps Unsplash/Pexels
+          attribution present + clickable (QC §1). */}
+      <section className="relative bg-brand-dark overflow-hidden">
+        <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}>
+          <StockImage
+            manifestKey="dog-com:category-health"
+            fallbackKey="dog-com:hero"
+            alt="A dog at a veterinary health check"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
         </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-none mb-3"
-          style={{ fontSize: 'clamp(34px, 5vw, 56px)' }}
-        >
-          {disease.name} in Dogs
-        </h1>
-        <p className="text-base font-light text-white/65 leading-relaxed max-w-3xl">
-          Symptoms, diagnostic approach, treatment tiers, and prognosis — sourced from
-          ACVIM consensus statements, AAHA guidelines, OFA prevalence data, and the
-          peer-reviewed veterinary literature.
-        </p>
-      </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-brand-dark/45"
+        />
+        <div className="relative z-10 px-container-sm sm:px-container pt-16 pb-12">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/20 text-brand-primary backdrop-blur-sm">
+              {disease.category}
+            </span>
+            <span className={`text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill border ${urgencyClass(disease.urgency)}`}>
+              {disease.urgency}
+            </span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/80 backdrop-blur-sm">
+              {disease.prevalence}
+            </span>
+          </div>
+          <h1
+            className="font-display font-black text-white tracking-tighter leading-none mb-3 max-w-3xl"
+            style={{ fontSize: 'clamp(34px, 5vw, 56px)', textShadow: '0 2px 18px rgba(0,0,0,0.5)' }}
+          >
+            {disease.name} in Dogs
+          </h1>
+          <p
+            className="text-base font-light text-white/80 leading-relaxed max-w-3xl"
+            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
+          >
+            Symptoms, diagnostic approach, treatment tiers, and prognosis — sourced from
+            ACVIM consensus statements, AAHA guidelines, OFA prevalence data, and the
+            peer-reviewed veterinary literature.
+          </p>
+        </div>
+      </section>
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
@@ -486,6 +563,52 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
                 Find a vet on Vets.co →
               </a>
             </div>
+
+            {/* Plan for the cost — pet-insurance comparison. Rendered for EVERY
+                condition: a financial-readiness path that's safe for clinical
+                content (no treatment claim). AffiliateDisclosure sits directly
+                above the affiliate-bearing comparison link (16 CFR §255). */}
+            <div className="bg-brand-white border border-brand-border rounded-xl p-5">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+                Plan for the Cost
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
+                Diagnostics and ongoing treatment for {disease.name.toLowerCase()} add up.
+                Pet insurance is cheapest while a dog is young and healthy — pre-existing
+                conditions are universally excluded.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+              <Link
+                href="/reviews/best-pet-insurance"
+                className="inline-block bg-brand-dark text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
+              >
+                Compare pet insurance →
+              </Link>
+            </div>
+
+            {/* Non-clinical management gear — ONLY for categories with a
+                genuinely useful supportive-care product (Orthopedic / Dental /
+                GI). Clinical/emergency categories never render this block (QC
+                §1.5 — route clinical content to a vet, not a product). The blurb
+                makes no treatment claim and AffiliateDisclosure renders above the
+                affiliate-bearing comparison link. */}
+            {gear && (
+              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
+                  Supportive Care
+                </div>
+                <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
+                  {gear.blurb}
+                </p>
+                <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+                <Link
+                  href={gear.href}
+                  className="inline-block bg-brand-primary text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+                >
+                  {gear.label} →
+                </Link>
+              </div>
+            )}
 
             <EmailCapture
               variant="sidebar"

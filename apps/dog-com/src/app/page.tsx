@@ -395,6 +395,7 @@ export default function HomePage() {
                 <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}>
                   <StockImage
                     manifestKey={path.manifestKey}
+                    fallbackKey="dog-com:hero"
                     alt={path.imageAlt}
                     aspect="3:4"
                     variant="inline"
