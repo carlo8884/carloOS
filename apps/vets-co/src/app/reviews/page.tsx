@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Product Reviews — Honest Comparisons | Vets.co', description: 'Pet product reviews from a veterinarian\'s perspective. Pet insurance, telehealth services ranked using public payout data and insurer disclosures.', path: '/reviews' })
 
@@ -36,13 +37,20 @@ export default function VetsReviewsPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
-        <h1 className="font-display font-bold text-white tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 4vw, 44px)' }}>Pet Product Reviews — Honest Comparisons</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Ranked from a veterinarian&apos;s perspective — what actually matters when your pet needs care.</p>
-      </div>
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="vets-co:category-reviews" aspect="16:9" variant="wide" priority />
-      </div>
+      <HubMasthead
+        eyebrow="Honest Comparisons"
+        title="Pet Product Reviews"
+        intro="Ranked from a clinical perspective on what actually matters when your pet needs care — published payout and complaint data, policy disclosures, and the credentials behind the advice. No paid placements."
+        manifestKey="vets-co:category-reviews"
+        fallbackKey="vets-co:insurance-hero"
+        imageAlt="A desk with documents and a calculator used to compare options"
+        primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare pet insurance' }}
+        secondaryCta={{ href: '/telehealth', label: 'Compare telehealth' }}
+      />
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
+        <span className="text-brand-text-mid">Reviews</span>
+      </nav>
       <div className="px-container-sm sm:px-container pt-12 pb-2">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>

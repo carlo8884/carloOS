@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Health Library — Sourced Guides | Vets.co', description: 'Complete pet health guides drawing on AVMA, ACVIM, and AAHA guidance. Emergency signs, breed health, preventive care, and specialist guidance.', path: '/health' })
 
@@ -82,13 +83,18 @@ export default function VetsHealthHubPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Health Library</span></div>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Pet Health Library</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Emergency guides, breed health, specialist directories, and insurance comparisons — all drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
-      </div>
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="vets-co:health-hero" priority aspect="16:9" variant="wide" />
+      <HubMasthead
+        eyebrow="Pet Health Library"
+        title="Pet Health Library"
+        intro="Condition references, emergency guides, breed health, and preventive-care schedules — every claim sourced to a primary paper. Read the guidelines, then find the care your pet needs."
+        manifestKey="vets-co:health-hero"
+        fallbackKey="vets-co:hero"
+        imageAlt="Reference books arranged on a library shelf"
+        primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
+        secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
+      />
+      <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
+        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
       </div>
       <div className="px-container-sm sm:px-container py-14">
         {GUIDES.map(section => (
