@@ -12,14 +12,17 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildFAQSchema,
   combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
   CalloutBox,
+  FAQAccordion,
   EmailCapture,
-  ArticleByline
+  ArticleByline,
 } from '@carloOS/ui'
+import type { FAQItem } from '@carloOS/ui'
 import { ConditionDiets } from '../../data/condition-diets'
 
 export const metadata: Metadata = buildMetadata({
@@ -63,7 +66,32 @@ const itemListSchema = {
   })),
 }
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, itemListSchema)
+const conditionsFAQItems: FAQItem[] = [
+  {
+    question: "Do I need a prescription to buy a therapeutic pet diet?",
+    answer: "Most veterinary therapeutic diets in the United States require a veterinary authorization — either a prescription or a written veterinarian-client-patient relationship (VCPR) confirmation — to purchase from an online retailer or pet pharmacy. Some formulations are sold over the counter at veterinary clinics without a written prescription, at the discretion of the dispensing veterinarian. The prescription requirement exists because these diets are formulated to intentionally deviate from standard AAFCO nutrient profiles, and administering them to a pet without the indicated condition (for example, feeding a phosphorus-restricted renal diet to a healthy young dog long-term) can cause nutritional imbalances. The Rx-versus-OTC distinction is covered on each individual condition page in this cluster.",
+    answerText: "Most veterinary therapeutic diets in the United States require a veterinary authorization — either a prescription or a written veterinarian-client-patient relationship (VCPR) confirmation — to purchase from an online retailer or pet pharmacy. Some formulations are sold over the counter at veterinary clinics without a written prescription, at the discretion of the dispensing veterinarian. The prescription requirement exists because these diets are formulated to intentionally deviate from standard AAFCO nutrient profiles, and administering them to a pet without the indicated condition (for example, feeding a phosphorus-restricted renal diet to a healthy young dog long-term) can cause nutritional imbalances. The Rx-versus-OTC distinction is covered on each individual condition page in this cluster.",
+  },
+  {
+    question: "Can I switch my pet back to a regular diet once symptoms improve on a therapeutic diet?",
+    answer: "This depends entirely on the condition. Some conditions, such as struvite urolithiasis, may allow a return to a maintenance diet once the stones have dissolved, with the therapeutic diet used as a short-term intervention under veterinary direction. Other conditions, such as chronic kidney disease (CKD), generally require the therapeutic diet to be maintained long-term because the phosphorus restriction and protein moderation are managing an ongoing pathological process, not resolving a reversible one. Discontinuing a renal diet in a CKD patient prematurely can accelerate disease progression. The decision to transition off a therapeutic diet should always be made with the treating veterinarian, not based on visible symptom resolution alone.",
+    answerText: "This depends entirely on the condition. Some conditions, such as struvite urolithiasis, may allow a return to a maintenance diet once the stones have dissolved, with the therapeutic diet used as a short-term intervention under veterinary direction. Other conditions, such as chronic kidney disease (CKD), generally require the therapeutic diet to be maintained long-term because the phosphorus restriction and protein moderation are managing an ongoing pathological process, not resolving a reversible one. Discontinuing a renal diet in a CKD patient prematurely can accelerate disease progression. The decision to transition off a therapeutic diet should always be made with the treating veterinarian, not based on visible symptom resolution alone.",
+  },
+  {
+    question: "What is the difference between Hill's Prescription Diet and Royal Canin Veterinary Diet?",
+    answer: "Both Hill's Prescription Diet (Colgate-Palmolive) and Royal Canin Veterinary Diet (Mars Petcare) are the two dominant veterinary-channel therapeutic diet lines in the United States. Both require veterinary authorization for purchase and both have extensive clinical-use histories in the published veterinary literature. Key differences: Hill's has historically emphasized feeding-trial substantiation for its therapeutic lines and publishes clinical outcome data for specific conditions; Royal Canin tends to emphasize precise nutrient profiles and has strong presence in breed-specific and early-life formulations. For many conditions (CKD, urinary, GI, weight management) both manufacturers offer viable therapeutic options, and veterinarians select based on the individual patient, palatability, cost, and the specific product line they have clinical experience with. The brands page in this cluster covers their corporate context and evaluation criteria in more detail.",
+    answerText: "Both Hill's Prescription Diet (Colgate-Palmolive) and Royal Canin Veterinary Diet (Mars Petcare) are the two dominant veterinary-channel therapeutic diet lines in the United States. Both require veterinary authorization for purchase and both have extensive clinical-use histories in the published veterinary literature. Key differences: Hill's has historically emphasized feeding-trial substantiation for its therapeutic lines and publishes clinical outcome data for specific conditions; Royal Canin tends to emphasize precise nutrient profiles and has strong presence in breed-specific and early-life formulations. For many conditions (CKD, urinary, GI, weight management) both manufacturers offer viable therapeutic options, and veterinarians select based on the individual patient, palatability, cost, and the specific product line they have clinical experience with. The brands page in this cluster covers their corporate context and evaluation criteria in more detail.",
+  },
+]
+
+const faqSchema = buildFAQSchema({
+  questions: conditionsFAQItems.map((f) => ({
+    question: f.question,
+    answer: f.answerText ?? (typeof f.answer === 'string' ? f.answer : ''),
+  })),
+})
+
+const combined = combineSchemas(articleSchema, breadcrumbSchema, itemListSchema, faqSchema)
 
 // ─── Severity icon helper ───────────────────────────────────────────────────
 // Inline SVGs — no emoji, matches the rest of the petfood-com style.
@@ -169,6 +197,7 @@ export default function ConditionsHubPage() {
               { label: 'About Therapeutic Diets', href: '#about' },
               { label: 'Six Conditions', href: '#conditions' },
               { label: 'Cornerstones', href: '#cornerstones' },
+              { label: 'FAQ', href: '#faq' },
             ]}
           />
           <RelatedLinks
@@ -310,6 +339,9 @@ export default function ConditionsHubPage() {
             rubric.
           </li>
         </ul>
+
+        <h2 id="faq">FAQ</h2>
+        <FAQAccordion items={conditionsFAQItems} includeSchema={false} />
 
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
           PetFood.com is reference material. We do not provide individualised veterinary advice.
