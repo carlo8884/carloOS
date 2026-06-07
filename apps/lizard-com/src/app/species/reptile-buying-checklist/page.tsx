@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Reptile Buying Checklist — Before You Buy | Lizard.com", description: "A pre-purchase reptile checklist: research the species, set up before buying, choose captive-bred, check health signs, and plan quarantine.", path: "/species/reptile-buying-checklist", type: 'article' })
@@ -35,6 +35,7 @@ export default function SpeciesReptileBuyingChecklistPage() {
       </>}
     >
       <div className="carloOS-article">
+        <StockImage manifestKey="lizard-com:category-species" fallbackKey="lizard-com:hero" aspect="16:9" variant="inline" caption="Work through the checklist before bringing any reptile home." priority />
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
           <p>{"Buying a reptile responsibly is mostly about what you do before money changes hands. The animal may live for one to several decades, will grow to an adult size you must be ready for, and needs a working enclosure waiting for it, not one assembled in a panic that evening. The most common mistakes, choosing a species you have not researched, buying before the setup is ready, picking a sick or wild-caught animal, and having no veterinary or quarantine plan, are all avoidable with a checklist. Here is the one to run through every time."}</p>
           <h2>{"1. Research the Species Thoroughly"}</h2>
@@ -65,6 +66,17 @@ export default function SpeciesReptileBuyingChecklistPage() {
           </ul>
           <h2>{"6. Be Honest About the Commitment"}</h2>
           <p>{"Finally, confirm you can meet the species’ needs for its full lifespan, including its adult size, decades-long lifespan for many species, ongoing costs, and the space and time required. Many reptiles are surrendered or neglected because an impulse purchase outgrew the keeper’s expectations. If, after working through this checklist, you are confident and prepared, you are far more likely to give the animal a long, healthy life and to enjoy keeping it."}</p>
+
+          <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+            <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Set Up Before the Animal Comes Home</div>
+            <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Step 2 of the checklist is to have the enclosure running and stable before you buy. Browse enclosures, heating, lighting, and substrate to get the build dialed in early. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the guidance above.</p>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a href="/go/amazon-brand/reptile%20terrarium%20setup%20kit?s=species-reptile-buying-checklist" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Enclosure Setups on Amazon →</a>
+              <a href="/go/chewy-brand/reptile%20habitat?s=species-reptile-buying-checklist" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+              <a href="/setup" style={{ display: 'inline-block', padding: '9px 16px', border: '1px solid var(--brand-border-strong, #3a4358)', color: 'var(--brand-white)', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>The setup hub →</a>
+            </div>
+          </div>
+
           <h2>{"Sources & Further Reading"}</h2>
           <ul>
             <li>{"Mader, D. R. Reptile Medicine and Surgery (Elsevier), husbandry and quarantine chapters."}</li>

@@ -238,6 +238,16 @@ export default function UvbDistanceCalculatorPage() {
         <p className="mt-8 text-sm">
           For the full deep-dive on bulb selection, mounting, and replacement schedule, see the <Link href="/setup/uvb-lighting-guide">UVB Lighting Guide</Link>.
         </p>
+
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Shop UVB Lamps &amp; Fixtures</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Once you know the right mounting distance, pair it with a T5 HO bulb and reflector fixture rated for your species&apos; Ferguson zone. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the distances calculated above.</p>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="/go/amazon-brand/reptile%20T5%20HO%20UVB%20bulb%20fixture?s=tool-uvb-calculator" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop UVB Lighting on Amazon →</a>
+            <a href="/go/chewy-brand/reptile%20UVB%20bulb?s=tool-uvb-calculator" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #7bc25c)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
+            <Link href="/reviews/best-uvb-bulbs" style={{ display: 'inline-block', padding: '9px 16px', border: '1px solid var(--brand-border-strong, #3a4358)', color: 'var(--brand-white)', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Our UVB bulb reviews →</Link>
+          </div>
+        </div>
       </div>
     </ArticleLayout>
   )
