@@ -9,10 +9,10 @@ const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light',
 const schema = combineSchemas(articleSchema, hyggerSchema)
 
 const PICKS = [
-  { label: 'Best Planted (Budget)', emoji: '🌿', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · Under $60', href: '#hygger' },
-  { label: 'Best Planted (Premium)', emoji: '🏆', name: 'Fluval Plant 3.0', subtitle: 'App-controlled · Best spectrum quality', href: '#fluval' },
-  { label: 'Best Reef', emoji: '🪸', name: 'Kessil A360X', subtitle: 'Shimmer effect · Proven coral growth', href: '#kessil' },
-  { label: 'Best FOWLR', emoji: '🐠', name: 'Nicrew Classic LED+', subtitle: 'Fish-only · Budget · Reliable', href: '#nicrew' },
+  { label: 'Best Planted (Budget)', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · Under $60', href: '#hygger' },
+  { label: 'Best Planted (Premium)', name: 'Fluval Plant 3.0', subtitle: 'App-controlled · Best spectrum quality', href: '#fluval' },
+  { label: 'Best Reef', name: 'Kessil A360X', subtitle: 'Shimmer effect · Proven coral growth', href: '#kessil' },
+  { label: 'Best FOWLR', name: 'Nicrew Classic LED+', subtitle: 'Fish-only · Budget · Reliable', href: '#nicrew' },
 ]
 
 export default function BestAquariumLightingPage() {
@@ -20,7 +20,7 @@ export default function BestAquariumLightingPage() {
     <>
       <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Lights 2025', url: 'https://fish.com/reviews/best-aquarium-lighting' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">⚡ Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
