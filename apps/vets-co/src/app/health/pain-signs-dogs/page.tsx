@@ -3,8 +3,8 @@ import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carlo
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
-const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2025-05-01' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 const SIGNS = [
   { sign: 'Changes in posture', detail: 'A hunched back, tucked abdomen, or a stance with weight shifted away from one limb indicates pain. Dogs with abdominal pain adopt a "praying position" (front down, rear elevated). Hunched posture in a dog that normally stands upright is significant.' },

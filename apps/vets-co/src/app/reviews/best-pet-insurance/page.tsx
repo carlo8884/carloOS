@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — How the 11 Major Carriers Compare | Vets.co',
+  title: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co',
   description: 'Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.',
   path: '/reviews/best-pet-insurance',
   type: 'article',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2025 — How the 11 Major Carriers Compare',
+  title: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare',
   description: 'Pet insurance ranked using public payout data, contract terms, and what actually matters for owners.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',
@@ -87,11 +87,11 @@ export default function VetsPetInsurancePage() {
       <SchemaScript schema={pageSchema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
-          Owner Reference · May 2025
+          Owner Reference · Updated Jun 2026
         </span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
-          Best Pet Insurance 2025 — How the 11 Major Carriers Compare
+          Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Across the 11 major pet insurance carriers, Trupanion is the only one
@@ -102,7 +102,7 @@ export default function VetsPetInsurancePage() {
           routine wellness coverage matters. Enroll before any vet visit — every
           insurer permanently excludes conditions documented before the policy starts.
         </p>
-        <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated May 2025 · Affiliate disclosure applies</div>
+        <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated Jun 2026 · Affiliate disclosure applies</div>
       </div>
 
       <QuickPicks items={PICKS} />
@@ -118,7 +118,7 @@ export default function VetsPetInsurancePage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
-            <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
             <AffiliateDisclosure variant="inline" siteId="vets-co" />
 

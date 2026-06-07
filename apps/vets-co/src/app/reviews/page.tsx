@@ -13,8 +13,8 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2025 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
-  { title: 'Best Pet Telehealth 2025', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: '📱 Convenient Care' },
+  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
+  { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: '📱 Convenient Care' },
 ]
 
 const itemListSchema = {
