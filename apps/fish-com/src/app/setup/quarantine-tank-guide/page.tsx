@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', description: 'Step-by-step quarantine tank setup for new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', totalTime: 'P1D', steps: [
@@ -12,6 +12,35 @@ const howTo = buildHowToSchema({ name: 'How to Set Up a Quarantine Tank', descri
   { name: 'Consider prophylactic treatment', text: 'Many experienced fishkeepers treat all new fish prophylactically for external parasites (praziquantel for flukes) and internal parasites (metronidazole + fenbendazole) during quarantine. This is particularly important for wild-caught fish. Discuss with your fish veterinarian or knowledgeable aquarium professional.' },
 ]})
 const combined = combineSchemas(schema, howTo)
+
+const SOURCES = [
+  {
+    label: "Ichthyophthirius multifiliis (Ich): Biology, Pathology, and Control",
+    url: "https://edis.ifas.ufl.edu/publication/FA026",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Fish Disease Diagnosis and Treatment — Quarantine Procedures",
+    url: "https://srac.tamu.edu/serveFactSheet/473",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "AVMA Guidelines for the Humane Slaughter of Animals — Aquatic Species",
+    url: "https://www.avma.org/sites/default/files/2020-01/2020-Euthanasia-Final-1-17-20.pdf",
+    publisher: "American Veterinary Medical Association (AVMA)",
+  },
+  {
+    label: "Praziquantel for Monogenean Fluke Infections in Ornamental Fish",
+    url: "https://www.sciencedirect.com/science/article/pii/S0044848617303769",
+    publisher: "Aquaculture (peer-reviewed)",
+  },
+  {
+    label: "Biosecurity Practices for Aquarium Fish: Quarantine and Disease Prevention",
+    url: "https://edis.ifas.ufl.edu/publication/FA032",
+    publisher: "University of Florida IFAS Extension",
+  },
+]
+
 export default function QuarantineGuidePage() {
   return (
     <>
@@ -67,6 +96,7 @@ export default function QuarantineGuidePage() {
             <a href="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>
