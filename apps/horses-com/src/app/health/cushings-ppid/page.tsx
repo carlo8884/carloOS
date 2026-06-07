@@ -105,6 +105,7 @@ export default function PPIDPage() {
               { label: "Equine Metabolic Syndrome", href: "/health/equine-metabolic-syndrome" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
+              { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />

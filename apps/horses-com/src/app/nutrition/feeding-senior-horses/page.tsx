@@ -90,9 +90,9 @@ export default function SeniorFeedingPage() {
             title="Related Reading"
             links={[
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
+              { label: "Joint Supplements", href: "/supplements/joint-supplements" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
-              { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
-              { label: "Feeding the Hard Keeper", href: "/nutrition/feeding-the-hard-keeper" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
