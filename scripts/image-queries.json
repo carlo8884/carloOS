@@ -1794,5 +1794,101 @@
     "provider": "either",
     "alt": "A Zebra Danio in an aquarium",
     "orientation": "landscape"
+  },
+  "petfood-com:brand-blue-buffalo": {
+    "query": "premium dog food kibble bowl close up",
+    "provider": "either",
+    "alt": "A bowl of premium dry kibble photographed in natural light",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-hills-vs-royal-canin": {
+    "query": "two bowls dry pet food comparison",
+    "provider": "either",
+    "alt": "Two bowls of dry pet food side by side for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-orijen-vs-acana": {
+    "query": "high protein kibble bowl raw ingredients",
+    "provider": "either",
+    "alt": "A bowl of high-protein kibble beside raw ingredient sources",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-kirkland-signature": {
+    "query": "value dog food kibble scoop bag",
+    "provider": "either",
+    "alt": "Dry kibble with a scoop beside an unbranded food bag",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-purina-pro-plan": {
+    "query": "dry pet food bowl measuring cup",
+    "provider": "either",
+    "alt": "A bowl of dry pet food beside a measuring cup",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-taste-of-the-wild": {
+    "query": "grain free kibble bowl roasted meat",
+    "provider": "either",
+    "alt": "A bowl of kibble alongside roasted-meat ingredient sources",
+    "orientation": "landscape"
+  },
+  "petfood-com:brand-wellness-vs-merrick": {
+    "query": "natural pet food bowls comparison",
+    "provider": "either",
+    "alt": "Two bowls of natural pet food arranged for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-breed-specific-diets": {
+    "query": "different kibble shapes sizes bowls",
+    "provider": "either",
+    "alt": "Bowls of differently shaped kibble illustrating breed-specific formulas",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-freeze-dried-and-dehydrated": {
+    "query": "freeze dried pet food raw meat pieces",
+    "provider": "either",
+    "alt": "Pieces of freeze-dried and dehydrated pet food on a neutral surface",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-fresh-vs-kibble": {
+    "query": "fresh meat vegetables beside dry kibble",
+    "provider": "either",
+    "alt": "Fresh meat and vegetables beside a bowl of dry kibble",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-grain-free-vs-grain-inclusive": {
+    "query": "grains legumes beside kibble bowl",
+    "provider": "either",
+    "alt": "Grains and legumes beside a bowl of kibble for comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-home-cooked-vs-commercial": {
+    "query": "home cooked pet meal beside kibble bowl",
+    "provider": "either",
+    "alt": "A home-cooked pet meal beside a bowl of commercial kibble",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-kibble-vs-canned-for-cats": {
+    "query": "dry kibble beside wet canned cat food",
+    "provider": "either",
+    "alt": "Dry kibble beside wet canned food in cat bowls",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-prescription-vs-otc-diets": {
+    "query": "veterinary diet pet food bowls clinical",
+    "provider": "either",
+    "alt": "Bowls of pet food in clinical light illustrating diet comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-raw-vs-cooked-diets": {
+    "query": "raw meat beside cooked meat pet food",
+    "provider": "either",
+    "alt": "Raw meat beside cooked meat illustrating a raw-versus-cooked comparison",
+    "orientation": "landscape"
+  },
+  "petfood-com:compare-wet-vs-dry-food": {
+    "query": "wet canned food beside dry kibble bowls",
+    "provider": "either",
+    "alt": "Wet canned food beside dry kibble in two bowls for comparison",
+    "orientation": "landscape"
   }
 }
