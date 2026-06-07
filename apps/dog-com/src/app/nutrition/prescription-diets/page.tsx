@@ -22,7 +22,7 @@ export default function PrescriptionDietsPage() {
       contentType="nutrition"
       hero={{ title: 'Prescription Dog Food Explained', subtitle: 'Prescription diets are not premium marketing — they are clinically formulated foods for specific medical conditions, with meaningful research behind them. Here\'s when each type matters.', category: 'Nutrition Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Prescription Diets', href: '/nutrition/prescription-diets' }]}
-      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Dog Supplements', href: '/nutrition/dog-supplements', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Dog Supplements', href: '/nutrition/dog-supplements', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Kidney Disease in Dogs', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Diabetes in Dogs', href: '/health/dog-diabetes', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={DIETS.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s\/&,()]/g, '-').replace(/-+/g, '-')}` }))} />

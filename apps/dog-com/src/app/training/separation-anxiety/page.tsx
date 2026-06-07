@@ -57,7 +57,7 @@ export default function SeparationAnxietyPage() {
         { name: 'Training', href: '/training' },
         { name: 'Separation Anxiety', href: '/training/separation-anxiety' },
       ]}
-      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Excessive Barking', href: '/training/excessive-barking', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Anxiety (Health)', href: '/health/dog-anxiety', category: 'Dog Health' }, { title: 'Excessive Barking', href: '/training/excessive-barking', category: 'Training' }, { title: 'Crate Training', href: '/training/crate-training', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[

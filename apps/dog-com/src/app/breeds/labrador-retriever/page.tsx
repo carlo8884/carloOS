@@ -9,7 +9,7 @@ export default function LabradorPage() {
     <ArticleLayout siteId="dog-com"
       hero={{ title: 'Labrador Retriever Breed Guide', subtitle: 'The most popular dog breed in the US for over 30 consecutive years. Labradors are working retrievers — bred for stamina, trainability, and a soft mouth. Their food motivation (which has a genetic basis) makes them among the most trainable dogs in existence, and among the most prone to obesity.', category: 'Breed Guide', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Breeds', href: '/breeds' }, { name: 'Labrador Retriever', href: '/breeds/labrador-retriever' }]}
-      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Golden Retriever Guide', href: '/breeds/golden-retriever', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'Best Dog Food Reviews', href: '/reviews', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Breeds Hub', href: '/breeds', category: 'Hub' }, { title: 'Compare Breeds', href: '/compare', category: 'Breed Guide' }, { title: 'Golden Retriever Guide', href: '/breeds/golden-retriever', category: 'Breed Guide' }, { title: 'German Shepherd Guide', href: '/breeds/german-shepherd', category: 'Breed Guide' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'Best Dog Food Reviews', href: '/reviews', category: 'Reviews' }]}
       schema={schema}
       contentType="breed"
       sidebar={<>
