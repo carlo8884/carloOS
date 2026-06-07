@@ -197,6 +197,11 @@ export default function CO2CalculatorPage() {
         <p>
           For full planted-tank setup including substrate, lighting, and dosing schedule, see our{' '}
           <Link href="/setup/planted-tank-setup">planted tank setup guide</Link>.
+          Accurate readings depend on a quality liquid test kit — our{' '}
+          <Link href="/reviews/best-water-test-kits">water test kit reviews</Link> cover the options for KH and pH.
+          If your CO2 numbers are in range but plants still struggle, the bottleneck is usually light or nutrients — see our{' '}
+          <Link href="/reviews/best-aquarium-lighting">aquarium lighting reviews</Link> and{' '}
+          <Link href="/reviews/best-planted-tank-fertilizers">planted-tank fertilizer reviews</Link>.
         </p>
 
         <h2 id="faq">FAQ</h2>
