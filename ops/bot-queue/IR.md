@@ -1,7 +1,7 @@
 # IR Bot (Codex) — Wakeup Queue
 
 **Owner:** IR Bot · **Lane:** READ-ONLY adversarial review. Reports findings IN CHAT (read-only env) → Carlo relays → CSRO files.
-**Last updated:** 2026-05-31 (by CSRO)
+**Last updated:** 2026-06-07 (by CSRO — reconciled against origin/main @ dd16e9a1, PR #567)
 
 ## RESTART PROMPT
 ```
@@ -11,7 +11,7 @@ Read-only adversarial review (IR-BOT.md §3a). Read current main: new high-risk 
 ## Queue
 | # | Item | Priority | Status | Next action |
 |---|---|---|---|---|
-| 0 | **🚀 FERRET 105-PAGE LAUNCH AUDIT** (NEW 2026-06-01) | 🔴 P0 pre-launch | queued | Ferret.com was built 34→105 pages overnight by parallel agents + is going LIVE. FIRE THIS FIRST. Adversarial pass on the new pages: (1) QC §1 — any fake credentials, "we tested", first-person hands-on, AI-animal claims? (2) §1.5.a — any consumer medication dose ranges (mg/kg) on health pages? (3) §1.5.b — any buy-box/CTA on clinical/medicated products (esp. diet/supplements after Monetization adds buy-boxes)? (4) any unescaped-apostrophe build-breakers CSRO's scan missed? (5) thin/duplicate/templated pages that read as filler (site-level quality risk)? (6) broken internal links / 404 hub cards? Report findings IN CHAT severity-tagged. This is the last check before a public launch — be thorough. |
+| 0 | **🚀 FERRET 109-PAGE LAUNCH AUDIT** (updated 2026-06-07; was "105-page" when queued 2026-06-01) | 🔴 P0 pre-launch | queued | Ferret.com is now 109 pages (verified `find apps/ferret-com/src/app -name page.tsx \| wc -l` = 109 on main @ dd16e9a1). The architecture, trust, affiliate routing, and tooling gates are CLEAN per COO launch-readiness QA (2026-06-07, `ops/handoffs/2026-06-07-launch-readiness-qa-fish-petfood-ferret.md`). **Current risk areas are imagery + claim hygiene — NOT architecture.** Adversarial pass should focus on: (1) Verify claim-hygiene fix in #567 is complete on Ferret health cluster — any surviving "we tested" / first-person hands-on / consumer dose ranges (mg/kg)? (2) Verify starter-kit funnel (`(funnels)/ferret-starter-kit`) has AffiliateDisclosure above first `/go` CTA — QA confirms yes, IR should independently verify. (3) 11 paw-glyph image placeholders on hero/article images (keys missing from `image-manifest.json`) — flag if any appear on trust-critical clinical pages (health-emergency, health-gi-blockage, health-vaccinations identified in QA). (4) Confirm no new thin/dup pages from the post-105 pages (4 new pages were added; QA found 0 thin prose on current main). (5) Verify `reviewCount: 1` Product-schema pattern is fixed (should be — PR #565 changed AggregateRating → Review for editorial scores; confirm Ferret is not affected since it has no review pages). Report findings IN CHAT severity-tagged. |
 | 1 | Re-verify PR #265/#266/#263 AFTER fix-backs | 🔴 HIGH | queued | Confirm the CSRO fix-backs actually landed: #266 chlorhexidine card gone, #265 horses-com in AMAZON_BRAND/CHEWY_BRAND, #263 Logo letterSpacing=0 + no placeholder attribution on wired pages. Report pass/fail per item. |
 | 2 | QC §1.5.b portfolio sweep | 🔴 HIGH | queued | Independently grep every buy-box/ReviewCard for medicated/clinical products (antiseptic/antimicrobial/rinse/medicated/Rx-adjacent). Flag any monetized clinical product CSRO/Mon missed. |
 | 3 | QC §1.5.a portfolio sweep | 🔴 HIGH | queued | Re-grep all health pages for surviving consumer dose ranges (mg/kg, PO q12h) beyond the exempt supplements/AAFCO. Flag stragglers. |
@@ -24,7 +24,8 @@ Read-only adversarial review (IR-BOT.md §3a). Read current main: new high-risk 
 | 10 | Metadata/SEO integrity spot-check | LOW | queued | Sample programmatic pages (vets funnels, petfoods brands) for duplicate titles/descriptions, thin content, canonical issues. |
 
 ## Status
-- **Done:** caught dir-015 affiliate bugs + 10-finding strategy pass + 2 bugs in #246 + the 2026-06-01 pass (Fish fake-testing, ferret rx-dosing, #265 untagged horses, #266 chlorhexidine, #263 Logo/attribution). Very high value — all confirmed.
+- **Done:** caught dir-015 affiliate bugs + 10-finding strategy pass + 2 bugs in #246 + the 2026-06-01 pass (Fish fake-testing, ferret rx-dosing, #265 untagged horses, #266 chlorhexidine, #263 Logo/attribution). Post-premium-rollout Tier-1 re-review (#497, #478). Very high value — all confirmed.
+- **Post-#567 context (2026-06-07):** COO has completed a full launch-readiness QA pass on all 5 polish sites (PRs #564, #566). Trust/claim hygiene fixes merged (#565, #567). Architecture, affiliate routing, disclosure, and tools gates are all GREEN. Primary remaining risks across the portfolio are: (a) 19 unsynced hero/article images (Visual lane), (b) Fish ~14 lite species pages + 1 metadata over-claim (COO lane), (c) unsourced stat sweep on Dog/Vets insurance reviews. IR's highest-value next action is the independent adversarial verification of the Ferret 109-page launch surface (item #0 above).
 - **Env:** read-only — reports in chat, cannot write/pull. Carlo relays to CSRO.
 - **Overnight rule:** work top-down; report EACH item's findings in chat severity-tagged as you go; if an item is clean say "clean, nothing to flag" and move on — never idle, never write stub files.
 - **Carlo needed?** Only to relay findings + on blocker/Tier-1.
