@@ -40,6 +40,7 @@ import {
   EmailCapture,
   RelatedLinks,
   StockImage,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   Breeds,
@@ -162,6 +163,156 @@ function buildRecommendedReviewsForBreed(
 }
 
 /**
+ * One breed-appropriate gear recommendation. `href` always routes a commercial
+ * click through an EXISTING /go/<vendor>/<sku> handler (amazon-brand / chewy-brand
+ * search SKUs — no invented vendors or ASINs) OR to an internal /reviews money
+ * page when no honest single product applies. The `s=` source param tags the
+ * click origin for Monetization-Bot attribution (mirrors /reviews/* CTA pattern).
+ *
+ * Editorial voice only — no star ratings, no review counts, no "we tested."
+ * Categories are derived from the breed's own structured data (size → food/crate
+ * sizing, grooming level → grooming tool, energy → activity gear) so each pick is
+ * genuinely breed-appropriate rather than generic filler.
+ */
+interface GearPick {
+  /** Short category label, e.g. "Food" */
+  category: string
+  /** Concrete, honest recommendation headline */
+  title: string
+  /** One-line editorial rationale tied to this breed */
+  rationale: string
+  /** Commercial /go route OR internal /reviews link */
+  href: string
+  /** CTA verb — "Shop" for /go, "Compare picks" for /reviews */
+  cta: string
+}
+
+function enc(q: string): string {
+  return encodeURIComponent(q)
+}
+
+function buildGearForBreed(breed: Breed): GearPick[] {
+  const src = `breed-${breed.slug}`
+  const picks: GearPick[] = []
+  const small = breed.sizeCategory === 'Toy' || breed.sizeCategory === 'Small'
+  const large = breed.sizeCategory === 'Large' || breed.sizeCategory === 'Giant'
+
+  // ── Food — sized to the breed. Internal /reviews money page (editorial
+  //    comparison) rather than a single fabricated product. ──
+  picks.push({
+    category: 'Food',
+    title: small
+      ? 'Small-breed formula'
+      : large
+        ? 'Large-breed formula'
+        : 'Complete dry food',
+    rationale: small
+      ? `Small-breed kibble is sized for smaller mouths and calorie-dense for faster metabolisms — a fit for the ${breed.name}.`
+      : large
+        ? `Large-breed formulas control growth rate and support joints — important for a ${breed.sizeCategory.toLowerCase()} breed like the ${breed.name}.`
+        : `A complete, life-stage-appropriate diet is the foundation of ${breed.name} health.`,
+    href: small
+      ? '/reviews/best-dog-food-small-breed'
+      : large
+        ? '/reviews/best-large-breed-dog-food'
+        : '/reviews/best-dry-dog-food',
+    cta: 'Compare picks',
+  })
+
+  // ── Crate — sized to the breed. Commercial /go (amazon search SKU). ──
+  picks.push({
+    category: 'Crate',
+    title: small
+      ? 'Right-sized wire crate'
+      : large
+        ? 'Heavy-duty / XL crate'
+        : 'Wire crate with divider',
+    rationale: `Pick a crate your ${breed.name} can stand, turn, and lie down in — no larger. ${
+      large
+        ? 'Larger breeds need a sturdier frame and a bigger footprint.'
+        : 'A divider panel lets a puppy crate grow with the dog.'
+    }`,
+    href: `/go/amazon-brand/${enc(
+      large ? 'extra large heavy duty dog crate' : `${breed.sizeCategory.toLowerCase()} dog crate divider`,
+    )}?s=${src}`,
+    cta: 'Shop crates',
+  })
+
+  // ── Bed — sized to the breed. Commercial /go. ──
+  picks.push({
+    category: 'Bed',
+    title: large ? 'Orthopedic bed (large)' : 'Cushioned bed',
+    rationale: large
+      ? `Orthopedic foam supports the joints of heavier breeds like the ${breed.name} and helps prevent pressure sores.`
+      : `A washable, right-sized bed gives the ${breed.name} a defined rest space.`,
+    href: `/go/chewy-brand/${enc(
+      large ? 'orthopedic large dog bed' : `${breed.sizeCategory.toLowerCase()} dog bed washable`,
+    )}?s=${src}`,
+    cta: 'Shop beds',
+  })
+
+  // ── Grooming — derived from grooming level. ──
+  if (breed.groomingLevel === 'High' || breed.groomingLevel === 'Moderate') {
+    picks.push({
+      category: 'Grooming',
+      title:
+        breed.groomingLevel === 'High'
+          ? 'Slicker brush + de-shedding tool'
+          : 'Slicker brush',
+      rationale:
+        breed.groomingLevel === 'High'
+          ? `${breed.name}s are ${breed.groomingLevel.toLowerCase()}-maintenance — regular brushing between professional grooms prevents matting.`
+          : `Weekly brushing keeps a ${breed.name}'s coat healthy and cuts loose hair around the home.`,
+      href: `/go/amazon-brand/${enc('slicker brush dog grooming')}?s=${src}`,
+      cta: 'Shop grooming',
+    })
+  } else {
+    // Low-grooming breeds still shed — a rubber curry / bath brush is honest.
+    picks.push({
+      category: 'Grooming',
+      title: 'Rubber curry brush',
+      rationale: `Even low-maintenance ${breed.name}s shed — a rubber curry brush lifts loose hair during a quick weekly once-over.`,
+      href: `/go/amazon-brand/${enc('rubber curry dog brush short coat')}?s=${src}`,
+      cta: 'Shop grooming',
+    })
+  }
+
+  // ── Activity / training — derived from energy. ──
+  if (breed.energyLevel === 'Very High' || breed.energyLevel === 'High') {
+    picks.push({
+      category: 'Activity',
+      title: 'Durable chew + puzzle toys',
+      rationale: `High-drive ${breed.name}s need a mental and physical outlet — tough chew and food-puzzle toys curb boredom-driven behavior.`,
+      href: `/go/chewy-brand/${enc('durable dog puzzle toy')}?s=${src}`,
+      cta: 'Shop toys',
+    })
+  } else {
+    picks.push({
+      category: 'Walking',
+      title: 'No-pull harness',
+      rationale: `A well-fitted ${breed.sizeCategory.toLowerCase()} harness makes daily walks more comfortable for the ${breed.name} than a collar alone.`,
+      href: '/reviews/best-dog-harnesses',
+      cta: 'Compare picks',
+    })
+  }
+
+  // ── Joint support — only when the breed's documented concerns warrant it.
+  //    Internal /reviews page (supplements, not prescription meds). ──
+  const concerns = breed.healthConcerns.join(' ').toLowerCase()
+  if (/hip|elbow|joint|arthritis|cruciate|patella|dysplasia/.test(concerns)) {
+    picks.push({
+      category: 'Joint support',
+      title: 'Joint supplements',
+      rationale: `The ${breed.name}'s documented joint risks make a vet-guided joint supplement worth discussing — compare options before buying.`,
+      href: '/reviews/best-joint-supplements',
+      cta: 'Compare picks',
+    })
+  }
+
+  return picks
+}
+
+/**
  * Cross-link a health condition to the closest existing /health/ guide.
  * Returns href if the breed's commonHealthCrossLinks contains a matching URL,
  * otherwise undefined.
@@ -245,6 +396,62 @@ function buildFAQs(breed: Breed): Array<{ question: string; answer: string }> {
   return faqs
 }
 
+/**
+ * Presentational "Recommended gear" block. Editorial voice only — no ratings,
+ * no review counts. The first instance on the page passes `withDisclosure` so
+ * the FTC AffiliateDisclosure sits ABOVE the first commercial CTA (QC §1).
+ * `/go` links open the click-tracker; /reviews links are internal money pages.
+ */
+function GearBlock({
+  breedName,
+  picks,
+  withDisclosure = false,
+  heading,
+}: {
+  breedName: string
+  picks: GearPick[]
+  withDisclosure?: boolean
+  heading: string
+}) {
+  if (picks.length === 0) return null
+  return (
+    <section className="not-prose my-10">
+      <h2 className="font-display font-black text-brand-dark tracking-tight text-2xl mb-1">
+        {heading}
+      </h2>
+      <p className="text-sm text-brand-text-light mb-4">
+        Breed-appropriate picks for the {breedName}, chosen from our editorial
+        reviews. Some links are affiliate links.
+      </p>
+      {withDisclosure && <AffiliateDisclosure variant="inline" siteId="dog-com" />}
+      <div className="grid sm:grid-cols-2 gap-4 mt-4">
+        {picks.map((p) => (
+          <div
+            key={p.category}
+            className="flex flex-col border border-brand-border rounded-xl p-5 bg-white"
+          >
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+              {p.category}
+            </span>
+            <span className="font-display font-bold text-brand-dark text-base mb-1.5">
+              {p.title}
+            </span>
+            <p className="text-sm text-brand-text-mid leading-relaxed flex-1 mb-4">
+              {p.rationale}
+            </p>
+            <Link
+              href={p.href}
+              className="inline-block self-start bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              {p.cta} →
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default async function BreedTemplatePage({ params }: PageProps) {
   const { slug } = await params
   const breed = getBreedBySlug(slug)
@@ -255,6 +462,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
   if (EXISTING_STATIC_BREED_SLUGS.has(breed.slug)) notFound()
 
   const faqs = buildFAQs(breed)
+  const gear = buildGearForBreed(breed)
 
   // Build reciprocal comparison links for this breed.
   const comparisonLinks = BREED_COMPARISON_PAIRS
@@ -332,6 +540,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
         <div className="absolute inset-0 [&>figure]:my-0 [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full">
           <StockImage
             manifestKey={`dog-com:breed-${breed.slug}`}
+            fallbackKey="dog-com:hero"
             alt={breed.name}
             aspect="16:9"
             variant="inline"
@@ -406,6 +615,15 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               </table>
             </div>
 
+            {/* Recommended gear — top placement (first commercial surface;
+                carries the FTC disclosure above its CTAs). */}
+            <GearBlock
+              breedName={breed.name}
+              picks={gear}
+              withDisclosure
+              heading={`Recommended Gear for the ${breed.name}`}
+            />
+
             {/* Origin + purpose */}
             <h2>Origin and Purpose</h2>
             <p>
@@ -415,6 +633,19 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               selected to do — and a {breed.name} that has no outlet for that drive is
               the most common source of behavioral problems reported by new owners.
             </p>
+
+            {/* Inline mid-article image. Falls back to the branded category
+                image until a per-breed photo is synced (Visual Bot). */}
+            <div className="not-prose my-8">
+              <StockImage
+                manifestKey={`dog-com:breed-${breed.slug}-2`}
+                fallbackKey="dog-com:category-breeds"
+                alt={`${breed.name} — temperament and training`}
+                aspect="16:9"
+                variant="inline"
+                caption={`The ${breed.name}'s temperament reflects its ${breed.group.toLowerCase()}-group working history.`}
+              />
+            </div>
 
             {/* Temperament + training */}
             <h2>Temperament and Training</h2>
@@ -545,6 +776,15 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 Find a vet on Vets.co →
               </a>
             </p>
+
+            {/* Recommended gear — bottom placement (reinforces commercial
+                surface after the reader has read the full profile). Disclosure
+                already shown above the first block earlier on the page. */}
+            <GearBlock
+              breedName={breed.name}
+              picks={gear}
+              heading={`Gear & Essentials for ${breed.name} Owners`}
+            />
 
             {/* FAQ */}
             <h2>Frequently Asked Questions</h2>
