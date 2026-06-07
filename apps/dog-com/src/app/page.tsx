@@ -57,7 +57,7 @@ import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live decision wizard embedded on the homepage so the flagship's first
 // screens are a product you use, not links to tools (premium gate 3).
-import { WhichPetWizard } from './which-pet/wizard-client'
+import { BreedMatchWizard } from './breeds/match/wizard-client'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'dog-com', name: 'Dog.com', url: 'https://dog.com' }),
@@ -488,7 +488,7 @@ export default function HomePage() {
           Answer a few questions about your home, time, and experience — get matched to breeds
           that fit, with the trade-offs spelled out. No email required.
         </p>
-        <WhichPetWizard />
+        <BreedMatchWizard />
       </section>
 
       {/* ── TOOLS & CALCULATORS ────────────────────────────────────────── */}
