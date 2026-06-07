@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Car
 export default function AmanoShrimpPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Amano Shrimp Care Guide', subtitle: 'Caridina multidentata — named for Takashi Amano who popularized their use in aquascaping — are the most effective algae-eating invertebrates available for freshwater aquariums. At 2 inches, they tackle algae that smaller cherry shrimp and otocinclus ignore, and they do it visibly and actively in the foreground of the tank.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Amano Shrimp Care Guide', subtitle: 'Caridina multidentata — named for Takashi Amano who popularized their use in aquascaping — are the most effective algae-eating invertebrates available for freshwater aquariums. At 2 inches, they tackle algae that smaller cherry shrimp and otocinclus ignore, and they do it visibly and actively in the foreground of the tank.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Amano Shrimp', href: '/species/amano-shrimp' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}

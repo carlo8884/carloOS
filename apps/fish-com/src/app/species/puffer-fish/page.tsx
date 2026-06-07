@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care
 export default function PufferFishPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Puffer Fish Care Guide', subtitle: 'Freshwater puffers are among the most intelligent, interactive, and personality-rich fish in the hobby. They are also among the most aggressive, the most difficult to keep with other fish, and the most demanding in terms of feeding requirements. Every puffer keeper will tell you the same thing: the work is worth it.', category: 'Species Guide — Experienced', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Puffer Fish', href: '/species/puffer-fish' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Dwarf Puffer", href: "/species/dwarf-puffer", category: "Species Guide" }, { title: "Saltwater Tank Setup", href: "/setup/saltwater-tank-setup", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}

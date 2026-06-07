@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pleco Care Guide
 export default function PlecoPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pleco Care Guide', subtitle: '"Pleco" encompasses hundreds of Loricariidae species ranging from 2-inch nano plecos to 24-inch commons. The fish stores sell mostly common plecos (Hypostomus plecostomus) as algae eaters for community tanks — but they grow to 24 inches and produce enormous waste. The bristlenose pleco (Ancistrus sp.) is what most community tanks actually need.', category: 'Species Guide', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Pleco Care Guide', subtitle: '"Pleco" encompasses hundreds of Loricariidae species ranging from 2-inch nano plecos to 24-inch commons. The fish stores sell mostly common plecos (Hypostomus plecostomus) as algae eaters for community tanks — but they grow to 24 inches and produce enormous waste. The bristlenose pleco (Ancistrus sp.) is what most community tanks actually need.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Pleco', href: '/species/pleco' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Bristlenose Pleco", href: "/species/bristlenose-pleco", category: "Species Guide" }, { title: "Otocinclus", href: "/species/otocinclus", category: "Species Guide" }, { title: "Aquarium Algae Control", href: "/setup/aquarium-algae-control", category: "Tank Setup" }]}
