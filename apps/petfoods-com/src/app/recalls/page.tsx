@@ -6,6 +6,7 @@ import {
   ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
   EmailCapture,
 } from '@carloOS/ui'
@@ -141,6 +142,11 @@ export default function RecallsHubPage() {
               { label: 'AAFCO Completeness Explained', href: 'https://petfood.com/guides/aafco-completeness-explained' },
               { label: 'Grain-Free and DCM — The FDA Record', href: 'https://petfood.com/ingredients/grain-free-dcm-risk' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="brand"
+            variant="sidebar"
           />
         </>
       }
