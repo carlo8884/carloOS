@@ -172,6 +172,32 @@ export default function DogCalorieCalculatorPage() {
         </div>
       </section>
 
+      {/* Related tools + reviews */}
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dog Age in Human Years Calculator', href: '/tools/dog-age-calculator', note: 'Convert calendar age to life-stage' },
+              { label: 'Best Dry Dog Food 2025', href: '/reviews/best-dry-dog-food', note: 'WSAVA-ranked foods by calorie density' },
+              { label: 'Best Dog Food for Senior Dogs', href: '/reviews/best-dog-food-senior', note: 'Lower-calorie senior formulas' },
+              { label: 'Best Dog Food for Small Breeds', href: '/reviews/best-dog-food-small-breed', note: 'High-calorie-density small breed foods' },
+              { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
+              { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
+            ].map(item => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Email capture */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl">

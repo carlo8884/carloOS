@@ -173,6 +173,32 @@ export default function DogAgeCalculatorPage() {
         </div>
       </section>
 
+      {/* Related tools + reviews */}
+      <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-10">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Estimate daily kcal needs by life stage' },
+              { label: 'Best Senior Dog Food 2025', href: '/reviews/best-dog-food-senior', note: 'Nutrition for dogs 7+ years' },
+              { label: 'Best Joint Supplements for Dogs', href: '/reviews/best-joint-supplements', note: 'Evidence-based options for senior joint health' },
+              { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance', note: 'Senior dogs cost more to insure — enroll early' },
+              { label: 'Breed Profiles — Lifespan by Breed', href: '/breeds', note: 'Typical lifespans for 50+ breeds' },
+              { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', note: 'When age-related symptoms need vet attention' },
+            ].map(item => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block bg-brand-surface border border-brand-border rounded-lg p-4 no-underline hover:border-brand-primary transition-colors duration-200"
+              >
+                <div className="text-sm font-bold text-brand-dark mb-0.5">{item.label}</div>
+                <div className="text-xs text-brand-text-light">{item.note}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Email capture */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl">

@@ -11,10 +11,10 @@ const intSchema = buildProductSchema({ name: 'Interceptor Plus', description: 'M
 const allSchemas = combineSchemas(schema, hgSchema, intSchema)
 
 const PICKS = [
-  { label: 'Best Standalone HW', emoji: '🏆', name: 'Heartgard Plus', subtitle: 'Ivermectin + pyrantel · Most prescribed', href: '#heartgard' },
-  { label: 'Broadest Coverage', emoji: '⭐', name: 'Interceptor Plus', subtitle: 'Adds whipworm + tapeworm to spectrum', href: '#interceptor' },
-  { label: 'All-in-One', emoji: '🥇', name: 'Simparica Trio', subtitle: 'HW + fleas + ticks + intestinal parasites', href: '#simparica' },
-  { label: 'Best Injectable', emoji: '💉', name: 'ProHeart 12', subtitle: '12-month protection · No monthly compliance needed', href: '#proheart' },
+  { label: 'Best Standalone HW', name: 'Heartgard Plus', subtitle: 'Ivermectin + pyrantel · Most prescribed', href: '#heartgard' },
+  { label: 'Broadest Coverage', name: 'Interceptor Plus', subtitle: 'Adds whipworm + tapeworm to spectrum', href: '#interceptor' },
+  { label: 'All-in-One', name: 'Simparica Trio', subtitle: 'HW + fleas + ticks + intestinal parasites', href: '#simparica' },
+  { label: 'Best Injectable', name: 'ProHeart 12', subtitle: '12-month protection · No monthly compliance needed', href: '#proheart' },
 ]
 
 export default function BestHeartwormPreventionPage() {
@@ -40,7 +40,7 @@ export default function BestHeartwormPreventionPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Monthly preventives do not block infection in real time — they eliminate larvae exposed to during the previous month before they mature into adult worms. Missing one month creates a gap. Annual heartworm testing detects any breakthrough infection even in dogs on prevention.</p>
             </div>
             <ScoreMethodology />
-            <ReviewCard id="heartgard" badge="Best Standalone" badgeEmoji="🏆" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Most prescribed HW preventive" score={9.3} winner
+            <ReviewCard id="heartgard" badge="Best Standalone" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Most prescribed HW preventive" score={9.3} winner
               description={<p>Heartgard Plus is the most commonly prescribed standalone heartworm preventive in the US — ivermectin kills Dirofilaria immitis larvae while pyrantel pamoate covers roundworm and hookworm. Monthly beef-flavored chew with very high palatability. Suitable for all dogs except those with MDR1 gene mutation at higher doses — standard Heartgard dosing (6 mcg/kg ivermectin) is safe in MDR1-positive herding breeds. Not for flea/tick protection — pair with a separate isoxazoline for complete parasite coverage, or switch to Simparica Trio for combined coverage.</p>}
               specs={[{ label: 'Active Ingredients', value: 'Ivermectin + pyrantel', highlight: 'good' }, { label: 'Spectrum', value: 'HW + roundworm + hookworm' }, { label: 'Dosing', value: 'Monthly' }, { label: 'Rx required', value: 'Yes' }]}
               pros={['Most prescribed — largest safety dataset', 'Safe for MDR1-positive herding breeds at standard dose', 'High palatability', 'Affordable']}
@@ -50,7 +50,7 @@ export default function BestHeartwormPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
-            <ReviewCard id="interceptor" badge="Broadest GI Spectrum" badgeEmoji="⭐" name="Interceptor Plus" subtitle="Milbemycin oxime + praziquantel · Adds whipworm and tapeworm to Heartgard's spectrum" score={9.2}
+            <ReviewCard id="interceptor" badge="Broadest GI Spectrum" name="Interceptor Plus" subtitle="Milbemycin oxime + praziquantel · Adds whipworm and tapeworm to Heartgard's spectrum" score={9.2}
               description={<p>Interceptor Plus covers five parasite types in one monthly chew: heartworm, roundworm, hookworm, whipworm, and tapeworm (Taenia species). For dogs with outdoor access, hunting exposure, or known GI parasite issues, the broader spectrum is meaningful. Milbemycin oxime is the heartworm component — also safe for MDR1-positive herding breeds at standard preventive dosing. Chicken-flavored chew. The best choice where GI parasite burden is a concern in addition to heartworm.</p>}
               specs={[{ label: 'Spectrum', value: 'HW + 4 GI parasites', highlight: 'good' }, { label: 'Tapeworm', value: 'Yes (Taenia species)', highlight: 'good' }, { label: 'Whipworm', value: 'Yes', highlight: 'good' }, { label: 'MDR1 safe', value: 'Yes at standard dose' }]}
               pros={['Broadest intestinal parasite coverage', 'MDR1-safe at standard dose', 'Good for outdoor/hunting dogs', 'One product covers GI parasite prevention']}
@@ -60,7 +60,7 @@ export default function BestHeartwormPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
-            <ReviewCard id="simparica" badge="Best All-in-One" badgeEmoji="🥇" name="Simparica Trio" subtitle="Sarolaner + moxidectin + pyrantel · HW + fleas + ticks + intestinal parasites" score={9.5}
+            <ReviewCard id="simparica" badge="Best All-in-One" name="Simparica Trio" subtitle="Sarolaner + moxidectin + pyrantel · HW + fleas + ticks + intestinal parasites" score={9.5}
               description={<p>Simparica Trio is the most complete single monthly chew available — covering heartworm, 5 tick species, fleas (98% kill within 3 hours), roundworm, and hookworm. For most dogs in tick-endemic areas that would otherwise need both a heartworm preventive and a flea/tick product, Simparica Trio replaces two separate monthly products with one. The moxidectin heartworm component is among the strongest available. Note: moxidectin requires caution in MDR1-positive herding breeds at high doses — discuss with your vet for collies, shelties, and Australian Shepherds.</p>}
               specs={[{ label: 'Spectrum', value: 'HW + fleas + 5 tick species + GI', highlight: 'good' }, { label: 'Flea kill speed', value: '98% within 3 hours', highlight: 'good' }, { label: 'Replaces', value: 'Flea/tick + HW preventive both' }, { label: 'MDR1 note', value: 'Discuss with vet for herding breeds' }]}
               pros={['Replaces two separate monthly products', 'Fastest flea kill tested', 'Broadest tick species coverage', 'One chew covers everything']}
@@ -70,7 +70,7 @@ export default function BestHeartwormPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
-            <ReviewCard id="proheart" badge="Best for Compliance" badgeEmoji="💉" name="ProHeart 12 (Injectable)" subtitle="12-month heartworm prevention · One vet visit · No monthly compliance" score={9.0}
+            <ReviewCard id="proheart" badge="Best for Compliance" name="ProHeart 12 (Injectable)" subtitle="12-month heartworm prevention · One vet visit · No monthly compliance" score={9.0}
               description={<p>ProHeart 12 is an injectable heartworm preventive administered by a veterinarian that provides 12 months of protection from a single injection. For owners who consistently forget monthly doses — which creates gaps in protection — ProHeart 12 eliminates the compliance problem entirely. Given at the annual wellness visit, it ensures continuous coverage without any owner follow-through required. Moxidectin-based. Does not cover flea/tick or GI parasites — pair with a separate flea/tick preventive. ProHeart 6 (6-month version) is also available for dogs where the 12-month formulation is not preferred.</p>}
               specs={[{ label: 'Duration', value: '12 months per injection', highlight: 'good' }, { label: 'Compliance required', value: 'None — one vet visit', highlight: 'good' }, { label: 'Administration', value: 'Veterinarian only' }, { label: 'Spectrum', value: 'HW only — no flea/tick' }]}
               pros={['No monthly compliance required', 'Annual protection from one injection', 'Perfect for owners who miss monthly doses', 'Given at wellness visit']}

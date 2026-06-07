@@ -39,6 +39,7 @@ import {
   SchemaScript,
   EmailCapture,
   RelatedLinks,
+  StockImage,
 } from '@carloOS/ui'
 import {
   Breeds,
@@ -326,30 +327,46 @@ export default async function BreedTemplatePage({ params }: PageProps) {
         <span className="text-brand-text-mid font-medium">{breed.name}</span>
       </nav>
 
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-12">
-        <div className="flex flex-wrap gap-2 mb-4">
-          <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/15 text-brand-primary">
-            {breed.group} Group
-          </span>
-          <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/70">
-            {breed.sizeCategory} size
-          </span>
-          <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/70">
-            {breed.energyLevel} energy
-          </span>
+      {/* Hero — image + dark overlay, mirrors breeds hub pattern */}
+      <section className="relative bg-brand-dark overflow-hidden">
+        <div className="absolute inset-0 [&>figure]:my-0 [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full">
+          <StockImage
+            manifestKey={`dog-com:breed-${breed.slug}`}
+            alt={breed.name}
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
         </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-none mb-3"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          {breed.name}
-        </h1>
-        <p className="text-base font-light text-white/65 leading-relaxed max-w-2xl">
-          From {breed.originCountry}, originally {breed.originPurpose.charAt(0).toLowerCase() + breed.originPurpose.slice(1)}{' '}
-          Adults typically weigh {formatRange(breed.weightRangeLb, 'lb')} with a lifespan of {formatRange(breed.lifespanYears, 'years')}.
-        </p>
-      </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-brand-dark/30"
+        />
+        <div className="relative z-10 flex flex-col justify-end min-h-[40vh] sm:min-h-[48vh] px-container-sm sm:px-container pt-14 pb-10">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-primary/20 text-brand-primary">
+              {breed.group} Group
+            </span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/70">
+              {breed.sizeCategory} size
+            </span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-white/10 text-white/70">
+              {breed.energyLevel} energy
+            </span>
+          </div>
+          <h1
+            className="font-display font-black text-white tracking-tighter leading-none mb-3"
+            style={{ fontSize: 'clamp(36px, 5vw, 60px)', textShadow: '0 2px 18px rgba(0,0,0,0.5)' }}
+          >
+            {breed.name}
+          </h1>
+          <p className="text-base font-light text-white/70 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
+            From {breed.originCountry}, originally {breed.originPurpose.charAt(0).toLowerCase() + breed.originPurpose.slice(1)}{' '}
+            Adults typically weigh {formatRange(breed.weightRangeLb, 'lb')} with a lifespan of {formatRange(breed.lifespanYears, 'years')}.
+          </p>
+        </div>
+      </section>
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">

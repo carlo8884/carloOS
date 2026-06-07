@@ -8,16 +8,16 @@ const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', descripti
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin' },
-  { label: 'Best High-Protein', emoji: '⭐', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Widely recommended', href: '#purina' },
-  { label: "Best Hill's", emoji: '🔬', name: "Hill's Science Diet Large Breed", subtitle: 'Glucosamine · Natural ingredients · Antioxidant blend', href: '#hills' },
+  { label: 'Best Overall', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin' },
+  { label: 'Best High-Protein', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Widely recommended', href: '#purina' },
+  { label: "Best Hill's", name: "Hill's Science Diet Large Breed", subtitle: 'Glucosamine · Natural ingredients · Antioxidant blend', href: '#hills' },
 ]
 export default function BestLargeBreedFoodPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Large Breed Dog Food 2026', url: 'https://dog.com/reviews/best-large-breed-dog-food' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large breed dogs (50+ lbs) have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds.</p>
       </div>
@@ -36,7 +36,7 @@ export default function BestLargeBreedFoodPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="royal-canin" badge="Best Overall" badgeEmoji="🏆" name="Royal Canin Large Adult" subtitle="Glucosamine + chondroitin · Tailored kibble texture · WSAVA top tier" score={9.3} winner
+            <ReviewCard id="royal-canin" badge="Best Overall" name="Royal Canin Large Adult" subtitle="Glucosamine + chondroitin · Tailored kibble texture · WSAVA top tier" score={9.3} winner
               description={<p>Royal Canin Large Adult is formulated with joint health as a central priority — glucosamine (200mg/kg) and chondroitin sulfate (160mg/kg) are included at levels shown to support cartilage health in dogs predisposed to joint disease. The kibble texture is tailored for large breed biting patterns — encouraging thorough chewing rather than bolting food, which reduces bloat risk in deep-chested large breeds. EPA from fish oil provides anti-inflammatory support for joints. Royal Canin is one of three <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-recommended manufacturers with full veterinary nutritionist oversight. Available in multiple size variations — Large Adult (for dogs 55–100 lbs) and Giant Adult (for dogs over 100 lbs).</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Glucosamine', value: '200mg/kg + chondroitin', highlight: 'good' }, { label: 'EPA', value: 'Fish oil — anti-inflammatory' }, { label: 'Kibble', value: 'Tailored for large jaw mechanics' }]}
               pros={['WSAVA top-tier compliance', 'Meaningful glucosamine and chondroitin levels', 'EPA from fish oil', 'Kibble size tailored for large breeds']}
@@ -47,7 +47,7 @@ export default function BestLargeBreedFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+large+adult"
             />
-            <ReviewCard id="purina" badge="Best High-Protein" badgeEmoji="⭐" name="Purina Pro Plan Large Breed Adult" subtitle="Chicken & rice · EPA + glucosamine · Live probiotics" score={9.2}
+            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Large Breed Adult" subtitle="Chicken & rice · EPA + glucosamine · Live probiotics" score={9.2}
               description={<p>Purina Pro Plan Large Breed Adult provides 26% protein (real chicken as first ingredient) and incorporates EPA from fish oil plus glucosamine for joint support. The inclusion of live probiotics (Bacillus coagulans) for digestive health is a meaningful differentiator at this price point. Purina's research investment — including BREATHE trials on respiratory health, joint studies, and cognitive research — backs a formula that balances joint support, digestive health, and overall nutrition for large breed adults. The most widely recommended formula by general practice veterinarians for large breed adults. Also available in salmon and trout variety for dogs with chicken sensitivity.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '26% — real chicken first ingredient' }, { label: 'Probiotic', value: 'Live B. coagulans — clinically studied', highlight: 'good' }, { label: 'Joint support', value: 'EPA + glucosamine' }]}
               pros={['WSAVA compliant', 'Real chicken first ingredient', 'Live probiotics', 'EPA and glucosamine joint support', 'Multiple protein options']}

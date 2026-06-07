@@ -37,10 +37,10 @@ const embraceSchema = buildProductSchema({ name: 'Embrace Pet Insurance', descri
 const combinedSchema = combineSchemas(articleSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Trupanion', subtitle: 'Direct vet pay · No payout limits · 90%', href: '#trupanion' },
-  { label: 'Fastest Claims', emoji: '⚡', name: 'Healthy Paws', subtitle: 'Best claims experience · No annual limits', href: '#healthy-paws' },
-  { label: 'Most Customizable', emoji: '🎛️', name: 'Embrace', subtitle: 'Flexible deductible · Diminishing deductible', href: '#embrace' },
-  { label: 'Best Budget', emoji: '💰', name: 'Figo', subtitle: 'Lower premiums · 100% reimbursement option', href: '#figo' },
+  { label: 'Best Overall', name: 'Trupanion', subtitle: 'Direct vet pay · No payout limits · 90%', href: '#trupanion' },
+  { label: 'Fastest Claims', name: 'Healthy Paws', subtitle: 'Best claims experience · No annual limits', href: '#healthy-paws' },
+  { label: 'Most Customizable', name: 'Embrace', subtitle: 'Flexible deductible · Diminishing deductible', href: '#embrace' },
+  { label: 'Best Budget', name: 'Figo', subtitle: 'Lower premiums · 100% reimbursement option', href: '#figo' },
 ]
 
 export default function BestPetInsurancePage() {
@@ -48,7 +48,7 @@ export default function BestPetInsurancePage() {
     <>
       <SchemaScript schema={combineSchemas(...combinedSchema, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Pet Insurance 2025', url: 'https://dog.com/reviews/best-pet-insurance' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Pet Insurance 2025
@@ -94,7 +94,6 @@ export default function BestPetInsurancePage() {
             <ReviewCard
               id="trupanion"
               badge="Best Overall"
-              badgeEmoji="🏆"
               name="Trupanion"
               subtitle="Pays vet directly · No payout limits ever · 90% reimbursement · Per-incident deductible"
               score={9.4}
@@ -124,7 +123,6 @@ export default function BestPetInsurancePage() {
             <ReviewCard
               id="healthy-paws"
               badge="Fastest Claims"
-              badgeEmoji="⚡"
               name="Healthy Paws"
               subtitle="Claims paid in days · No annual limits · Simple flat-rate plans"
               score={9.2}
@@ -152,7 +150,6 @@ export default function BestPetInsurancePage() {
             <ReviewCard
               id="embrace"
               badge="Most Customizable"
-              badgeEmoji="🎛️"
               name="Embrace Pet Insurance"
               subtitle="Diminishing deductible · Wellness add-on · Broad hereditary coverage"
               score={8.9}
@@ -176,7 +173,6 @@ export default function BestPetInsurancePage() {
             <ReviewCard
               id="figo"
               badge="Best Budget Option"
-              badgeEmoji="💰"
               name="Figo Pet Insurance"
               subtitle="100% reimbursement option · Cloud-based claims · Competitive premiums"
               score={8.5}

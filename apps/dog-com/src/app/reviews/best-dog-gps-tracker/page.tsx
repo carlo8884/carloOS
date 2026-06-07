@@ -8,16 +8,16 @@ const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', descriptio
 const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://whistle.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fiSchema, whistleSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi' },
-  { label: 'Best with Health Data', emoji: '❤️', name: 'Whistle Go Explore', subtitle: 'GPS + activity + health monitoring', href: '#whistle' },
-  { label: 'Best Budget', emoji: '💰', name: 'Tractive GPS', subtitle: 'Lowest monthly fee · Works globally', href: '#tractive' },
+  { label: 'Best Overall', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi' },
+  { label: 'Best with Health Data', name: 'Whistle Go Explore', subtitle: 'GPS + activity + health monitoring', href: '#whistle' },
+  { label: 'Best Budget', name: 'Tractive GPS', subtitle: 'Lowest monthly fee · Works globally', href: '#tractive' },
 ]
 export default function BestGPSTrackerPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog GPS Trackers 2025', url: 'https://dog.com/reviews/best-dog-gps-tracker' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">📍 Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
@@ -32,7 +32,7 @@ export default function BestGPSTrackerPage() {
           <div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="fi" badge="Best Overall" badgeEmoji="🏆" name="Fi Series 3 Dog Collar" subtitle="3-month battery · LTE-M network · Geofence escape alerts · Sleek collar design" score={9.4} winner
+            <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3 Dog Collar" subtitle="3-month battery · LTE-M network · Geofence escape alerts · Sleek collar design" score={9.4} winner
               description={<p>Fi's standout feature is the 3-month battery life — the longest of any GPS tracker by a significant margin. Competitors need weekly or daily charging; Fi charges once per quarter. The LTE-M network gives broader coverage in rural and low-signal areas than standard LTE trackers. The app shows real-time location, daily step count, sleep tracking, and instantly alerts when the dog leaves a defined geofence (your yard, a friend's house). The collar replaces your dog's existing collar — the tracker module snaps into a standard collar band. Monthly subscription: $9.99/mo (annual) or $14.99/mo (monthly).</p>}
               specs={[{ label: 'Battery', value: '3 months', highlight: 'good' }, { label: 'Network', value: 'LTE-M (broader coverage)', highlight: 'good' }, { label: 'Geofence alerts', value: 'Yes — instant', highlight: 'good' }, { label: 'Monthly fee', value: '$9.99/mo (annual)' }, { label: 'Water resistant', value: 'IP68' }]}
               pros={['3-month battery — best by far', 'LTE-M for rural coverage', 'Instant escape alerts', 'Replaces collar — no extra bulk', 'Step and sleep tracking']}
@@ -43,7 +43,7 @@ export default function BestGPSTrackerPage() {
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="fi+series+3+dog+collar"
             />
-            <ReviewCard id="whistle" badge="Best Health Monitoring" badgeEmoji="❤️" name="Whistle Go Explore" subtitle="GPS + health monitoring · Lick and scratch tracking · Vet alerts" score={9.0}
+            <ReviewCard id="whistle" badge="Best Health Monitoring" name="Whistle Go Explore" subtitle="GPS + health monitoring · Lick and scratch tracking · Vet alerts" score={9.0}
               description={<p>Whistle Go Explore combines GPS tracking with health behavior monitoring — it detects excessive licking, scratching, sleeping, and activity changes that may indicate health issues before they are visible. The app can alert you when behaviors change significantly from the dog's baseline, which some owners find clinically useful. GPS accuracy is solid in urban environments. Battery life is 20 days — shorter than Fi but longer than Tractive. Monthly subscription: $9.95/mo. The health monitoring layer differentiates it from pure-GPS competitors.</p>}
               specs={[{ label: 'Battery', value: '20 days' }, { label: 'GPS', value: 'LTE' }, { label: 'Health monitoring', value: 'Lick, scratch, activity, sleep', highlight: 'good' }, { label: 'Monthly fee', value: '$9.95/mo' }]}
               pros={['Health behavior monitoring (licking, scratching)', 'Good GPS accuracy', '20-day battery', 'Vet alert integration']}
@@ -54,7 +54,7 @@ export default function BestGPSTrackerPage() {
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="whistle+go+explore"
             />
-            <ReviewCard id="tractive" badge="Best Budget" badgeEmoji="💰" name="Tractive GPS Dog Tracker" subtitle="Lowest monthly fee · Works in 175 countries · Simple app" score={8.8}
+            <ReviewCard id="tractive" badge="Best Budget" name="Tractive GPS Dog Tracker" subtitle="Lowest monthly fee · Works in 175 countries · Simple app" score={8.8}
               description={<p>Tractive has the lowest monthly fee of any GPS tracker ($5/mo annual) and works in 175 countries — making it the best option for dogs that travel internationally or for owners who want basic GPS without the premium features of Fi or Whistle. Battery life is 2–5 days depending on tracking frequency — requires regular charging. The app is simple and accurate. No health monitoring. Best for: budget-conscious owners who just want to know where their dog is, and owners who travel internationally with their dogs.</p>}
               specs={[{ label: 'Monthly fee', value: '$5/mo (annual)', highlight: 'good' }, { label: 'Countries', value: '175 — best global coverage', highlight: 'good' }, { label: 'Battery', value: '2–5 days' }, { label: 'Health monitoring', value: 'None' }]}
               pros={['Lowest monthly cost', 'Best international coverage', 'Simple reliable app', 'Lightweight']}

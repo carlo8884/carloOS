@@ -13,11 +13,11 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2025', desc: 'Trupanion, Healthy Paws, Embrace ranked by actual payout rates', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
-  { title: 'Best Dry Dog Food 2025', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: '🥩 Nutrition' },
-  { title: 'Best Flea & Tick Prevention 2025', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: '🛡️ Prevention' },
-  { title: 'Best Dog Beds 2025', desc: 'Orthopedic, elevated, and washable beds tested over 6 months', href: '/reviews/best-dog-beds', badge: '😴 Comfort' },
-  { title: 'Best Dog Crates 2025', desc: 'Wire, heavy duty, airline-approved, and furniture style ranked', href: '/reviews/best-dog-crates', badge: '🏠 Housing' },
+  { title: 'Best Pet Insurance 2025', desc: 'Trupanion, Healthy Paws, Embrace ranked by actual payout rates', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
+  { title: 'Best Dry Dog Food 2025', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: 'Nutrition' },
+  { title: 'Best Flea & Tick Prevention 2025', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: 'Prevention' },
+  { title: 'Best Dog Beds 2025', desc: 'Orthopedic, elevated, and washable beds compared on foam quality, clinical data, and durability', href: '/reviews/best-dog-beds', badge: 'Comfort' },
+  { title: 'Best Dog Crates 2025', desc: 'Wire, heavy duty, airline-approved, and furniture style ranked', href: '/reviews/best-dog-crates', badge: 'Housing' },
   { title: 'Best Dog Food for Sensitive Stomach 2025', desc: 'Purina Pro Plan Sensitive, Hill\'s Sensitive Stomach, Royal Canin Digestive Care ranked', href: '/reviews/best-dog-food-sensitive-stomach' },
   { title: 'Best Puppy Food 2025', desc: 'WSAVA-compliant puppy foods ranked for large breed, small breed, and all sizes', href: '/reviews/best-dog-food-for-puppies' },
   { title: 'Best Slow Feeder Bowls for Dogs 2025', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls' },
@@ -54,7 +54,7 @@ export default function DogReviewsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Product Reviews</span></div>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Dog Product Reviews 2025</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Expert-tested reviews with honest editorial criteria — we rank what actually works, not what has the best marketing budget.</p>
+        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Editorially assessed reviews with honest criteria — we rank what actually works, not what has the best marketing budget.</p>
       </div>
       <div className="px-container-sm sm:px-container pt-8">
         <div className="max-w-content-wide mx-auto">
@@ -77,7 +77,7 @@ export default function DogReviewsPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['🏆 Editor picks', '⚠️ What to avoid', '🚫 No spam']} />
+        <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Product picks, health guides, and practical advice every Tuesday." source="reviews-index" ctaText="Subscribe Free" perks={['Editor picks', '⚠️ What to avoid', 'No spam']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">

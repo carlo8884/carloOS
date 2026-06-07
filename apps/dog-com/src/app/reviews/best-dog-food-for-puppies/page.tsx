@@ -29,10 +29,10 @@ const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
-  { label: 'Best Large Breed', emoji: '🏆', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin' },
-  { label: 'Best Overall Value', emoji: '⭐', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
-  { label: 'Best Small Breed', emoji: '🐾', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
-  { label: 'Best Budget', emoji: '💰', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · Under $40/bag', href: '#iams' },
+  { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin' },
+  { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
+  { label: 'Best Small Breed', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
+  { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · Under $40/bag', href: '#iams' },
 ]
 
 export default function BestPuppyFoodPage() {
@@ -40,7 +40,7 @@ export default function BestPuppyFoodPage() {
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Puppy Food 2026', url: 'https://dog.com/reviews/best-dog-food-for-puppies' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
@@ -73,7 +73,6 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
-              badgeEmoji="🏆"
               name="Royal Canin Large Breed Puppy"
               subtitle="Most researched puppy formula · Breed-specific lines · 600+ scientists"
               score={9.5}
@@ -101,7 +100,6 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="pro-plan"
               badge="Best Overall Value"
-              badgeEmoji="⭐"
               name="Purina Pro Plan Puppy Large Breed"
               subtitle="400+ published studies · AAFCO feeding trial · DHA from salmon oil"
               score={9.3}
@@ -125,7 +123,6 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="hills-small"
               badge="Best Small Breed Puppy"
-              badgeEmoji="🐾"
               name="Hill's Science Diet Puppy Small Paws"
               subtitle="Small breed puppy formula · DHA for brain · Hill's nutritionist team"
               score={9.1}
@@ -148,7 +145,6 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="iams"
               badge="Best Budget"
-              badgeEmoji="💰"
               name="Iams ProActive Health Smart Puppy"
               subtitle="WSAVA-compliant · Budget price · AAFCO meeting standard"
               score={8.7}
