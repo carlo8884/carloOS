@@ -14,7 +14,7 @@ export default function AffordVetCarePage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'How to Afford Vet Care', subtitle: 'A large or unexpected veterinary bill can be daunting, but more options exist than many owners realize — from insurance and emergency savings to financing, assistance funds, and open conversations with your veterinary team. This guide lays out realistic ways to prepare for and manage the cost of caring for your pet.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'How to Afford Vet Care', subtitle: 'A large or unexpected veterinary bill can be daunting, but more options exist than many owners realize — from insurance and emergency savings to financing, assistance funds, and open conversations with your veterinary team. This guide lays out realistic ways to prepare for and manage the cost of caring for your pet.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

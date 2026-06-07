@@ -12,16 +12,16 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 const SPECIALISTS = [
-  { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', icon: '🚨', color: '#C84A2A' },
-  { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', icon: '🔬', color: '#2563EB' },
-  { specialty: 'Cardiology', credential: 'DACVIM (Cardiology)', when: 'Heart murmur detected, arrhythmia, suspected cardiac disease, pre-breeding cardiac clearance (Cavaliers)', icon: '❤️', color: '#DC2626' },
-  { specialty: 'Neurology', credential: 'DACVIM (Neurology)', when: 'Seizures, spinal disease (IVDD), wobbler syndrome, brain tumors, paralysis, vestibular disease', icon: '🧠', color: '#7C3AED' },
-  { specialty: 'Oncology', credential: 'DACVIM (Oncology)', when: 'Cancer diagnosis, chemotherapy protocols, radiation referrals, prognosis discussion', icon: '🎗️', color: '#059669' },
-  { specialty: 'Dermatology', credential: 'DACVD', when: 'Chronic skin disease, environmental or food allergies, autoimmune skin conditions, recurrent ear infections', icon: '🩺', color: '#D97706' },
-  { specialty: 'Ophthalmology', credential: 'DACVO', when: 'Eye injuries, cataracts, glaucoma, progressive retinal atrophy, corneal ulcers not responding to treatment', icon: '👁️', color: '#0891B2' },
-  { specialty: 'Surgery', credential: 'DACVS', when: 'Orthopedic surgery (TPLO, FHO, THR), soft tissue surgery, oncologic surgery, complex fracture repair', icon: '⚕️', color: '#475569' },
-  { specialty: 'Dentistry', credential: 'DAVDC', when: 'Complex dental extractions, oral tumors, jaw fractures, advanced periodontal disease, dental radiograph interpretation', icon: '🦷', color: '#64748B' },
-  { specialty: 'Behavioral Medicine', credential: 'DACVB', when: 'Aggression, severe anxiety, separation anxiety, compulsive disorders, medication management for behavioral conditions', icon: '🧡', color: '#92400E' },
+  { specialty: 'Emergency & Critical Care', credential: 'DACVECC', when: 'Acute illness or injury outside regular hours, post-surgical monitoring, toxin exposure, trauma', abbr: 'ER', color: '#C84A2A' },
+  { specialty: 'Internal Medicine', credential: 'DACVIM', when: 'Complex diagnostics, hormonal disease, immune-mediated disease, chronic conditions requiring specialist oversight', abbr: 'IM', color: '#2563EB' },
+  { specialty: 'Cardiology', credential: 'DACVIM (Cardiology)', when: 'Heart murmur detected, arrhythmia, suspected cardiac disease, pre-breeding cardiac clearance (Cavaliers)', abbr: 'CA', color: '#DC2626' },
+  { specialty: 'Neurology', credential: 'DACVIM (Neurology)', when: 'Seizures, spinal disease (IVDD), wobbler syndrome, brain tumors, paralysis, vestibular disease', abbr: 'NE', color: '#7C3AED' },
+  { specialty: 'Oncology', credential: 'DACVIM (Oncology)', when: 'Cancer diagnosis, chemotherapy protocols, radiation referrals, prognosis discussion', abbr: 'ON', color: '#059669' },
+  { specialty: 'Dermatology', credential: 'DACVD', when: 'Chronic skin disease, environmental or food allergies, autoimmune skin conditions, recurrent ear infections', abbr: 'DM', color: '#D97706' },
+  { specialty: 'Ophthalmology', credential: 'DACVO', when: 'Eye injuries, cataracts, glaucoma, progressive retinal atrophy, corneal ulcers not responding to treatment', abbr: 'OP', color: '#0891B2' },
+  { specialty: 'Surgery', credential: 'DACVS', when: 'Orthopedic surgery (TPLO, FHO, THR), soft tissue surgery, oncologic surgery, complex fracture repair', abbr: 'SX', color: '#475569' },
+  { specialty: 'Dentistry', credential: 'DAVDC', when: 'Complex dental extractions, oral tumors, jaw fractures, advanced periodontal disease, dental radiograph interpretation', abbr: 'DT', color: '#64748B' },
+  { specialty: 'Behavioral Medicine', credential: 'DACVB', when: 'Aggression, severe anxiety, separation anxiety, compulsive disorders, medication management for behavioral conditions', abbr: 'BM', color: '#92400E' },
 ]
 export default function FindAVetPage() {
   return (
@@ -70,7 +70,7 @@ export default function FindAVetPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             {SPECIALISTS.map(s => (
               <div key={s.specialty} className="bg-brand-surface border border-brand-border rounded-xl p-5 flex gap-4">
-                <div className="text-2xl flex-shrink-0">{s.icon}</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style={{ backgroundColor: s.color }} aria-hidden="true">{s.abbr}</div>
                 <div>
                   <div className="font-bold text-brand-dark text-sm mb-0.5">{s.specialty}</div>
                   <div className="text-2xs font-mono text-brand-primary mb-2">{s.credential}</div>

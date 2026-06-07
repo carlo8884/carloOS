@@ -76,9 +76,9 @@ const embraceSchema = buildProductSchema({
 const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', emoji: '⚡', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
-  { label: 'Wellness Included', emoji: '📋', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
+  { label: 'Best Overall', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
+  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
+  { label: 'Wellness Included', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
 export default function VetsPetInsurancePage() {
@@ -136,7 +136,7 @@ export default function VetsPetInsurancePage() {
             </CalloutBox>
 
             <ScoreMethodology />
-            <ReviewCard id="trupanion" badge="Best Overall" badgeEmoji="🏆" name="Trupanion" winner
+            <ReviewCard id="trupanion" badge="Best Overall" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
               score={9.4}
               description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts make them the standard recommendation for high-risk breeds.</p>}
@@ -154,7 +154,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" badgeEmoji="⚡" name="Healthy Paws"
+            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="~2 day claims processing · Strong customer satisfaction reputation"
               score={9.1}
               description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and average 2-day processing make the reimbursement experience notably smooth. No annual or per-incident limits. Slightly lower premiums than Trupanion at comparable coverage levels. Best for owners who prefer to pay the vet and be reimbursed quickly rather than wait for direct payment integration.</p>}
@@ -171,7 +171,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="embrace" badge="Wellness Included" badgeEmoji="📋" name="Embrace"
+            <ReviewCard id="embrace" badge="Wellness Included" name="Embrace"
               subtitle="Wellness add-on · Diminishing deductible · Customizable"
               score={8.8}
               description={<p>Embrace is the best choice for owners who want routine and preventive care covered alongside illness and accident insurance. Their wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Among the more customizable plan structures of the major insurers — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}

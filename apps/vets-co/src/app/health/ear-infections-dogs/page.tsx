@@ -21,7 +21,7 @@ export default function EarInfectionsDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Ear Infections in Dogs', subtitle: 'Ear infections are among the most common reasons dogs visit the veterinarian. A single infection is easily treated, but recurrent infections are a red flag for an underlying problem — usually allergies. Understanding why infections happen, and treating the root cause, is the difference between a one-time problem and a lifelong cycle.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Ear Infections in Dogs', subtitle: 'Ear infections are among the most common reasons dogs visit the veterinarian. A single infection is easily treated, but recurrent infections are a red flag for an underlying problem — usually allergies. Understanding why infections happen, and treating the root cause, is the difference between a one-time problem and a lifelong cycle.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Ear Infections', href: '/health/ear-infections-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

@@ -14,7 +14,7 @@ export default function WhatToExpectPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'What to Expect at the Vet', subtitle: 'Whether it is a routine wellness check or a visit for a specific concern, a veterinary appointment follows a predictable rhythm: check-in and history, a thorough physical exam, any needed diagnostics, and a discussion of findings and next steps. Knowing the flow — and how to prepare — helps you get the most from every visit.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'What to Expect at the Vet', subtitle: 'Whether it is a routine wellness check or a visit for a specific concern, a veterinary appointment follows a predictable rhythm: check-in and history, a thorough physical exam, any needed diagnostics, and a discussion of findings and next steps. Knowing the flow — and how to prepare — helps you get the most from every visit.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'What to Expect', href: '/guides/what-to-expect-at-the-vet' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

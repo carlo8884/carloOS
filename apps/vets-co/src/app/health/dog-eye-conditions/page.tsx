@@ -16,7 +16,7 @@ export default function DogEyeConditionsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Eye Conditions in Dogs', subtitle: 'The eye conditions most commonly seen in dogs range from minor irritations to sight-threatening emergencies requiring same-day treatment. Knowing which situation you are looking at — and which ones cannot wait — is the essential skill for any dog owner.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Eye Conditions in Dogs', subtitle: 'The eye conditions most commonly seen in dogs range from minor irritations to sight-threatening emergencies requiring same-day treatment. Knowing which situation you are looking at — and which ones cannot wait — is the essential skill for any dog owner.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Eye Conditions', href: '/health/dog-eye-conditions' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

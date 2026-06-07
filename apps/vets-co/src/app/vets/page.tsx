@@ -127,7 +127,7 @@ export default function VetDirectoryHubPage() {
             aria-label="USA map placeholder — interactive map renders here once verified directory data is wired."
           >
             <div className="text-center px-6 py-10">
-              <div className="text-3xl mb-2" aria-hidden>🗺️</div>
+              <div className="text-3xl mb-2 text-brand-text-light font-light" aria-hidden="true">[ map ]</div>
               <div className="text-sm font-bold text-brand-dark mb-1">USA Map (Coming Soon)</div>
               <p className="text-xs text-brand-text-light m-0 max-w-md">
                 Interactive state selector. Currently {populatedStateCount} state

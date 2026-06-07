@@ -107,7 +107,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             'A tough little terrier in a 7-pound package, the Yorkie is long-lived but carries a distinct set of liver, orthopedic, airway and dental predispositions. Early bile-acids screening and committed dental care are the highest-yield interventions.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

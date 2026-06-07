@@ -14,7 +14,7 @@ export default function DeductiblesPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function DeductiblesPage() {
           <ReviewCard
             id="healthy-paws"
             badge="Simple Levers"
-            badgeEmoji="⚡"
             name="Healthy Paws"
             subtitle="One plan, you set the deductible and reimbursement rate"
             score={8.7}
@@ -82,7 +81,6 @@ export default function DeductiblesPage() {
           <ReviewCard
             id="pets-best"
             badge="Tiered Options"
-            badgeEmoji="🐾"
             name="Pets Best"
             subtitle="Multiple deductible and reimbursement combinations"
             score={8.2}

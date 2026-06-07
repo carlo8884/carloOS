@@ -13,7 +13,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const SECTIONS = [
-  { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: '💵 Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
+  { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
   { category: 'The Vet Visit', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
   { category: 'Urgent vs. Routine', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
 ]
@@ -77,7 +77,7 @@ export default function VetsGuidesHubPage() {
         ))}
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Owner Newsletter" subtitle="Practical, vet-informed guidance every week." source="guides-hub" ctaText="Subscribe Free" perks={['✓ Practical', '📬 Weekly', '🐾 Owner-focused']} />
+        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Owner Newsletter" subtitle="Practical, vet-informed guidance every week." source="guides-hub" ctaText="Subscribe Free" perks={['Practical', 'Weekly', 'Owner-focused']} />
       </div>
     </>
   </>

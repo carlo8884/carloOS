@@ -14,7 +14,7 @@ export default function CostOfCarePage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'What Veterinary Care Really Costs', subtitle: 'Pet ownership comes with predictable routine costs and unpredictable large ones, and understanding the difference is the foundation of planning. This guide gives a realistic picture of routine care, common procedures, and major emergencies — and explains why prices vary so widely — so you can budget and protect yourself sensibly.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'What Veterinary Care Really Costs', subtitle: 'Pet ownership comes with predictable routine costs and unpredictable large ones, and understanding the difference is the foundation of planning. This guide gives a realistic picture of routine care, common procedures, and major emergencies — and explains why prices vary so widely — so you can budget and protect yourself sensibly.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Cost of Care', href: '/guides/cost-of-veterinary-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

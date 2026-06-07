@@ -32,7 +32,7 @@ export default function PainSignsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Signs Your Dog Is in Pain', subtitle: 'Dogs evolved to hide pain — displaying weakness to a predator or within a pack was dangerous. This evolutionary legacy means dogs in significant chronic pain often show subtle, easily missed signs rather than obvious distress. Recognizing pain early means treatment begins earlier and the dog suffers less.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Signs', href: '/health/pain-signs-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

@@ -107,7 +107,7 @@ export default function VetsPomeranianHealthPage() {
             'A small dog with a long working life — but a tight, breed-specific cluster of orthopedic, airway, dermatologic and dental conditions that benefit from early screening and proactive management.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

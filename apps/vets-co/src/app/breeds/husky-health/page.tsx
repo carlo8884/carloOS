@@ -107,7 +107,7 @@ export default function VetsHuskyHealthPage() {
             'A working sled-dog selected for endurance and soundness, the Siberian Husky carries a tightly defined cluster of breed-specific eye, dermatologic and orthopedic conditions. Eye screening and dermatologic awareness are the highest-yield preventive steps.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

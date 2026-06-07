@@ -14,7 +14,7 @@ export default function WellnessVsInsurancePage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Wellness vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function WellnessVsInsurancePage() {
           <ReviewCard
             id="embrace"
             badge="Insurance + Wellness"
-            badgeEmoji="📋"
             name="Embrace"
             subtitle="Accident-and-illness plus an optional Wellness Rewards plan"
             score={8.6}
@@ -82,7 +81,6 @@ export default function WellnessVsInsurancePage() {
           <ReviewCard
             id="pumpkin"
             badge="Preventive Bundle"
-            badgeEmoji="🎃"
             name="Pumpkin Pet Insurance"
             subtitle="Accident-and-illness with an optional preventive essentials package"
             score={8.2}
