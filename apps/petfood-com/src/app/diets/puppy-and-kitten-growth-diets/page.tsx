@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -107,6 +108,12 @@ export default function PuppyAndKittenGrowthDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A growth-formula pet-food bag for puppies and kittens in clinical light"
+          eyebrow="Growth-Stage Diet"
+          priority
+        />
         <p>During growth, an animal builds bone, muscle, organs, and nervous tissue at a rapid rate, requiring more energy and more of nearly every nutrient per unit of body weight than at any other life stage except lactation. AAFCO sets a distinct growth-and-reproduction nutrient profile with higher minimums, and feeding a growing animal a diet formulated only for adult maintenance can produce deficiencies with lasting consequences. See <a href="/life-stage">Pet Food by Life Stage</a>.</p>
         <h2 id="demanding">Why Growth Is Demanding</h2>
         <p>A growing puppy or kitten may need roughly twice the energy per kilogram of an adult, and proportionally more protein to lay down lean tissue, more calcium and phosphorus to mineralize the skeleton, and more of several micronutrients. This is why growth diets and all-life-stages diets carry higher minimums than adult-maintenance foods, and why a food labeled for adult maintenance only is inappropriate for a youngster.</p>

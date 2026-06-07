@@ -13,6 +13,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -123,6 +124,12 @@ export default function GlucosamineAndJointSupportPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Glucosamine and joint-support supplement chews for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>Glucosamine and chondroitin sulfate are cartilage-component molecules marketed to support joint health in animals with osteoarthritis. They are among the most-used pet supplements and are widely added to mobility diets and treats. Their popularity outruns their evidence, and as supplements they sit in a lightly regulated market where label accuracy is not guaranteed. See <a href="/diets/joint-and-mobility-diets">Joint and Mobility Diets</a>.</p>
         <h2 id="ingredients">The Ingredients</h2>
         <p>Glucosamine is an amino sugar involved in building cartilage; chondroitin sulfate is a major structural component of cartilage. The rationale is that supplementing these building blocks supports cartilage maintenance and repair. They are often combined, sometimes with manganese, methylsulfonylmethane (MSM), or other additives. The theory is plausible; the clinical proof is the weak link.</p>

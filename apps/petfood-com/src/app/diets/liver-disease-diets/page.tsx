@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -112,6 +113,12 @@ export default function LiverDiseaseDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A hepatic therapeutic pet-food bag photographed in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>The liver processes nutrients, synthesizes proteins, detoxifies metabolic waste, and stores vitamins and minerals. Liver disease ranges from copper-associated hepatopathy and chronic hepatitis to portosystemic shunts and hepatic lipidosis, and the dietary needs differ by diagnosis. The shared goals are to support hepatic regeneration, minimize the buildup of toxins the failing liver cannot clear, and maintain adequate intake and body condition.</p>
         <h2 id="liver">The Liver in Nutrition</h2>
         <p>Because the liver is so metabolically central, its disease affects protein metabolism, ammonia handling, copper storage, vitamin status, and energy balance. Unlike some organ-failure diets, hepatic diets generally do not severely restrict protein — the liver needs protein to regenerate — but they emphasize protein quality and may moderate quantity only when specific complications arise.</p>

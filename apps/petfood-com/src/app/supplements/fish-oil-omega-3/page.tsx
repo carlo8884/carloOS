@@ -13,6 +13,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -123,6 +124,12 @@ export default function FishOilOmega3Page() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:supplements-hero"
+          alt="Fish-oil and omega-3 supplement softgels and liquid for pets"
+          eyebrow="Supplement Reference"
+          priority
+        />
         <p>Fish oil supplies the long-chain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), which modulate inflammation and support several tissues. Among pet supplements, omega-3 fatty acids have some of the best-supported clinical evidence, and they are incorporated into many therapeutic diets for exactly this reason. See <a href="/nutrition/dietary-fat-and-fatty-acids">Dietary Fat and Essential Fatty Acids</a>.</p>
         <h2 id="epadha">EPA and DHA</h2>
         <p>EPA and DHA are the biologically active omega-3s. They shift the production of inflammatory mediators toward a less-inflammatory profile, which underlies their benefit in inflammatory and degenerative conditions. DHA also supports neural and retinal tissue, making it important in growth diets. The relevant figure on a supplement label is the combined EPA and DHA content, not the total fish-oil weight.</p>
