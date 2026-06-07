@@ -185,6 +185,8 @@ export default function ConditionsHubPage() {
       ]}
       relatedLinks={[
         { title: 'Conditions Hub', href: '/conditions' },
+        { title: 'Compare Food Types', href: '/compare' },
+        { title: 'Brand Evaluations', href: '/brands' },
         { title: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
         { title: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
         { title: 'Weight-Management Diets', href: '/diets/weight-management-diets' },
@@ -207,6 +209,14 @@ export default function ConditionsHubPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
               { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Methodology', href: '/guides/methodology' },
+            ]}
+          />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Prescription vs OTC Diets', href: '/compare/prescription-vs-otc-diets' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
