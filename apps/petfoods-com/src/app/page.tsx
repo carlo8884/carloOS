@@ -32,28 +32,28 @@ const sections: Section[] = [
     href: '/brands',
     blurb:
       'Alphabetical index of major commercial pet food brands sold in the US, each mapped to corporate parent and manufacturing country. Cross-linked to PetFood.com brand comparisons as they publish.',
-    status: 'Index live · per-brand scored profiles in progress',
+    status: 'Brand index + 10 WSAVA-scored reviews',
   },
   {
     title: 'Ingredients',
     href: '/ingredients',
     blurb:
       'A–Z reference of common dog and cat food ingredients, grouped by AAFCO functional category — proteins, carbs, fats, fibers, preservatives, supplements, and disclosure patterns worth scrutiny.',
-    status: 'Index live · per-ingredient deep pages in progress',
+    status: 'Category-grouped index + ingredient deep dives',
   },
   {
     title: 'Life Stage',
     href: '/life-stage',
     blurb:
       'AAFCO life-stage classifications — Growth, Adult Maintenance, All Life Stages, plus the marketing-only “Senior” category — with the nutrient-profile differences explained.',
-    status: 'Index live · per-stage brand examples in progress',
+    status: 'AAFCO profiles + brand-selection guidance',
   },
   {
     title: 'Recalls',
     href: '/recalls',
     blurb:
       'Year-by-year structured catalog of US commercial pet food recalls reported to the FDA Center for Veterinary Medicine since 2018, with Class I/II/III explanations and recall-alert signup.',
-    status: 'Year index live · live tracker in development',
+    status: 'Year-by-year index · 2018–present',
   },
   {
     title: 'Label Glossary',

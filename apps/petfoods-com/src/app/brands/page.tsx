@@ -106,9 +106,9 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Why does this index list brands you have not reviewed yet?',
     answer:
-      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is the first deliverable. The long-form review is the second. Ten brands have a full WSAVA-scored review at launch; the remaining catalog entries link to the structured reference page and are queued for review.',
+      'The index is the catalog spine. Listing the brand publicly — with parent company and manufacturing country — is a distinct deliverable from the long-form review. Ten brands have a full WSAVA-scored review; the remaining catalog entries link to the structured reference page for that brand.',
     answerText:
-      'The catalog is the spine; the long-form reviews come next. Ten brands have full reviews at launch; the rest are queued.',
+      'The catalog spine and the long-form reviews are distinct deliverables. Ten brands have full WSAVA reviews; the rest link to the structured reference page.',
   },
   {
     question: 'Do any brands pay for inclusion or for assessment language?',
@@ -220,7 +220,7 @@ export default function BrandsHubPage() {
           {' '}<strong>Ten brands</strong> carry a full long-form independent review, with a WSAVA
           Global Nutrition Committee 6-question scorecard, FDA CVM recall history, product-line
           breakdown, strengths and weaknesses, and an editorial assessment paragraph. The remainder
-          of the catalog links to a structured reference page and is queued for the next review pass.
+          of the catalog links to the structured reference page for that brand.
         </p>
 
         <h2 id="how-to-read">How to Read This Index</h2>
