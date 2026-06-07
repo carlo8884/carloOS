@@ -89,9 +89,9 @@ export default function WinterCarePage() {
             title="Related Reading"
             links={[
               { label: "Blanketing Guide", href: "/care/blanketing" },
+              { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
               { label: "Water Requirements", href: "/nutrition/water-requirements" },
               { label: "Equine Colic", href: "/health/colic" },
-              { label: "Forage Basics", href: "/nutrition/forage-basics" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />

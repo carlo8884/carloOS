@@ -84,6 +84,7 @@ export default function EquineUlcersPage() {
           <RelatedLinks
             title="Related Guides"
             links={[
+              { label: 'Best Equine Supplements', href: '/reviews/best-equine-supplements' },
               { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
               { label: 'Quarter Horse Genetics', href: '/breeds/quarter-horse' },
               { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },

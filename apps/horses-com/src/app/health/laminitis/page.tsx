@@ -119,6 +119,7 @@ export default function LaminitisPage() {
               { label: 'Cushing&apos;s / PPID', href: '/health/cushings-ppid' },
               { label: 'Hoof Abscess', href: '/health/abscess' },
               { label: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
+              { label: 'Body Condition Score Tool', href: '/tools/body-condition-score' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />

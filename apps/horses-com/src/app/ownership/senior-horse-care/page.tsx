@@ -91,8 +91,8 @@ export default function SeniorHorseCarePage() {
             links={[
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Osteoarthritis in Horses", href: "/health/osteoarthritis" },
-              { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
             ]}
           />
           <EmailCapture

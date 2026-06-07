@@ -90,9 +90,9 @@ export default function HardKeeperPage() {
             title="Related Reading"
             links={[
               { label: "Equine Gastric Ulcers", href: "/health/equine-ulcers" },
+              { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
               { label: "Beet Pulp Explained", href: "/nutrition/beet-pulp" },
-              { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
