@@ -9,6 +9,7 @@ import {
   Breadcrumb,
   FAQAccordion,
   EmailCapture,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 
@@ -441,6 +442,51 @@ export default function RescuesDirectoryPage() {
               <em>Journal of Exotic Pet Medicine</em> — peer-reviewed
               discussion of early gonadectomy and adrenal disease prevalence
               in the US pet ferret population.
+            </li>
+          </ul>
+        </section>
+
+        {/* ─── Cross-portfolio funnel to Ferret.com ──────────────────────── */}
+        <div className="mb-12">
+          <CrossPortfolioCard
+            currentSite="ferrets-com"
+            contentType="directory"
+            variant="sidebar"
+          />
+        </div>
+
+        {/* ─── Related Ferrets.com hubs ──────────────────────────────────── */}
+        <section
+          aria-labelledby="related-hubs"
+          className="mb-12 p-6 rounded-xl border border-brand-border bg-brand-surface"
+        >
+          <h2
+            id="related-hubs"
+            className="font-display font-bold text-brand-text-dark mb-3"
+            style={{ fontSize: '1.25rem' }}
+          >
+            Other Ferrets.com directories
+          </h2>
+          <ul className="list-none p-0 m-0 flex flex-col gap-2 text-sm text-brand-text-mid">
+            <li>
+              <Link href="/states" className="text-brand-primary font-medium hover:underline">
+                State-by-state ferret legality directory &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/adopt" className="text-brand-primary font-medium hover:underline">
+                Adopting a ferret (regional guides) &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/find-a-vet" className="text-brand-primary font-medium hover:underline">
+                Find an exotic-pet vet by state &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link href="/acquiring" className="text-brand-primary font-medium hover:underline">
+                Acquiring a ferret (checklist + permits) &rarr;
+              </Link>
             </li>
           </ul>
         </section>
