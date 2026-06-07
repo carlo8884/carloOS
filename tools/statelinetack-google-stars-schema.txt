@@ -1,0 +1,61 @@
+STATELINETACK — GOOGLE STAR RATINGS + PRICE (PRODUCT SCHEMA)
+============================================================
+What this does: makes StateLineTack products show star ratings and price
+directly in Google search results (instead of a plain blue link).
+Stars ONLY appear when a product has real reviews — nothing is faked.
+
+WHERE IT GOES
+-------------
+Paste into the product template: Online Store > Themes > Edit code >
+sections/main-product.liquid (or product.liquid on older themes).
+Put it anywhere inside the template; top of the file is fine.
+
+THE CODE
+--------
+{%- comment -%} Product JSON-LD — review stars + price in Google. Stars only if real reviews exist. {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "image": [{{ product.featured_image | image_url: width: 1200 | prepend: "https:" | json }}],
+  "description": {{ product.description | strip_html | truncate: 320 | json }},
+  "sku": {{ product.selected_or_first_available_variant.sku | json }},
+  "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+  "offers": {
+    "@type": "Offer",
+    "url": {{ shop.url | append: product.url | json }},
+    "priceCurrency": {{ shop.currency | json }},
+    "price": {{ product.selected_or_first_available_variant.price | money_without_currency | strip | json }},
+    "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+  {%- if product.metafields.reviews.rating_count and product.metafields.reviews.rating_count > 0 -%}
+  ,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ product.metafields.reviews.rating.value | json }},
+    "reviewCount": {{ product.metafields.reviews.rating_count | json }}
+  }
+  {%- endif -%}
+}
+</script>
+
+THREE THINGS THAT MATTER
+------------------------
+1. The stars come from the "aggregateRating" block, which only renders when a
+   product actually has reviews (rating_count > 0). No reviews = no fake stars.
+
+2. The "product.metafields.reviews.*" namespace is the Shopify Product Reviews /
+   Judge.me / Okendo convention. If StateLineTack uses a different review app,
+   change that namespace to match the app — otherwise stars won't populate.
+
+3. Verify before trusting it: after pasting + saving, test a live product URL in
+   Google's Rich Results Test (https://search.google.com/test/rich-results).
+   Confirm "Product snippets" is detected with 0 errors. Stars typically appear
+   in search within a crawl cycle.
+
+OPTIONAL: BREADCRUMBS IN GOOGLE
+------------------------------
+A matching BreadcrumbList snippet (shows the category path under the listing)
+is available too — ask and it can be included.
