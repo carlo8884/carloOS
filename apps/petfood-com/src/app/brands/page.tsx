@@ -19,12 +19,18 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
-const BRANDS = [
+const BRANDS: Array<{
+  slug: string
+  title: string
+  description: string
+  flagship?: boolean
+}> = [
   {
     slug: 'hills-vs-royal-canin',
     title: "Hill's vs Royal Canin",
     description:
-      'Side-by-side reference comparison of the two largest veterinary therapeutic diet brands — Hill\'s Pet Nutrition (Colgate-Palmolive) and Royal Canin (Mars Petcare).',
+      "Side-by-side reference comparison of the two largest veterinary therapeutic diet brands — Hill's Pet Nutrition (Colgate-Palmolive) and Royal Canin (Mars Petcare).",
+    flagship: true,
   },
   {
     slug: 'blue-buffalo-evaluation',
@@ -143,10 +149,10 @@ export default function BrandsHubPage() {
 
       <div className="px-container-sm sm:px-container py-10 max-w-content-wide">
         <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-          The pet food market is dominated by a small number of large corporate groups — Mars Petcare, Nestle Purina, and Colgate-Palmolive (Hill's) account for the majority of US retail volume — alongside a long tail of independent, premium, and private-label brands. Corporate ownership, manufacturing footprint, recall history, and the depth of a brand's nutritional research investment all affect how much confidence you can reasonably place in a product, yet none of these factors appear on the front of the bag.
+          The pet food market is dominated by a small number of large corporate groups — Mars Petcare, Nestle Purina, and Colgate-Palmolive (Hill&#x2019;s) account for the majority of US retail volume — alongside a long tail of independent, premium, and private-label brands. Corporate ownership, manufacturing footprint, recall history, and the depth of a brand&#x2019;s nutritional research investment all affect how much confidence you can reasonably place in a product, yet none of these factors appear on the front of the bag.
         </p>
         <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-          The seven evaluations in this cluster apply the same five-dimension framework derived from WSAVA Global Nutrition Committee criteria: corporate and ownership context, product line coverage, manufacturing (owned facilities versus co-manufacturing), AAFCO substantiation posture (formulated-to-meet versus animal feeding trials), and recall history as reported to FDA-CVM. Each page also notes the grain-free and DCM context where relevant, and explains the Hill's versus Royal Canin distinction for therapeutic diet selection.
+          The seven evaluations in this cluster apply the same five-dimension framework derived from WSAVA Global Nutrition Committee criteria: corporate and ownership context, product line coverage, manufacturing (owned facilities versus co-manufacturing), AAFCO substantiation posture (formulated-to-meet versus animal feeding trials), and recall history as reported to FDA-CVM. Each page also notes the grain-free and DCM context where relevant, and explains the Hill&#x2019;s versus Royal Canin distinction for therapeutic diet selection.
         </p>
         <p className="text-base text-brand-text-mid leading-relaxed">
           Start with the Hill&#x2019;s vs Royal Canin page if your veterinarian has recommended a therapeutic diet — those two brands dominate the veterinary-channel prescription segment and the evaluation explains the clinical evidence and practical differences. Start with the Purina Pro Plan evaluation if you are selecting a mainstream adult or performance diet and want the most evidence-backed independent summary available.
@@ -159,8 +165,18 @@ export default function BrandsHubPage() {
             <li key={b.slug}>
               <Link
                 href={`/brands/${b.slug}`}
-                className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                className={[
+                  "block py-5 px-6 rounded-lg border no-underline transition",
+                  b.flagship
+                    ? "border-brand-primary ring-2 ring-brand-primary/30 bg-brand-surface hover:bg-white hover:ring-brand-primary/60"
+                    : "border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white",
+                ].join(" ")}
               >
+                {b.flagship && (
+                  <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary font-semibold mb-2">
+                    [FLAGSHIP EVALUATION]
+                  </p>
+                )}
                 <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
                   {b.title}
                 </div>

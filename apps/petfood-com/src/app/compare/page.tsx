@@ -18,7 +18,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
-const COMPARE = [
+const COMPARE: Array<{
+  slug: string
+  title: string
+  description: string
+  flagship?: boolean
+}> = [
   {
     slug: 'wet-vs-dry-food',
     title: 'Wet vs Dry Food',
@@ -29,7 +34,7 @@ const COMPARE = [
     slug: 'raw-vs-cooked-diets',
     title: 'Raw vs Cooked Diets',
     description:
-      'Raw versus cooked is the most polarized comparison in pet nutrition, and the evidence is more one-sided than the debate suggests: the major veterinary bodies caution against raw...',
+      'Raw versus cooked is the most polarized comparison in pet nutrition, and the evidence is more one-sided than the debate suggests: the major veterinary bodies caution against raw diets on pathogen-risk grounds, and digestibility advantages are not well established.',
   },
   {
     slug: 'fresh-vs-kibble',
@@ -41,13 +46,13 @@ const COMPARE = [
     slug: 'grain-free-vs-grain-inclusive',
     title: 'Grain-Free vs Grain-Inclusive',
     description:
-      'Grain-free became one of the best-selling positions in pet food on the strength of a claim — that grain is a common allergen and an inferior filler — that the evidence does not ...',
+      'Grain-free became one of the best-selling positions in pet food on the strength of a claim — that grain is a common allergen and an inferior filler — that the evidence does not support, and the FDA DCM investigation added a separate safety question.',
   },
   {
     slug: 'home-cooked-vs-commercial',
     title: 'Home-Cooked vs Commercial Diets',
     description:
-      'Home-cooking for a pet is appealing and, done correctly, legitimate — but the evidence is unambiguous that most home-prepared recipes, including those from books and websites, a...',
+      'Home-cooking for a pet is appealing and, done correctly, legitimate — but the evidence is unambiguous that most home-prepared recipes, including those from books and websites, are nutritionally incomplete without board-certified veterinary nutritionist oversight.',
   },
   {
     slug: 'kibble-vs-canned-for-cats',
@@ -66,6 +71,7 @@ const COMPARE = [
     title: 'Prescription vs Over-the-Counter Diets',
     description:
       'Prescription (therapeutic) diets occupy a distinct regulatory and clinical space from over-the-counter foods, and the difference is more than marketing.',
+    flagship: true,
   },
   {
     slug: 'breed-specific-diets',
@@ -115,7 +121,7 @@ export default function CompareHubPage() {
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
-        <span>›</span>
+        <span>&#x203A;</span>
         <span className="text-brand-text-mid font-medium">Compare</span>
       </nav>
 
@@ -129,8 +135,18 @@ export default function CompareHubPage() {
             <li key={i.slug}>
               <Link
                 href={`/compare/${i.slug}`}
-                className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                className={[
+                  "block py-5 px-6 rounded-lg border no-underline transition",
+                  i.flagship
+                    ? "border-brand-primary ring-2 ring-brand-primary/30 bg-brand-surface hover:bg-white hover:ring-brand-primary/60"
+                    : "border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white",
+                ].join(" ")}
               >
+                {i.flagship && (
+                  <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary font-semibold mb-2">
+                    [FLAGSHIP COMPARISON]
+                  </p>
+                )}
                 <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
                   {i.title}
                 </div>
