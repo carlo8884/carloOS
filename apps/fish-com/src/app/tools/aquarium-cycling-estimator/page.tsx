@@ -225,7 +225,11 @@ export default function AquariumCyclingEstimatorPage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair the estimator with our <Link href="/water-parameters">water parameters reference</Link> and <Link href="/reviews/best-water-test-kits">test kit reviews</Link>. New aquarists: this is the single most important step in your setup.
+          Pair the estimator with our <Link href="/water-parameters">water parameters reference</Link> and{' '}
+          <Link href="/reviews/best-water-test-kits">test kit reviews</Link> — the dose-and-wait test is the only reliable completion signal.
+          Filter media surface area is the main variable that changes cycling speed; see our{' '}
+          <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> for high-bio-media-volume picks.
+          New aquarists: this is the single most important step in your setup.
         </p>
       </div>
     </ArticleLayout>
