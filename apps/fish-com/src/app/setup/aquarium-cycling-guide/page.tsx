@@ -12,6 +12,7 @@ import {
   combineSchemas,
   ArticleByline,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,6 +127,34 @@ const faqSchema = buildFAQSchema({
 })
 
 const combinedSchema = combineSchemas(articleSchema, howToSchema, faqSchema)
+
+const SOURCES = [
+  {
+    label: "Nitrification and the Aquarium Nitrogen Cycle",
+    url: "https://www.researchgate.net/publication/228393977",
+    publisher: "Aquacultural Engineering (peer-reviewed)",
+  },
+  {
+    label: "Nitrosomonas and Nitrospira in Biological Filters",
+    url: "https://aem.asm.org/content/67/12/5768",
+    publisher: "Applied and Environmental Microbiology",
+  },
+  {
+    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
+    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
+    publisher: "University of Arkansas Cooperative Extension",
+  },
+  {
+    label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
+    url: "https://srac.tamu.edu/serveFactSheet/140",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "Aquarium Water Chemistry: Ammonia, Nitrite, Nitrate",
+    url: "https://fisheries.org/docs/wp/Urban-Fisheries/Aquarium-Water-Chemistry.pdf",
+    publisher: "American Fisheries Society",
+  },
+]
 
 export default function CyclingGuidePage() {
   return (
@@ -479,6 +508,7 @@ export default function CyclingGuidePage() {
             <a href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>

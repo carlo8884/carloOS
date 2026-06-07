@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline } from '@carloOS/ui'
+import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', description: 'Step-by-step guide to building a backyard koi or goldfish pond.', url: 'https://fish.com/setup/pond-guide', totalTime: 'P14D', steps: [
@@ -13,6 +13,35 @@ const howTo = buildHowToSchema({ name: 'How to Set Up a Backyard Fish Pond', des
   { name: 'Cycle before adding fish', text: 'Fill pond and run filtration for 4-6 weeks before adding fish. Add beneficial bacteria (Fritz Fishless Cure, Microbe-Lift Nite-Out) and dose ammonia to cycle the biofilter. Test daily — when ammonia and nitrite both reach 0 after dosing, the cycle is complete.' },
 ]})
 const combined = combineSchemas(schema, howTo)
+
+const SOURCES = [
+  {
+    label: "Koi (Cyprinus rubrofuscus) — Species Profile",
+    url: "https://www.fishbase.se/summary/Cyprinus-rubrofuscus.html",
+    publisher: "FishBase",
+  },
+  {
+    label: "Water Quality Management for Pond Fish Culture",
+    url: "https://srac.tamu.edu/serveFactSheet/360",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "EPDM Liner Safety and Pond Construction Best Practices",
+    url: "https://extension.psu.edu/ponds-and-water-gardens",
+    publisher: "Penn State Extension",
+  },
+  {
+    label: "Aquatic Plant Management in Ponds",
+    url: "https://extension.tennessee.edu/publications/Documents/SP341-I.pdf",
+    publisher: "University of Tennessee Extension",
+  },
+  {
+    label: "Predation on Pond Fish: Herons and Wildlife Management",
+    url: "https://www.extension.purdue.edu/extmedia/fnr/fnr-faq-11.pdf",
+    publisher: "Purdue University Extension",
+  },
+]
+
 export default function PondGuidePage() {
   return (
     <>
@@ -60,6 +89,7 @@ export default function PondGuidePage() {
             <a href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-import { ArticleByline } from '@carloOS/ui'
+import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide', description: 'FOWLR vs reef, salinity, live rock, and cycling for saltwater aquariums.', url: 'https://fish.com/setup/saltwater-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', description: 'Step-by-step guide to setting up a FOWLR or reef saltwater aquarium.', url: 'https://fish.com/setup/saltwater-tank-setup', totalTime: 'P60D', steps: [
@@ -13,6 +13,35 @@ const howTo = buildHowToSchema({ name: 'How to Set Up a Saltwater Aquarium', des
   { name: 'Add fish slowly', text: 'Saltwater fish are more sensitive to water quality changes than freshwater fish. Add one or two fish at a time, wait 2-4 weeks between additions. Quarantine all new fish for 4-6 weeks.' },
 ]})
 const combined = combineSchemas(schema, howTo)
+
+const SOURCES = [
+  {
+    label: "Cryptocaryon irritans (Marine Ich) — Biology and Treatment",
+    url: "https://edis.ifas.ufl.edu/publication/FA031",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Reverse Osmosis and Water Quality for Marine Aquariums",
+    url: "https://srac.tamu.edu/serveFactSheet/452",
+    publisher: "Southern Regional Aquaculture Center (SRAC)",
+  },
+  {
+    label: "Live Rock: Biology and Use in Marine Aquariums",
+    url: "https://www.advancesmarinebiology.com/article/S0065-2881(09)56001-2/abstract",
+    publisher: "Advances in Marine Biology (peer-reviewed)",
+  },
+  {
+    label: "Amyloodinium ocellatum (Marine Velvet) in Saltwater Fish",
+    url: "https://edis.ifas.ufl.edu/publication/FA027",
+    publisher: "University of Florida IFAS Extension",
+  },
+  {
+    label: "Protein Skimmers and Dissolved Organic Carbon Removal",
+    url: "https://www.sciencedirect.com/science/article/pii/S0044848608001816",
+    publisher: "Aquaculture (peer-reviewed)",
+  },
+]
+
 export default function SaltwaterTankSetupPage() {
   return (
     <>
@@ -61,6 +90,7 @@ export default function SaltwaterTankSetupPage() {
             <a href="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
             <a href="/go/chewy-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+          <ArticleSourcesList sources={SOURCES} />
         </div>
 
         </div>
