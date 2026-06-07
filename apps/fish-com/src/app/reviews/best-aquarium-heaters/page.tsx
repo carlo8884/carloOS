@@ -6,7 +6,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Best Aquarium Heaters 2025 — Ranked for Accuracy | Fish.com',
+  title: 'Best Aquarium Heaters 2026 — Ranked for Accuracy | Fish.com',
   description: 'Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports.',
   path: '/reviews/best-aquarium-heaters',
   type: 'article',
@@ -14,13 +14,13 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Best Aquarium Heaters 2025',
+  title: 'Best Aquarium Heaters 2026',
   description: 'Aquarium heaters ranked for accuracy using published specs and aggregated keeper reports — Eheim, Fluval, Cobalt.',
   url: 'https://fish.com/reviews/best-aquarium-heaters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const eheimSchema = buildProductSchema({
@@ -45,11 +45,11 @@ const PICKS = [
 export default function BestHeatersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Heaters 2025', url: 'https://fish.com/reviews/best-aquarium-heaters' }] }))} />
+      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Heaters 2026', url: 'https://fish.com/reviews/best-aquarium-heaters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editorial Comparison · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editorial Comparison · June 2026</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Aquarium Heaters 2025 — Ranked for Temperature Accuracy
+          Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We ranked 8 heaters using manufacturer-published accuracy specs and aggregated keeper reports. Here&apos;s what holds temperature best on the record.
@@ -64,7 +64,7 @@ export default function BestHeatersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
-            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
             <CalloutBox variant="tip" title="Right-sizing wattage">
               Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer. Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link> to size for your tank volume and target temperature.
