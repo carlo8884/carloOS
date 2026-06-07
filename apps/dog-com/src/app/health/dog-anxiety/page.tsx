@@ -23,7 +23,7 @@ export default function DogAnxietyPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Seizures', href: '/health/dog-seizures', category: 'Dog Health' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
         </>}

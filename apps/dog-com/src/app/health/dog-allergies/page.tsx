@@ -44,7 +44,7 @@ export default function DogAllergiesPage() {
               <li>Veterinary Dermatology (journal) reviews</li>
             </ul>
           </div>
-          <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }]} />
+          <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-allergies" />
         </>}

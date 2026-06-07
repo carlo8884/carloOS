@@ -182,10 +182,11 @@ export default function GoldenRetrieverBreedPage() {
             <RelatedLinks title="Health Resources" links={[
               { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
-              { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               { label: 'Find a Specialist', href: '/find-a-vet' },
             ]} />
             <RelatedLinks title="Related Breeds" links={[
+              { label: 'All Dog Breeds', href: '/breeds' },
               { label: 'Labrador Retriever', href: '/breeds/labrador-retriever' },
               { label: 'German Shepherd', href: '/breeds/german-shepherd' },
             ]} />

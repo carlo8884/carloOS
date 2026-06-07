@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2026 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2025', description: 'Heartgard, Interceptor, Simparica Trio compared for heartworm prevention.', url: 'https://dog.com/reviews/best-heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2026', description: 'Heartgard, Interceptor, Simparica Trio compared for heartworm prevention.', url: 'https://dog.com/reviews/best-heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const hgSchema = buildProductSchema({ name: 'Heartgard Plus', description: 'Monthly heartworm, roundworm, and hookworm prevention chew for dogs.', url: 'https://heartgard.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const intSchema = buildProductSchema({ name: 'Interceptor Plus', description: 'Monthly heartworm, roundworm, hookworm, whipworm, and tapeworm prevention for dogs.', url: 'https://interceptorplus.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, hgSchema, intSchema)
@@ -20,10 +20,10 @@ const PICKS = [
 export default function BestHeartwormPreventionPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Heartworm Prevention for Dogs 2025', url: 'https://dog.com/reviews/best-heartworm-prevention' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Heartworm Prevention for Dogs 2026', url: 'https://dog.com/reviews/best-heartworm-prevention' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · May 2025</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Heartworm Prevention for Dogs 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · Updated 2026</span>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Heartworm Prevention for Dogs 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Heartworm prevention costs $8–15/month. Treatment costs $1,000–2,000+ and requires months of strict rest. All options listed here require a prescription — your vet will recommend one based on your dog's risk profile and region.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -91,7 +91,7 @@ export default function BestHeartwormPreventionPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Heartworm Prevention Guide', href: '/health/heartworm-prevention' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Heartworm Prevention Guide', href: '/health/heartworm-prevention' }, { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-heartworm" />
           </aside>
         </div>

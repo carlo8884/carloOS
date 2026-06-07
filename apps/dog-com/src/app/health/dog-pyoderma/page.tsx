@@ -28,7 +28,7 @@ export default function DogPyodermaPage() {
               <div key={c} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{c}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Mange', href: '/health/dog-mange' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Mange', href: '/health/dog-mange' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
           <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pyoderma" />
         </>}

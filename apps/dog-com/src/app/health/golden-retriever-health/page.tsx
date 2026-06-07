@@ -77,7 +77,7 @@ export default function GoldenRetrieverHealthPage() {
           ]} />
           <RelatedLinks title="Related" links={[
             { label: 'Golden Retriever Breed Profile', href: '/breeds/golden-retriever' },
-            { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+            { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             { label: 'Find a Specialist', href: '/find-a-vet' },
             { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
           ]} />
@@ -90,7 +90,7 @@ export default function GoldenRetrieverHealthPage() {
       }
       relatedLinks={[
         { title: 'Golden Retriever Breed Guide', href: '/breeds/golden-retriever', category: 'Breed Profile' },
-        { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance', category: 'Insurance' },
+        { title: 'Best Pet Insurance', href: '/reviews/best-pet-insurance', category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
     >

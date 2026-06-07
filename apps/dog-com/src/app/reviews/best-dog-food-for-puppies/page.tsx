@@ -5,8 +5,8 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Puppy Food 2025 — Large Breed | Dog.com',
-  description: 'WSAVA-compliant puppy foods ranked for 2025. Royal Canin, Purina Pro Plan, Hill\'s Science Diet compared for large breed puppies, small breeds, and all sizes.',
+  title: 'Best Puppy Food 2026 — Large Breed | Dog.com',
+  description: 'WSAVA-compliant puppy foods ranked for 2026. Royal Canin, Purina Pro Plan, Hill\'s Science Diet compared for large breed puppies, small breeds, and all sizes.',
   path: '/reviews/best-dog-food-for-puppies',
   category: 'Nutrition Reviews',
   type: 'article',
@@ -14,13 +14,13 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Puppy Food 2025',
+  title: 'Best Puppy Food 2026',
   description: 'WSAVA-compliant puppy formulas ranked — large breed, small breed, all sizes.',
   url: 'https://dog.com/reviews/best-dog-food-for-puppies',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
@@ -38,12 +38,12 @@ const PICKS = [
 export default function BestPuppyFoodPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Puppy Food 2025', url: 'https://dog.com/reviews/best-dog-food-for-puppies' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Puppy Food 2026', url: 'https://dog.com/reviews/best-dog-food-for-puppies' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
-          Best Puppy Food 2025 — WSAVA-Compliant Formulas Ranked
+          Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The most important rule in puppy nutrition: large breeds (expected adult weight 50+ lbs) must eat a large breed puppy formula. We ranked by <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials, and whether the manufacturer employs board-certified veterinary nutritionists.
@@ -194,6 +194,7 @@ export default function BestPuppyFoodPage() {
               </ul>
             </div>
             <RelatedLinks title="Related Guides" links={[
+              { label: 'All Dog Reviews', href: '/reviews' },
               { label: 'Puppy Nutrition Guide', href: '/nutrition/puppy-nutrition' },
               { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
               { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },

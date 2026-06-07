@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior.', path: '/reviews/best-dog-food-senior', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2025', description: 'Top-rated senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior.', path: '/reviews/best-dog-food-senior', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026', description: 'Top-rated senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Bright Mind Adult 7+', description: 'Enhanced botanical oils formula with clinical trial data for cognitive support in aging dogs.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const hillsSchema = buildProductSchema({ name: "Hill's Science Diet Adult 7+ Senior", description: 'veterinarian-formulated senior formula with antioxidant blend and easy-to-digest proteins.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, ppSchema, hillsSchema)
@@ -15,10 +15,10 @@ const PICKS = [
 export default function BestSeniorDogFoodPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Senior Dog Food 2025', url: 'https://dog.com/reviews/best-dog-food-senior' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Senior Dog Food 2026', url: 'https://dog.com/reviews/best-dog-food-senior' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · May 2025</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs are considered senior at 7+ years for most breeds (5-6 for giant breeds). Their nutritional needs shift — but "senior dog food" as a category is largely unregulated. <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-compliant formulas from research-backed manufacturers are the appropriate filter.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -70,7 +70,7 @@ export default function BestSeniorDogFoodPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-senior-food" />
           </aside>
         </div>

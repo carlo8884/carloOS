@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2025 — Fi, Whistle | Dog.com', description: 'Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2025', description: 'Fi, Whistle, and Tractive GPS dog trackers ranked.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi, Whistle | Dog.com', description: 'Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi, Whistle, and Tractive GPS dog trackers ranked.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', description: 'GPS dog tracker with 3-month battery life and LTE-M network coverage.', url: 'https://tryfi.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
 const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://whistle.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fiSchema, whistleSchema)
@@ -18,7 +18,7 @@ export default function BestGPSTrackerPage() {
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog GPS Trackers 2025', url: 'https://dog.com/reviews/best-dog-gps-tracker' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">📍 Buyer's Guide</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2025</h1>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -76,7 +76,7 @@ export default function BestGPSTrackerPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-gps" />
           </aside>
         </div>
