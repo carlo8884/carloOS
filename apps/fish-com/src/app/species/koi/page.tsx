@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Cyprinus rubrofuscus (Koi) — FishBase species record", url: "https://www.fishbase.se/summary/Cyprinus-rubrofuscus.html", publisher: "FishBase" },
+  { label: "Smartt, J. Goldfish Varieties and Genetics: A Handbook for Breeders. Blackwell Science, 2001.", publisher: "Blackwell Science" },
+  { label: "Koi Herpesvirus (KHV) Disease — USDA APHIS", url: "https://www.aphis.usda.gov/animal_health/aquaculture/downloads/khv_disease.pdf", publisher: "USDA APHIS" },
+  { label: "Pond Fish Management — UF/IFAS Extension FA-9", url: "https://edis.ifas.ufl.edu/publication/FA009", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Koi Fish Care Guide — Pond Size, Filtration | Fish.com', description: 'Koi need 250+ gallons per fish, heavy pond filtration, and regular water changes. Kohaku, Taisho Sanke, Showa, and other varieties.', path: '/species/koi', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Guide', description: 'Pond size requirements, filtration, water quality, and variety overview for koi fish.', url: 'https://fish.com/species/koi', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function KoiPage() {
@@ -59,6 +66,7 @@ export default function KoiPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

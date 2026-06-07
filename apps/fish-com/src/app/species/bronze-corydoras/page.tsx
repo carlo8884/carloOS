@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Corydoras aeneus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-aeneus/", publisher: "Seriously Fish" },
+  { label: "Corydoras aeneus — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-aeneus.html", publisher: "FishBase" },
+  { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
+  { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide — The Hardy Cory Catfish | Fish.com', description: "Bronze corydoras are the hardiest, most available cory catfish — peaceful bottom-dwelling schoolers that need a group of 6+, sand substrate, and sinking food.", path: '/species/bronze-corydoras', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bronze Corydoras Care Guide', description: 'School size, substrate, barbel care, and breeding for Corydoras aeneus.', url: 'https://fish.com/species/bronze-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function BronzeCorydorasPage() {
@@ -53,6 +60,7 @@ export default function BronzeCorydorasPage() {
             <a href="/go/chewy-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

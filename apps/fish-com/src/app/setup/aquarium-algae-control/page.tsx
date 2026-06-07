@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Algae in the Aquarium — Seriously Fish", url: "https://www.seriouslyfish.com/algae-in-the-aquarium/", publisher: "Seriously Fish" },
+  { label: "Algae Control in Freshwater Aquaria — UF/IFAS Extension FA-161", url: "https://edis.ifas.ufl.edu/publication/FA161", publisher: "UF/IFAS Extension" },
+  { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
+  { label: "Dodds, W.K. & Gudder, D.A. The Ecology of Cladophora. Journal of Phycology, 1992.", publisher: "Journal of Phycology" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Algae Control — Identify and Beat Every Type | Fish.com', description: "How to identify and control aquarium algae: green spot, hair, black beard, diatoms, and cyanobacteria. Fix the root causes — light, nutrients, and CO2.", path: '/setup/aquarium-algae-control', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Algae Control Guide', description: 'Identifying and controlling green spot, hair, black beard, diatom, and blue-green algae.', url: 'https://fish.com/setup/aquarium-algae-control', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function AlgaeControlPage() {
@@ -46,6 +53,7 @@ export default function AlgaeControlPage() {
 
         <h2>Preventing the Next Bloom</h2>
         <p>The tanks that stay algae-free long term share a few traits: a consistent, modest photoperiod on a timer; healthy, actively growing plants that monopolize nutrients; regular water changes that prevent nutrient accumulation; and restrained feeding. Establish those routines and algae becomes a minor, occasional nuisance rather than a recurring battle. Test nitrate and phosphate periodically — both unusually high and unusually low readings can drive specific algae types, and balance is the goal.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

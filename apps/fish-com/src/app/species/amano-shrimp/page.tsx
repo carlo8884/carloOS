@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Caridina multidentata — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/caridina-multidentata/", publisher: "Seriously Fish" },
+  { label: "Caridina multidentata — FishBase species record", url: "https://www.fishbase.se/summary/Caridina-multidentata.html", publisher: "FishBase" },
+  { label: "Takahashi, K. Larvae of Caridina multidentata (Stimpson, 1860) reared in the laboratory. Crustaceana, 1977.", publisher: "Crustaceana" },
+  { label: "Algae and Macrophytes in Freshwater Aquaria — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA161", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide — Best Algae Eater | Fish.com', description: 'Amano shrimp are the most effective algae-eating freshwater invertebrate. They cannot breed in freshwater. How many per tank and what algae they actually eat.', path: '/species/amano-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Amano Shrimp Care Guide', description: 'Algae control effectiveness, freshwater breeding impossibility, and group sizing for Caridina multidentata.', url: 'https://fish.com/species/amano-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AmanoShrimpPage() {
@@ -49,6 +56,7 @@ export default function AmanoShrimpPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

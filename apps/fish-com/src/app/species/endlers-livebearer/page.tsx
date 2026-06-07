@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Poecilia wingei — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/poecilia-wingei/", publisher: "Seriously Fish" },
+  { label: "Poecilia wingei — FishBase species record", url: "https://www.fishbase.se/summary/Poecilia-wingei.html", publisher: "FishBase" },
+  { label: "Poeser, F.N. et al. Description of Poecilia (Acanthophacelus) wingei n. sp. Contributions to Zoology, 2005.", publisher: "Contributions to Zoology" },
+  { label: "Endler, J.A. Natural Selection on Color Patterns in Poecilia reticulata. Evolution, 34(1), 76–91, 1980.", publisher: "Evolution" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide — The Nano Guppy | Fish.com", description: "Endler's livebearers are tiny, dazzling, prolific guppy relatives ideal for nano tanks. Easy to keep, easy to breed, and they hybridize freely with guppies.", path: '/species/endlers-livebearer', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: "Endler's Livebearer Care Guide", description: "Care, hybridization, and breeding for Poecilia wingei, the Endler's livebearer.", url: 'https://fish.com/species/endlers-livebearer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function EndlersLivebearerPage() {
@@ -53,6 +60,7 @@ export default function EndlersLivebearerPage() {
             <a href="/go/chewy-brand/endlers%20livebearer%20nano%20tank%20setup?s=species-endlers-livebearer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

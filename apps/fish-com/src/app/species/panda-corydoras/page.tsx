@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Corydoras panda — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-panda/", publisher: "Seriously Fish" },
+  { label: "Corydoras panda — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-panda.html", publisher: "FishBase" },
+  { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
+  { label: "Axenrot, T. & Kullander, S.O. Corydoras diphyes (Siluriformes: Callichthyidae), a new species from Paraguay. Ichthyological Explorations of Freshwaters, 2003.", publisher: "Ichthyological Explorations of Freshwaters" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide — The Cool-Water Cory | Fish.com', description: "Panda corydoras are a small, panda-marked cory catfish that prefers cooler water and pristine conditions. Keep a group of 6+ over soft sand.", path: '/species/panda-corydoras', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Panda Corydoras Care Guide', description: 'Temperature, group needs, water quality, and breeding for Corydoras panda.', url: 'https://fish.com/species/panda-corydoras', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function PandaCorydorasPage() {
@@ -53,6 +60,7 @@ export default function PandaCorydorasPage() {
             <a href="/go/chewy-brand/panda%20corydoras%20tank%20setup?s=species-panda-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

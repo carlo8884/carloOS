@@ -14,7 +14,15 @@ import {
   DropCap,
   CalloutBox,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Xiphophorus maculatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/xiphophorus-maculatus/", publisher: "Seriously Fish" },
+  { label: "Xiphophorus maculatus — FishBase species record", url: "https://www.fishbase.se/summary/Xiphophorus-maculatus.html", publisher: "FishBase" },
+  { label: "Schartl, M. et al. The Platyfish, Xiphophorus maculatus: a Model Organism in Comparative and Evolutionary Genomics. Molecular Ecology Resources, 2013.", publisher: "Molecular Ecology Resources" },
+  { label: "Rosen, D.E. & Bailey, R.M. The Poeciliid Fishes (Cyprinodontiformes). Bulletin of the AMNH, 1963.", publisher: "American Museum of Natural History" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -443,6 +451,7 @@ export default function PlatyPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

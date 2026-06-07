@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Tetraodon nigroviridis — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/tetraodon-nigroviridis/", publisher: "Seriously Fish" },
+  { label: "Tetraodon nigroviridis — FishBase species record", url: "https://www.fishbase.se/summary/Tetraodon-nigroviridis.html", publisher: "FishBase" },
+  { label: "Froese, R. & Pauly, D. Tetraodontidae — Pufferfishes. FishBase, 2023.", url: "https://www.fishbase.se/identification/SpeciesList.php?family=Tetraodontidae", publisher: "FishBase" },
+  { label: "Wager, R. & Unmack, P. Fishes of the Lake Eyre Catchment. Queensland Department of Primary Industries, 2000.", publisher: "QDPI" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Puffer Fish Care Guide — Beak Trimming, Aggression | Fish.com', description: 'Puffers bite everything including tankmates and need hard foods to wear their beaks. Dwarf puffer vs fahaka vs figure 8 compared.', path: '/species/puffer-fish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Puffer Fish Care Guide', description: 'Beak care, aggression management, and species comparison for freshwater puffer fish.', url: 'https://fish.com/species/puffer-fish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function PufferFishPage() {
@@ -51,6 +58,7 @@ export default function PufferFishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

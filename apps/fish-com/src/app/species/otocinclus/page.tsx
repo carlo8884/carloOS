@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Otocinclus vestitus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/otocinclus-vestitus/", publisher: "Seriously Fish" },
+  { label: "Otocinclus spp. — FishBase genus page", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=otocinclus", publisher: "FishBase" },
+  { label: "Schaefer, S.A. Otocinclus (Loricariidae). Systematic Zoology, 1991.", publisher: "Systematic Zoology" },
+  { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Otocinclus Care Guide — Algae, Starvation Risk | Fish.com', description: 'Otocinclus are the best algae eaters for small planted tanks but starve easily without established algae growth. Groups of 6+, established tanks only.', path: '/species/otocinclus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Otocinclus Care Guide', description: 'Algae requirements, starvation prevention, and group care for otocinclus catfish.', url: 'https://fish.com/species/otocinclus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function OtocinclsPage() {
@@ -52,6 +59,7 @@ export default function OtocinclsPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

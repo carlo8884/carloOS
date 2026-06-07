@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Tanichthys albonubes — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/tanichthys-albonubes/", publisher: "Seriously Fish" },
+  { label: "Tanichthys albonubes — FishBase species record", url: "https://www.fishbase.se/summary/Tanichthys-albonubes.html", publisher: "FishBase" },
+  { label: "Tanichthys albonubes — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/21449/9286097", publisher: "IUCN Red List" },
+  { label: "Kottelat, M. & Whitten, A.J. Freshwater Biodiversity in Asia. World Bank Technical Paper, 1996.", publisher: "World Bank" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide — Cold Water | Fish.com', description: 'White cloud mountain minnows are cold water nano fish — perfect for unheated tanks. Hardy, peaceful, and stunning in schools of 10+. Complete care guide.', path: '/species/white-cloud-mountain-minnow', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'White Cloud Mountain Minnow Care Guide', description: 'Cold water requirements, school size, and breeding for Tanichthys albonubes white clouds.', url: 'https://fish.com/species/white-cloud-mountain-minnow', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WhiteCloudPage() {
@@ -53,6 +60,7 @@ export default function WhiteCloudPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

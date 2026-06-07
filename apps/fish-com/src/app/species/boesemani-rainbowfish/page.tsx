@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Melanotaenia boesemani — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/melanotaenia-boesemani/", publisher: "Seriously Fish" },
+  { label: "Melanotaenia boesemani — FishBase species record", url: "https://www.fishbase.se/summary/Melanotaenia-boesemani.html", publisher: "FishBase" },
+  { label: "Melanotaenia boesemani — IUCN Red List", url: "https://www.iucnredlist.org/species/13023/3410174", publisher: "IUCN Red List" },
+  { label: "Allen, G.R. & Cross, N.J. Rainbowfishes of Australia and Papua New Guinea. TFH Publications, 1982.", publisher: "TFH Publications" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide — Blue-Orange Split | Fish.com', description: 'Boesemani rainbowfish are the most popular rainbowfish — vivid blue-purple front, orange-red rear. Locale-pure breeding matters.', path: '/species/boesemani-rainbowfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide', description: 'Color development, group requirements, and water chemistry for Melanotaenia boesemani.', url: 'https://fish.com/species/boesemani-rainbowfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BoesemaniPage() {
@@ -51,6 +58,7 @@ export default function BoesemaniPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

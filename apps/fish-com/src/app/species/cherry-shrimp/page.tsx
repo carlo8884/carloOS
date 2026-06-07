@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Neocaridina davidi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/neocaridina-davidi/", publisher: "Seriously Fish" },
+  { label: "Neocaridina davidi — FishBase species record", url: "https://www.fishbase.se/summary/Neocaridina-davidi.html", publisher: "FishBase" },
+  { label: "Klotz, W. et al. Neocaridina davidi (Bouvier, 1904) in Germany: the ornamental cherry shrimp as a potential invasive species. BioInvasions Records, 2013.", publisher: "BioInvasions Records" },
+  { label: "Freshwater Shrimp Care — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/FA177", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide — Grades, Breeding | Fish.com', description: 'Cherry shrimp are the best beginner shrimp. Sakura, Fire Red, and Painted Fire Red grades compared. They breed readily in established tanks', path: '/species/cherry-shrimp', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Care Guide', description: 'Grades, breeding, colony setup, and care for Neocaridina davidi cherry shrimp.', url: 'https://fish.com/species/cherry-shrimp', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryShrimpPage() {
@@ -56,6 +63,7 @@ export default function CherryShrimpPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

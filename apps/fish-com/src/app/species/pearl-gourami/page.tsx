@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Trichopodus leerii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/trichopodus-leerii/", publisher: "Seriously Fish" },
+  { label: "Trichopodus leerii — FishBase species record", url: "https://www.fishbase.se/summary/Trichopodus-leerii.html", publisher: "FishBase" },
+  { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
+  { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide — The Peaceful Centerpiece | Fish.com', description: "Pearl gouramis are among the most peaceful and beautiful gouramis — a labyrinth fish with pearlescent spotting. Needs surface access, calm tankmates.", path: '/species/pearl-gourami', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Care Guide', description: 'Temperament, tank size, labyrinth breathing, and care for Trichopodus leerii.', url: 'https://fish.com/species/pearl-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function PearlGouramiPage() {
@@ -54,6 +61,7 @@ export default function PearlGouramiPage() {
             <a href="/go/chewy-brand/pearl%20gourami%20tank%20setup?s=species-pearl-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

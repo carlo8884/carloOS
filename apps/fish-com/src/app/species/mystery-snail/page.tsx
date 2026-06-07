@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Pomacea bridgesii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/pomacea-bridgesii/", publisher: "Seriously Fish" },
+  { label: "Pomacea bridgesii — FishBase species record", url: "https://www.fishbase.se/summary/Pomacea-bridgesii.html", publisher: "FishBase" },
+  { label: "Rawlings, T.A. et al. Molecular phylogenetics of Pomacea apple snails. Molecular Phylogenetics and Evolution, 2007.", publisher: "Molecular Phylogenetics and Evolution" },
+  { label: "Invasive Apple Snails in Florida — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/IN920", publisher: "UF/IFAS Extension" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper', path: '/species/mystery-snail', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function MysterySnailPage() {
@@ -52,6 +59,7 @@ export default function MysterySnailPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )
