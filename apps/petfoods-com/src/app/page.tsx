@@ -9,6 +9,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@carloOS/ui'
+import { BrandMasthead } from '../components/BrandMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfoods-com',
@@ -68,39 +69,25 @@ export default function HomePage() {
   const year = new Date().getFullYear()
 
   return (
-    <div
-      style={{
-        maxWidth: '960px',
-        margin: '0 auto',
-        padding: '96px 24px 64px',
-      }}
-    >
-      <h1
+    <>
+      <BrandMasthead
+        eyebrow="The Pet Food Catalog"
+        title="PetFoods.com"
+        intro="An independent reference index of every commercial dog and cat food sold in the United States — organized by brand, by ingredient, by life stage, and by recall. Built to be referenced, not browsed."
+        manifestKey="petfoods-com:category-brands"
+        fallbackKey="petfoods-com:hero"
+        imageAlt="Shelves of commercial dog and cat food bags"
+        primaryCta={{ href: '/brands', label: 'Browse brand reviews' }}
+        secondaryCta={{ href: '/ingredients', label: 'Ingredient A–Z' }}
+      />
+      <div
         style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '3rem',
-          fontWeight: 900,
-          letterSpacing: '-0.02em',
-          color: 'var(--brand-text-dark)',
-          marginBottom: '20px',
+          maxWidth: '960px',
+          margin: '0 auto',
+          padding: '64px 24px 64px',
         }}
       >
-        PetFoods.com
-      </h1>
-      <p
-        style={{
-          fontSize: '1.125rem',
-          lineHeight: 1.6,
-          color: 'var(--brand-text-mid)',
-          maxWidth: '720px',
-          marginBottom: '20px',
-        }}
-      >
-        The catalog. An independent reference index of every commercial dog and cat food sold in
-        the United States — organized by brand, by ingredient, by life stage, and by recall.
-        Built to be referenced, not browsed.
-      </p>
-      <p
+        <p
         style={{
           fontSize: '1rem',
           lineHeight: 1.65,
@@ -204,6 +191,7 @@ export default function HomePage() {
       >
         © {year} PetFoods.com — sister catalog to PetFood.com.
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
