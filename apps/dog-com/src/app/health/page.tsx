@@ -159,9 +159,9 @@ export default function DogHealthHubPage() {
           on a bottom-up gradient scrim instead of sitting in an orphaned band
           below. Reuses the existing dog-com:category-health key (no new manifest
           entries). subtleCredit keeps photographer attribution present (QC §1). */}
-      <section className="relative bg-brand-dark">
+      <section className="relative bg-brand-dark min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh]">
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:!w-full [&_figure>div]:h-full [&_figure>div]:!w-full [&_figure>div]:!aspect-auto [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="dog-com:category-health"
@@ -184,7 +184,7 @@ export default function DogHealthHubPage() {
               "radial-gradient(ellipse at 25% 75%, rgba(232,98,42,0.35) 0%, transparent 60%)",
           }}
         />
-        <div className="relative z-10 flex flex-col justify-end min-h-[52vh] sm:min-h-[58vh] lg:min-h-[64vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
+        <div className="relative z-10 flex flex-col justify-end min-h-[60vh] sm:min-h-[62vh] lg:min-h-[68vh] px-container-sm sm:px-container pt-16 pb-10 sm:pb-12">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Dog Health Library</span>
