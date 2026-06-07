@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function GrainFreeVsGrainInclusivePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-grain-free-vs-grain-inclusive" priority aspect="16:9" variant="wide" caption="Grain-free versus grain-inclusive — the DCM question and what the evidence actually supports." />
         <p>Grain-free pet food replaces cereal grains (corn, wheat, rice) with other carbohydrate sources, most often potatoes, peas, lentils, and other legumes. The category was built on the marketing premise that grains are common allergens and low-quality fillers, and that a grain-free diet is therefore healthier. Neither premise holds up well, and the FDA later identified a possible association between some grain-free diets and canine heart disease. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a>.</p>
         <h2 id="whatis">What Grain-Free Means</h2>
         <p>Grain-free means only that the recipe contains no cereal grains. It says nothing about carbohydrate content, protein quality, or overall nutritional value, because the grains are simply replaced by other carbohydrate ingredients. The term is a marketing claim about one ingredient category, not a measure of diet quality.</p>

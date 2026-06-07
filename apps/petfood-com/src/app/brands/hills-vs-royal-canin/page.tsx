@@ -11,7 +11,8 @@ import {
   BuyBox,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -157,6 +158,7 @@ export default function HillsVsRoyalCaninPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-hills-vs-royal-canin" priority aspect="16:9" variant="wide" caption="Hill's vs Royal Canin — a side-by-side reference comparison of the two largest veterinary therapeutic diet brands." />
         <p>
           Hill&apos;s Pet Nutrition and Royal Canin are the two largest companies in the U.S.
           veterinary therapeutic diet channel. They are the two brands a small-animal clinician is
@@ -232,68 +234,71 @@ export default function HillsVsRoyalCaninPage() {
         </p>
 
         <h2 id="at-a-glance">At-a-Glance Comparison</h2>
-        <div style={{ background: 'rgba(31,26,20,0.04)', border: '1px solid rgba(31,26,20,0.10)', borderRadius: '10px', padding: '18px 22px', margin: '20px 0', overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', minWidth: '560px' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid rgba(31,26,20,0.18)' }}>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Dimension</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Hill&apos;s</th>
-                <th style={{ textAlign: 'left', padding: '8px 6px', fontWeight: 700 }}>Royal Canin</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Parent</td>
-                <td style={{ padding: '8px 6px' }}>Colgate-Palmolive (NYSE: CL)</td>
-                <td style={{ padding: '8px 6px' }}>Mars, Incorporated (private)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Founded</td>
-                <td style={{ padding: '8px 6px' }}>1907 (Topeka, Kansas)</td>
-                <td style={{ padding: '8px 6px' }}>1968 (Aimargues, France)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Maintenance retail line</td>
-                <td style={{ padding: '8px 6px' }}>Science Diet</td>
-                <td style={{ padding: '8px 6px' }}>Royal Canin (size / breed / life-stage)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Veterinary therapeutic line</td>
-                <td style={{ padding: '8px 6px' }}>Prescription Diet</td>
-                <td style={{ padding: '8px 6px' }}>Veterinary Diet</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>AAFCO pathway (most adult lines)</td>
-                <td style={{ padding: '8px 6px' }}>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
-                <td style={{ padding: '8px 6px' }}>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Primary U.S. manufacturing</td>
-                <td style={{ padding: '8px 6px' }}>Owned plants in Kansas, Indiana, Tennessee, Iowa</td>
-                <td style={{ padding: '8px 6px' }}>Owned plants in South Dakota, Missouri</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>FDA CVM recall history (last decade)</td>
-                <td style={{ padding: '8px 6px' }}>Yes — 2019 canned excess vitamin D</td>
-                <td style={{ padding: '8px 6px' }}>Yes — periodic limited withdrawals</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Board-certified veterinary nutritionists on staff</td>
-                <td style={{ padding: '8px 6px' }}>Yes (disclosed; multiple DACVIM-Nutrition)</td>
-                <td style={{ padding: '8px 6px' }}>Yes (disclosed; multiple DACVIM-Nutrition and ECVCN)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid rgba(31,26,20,0.08)' }}>
-                <td style={{ padding: '8px 6px' }}>Approximate price per 100 kcal (U.S. retail, 2025-2026)</td>
-                <td style={{ padding: '8px 6px' }}>$0.09–$0.20 (therapeutic higher)</td>
-                <td style={{ padding: '8px 6px' }}>$0.10–$0.22 (therapeutic higher)</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '8px 6px' }}>Positioning</td>
-                <td style={{ padding: '8px 6px' }}>Clinical/therapeutic heritage; broad veterinary channel</td>
-                <td style={{ padding: '8px 6px' }}>Breed/size/life-stage segmentation; broad veterinary channel</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="pf-compare">
+          <div className="pf-compare-caption">Hill&apos;s vs Royal Canin — side-by-side reference</div>
+          <div className="pf-compare-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Dimension</th>
+                  <th scope="col">Hill&apos;s</th>
+                  <th scope="col">Royal Canin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Parent</th>
+                  <td>Colgate-Palmolive (NYSE: CL)</td>
+                  <td>Mars, Incorporated (private)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Founded</th>
+                  <td>1907 (Topeka, Kansas)</td>
+                  <td>1968 (Aimargues, France)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Maintenance retail line</th>
+                  <td>Science Diet</td>
+                  <td>Royal Canin (size / breed / life-stage)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Veterinary therapeutic line</th>
+                  <td>Prescription Diet</td>
+                  <td>Veterinary Diet</td>
+                </tr>
+                <tr>
+                  <th scope="row">AAFCO pathway (most adult lines)</th>
+                  <td>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
+                  <td>Feeding trial on flagship adult; formulation on many therapeutic SKUs</td>
+                </tr>
+                <tr>
+                  <th scope="row">Primary U.S. manufacturing</th>
+                  <td>Owned plants in Kansas, Indiana, Tennessee, Iowa</td>
+                  <td>Owned plants in South Dakota, Missouri</td>
+                </tr>
+                <tr>
+                  <th scope="row">FDA CVM recall history (last decade)</th>
+                  <td>Yes — 2019 canned excess vitamin D</td>
+                  <td>Yes — periodic limited withdrawals</td>
+                </tr>
+                <tr>
+                  <th scope="row">Board-certified veterinary nutritionists on staff</th>
+                  <td>Yes (disclosed; multiple DACVIM-Nutrition)</td>
+                  <td>Yes (disclosed; multiple DACVIM-Nutrition and ECVCN)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Approximate price per 100 kcal (U.S. retail, 2025-2026)</th>
+                  <td>$0.09–$0.20 (therapeutic higher)</td>
+                  <td>$0.10–$0.22 (therapeutic higher)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Positioning</th>
+                  <td>Clinical/therapeutic heritage; broad veterinary channel</td>
+                  <td>Breed/size/life-stage segmentation; broad veterinary channel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <h2 id="manufacturing">Manufacturing Footprint</h2>

@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +108,7 @@ export default function BreedSpecificDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-breed-specific-diets" priority aspect="16:9" variant="wide" caption="Breed-specific diets — where breed-tailored formulation is substance, and where it is marketing." />
         <p>Breed-specific diets are formulated and marketed for individual breeds, implying a precision-tailored nutrition. Some of what they offer is genuinely useful — addressing the calorie needs, kibble preferences, and disease predispositions that do vary by breed and size. But much of the differentiation is size-based or cosmetic, and the breed-precise framing often outruns the actual formulation differences. The category is a mix of substance and marketing. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
         <h2 id="claim">What They Claim</h2>
         <p>Breed-specific lines claim to tailor nutrition to a breed&apos;s unique needs — energy level, body type, coat, and predisposition to certain conditions. The implication is that a generic diet cannot serve a specific breed as well. Some of this is real; much is a premium-positioning narrative built on features that are really about size category.</p>

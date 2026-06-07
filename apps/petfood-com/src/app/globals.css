@@ -79,6 +79,97 @@ h1, h2, h3, h4, h5, h6, .font-display {
   color: var(--brand-primary-dark);
   border: 1px solid var(--brand-primary);
 }
+/* Premium comparison table — a card-wrapped reference table with a captioned
+   header rail, sticky column headers, zebra rows, and an opt-in emphasis
+   column treatment so vs-comparison pages read like a premium reference rather
+   than a raw HTML table. Structure/visual only; carries no data semantics. */
+.pf-compare {
+  margin: 28px 0;
+  border: 1px solid var(--brand-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--brand-white, #fff);
+  box-shadow: 0 1px 2px rgba(31, 26, 20, 0.04), 0 10px 28px rgba(31, 26, 20, 0.05);
+}
+.pf-compare-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--brand-text-mid);
+  background: var(--brand-surface);
+  border-bottom: 1px solid var(--brand-border);
+}
+.pf-compare-caption::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--brand-primary);
+  flex: none;
+}
+.pf-compare-scroll { overflow-x: auto; }
+.carloOS-article .pf-compare table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  min-width: 560px;
+  margin: 0;
+}
+.carloOS-article .pf-compare thead th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  padding: 13px 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-text-dark);
+  background: var(--brand-surface);
+  border-bottom: 2px solid var(--brand-border);
+  white-space: nowrap;
+}
+.carloOS-article .pf-compare tbody td,
+.carloOS-article .pf-compare tbody th {
+  padding: 12px 18px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--brand-border);
+  line-height: 1.45;
+}
+.carloOS-article .pf-compare tbody tr:last-child td,
+.carloOS-article .pf-compare tbody tr:last-child th {
+  border-bottom: none;
+}
+.carloOS-article .pf-compare tbody tr:nth-child(even) td,
+.carloOS-article .pf-compare tbody tr:nth-child(even) th {
+  background: rgba(31, 26, 20, 0.018);
+}
+/* First column = row label / dimension, set off as a quiet rail */
+.carloOS-article .pf-compare tbody th[scope="row"] {
+  font-family: var(--font-display, inherit);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--brand-text-dark);
+  background: var(--brand-surface);
+  white-space: normal;
+}
+/* Emphasis column — a subtle brand wash that guides the reader's eye to the
+   column the page foregrounds. A reading aid the author opts into per page;
+   not an automated value judgment. */
+.carloOS-article .pf-compare .pf-col-em {
+  background: var(--brand-primary-pale) !important;
+  color: var(--brand-primary-dark);
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 var(--brand-primary), inset -2px 0 0 var(--brand-primary);
+}
+
 ::selection { background: rgba(63, 92, 58, 0.2); color: var(--brand-text-dark); }
 .font-vars, :root {
   --font-cormorant: Georgia, "Times New Roman", serif;

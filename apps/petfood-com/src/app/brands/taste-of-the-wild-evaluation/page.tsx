@@ -9,7 +9,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -115,6 +116,7 @@ export default function TasteOfTheWildEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-taste-of-the-wild" priority aspect="16:9" variant="wide" caption="Taste of the Wild — a grain-free line made by Diamond Pet Foods, evaluated on the DCM question and recall context." />
         <p>Taste of the Wild is a grain-free, ancestral-themed line made by Diamond Pet Foods, evaluated here against the PetFood.com five-dimension rubric. It is a popular mid-priced option whose grain-free, legume-inclusive positioning intersects with two important issues on our rubric: the FDA DCM investigation and the manufacturer&apos;s recall history. The evaluation is independent and never influenced by any commercial relationship. See <a href="/ingredients/grain-free-dcm-risk">Grain-Free and DCM Risk</a> and <a href="/guides/methodology">Scoring Methodology</a>.</p>
         <h2 id="corporate">Corporate Context</h2>
         <p>Taste of the Wild is owned and manufactured by Diamond Pet Foods, a large privately held US manufacturer that produces many brands across its facilities. Diamond&apos;s scale gives manufacturing capacity, but its corporate history includes a significant recall event (discussed below) that bears on the manufacturing and recall dimensions of our rubric. Corporate context here is mixed: substantial scale, with a recall record that warrants attention.</p>
