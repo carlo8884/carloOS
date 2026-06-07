@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -111,6 +112,12 @@ export default function KidneyDiseaseDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A renal therapeutic pet-food bag photographed in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Chronic kidney disease (CKD) is the progressive, irreversible loss of functioning kidney tissue. As nephrons are lost, the kidney becomes less able to excrete metabolic waste, regulate phosphorus and electrolytes, concentrate urine, and produce erythropoietin. Therapeutic renal diets are designed to reduce the workload on the remaining nephrons and to control the metabolic consequences of declining function. Multiple controlled studies have shown that dogs and cats fed a renal therapeutic diet live longer and experience fewer uremic crises than those kept on a maintenance diet.</p>
         <h2 id="whatdo">What Renal Diets Do</h2>
         <p>A renal therapeutic diet differs from a maintenance diet in several coordinated ways: it restricts phosphorus, moderates and improves the quality of protein, often increases omega-3 fatty acids, adds buffering to counter metabolic acidosis, and supports caloric intake and palatability so the animal keeps eating. No single nutrient does the work alone — it is the combination, validated in feeding studies, that produces the survival benefit.</p>

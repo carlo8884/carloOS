@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -111,6 +112,12 @@ export default function WeightManagementDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A weight-management therapeutic pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Obesity in pets is a clinical disease, not a cosmetic issue. Excess adipose tissue is metabolically active and pro-inflammatory, and obesity is associated with shortened lifespan, osteoarthritis, diabetes (especially in cats), respiratory compromise, and reduced quality of life. A landmark lifetime study in Labrador Retrievers found that dogs kept lean lived roughly two years longer than their overweight littermates. Weight management is among the highest-impact nutritional interventions available.</p>
         <h2 id="problem">The Scale of the Problem</h2>
         <p>Body condition is assessed on a 9-point body condition score (BCS), where 4 to 5 is ideal; each point above 5 represents roughly 10 to 15 percent over ideal weight. Most owners underestimate their pet&apos;s body condition. Establishing the ideal target weight is the first step, and it should be set by a veterinarian based on frame and BCS, not by breed-average tables. See <a href="/feeding/body-condition-scoring">Body Condition Scoring</a>.</p>

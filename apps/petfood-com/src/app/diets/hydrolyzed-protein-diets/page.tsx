@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -112,6 +113,12 @@ export default function HydrolyzedProteinDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A hydrolyzed-protein therapeutic pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>When dietary protein drives disease — through allergic skin disease or food-responsive enteropathy — two therapeutic strategies remove the offending antigen. The first hydrolyzes the protein into fragments too small to provoke an immune response; the second uses a protein the individual has never eaten, so no sensitization exists. Both are central to the elimination-diet approach and to managing dietary-antigen-driven gut disease. See <a href="/diets/food-allergy-and-elimination-diets">Food Allergy and Elimination Diets</a>.</p>
         <h2 id="strategies">The Two Strategies</h2>
         <p>Hydrolyzed diets are made from a conventional protein (such as soy or chicken liver) broken down enzymatically into small peptides. Novel-protein diets use an intact but unusual protein (venison, rabbit, kangaroo, duck, or insect). Hydrolyzed diets have the advantage that they do not depend on finding a protein the animal has truly never seen — increasingly difficult as exotic proteins enter mainstream foods and treats.</p>

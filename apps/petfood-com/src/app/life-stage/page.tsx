@@ -15,6 +15,7 @@ import {
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { LifeStages } from '../../data/life-stages'
+import { ArticleMasthead } from '../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -143,6 +144,13 @@ export default function LifeStageHubPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-life-stage"
+          fallbackKey="petfood-com:nutrition-hero"
+          alt="Pet food bowls representing different life-stage formulations"
+          eyebrow="Life-Stage Reference"
+          priority
+        />
         <h2 id="about">About AAFCO Life Stages</h2>
         <p>
           The Association of American Feed Control Officials (AAFCO) defines the regulatory

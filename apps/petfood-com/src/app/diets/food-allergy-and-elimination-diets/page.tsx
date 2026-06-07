@@ -9,6 +9,7 @@ import {
   ArticleSourcesList,
   ArticleByline
 } from '@carloOS/ui'
+import { ArticleMasthead } from '../../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -111,6 +112,12 @@ export default function FoodAllergyAndEliminationDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A hypoallergenic elimination-diet pet-food bag in clinical light"
+          eyebrow="Condition-Specific Diet"
+          priority
+        />
         <p>Cutaneous adverse food reaction (the precise term for what owners call food allergy) is an immune or non-immune reaction to a dietary protein that produces itching, recurrent skin and ear infections, and sometimes gastrointestinal signs. The most common culprit proteins in dogs are beef, dairy, chicken, and wheat; in cats, beef, dairy, and fish. Importantly, the allergen is almost always a protein the animal has eaten before — grain is a far less common trigger than the grain-free narrative implies.</p>
         <h2 id="whatis">What Food Allergy Is</h2>
         <p>Food allergy is one of several causes of itch in dogs and cats, alongside environmental allergy (atopic dermatitis), flea allergy, and parasites. It is frequently overdiagnosed by owners and overpromised by products. There is no validated blood, saliva, or hair test for food allergy; the serum and saliva tests marketed to owners have repeatedly failed validation studies, returning positives for water and for foods the animal has never eaten.</p>
