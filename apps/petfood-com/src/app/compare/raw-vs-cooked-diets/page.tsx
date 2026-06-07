@@ -7,7 +7,8 @@ import {
   RelatedLinks,
   EmailCapture,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -112,6 +113,7 @@ export default function RawVsCookedDietsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-raw-vs-cooked-diets" priority aspect="16:9" variant="wide" caption="Raw versus cooked diets — the pathogen-safety evidence and a harm-reduction framing." />
         <p>Cooking transforms food in ways that matter nutritionally and microbiologically. Proponents of raw feeding argue that cooking destroys enzymes and nutrients and that raw is more natural; the veterinary professional bodies counter that cooking&apos;s pathogen-control benefit outweighs its costs and that the naturalness argument is overstated for domesticated animals. This page weighs the specific claims. For the full treatment, see the <a href="/guides/raw-pet-food-evaluation">Raw Pet Food Evaluation</a>.</p>
         <h2 id="cooking">What Cooking Does</h2>
         <p>Heat denatures proteins (which can improve digestibility of some and reduce it for others), gelatinizes starch (making it digestible), destroys most pathogenic bacteria, inactivates certain anti-nutritional factors, and degrades some heat-sensitive vitamins (which is why cooked commercial diets are vitamin-supplemented). The claim that raw food retains beneficial enzymes is largely irrelevant: dietary enzymes are denatured by stomach acid and do not contribute meaningfully to the animal&apos;s own digestion.</p>

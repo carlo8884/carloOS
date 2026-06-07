@@ -9,7 +9,8 @@ import {
   ReviewCard,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -109,6 +110,7 @@ export default function FreshVsKibblePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:compare-fresh-vs-kibble" priority aspect="16:9" variant="wide" caption="Fresh versus kibble — comparing processing, cost, and the evidence behind the claims." />
         <p>Fresh pet food refers to gently cooked, minimally processed, usually refrigerated or frozen complete diets, often sold by subscription. The category positions itself against extruded kibble on the basis of lower-temperature cooking, recognizable whole ingredients, and higher moisture. The honest comparison separates the parts of that pitch supported by evidence from the parts that are marketing. See <a href="/nutrition/calories-and-energy-density">Pet Food Calories and Energy Density</a>.</p>
         <h2 id="whatis">What Fresh Food Is</h2>
         <p>Fresh diets are cooked at lower temperatures than the high-heat extrusion used for kibble, then refrigerated or frozen, with moisture content far higher than dry food (closer to canned). They use whole, identifiable ingredients and avoid the shelf-stable preservatives kibble requires. Like all complete diets, they should be formulated to meet AAFCO nutrient profiles for the life stage.</p>
