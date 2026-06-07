@@ -172,6 +172,10 @@ export default async function BreedsPage() {
           <p className="text-sm text-brand-text-light">
             {breeds.length} breeds profiled
           </p>
+          <Link href="/compare" className="text-sm font-bold text-brand-primary no-underline hover:underline flex items-center gap-1">
+            Compare breeds side-by-side
+            <IconArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Breed grid */}
