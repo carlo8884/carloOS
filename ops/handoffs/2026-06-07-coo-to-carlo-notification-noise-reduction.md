@@ -20,7 +20,20 @@ domain, security, or production-failure alerts.
 Added `"github": { "silent": true }` to every app's `vercel.json` (14 files,
 all production sites + scaffolds).
 
-**What this changes:**
+**Update after observing PR #575 itself:** the in-repo flag was **not
+sufficient on its own**. vercel[bot] still posted a comment on this PR. It
+appears the project-level dashboard setting overrides vercel.json, or the
+flag only takes effect after merge to main. Either way: **the in-repo
+change is necessary but not sufficient** — Task 0 below (dashboard
+toggle per project) is the actual switch.
+
+**Mitigating finding:** Vercel now updates ONE comment in place per PR as
+deploys progress, rather than posting one per deploy. GitHub typically
+only emails on initial comment creation, not on in-place edits — so even
+without the dashboard toggle, the email volume should drop from ~10 per PR
+to ~1 per PR. Better, but not the goal.
+
+**What this changes (when combined with Task 0):**
 - The Vercel bot **stops posting the giant PR comment** every time a deploy
   finishes ("The latest updates on your projects… 10 Skipped Deployments…").
 - That comment is what triggers GitHub to email you for every PR.
@@ -40,7 +53,38 @@ all production sites + scaffolds).
 **Reference:** Vercel docs — `github.silent` flag only suppresses PR comments
 and auto-reviews. https://vercel.com/docs/projects/project-configuration#github
 
-## What you need to do (3 click-step tasks)
+## What you need to do (4 click-step tasks)
+
+### Task 0 — Disable PR comments at the Vercel project level (REQUIRED, 10 projects)
+**~5 minutes.** This is the actual switch — the in-repo `vercel.json` change
+alone didn't suppress the comment on PR #575. Verified live.
+
+For **each** of the 10 production Vercel projects:
+
+1. Open https://vercel.com/carlo-tabibi-s-projects
+2. Click into the project (e.g., `dog-com`, `carlo-os-vets-co`, etc.)
+3. Settings → **Git** (left sidebar)
+4. Under **"Pull Request Comments"**: toggle **OFF**
+5. Under **"Commit Comments"**: toggle **OFF** (optional, recommended)
+6. Save
+
+Repeat for all 10:
+- `dog-com`
+- `carlo-os-vets-co`
+- `carlo-os-fish-com`
+- `carlo-os-lizard-com`
+- `carlo-os-saddle-com`
+- `horses-com`
+- `petfood-com`
+- `petfoods-com`
+- `ferret-com`
+- `ferrets-com`
+
+(Skip the 4 scaffold/decommissioned projects — they don't have Vercel
+projects yet or are sunset.)
+
+After this: vercel[bot] stops posting PR comments entirely. Deployment
+status checks (the green/red dots) still appear, so CI gating still works.
 
 ### Task 1 — Set repo Watch level to "Participating and @mentions"
 **~30 seconds.** Stops you being notified for every PR opened by every bot.
@@ -58,7 +102,7 @@ After this:
 - ❌ You'll stop getting email for every PR opened by COO/Monetization/Visual
   bots that you weren't tagged on
 
-### Task 2 — Turn off "Pull request reviews" and "Comments" emails for noise sources
+### Task 2 — Turn off email for watched-repo activity (account-wide)
 **~1 minute.** GitHub-account-wide, not repo-specific.
 
 1. Open https://github.com/settings/notifications
@@ -74,7 +118,7 @@ This is the biggest single lever. The repo-level setting from Task 1
 covers carloOS specifically; this account-level setting catches everything
 else.
 
-### Task 3 — Gmail filter as belt-and-suspenders
+### Task 3 — Gmail filter as belt-and-suspenders (catches anything that slips)
 **~3 minutes.** Catches anything that slips through.
 
 In Gmail, click the gear → "See all settings" → "Filters and Blocked
