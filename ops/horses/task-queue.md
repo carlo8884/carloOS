@@ -14,8 +14,10 @@ never flood thin pages. Every page trust-safe (QC §1) + CI-green + harvest-read
 6. Lane: build in `apps/horse-racing` (my app, no merge-wave collision); harvest into horses.com on CSRO dispatch.
 
 ## Cursor
-- **Current cycle:** C1 — Racing vertical depth (Pillar B), trust-safe educational clusters.
-- **Last completed:** (see Cycle Log)
+- **Current cycle:** ⏸ PAUSED (Carlo 2026-06-07) — STOP new racing builds. Reconciliation phase.
+- **Active task:** reconciliation map delivered → awaiting CSRO disposition approval.
+- **Resume condition:** CSRO approves the map; then build ONLY the highest-value non-overlapping
+  clusters CSRO dispatches. No solo building into apps/horses-com (COO's lane).
 
 ---
 
@@ -48,3 +50,6 @@ Cluster families queued (each expands to many scoped pages on graduation):
 - 2026-06-07: PARALLEL BATCH — 3 subagents built T3 Training&Safety, T4 Racehorse Care,
   T5 Racing History (hub + 6 each). Integration pass wired all 4 clusters into sitemap +
   homepage; full CI green (tsc + trust-guard 782/0 + link-check + metadata-policy). 1 batch = ~25 pages.
+- 2026-06-07: ⏸ PAUSED by Carlo — discovered staging (apps/horse-racing) overlaps the live
+  COO-built Horses.com racing vertical. New builds halted. Delivered reconciliation map
+  (2026-06-07-racing-reconciliation-map.md) to CSRO for disposition. I port nothing until approved.
