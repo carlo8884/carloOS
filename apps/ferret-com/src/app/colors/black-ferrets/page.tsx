@@ -86,7 +86,6 @@ export default function BlackFerretsPage() {
             'At the darkest end of the ferret palette sit the blacks — black sable and true black, with near-black guard hairs, deep masks, and dark noses. A crisp black coat over a white undercoat is one of the most dramatic looks in the species. Here is how the dark colors are defined and told apart.',
           category: 'Colors & Patterns',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

@@ -107,7 +107,6 @@ export default function FerretBondingPage() {
             "A bonded ferret is a joy: it seeks you out, naps on your lap, and greets you with the bouncy war dance. Getting there is mostly about patience, consistency, and working with a ferret's instincts rather than against them. Here is a practical, week-by-week plan for building real trust with a new, shy, or rescue ferret.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

@@ -125,7 +125,6 @@ export default function FerretSpayNeuterPage() {
             'For female ferrets, spaying is not optional cosmetic surgery — an unspayed jill left in heat can die of estrogen toxicity. The biology is unusual, the stakes are high, and the early-spay-neuter debate adds a real wrinkle worth understanding.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

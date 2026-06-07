@@ -53,7 +53,6 @@ export default function TravelAndCarriersPage() {
             'Most ferret travel is short — a carrier ride to the vet and back. But the same principles that make a vet trip safe apply to a road trip or a move: the right carrier, a temperature-controlled vehicle, water on the road, and a plan for stress. Here is how to do it without turning a routine trip into an emergency.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

@@ -125,7 +125,6 @@ export default function FerretCanineDistemperPage() {
             'Canine distemper is the single most important reason ferrets are vaccinated. In an unvaccinated ferret it is almost always fatal — and it can reach even a strictly indoor pet. This is preventable, and prevention is the whole story.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

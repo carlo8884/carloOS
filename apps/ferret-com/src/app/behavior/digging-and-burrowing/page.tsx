@@ -105,7 +105,6 @@ export default function FerretDiggingBurrowingPage() {
             "If you have ever watched a ferret attack the corner of a rug with the focus of a tiny excavator, you have met one of the species' oldest instincts. Digging is not a behaviour problem — it is a feature. The job is not to eliminate it but to point it somewhere that doesn't cost you your carpet.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -314,7 +313,6 @@ export default function FerretDiggingBurrowingPage() {
           <ReviewCard
             id="marshall-pop-n-play-dig"
             badge="Tunnel Set"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels sized for ferrets, machine washable, chainable"
             score={8.6}
@@ -340,7 +338,6 @@ export default function FerretDiggingBurrowingPage() {
           <ReviewCard
             id="ball-pit-fill-dig"
             badge="Dig Box Fill"
-            badgeEmoji="⚽"
             name="Ferret-Safe Ball Pit Balls"
             subtitle="Hollow plastic balls for a dig-box or ball pit — cheap, washable, ingest-safe"
             score={8.0}

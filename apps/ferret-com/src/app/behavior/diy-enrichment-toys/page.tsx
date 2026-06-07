@@ -105,7 +105,6 @@ export default function FerretDIYEnrichmentPage() {
             "Ferrets are relentlessly curious, easily bored, and absurdly easy to delight. You do not need an expensive shopping cart to keep one stimulated — a few cardboard boxes, a length of hose, and some household odds and ends go a remarkably long way. Here are safe, cheap, ferret-tested ideas, plus the safety rules that keep DIY fun from becoming a vet emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -319,7 +318,6 @@ export default function FerretDIYEnrichmentPage() {
           <ReviewCard
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
             score={8.6}
@@ -345,7 +343,6 @@ export default function FerretDIYEnrichmentPage() {
           <ReviewCard
             id="snuffle-mat-ferret"
             badge="Foraging"
-            badgeEmoji="🌿"
             name="Snuffle Mat (Dog/Small-Pet)"
             subtitle="Rubber-backed fabric mat with pockets for hiding treats — nose-work puzzle"
             score={7.8}

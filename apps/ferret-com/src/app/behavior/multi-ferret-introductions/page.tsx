@@ -103,7 +103,6 @@ export default function MultiFerretIntroductionsPage() {
             'Ferrets are social animals and most do better in pairs or small groups. But adding a ferret to your home is a staged process, not a one-day event: a quarantine period, neutral-ground meetings, and a tolerance for a startling amount of normal posturing. Rushed introductions are the ones that go wrong.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

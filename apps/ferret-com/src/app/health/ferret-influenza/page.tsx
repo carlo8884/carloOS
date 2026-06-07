@@ -125,7 +125,6 @@ export default function FerretInfluenzaPage() {
             'Ferrets are the textbook animal model for human flu — and that is not just a lab fact. Your ferret can catch influenza from you, and give it back. Usually mild, occasionally serious, and almost entirely a hygiene problem to manage.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

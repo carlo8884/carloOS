@@ -53,7 +53,6 @@ export default function IntroducingSecondFerretPage() {
             'Ferrets are social and most thrive with company, so adding a second ferret is usually a good decision. But ferrets play rough, and the introduction has to be managed — quarantine first for health, then a gradual, supervised bonding on neutral ground. Here is how to do it without confusing normal play for a fight.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

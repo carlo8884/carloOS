@@ -124,7 +124,6 @@ export default function FerretToxicFoodsPage() {
             'Ferrets are obligate carnivores with a short gastrointestinal tract, a high metabolic rate, and a famously curious chewing habit. The combination means accidental ingestions are common and the toxicity profile for many household items is different from cats and dogs. A small chocolate dose that a 25 kg dog would shrug off can be a life-threatening exposure in a 1 kg ferret.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

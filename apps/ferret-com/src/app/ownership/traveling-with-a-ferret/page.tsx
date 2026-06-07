@@ -45,7 +45,6 @@ export default function TravelingWithAFerretPage() {
             "Ferrets travel better than most exotic pets — they sleep deeply, settle in a carrier, and adapt to routine — but they are also exquisitely sensitive to heat and bound by a patchwork of legality that does not stop at your home state. This is how to move a ferret safely by car or air, what to pack, and the cases where the kindest choice is to leave them behind with a sitter.",
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

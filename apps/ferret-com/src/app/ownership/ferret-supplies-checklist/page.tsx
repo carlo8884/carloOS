@@ -45,7 +45,6 @@ export default function FerretSuppliesChecklistPage() {
             'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Editorial reference only — no products, no links, just what to look for.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

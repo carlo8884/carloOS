@@ -131,7 +131,6 @@ export default function FerretLymphomaPage() {
             'Lymphoma — neoplasia of the lymphocyte cell line — is one of the three most-common cancers in domestic ferrets and the most heterogeneous in presentation. Some ferrets are diagnosed because a lump appeared. Some because bloodwork looked wrong at a routine senior visit. Some because weight kept dropping despite a good appetite. Recognizing the pattern across a confusing clinical picture is what separates early diagnosis from late.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}

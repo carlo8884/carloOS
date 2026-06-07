@@ -45,7 +45,6 @@ export default function FirstWeekChecklistPage() {
             'The first week sets the tone for everything that follows. A new ferret arrives stressed by the move, and a calm, structured introduction to its home builds the trust that makes training and bonding possible. This is a day-by-day plan — what to have ready before the ferret arrives, and how to pace the first seven days without overwhelming a small, nervous animal.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

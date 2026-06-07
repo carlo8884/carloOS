@@ -53,7 +53,6 @@ export default function EarCleaningPage() {
             'Ferrets produce a lot of ear wax — normally a reddish-brown color that alarms first-time owners but is completely typical. Knowing what is normal, how to clean gently, and how to spot the difference between routine wax and ear mites keeps a minor grooming task from becoming a missed medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

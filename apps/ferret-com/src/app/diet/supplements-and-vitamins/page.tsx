@@ -45,7 +45,6 @@ export default function SupplementsAndVitaminsPage() {
             'The honest headline: a ferret on a complete, appropriate diet needs very few supplements, and several popular products do more for the owner’s peace of mind than for the ferret. This page sorts the genuinely useful from the redundant from the ones that warrant real caution.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

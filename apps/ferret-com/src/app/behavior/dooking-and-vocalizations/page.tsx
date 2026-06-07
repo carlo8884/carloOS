@@ -102,7 +102,6 @@ export default function FerretVocalizationsPage() {
             "Ferrets are chattier than most people expect. Once you learn the handful of sounds in their vocabulary, your ferret becomes a lot easier to read — and a lot more entertaining. Here is the full field guide, from the joyful dook to the rare and serious scream.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

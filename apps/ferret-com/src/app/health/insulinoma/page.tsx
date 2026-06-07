@@ -69,7 +69,6 @@ export default function FerretInsulinomaPage() {
             'Insulinoma — a functional tumor of the pancreatic beta cells — is the most commonly diagnosed neoplasm in middle-aged and older domestic ferrets. The clinical picture is easily mistaken for "an old ferret slowing down". The biochemistry is unambiguous when looked for, and the treatment is well-established. Early recognition meaningfully changes the prognosis.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}

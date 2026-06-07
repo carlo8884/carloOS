@@ -86,7 +86,6 @@ export default function ChocolateFerretsPage() {
             'Chocolate is the warm, approachable middle of the ferret palette — milk-chocolate guard hairs over a bright undercoat, with a soft brown nose and brown mask. It sits neatly between the cooler sable and the pale champagne, and it gets pleasantly muddled with cinnamon. Here is how to spot it.',
           category: 'Colors & Patterns',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

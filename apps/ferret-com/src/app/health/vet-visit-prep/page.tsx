@@ -131,7 +131,6 @@ export default function FerretVetVisitPrepPage() {
             'A well-prepared ferret vet visit produces a better diagnostic picture, shorter appointments, and lower cost than the alternative. Most of the difference is in what you do at home before you walk through the door — finding the right clinic, choosing the right time to go, bringing the right information, and matching the visit to what is actually wrong.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

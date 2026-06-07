@@ -126,7 +126,6 @@ export default function FerretEmergencySignsPage() {
             'Ferrets hide illness and crash fast. This is the can’t-wait list — the signs that mean stop reading and call a vet — along with what each one can indicate. Knowing them in advance is the difference between a scare and a tragedy.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

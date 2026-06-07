@@ -45,7 +45,6 @@ export default function FerretLegalityByStatePage() {
             'In most of the United States, keeping a ferret is perfectly legal — but not everywhere, and the exceptions matter enough to check before you buy. Two states ban ferrets outright, and a number of cities and counties impose their own restrictions or permit requirements regardless of state law. This page explains the landscape and, more importantly, how to verify the rules where you actually live.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

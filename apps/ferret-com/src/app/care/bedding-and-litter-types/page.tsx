@@ -52,7 +52,6 @@ export default function BeddingAndLitterTypesPage() {
             'Ferrets are burrowers who sleep face-buried for 16 hours a day and eliminate in corners by instinct. Those two facts decide almost every bedding and litter choice you will make. This is a material-by-material guide to what is safe, what is hazardous, and why.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}

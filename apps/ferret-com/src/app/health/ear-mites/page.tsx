@@ -125,7 +125,6 @@ export default function FerretEarMitesPage() {
             'Otodectes cynotis is the single most common external parasite in pet ferrets. It is itchy, contagious across the whole household, and — caught early — completely curable with a veterinarian-prescribed acaricide.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

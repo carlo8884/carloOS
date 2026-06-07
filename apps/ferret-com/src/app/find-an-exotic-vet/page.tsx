@@ -96,7 +96,6 @@ export default function FindAnExoticVetPage() {
             'Every ferret needs a veterinarian who actually works in exotic-mammal medicine — not just one who is willing to see a ferret. This guide walks through the directories worth searching, the questions worth asking before you commit, and how to line up both routine and emergency care before you ever need it.',
           category: 'Owner Guide',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

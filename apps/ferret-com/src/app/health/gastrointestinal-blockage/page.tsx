@@ -126,7 +126,6 @@ export default function FerretGIBlockagePage() {
             'Ferrets explore with their teeth, love rubber, and have an intestine narrow enough that a swallowed earplug can become a surgical emergency. GI obstruction is common, time-sensitive, and largely preventable with disciplined ferret-proofing.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

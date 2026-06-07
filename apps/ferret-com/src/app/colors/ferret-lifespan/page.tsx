@@ -85,7 +85,6 @@ export default function FerretLifespanPage() {
             "Bringing a ferret home means signing up for several years of one of the most entertaining companions in the small-pet world. Knowing what to expect — the typical lifespan, the life stages, and the factors you can actually influence — helps you give your ferret the longest, healthiest run possible. Here is the honest picture.",
           category: 'Ferret Facts',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

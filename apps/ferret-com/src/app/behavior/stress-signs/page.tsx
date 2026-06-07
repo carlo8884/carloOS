@@ -110,7 +110,6 @@ export default function FerretStressSignsPage() {
             "Ferrets are stoic little animals that often mask discomfort until it is significant. Learning to read the early, subtle signals of stress — and knowing which of them overlap with illness — lets you act before a small problem becomes a big one. Here is what to watch for and what it usually means.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
@@ -323,7 +322,6 @@ export default function FerretStressSignsPage() {
           <ReviewCard
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
-            badgeEmoji="😴"
             name="Ferret Sleep Sack / Hammock"
             subtitle="Enclosed fleece sleeping pouch — quiet, dark, enclosed resting space"
             score={8.4}
@@ -348,7 +346,6 @@ export default function FerretStressSignsPage() {
           <ReviewCard
             id="ferret-tunnel-stress"
             badge="Enrichment"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
             score={8.6}

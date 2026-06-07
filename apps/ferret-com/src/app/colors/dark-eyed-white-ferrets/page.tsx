@@ -86,7 +86,6 @@ export default function DarkEyedWhiteFerretsPage() {
             "At a glance, a dark-eyed white looks like an albino — same snowy coat, same striking presence. But look at the eyes: deep burgundy or near-black instead of bright red. That single difference marks an entirely separate kind of white ferret, with its own genetics and a couple of things worth knowing before you bring one home.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

@@ -45,7 +45,6 @@ export default function RawFeedingGuidePage() {
             'A raw or whole-prey diet is the closest match to what a ferret evolved to eat — but only when it is correctly balanced and safely handled. This guide covers the ratios, the sourcing, the freezing protocols, and the food-safety discipline that separate a good raw diet from a deficient or hazardous one.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}
@@ -148,7 +147,6 @@ export default function RawFeedingGuidePage() {
           <ReviewCard
             id="frozen-feeder-prey"
             badge="Whole-Prey Source"
-            badgeEmoji="🧊"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey, frozen, sized for a ferret"
             score={8.4}

@@ -123,7 +123,6 @@ export default function FerretTrainingBondingPage() {
             'Ferrets are trainable. They are not as motivated by social approval as dogs, not as routine-bound as cats, and respond best to a mixture of food-reward operant conditioning and patient, consistent handling from kithood. The right framing: shape behaviour you want, work with instinct rather than against it, and never use punishment-based methods.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}

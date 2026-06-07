@@ -52,7 +52,6 @@ export default function FerretProofingPage() {
             'A ferret will find every gap, every hazard, and every soft object in a room within its first hour loose. Ferret-proofing is not optional housekeeping — it is the precondition for the daily out-of-cage time a ferret must have. This is the room-by-room checklist.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}

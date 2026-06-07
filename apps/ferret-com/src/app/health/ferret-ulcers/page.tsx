@@ -125,7 +125,6 @@ export default function FerretUlcersPage() {
             'Gastric ulcers are a common, painful, and under-recognized ferret problem — often driven by Helicobacter mustelae and easy to miss until the teeth-grinding and tarry stool appear. They rarely travel alone, which is why they are worth understanding.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

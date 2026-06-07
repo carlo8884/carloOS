@@ -53,7 +53,6 @@ export default function HeatStrokePreventionPage() {
             'Of all the routine hazards a ferret faces, heat is among the most lethal and the most preventable. Ferrets cannot sweat, tolerate heat poorly, and can decline from comfortable to critical within an hour on a hot day. Knowing the safe range, the warning signs, and the cooling response is core ferret-keeping.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

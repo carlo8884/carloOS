@@ -125,7 +125,6 @@ export default function FerretHeartDiseasePage() {
             'Cardiomyopathy is a leading cause of decline in older ferrets, and its early signs are easy to mistake for simple aging. Recognizing them early — and getting an echocardiogram — is what buys these ferrets comfortable time.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

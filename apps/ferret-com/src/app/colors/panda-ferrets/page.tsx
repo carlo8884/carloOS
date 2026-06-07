@@ -86,7 +86,6 @@ export default function PandaFerretsPage() {
             "A panda ferret looks like it dipped its head in white paint: a fully white head and shoulders over a colored saddle, with white feet to match. It is one of the most striking ferret patterns — and one of the most important to understand, because the same genetics that paint the head white are tied to a high rate of deafness. Here is what panda is, how it differs from blaze, and what the pattern means for hearing.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
