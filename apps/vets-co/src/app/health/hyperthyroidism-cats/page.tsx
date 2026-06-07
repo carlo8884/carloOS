@@ -21,7 +21,7 @@ export default function HyperthyroidismCatsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Hyperthyroidism in Cats', subtitle: 'Hyperthyroidism is the most common hormonal disease of older cats, caused almost always by a benign overgrowth of the thyroid glands that floods the body with thyroid hormone. It is very treatable — often curable — and recognizing the signs early prevents the heart and kidney damage that uncontrolled disease causes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Hyperthyroidism in Cats', subtitle: 'Hyperthyroidism is the most common hormonal disease of older cats, caused almost always by a benign overgrowth of the thyroid glands that floods the body with thyroid hormone. It is very treatable — often curable — and recognizing the signs early prevents the heart and kidney damage that uncontrolled disease causes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hyperthyroidism in Cats', href: '/health/hyperthyroidism-cats' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

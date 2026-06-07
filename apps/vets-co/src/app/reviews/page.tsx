@@ -13,8 +13,8 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: '🏆 Most Important' },
-  { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: '📱 Convenient Care' },
+  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
+  { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: 'Convenient Care' },
 ]
 
 const itemListSchema = {
@@ -69,7 +69,7 @@ export default function VetsReviewsPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Tips" subtitle="research-based guidance every Tuesday." source="reviews-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly']} />
+        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Tips" subtitle="research-based guidance every Tuesday." source="reviews-hub" ctaText="Subscribe Free" perks={['Research-based', 'Weekly']} />
       </div>
     </>
   </>

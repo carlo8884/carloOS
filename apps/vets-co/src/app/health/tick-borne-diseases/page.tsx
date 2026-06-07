@@ -17,7 +17,7 @@ export default function TickBornePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Tick-Borne Diseases in Dogs', subtitle: 'Four major tick-borne diseases affect dogs in the US: Lyme disease, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever (RMSF). All are transmitted by ticks, all respond to doxycycline, and all are prevented by consistent tick prevention. The variation between them is geographic distribution, severity, and the speed of required treatment.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Tick-Borne Diseases in Dogs', subtitle: 'Four major tick-borne diseases affect dogs in the US: Lyme disease, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever (RMSF). All are transmitted by ticks, all respond to doxycycline, and all are prevented by consistent tick prevention. The variation between them is geographic distribution, severity, and the speed of required treatment.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

@@ -17,7 +17,7 @@ export default function LeptospirosisPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Leptospirosis in Dogs', subtitle: 'Leptospirosis is a bacterial disease caused by Leptospira spirochetes — transmitted through urine of infected wildlife (raccoons, deer, opossums, rodents) contaminating standing water, soil, and puddles. It can cause acute kidney and liver failure in dogs and is zoonotic — transmissible to humans from infected dog urine.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
+        hero={{ title: 'Leptospirosis in Dogs', subtitle: 'Leptospirosis is a bacterial disease caused by Leptospira spirochetes — transmitted through urine of infected wildlife (raccoons, deer, opossums, rodents) contaminating standing water, soil, and puddles. It can cause acute kidney and liver failure in dogs and is zoonotic — transmissible to humans from infected dog urine.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Leptospirosis', href: '/health/leptospirosis' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

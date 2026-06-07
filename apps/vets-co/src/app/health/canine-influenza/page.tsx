@@ -16,7 +16,7 @@ export default function CanineInfluenzaPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Canine Influenza (Dog Flu)', subtitle: 'Canine influenza is a highly contagious respiratory infection caused by influenza A viruses adapted to dogs. Two strains currently circulate in the US: H3N8 (identified 2004) and H3N2 (identified 2015 — more recently introduced from Asia). Most dogs exposed develop mild to moderate illness; a small percentage develop serious pneumonia.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
+        hero={{ title: 'Canine Influenza (Dog Flu)', subtitle: 'Canine influenza is a highly contagious respiratory infection caused by influenza A viruses adapted to dogs. Two strains currently circulate in the US: H3N8 (identified 2004) and H3N2 (identified 2015 — more recently introduced from Asia). Most dogs exposed develop mild to moderate illness; a small percentage develop serious pneumonia.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '7 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Canine Influenza', href: '/health/canine-influenza' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

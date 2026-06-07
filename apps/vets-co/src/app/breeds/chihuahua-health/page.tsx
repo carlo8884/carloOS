@@ -107,7 +107,7 @@ export default function VetsChihuahuaHealthPage() {
             'The world\'s smallest dog breed brings outsized longevity — and a focused cluster of orthopedic, neurologic, cardiac and dental predispositions that benefit from informed screening from puppyhood.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

@@ -14,44 +14,44 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 // All Health Topics — source-of-truth array; drives both the visible link grid
 // and the ItemList JSON-LD so URLs stay in sync automatically.
 const HEALTH_ARTICLES = [
-  { slug: 'allergic-reactions-dogs', title: 'Allergic Reactions Dogs' },
-  { slug: 'anxiety-in-dogs', title: 'Anxiety In Dogs' },
-  { slug: 'arthritis-in-dogs', title: 'Arthritis In Dogs' },
-  { slug: 'canine-influenza', title: 'Canine Influenza' },
-  { slug: 'cognitive-dysfunction', title: 'Cognitive Dysfunction' },
-  { slug: 'cushing-disease-dogs', title: 'Cushing Disease Dogs' },
-  { slug: 'dehydration-in-dogs', title: 'Dehydration In Dogs' },
-  { slug: 'dental-cleaning-guide', title: 'Dental Cleaning Guide' },
-  { slug: 'diabetes-in-dogs-cats', title: 'Diabetes In Dogs Cats' },
-  { slug: 'dog-eye-conditions', title: 'Dog Eye Conditions' },
-  { slug: 'dog-vaccinations-guide', title: 'Dog Vaccinations Guide' },
-  { slug: 'ear-infections-dogs', title: 'Ear Infections Dogs' },
-  { slug: 'flea-tick-prevention', title: 'Flea Tick Prevention' },
-  { slug: 'kennel-cough', title: 'Kennel Cough' },
-  { slug: 'parvovirus-in-puppies', title: 'Parvovirus In Puppies' },
-  { slug: 'seizures-in-dogs', title: 'Seizures In Dogs' },
-  { slug: 'vomiting-diarrhea-pets', title: 'Vomiting Diarrhea Pets' },
-  { slug: 'emergency-signs', title: 'Emergency Signs' },
-  { slug: 'bloat-gdv-dogs', title: 'Bloat GDV Dogs' },
-  { slug: 'feline-lower-urinary-tract-disease', title: 'Feline Lower Urinary Tract Disease' },
-  { slug: 'heartworm-in-dogs', title: 'Heartworm In Dogs' },
-  { slug: 'heat-stroke-dogs', title: 'Heat Stroke Dogs' },
-  { slug: 'hyperthyroidism-cats', title: 'Hyperthyroidism Cats' },
-  { slug: 'hypothyroidism-dogs', title: 'Hypothyroidism Dogs' },
-  { slug: 'intestinal-parasites', title: 'Intestinal Parasites' },
-  { slug: 'kidney-disease-cats', title: 'Kidney Disease Cats' },
-  { slug: 'leptospirosis', title: 'Leptospirosis' },
-  { slug: 'pain-management-dogs', title: 'Pain Management Dogs' },
-  { slug: 'pancreatitis-in-dogs', title: 'Pancreatitis In Dogs' },
-  { slug: 'periodontal-disease-pets', title: 'Periodontal Disease Pets' },
-  { slug: 'pain-signs-dogs', title: 'Pain Signs Dogs' },
-  { slug: 'preventive-care-schedule', title: 'Preventive Care Schedule' },
-  { slug: 'senior-bloodwork-guide', title: 'Senior Bloodwork Guide' },
+  { slug: 'allergic-reactions-dogs', title: 'Allergic Reactions in Dogs' },
+  { slug: 'anxiety-in-dogs', title: 'Anxiety in Dogs' },
+  { slug: 'arthritis-in-dogs', title: 'Arthritis in Dogs' },
+  { slug: 'canine-influenza', title: 'Canine Influenza (Dog Flu)' },
+  { slug: 'cognitive-dysfunction', title: 'Cognitive Dysfunction Syndrome' },
+  { slug: 'cushing-disease-dogs', title: "Cushing's Disease in Dogs" },
+  { slug: 'dehydration-in-dogs', title: 'Dehydration in Dogs' },
+  { slug: 'dental-cleaning-guide', title: 'Dental Cleaning: What to Expect' },
+  { slug: 'diabetes-in-dogs-cats', title: 'Diabetes in Dogs and Cats' },
+  { slug: 'dog-eye-conditions', title: 'Eye Conditions in Dogs' },
+  { slug: 'dog-vaccinations-guide', title: 'Dog Vaccinations: Core and Non-Core' },
+  { slug: 'ear-infections-dogs', title: 'Ear Infections in Dogs' },
+  { slug: 'flea-tick-prevention', title: 'Flea and Tick Prevention' },
+  { slug: 'kennel-cough', title: 'Kennel Cough (Infectious Tracheobronchitis)' },
+  { slug: 'parvovirus-in-puppies', title: 'Parvovirus in Puppies' },
+  { slug: 'seizures-in-dogs', title: 'Seizures in Dogs' },
+  { slug: 'vomiting-diarrhea-pets', title: 'Vomiting and Diarrhea in Pets' },
+  { slug: 'emergency-signs', title: 'Emergency Warning Signs in Pets' },
+  { slug: 'bloat-gdv-dogs', title: 'Bloat (GDV) in Dogs' },
+  { slug: 'feline-lower-urinary-tract-disease', title: 'Feline Lower Urinary Tract Disease (FLUTD)' },
+  { slug: 'heartworm-in-dogs', title: 'Heartworm Disease in Dogs' },
+  { slug: 'heat-stroke-dogs', title: 'Heat Stroke in Dogs' },
+  { slug: 'hyperthyroidism-cats', title: 'Hyperthyroidism in Cats' },
+  { slug: 'hypothyroidism-dogs', title: 'Hypothyroidism in Dogs' },
+  { slug: 'intestinal-parasites', title: 'Intestinal Parasites in Pets' },
+  { slug: 'kidney-disease-cats', title: 'Kidney Disease in Cats (CKD)' },
+  { slug: 'leptospirosis', title: 'Leptospirosis in Dogs' },
+  { slug: 'pain-management-dogs', title: 'Pain Management in Dogs' },
+  { slug: 'pancreatitis-in-dogs', title: 'Pancreatitis in Dogs' },
+  { slug: 'periodontal-disease-pets', title: 'Periodontal Disease in Pets' },
+  { slug: 'pain-signs-dogs', title: 'Signs of Pain in Dogs' },
+  { slug: 'preventive-care-schedule', title: 'Preventive Care Schedule by Life Stage' },
+  { slug: 'senior-bloodwork-guide', title: 'Senior Pet Bloodwork Guide' },
   { slug: 'senior-pet-care', title: 'Senior Pet Care' },
-  { slug: 'spay-neuter-benefits', title: 'Spay Neuter Benefits' },
-  { slug: 'tick-borne-diseases', title: 'Tick Borne Diseases' },
-  { slug: 'urinary-tract-infection', title: 'Urinary Tract Infection' },
-  { slug: 'weight-management', title: 'Weight Management' },
+  { slug: 'spay-neuter-benefits', title: 'Spay and Neuter: Health Benefits' },
+  { slug: 'tick-borne-diseases', title: 'Tick-Borne Diseases in Dogs' },
+  { slug: 'urinary-tract-infection', title: 'Urinary Tract Infections in Pets' },
+  { slug: 'weight-management', title: 'Weight Management in Dogs and Cats' },
 ]
 
 // ItemList structured data — enumerates the health article cluster for
@@ -72,9 +72,9 @@ const healthItemListSchema = {
 const schema = combineSchemas(breadcrumbSchema, healthItemListSchema)
 
 const GUIDES = [
-  { category: 'Emergency', items: [{ title: '15 Signs Your Pet Needs Emergency Care', href: '/health/emergency-signs', badge: '🚨 Must Read' }, { title: 'ASPCA Poison Control: 888-426-4435', href: 'tel:8884264435', badge: '☎️ Save This' }] },
+  { category: 'Emergency', items: [{ title: '15 Signs Your Pet Needs Emergency Care', href: '/health/emergency-signs', badge: 'Must Read' }, { title: 'ASPCA Poison Control: 888-426-4435', href: 'tel:8884264435', badge: 'Save This' }] },
   { category: 'Breed Health', items: [{ title: 'Golden Retriever Health Guide', href: '/breeds/golden-retriever-health' }, { title: 'Labrador Retriever Health', href: '/breeds/labrador-health' }, { title: 'French Bulldog Health', href: '/breeds/french-bulldog-health' }, { title: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }] },
-  { category: 'Finding Care', items: [{ title: 'Find a Veterinary Specialist', href: '/find-a-vet', badge: '🔍 Directory' }, { title: 'Best Pet Telehealth 2025', href: '/telehealth' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
+  { category: 'Finding Care', items: [{ title: 'Find a Veterinary Specialist', href: '/find-a-vet', badge: 'Directory' }, { title: 'Best Pet Telehealth 2025', href: '/telehealth' }, { title: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }] },
 ]
 
 export default function VetsHealthHubPage() {
@@ -106,7 +106,7 @@ export default function VetsHealthHubPage() {
         ))}
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Newsletter" subtitle="research-based health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['✓ Research-based', '📬 Weekly', '🐾 All species']} />
+        <EmailCapture variant="section" siteId="vets-co" title="Free Pet Health Newsletter" subtitle="research-based health alerts every Tuesday." source="health-hub" ctaText="Subscribe Free" perks={['Research-based', 'Weekly', 'All species']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">

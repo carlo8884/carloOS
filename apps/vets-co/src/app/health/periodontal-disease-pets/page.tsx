@@ -21,7 +21,7 @@ export default function PeriodontalDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Periodontal Disease in Dogs and Cats', subtitle: 'Periodontal disease is the most common disease in adult dogs and cats — by age 3, the majority show signs. It is also one of the most overlooked, because the damage happens below the gumline where owners cannot see it, and because pets hide the pain. Understanding it is the key to protecting both your pet\'s mouth and overall health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

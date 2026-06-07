@@ -19,7 +19,7 @@ export default function AllergicReactionsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Allergic Reactions in Dogs', subtitle: 'Acute allergic reactions in dogs — from bee stings, vaccines, medications, or insect bites — range from mild hives (concerning but manageable) to anaphylaxis (life-threatening within minutes). Knowing which situation you are in, and what to do immediately, can be the difference between a vet visit and a fatality.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
+        hero={{ title: 'Allergic Reactions in Dogs', subtitle: 'Acute allergic reactions in dogs — from bee stings, vaccines, medications, or insect bites — range from mild hives (concerning but manageable) to anaphylaxis (life-threatening within minutes). Knowing which situation you are in, and what to do immediately, can be the difference between a vet visit and a fatality.', category: 'Veterinary Guide — Emergency', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Allergic Reactions', href: '/health/allergic-reactions-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

@@ -164,7 +164,7 @@ export default function SpecialistPage({ params }: PageProps) {
         category: 'Veterinary Specialists',
         categoryHref: '/specialists',
         authorName: 'Vets.co Editorial',
-        authorAvatar: '🐾',
+       
         publishedAt: 'May 2026',
         readTime: '12 min',
       }}

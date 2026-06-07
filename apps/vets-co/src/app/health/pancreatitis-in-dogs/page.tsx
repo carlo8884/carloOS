@@ -21,7 +21,7 @@ export default function PancreatitisPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Pancreatitis in Dogs', subtitle: 'Pancreatitis — inflammation of the pancreas — ranges from a mild, self-limiting upset to a severe, life-threatening illness. It is frequently triggered by fatty food and is painful. Recognizing the signs early and acting quickly makes a real difference to outcome, and most dogs recover with prompt supportive care.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Pancreatitis in Dogs', subtitle: 'Pancreatitis — inflammation of the pancreas — ranges from a mild, self-limiting upset to a severe, life-threatening illness. It is frequently triggered by fatty food and is painful. Recognizing the signs early and acting quickly makes a real difference to outcome, and most dogs recover with prompt supportive care.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pancreatitis', href: '/health/pancreatitis-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

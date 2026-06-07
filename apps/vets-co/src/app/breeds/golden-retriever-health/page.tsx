@@ -44,7 +44,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         subtitle: 'Golden Retrievers are one of the most common breeds in general practice. The points most worth giving every Golden owner: the cancer statistics are real, the monitoring matters, and early detection is the single most impactful thing you can do.',
         category: 'Breed Health Guide',
         authorName: 'Vets.co Editorial',
-        authorAvatar: '🐾',
+       
         publishedAt: 'May 2025',
         readTime: '10 min',
       }}
