@@ -209,6 +209,47 @@ export default async function ConditionDietPage({ params }: PageProps) {
             ? { label: 'Vets.co — Urolithiasis & FLUTD', href: 'https://vets.co/conditions/urolithiasis' }
             : { label: 'Vets.co — Chronic Enteropathy', href: 'https://vets.co/conditions/chronic-enteropathy' }
 
+  // Condition-specific compare and brands links — funnel informational readers
+  // into the commercial evaluation surfaces naturally. Only links that are
+  // genuinely relevant to the condition are included.
+  const compareAndBrandsLinks: Array<{ label: string; href: string }> =
+    slug === 'food-allergies-and-intolerances'
+      ? [
+          { label: "Prescription vs OTC Diets", href: "/compare/prescription-vs-otc-diets" },
+          { label: "Grain-Free vs Grain-Inclusive", href: "/compare/grain-free-vs-grain-inclusive" },
+          { label: "Brand Evaluations", href: "/brands" },
+        ]
+      : slug === 'kidney-disease-renal-diets'
+        ? [
+            { label: "Prescription vs OTC Diets", href: "/compare/prescription-vs-otc-diets" },
+            { label: "Hill's vs Royal Canin", href: "/brands/hills-vs-royal-canin" },
+            { label: "Brand Evaluations", href: "/brands" },
+          ]
+        : slug === 'weight-management'
+          ? [
+              { label: "Wet vs Dry Food", href: "/compare/wet-vs-dry-food" },
+              { label: "Fresh vs Kibble", href: "/compare/fresh-vs-kibble" },
+              { label: "Compare All Food Types", href: "/compare" },
+              { label: "Brand Evaluations", href: "/brands" },
+            ]
+          : slug === 'diabetes'
+            ? [
+                { label: "Prescription vs OTC Diets", href: "/compare/prescription-vs-otc-diets" },
+                { label: "Grain-Free vs Grain-Inclusive", href: "/compare/grain-free-vs-grain-inclusive" },
+                { label: "Hill's vs Royal Canin", href: "/brands/hills-vs-royal-canin" },
+              ]
+            : slug === 'urinary-stones'
+              ? [
+                  { label: "Prescription vs OTC Diets", href: "/compare/prescription-vs-otc-diets" },
+                  { label: "Hill's vs Royal Canin", href: "/brands/hills-vs-royal-canin" },
+                  { label: "Brand Evaluations", href: "/brands" },
+                ]
+              : /* gastrointestinal-sensitivity */ [
+                  { label: "Prescription vs OTC Diets", href: "/compare/prescription-vs-otc-diets" },
+                  { label: "Home-Cooked vs Commercial", href: "/compare/home-cooked-vs-commercial" },
+                  { label: "Brand Evaluations", href: "/brands" },
+                ]
+
   return (
     <ArticleLayout
       siteId="petfood-com"
@@ -249,6 +290,10 @@ export default async function ConditionDietPage({ params }: PageProps) {
           <RelatedLinks
             title="Companion Specialty Page"
             links={[specialtyCrossLink]}
+          />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={compareAndBrandsLinks}
           />
           <EmailCapture
             variant="sidebar"

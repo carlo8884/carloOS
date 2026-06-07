@@ -90,6 +90,7 @@ export default function HomeCookedVsCommercialPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Gastrointestinal Sensitivity Diets', href: '/conditions/gastrointestinal-sensitivity' },
               { label: 'Minerals in Pet Food', href: '/nutrition/minerals-in-pet-food' },
               { label: 'Multivitamins for Pets', href: '/supplements/multivitamins-for-pets' },
               { label: 'Raw vs Cooked Diets', href: '/compare/raw-vs-cooked-diets' },

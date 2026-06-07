@@ -137,9 +137,11 @@ export default function HillsVsRoyalCaninPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Kidney Disease — Renal Diets', href: '/conditions/kidney-disease-renal-diets' },
+              { label: 'Diabetes Diets', href: '/conditions/diabetes' },
+              { label: 'Condition-Specific Diets', href: '/conditions' },
+              { label: 'Prescription vs OTC Diets', href: '/compare/prescription-vs-otc-diets' },
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
-              { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
-              { label: 'Reading a Pet Food Label', href: '/guides/reading-pet-food-labels' },
               { label: 'Orijen vs Acana', href: '/brands/orijen-vs-acana-comparison' },
             ]}
           />

@@ -90,8 +90,10 @@ export default function PrescriptionVsOtcDietsPage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Condition-Specific Diets', href: '/conditions' },
+              { label: 'Kidney Disease — Renal Diets', href: '/conditions/kidney-disease-renal-diets' },
+              { label: 'Food Allergies and Intolerances', href: '/conditions/food-allergies-and-intolerances' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
-              { label: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
               { label: 'Scoring Methodology', href: '/guides/methodology' },
             ]}
           />

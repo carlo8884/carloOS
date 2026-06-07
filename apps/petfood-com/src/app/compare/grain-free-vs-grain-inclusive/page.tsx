@@ -94,6 +94,7 @@ export default function GrainFreeVsGrainInclusivePage() {
           <RelatedLinks
             title="Related References"
             links={[
+              { label: 'Food Allergies and Intolerances', href: '/conditions/food-allergies-and-intolerances' },
               { label: 'Grain-Free and DCM Risk', href: '/ingredients/grain-free-dcm-risk' },
               { label: 'Carbohydrates in Pet Food', href: '/nutrition/carbohydrates-in-pet-food' },
               { label: 'Food Allergy and Elimination Diets', href: '/diets/food-allergy-and-elimination-diets' },
