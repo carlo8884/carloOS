@@ -31,8 +31,8 @@
 *100% in our control. Authority content + tools that rank, get AI-cited, and refer high-intent buyers.*
 
 - ☐ **A1** Blanket buying guide hub (Saddle) — denier/fill weight explained, turnout vs stable vs sheet · SEO H / GEO H / $ M / M
-- ☐ **A2** "What weight blanket does my horse need?" decision flow (temp × clip × shelter) · SEO H / GEO H / $ M / M
-- ☐ **A3** Blanket weight/temperature chart (original data table — citation magnet) · SEO M / GEO H / $ L / S
+- ◐ **A2** "What weight blanket does my horse need?" decision flow — interactive recommender shipped (`tools/horse-blanket-weight-recommender.html`); prose hub page still to build · SEO H / GEO H / $ M / M
+- ☑ **A3** Blanket weight/temperature chart (data table — citation magnet) — embedded in weight recommender · SEO M / GEO H / $ L / S
 - ☐ **A4** Blanket fit & measuring guide (pairs with calculator) · SEO M / GEO H / $ M / S
 - ☐ **A5** Blanket repair vs replace guide · SEO M / GEO M / $ M / S
 - ☐ **A6** Brand comparison: turnout blankets (Weatherbeeta vs Horseware vs Schneiders…) · SEO H / GEO M / $ H / M
@@ -56,7 +56,7 @@
 - ☐ **B5** Saddle pad size guide
 - ☐ **B6** Halter sizing (horse/pony/cob/mini) tool
 - ☐ **B7** Bell boot / splint boot sizing tool
-- ☐ **B8** Blanket layering/weight recommender (interactive) · pairs w/ A2
+- ☑ **B8** Blanket layering/weight recommender (interactive) — `tools/horse-blanket-weight-recommender.html`
 - ☐ **B9** Feed/hay weight estimator (body-weight tape → ration) · SEO M / GEO H
 - ☐ **B10** Embeddable bundle: one `<script>` loader hosting all tools (Glen pastes once)
 - ☐ **B11** Theme-matched build variants (light/dark, brand color) per tool
