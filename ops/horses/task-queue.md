@@ -22,10 +22,10 @@ never flood thin pages. Every page trust-safe (QC §1) + CI-green + harvest-read
 ## Active Cycle C1 — Racing vertical depth (highest-value, zero wagering risk)
 - [x] T1 Race Types cluster — hub + 7 explainers (maiden/claiming/allowance/optional-claiming/stakes/graded/handicap) ✅ 2026-06-07
 - [x] T2 Major Races cluster — hub + Triple Crown / Derby / Preakness / Belmont / Breeders' Cup ✅ 2026-06-07
-- [~] T3 Training & Safety cluster — SUBAGENT building (parallel)
-- [~] T4 Racehorse Care cluster — SUBAGENT building (parallel)
-- [~] T5 Racing History cluster — SUBAGENT building (parallel)
-- [~] T9 Racing Roles cluster (jockey/trainer/owner/steward, D12 Tier A) — building self
+- [x] T3 Training & Safety cluster — hub + 6 (subagent) ✅ 2026-06-07
+- [x] T4 Racehorse Care cluster — hub + 6 (subagent) ✅ 2026-06-07
+- [x] T5 Racing History cluster — hub + 6 (subagent) ✅ 2026-06-07
+- [x] T9 Racing Roles cluster — hub + 4 (self) ✅ 2026-06-07
 - [ ] T6 Beginner explainers — glossary expansion (after — touches shared glossary data)
 - [ ] T7 Bloodstock depth — stallions/stud basics / sales calendar explainer (no live data)
 - [ ] T8 Ownership depth — partnerships vs syndicates deep-dive / aftercare obligations
@@ -44,3 +44,7 @@ Cluster families queued (each expands to many scoped pages on graduation):
 - 2026-06-07: ledger created; C1 opened.
 - 2026-06-07: T1 Race Types shipped (hub + 7), CI-green, pushed.
 - 2026-06-07: T2 Major Races shipped (hub + 5), CI-green, pushed.
+- 2026-06-07: T9 Racing Roles shipped (hub + 4, self), pushed.
+- 2026-06-07: PARALLEL BATCH — 3 subagents built T3 Training&Safety, T4 Racehorse Care,
+  T5 Racing History (hub + 6 each). Integration pass wired all 4 clusters into sitemap +
+  homepage; full CI green (tsc + trust-guard 782/0 + link-check + metadata-policy). 1 batch = ~25 pages.

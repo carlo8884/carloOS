@@ -184,6 +184,10 @@ export default function RaceCenterPage() {
             { href: '/bloodstock', label: 'Bloodstock', desc: 'How sales & pedigrees actually work' },
             { href: '/race-types', label: 'Race Types', desc: 'Maiden to Grade 1, explained' },
             { href: '/major-races', label: 'Major Races', desc: 'Triple Crown & Breeders’ Cup' },
+            { href: '/racing-roles', label: 'Racing Roles', desc: 'Jockey, trainer, owner & officials' },
+            { href: '/training-safety', label: 'Training & Safety', desc: 'How racehorses are trained & kept safe' },
+            { href: '/racehorse-care', label: 'Racehorse Care', desc: 'Daily care, feeding & welfare' },
+            { href: '/racing-history', label: 'Racing History', desc: 'Origins, legends & milestones' },
           ].map((c) => (
             <Link
               key={c.href}

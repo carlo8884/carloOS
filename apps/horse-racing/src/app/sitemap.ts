@@ -16,6 +16,10 @@ import { allEditionSlugs } from '../data/racing/newsletter'
 import { allBloodstockSlugs } from '../data/racing/bloodstock'
 import { allRaceTypeSlugs } from '../data/racing/race-types'
 import { allMajorRaceSlugs } from '../data/racing/major-races'
+import { allRacingRoleSlugs } from '../data/racing/racing-roles'
+import { allTrainingSafetySlugs } from '../data/racing/training-safety'
+import { allRacehorseCareSlugs } from '../data/racing/racehorse-care'
+import { allRacingHistorySlugs } from '../data/racing/racing-history'
 
 /**
  * Sitemap — hub pages, every racecard, every profile, and every glossary term.
@@ -50,6 +54,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const bloodstock = allBloodstockSlugs().map((s) => entry(`/bloodstock/${s}`, 'monthly', 0.7))
   const raceTypes = allRaceTypeSlugs().map((s) => entry(`/race-types/${s}`, 'monthly', 0.7))
   const majorRaces = allMajorRaceSlugs().map((s) => entry(`/major-races/${s}`, 'monthly', 0.7))
+  const racingRoles = allRacingRoleSlugs().map((s) => entry(`/racing-roles/${s}`, 'monthly', 0.7))
+  const trainingSafety = allTrainingSafetySlugs().map((s) => entry(`/training-safety/${s}`, 'monthly', 0.7))
+  const racehorseCare = allRacehorseCareSlugs().map((s) => entry(`/racehorse-care/${s}`, 'monthly', 0.7))
+  const racingHistory = allRacingHistorySlugs().map((s) => entry(`/racing-history/${s}`, 'monthly', 0.7))
 
   return [
     entry('', 'daily', 1.0),
@@ -74,6 +82,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/bloodstock', 'weekly', 0.8),
     entry('/race-types', 'weekly', 0.8),
     entry('/major-races', 'weekly', 0.9),
+    entry('/racing-roles', 'weekly', 0.8),
+    entry('/training-safety', 'weekly', 0.8),
+    entry('/racehorse-care', 'weekly', 0.8),
+    entry('/racing-history', 'weekly', 0.8),
     ...racecards,
     ...horses,
     ...trainers,
@@ -88,5 +100,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bloodstock,
     ...raceTypes,
     ...majorRaces,
+    ...racingRoles,
+    ...trainingSafety,
+    ...racehorseCare,
+    ...racingHistory,
   ]
 }
