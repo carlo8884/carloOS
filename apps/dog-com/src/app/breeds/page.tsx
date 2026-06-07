@@ -62,6 +62,17 @@ function IconAlert({ className }: { className?: string }) {
 // Strip StockImage's outer margins so it fills a tile/masthead edge-to-edge.
 const FILL_IMAGE = "[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0"
 
+// Health-condition slugs render as readable names (varies per breed instead of
+// a flat "{n} known conditions" count). Known veterinary acronyms stay
+// upper-cased; everything else is title-cased.
+const CONDITION_ACRONYMS = new Set(['boas', 'ivdd', 'pra', 'dm', 'acl', 'dcm', 'pda'])
+function formatCondition(slug: string): string {
+  return slug
+    .split('-')
+    .map((w) => (CONDITION_ACRONYMS.has(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(' ')
+}
+
 const BREED_MANIFEST_KEYS: Record<string, string> = {
   'golden-retriever': 'dog-com:breed-golden-retriever',
   'labrador-retriever': 'dog-com:breed-labrador-retriever',
@@ -116,7 +127,7 @@ export default async function BreedsPage() {
           entries). subtleCredit keeps photographer attribution present (QC §1). */}
       <section className="relative bg-brand-dark">
         <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
+          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:!w-full [&_figure>div]:h-full [&_figure>div]:!w-full [&_figure>div]:!aspect-auto [&_figure>div]:!rounded-none [&>div]:h-full`}
         >
           <StockImage
             manifestKey="dog-com:category-breeds"
@@ -208,9 +219,12 @@ export default async function BreedsPage() {
                     {String(careData.size ?? '')} · {String(careData.exercise_level ?? '')} exercise
                   </div>
                   {breed.health_conditions?.length > 0 && (
-                    <div className="flex items-center gap-1 text-2xs text-brand-danger font-medium">
-                      <IconAlert className="shrink-0" />
-                      {breed.health_conditions.length} known conditions
+                    <div className="flex items-center gap-1 text-2xs text-brand-text-light font-medium" title={`${breed.health_conditions.length} breed-associated health conditions profiled`}>
+                      <IconAlert className="shrink-0 text-brand-primary" />
+                      <span className="truncate">
+                        {breed.health_conditions.slice(0, 2).map(formatCondition).join(' · ')}
+                        {breed.health_conditions.length > 2 ? ` +${breed.health_conditions.length - 2}` : ''}
+                      </span>
                     </div>
                   )}
                 </div>
