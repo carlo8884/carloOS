@@ -13,6 +13,7 @@ import {
   FAQAccordion,
   EmailCapture,
   BuyBox,
+  StockImage,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands, getBrandBySlug, getRelatedBrandsByPriceTier, type Brand } from '../../../data/brands'
@@ -265,6 +266,14 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
           reviewedBy="Editorial team"
         />
         <DisclosureBanner />
+
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt={`Commercial pet food on retailer shelves — reference context for ${brand.name}`}
+          aspect="16:9"
+          priority
+        />
 
         <p id="tldr">
           <strong>TL;DR.</strong> {buildTldr(brand)}
@@ -646,6 +655,14 @@ function BrandReviewPage({ review, brand }: { review: BrandReview; brand?: Brand
           reviewedBy="Editorial team"
         />
         <DisclosureBanner />
+
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt={`Commercial pet food on retailer shelves — reference context for ${review.brandName}`}
+          aspect="16:9"
+          priority
+        />
 
         <BuyBox
           label={`Where to buy ${review.brandName}`}

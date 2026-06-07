@@ -9,6 +9,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   FAQAccordion,
+  StockImage,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { Brands as BRAND_DATA } from '../../data/brands'
@@ -213,6 +214,14 @@ export default function BrandsHubPage() {
           inclusion or for any assessment language. WSAVA scoring and recall coverage are not for
           sale.
         </div>
+
+        <StockImage
+          manifestKey="petfoods-com:category-brands"
+          fallbackKey="petfoods-com:hero"
+          alt="Shelves of commercial dog and cat food bags from major pet food brands"
+          aspect="16:9"
+          priority
+        />
 
         <p id="tldr">
           <strong>TL;DR.</strong> This page indexes the major commercial pet-food brands sold in the
