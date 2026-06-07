@@ -14,7 +14,7 @@ export default function HowPetInsuranceWorksPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'How Pet Insurance Works', subtitle: 'Pet insurance is medical insurance for your dog or cat, and it works on a reimbursement model: you pay the vet, then the insurer pays you back a percentage of covered costs after a deductible. Four numbers — premium, deductible, reimbursement rate, and annual limit — define every policy. Once you understand how they interact, comparing plans becomes straightforward.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'How Pet Insurance Works', subtitle: 'Pet insurance is medical insurance for your dog or cat, and it works on a reimbursement model: you pay the vet, then the insurer pays you back a percentage of covered costs after a deductible. Four numbers — premium, deductible, reimbursement rate, and annual limit — define every policy. Once you understand how they interact, comparing plans becomes straightforward.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'How It Works', href: '/insurance/how-pet-insurance-works' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function HowPetInsuranceWorksPage() {
           <ReviewCard
             id="trupanion"
             badge="Direct-Pay Model"
-            badgeEmoji="🏆"
             name="Trupanion"
             subtitle="Pays participating vets directly, per-condition deductible"
             score={9.0}
@@ -82,7 +81,6 @@ export default function HowPetInsuranceWorksPage() {
           <ReviewCard
             id="healthy-paws"
             badge="Fast Reimbursement"
-            badgeEmoji="⚡"
             name="Healthy Paws"
             subtitle="One simple accident-and-illness plan, fast claims"
             score={8.7}

@@ -143,7 +143,7 @@ export default function DiagnosticPage({ params }: PageProps) {
           subtitle: `What it measures, why a veterinarian orders it, what the results mean in plain language, and typical US cost ranges — sourced from ACVIM, AAHA, ACVR, and the Merck Veterinary Manual.`,
           category: `Diagnostic Test · ${categoryLabel(d)}`,
           authorName: 'Vets.co Editorial — sourced from cited references',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '8 min',
         }}

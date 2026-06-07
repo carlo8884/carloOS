@@ -22,7 +22,7 @@ export default function ArthritisDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '10 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is one of the most common and most under-treated conditions in dogs — affecting an estimated 1 in 5 dogs overall and the majority of dogs over 8 years old. It is progressive and not curable, but a well-designed plan keeps most arthritic dogs comfortable and mobile for years. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Arthritis', href: '/health/arthritis-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

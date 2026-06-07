@@ -21,7 +21,7 @@ export default function AnxietyDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Anxiety in Dogs', subtitle: 'Anxiety is a genuine medical and behavioral condition in dogs, not simply misbehavior — and it causes real suffering. Separation anxiety, noise phobias, and generalized fear are common, often worsen if untreated, and respond well to a structured, evidence-based approach. Recognizing the signs and acting early gives the best chance of a calmer, happier dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Anxiety in Dogs', subtitle: 'Anxiety is a genuine medical and behavioral condition in dogs, not simply misbehavior — and it causes real suffering. Separation anxiety, noise phobias, and generalized fear are common, often worsen if untreated, and respond well to a structured, evidence-based approach. Recognizing the signs and acting early gives the best chance of a calmer, happier dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Anxiety', href: '/health/anxiety-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

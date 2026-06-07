@@ -14,7 +14,7 @@ export default function WhenToEnrollPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'When to Enroll Your Pet', subtitle: 'There is a clear answer to when you should buy pet insurance: as early as possible, while your pet is young and healthy. Because pre-existing conditions are permanently excluded and premiums rise with age, the day you enroll largely determines the lifetime value of your coverage. Here is how to think about timing at every life stage.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'When to Enroll Your Pet', subtitle: 'There is a clear answer to when you should buy pet insurance: as early as possible, while your pet is young and healthy. Because pre-existing conditions are permanently excluded and premiums rise with age, the day you enroll largely determines the lifetime value of your coverage. Here is how to think about timing at every life stage.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'When to Enroll', href: '/insurance/when-to-enroll' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -58,7 +58,6 @@ export default function WhenToEnrollPage() {
           <ReviewCard
             id="lemonade"
             badge="Young-Pet Value"
-            badgeEmoji="📱"
             name="Lemonade Pet"
             subtitle="Often competitive premiums for young, healthy pets"
             score={8.4}
@@ -82,7 +81,6 @@ export default function WhenToEnrollPage() {
           <ReviewCard
             id="pets-best"
             badge="Flexible Plans"
-            badgeEmoji="🐾"
             name="Pets Best"
             subtitle="Multiple plan tiers, no upper age limit on enrollment"
             score={8.2}

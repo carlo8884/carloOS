@@ -22,7 +22,7 @@ export default function FleaTickPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Flea and Tick Prevention', subtitle: 'Fleas and ticks are more than a nuisance — they transmit tapeworms, cause allergic skin disease and anemia, and spread serious tick-borne illnesses, some of which affect people too. Consistent, year-round prevention is one of the highest-value, lowest-effort things you can do for your pet\'s health. Here is how it works and how to choose the right approach.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Flea and Tick Prevention', subtitle: 'Fleas and ticks are more than a nuisance — they transmit tapeworms, cause allergic skin disease and anemia, and spread serious tick-borne illnesses, some of which affect people too. Consistent, year-round prevention is one of the highest-value, lowest-effort things you can do for your pet\'s health. Here is how it works and how to choose the right approach.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Flea & Tick Prevention', href: '/health/flea-tick-prevention' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

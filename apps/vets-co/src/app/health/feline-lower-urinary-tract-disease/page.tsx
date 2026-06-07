@@ -21,7 +21,7 @@ export default function FLUTDPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Feline Lower Urinary Tract Disease (FLUTD)', subtitle: 'FLUTD is an umbrella term for several conditions that cause cats to strain, urinate frequently, and pass bloody urine. Most cases are uncomfortable but not immediately dangerous — with one critical exception: a male cat that cannot urinate is a life-threatening emergency requiring care within hours.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Feline Lower Urinary Tract Disease (FLUTD)', subtitle: 'FLUTD is an umbrella term for several conditions that cause cats to strain, urinate frequently, and pass bloody urine. Most cases are uncomfortable but not immediately dangerous — with one critical exception: a male cat that cannot urinate is a life-threatening emergency requiring care within hours.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'FLUTD', href: '/health/feline-lower-urinary-tract-disease' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

@@ -11,7 +11,7 @@ const intSchema = buildProductSchema({ name: 'Interceptor Plus', description: 'M
 const allSchemas = combineSchemas(schema, hgSchema, intSchema)
 
 const PICKS = [
-  { label: 'Best Standalone HW', name: 'Heartgard Plus', subtitle: 'Ivermectin + pyrantel · Most prescribed', href: '#heartgard' },
+  { label: 'Best Standalone HW', name: 'Heartgard Plus', subtitle: 'Ivermectin + pyrantel · Commonly used', href: '#heartgard' },
   { label: 'Broadest Coverage', name: 'Interceptor Plus', subtitle: 'Adds whipworm + tapeworm to spectrum', href: '#interceptor' },
   { label: 'All-in-One', name: 'Simparica Trio', subtitle: 'HW + fleas + ticks + intestinal parasites', href: '#simparica' },
   { label: 'Best Injectable', name: 'ProHeart 12', subtitle: '12-month protection · No monthly compliance needed', href: '#proheart' },
@@ -40,10 +40,10 @@ export default function BestHeartwormPreventionPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Monthly preventives do not block infection in real time — they eliminate larvae exposed to during the previous month before they mature into adult worms. Missing one month creates a gap. Annual heartworm testing detects any breakthrough infection even in dogs on prevention.</p>
             </div>
             <ScoreMethodology />
-            <ReviewCard id="heartgard" badge="Best Standalone" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Most prescribed HW preventive" score={9.3} winner
-              description={<p>Heartgard Plus is the most commonly prescribed standalone heartworm preventive in the US — ivermectin kills Dirofilaria immitis larvae while pyrantel pamoate covers roundworm and hookworm. Monthly beef-flavored chew with very high palatability. Suitable for all dogs except those with MDR1 gene mutation at higher doses — standard Heartgard dosing (6 mcg/kg ivermectin) is safe in MDR1-positive herding breeds. Not for flea/tick protection — pair with a separate isoxazoline for complete parasite coverage, or switch to Simparica Trio for combined coverage.</p>}
+            <ReviewCard id="heartgard" badge="Best Standalone" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Commonly used HW preventive" score={9.3} winner
+              description={<p>Heartgard Plus is a commonly used standalone heartworm preventive in the US — ivermectin kills Dirofilaria immitis larvae while pyrantel pamoate covers roundworm and hookworm. Monthly beef-flavored chew with very high palatability. Suitable for all dogs except those with MDR1 gene mutation at higher doses — standard labeled preventive dosing (your veterinarian determines the correct product and dose) is safe in MDR1-positive herding breeds. Not for flea/tick protection — pair with a separate isoxazoline for complete parasite coverage, or switch to Simparica Trio for combined coverage.</p>}
               specs={[{ label: 'Active Ingredients', value: 'Ivermectin + pyrantel', highlight: 'good' }, { label: 'Spectrum', value: 'HW + roundworm + hookworm' }, { label: 'Dosing', value: 'Monthly' }, { label: 'Rx required', value: 'Yes' }]}
-              pros={['Most prescribed — largest safety dataset', 'Safe for MDR1-positive herding breeds at standard dose', 'High palatability', 'Affordable']}
+              pros={['Commonly used — established safety record', 'Safe for MDR1-positive herding breeds at standard dose', 'High palatability', 'Affordable']}
               cons={['No flea/tick coverage', 'Monthly compliance required', 'Separate product needed for complete parasite coverage']}
               price="$35–55 / 6-month supply"
               ctaText="Ask Your Vet →"

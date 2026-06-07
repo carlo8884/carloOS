@@ -18,7 +18,7 @@ export default function PainManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
+        hero={{ title: 'Pain Management in Dogs', subtitle: 'Pain in dogs is significantly undertreated — partly because dogs hide pain as an evolutionary survival mechanism, partly because owners and even some veterinarians underestimate the signs, and partly because pain management options have historically been limited. All three of these barriers have improved substantially.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Pain Management', href: '/health/pain-management-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

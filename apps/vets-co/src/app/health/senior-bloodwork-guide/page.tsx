@@ -16,7 +16,7 @@ export default function SeniorBloodworkPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Senior Dog Bloodwork — What Each Test Finds', subtitle: 'Annual bloodwork for dogs over 7 is not a routine checkbox — it is an early warning system for the most common conditions affecting aging dogs. Understanding what each test measures helps owners make sense of results and participate more meaningfully in their dog\'s care decisions.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '10 min',}}
+        hero={{ title: 'Senior Dog Bloodwork — What Each Test Finds', subtitle: 'Annual bloodwork for dogs over 7 is not a routine checkbox — it is an early warning system for the most common conditions affecting aging dogs. Understanding what each test measures helps owners make sense of results and participate more meaningfully in their dog\'s care decisions.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Senior Bloodwork', href: '/health/senior-bloodwork-guide' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

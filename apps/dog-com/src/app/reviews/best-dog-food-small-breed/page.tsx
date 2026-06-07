@@ -20,7 +20,7 @@ export default function BestSmallBreedFoodPage() {
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Food for Small Breeds 2025', url: 'https://dog.com/reviews/best-dog-food-small-breed' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
@@ -50,10 +50,10 @@ export default function BestSmallBreedFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+small+adult"
             />
-            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Small & Toy Breed Adult" subtitle="30% protein · Live probiotics · Most veterinarian-recommended brand" score={9.2}
-              description={<p>Purina Pro Plan consistently ranks as the most veterinarian-recommended dog food brand in surveys — a reflection of both its WSAVA compliance and its extensive research backing. The Small & Toy Breed Adult formula provides 30% protein (higher than most small breed formulas) to support the lean muscle mass that small breeds need to maintain healthy metabolism. Includes live probiotics (Bacillus coagulans) for digestive health — one of the few dog foods with a clinically studied probiotic strain at an effective inclusion rate. Available in chicken and beef formulas. The "salmon & rice" variant is appropriate for dogs with chicken sensitivity.</p>}
+            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Small & Toy Breed Adult" subtitle="30% protein · Live probiotics · Commonly veterinarian-recommended brand" score={9.2}
+              description={<p>Purina Pro Plan is among the commonly veterinarian-recommended dog food brands — a reflection of both its WSAVA compliance and its extensive research backing. The Small & Toy Breed Adult formula provides 30% protein (higher than most small breed formulas) to support the lean muscle mass that small breeds need to maintain healthy metabolism. Includes live probiotics (Bacillus coagulans) for digestive health — one of the few dog foods with a clinically studied probiotic strain at an effective inclusion rate. Available in chicken and beef formulas. The "salmon & rice" variant is appropriate for dogs with chicken sensitivity.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '30% — high for a small breed formula', highlight: 'good' }, { label: 'Probiotic', value: 'Live B. coagulans — clinically studied', highlight: 'good' }, { label: 'Formulas', value: 'Chicken, beef, salmon variants' }]}
-              pros={['30% protein — supports lean muscle', 'Live clinically-studied probiotic', 'Most recommended brand by veterinarians', 'Multiple protein options']}
+              pros={['30% protein — supports lean muscle', 'Live clinically-studied probiotic', 'Commonly recommended by veterinarians', 'Multiple protein options']}
               cons={['Less dental-specific than Royal Canin', 'Not breed-specific (Small & Toy is a size category, not breed-targeted)']}
               price="$35–55 / 16 lb"
               ctaText="Shop Purina Pro Plan Small & Toy →"

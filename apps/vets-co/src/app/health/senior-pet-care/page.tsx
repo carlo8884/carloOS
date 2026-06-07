@@ -16,7 +16,7 @@ export default function SeniorPetCarePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Senior Dog Care', subtitle: 'A dog is considered senior at 7 years for most breeds — earlier for giants (5–6 years), later for small breeds (9–10 years). Senior dogs have more to gain from regular veterinary care, not less. The goal is maximum quality of life for maximum time.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Senior Dog Care', subtitle: 'A dog is considered senior at 7 years for most breeds — earlier for giants (5–6 years), later for small breeds (9–10 years). Senior dogs have more to gain from regular veterinary care, not less. The goal is maximum quality of life for maximum time.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Senior Pet Care', href: '/health/senior-pet-care' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

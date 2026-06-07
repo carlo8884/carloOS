@@ -21,7 +21,7 @@ export default function KennelCoughPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Kennel Cough in Dogs', subtitle: 'Kennel cough — more formally canine infectious respiratory disease — is a highly contagious infection of the airways that spreads easily wherever dogs gather. Most cases are mild and resolve on their own, but the distinctive honking cough is alarming to owners, and the illness can be serious in vulnerable dogs. Knowing the signs and when to worry helps you respond appropriately.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Kennel Cough in Dogs', subtitle: 'Kennel cough — more formally canine infectious respiratory disease — is a highly contagious infection of the airways that spreads easily wherever dogs gather. Most cases are mild and resolve on their own, but the distinctive honking cough is alarming to owners, and the illness can be serious in vulnerable dogs. Knowing the signs and when to worry helps you respond appropriately.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Kennel Cough', href: '/health/kennel-cough' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

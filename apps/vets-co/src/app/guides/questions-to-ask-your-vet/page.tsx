@@ -14,7 +14,7 @@ export default function QuestionsToAskPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Questions to Ask Your Vet', subtitle: 'A veterinary visit can feel rushed, and it is easy to leave with unanswered questions. Coming prepared with the right questions — about the diagnosis, the options, the costs, and the follow-up — turns an appointment into clear, confident care and helps you and your veterinarian make the best decisions together.', category: 'Owner Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Questions to Ask Your Vet', subtitle: 'A veterinary visit can feel rushed, and it is easy to leave with unanswered questions. Coming prepared with the right questions — about the diagnosis, the options, the costs, and the follow-up — turns an appointment into clear, confident care and helps you and your veterinarian make the best decisions together.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Questions to Ask', href: '/guides/questions-to-ask-your-vet' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

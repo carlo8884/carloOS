@@ -21,7 +21,7 @@ export default function VomitingDiarrheaPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Vomiting and Diarrhea in Pets', subtitle: 'Vomiting and diarrhea are among the most common reasons pets see the veterinarian. Most episodes are mild and self-limiting, but some signal a serious problem — and the rapid dehydration they cause can become dangerous. Knowing which signs warrant watchful waiting and which require prompt care helps you respond appropriately for your dog or cat.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Vomiting and Diarrhea in Pets', subtitle: 'Vomiting and diarrhea are among the most common reasons pets see the veterinarian. Most episodes are mild and self-limiting, but some signal a serious problem — and the rapid dehydration they cause can become dangerous. Knowing which signs warrant watchful waiting and which require prompt care helps you respond appropriately for your dog or cat.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

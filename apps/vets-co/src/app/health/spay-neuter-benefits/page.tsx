@@ -21,7 +21,7 @@ export default function SpayNeuterPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Spay & Neuter — Benefits, Timing & Breed Considerations', subtitle: 'Spay and neuter are the most performed elective veterinary surgeries. The benefits for population control and individual health are well-established. The optimal timing — particularly for large breeds — has become more nuanced as newer research emerges on orthopedic and cancer outcomes.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Spay & Neuter', href: '/health/spay-neuter-benefits' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

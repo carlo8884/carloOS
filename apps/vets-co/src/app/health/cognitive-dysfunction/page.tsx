@@ -16,7 +16,7 @@ export default function CognitiveDysfunctionPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+ (Madari et al., Appl Anim Behav Sci). Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Cognitive Dysfunction Syndrome in Dogs', subtitle: 'Cognitive Dysfunction Syndrome (CDS) — the canine equivalent of Alzheimer\'s disease — affects approximately 22% of dogs aged 9–11 years and over 60% of dogs aged 15+ (Madari et al., Appl Anim Behav Sci). Signs are frequently misattributed to "just getting old" and undertreated. While there is no cure, effective management strategies improve quality of life significantly.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

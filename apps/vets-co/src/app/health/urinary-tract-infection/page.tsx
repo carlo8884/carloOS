@@ -16,7 +16,7 @@ export default function UTIPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '8 min',}}
+        hero={{ title: 'Urinary Tract Infections in Dogs', subtitle: 'Bacterial urinary tract infections (UTIs) are common in dogs — particularly females, due to their shorter urethral anatomy. They are almost always curable with appropriate antibiotics, but treatment without culture leads to antibiotic resistance, and recurrent UTIs indicate an underlying condition that requires investigation.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

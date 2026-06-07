@@ -21,7 +21,7 @@ export default function BloatGDVPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Bloat (GDV) in Dogs', subtitle: 'Gastric dilatation-volvulus — known simply as "bloat" — is one of the most rapidly fatal emergencies in dogs. The stomach fills with gas and twists on itself, cutting off blood flow and sending the dog into shock within hours. It is a true minutes-matter emergency, and recognizing it instantly can save a dog\'s life.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '8 min',}}
+        hero={{ title: 'Bloat (GDV) in Dogs', subtitle: 'Gastric dilatation-volvulus — known simply as "bloat" — is one of the most rapidly fatal emergencies in dogs. The stomach fills with gas and twists on itself, cutting off blood flow and sending the dog into shock within hours. It is a true minutes-matter emergency, and recognizing it instantly can save a dog\'s life.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Bloat (GDV)', href: '/health/bloat-gdv-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

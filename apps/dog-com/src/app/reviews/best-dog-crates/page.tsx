@@ -131,7 +131,7 @@ export default function BestDogCratesPage() {
               subtitle="IATA compliant · Live Animal ventilation · Most airlines accept"
               score={9.0}
               description={
-                <p>For air travel with a dog in cargo, the Petmate Sky Kennel is the most widely accepted airline-approved crate. It meets IATA (International Air Transport Association) Live Animals Regulations, has the required 360° ventilation, and includes the required food and water dishes that attach inside the door. Check your specific airline&apos;s requirements before travel — most follow IATA standards but some have additional requirements. Comes with &quot;Live Animal&quot; stickers and assembly hardware required by most carriers.</p>
+                <p>For air travel with a dog in cargo, the Petmate Sky Kennel is a widely accepted airline-approved crate. It meets IATA (International Air Transport Association) Live Animals Regulations, has the required 360° ventilation, and includes the required food and water dishes that attach inside the door. Check your specific airline&apos;s requirements before travel — most follow IATA standards but some have additional requirements. Comes with &quot;Live Animal&quot; stickers and assembly hardware required by most carriers.</p>
               }
               specs={[
                 { label: 'IATA Compliant', value: 'Yes', highlight: 'good' },

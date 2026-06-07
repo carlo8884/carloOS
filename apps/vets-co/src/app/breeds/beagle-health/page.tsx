@@ -107,7 +107,7 @@ export default function VetsBeagleHealthPage() {
             'Friendly, food-motivated and remarkably long-lived, the Beagle is over-represented in idiopathic epilepsy research and carries a small set of breed-specific genetic conditions. Lean body condition and neurologic awareness are the two highest-yield interventions.',
           category: 'Breed Health Guide',
           authorName: 'Vets.co Editorial',
-          authorAvatar: '🐾',
+         
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

@@ -21,7 +21,7 @@ export default function HypothyroidismDogsPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — an underactive thyroid gland — is among the most common hormonal diseases in dogs and one of the most rewarding to treat. The signs are easy to mistake for normal aging, but once recognized and confirmed, daily hormone replacement restores most dogs to full health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min',}}
+        hero={{ title: 'Hypothyroidism in Dogs', subtitle: 'Hypothyroidism — an underactive thyroid gland — is among the most common hormonal diseases in dogs and one of the most rewarding to treat. The signs are easy to mistake for normal aging, but once recognized and confirmed, daily hormone replacement restores most dogs to full health.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
