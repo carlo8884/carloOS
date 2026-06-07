@@ -114,6 +114,7 @@ export default function BridleFitGuidePage() {
         { title: 'Horse Bridle Guide', href: '/guides/horse-bridle-guide', category: 'Equipment' },
         { title: 'Bit Selection Guide', href: '/guides/bit-selection-guide', category: 'Equipment' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Riding Helmets', href: '/reviews/best-riding-helmets', category: 'Reviews' },
       ]}
       sidebar={
         <>
@@ -137,6 +138,7 @@ export default function BridleFitGuidePage() {
               { label: 'Horse Bridle Guide', href: '/guides/horse-bridle-guide' },
               { label: 'Bit Selection Guide', href: '/guides/bit-selection-guide' },
               { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
+              { label: 'Best Riding Helmets', href: '/reviews/best-riding-helmets' },
             ]}
           />
           <EmailCapture

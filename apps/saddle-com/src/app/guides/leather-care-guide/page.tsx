@@ -47,6 +47,8 @@ export default function LeatherCareGuidePage() {
         { title: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule', category: 'Care' },
         { title: 'Tack Room Organization', href: '/guides/tack-room-organization', category: 'Care' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
       ]}
       sidebar={<>
         <TableOfContents items={[
@@ -62,6 +64,7 @@ export default function LeatherCareGuidePage() {
         <RelatedLinks title="Related Guides" links={[
           { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' },
           { label: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
+          { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' },
           { label: 'Best English Saddles 2025', href: '/reviews/best-english-saddles' },
         ]} />
         <EmailCapture variant="sidebar" siteId="saddle-com"

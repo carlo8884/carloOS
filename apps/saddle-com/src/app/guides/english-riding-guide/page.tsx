@@ -14,6 +14,9 @@ export default function EnglishRidingGuidePage() {
         { title: 'Dressage Basics Guide', href: '/guides/dressage-basics-guide', category: 'Disciplines' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
         { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        { title: 'Best Riding Helmets', href: '/reviews/best-riding-helmets', category: 'Reviews' },
+        { title: 'Best Riding Boots', href: '/reviews/best-riding-boots', category: 'Reviews' },
+        { title: 'Best Riding Gloves', href: '/reviews/best-riding-gloves', category: 'Reviews' },
       ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -25,7 +28,7 @@ export default function EnglishRidingGuidePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Best English Saddles', href: '/reviews/best-english-saddles' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Best English Saddles', href: '/reviews/best-english-saddles' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Helmets', href: '/reviews/best-riding-helmets' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best Riding Gloves', href: '/reviews/best-riding-gloves' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert fitting and care guides." source="guides-english-riding" />
       </>}
     >

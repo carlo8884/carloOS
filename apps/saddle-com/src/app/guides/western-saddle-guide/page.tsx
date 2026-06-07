@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'saddle-com', title: 'Western Saddle Guide — Tree Fit, Disciplines | Saddle.com', description: 'Western saddle guide. How to fit a western saddle to your horse, the differences between roping, barrel, cutting, and trail saddles, and cinch selection.', path: '/guides/western-saddle-guide', type: 'article' })
@@ -13,6 +14,7 @@ export default function WesternSaddleGuidePage() {
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },
         { title: 'Western Riding Guide', href: '/guides/western-riding-guide', category: 'Disciplines' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Tree Size Estimator', href: '/tools/tree-size-estimator', category: 'Tool' },
         { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
       ]}
       sidebar={<>
@@ -25,7 +27,7 @@ export default function WesternSaddleGuidePage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Western Saddles', href: '/reviews/best-western-saddles' }, { label: 'Seat Size Guide', href: '/guides/seat-size-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Tree Size Estimator', href: '/tools/tree-size-estimator' }, { label: 'Best Western Saddles', href: '/reviews/best-western-saddles' }, { label: 'Seat Size Guide', href: '/guides/seat-size-guide' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and fitting guides." source="guides-western" />
       </>}
     >
@@ -33,7 +35,7 @@ export default function WesternSaddleGuidePage() {
         <ArticleByline siteName="Saddle.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <h2>Western Saddle Tree Fit — The Foundation</h2>
         <p>Like English saddles, the western saddle's fit to the horse begins with the tree. The gullet (the channel running the length of the saddle's underside) must clear the horse's spine by at least 2–3 fingers when the saddle is cinched. The bars (the panels of the tree that contact the horse's back) must lay flat along the horse's back without bridging (contacting only at front and back while floating in the middle) or rocking (contacting only in the middle while lifting at front and back).</p>
-        <p>Western saddle tree widths are measured differently than English: Narrow (fits high-withered, mutton-withered, or very lean horses), Regular (7" gullet — fits most Quarter Horses and similar), Wide (8" gullet — wider-backed horses, heavy horses), and Extra Wide (fits wide-backed drafts and draft crosses). The gullet width measurement refers to the width at the fork/pommel, not the full gullet width — these terms are not standardized across manufacturers, adding complexity to selection.</p>
+        <p>Western saddle tree widths are measured differently than English: Narrow (fits high-withered, mutton-withered, or very lean horses), Regular (7" gullet — fits most Quarter Horses and similar), Wide (8" gullet — wider-backed horses, heavy horses), and Extra Wide (fits wide-backed drafts and draft crosses). The gullet width measurement refers to the width at the fork/pommel, not the full gullet width — these terms are not standardized across manufacturers, adding complexity to selection. For a starting estimate before consulting a fitter, use the <Link href="/tools/tree-size-estimator" className="text-brand-primary hover:underline">tree size estimator</Link> — horse type and withers profile map to an English or Western bar-width starting category.</p>
 
         <h2>Discipline-Specific Features</h2>
         <p><strong>Trail saddles:</strong> The largest western saddle category by sales volume. Priority: comfort for rider and horse over multiple hours. Features: padded or seat-jockey leather seats, lighter weight (some synthetic trail saddles under 20 lbs), larger tooled skirts for protection, and comfortable rigging positions. Look for padded fenders that reduce knee strain on long rides.</p>

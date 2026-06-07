@@ -29,8 +29,10 @@ export default function SaddleFitGuidePage() {
       relatedLinks={[
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },
         { title: 'Seat Size Guide', href: '/guides/seat-size-guide', category: 'Fitting' },
+        { title: 'Tree Size Estimator', href: '/tools/tree-size-estimator', category: 'Tool' },
         { title: 'Used Saddle Buying Guide', href: '/guides/used-saddle-buying-guide', category: 'Buying' },
         { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
+        { title: 'Best Western Saddles', href: '/reviews/best-western-saddles', category: 'Reviews' },
       ]}
       sidebar={<>
         <TableOfContents items={[
@@ -45,8 +47,10 @@ export default function SaddleFitGuidePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Seat Size Guide', href: '/guides/seat-size-guide' },
+          { label: 'Tree Size Estimator', href: '/tools/tree-size-estimator' },
           { label: 'Buying a Used Saddle', href: '/guides/used-saddle-buying-guide' },
           { label: 'Best English Saddles 2025', href: '/reviews/best-english-saddles' },
+          { label: 'Best Western Saddles 2025', href: '/reviews/best-western-saddles' },
         ]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Buying Guide" subtitle="Saddle reviews and market intelligence." source="guide-saddle-fit" />
       </>}
