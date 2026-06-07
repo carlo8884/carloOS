@@ -16,6 +16,8 @@ export default function TackRoomPage() {
         { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
         { title: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule', category: 'Care' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+        { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+        { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
       ]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -26,7 +28,7 @@ export default function TackRoomPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Tack Cleaning Schedule', href: '/guides/tack-cleaning-schedule' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert care and fitting guides." source="guides-tack-room" />
       </>}
     >

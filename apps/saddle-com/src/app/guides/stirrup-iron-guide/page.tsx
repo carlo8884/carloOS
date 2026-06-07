@@ -14,6 +14,7 @@ export default function StirrupIronGuidePage() {
         { title: 'Guides Hub', href: '/guides', category: 'Hub' },
         { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
         { title: 'Best Stirrup Irons', href: '/reviews/best-stirrup-irons', category: 'Reviews' },
+        { title: 'Best Stirrups', href: '/reviews/best-stirrups', category: 'Reviews' },
         { title: 'Best Riding Boots', href: '/reviews/best-riding-boots', category: 'Reviews' },
       ]}
       sidebar={<>
@@ -21,7 +22,7 @@ export default function StirrupIronGuidePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Sizing Rule</div>
           <p className="text-xs text-brand-text-mid leading-relaxed m-0">Stirrup width should be 1 inch wider than your boot at its widest point. Too narrow — foot gets stuck. Too wide — foot slides through. Measure your boot, add 1 inch.</p>
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Stirrup Irons', href: '/reviews/best-stirrup-irons' }, { label: 'Best Stirrups', href: '/reviews/best-stirrups' }, { label: 'Best Riding Boots', href: '/reviews/best-riding-boots' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
         <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and fitting guides." source="guides-stirrups" />
       </>}
     >

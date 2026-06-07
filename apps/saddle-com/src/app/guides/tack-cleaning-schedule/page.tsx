@@ -26,10 +26,12 @@ export default function TackCleaningSchedulePage() {
           { title: 'Leather Care Guide', href: '/guides/leather-care-guide', category: 'Care' },
           { title: 'Tack Room Organization', href: '/guides/tack-room-organization', category: 'Care' },
           { title: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide', category: 'Fitting' },
+          { title: 'Best Saddle Pads', href: '/reviews/best-saddle-pads', category: 'Reviews' },
+          { title: 'Best English Saddles', href: '/reviews/best-english-saddles', category: 'Reviews' },
         ]}
         sidebar={<>
           <TableOfContents items={[{ label: 'After Every Ride', href: '#after-ride' }, { label: 'Weekly Deep Clean', href: '#weekly' }, { label: 'Monthly', href: '#monthly' }, { label: 'Annual', href: '#annual' }, { label: 'Products', href: '#products' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Leather Care Guide', href: '/guides/leather-care-guide' }, { label: 'Saddle Fit Guide', href: '/guides/saddle-fit-guide' }, { label: 'Best Saddle Pads', href: '/reviews/best-saddle-pads' }, { label: 'Best English Saddles', href: '/reviews/best-english-saddles' }]} />
           <EmailCapture variant="sidebar" siteId="saddle-com" title="Free Equipment Guides" subtitle="Expert reviews and care guides." source="guides-tack-cleaning" />
         </>}
       >

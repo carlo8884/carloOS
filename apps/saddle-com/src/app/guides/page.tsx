@@ -166,6 +166,37 @@ export default function GuidesHubPage() {
         ))}
       </div>
 
+      {/* Tools & Reviews */}
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide mx-auto">
+        <h2 className="font-display font-bold text-brand-dark text-xl mb-2 border-b border-brand-border pb-2">
+          Tools &amp; Reviews
+        </h2>
+        <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 list-none p-0">
+          {[
+            { href: "/tools/tree-size-estimator", title: "Tree Size Estimator", desc: "Starting English / Western tree-size estimate from horse type, withers profile, and back length." },
+            { href: "/reviews/best-english-saddles", title: "Best English Saddles", desc: "Stubben, Pessoa, Bates, and Collegiate compared by discipline." },
+            { href: "/reviews/best-western-saddles", title: "Best Western Saddles", desc: "Circle Y, Billy Cook, and Martin ranked for reining, cutting, barrel, and trail." },
+            { href: "/reviews/stubben-saddle-review", title: "Stubben Saddle Review", desc: "Deep dive on the German dressage benchmark — Quick-Change tree and panel construction." },
+            { href: "/reviews/pessoa-saddle-review", title: "Pessoa Saddle Review", desc: "Close-contact showjumping geometry from Nelson and Rodrigo Pessoa." },
+            { href: "/reviews/collegiate-saddle-review", title: "Collegiate Saddle Review", desc: "The practical entry-level English saddle — adjustable gullet at an accessible price." },
+            { href: "/reviews/best-stirrup-irons", title: "Best Stirrup Irons", desc: "Safety stirrups, ergonomic designs, and classic INOX options ranked." },
+            { href: "/reviews/best-saddle-pads", title: "Best Saddle Pads", desc: "Shaped, correction, and all-purpose saddle pads compared." },
+            { href: "/reviews/best-riding-helmets", title: "Best Riding Helmets", desc: "ASTM/SEI and BETA-certified helmets for English and western disciplines." },
+            { href: "/reviews/best-riding-boots", title: "Best Riding Boots", desc: "Tall boots, paddock boots, and half-chaps ranked by discipline and budget." },
+          ].map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="block bg-brand-white border border-brand-border rounded-xl p-5 no-underline hover:border-brand-primary hover:shadow-card-hover transition-all"
+              >
+                <div className="font-display font-bold text-brand-dark text-sm mb-1.5">{item.title}</div>
+                <div className="text-xs text-brand-text-light leading-relaxed">{item.desc}</div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       {/* Email Capture */}
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
         <EmailCapture
