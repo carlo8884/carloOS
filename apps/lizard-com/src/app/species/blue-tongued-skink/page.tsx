@@ -11,6 +11,10 @@ export default function BlueTonguedSkinkPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Fire Skink Care', href: '/species/fire-skink', category: 'Species' },
         { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
         { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },

@@ -12,6 +12,8 @@ export default function CrestedGeckoPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Gargoyle Gecko Care', href: '/species/gargoyle-gecko', category: 'Species' },
         { title: 'Day Gecko Care', href: '/species/day-gecko', category: 'Species' },
         { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },

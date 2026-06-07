@@ -11,6 +11,10 @@ export default function UromastcyxPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Thermostats', href: '/reviews/best-thermostats', category: 'Reviews' },
         { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
         { title: 'Russian Tortoise Care', href: '/species/russian-tortoise', category: 'Species' },
         { title: 'Herbivore Reptile Diet', href: '/health/herbivore-reptile-diet', category: 'Health' },

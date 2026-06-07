@@ -25,6 +25,7 @@ export default function HumidityGuidePage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
         { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
         { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
         { title: 'Dysecdysis (Retained Shed)', href: '/health/dysecdysis', category: 'Health' },

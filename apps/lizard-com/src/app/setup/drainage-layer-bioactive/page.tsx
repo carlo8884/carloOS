@@ -13,6 +13,8 @@ export default function SetupDrainageLayerBioactivePage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
         { title: 'Cleanup Crew Guide', href: '/setup/cleanup-crew-isopods-springtails', category: 'Setup' },
         { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },

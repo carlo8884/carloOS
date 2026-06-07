@@ -16,6 +16,10 @@ export default function BeardedDragonPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Uromastyx Care Guide', href: '/species/uromastyx', category: 'Species' },
         { title: 'Blue-Tongued Skink Care', href: '/species/blue-tongued-skink', category: 'Species' },
         { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },

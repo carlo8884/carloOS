@@ -132,8 +132,11 @@ export default function UvbDistanceCalculatorPage() {
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Hub' },
         { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
         { title: 'UVB Lighting Guide', href: '/setup/uvb-lighting-guide', category: 'Setup' },
         { title: 'Lighting Guide', href: '/setup/lighting-guide', category: 'Setup' },
+        { title: 'Bearded Dragon Care', href: '/species/bearded-dragon', category: 'Species' },
+        { title: 'Uromastyx Care', href: '/species/uromastyx', category: 'Species' },
         { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },
       ]}
       sidebar={
