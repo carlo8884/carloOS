@@ -338,6 +338,12 @@ export default function FerretFirstYearSchedulePage() {
           <FAQAccordion items={FAQS} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
+            <p className="mb-2">Ferret reference hubs:</p>
+            <ul className="space-y-1.5 mb-4">
+              <li><Link href="/health" className="text-brand-primary hover:underline">Ferret Health Hub — insulinoma, adrenal disease, vaccinations &amp; more</Link></li>
+              <li><Link href="/care" className="text-brand-primary hover:underline">Ferret Care Hub — diet, housing, grooming &amp; safety</Link></li>
+              <li><Link href="/ownership" className="text-brand-primary hover:underline">Ferret Ownership Hub — cost, legality, adoption &amp; the first week</Link></li>
+            </ul>
             <p className="mb-2">More ferret reference:</p>
             <ul className="space-y-1.5">
               <li><Link href="/care/diet-basics" className="text-brand-primary hover:underline">Ferret Diet Basics — obligate-carnivore feeding</Link></li>

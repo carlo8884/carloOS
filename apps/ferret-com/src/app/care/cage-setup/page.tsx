@@ -105,6 +105,7 @@ export default function FerretCageSetupPage() {
           { title: 'Multi-Level Housing', href: '/care/multi-level-housing' },
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">

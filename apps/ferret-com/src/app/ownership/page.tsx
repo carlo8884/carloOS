@@ -332,7 +332,9 @@ export default function OwnershipHubPage() {
           start well. Once a ferret is home, the{' '}
           <Link href="/care" className="amber-link" style={{ fontWeight: 600 }}>Care</Link>{' '}and{' '}
           <Link href="/health" className="amber-link" style={{ fontWeight: 600 }}>Health</Link>{' '}
-          hubs cover day-to-day husbandry and medical references.
+          hubs cover day-to-day husbandry and medical references. New owners can also grab the free{' '}
+          <Link href="/first-year-schedule" className="amber-link" style={{ fontWeight: 600 }}>52-week first-year schedule</Link>{' '}
+          — a week-by-week calendar covering vaccines, dental onset, diet milestones, and the insulinoma watch window.
         </p>
 
         <ul

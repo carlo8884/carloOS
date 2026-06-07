@@ -129,6 +129,7 @@ export default function LitterBoxTroubleshootingPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Litter Training', href: '/care/litter-training' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
                 { label: 'Behavior Hub', href: '/behavior' },

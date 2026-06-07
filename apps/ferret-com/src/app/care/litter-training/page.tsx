@@ -176,6 +176,7 @@ export default function FerretLitterTrainingPage() {
           { title: 'Litter Box Troubleshooting', href: '/behavior/litter-box-troubleshooting' },
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">

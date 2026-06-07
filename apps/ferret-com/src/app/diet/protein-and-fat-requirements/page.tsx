@@ -92,7 +92,9 @@ export default function ProteinAndFatRequirementsPage() {
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
+          { title: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
           { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">
