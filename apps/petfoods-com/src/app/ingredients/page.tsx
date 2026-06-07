@@ -13,9 +13,9 @@ import {
 import type { FAQItem } from '@carloOS/ui'
 import { Ingredients } from '../../data/ingredients'
 
-// Slug set for the 15 ingredient deep-dive pages live under /ingredients/[slug].
+// Slug set for ingredient deep-dive pages live under /ingredients/[slug].
 // Used to render real <Link>s for those entries and to fall back to an anchor
-// for the remaining catalog entries that have not yet been built out.
+// for entries that link elsewhere (e.g. external PetFood.com references).
 const DEEP_DIVE_SLUGS = new Set(Ingredients.map((i) => i.slug))
 
 export const metadata: Metadata = buildMetadata({
@@ -41,9 +41,8 @@ const schema = buildArticleSchema({
 
 // ─── Ingredient catalog ─────────────────────────────────────────────────────
 // Grouped by AAFCO functional category. Each entry has a short factual note —
-// not a recommendation. Per-ingredient detail pages are queued; this hub is
-// the spine. Where PetFood.com has already published an ingredient-level
-// reference (e.g., grain-free / DCM), the entry cross-links to it.
+// not a recommendation. Where PetFood.com has already published an ingredient-
+// level reference (e.g., grain-free / DCM), the entry cross-links to it.
 
 interface IngredientEntry {
   name: string
