@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Koi Fish Care Gu
 export default function KoiPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Koi', href: '/species/koi' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Goldfish", href: "/species/goldfish", category: "Species Guide" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}

@@ -116,7 +116,6 @@ export default function MollyPage() {
             'Poecilia sphenops, P. latipinna, and P. velifera — mollies are livebearing fish from coastal and brackish waters of the Americas. They tolerate salt better than almost any common aquarium fish, come in dozens of color varieties including the dramatic sailfin form, and breed enthusiastically enough that population control is the central management challenge.',
           category: 'Species Guide — Beginner/Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}

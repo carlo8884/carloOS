@@ -21,43 +21,43 @@ const REVIEWS = [
     title: 'Best Aquarium Filters 2025',
     desc: 'HOB, canister, and sponge filters ranked by flow rate, media volume, and noise — for tanks from 10 to 125 gallons.',
     href: '/reviews/best-aquarium-filters',
-    badge: '🏆 Most Important',
+    badge: 'Most Important',
   },
   {
     title: 'Best Canister Filters 2025',
     desc: 'Fluval, Eheim, and SunSun compared on bio-media volume, flow rate, and seal reliability.',
     href: '/reviews/best-canister-filters',
-    badge: '⚙️ Filtration',
+    badge: 'Filtration',
   },
   {
     title: 'Best Aquarium Heaters 2025',
     desc: 'Eheim Jager, Fluval E-series, and Aqueon Pro tested for temperature accuracy and failure safety.',
     href: '/reviews/best-aquarium-heaters',
-    badge: '🔥 Essential',
+    badge: 'Essential',
   },
   {
     title: 'Best Aquarium Lighting 2025',
     desc: 'Full-spectrum, planted-tank, and reef-capable lights compared on PAR output and spectrum quality.',
     href: '/reviews/best-aquarium-lighting',
-    badge: '💡 Lighting',
+    badge: 'Lighting',
   },
   {
     title: 'Best Water Test Kits 2025',
     desc: 'API Master Test Kit vs test strips — why liquid tests are the only reliable option, with top picks.',
     href: '/reviews/best-water-test-kits',
-    badge: '🧪 Water Quality',
+    badge: 'Water Quality',
   },
   {
     title: 'Best Nano Tanks 2025',
     desc: 'All-in-one nano aquariums for shrimp, bettas, and small communities — compared on filtration quality and light output.',
     href: '/reviews/best-nano-tanks',
-    badge: '🐠 Small Tanks',
+    badge: 'Small Tanks',
   },
   {
     title: 'Best Planted-Tank Fertilizers 2025',
     desc: 'Macro, micro, and all-in-one fertilizers ranked by nutrient completeness and value. With dosing guidance.',
     href: '/reviews/best-planted-tank-fertilizers',
-    badge: '🌿 Planted Tanks',
+    badge: 'Planted Tanks',
   },
 ]
 
@@ -141,7 +141,7 @@ export default function FishReviewsPage() {
           subtitle="Equipment picks, species spotlights, and fishkeeping tips every Thursday."
           source="reviews-hub"
           ctaText="Subscribe Free"
-          perks={['⚙️ Editor equipment picks', '🐠 Species guides', '🧪 Water chemistry tips', '🚫 No spam']}
+          perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
         />
       </div>
 

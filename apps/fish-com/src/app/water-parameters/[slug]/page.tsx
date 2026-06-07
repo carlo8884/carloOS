@@ -235,7 +235,6 @@ export default async function ParameterPage({ params }: PageProps) {
         category: 'Water Parameters',
         categoryHref: '/water-parameters',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🧪',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}

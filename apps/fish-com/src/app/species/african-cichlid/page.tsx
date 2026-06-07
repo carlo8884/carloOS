@@ -116,7 +116,6 @@ export default function AfricanCichlidPage() {
             'African rift-lake cichlids — the Mbuna, Peacocks, and Haplochromines of Lake Malawi, the Tropheus and shell-dwellers of Lake Tanganyika, and the Haplochromis complex of Lake Victoria — represent some of the most colorful freshwater fish in the world and some of the most behaviorally complex. They need hard alkaline water, large tanks, dense rockwork, and species-matched diet. None of that is beginner difficulty; all of it is doable in a first serious tank.',
           category: 'Species Guide — Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '14 min',
         }}

@@ -14,7 +14,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const GUIDES = [
-  { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', badge: '⚡ Essential First Read', desc: 'Why most new tanks fail and how to prevent it' },
+  { title: 'Nitrogen Cycle Explained', href: '/health/nitrogen-cycle-explained', badge: 'Essential First Read', desc: 'Why most new tanks fail and how to prevent it' },
   { title: 'Aquarium Water Chemistry', href: '/water-parameters', desc: 'pH, ammonia, nitrite, nitrate, KH, GH — all parameters explained' },
   { title: 'Fish Disease Guide', href: '/health/fish-disease-guide', desc: 'Identify and treat ich, velvet, fin rot, dropsy' },
   { title: 'Ich Treatment Guide', href: '/health/ich-treatment', desc: 'The most common aquarium disease — complete treatment' },
@@ -61,7 +61,7 @@ export default function FishHealthPage() {
         </div>
       </div>
       <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-        <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Water chemistry tips and fishkeeping guides every Thursday." source="health-hub" ctaText="Subscribe Free" perks={['🧪 Water chemistry', '🐠 Species guides', '🚫 No spam']} />
+        <EmailCapture variant="section" siteId="fish-com" title="The Weekly Tank" subtitle="Water chemistry tips and fishkeeping guides every Thursday." source="health-hub" ctaText="Subscribe Free" perks={['Water chemistry', 'Species guides', 'No spam']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">

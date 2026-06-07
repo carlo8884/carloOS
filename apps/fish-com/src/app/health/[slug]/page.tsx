@@ -241,7 +241,6 @@ export default async function DiseasePage({ params }: PageProps) {
         subtitle: `${disease.category} disease in ${disease.waterType.toLowerCase()} aquarium fish — symptoms, treatment, and prevention.`,
         category: 'Fish Health',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '7 min',
       }}

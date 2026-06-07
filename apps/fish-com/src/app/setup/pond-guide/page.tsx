@@ -47,7 +47,7 @@ export default function PondGuidePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Backyard Pond Setup Guide', subtitle: 'A well-designed backyard pond with koi or goldfish is one of the most rewarding features you can add to a garden — dynamic, living, low-maintenance once established. The key word: once established. The setup decisions made before the first fish enters determine whether the pond succeeds or fails.', category: 'Pond Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '11 min' }}
+        hero={{ title: 'Backyard Pond Setup Guide', subtitle: 'A well-designed backyard pond with koi or goldfish is one of the most rewarding features you can add to a garden — dynamic, living, low-maintenance once established. The key word: once established. The setup decisions made before the first fish enters determine whether the pond succeeds or fails.', category: 'Pond Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '11 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Pond Guide', href: '/setup/pond-guide' }]}
         relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Koi', href: '/species/koi', category: 'Species Guide' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }, { title: 'Aquarium Algae Control', href: '/setup/aquarium-algae-control', category: 'Tank Setup' }]}
         sidebar={<>

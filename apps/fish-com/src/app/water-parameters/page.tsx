@@ -536,7 +536,7 @@ export default function WaterParametersHubPage() {
           subtitle="Water-chemistry references, species guides, and equipment picks every Thursday."
           source="water-parameters-hub"
           ctaText="Subscribe Free"
-          perks={['🧪 Water chemistry', '🐠 Species guides', '⚙️ Equipment picks']}
+          perks={['Water chemistry', 'Species guides', 'Equipment picks']}
         />
       </div>
     </>

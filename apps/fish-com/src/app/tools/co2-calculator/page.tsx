@@ -98,7 +98,6 @@ export default function CO2CalculatorPage() {
         subtitle: 'Estimate dissolved CO2 in your planted aquarium from carbonate hardness and pH. The standard formula, with honest caveats about when it breaks.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🌿',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}

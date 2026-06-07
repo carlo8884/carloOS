@@ -113,7 +113,6 @@ export default function AquariumCyclingEstimatorPage() {
           'How long will my new tank take to cycle? Pick a method and temperature; the estimator returns days to completion and a phase-by-phase timeline.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🔬',
         publishedAt: 'May 2026',
         readTime: '4 min',
       }}

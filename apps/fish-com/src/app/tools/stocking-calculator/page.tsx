@@ -98,7 +98,6 @@ export default function StockingCalculatorPage() {
         subtitle: 'How many fish can your tank actually hold? Modern surface-area model adjusted for filtration and aquascape style — not the broken inch-per-gallon rule.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '4 min',
       }}

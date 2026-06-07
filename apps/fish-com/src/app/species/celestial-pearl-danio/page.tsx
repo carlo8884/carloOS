@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Celestial Pearl 
 export default function CPDPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '7 min' }}
+      hero={{ title: 'Celestial Pearl Danio', subtitle: 'Danio margaritatus — discovered in 2006 in Myanmar and immediately popular in the hobby. At 1 inch, the celestial pearl danio (galaxy rasbora) packs extraordinary visual impact: pearlescent spots on a dark body, red-orange fins edged in black. Males display to each other constantly in groups, intensifying color to compete.', category: 'Species Guide — Nano', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '7 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Celestial Pearl Danio', href: '/species/celestial-pearl-danio' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Cherry Shrimp", href: "/species/cherry-shrimp", category: "Species Guide" }, { title: "Nano Tank Setup", href: "/setup/nano-tank-setup", category: "Tank Setup" }]}

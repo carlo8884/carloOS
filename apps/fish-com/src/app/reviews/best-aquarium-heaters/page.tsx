@@ -36,10 +36,10 @@ const eheimSchema = buildProductSchema({
 const schema = combineSchemas(articleSchema, eheimSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim' },
-  { label: 'Best Flat Design', emoji: '⭐', name: 'Cobalt Neo-Therm', subtitle: 'Slim profile · LED indicator', href: '#cobalt' },
-  { label: 'Best Canister Inline', emoji: '⚙️', name: 'Hydor Inline', subtitle: 'No heater in tank · For canister setups', href: '#hydor' },
-  { label: 'Best Budget', emoji: '💰', name: 'Aqueon Pro', subtitle: 'Shatterproof · Under $30', href: '#aqueon' },
+  { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim' },
+  { label: 'Best Flat Design', name: 'Cobalt Neo-Therm', subtitle: 'Slim profile · LED indicator', href: '#cobalt' },
+  { label: 'Best Canister Inline', name: 'Hydor Inline', subtitle: 'No heater in tank · For canister setups', href: '#hydor' },
+  { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · Under $30', href: '#aqueon' },
 ]
 
 export default function BestHeatersPage() {
@@ -80,7 +80,6 @@ export default function BestHeatersPage() {
             <ReviewCard
               id="eheim"
               badge="Best Overall"
-              badgeEmoji="🏆"
               name="Eheim Jager TruTemp"
               subtitle="Most accurate on published spec · Recalibratable · German engineering"
               score={9.4}
@@ -110,7 +109,6 @@ export default function BestHeatersPage() {
             <ReviewCard
               id="cobalt"
               badge="Best Flat Design"
-              badgeEmoji="⭐"
               name="Cobalt Aquatics Neo-Therm Pro"
               subtitle="Slim flat design · LED color indicator · ±0.5°F accuracy"
               score={9.1}
@@ -134,7 +132,6 @@ export default function BestHeatersPage() {
             <ReviewCard
               id="hydor"
               badge="Best Inline (Canister Setups)"
-              badgeEmoji="⚙️"
               name="Hydor In-Line External Heater"
               subtitle="No heater in the tank · Connects to canister filter hose"
               score={8.9}
@@ -157,7 +154,6 @@ export default function BestHeatersPage() {
             <ReviewCard
               id="aqueon"
               badge="Best Budget"
-              badgeEmoji="💰"
               name="Aqueon Pro Adjustable Heater"
               subtitle="Shatterproof · Under $30 · Widely available"
               score={8.1}

@@ -141,8 +141,7 @@ export default async function SpeciesIndexPage() {
           {/* More coming CTA */}
           <div className="border-2 border-dashed border-brand-border rounded-xl flex items-center justify-center text-center p-6">
             <div>
-              <div className="text-3xl mb-2">🐠</div>
-              <div className="text-sm font-bold text-brand-text-mid mb-1">200+ species</div>
+              <div className="text-sm font-bold text-brand-text-mid mb-1">40+ species</div>
               <div className="text-xs text-brand-text-light">Added weekly</div>
             </div>
           </div>
@@ -170,7 +169,7 @@ export default async function SpeciesIndexPage() {
           title="The Weekly Tank"
           subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
           source="species-index" ctaText="Subscribe Free"
-          perks={['🐠 Species spotlights', '🧪 Water chemistry', '⚙️ Equipment picks']} />
+          perks={['Species spotlights', 'Water chemistry', 'Equipment picks']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">

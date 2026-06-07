@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water C
 export default function WaterChemistryGuidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Aquarium Water Chemistry Guide', subtitle: 'pH gets most of the attention but GH and KH often matter more for fish health and breeding. Understanding what each parameter actually measures — and how they interact — allows you to match your water to your fish\'s requirements rather than chasing arbitrary numbers.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]}
       schema={schema}
       relatedLinks={[{ title: "Tank Setup Hub", href: "/setup", category: "Tank Setup" }, { title: "Aquarium Water Parameters", href: "/water-parameters", category: "Water Chemistry" }, { title: "GH & KH Water Hardness", href: "/setup/gh-kh-water-hardness", category: "Tank Setup" }, { title: "Nitrogen Cycle Explained", href: "/health/nitrogen-cycle-explained", category: "Fish Health" }, { title: "Best Water Test Kits", href: "/reviews/best-water-test-kits", category: "Reviews" }]}

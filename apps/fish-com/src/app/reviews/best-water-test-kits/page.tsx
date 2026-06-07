@@ -7,16 +7,16 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Wa
 const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api' },
-  { label: 'Best Reef', emoji: '🪸', name: 'Salifert Individual Tests', subtitle: 'Reef-grade accuracy · Alk, Ca, Mg, nitrate', href: '#salifert' },
-  { label: 'Best Digital', emoji: '📱', name: 'Apogee or Bluelab Meters', subtitle: 'pH/TDS digital meters — no reagents', href: '#digital' },
+  { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api' },
+  { label: 'Best Reef', name: 'Salifert Individual Tests', subtitle: 'Reef-grade accuracy · Alk, Ca, Mg, nitrate', href: '#salifert' },
+  { label: 'Best Digital', name: 'Apogee or Bluelab Meters', subtitle: 'pH/TDS digital meters — no reagents', href: '#digital' },
 ]
 export default function BestWaterTestKitsPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Water Test Kits 2025', url: 'https://fish.com/reviews/best-water-test-kits' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🧪 Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Water Test Kits 2025</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">You cannot manage water quality you do not measure. Ammonia and nitrite are invisible and lethal. Test at least weekly, always after adding new fish, and during any disease or behavior change.</p>
       </div>
@@ -31,7 +31,7 @@ export default function BestWaterTestKitsPage() {
           <div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="api" badge="Best Overall" badgeEmoji="🏆" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" score={9.3} winner
+            <ReviewCard id="api" badge="Best Overall" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" score={9.3} winner
               description={<p>The API Freshwater Master Test Kit is the standard hobbyist water testing solution — used by more aquarists than any other kit. It covers the four parameters that matter most for fish health: pH, ammonia (NH3/NH4+), nitrite (NO2-), and nitrate (NO3-). 800 total tests provides approximately 2+ years of weekly testing for a single tank. Liquid reagent tests are significantly more accurate than dip-strip tests — do not use dip strips for critical parameters like ammonia. Color comparison can be challenging in some lighting conditions, but the ammonia, nitrite, and nitrate tests are reliable and consistent. Essential for every freshwater hobbyist.</p>}
               specs={[{ label: 'Tests', value: '800 total', highlight: 'good' }, { label: 'Parameters', value: 'pH, ammonia, nitrite, nitrate', highlight: 'good' }, { label: 'Format', value: 'Liquid reagent — more accurate than strips', highlight: 'good' }, { label: 'Tank type', value: 'Freshwater' }]}
               pros={['800 tests — 2+ years supply', 'Most accurate affordable kit', 'Covers all 4 critical parameters', 'Industry standard — widely referenced']}
