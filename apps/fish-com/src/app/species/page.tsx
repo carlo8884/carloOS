@@ -5,8 +5,8 @@ import { createServerClient } from '@carloOS/db'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Aquarium Fish Species Guide — 200+ Fish Profiles | Fish.com',
-  description: 'Complete care guides for 200+ aquarium fish species. Freshwater, saltwater, beginner to advanced — tank size, water parameters, diet, compatibility, and health.',
+  title: 'Aquarium Fish Species Guide — 40+ Fish Profiles | Fish.com',
+  description: 'Complete care guides for 40+ aquarium fish species. Freshwater, saltwater, beginner to advanced — tank size, water parameters, diet, compatibility, and health.',
   path: '/species',
 })
 
@@ -91,7 +91,7 @@ export default async function SpeciesIndexPage() {
           Aquarium Fish Species Guide
         </h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium.
+          Complete care guides for 40+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium.
         </p>
       </div>
 
@@ -138,14 +138,18 @@ export default async function SpeciesIndexPage() {
             </Link>
           ))}
 
-          {/* More coming CTA */}
-          <div className="border-2 border-dashed border-brand-border rounded-xl flex items-center justify-center text-center p-6">
-            <div>
-              <div className="text-3xl mb-2">🐠</div>
-              <div className="text-sm font-bold text-brand-text-mid mb-1">200+ species</div>
-              <div className="text-xs text-brand-text-light">Added weekly</div>
-            </div>
-          </div>
+          {/* Browse all species CTA */}
+          <Link href="#all-species"
+            className="block bg-brand-surface border border-brand-border rounded-xl flex flex-col items-center justify-center text-center p-6 no-underline hover:border-brand-primary hover:-translate-y-1 hover:shadow-card-hover transition-all duration-200">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-brand-primary mb-3">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+            <div className="text-sm font-bold text-brand-dark mb-1">Browse all 40+ species</div>
+            <div className="text-xs text-brand-primary font-semibold">View full list below</div>
+          </Link>
         </div>
 
         {/* Quick links */}
@@ -170,10 +174,10 @@ export default async function SpeciesIndexPage() {
           title="The Weekly Tank"
           subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
           source="species-index" ctaText="Subscribe Free"
-          perks={['🐠 Species spotlights', '🧪 Water chemistry', '⚙️ Equipment picks']} />
+          perks={['Species spotlights', 'Water chemistry', 'Equipment picks']} />
       </div>
       {/* agent1-browse-all-start */}
-      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
+      <section id="all-species" className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Fish Species</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
         <Link key="african-cichlid" href="/species/african-cichlid" className="text-sm text-brand-primary no-underline hover:underline">African Cichlid</Link>
