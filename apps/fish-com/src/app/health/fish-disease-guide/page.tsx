@@ -109,10 +109,10 @@ const DISEASES = [
 ]
 
 const URGENCY_STYLES = {
-  'treat-immediately': { label: '🚨 Treat Immediately', bg: 'rgba(200,74,42,0.05)', border: 'rgba(200,74,42,0.18)', color: '#C84A2A' },
-  'treat-soon': { label: '⚠️ Treat Soon', bg: 'rgba(200,149,42,0.05)', border: 'rgba(200,149,42,0.15)', color: '#C8952A' },
-  'prognosis-poor': { label: '⚡ Poor Prognosis — Act Immediately', bg: 'rgba(200,74,42,0.07)', border: 'rgba(200,74,42,0.22)', color: '#C84A2A' },
-  'monitor': { label: '👁 Monitor Closely', bg: 'rgba(14,107,138,0.05)', border: 'rgba(14,107,138,0.15)', color: '#0E6B8A' },
+  'treat-immediately': { label: 'Treat Immediately', bg: 'rgba(200,74,42,0.05)', border: 'rgba(200,74,42,0.18)', color: '#C84A2A' },
+  'treat-soon': { label: 'Treat Soon', bg: 'rgba(200,149,42,0.05)', border: 'rgba(200,149,42,0.15)', color: '#C8952A' },
+  'prognosis-poor': { label: 'Poor Prognosis — Act Immediately', bg: 'rgba(200,74,42,0.07)', border: 'rgba(200,74,42,0.22)', color: '#C84A2A' },
+  'monitor': { label: 'Monitor Closely', bg: 'rgba(14,107,138,0.05)', border: 'rgba(14,107,138,0.15)', color: '#0E6B8A' },
 }
 
 export default function FishDiseaseGuidePage() {
@@ -124,8 +124,7 @@ export default function FishDiseaseGuidePage() {
         subtitle: 'Most fish disease is preventable — excellent water quality, proper quarantine, and stress reduction prevent the vast majority of common conditions. When disease does occur, early identification makes treatment faster and more effective.',
         category: 'Fish Health Guide',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
-        publishedAt: 'May 2025',
+          publishedAt: 'May 2025',
         readTime: '12 min',
       }}
       breadcrumbs={[

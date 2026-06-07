@@ -170,7 +170,7 @@ export default async function SpeciesIndexPage() {
           title="The Weekly Tank"
           subtitle="Species spotlights, water chemistry tips, and equipment picks every Thursday."
           source="species-index" ctaText="Subscribe Free"
-          perks={['🐠 Species spotlights', '🧪 Water chemistry', '⚙️ Equipment picks']} />
+          perks={['Species spotlights', 'Water chemistry', 'Equipment picks']} />
       </div>
       {/* agent1-browse-all-start */}
       <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
