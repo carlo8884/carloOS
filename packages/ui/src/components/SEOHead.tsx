@@ -192,18 +192,26 @@ interface ProductSchemaParams {
 }
 
 export function buildProductSchema(params: ProductSchemaParams) {
+  // The score is our single editorial assessment — represent it as a `Review`
+  // (authored by the editorial team), NOT an `AggregateRating`. An aggregate
+  // rating implies multiple user reviews; emitting one with reviewCount:1 would
+  // misrepresent an editorial score as a user-review base (QC §1.4). `reviewCount`
+  // is retained in the params for caller compatibility but intentionally unused.
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: params.name,
     description: params.description,
-    image: params.imageUrl,
+    ...(params.imageUrl ? { image: params.imageUrl } : {}),
     url: params.url,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: params.ratingValue,
-      bestRating: 10,
-      reviewCount: params.reviewCount,
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: params.ratingValue,
+        bestRating: 10,
+      },
+      author: { '@type': 'Organization', name: 'Editorial team' },
     },
     ...(params.priceRange ? { offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', offerCount: 1, price: params.priceRange } } : {}),
   }
