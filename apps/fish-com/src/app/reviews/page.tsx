@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, combineSchemas } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
@@ -81,26 +82,16 @@ export default function FishReviewsPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      {/* HERO */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment Reviews</span>
-        </div>
-        <h1
-          className="font-display font-bold text-white tracking-tight leading-tight mb-4"
-          style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}
-        >
-          Aquarium Equipment Reviews 2026
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Filters, heaters, lighting, and testing gear — ranked by aquarists using real performance data, not box claims.
-        </p>
-      </div>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:category-reviews" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:category-reviews"
+        alt="A well-maintained planted display aquarium"
+        eyebrow="Equipment Reviews"
+        title="Aquarium Equipment Reviews 2026"
+        subtitle="Filters, heaters, lighting, and testing gear — ranked against published performance specs and stated criteria, not box claims."
+        primaryCta={{ href: '/reviews/best-aquarium-filters', label: 'See the best filters' }}
+        secondaryCta={{ href: '/tools/stocking-calculator', label: 'Size your tank first' }}
+      />
 
       {/* REVIEWS GRID */}
       <div className="px-container-sm sm:px-container py-12">

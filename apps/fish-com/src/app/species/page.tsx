@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -81,23 +82,16 @@ export default async function SpeciesIndexPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-5">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Species Library</span>
-        </div>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4"
-          style={{ fontSize: 'clamp(30px, 5vw, 54px)' }}>
-          Aquarium Fish Species Guide
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium.
-        </p>
-      </div>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:category-species" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:category-species"
+        alt="A vividly colored betta fish displaying its fins in a planted aquarium"
+        eyebrow="Species Library"
+        title="Aquarium Fish Species Guide"
+        subtitle="Complete care guides for 200+ freshwater and saltwater species — tank size, water parameters, diet, compatibility, and health for every fish in your aquarium."
+        primaryCta={{ href: '/tools/stocking-calculator', label: 'Check tank compatibility' }}
+        secondaryCta={{ href: '/species/betta-fish', label: 'Start with betta care' }}
+      />
 
       {/* Category filters */}
       <div className="bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-4">
