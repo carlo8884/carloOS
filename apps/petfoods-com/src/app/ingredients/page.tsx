@@ -7,6 +7,7 @@ import {
   ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -248,6 +249,11 @@ export default function IngredientsHubPage() {
               { label: 'Reading a Pet Food Label', href: 'https://petfood.com/guides/reading-pet-food-labels' },
               { label: 'Grain-Free and DCM — The FDA Record', href: 'https://petfood.com/ingredients/grain-free-dcm-risk' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="nutrition"
+            variant="sidebar"
           />
         </>
       }

@@ -6,6 +6,7 @@ import {
   ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -205,6 +206,11 @@ export default function LifeStageHubPage() {
               { label: 'Reading a Pet Food Label', href: 'https://petfood.com/guides/reading-pet-food-labels' },
               { label: 'PetFood.com Methodology', href: 'https://petfood.com/guides/methodology' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="nutrition"
+            variant="sidebar"
           />
         </>
       }

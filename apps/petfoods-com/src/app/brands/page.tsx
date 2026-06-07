@@ -7,6 +7,7 @@ import {
   ArticleByline,
   TableOfContents,
   RelatedLinks,
+  CrossPortfolioCard,
   FAQAccordion,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -178,6 +179,11 @@ export default function BrandsHubPage() {
               { label: 'Life-Stage Catalog', href: '/life-stage' },
               { label: 'PetFood.com — Scoring Methodology v1.0', href: 'https://petfood.com/guides/methodology' },
             ]}
+          />
+          <CrossPortfolioCard
+            currentSite="petfoods-com"
+            contentType="brand"
+            variant="sidebar"
           />
         </>
       }
