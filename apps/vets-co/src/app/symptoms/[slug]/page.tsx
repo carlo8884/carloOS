@@ -9,6 +9,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
 
@@ -331,6 +332,84 @@ export default function SymptomPage({ params }: PageProps) {
           now, today, or later in the week. For after-hours questions when your primary vet is
           closed, a telehealth consult is a reasonable bridge for non-emergency concerns.
         </p>
+
+        {/* TALK-TO-A-VET — non-emergency service referral (telehealth).
+            Safety ordering: emergency-first line stays ABOVE the CTA; on
+            ER-NOW symptoms telehealth is demoted to a secondary option and the
+            primary action is the find-a-vet emergency directory. The commercial
+            click routes through the existing /go/vetster/telehealth tracker
+            (registered in affiliate-routes.ts; service referral, not a product
+            buy-box — QC §1.5.b is about products, this is a clinical service). */}
+        <section className="not-prose my-10" aria-label="Talk to a vet">
+          {/* Emergency-first line — never below the telehealth CTA. */}
+          <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+            <strong className="text-brand-dark">
+              If this is an emergency — your pet is collapsing, struggling to
+              breathe, bleeding heavily, or you suspect a poisoning — go to the
+              nearest 24-hour ER vet immediately. Do not wait for an online
+              consult.
+            </strong>{' '}
+            <Link href="/find-a-vet" className="text-brand-primary font-bold hover:underline">
+              Find a 24-hour emergency vet near you →
+            </Link>
+          </p>
+
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+
+          <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-2">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              {isER ? 'Not Sure It Is an Emergency?' : 'Not Sure What to Do Next?'}
+            </div>
+            <div className="font-display font-bold text-brand-dark text-lg mb-2">
+              Talk to a licensed vet now
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">
+              {isER
+                ? `For ${s.name.toLowerCase()}, in-person care is usually the right call. But if you are unsure whether your ${s.species === 'Cat' ? 'cat' : 'dog'} needs the ER right now, a licensed veterinarian over video can help you decide in minutes — a triage bridge, not a substitute for emergency care.`
+                : `If your ${s.species === 'Cat' ? 'cat' : 'dog'} is stable but you are wondering "should I be worried?", a licensed veterinarian over video or chat can review the symptom, suggest safe next steps, and tell you whether an in-person visit is needed — often within minutes, including after hours.`}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {isER ? (
+                <>
+                  <Link
+                    href="/find-a-vet"
+                    className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
+                  >
+                    Find an emergency vet →
+                  </Link>
+                  <a
+                    href="/go/vetster/telehealth"
+                    rel="sponsored nofollow"
+                    className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
+                  >
+                    Or ask a vet online →
+                  </a>
+                </>
+              ) : (
+                <>
+                  <a
+                    href="/go/vetster/telehealth"
+                    rel="sponsored nofollow"
+                    className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
+                  >
+                    Talk to a vet now →
+                  </a>
+                  <Link
+                    href="/telehealth"
+                    className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
+                  >
+                    Compare telehealth services →
+                  </Link>
+                </>
+              )}
+            </div>
+            <p className="text-xs text-brand-text-light leading-relaxed mt-4 mb-0">
+              Online vets can advise, triage, and prescribe where licensed — but
+              cannot examine, run blood work, take X-rays, or treat an emergency.
+              When in doubt, see a vet in person.
+            </p>
+          </div>
+        </section>
 
         {/* Related conditions cross-links */}
         <h2>Related conditions on Vets.co</h2>
