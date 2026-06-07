@@ -11,7 +11,8 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -148,30 +149,15 @@ export default function RacingHubPage() {
     <>
       <SchemaScript schema={schema} />
 
-      {/* ── HERO BAND ──────────────────────────────────────────────── */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Racing Intelligence
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Horse Racing
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Educational reference for the sport: the disciplines (flat, harness,
-          Quarter Horse, and jump racing), the marquee events (the Triple Crown
-          and the Breeders&apos; Cup), how race classes work, the people behind
-          a runner, OTTB aftercare, and a plain-language glossary. Not a betting
-          resource. Not a handicapping guide.
-        </p>
-      </div>
-
-      <StockImage manifestKey="horses-com:category-disciplines" aspect="16:9" variant="full-bleed" priority />
+      {/* ── PREMIUM MASTHEAD (image-first) ─────────────────────────── */}
+      <PremiumMasthead
+        manifestKey="horses-com:racing"
+        fallbackKey="horses-com:category-disciplines"
+        eyebrow="Racing Intelligence"
+        title="Horse Racing"
+        subtitle="Educational reference for the sport: the disciplines (flat, harness, Quarter Horse, and jump racing), the marquee events (the Triple Crown and the Breeders' Cup), how race classes work, the people behind a runner, OTTB aftercare, and a plain-language glossary. Not a betting resource. Not a handicapping guide."
+        alt="Thoroughbred racehorses on a turf track"
+      />
 
       {/* ── BREADCRUMB ─────────────────────────────────────────────── */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
