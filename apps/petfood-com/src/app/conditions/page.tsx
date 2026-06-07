@@ -24,6 +24,7 @@ import {
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { ConditionDiets } from '../../data/condition-diets'
+import { ArticleMasthead } from '../../components/ArticleMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
@@ -231,6 +232,12 @@ export default function ConditionsHubPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleMasthead
+          manifestKey="petfood-com:category-conditions"
+          alt="A prescription veterinary diet bag photographed in clinical light"
+          eyebrow="Condition-Specific Reference"
+          priority
+        />
         <CalloutBox variant="warning" title="Therapeutic diets require veterinary guidance">
           <p style={{ margin: 0 }}>
             Therapeutic diets require veterinary guidance. Discuss your pet&rsquo;s specific
