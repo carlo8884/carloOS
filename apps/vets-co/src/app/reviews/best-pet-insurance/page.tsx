@@ -57,7 +57,7 @@ const trupanionSchema = buildProductSchema({
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'Fastest claims processing (~2 days average), highest customer satisfaction, unlimited payouts, no annual or per-incident limits.',
+  description: 'Fast claims processing (~2 days average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
   url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
   imageUrl: '',
   ratingValue: 9.1,
@@ -155,16 +155,16 @@ export default function VetsPetInsurancePage() {
             />
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" badgeEmoji="⚡" name="Healthy Paws"
-              subtitle="~2 day claims processing · Highest customer satisfaction"
+              subtitle="~2 day claims processing · Strong customer satisfaction reputation"
               score={9.1}
-              description={<p>Healthy Paws consistently wins customer satisfaction surveys — their mobile app claim submission and average 2-day processing make the reimbursement experience the smoothest in the industry. No annual or per-incident limits. Slightly lower premiums than Trupanion at comparable coverage levels. Best for owners who prefer to pay the vet and be reimbursed quickly rather than wait for direct payment integration.</p>}
+              description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and average 2-day processing make the reimbursement experience notably smooth. No annual or per-incident limits. Slightly lower premiums than Trupanion at comparable coverage levels. Best for owners who prefer to pay the vet and be reimbursed quickly rather than wait for direct payment integration.</p>}
               specs={[
                 { label: 'Reimbursement', value: '80–90%', highlight: 'good' },
                 { label: 'Claims Speed', value: '~2 days', highlight: 'good' },
                 { label: 'Payout Limit', value: 'Unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
-              pros={['Fastest claims in the industry', 'Highest customer satisfaction scores', 'No payout limits', 'Good mobile app']}
+              pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'No payout limits', 'Good mobile app']}
               cons={['No direct vet payment', 'No wellness add-on']}
               price="$40–85/month"
               ctaText="Get a Quote →" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance"
