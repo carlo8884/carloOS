@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, ScoreMethodology, Breadcrumb, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025 — Vetster, AskVet | Vets.co', description: 'We compared pet telehealth services on veterinarian credentials, wait times, consultation quality, and cost. Find the right service for your pet\'s needs.', path: '/telehealth', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2025', description: 'Vetster, AskVet, and Chewy Connect compared by the Vets.co editorial team on credentials, wait times, consultation quality, and cost.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026 — Vetster, AskVet | Vets.co', description: 'We compared pet telehealth services on veterinarian credentials, wait times, consultation quality, and cost. Find the right service for your pet\'s needs.', path: '/telehealth', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026', description: 'Vetster, AskVet, and Chewy Connect compared by the Vets.co editorial team on credentials, wait times, consultation quality, and cost.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
@@ -17,8 +17,8 @@ export default function TelehealthPage() {
     <>
       <SchemaScript schema={schema} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · May 2025</span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2025</h1>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · June 2026</span>
+        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -49,7 +49,7 @@ export default function TelehealthPage() {
               specs={[{ label: 'Cost', value: 'Included with Chewy+', highlight: 'good' }, { label: 'Chewy Pharmacy', value: 'Direct integration', highlight: 'good' }, { label: 'Consultation Type', value: 'Video + chat' }, { label: 'Availability', value: 'Extended hours' }]}
               pros={['Included with Chewy+ membership', 'Direct Chewy pharmacy integration', 'Convenient for existing Chewy customers']}
               cons={['Only valuable if you already use Chewy+', 'Less specialist access than Vetster']}
-              price="Included with Chewy+ ($19.99/month)" ctaText="Explore Chewy+ →" ctaHref="/go/chewy/chewy-connect" ctaAffiliateProgram="chewy" ctaAffiliateProduct="chewy-connect" />
+              price="Included with Chewy+ ($19.99/month)" editorial />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
