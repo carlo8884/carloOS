@@ -171,6 +171,19 @@ export default function InsuranceReimbursementEstimatorPage() {
         </p>
         <InsuranceReimbursementEstimator />
 
+        <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold text-brand-text-dark mb-1">Ready to compare real quotes?</p>
+            <p className="text-xs text-brand-text-mid">See our ranked comparison of the 9 major carriers — premiums, deductibles, waiting periods, and coverage flags side-by-side.</p>
+          </div>
+          <Link
+            href="/reviews/best-pet-insurance"
+            className="inline-block shrink-0 px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
+          >
+            Compare carriers →
+          </Link>
+        </div>
+
         <h2 id="reading">How to read the numbers</h2>
         <ul>
           <li><strong>Annual premium</strong> — what you pay the carrier regardless of claims. Goes up at renewal as the pet ages.</li>

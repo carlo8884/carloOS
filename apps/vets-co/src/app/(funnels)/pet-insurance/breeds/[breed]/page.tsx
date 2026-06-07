@@ -111,7 +111,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href={`/pet-insurance/${recommended.slug}`}
+              href="/reviews/best-pet-insurance"
               className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
             >
               See {recommended.name} details →
