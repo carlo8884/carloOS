@@ -127,7 +127,7 @@ const ENTRY_TILES: Array<{
   flagship?: boolean
 }> = [
   {
-    eyebrow: 'BRAND_VS_BRAND',
+    eyebrow: 'Brand vs Brand',
     title: 'Orijen vs Acana',
     desc: 'Two lines, one manufacturer. Same rubric, recipe panels in mono.',
     href: '/brands/orijen-vs-acana-comparison',
@@ -136,7 +136,7 @@ const ENTRY_TILES: Array<{
     flagship: true,
   },
   {
-    eyebrow: 'INGREDIENT_RISK',
+    eyebrow: 'Ingredient Risk',
     title: 'Grain-Free & DCM',
     desc: 'What the FDA CVM record actually says. Association, not causation.',
     href: '/ingredients/grain-free-dcm-risk',
@@ -524,7 +524,7 @@ export default function HomePage() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="relative z-10 flex flex-col justify-end h-full min-h-[180px] p-5">
                   <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                    [THERAPEUTIC]
+                    [Therapeutic]
                   </p>
                   <div className="font-display font-semibold text-white text-lg leading-tight">
                     Prescription &amp; condition-specific diets
@@ -625,7 +625,7 @@ export default function HomePage() {
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               <div className="relative z-10 flex flex-col justify-end h-full min-h-[260px] p-6">
                 <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                  [MACRONUTRIENTS]
+                  [Macronutrients]
                 </p>
                 <div className="font-display font-semibold text-white text-2xl leading-tight mb-1.5">
                   Nutrition reference
@@ -654,7 +654,7 @@ export default function HomePage() {
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               <div className="relative z-10 flex flex-col justify-end h-full min-h-[260px] p-6">
                 <p className="font-mono text-2xs uppercase tracking-wider text-brand-primary-light font-semibold mb-1.5">
-                  [INGREDIENT_RISK]
+                  [Ingredient Risk]
                 </p>
                 <div className="font-display font-semibold text-white text-2xl leading-tight mb-1.5">
                   Ingredient reference
