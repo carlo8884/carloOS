@@ -45,7 +45,6 @@ export default function SafeTreatsPage() {
             'Treats are where well-meaning owners do the most accidental harm. A surprising number of products sold as "ferret treats" — yogurt drops, raisin treats, fruit-and-vegetable medleys — are quietly inappropriate for an obligate carnivore. This page sorts the safe from the unsafe and gives you one reliable rule to apply at the store.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -152,7 +151,6 @@ export default function SafeTreatsPage() {
           <ReviewCard
             id="wysong-freeze-dried-treats"
             badge="Meat-Based Treat"
-            badgeEmoji="🥩"
             name="Wysong Single-Ingredient Freeze-Dried Treats"
             subtitle="Single-protein freeze-dried treat, no added sugar or grain"
             score={8.6}

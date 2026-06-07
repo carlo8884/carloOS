@@ -130,7 +130,6 @@ export default function FerretDiarrheaCausesPage() {
             "Loose stool in a ferret can mean a passing diet upset or the first sign of serious disease — and the two can look alike at the start. Because ferrets are small and dehydrate fast, knowing the common causes, reading the stool, and recognizing the danger signs is what keeps a minor episode from becoming a crisis.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

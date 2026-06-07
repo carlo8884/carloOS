@@ -132,7 +132,6 @@ export default function FerretVaccinationsPage() {
             'Two vaccines matter for ferrets: canine distemper virus (CDV) and rabies. The first is a near-certain death sentence in unvaccinated exposed animals; the second is a legal requirement in most US states. Both have well-documented adverse-reaction profiles that change the practical protocol. Done right, ferret vaccination is straightforward; done casually, it is a real source of preventable harm.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '11 min',
         }}

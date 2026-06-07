@@ -102,7 +102,6 @@ export default function FerretDeadSleepPage() {
             "Sooner or later, nearly every ferret owner has the same heart-stopping moment: they find their ferret limp, floppy, and seemingly unresponsive — and assume the worst. Almost always, the ferret is simply in a very, very deep sleep. Here is why ferrets do this, and how to tell a normal deep sleep from a real emergency.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

@@ -35,7 +35,6 @@ export default function FerretGlossaryPage() {
             'Ferret keeping comes with its own vocabulary, and a new owner can feel lost in a forum thread full of jills, gibs, dooking, and war dances. This glossary collects the terms in one place — the words for ferrets by sex and age, the names for their behaviors, and the husbandry and health terms you will meet at the vet and in the community.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}

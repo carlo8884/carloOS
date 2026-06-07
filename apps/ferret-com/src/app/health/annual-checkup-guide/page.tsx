@@ -130,7 +130,6 @@ export default function FerretAnnualCheckupGuidePage() {
             "Ferrets pack a lot of disease into a short life, and most of the conditions that shorten it are far more treatable when caught early. The wellness exam is where early detection happens. Here is what a ferret checkup actually covers, how often to go at each life stage, and why the threshold shifts to twice a year once a ferret hits middle age.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

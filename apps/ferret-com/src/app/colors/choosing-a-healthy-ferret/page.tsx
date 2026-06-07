@@ -85,7 +85,6 @@ export default function ChoosingHealthyFerretPage() {
             "Picking the right ferret is part heart, part head. The heart part takes care of itself — ferrets are irresistible. The head part is this checklist: a calm, head-to-tail assessment of health and temperament that helps you bring home a sound, well-socialized companion and spot the red flags worth walking away from.",
           category: 'Ferret Facts',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

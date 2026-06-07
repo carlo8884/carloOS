@@ -48,7 +48,6 @@ export default function NailTrimmingPage() {
             'Ferret nails grow continuously and, indoors, never wear down enough on their own. Overgrown nails snag on fabric, curl into the pad, and catch in cage bars. Trimming is a basic, frequent grooming task — and with the right tool and the distraction trick keepers rely on, it takes under a minute.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

@@ -88,7 +88,6 @@ export default function BlazeAndRoanPatternsPage() {
             "Two of the most commonly mislabeled ferret patterns sit side by side here: the blaze, a clean white stripe running up a colored head, and the roan, a salt-and-pepper mix of white and colored guard hairs across the body. They can appear separately or together, and one of them carries the same deafness flag as the panda. Here is how to read each.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

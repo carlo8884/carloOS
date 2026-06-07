@@ -57,7 +57,6 @@ export default function FerretCageSetupPage() {
             'A ferret cage is the bedroom, not the house. Ferrets sleep 14–18 hours a day, and during their waking 6–10 hours they need to be out of the cage exploring, playing, and running. The right cage is what they come back to between play sessions — secure, vertically interesting, and clean.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -215,7 +214,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="critter-nation"
             badge="Best Overall"
-            badgeEmoji="🏆"
             name="MidWest Critter Nation Double Unit (Model 162)"
             subtitle="Two-level, 36×25×62 inches, 1/2-inch bar spacing on lower portion"
             score={9.4}
@@ -241,7 +239,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="marshall"
             badge="Best Starter"
-            badgeEmoji="🛠️"
             name="Marshall Designer Ferret Cage"
             subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
             score={8.2}
@@ -271,7 +268,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="marshall-sleep-sack"
             badge="Top Pick"
-            badgeEmoji="😴"
             name="Marshall Ferret Sleep Sack & Hammock Set"
             subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
             score={9.0}
@@ -289,7 +285,6 @@ export default function FerretCageSetupPage() {
           <ReviewCard
             id="kaytee-litter-pan"
             badge="Essential"
-            badgeEmoji="🗑️"
             name="Kaytee Corner Ferret Litter Pan"
             subtitle="Corner-shaped, high back wall, low-entry front lip"
             score={8.8}

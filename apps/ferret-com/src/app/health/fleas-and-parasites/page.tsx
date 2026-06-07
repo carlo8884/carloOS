@@ -125,7 +125,6 @@ export default function FerretFleasParasitesPage() {
             'Fleas, mites, heartworm, and intestinal parasites all affect ferrets — and the ferret’s small size turns parasite control into a precision job where the wrong dog product can do real harm. Here is the landscape, and why every preventive is a veterinary decision.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

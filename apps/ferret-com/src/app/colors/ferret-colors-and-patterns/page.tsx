@@ -86,7 +86,6 @@ export default function FerretColorsPatternsPage() {
             "From the classic masked sable to the snow-white albino, ferrets come in a surprisingly rich palette. Better still, color and pattern combine, so almost every ferret is a little unique. Here is the full guide to what you are looking at — the recognized colors, the pattern overlays, and the genetics quirks worth knowing.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '12 min',
         }}

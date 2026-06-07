@@ -45,7 +45,6 @@ export default function HydrationAndWaterPage() {
             'Water is the easiest part of ferret care to get wrong by accident — a clogged sipper bottle on a warm afternoon can put a small carnivore into a dehydration crisis surprisingly fast. This page covers how ferrets prefer to drink, how much they need, the warning signs of dehydration, and the seasonal hazards to watch.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -145,7 +144,6 @@ export default function HydrationAndWaterPage() {
           <ReviewCard
             id="ceramic-water-bowl"
             badge="Primary Source"
-            badgeEmoji="🥣"
             name="Heavy Ceramic Pet Water Bowl"
             subtitle="Low, wide, tip-resistant — lets a ferret lap naturally"
             score={8.8}
@@ -170,7 +168,6 @@ export default function HydrationAndWaterPage() {
           <ReviewCard
             id="sipper-water-bottle"
             badge="Backup Source"
-            badgeEmoji="💧"
             name="Small-Animal Sipper Water Bottle"
             subtitle="Clean, spill-free backup — never the only source"
             score={7.5}

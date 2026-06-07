@@ -125,7 +125,6 @@ export default function FerretAnesthesiaRiskPage() {
             'Ferrets are not small dogs. They cool fast, run low on blood sugar fast, and tolerate error poorly under anesthesia — which is exactly why a ferret-experienced surgical team, short fasting, and real monitoring turn a daunting procedure into a routine one.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

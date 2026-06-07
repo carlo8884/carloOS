@@ -117,7 +117,6 @@ export default function FerretSeasonalSheddingPage() {
             "Ferrets blow their coat twice a year, driven by changing daylight rather than temperature. A spring shed drops the dense winter coat; an autumn shed builds it back. Knowing what a normal molt looks like — and which patterns of hair loss are not normal — is one of the more useful skills a ferret keeper develops.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

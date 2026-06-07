@@ -132,7 +132,6 @@ export default function FerretDentalDiseasePage() {
             'Dental disease is the most under-treated condition in pet ferrets. Tartar builds fast on kibble diets, periodontal disease is often clinically meaningful by age 2-3, and the consequences compound silently for years. The leverage of early home dental care is large.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}

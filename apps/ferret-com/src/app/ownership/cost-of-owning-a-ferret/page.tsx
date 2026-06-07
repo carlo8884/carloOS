@@ -45,7 +45,6 @@ export default function CostOfOwningAFerretPage() {
             'Ferrets are inexpensive to acquire and deceptively expensive to keep well. The animal itself is the smallest line on the budget; the cage, the food, and above all the veterinary care over a 6–10 year life are what add up. This page lays out startup and recurring costs honestly, including the surgery line item that catches most owners by surprise.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

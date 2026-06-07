@@ -71,7 +71,6 @@ export default function FerretDietBasicsPage() {
             'Ferrets (Mustela putorius furo) are obligate carnivores with a short intestinal tract and rapid gut transit. They cannot derive useful energy from plants. Diet is the single largest controllable input on a ferret’s lifespan, and the biggest single mistake new owners make is feeding cat food, dog food, or a "premium" kibble that is actually high in plant carbohydrate.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -221,7 +220,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="Animal-first, starch-free, grain-free"
             score={9.3}
@@ -247,7 +245,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="marshall-premium-diet"
             badge="Mid Tier"
-            badgeEmoji="🛒"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
             score={8.0}
@@ -272,7 +269,6 @@ export default function FerretDietBasicsPage() {
           <ReviewCard
             id="carniwhole"
             badge="Direct-to-Consumer"
-            badgeEmoji="📦"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
             score={8.2}

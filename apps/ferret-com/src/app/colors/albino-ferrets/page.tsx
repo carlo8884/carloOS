@@ -86,7 +86,6 @@ export default function AlbinoFerretsPage() {
             "With their pure white coats, pink noses, and striking red eyes, albino ferrets are among the most recognizable in the species. They are also one of the most misunderstood — surrounded by myths about blindness and fragility that mostly are not true. Here is the real story: the genetics, the history, and what (very little) special care they actually need.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

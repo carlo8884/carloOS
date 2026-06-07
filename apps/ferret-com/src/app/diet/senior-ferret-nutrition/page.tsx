@@ -45,7 +45,6 @@ export default function SeniorFerretNutritionPage() {
             'Ferrets are considered senior from around four to five years of age. The diet rarely needs a dramatic overhaul, but it does need closer attention: protein stays high, eating gets harder as teeth wear, and several age-related diseases reshape what and how a ferret should be fed.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -217,7 +216,6 @@ export default function SeniorFerretNutritionPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Senior-Friendly Kibble"
-            badgeEmoji="🥇"
             name="Wysong Epigen 90"
             subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
             score={9.0}

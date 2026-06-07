@@ -126,7 +126,6 @@ export default function FerretLitterTrainingPage() {
             'Ferrets can be litter-trained — not as reliably as cats, but well enough that a sensible household can run mostly accident-free with a multi-pan layout, the right substrate, and a realistic understanding of where the natural behavior helps and where it limits the ceiling.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '12 min',
         }}
@@ -523,7 +522,6 @@ export default function FerretLitterTrainingPage() {
           <ReviewCard
             id="marshall-corner-pan"
             badge="Pan Shape Default"
-            badgeEmoji="🔻"
             name="Marshall Lock-N-Litter Corner Pan"
             subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
             score={8.8}
@@ -549,7 +547,6 @@ export default function FerretLitterTrainingPage() {
           <ReviewCard
             id="yesterdays-news"
             badge="Substrate Default"
-            badgeEmoji="📰"
             name="Yesterday's News Recycled Paper-Pellet Litter"
             subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
             score={9.0}

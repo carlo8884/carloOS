@@ -45,7 +45,6 @@ export default function WeightManagementPage() {
             'Ferrets gain and lose weight on a seasonal cycle that alarms new owners and is usually completely normal. The skill is telling that healthy rhythm apart from the weight changes that signal a problem — and feeding in a way that keeps a ferret lean and muscular rather than soft or wasted.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
@@ -142,7 +141,6 @@ export default function WeightManagementPage() {
           <ReviewCard
             id="digital-gram-scale"
             badge="Tracking Tool"
-            badgeEmoji="⚖️"
             name="Digital Gram Scale (Kitchen / Small-Pet)"
             subtitle="Gram-precision weighing with tare — catches trends a hand cannot"
             score={8.7}

@@ -107,7 +107,6 @@ export default function FerretPlayAggressionPage() {
             "Ferret play looks alarmingly like combat. They grab each other by the neck, drag one another across the floor, tumble, hiss, and thump — and then do it all again, delightedly, for an hour. Learning to read the line between exuberant rough play and genuine aggression is one of the most useful skills a ferret owner can have.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

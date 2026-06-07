@@ -103,7 +103,6 @@ export default function LitterBoxTroubleshootingPage() {
             'Ferrets are not cats. They never fully commit to a single box the way a tidy cat does, and an 80-90% hit rate is a realistic ceiling rather than a failure. When the miss rate climbs higher than that, the fix is almost always placement, cleaning, or litter choice — or, in a previously reliable adult, a medical change worth investigating.',
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}

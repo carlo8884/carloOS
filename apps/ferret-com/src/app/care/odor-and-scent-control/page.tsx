@@ -113,7 +113,6 @@ export default function FerretOdorScentControlPage() {
             "Ferrets carry a natural musky scent, and the two things most new owners reach for — descenting and frequent baths — are the two least effective ways to manage it. The smell that fills a room is mostly husbandry, not biology, and the husbandry is very controllable. Here is where ferret odor actually comes from and what genuinely reduces it.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

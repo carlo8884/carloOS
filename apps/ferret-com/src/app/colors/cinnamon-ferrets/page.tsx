@@ -86,7 +86,6 @@ export default function CinnamonFerretsPage() {
             "Cinnamon is one of the prettiest and most argued-over ferret colors: a warm, reddish-brown coat that glows golden in the right light. It is also genuinely rare and famously hard to pin down, because the label gets used loosely. Here is what cinnamon really describes, and why even experts disagree about it.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

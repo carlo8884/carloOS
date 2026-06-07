@@ -45,7 +45,6 @@ export default function ProteinAndFatRequirementsPage() {
             'Every feeding decision a ferret owner makes is, underneath, an attempt to hit a fairly narrow macronutrient window. This page defines that window — protein, fat, carbohydrate, taurine, fiber — explains the reasoning behind each number, and shows why a bag’s guaranteed analysis can mislead if you read it on the wrong basis.',
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}
@@ -150,7 +149,6 @@ export default function ProteinAndFatRequirementsPage() {
           <ReviewCard
             id="wysong-epigen-90"
             badge="Hits the Window"
-            badgeEmoji="🎯"
             name="Wysong Epigen 90"
             subtitle="Animal-first, starch-free — protein high, carbohydrate in single digits"
             score={9.2}

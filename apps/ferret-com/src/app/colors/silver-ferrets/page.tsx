@@ -86,7 +86,6 @@ export default function SilverFerretsPage() {
             "Silver is the ferret color that refuses to hold still. White-tipped guard hairs scatter over a darker base to create a steely, frosted grey — and then the coat keeps changing, often whitening with every molt until some silvers barely resemble their kit selves. Here is what silver actually is, why it shifts, and how to tell it from the whites it can grow into.",
           category: 'Ferret Colors',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

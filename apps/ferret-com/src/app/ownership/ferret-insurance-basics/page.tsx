@@ -45,7 +45,6 @@ export default function FerretInsuranceBasicsPage() {
             "Ferrets get expensive in their senior years, and that is exactly when owners start asking whether pet insurance is worth it. This is an educational overview — not a recommendation of any carrier — of how exotic-pet coverage generally works for ferrets: what it tends to cover, what it usually does not, why timing matters so much, and how it stacks up against simply saving for the vet yourself.",
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

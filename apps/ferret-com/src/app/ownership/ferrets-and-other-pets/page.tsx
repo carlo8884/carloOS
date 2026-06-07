@@ -45,7 +45,6 @@ export default function FerretsAndOtherPetsPage() {
             'A ferret is a predator with a strong prey drive, and that single fact governs everything about how it shares a home with other animals. With dogs and cats, ferrets can do well under supervision and depending on temperament. With small prey species — rabbits, rodents, birds, reptiles — the answer is usually a flat no. This page walks through both.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

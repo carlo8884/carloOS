@@ -108,7 +108,6 @@ export default function FerretBitingNippingPage() {
             "Almost every new ferret owner gets a few sharp surprises in the first month. Good news: biting is one of the most fixable ferret behaviours, and almost none of it requires punishment. The trick is reading WHY the ferret is biting — play, teething, fear, or pain — because each one has a different answer.",
           category: 'Ferret Behavior',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}

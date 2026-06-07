@@ -134,7 +134,6 @@ export default function FerretAdrenalDiseasePage() {
             "Adrenal gland disease — hyperplasia, adenoma, or adenocarcinoma of the adrenal cortex — is the second most commonly diagnosed disease of middle-aged ferrets, behind only insulinoma. It is hormonally driven rather than cortisol-driven (unlike canine Cushing's), which changes both the clinical picture and the diagnostic workup.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '14 min',
         }}

@@ -130,7 +130,6 @@ export default function FerretSignsOfPainPage() {
             "Ferrets are built to hide pain. As a small predator that is also potential prey, the ferret instinct is to mask weakness until discomfort is severe — which is exactly why owners need to read the subtle signs. Recognizing a hurting ferret early, and getting it to a vet, is one of the highest-leverage skills in ferret care.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '10 min',
         }}

@@ -113,7 +113,6 @@ export default function FerretCageCleaningRoutinePage() {
             "A clean cage is the single biggest lever on a ferret household's odor and on litter-training reliability — and it takes less effort with a routine than with sporadic blitzes. The trick is layering small daily tasks, a weekly reset, and a monthly deep clean, while leaving just enough familiar scent to keep litter habits intact.",
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}

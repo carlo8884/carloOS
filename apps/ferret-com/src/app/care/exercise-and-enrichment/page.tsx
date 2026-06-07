@@ -127,7 +127,6 @@ export default function FerretExerciseEnrichmentPage() {
             'Ferrets are not cage animals. A ferret that lives 24 hours a day in its cage is an under-stimulated, behaviourally frustrated, and ultimately less healthy ferret. Four hours of out-of-cage time per day is the working minimum across the exotic-pet welfare literature; six to eight hours is closer to ideal. The enrichment side of that time matters as much as the duration.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'May 2026',
           readTime: '13 min',
         }}
@@ -533,7 +532,6 @@ export default function FerretExerciseEnrichmentPage() {
           <ReviewCard
             id="marshall-pop-n-play"
             badge="Tunnel Default"
-            badgeEmoji="🚇"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
             score={8.6}
@@ -559,7 +557,6 @@ export default function FerretExerciseEnrichmentPage() {
           <ReviewCard
             id="dig-box-supplies"
             badge="Dig Box"
-            badgeEmoji="🪨"
             name="Storage-Tote Dig Box + Safe Fill"
             subtitle="Plastic tote plus washed river rocks, ferret-safe plastic balls, or rice"
             score={8.0}

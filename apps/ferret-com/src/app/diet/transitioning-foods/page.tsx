@@ -45,7 +45,6 @@ export default function TransitioningFoodsPage() {
             "Ferrets imprint on the texture and smell of what they ate as kits, which makes them famously stubborn about switching foods. A change done too fast triggers refusal or digestive upset; done slowly and with a few tricks, even a fixated ferret can be moved to a better diet. Here is the method and the timeline.",
           category: 'Diet & Nutrition',
           authorName: 'Ferret.com Editorial',
-          authorAvatar: '🦦',
           publishedAt: 'June 2026',
           readTime: '8 min',
         }}
@@ -210,7 +209,6 @@ export default function TransitioningFoodsPage() {
           <ReviewCard
             id="meat-topper"
             badge="Transition Aid"
-            badgeEmoji="🥄"
             name="Meat-Based Food Topper / Gravy (Sugar-Free)"
             subtitle="Animal-protein topper to coax a reluctant eater onto new food"
             score={8.1}
