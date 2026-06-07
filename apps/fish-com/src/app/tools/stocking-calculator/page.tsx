@@ -199,13 +199,6 @@ export default function StockingCalculatorPage() {
           For specific species pairings, see our <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
           <Link href="/species/neon-tetra">neon tetra</Link> profile, and <Link href="/species/angelfish">angelfish</Link> profile.
         </p>
-        <p>
-          Once you know your stocking ceiling, filtration becomes the lever. Oversizing your filter is the single cheapest way to raise it.
-          See our <Link href="/reviews/best-aquarium-filters">aquarium filter reviews</Link> and{' '}
-          <Link href="/reviews/best-canister-filters">canister filter reviews</Link> for picks by tank size.
-          If your result is under 20 gallons, see our <Link href="/reviews/best-nano-tanks">nano tank reviews</Link> for
-          purpose-built setups that handle the tight stocking ceiling more reliably than standard tanks.
-        </p>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion
