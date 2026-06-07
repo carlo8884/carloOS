@@ -11,7 +11,8 @@ import {
   BuyBox,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -157,6 +158,7 @@ export default function HillsVsRoyalCaninPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-hills-vs-royal-canin" priority aspect="16:9" variant="wide" caption="Hill's vs Royal Canin — a side-by-side reference comparison of the two largest veterinary therapeutic diet brands." />
         <p>
           Hill&apos;s Pet Nutrition and Royal Canin are the two largest companies in the U.S.
           veterinary therapeutic diet channel. They are the two brands a small-animal clinician is

@@ -11,7 +11,8 @@ import {
   BuyBox,
   AffiliateDisclosure,
   ArticleSourcesList,
-  ArticleByline
+  ArticleByline,
+  StockImage
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -148,6 +149,7 @@ export default function BlueBuffaloEvaluationPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="petfood-com:brand-blue-buffalo" priority aspect="16:9" variant="wide" caption="Blue Buffalo — an independent, evidence-based brand evaluation." />
         <p>
           Blue Buffalo is one of the most-recognized brands in U.S. pet food, the largest brand
           in the &quot;wholesome natural&quot; segment as it emerged in the late 2000s and early
