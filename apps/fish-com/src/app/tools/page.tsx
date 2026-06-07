@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -83,31 +84,16 @@ export default function ToolsHub() {
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={itemListSchema} />
       <>
-      {/* HERO */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(14,107,138,0.5) 0%, transparent 60%)' }}
-          aria-hidden="true"
-        />
-        <div className="relative z-10 max-w-3xl">
-          <div className="flex items-center gap-2.5 mb-6">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Calculators &amp; Tools</span>
-          </div>
-          <h1 className="font-display font-bold text-white tracking-tight leading-none mb-5" style={{ fontSize: 'clamp(40px, 5.5vw, 64px)' }}>
-            Aquarium math, <span className="italic font-normal">done for you.</span>
-          </h1>
-          <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Free calculators built by aquarists for the questions everyone Googles: how many gallons is my tank, how many fish can I stock,
-            what wattage heater do I need, and how much CO2 is actually in my planted tank. Mobile-friendly and no signup.
-          </p>
-        </div>
-      </section>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:tools-hero" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:tools-hero"
+        alt="A planted freshwater aquarium with healthy aquascaping"
+        eyebrow="Calculators & Tools"
+        title="Aquarium math, done for you."
+        subtitle="Free calculators for the questions everyone Googles: how many gallons is my tank, how many fish can I stock, what wattage heater do I need, and how much CO2 is in my planted tank. Mobile-friendly, no signup."
+        primaryCta={{ href: '/tools/stocking-calculator', label: 'Check your stocking' }}
+        secondaryCta={{ href: '/tools/aquarium-volume-calculator', label: 'Calculate tank volume' }}
+      />
 
       {/* TOOLS GRID */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">

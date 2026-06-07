@@ -6,8 +6,8 @@ import {
   combineSchemas,
   SchemaScript,
   EmailCapture,
-  StockImage,
 } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -106,29 +106,22 @@ export default function AquariumGlossaryPage() {
     <>
       <SchemaScript schema={schema} />
 
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Reference</span>
-        </div>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4" style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}>
-          Aquarium Glossary
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          The language of fishkeeping in plain English — the nitrogen cycle, water chemistry, the gear and
-          how it filters, and the husbandry terms behind a stable, healthy tank.
-        </p>
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:glossary-hero"
+        alt="A planted freshwater aquarium"
+        eyebrow="Reference"
+        title="Aquarium Glossary"
+        subtitle="The language of fishkeeping in plain English — the nitrogen cycle, water chemistry, the gear and how it filters, and the husbandry terms behind a stable, healthy tank."
+        primaryCta={{ href: '/tools', label: 'Open the calculators' }}
+        secondaryCta={{ href: '/setup/aquarium-cycling-guide', label: 'Learn the nitrogen cycle' }}
+      />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Fish.com</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Glossary</span>
       </nav>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:glossary-hero" aspect="16:9" variant="wide" priority />
-      </div>
 
       <div className="px-container-sm sm:px-container py-12 max-w-3xl">
         <p className="text-sm text-brand-text-light mb-10">

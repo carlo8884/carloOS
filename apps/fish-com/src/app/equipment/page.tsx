@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { EquipmentCategories } from '../../data/equipment-categories'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -57,30 +58,16 @@ export default function EquipmentHubPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      {/* HERO */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Equipment Buyer Guides
-          </span>
-        </div>
-        <h1
-          className="font-display font-bold text-white tracking-tight leading-tight mb-4"
-          style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}
-        >
-          Aquarium Equipment — How to Choose
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          Plain-English buyer guides for the six equipment categories that decide whether your tank
-          survives its first six months. Each guide explains how to pick the right sub-type for
-          your setup, then funnels you to ranked product picks.
-        </p>
-      </div>
-
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="fish-com:category-equipment" aspect="16:9" variant="wide" priority />
-      </div>
+      {/* HERO — premium image-first masthead (HubMasthead) */}
+      <HubMasthead
+        manifestKey="fish-com:category-equipment"
+        alt="Aquarium filtration and heating equipment"
+        eyebrow="Equipment Buyer Guides"
+        title="Aquarium Equipment — How to Choose"
+        subtitle="Plain-English buyer guides for the six equipment categories that decide whether your tank survives its first six months — each one points you to ranked product picks."
+        primaryCta={{ href: '/reviews', label: 'See ranked product picks' }}
+        secondaryCta={{ href: '/tools/heater-wattage-calculator', label: 'Size your heater' }}
+      />
 
       {/* BREADCRUMB */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
