@@ -22,12 +22,13 @@ never flood thin pages. Every page trust-safe (QC §1) + CI-green + harvest-read
 ## Active Cycle C1 — Racing vertical depth (highest-value, zero wagering risk)
 - [x] T1 Race Types cluster — hub + 7 explainers (maiden/claiming/allowance/optional-claiming/stakes/graded/handicap) ✅ 2026-06-07
 - [x] T2 Major Races cluster — hub + Triple Crown / Derby / Preakness / Belmont / Breeders' Cup ✅ 2026-06-07
-- [ ] T3 Training & Safety cluster — how racehorses are trained / track safety / the backstretch workforce
-- [ ] T4 Racehorse Care cluster — daily care / nutrition / soundness / turnout (non-medical)
-- [ ] T5 Racing History cluster — origins / iconic horses (opinion-framed) / milestone races
-- [ ] T6 Beginner explainers — glossary expansion + "how to watch" + "reading the program"
+- [~] T3 Training & Safety cluster — SUBAGENT building (parallel)
+- [~] T4 Racehorse Care cluster — SUBAGENT building (parallel)
+- [~] T5 Racing History cluster — SUBAGENT building (parallel)
+- [~] T9 Racing Roles cluster (jockey/trainer/owner/steward, D12 Tier A) — building self
+- [ ] T6 Beginner explainers — glossary expansion (after — touches shared glossary data)
 - [ ] T7 Bloodstock depth — stallions/stud basics / sales calendar explainer (no live data)
-- [ ] T8 Ownership depth — tax basics / partnerships vs syndicates deep-dive / aftercare obligations
+- [ ] T8 Ownership depth — partnerships vs syndicates deep-dive / aftercare obligations
 
 ## Backlog reservoir (graduates into cycles; ~1000-item plan)
 Full prioritized idea reservoir: `ops/handoffs/horses-idea-backlog.md`.
