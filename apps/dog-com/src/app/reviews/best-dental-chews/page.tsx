@@ -4,7 +4,7 @@ import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, Scor
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — most widely recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies' },
@@ -35,10 +35,10 @@ export default function BestDentalChewsPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="greenies" badge="Best Overall" badgeEmoji="🏆" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Most widely recommended · All sizes from teenie to large" score={9.2} winner
-              description={<p>Greenies are the most widely recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
+            <ReviewCard id="greenies" badge="Best Overall" badgeEmoji="🏆" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" score={9.2} winner
+              description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
-              pros={['VOHC accepted (plaque + tartar)', 'Most prescribed by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
+              pros={['VOHC accepted (plaque + tartar)', 'Often used by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
               cons={['Must count calories', 'Some dogs wolf them down too fast for dental benefit', 'Not ideal for dogs with wheat sensitivity (contains wheat)']}
               price="$25–35 / 27-count"
               ctaText="Shop Greenies →"

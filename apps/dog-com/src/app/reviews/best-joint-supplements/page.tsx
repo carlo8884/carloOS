@@ -130,7 +130,7 @@ export default function BestJointSupplementsPage() {
               name="Cosequin DS Maximum Strength"
               subtitle="Glucosamine + Chondroitin · NASC certified · Widely available"
               score={8.8}
-              description={<p>Cosequin DS is the most widely prescribed glucosamine-chondroitin supplement by veterinarians — because it has the NASC quality seal, it has been on the market long enough to have clinical feedback, and it is significantly more affordable than Dasuquin. Clinical evidence for plain glucosamine-chondroitin (without ASU) is moderate — some dogs show meaningful improvement, others do not respond. The 4–6 week trial is warranted for any dog with joint disease. If Cosequin DS does not produce visible improvement after 6 weeks, stepping up to Dasuquin (with ASU) is a reasonable next step.</p>}
+              description={<p>Cosequin DS is a widely used glucosamine-chondroitin supplement in veterinary practice — it has the NASC quality seal, has been on the market long enough to have clinical feedback, and is significantly more affordable than Dasuquin. Clinical evidence for plain glucosamine-chondroitin (without ASU) is moderate — some dogs show meaningful improvement, others do not respond. The 4–6 week trial is warranted for any dog with joint disease. If Cosequin DS does not produce visible improvement after 6 weeks, stepping up to Dasuquin (with ASU) is a reasonable next step.</p>}
               specs={[
                 { label: 'Active Ingredients', value: 'Glucosamine + Chondroitin' },
                 { label: 'NASC Certified', value: 'Yes', highlight: 'good' },

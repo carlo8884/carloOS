@@ -47,7 +47,7 @@ export default function HeartwormPreventionPage() {
         <h2>Prevention — Monthly Preventives</h2>
         <p>Monthly heartworm preventives work by eliminating any larvae the dog was exposed to in the previous month before they can mature. They do not prevent infection in real-time — they clear it monthly. This is why monthly dosing is essential: missing a month creates a gap during which larvae can mature.</p>
         <ul>
-          <li><strong>Heartgard Plus (ivermectin + pyrantel):</strong> The most commonly prescribed standalone heartworm preventive. Also covers roundworms and hookworms. Monthly beef-flavored chew.</li>
+          <li><strong>Heartgard Plus (ivermectin + pyrantel):</strong> A commonly used standalone heartworm preventive. Also covers roundworms and hookworms. Monthly beef-flavored chew.</li>
           <li><strong>Interceptor Plus (milbemycin + praziquantel):</strong> Heartworm plus roundworm, hookworm, whipworm, and tapeworm coverage. Good for dogs with GI parasite exposure.</li>
           <li><strong>Simparica Trio (sarolaner + moxidectin + pyrantel):</strong> Heartworm + flea + tick + roundworm + hookworm in one monthly chew. The most complete single-product preventive available. Appropriate if you also need flea/tick prevention — see our flea/tick guide.</li>
           <li><strong>ProHeart 6 / ProHeart 12:</strong> Injectable heartworm prevention given by a veterinarian — 6-month or 12-month formulation. No monthly compliance required. Excellent option for dogs whose owners forget monthly dosing.</li>
