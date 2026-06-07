@@ -1890,5 +1890,47 @@
     "provider": "either",
     "alt": "Wet canned food beside dry kibble in two bowls for comparison",
     "orientation": "landscape"
+  },
+  "saddle-com:guide-leather-care": {
+    "query": "leather saddle care conditioning",
+    "provider": "either",
+    "alt": "Leather conditioner being applied to a saddle — leather care guide reference",
+    "orientation": "landscape"
+  },
+  "saddle-com:guide-stirrup-iron": {
+    "query": "stirrup iron leather close up",
+    "provider": "either",
+    "alt": "A close-up of a stirrup iron and leather — stirrup guide reference",
+    "orientation": "landscape"
+  },
+  "saddle-com:guide-western-saddle": {
+    "query": "western saddle on fence",
+    "provider": "either",
+    "alt": "A Western saddle resting on a fence rail — Western saddle guide reference",
+    "orientation": "landscape"
+  },
+  "horses-com:racing": {
+    "query": "thoroughbred racehorse galloping track",
+    "provider": "either",
+    "alt": "A thoroughbred racehorse galloping on the track — horse racing reference",
+    "orientation": "landscape"
+  },
+  "horses-com:care-grooming": {
+    "query": "grooming a horse brush",
+    "provider": "either",
+    "alt": "A horse being groomed with a body brush — grooming care reference",
+    "orientation": "landscape"
+  },
+  "horses-com:tack-halters": {
+    "query": "horse halter and lead rope",
+    "provider": "either",
+    "alt": "A horse wearing a halter with a lead rope — halters tack reference",
+    "orientation": "landscape"
+  },
+  "horses-com:tack-bits": {
+    "query": "horse bridle bit close up",
+    "provider": "either",
+    "alt": "A close-up of a snaffle bit on a bridle — bits tack reference",
+    "orientation": "landscape"
   }
 }
