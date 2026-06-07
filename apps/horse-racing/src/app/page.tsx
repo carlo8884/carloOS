@@ -183,6 +183,7 @@ export default function RaceCenterPage() {
             { href: '/first-derby', label: 'Your First Derby', desc: 'New to the sport? Start here' },
             { href: '/bloodstock', label: 'Bloodstock', desc: 'How sales & pedigrees actually work' },
             { href: '/race-types', label: 'Race Types', desc: 'Maiden to Grade 1, explained' },
+            { href: '/major-races', label: 'Major Races', desc: 'Triple Crown & Breeders’ Cup' },
           ].map((c) => (
             <Link
               key={c.href}

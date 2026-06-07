@@ -20,8 +20,8 @@ never flood thin pages. Every page trust-safe (QC §1) + CI-green + harvest-read
 ---
 
 ## Active Cycle C1 — Racing vertical depth (highest-value, zero wagering risk)
-- [ ] T1 Race Types cluster — hub + maiden/claiming/allowance/optional-claiming/stakes/graded-stakes/handicap/conditions
-- [ ] T2 Major Races cluster — hub + Triple Crown / Derby / Preakness / Belmont / Breeders' Cup (heritage, no marks misuse)
+- [x] T1 Race Types cluster — hub + 7 explainers (maiden/claiming/allowance/optional-claiming/stakes/graded/handicap) ✅ 2026-06-07
+- [x] T2 Major Races cluster — hub + Triple Crown / Derby / Preakness / Belmont / Breeders' Cup ✅ 2026-06-07
 - [ ] T3 Training & Safety cluster — how racehorses are trained / track safety / the backstretch workforce
 - [ ] T4 Racehorse Care cluster — daily care / nutrition / soundness / turnout (non-medical)
 - [ ] T5 Racing History cluster — origins / iconic horses (opinion-framed) / milestone races
@@ -41,3 +41,5 @@ Cluster families queued (each expands to many scoped pages on graduation):
 
 ## Cycle Log
 - 2026-06-07: ledger created; C1 opened.
+- 2026-06-07: T1 Race Types shipped (hub + 7), CI-green, pushed.
+- 2026-06-07: T2 Major Races shipped (hub + 5), CI-green, pushed.
