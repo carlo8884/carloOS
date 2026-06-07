@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Best aquarium lights tested for PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
-const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2025', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Best aquarium lights tested for PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
+const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/reviews/best-aquarium-lighting#hygger', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const schema = combineSchemas(articleSchema, hyggerSchema)
 
@@ -18,10 +18,10 @@ const PICKS = [
 export default function BestAquariumLightingPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Lights 2025', url: 'https://fish.com/reviews/best-aquarium-lighting' }] }))} />
+      <SchemaScript schema={combineSchemas(...schema, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Lights 2026', url: 'https://fish.com/reviews/best-aquarium-lighting' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2025</h1>
+        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />

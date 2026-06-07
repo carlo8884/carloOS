@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2025 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2025', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
@@ -16,10 +16,10 @@ const PICKS = [
 export default function BestNanoTanksPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Nano Aquariums 2025', url: 'https://fish.com/reviews/best-nano-tanks' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Nano Aquariums 2026', url: 'https://fish.com/reviews/best-nano-tanks' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2025</h1>
+        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Nano tanks (5–20 gallons) are ideal for betta fish, shrimp colonies, planted tanks, and small community setups. Bigger is more forgiving — but these small tanks are manageable and rewarding when set up correctly.</p>
       </div>
       <QuickPicks items={PICKS} />
