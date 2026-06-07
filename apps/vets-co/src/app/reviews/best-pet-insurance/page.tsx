@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,7 +29,51 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Best Pet Insurance', url: 'https://vets.co/reviews/best-pet-insurance' },
   ],
 })
-const pageSchema = combineSchemas(schema, breadcrumbSchema)
+
+// ItemList schema — enumerates compared carriers for AI/search citation
+const insurerListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Best Pet Insurance 2025 — Carrier Comparison',
+  description: 'Pet insurance carriers compared on reimbursement model, payout speed, and policy terms. Editorial review by Vets.co.',
+  url: 'https://vets.co/reviews/best-pet-insurance',
+  numberOfItems: 3,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/reviews/best-pet-insurance#trupanion' },
+    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws' },
+    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/reviews/best-pet-insurance#embrace' },
+  ],
+}
+
+// Product schemas — single editorial review (reviewCount: 1 per honest-pattern used across the portfolio)
+const trupanionSchema = buildProductSchema({
+  name: 'Trupanion Pet Insurance',
+  description: 'Only insurer that pays the veterinary practice directly at checkout. 90% reimbursement, unlimited payouts, per-condition deductible.',
+  url: 'https://vets.co/reviews/best-pet-insurance#trupanion',
+  imageUrl: '',
+  ratingValue: 9.4,
+  reviewCount: 1,
+})
+
+const healthyPawsSchema = buildProductSchema({
+  name: 'Healthy Paws Pet Insurance',
+  description: 'Fastest claims processing (~2 days average), highest customer satisfaction, unlimited payouts, no annual or per-incident limits.',
+  url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
+  imageUrl: '',
+  ratingValue: 9.1,
+  reviewCount: 1,
+})
+
+const embraceSchema = buildProductSchema({
+  name: 'Embrace Pet Insurance',
+  description: 'Wellness add-on available for routine and preventive care. Diminishing deductible, highly customizable plan structure.',
+  url: 'https://vets.co/reviews/best-pet-insurance#embrace',
+  imageUrl: '',
+  ratingValue: 8.8,
+  reviewCount: 1,
+})
+
+const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
   { label: 'Best Overall', emoji: '🏆', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
@@ -147,9 +191,12 @@ export default function VetsPetInsurancePage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
+              { label: 'Pet Insurance Education Hub', href: '/insurance' },
+              { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' },
+              { label: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' },
+              { label: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' },
               { label: 'Find a Specialist', href: '/find-a-vet' },
               { label: 'Emergency Signs', href: '/health/emergency-signs' },
-              { label: 'Golden Retriever Health', href: '/breeds/golden-retriever-health' },
             ]} />
             <EmailCapture variant="sidebar" siteId="vets-co"
               title="Free Pet Health Tips"

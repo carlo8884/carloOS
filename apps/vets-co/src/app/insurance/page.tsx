@@ -61,9 +61,29 @@ export default function VetsInsuranceHubPage() {
           <p className="text-base text-brand-text-mid leading-relaxed mt-4">
             For quick definitions of any term you hit along the way, see the <Link href="/glossary" className="text-brand-primary font-medium hover:underline">pet health &amp; insurance glossary</Link>.
           </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mt-4">
+            Ready to compare carriers? See our editorial comparison of the 11 major insurers: <Link href="/reviews/best-pet-insurance" className="text-brand-primary font-semibold hover:underline">Best Pet Insurance 2025 — How the 11 Major Carriers Compare</Link>.
+          </p>
         </div>
       </div>
-      <div className="px-container-sm sm:px-container pb-14 pt-4">
+
+      {/* Featured: carrier comparison + funnel entry */}
+      <div className="px-container-sm sm:px-container pt-4 pb-2">
+        <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
+          <Link href="/reviews/best-pet-insurance" className="block bg-brand-dark rounded-xl p-6 no-underline hover:opacity-90 transition-opacity">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Carrier Comparison</div>
+            <div className="font-display font-bold text-white text-base leading-snug mb-2">Best Pet Insurance 2025 — 11 Carriers Compared</div>
+            <p className="text-sm text-white/60 m-0 leading-relaxed">Trupanion, Healthy Paws, Embrace, and 8 more — ranked on reimbursement model, claims speed, and policy terms by the Vets.co editorial team.</p>
+          </Link>
+          <Link href="/pet-insurance" className="block bg-brand-primary-pale border border-brand-primary rounded-xl p-6 no-underline hover:border-brand-primary-dark transition-colors">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Get Personalized Quotes</div>
+            <div className="font-display font-bold text-brand-dark text-base leading-snug mb-2">Compare Quotes for Your Pet</div>
+            <p className="text-sm text-brand-text-mid m-0 leading-relaxed">See plans and pricing for your pet&apos;s breed, age, and location. Enroll before your first vet visit — exclusions apply from day one.</p>
+          </Link>
+        </div>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-14 pt-8">
         {GUIDES.map(section => (
           <div key={section.category} className="mb-10">
             <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
