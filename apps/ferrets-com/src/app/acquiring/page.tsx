@@ -21,6 +21,7 @@ import {
   CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
+import { PageMasthead } from '@/components/PageMasthead'
 import { ACQUIRING_GUIDES, ACQUIRING_SLUGS } from '@/data/guides/acquiring'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,25 +106,17 @@ export default function AcquiringHubPage() {
       />
 
       <div className="px-container-sm sm:px-container py-14 max-w-4xl mx-auto">
-        <header className="mb-10">
-          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Acquiring a Ferret
-          </p>
-          <h1
-            className="font-display font-black text-brand-text-dark leading-tight tracking-tighter mb-5"
-            style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}
-          >
-            Acquiring a ferret, the right way
-          </h1>
-          <p className="text-lg text-brand-text-mid leading-relaxed m-0">
-            The legal and logistical steps between deciding you want a ferret
-            and actually bringing one home — permits, vaccination, choosing a
-            healthy animal, transport, and setup. Work through them in order.
-          </p>
-          <p className="text-xs text-brand-text-light mt-4 m-0">
-            By Ferrets.com Editorial &mdash; sourced from cited references.
-          </p>
-        </header>
+        <PageMasthead
+          eyebrow="Acquiring a Ferret"
+          heading="Acquiring a ferret, the right way"
+          dek="The legal and logistical steps between deciding you want a ferret and actually bringing one home — permits, vaccination, choosing a healthy animal, transport, and setup. Work through them in order."
+          manifestKey="ferrets-com:acquiring-masthead"
+          fallbackKey="ferrets-com:hero"
+          alt="A young ferret being held by its new owner"
+        />
+        <p className="text-xs text-brand-text-light mb-8 -mt-4 m-0">
+          By Ferrets.com Editorial &mdash; sourced from cited references.
+        </p>
 
         <CalloutBox variant="info" title="Start with legality">
           <p>

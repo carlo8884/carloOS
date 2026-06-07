@@ -14,6 +14,7 @@
  */
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -65,6 +66,13 @@ export interface GuideArticleProps {
   disclaimer?: string
   /** Email-capture source tag. */
   source: string
+  /**
+   * Optional slot rendered after the body sections and FAQ, before the
+   * disclaimer footer. Used by the single commercial-intent setup guide
+   * (/acquiring/first-supplies) to inject a tasteful, FTC-disclosed supplies
+   * CTA. Editorial reference guides omit it and stay CTA-free.
+   */
+  afterBody?: ReactNode
 }
 
 const DEFAULT_DISCLAIMER =
@@ -83,6 +91,7 @@ export function GuideArticle({
   related,
   disclaimer,
   source,
+  afterBody,
 }: GuideArticleProps) {
   const pageUrl = `https://ferrets.com${path}`
   const now = new Date().toISOString()
@@ -212,6 +221,8 @@ export function GuideArticle({
                 <FAQAccordion items={faqs} includeSchema={false} />
               </section>
             )}
+
+            {afterBody}
 
             <footer className="text-sm text-brand-text-light leading-relaxed border-t border-brand-border pt-6">
               <p className="mb-2 font-semibold text-brand-text-mid">
