@@ -13,6 +13,7 @@ export default function SetupCleanupCrewIsopodsSpringtailsPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates', category: 'Reviews' },
         { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
         { title: 'Drainage Layer Guide', href: '/setup/drainage-layer-bioactive', category: 'Setup' },
         { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },

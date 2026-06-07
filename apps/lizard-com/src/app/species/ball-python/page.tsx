@@ -12,6 +12,9 @@ export default function BallPythonPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
+        { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
         { title: 'Ball Python Morphs', href: '/species/ball-python-morphs', category: 'Species' },
         { title: 'Corn Snake Care', href: '/species/corn-snake', category: 'Species' },
         { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },

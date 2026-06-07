@@ -27,6 +27,9 @@ export default function LeopardGeckoPage() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Leopard Gecko', href: '/species/leopard-gecko' }]}
         relatedLinks={[
           { title: 'Species Library', href: '/species', category: 'Hub' },
+          { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+          { title: 'Best Thermometers & Hygrometers', href: '/reviews/best-thermometers-hygrometers', category: 'Reviews' },
+          { title: 'Best Thermostats', href: '/reviews/best-thermostats', category: 'Reviews' },
           { title: 'African Fat-Tailed Gecko Care', href: '/species/african-fat-tailed-gecko', category: 'Species' },
           { title: 'Crested Gecko Care', href: '/species/crested-gecko', category: 'Species' },
           { title: 'Metabolic Bone Disease', href: '/health/metabolic-bone-disease', category: 'Health' },

@@ -13,6 +13,8 @@ export default function SetupScreenVsPvcEnclosurePage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Terrarium Size Guide', href: '/setup/terrarium-size-guide', category: 'Setup' },
         { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
         { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },

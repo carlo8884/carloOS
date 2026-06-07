@@ -11,6 +11,9 @@ export default function BioactiveSetupPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Bioactive Substrates', href: '/reviews/best-bioactive-substrates', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Substrate Guide', href: '/setup/substrate-guide', category: 'Setup' },
         { title: 'Drainage Layer Guide', href: '/setup/drainage-layer-bioactive', category: 'Setup' },
         { title: 'Cleanup Crew Guide', href: '/setup/cleanup-crew-isopods-springtails', category: 'Setup' },

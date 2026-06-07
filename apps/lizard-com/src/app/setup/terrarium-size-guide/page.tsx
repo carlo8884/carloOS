@@ -14,10 +14,11 @@ export default function SetupTerrariumSizeGuidePage() {
       schema={schema}
       relatedLinks={[
         { title: 'Setup Hub', href: '/setup', category: 'Hub' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Screen vs PVC Enclosures', href: '/setup/screen-vs-pvc-enclosure', category: 'Setup' },
         { title: 'Temperature Guide', href: '/setup/temperature-guide', category: 'Setup' },
         { title: 'Bioactive Setup Guide', href: '/setup/bioactive-setup', category: 'Setup' },
-        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
       ]}
       sidebar={<>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '16px' }}>

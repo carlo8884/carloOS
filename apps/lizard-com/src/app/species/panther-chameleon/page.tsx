@@ -11,6 +11,10 @@ export default function PantherChameleonPage() {
       schema={schema}
       relatedLinks={[
         { title: 'Species Library', href: '/species', category: 'Hub' },
+        { title: 'UVB Distance Calculator', href: '/tools/uvb-distance-calculator', category: 'Tools' },
+        { title: 'Enclosure Size Calculator', href: '/tools/enclosure-size-calculator', category: 'Tools' },
+        { title: 'Best UVB Bulbs', href: '/reviews/best-uvb-bulbs', category: 'Reviews' },
+        { title: 'Best Reptile Terrariums', href: '/reviews/best-reptile-terrariums', category: 'Reviews' },
         { title: 'Veiled Chameleon Care', href: '/species/veiled-chameleon', category: 'Species' },
         { title: 'Chinese Water Dragon Care', href: '/species/chinese-water-dragon', category: 'Species' },
         { title: 'Humidity Guide', href: '/setup/humidity-guide', category: 'Setup' },
