@@ -14,7 +14,15 @@ import {
   DropCap,
   CalloutBox,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Paracheirodon axelrodi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/paracheirodon-axelrodi/", publisher: "Seriously Fish" },
+  { label: "Paracheirodon axelrodi — FishBase species record", url: "https://www.fishbase.se/summary/Paracheirodon-axelrodi.html", publisher: "FishBase" },
+  { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+  { label: "Project Piaba — Sustainability in Cardinal Tetra Trade. Amazon Conservation Association, 2019.", url: "https://www.projectpiaba.org", publisher: "Project Piaba / Amazon Conservation Association" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -426,6 +434,7 @@ export default function CardinalTetraPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

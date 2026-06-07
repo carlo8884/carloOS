@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Ambystoma mexicanum — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/1095/53947343", publisher: "IUCN Red List" },
+  { label: "Ambystoma mexicanum — AmphibiaWeb species account", url: "https://amphibiaweb.org/species/3257", publisher: "AmphibiaWeb" },
+  { label: "Voss, S.R. et al. Origin of Amphibian and Fish Limbless Mutants. Genetics, 2009.", publisher: "Genetics" },
+  { label: "Axolotl (Ambystoma mexicanum) Husbandry Manual — Chester Zoo, 2018.", publisher: "Chester Zoo" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel).', path: '/species/axolotl', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AxolotlPage() {
@@ -53,6 +60,7 @@ export default function AxolotlPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

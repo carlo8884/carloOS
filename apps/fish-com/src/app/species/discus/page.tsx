@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Symphysodon spp. — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/symphysodon-aequifasciatus/", publisher: "Seriously Fish" },
+  { label: "Symphysodon aequifasciatus — FishBase species record", url: "https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html", publisher: "FishBase" },
+  { label: "Bleher, H. Bleher's Discus. Aquapress, 2006.", publisher: "Aquapress" },
+  { label: "Kullander, S.O. & Ferreira, E.J.G. A Review of the South American Cichlid Genus Cichla. Ichthyological Exploration of Freshwaters, 2006.", publisher: "Ichthyological Exploration of Freshwaters" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. 82-86°F, pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Care Guide', description: 'Water requirements, daily water changes, and disease prevention for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function DiscusPage() {
@@ -62,6 +69,7 @@ export default function DiscusPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

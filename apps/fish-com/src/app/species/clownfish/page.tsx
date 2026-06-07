@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Amphiprion ocellaris — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/amphiprion-ocellaris/", publisher: "Seriously Fish" },
+  { label: "Amphiprion ocellaris — FishBase species record", url: "https://www.fishbase.se/summary/Amphiprion-ocellaris.html", publisher: "FishBase" },
+  { label: "Fautin, D.G. & Allen, G.R. Field Guide to Anemonefishes and Their Host Sea Anemones. Western Australian Museum, 1992.", publisher: "Western Australian Museum" },
+  { label: "Godwin, J. Behavioral Aspects of Protandrous Sex Change in the Anemonefish, Amphiprion melanopus. Environmental Biology of Fishes, 52(4), 365–374, 1998.", publisher: "Environmental Biology of Fishes" },
+]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Clownfish Care Guide — Saltwater Tank Requirements | Fish.com', description: 'Complete clownfish care guide. Saltwater tank requirements, FOWLR vs reef setup, whether they need anemones (no), tankmates, and feeding for Amphiprioninae.', path: '/species/clownfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Clownfish Care Guide', description: 'Saltwater setup, anemone question, tankmates, and feeding for clownfish.', url: 'https://fish.com/species/clownfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -78,6 +85,7 @@ export default function ClownfishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

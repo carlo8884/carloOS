@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Pangio kuhlii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/pangio-kuhlii/", publisher: "Seriously Fish" },
+  { label: "Pangio kuhlii — FishBase species record", url: "https://www.fishbase.se/summary/Pangio-kuhlii.html", publisher: "FishBase" },
+  { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia and Sulawesi. Periplus, 1993.", publisher: "Periplus" },
+  { label: "Ng, H.H. & Kottelat, M. The Pangio kuhlii species complex. Ichthyological Exploration of Freshwaters, 1998.", publisher: "Ichthyological Exploration of Freshwaters" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide — Sand Substrate, Groups | Fish.com', description: 'Kuhli loaches are eel-shaped bottom fish that require sand, groups of 6+, and dense hiding spots. Nocturnal scavengers that vanish during the day — care guide.', path: '/species/kuhli-loach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Kuhli Loach Care Guide', description: 'Sand substrate, group size, and hiding requirements for kuhli loaches.', url: 'https://fish.com/species/kuhli-loach', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function KuhliLoachPage() {
@@ -53,6 +60,7 @@ export default function KuhliLoachPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

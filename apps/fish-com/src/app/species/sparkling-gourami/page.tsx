@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Trichopsis pumila — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/trichopsis-pumila/", publisher: "Seriously Fish" },
+  { label: "Trichopsis pumila — FishBase species record", url: "https://www.fishbase.se/summary/Trichopsis-pumila.html", publisher: "FishBase" },
+  { label: "Ladich, F. & Myrberg, A.A. Jr. Agonistic Behavior and Acoustical Communication in the Pygmy Gourami Trichopsis pumilus. Ethology, 1998.", publisher: "Ethology" },
+  { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide — The Croaking Nano Fish | Fish.com', description: "Sparkling gouramis are tiny labyrinth fish under 1.5 inches that audibly croak. Ideal for planted nano tanks with gentle flow and calm tankmates.", path: '/species/sparkling-gourami', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Sparkling Gourami Care Guide', description: 'Care, croaking behavior, and breeding for Trichopsis pumila, the sparkling gourami.', url: 'https://fish.com/species/sparkling-gourami', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function SparklingGouramiPage() {
@@ -53,6 +60,7 @@ export default function SparklingGouramiPage() {
             <a href="/go/chewy-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

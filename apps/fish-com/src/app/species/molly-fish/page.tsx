@@ -14,7 +14,15 @@ import {
   DropCap,
   CalloutBox,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Poecilia sphenops — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/poecilia-sphenops/", publisher: "Seriously Fish" },
+  { label: "Poecilia sphenops — FishBase species record", url: "https://www.fishbase.se/summary/Poecilia-sphenops.html", publisher: "FishBase" },
+  { label: "Rosen, D.E. & Bailey, R.M. The Poeciliid Fishes (Cyprinodontiformes), Their Structure, Zoogeography, and Systematics. Bulletin of the AMNH, 1963.", publisher: "American Museum of Natural History" },
+  { label: "Turner, C.L. The Trophotaeniae of the Goodeidae. Journal of Morphology, 1937.", publisher: "Journal of Morphology" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -465,6 +473,7 @@ export default function MollyPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

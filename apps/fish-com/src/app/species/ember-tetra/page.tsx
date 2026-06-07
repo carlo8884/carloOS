@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Hyphessobrycon amandae — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/hyphessobrycon-amandae/", publisher: "Seriously Fish" },
+  { label: "Hyphessobrycon amandae — FishBase species record", url: "https://www.fishbase.se/summary/Hyphessobrycon-amandae.html", publisher: "FishBase" },
+  { label: "Weitzman, S.H. & Malabarba, L.R. Phylogeny of the Subtribe Tetragonopterinae. Ichthyological Exploration of Freshwaters, 1999.", publisher: "Ichthyological Exploration of Freshwaters" },
+  { label: "Roberts, T.R. Nomenclature and Distribution of the Bleeding Heart Tetras. Proceedings of the California Academy of Sciences, 1973.", publisher: "California Academy of Sciences" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Ember Tetra Care Guide — Nano Glowing Orange Fish | Fish.com', description: 'Ember tetras are glowing orange 0.8-inch nano fish. Large schools in planted tanks create a stunning display. Hardy, peaceful, and compatible with shrimp.', path: '/species/ember-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ember Tetra Care Guide', description: 'School size, planted tank setup, and shrimp compatibility for Hyphessobrycon amandae ember tetras.', url: 'https://fish.com/species/ember-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function EmberTetraPage() {
@@ -47,6 +54,7 @@ export default function EmberTetraPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Carassius auratus — FishBase species record", url: "https://www.fishbase.se/summary/Carassius-auratus.html", publisher: "FishBase" },
+  { label: "Goldfish Husbandry — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/goldfish", publisher: "Merck Vet Manual" },
+  { label: "Andrews, C. A Fishkeeper's Guide to Goldfish. Salamander Books, 1986.", publisher: "Salamander Books" },
+  { label: "Smartt, J. Goldfish Varieties and Genetics. Blackwell Science, 2001.", publisher: "Blackwell Science" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Goldfish Care Guide — Tank Size, Lifespan | Fish.com', description: 'Goldfish are not bowl fish. Common goldfish need 75+ gallons and can live 20+ years. Fancy goldfish have different needs than single-tail varieties.', path: '/species/goldfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Goldfish Care Guide', description: 'Tank size, filtration, and care for common and fancy goldfish.', url: 'https://fish.com/species/goldfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function GoldfishPage() {
@@ -55,6 +62,7 @@ export default function GoldfishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

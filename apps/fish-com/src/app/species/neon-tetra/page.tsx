@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Paracheirodon innesi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/paracheirodon-innesi/", publisher: "Seriously Fish" },
+  { label: "Paracheirodon innesi — FishBase species record", url: "https://www.fishbase.se/summary/Paracheirodon-innesi.html", publisher: "FishBase" },
+  { label: "Neon Tetra Disease (Pleistophora hyphessobryconis) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/microsporidiosis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure', path: '/species/neon-tetra', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Neon Tetra Care Guide', description: 'School size, neon tetra disease, planted tank display, and care for Paracheirodon innesi.', url: 'https://fish.com/species/neon-tetra', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function NeonTetraPage() {
@@ -58,6 +65,7 @@ export default function NeonTetraPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

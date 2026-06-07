@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Water Quality in Aquaculture — UF/IFAS Extension FA-120", url: "https://edis.ifas.ufl.edu/publication/FA120", publisher: "UF/IFAS Extension" },
+  { label: "Nitrogen Cycle in Aquaculture Systems — SRAC Publication 4600", url: "https://www.srac.tamu.edu/", publisher: "Southern Regional Aquaculture Center" },
+  { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
+  { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com', description: 'pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.', path: '/setup/water-chemistry-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquarium Water Chemistry Guide', description: 'pH, GH, KH, and TDS explained for freshwater aquariums.', url: 'https://fish.com/setup/water-chemistry-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function WaterChemistryGuidePage() {
@@ -57,6 +64,7 @@ export default function WaterChemistryGuidePage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

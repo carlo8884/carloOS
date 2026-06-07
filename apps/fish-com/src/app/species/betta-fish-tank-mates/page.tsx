@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Betta splendens — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/betta-splendens/", publisher: "Seriously Fish" },
+  { label: "Betta splendens — FishBase species record", url: "https://www.fishbase.se/summary/Betta-splendens.html", publisher: "FishBase" },
+  { label: "Jaroensutasinee, M. & Jaroensutasinee, K. Bubble nest habitat characteristics of wild Siamese fighting fish. Journal of Fish Biology, 2001.", publisher: "Journal of Fish Biology" },
+  { label: "Simpson, M.J.A. The Display of the Siamese Fighting Fish, Betta splendens. Animal Behaviour Monographs, 1968.", publisher: "Animal Behaviour Monographs" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Betta Fish Tank Mates — What Can Live with a Betta? | Fish.com', description: 'Can bettas live with other fish? The answer depends on the individual betta. Compatible tankmates, fish to always avoid.', path: '/species/betta-fish-tank-mates', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Betta Fish Tank Mates', description: 'Compatible and incompatible tankmates for betta fish — a practical guide.', url: 'https://fish.com/species/betta-fish-tank-mates', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function BettaTankMatesPage() {
@@ -54,6 +61,7 @@ export default function BettaTankMatesPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

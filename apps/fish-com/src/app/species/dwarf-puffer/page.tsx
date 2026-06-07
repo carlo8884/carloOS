@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Carinotetraodon travancoricus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/carinotetraodon-travancoricus/", publisher: "Seriously Fish" },
+  { label: "Carinotetraodon travancoricus — FishBase species record", url: "https://www.fishbase.se/summary/Carinotetraodon-travancoricus.html", publisher: "FishBase" },
+  { label: "Carinotetraodon travancoricus — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/166489/6219162", publisher: "IUCN Red List" },
+  { label: "Kottelat, M. et al. Freshwater Fishes of Western Indonesia. Periplus, 1993.", publisher: "Periplus" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide — The Pea Puffer | Fish.com', description: "Dwarf pea puffers are inch-long freshwater puffers with huge personalities. They need live or frozen snails to wear down their teeth and dislike most tankmates.", path: '/species/dwarf-puffer', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Dwarf Puffer Care Guide', description: 'Diet, teeth, temperament, and care for Carinotetraodon travancoricus, the pea puffer.', url: 'https://fish.com/species/dwarf-puffer', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function DwarfPufferPage() {
@@ -52,6 +59,7 @@ export default function DwarfPufferPage() {
             <a href="/go/chewy-brand/dwarf%20puffer%20nano%20tank%20setup?s=species-dwarf-puffer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

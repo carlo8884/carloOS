@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Puntius titteya — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/puntius-titteya/", publisher: "Seriously Fish" },
+  { label: "Puntius titteya — FishBase species record", url: "https://www.fishbase.se/summary/Puntius-titteya.html", publisher: "FishBase" },
+  { label: "Puntius titteya (Cherry Barb) — IUCN Red List", url: "https://www.iucnredlist.org/species/191759/2004768", publisher: "IUCN Red List" },
+  { label: "Kottelat, M. & Whitten, A.J. Freshwater Fishes of Western Indonesia and Sulawesi. Periplus, 1996.", publisher: "Periplus" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Cherry Barb Care Guide — Peaceful Barb, School Size | Fish.com', description: 'Cherry barbs are the only barb safe for peaceful community tanks. Males are vivid red when conditioned. School of 8+ required, planted tanks preferred.', path: '/species/cherry-barb', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care Guide', description: 'School size, conditioning color, and planted tank setup for Puntius titteya cherry barbs.', url: 'https://fish.com/species/cherry-barb', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function CherryBarbPage() {
@@ -54,6 +61,7 @@ export default function CherryBarbPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

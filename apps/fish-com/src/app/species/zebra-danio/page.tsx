@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Danio rerio — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/danio-rerio/", publisher: "Seriously Fish" },
+  { label: "Danio rerio (Zebrafish) — NCBI Gene Expression Omnibus / ZFIN model organism", url: "https://www.fishbase.se/summary/Danio-rerio.html", publisher: "FishBase" },
+  { label: "Spence, R. et al. The behaviour and ecology of the zebrafish, Danio rerio. Biological Reviews, 2008.", publisher: "Biological Reviews" },
+  { label: "Engeszer, R.E. et al. Timing and Location of Zebrafish (Danio rerio) Spawning. Copeia, 2007.", publisher: "Copeia" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Zebra Danio Care Guide — The Hardy Cycling Fish | Fish.com', description: "Zebra danios are among the hardiest beginner fish — fast, active schoolers that tolerate a wide range. School of 6+, cooler water, secure lid.", path: '/species/zebra-danio', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Zebra Danio Care Guide', description: 'School size, temperament, tank requirements, and breeding for Danio rerio.', url: 'https://fish.com/species/zebra-danio', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function ZebraDanioPage() {
@@ -53,6 +60,7 @@ export default function ZebraDanioPage() {
             <a href="/go/amazon-brand/zebra%20danio%20tank%20setup?s=species-zebra-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Zebra Danio Setup on Amazon →</a>
             <a href="/go/chewy-brand/zebra%20danio%20tank%20setup?s=species-zebra-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </div>
     </ArticleLayout>

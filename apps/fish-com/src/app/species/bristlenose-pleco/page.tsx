@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Ancistrus cf. cirrhosus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/ancistrus-cf-cirrhosus/", publisher: "Seriously Fish" },
+  { label: "Ancistrus — FishBase genus page", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=ancistrus", publisher: "FishBase" },
+  { label: "Armbruster, J.W. Phylogenetic relationships of the suckermouth armored catfishes. Zoological Journal of the Linnean Society, 2004.", publisher: "Zoological Journal of the Linnean Society" },
+  { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide — The Small Algae Eater | Fish.com', description: "Bristlenose plecos stay under 5 inches, eat algae, and suit tanks the common pleco outgrows. Needs driftwood, vegetables, and a male's signature bristles.", path: '/species/bristlenose-pleco', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Bristlenose Pleco Care Guide', description: 'Adult size, diet, driftwood requirement, and breeding for Ancistrus species.', url: 'https://fish.com/species/bristlenose-pleco', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function BristlenosePlecoPage() {
@@ -53,6 +60,7 @@ export default function BristlenosePlecoPage() {
             <a href="/go/chewy-brand/bristlenose%20pleco%20tank%20setup?s=species-bristlenose-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-primary, #1e90ff)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
           </div>
         </div>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

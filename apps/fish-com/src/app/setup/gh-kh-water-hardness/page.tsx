@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Water Quality in Aquaculture — UF/IFAS Extension FA-120", url: "https://edis.ifas.ufl.edu/publication/FA120", publisher: "UF/IFAS Extension" },
+  { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
+  { label: "Harker, R. Water Chemistry for the Freshwater Aquarium. Practical Fishkeeping, 2002.", publisher: "Practical Fishkeeping" },
+  { label: "Alkalinity and Hardness in Fish Culture Ponds — Southern Regional Aquaculture Center, SRAC-462", url: "https://www.srac.tamu.edu/index.cfm/event/getFactSheet/whichfactsheet/137/", publisher: "SRAC" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'GH and KH Explained — Aquarium Water Hardness Guide | Fish.com', description: "What GH and KH mean, why they differ, and how they affect pH stability and fish health. How to raise, lower, and match hardness to your species.", path: '/setup/gh-kh-water-hardness', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'GH and KH Water Hardness Guide', description: 'General hardness, carbonate hardness, pH buffering, and matching hardness to fish.', url: 'https://fish.com/setup/gh-kh-water-hardness', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function GhKhPage() {
@@ -42,6 +49,7 @@ export default function GhKhPage() {
 
         <h2>Raising and Lowering Hardness</h2>
         <p>To <strong>raise</strong> GH and KH, the simplest tools are crushed coral or aragonite in the filter (which dissolves slowly to add both), commercial remineralizing products, or for GH specifically, products containing calcium and magnesium salts. To <strong>lower</strong> hardness, the cleanest method is to dilute hard tap water with reverse-osmosis (RO) water, then remineralize to the exact target. Peat, driftwood, and Indian almond leaves lower KH and pH gradually through tannic and humic acids, useful for soft-water biotopes. Always change hardness slowly — large, rapid swings are more stressful to fish than the original parameter, so adjust over days, not minutes. For the wider picture of pH, ammonia, and nitrate, see the <a href="/setup/water-chemistry-guide">water chemistry guide</a>.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

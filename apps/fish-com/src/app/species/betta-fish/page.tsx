@@ -12,7 +12,15 @@ import {
   StockImage,
   AffiliateDisclosure,
   ArticleByline,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Betta splendens — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/betta-splendens/", publisher: "Seriously Fish" },
+  { label: "Betta splendens — FishBase species record", url: "https://www.fishbase.se/summary/Betta-splendens.html", publisher: "FishBase" },
+  { label: "Mahapatro, D. et al. Captive Breeding of Siamese Fighting Fish Betta splendens. Asian Fisheries Science, 2012.", publisher: "Asian Fisheries Science" },
+  { label: "Pinter, H. Labyrinth Fish. Barron's Educational Series, 1986.", publisher: "Barron's" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -390,6 +398,7 @@ export default function BettaFishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>

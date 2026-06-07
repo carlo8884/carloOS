@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Pterophyllum scalare — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/pterophyllum-scalare/", publisher: "Seriously Fish" },
+  { label: "Pterophyllum scalare — FishBase species record", url: "https://www.fishbase.se/summary/Pterophyllum-scalare.html", publisher: "FishBase" },
+  { label: "Kullander, S.O. Cichlidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
+  { label: "Loiselle, P.V. The Cichlid Aquarium. Tetra Press, 1985.", publisher: "Tetra Press" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Angelfish Care Guide — Cichlid Behavior, Tank Height | Fish.com', description: 'Angelfish are cichlids with cichlid behavior — pairs bond for life, defend territory, and may attack tankmates during breeding. Tall tanks required.', path: '/species/angelfish', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Angelfish Care Guide', description: 'Cichlid behavior, bonding, territory, and tall tank requirements for freshwater angelfish.', url: 'https://fish.com/species/angelfish', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
 export default function AngelfishPage() {
@@ -54,6 +61,7 @@ export default function AngelfishPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
       </div>
       </ArticleLayout>
   )

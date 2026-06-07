@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Aquarium Management — UF/IFAS Extension, FA-9", url: "https://edis.ifas.ufl.edu/publication/FA009", publisher: "UF/IFAS Extension" },
+  { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
+  { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
+  { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
+]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Nano Aquarium Setup Guide — Small Tanks Done Right | Fish.com', description: "How to set up a nano aquarium under 10 gallons. Stocking, stability, filtration, and the small-tank fish that actually thrive in compact setups.", path: '/setup/nano-tank-setup', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Nano Aquarium Setup Guide', description: 'Stocking, stability, filtration, and species selection for nano tanks under 10 gallons.', url: 'https://fish.com/setup/nano-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 export default function NanoTankSetupPage() {
@@ -46,6 +53,7 @@ export default function NanoTankSetupPage() {
 
         <h2>Maintenance Routine</h2>
         <p>The nano maintenance rhythm is little and often: a 15 to 25 percent water change weekly, glass wiped as needed, and feeding kept light enough that nothing settles uneaten. Always replace evaporated water with dechlorinated fresh water rather than letting the tank concentrate minerals as it evaporates down. A small, accurate heater and a thermometer are essential, since room-temperature swings reach a nano faster than a larger tank. Keep a jug of dechlorinated water on hand so a quick change is never a chore.</p>
+        <ArticleSourcesList sources={SOURCES} />
       </div>
     </ArticleLayout>
   )

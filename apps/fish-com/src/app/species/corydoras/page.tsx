@@ -14,7 +14,15 @@ import {
   DropCap,
   CalloutBox,
   AffiliateDisclosure,
+  ArticleSourcesList,
 } from '@carloOS/ui'
+
+const SOURCES = [
+  { label: "Corydoras paleatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-paleatus/", publisher: "Seriously Fish" },
+  { label: "Corydoras — FishBase genus overview", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=corydoras", publisher: "FishBase" },
+  { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
+  { label: "Burgess, W.E. Atlas of Freshwater and Marine Catfishes. TFH Publications, 1989.", publisher: "TFH Publications" },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -497,6 +505,7 @@ export default function CorydorasPage() {
           </div>
         </div>
 
+        <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
     </>
