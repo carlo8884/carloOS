@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function KuhliLoachPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-kuhli-loach" aspect="16:9" variant="inline" caption="A kuhli loach in a home aquarium." priority />
         <h2>Sand Substrate — Non-Negotiable</h2>
         <p>Kuhli loaches burrow into substrate. Their soft, scaleless skin is easily damaged by coarse gravel or sharp substrates. Fine sand (pool filter sand, Caribsea Super Naturals, or play sand) is required. In gravel substrates, kuhli loaches attempt to burrow and injure themselves, become stressed, and develop skin abrasions that lead to infection. This is not optional — sand is a welfare requirement for kuhli loaches, not a preference.</p>
         <p>Depth matters: a minimum of 2 inches of fine sand allows them to burrow properly. They will bury themselves completely when stressed or during the day. Finding nothing but sand in the tank after adding kuhli loaches is normal — they are simply hiding.</p>

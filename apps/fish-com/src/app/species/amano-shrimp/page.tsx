@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function AmanoShrimpPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-amano-shrimp" aspect="16:9" variant="inline" caption="An Amano shrimp in a home aquarium." priority />
         <h2>Why Amano Shrimp Are the Best Algae Eaters</h2>
         <p>In the planted aquarium and aquascaping community, Amano shrimp have a near-universal recommendation for algae control — specifically for the algae types that other commonly kept algae eaters ignore. They are particularly effective at: thread algae / string algae (long, hair-like green algae that wraps around plants), staghorn algae (short gray filaments on plant edges — often iron deficiency indicator), BBA (black brush/beard algae — notoriously difficult to eliminate), and general biofilm and surface algae. Otocinclus are better for diatoms and spot algae on glass; Amanos win for hair and beard algae.</p>
         <p>The key to Amano shrimp effectiveness: groups, not individuals. A single Amano shrimp in a 30-gallon planted tank makes no visible impact. Eight Amano shrimp in the same tank provide meaningful algae control. The standard recommendation for planted tanks with moderate algae: one Amano shrimp per 5 gallons as a starting point, adjusted based on algae load. In a tank with significant hair algae problems, temporarily doubling the population often provides rapid visible improvement.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function PearlGouramiPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-pearl-gourami" aspect="16:9" variant="inline" caption="A pearl gourami in a home aquarium." priority />
 
         <h2>A Labyrinth Fish — Surface Access Is Mandatory</h2>
         <DropCap>Like its relatives the betta and dwarf gourami, the pearl gourami is an anabantoid — it possesses a labyrinth organ that allows it to breathe atmospheric air directly from the surface. This adaptation evolved in the warm, oxygen-poor, slow-moving waters of Southeast Asia, and it has a direct husbandry consequence: pearl gouramis must always have unobstructed access to the water surface. A tank packed to the rim with floating plants, or a tightly sealed lid with warm trapped air far colder than the water, can both cause problems. The air the fish gulps should be warm and humid, which is why a covered tank with a small air gap is ideal — chilled room air gulped at the surface can damage the labyrinth organ.</DropCap>

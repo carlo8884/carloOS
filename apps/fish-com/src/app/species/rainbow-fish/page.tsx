@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -35,6 +35,7 @@ export default function RainbowFishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-rainbow-fish" aspect="16:9" variant="inline" caption="A rainbowfish in a home aquarium." priority />
         <h2>Color Development — Why Your Rainbowfish Looks Different</h2>
         <p>Rainbowfish are notoriously dull-looking in fish stores and reach their full color potential only under specific conditions: maturity (full color at 9–18 months — juveniles are pale), clean water (nitrate under 20 ppm — consistent water changes), varied high-quality diet (spirulina-based flakes plus frozen daphnia and brine shrimp develop the carotenoid pigments responsible for red and orange coloration), and social stimulation (males display to each other and to females — a mixed-sex group in the correct ratio produces the best coloration). A Boesemani rainbowfish in a bare tank with poor water and flake food is unimpressive. The same fish in a planted tank with clean water, good food, and other rainbowfish is stunning.</p>
 

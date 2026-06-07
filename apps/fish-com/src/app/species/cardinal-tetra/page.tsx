@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -199,6 +199,7 @@ export default function CardinalTetraPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-cardinal-tetra" aspect="16:9" variant="inline" caption="A cardinal tetra in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from

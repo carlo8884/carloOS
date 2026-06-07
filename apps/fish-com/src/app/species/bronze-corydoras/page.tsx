@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function BronzeCorydorasPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-bronze-corydoras" aspect="16:9" variant="inline" caption="A bronze corydoras in a home aquarium." priority />
 
         <h2>The Beginner Cory</h2>
         <DropCap>If a new aquarist wants a bottom-dwelling catfish, the bronze corydoras is almost always the right first choice. It tolerates a wider range of water chemistry and temperature than its more delicate relatives such as the panda or pygmy cory, accepts virtually any sinking food, and reproduces so readily that surprise spawns in community tanks are common. The albino corydoras sold everywhere is simply a color morph of this same species. Both forms share the genus-wide need for company: corydoras are intensely social and must be kept in groups of at least six. A single cory is a stressed, withdrawn animal that hides constantly; a school of eight forages confidently across the open substrate in broad daylight.</DropCap>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function CherryBarbPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-cherry-barb" aspect="16:9" variant="inline" caption="A cherry barb in a home aquarium." priority />
         <h2>Why Cherry Barbs Are Different From Other Barbs</h2>
         <p>The barb family has an undeserved reputation for aggression — deserved by tiger barbs (notorious fin-nippers), rosy barbs (semi-aggressive), and odessa barbs (males fight). Cherry barbs are the exception. They are peaceful with every species small enough to not eat them. They will not nip fins, harass smaller fish, or bother invertebrates. This makes them one of the few barbs appropriate for tanks with guppies, bettas, neon tetras, and shrimp.</p>
         <p>Cherry barbs are listed as vulnerable on the IUCN Red List — their native Sri Lankan stream habitats are under pressure from deforestation and agricultural runoff. All cherry barbs in the trade are commercially bred, but that wild population status is worth knowing.</p>

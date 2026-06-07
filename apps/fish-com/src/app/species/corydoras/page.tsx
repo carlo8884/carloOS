@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -201,6 +201,7 @@ export default function CorydorasPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-corydoras" aspect="16:9" variant="inline" caption="A corydoras catfish in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Corydoras catfish are peaceful South American bottom-dwellers

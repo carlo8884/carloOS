@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function EndlersLivebearerPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-endlers-livebearer" aspect="16:9" variant="inline" caption="An Endler’s livebearer in a home aquarium." priority />
 
         <h2>A Nano Powerhouse</h2>
         <DropCap>The Endler's livebearer packs more color into a one-inch body than almost any other freshwater fish. Originally found in the Laguna de Patos region of Venezuela, the species was nearly lost in the wild and survives largely through aquarium populations and dedicated hobbyist breeders. Its small size, peaceful nature, and hardiness make it ideal for nano and planted tanks where a full-sized guppy would feel cramped. Males are the showpieces, flashing metallic patches and performing constant courtship displays; females are larger, plainer, and silvery. Because they are so small and active, even a 10-gallon tank can support a lively colony.</DropCap>
