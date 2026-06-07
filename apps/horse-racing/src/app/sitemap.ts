@@ -14,6 +14,7 @@ import { allExperienceSlugs } from '../data/racing/experiences'
 import { allGearSlugs } from '../data/racing/gear'
 import { allEditionSlugs } from '../data/racing/newsletter'
 import { allBloodstockSlugs } from '../data/racing/bloodstock'
+import { allRaceTypeSlugs } from '../data/racing/race-types'
 
 /**
  * Sitemap — hub pages, every racecard, every profile, and every glossary term.
@@ -46,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gear = allGearSlugs().map((s) => entry(`/gear/${s}`, 'monthly', 0.7))
   const editions = allEditionSlugs().map((s) => entry(`/newsletter/${s}`, 'monthly', 0.6))
   const bloodstock = allBloodstockSlugs().map((s) => entry(`/bloodstock/${s}`, 'monthly', 0.7))
+  const raceTypes = allRaceTypeSlugs().map((s) => entry(`/race-types/${s}`, 'monthly', 0.7))
 
   return [
     entry('', 'daily', 1.0),
@@ -68,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/predict', 'weekly', 0.7),
     entry('/first-derby', 'weekly', 0.9),
     entry('/bloodstock', 'weekly', 0.8),
+    entry('/race-types', 'weekly', 0.8),
     ...racecards,
     ...horses,
     ...trainers,
@@ -80,5 +83,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gear,
     ...editions,
     ...bloodstock,
+    ...raceTypes,
   ]
 }
