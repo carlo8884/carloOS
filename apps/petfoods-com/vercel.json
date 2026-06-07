@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=petfoods-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh petfoods-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh petfoods-com",
+  "github": {
+    "silent": true
+  }
 }

@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=seniorpets",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh seniorpets"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh seniorpets",
+  "github": {
+    "silent": true
+  }
 }

@@ -3,5 +3,8 @@
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npx turbo build --filter=horses-com",
   "outputDirectory": ".next",
-  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh horses-com"
+  "ignoreCommand": "bash ../../scripts/vercel-ignore.sh horses-com",
+  "github": {
+    "silent": true
+  }
 }
