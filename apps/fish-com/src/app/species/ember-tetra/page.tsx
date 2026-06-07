@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function EmberTetraPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-ember-tetra" aspect="16:9" variant="inline" caption="An ember tetra in a home aquarium." priority />
         <h2>Why Ember Tetras Excel in Planted Nano Tanks</h2>
         <p>The ember tetra's orange-amber color is enhanced dramatically by: dark substrate (black or dark brown sand creates maximum contrast), green plant background (red-orange against green is one of the highest-contrast color combinations in nature), moderate lighting that illuminates the fish without washing out the coloration, and a group large enough to create the "school of fire" effect — 20+ fish moving together through a planted scape is a compelling sight in even a small tank.</p>
         <p>They are particularly valued in aquascaping ("Nature aquariums" in the Takashi Amano tradition) because their small size allows large apparent schools in modest tank volumes — a 20-gallon tank with 30 ember tetras and dense planting achieves a visual impact that suggests a much larger setup.</p>

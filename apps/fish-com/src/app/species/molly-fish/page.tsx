@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -200,6 +200,7 @@ export default function MollyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
+        <StockImage manifestKey="fish-com:species-molly-fish" aspect="16:9" variant="inline" caption="A molly in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Mollies (Poecilia sphenops, P. latipinna, P. velifera) are

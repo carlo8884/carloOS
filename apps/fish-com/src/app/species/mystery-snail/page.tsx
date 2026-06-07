@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function MysterySnailPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-mystery-snail" aspect="16:9" variant="inline" caption="A mystery snail in a home aquarium." priority />
         <h2>Copper — The Single Most Important Care Fact</h2>
         <p>Mystery snails, like all freshwater snails, are killed by copper at concentrations that are safe for fish. This is the most critical care fact — more important than any other husbandry consideration. Sources of copper that kill snails: copper-based algae treatments (API AlgaeFix contains copper), copper-based disease treatments, tap water from old copper pipes, some plant fertilizers, and some fish foods. Before adding mystery snails to any established tank, verify that no copper-containing products have ever been used. Test with a copper test kit if uncertain. Even trace copper remaining from a previous treatment can kill snails.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { StockImage,
   buildMetadata,
   ArticleLayout,
   EmailCapture,
@@ -169,6 +169,7 @@ export default function SwordtailPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-swordtail-fish" aspect="16:9" variant="inline" caption="A swordtail in a home aquarium." priority />
           <h2>The Fish in One Paragraph</h2>
           <p>
             Swordtails are hard-water livebearers from the Atlantic slope of Mexico, Belize, Guatemala,

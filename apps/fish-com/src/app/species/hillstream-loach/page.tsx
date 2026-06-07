@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -36,6 +36,7 @@ export default function HillstreamLoachPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-hillstream-loach" aspect="16:9" variant="inline" caption="A hillstream loach in a home aquarium." priority />
         <h2>Water Flow — The Non-Negotiable</h2>
         <p>Hillstream loaches come from fast-flowing streams and rivers in Southeast and East Asia where water rushes over rocky substrates. Their body shape is evolutionary adaptation to high-flow environments — the flattened profile, enlarged paired fins, and mouth structure all allow them to cling to smooth rocks in strong current while grazing biofilm. In a standard low-to-moderate flow community tank, hillstream loaches stress, refuse food, and die within weeks. The flow requirement is not an enrichment preference — it is a physiological necessity.</p>
         <p>Adequate flow for hillstream loaches: turnover rate of 10-15× tank volume per hour, distributed across multiple flow sources to create turbulent, randomized current rather than a single directional flow. A powerhead or circulation pump aimed across the tank length, combined with the return flow from the filter, creates more appropriate conditions than a single filter outlet. Adding a wavemaker provides the intermittent, surge-like flow that most closely mimics natural stream conditions. The fish should be visibly using the flow — clinging to the glass and rocks in the current zone.</p>

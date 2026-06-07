@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -34,6 +34,7 @@ export default function AxolotlPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-axolotl" aspect="16:9" variant="inline" caption="An axolotl in a home aquarium." priority />
         <h2>Neoteny — Why Axolotls Stay "Larval"</h2>
         <p>Most salamander species undergo metamorphosis — transitioning from aquatic larvae to terrestrial adults. Axolotls are neotenic: they reach sexual maturity while retaining larval characteristics (external gills, aquatic lifestyle, larval body proportions). The metamorphosis pathway still exists in their genetics — it can be triggered by thyroid hormone administration — but in normal conditions it does not occur. This means an axolotl is not a "baby" that will grow into something different; it is a sexually mature adult in its natural form, permanently aquatic, permanently displaying the feathery external gills and broad, flat head that make them distinctive.</p>
         <p>The feathery structures extending from their heads are external gills — the gill filaments are densely branched to maximize surface area for oxygen uptake. Gill plumage health is an indicator of water quality: full, fluffy, well-branched gills indicate good conditions; thin, receding, or curling gills indicate stress, poor water quality, or disease.</p>

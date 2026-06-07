@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -35,6 +35,7 @@ export default function CherryShrimpPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
+        <StockImage manifestKey="fish-com:species-cherry-shrimp" aspect="16:9" variant="inline" caption="A cherry shrimp in a home aquarium." priority />
         <h2>Grades — What You're Paying For</h2>
         <p>Cherry shrimp are sold in grades based on color intensity and coverage. All grades are the same species (Neocaridina davidi) and have identical care requirements — grade is purely aesthetic and affects price, not ease of care. Low-grade "cherry" shrimp have pale, patchy red coloration with transparent areas. Higher grades have progressively more intense and solid red coloration, culminating in "Painted Fire Red" with solid, opaque red coloration throughout. Breeding higher-grade shrimp together tends to produce higher-grade offspring — but population grades drift toward lower grades without selective culling of pale individuals.</p>
         <p>Important note: do not mix different Neocaridina color morphs (cherry, blue dream, yellow, orange rili) in the same tank. They interbreed freely and within a few generations produce drab, genetically mixed offspring in place of the pure-color varieties. Keep each Neocaridina color morph in its own tank or with other compatible species.</p>
