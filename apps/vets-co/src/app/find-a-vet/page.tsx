@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 import { States, type CensusRegion } from '../../data/states'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Find a Vet — General Practice, Emergency & Specialists | Vets.co', description: 'Find the right veterinarian for your dog. General practice, emergency, and board-certified specialists — dermatology, cardiology, neurology, oncology.', path: '/find-a-vet', type: 'website' })
 
@@ -28,23 +29,29 @@ export default function FindAVetPage() {
     <>
       <SchemaScript schema={breadcrumbSchema} />
       <div>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Veterinary Directory</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>Find the Right Vet</h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-8">General practice vets handle most of your dog's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each.</p>
-        <div className="flex flex-wrap gap-3">
-          <Link href="#general" className="bg-brand-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">General Practice</Link>
-          <Link href="#specialists" className="bg-white/10 text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:bg-white/20">Specialists</Link>
-          <Link href="#emergency" className="bg-brand-danger text-white text-sm font-bold px-5 py-2.5 rounded-lg no-underline hover:opacity-90">Emergency</Link>
-        </div>
-      </div>
+      <HubMasthead
+        eyebrow="Veterinary Directory"
+        title="Find the Right Vet"
+        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. Know when you need each, and find care by state."
+        manifestKey="vets-co:find-a-vet-hero"
+        fallbackKey="vets-co:hero"
+        imageAlt="The exterior entrance of a veterinary clinic building"
+        primaryCta={{ href: '#states', label: 'Find a vet by state' }}
+        secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs guide' }}
+      />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Find a Vet</span>
       </nav>
 
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="vets-co:find-a-vet-hero" priority aspect="16:9" variant="wide" />
+      <div className="px-container-sm sm:px-container py-3 bg-brand-surface border-b border-brand-border flex flex-wrap gap-3">
+        <Link href="#general" className="text-xs font-bold text-brand-primary no-underline hover:underline">General Practice</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#specialists" className="text-xs font-bold text-brand-primary no-underline hover:underline">Specialists</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#emergency" className="text-xs font-bold text-brand-danger no-underline hover:underline">Emergency</Link>
+        <span aria-hidden="true" className="text-brand-border">·</span>
+        <Link href="#states" className="text-xs font-bold text-brand-primary no-underline hover:underline">By State</Link>
       </div>
 
       <div className="px-container-sm sm:px-container py-14 max-w-5xl">

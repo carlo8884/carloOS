@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Insurance Education — How It Works | Vets.co', description: 'Plain-English, editorial pet insurance education from a clinical perspective: how coverage works, what is covered, when to enroll, and reading the fine print.', path: '/insurance' })
 
@@ -38,14 +39,20 @@ export default function VetsInsuranceHubPage() {
     <>
       <SchemaScript schema={schema} />
       <>
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <div className="flex items-center gap-2.5 mb-4"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Pet Insurance Education</span></div>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4" style={{ fontSize: 'clamp(28px, 5vw, 50px)' }}>Pet Insurance, Explained</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">A clinical-perspective, jargon-free guide to how pet insurance actually works — what it covers, when to enroll, how deductibles and reimbursement function, and how to read a policy before you sign. Editorial only; we do not sell insurance.</p>
-      </div>
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="vets-co:insurance-hero" priority aspect="16:9" variant="wide" />
-      </div>
+      <HubMasthead
+        eyebrow="Pet Insurance Education"
+        title="Pet Insurance, Explained"
+        intro="A clinical-perspective, jargon-free guide to how pet insurance actually works — what it covers, when to enroll, how deductibles and reimbursement function, and how to read a policy before you sign. Editorial only; we do not sell insurance."
+        manifestKey="vets-co:insurance-hero"
+        fallbackKey="vets-co:hero"
+        imageAlt="Insurance paperwork and a calculator on a desk"
+        primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare insurance plans' }}
+        secondaryCta={{ href: '/insurance/how-pet-insurance-works', label: 'Start with the basics' }}
+      />
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
+        <span className="text-brand-text-mid">Insurance</span>
+      </nav>
       <div className="px-container-sm sm:px-container pt-14 pb-2">
         <div className="max-w-2xl">
           <h2 className="font-display text-2xl font-bold text-brand-dark mb-4 leading-tight">What this hub covers</h2>

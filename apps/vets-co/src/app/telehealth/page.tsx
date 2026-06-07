@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, ScoreMethodology, Breadcrumb, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026 — Vetster, AskVet | Vets.co', description: 'We compared pet telehealth services on veterinarian credentials, wait times, consultation quality, and cost. Find the right service for your pet\'s needs.', path: '/telehealth', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026', description: 'Vetster, AskVet, and Chewy Connect compared by the Vets.co editorial team on credentials, wait times, consultation quality, and cost.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -16,11 +17,16 @@ export default function TelehealthPage() {
   return (
     <>
       <SchemaScript schema={schema} />
-      <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Telehealth Compared · June 2026</span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-2xl" style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>Best Pet Telehealth 2026</h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality.</p>
-      </div>
+      <HubMasthead
+        eyebrow="Telehealth Compared · June 2026"
+        title="Best Pet Telehealth 2026"
+        intro="Talk to a licensed vet tonight — without a waiting room. We compared the major platforms on credential requirements, wait times, and consultation quality."
+        manifestKey="vets-co:category-telehealth"
+        fallbackKey="vets-co:hero"
+        imageAlt="A laptop and notepad on a desk, set up for a remote consultation"
+        primaryCta={{ href: '#vetster', label: 'See the top pick' }}
+        secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
+      />
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
       <div className="px-container-sm sm:px-container py-12">
