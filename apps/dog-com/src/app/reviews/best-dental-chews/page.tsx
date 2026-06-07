@@ -7,9 +7,9 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews
 const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies' },
-  { label: 'Best Natural', emoji: '🌿', name: 'Whimzees', subtitle: 'Plant-based · VOHC accepted · Longer chew time', href: '#whimzees' },
-  { label: 'Best Enzymatic', emoji: '🔬', name: 'Virbac CET Enzymatic', subtitle: 'Dual enzyme system · Vet brand · Rawhide-based', href: '#virbac' },
+  { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies' },
+  { label: 'Best Natural', name: 'Whimzees', subtitle: 'Plant-based · VOHC accepted · Longer chew time', href: '#whimzees' },
+  { label: 'Best Enzymatic', name: 'Virbac CET Enzymatic', subtitle: 'Dual enzyme system · Vet brand · Rawhide-based', href: '#virbac' },
 ]
 export default function BestDentalChewsPage() {
   return (
@@ -35,7 +35,7 @@ export default function BestDentalChewsPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="greenies" badge="Best Overall" badgeEmoji="🏆" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" score={9.2} winner
+            <ReviewCard id="greenies" badge="Best Overall" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" score={9.2} winner
               description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
               pros={['VOHC accepted (plaque + tartar)', 'Often used by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
@@ -46,7 +46,7 @@ export default function BestDentalChewsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="greenies+dental+chews+dogs"
             />
-            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" badgeEmoji="🌿" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies" score={9.0}
+            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies" score={9.0}
               description={<p>Whimzees are made from plant-based ingredients — potato starch, glycerin, and cellulose — with no artificial colors, preservatives, or animal products. VOHC accepted for plaque reduction. The texture is slightly firmer than Greenies but still pliable and tooth-safe. Many owners report their dogs spend longer chewing Whimzees than Greenies — more time chewing means more tooth surface contact and more mechanical plaque removal. Good choice for dogs with animal protein sensitivities or owners preferring plant-based options. Available in several fun shapes (toothbrush, hedgehog, crocodile) that all achieve similar dental effect.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque reduction', highlight: 'good' }, { label: 'Ingredients', value: 'Plant-based — no artificial additives', highlight: 'good' }, { label: 'Chew time', value: 'Longer than Greenies', highlight: 'good' }, { label: 'Best for', value: 'Dogs with protein sensitivities' }]}
               pros={['Plant-based — no animal protein', 'VOHC accepted', 'Longer chew duration', 'No artificial additives']}

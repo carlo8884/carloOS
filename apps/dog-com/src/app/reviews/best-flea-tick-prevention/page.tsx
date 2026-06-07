@@ -8,9 +8,9 @@ const bravecto = buildProductSchema({ name: 'Bravecto Chew for Dogs', descriptio
 const nexgard = buildProductSchema({ name: 'NexGard Chew for Dogs', description: 'Monthly oral flea and tick prevention — afoxolaner isoxazoline class.', url: 'https://nexgard.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, bravecto, nexgard)
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Bravecto', subtitle: '12-week duration · Fewest doses · Broad tick coverage', href: '#bravecto' },
-  { label: 'Best Monthly', emoji: '⭐', name: 'NexGard', subtitle: 'Monthly · Established track record · Widely available', href: '#nexgard' },
-  { label: 'Best Combo', emoji: '🛡️', name: 'Simparica Trio', subtitle: 'Fleas, ticks, heartworm, intestinal parasites', href: '#simparica' },
+  { label: 'Best Overall', name: 'Bravecto', subtitle: '12-week duration · Fewest doses · Broad tick coverage', href: '#bravecto' },
+  { label: 'Best Monthly', name: 'NexGard', subtitle: 'Monthly · Established track record · Widely available', href: '#nexgard' },
+  { label: 'Best Combo', name: 'Simparica Trio', subtitle: 'Fleas, ticks, heartworm, intestinal parasites', href: '#simparica' },
 ]
 export default function FleaTickPreventionPage() {
   return (
@@ -35,7 +35,7 @@ export default function FleaTickPreventionPage() {
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fact-sheet-isoxazoline-class-products" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> has issued a warning that isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) may cause neurological adverse events including muscle tremors, ataxia, and seizures in some dogs. This is rare — but dogs with a history of seizures or neurological conditions should use these products only under close veterinary supervision. Discuss with your vet before starting any isoxazoline product.</p>
             </div>
             <ScoreMethodology />
-            <ReviewCard id="bravecto" badge="Best Overall" badgeEmoji="🏆" name="Bravecto Chew (Fluralaner)" subtitle="12-week duration · Covers 7 tick species · Single dose convenience" score={9.3} winner
+            <ReviewCard id="bravecto" badge="Best Overall" name="Bravecto Chew (Fluralaner)" subtitle="12-week duration · Covers 7 tick species · Single dose convenience" score={9.3} winner
               description={<p>Bravecto's 12-week duration is its defining advantage — 4 doses per year versus 12 for monthly products. Fewer doses means fewer opportunities for compliance lapses (the most common reason prevention fails). A single chew provides 3 months of protection against fleas and 7 tick species including Deer tick (Lyme disease vector), American dog tick, Brown dog tick, Black-legged tick, Gulf Coast tick, Lone Star tick, and Serrano tick. Blood levels remain therapeutic throughout the 12-week window — unlike some monthly products that have efficacy gaps in the final week. Prescription required.</p>}
               specs={[{ label: 'Duration', value: '12 weeks per dose', highlight: 'good' }, { label: 'Tick species', value: '7 — broadest coverage', highlight: 'good' }, { label: 'Class', value: 'Isoxazoline (fluralaner)' }, { label: 'Requires Rx', value: 'Yes' }]}
               pros={['12-week duration — fewest doses', 'Broadest tick species coverage', 'Consistent efficacy throughout window', 'Beef-flavored — most dogs take readily']}
@@ -45,7 +45,7 @@ export default function FleaTickPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
-            <ReviewCard id="nexgard" badge="Best Monthly" badgeEmoji="⭐" name="NexGard Chew (Afoxolaner)" subtitle="Monthly · 5 tick species · Widely used oral prevention" score={9.2}
+            <ReviewCard id="nexgard" badge="Best Monthly" name="NexGard Chew (Afoxolaner)" subtitle="Monthly · 5 tick species · Widely used oral prevention" score={9.2}
               description={<p>NexGard is a widely used oral flea and tick prevention and has the longest post-market safety record of the isoxazoline class — first approved in 2013. Monthly dosing maintains high compliance when dogs are on a consistent schedule. Covers 5 tick species including Deer tick, American dog tick, Brown dog tick, Gulf Coast tick, and Lone Star tick. Kills fleas before they lay eggs — important for breaking the flea lifecycle in the environment. Beef-flavored chew most dogs eat readily. Prescription required; your veterinarian likely has it in stock.</p>}
               specs={[{ label: 'Duration', value: 'Monthly' }, { label: 'Tick species', value: '5' }, { label: 'Class', value: 'Isoxazoline (afoxolaner)' }, { label: 'Track record', value: 'Longest of isoxazoline class', highlight: 'good' }]}
               pros={['Longest safety track record in class', 'Widely available', 'Kills fleas before egg laying', 'Monthly predictability']}

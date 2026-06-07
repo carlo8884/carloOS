@@ -24,10 +24,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Evidence', emoji: '🏆', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin' },
-  { label: 'Best Fish Oil', emoji: '🐟', name: 'Nordic Naturals Omega-3', subtitle: 'Marine EPA/DHA · Anti-inflammatory', href: '#fish-oil' },
-  { label: 'Best Budget', emoji: '💰', name: 'Cosequin DS', subtitle: 'Widely available · NASC certified', href: '#cosequin' },
-  { label: 'Emerging', emoji: '◎', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },
+  { label: 'Best Evidence', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin' },
+  { label: 'Best Fish Oil', name: 'Nordic Naturals Omega-3', subtitle: 'Marine EPA/DHA · Anti-inflammatory', href: '#fish-oil' },
+  { label: 'Best Budget', name: 'Cosequin DS', subtitle: 'Widely available · NASC certified', href: '#cosequin' },
+  { label: 'Emerging', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://nutramax.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
@@ -73,7 +73,6 @@ export default function BestJointSupplementsPage() {
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
-              badgeEmoji="🏆"
               name="Nutramax Dasuquin with MSM"
               subtitle="Avocado/Soybean Unsaponifiables (ASU) + Glucosamine + Chondroitin + MSM"
               score={9.2}
@@ -101,7 +100,6 @@ export default function BestJointSupplementsPage() {
             <ReviewCard
               id="fish-oil"
               badge="Best Anti-Inflammatory"
-              badgeEmoji="🐟"
               name="Nordic Naturals Omega-3 Pet"
               subtitle="Marine EPA + DHA · Anti-inflammatory · Skin, coat, cognitive benefit"
               score={9.3}
@@ -126,7 +124,6 @@ export default function BestJointSupplementsPage() {
             <ReviewCard
               id="cosequin"
               badge="Best Budget Glucosamine"
-              badgeEmoji="💰"
               name="Cosequin DS Maximum Strength"
               subtitle="Glucosamine + Chondroitin · NASC certified · Widely available"
               score={8.8}
@@ -150,7 +147,6 @@ export default function BestJointSupplementsPage() {
             <ReviewCard
               id="cbd"
               badge="Emerging Evidence"
-              badgeEmoji="◎"
               name="CBD for Dogs (Vetri-CBD, ElleVet)"
               subtitle="2018 Cornell study · Pain reduction in arthritic dogs · Use vet-formulated brands"
               score={8.4}

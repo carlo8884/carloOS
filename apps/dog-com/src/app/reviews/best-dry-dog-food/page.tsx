@@ -23,10 +23,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
-  { label: 'Best Value', emoji: '💰', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
-  { label: 'Prescription/Medical', emoji: '🩺', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
-  { label: 'Premium Natural', emoji: '🌿', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
+  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
+  { label: 'Best Value', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
+  { label: 'Prescription/Medical', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
+  { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Purina Pro Plan Adult Large Breed', description: 'WSAVA-compliant dry dog food with chicken as primary protein and 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
@@ -42,7 +42,7 @@ export default function BestDogFoodPage() {
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          🏆 Buyer's Guide
+          Buyer's Guide
         </span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
@@ -91,7 +91,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
-              badgeEmoji="🏆"
               name="Royal Canin"
               subtitle="WSAVA-compliant · Extensive research investment · Breed and life stage formulas"
               score={9.5}
@@ -134,7 +133,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="purina"
               badge="Best Value"
-              badgeEmoji="💰"
               name="Purina Pro Plan"
               subtitle="Science-backed · 400+ veterinary studies · Widely available"
               score={9.3}
@@ -172,7 +170,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="hills"
               badge="Best for Medical Conditions"
-              badgeEmoji="🩺"
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
               score={9.0}
@@ -207,7 +204,6 @@ export default function BestDogFoodPage() {
             <ReviewCard
               id="orijen"
               badge="Best Premium Natural"
-              badgeEmoji="🌿"
               name="Orijen"
               subtitle="High protein · Regional ingredients · Biologically appropriate"
               score={8.4}

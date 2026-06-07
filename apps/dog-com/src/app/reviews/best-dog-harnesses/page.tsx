@@ -10,10 +10,10 @@ const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness'
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
 
 const PICKS = [
-  { label: 'Best No-Pull', emoji: '🏆', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk' },
-  { label: 'Best Outdoor', emoji: '🥾', name: 'Ruffwear Front Range', subtitle: 'Two-clip · Padded · Hiking-rated', href: '#ruffwear' },
-  { label: 'Best Escape-Proof', emoji: '🔒', name: 'Julius-K9 IDC Powerharness', subtitle: 'Heavy-duty · Escape-resistant · Velcro patches', href: '#julius' },
-  { label: 'Best for Puppies', emoji: '🐾', name: 'PetSafe Sure-Fit', subtitle: 'Adjustable · Grows with puppy', href: '#puppy' },
+  { label: 'Best No-Pull', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk' },
+  { label: 'Best Outdoor', name: 'Ruffwear Front Range', subtitle: 'Two-clip · Padded · Hiking-rated', href: '#ruffwear' },
+  { label: 'Best Escape-Proof', name: 'Julius-K9 IDC Powerharness', subtitle: 'Heavy-duty · Escape-resistant · Velcro patches', href: '#julius' },
+  { label: 'Best for Puppies', name: 'PetSafe Sure-Fit', subtitle: 'Adjustable · Grows with puppy', href: '#puppy' },
 ]
 
 export default function BestDogHarnessesPage() {
@@ -40,7 +40,7 @@ export default function BestDogHarnessesPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="easy-walk" badge="Best No-Pull" badgeEmoji="🏆" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" score={9.3} winner
+            <ReviewCard id="easy-walk" badge="Best No-Pull" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" score={9.3} winner
               description={<p>The Easy Walk is a widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: 'Under $30', highlight: 'good' }]}
               pros={['Immediate pulling reduction', 'Affordable', 'Widely available', 'Trainer and behaviorist recommended', 'No pain mechanism']}
@@ -51,7 +51,7 @@ export default function BestDogHarnessesPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="petsafe+easy+walk+harness"
             />
-            <ReviewCard id="ruffwear" badge="Best Outdoor" badgeEmoji="🥾" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated" score={9.2}
+            <ReviewCard id="ruffwear" badge="Best Outdoor" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated" score={9.2}
               description={<p>Ruffwear builds outdoor gear for dogs and the Front Range is their flagship harness — padded chest piece, aluminum V-ring at the back for normal walking, and a leash attachment loop at the front for pulling management. The padding is meaningful for long hiking days. Reflective trim for low-light visibility. Two leash attachment points allow switching between pulling management (front) and general walking (back). Built to last — Ruffwear gear is well-constructed with quality hardware. More expensive than the PetSafe Easy Walk but significantly more durable for active outdoor use.</p>}
               specs={[{ label: 'Clips', value: 'Front + back (two-clip)', highlight: 'good' }, { label: 'Padding', value: 'Padded chest and belly', highlight: 'good' }, { label: 'Durability', value: 'Outdoor/hiking rated', highlight: 'good' }, { label: 'Reflective', value: 'Yes' }]}
               pros={['Two-clip versatility', 'Padded for long wear', 'Excellent build quality', 'Reflective trim', 'Best outdoor harness tested']}
@@ -62,7 +62,7 @@ export default function BestDogHarnessesPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="ruffwear+front+range+harness"
             />
-            <ReviewCard id="julius" badge="Best Escape-Proof" badgeEmoji="🔒" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches" score={9.0}
+            <ReviewCard id="julius" badge="Best Escape-Proof" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches" score={9.0}
               description={<p>For dogs that back out of or destroy harnesses — the Julius-K9 IDC Powerharness is the industry standard for escape prevention and durability. Used by working dogs internationally. The chest and back straps are wide and padded, multiple adjustment points allow precise fit, and the hardware is rated for the forces a large dog can generate. The Velcro side patches accept custom ID patches. Not a no-pull harness (back clip only) — its value is durability and escape resistance, not pulling management. For escape-prone dogs used alongside leash training.</p>}
               specs={[{ label: 'Escape resistance', value: 'Highest tested', highlight: 'good' }, { label: 'Construction', value: 'Heavy-duty, working-dog rated', highlight: 'good' }, { label: 'ID patches', value: 'Velcro — customizable' }, { label: 'Clip position', value: 'Back-clip only' }]}
               pros={['Best escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}

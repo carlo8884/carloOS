@@ -11,8 +11,8 @@ import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Dog Breed Guide — 200+ Breeds Profiled',
-  description: 'Complete breed profiles for 200+ dog breeds. Temperament scores, health conditions, exercise needs, grooming requirements.',
+  title: 'Dog Breed Guide — 50+ Breeds Profiled',
+  description: 'Breed profiles for 50+ dog breeds. Temperament, health conditions, exercise needs, grooming requirements.',
   path: '/breeds',
 })
 
@@ -81,10 +81,6 @@ const BREED_MANIFEST_KEYS: Record<string, string> = {
   'beagle': 'dog-com:breed-beagle',
   'poodle': 'dog-com:breed-poodle',
 }
-
-// Size filters for UI
-const SIZE_FILTERS = ['All', 'Small', 'Medium', 'Large', 'Giant']
-const GROUP_FILTERS = ['All Groups', 'Sporting', 'Hound', 'Working', 'Terrier', 'Toy', 'Non-Sporting', 'Herding']
 
 export default async function BreedsPage() {
   let breeds: Array<{
@@ -165,7 +161,7 @@ export default async function BreedsPage() {
             className="text-lg font-light text-white/85 max-w-xl leading-relaxed"
             style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
           >
-            Research-based profiles for 200+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
+            Research-based profiles for 50+ breeds — temperament, health conditions, exercise needs, and everything you need before choosing a dog.
           </p>
         </div>
       </section>
@@ -249,8 +245,8 @@ export default async function BreedsPage() {
                 <path d="M32 33c-7.2 0-13 5-13 11.5 0 4.6 3.7 7.5 8.4 7.5 2.4 0 3.4-1 4.6-1s2.2 1 4.6 1c4.7 0 8.4-2.9 8.4-7.5C45 38 39.2 33 32 33z" />
               </svg>
             </span>
-            <div className="text-sm font-display font-bold text-brand-dark mb-1">200+ breeds</div>
-            <div className="text-xs text-brand-text-mid mb-2">More profiles added weekly</div>
+            <div className="text-sm font-display font-bold text-brand-dark mb-1">50+ breeds</div>
+            <div className="text-xs text-brand-text-mid mb-2">Growing profile library</div>
             <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-primary group-hover:gap-2 transition-all">
               Browse all
               <IconArrowRight className="w-3.5 h-3.5" />

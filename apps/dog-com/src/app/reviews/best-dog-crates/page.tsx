@@ -23,10 +23,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Wire', emoji: '🏆', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest' },
-  { label: 'Best Heavy Duty', emoji: '🔒', name: 'Impact Dog Crate', subtitle: 'Escape-proof aluminum · Lifetime warranty', href: '#impact' },
-  { label: 'Best Airline', emoji: '✈️', name: 'Petmate Sky Kennel', subtitle: 'IATA compliant · Vet recommended', href: '#petmate' },
-  { label: 'Best Furniture', emoji: '🪑', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
+  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest' },
+  { label: 'Best Heavy Duty', name: 'Impact Dog Crate', subtitle: 'Escape-proof aluminum · Lifetime warranty', href: '#impact' },
+  { label: 'Best Airline', name: 'Petmate Sky Kennel', subtitle: 'IATA compliant · Vet recommended', href: '#petmate' },
+  { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://midwesthomes4pets.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
@@ -39,7 +39,7 @@ export default function BestDogCratesPage() {
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Crates 2026', url: 'https://dog.com/reviews/best-dog-crates' } ] }))} />
 
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Editor Pick · Updated 2026</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editor Pick · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
@@ -74,7 +74,6 @@ export default function BestDogCratesPage() {
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
-              badgeEmoji="🏆"
               name="MidWest Homes iCrate"
               subtitle="Divider panel included · Fold-flat · Double door · Best value wire"
               score={9.3}
@@ -103,7 +102,6 @@ export default function BestDogCratesPage() {
             <ReviewCard
               id="impact"
               badge="Best Heavy Duty — Escape Artists"
-              badgeEmoji="🔒"
               name="Impact High Anxiety Dog Crate"
               subtitle="Aircraft-grade aluminum · Escape-proof · Lifetime warranty"
               score={9.4}
@@ -129,7 +127,6 @@ export default function BestDogCratesPage() {
             <ReviewCard
               id="petmate"
               badge="Best Airline Crate"
-              badgeEmoji="✈️"
               name="Petmate Sky Kennel"
               subtitle="IATA compliant · Live Animal ventilation · Most airlines accept"
               score={9.0}
@@ -156,7 +153,6 @@ export default function BestDogCratesPage() {
             <ReviewCard
               id="frisco"
               badge="Best Furniture Style"
-              badgeEmoji="🪑"
               name="Frisco Furniture Style Dog Crate"
               subtitle="Doubles as end table · Wooden exterior · Calm dogs only"
               score={8.3}
