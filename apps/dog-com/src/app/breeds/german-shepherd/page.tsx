@@ -61,8 +61,9 @@ export default function GermanShepherdBreedPage() {
             <p>GSDs require 1–2+ hours of vigorous exercise daily with mental stimulation. Excellent at obedience, agility, Schutzhund, herding, and tracking. Without adequate physical and mental outlets, GSDs develop anxiety, destructive behavior, and excessive vocalization. Begin training and socialization from day one.</p>
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
+            <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Rottweiler', href: '/breeds/rottweiler' }, { label: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]} />
             <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <RelatedLinks title="Breed Comparisons" links={[
               { label: 'German Shepherd vs Belgian Malinois', href: '/compare/german-shepherd-vs-belgian-malinois' },
               { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },

@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2025', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://outwardhound.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, outwardSchema)
 
@@ -21,7 +21,7 @@ export default function BestSlowFeederBowlsPage() {
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Slow Feeder Bowls for Dogs 2025', url: 'https://dog.com/reviews/best-slow-feeder-bowls' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
-        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2025</h1>
+        <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A $15 bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -83,7 +83,7 @@ export default function BestSlowFeederBowlsPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat Guide', href: '/health/dog-bloat-gvd' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'GDV / Bloat Guide', href: '/health/dog-bloat-gvd' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]} />
             <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-slow-feeders" />
           </aside>
         </div>

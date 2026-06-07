@@ -130,6 +130,7 @@ export default function DogObesityPage() {
                 { label: 'Weight Management Diets', href: '/nutrition/weight-management' },
                 { label: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
                 { label: 'Dog Arthritis', href: '/health/dog-arthritis' },
+                { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               ]}
             />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

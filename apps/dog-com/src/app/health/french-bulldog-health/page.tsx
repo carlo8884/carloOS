@@ -72,7 +72,7 @@ export default function FrenchBulldogHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
-  title: 'Best Dog Crates 2025 — Wire, Plastic | Dog.com',
+  title: 'Best Dog Crates 2026 — Wire, Plastic | Dog.com',
   description: 'Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly.',
   path: '/reviews/best-dog-crates',
   type: 'article',
@@ -13,13 +13,13 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Dog Crates 2025',
+  title: 'Best Dog Crates 2026',
   description: 'Dog crates tested for durability, escape resistance, and ease of use.',
   url: 'https://dog.com/reviews/best-dog-crates',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const PICKS = [
@@ -36,13 +36,13 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 export default function BestDogCratesPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Crates 2025', url: 'https://dog.com/reviews/best-dog-crates' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dog Crates 2026', url: 'https://dog.com/reviews/best-dog-crates' } ] }))} />
 
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Editor Pick · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🏆 Editor Pick · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Dog Crates 2025 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
+          Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
@@ -197,7 +197,8 @@ export default function BestDogCratesPage() {
               ))}
             </div>
             <RelatedLinks title="Related" links={[
-              { label: 'Best Dog Beds 2025', href: '/reviews/best-dog-beds' },
+              { label: 'All Dog Reviews', href: '/reviews' },
+              { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' },
               { label: 'Crate Training Guide', href: '/training' },
               { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
             ]} />
