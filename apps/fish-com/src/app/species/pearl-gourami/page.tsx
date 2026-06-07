@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Pearl Gourami Ca
 export default function PearlGouramiPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Pearl Gourami Care Guide', subtitle: "Trichopodus leerii — the pearl gourami is widely regarded as the most beautiful and peaceful of the commonly available gouramis. A lattice of pearlescent spots over a soft brown body, a dark lateral line, and threadlike pelvic fins make it an ideal centerpiece for a calm community aquarium. Breeding males develop a striking orange-red breast.", category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'June 2026', readTime: '8 min' }}
+      hero={{ title: 'Pearl Gourami Care Guide', subtitle: "Trichopodus leerii — the pearl gourami is widely regarded as the most beautiful and peaceful of the commonly available gouramis. A lattice of pearlescent spots over a soft brown body, a dark lateral line, and threadlike pelvic fins make it an ideal centerpiece for a calm community aquarium. Breeding males develop a striking orange-red breast.", category: 'Species Guide', authorName: 'Fish.com Editorial' publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Pearl Gourami', href: '/species/pearl-gourami' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Dwarf Gourami", href: "/species/dwarf-gourami", category: "Species Guide" }, { title: "Sparkling Gourami", href: "/species/sparkling-gourami", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}

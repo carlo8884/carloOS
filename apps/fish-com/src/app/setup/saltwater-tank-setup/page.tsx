@@ -47,7 +47,7 @@ export default function SaltwaterTankSetupPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="fish-com"
-        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '12 min' }}
+        hero={{ title: 'Saltwater Aquarium Setup Guide', subtitle: 'Saltwater aquariums are more demanding than freshwater — but the fish and reef inhabitants are some of the most spectacular animals in the hobby. Clownfish, tangs, wrasses, and reef corals are attainable with proper setup. Start with FOWLR and graduate to reef once you understand saltwater chemistry.', category: 'Tank Setup', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '12 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Tank Setup', href: '/setup' }, { name: 'Saltwater Setup', href: '/setup/saltwater-tank-setup' }]}
         relatedLinks={[{ title: 'Tank Setup Hub', href: '/setup', category: 'Tank Setup' }, { title: 'Clownfish', href: '/species/clownfish', category: 'Species Guide' }, { title: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide', category: 'Tank Setup' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }]}
         sidebar={<>

@@ -98,7 +98,6 @@ export default function HeaterWattageCalculatorPage() {
         subtitle: 'Size your aquarium heater correctly based on tank volume, room temperature, and target temperature. With redundancy guidance for large tanks.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '🔥',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}

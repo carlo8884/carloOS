@@ -112,7 +112,6 @@ export default function SwordtailPage() {
             'Xiphophorus hellerii — named for the elongated lower caudal lobe that forms the male’s "sword." Hard-water livebearers from Mexico and Central America, intensely studied as a model for sex determination, and one of the easiest aquarium species to breed accidentally to the point of overpopulation.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}

@@ -97,7 +97,6 @@ export default function VolumeCalculatorPage() {
         subtitle: 'Convert tank dimensions to US gallons, UK gallons, and liters. Supports rectangular, bow-front, cube, hexagonal, and cylinder tanks with realistic water-fill adjustment.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '📏',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}

@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Care Guid
 export default function DiscusPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Discus Fish Care Guide', subtitle: 'Symphysodon — the "king of the aquarium." Discus are breathtakingly beautiful, highly intelligent, and the most demanding freshwater fish commonly kept. Their water requirements are strict, their sensitivity to pathogens is high, and their cost is significant. Experienced aquarists only.', category: 'Species Guide — Advanced', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '11 min' }}
+      hero={{ title: 'Discus Fish Care Guide', subtitle: 'Symphysodon — the "king of the aquarium." Discus are breathtakingly beautiful, highly intelligent, and the most demanding freshwater fish commonly kept. Their water requirements are strict, their sensitivity to pathogens is high, and their cost is significant. Experienced aquarists only.', category: 'Species Guide — Advanced', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '11 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Discus', href: '/species/discus' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }, { title: "Best Aquarium Filters", href: "/reviews/best-aquarium-filters", category: "Reviews" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}

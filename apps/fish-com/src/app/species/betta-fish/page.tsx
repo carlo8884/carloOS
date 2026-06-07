@@ -113,7 +113,6 @@ export default function BettaFishPage() {
             'Betta splendens — the Siamese fighting fish is one of the most commonly purchased aquarium fish and one of the most commonly mistreated. The bowls, vases, and tiny containers sold for bettas do not constitute adequate housing. A heated, filtered tank of at least 5 gallons is the welfare minimum.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐠',
           publishedAt: 'May 2025',
           readTime: '14 min',
         }}

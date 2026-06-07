@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Columnaris in Fi
 export default function ColumnarisguidePage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Columnaris in Fish', subtitle: 'Flavobacterium columnare infection — commonly called columnaris, cotton mouth disease, saddleback disease, or mouth rot — is one of the most common bacterial diseases in freshwater fish. It is frequently misidentified as fungal infection because of its white, fluffy appearance. This misidentification leads to incorrect treatment and fish death.', category: 'Fish Health', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Columnaris', href: '/health/columnaris' }]}
       schema={schema}
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Bacterial Infections", href: "/health/bacterial-infections", category: "Fish Health" }, { title: "Fin Rot", href: "/health/fin-rot", category: "Fish Health" }, { title: "Fish Disease Guide", href: "/health/fish-disease-guide", category: "Fish Health" }]}

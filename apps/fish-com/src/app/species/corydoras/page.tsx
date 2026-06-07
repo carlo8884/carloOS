@@ -116,7 +116,6 @@ export default function CorydorasPage() {
             'Corydoras spp. — corydoras are the most widely kept bottom-dwelling fish in the freshwater hobby. Peaceful, active, fascinating to watch, and available across more than 170 described species ranging from the pygmy cory at 1 inch to the emerald catfish at 3.5 inches. One rule applies to all of them: groups of six or more of the same species, on smooth sand, in a peaceful community.',
           category: 'Species Guide',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '13 min',
         }}

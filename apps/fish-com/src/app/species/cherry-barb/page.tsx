@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Barb Care
 export default function CherryBarbPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Cherry Barb Care Guide', subtitle: 'Puntius titteya — the one barb that belongs in a peaceful community tank. Unlike tiger barbs or rosy barbs, cherry barbs are gentle, non-fin-nipping, and compatible with small peaceful species. Males in breeding condition are a striking deep red. Often underestimated in the fish store, extraordinary in the right setup.', category: 'Species Guide', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Barb', href: '/species/cherry-barb' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Harlequin Rasbora", href: "/species/harlequin-rasbora", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}

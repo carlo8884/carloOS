@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Harlequin Rasbor
 export default function HarlequinPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Harlequin Rasbora', subtitle: 'Trigonostigma heteromorpha — the harlequin rasbora is the gold standard for community tank schooling fish. Peaceful, hardy, adaptable, and visually striking when kept in groups of 15+: the copper-orange body with the distinctive black triangular patch catches light from every angle as the school moves together.', category: 'Species Guide', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Harlequin Rasbora', subtitle: 'Trigonostigma heteromorpha — the harlequin rasbora is the gold standard for community tank schooling fish. Peaceful, hardy, adaptable, and visually striking when kept in groups of 15+: the copper-orange body with the distinctive black triangular patch catches light from every angle as the school moves together.', category: 'Species Guide', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Harlequin Rasbora', href: '/species/harlequin-rasbora' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Cherry Barb", href: "/species/cherry-barb", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}

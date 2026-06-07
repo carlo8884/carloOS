@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Cherry Shrimp Ca
 export default function CherryShrimpPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'Cherry Shrimp Care Guide', subtitle: 'Neocaridina davidi — the cherry shrimp is the gateway invertebrate for most aquarists. Hardy, colorful, endlessly interesting to watch, and prolific breeders that establish self-sustaining colonies in established tanks. They clean glass, graze on biofilm, and add movement and color to any community setup.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Cherry Shrimp Care Guide', subtitle: 'Neocaridina davidi — the cherry shrimp is the gateway invertebrate for most aquarists. Hardy, colorful, endlessly interesting to watch, and prolific breeders that establish self-sustaining colonies in established tanks. They clean glass, graze on biofilm, and add movement and color to any community setup.', category: 'Species Guide — Invertebrate', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Amano Shrimp", href: "/species/amano-shrimp", category: "Species Guide" }, { title: "Mystery Snail", href: "/species/mystery-snail", category: "Species Guide" }, { title: "Low-Tech Planted Tank", href: "/setup/low-tech-planted-tank", category: "Tank Setup" }]}

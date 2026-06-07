@@ -98,7 +98,6 @@ export default function WaterChangeCalculatorPage() {
         subtitle: 'Find the exact % water change needed to bring nitrate, TDS, GH, or salinity down to a safe target. Includes multi-change planning for large reductions.',
         category: 'Calculators',
         categoryHref: '/tools',
-        authorAvatar: '💧',
         publishedAt: 'May 2026',
         readTime: '3 min',
       }}

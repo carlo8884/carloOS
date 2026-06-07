@@ -153,7 +153,6 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         subtitle: category.whatItIs,
         category: 'Equipment Buyer Guide',
         authorName: 'Fish.com Editorial',
-        authorAvatar: '🐠',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}

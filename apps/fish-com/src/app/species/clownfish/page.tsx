@@ -17,7 +17,7 @@ export default function ClownfishPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
-      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Clownfish Care Guide', subtitle: 'Clownfish are one of the best beginner saltwater fish — hardy, colorful, and adaptable. They do not require anemones, they tolerate imperfect parameters better than most marines, and they breed readily in captivity.', category: 'Species Guide — Saltwater', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Clownfish', href: '/species/clownfish' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Saltwater Tank Setup", href: "/setup/saltwater-tank-setup", category: "Tank Setup" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }, { title: "Best Aquarium Filters", href: "/reviews/best-aquarium-filters", category: "Reviews" }]}

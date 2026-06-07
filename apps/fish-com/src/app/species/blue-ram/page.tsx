@@ -14,7 +14,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram 
 export default function BlueRamPage() {
   return (
     <ArticleLayout siteId="fish-com"
-      hero={{ title: 'German Blue Ram Care Guide', subtitle: 'Mikrogeophagus ramirezi — one of the most spectacularly colored dwarf cichlids available. Electric blue body, brilliant yellow head, red eye, and flowing fins make blue rams stunning in a planted tank. They also require specific water conditions that most beginners cannot provide — and they die quickly when those conditions are wrong.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial', authorAvatar: '🐠', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'German Blue Ram Care Guide', subtitle: 'Mikrogeophagus ramirezi — one of the most spectacularly colored dwarf cichlids available. Electric blue body, brilliant yellow head, red eye, and flowing fins make blue rams stunning in a planted tank. They also require specific water conditions that most beginners cannot provide — and they die quickly when those conditions are wrong.', category: 'Species Guide — Intermediate', authorName: 'Fish.com Editorial' publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'German Blue Ram', href: '/species/blue-ram' }]}
       schema={schema}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Discus", href: "/species/discus", category: "Species Guide" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}

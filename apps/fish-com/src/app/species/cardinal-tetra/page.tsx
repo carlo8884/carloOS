@@ -116,7 +116,6 @@ export default function CardinalTetraPage() {
             'Paracheirodon axelrodi — the full-body red-and-blue cardinal tetra is widely considered the most visually striking schooling fish in the freshwater hobby. Unlike its smaller cousin the neon tetra, the cardinal carries red coloration the entire length of the body. It demands softer, warmer, more acidic water than the neon — and rewards correct conditions with a school display nothing else at its size matches.',
           category: 'Species Guide — Intermediate',
           authorName: 'Fish.com Editorial',
-          authorAvatar: '🐟',
           publishedAt: 'May 2025',
           readTime: '12 min',
         }}
