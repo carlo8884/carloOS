@@ -5,7 +5,7 @@ import { buildArticleSchema, buildProductSchema, buildBreadcrumbSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Best Aquarium Filters 2025 — HOB, Canister | Fish.com',
+  title: 'Best Aquarium Filters 2026 — HOB, Canister | Fish.com',
   description: 'Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options.',
   path: '/reviews/best-aquarium-filters',
   type: 'article',
@@ -13,13 +13,13 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Best Aquarium Filters 2025',
+  title: 'Best Aquarium Filters 2026',
   description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const PICKS = [
@@ -36,12 +36,12 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 export default function BestAquariumFiltersPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Filters 2025', url: 'https://fish.com/reviews/best-aquarium-filters' }] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://fish.com/' }, { name: 'Reviews', url: 'https://fish.com/reviews' }, { name: 'Best Aquarium Filters 2026', url: 'https://fish.com/reviews/best-aquarium-filters' }] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editor Pick · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Editor Pick · June 2026</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
-          Best Aquarium Filters 2025 — HOB, Canister & Sponge Ranked
+          Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
