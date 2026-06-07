@@ -93,7 +93,9 @@ export default function WholePreyVsKibblePage() {
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">

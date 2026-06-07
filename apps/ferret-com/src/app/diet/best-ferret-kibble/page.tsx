@@ -91,7 +91,9 @@ export default function BestFerretKibblePage() {
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
+          { title: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">

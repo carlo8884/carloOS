@@ -118,6 +118,7 @@ export default function FerretDietBasicsPage() {
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
           { title: 'Toxic Foods', href: '/care/toxic-foods' },
+          { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
 >
         <div className="carloOS-article">
