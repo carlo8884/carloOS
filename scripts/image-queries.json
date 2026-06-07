@@ -920,7 +920,7 @@
     "orientation": "landscape"
   },
   "ferret-com:tools-hero": {
-    "query": "ferret food bowl",
+    "query": "ferret playing",
     "provider": "either",
     "alt": "A ferret food bowl -- ferret tools hub hero",
     "orientation": "landscape"
@@ -950,7 +950,7 @@
     "orientation": "landscape"
   },
   "horses-com:supplement-joint": {
-    "query": "show jumping horse mid-flight fence",
+    "query": "horse jumping",
     "provider": "either",
     "alt": "A show jumper mid-flight over a fence — the explosive-impact sport horse joint supplements are designed for",
     "orientation": "landscape"
@@ -1142,43 +1142,43 @@
     "orientation": "landscape"
   },
   "ferret-com:health-gi-blockage": {
-    "query": "domestic ferret curious exploring",
+    "query": "domestic ferret",
     "provider": "either",
     "alt": "A curious ferret exploring its environment — GI blockage prevention begins with ferret-proofing",
     "orientation": "landscape"
   },
   "ferret-com:health-vaccinations": {
-    "query": "domestic ferret portrait calm resting",
+    "query": "ferret resting",
     "provider": "either",
     "alt": "A calm domestic ferret — ferret vaccination schedule reference",
     "orientation": "landscape"
   },
   "ferret-com:health-emergency": {
-    "query": "ferret alert watching",
+    "query": "ferret closeup",
     "provider": "either",
     "alt": "An alert ferret — learn to recognise emergency warning signs before they happen",
     "orientation": "landscape"
   },
   "ferret-com:behavior-training": {
-    "query": "ferret handled gently person hands",
+    "query": "ferret pet",
     "provider": "either",
     "alt": "A ferret being handled gently — ferret training and bonding guide",
     "orientation": "landscape"
   },
   "ferret-com:behavior-biting": {
-    "query": "ferret face close portrait whiskers",
+    "query": "ferret face",
     "provider": "either",
     "alt": "A close ferret portrait showing whiskers — ferret biting and nipping behaviour guide",
     "orientation": "landscape"
   },
   "ferret-com:diet-raw-vs-kibble": {
-    "query": "raw meat protein cuts dry kibble",
+    "query": "ferret eating",
     "provider": "either",
     "alt": "Raw meat protein beside dry kibble — the ferret whole-prey versus kibble feeding decision",
     "orientation": "landscape"
   },
   "ferret-com:care-exercise": {
-    "query": "ferret playing tunnel enrichment active",
+    "query": "ferret running",
     "provider": "either",
     "alt": "A ferret actively playing — ferret exercise and enrichment guide",
     "orientation": "landscape"
