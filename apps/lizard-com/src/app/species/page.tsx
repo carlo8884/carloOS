@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -168,6 +168,8 @@ export default function SpeciesIndexPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      <CrossPortfolioCard currentSite="lizard-com" contentType="species" variant="footer" />
 </>
   )
 }
