@@ -414,6 +414,12 @@ export default function GlossaryHubPage() {
             "organic" claim on pet food.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )

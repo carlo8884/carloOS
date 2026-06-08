@@ -358,6 +358,12 @@ export default function LifeStageHubPage() {
             from retail life-stage formulas.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )
