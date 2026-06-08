@@ -149,6 +149,24 @@ export default function FeedingHubPage() {
         </ul>
       </div>
 
+      <div className="px-container-sm sm:px-container pb-4 max-w-content-wide">
+        <p className="text-sm text-brand-text-mid leading-relaxed">
+          Putting a guide into practice? Use the{' '}
+          <Link href="/tools/food-transition-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+            Food Transition Schedule Generator
+          </Link>{' '}
+          to build a day-by-day plan for switching foods, the{' '}
+          <Link href="/tools/portion-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+            portion calculator
+          </Link>{' '}
+          for daily calories, and the{' '}
+          <Link href="/tools/food-cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+            food cost calculator
+          </Link>{' '}
+          for the real per-day cost.
+        </p>
+      </div>
+
       <section
         className="px-container-sm sm:px-container py-12"
         style={{ background: 'var(--brand-primary-pale)' }}

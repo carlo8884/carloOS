@@ -29,6 +29,12 @@ const TOOLS = [
     desc: 'Calculate daily caloric needs for dogs and cats using the standard RER/MER equations (WSAVA/AAHA-style). Enter weight and life stage; get kcal/day and optional cups/day from the food label.',
     tag: 'Nutrition',
   },
+  {
+    href: '/tools/food-transition-calculator',
+    title: 'Food Transition Schedule Generator',
+    desc: 'Switching foods? Pick 7, 10, or 14 days (or a slower sensitive-stomach plan) and get a day-by-day old:new mixing ratio, optional gram/cup splits, and GI-upset watch guidance so the change is gentle on the gut.',
+    tag: 'Feeding',
+  },
 ]
 
 const itemListSchema = {
@@ -87,6 +93,9 @@ export default function ToolsHub() {
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The <Link href="/tools/food-cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">Pet Food Cost Calculator</Link> takes three numbers off the bag &mdash; your pet&apos;s cups per day, the bag size, and the price &mdash; and returns cost per day, per month, per year, and per cup. Its side-by-side mode puts two foods next to each other on the same terms, so a comparison that usually relies on guesswork becomes a clean apples-to-apples figure. It is the fastest way to settle whether the food you are eyeing is genuinely more expensive or just packaged to look that way.
+          </p>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
+            Once you have chosen a food, the <Link href="/tools/food-transition-calculator" className="text-brand-primary underline-offset-2 hover:underline">Food Transition Schedule Generator</Link> handles the switch itself. Pick a 7, 10, or 14-day window &mdash; or a slower plan for a sensitive stomach &mdash; and it lays out the day-by-day old:new mixing ratio that lets the gut adapt, optionally splitting your daily amount into the grams or cups of each food, with clear guidance on when to slow down or call a vet.
           </p>
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Cost is one input, not the whole decision</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">

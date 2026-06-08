@@ -517,6 +517,12 @@
     "alt": "A measuring cup beside a bowl of kibble",
     "orientation": "landscape"
   },
+  "petfood-com:tool-food-transition": {
+    "query": "two bowls of dry dog food side by side",
+    "provider": "either",
+    "alt": "Two bowls of dry pet food side by side, illustrating mixing old and new food",
+    "orientation": "landscape"
+  },
   "ferret-com:tool-food-evaluator": {
     "query": "ferret eating bowl",
     "provider": "either",
