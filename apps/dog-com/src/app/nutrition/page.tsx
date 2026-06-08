@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -165,6 +165,7 @@ export default function NutritionHubPage() {
           estimates daily kcal needs using the standard RER formula and WSAVA/AAHA-style life-stage factors.
         </p>
       </section>
+      <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="footer" />
     </>
   </>
   )

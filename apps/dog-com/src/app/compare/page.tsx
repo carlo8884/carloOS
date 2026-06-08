@@ -21,6 +21,7 @@ import {
   combineSchemas,
   SchemaScript,
   StockImage,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../data/breeds'
 import {
@@ -251,6 +252,7 @@ export default function CompareHubPage() {
           Browse all breeds →
         </Link>
       </section>
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
     </>
   )
 }

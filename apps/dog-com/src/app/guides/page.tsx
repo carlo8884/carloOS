@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -117,6 +117,7 @@ export default function GuidesHubPage() {
           source="guides-hub" ctaText="Subscribe Free"
         />
       </div>
+      <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="footer" />
     </>
   </>
   )
