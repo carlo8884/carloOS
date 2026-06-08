@@ -2112,5 +2112,41 @@
     "provider": "either",
     "alt": "A historic American grandstand and racecourse — milestones in American racing reference",
     "orientation": "landscape"
+  },
+  "fish-com:category-setup": {
+    "query": "planted aquarium setup",
+    "provider": "either",
+    "alt": "A planted freshwater aquarium setup — aquarium setup category reference",
+    "orientation": "landscape"
+  },
+  "fish-com:species-goldfish": {
+    "query": "goldfish in aquarium",
+    "provider": "either",
+    "alt": "A goldfish swimming in a freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "fish-com:species-neon-tetra": {
+    "query": "neon tetra fish aquarium",
+    "provider": "either",
+    "alt": "Neon tetras in a planted freshwater aquarium",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-health": {
+    "query": "reptile veterinary care",
+    "provider": "either",
+    "alt": "A reptile during a veterinary health check — reptile health category reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-setup": {
+    "query": "reptile terrarium setup",
+    "provider": "either",
+    "alt": "A naturalistic reptile terrarium setup — enclosure setup category reference",
+    "orientation": "landscape"
+  },
+  "lizard-com:category-species": {
+    "query": "colorful reptile lizard",
+    "provider": "either",
+    "alt": "A colorful reptile in naturalistic light — reptile species category reference",
+    "orientation": "landscape"
   }
 }
