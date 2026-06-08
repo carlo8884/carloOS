@@ -17,17 +17,18 @@ import { NewcomerSpokePage } from '../NewcomerSpokePage'
 import { getNewcomerSpoke } from '@/data/racing-for-newcomers'
 
 const SLUG = 'how-to-read-a-race-card'
-const spoke = getNewcomerSpoke(SLUG)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: `${spoke?.metaTitle ?? 'How to Read a Race Card'} | Horses.com`,
-  description: spoke?.description ?? '',
+  title: 'How to Read a Race Card — A Spectator’s Guide | Horses.com',
+  description:
+    'A plain-language guide to reading a race card as a spectator: what the horse, connections, distance, class, weights, and form figures mean. Non-wagering.',
   path: `/racing/racing-for-newcomers/${SLUG}`,
   type: 'article',
 })
 
 export default function Page() {
-  if (!spoke) notFound()
-  return <NewcomerSpokePage spoke={spoke} />
+  const data = getNewcomerSpoke(SLUG)
+  if (!data) return notFound()
+  return <NewcomerSpokePage spoke={data} />
 }

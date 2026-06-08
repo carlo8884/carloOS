@@ -15,17 +15,18 @@ import { NewcomerSpokePage } from '../NewcomerSpokePage'
 import { getNewcomerSpoke } from '@/data/racing-for-newcomers'
 
 const SLUG = 'understanding-racing-silks'
-const spoke = getNewcomerSpoke(SLUG)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: `${spoke?.metaTitle ?? 'Understanding Racing Silks'} | Horses.com`,
-  description: spoke?.description ?? '',
+  title: 'Understanding Racing Silks — A Spectator’s Guide | Horses.com',
+  description:
+    'What racing silks are, how owners register their colours, and how they help a spectator follow a horse during a race. A non-wagering guide to racing colours.',
   path: `/racing/racing-for-newcomers/${SLUG}`,
   type: 'article',
 })
 
 export default function Page() {
-  if (!spoke) notFound()
-  return <NewcomerSpokePage spoke={spoke} />
+  const data = getNewcomerSpoke(SLUG)
+  if (!data) return notFound()
+  return <NewcomerSpokePage spoke={data} />
 }

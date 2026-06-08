@@ -15,17 +15,18 @@ import { NewcomerSpokePage } from '../NewcomerSpokePage'
 import { getNewcomerSpoke } from '@/data/racing-for-newcomers'
 
 const SLUG = 'a-day-at-the-races'
-const spoke = getNewcomerSpoke(SLUG)
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: `${spoke?.metaTitle ?? 'A Day at the Races'} | Horses.com`,
-  description: spoke?.description ?? '',
+  title: 'A Day at the Races — A Newcomer’s Guide | Horses.com',
+  description:
+    'A newcomer’s guide to attending the races: the paddock, post parade, call to post, watching a race, etiquette, and what to wear. A non-wagering spectator guide.',
   path: `/racing/racing-for-newcomers/${SLUG}`,
   type: 'article',
 })
 
 export default function Page() {
-  if (!spoke) notFound()
-  return <NewcomerSpokePage spoke={spoke} />
+  const data = getNewcomerSpoke(SLUG)
+  if (!data) return notFound()
+  return <NewcomerSpokePage spoke={data} />
 }
