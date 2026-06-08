@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The History of Thoroughbred Racing -- Heritage & Legends | Horses.com',
   description:
-    'A heritage guide to the history of Thoroughbred racing: the breed’s British origins and foundation sires, how the Triple Crown formed, celebrated horses, and the milestones that shaped the sport.',
+    'A heritage guide to the history of Thoroughbred racing: the breed’s origins and foundation sires, how the Triple Crown formed, and the legends of the turf.',
   path: '/racing/history',
 })
 
