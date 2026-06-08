@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -21,6 +21,13 @@ const schema = buildArticleSchema({
   modifiedAt: '2025-05-01T00:00:00Z',
 })
 
+const breadcrumbSchema = buildBreadcrumbSchema([
+  { name: 'Home', url: 'https://lizard.com/' },
+  { name: 'Reviews', url: 'https://lizard.com/reviews' },
+  { name: 'Best Thermometers & Hygrometers', url: 'https://lizard.com/reviews/best-thermometers-hygrometers' },
+])
+const allSchemas = combineSchemas(schema, breadcrumbSchema)
+
 const PICKS = [
   { label: 'Best Overall', name: 'Govee H5053', subtitle: 'WiFi · App alerts · ±0.54°F', href: '#govee' },
   { label: 'Best Budget', name: 'Inkbird IBS-TH2', subtitle: 'Bluetooth · Good accuracy · Low cost', href: '#inkbird' },
@@ -30,7 +37,7 @@ const PICKS = [
 export default function BestThermometersPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={allSchemas} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Published Accuracy Data · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
