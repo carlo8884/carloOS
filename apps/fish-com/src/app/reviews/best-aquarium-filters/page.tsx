@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Best Aquarium Filters 2026',
-  description: 'HOB, canister, and sponge filters tested for biological capacity and reliability.',
+  description: 'HOB, canister, and sponge filters compared on published biological capacity and reliability.',
   url: 'https://fish.com/reviews/best-aquarium-filters',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -157,7 +157,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
                 { label: 'Availability', value: 'Every pet store', highlight: 'good' },
               ]}
-              pros={['Lowest price of HOBs tested', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
+              pros={['Lowest price of the HOBs in this comparison', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
               ctaText="Shop Aqueon QuietFlow →"

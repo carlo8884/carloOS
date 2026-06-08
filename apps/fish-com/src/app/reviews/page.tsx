@@ -32,7 +32,7 @@ const REVIEWS = [
   },
   {
     title: 'Best Aquarium Heaters 2026',
-    desc: 'Eheim Jager, Fluval E-series, and Aqueon Pro tested for temperature accuracy and failure safety.',
+    desc: 'Eheim Jager, Fluval E-series, and Aqueon Pro compared on published temperature accuracy and failure safety.',
     href: '/reviews/best-aquarium-heaters',
     badge: 'Essential',
   },
@@ -44,7 +44,7 @@ const REVIEWS = [
   },
   {
     title: 'Best Water Test Kits 2026',
-    desc: 'API Master Test Kit vs test strips — why liquid tests are the only reliable option, with top picks.',
+    desc: 'API Master Test Kit vs test strips — why liquid reagent tests are generally the more reliable option, with top picks.',
     href: '/reviews/best-water-test-kits',
     badge: 'Water Quality',
   },
