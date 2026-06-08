@@ -156,7 +156,7 @@ const CATEGORIES: {
   {
     icon: 'reviews',
     title: 'Reviews',
-    desc: 'UVB bulbs, thermostats, and terrariums tested on the same dimensions — no paid scores.',
+    desc: 'UVB bulbs, thermostats, and terrariums compared on the same dimensions — no paid scores.',
     href: '/reviews',
   },
   {
