@@ -278,7 +278,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             obvious pain. Yorkies decompensate fast; do not wait for morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             Build a year-one screening plan around bile-acids testing, patellar palpation, cardiac auscultation
             and an ACVO eye exam. A normal puppy screening doesn’t mean lifelong immunity, but it sets a clean

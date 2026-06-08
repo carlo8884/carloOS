@@ -293,7 +293,7 @@ export default function VetsHuskyHealthPage() {
             hypothyroid dog (suspect myxedema coma). Do not wait until morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             The single highest-yield screening test in this breed is an annual eye exam by a board-certified
             veterinary ophthalmologist with submission to the OFA / CAER registry. One visit covers

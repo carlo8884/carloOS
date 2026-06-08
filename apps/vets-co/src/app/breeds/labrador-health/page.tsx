@@ -51,7 +51,7 @@ export default function VetsLabradorHealthPage() {
         <CalloutBox variant="evidence" title="The POMC deletion is genuine — and prevalent">
           A 2016 Cell Metabolism study identified a POMC gene deletion that impairs satiety in Labradors; roughly 23% of pet Labs and a higher proportion of assistance dogs carry the mutation. The implication is that a hungry Lab is often biologically driven, not behaviorally manipulative. Measured meals and no free-feeding are management essentials, not preferences.
         </CalloutBox>
-        <p>My recommendation: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
+        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
 
         <h2>Recommended Screening</h2>
         <ul>

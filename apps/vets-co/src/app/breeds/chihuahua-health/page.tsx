@@ -281,7 +281,7 @@ export default function VetsChihuahuaHealthPage() {
             Chihuahuas decompensate fast — do not wait for morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             A Chihuahua well-puppy plan should include patellar palpation, careful skull and fontanelle
             assessment, full neurologic and cardiac auscultation, an ACVO eye examination, and a frank
