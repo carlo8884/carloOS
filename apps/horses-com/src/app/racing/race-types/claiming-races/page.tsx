@@ -76,7 +76,7 @@ export default function ClaimingRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-claiming"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Entry Level"
         title="Claiming Races"
         subtitle="The everyday backbone of the racing calendar: races where every runner is for sale at a set price, and that price quietly sorts the whole field."

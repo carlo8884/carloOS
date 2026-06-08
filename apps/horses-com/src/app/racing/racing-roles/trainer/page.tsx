@@ -79,7 +79,7 @@ export default function TrainerRolePage() {
 
       <PremiumMasthead
         manifestKey="horses-com:role-trainer"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Roles · The Stable"
         title="The Trainer"
         subtitle="The head coach and operations manager of the stable: conditioning each horse, planning its campaign, and answering to owners on one side and the rules on the other."

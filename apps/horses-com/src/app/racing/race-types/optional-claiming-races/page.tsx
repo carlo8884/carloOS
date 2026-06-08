@@ -76,7 +76,7 @@ export default function OptionalClaimingRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-optional-claiming"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Mid Class"
         title="Optional Claiming Races"
         subtitle="The flexible hybrid that lets some horses run for a price and others run protected, so a single race can draw from two pools of horses at once."

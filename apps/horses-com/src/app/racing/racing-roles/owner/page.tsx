@@ -78,7 +78,7 @@ export default function OwnerRolePage() {
 
       <PremiumMasthead
         manifestKey="horses-com:role-owner"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Roles · The Connections"
         title="The Owner"
         subtitle="From sole owners to syndicates of thousands: the person or group that holds the horse, carries its costs, and shares in the experience of competing."

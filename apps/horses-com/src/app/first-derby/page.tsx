@@ -84,7 +84,7 @@ export default function FirstDerbyPage() {
       {/* Image-first hero (StockImage via PremiumMasthead, attribution preserved) */}
       <PremiumMasthead
         manifestKey="horses-com:first-derby-hero"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="New to the Sport? Start Here"
         title="Your First Day at the Races"
         subtitle="A friendly, no-jargon guide to enjoying the biggest day in racing as a spectator: what you are watching, the traditions, and how the afternoon unfolds. An on-ramp into the sport, not a betting guide."

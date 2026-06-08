@@ -76,7 +76,7 @@ export default function StakesRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-stakes"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Top Class"
         title="Stakes Races"
         subtitle="The top of the sport: the biggest purses, the races that make champions, and the bold catalogue print that turns a win into lasting breeding value."

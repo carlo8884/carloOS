@@ -76,7 +76,7 @@ export default function AllowanceRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-allowance"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Mid Class"
         title="Allowance Races"
         subtitle="The proving ground above claiming and below stakes, where a horse that has broken its maiden climbs a ladder of conditions toward the top of the sport."

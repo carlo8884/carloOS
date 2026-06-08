@@ -77,7 +77,7 @@ export default function HandicapRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-handicap"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Weighting Method"
         title="Handicap Races"
         subtitle="The race built around a theoretical dead heat: an official assigns each horse a weight, better horses carrying more, so every runner starts with an equal chance on paper."

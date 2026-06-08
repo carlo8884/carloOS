@@ -87,7 +87,7 @@ export default function BelmontStakesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:triple-crown-belmont"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Triple Crown · Final Leg"
         title="The Belmont Stakes"
         subtitle="The Test of the Champion — the longest leg, traditionally a mile and a half at Belmont Park, where most Triple Crown bids meet their end."
