@@ -20,6 +20,8 @@ import {
   TableOfContents,
   FAQAccordion,
   buildArticleSchema,
+  buildBreadcrumbSchema,
+  combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
@@ -44,6 +46,17 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-08T00:00:00Z',
   modifiedAt: '2026-06-08T00:00:00Z',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com' },
+    { name: 'Racing', url: 'https://horses.com/racing' },
+    { name: 'Race Types', url: 'https://horses.com/racing/race-types' },
+    { name: 'Graded Stakes Races', url: 'https://horses.com/racing/race-types/graded-stakes-races' },
+  ],
+})
+
+const schema = combineSchemas(articleSchema, breadcrumbSchema)
 
 const FAQS = [
   {
@@ -72,7 +85,7 @@ const FAQS = [
 export default function GradedStakesRacesPage() {
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={schema} />
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-graded-stakes"
@@ -105,7 +118,7 @@ export default function GradedStakesRacesPage() {
         breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Racing', href: '/racing' },
-          { name: 'Race Types', href: '/racing/understanding-race-types-and-classes' },
+          { name: 'Race Types', href: '/racing/race-types' },
           { name: 'Graded Stakes Races', href: '/racing/race-types/graded-stakes-races' },
         ]}
         sidebar={

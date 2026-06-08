@@ -18,6 +18,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -130,6 +131,7 @@ export default function BreedersCupPage() {
                 { label: 'Off-Track Thoroughbred Aftercare', href: '/racing/off-track-thoroughbred-aftercare' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"

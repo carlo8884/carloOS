@@ -15,6 +15,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -129,6 +130,7 @@ export default function QuarterHorseRacingPage() {
                 { label: 'Reining', href: '/disciplines/reining' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"

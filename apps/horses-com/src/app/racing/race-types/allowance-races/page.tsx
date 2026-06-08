@@ -20,6 +20,8 @@ import {
   TableOfContents,
   FAQAccordion,
   buildArticleSchema,
+  buildBreadcrumbSchema,
+  combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
@@ -44,6 +46,17 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-08T00:00:00Z',
   modifiedAt: '2026-06-08T00:00:00Z',
 })
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  items: [
+    { name: 'Home', url: 'https://horses.com' },
+    { name: 'Racing', url: 'https://horses.com/racing' },
+    { name: 'Race Types', url: 'https://horses.com/racing/race-types' },
+    { name: 'Allowance Races', url: 'https://horses.com/racing/race-types/allowance-races' },
+  ],
+})
+
+const schema = combineSchemas(articleSchema, breadcrumbSchema)
 
 const FAQS = [
   {
@@ -72,7 +85,7 @@ const FAQS = [
 export default function AllowanceRacesPage() {
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={schema} />
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-allowance"
@@ -105,7 +118,7 @@ export default function AllowanceRacesPage() {
         breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Racing', href: '/racing' },
-          { name: 'Race Types', href: '/racing/understanding-race-types-and-classes' },
+          { name: 'Race Types', href: '/racing/race-types' },
           { name: 'Allowance Races', href: '/racing/race-types/allowance-races' },
         ]}
         sidebar={

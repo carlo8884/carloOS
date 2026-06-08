@@ -15,6 +15,7 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
+  CrossPortfolioCard,
   EmailCapture,
   RelatedLinks,
   TableOfContents,
@@ -130,6 +131,7 @@ export default function RacehorseTrainingPage() {
                 { label: 'Equine Health', href: '/health' },
               ]}
             />
+            <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
             <EmailCapture
               variant="sidebar"
               siteId="horses-com"
