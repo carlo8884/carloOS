@@ -21,9 +21,9 @@ const URL = 'https://petfood.com/tools/food-transition-calculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'petfood-com',
-  title: 'Food Transition Schedule Generator — Switch Pet Food Safely | PetFood.com',
+  title: 'Pet Food Transition Schedule Generator | PetFood.com',
   description:
-    'Free dog & cat food transition calculator. Choose 7, 10, or 14 days (or a slower sensitive-stomach plan) and get a day-by-day old:new mixing ratio, plus optional gram/cup splits and GI-upset watch guidance.',
+    'Free dog & cat food transition calculator. Pick 7, 10, or 14 days (or a sensitive-stomach plan) for a day-by-day old:new mixing ratio and gram/cup splits.',
   path: '/tools/food-transition-calculator',
 })
 
