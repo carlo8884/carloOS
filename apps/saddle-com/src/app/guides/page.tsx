@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'saddle-com',
@@ -213,6 +213,9 @@ export default function GuidesHubPage() {
             'Unsubscribe anytime',
           ]}
         />
+      </div>
+      <div className="px-container-sm sm:px-container py-10 max-w-content-wide mx-auto">
+        <CrossPortfolioCard currentSite="saddle-com" contentType="guide" variant="footer" />
       </div>
     </>
   )

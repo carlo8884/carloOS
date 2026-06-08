@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, Breadcrumb, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, Breadcrumb, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { SADDLE_BRANDS } from '@/data/saddle-brands'
 
@@ -139,6 +139,9 @@ export default function BrandsHubPage() {
           ctaText="Get Free Guide"
           perks={['📋 Brand comparison', '💰 Market pricing']}
         />
+      </div>
+      <div className="px-container-sm sm:px-container py-10">
+        <CrossPortfolioCard currentSite="saddle-com" contentType="brand" variant="footer" />
       </div>
     </>
   )
