@@ -64,7 +64,7 @@ export default function BestThermometersPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is the best reptile thermometer/hygrometer for serious keepers. Published ±0.54°F temperature accuracy against reference standards — one of the most accurate consumer devices reported against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>The Govee H5053 is our top pick in this comparison for serious keepers. Published ±0.54°F temperature accuracy against reference standards puts it among the most accurate consumer devices reported against reference standards. WiFi connectivity means real-time monitoring from anywhere via the Govee app, with configurable push notifications when temperature or humidity leave your set range.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>The data logging function stores 2 years of readings, allowing you to audit temperature gradients and identify if your thermostat is cycling correctly. For enclosures with complex heating (CHE + basking + heat mat), the logging history is invaluable for diagnosing inconsistency. Buy multiple — place one at the basking zone, one at the cool side, one inside any humid hides.</p>
                 </div>
               }
