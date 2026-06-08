@@ -159,6 +159,20 @@ export default function RaceTypesAndClassesPage() {
             reviewedBy="Editorial team"
           />
 
+          <div className="not-prose my-6 p-5 bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Race Types Hub
+            </div>
+            <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
+              This page is the narrative overview of how the class system fits
+              together. For the full Race Types hub — a card index linking every
+              individual class reference — see{' '}
+              <Link href="/racing/race-types" className="text-brand-primary font-semibold no-underline hover:underline">
+                Race Types &amp; Classes
+              </Link>
+              .
+            </p>
+          </div>
 
           <h2 id="why">Why a Class Structure Exists</h2>
           <p>Horse racing&apos;s class system exists to create competitive conditions that allow horses of broadly similar ability and experience to compete against each other. Without such a structure, races would be dominated by the best horses, and owners of less distinguished horses would have no competitive outlet. The class structure creates a spectrum of opportunities from entry-level maiden races through the highest-quality stakes events, allowing horses to compete at an appropriate level while providing a pathway for talented horses to advance.</p>

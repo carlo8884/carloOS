@@ -236,7 +236,8 @@ export default function RacingHubPage() {
             {[
               { label: 'Racing History', href: '/racing/history' },
               { label: 'Your First Day at the Races', href: '/first-derby' },
-              { label: 'Race Types & Classes', href: '/racing/understanding-race-types-and-classes' },
+              { label: 'Race Types & Classes', href: '/racing/race-types' },
+              { label: 'Racing Roles', href: '/racing/racing-roles' },
               { label: 'Bloodstock & Breeding', href: '/bloodstock' },
               { label: 'Disciplines', href: '/disciplines' },
               { label: 'Breeds', href: '/breeds' },
