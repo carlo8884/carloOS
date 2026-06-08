@@ -21,9 +21,7 @@ import {
   FAQAccordion,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
-  SchemaScript,
 } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import type { NewcomerSpoke } from '@/data/racing-for-newcomers'
@@ -46,16 +44,12 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
     questions: spoke.faq.map((f) => ({ question: f.question, answer: f.answerText })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://horses.com' },
-      { name: 'Racing', url: 'https://horses.com/racing' },
-      { name: 'Racing for Newcomers', url: 'https://horses.com/racing/racing-for-newcomers' },
-      { name: spoke.name, url },
-    ],
-  })
-
-  const schema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+  // BreadcrumbList JSON-LD is auto-derived by <ArticleLayout> from the
+  // complete `breadcrumbs` prop below (each item has a real href), so we do
+  // NOT build one here — emitting it both places produced a duplicate
+  // BreadcrumbList. Passing this combined schema into ArticleLayout's `schema`
+  // prop lets its dedup logic own breadcrumb emission: exactly one per spoke.
+  const schema = combineSchemas(articleSchema, faqSchema)
 
   const tocItems = [
     ...spoke.sections.map((s) => ({ label: s.heading, href: `#${s.id}` })),
@@ -65,8 +59,6 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
   return (
     <>
-      <SchemaScript schema={schema} />
-
       {/* Image-first hero. Reuses the existing horses-com:racing manifest key
           with the synced horses-com:hero fallback — no new manifest keys. */}
       <PremiumMasthead
@@ -81,6 +73,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
       <ArticleLayout
         siteId="horses-com"
         contentType="guide"
+        schema={schema}
         relatedLinks={[
           { title: 'Racing for Newcomers Hub', href: '/racing/racing-for-newcomers', category: 'For Newcomers' },
           ...spoke.related.map((r) => ({ title: r.label, href: r.href })),
