@@ -162,7 +162,7 @@ export const BrandReviews: BrandReview[] = [
       'Meets all six WSAVA Global Nutrition Committee transparency questions based on public disclosures.',
       'Owns and operates its manufacturing plants — full chain-of-custody for the production process.',
       'One of the few brands whose portfolio includes diets substantiated by AAFCO feeding trials, not only formulation.',
-      'Veterinary Diet line is one of the most-prescribed therapeutic diet lines in North America.',
+      'Veterinary Diet line is a widely distributed therapeutic diet line, sold through licensed veterinarians across North America.',
     ],
     weaknesses: [
       'Heavy use of named by-product meals and corn-based carbohydrates is a turn-off for owners seeking a "whole food" ingredient deck — the formulation is nutritionally defensible but the ingredient panel is not boutique-friendly.',
