@@ -1962,5 +1962,47 @@
     "provider": "either",
     "alt": "A lively crowd watching from the grandstand on a sunny race day — first day at the races spectator guide",
     "orientation": "landscape"
+  },
+  "horses-com:race-type-maiden": {
+    "query": "young thoroughbreds breaking from the starting gate",
+    "provider": "either",
+    "alt": "Young Thoroughbreds breaking from the starting gate — maiden races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-claiming": {
+    "query": "thoroughbreds in the paddock before a race",
+    "provider": "either",
+    "alt": "Thoroughbreds in the paddock before an everyday race — claiming races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-allowance": {
+    "query": "thoroughbreds racing at a daytime meeting",
+    "provider": "either",
+    "alt": "Thoroughbreds racing at a mid-level daytime meeting — allowance races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-optional-claiming": {
+    "query": "thoroughbreds walking onto a racetrack",
+    "provider": "either",
+    "alt": "Thoroughbreds walking onto the racetrack for a mixed-conditions race — optional claiming races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-stakes": {
+    "query": "thoroughbreds racing at a major stakes meeting",
+    "provider": "either",
+    "alt": "Thoroughbreds contesting a major stakes race — stakes races reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-graded-stakes": {
+    "query": "thoroughbred field racing toward the finish line",
+    "provider": "either",
+    "alt": "A field racing toward the finish at a championship meeting — graded stakes reference",
+    "orientation": "landscape"
+  },
+  "horses-com:race-type-handicap": {
+    "query": "thoroughbred racehorses competing on a turf course",
+    "provider": "either",
+    "alt": "Thoroughbreds competing carrying assigned weights — handicap races reference",
+    "orientation": "landscape"
   }
 }
