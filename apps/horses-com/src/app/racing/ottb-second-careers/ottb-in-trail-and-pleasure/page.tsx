@@ -35,7 +35,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The OTTB in Trail & Pleasure -- Retraining the Off-Track Thoroughbred',
   description:
-    'How the off-track Thoroughbred becomes a calm trail and pleasure mount: building confidence and quiet, the retraining timeline, temperament, and realistic expectations.',
+    'How the off-track Thoroughbred becomes a calm trail and pleasure mount: building confidence, the retraining timeline, and realistic expectations.',
   path: '/racing/ottb-second-careers/ottb-in-trail-and-pleasure',
   type: 'article',
 })

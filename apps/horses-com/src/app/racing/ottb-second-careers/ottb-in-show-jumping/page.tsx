@@ -34,7 +34,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The OTTB in Show Jumping -- Retraining the Off-Track Thoroughbred',
   description:
-    'How the off-track Thoroughbred transitions into show jumping: scope and athleticism, the retraining timeline, temperament and conformation, and realistic expectations.',
+    'How the off-track Thoroughbred transitions into show jumping: scope and athleticism, the retraining timeline, and realistic expectations for the jumper ring.',
   path: '/racing/ottb-second-careers/ottb-in-show-jumping',
   type: 'article',
 })

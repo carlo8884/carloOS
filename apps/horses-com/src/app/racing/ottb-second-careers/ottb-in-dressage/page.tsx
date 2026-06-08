@@ -34,7 +34,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'The OTTB in Dressage -- Retraining the Off-Track Thoroughbred',
   description:
-    'How the off-track Thoroughbred transitions into dressage: sensitivity and elastic movement, the slow rebuild of balance and topline, temperament, and expectations.',
+    'How the off-track Thoroughbred transitions into dressage: sensitivity and elastic movement, the slow rebuild of balance and topline, and realistic expectations.',
   path: '/racing/ottb-second-careers/ottb-in-dressage',
   type: 'article',
 })
