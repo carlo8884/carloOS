@@ -2004,5 +2004,23 @@
     "provider": "either",
     "alt": "Thoroughbreds competing carrying assigned weights — handicap races reference",
     "orientation": "landscape"
+  },
+  "horses-com:triple-crown-derby": {
+    "query": "thoroughbred field rounding the turn at a packed grandstand racecourse",
+    "provider": "either",
+    "alt": "A full field of Thoroughbreds racing past a packed grandstand on a spring race day — Kentucky Derby reference",
+    "orientation": "landscape"
+  },
+  "horses-com:triple-crown-preakness": {
+    "query": "thoroughbreds racing down the homestretch at a historic racetrack",
+    "provider": "either",
+    "alt": "Thoroughbreds driving down the homestretch at a historic dirt racecourse — Preakness Stakes reference",
+    "orientation": "landscape"
+  },
+  "horses-com:triple-crown-belmont": {
+    "query": "lone thoroughbred galloping clear on a wide dirt racetrack",
+    "provider": "either",
+    "alt": "A Thoroughbred galloping clear over a long dirt course — Belmont Stakes reference",
+    "orientation": "landscape"
   }
 }
