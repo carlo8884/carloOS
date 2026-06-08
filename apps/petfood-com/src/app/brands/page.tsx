@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, FAQAccordion, CrossPortfolioCard } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -190,6 +190,10 @@ export default function BrandsHubPage() {
           source="brands-hub"
         />
       </section>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <CrossPortfolioCard currentSite="petfood-com" contentType="brand" variant="footer" />
+      </div>
     </>
   </>
   )

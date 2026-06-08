@@ -12,6 +12,7 @@ import {
   EmailCapture,
   ArticleByline,
   FAQAccordion,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { LifeStages } from '../../data/life-stages'
@@ -244,6 +245,7 @@ export default function LifeStageHubPage() {
           individualised veterinary nutrition advice. Diet selection for pets with diagnosed
           conditions should be discussed with the treating veterinarian.
         </p>
+        <CrossPortfolioCard currentSite="petfood-com" contentType="guide" variant="footer" />
       </div>
     </ArticleLayout>
   )
