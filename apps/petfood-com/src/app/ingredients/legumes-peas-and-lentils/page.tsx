@@ -100,6 +100,14 @@ export default function LegumesPeasAndLentilsPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Taste of the Wild — Independent Evaluation', href: '/brands/taste-of-the-wild-evaluation' },
+              { label: 'Orijen vs Acana — Grain-Free Lines', href: '/brands/orijen-vs-acana-comparison' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

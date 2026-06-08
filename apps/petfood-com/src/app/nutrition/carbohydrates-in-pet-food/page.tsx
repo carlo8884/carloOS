@@ -113,6 +113,7 @@ export default function CarbohydratesInPetFoodPage() {
               { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
               { label: 'Diabetic Diets for Dogs and Cats', href: '/diets/diabetic-diets' },
               { label: 'Fiber and Digestive Health Diets', href: '/diets/fiber-and-digestive-health' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture

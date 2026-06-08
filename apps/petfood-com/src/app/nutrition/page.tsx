@@ -194,6 +194,60 @@ export default function NutritionHubPage() {
       </div>
 
       <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
+        <div className="flex items-center gap-2.5 mb-4">
+          <span className="w-6 h-0.5 bg-brand-primary" />
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
+            Next Step — Apply the Nutrient Science
+          </span>
+        </div>
+        <p className="text-sm text-brand-text-mid leading-relaxed max-w-xl mb-5">
+          Once you understand the nutrients, the next step is comparing real foods on those
+          terms. These pages apply the same standards to specific food types and manufacturers.
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 list-none p-0">
+          <li>
+            <Link
+              href="/compare"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Compare Food Types
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Wet vs dry, fresh vs kibble, prescription vs OTC, and more — head to head.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/compare/wet-vs-dry-food"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Wet vs Dry Food
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                The dry-matter and moisture math applied to a real format comparison.
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/brands"
+              className="block py-4 px-5 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+            >
+              <div className="font-display font-bold text-brand-dark text-base mb-1 leading-tight">
+                Brand Evaluations
+              </div>
+              <p className="text-xs text-brand-text-mid leading-relaxed m-0">
+                Independent evaluations of major pet food brands against our rubric.
+              </p>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-12 max-w-content-wide">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-6">Frequently Asked Questions</h2>
         <FAQAccordion items={nutritionFAQItems} includeSchema={false} />
       </div>

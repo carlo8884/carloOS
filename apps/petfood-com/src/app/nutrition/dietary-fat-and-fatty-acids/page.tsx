@@ -109,6 +109,14 @@ export default function DietaryFatAndFattyAcidsPage() {
               { label: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Orijen vs Acana — Fat & Protein Profiles', href: '/brands/orijen-vs-acana-comparison' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

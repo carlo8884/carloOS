@@ -95,6 +95,14 @@ export default function WholeGrainsRiceOatsBarleyPage() {
               { label: 'Corn in Pet Food Myth', href: '/myths/corn-in-pet-food-myth' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+              { label: 'Purina Pro Plan — Independent Evaluation', href: '/brands/purina-pro-plan-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

@@ -95,6 +95,14 @@ export default function IngredientSplittingPage() {
               { label: 'Animal Protein Sources', href: '/ingredients/animal-protein-sources' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Brand Evaluations', href: '/brands' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

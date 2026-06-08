@@ -85,6 +85,14 @@ export default function GrainFreeDCMRiskPage() {
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

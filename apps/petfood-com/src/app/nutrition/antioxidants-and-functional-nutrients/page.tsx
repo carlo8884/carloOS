@@ -110,6 +110,14 @@ export default function AntioxidantsAndFunctionalNutrientsPage() {
               { label: 'Glucosamine and Joint Supplements', href: '/supplements/glucosamine-and-joint-support' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: "Hill's vs Royal Canin", href: '/brands/hills-vs-royal-canin' },
+              { label: 'Compare Food Types', href: '/compare' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"
