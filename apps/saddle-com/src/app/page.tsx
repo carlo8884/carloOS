@@ -124,6 +124,11 @@ interface FeaturedReview {
    * rendered. Per QC §1: no raw CDN URLs here.
    */
   imageKey?: string
+  /**
+   * Guaranteed-synced manifest key. Used when `imageKey` is not yet synced
+   * so the card renders a real on-brand photo instead of the paw placeholder.
+   */
+  imageFallbackKey?: string
   imageAlt?: string
 }
 
@@ -138,6 +143,7 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
       'Deep seat, narrow twist, hand-stitched bridle leather. Pricing aligned with the German-made cohort; resale holds among the strongest in the category.',
     href: '/reviews/stubben-saddle-review',
     imageKey: 'saddle-com:review-dressage',
+    imageFallbackKey: 'saddle-com:category-dressage',
     imageAlt: 'Dressage horse in tack at the canter',
   },
   {
@@ -150,6 +156,7 @@ const FEATURED_REVIEWS: FeaturedReview[] = [
       'Forward flap, anatomic panels, calfskin grip. The benchmark performance jumper; widely fitted, with predictable resale.',
     href: '/reviews/pessoa-saddle-review',
     imageKey: 'saddle-com:review-jumping',
+    imageFallbackKey: 'saddle-com:category-jumping',
     imageAlt: 'Show jumper mid-flight over a fence',
   },
   {
@@ -534,6 +541,7 @@ export default function SaddleHomePage() {
                 {r.imageKey ? (
                   <StockImage
                     manifestKey={r.imageKey}
+                    fallbackKey={r.imageFallbackKey}
                     alt={r.imageAlt}
                     aspect="4:3"
                     variant="inline"
