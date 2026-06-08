@@ -147,7 +147,6 @@ export default function GroomingPage() {
           <ReviewCard
             id="rubber-curry-comb"
             badge="Core Kit"
-            badgeEmoji="🐴"
             name="Rubber Curry Comb"
             subtitle="The workhorse first step of any grooming routine"
             score={8.6}
@@ -173,7 +172,6 @@ export default function GroomingPage() {
           <ReviewCard
             id="dandy-body-brush-set"
             badge="Brush Set"
-            badgeEmoji="🧹"
             name="Dandy and Body Brush Set"
             subtitle="Flick dirt away, then finish and lay the coat"
             score={8.4}
@@ -198,7 +196,6 @@ export default function GroomingPage() {
           <ReviewCard
             id="hoof-pick-brush"
             badge="Feet"
-            badgeEmoji="🦄"
             name="Hoof Pick with Brush"
             subtitle="Pick out the feet first, every single time"
             score={8.5}

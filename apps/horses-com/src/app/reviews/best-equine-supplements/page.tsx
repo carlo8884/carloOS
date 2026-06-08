@@ -166,7 +166,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="cosequin-asu"
               badge="Best Joint Evidence"
-              badgeEmoji="🏆"
               name="Cosequin ASU Plus (Nutramax)"
               subtitle="Avocado-soybean unsaponifiables + glucosamine + chondroitin · NASC sealed"
               score={9.1}
@@ -196,7 +195,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="platinum"
               badge="Best Comprehensive"
-              badgeEmoji="◎"
               name="Platinum Performance Equine"
               subtitle="Omega-3 + antioxidants + amino acids · Veterinary distribution model"
               score={9.0}
@@ -226,7 +224,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="smartgut"
               badge="Best Gastric Adjunct"
-              badgeEmoji="🐴"
               name="SmartPak SmartGut Ultra"
               subtitle="Calcium &amp; magnesium buffering · Glutamine · Sea buckthorn · NASC sealed"
               score={8.6}
@@ -256,7 +253,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="ker-eo3"
               badge="Best Marine Omega-3"
-              badgeEmoji="🐟"
               name="KER EO-3 (Kentucky Equine Research)"
               subtitle="Marine DHA + EPA · Equine-research-backed formulation · Liquid"
               score={8.9}
@@ -285,7 +281,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="equithrive"
               badge="Best Resveratrol"
-              badgeEmoji="⭐"
               name="Equithrive Original Pellets"
               subtitle="Trans-resveratrol · Anti-inflammatory and joint support"
               score={8.5}
@@ -315,7 +310,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="standlee"
               badge="Best Forage Products"
-              badgeEmoji="🌾"
               name="Standlee Premium Forage"
               subtitle="Premium alfalfa, timothy, orchard grass · Pelleted, cubed, and baled"
               score={8.7}
@@ -344,7 +338,6 @@ export default function BestEquineSupplementsPage() {
             <ReviewCard
               id="adams"
               badge="Best Electrolyte"
-              badgeEmoji="💧"
               name="Adams Plus Equine Electrolyte"
               subtitle="Sodium chloride balanced with potassium · For performance and travel"
               score={8.3}

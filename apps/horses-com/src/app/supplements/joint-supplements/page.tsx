@@ -137,7 +137,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="cosequin-asu"
               badge="Best Evidence (ASU)"
-              badgeEmoji="🏆"
               name="Nutramax Cosequin ASU Plus"
               subtitle="Avocado/Soybean Unsaponifiables + Glucosamine + Chondroitin"
               score={8.9}
@@ -164,7 +163,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="platinum-cj"
               badge="Best Comprehensive"
-              badgeEmoji="◎"
               name="Platinum Performance CJ"
               subtitle="Whole-system formula with joint-targeted CJ blend"
               score={9.0}
@@ -190,7 +188,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="smartflex"
               badge="Best Senior"
-              badgeEmoji="🐴"
               name="SmartPak SmartFlex Senior"
               subtitle="Glucosamine + chondroitin + MSM + HA at senior-targeted dosing"
               score={8.5}
@@ -216,7 +213,6 @@ export default function JointSupplementsPage() {
             <ReviewCard
               id="omega-3"
               badge="Reference Ingredient"
-              badgeEmoji="🐟"
               name="Marine-Source Omega-3 (DHA/EPA)"
               subtitle="Algal or fish-oil source — flax is not equivalent"
               score={8.6}

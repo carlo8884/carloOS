@@ -144,7 +144,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="grass-forage-balancer"
             badge="Grass-Forage Diets"
-            badgeEmoji="🌾"
             name="Purina Enrich Plus Ration Balancer"
             subtitle="Concentrated protein, vitamins, and minerals for forage-based diets"
             score={8.7}
@@ -170,7 +169,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="low-starch-balancer"
             badge="Metabolic / Low-Starch"
-            badgeEmoji="⚖️"
             name="Triple Crown 30% Ration Balancer"
             subtitle="Low-NSC option for metabolic and easy-keeper horses"
             score={8.6}
@@ -195,7 +193,6 @@ export default function RationBalancersPage() {
           <ReviewCard
             id="senior-balancer"
             badge="Senior Forage Diets"
-            badgeEmoji="🐴"
             name="Nutrena Empower Topline Balancer"
             subtitle="Amino-acid-focused balancer to support topline on forage"
             score={8.4}

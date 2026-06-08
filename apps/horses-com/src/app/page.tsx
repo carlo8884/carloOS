@@ -262,27 +262,31 @@ export default function HomePage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
-        {/* Hero photograph — moody single-subject equestrian editorial.
-            Reuses the dressage-horse-at-canter ID from Saddle.com
-            production (verified-in-production CarloOS Unsplash catalog).
-            Per the COO playbook: no smiling-rider cliché, environmental
-            over staged. The dressage portrait is the strongest single-
-            subject image in the verified catalog and grades cleanly into
-            the deep green-black masthead via the multi-stop gradient. */}
-        {/* Hero photo slot — rendered below via manifest-managed StockImage.
-            Desktop right-column removed from here; the separate manifest-backed
-            hero image block renders with photographer attribution below the fold. */}
+        {/* Hero photograph — image-first masthead. The manifest-managed hero
+            photo renders full-bleed BEHIND the headline band so the first
+            mobile screen leads with photography, not a flat text band.
+            Attribution stays present + linked (StockImage subtleCredit;
+            Unsplash/Pexels TOS, QC §1). */}
+        <div className="absolute inset-0 z-0">
+          <StockImage
+            manifestKey="horses-com:hero"
+            aspect="16:9"
+            variant="full-bleed"
+            priority
+            subtleCredit
+          />
+        </div>
 
-        {/* Atmospheric overlays kept on top of photo for cohesion with the
-            CSS-only fallback on mobile. */}
+        {/* Atmospheric overlays kept on top of photo for legibility and
+            cohesion with the deep green-black masthead. */}
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none z-[1]"
           style={{
             backgroundImage: [
-              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.22) 0%, transparent 55%)',
-              'radial-gradient(ellipse 70% 70% at 12% 95%, rgba(31,58,47,0.55) 0%, transparent 60%)',
-              'linear-gradient(180deg, rgba(19,36,28,0.0) 0%, rgba(19,36,28,0.55) 95%)',
+              'radial-gradient(ellipse 80% 60% at 78% 18%, rgba(182,136,48,0.20) 0%, transparent 55%)',
+              'linear-gradient(90deg, rgba(19,36,28,0.88) 0%, rgba(19,36,28,0.62) 45%, rgba(19,36,28,0.28) 100%)',
+              'linear-gradient(180deg, rgba(19,36,28,0.35) 0%, rgba(19,36,28,0.72) 100%)',
             ].join(','),
           }}
         />
@@ -412,11 +416,6 @@ export default function HomePage() {
             </span>
           ))}
         </div>
-      </div>
-
-      {/* ── HERO PHOTO (manifest-managed) ───────────────────────────── */}
-      <div className="bg-brand-surface px-container-sm sm:px-container">
-        <StockImage manifestKey="horses-com:hero" aspect="16:9" variant="inline" />
       </div>
 
       {/* ── LIVE TOOL — score your horse's condition (premium gate 3) ── */}

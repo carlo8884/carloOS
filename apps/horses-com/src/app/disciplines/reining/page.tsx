@@ -81,7 +81,7 @@ const FAQS = [
   {
     question: 'What breeds are best for reining?',
     answer:
-      'Reining is dominated by the American Quarter Horse — the discipline grew out of working cow-horse training and the Quarter Horse&apos;s combination of speed, stop, and trainability remains unmatched. Paint Horses (APHA) and Appaloosas (ApHC) appear at every level; many top horses are dual-registered with AQHA. Specific reining bloodlines have been developed over decades — Hollywood Dun It (NRHA Hall of Fame, the all-time leading sire in reining), Smart Chic Olena, Wimpys Little Step, Shining Spark, Topsail Whiz, and Gunner are foundational stallions whose progeny dominate NRHA records.',
+      'Reining is dominated by the American Quarter Horse — the discipline grew out of working cow-horse training and the Quarter Horse&apos;s combination of speed, stop, and trainability suits the discipline particularly well. Paint Horses (APHA) and Appaloosas (ApHC) appear at every level; many top horses are dual-registered with AQHA. Specific reining bloodlines have been developed over decades — Hollywood Dun It (NRHA Hall of Fame, the all-time leading sire in reining), Smart Chic Olena, Wimpys Little Step, Shining Spark, Topsail Whiz, and Gunner are foundational stallions whose progeny dominate NRHA records.',
     answerText:
       'Dominated by the American Quarter Horse. Paint Horses (APHA) and Appaloosas (ApHC) appear at every level. Foundation sires include Hollywood Dun It, Smart Chic Olena, Wimpys Little Step, Shining Spark, Topsail Whiz, and Gunner.',
   },
