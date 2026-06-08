@@ -6,7 +6,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildProduct
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Pet Insurance 2025 — Trupanion, Healthy Paws | Dog.com',
-  description: 'We compared 8 pet insurance companies on published coverage terms, exclusions, and reimbursement structure. Trupanion, Healthy Paws, Embrace, and Figo ranked for dogs.',
+  description: 'We compared 8 pet insurers on published coverage terms, exclusions, and reimbursement structure. Trupanion, Healthy Paws, Embrace, Figo ranked for dogs.',
   path: '/reviews/best-pet-insurance',
   category: 'Pet Insurance',
   type: 'article',
