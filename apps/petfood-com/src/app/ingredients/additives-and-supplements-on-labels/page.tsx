@@ -100,6 +100,14 @@ export default function AdditivesAndSupplementsOnLabelsPage() {
               { label: 'Preservatives in Pet Food', href: '/ingredients/preservatives-pet-food' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Blue Buffalo — Independent Evaluation', href: '/brands/blue-buffalo-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

@@ -115,6 +115,14 @@ export default function AnimalProteinSourcesPage() {
               { label: 'Our Scoring Methodology', href: '/guides/methodology' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Orijen vs Acana — Protein-Forward Lines', href: '/brands/orijen-vs-acana-comparison' },
+              { label: 'Taste of the Wild — Independent Evaluation', href: '/brands/taste-of-the-wild-evaluation' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

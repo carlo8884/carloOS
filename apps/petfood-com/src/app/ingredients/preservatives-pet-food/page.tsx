@@ -115,6 +115,14 @@ export default function PreservativesPetFoodPage() {
               { label: 'AAFCO Completeness Explained', href: '/guides/aafco-completeness-explained' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Brand Evaluations', href: '/brands' },
+              { label: 'Blue Buffalo — Independent Evaluation', href: '/brands/blue-buffalo-evaluation' },
+              { label: 'Compare Food Types', href: '/compare' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

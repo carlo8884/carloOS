@@ -96,6 +96,14 @@ export default function TaurineAndAminoAcidsPage() {
               { label: 'Dog vs Cat Nutrition', href: '/species/dog-vs-cat-nutrition-overview' },
             ]}
           />
+          <RelatedLinks
+            title="Compare &amp; Evaluate Brands"
+            links={[
+              { label: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
+              { label: 'Compare Food Types', href: '/compare' },
+              { label: 'Brand Evaluations', href: '/brands' },
+            ]}
+          />
           <EmailCapture
             variant="sidebar"
             siteId="petfood-com"

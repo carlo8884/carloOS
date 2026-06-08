@@ -108,6 +108,7 @@ export default function MineralsInPetFoodPage() {
               { label: 'Vitamins in Pet Food', href: '/nutrition/vitamins-in-pet-food' },
               { label: 'Kidney Disease Diets', href: '/diets/kidney-disease-diets' },
               { label: 'Large-Breed Puppy Nutrition', href: '/feeding/large-breed-puppy-nutrition' },
+              { label: 'Brand Evaluations', href: '/brands' },
             ]}
           />
           <EmailCapture
