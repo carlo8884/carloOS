@@ -775,6 +775,12 @@
     "alt": "A dog food bowl beside a measuring cup -- dog care tools hub hero",
     "orientation": "landscape"
   },
+  "dog-com:tools-puppy-growth": {
+    "query": "puppy sitting next to adult dog size comparison",
+    "provider": "either",
+    "alt": "A growing puppy beside an adult dog -- puppy growth and adult weight calculator hero",
+    "orientation": "landscape"
+  },
   "dog-com:compare-hero": {
     "query": "dog food kibble bowl close up",
     "provider": "either",

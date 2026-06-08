@@ -349,6 +349,34 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+
+      {/* Tool callout — puppy growth predictor */}
+      <section className="border-t border-brand-border bg-brand-white px-container-sm sm:px-container py-10">
+        <div className="max-w-2xl">
+          <h2 className="font-display font-bold text-brand-dark text-lg mb-2">
+            How big will your puppy get?
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            Use the{' '}
+            <Link
+              href="/tools/puppy-growth-calculator"
+              className="text-brand-primary underline-offset-2 hover:underline"
+            >
+              Puppy Growth &amp; Adult Weight Calculator
+            </Link>{' '}
+            to estimate your puppy&apos;s adult weight from its current age, weight, and breed or
+            size class -- using the standard growth-percentage method, clearly labeled as an
+            estimate.
+          </p>
+          <Link
+            href="/tools/puppy-growth-calculator"
+            className="inline-block bg-brand-primary text-brand-white text-sm font-bold rounded-lg px-5 py-2.5 no-underline hover:opacity-90 transition-opacity"
+          >
+            Open the puppy growth calculator
+          </Link>
+        </div>
+      </section>
+
       <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>

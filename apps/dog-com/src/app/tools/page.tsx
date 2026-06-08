@@ -30,6 +30,12 @@ const TOOLS = [
     desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size (small, medium, large, giant) and outputs a qualitative life-stage label.',
     tag: 'Life Stage',
   },
+  {
+    href: '/tools/puppy-growth-calculator',
+    title: 'Puppy Growth & Adult Weight Calculator',
+    desc: 'Predict how big your puppy will get. Enter current age, weight, and size class or breed to see growth progress and an estimated adult weight, using the standard growth-percentage method. Clearly labeled as an estimate.',
+    tag: 'Puppy',
+  },
 ]
 
 const breadcrumbSchema = buildBreadcrumbSchema({
