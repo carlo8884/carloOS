@@ -135,6 +135,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Welfare & Aftercare',
   },
   {
+    slug: 'ottb-second-careers',
+    title: 'OTTB Second Careers',
+    tagline:
+      'How off-track Thoroughbreds transition by discipline: aptitude, the letdown-to-restart arc, and realistic retraining timelines for eventing, jumping, dressage, and pleasure.',
+    authorities: 'Retired Racehorse Project',
+    category: 'Welfare & Aftercare',
+  },
+  {
     slug: 'racehorse-training-and-conditioning',
     title: 'Racehorse Training & Conditioning',
     tagline:
