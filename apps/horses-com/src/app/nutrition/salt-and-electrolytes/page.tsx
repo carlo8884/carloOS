@@ -150,7 +150,6 @@ export default function SaltElectrolytesPage() {
           <ReviewCard
             id="plain-salt-block"
             badge="Year-Round Baseline"
-            badgeEmoji="🧂"
             name="Plain White Salt Block / Loose Salt"
             subtitle="The free-choice baseline every horse needs"
             score={8.7}
@@ -176,7 +175,6 @@ export default function SaltElectrolytesPage() {
           <ReviewCard
             id="sweat-electrolyte"
             badge="Sweat Replacement"
-            badgeEmoji="💧"
             name="Salt-First Sweat-Replacement Electrolyte"
             subtitle="For horses in heavy work or hot, humid conditions"
             score={8.5}

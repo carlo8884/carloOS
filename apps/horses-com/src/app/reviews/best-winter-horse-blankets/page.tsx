@@ -156,7 +156,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="rambo"
               badge="Best Premium Turnout"
-              badgeEmoji="🏆"
               name="Horseware Rambo Original Turnout"
               subtitle="1000-denier ballistic · Leg-arch shoulder · Premium build standard"
               score={9.4}
@@ -184,7 +183,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="rhino"
               badge="Best Modern Standard"
-              badgeEmoji="⭐"
               name="Horseware Rhino Original Turnout"
               subtitle="1200-denier ripstop · Modern Horseware design · Strong mainstream choice"
               score={9.0}
@@ -211,7 +209,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="schneiders"
               badge="Best Heavy Winter"
-              badgeEmoji="❄"
               name="Schneiders StormShield Euro Turnout"
               subtitle="1680-denier ballistic · 300+ g heavy fill · Harsh-winter specification"
               score={9.2}
@@ -238,7 +235,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="smartpak"
               badge="Best House Brand"
-              badgeEmoji="◎"
               name="SmartPak Ultimate Turnout"
               subtitle="1200-denier ripstop · Shoulder gussets · SmartPak quality at house-brand pricing"
               score={8.7}
@@ -265,7 +261,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="weatherbeeta"
               badge="Best Mid-Tier"
-              badgeEmoji="⭐"
               name="Weatherbeeta ComFiTec Plus Dynamic II"
               subtitle="1200-denier ripstop · Memory-foam wither relief · Strong feature set"
               score={8.6}
@@ -292,7 +287,6 @@ export default function BestWinterBlanketsPage() {
             <ReviewCard
               id="amigo"
               badge="Best Value"
-              badgeEmoji="◎"
               name="Horseware Amigo Bravo 12 Plus Turnout"
               subtitle="1000-denier ballistic · Horseware build at the value tier"
               score={8.5}

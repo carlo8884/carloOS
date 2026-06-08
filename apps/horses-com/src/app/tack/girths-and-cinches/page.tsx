@@ -143,7 +143,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="anatomic-english-girth"
             badge="English Everyday"
-            badgeEmoji="🐴"
             name="Anatomic / Shaped English Girth"
             subtitle="Contoured shape to relieve the elbow and reduce galls"
             score={8.6}
@@ -169,7 +168,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="mohair-cinch"
             badge="Western"
-            badgeEmoji="🤠"
             name="Mohair / Roper Western Cinch"
             subtitle="Breathable natural-fiber cinch for long rides"
             score={8.5}
@@ -194,7 +192,6 @@ export default function GirthsCinchesPage() {
           <ReviewCard
             id="fleece-girth-cover"
             badge="Gall Prevention"
-            badgeEmoji="🐑"
             name="Sheepskin / Fleece Girth Cover"
             subtitle="Cushioning sleeve to reduce friction on sensitive horses"
             score={8.1}
