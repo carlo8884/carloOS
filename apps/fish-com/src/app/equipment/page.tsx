@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { EquipmentCategories } from '../../data/equipment-categories'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -150,6 +150,9 @@ export default function EquipmentHubPage() {
           ))}
         </div>
       </section>
+
+      {/* Explore the CarloOS network — cross-portfolio authority */}
+      <CrossPortfolioCard currentSite="fish-com" contentType="equipment" variant="footer" />
     </>
   </>
   )

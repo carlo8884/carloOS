@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -214,6 +214,9 @@ export default async function SpeciesIndexPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+
+      {/* Explore the CarloOS network — cross-portfolio authority */}
+      <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="footer" />
 </>
   </>
   )

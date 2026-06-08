@@ -26,6 +26,7 @@ import {
   EmailCapture,
   FAQAccordion,
   CalloutBox,
+  CrossPortfolioCard,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
@@ -528,6 +529,9 @@ export default function WaterParametersHubPage() {
           perks={['Water chemistry', 'Species guides', 'Equipment picks']}
         />
       </div>
+
+      {/* Explore the CarloOS network — cross-portfolio authority */}
+      <CrossPortfolioCard currentSite="fish-com" contentType="guide" variant="footer" />
     </>
   )
 }

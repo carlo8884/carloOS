@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { Diseases, RESERVED_HEALTH_SLUGS } from '../../data/diseases'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -98,6 +98,9 @@ export default function FishHealthPage() {
           ))}
         </div>
       </section>
+
+      {/* Explore the CarloOS network — cross-portfolio authority */}
+      <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="footer" />
 </>
   </>
   )

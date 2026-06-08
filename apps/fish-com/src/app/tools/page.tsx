@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -152,6 +152,9 @@ export default function ToolsHub() {
           perks={['New calculators', 'Species spotlights', 'Water chemistry tips', 'No spam']}
         />
       </section>
+
+      {/* Explore the CarloOS network — cross-portfolio authority */}
+      <CrossPortfolioCard currentSite="fish-com" contentType="equipment" variant="footer" />
     </>
   </>
   )
