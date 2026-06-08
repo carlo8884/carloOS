@@ -58,7 +58,8 @@ const FORBIDDEN = [
   { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our calibration…") — QC §1' },
   { pattern: /\bcalibration\s+testing\b/i, allowNegated: true, reason: '"calibration testing" implies a test we ran — QC §1' },
   { pattern: /\bNIST[\s-]?traceable\b/i, allowNegated: true, reason: '"NIST-traceable" testing claim — implies metrology we did not perform — QC §1' },
-  { pattern: /\b(?:heaters?|products?|units?|models?|items?)\s+tested\b/i, allowNegated: true, reason: '"N heaters/products tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
+  { pattern: /\b(?:heaters?|products?|units?|models?|items?|filters?|lights?|lighting|bulbs?|LEDs?|HOBs?|canisters?|thermostats?|thermometers?|hygrometers?|bowls?|pads?|blankets?|saddles?|crates?|harnesses?|substrates?|terrariums?)\s+tested\b(?!\s+(?:positive|negative))/i, allowNegated: true, reason: '"N <product> tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
+  { pattern: /\btested\s+for\s+(?:par|accuracy|output|durability|performance|flow(?:\s+rate)?|temperature\s+accuracy|biological\s+capacity)\b/i, allowNegated: true, reason: '"tested for <review metric>" implies hands-on testing — QC §1 (use "compared on"/"ranked by")' },
 
   // Uncredited stock photography (Unsplash/Pexels TOS + QC §1). Hardcoded CDN URLs render
   // images without photographer attribution. Use manifest-backed <StockImage manifestKey=...>

@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: '
 const REVIEWS = [
   { title: 'Best UVB Bulbs 2025', desc: 'Arcadia vs Zoo Med ranked on published Solarmeter 6.5 data', href: '/reviews/best-uvb-bulbs', badge: 'Most Important' },
   { title: 'Best Reptile Terrariums 2025', desc: 'Zen Habitats, Animal Plastics, Exo Terra — PVC vs glass tested', href: '/reviews/best-reptile-terrariums', badge: 'Setup' },
-  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird tested for accuracy — calibration data included', href: '/reviews/best-thermometers-hygrometers' },
+  { title: 'Best Thermometers 2025', desc: 'Govee, Inkbird compared on accuracy — published calibration data', href: '/reviews/best-thermometers-hygrometers' },
   { title: 'Best Reptile Substrates 2025', desc: 'Bio-active mixes, loose particle, tile — compared by species', href: '/reviews/best-bioactive-substrates' },
   { title: 'Best Reptile Thermostats 2025', desc: 'Pulse, dimming, and on-off thermostats ranked — Herpstat, Inkbird', href: '/reviews/best-thermostats' },
 ]
