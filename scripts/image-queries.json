@@ -223,6 +223,30 @@
     "alt": "Portrait of a ferret's face",
     "orientation": "landscape"
   },
+  "ferrets-com:home-masthead": {
+    "query": "two ferrets exploring together",
+    "provider": "either",
+    "alt": "Two ferrets exploring together",
+    "orientation": "landscape"
+  },
+  "ferrets-com:states-masthead": {
+    "query": "curious ferret looking up",
+    "provider": "either",
+    "alt": "A curious ferret looking up",
+    "orientation": "landscape"
+  },
+  "ferrets-com:care-masthead": {
+    "query": "ferret in cozy bedding",
+    "provider": "either",
+    "alt": "A ferret resting in cozy bedding",
+    "orientation": "landscape"
+  },
+  "ferrets-com:acquiring-masthead": {
+    "query": "young ferret being held",
+    "provider": "either",
+    "alt": "A young ferret being held by its owner",
+    "orientation": "landscape"
+  },
   "fish-com:hero": {
     "query": "planted freshwater aquarium",
     "provider": "either",
