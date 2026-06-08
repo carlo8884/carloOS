@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Best Dog Crates 2026',
-  description: 'Dog crates tested for durability, escape resistance, and ease of use.',
+  description: 'Dog crates compared on durability, escape resistance, and ease of use using published specs and stated criteria.',
   url: 'https://dog.com/reviews/best-dog-crates',
   imageUrl: '',
   authorName: 'Dog.com Editorial',

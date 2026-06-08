@@ -42,7 +42,7 @@ export default function BestSlowFeederBowlsPage() {
             <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" score={9.2} winner
               description={<p>The Outward Hound Fun Feeder is a widely used slow feeder and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
               specs={[{ label: 'Mealtime extension', value: '10x typical', highlight: 'good' }, { label: 'Sizes', value: '5 (mini to large breed)', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes — top rack', highlight: 'good' }, { label: 'Non-slip base', value: 'Yes' }]}
-              pros={['Best mealtime extension tested', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
+              pros={['Strong mealtime extension among bowls compared here', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
               ctaText="Shop Outward Hound →"

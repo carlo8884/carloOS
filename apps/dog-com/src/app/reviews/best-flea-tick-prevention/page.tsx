@@ -19,7 +19,7 @@ export default function FleaTickPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · May 2025</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Flea & Tick Prevention 2025</h1>
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are widely regarded as among the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
