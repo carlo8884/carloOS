@@ -225,7 +225,7 @@ function BrandCatalogPage({ brand }: { brand: Brand }) {
           <RelatedLinks
             title="Companion References"
             links={[
-              { label: 'Brand Index (all 35)', href: '/brands' },
+              { label: 'Brand Index (all)', href: '/brands' },
               { label: 'Ingredient Glossary', href: '/ingredients' },
               { label: 'Pet Food Recall Database', href: '/recalls' },
               { label: 'Life-Stage Catalog', href: '/life-stage' },
