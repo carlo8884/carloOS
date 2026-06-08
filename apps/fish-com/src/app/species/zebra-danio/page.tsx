@@ -34,7 +34,7 @@ export default function ZebraDanioPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-zebra-danio" aspect="16:9" variant="inline" caption="A zebra danio in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-zebra-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A zebra danio in a home aquarium." priority />
 
         <h2>The Toughest Beginner Fish — Within Reason</h2>
         <DropCap>The zebra danio earned its reputation for hardiness honestly. It tolerates a wide temperature band, adapts to most municipal water chemistry, and resists the stress-related disease that kills more delicate species. This is why it became the textbook recommendation for new aquarists and the standard model organism in genetics labs worldwide. But hardiness is frequently mistaken for invincibility. The widespread (and now discouraged) practice of using danios to "fishlessly" cycle a tank subjected these fish to lethal ammonia and nitrite — surviving such abuse is not the same as thriving. A danio kept properly in a cycled, appropriately sized school is a far more attractive and active animal than one that merely survived a cycle.</DropCap>

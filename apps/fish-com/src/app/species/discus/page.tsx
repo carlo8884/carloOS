@@ -34,7 +34,7 @@ export default function DiscusPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-discus" aspect="16:9" variant="inline" caption="A discus in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-discus" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A discus in a home aquarium." priority />
 
         <h2>Why Discus Are Advanced</h2>
         <DropCap>Discus are sensitive to water quality in a way that most fish are not — they show stress responses at nitrate levels that most community fish handle easily, they are susceptible to pathogens that hardy fish resist, and they require water parameters (soft, warm, acidic) that require active management in most US households with hard tap water. The daily or every-other-day water changes required to maintain discus — large volume, temperature-matched — represent a significant time commitment. A discus keeper does water changes the way a planted tank keeper doses fertilizers: consistently, on schedule, without exception.</DropCap>

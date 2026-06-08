@@ -39,7 +39,7 @@ export default function ClownfishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-clownfish" aspect="16:9" variant="inline" caption="A clownfish in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-clownfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A clownfish in a home aquarium." priority />
         <h2>Saltwater Tank Basics</h2>
         <p>Clownfish are marine fish — they require saltwater maintained at 1.023–1.026 specific gravity (SG). This is measured with a refractometer (more accurate) or hydrometer. Mix Instant Ocean or Red Sea Salt with RODI (reverse osmosis/deionized) water — never tap water in a marine tank. Marine tanks also require protein skimmers and higher-quality filtration than freshwater setups.</p>
         <p>The good news: captive-bred clownfish (available from most reputable marine fish retailers) are significantly hardier than wild-caught fish and tolerate the parameter fluctuations that are inevitable in any tank. Always choose captive-bred over wild-caught for both ecological and practical reasons.</p>

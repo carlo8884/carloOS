@@ -34,7 +34,7 @@ export default function HarlequinPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-harlequin-rasbora" aspect="16:9" variant="inline" caption="A harlequin rasbora in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-harlequin-rasbora" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A harlequin rasbora in a home aquarium." priority />
         <h2>Why Harlequins Are the Benchmark Community Schooler</h2>
         <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras consistently rank as one of the most recommended because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>
         <p>A single harlequin rasbora is unremarkable. Eight harlequin rasboras are pleasant. Twenty harlequin rasboras moving as a cohesive school through a planted midground is one of the most satisfying things in the freshwater hobby — the school rotates and banks together, each fish's patch catching the light differently as they turn.</p>

@@ -34,7 +34,7 @@ export default function BristlenosePlecoPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-bristlenose-pleco" aspect="16:9" variant="inline" caption="A bristlenose pleco in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-bristlenose-pleco" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A bristlenose pleco in a home aquarium." priority />
 
         <h2>The Pleco You Should Actually Buy</h2>
         <DropCap>The single most common mistake in catfish keeping is buying a "pleco" without knowing which species it is. The fish sold generically as plecos in most stores is the common pleco (Hypostomus or Pterygoplichthys), which grows to 18–24 inches and requires a tank well over 100 gallons as an adult. The bristlenose pleco is the answer to that problem: a true dwarf that tops out around four to five inches, remains an effective algae grazer for its entire life rather than abandoning the habit as it matures, and fits comfortably in a 25- to 30-gallon community. If you want a hardworking algae eater for a normal-sized tank, this is the species to seek out by name.</DropCap>

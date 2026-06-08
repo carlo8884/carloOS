@@ -195,7 +195,7 @@ export default function AfricanCichlidPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
-        <StockImage manifestKey="fish-com:species-african-cichlid" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             African rift-lake cichlids from Lakes Malawi, Tanganyika, and

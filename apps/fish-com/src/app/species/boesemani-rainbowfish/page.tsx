@@ -34,7 +34,7 @@ export default function BoesemaniPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-boesemani-rainbowfish" aspect="16:9" variant="inline" caption="A Boeseman’s rainbowfish in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-boesemani-rainbowfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A Boeseman’s rainbowfish in a home aquarium." priority />
         <h2>Color Development — Why Store Fish Look Different</h2>
         <p>Boesemani from fish stores are frequently juvenile males showing pale, washed-out versions of their adult colors — the blue may appear gray, the orange may appear yellowish, and the characteristic split may be barely defined. Full adult coloration in males takes 9–18 months to develop fully and requires: maturity, appropriate water chemistry (harder alkaline water produces better blue coloration), high-quality diet with color-enhancing foods, social stimulation (males displaying to each other and to females), and low nitrate (under 20 ppm — elevated nitrate consistently suppresses rainbowfish color). A Boesemani male in peak condition in ideal water, with a group of rivals and females, displaying with full intensity, is dramatically different from the same fish at 6 months in a fish store tank.</p>
 

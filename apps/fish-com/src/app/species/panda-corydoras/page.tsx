@@ -34,7 +34,7 @@ export default function PandaCorydorasPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-panda-corydoras" aspect="16:9" variant="inline" caption="A panda corydoras in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-panda-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A panda corydoras in a home aquarium." priority />
 
         <h2>The Cooler-Water Cory</h2>
         <DropCap>The panda corydoras differs from most aquarium catfish in one important respect: it comes from cooler, faster-flowing foothill streams of the Peruvian Amazon rather than the warm lowland waters most tropical fish inhabit. As a result it does best at the lower end of the tropical range, between 68 and 77°F, and tends to struggle and shorten its lifespan in the high-70s-to-low-80s temperatures kept for discus or many gouramis. This makes the panda a poor tankmate for warm-water specialists but an excellent companion for other cool-tolerant species such as white cloud mountain minnows, neon tetras, and many rasboras. Keepers who lose pandas quickly have very often kept them too warm.</DropCap>
