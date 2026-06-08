@@ -22,6 +22,8 @@ import {
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
+import Link from 'next/link'
+import { racingRoleSpokes } from '@/data/racing-roles'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -113,8 +115,18 @@ export default function PeopleOfRacingPage() {
                 { label: 'The Jockey', href: '#jockey' },
                 { label: 'The Backstretch Team', href: '#backstretch' },
                 { label: 'Raceday Officials', href: '#officials' },
+                { label: 'The Roles in Depth', href: '#in-depth' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'References', href: '#references' },
+              ]}
+            />
+            <RelatedLinks
+              title="The Roles In Depth"
+              links={[
+                { label: 'The Jockey', href: '/racing/racing-roles/jockey' },
+                { label: 'The Trainer', href: '/racing/racing-roles/trainer' },
+                { label: 'The Owner', href: '/racing/racing-roles/owner' },
+                { label: 'Racing Officials & Stewards', href: '/racing/racing-roles/racing-official' },
               ]}
             />
             <RelatedLinks
@@ -164,6 +176,29 @@ export default function PeopleOfRacingPage() {
 
           <h2 id="officials">Raceday Officials</h2>
           <p>Several officials make a race meet run under the rules. The <strong>racing secretary</strong> writes the condition book and assigns handicap weights, shaping the races a track offers. The <strong>stewards</strong> enforce the rules on race day, reviewing incidents and able to sanction participants or alter the order of finish. The <strong>clerk of scales</strong> verifies that each jockey weighs out and in at the correct weight. The <strong>valet</strong> prepares a jockey&apos;s equipment and silks. <strong>Outriders</strong> help control horses on the track and catch loose horses. Together these roles, licensed and overseen by the racing commission, uphold the integrity and safety of the race.</p>
+
+          <h2 id="in-depth">The Roles in Depth</h2>
+          <p>The sections above introduce the principal roles. Four of them -- the rider, the trainer, the owner, and the officials -- each have their own dedicated reference that goes deeper into what the role really involves, the path into it, and the daily reality. These remain strictly educational role guides; none offers wagering guidance.</p>
+          <ul className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-3 list-none p-0 my-6">
+            {racingRoleSpokes.map((spoke) => (
+              <li key={spoke.slug}>
+                <Link
+                  href={`/racing/racing-roles/${spoke.slug}`}
+                  className="block py-3 px-4 rounded-md border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                >
+                  <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-1">
+                    {spoke.kicker}
+                  </span>
+                  <span className="block font-display font-bold text-brand-dark text-base leading-tight mb-1">
+                    {spoke.title}
+                  </span>
+                  <span className="block text-xs text-brand-text-mid">
+                    {spoke.description}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
