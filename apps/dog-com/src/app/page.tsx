@@ -613,10 +613,16 @@ export default function HomePage() {
               Hereditary conditions, screening tests by age, breed-specific nutrition, training tendencies.
             </p>
           </div>
-          <Link href="/breeds" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
-            All breeds
-            <IconArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <div className="flex items-center gap-5">
+            <Link href="/breeds/match" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+              Find your match
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link href="/breeds" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary no-underline hover:underline whitespace-nowrap">
+              All breeds
+              <IconArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Two large photo-featured breeds (real photography only) */}
