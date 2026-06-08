@@ -2022,5 +2022,29 @@
     "provider": "either",
     "alt": "A Thoroughbred galloping clear over a long dirt course — Belmont Stakes reference",
     "orientation": "landscape"
+  },
+  "horses-com:role-jockey": {
+    "query": "jockey riding a thoroughbred at speed during a race",
+    "provider": "either",
+    "alt": "A jockey riding a Thoroughbred at speed during a race — the jockey role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-trainer": {
+    "query": "horse trainer with a thoroughbred at the stable on a morning at the track",
+    "provider": "either",
+    "alt": "A trainer with a Thoroughbred at the stable on a morning at the track — the trainer role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-owner": {
+    "query": "racegoers watching from the owners enclosure at a racecourse",
+    "provider": "either",
+    "alt": "Owners watching their horse from the enclosure on a race day — the owner role guide",
+    "orientation": "landscape"
+  },
+  "horses-com:role-official": {
+    "query": "photo finish camera and finish line at a horse racing track",
+    "provider": "either",
+    "alt": "The photo-finish line at a racecourse — the racing officials and stewards role guide",
+    "orientation": "landscape"
   }
 }
