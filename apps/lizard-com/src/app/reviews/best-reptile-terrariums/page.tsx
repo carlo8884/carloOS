@@ -61,9 +61,9 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-5"
         style={{ background: '#0D1A0D', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="rounded-lg p-5" style={{ background: 'rgba(122,181,42,0.07)', border: '1px solid rgba(122,181,42,0.2)' }}>
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Testing Methodology</div>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Comparison Methodology</div>
           <p className="text-sm m-0" style={{ color: 'rgba(238,240,228,0.75)', lineHeight: 1.65 }}>
-            Each enclosure was tested with identical heating setups (150W basking bulb + heat panel) and measured with Govee H5053 sensors at basking zone, mid-tank, and cool side. Humidity was tested with and without moist hides and misting. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
+            Each enclosure is compared on the same criteria — thermal performance with a standard heating setup (150W basking bulb + heat panel), manufacturer-stated dimensions and materials, and humidity retention with and without moist hides — drawing on manufacturer specifications and aggregated long-term keeper reports rather than an in-house test rig. Build quality assessed against owner long-term reports and manufacturer specifications. Affiliate links below — rankings are independent.
           </p>
         </div>
       </div>
@@ -82,7 +82,7 @@ export default function BestTerrariumsPage() {
               winner
               description={
                 <div>
-                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zen Habitats has become the default recommendation for most terrestrial reptile species — bearded dragons, ball pythons, blue-tongue skinks, corn snakes — and for good reason. PVC construction retains heat significantly better than glass, reducing electricity costs and preventing temperature instability. In our tests, the Zen 4×2×2 maintained a 28°F gradient (105°F basking to 77°F cool side) with the same wattage that required significantly more in glass alternatives.</p>
+                  <p style={{ color: 'rgba(238,240,228,0.8)' }}>Zen Habitats has become the default recommendation for most terrestrial reptile species — bearded dragons, ball pythons, blue-tongue skinks, corn snakes — and for good reason. PVC construction retains heat significantly better than glass, reducing electricity costs and preventing temperature instability. Per keeper reports and the maker's published thermal data, the Zen 4×2×2 holds roughly a 28°F gradient (about 105°F basking to 77°F cool side) at wattages that reportedly require significantly more in glass alternatives.</p>
                   <p style={{ color: 'rgba(238,240,228,0.8)' }}>Flat-pack shipping keeps prices lower than competitors. Assembly takes 30–45 minutes with no tools. Front-opening doors eliminate the stress of top-opening interaction (prey response in many reptiles). Multiple vent configurations available. Build quality is solid — hinges and magnetic latches hold up through repeated use.</p>
                 </div>
               }
