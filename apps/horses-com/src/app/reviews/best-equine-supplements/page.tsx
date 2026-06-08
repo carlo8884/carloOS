@@ -171,7 +171,7 @@ export default function BestEquineSupplementsPage() {
               score={9.1}
               winner
               description={<>
-                <p>Cosequin from Nutramax is the most peer-reviewed equine joint supplement brand on the market. The ASU formulations specifically have the strongest published equine clinical-trial evidence of any oral joint supplement, with chondroprotective effects demonstrated in induced-osteoarthritis models (Kawcak CE et al., <em>American Journal of Veterinary Research</em>, 2007). Nutramax is NASC-sealed and runs its own pharmaceutical-grade manufacturing.</p>
+                <p>Cosequin from Nutramax is among the most-studied equine joint supplement brands. Its ASU formulations have some of the strongest published equine clinical-trial evidence of any oral joint supplement, with chondroprotective effects demonstrated in induced-osteoarthritis models (Kawcak CE et al., <em>American Journal of Veterinary Research</em>, 2007). Nutramax is NASC-sealed and runs its own pharmaceutical-grade manufacturing.</p>
                 <p>The trade-off: Cosequin ASU runs at the higher end of the joint-supplement price range, and the loading-dose-then-maintenance protocol increases first-month cost. For horses with diagnosed osteoarthritis or significant work-related joint loading, the evidence justifies the price.</p>
               </>}
               specs={[
@@ -305,7 +305,7 @@ export default function BestEquineSupplementsPage() {
             />
 
             <h2>Forage and Forage-Replacement</h2>
-            <p>The single most powerful equine "supplement" is appropriate forage. Standlee Premium Forage is the leading US producer of premium pelleted and baled forage products. Standlee alfalfa, timothy, and orchard grass products serve as forage-extension (slow-feeders, soaked products for senior horses with dental compromise), pre-exercise gastric buffer (an alfalfa flake 30 minutes before work reduces ESGD risk), and travel/competition forage where consistent hay supply matters.</p>
+            <p>The single most powerful equine "supplement" is appropriate forage. Standlee Premium Forage is one of the most widely-distributed US producers of premium pelleted and baled forage products. Standlee alfalfa, timothy, and orchard grass products serve as forage-extension (slow-feeders, soaked products for senior horses with dental compromise), pre-exercise gastric buffer (an alfalfa flake 30 minutes before work reduces ESGD risk), and travel/competition forage where consistent hay supply matters.</p>
 
             <ReviewCard
               id="standlee"
@@ -314,7 +314,7 @@ export default function BestEquineSupplementsPage() {
               subtitle="Premium alfalfa, timothy, orchard grass · Pelleted, cubed, and baled"
               score={8.7}
               description={<>
-                <p>Standlee Premium Forage is the dominant US brand for shelf-stable, consistent-quality forage products — pelleted alfalfa, alfalfa-orchard blends, timothy pellets and cubes, beet pulp, and various forage-extender products. The product line is most useful for horses needing soaked forage (senior horses with dental compromise, post-colic recovery, travel where local hay quality is unpredictable) and for owners using alfalfa as a pre-exercise gastric buffer.</p>
+                <p>Standlee Premium Forage is a widely-stocked US brand for shelf-stable, consistent-quality forage products — pelleted alfalfa, alfalfa-orchard blends, timothy pellets and cubes, beet pulp, and various forage-extender products. The product line is most useful for horses needing soaked forage (senior horses with dental compromise, post-colic recovery, travel where local hay quality is unpredictable) and for owners using alfalfa as a pre-exercise gastric buffer.</p>
                 <p>Standlee is not a "supplement" in the traditional sense, but it earns mention here because the forage stack is the foundation of all equine nutrition decisions, and standardized commercial forage products solve real ration consistency problems that no pelleted supplement can address.</p>
               </>}
               specs={[

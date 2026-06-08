@@ -161,7 +161,7 @@ export default function BestWinterBlanketsPage() {
               score={9.4}
               winner
               description={<>
-                <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is the most durable in the standard mid-weight market; multi-season use in active pasture turnout is the norm, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
+                <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is among the most durable in the standard mid-weight market; multi-season use in active pasture turnout is commonly reported, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
                 <p>The trade-off is price. A new Rambo Original retails 50–80 percent higher than the equivalent fill-weight competitor from a value-tier brand. The cost-per-season math favors Rambo for any owner who plans to keep horses long-term and prefers not to replace a blanket every two winters.</p>
               </>}
               specs={[
