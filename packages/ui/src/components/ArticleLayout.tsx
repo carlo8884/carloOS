@@ -16,10 +16,9 @@
 
 import type { ReactNode } from 'react'
 import type { SiteId, ContentType } from '@carloOS/config'
-import { getSiteConfig } from '@carloOS/config'
 import { Breadcrumb } from './Breadcrumb'
 import { CrossPortfolioCard } from './CrossPortfolioCard'
-import { SchemaScript, buildBreadcrumbSchema } from './SEOHead'
+import { SchemaScript } from './SEOHead'
 
 interface ArticleHero {
   title: string
@@ -63,34 +62,29 @@ export function ArticleLayout({
   relatedLinks,
   contentType,
 }: ArticleLayoutProps) {
-  // Auto-derive BreadcrumbList JSON-LD from the visual breadcrumb prop.
-  // GEO/SEO: a breadcrumb schema is one of the highest-leverage structured-
-  // data signals for AI Overviews + classic SERP, and was previously absent
-  // on ~300 editorial pages that pass `breadcrumbs` but only an Article
-  // schema. Skip if the page already supplied a BreadcrumbList (no dupes)
-  // or if any breadcrumb item is missing an href (incomplete graph).
-  const mergedSchema = (() => {
-    if (!breadcrumbs || breadcrumbs.length === 0) return schema
-    if (breadcrumbs.some((b) => !b.href)) return schema
-    const existing = Array.isArray(schema) ? schema : schema ? [schema] : []
-    const hasBreadcrumb = existing.some(
-      (s) => (s as { '@type'?: string })?.['@type'] === 'BreadcrumbList',
-    )
-    if (hasBreadcrumb) return schema
-    const siteUrl = getSiteConfig(siteId).theme.siteUrl
-    const auto = buildBreadcrumbSchema({
-      items: breadcrumbs.map((b) => ({
-        name: b.name,
-        url: b.href!.startsWith('http') ? b.href! : `${siteUrl}${b.href}`,
-      })),
-    })
-    return [...existing, auto]
+  // SINGLE SOURCE OF TRUTH for BreadcrumbList JSON-LD = the inner <Breadcrumb>
+  // (rendered below), which emits exactly one BreadcrumbList from the same
+  // `breadcrumbs` prop that draws the visual trail. To guarantee exactly ONE
+  // BreadcrumbList per page, strip any BreadcrumbList node a page may have
+  // hand-built into the `schema` prop — otherwise it would double-emit
+  // alongside the inner <Breadcrumb>. We do NOT auto-derive a breadcrumb here;
+  // emission is owned solely by <Breadcrumb>. Non-breadcrumb schema (Article,
+  // FAQPage, MedicalWebPage, etc.) passes through untouched.
+  const pageSchema = (() => {
+    if (!schema) return schema
+    const isBreadcrumb = (s: unknown) =>
+      (s as { '@type'?: string } | null)?.['@type'] === 'BreadcrumbList'
+    if (Array.isArray(schema)) {
+      const filtered = schema.filter((s) => !isBreadcrumb(s))
+      return filtered.length > 0 ? filtered : undefined
+    }
+    return isBreadcrumb(schema) ? undefined : schema
   })()
 
   return (
     <>
-      {/* JSON-LD Schema */}
-      {mergedSchema && <SchemaScript schema={mergedSchema} />}
+      {/* JSON-LD Schema (BreadcrumbList stripped — owned by <Breadcrumb> below) */}
+      {pageSchema && <SchemaScript schema={pageSchema} />}
 
       {/* Breadcrumb */}
       {breadcrumbs && breadcrumbs.length > 0 && (
