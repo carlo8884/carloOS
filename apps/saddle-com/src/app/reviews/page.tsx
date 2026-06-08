@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import {
   SADDLE_REVIEWS,
   FEATURED_SADDLE_REVIEWS,
@@ -172,6 +172,9 @@ export default function SaddleReviewsPage() {
             ))}
         </div>
       </section>
+      <div className="px-container-sm sm:px-container py-10">
+        <CrossPortfolioCard currentSite="saddle-com" contentType="review" variant="footer" />
+      </div>
     </>
   )
 }
