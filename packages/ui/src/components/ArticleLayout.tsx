@@ -72,6 +72,11 @@ export function ArticleLayout({
   // FAQPage, MedicalWebPage, etc.) passes through untouched.
   const pageSchema = (() => {
     if (!schema) return schema
+    // Only strip the page's own BreadcrumbList when the inner <Breadcrumb> will
+    // render (breadcrumbs prop present) to emit the canonical one. With no
+    // breadcrumbs prop there is no inner Breadcrumb, so keep the page's own
+    // BreadcrumbList — otherwise the page would lose breadcrumb schema entirely.
+    if (!breadcrumbs || breadcrumbs.length === 0) return schema
     const isBreadcrumb = (s: unknown) =>
       (s as { '@type'?: string } | null)?.['@type'] === 'BreadcrumbList'
     if (Array.isArray(schema)) {
