@@ -87,7 +87,7 @@ export default function PreaknessStakesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:triple-crown-preakness"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Triple Crown · Second Leg"
         title="The Preakness Stakes"
         subtitle="The middle jewel — the shortest leg, run two weeks after the Derby at historic Pimlico, where a Triple Crown bid is either kept alive or quietly ended."

@@ -79,7 +79,7 @@ export default function JockeyRolePage() {
 
       <PremiumMasthead
         manifestKey="horses-com:role-jockey"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Roles · In the Saddle"
         title="The Jockey"
         subtitle="More than a passenger: a finely conditioned athlete and split-second tactician, judging pace and timing a run at 35+ mph in a tight pack."

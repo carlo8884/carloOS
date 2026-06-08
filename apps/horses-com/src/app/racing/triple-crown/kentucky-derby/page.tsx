@@ -87,7 +87,7 @@ export default function KentuckyDerbyPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:triple-crown-derby"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Triple Crown · First Leg"
         title="The Kentucky Derby"
         subtitle="The first jewel of the Triple Crown — a mile and a quarter at Churchill Downs on the first Saturday in May, and the most famous race in American sport."

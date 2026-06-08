@@ -76,7 +76,7 @@ export default function GradedStakesRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-graded-stakes"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Top Class"
         title="Graded Stakes Races"
         subtitle="The cream of the sport, ranked Grade 1, 2, or 3 by an independent committee — where championships are decided and pedigrees are made."

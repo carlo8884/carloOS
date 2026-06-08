@@ -78,7 +78,7 @@ export default function RacingOfficialRolePage() {
 
       <PremiumMasthead
         manifestKey="horses-com:role-official"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Roles · Integrity"
         title="Racing Officials & Stewards"
         subtitle="The licensed officials who enforce the rules, judge the running, and protect the integrity of every race -- the people the whole sport depends on."

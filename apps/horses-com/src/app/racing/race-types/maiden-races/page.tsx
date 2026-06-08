@@ -76,7 +76,7 @@ export default function MaidenRacesPage() {
 
       <PremiumMasthead
         manifestKey="horses-com:race-type-maiden"
-        fallbackKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Race Types · Entry Level"
         title="Maiden Races"
         subtitle="Where almost every racing career begins: races for horses that have never won, and the first place future stars show their hand."
