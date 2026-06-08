@@ -103,15 +103,15 @@ export default function BestJointSupplementsPage() {
               name="Nordic Naturals Omega-3 Pet"
               subtitle="Marine EPA + DHA · Anti-inflammatory · Skin, coat, cognitive benefit"
               score={9.3}
-              description={<p>Fish oil (EPA and DHA omega-3 fatty acids) has among the strongest published evidence of any joint supplement (Roush et al., JAVMA 2010; multiple ACVS-cited reviews) — for joint inflammation, skin and coat, cardiovascular support, and emerging cognitive benefit in senior dogs. The anti-inflammatory mechanism of EPA and DHA is well-established and clinically relevant for osteoarthritis management. Nordic Naturals publishes third-party heavy-metal testing and is widely recommended for pet omega-3 supplementation. Dose for joint benefit: 20–55mg combined EPA/DHA per kg body weight daily — significantly more than most fish oil products suggest on the label. Calculate the dose based on EPA/DHA content, not total fish oil volume.</p>}
+              description={<p>Fish oil (EPA and DHA omega-3 fatty acids) has among the strongest published evidence of any joint supplement (Roush et al., JAVMA 2010; multiple ACVS-cited reviews) — for joint inflammation, skin and coat, cardiovascular support, and emerging cognitive benefit in senior dogs. The anti-inflammatory mechanism of EPA and DHA is well-established and clinically relevant for osteoarthritis management. Nordic Naturals publishes third-party heavy-metal testing and is widely recommended for pet omega-3 supplementation. Published therapeutic ranges for joint benefit fall around 20–55 mg combined EPA/DHA per kg body weight daily — often more than label suggestions — but confirm the right dose with your veterinarian and calculate from EPA/DHA content, not total fish oil volume.</p>}
               specs={[
                 { label: 'Active Ingredients', value: 'EPA + DHA (marine)', highlight: 'good' },
                 { label: 'Third-Party Tested', value: 'Yes (heavy metals)', highlight: 'good' },
-                { label: 'Evidence Level', value: 'Strong — most studied supplement', highlight: 'good' },
+                { label: 'Evidence Level', value: 'Strong — among the most studied supplements', highlight: 'good' },
                 { label: 'Additional Benefits', value: 'Skin, coat, cardiovascular, cognitive' },
-                { label: 'Dose', value: '20–55mg EPA+DHA per kg/day' },
+                { label: 'Published range', value: '20–55mg EPA+DHA per kg/day (confirm with vet)' },
               ]}
-              pros={['Strongest evidence of any supplement category', 'Multiple additional health benefits', 'Third-party heavy metal tested', 'Widely available']}
+              pros={['Among the strongest evidence of any supplement category', 'Multiple additional health benefits', 'Third-party heavy metal tested', 'Widely available']}
               cons={['Dose calculation required — label suggestions are often too low', 'Some dogs refuse fish-flavored supplements', 'Blood thinner at very high doses — discuss with vet']}
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content"

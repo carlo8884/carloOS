@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Dry Dog Food 2025 — Royal Canin, Hill\'s & Purina Ranked',
-  description: 'We evaluated 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance. Royal Canin, Hill\'s, Purina Pro Plan, and more — ranked.',
+  description: 'We compared 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance using published specs. Royal Canin, Hill\'s, Purina ranked.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
 })
@@ -49,7 +49,7 @@ export default function BestDogFoodPage() {
           Best Dry Dog Food 2025
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
-          The dog food market is full of marketing. We cut through it: 12 foods evaluated on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and actual ingredient quality — not front-of-bag claims.
+          The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
         <div className="text-xs text-white/30">
           Updated May 2025 ·{' '}
@@ -97,7 +97,7 @@ export default function BestDogFoodPage() {
               winner
               description={
                 <div>
-                  <p>Royal Canin is the most veterinary-recommended dog food brand globally — not because of marketing spend, but because of genuine investment in nutritional science. They employ over 600 scientists, conduct extensive feeding trials, and publish research. Their breed-specific formulas (Labrador, Golden Retriever, French Bulldog, German Shepherd) are genuinely differentiated for breed-specific nutritional needs and kibble geometry, not just marketing segmentation.</p>
+                  <p>Royal Canin is among the most widely veterinarian-recommended dog food brands — not because of marketing spend, but because of genuine investment in nutritional science. Per the company, they employ over 600 scientists, conduct extensive feeding trials, and publish research. Their breed-specific formulas (Labrador, Golden Retriever, French Bulldog, German Shepherd) are genuinely differentiated for breed-specific nutritional needs and kibble geometry, not just marketing segmentation.</p>
                   <p>Full WSAVA compliance: they employ board-certified veterinary nutritionists, conduct AAFCO feeding trials (not just formulation testing), and can answer detailed questions about ingredient sourcing and manufacturing. This level of transparency is the benchmark the rest of the industry should meet.</p>
                 </div>
               }
@@ -110,8 +110,8 @@ export default function BestDogFoodPage() {
                 { label: 'Price Point', value: 'Mid-premium' },
               ]}
               pros={[
-                'Most research-backed brand in the industry',
-                'Full WSAVA compliance — top-tier transparency',
+                'Among the most research-backed brands in the industry',
+                'Full WSAVA compliance — strong sourcing transparency',
                 'Breed-specific formulas with genuine nutritional differentiation',
                 'AAFCO feeding trials (not just formulation testing)',
                 'Widely available through vets, Chewy, Amazon',
@@ -138,7 +138,7 @@ export default function BestDogFoodPage() {
               score={9.3}
               description={
                 <div>
-                  <p>Purina Pro Plan is the most common answer when you ask veterinarians what they feed their own dogs — not a paid endorsement, just a consistent observation. Purina invests more in nutritional research than almost any other pet food company, with over 400 published studies. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
+                  <p>Purina Pro Plan is frequently cited among the brands veterinarians choose for their own dogs — an anecdotal pattern, not a formal survey. Purina is among the larger investors in nutritional research in the pet food category, with over 400 published studies per the company. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
                   <p>Pro Plan specifically (not regular Purina) meets WSAVA guidelines and uses AAFCO feeding trials. The Sport, Sensitive Skin & Stomach, and Adult formulas are among the most evidence-backed dog foods available at their price point. Widely available, excellent palatability, consistent quality.</p>
                 </div>
               }
@@ -151,8 +151,8 @@ export default function BestDogFoodPage() {
                 { label: 'Price Point', value: 'Mid-range (great value)' },
               ]}
               pros={[
-                'Veterinarian\'s most common personal choice for their own dogs',
-                'Extensive research investment — 400+ studies',
+                'Frequently cited among vets\' choices for their own dogs (anecdotal)',
+                'Extensive research investment — 400+ studies per the company',
                 'Excellent palatability — picky eaters usually accept it',
                 'Strong value at price point',
               ]}
@@ -183,7 +183,7 @@ export default function BestDogFoodPage() {
                 { label: 'Vet Recommended', value: 'Widely used in veterinary practice', highlight: 'good' },
               ]}
               pros={[
-                'Most clinically studied prescription diet line',
+                'Among the most clinically studied prescription diet lines',
                 'Formulas for every major disease condition',
                 'Extensive feeding trial data',
                 'Strong dental health formula (t/d)',
