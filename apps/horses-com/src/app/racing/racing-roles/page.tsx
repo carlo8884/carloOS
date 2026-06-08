@@ -59,8 +59,8 @@ export default function RacingRolesHubPage() {
 
       {/* ── PREMIUM MASTHEAD (image-first) ─────────────────────────── */}
       <PremiumMasthead
-        manifestKey="horses-com:racing-roles"
-        fallbackKey="horses-com:racing"
+        manifestKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Intelligence · The People"
         title="Racing Roles"
         subtitle="Behind every runner is a team. This hub gathers the in-depth references on the people of racing — the jockey in the saddle, the trainer who prepares the horse, the owner who funds it, and the officials who keep each race fair. Educational role guides, not a betting resource."

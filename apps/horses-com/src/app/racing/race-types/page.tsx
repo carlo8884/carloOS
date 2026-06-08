@@ -59,8 +59,8 @@ export default function RaceTypesHubPage() {
 
       {/* ── PREMIUM MASTHEAD (image-first) ─────────────────────────── */}
       <PremiumMasthead
-        manifestKey="horses-com:race-types"
-        fallbackKey="horses-com:racing"
+        manifestKey="horses-com:racing"
+        fallbackKey="horses-com:hero"
         eyebrow="Racing Intelligence · Race Classes"
         title="Race Types & Classes"
         subtitle="The class ladder that organizes the entire sport: maiden, claiming, allowance, optional claiming, stakes, graded stakes, and handicap races. Each class has its own in-depth reference here. Educational structure only — not a handicapping or wagering guide."
