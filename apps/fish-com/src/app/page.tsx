@@ -683,10 +683,20 @@ export default function HomePage() {
             <h2 className="font-display font-bold tracking-tight text-3xl italic mb-4 max-w-3xl">
               The cycle, the parameters, the emergencies.
             </h2>
-            <p className="text-base text-white/60 leading-relaxed">
+            <p className="text-base text-white/60 leading-relaxed mb-5">
               Most aquarium problems trace back to one of four water issues. Each guide covers what
               the readings mean, what causes them, and the specific action that fixes them.
             </p>
+            <div className="flex gap-5 flex-wrap">
+              <Link href="/water-parameters" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light no-underline hover:underline whitespace-nowrap">
+                Water chemistry reference
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link href="/health" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light no-underline hover:underline whitespace-nowrap">
+                All health &amp; disease guides
+                <IconArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
 
