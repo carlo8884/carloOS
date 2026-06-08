@@ -71,6 +71,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'Discipline',
   },
   {
+    slug: 'racing-for-newcomers',
+    title: 'Racing for Newcomers',
+    tagline:
+      'New to the sport? Start here: how to read a race card, what a day at the races is like, and how racing silks help you follow a horse. A spectator\'s guide, not a betting one.',
+    authorities: 'Educational Reference',
+    category: 'For Newcomers',
+  },
+  {
     slug: 'understanding-race-types-and-classes',
     title: 'Race Types & Classes Explained',
     tagline:
