@@ -2046,5 +2046,47 @@
     "provider": "either",
     "alt": "The photo-finish line at a racecourse — the racing officials and stewards role guide",
     "orientation": "landscape"
+  },
+  "horses-com:history-hero": {
+    "query": "thoroughbred field at a historic american racecourse grandstand",
+    "provider": "either",
+    "alt": "A Thoroughbred field at a historic American racecourse — racing history heritage reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-origins": {
+    "query": "thoroughbred horse at liberty in an open english paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred at liberty in an open paddock — origins of Thoroughbred racing reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-triple-crown": {
+    "query": "thoroughbred field rounding the turn at a classic american racecourse",
+    "provider": "either",
+    "alt": "A Thoroughbred field rounding the turn at a historic racecourse — Triple Crown history reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-secretariat": {
+    "query": "powerful chestnut thoroughbred racehorse at full stride",
+    "provider": "either",
+    "alt": "A powerful chestnut Thoroughbred at full stride — heritage profile of a champion racehorse",
+    "orientation": "landscape"
+  },
+  "horses-com:history-man-o-war": {
+    "query": "muscular chestnut thoroughbred standing portrait",
+    "provider": "either",
+    "alt": "A muscular chestnut Thoroughbred standing in profile — early-century champion heritage profile",
+    "orientation": "landscape"
+  },
+  "horses-com:history-great-mares": {
+    "query": "thoroughbred mare and foal in a green pasture",
+    "provider": "either",
+    "alt": "A Thoroughbred mare with her foal in a pasture — the great mares of racing history reference",
+    "orientation": "landscape"
+  },
+  "horses-com:history-milestones": {
+    "query": "historic american racecourse grandstand architecture",
+    "provider": "either",
+    "alt": "A historic American grandstand and racecourse — milestones in American racing reference",
+    "orientation": "landscape"
   }
 }
