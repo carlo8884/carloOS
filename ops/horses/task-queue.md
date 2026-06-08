@@ -14,10 +14,18 @@ never flood thin pages. Every page trust-safe (QC §1) + CI-green + harvest-read
 6. Lane: build in `apps/horse-racing` (my app, no merge-wave collision); harvest into horses.com on CSRO dispatch.
 
 ## Cursor
-- **Current cycle:** ⏸ PAUSED (Carlo 2026-06-07) — STOP new racing builds. Reconciliation phase.
-- **Active task:** reconciliation map delivered → awaiting CSRO disposition approval.
-- **Resume condition:** CSRO approves the map; then build ONLY the highest-value non-overlapping
-  clusters CSRO dispatches. No solo building into apps/horses-com (COO's lane).
+- **Current cycle:** C2 — HARVEST BUILD (CSRO-approved set), dispatched 2026-06-07.
+- **Mode:** one cluster = one small PR, own branch in isolated worktree off fresh main, apps/horses-com
+  ONLY, premium ArticleLayout convention, non-wagering. CSRO/COO hold the merge gate.
+- **Harvest set + status:**
+  - [x] bloodstock → PR #611 (draft, CI in progress) ✅ built
+  - [ ] racing-history (fact-checked) — next
+  - [ ] first-derby
+  - [ ] race-types 7 spokes under existing overview
+  - [ ] 3 missing Triple Crown legs (Derby / Preakness / Belmont)
+  - [~] racing-roles — PULLED: /racing/the-people-of-racing already covers it (flagged to CSRO in PR #611)
+- **Sitemap:** auto-generated (scripts/regenerate-sitemaps.mjs) → run at merge, not per-PR.
+- **Images:** sandbox blocks Unsplash/Pexels; only wire slots + image-queries; Carlo runs sync-images.mjs.
 
 ---
 
