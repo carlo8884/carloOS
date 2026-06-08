@@ -184,14 +184,14 @@ const CATEGORIES: Array<{
   {
     icon: 'english',
     title: 'English Saddles',
-    desc: 'Dressage, jumping, all-purpose — ranked on tree fit, panel contact, balance, and resale.',
-    href: '/reviews/best-english-saddles',
+    desc: 'Dressage, jumping, all-purpose — organized by discipline, ranked on tree fit, panel contact, balance, and resale.',
+    href: '/english',
   },
   {
     icon: 'western',
     title: 'Western Saddles',
-    desc: 'Roping, barrel, trail, and ranch — evaluated on tree quality, rigging position, and rider geometry.',
-    href: '/reviews/best-western-saddles',
+    desc: 'Roping, barrel, trail, and ranch — organized by discipline, evaluated on tree quality, rigging position, and rider geometry.',
+    href: '/western',
   },
   {
     icon: 'guides',

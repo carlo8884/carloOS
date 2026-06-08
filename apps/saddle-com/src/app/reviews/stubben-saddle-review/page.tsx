@@ -82,7 +82,7 @@ export default function StubbenReviewPage() {
       </div>
 
       <QuickPicks items={PICKS} />
-      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Stubben Saddle" }]} />
+      <Breadcrumb siteId="saddle-com" items={[{ name: "Home", href: "/" }, { name: "Reviews", href: "/reviews" }, { name: "Stubben Saddle", href: "/reviews/stubben-saddle-review" }]} />
 
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
