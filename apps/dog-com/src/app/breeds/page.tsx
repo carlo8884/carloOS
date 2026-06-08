@@ -198,11 +198,12 @@ export default async function BreedsPage() {
                 className="block bg-brand-white border border-brand-border rounded-lg overflow-hidden no-underline hover:border-brand-primary hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200"
               >
                 {/* Always render StockImage. For breeds whose per-breed key
-                    isn't synced yet, StockImage falls back to its branded paw
-                    placeholder — no emoji, no dashed/grey box. */}
+                    isn't synced yet, fall back to the real breeds-category photo
+                    (not the branded paw placeholder) so every tile shows a dog. */}
                 <div className={`overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure>div]:!rounded-none`}>
                   <StockImage
                     manifestKey={manifestKey ?? `dog-com:breed-${breed.slug}`}
+                    fallbackKey="dog-com:category-breeds"
                     alt={breed.common_name}
                     aspect="4:3"
                   />
