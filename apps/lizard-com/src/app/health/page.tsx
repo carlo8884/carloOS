@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { Conditions, RESERVED_HEALTH_SLUGS, type ConditionCategory } from '../../data/conditions'
 
 export const metadata: Metadata = buildMetadata({
@@ -234,6 +234,8 @@ export default function LizardHealthPage() {
           )
         })}
       </section>
+
+      <CrossPortfolioCard currentSite="lizard-com" contentType="health" variant="footer" />
     </>
   )
 }
