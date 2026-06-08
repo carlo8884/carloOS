@@ -1932,5 +1932,29 @@
     "provider": "either",
     "alt": "A close-up of a snaffle bit on a bridle — bits tack reference",
     "orientation": "landscape"
+  },
+  "horses-com:bloodstock-hero": {
+    "query": "thoroughbred mare and foal paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred mare and foal in a breeding paddock — bloodstock and breeding reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-business": {
+    "query": "thoroughbred horses stud farm",
+    "provider": "either",
+    "alt": "Thoroughbred horses at a stud farm — bloodstock business reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-sales": {
+    "query": "thoroughbred yearling led at sales paddock",
+    "provider": "either",
+    "alt": "A Thoroughbred yearling being led at a sales paddock — Thoroughbred sales reference",
+    "orientation": "landscape"
+  },
+  "horses-com:bloodstock-pedigree": {
+    "query": "thoroughbred broodmare with foal pasture",
+    "provider": "either",
+    "alt": "A Thoroughbred broodmare with her foal in a pasture — pedigree and breeding reference",
+    "orientation": "landscape"
   }
 }
