@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -105,25 +106,12 @@ export default function OwnershipHubPage() {
     <>
       <SchemaScript schema={schema} />
 
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Horse Ownership
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Horse Ownership
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Practical references for the decisions and responsibilities of owning a horse, from buying and budgeting to insurance, body language, and finding a vet.
-        </p>
-      </div>
-
-      <StockImage manifestKey="horses-com:category-ownership" aspect="16:9" variant="full-bleed" priority />
+      <PremiumMasthead
+        manifestKey="horses-com:category-ownership"
+        eyebrow="Horse Ownership"
+        title="Horse Ownership"
+        subtitle="Practical references for the decisions and responsibilities of owning a horse, from buying and budgeting to insurance, body language, and finding a vet."
+      />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>

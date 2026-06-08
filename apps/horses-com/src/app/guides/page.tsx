@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture } from '@carloOS/ui'
+import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -61,26 +62,13 @@ export default function GuidesHubPage() {
     <>
       <SchemaScript schema={schema} />
 
-      {/* Hero */}
-      <div className="bg-brand-dark px-container-sm sm:px-container py-16">
-        <div className="flex items-center gap-2.5 mb-4">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-            Owner Guides
-          </span>
-        </div>
-        <h1
-          className="font-display font-black text-white tracking-tighter leading-tight mb-4"
-          style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
-        >
-          Equine Guides
-        </h1>
-        <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
-          Practical owner guides on saddle fitting, preventive dental care, and vaccination
-          schedules — each citing AAEP guidelines, veterinary clinical literature, and
-          Society of Master Saddlers criteria.
-        </p>
-      </div>
+      {/* Hero — image-first masthead (photo behind the title band) */}
+      <PremiumMasthead
+        manifestKey="horses-com:category-guides"
+        eyebrow="Owner Guides"
+        title="Equine Guides"
+        subtitle="Practical owner guides on saddle fitting, preventive dental care, and vaccination schedules — each citing AAEP guidelines, veterinary clinical literature, and Society of Master Saddlers criteria."
+      />
 
       {/* Breadcrumb */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -88,10 +76,6 @@ export default function GuidesHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Guides</span>
       </nav>
-
-      <div className="px-container-sm sm:px-container pt-12">
-        <StockImage manifestKey="horses-com:category-guides" aspect="16:9" variant="wide" priority />
-      </div>
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
