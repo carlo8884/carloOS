@@ -108,7 +108,7 @@ export default function KibbleVsCannedForCatsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="PetFood.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="petfood-com:compare-kibble-vs-canned-for-cats" priority aspect="16:9" variant="wide" caption="Kibble versus canned for cats — how feline physiology sharpens the wet-versus-dry question." />
+        <StockImage manifestKey="petfood-com:compare-kibble-vs-canned-for-cats" fallbackKey="petfood-com:compare-hero" priority aspect="16:9" variant="wide" caption="Kibble versus canned for cats — how feline physiology sharpens the wet-versus-dry question." />
         <p>The general wet-versus-dry comparison applies to cats, but several feline traits sharpen it. Cats are obligate carnivores adapted to a high-moisture, high-protein, low-carbohydrate prey diet, and they have a weak thirst drive. Modern indoor cats fed dry food face higher rates of obesity, diabetes, and urinary disease — problems to which diet format contributes. For many cats, canned food addresses several of these at once. See <a href="/species/dog-vs-cat-nutrition-overview">Dog vs Cat Nutrition</a>.</p>
         <h2 id="different">Why Cats Are Different</h2>
         <p>A cat&apos;s ancestral diet was small prey — high in water, high in animal protein and fat, very low in carbohydrate. Cats evolved to obtain most of their water from food and to run their metabolism on protein and fat. Dry kibble, by necessity high in starch and low in moisture, departs from this template more than canned food does. The mismatch is the root of the feline-specific concerns.</p>
