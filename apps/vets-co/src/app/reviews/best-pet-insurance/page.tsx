@@ -181,7 +181,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Reimbursement', value: '70–90%' },
                 { label: 'Ortho Waiting', value: '6 months', highlight: 'warn' },
               ]}
-              pros={['Only major insurer with wellness add-on', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
+              pros={['Wellness add-on covers routine and preventive care', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
               cons={['6-month orthopedic waiting period', 'More complex plan options']}
               price="$45–95/month + wellness add-on"
               ctaText="Get a Quote →" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance"
