@@ -95,6 +95,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'History & Reference',
   },
   {
+    slug: 'great-racehorses',
+    title: 'Great Racehorses',
+    tagline:
+      'Heritage career profiles of the legends: Secretariat, Man o\' War, Seabiscuit, Citation, American Pharoah, and Justify -- their records, connections, and legacy.',
+    authorities: 'National Museum of Racing',
+    category: 'History & Reference',
+  },
+  {
     slug: 'glossary',
     title: 'Horse Racing Glossary',
     tagline:
