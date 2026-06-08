@@ -564,9 +564,6 @@ export default function HomePage() {
                           <span className="font-mono text-sm font-semibold text-brand-text-dark uppercase tracking-wider">
                             {dim.label}
                           </span>
-                          <span className="font-mono text-2xs text-brand-text-light">
-                            [{dim.key}]
-                          </span>
                         </div>
                         <p className="text-sm text-brand-text-mid leading-relaxed">
                           {dim.detail}
@@ -703,7 +700,7 @@ export default function HomePage() {
               meta="Cornerstone guide · 14-min read"
             />
             <GuideCard
-              eyebrow="LIFE_STAGE"
+              eyebrow="LIFE STAGE"
               title="Pet Food by Life Stage"
               desc="Seven deep-dives against AAFCO 2025 Chapter 6 nutrient profiles — puppy, kitten, adult, senior, and large-breed puppy, and what each label commits to."
               href="/life-stage"

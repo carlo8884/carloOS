@@ -122,13 +122,14 @@ export default function MethodologyPage() {
           PetFood.com exists to answer one question per product, with citations: <em>compared to its
           category peers, how does this food rate on a fixed set of criteria that matter?</em> The
           rubric below is the one we apply to every review, and it is structured so that a careful
-          reader can reconstruct any score from the brand page&apos;s factual claims.
+          reader can reconstruct our reasoning from the brand page&apos;s factual claims.
         </p>
 
         <h2 id="what">What We Score On — Five Dimensions</h2>
         <p>
-          A formula or brand carries a score on each of five dimensions. The dimensions are weighted
-          to produce an overall score on a ten-point scale. The dimensions are:
+          Every evaluation works through the same five dimensions. Each is weighted in our overall
+          judgment and — where the evidence supports a single defensible figure — combined into an
+          overall ten-point score. The dimensions are:
         </p>
         <ol>
           <li><strong>AAFCO completeness</strong> — what does the nutritional adequacy statement say, and was it earned by feeding trial or by formulation only?</li>
@@ -313,18 +314,18 @@ export default function MethodologyPage() {
 
         <h2 id="aggregation">Score Aggregation</h2>
         <p>
-          Dimension scores are combined into an overall ten-point score using a fixed weight vector
-          published with this rubric. v1.0 weights: AAFCO completeness 25%, ingredient sourcing
-          transparency 25%, recall history 20%, manufacturing standards 20%, feeding-outcome
-          literature 10%. The overall score is rounded to one decimal place; on every brand page,
-          the dimension scores are shown alongside the overall, so a reader can recompute or
-          override the weighting.
+          When we publish an overall ten-point score, it reflects a fixed weighting across the five
+          dimensions. v1.0 weights: AAFCO completeness 25%, ingredient sourcing transparency 25%,
+          recall history 20%, manufacturing standards 20%, feeding-outcome literature 10%. Each
+          brand evaluation walks through these dimensions in prose so a reader can follow the
+          reasoning behind the assessment — and weight them differently if they disagree. Where the
+          evidence does not support a single defensible figure, we say so rather than force a number.
         </p>
         <p>
-          We do not collapse multi-formula brands into a single brand score. Each formula carries
-          its own score because the AAFCO statement, ingredient panel, and (sometimes) the
-          manufacturing facility differ between formulas. A brand-level page averages the
-          published formula scores and explicitly shows the spread.
+          We do not collapse multi-formula brands into a single definitive brand score. The AAFCO
+          statement, ingredient panel, and (sometimes) the manufacturing facility differ between
+          formulas, so a brand-level evaluation discusses that spread in prose rather than hiding it
+          behind one number.
         </p>
 
         <h2 id="differ">Why Our Methodology Differs from Other Pet Food Sites</h2>
