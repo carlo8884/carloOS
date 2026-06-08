@@ -86,10 +86,12 @@ export default function TripleCrownPage() {
         siteId="horses-com"
         contentType="guide"
         relatedLinks={[
-          { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
-          { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
+          { title: 'The Kentucky Derby', href: '/racing/triple-crown/kentucky-derby', category: 'The Three Legs' },
+          { title: 'The Preakness Stakes', href: '/racing/triple-crown/preakness-stakes' },
+          { title: 'The Belmont Stakes', href: '/racing/triple-crown/belmont-stakes' },
           { title: "The Breeders' Cup", href: '/racing/breeders-cup' },
           { title: 'Race Types & Classes', href: '/racing/understanding-race-types-and-classes' },
+          { title: 'Racing Hub', href: '/racing' },
         ]}
         hero={{
           title: 'The Triple Crown',
@@ -111,6 +113,7 @@ export default function TripleCrownPage() {
             <TableOfContents
               items={[
                 { label: 'What the Triple Crown Is', href: '#what' },
+                { label: 'The Three Legs', href: '#legs' },
                 { label: 'The Kentucky Derby', href: '#derby' },
                 { label: 'The Preakness Stakes', href: '#preakness' },
                 { label: 'The Belmont Stakes', href: '#belmont' },
@@ -119,6 +122,14 @@ export default function TripleCrownPage() {
                 { label: 'Following the Series', href: '#following' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'References', href: '#references' },
+              ]}
+            />
+            <RelatedLinks
+              title="The Three Legs"
+              links={[
+                { label: 'The Kentucky Derby', href: '/racing/triple-crown/kentucky-derby' },
+                { label: 'The Preakness Stakes', href: '/racing/triple-crown/preakness-stakes' },
+                { label: 'The Belmont Stakes', href: '/racing/triple-crown/belmont-stakes' },
               ]}
             />
             <RelatedLinks
@@ -155,17 +166,49 @@ export default function TripleCrownPage() {
           <p>The three races predate the concept that unites them. The Belmont Stakes was first run in 1867, the Preakness Stakes in 1873, and the Kentucky Derby in 1875. The phrase &quot;Triple Crown&quot; came into common American use in the 1930s, popularized by the racing writer Charles Hatton of the Daily Racing Form, and was applied retroactively to earlier sweeps. Each race is a Grade I stakes -- the highest classification in North American racing -- and each is run on dirt.</p>
           <p>This reference treats the Triple Crown as an educational and historical subject. No picks, odds, wagering guidance, or predictions are offered here.</p>
 
+          <h2 id="legs">The Three Legs</h2>
+          <p>The series is made up of three separate races, each with its own track, distance, history, and traditions. The summaries below introduce each leg; the dedicated references go deeper on every one.</p>
+          <div className="not-prose my-6 grid gap-4 sm:grid-cols-3">
+            <a
+              href="/racing/triple-crown/kentucky-derby"
+              className="block rounded-xl border border-brand-border bg-brand-surface p-5 no-underline transition-colors hover:border-brand-primary"
+            >
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">First Leg</div>
+              <div className="mt-1 font-display text-lg font-bold text-brand-text-dark">The Kentucky Derby</div>
+              <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">Churchill Downs · a mile and a quarter · the Run for the Roses.</p>
+            </a>
+            <a
+              href="/racing/triple-crown/preakness-stakes"
+              className="block rounded-xl border border-brand-border bg-brand-surface p-5 no-underline transition-colors hover:border-brand-primary"
+            >
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Second Leg</div>
+              <div className="mt-1 font-display text-lg font-bold text-brand-text-dark">The Preakness Stakes</div>
+              <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">Pimlico · the shortest leg · the middle jewel, two weeks on.</p>
+            </a>
+            <a
+              href="/racing/triple-crown/belmont-stakes"
+              className="block rounded-xl border border-brand-border bg-brand-surface p-5 no-underline transition-colors hover:border-brand-primary"
+            >
+              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Final Leg</div>
+              <div className="mt-1 font-display text-lg font-bold text-brand-text-dark">The Belmont Stakes</div>
+              <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">Belmont Park · a mile and a half · the Test of the Champion.</p>
+            </a>
+          </div>
+
           <h2 id="derby">The Kentucky Derby</h2>
           <p>The first leg, the Kentucky Derby, is run at Churchill Downs in Louisville, Kentucky, on the first Saturday in May. It is contested at a mile and a quarter (ten furlongs) on dirt. Known for its traditions -- the garland of roses awarded to the winner, the field of up to twenty starters, and a qualifying system based on points earned in designated prep races -- the Derby is the most widely watched horse race in the United States and the largest single-day attendance event in the sport.</p>
           <p>Because it carries the largest field of the three legs and a points-based qualification path, the Derby tends to assemble the deepest and least-tested field. Many horses that contest the Derby are running the longest distance of their lives to that point, since few earlier races for three-year-olds are run at a mile and a quarter.</p>
+          <p><a href="/racing/triple-crown/kentucky-derby">Read the full Kentucky Derby reference &raquo;</a></p>
 
           <h2 id="preakness">The Preakness Stakes</h2>
           <p>The second leg, the Preakness Stakes, is run at Pimlico Race Course in Baltimore, Maryland, approximately two weeks after the Derby. It is the shortest of the three legs at a mile and three-sixteenths (nine and a half furlongs) on dirt. The winner is traditionally draped with a blanket of black-eyed Susans, the Maryland state flower.</p>
           <p>The Preakness typically draws a smaller field than the Derby, often including the Derby winner, a number of Derby also-rans, and fresh horses that skipped the first leg. The short turnaround from the Derby -- and the fact that a Derby winner arriving at Pimlico is the focus of Triple Crown attention -- gives the second leg its particular tension.</p>
+          <p><a href="/racing/triple-crown/preakness-stakes">Read the full Preakness Stakes reference &raquo;</a></p>
 
           <h2 id="belmont">The Belmont Stakes</h2>
           <p>The third and final leg, the Belmont Stakes, is traditionally run at Belmont Park in Elmont, New York, roughly three weeks after the Preakness. At a mile and a half (twelve furlongs) on dirt, it is the longest of the three and the longest race most of these horses will ever run. Its demanding distance has earned it the nickname &quot;the Test of the Champion.&quot;</p>
           <p>The Belmont is where Triple Crown bids are most often decided -- and most often denied. A horse arriving with the first two legs in hand faces both the unfamiliar distance and fresh rivals pointed specifically at the Belmont. During periods of renovation at Belmont Park, the race has been hosted at alternate New York venues; confirm the current year&apos;s site with the New York Racing Association (NYRA).</p>
+          <p><a href="/racing/triple-crown/belmont-stakes">Read the full Belmont Stakes reference &raquo;</a></p>
 
           <h2 id="difficulty">Why the Sweep Is So Rare</h2>
           <p>Several factors compound to make the Triple Crown one of the most difficult achievements in sport:</p>
