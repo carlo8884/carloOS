@@ -282,7 +282,7 @@ export default function VetsBeagleHealthPage() {
             to cluster — call ahead and go.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             The yield of a Beagle-specific screening plan is unusually high. DNA testing for MLS and IGS is
             inexpensive and definitive. Annual weight and body condition score is non-negotiable. From

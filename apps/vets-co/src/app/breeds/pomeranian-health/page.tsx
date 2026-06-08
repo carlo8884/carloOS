@@ -281,10 +281,10 @@ export default function VetsPomeranianHealthPage() {
             because of their small body size — do not wait until morning.
           </CalloutBox>
 
-          <h2>Screening I Recommend</h2>
+          <h2>Recommended Screening</h2>
           <DropCap>
             Every Pomeranian benefits from a standardized screening package built around the breed’s
-            predispositions. At each well visit I recommend an orthopedic exam (patellar grade), cardiac
+            predispositions. At each well visit, the recommended workup is an orthopedic exam (patellar grade), cardiac
             auscultation, dental score, and body condition score. Eyes warrant an ACVO-listed ophthalmology
             examination at least once in the first year for breeding stock, and again at age 5–6 in pet dogs to
             screen for cataract.
