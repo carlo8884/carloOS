@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2025 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
@@ -102,6 +102,7 @@ export default function DogReviewsPage() {
         </div>
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="footer" />
 </>
   </>
   )

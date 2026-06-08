@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup } from '../../data/breeds'
 
@@ -349,6 +349,7 @@ export default async function BreedsPage() {
         })()}
       </section>
       {/* agent1-browse-all-end */}
+      <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
 </>
   </>
   )
