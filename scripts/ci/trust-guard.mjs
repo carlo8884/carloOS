@@ -55,7 +55,7 @@ const FORBIDDEN = [
   // allowNegated: skip when the line DENIES the claim ("No 'we tested' claims", "no in-house
   // bench testing") — disclaimers are honest and must not trip the guard.
   { pattern: /\bwe\s+(?:calibrated|tested|measured|benchmarked|bench-tested|ran|trialed|trialled)\b/i, allowNegated: true, reason: 'First-person hands-on testing claim ("we tested/calibrated/measured…") — QC §1 forbids hands-on claims' },
-  { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our calibration…") — QC §1' },
+  { pattern: /\b(?:our|in-house|in\s+our)\s+(?:lab|calibration|bench|testing\s+lab|bench\s+testing|tests?|testing|trials?)\b/i, allowNegated: true, reason: 'Implied in-house lab/testing ("our lab", "in our tests", "our testing/trials…") — QC §1' },
   { pattern: /\bcalibration\s+testing\b/i, allowNegated: true, reason: '"calibration testing" implies a test we ran — QC §1' },
   { pattern: /\bNIST[\s-]?traceable\b/i, allowNegated: true, reason: '"NIST-traceable" testing claim — implies metrology we did not perform — QC §1' },
   { pattern: /\b(?:heaters?|products?|units?|models?|items?|filters?|lights?|lighting|bulbs?|LEDs?|HOBs?|canisters?|thermostats?|thermometers?|hygrometers?|bowls?|pads?|blankets?|saddles?|crates?|harnesses?|substrates?|terrariums?)\s+tested\b(?!\s+(?:positive|negative))/i, allowNegated: true, reason: '"N <product> tested" implies hands-on testing — QC §1 (use "compared"/"ranked")' },
@@ -102,9 +102,12 @@ for (const file of files) {
   const lines = src.split('\n')
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
+    // Normalize HTML-escaped apostrophes so negation cues like "don&apos;t" /
+    // "haven&#39;t" in honest disclaimers are recognized (else allowNegated misses them).
+    const negLine = line.replace(/&apos;|&#39;|&#x27;/gi, "'")
     for (const rule of FORBIDDEN) {
       if (rule.pattern.test(line)) {
-        if (rule.allowNegated && NEGATION.test(line)) continue
+        if (rule.allowNegated && NEGATION.test(negLine)) continue
         hits.push({
           file: file.replace(ROOT + '/', ''),
           line: i + 1,
