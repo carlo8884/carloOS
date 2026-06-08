@@ -258,13 +258,29 @@ export default function SaddleHomePage() {
           }}
         />
 
-        {/* Hero photo slot — manifest-managed StockImage renders below the hero
-            with photographer attribution. Desktop background removed per QC §1;
-            CSS radial-gradient wash provides the brass/cordovan atmosphere on
-            all viewports. */}
-
-        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-20 lg:py-28">
-          <div className="max-w-3xl">
+        {/* Hero photo — manifest-managed StockImage with photographer
+            attribution (subtle overlay). Image-first on mobile: a real,
+            on-brand saddle-leather photo leads the first screen above the
+            masthead text. On desktop it sits beside the masthead as the
+            right rail. saddle-com:hero is a verified-synced key. Per QC §1:
+            no raw CDN URLs, attribution always rendered. */}
+        <div className="relative z-10 mx-auto max-w-container-wide px-container-sm sm:px-container py-12 sm:py-20 lg:py-28">
+          <div className="lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:items-center">
+            {/* Mobile-first hero photo — appears first on mobile (order-first),
+                moves to the right rail on desktop. */}
+            <div className="order-first lg:order-last mb-10 lg:mb-0">
+              <div className="overflow-hidden rounded-xl border border-white/10 shadow-card-hover">
+                <StockImage
+                  manifestKey="saddle-com:hero"
+                  alt="Hand-stitched saddle leather and tack"
+                  aspect="4:3"
+                  variant="inline"
+                  priority
+                  subtleCredit
+                />
+              </div>
+            </div>
+          <div className="max-w-3xl lg:order-first">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-7">
               <span
@@ -364,6 +380,7 @@ export default function SaddleHomePage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>
