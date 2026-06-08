@@ -34,7 +34,7 @@ export default function CPDPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-celestial-pearl-danio" aspect="16:9" variant="inline" caption="A celestial pearl danio in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-celestial-pearl-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A celestial pearl danio in a home aquarium." priority />
         <h2>Sexual Dimorphism and Display</h2>
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>
 

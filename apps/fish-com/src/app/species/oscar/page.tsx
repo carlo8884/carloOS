@@ -34,7 +34,7 @@ export default function OscarPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-oscar" aspect="16:9" variant="inline" caption="An oscar in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-oscar" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An oscar in a home aquarium." priority />
         <h2>Tank Size — The Most Common Mistake</h2>
         <p>Oscars are sold as juveniles (2–4 inches) in fish stores and grow to 12–18 inches within 12–18 months at the rate of approximately 1 inch per month in good conditions. A 30-gallon tank that seems spacious for a 3-inch juvenile is severely cramped for an 18-inch adult — and oscars do not stop growing until conditions limit them (stunted fish are unhealthy fish). Minimum tank for one oscar: 75 gallons. For two oscars: 125+ gallons. Two oscars in a 75-gallon tank will eventually result in one dead oscar when they reach territorial adult size.</p>
         <p>The waste production of a 15-inch oscar is significant — comparable to a heavily stocked community tank alone. Heavy filtration is required: canister filter rated for 3-4× tank volume, or multiple filters. Weekly 25-30% water changes are the baseline — Oscars in poor water quality develop HITH (see below) and their immune function declines. The tank maintenance commitment scales with the fish size.</p>

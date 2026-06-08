@@ -34,7 +34,7 @@ export default function OtocinclsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-otocinclus" aspect="16:9" variant="inline" caption="An otocinclus in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-otocinclus" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An otocinclus in a home aquarium." priority />
         <h2>The Starvation Problem — The Most Common Cause of Death</h2>
         <p>Otocinclus die from starvation more than any other cause. They are obligate soft algae eaters — their mouth is designed specifically to graze soft green algae (diatoms, green dust algae, green film algae) from smooth surfaces. They cannot eat hair algae, hard algae, or most commercial foods readily. In a new tank with no established algae growth, or in a tank that is kept spotlessly clean, otocinclus have nothing to eat and starve within weeks.</p>
         <p><strong>Requirements before adding otocinclus:</strong> The tank must be at least 2–3 months old with visible algae on the glass and plants. If you cannot see green film or a brownish diatom coating on surfaces, the tank is not ready. Otocinclus are not appropriate for new tanks, heavily cleaned tanks, or tanks without established algae growth.</p>

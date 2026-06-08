@@ -34,7 +34,7 @@ export default function GuppyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-guppy" aspect="16:9" variant="inline" caption="A guppy in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-guppy" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A guppy in a home aquarium." priority />
         <h2>The Pet Store Guppy Problem</h2>
         <p>Pet store guppies — mass-produced in fish farms with high stocking densities, variable water quality, and mixed strains — frequently carry disease, particularly the complex of conditions called "guppy disease": Columnaris (bacterial), Epistylis (protozoan), and various other pathogens that circulate in crowded farm conditions. These fish often appear healthy in the store and crash within days to weeks of entering a home aquarium. This is the source of guppies' undeserved reputation as "fragile."</p>
         <p>The solution: purchase guppies from dedicated breeders rather than big-box pet stores. Breeder-quality guppies from established hobbyist breeders are significantly more vigorous, healthier, and longer-lived — they come from line-bred strains maintained in better conditions with selective pressure for health and quality. The Guppy Breeders Guild and IFGA (International Fancy Guppy Association) maintain breeder directories.</p>

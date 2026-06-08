@@ -34,7 +34,7 @@ export default function WhiteCloudPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
         <p>At tropical temperatures (78°F+), white clouds decline: their lifespan shortens significantly, their immune function is compromised, and they are less active and less colorful than at their preferred range. If you are running a heated tropical tank at 78°F, white clouds are not appropriate tankmates — keep them in their preferred temperature range where they thrive.</p>

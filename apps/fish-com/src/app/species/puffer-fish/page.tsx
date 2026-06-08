@@ -35,7 +35,7 @@ export default function PufferFishPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-puffer-fish" aspect="16:9" variant="inline" caption="A pufferfish in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-puffer-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pufferfish in a home aquarium." priority />
         <h2>The Beak — Why It Matters</h2>
         <p>Puffer fish have fused beak-like teeth (technically a beak of dental plates) that grow continuously throughout their lives. In the wild, they grind snails, crustaceans, and other hard-shelled prey that naturally wear the beak to an appropriate length. In captivity, a puffer fed only soft foods (bloodworms, soft pellets) develops an overgrown beak — the upper and lower plates grow to the point where the fish cannot close its mouth or eat normally. This is painful and eventually fatal without intervention.</p>
         <p>Prevention: feed hard-shelled foods regularly — snails are the gold standard (trumpet snails, mystery snails, pond snails — puffers demolish them enthusiastically). Unshelled shrimp, clam on the half shell, and frozen krill with shells also help. The crunch is necessary. Every puffer diet should include hard foods at multiple feedings weekly. Overgrown beaks can be trimmed by a fish veterinarian under anesthesia (MS-222) — an uncomfortable but necessary procedure when diet management has failed.</p>

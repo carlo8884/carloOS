@@ -34,7 +34,7 @@ export default function DwarfPufferPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-dwarf-puffer" aspect="16:9" variant="inline" caption="A dwarf puffer in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-dwarf-puffer" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A dwarf puffer in a home aquarium." priority />
 
         <h2>A Tiny Predator With a Big Personality</h2>
         <DropCap>The dwarf puffer is a true freshwater pufferfish — a distinction worth emphasizing, because the great majority of "puffers" in the trade are brackish or marine species frequently sold to beginners by mistake. Native to the rivers and lakes of Kerala in southwestern India, the pea puffer spends its whole life in fresh water and needs no salt. Despite measuring barely an inch, it is an active, curious, surprisingly intelligent micro-predator that stalks prey with binocular vision, swivels its eyes independently, and quickly learns to recognize the person who feeds it. These traits make it one of the most engaging nano fish in the hobby, but they come bundled with two non-negotiable care requirements: a specialized diet and careful management of its aggression.</DropCap>

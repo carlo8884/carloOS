@@ -201,7 +201,7 @@ export default function PlatyPage() {
             updatedAt="2026-05-28T00:00:00Z"
             reviewedBy="Editorial team"
           />
-        <StockImage manifestKey="fish-com:species-platy-fish" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-platy-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
 
           <CalloutBox variant="note" title="TL;DR">
             Platies (Xiphophorus maculatus) are the textbook beginner

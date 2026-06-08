@@ -32,7 +32,7 @@ export default function BettaTankMatesPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <StockImage manifestKey="fish-com:species-betta-fish-tank-mates" aspect="16:9" variant="inline" caption="A betta fish community in a home aquarium." priority />
+        <StockImage manifestKey="fish-com:species-betta-fish-tank-mates" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A betta fish community in a home aquarium." priority />
         <h2>Individual Variation — The Most Important Factor</h2>
         <p>Betta aggression varies enormously between individual fish. Some bettas live peacefully with a full community tank including other colorful fish. Others will attack, fin-nip, or kill fish that are typically considered "safe" companions. No compatibility guide can predict how a specific betta will behave — the individual fish's temperament is the determining factor. Always have a backup plan (a separate tank or divider) when introducing new tankmates to a betta.</p>
 
