@@ -6,7 +6,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, buildProduct
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Pet Insurance 2025 — Trupanion, Healthy Paws | Dog.com',
-  description: 'We compared 8 pet insurance companies on actual payout rates, exclusions, and what vets recommend. Trupanion, Healthy Paws, Embrace, and Figo ranked for dogs.',
+  description: 'We compared 8 pet insurance companies on published coverage terms, exclusions, and reimbursement structure. Trupanion, Healthy Paws, Embrace, and Figo ranked for dogs.',
   path: '/reviews/best-pet-insurance',
   category: 'Pet Insurance',
   type: 'article',
@@ -32,8 +32,8 @@ const FAQS = [
 ]
 
 const trupanionSchema = buildProductSchema({ name: 'Trupanion Pet Insurance', description: 'Pays vet directly, no payout limits, 90% reimbursement, per-incident deductible.', url: 'https://trupanion.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1, priceRange: '40-120' })
-const healthyPawsSchema = buildProductSchema({ name: 'Healthy Paws Pet Insurance', description: 'Fastest claims in category, no annual limits, annual deductible, 2-day claim processing.', url: 'https://healthypawspetinsurance.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1, priceRange: '30-100' })
-const embraceSchema = buildProductSchema({ name: 'Embrace Pet Insurance', description: 'Most customizable plans, diminishing deductible, wellness add-on available.', url: 'https://embracepetinsurance.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1, priceRange: '35-110' })
+const healthyPawsSchema = buildProductSchema({ name: 'Healthy Paws Pet Insurance', description: 'Fast claims processing (commonly ~2 business days per the carrier), no annual limits, annual deductible.', url: 'https://healthypawspetinsurance.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1, priceRange: '30-100' })
+const embraceSchema = buildProductSchema({ name: 'Embrace Pet Insurance', description: 'Highly customizable plans, diminishing deductible, wellness add-on available.', url: 'https://embracepetinsurance.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1, priceRange: '35-110' })
 const combinedSchema = combineSchemas(articleSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
@@ -57,8 +57,8 @@ export default function BestPetInsurancePage() {
           Trupanion is our top overall pick for pet insurance in 2025 — direct vet pay,
           no payout limits, and 90% reimbursement. Healthy Paws wins on claims speed
           (2-day processing) and Embrace offers the most customizable plans. We compared
-          8 insurers on actual payout rates, fine-print exclusions, and real claims
-          experience rather than marketing promises. The single most important rule:
+          8 insurers on published coverage terms, fine-print exclusions, and reported
+          claims experience rather than marketing promises. The single most important rule:
           enroll before the first vet visit — any earlier condition is permanently excluded.
         </p>
       </div>
@@ -138,7 +138,7 @@ export default function BestPetInsurancePage() {
                 { label: 'Payment', value: 'Reimburses you (not vet direct)' },
                 { label: 'Price Range', value: '$30–100/month' },
               ]}
-              pros={['Fastest claims in category', 'No annual or lifetime limits', 'Annual deductible favors multiple conditions per year', 'Highly rated by policyholders', 'Simple plan structure']}
+              pros={['Among the fastest claims of the carriers compared here', 'No annual or lifetime limits', 'Annual deductible favors multiple conditions per year', 'Strong policyholder satisfaction reputation', 'Simple plan structure']}
               cons={['Reimburses you, not vet — float required for large bills', 'No 24/7 vet helpline', 'No wellness add-on available']}
               price="$30–100/month"
               ctaText="Get Healthy Paws Quote →"
