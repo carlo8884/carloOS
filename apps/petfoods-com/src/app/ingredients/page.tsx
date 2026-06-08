@@ -424,6 +424,12 @@ export default function IngredientsHubPage() {
             The underlying nutritional science volume that AAFCO nutrient profiles draw on.
           </li>
         </ul>
+
+        <CrossPortfolioCard
+          currentSite="petfoods-com"
+          contentType="nutrition"
+          variant="footer"
+        />
       </div>
     </ArticleLayout>
   )
