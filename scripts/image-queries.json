@@ -1956,5 +1956,11 @@
     "provider": "either",
     "alt": "A Thoroughbred broodmare with her foal in a pasture — pedigree and breeding reference",
     "orientation": "landscape"
+  },
+  "horses-com:first-derby-hero": {
+    "query": "crowd at a horse racing grandstand on a sunny race day",
+    "provider": "either",
+    "alt": "A lively crowd watching from the grandstand on a sunny race day — first day at the races spectator guide",
+    "orientation": "landscape"
   }
 }

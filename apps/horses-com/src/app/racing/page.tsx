@@ -234,6 +234,7 @@ export default function RacingHubPage() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { label: 'Your First Day at the Races', href: '/first-derby' },
               { label: 'Bloodstock & Breeding', href: '/bloodstock' },
               { label: 'Disciplines', href: '/disciplines' },
               { label: 'Breeds', href: '/breeds' },
