@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Low-Maintenanc
 export default function SpeciesLowMaintenanceReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Low-Maintenance Reptiles", subtitle: "Some reptiles genuinely fit a busy life, eating infrequently, needing simple equipment, and asking little daily attention. But low-maintenance is relative; no reptile is a set-and-forget pet, and every species needs correct conditions and routine care. This guide ranks the most realistically low-effort reptiles and is honest about what low-maintenance does and does not mean.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Low-Maintenance Reptiles", subtitle: "Some reptiles genuinely fit a busy life, eating infrequently, needing simple equipment, and asking little daily attention. But low-maintenance is relative; no reptile is a set-and-forget pet, and every species needs correct conditions and routine care. This guide ranks the most realistically low-effort reptiles and is honest about what low-maintenance does and does not mean.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Low-Maintenance Reptiles", href: "/species/low-maintenance-reptiles" }]}
       schema={schema}
       relatedLinks={[

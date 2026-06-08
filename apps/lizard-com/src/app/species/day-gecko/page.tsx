@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Day Gecko Care
 export default function DayGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Day Gecko Care Guide', subtitle: 'Phelsuma — the day geckos of Madagascar and surrounding Indian Ocean islands — are among the most visually spectacular lizards in captivity. Vivid emerald green marked with red, orange, and blue depending on species. They are diurnal (active during the day), fast, agile, and very much display animals rather than handling animals. Their beauty is for watching, not holding.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Day Gecko Care Guide', subtitle: 'Phelsuma — the day geckos of Madagascar and surrounding Indian Ocean islands — are among the most visually spectacular lizards in captivity. Vivid emerald green marked with red, orange, and blue depending on species. They are diurnal (active during the day), fast, agile, and very much display animals rather than handling animals. Their beauty is for watching, not holding.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Day Gecko', href: '/species/day-gecko' }]}
       schema={schema}
       relatedLinks={[

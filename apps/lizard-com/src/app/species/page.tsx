@@ -91,7 +91,7 @@ export default function SpeciesIndexPage() {
               className="block rounded-xl overflow-hidden no-underline group"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
               <div className="relative h-36 overflow-hidden">
-                <StockImage manifestKey={s.img} alt={s.name} aspect="1:1" variant="inline" />
+                <StockImage manifestKey={s.img} fallbackKey="lizard-com:category-species" alt={s.name} aspect="1:1" variant="inline" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
               <div className="p-3">

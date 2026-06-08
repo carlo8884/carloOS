@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon
 export default function FrilledDragonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Frilled Dragon Care Guide', subtitle: 'Chlamydosaurus kingii — the frilled-neck lizard of Australia and southern New Guinea. The frill that makes this species iconic is not just a display prop: it is an active communication organ used in thermoregulation, territorial displays, courtship, and the dramatic threat posture that made these lizards famous. In captivity, a healthy frilled dragon that displays freely is a sign of wellbeing.', category: 'Species Guide — Intermediate', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Frilled Dragon', href: '/species/frilled-dragon' }]}
       schema={schema}
       relatedLinks={[

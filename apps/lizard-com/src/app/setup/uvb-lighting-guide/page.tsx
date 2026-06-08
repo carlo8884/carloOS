@@ -39,7 +39,6 @@ export default function UVBLightingGuidePage() {
         subtitle: 'UVB is not optional for most reptile species. It is the difference between metabolic bone disease and skeletal health. This guide covers everything from Ferguson Zones to bulb selection to the replacement schedule most keepers miss.',
         category: 'Setup Guide',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '13 min',
       }}

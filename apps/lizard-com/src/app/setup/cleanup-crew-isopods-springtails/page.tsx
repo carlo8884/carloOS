@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Bioactive Clea
 export default function SetupCleanupCrewIsopodsSpringtailsPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Bioactive Cleanup Crew Guide", subtitle: "The cleanup crew is the living engine of a bioactive enclosure: detritivorous invertebrates that consume waste, shed skin, uneaten food, and mold, turning them into harmless byproducts and keeping the substrate healthy. The two workhorses are isopods and springtails. Done right, they make an enclosure nearly self-cleaning; done wrong, the crew dies off and waste accumulates.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Cleanup Crew Guide", href: "/setup/cleanup-crew-isopods-springtails" }]}
       schema={schema}
       relatedLinks={[

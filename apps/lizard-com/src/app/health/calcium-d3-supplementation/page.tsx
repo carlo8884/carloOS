@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Calcium and D3
 export default function HealthCalciumD3SupplementationPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Calcium and D3 Supplementation for Reptiles", subtitle: "Supplementation, dusting feeders or food with calcium, vitamin D3, and multivitamins, is essential for most captive reptiles because their diets and lighting rarely match the wild. Getting it right prevents metabolic bone disease, the most common nutritional disease in captivity, while getting it wrong in either direction (too little or too much) causes its own problems. This guide explains the products and the logic behind a sensible schedule.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Calcium and D3 Supplementation for Reptiles", subtitle: "Supplementation, dusting feeders or food with calcium, vitamin D3, and multivitamins, is essential for most captive reptiles because their diets and lighting rarely match the wild. Getting it right prevents metabolic bone disease, the most common nutritional disease in captivity, while getting it wrong in either direction (too little or too much) causes its own problems. This guide explains the products and the logic behind a sensible schedule.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Calcium & D3 Supplementation", href: "/health/calcium-d3-supplementation" }]}
       schema={schema}
       relatedLinks={[

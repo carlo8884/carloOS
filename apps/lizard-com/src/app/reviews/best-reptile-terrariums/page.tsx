@@ -22,10 +22,10 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best PVC', emoji: '🏆', name: 'Zen Habitats 4×2×2', subtitle: 'Best overall for most species', href: '#zen' },
-  { label: 'Best Custom', emoji: '⚙️', name: 'Animal Plastics T8', subtitle: 'Largest, most configurable', href: '#ap' },
-  { label: 'Best Glass', emoji: '🪟', name: 'Exo Terra 36×18×24', subtitle: 'Arboreal species standard', href: '#exo' },
-  { label: 'Best Budget', emoji: '💰', name: 'Repti Zoo 40 Gal', subtitle: 'Starter glass terrarium', href: '#reptizoo' },
+  { label: 'Best PVC', name: 'Zen Habitats 4×2×2', subtitle: 'Best overall for most species', href: '#zen' },
+  { label: 'Best Custom', name: 'Animal Plastics T8', subtitle: 'Largest, most configurable', href: '#ap' },
+  { label: 'Best Glass', name: 'Exo Terra 36×18×24', subtitle: 'Arboreal species standard', href: '#exo' },
+  { label: 'Best Budget', name: 'Repti Zoo 40 Gal', subtitle: 'Starter glass terrarium', href: '#reptizoo' },
 ]
 
 export default function BestTerrariumsPage() {
@@ -35,7 +35,7 @@ export default function BestTerrariumsPage() {
       <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
-          ⚡ Editor Pick · May 2025
+          Editor Pick · May 2025
         </span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-5 max-w-3xl"
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
@@ -69,7 +69,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="zen"
               badge="Best Overall PVC"
-              badgeEmoji="🏆"
               name="Zen Habitats 4×2×2 Reptile Enclosure"
               subtitle="PVC · Flat-pack assembly · Front-opening · Best temperature retention"
               score={9.4}
@@ -101,7 +100,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="ap"
               badge="Best Custom / Large Scale"
-              badgeEmoji="⚙️"
               name="Animal Plastics T8"
               subtitle="HDPE plastic · Fully customizable · Maximum durability"
               score={9.1}
@@ -128,7 +126,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="exo"
               badge="Best Glass — Arboreal Species"
-              badgeEmoji="🪟"
               name="Exo Terra 36×18×24"
               subtitle="Front-opening glass · Full-screen top · Arboreal standard"
               score={8.8}
@@ -154,7 +151,6 @@ export default function BestTerrariumsPage() {
             <ReviewCard
               id="reptizoo"
               badge="Best Budget Glass"
-              badgeEmoji="💰"
               name="REPTIZOO 40-Gallon Terrarium"
               subtitle="Budget glass · Front-opening · Good starter option"
               score={8.1}

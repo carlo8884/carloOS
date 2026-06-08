@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Ca
 export default function TokayGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Tokay Gecko Care Guide', subtitle: 'Gekko gecko — the largest gecko in the Gekko genus, native across Southeast Asia. The tokay is famous for three things: its striking appearance (vivid blue-gray with red-orange spots), its loud "to-KAY to-KAY" call that can be heard from across a room, and its bite — which is a genuine and not insignificant event. They are challenging pets that reward patient, experienced keepers.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Tokay Gecko', href: '/species/tokay-gecko' }]}
       schema={schema}
       relatedLinks={[

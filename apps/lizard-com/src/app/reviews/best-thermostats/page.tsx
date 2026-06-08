@@ -10,9 +10,9 @@ const inkbirdSchema = buildProductSchema({ name: 'Inkbird ITC-306A Thermostat', 
 const allSchemas = combineSchemas(schema, herpstatSchema, inkbirdSchema)
 
 const PICKS = [
-  { label: 'Best Overall', emoji: '🏆', name: 'Herpstat 1', subtitle: 'Pulse proportional · Most accurate · UTH + RHP', href: '#herpstat' },
-  { label: 'Best Dimming', emoji: '💡', name: 'Vivarium Electronics VE-100', subtitle: 'Dimming · For bulbs and CHE', href: '#ve100' },
-  { label: 'Best Budget', emoji: '💰', name: 'Inkbird ITC-306A', subtitle: 'On/off · Reliable · Under $30', href: '#inkbird' },
+  { label: 'Best Overall', name: 'Herpstat 1', subtitle: 'Pulse proportional · Most accurate · UTH + RHP', href: '#herpstat' },
+  { label: 'Best Dimming', name: 'Vivarium Electronics VE-100', subtitle: 'Dimming · For bulbs and CHE', href: '#ve100' },
+  { label: 'Best Budget', name: 'Inkbird ITC-306A', subtitle: 'On/off · Reliable · Under $30', href: '#inkbird' },
 ]
 
 export default function BestThermostatsPage() {
@@ -20,7 +20,7 @@ export default function BestThermostatsPage() {
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://lizard.com/' }, { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' }, { name: 'Best Reptile Thermostats 2025', url: 'https://lizard.com/reviews/best-thermostats' }] }))} />
       <div className="relative z-10 px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">⚡ Safety Critical · May 2025</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Safety Critical · May 2025</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Reptile Thermostats 2025</h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: 'rgba(238,240,228,0.55)' }}>Unthermostated heat mats have killed reptiles and caused fires. Every heat source in every enclosure needs a thermostat — this is not optional. Here are the best options by heat source type.</p>
       </div>
@@ -46,7 +46,7 @@ export default function BestThermostatsPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="lizard-com" />
-            <ReviewCard id="herpstat" badge="Best Overall" badgeEmoji="🏆" name="Spyder Robotics Herpstat 1" subtitle="Pulse proportional · ±0.2°F accuracy · Heat mat + RHP compatible" score={9.5} winner
+            <ReviewCard id="herpstat" badge="Best Overall" name="Spyder Robotics Herpstat 1" subtitle="Pulse proportional · ±0.2°F accuracy · Heat mat + RHP compatible" score={9.5} winner
               description={<p>The Herpstat 1 is widely considered the benchmark pulse proportional reptile thermostat. Pulse proportional technology maintains temperatures within ±0.2°F by sending rapid on/off pulses to the heat source rather than switching it fully on and off — this eliminates the temperature swings of basic on/off thermostats and extends heat mat lifespan. Built in the US by Spyder Robotics with a decade of track record in the reptile keeping community. The probe is accurate, the housing is durable, and the safety record is excellent. Compatible with heat mats (UTH), radiant heat panels (RHP), and ceramic heat emitters (CHE) — not for incandescent or halogen bulbs (use dimming thermostat for these).</p>}
               specs={[{ label: 'Type', value: 'Pulse proportional', highlight: 'good' }, { label: 'Accuracy', value: '±0.2°F', highlight: 'good' }, { label: 'Compatible', value: 'UTH, RHP, CHE' }, { label: 'Made In', value: 'USA', highlight: 'good' }]}
               pros={['Best temperature accuracy available', 'Pulse tech extends heat mat life', 'US-made, reliable', 'Decade of keeper track record']}
@@ -57,7 +57,7 @@ export default function BestThermostatsPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="herpstat-1"
             />
-            <ReviewCard id="ve100" badge="Best Dimming Thermostat" badgeEmoji="💡" name="Vivarium Electronics VE-100" subtitle="Dimming type · For incandescent, CHE, and halogen bulbs" score={9.2}
+            <ReviewCard id="ve100" badge="Best Dimming Thermostat" name="Vivarium Electronics VE-100" subtitle="Dimming type · For incandescent, CHE, and halogen bulbs" score={9.2}
               description={<p>Dimming thermostats reduce power to the heat source rather than switching it on and off — this is required for incandescent and halogen bulbs (which should not be rapidly cycled on and off, and which create temperature spikes with on/off control). The VE-100 is the most recommended dimming thermostat in the reptile keeping community. Compatible with incandescent bulbs, ceramic heat emitters, and halogen basking bulbs. Not for heat mats (use pulse thermostat for those). Accurate probe, user-adjustable set point.</p>}
               specs={[{ label: 'Type', value: 'Dimming (PWM)', highlight: 'good' }, { label: 'Compatible', value: 'Incandescent, CHE, halogen', highlight: 'good' }, { label: 'Not for', value: 'Heat mats (use pulse)', highlight: 'warn' }]}
               pros={['Best dimming thermostat available', 'Required for bulbs', 'Accurate and reliable', 'Well-established in the community']}
@@ -68,7 +68,7 @@ export default function BestThermostatsPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ve-100"
             />
-            <ReviewCard id="inkbird" badge="Best Budget" badgeEmoji="💰" name="Inkbird ITC-306A" subtitle="On/off · Under $30 · Reliable for low-wattage heat mats · Digital display" score={8.8}
+            <ReviewCard id="inkbird" badge="Best Budget" name="Inkbird ITC-306A" subtitle="On/off · Under $30 · Reliable for low-wattage heat mats · Digital display" score={8.8}
               description={<p>For small setups and low-wattage heat mats (under 20W), the Inkbird ITC-306A delivers reliable on/off thermostat control at the lowest price in the category. Digital display, adjustable hysteresis (temperature swing range), and accurate probe. The on/off switching means more temperature variation than pulse thermostats — acceptable for heat mats in small setups but less ideal for larger wattage. For a beginner&apos;s first reptile setup or a secondary enclosure, the Inkbird is an appropriate budget choice. Upgrade to Herpstat as the setup grows or as temperature stability becomes more critical.</p>}
               specs={[{ label: 'Type', value: 'On/off' }, { label: 'Best for', value: 'Low-wattage heat mats under 20W' }, { label: 'Price', value: 'Under $30', highlight: 'good' }, { label: 'Display', value: 'Digital temperature readout' }]}
               pros={['Lowest price thermostat that works', 'Digital display', 'Adjustable hysteresis', 'Widely available']}

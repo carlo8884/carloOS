@@ -41,7 +41,6 @@ export default function ReptileFeedingGuidePage() {
         subtitle: 'Prey size, feeding frequency, gut-loading protocols, and the supplementation schedule that prevents metabolic bone disease. Species-specific data for the most common captive reptiles.',
         category: 'Health & Husbandry',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '11 min',
       }}

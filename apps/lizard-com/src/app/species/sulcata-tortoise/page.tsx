@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Sulcata Tortoi
 export default function SulcataTortoisePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Sulcata Tortoise Care Guide', subtitle: "Centrochelys sulcata — the African spurred tortoise is the third largest tortoise species in the world and the most frequently surrendered reptile to rescues in the US. Hatchlings are 2-3 inches. Adults are 18-30 inches and 100-200 lbs. The gap between 'cute baby tortoise' and '150-lb animal demolishing my yard' is the story of most sulcata acquisitions.", category: 'Species Guide — Advanced Only', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Sulcata Tortoise', href: '/species/sulcata-tortoise' }]}
       schema={schema}
       relatedLinks={[

@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Cloacal Prolap
 export default function HealthProlapseFirstAidPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Cloacal Prolapse in Reptiles", subtitle: "A prolapse is the protrusion of internal tissue, the cloaca, intestine, oviduct, or hemipenis, through the vent. It is a true veterinary emergency: exposed tissue dries, swells, and dies quickly. Recognizing a prolapse, keeping the tissue moist and protected, and getting to a reptile vet immediately are the difference between a recoverable animal and a fatal outcome.", category: "Health — Emergency", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Cloacal Prolapse in Reptiles", subtitle: "A prolapse is the protrusion of internal tissue, the cloaca, intestine, oviduct, or hemipenis, through the vent. It is a true veterinary emergency: exposed tissue dries, swells, and dies quickly. Recognizing a prolapse, keeping the tissue moist and protected, and getting to a reptile vet immediately are the difference between a recoverable animal and a fatal outcome.", category: "Health — Emergency", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Cloacal Prolapse", href: "/health/prolapse-first-aid" }]}
       schema={schema}
       relatedLinks={[

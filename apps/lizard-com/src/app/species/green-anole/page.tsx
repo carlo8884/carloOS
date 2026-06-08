@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Green Anole Ca
 export default function SpeciesGreenAnolePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Green Anole Care Guide", subtitle: "Anolis carolinensis is a small (5 to 8 inch) diurnal, arboreal lizard native to the southeastern United States, able to shift color from bright green to brown. Often sold cheaply as a beginner or class pet, it actually needs UVB, high humidity, live insect prey, and a tall planted enclosure to thrive, and is best kept as a display animal rather than a handling pet.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Green Anole Care Guide", subtitle: "Anolis carolinensis is a small (5 to 8 inch) diurnal, arboreal lizard native to the southeastern United States, able to shift color from bright green to brown. Often sold cheaply as a beginner or class pet, it actually needs UVB, high humidity, live insect prey, and a tall planted enclosure to thrive, and is best kept as a display animal rather than a handling pet.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Green Anole", href: "/species/green-anole" }]}
       schema={schema}
       relatedLinks={[

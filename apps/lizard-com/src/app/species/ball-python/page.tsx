@@ -7,7 +7,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Ca
 export default function BallPythonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Ball Python Care Guide', subtitle: 'Python regius — the ball python is the most popular pet snake in the world, and for good reason: they are docile, manageable in size (3–5 feet), available in extraordinary morph diversity, and long-lived (20–30 years). Understanding their natural biology — particularly their tendency toward feeding refusals — is the key to keeping them confidently.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Ball Python', href: '/species/ball-python' }]}
       schema={schema}
       relatedLinks={[

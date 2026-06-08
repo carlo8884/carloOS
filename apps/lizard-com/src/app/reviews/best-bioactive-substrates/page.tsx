@@ -8,16 +8,16 @@ const biodude = buildProductSchema({ name: 'BioDude Terra Sahara', description: 
 const jfrogs = buildProductSchema({ name: "Josh's Frogs BioBedding Desert", description: 'Pre-mixed desert bioactive substrate with clay and organic components.', url: 'https://joshsfrogs.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, biodude, jfrogs)
 const PICKS = [
-  { label: 'Best Desert Mix', emoji: '🏆', name: "BioDude Terra Sahara", subtitle: 'Ready-to-use · Desert species · Bearded dragon proven', href: '#biodude' },
-  { label: "Best Josh's Frogs", emoji: '⭐', name: "Josh's Frogs BioBedding Desert", subtitle: 'Quality clay/sand blend · Well-tested', href: '#jfrogs' },
-  { label: 'Best DIY Desert', emoji: '🛠️', name: 'DIY 60/30/10 Mix', subtitle: 'Cheapest · Customizable · Takes research', href: '#diy' },
+  { label: 'Best Desert Mix', name: "BioDude Terra Sahara", subtitle: 'Ready-to-use · Desert species · Bearded dragon proven', href: '#biodude' },
+  { label: "Best Josh's Frogs", name: "Josh's Frogs BioBedding Desert", subtitle: 'Quality clay/sand blend · Well-tested', href: '#jfrogs' },
+  { label: 'Best DIY Desert', name: 'DIY 60/30/10 Mix', subtitle: 'Cheapest · Customizable · Takes research', href: '#diy' },
 ]
 export default function BestBioactiveSubstratesPage() {
   return (
     <>
       <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [{ name: 'Home', url: 'https://lizard.com/' }, { name: 'Equipment Reviews', url: 'https://lizard.com/reviews' }, { name: 'Best Bioactive Reptile Substrates 2025', url: 'https://lizard.com/reviews/best-bioactive-substrates' }] }))} />
       <div className="relative px-container-sm sm:px-container py-14" style={{ background: 'linear-gradient(135deg, #0D1A0D, #080C08)' }}>
-        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">🌱 Buyer's Guide</span>
+        <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-brand-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Bioactive Reptile Substrates 2025</h1>
         <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: 'rgba(238,240,228,0.55)' }}>A bioactive setup — live substrate with a cleanup crew of isopods and springtails — creates a self-maintaining, naturalistic enclosure. The substrate is the foundation. Here are the best options by species type.</p>
       </div>
@@ -32,7 +32,7 @@ export default function BestBioactiveSubstratesPage() {
             </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="lizard-com" />
-            <ReviewCard id="biodude" badge="Best Desert Mix" badgeEmoji="🏆" name="BioDude Terra Sahara" subtitle="Pre-bagged · Desert species proven · Contains bioactive starter organisms" score={9.3} winner
+            <ReviewCard id="biodude" badge="Best Desert Mix" name="BioDude Terra Sahara" subtitle="Pre-bagged · Desert species proven · Contains bioactive starter organisms" score={9.3} winner
               description={<p>BioDude's Terra Sahara is the most widely used commercial bioactive substrate mix for desert reptile species — bearded dragons, uromastyx, monitors, and leopard geckos. The mix combines organic topsoil, sand, and clay in proportions that allow burrowing, retain minimal moisture appropriate for desert species, and support a cleanup crew of isopods and springtails. Some bags include starter isopod and springtail populations (check current product description — this varies). Ready to use out of the bag with the addition of a drainage layer. The BioDude also sells complete bioactive kits that include substrate, drainage material, cleanup crew, and live plants — the easiest entry point for bioactive beginners.</p>}
               specs={[{ label: 'Species', value: 'Desert: bearded dragons, geckos, monitors', highlight: 'good' }, { label: 'Pre-mixed', value: 'Yes — ready to use', highlight: 'good' }, { label: 'Cleanup crew', value: 'Some bags include starter CUC' }, { label: 'DIY vs pre-made', value: '2–3× cost of DIY mix' }]}
               pros={['Ready to use', 'Proven desert species formula', 'Good moisture profile for desert reptiles', 'Supports cleanup crew']}

@@ -264,7 +264,6 @@ export default async function ConditionPage({ params }: PageProps) {
         subtitle: `${condition.category} reptile condition — symptoms, diagnostic ladder, treatment tiers, and prevention via husbandry.`,
         category: 'Reptile Health',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2026',
         readTime: '8 min',
       }}

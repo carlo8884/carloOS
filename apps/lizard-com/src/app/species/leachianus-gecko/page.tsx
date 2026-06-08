@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Leachianus Gec
 export default function SpeciesLeachianusGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Leachianus Gecko Care Guide", subtitle: "Rhacodactylus leachianus, the New Caledonian giant gecko, is the largest gecko species alive today, reaching 12 to 14 inches and a heavy build. Long-lived, vocal, and intelligent, leachies are a rewarding arboreal species for keepers who can provide a tall enclosure, avoid overheating, and respect their need to be housed alone.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Leachianus Gecko", href: "/species/leachianus-gecko" }]}
       schema={schema}
       relatedLinks={[

@@ -14,7 +14,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function RespiratoryInfectionPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Respiratory Infections in Reptiles', subtitle: 'Respiratory infections are the most common bacterial disease in captive reptiles and almost universally linked to husbandry deficits — temperatures too low, humidity inappropriate, or inadequate thermal gradient. Treating the infection without correcting the underlying environment guarantees recurrence.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Respiratory Infection', href: '/health/respiratory-infection' }]}
       schema={schema}
       relatedLinks={[

@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Snake Mites an
 export default function HealthSnakeMiteEradicationPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Snake Mites and Reptile Mites", subtitle: "Snake mites (Ophionyssus natricis) are tiny external parasites that feed on a reptile’s blood and spread explosively through a collection. They cause irritation, stress, anemia, and can transmit disease. Eradication is achievable but demands persistence: you must break the mite life cycle on the animal and in the entire environment, not just kill the adults you can see.", category: "Health — Common", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Snake Mites and Reptile Mites", subtitle: "Snake mites (Ophionyssus natricis) are tiny external parasites that feed on a reptile’s blood and spread explosively through a collection. They cause irritation, stress, anemia, and can transmit disease. Eradication is achievable but demands persistence: you must break the mite life cycle on the animal and in the entire environment, not just kill the adults you can see.", category: "Health — Common", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Snake Mites", href: "/health/snake-mite-eradication" }]}
       schema={schema}
       relatedLinks={[

@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Best Beginner 
 export default function SpeciesBestBeginnerReptilesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Best Beginner Reptiles", subtitle: "Some reptiles tolerate a learning curve; others punish small mistakes. The best beginner species combine modest size, forgiving husbandry, hardiness, calm temperament, and wide availability of captive-bred stock. This guide ranks the genuinely beginner-friendly reptiles and, just as importantly, the honest caveats, because no reptile is truly low-maintenance.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Best Beginner Reptiles", subtitle: "Some reptiles tolerate a learning curve; others punish small mistakes. The best beginner species combine modest size, forgiving husbandry, hardiness, calm temperament, and wide availability of captive-bred stock. This guide ranks the genuinely beginner-friendly reptiles and, just as importantly, the honest caveats, because no reptile is truly low-maintenance.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Best Beginner Reptiles", href: "/species/best-beginner-reptiles" }]}
       schema={schema}
       relatedLinks={[

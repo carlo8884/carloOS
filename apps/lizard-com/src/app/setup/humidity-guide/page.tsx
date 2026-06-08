@@ -20,7 +20,7 @@ export default function HumidityGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Humidity Guide', subtitle: 'Correct humidity is as important as correct temperature. Too low causes chronic dehydration and stuck shed. Too high causes respiratory infection. The correct range depends entirely on the species.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Humidity Guide', href: '/setup/humidity-guide' }]}
       schema={schema}
       relatedLinks={[
