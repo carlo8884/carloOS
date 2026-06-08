@@ -85,6 +85,7 @@ export default function OttbAftercarePage() {
         contentType="training"
         relatedLinks={[
           { title: 'Racing Hub', href: '/racing', category: 'Horse Racing' },
+          { title: 'OTTB Second Careers by Discipline', href: '/racing/ottb-second-careers' },
           { title: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
           { title: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
           { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
@@ -124,6 +125,7 @@ export default function OttbAftercarePage() {
               title="Related Reading"
               links={[
                 { label: 'Horse Racing Hub', href: '/racing' },
+                { label: 'OTTB Second Careers by Discipline', href: '/racing/ottb-second-careers' },
                 { label: 'Thoroughbred Flat Racing', href: '/racing/thoroughbred-flat-racing' },
                 { label: 'Racehorse Training & Conditioning', href: '/racing/racehorse-training-and-conditioning' },
                 { label: 'Eventing', href: '/disciplines/eventing' },
@@ -174,7 +176,7 @@ export default function OttbAftercarePage() {
           <p>Many retraining organizations use specialized programs incorporating groundwork, in-hand work, and gradual under-saddle reintroduction. The Retired Racehorse Project, an organization associated with the aftercare world, hosts the annual Thoroughbred Makeover competition in which OTTBs are started from track retirement and prepared for competition across multiple disciplines within a defined time period, demonstrating both the versatility of the breed and the structured, time-bound approach that a thoughtful retraining program can take. The Makeover has become a high-profile showcase for what recently retired racehorses can accomplish with skilled handling.</p>
 
           <h2 id="careers">Second Careers</h2>
-          <p>OTTBs compete successfully at the highest levels of multiple equestrian disciplines. The Thoroughbred&apos;s athleticism -- the same cardiovascular capacity, elastic gaits, and quick-twitch responsiveness that served it on the track -- is a genuine asset across the sport. The breed&apos;s suitability varies by discipline:</p>
+          <p>OTTBs compete successfully at the highest levels of multiple equestrian disciplines. For a discipline-by-discipline look at how a Thoroughbred actually transitions into each sport &mdash; aptitude, retraining timeline, and realistic expectations &mdash; see the <a href="/racing/ottb-second-careers">OTTB second careers</a> cluster. The Thoroughbred&apos;s athleticism -- the same cardiovascular capacity, elastic gaits, and quick-twitch responsiveness that served it on the track -- is a genuine asset across the sport. The breed&apos;s suitability varies by discipline:</p>
           <p><strong>Eventing</strong> is often considered the natural second home for the OTTB. The cross-country phase rewards exactly the stamina, boldness, and galloping ability that racing develops, and Thoroughbred or near-Thoroughbred blood is common at the upper levels of the sport. The discipline is covered in depth in the <a href="/disciplines/eventing">eventing reference</a>. <strong>Show jumping</strong> and the <strong>hunters</strong> draw OTTBs for their scope, athleticism, and rideable temperament once retrained, though the hunter ring&apos;s emphasis on a quiet, even way of going can require patient retraining for a horse used to racing forward. <strong>Dressage</strong> may seem an unlikely fit for a racehorse, but the Thoroughbred&apos;s sensitivity and elastic movement reward correct training, and OTTBs compete successfully through the levels.</p>
           <p>Beyond competition, OTTBs serve in trail riding, recreational riding, fox hunting, polo, lesson programs, and therapeutic riding programs. Their versatility reflects the breadth of the breed: Thoroughbreds were developed for performance, and that performance capacity does not disappear when they leave the track -- it redirects into whatever new work they are asked to do. The historic champions profiled in the <a href="/racing/great-racehorses">great racehorses</a> collection illustrate the athletic ceiling of the breed; the great majority of Thoroughbreds, including those, were bred from the same population that supplies today&apos;s sport horses.</p>
           <p>Not every OTTB will become a competitive horse, nor should that be the expectation. Many are best suited to a quiet second life as a pleasure riding horse, a companion animal, or a pasture horse if injury or age precludes ridden work. The goal of the aftercare ecosystem is to match each horse with an appropriate outcome that provides a safe, humane life after racing.</p>
