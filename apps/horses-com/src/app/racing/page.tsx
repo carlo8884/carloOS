@@ -111,6 +111,14 @@ const RACING_SPOKES: RacingCard[] = [
     category: 'History & Reference',
   },
   {
+    slug: 'venues',
+    title: 'Iconic Racetracks',
+    tagline:
+      'Educational venue guides to the historic homes of American racing: Churchill Downs, Pimlico, Belmont Park, Saratoga, and Keeneland -- history, architecture, and tradition.',
+    authorities: 'Venue Guides',
+    category: 'History & Reference',
+  },
+  {
     slug: 'glossary',
     title: 'Horse Racing Glossary',
     tagline:
