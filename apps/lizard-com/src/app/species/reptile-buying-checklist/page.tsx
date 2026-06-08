@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Buying
 export default function SpeciesReptileBuyingChecklistPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Buying Checklist", subtitle: "Most reptile welfare problems start at purchase: the wrong species, an enclosure thrown together after the animal is already home, or a sickly wild-caught individual chosen on impulse. This checklist walks through what to do before you buy, how to evaluate the animal and seller, and how to set yourself, and the reptile, up for success from day one.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptile Buying Checklist", href: "/species/reptile-buying-checklist" }]}
       schema={schema}
       relatedLinks={[

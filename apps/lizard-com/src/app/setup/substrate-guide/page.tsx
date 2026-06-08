@@ -9,7 +9,7 @@ export default function SubstrateGuidePage() {
   return (
     <ArticleLayout
       siteId="lizard-com"
-      hero={{ title: 'Reptile Substrate Guide', subtitle: 'Substrate choice affects humidity, thermoregulation, psychological wellbeing, and — critically — impaction risk. The range of options spans from bioactive living soil to bare tile.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Substrate Guide', subtitle: 'Substrate choice affects humidity, thermoregulation, psychological wellbeing, and — critically — impaction risk. The range of options spans from bioactive living soil to bare tile.', category: 'Enclosure Setup', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Substrate Guide', href: '/setup/substrate-guide' }]}
       schema={schema}
       relatedLinks={[

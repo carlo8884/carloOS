@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Mourning Gecko
 export default function SpeciesMourningGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Mourning Gecko Care Guide", subtitle: "Lepidodactylus lugubris, the mourning gecko, is a tiny (3.5 to 4 inch) arboreal gecko famous for being parthenogenetic: populations are all-female and reproduce by cloning, no males required. Sociable, vocal, and easy to keep in bioactive colonies, they are an ideal nano-vivarium species, with the caveat that a single pair can quickly become a population.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Mourning Gecko Care Guide", subtitle: "Lepidodactylus lugubris, the mourning gecko, is a tiny (3.5 to 4 inch) arboreal gecko famous for being parthenogenetic: populations are all-female and reproduce by cloning, no males required. Sociable, vocal, and easy to keep in bioactive colonies, they are an ideal nano-vivarium species, with the caveat that a single pair can quickly become a population.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Mourning Gecko", href: "/species/mourning-gecko" }]}
       schema={schema}
       relatedLinks={[

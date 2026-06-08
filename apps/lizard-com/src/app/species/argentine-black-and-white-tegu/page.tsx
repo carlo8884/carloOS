@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Argentine Blac
 export default function SpeciesArgentineBlackAndWhiteTeguPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Argentine Black and White Tegu Care Guide", subtitle: "Salvator merianae is a large, intelligent South American lizard reaching 3.5 to 4.5 feet and 10 to 15 pounds. Known for becoming remarkably tame and responsive, the Argentine black and white tegu is one of the few reptiles widely described as interactive, but it demands a room-sized enclosure, powerful heat and UVB, and an owner prepared for a 15 to 20 year commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "12 min" }}
+      hero={{ title: "Argentine Black and White Tegu Care Guide", subtitle: "Salvator merianae is a large, intelligent South American lizard reaching 3.5 to 4.5 feet and 10 to 15 pounds. Known for becoming remarkably tame and responsive, the Argentine black and white tegu is one of the few reptiles widely described as interactive, but it demands a room-sized enclosure, powerful heat and UVB, and an owner prepared for a 15 to 20 year commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "12 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Argentine Tegu", href: "/species/argentine-black-and-white-tegu" }]}
       schema={schema}
       relatedLinks={[

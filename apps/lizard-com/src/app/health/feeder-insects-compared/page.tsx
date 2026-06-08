@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Feeder Insects
 export default function HealthFeederInsectsComparedPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Feeder Insects Compared", subtitle: "Not all feeder insects are equal. Some make excellent nutritional staples, others are fatty treats that cause problems if overused, and a couple are best avoided as primary feeders. This guide compares the common options, crickets, dubia roaches, mealworms, superworms, black soldier fly larvae, hornworms, and waxworms, so you can build a varied, balanced insectivore diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Feeder Insects Compared", subtitle: "Not all feeder insects are equal. Some make excellent nutritional staples, others are fatty treats that cause problems if overused, and a couple are best avoided as primary feeders. This guide compares the common options, crickets, dubia roaches, mealworms, superworms, black soldier fly larvae, hornworms, and waxworms, so you can build a varied, balanced insectivore diet.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Feeder Insects Compared", href: "/health/feeder-insects-compared" }]}
       schema={schema}
       relatedLinks={[

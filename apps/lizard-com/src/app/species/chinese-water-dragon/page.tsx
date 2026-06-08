@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Chinese Water 
 export default function SpeciesChineseWaterDragonPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Chinese Water Dragon Care Guide", subtitle: "Physignathus cocincinus is a striking green arboreal agamid from Southeast Asian rainforests, reaching 2 to 3 feet (mostly tail). It needs a tall, heavily planted, humid enclosure with a large water feature for swimming. Its biggest captive welfare problem is rostral (snout) damage from rubbing on enclosure walls when housed too small or too exposed.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
+      hero={{ title: "Chinese Water Dragon Care Guide", subtitle: "Physignathus cocincinus is a striking green arboreal agamid from Southeast Asian rainforests, reaching 2 to 3 feet (mostly tail). It needs a tall, heavily planted, humid enclosure with a large water feature for swimming. Its biggest captive welfare problem is rostral (snout) damage from rubbing on enclosure walls when housed too small or too exposed.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Chinese Water Dragon", href: "/species/chinese-water-dragon" }]}
       schema={schema}
       relatedLinks={[

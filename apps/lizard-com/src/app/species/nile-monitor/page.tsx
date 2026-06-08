@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Nile Monitor C
 export default function SpeciesNileMonitorPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Nile Monitor Care Guide", subtitle: "Varanus niloticus is a large, powerful, semi-aquatic African monitor reaching 4 to 6 feet. Fast, intelligent, and often defensive, the Nile monitor is an advanced-only species that needs a room-sized custom enclosure, intense heat and UVB, a large water feature, and a keeper with realistic expectations: most do not become tame, and they are a serious safety and space commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "11 min" }}
+      hero={{ title: "Nile Monitor Care Guide", subtitle: "Varanus niloticus is a large, powerful, semi-aquatic African monitor reaching 4 to 6 feet. Fast, intelligent, and often defensive, the Nile monitor is an advanced-only species that needs a room-sized custom enclosure, intense heat and UVB, a large water feature, and a keeper with realistic expectations: most do not become tame, and they are a serious safety and space commitment.", category: "Species Guide — Advanced", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "11 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Nile Monitor", href: "/species/nile-monitor" }]}
       schema={schema}
       relatedLinks={[

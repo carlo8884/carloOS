@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Reptile Lighti
 export default function LightingGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Reptile Lighting Guide', subtitle: 'Reptile lighting serves three separate functions — UVB (for vitamin D3 synthesis), visible light (for circadian rhythm and behavior), and heat (for thermoregulation). Each is provided by different equipment and serves different physiological needs. Understanding what each does prevents the common mistake of assuming one light source does everything.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Reptile Lighting Guide', subtitle: 'Reptile lighting serves three separate functions — UVB (for vitamin D3 synthesis), visible light (for circadian rhythm and behavior), and heat (for thermoregulation). Each is provided by different equipment and serves different physiological needs. Understanding what each does prevents the common mistake of assuming one light source does everything.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Lighting Guide', href: '/setup/lighting-guide' }]}
       schema={schema}
       relatedLinks={[

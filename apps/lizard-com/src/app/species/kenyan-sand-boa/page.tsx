@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Kenyan Sand Bo
 export default function SpeciesKenyanSandBoaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Kenyan Sand Boa Care Guide", subtitle: "Gongylophis colubrinus is one of the smallest commonly kept boas and an excellent first snake. Females reach 24 to 32 inches; males stay under 18. They spend up to 90 percent of their life buried in substrate, ambushing prey from below with only the eyes exposed.", category: "Species Guide — Beginner Friendly", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Kenyan Sand Boa", href: "/species/kenyan-sand-boa" }]}
       schema={schema}
       relatedLinks={[

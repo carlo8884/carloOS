@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Boa Constricto
 export default function BoaPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Boa Constrictor Care Guide', subtitle: 'Boa imperator and Boa constrictor — the boa constrictors of Central and South America. Stunning, intelligent, long-lived (25+ years), and frequently the first large snake in a keeper\'s collection. The decision point is honest: a 7-foot, 20-pound animal with the husbandry requirements and feeding schedule that implies. The reward for those prepared for it is one of the most impressive reptiles in the hobby.', category: 'Species Guide — Intermediate/Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Boa Constrictor Care Guide', subtitle: 'Boa imperator and Boa constrictor — the boa constrictors of Central and South America. Stunning, intelligent, long-lived (25+ years), and frequently the first large snake in a keeper\'s collection. The decision point is honest: a 7-foot, 20-pound animal with the husbandry requirements and feeding schedule that implies. The reward for those prepared for it is one of the most impressive reptiles in the hobby.', category: 'Species Guide — Intermediate/Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Boa Constrictor', href: '/species/boa-constrictor' }]}
       schema={schema}
       relatedLinks={[

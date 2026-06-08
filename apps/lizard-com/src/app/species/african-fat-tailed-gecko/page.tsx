@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "African Fat-Ta
 export default function SpeciesAfricanFatTailedGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "African Fat-Tailed Gecko Care Guide", subtitle: "Hemitheconyx caudicinctus is a ground-dwelling West African gecko closely related to the leopard gecko, with similar care but a need for higher humidity. Calm, slow-moving, and reaching 7 to 9 inches, the African fat-tailed gecko is an excellent docile beginner species whose thick tail, like the leopard gecko’s, is a vital fat reserve.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "African Fat-Tailed Gecko Care Guide", subtitle: "Hemitheconyx caudicinctus is a ground-dwelling West African gecko closely related to the leopard gecko, with similar care but a need for higher humidity. Calm, slow-moving, and reaching 7 to 9 inches, the African fat-tailed gecko is an excellent docile beginner species whose thick tail, like the leopard gecko’s, is a vital fat reserve.", category: "Species Guide — Beginner", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "African Fat-Tailed Gecko", href: "/species/african-fat-tailed-gecko" }]}
       schema={schema}
       relatedLinks={[

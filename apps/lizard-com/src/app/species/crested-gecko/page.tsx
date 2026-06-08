@@ -7,7 +7,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Crested Gecko 
 export default function CrestedGeckoPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Crested Gecko Care Guide', subtitle: 'Correlophus ciliatus — the crested gecko was rediscovered in 1994 after being presumed extinct. It rapidly became one of the most popular gecko species in captivity. Hardy, available in a stunning range of morph colors, manageable in size, and uniquely suited to room temperature keeping without specialized heating — the crested gecko is genuinely one of the best entry-level reptiles available.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Crested Gecko', href: '/species/crested-gecko' }]}
       schema={schema}
       relatedLinks={[

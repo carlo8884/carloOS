@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Bioactive Viva
 export default function BioactiveSetupPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '10 min' }}
+      hero={{ title: 'Bioactive Vivarium Setup Guide', subtitle: 'A bioactive vivarium uses a living substrate ecosystem — beneficial microorganisms, plants, and a cleanup crew of invertebrates — to break down waste, maintain substrate structure, and create a self-sustaining micro-habitat. Done correctly, bioactive setups require less frequent substrate changes, provide environmental enrichment, and look spectacular.', category: 'Setup Guide', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Setup', href: '/setup' }, { name: 'Bioactive Setup', href: '/setup/bioactive-setup' }]}
       schema={schema}
       relatedLinks={[

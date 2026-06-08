@@ -6,7 +6,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Blue-Tongued S
 export default function BlueTonguedSkinkPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Blue-Tongued Skink Care Guide', subtitle: 'Tiliqua species — the best beginner lizard for adults who want a genuinely interactive reptile. Blue-tongued skinks are intelligent, curious, manageable in size, and become remarkably personable with regular handling. Their vivid blue tongue serves as a bluff defense display — and rarely needs to be used with well-handled captives.', category: 'Species Guide — Beginner Friendly', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Blue-Tongued Skink', href: '/species/blue-tongued-skink' }]}
       schema={schema}
       relatedLinks={[

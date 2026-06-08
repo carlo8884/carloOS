@@ -25,7 +25,7 @@ export default function MossyLeafTailGeckoPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Mossy Leaf-Tail Gecko Care Guide', subtitle: 'Uroplatus sikorae — Madagascar\'s mossy leaf-tailed gecko is one of the most spectacular camouflage specialists in herpetology. It is also one of the most demanding species in the hobby. Captive-bred only, advanced keepers only, IUCN Vulnerable.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2026', readTime: '14 min' }}
+        hero={{ title: 'Mossy Leaf-Tail Gecko Care Guide', subtitle: 'Uroplatus sikorae — Madagascar\'s mossy leaf-tailed gecko is one of the most spectacular camouflage specialists in herpetology. It is also one of the most demanding species in the hobby. Captive-bred only, advanced keepers only, IUCN Vulnerable.', category: 'Species Guide — Advanced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2026', readTime: '14 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Mossy Leaf-Tail Gecko', href: '/species/mossy-leaf-tail-gecko' }]}
         relatedLinks={[
           { title: 'Species Library', href: '/species', category: 'Hub' },

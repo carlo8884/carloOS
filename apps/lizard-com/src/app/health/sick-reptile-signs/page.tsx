@@ -92,9 +92,9 @@ const SIGNS = [
 ]
 
 const STYLES = {
-  emergency: { bg: 'rgba(224,90,58,0.07)', border: 'rgba(224,90,58,0.2)', numColor: '#E05A3A', badge: '🚨 Emergency', badgeBg: 'rgba(224,90,58,0.1)' },
-  urgent: { bg: 'rgba(200,168,64,0.07)', border: 'rgba(200,168,64,0.2)', numColor: '#C8A840', badge: '⚠️ Urgent', badgeBg: 'rgba(200,168,64,0.1)' },
-  monitor: { bg: 'rgba(122,181,42,0.05)', border: 'rgba(122,181,42,0.15)', numColor: '#7AB52A', badge: '👁 Monitor', badgeBg: 'rgba(122,181,42,0.1)' },
+  emergency: { bg: 'rgba(224,90,58,0.07)', border: 'rgba(224,90,58,0.2)', numColor: '#E05A3A', badge: 'Emergency', badgeBg: 'rgba(224,90,58,0.1)' },
+  urgent: { bg: 'rgba(200,168,64,0.07)', border: 'rgba(200,168,64,0.2)', numColor: '#C8A840', badge: 'Urgent', badgeBg: 'rgba(200,168,64,0.1)' },
+  monitor: { bg: 'rgba(122,181,42,0.05)', border: 'rgba(122,181,42,0.15)', numColor: '#7AB52A', badge: 'Monitor', badgeBg: 'rgba(122,181,42,0.1)' },
 }
 
 export default function SickReptileSignsPage() {
@@ -107,7 +107,6 @@ export default function SickReptileSignsPage() {
         subtitle: 'Reptiles are prey animals — they conceal illness as a survival mechanism. By the time obvious symptoms appear, disease is often advanced. These are the signs to watch for, and what to do about them.',
         category: 'Health Guide',
         authorName: 'Lizard.com Editorial',
-        authorAvatar: '🦎',
         publishedAt: 'May 2025',
         readTime: '9 min',
       }}

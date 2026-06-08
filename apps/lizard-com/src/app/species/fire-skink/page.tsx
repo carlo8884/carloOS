@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Fire Skink Car
 export default function SpeciesFireSkinkPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Fire Skink Care Guide", subtitle: "Lepidothyris fernandi, the fire skink, is a stocky, brilliantly colored West African lizard with red, black, white, and gold flanks. Reaching 12 to 15 inches, it is hardy and long-lived but spends much of its time burrowed, so success depends on deep moist substrate, gentle warmth and humidity, and patience while it acclimates.", category: "Species Guide — Intermediate", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Fire Skink", href: "/species/fire-skink" }]}
       schema={schema}
       relatedLinks={[

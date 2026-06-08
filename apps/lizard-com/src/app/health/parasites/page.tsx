@@ -14,7 +14,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function ParasitesPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Reptile Parasites — Mites, Pinworms & Coccidia', subtitle: 'Parasites are common in wild-caught reptiles and in animals kept in suboptimal conditions. Most are treatable with appropriate medication, but treatment requires a veterinarian — do not attempt to deworm or treat parasites without professional guidance.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '9 min' }}
+      hero={{ title: 'Reptile Parasites — Mites, Pinworms & Coccidia', subtitle: 'Parasites are common in wild-caught reptiles and in animals kept in suboptimal conditions. Most are treatable with appropriate medication, but treatment requires a veterinarian — do not attempt to deworm or treat parasites without professional guidance.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Parasites', href: '/health/parasites' }]}
       schema={schema}
       relatedLinks={[

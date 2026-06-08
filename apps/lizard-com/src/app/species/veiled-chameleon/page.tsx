@@ -24,7 +24,7 @@ export default function VeiledChameleonPage() {
       <ArticleLayout
         siteId="lizard-com"
         contentType="species"
-        hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '13 min' }}
+        hero={{ title: 'Veiled Chameleon Care Guide', subtitle: 'Chamaeleo calyptratus — the most commonly kept chameleon in the hobby, and the most commonly killed by inadequate husbandry. Veiled chameleons are sensitive to stress, dependent on specific environmental conditions, and require daily management attention. They reward experienced keepers who meet their needs with one of the most visually captivating reptiles in existence.', category: 'Species Guide — Experienced', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '13 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Veiled Chameleon', href: '/species/veiled-chameleon' }]}
         relatedLinks={[
           { title: 'Species Library', href: '/species', category: 'Hub' },

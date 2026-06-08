@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Dubia Roach Ca
 export default function HealthDubiaRoachCarePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Dubia Roach Care and Colony Keeping", subtitle: "Dubia roaches (Blaptica dubia) are the premier feeder insect for many reptile keepers: nutritious, quiet, odorless compared to crickets, unable to climb smooth surfaces or infest a typical home, and easy to breed into a self-sustaining colony. Keeping your own colony cuts costs and guarantees well-gut-loaded feeders on demand. This guide covers setup, care, and harvesting.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Dubia Roach Care and Colony Keeping", subtitle: "Dubia roaches (Blaptica dubia) are the premier feeder insect for many reptile keepers: nutritious, quiet, odorless compared to crickets, unable to climb smooth surfaces or infest a typical home, and easy to breed into a self-sustaining colony. Keeping your own colony cuts costs and guarantees well-gut-loaded feeders on demand. This guide covers setup, care, and harvesting.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Dubia Roach Care", href: "/health/dubia-roach-care" }]}
       schema={schema}
       relatedLinks={[

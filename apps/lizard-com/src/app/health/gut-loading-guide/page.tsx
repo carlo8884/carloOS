@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Gut-Loading Fe
 export default function HealthGutLoadingGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Gut-Loading Feeder Insects", subtitle: "Gut-loading is the practice of feeding nutritious food to feeder insects before offering them to your reptile, so the insect becomes a vehicle delivering that nutrition. A cricket fed garbage is mostly empty calories; a cricket gut-loaded for a day or two becomes a far better meal. Done alongside calcium dusting, gut-loading is one of the simplest, cheapest upgrades to a reptile’s diet.", category: "Feeding", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "8 min" }}
+      hero={{ title: "Gut-Loading Feeder Insects", subtitle: "Gut-loading is the practice of feeding nutritious food to feeder insects before offering them to your reptile, so the insect becomes a vehicle delivering that nutrition. A cricket fed garbage is mostly empty calories; a cricket gut-loaded for a day or two becomes a far better meal. Done alongside calcium dusting, gut-loading is one of the simplest, cheapest upgrades to a reptile’s diet.", category: "Feeding", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "8 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Gut-Loading Guide", href: "/health/gut-loading-guide" }]}
       schema={schema}
       relatedLinks={[

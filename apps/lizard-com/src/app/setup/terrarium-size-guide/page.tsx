@@ -9,7 +9,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptile Enclos
 export default function SetupTerrariumSizeGuidePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "10 min" }}
+      hero={{ title: "Reptile Enclosure Size Guide", subtitle: "Enclosure size is one of the most consequential and most misunderstood husbandry decisions. The old advice that snakes feel safest in tiny tubs and lizards do fine in small tanks has given way to a clear consensus: appropriately large, well-furnished enclosures support natural behavior, thermoregulation, and welfare. This guide covers how to size an enclosure and minimum footprints for popular species.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "10 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Enclosure Size Guide", href: "/setup/terrarium-size-guide" }]}
       schema={schema}
       relatedLinks={[

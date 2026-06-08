@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Bioactive Drai
 export default function SetupDrainageLayerBioactivePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Bioactive Drainage Layer Guide", subtitle: "In a humid bioactive enclosure, excess water has to go somewhere other than the substrate, or the soil turns into an anaerobic swamp that kills plants, drowns the cleanup crew, and breeds harmful bacteria. A drainage layer (sometimes called a false bottom) creates a reservoir beneath the substrate to hold that water. This guide covers how to build one and when you actually need it.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Bioactive Drainage Layer Guide", subtitle: "In a humid bioactive enclosure, excess water has to go somewhere other than the substrate, or the soil turns into an anaerobic swamp that kills plants, drowns the cleanup crew, and breeds harmful bacteria. A drainage layer (sometimes called a false bottom) creates a reservoir beneath the substrate to hold that water. This guide covers how to build one and when you actually need it.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Drainage Layer Guide", href: "/setup/drainage-layer-bioactive" }]}
       schema={schema}
       relatedLinks={[

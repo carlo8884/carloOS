@@ -15,7 +15,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Obesity in Rep
 export default function HealthReptileObesityPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Obesity in Reptiles", subtitle: "Obesity is among the most common and most overlooked health problems in captive reptiles. Well-meaning keepers overfeed sedentary animals, and the resulting fat accumulation strains the liver, heart, and reproductive system and shortens lifespan. Recognizing the signs and adjusting feeding frequency, diet composition, and enclosure enrichment reverses most cases.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Obesity in Reptiles", subtitle: "Obesity is among the most common and most overlooked health problems in captive reptiles. Well-meaning keepers overfeed sedentary animals, and the resulting fat accumulation strains the liver, heart, and reproductive system and shortens lifespan. Recognizing the signs and adjusting feeding frequency, diet composition, and enclosure enrichment reverses most cases.", category: "Health — Husbandry-Driven", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Health", href: "/health" }, { name: "Reptile Obesity", href: "/health/reptile-obesity" }]}
       schema={schema}
       relatedLinks={[

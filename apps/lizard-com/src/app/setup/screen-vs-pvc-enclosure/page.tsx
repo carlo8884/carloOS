@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Screen vs PVC 
 export default function SetupScreenVsPvcEnclosurePage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Screen vs PVC vs Glass Reptile Enclosures", subtitle: "The material your enclosure is built from determines how well it holds humidity and heat, how it ventilates, and how easy it is to maintain. The three dominant options, all-screen, glass, and PVC (or sealed wood), each suit different species and climates. Choosing wrong forces you to fight your enclosure to maintain the conditions your animal needs.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Screen vs PVC vs Glass Reptile Enclosures", subtitle: "The material your enclosure is built from determines how well it holds humidity and heat, how it ventilates, and how easy it is to maintain. The three dominant options, all-screen, glass, and PVC (or sealed wood), each suit different species and climates. Choosing wrong forces you to fight your enclosure to maintain the conditions your animal needs.", category: "Enclosure Setup", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Setup", href: "/setup" }, { name: "Screen vs PVC Enclosures", href: "/setup/screen-vs-pvc-enclosure" }]}
       schema={schema}
       relatedLinks={[

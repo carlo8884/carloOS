@@ -14,7 +14,7 @@ const schema = combineSchemas(buildArticleSchema({ siteId: 'lizard-com', title: 
 export default function VitAPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: 'Vitamin A Deficiency in Reptiles', subtitle: 'Hypovitaminosis A (vitamin A deficiency) causes skin and epithelial tissue dysfunction in reptiles — swollen eyelids, poor skin quality, retained shed, respiratory symptoms, and in severe cases, immune failure. It is exclusively a husbandry problem: inadequate dietary vitamin A or insufficient vitamin A in feeder insects.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'May 2025', readTime: '8 min' }}
+      hero={{ title: 'Vitamin A Deficiency in Reptiles', subtitle: 'Hypovitaminosis A (vitamin A deficiency) causes skin and epithelial tissue dysfunction in reptiles — swollen eyelids, poor skin quality, retained shed, respiratory symptoms, and in severe cases, immune failure. It is exclusively a husbandry problem: inadequate dietary vitamin A or insufficient vitamin A in feeder insects.', category: 'Reptile Health', authorName: 'Lizard.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reptile Health', href: '/health/sick-reptile-signs' }, { name: 'Vitamin A Deficiency', href: '/health/vitamin-a-deficiency' }]}
       schema={schema}
       relatedLinks={[

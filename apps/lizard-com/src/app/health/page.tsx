@@ -15,7 +15,7 @@ const FOUNDATIONAL_GUIDES = [
   {
     title: 'Sick Reptile Signs',
     href: '/health/sick-reptile-signs',
-    badge: '⚡ Essential First Read',
+    badge: 'Essential First Read',
     desc: 'How to tell when a reptile is sick — the warning signs every keeper should know',
   },
   {

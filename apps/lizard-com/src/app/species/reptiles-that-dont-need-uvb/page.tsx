@@ -8,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'lizard-com', title: "Reptiles That 
 export default function SpeciesReptilesThatDontNeedUvbPage() {
   return (
     <ArticleLayout siteId="lizard-com"
-      hero={{ title: "Reptiles That Do Not Strictly Need UVB", subtitle: "UVB lighting is essential for most diurnal basking reptiles, but a subset of species, mainly nocturnal and crepuscular ones, can be maintained without it when dietary vitamin D3 is provided. This guide explains which reptiles fall into that category, why, the growing case for offering low-level UVB even to them, and which species absolutely must have UVB.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', authorAvatar: '🦎', publishedAt: 'June 2026', readTime: "9 min" }}
+      hero={{ title: "Reptiles That Do Not Strictly Need UVB", subtitle: "UVB lighting is essential for most diurnal basking reptiles, but a subset of species, mainly nocturnal and crepuscular ones, can be maintained without it when dietary vitamin D3 is provided. This guide explains which reptiles fall into that category, why, the growing case for offering low-level UVB even to them, and which species absolutely must have UVB.", category: "Choosing a Reptile", authorName: 'Lizard.com Editorial', publishedAt: 'June 2026', readTime: "9 min" }}
       breadcrumbs={[{ name: "Home", href: "/" }, { name: "Species", href: "/species" }, { name: "Reptiles That Do Not Need UVB", href: "/species/reptiles-that-dont-need-uvb" }]}
       schema={schema}
       relatedLinks={[
