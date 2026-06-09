@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 
 const SOURCES = [
@@ -53,6 +53,8 @@ export default function VitAPage() {
 
         <h2>Treatment</h2>
         <p>Veterinary evaluation is required for any reptile showing the swollen-eye presentation — this sign can also indicate bacterial infection of the eye area, abscess, or other conditions requiring different treatment. A reptile veterinarian can determine whether vitamin A deficiency is the primary cause and administer appropriate treatment: oral or injectable vitamin A at therapeutic doses, treatment of any secondary infections, and supportive care (eye flushing for accumulated debris, assisted feeding if anorectic). Correct husbandry simultaneously — treating the deficiency without correcting the diet that caused it results in recurrence.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Reptile Multivitamin Supplements</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Reptile multivitamins (Repashy Herptivite, Rep-Cal Herptivite) supply pre-formed vitamin A. Dose per husbandry schedule + vet direction. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
