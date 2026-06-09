@@ -1010,25 +1010,25 @@
     "orientation": "landscape"
   },
   "lizard-com:featured-bearded-dragon": {
-    "query": "bearded dragon basking Pogona",
+    "query": "bearded dragon basking",
     "provider": "either",
     "alt": "A bearded dragon (Pogona vitticeps) basking",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-corn-snake": {
-    "query": "corn snake macro Pantherophis",
+    "query": "corn snake macro",
     "provider": "either",
     "alt": "A corn snake (Pantherophis guttatus) in a naturalistic setting",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-blue-tongue-skink": {
-    "query": "blue tongue skink Tiliqua macro",
+    "query": "blue tongue skink macro",
     "provider": "either",
     "alt": "A blue-tongue skink (Tiliqua spp.) on a naturalistic surface",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-ball-python": {
-    "query": "ball python coiled macro Python regius",
+    "query": "ball python coiled macro",
     "provider": "either",
     "alt": "A ball python coiled in a naturalistic setting",
     "orientation": "landscape"
@@ -1088,79 +1088,79 @@
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-gargoyle-gecko": {
-    "query": "gargoyle gecko Rhacodactylus auriculatus macro",
+    "query": "gargoyle gecko macro",
     "provider": "either",
     "alt": "A gargoyle gecko (Rhacodactylus auriculatus) on a branch",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-african-fat-tailed-gecko": {
-    "query": "fat tailed gecko Hemitheconyx portrait",
+    "query": "fat tailed gecko portrait",
     "provider": "either",
     "alt": "An African fat-tailed gecko (Hemitheconyx caudicinctus) in profile",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-western-hognose": {
-    "query": "hognose snake Heterodon macro portrait",
+    "query": "hognose snake macro portrait",
     "provider": "either",
     "alt": "A western hognose snake (Heterodon nasicus) in a naturalistic setting",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-kenyan-sand-boa": {
-    "query": "kenyan sand boa Gongylophis snake macro",
+    "query": "kenyan sand boa snake macro",
     "provider": "either",
     "alt": "A Kenyan sand boa (Gongylophis colubrinus) coiled",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-green-anole": {
-    "query": "green anole Anolis carolinensis macro",
+    "query": "green anole macro",
     "provider": "either",
     "alt": "A green anole (Anolis carolinensis) on a branch",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-chinese-water-dragon": {
-    "query": "chinese water dragon Physignathus macro",
+    "query": "chinese water dragon macro",
     "provider": "either",
     "alt": "A Chinese water dragon (Physignathus cocincinus) in naturalistic light",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-fire-skink": {
-    "query": "fire skink Lepidothyris fernandi macro",
+    "query": "fire skink macro",
     "provider": "either",
     "alt": "A fire skink (Lepidothyris fernandi) showing vivid coloration",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-leachianus-gecko": {
-    "query": "leachianus gecko Rhacodactylus leachianus portrait",
+    "query": "leachianus gecko portrait",
     "provider": "either",
     "alt": "A leachianus gecko (Rhacodactylus leachianus) on a branch",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-mourning-gecko": {
-    "query": "mourning gecko Lepidodactylus macro portrait",
+    "query": "mourning gecko macro portrait",
     "provider": "either",
     "alt": "A mourning gecko (Lepidodactylus lugubris) close-up",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-mossy-leaf-tail-gecko": {
-    "query": "leaf tail gecko Uroplatus camouflage macro",
+    "query": "leaf tail gecko camouflage macro",
     "provider": "either",
     "alt": "A mossy leaf-tail gecko (Uroplatus sikorae) in camouflage",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-argentine-tegu": {
-    "query": "argentine tegu Salvator merianae macro portrait",
+    "query": "argentine tegu macro portrait",
     "provider": "either",
     "alt": "An Argentine black-and-white tegu (Salvator merianae) close-up",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-savannah-monitor": {
-    "query": "savannah monitor Varanus exanthematicus portrait",
+    "query": "savannah monitor portrait",
     "provider": "either",
     "alt": "A savannah monitor (Varanus exanthematicus) in natural light",
     "orientation": "landscape"
   },
   "lizard-com:species-thumb-nile-monitor": {
-    "query": "nile monitor Varanus niloticus macro portrait",
+    "query": "nile monitor macro portrait",
     "provider": "either",
     "alt": "A Nile monitor (Varanus niloticus) in naturalistic setting",
     "orientation": "landscape"
@@ -1592,19 +1592,19 @@
     "orientation": "landscape"
   },
   "fish-com:species-amano-shrimp": {
-    "query": "Amano shrimp Caridina aquarium",
+    "query": "Amano shrimp aquarium",
     "provider": "either",
     "alt": "A Amano Shrimp in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-angelfish": {
-    "query": "freshwater angelfish Pterophyllum aquarium",
+    "query": "freshwater angelfish aquarium",
     "provider": "either",
     "alt": "A Angelfish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-axolotl": {
-    "query": "axolotl Ambystoma aquarium",
+    "query": "axolotl aquarium",
     "provider": "either",
     "alt": "A Axolotl in an aquarium",
     "orientation": "landscape"
@@ -1616,19 +1616,19 @@
     "orientation": "landscape"
   },
   "fish-com:species-blue-ram": {
-    "query": "German blue ram cichlid Mikrogeophagus aquarium",
+    "query": "German blue ram cichlid aquarium",
     "provider": "either",
     "alt": "A German Blue Ram in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-boesemani-rainbowfish": {
-    "query": "Boesemani rainbowfish Melanotaenia aquarium",
+    "query": "Boesemani rainbowfish aquarium",
     "provider": "either",
     "alt": "A Boesemani Rainbowfish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-bristlenose-pleco": {
-    "query": "bristlenose pleco Ancistrus aquarium",
+    "query": "bristlenose pleco aquarium",
     "provider": "either",
     "alt": "A Bristlenose Pleco in an aquarium",
     "orientation": "landscape"
@@ -1640,7 +1640,7 @@
     "orientation": "landscape"
   },
   "fish-com:species-cardinal-tetra": {
-    "query": "cardinal tetra Paracheirodon aquarium school",
+    "query": "cardinal tetra aquarium school",
     "provider": "either",
     "alt": "A Cardinal Tetra in an aquarium",
     "orientation": "landscape"
@@ -1652,13 +1652,13 @@
     "orientation": "landscape"
   },
   "fish-com:species-cherry-barb": {
-    "query": "cherry barb Puntius aquarium fish",
+    "query": "cherry barb aquarium fish",
     "provider": "either",
     "alt": "A Cherry Barb in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-cherry-shrimp": {
-    "query": "red cherry shrimp Neocaridina aquarium",
+    "query": "red cherry shrimp aquarium",
     "provider": "either",
     "alt": "A Cherry Shrimp in an aquarium",
     "orientation": "landscape"
@@ -1676,49 +1676,49 @@
     "orientation": "landscape"
   },
   "fish-com:species-discus": {
-    "query": "discus fish Symphysodon aquarium",
+    "query": "discus fish aquarium",
     "provider": "either",
     "alt": "A Discus in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-dwarf-gourami": {
-    "query": "dwarf gourami Trichogaster aquarium fish",
+    "query": "dwarf gourami aquarium fish",
     "provider": "either",
     "alt": "A Dwarf Gourami in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-dwarf-puffer": {
-    "query": "dwarf pea puffer Carinotetraodon aquarium",
+    "query": "dwarf pea puffer aquarium",
     "provider": "either",
     "alt": "A Dwarf Puffer in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-ember-tetra": {
-    "query": "ember tetra Hyphessobrycon aquarium nano fish",
+    "query": "ember tetra aquarium nano fish",
     "provider": "either",
     "alt": "A Ember Tetra in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-endlers-livebearer": {
-    "query": "Endlers livebearer Poecilia aquarium fish",
+    "query": "Endlers livebearer aquarium fish",
     "provider": "either",
     "alt": "A Endler's Livebearer in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-guppy": {
-    "query": "guppy Poecilia reticulata aquarium fish",
+    "query": "guppy aquarium fish",
     "provider": "either",
     "alt": "A Guppy in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-harlequin-rasbora": {
-    "query": "harlequin rasbora Trigonostigma aquarium school",
+    "query": "harlequin rasbora aquarium school",
     "provider": "either",
     "alt": "A Harlequin Rasbora in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-hillstream-loach": {
-    "query": "hillstream loach Sewellia aquarium",
+    "query": "hillstream loach aquarium",
     "provider": "either",
     "alt": "A Hillstream Loach in an aquarium",
     "orientation": "landscape"
@@ -1730,25 +1730,25 @@
     "orientation": "landscape"
   },
   "fish-com:species-kuhli-loach": {
-    "query": "kuhli loach Pangio aquarium",
+    "query": "kuhli loach aquarium",
     "provider": "either",
     "alt": "A Kuhli Loach in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-molly-fish": {
-    "query": "molly fish Poecilia aquarium",
+    "query": "molly fish aquarium",
     "provider": "either",
     "alt": "A Molly Fish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-mystery-snail": {
-    "query": "mystery snail Pomacea aquarium",
+    "query": "mystery snail aquarium",
     "provider": "either",
     "alt": "A Mystery Snail in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-oscar": {
-    "query": "oscar fish Astronotus aquarium cichlid",
+    "query": "oscar fish aquarium cichlid",
     "provider": "either",
     "alt": "A Oscar in an aquarium",
     "orientation": "landscape"
@@ -1766,13 +1766,13 @@
     "orientation": "landscape"
   },
   "fish-com:species-pearl-gourami": {
-    "query": "pearl gourami Trichopodus aquarium fish",
+    "query": "pearl gourami aquarium fish",
     "provider": "either",
     "alt": "A Pearl Gourami in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-platy-fish": {
-    "query": "platy fish Xiphophorus aquarium",
+    "query": "platy fish aquarium",
     "provider": "either",
     "alt": "A Platy Fish in an aquarium",
     "orientation": "landscape"
@@ -1790,31 +1790,31 @@
     "orientation": "landscape"
   },
   "fish-com:species-rainbow-fish": {
-    "query": "rainbowfish Melanotaenia aquarium",
+    "query": "rainbowfish aquarium",
     "provider": "either",
     "alt": "A Rainbowfish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-sparkling-gourami": {
-    "query": "sparkling gourami Trichopsis aquarium nano fish",
+    "query": "sparkling gourami aquarium nano fish",
     "provider": "either",
     "alt": "A Sparkling Gourami in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-swordtail-fish": {
-    "query": "swordtail fish Xiphophorus aquarium",
+    "query": "swordtail fish aquarium",
     "provider": "either",
     "alt": "A Swordtail Fish in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-white-cloud-mountain-minnow": {
-    "query": "white cloud mountain minnow Tanichthys aquarium",
+    "query": "white cloud mountain minnow aquarium",
     "provider": "either",
     "alt": "A White Cloud Mountain Minnow in an aquarium",
     "orientation": "landscape"
   },
   "fish-com:species-zebra-danio": {
-    "query": "zebra danio Danio rerio aquarium school",
+    "query": "zebra danio aquarium school",
     "provider": "either",
     "alt": "A Zebra Danio in an aquarium",
     "orientation": "landscape"
@@ -2147,6 +2147,366 @@
     "query": "colorful reptile lizard",
     "provider": "either",
     "alt": "A colorful reptile in naturalistic light — reptile species category reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-reviews": {
+    "query": "aquarium equipment gear",
+    "provider": "either",
+    "alt": "Aquarium equipment and gear — fish keeping reviews hub reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-species": {
+    "query": "colorful freshwater aquarium fish",
+    "provider": "either",
+    "alt": "Colorful freshwater aquarium fish — species profiles hub reference",
+    "orientation": "landscape"
+  },
+  "fish-com:category-health": {
+    "query": "aquarium water test kit",
+    "provider": "either",
+    "alt": "An aquarium water test kit — fish health and disease hub reference",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-akita-2": {
+    "query": "Akita dog outdoors",
+    "provider": "either",
+    "alt": "A Akita outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-cattle-dog-2": {
+    "query": "Australian Cattle Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Australian Cattle Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-australian-shepherd-2": {
+    "query": "Australian Shepherd dog outdoors",
+    "provider": "either",
+    "alt": "A Australian Shepherd outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-basset-hound-2": {
+    "query": "Basset Hound dog outdoors",
+    "provider": "either",
+    "alt": "A Basset Hound outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-beagle-2": {
+    "query": "Beagle dog outdoors",
+    "provider": "either",
+    "alt": "A Beagle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-belgian-malinois-2": {
+    "query": "Belgian Malinois dog outdoors",
+    "provider": "either",
+    "alt": "A Belgian Malinois outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bernese-mountain-dog-2": {
+    "query": "Bernese Mountain Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Bernese Mountain Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bichon-frise-2": {
+    "query": "Bichon Frise dog outdoors",
+    "provider": "either",
+    "alt": "A Bichon Frise outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-border-collie-2": {
+    "query": "Border Collie dog outdoors",
+    "provider": "either",
+    "alt": "A Border Collie outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boston-terrier-2": {
+    "query": "Boston Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A Boston Terrier outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-boxer-2": {
+    "query": "Boxer dog outdoors",
+    "provider": "either",
+    "alt": "A Boxer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-brittany-2": {
+    "query": "Brittany dog outdoors",
+    "provider": "either",
+    "alt": "A Brittany outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bulldog-2": {
+    "query": "Bulldog dog outdoors",
+    "provider": "either",
+    "alt": "A Bulldog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-bullmastiff-2": {
+    "query": "Bullmastiff dog outdoors",
+    "provider": "either",
+    "alt": "A Bullmastiff outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cane-corso-2": {
+    "query": "Cane Corso dog outdoors",
+    "provider": "either",
+    "alt": "A Cane Corso outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavachon-2": {
+    "query": "Cavachon dog outdoors",
+    "provider": "either",
+    "alt": "A Cavachon outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cavalier-king-charles-2": {
+    "query": "Cavalier King Charles Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A Cavalier King Charles Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-chihuahua-2": {
+    "query": "Chihuahua dog outdoors",
+    "provider": "either",
+    "alt": "A Chihuahua outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cockapoo-2": {
+    "query": "Cockapoo dog outdoors",
+    "provider": "either",
+    "alt": "A Cockapoo outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-cocker-spaniel-2": {
+    "query": "Cocker Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A Cocker Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-collie-2": {
+    "query": "Collie dog outdoors",
+    "provider": "either",
+    "alt": "A Collie outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-dachshund-2": {
+    "query": "Dachshund dog outdoors",
+    "provider": "either",
+    "alt": "A Dachshund outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-doberman-pinscher-2": {
+    "query": "Doberman Pinscher dog outdoors",
+    "provider": "either",
+    "alt": "A Doberman Pinscher outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-english-springer-spaniel-2": {
+    "query": "English Springer Spaniel dog outdoors",
+    "provider": "either",
+    "alt": "A English Springer Spaniel outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-french-bulldog-2": {
+    "query": "French Bulldog dog outdoors",
+    "provider": "either",
+    "alt": "A French Bulldog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shepherd-2": {
+    "query": "German Shepherd dog outdoors",
+    "provider": "either",
+    "alt": "A German Shepherd outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-german-shorthaired-pointer-2": {
+    "query": "German Shorthaired Pointer dog outdoors",
+    "provider": "either",
+    "alt": "A German Shorthaired Pointer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-doodle-2": {
+    "query": "Goldendoodle dog outdoors",
+    "provider": "either",
+    "alt": "A Goldendoodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-golden-retriever-2": {
+    "query": "Golden Retriever dog outdoors",
+    "provider": "either",
+    "alt": "A Golden Retriever outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-dane-2": {
+    "query": "Great Dane dog outdoors",
+    "provider": "either",
+    "alt": "A Great Dane outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-great-pyrenees-2": {
+    "query": "Great Pyrenees dog outdoors",
+    "provider": "either",
+    "alt": "A Great Pyrenees outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-havanese-2": {
+    "query": "Havanese dog outdoors",
+    "provider": "either",
+    "alt": "A Havanese outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-setter-2": {
+    "query": "Irish Setter dog outdoors",
+    "provider": "either",
+    "alt": "A Irish Setter outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-irish-wolfhound-2": {
+    "query": "Irish Wolfhound dog outdoors",
+    "provider": "either",
+    "alt": "A Irish Wolfhound outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labradoodle-2": {
+    "query": "Labradoodle dog outdoors",
+    "provider": "either",
+    "alt": "A Labradoodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-labrador-retriever-2": {
+    "query": "Labrador Retriever dog outdoors",
+    "provider": "either",
+    "alt": "A Labrador Retriever outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltese-2": {
+    "query": "Maltese dog outdoors",
+    "provider": "either",
+    "alt": "A Maltese outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-maltipoo-2": {
+    "query": "Maltipoo dog outdoors",
+    "provider": "either",
+    "alt": "A Maltipoo outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-mastiff-2": {
+    "query": "Mastiff dog outdoors",
+    "provider": "either",
+    "alt": "A Mastiff outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-miniature-schnauzer-2": {
+    "query": "Miniature Schnauzer dog outdoors",
+    "provider": "either",
+    "alt": "A Miniature Schnauzer outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-newfoundland-2": {
+    "query": "Newfoundland dog outdoors",
+    "provider": "either",
+    "alt": "A Newfoundland outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-papillon-2": {
+    "query": "Papillon dog outdoors",
+    "provider": "either",
+    "alt": "A Papillon outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pembroke-welsh-corgi-2": {
+    "query": "Pembroke Welsh Corgi dog outdoors",
+    "provider": "either",
+    "alt": "A Pembroke Welsh Corgi outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-pomeranian-2": {
+    "query": "Pomeranian dog outdoors",
+    "provider": "either",
+    "alt": "A Pomeranian outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-poodle-2": {
+    "query": "Poodle dog outdoors",
+    "provider": "either",
+    "alt": "A Poodle outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-portuguese-water-dog-2": {
+    "query": "Portuguese Water Dog dog outdoors",
+    "provider": "either",
+    "alt": "A Portuguese Water Dog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rhodesian-ridgeback-2": {
+    "query": "Rhodesian Ridgeback dog outdoors",
+    "provider": "either",
+    "alt": "A Rhodesian Ridgeback outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-rottweiler-2": {
+    "query": "Rottweiler dog outdoors",
+    "provider": "either",
+    "alt": "A Rottweiler outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-saint-bernard-2": {
+    "query": "Saint Bernard dog outdoors",
+    "provider": "either",
+    "alt": "A Saint Bernard outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shetland-sheepdog-2": {
+    "query": "Shetland Sheepdog dog outdoors",
+    "provider": "either",
+    "alt": "A Shetland Sheepdog outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shiba-inu-2": {
+    "query": "Shiba Inu dog outdoors",
+    "provider": "either",
+    "alt": "A Shiba Inu outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-shih-tzu-2": {
+    "query": "Shih Tzu dog outdoors",
+    "provider": "either",
+    "alt": "A Shih Tzu outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-siberian-husky-2": {
+    "query": "Siberian Husky dog outdoors",
+    "provider": "either",
+    "alt": "A Siberian Husky outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-vizsla-2": {
+    "query": "Vizsla dog outdoors",
+    "provider": "either",
+    "alt": "A Vizsla outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-weimaraner-2": {
+    "query": "Weimaraner dog outdoors",
+    "provider": "either",
+    "alt": "A Weimaraner outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-west-highland-white-terrier-2": {
+    "query": "West Highland White Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A West Highland White Terrier outdoors in natural light — temperament and training",
+    "orientation": "landscape"
+  },
+  "dog-com:breed-yorkshire-terrier-2": {
+    "query": "Yorkshire Terrier dog outdoors",
+    "provider": "either",
+    "alt": "A Yorkshire Terrier outdoors in natural light — temperament and training",
     "orientation": "landscape"
   }
 }
