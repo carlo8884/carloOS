@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
+import { ResultCTA } from '../_components/ResultCTA'
 
 type Param = 'nitrate' | 'tds' | 'gh' | 'salinity' | 'custom'
 
@@ -138,6 +139,20 @@ export default function WaterChangeCalculator() {
               </>
             )
           }
+        />
+      )}
+
+      {result && result.kind === 'ok' && (
+        <ResultCTA
+          heading="Shop water-change gear: gravel siphon and dechlorinator"
+          blurb={
+            <>
+              A gravel-vacuum siphon makes a {result.pct.toFixed(0)}% change painless, and dechlorinator is required for any tap water before it touches the tank.
+            </>
+          }
+          query="aquarium gravel vacuum siphon water dechlorinator"
+          cta="Browse water-change gear on Amazon"
+          source="tools-water-change"
         />
       )}
     </div>

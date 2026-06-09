@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
+import { ResultCTA } from '../_components/ResultCTA'
 
 type Shape = 'rectangular' | 'bowfront' | 'cylinder' | 'cube' | 'hexagonal'
 type Unit = 'in' | 'cm'
@@ -175,6 +176,20 @@ export default function VolumeCalculator() {
               Tank weight assumes freshwater; saltwater is ~3% heavier. Always verify your floor can support the load — a filled 75-gallon tank weighs over 800 lb.
             </>
           }
+        />
+      )}
+
+      {result && result.grossUSGal > 0 && (
+        <ResultCTA
+          heading={`Shop filters rated for a ${result.netUSGal.toFixed(0)}-gallon tank`}
+          blurb={
+            <>
+              Aim for a filter rated at your net volume or above — turnover of 4&ndash;6&times; tank volume per hour is a good target.
+            </>
+          }
+          query={`aquarium filter ${result.netUSGal.toFixed(0)} gallon`}
+          cta="Browse filters on Amazon"
+          source="tools-aquarium-volume"
         />
       )}
     </div>

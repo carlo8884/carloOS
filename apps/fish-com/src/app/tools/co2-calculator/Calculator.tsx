@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, ResultPanel } from '../_components/CalcShell'
+import { ResultCTA } from '../_components/ResultCTA'
 
 // Classic planted-tank formula: CO2 (ppm) = 12.839 × KH(dKH) × 10^(7 - pH)
 // Caveat: assumes only carbonate buffer. Phosphate buffers and discus buffers throw this off.
@@ -100,6 +101,34 @@ export default function CO2Calculator() {
             </>
           }
         />
+      )}
+
+      {result && result.ppm > 0 && (
+        result.tone === 'low' ? (
+          <ResultCTA
+            heading="Shop a pressurized CO2 system to reach the planted-tank range"
+            blurb={
+              <>
+                To lift CO2 toward the 15&ndash;35 ppm target, a regulator, diffuser, and drop checker are the core components.
+              </>
+            }
+            query="aquarium co2 system regulator diffuser"
+            cta="Browse CO2 systems on Amazon"
+            source="tools-co2"
+          />
+        ) : (
+          <ResultCTA
+            heading="Cross-check your CO2 with a drop checker"
+            blurb={
+              <>
+                With CO2 this high, a drop checker with 4dKH reference solution is the safest way to confirm the real dissolved level before adjusting.
+              </>
+            }
+            query="aquarium co2 drop checker"
+            cta="Browse drop checkers on Amazon"
+            source="tools-co2"
+          />
+        )
       )}
     </div>
   )
