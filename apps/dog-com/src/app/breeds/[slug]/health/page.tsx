@@ -23,7 +23,6 @@ import {
   ArticleLayout,
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMedicalWebPageSchema,
   combineSchemas,
@@ -147,19 +146,10 @@ export default async function BreedHealthPage({ params }: PageProps) {
     lastReviewed: '2026-05-29',
     medicalAudience: 'Caregiver',
   })
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://dog.com/' },
-      { name: 'Breeds', url: 'https://dog.com/breeds' },
-      { name: record.breedName, url: `https://dog.com/breeds/${record.slug}` },
-      { name: 'Health', url },
-    ],
-  })
   const faqSchema = buildFAQSchema({ questions: record.faqs })
   const combined = combineSchemas(
     articleSchema,
     medicalSchema,
-    breadcrumbSchema,
     faqSchema,
   )
 

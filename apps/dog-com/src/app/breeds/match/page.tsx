@@ -4,7 +4,6 @@ import {
   ArticleByline,
   FAQAccordion,
   SchemaScript,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
@@ -96,15 +95,7 @@ const FAQS = [
 
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Dog.com', url: 'https://dog.com' },
-    { name: 'Breeds', url: 'https://dog.com/breeds' },
-    { name: 'Breed Match', url: PAGE_URL },
-  ],
-})
-
-const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema, breadcrumbSchema)
+const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema)
 
 // ─── Static persona index — indexed without JS by Google + AI crawlers ──────
 
