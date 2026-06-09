@@ -34,7 +34,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const insurerListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Best Pet Insurance 2025 — Carrier Comparison',
+  name: 'Best Pet Insurance 2026 — Carrier Comparison',
   description: 'Pet insurance carriers compared on reimbursement model, payout speed, and policy terms. Editorial review by Vets.co.',
   url: 'https://vets.co/reviews/best-pet-insurance',
   numberOfItems: 3,
@@ -57,7 +57,7 @@ const trupanionSchema = buildProductSchema({
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'Fast claims processing (~2 days average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
+  description: 'Fast claims processing (per the carrier\'s stated ~2-day average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
   url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
   imageUrl: '',
   ratingValue: 9.1,
@@ -67,6 +67,7 @@ const healthyPawsSchema = buildProductSchema({
 const embraceSchema = buildProductSchema({
   name: 'Embrace Pet Insurance',
   description: 'Wellness add-on available for routine and preventive care. Diminishing deductible, highly customizable plan structure.',
+  // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
   url: 'https://vets.co/reviews/best-pet-insurance#embrace',
   imageUrl: '',
   ratingValue: 8.8,
@@ -97,8 +98,8 @@ export default function VetsPetInsurancePage() {
           Across the 11 major pet insurance carriers, Trupanion is the only one
           that pays the practice directly at checkout, eliminating the
           submit-and-wait reimbursement gap that strands owners with a $5,000
-          emergency bill. Healthy Paws delivers the fastest reimbursement (around
-          two days, no payout caps), and Embrace is the practical choice when
+          emergency bill. Healthy Paws is among the fastest for reimbursement (the
+          carrier cites an average of about two days, with no payout caps), and Embrace is the practical choice when
           routine wellness coverage matters. Enroll before any vet visit — every
           insurer permanently excludes conditions documented before the policy starts.
         </p>

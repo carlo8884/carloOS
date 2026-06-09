@@ -69,7 +69,7 @@ export default function VetsInsuranceHubPage() {
             For quick definitions of any term you hit along the way, see the <Link href="/glossary" className="text-brand-primary font-medium hover:underline">pet health &amp; insurance glossary</Link>.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed mt-4">
-            Ready to compare carriers? See our editorial comparison of the 11 major insurers: <Link href="/reviews/best-pet-insurance" className="text-brand-primary font-semibold hover:underline">Best Pet Insurance 2025 — How the 11 Major Carriers Compare</Link>.
+            Ready to compare carriers? See our editorial comparison of the 11 major insurers: <Link href="/reviews/best-pet-insurance" className="text-brand-primary font-semibold hover:underline">Best Pet Insurance 2026 — How the 11 Major Carriers Compare</Link>.
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function VetsInsuranceHubPage() {
         <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
           <Link href="/reviews/best-pet-insurance" className="block bg-brand-dark rounded-xl p-6 no-underline hover:opacity-90 transition-opacity">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Carrier Comparison</div>
-            <div className="font-display font-bold text-white text-base leading-snug mb-2">Best Pet Insurance 2025 — 11 Carriers Compared</div>
+            <div className="font-display font-bold text-white text-base leading-snug mb-2">Best Pet Insurance 2026 — 11 Carriers Compared</div>
             <p className="text-sm text-white/60 m-0 leading-relaxed">Trupanion, Healthy Paws, Embrace, and 8 more — ranked on reimbursement model, claims speed, and policy terms by the Vets.co editorial team.</p>
           </Link>
           <Link href="/pet-insurance" className="block bg-brand-primary-pale border border-brand-primary rounded-xl p-6 no-underline hover:border-brand-primary-dark transition-colors">
