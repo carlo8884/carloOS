@@ -13,7 +13,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
@@ -82,12 +81,6 @@ const itemListSchema = {
 }
 
 const schema = combineSchemas(
-  buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'Adopt', url: 'https://ferrets.com/adopt' },
-    ],
-  }),
   buildFAQSchema({
     questions: FAQS.map((f) => ({
       question: f.question,

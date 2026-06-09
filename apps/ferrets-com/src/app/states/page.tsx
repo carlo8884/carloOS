@@ -14,7 +14,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
@@ -146,12 +145,6 @@ export default function StatesHubPage() {
   ]
 
   // ─── Schema ────────────────────────────────────────────────────────────────
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://ferrets.com' },
-      { name: 'States', url: 'https://ferrets.com/states' },
-    ],
-  })
   const faqSchema = buildFAQSchema({
     questions: faqs.map((f) => ({
       question: f.question,
@@ -171,7 +164,7 @@ export default function StatesHubPage() {
       url: `https://ferrets.com/states/${s.slug}`,
     })),
   }
-  const schema = combineSchemas(breadcrumbSchema, faqSchema, itemListSchema)
+  const schema = combineSchemas(faqSchema, itemListSchema)
 
   return (
     <>

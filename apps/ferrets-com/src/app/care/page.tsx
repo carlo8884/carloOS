@@ -3,8 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   Breadcrumb,
   FAQAccordion,
@@ -62,14 +60,7 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Care Library', url: 'https://ferrets.com/care' },
-  ],
-})
-
-const schema = combineSchemas(faqSchema, breadcrumbSchema)
+const schema = faqSchema
 
 // ─── Category data ───────────────────────────────────────────────────────────
 
