@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide — Frill Display, Climbing | Lizard.com', description: 'Frilled dragons are arboreal Australian lizards with dramatic frill displays. Tall enclosures, hot basking spots, and insect diets.', path: '/species/frilled-dragon', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Frilled Dragon Care Guide', description: 'Frill behavior, enclosure height, UVB, and diet for Chlamydosaurus kingii frilled dragons.', url: 'https://lizard.com/species/frilled-dragon', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -51,6 +51,7 @@ export default function FrilledDragonPage() {
 
         <h2>Handling — Gradual Trust Building</h2>
         <p>Wild-caught frilled dragons are very difficult to tame and spend considerable time in defensive displays. Captive-bred juveniles, handled gently and consistently from 6-8 weeks old, become remarkably calm and interactive adults. The key is not forcing interaction but building positive associations: offer food from tongs then from the hand, allow the dragon to climb onto you voluntarily rather than grabbing, and keep initial sessions very short (5 minutes). A well-socialized adult frilled dragon is a genuinely impressive animal — large, responsive, and active in a way that smaller lizards cannot match.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Frilled Dragon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for frilled dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

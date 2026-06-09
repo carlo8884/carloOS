@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide — Loud Calls, Biting | Lizard.com', description: 'Tokay geckos are the most aggressive commonly kept gecko. Their "to-KAY" call is heard at night. Taming protocol works — but takes patience.', path: '/species/tokay-gecko', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Tokay Gecko Care Guide', description: 'Aggression management, taming protocol, and care for Gekko gecko tokay geckos.', url: 'https://lizard.com/species/tokay-gecko', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -47,6 +47,7 @@ export default function TokayGeckoPage() {
 
         <h2>Enclosure and Care</h2>
         <p>Tropical species requiring 60-80% humidity and warm temperatures (80-90°F warm end). Tall enclosure with lots of vertical structure — cork bark tubes mounted vertically, large branches, pothos and Ficus plants. Tokays are nocturnal and emerge at night to hunt; daytime hides should be secure and enclosed enough that the gecko feels truly hidden. Feed primarily large dubia roaches, superworms, and appropriately sized feeder mice for adults. Calcium dust every feeding; multivitamin 2× weekly. Misting twice daily maintains humidity and provides drinking water.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Tokay Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for tokay gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

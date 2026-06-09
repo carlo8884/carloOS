@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
@@ -124,6 +124,8 @@ export default function HypocalcemiaPage() {
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           <ArticleSourcesList sources={SOURCES} />
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <p style={{ fontSize: '13px', color: '#8a96ad', fontStyle: 'italic', margin: '0 0 8px', lineHeight: 1.55 }}>These products support husbandry correction and do not treat disease. Work with a reptile veterinarian for diagnosis and treatment.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Calcium Supplementation</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Reptile calcium-with-D3 and calcium-without-D3 powders (Repashy, Rep-Cal, Zoo Med). Dose per the husbandry schedule and veterinary direction. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

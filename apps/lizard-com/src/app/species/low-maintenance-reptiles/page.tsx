@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline, StockImage } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Low-Maintenance Reptiles — Realistically Easy Pets | Lizard.com", description: "The lowest-maintenance reptiles for busy keepers, ranked by feeding frequency, equipment, and daily effort, with honest expectations.", path: "/species/low-maintenance-reptiles", type: 'article' })
@@ -62,7 +62,8 @@ export default function SpeciesLowMaintenanceReptilesPage() {
           </ul>
           <p>{"Choose a low-maintenance species honestly matched to the time you have, and you will have a healthier animal and a better experience than someone who bought a demanding reptile expecting it to be effortless."}</p>
 
-          <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
+          <AffiliateDisclosure variant="inline" siteId="lizard-com" />
+        <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
             <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Low-Maintenance Setup Gear</div>
             <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>A thermostat-controlled heat source and the right enclosure do most of the work of keeping a low-maintenance reptile easy. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences which species we recommend above.</p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>

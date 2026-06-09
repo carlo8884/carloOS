@@ -60,12 +60,14 @@ export default function ReptileDehydrationPage() {
         <h2>Veterinary Care for Severe Dehydration</h2>
         <p>Severe dehydration (estimated greater than 5-8% body weight deficit) — visible by extreme skin tenting, deeply sunken eyes, extreme lethargy, and absent urination for extended periods — requires veterinary rehydration. A reptile veterinarian can administer subcutaneous or intracoelemic (body cavity) fluids using appropriate reptile fluid solutions at calculated rates. Oral fluids via tube (gavage) are also used for moderately dehydrated animals that can safely receive them. IV fluid therapy is possible in some species but technically challenging. The underlying cause of the dehydration must also be addressed — whether husbandry, illness, or both.</p>
         <div style={{ background: '#1a1f2b', border: '1px solid #2d3548', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>Hydration Equipment</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Husbandry equipment for hydration: foggers, ultrasonic humidifiers, digital hygrometers, drip systems. This is husbandry equipment, not a substitute for veterinary care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/reptile%20humidifier%20digital%20hygrometer%20water%20bowl?s=health-dehydration-reptiles" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#232f3e', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-            <a href="/go/chewy-brand/reptile%20humidifier%20digital%20hygrometer%20water%20bowl?s=health-dehydration-reptiles" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: '#7bc25c', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Chewy →</a>
-          </div>
+          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#8a96ad', marginBottom: '8px' }}>When to involve a vet</div>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Severe dehydration (deeply sunken eyes, extreme skin tenting, absent urination, profound lethargy) needs veterinary rehydration — subcutaneous or intracoelomic fluids that cannot be given safely at home. Locate a reptile-experienced clinic through the <a href="https://arav.org" rel="noopener" target="_blank" style={{ color: '#7bc25c' }}>ARAV member directory</a> before you need one.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: '#8a96ad', lineHeight: 1.55 }}>Most dehydration traces back to a husbandry gap. Correct the environment with these setup guides so it does not recur:</p>
+          <ul style={{ margin: 0, paddingLeft: '20px', color: '#8a96ad', fontSize: '14px', lineHeight: 1.7 }}>
+            <li><a href="/setup/humidity-guide" style={{ color: '#7bc25c' }}>Humidity Guide</a> — species-appropriate humidity and how to hold it</li>
+            <li><a href="/setup/temperature-guide" style={{ color: '#7bc25c' }}>Temperature Guide</a> — gradients that prevent overheating and water loss</li>
+            <li><a href="/health/dysecdysis" style={{ color: '#7bc25c' }}>Dysecdysis (Retained Shed)</a> — the most common downstream sign of chronic dehydration</li>
+          </ul>
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>

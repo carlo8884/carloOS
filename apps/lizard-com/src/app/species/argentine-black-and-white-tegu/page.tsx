@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Argentine Black and White Tegu Care — Intelligence | Lizard.com", description: "Argentine tegus are large, intelligent, dog-tame lizards needing huge enclosures, intense heat, UVB, and seasonal brumation. An advanced commitment.", path: "/species/argentine-black-and-white-tegu", type: 'article' })
@@ -68,6 +68,7 @@ export default function SpeciesArgentineBlackAndWhiteTeguPage() {
             <li>{"Reptiles Magazine, Salvator merianae husbandry references."}</li>
             <li>{"Association of Reptilian and Amphibian Veterinarians (ARAV), arav.org."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Argentine Tegu — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse large enclosures, high-output UVB, halogen flood basking bulbs, thermostats, and deep substrate sized for Argentine tegu care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>

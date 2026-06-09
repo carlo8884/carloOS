@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { EnclosureSizeCalculator } from './Calculator'
 
@@ -217,6 +218,7 @@ export default function EnclosureSizeCalculatorPage() {
           before committing to a build.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Shop Enclosures That Meet These Minimums</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Once you have your target dimensions, browse front-opening terrariums and PVC enclosures sized to hit them. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the dimensions calculated above.</p>

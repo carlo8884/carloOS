@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Care Guide — Morphs, Feeding Strikes | Lizard.com', description: 'Ball pythons are the most popular pet snake. 400+ morphs, humidity 60-80%, and feeding strikes are normal. Why most feeding refusals are not emergencies.', path: '/species/ball-python', type: 'article' })
@@ -58,6 +58,7 @@ export default function BallPythonPage() {
 
         <h2>Enclosure — Tub vs Tank vs PVC</h2>
         <p>Ball pythons do best in secure, humid, snug enclosures — not large open spaces. Counter-intuitively, a massive tank with lots of open space stresses ball pythons. They are ambush predators that feel secure in tight-fitting hides that touch their body on all sides. Three enclosure options: (1) Plastic tubs (the breeder standard — cheap, secure, hold humidity, easy to clean; aesthetically plain), (2) PVC enclosures (Reptile Sciences, Boamaster — expensive but retain humidity excellently and look good; recommended), (3) Glass tanks (poor humidity retention with screen tops; require partial screen covering). Minimum adult dimensions: 4×2 feet floor space. A 4×2×2 PVC with front-opening sliding doors is the widely regarded ideal adult ball python enclosure.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Ball Python — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for ball python care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

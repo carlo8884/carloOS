@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Sulcata Tortoise Care Guide — 100+ lbs | Lizard.com', description: 'Sulcata tortoises grow to 100-200 lbs. The cute hatchling becomes a 30-inch animal that digs under fences and eats landscaping. Most end up rehomed.', path: '/species/sulcata-tortoise', type: 'article' })
@@ -50,6 +50,7 @@ export default function SulcataTortoisePage() {
         <h2>Who Sulcatas Are Appropriate For</h2>
         <p>Sulcatas are appropriate for: people who own or have permanent access to a minimum half-acre of appropriate outdoor land in a warm climate, have resources to build appropriate substantial fencing, can provide lifelong care or have a credible long-term plan for the animal's future, and have experience with large reptiles or are connecting with experienced mentors. They make genuinely spectacular animals for the right keeper — their longevity, impressive size, and the relationship that develops with a well-cared-for sulcata over decades are extraordinary. But the barriers to providing appropriate care are real and high.</p>
         <p>For people who want a tortoise but cannot meet sulcata requirements: Russian tortoises are the recommended alternative — manageable size, similar personality, cold-tolerant, and appropriate for a much wider range of living situations.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Sulcata Tortoise — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for sulcata tortoise care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

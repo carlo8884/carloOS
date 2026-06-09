@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Crested Gecko Care Guide — No Heat Lamp, MRP Diet | Lizard.com', description: 'Crested geckos need no heat lamp (room temperature is fine) and thrive on meal replacement powder diet. Floppy tail syndrome from improper perching.', path: '/species/crested-gecko', type: 'article' })
@@ -60,6 +60,7 @@ export default function CrestedGeckoPage() {
 
         <h2>Tail Autotomy — No Regrowth in Cresties</h2>
         <p>Crested geckos can drop their tails as a predator defense — tail autotomy. Unlike many gecko species, crested geckos do not regenerate their tails after dropping them. A tailless crested gecko (called a "frogbutt") is permanent. This does not affect health, longevity, or quality of life — tailless crested geckos live full, normal lives. However, it does affect value if the animal is to be sold. Avoid situations that stress the gecko into tail drop: rough handling, being grabbed by the tail, loud noises, and encounters with aggressive tankmates (crested geckos should be housed individually except during supervised breeding).</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Crested Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for crested gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

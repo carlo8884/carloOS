@@ -8,6 +8,7 @@ import {
   EmailCapture,
   TableOfContents,
   RelatedLinks,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { UvbDistanceCalculator } from '../../../components/visual/UvbDistanceCalculator'
 
@@ -239,6 +240,7 @@ export default function UvbDistanceCalculatorPage() {
           For the full deep-dive on bulb selection, mounting, and replacement schedule, see the <Link href="/setup/uvb-lighting-guide">UVB Lighting Guide</Link>.
         </p>
 
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Shop UVB Lamps &amp; Fixtures</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Once you know the right mounting distance, pair it with a T5 HO bulb and reflector fixture rated for your species&apos; Ferguson zone. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission never influences the distances calculated above.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Mourning Gecko Care Guide — Parthenogenetic Colony | Lizard.com", description: "Mourning geckos are tiny all-female parthenogenetic geckos kept in colonies. Bioactive nano vivariums, CGD plus insects, and why they clone themselves.", path: "/species/mourning-gecko", type: 'article' })
@@ -67,6 +67,7 @@ export default function SpeciesMourningGeckoPage() {
             <li>{"Peer-reviewed literature on parthenogenesis in Lepidodactylus lugubris."}</li>
             <li>{"Reptiles Magazine, mourning gecko colony husbandry references."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Mourning Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse planted nano enclosures, low-level UVB, foggers, thermostats, substrate, and complete gecko diet sized for mourning gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
