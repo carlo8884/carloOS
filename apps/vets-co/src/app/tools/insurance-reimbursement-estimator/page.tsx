@@ -134,6 +134,7 @@ export default function InsuranceReimbursementEstimatorPage() {
           <TableOfContents
             items={[
               { label: 'The estimator', href: '#estimator' },
+              { label: 'Next step', href: '#next-step' },
               { label: 'Reading the numbers', href: '#reading' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -171,17 +172,41 @@ export default function InsuranceReimbursementEstimatorPage() {
         </p>
         <InsuranceReimbursementEstimator />
 
-        <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-brand-text-dark mb-1">Ready to compare real quotes?</p>
-            <p className="text-xs text-brand-text-mid">See our ranked comparison of the 9 major carriers — premiums, deductibles, waiting periods, and coverage flags side-by-side.</p>
+        {/* Result-based next step. Sits directly below the live estimate so it
+            reads as "you have a number — here's how to pressure-test it," not
+            as a standalone affiliate box. Trust-first: the primary path is the
+            neutral, no-carrier-picked comparison (no disclosure needed); the
+            optional quote path is an affiliate /go link, disclosed subtly and
+            framed as "run a live quote," never "buy the best." */}
+        <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
+          <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
+          <p className="text-sm font-semibold text-brand-text-dark mb-1">
+            You have an estimate — now check it against real policies.
+          </p>
+          <p className="text-xs text-brand-text-mid mb-4">
+            The figures above use the standard reimbursement formula. Reimbursement %, deductible tiers, annual caps, and excluded conditions vary by carrier, so verify your estimate against each carrier&apos;s published terms before deciding.
+          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <Link
+              href="/reviews/best-pet-insurance"
+              className="inline-block shrink-0 px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors text-center"
+            >
+              Compare plans on published terms →
+            </Link>
+            <Link
+              href="/go/lemonade/estimator?s=insurance-reimbursement-estimator"
+              className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
+              rel="sponsored nofollow"
+            >
+              Run a live quote
+            </Link>
           </div>
-          <Link
-            href="/reviews/best-pet-insurance"
-            className="inline-block shrink-0 px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors"
-          >
-            Compare carriers →
-          </Link>
+          <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">
+            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. &ldquo;Run a live quote&rdquo; is an affiliate link; we may earn a commission at no extra cost to you.{' '}
+            <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
+              Disclosure →
+            </Link>
+          </p>
         </div>
 
         <h2 id="reading">How to read the numbers</h2>
