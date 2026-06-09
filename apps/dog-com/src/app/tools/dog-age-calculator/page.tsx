@@ -126,7 +126,7 @@ export default function DogAgeCalculatorPage() {
 
       {/* Result next-step — soft senior-care / cost-planning intent path.
           A dog's human-age estimate naturally raises "what should I plan for?"
-          Insurance is cheapest while a dog is young; this is a financial-
+          Insurance premiums are typically lowest while a dog is young; this is a financial-
           readiness link, not a product pitch. Routes to the editorial
           comparison hub. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">

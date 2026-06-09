@@ -890,7 +890,7 @@ export default function HomePage() {
             </h2>
             <p className="text-base text-brand-text-mid leading-relaxed mb-6 max-w-xl">
               The average emergency vet visit runs $1,500–$5,000. Chronic conditions like atopic dermatitis,
-              kidney disease, or arthritis can cost $300–$800/month long-term. Pet insurance is the cheapest
+              kidney disease, or arthritis can cost $300–$800/month long-term. Pet insurance is among the most cost-effective
               when your dog is young and healthy — and pre-existing conditions are universally excluded by
               every major carrier.
             </p>
