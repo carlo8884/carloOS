@@ -7,6 +7,7 @@ import {
   SchemaScript,
   FAQAccordion,
   EmailCapture,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import PortionCalculator from './Calculator'
 
@@ -126,6 +127,49 @@ export default function PortionCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <PortionCalculator />
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl rounded-lg border border-brand-border bg-brand-white p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Have your daily calorie target?
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-text-dark">
+            Turn calories into the right food and portion
+          </h2>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
+            A calorie target is only useful once you match it to a complete, life-stage-appropriate
+            food and its kcal-per-cup. Compare options with our independent{' '}
+            <Link href="/brands" className="text-brand-primary underline-offset-2 hover:underline">
+              brand evaluations
+            </Link>
+            , then run the chosen bag through the{' '}
+            <Link href="/tools/food-cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
+              food cost calculator
+            </Link>
+            .
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <Link
+              href="/brands"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Read brand evaluations
+            </Link>
+            <a
+              href="/go/chewy-brand/complete%20balanced%20pet%20food?s=tools-portion-calculator"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-text-dark no-underline hover:bg-brand-surface"
+            >
+              Browse complete diets on Chewy →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through the retailer link — no extra cost to you, and we never rank by commission.
+          </p>
         </div>
       </section>
 

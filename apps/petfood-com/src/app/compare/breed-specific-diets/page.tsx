@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -122,6 +124,44 @@ export default function BreedSpecificDietsPage() {
         <p>Layered over the substantive features is a marketing premium: breed imagery, breed-precise naming, and the implication of bespoke formulation justify a higher price. The actual nutrient differences between a breed-specific diet and a well-matched size-and-life-stage diet are often small. As with all pet food, the regulated back of the bag and the manufacturer&apos;s substantiation matter more than the breed name on the front. See <a href="/myths/marketing-terms-decoded">Pet Food Marketing Terms</a>.</p>
         <h2 id="worthit">When It Is Worth It</h2>
         <p>A breed-specific diet is worth considering when its features address a real need for your animal — an appropriate kibble shape for a flat-faced breed, evidence-supported targeting of a genuine breed predisposition — and when it is otherwise a complete, well-substantiated diet from a transparent manufacturer. It is not worth a premium for breed branding alone. For most animals, a quality diet matched to size, life stage, and any medical needs serves as well. See <a href="/guides/how-to-choose-a-pet-food">How to Choose a Pet Food</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            What usually matters more than the breed name
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop size- and life-stage-matched diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most animals, a complete diet matched to size and life stage serves as well as a
+            breed-labeled one, often for less. Compare options with our independent{' '}
+            <Link href="/brands">brand evaluations</Link>, then search the category below — small-,
+            large-, and giant-breed lines cover most of what breed-specific framing offers. Confirm
+            the AAFCO complete-and-balanced statement for the life stage on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/breed%20size%20life%20stage%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search size-matched diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/small%20large%20breed%20complete%20dog%20food?s=compare-breed-specific-diets"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

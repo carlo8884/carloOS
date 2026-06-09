@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -122,6 +124,46 @@ export default function KibbleVsCannedForCatsPage() {
         <p>Increased water intake dilutes the urine, reducing the supersaturation that forms crystals and stones and helping flush the lower urinary tract. For cats with a history of feline lower urinary tract disease, urinary stones, or idiopathic cystitis, the moisture of canned food is part of standard management. See <a href="/diets/urinary-tract-diets">Urinary and Bladder Stone Diets</a>.</p>
         <h2 id="verdict">The Practical Verdict</h2>
         <p>For many cats, canned food (alone or combined with kibble) offers real advantages in hydration, carbohydrate, weight, and urinary health, and is often the better default — especially for cats prone to obesity, diabetes, or urinary disease. Dry food remains acceptable for healthy cats when used with measured feeding and good water access, and is cheaper and more convenient. A wet-and-dry combination is a reasonable middle ground. The choice should weigh the individual cat&apos;s health risks.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shopping for your cat
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop complete cat diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For a healthy cat, a complete-and-balanced canned or dry diet, or a combination, is a
+            sound choice. Compare options with our independent{' '}
+            <Link href="/brands">brand evaluations</Link>, then search the category below and confirm
+            the AAFCO complete-and-balanced statement for the life stage. A cat with diagnosed
+            diabetes, urinary, or kidney disease needs a diet set by a veterinarian — see{' '}
+            <Link href="/diets/urinary-tract-diets">urinary diets</Link> and{' '}
+            <Link href="/diets/diabetic-diets">diabetic diets</Link>, not a self-selected food.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20balanced%20cat%20food%20wet%20dry?s=compare-kibble-vs-canned-for-cats"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search cat foods on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20cat%20food?s=compare-kibble-vs-canned-for-cats"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
