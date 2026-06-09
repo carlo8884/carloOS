@@ -25,6 +25,7 @@ export default function VizslaPage() {
           { label: 'German Shorthaired Pointer vs Vizsla', href: '/compare/german-shorthaired-pointer-vs-vizsla' },
           { label: 'Vizsla vs Weimaraner', href: '/compare/vizsla-vs-weimaraner' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-vizsla" />
       </>}
