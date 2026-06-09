@@ -5,7 +5,6 @@ import {
   ArticleByline,
   FAQAccordion,
   SchemaScript,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
@@ -105,14 +104,7 @@ const FAQS = [
 
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Dog.com', url: 'https://dog.com' },
-    { name: 'Which Pet Should I Get?', url: PAGE_URL },
-  ],
-})
-
-const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema, breadcrumbSchema)
+const allSchemas = combineSchemas(webAppSchema, quizSchema, faqSchema)
 
 // ─── Sister-site canonical URLs (sourced from siteConfigs) ──────────────────
 

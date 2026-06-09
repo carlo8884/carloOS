@@ -22,7 +22,6 @@ import {
   ArticleLayout,
   ArticleByline,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   buildFAQSchema,
   buildMetadata,
   CalloutBox,
@@ -108,19 +107,8 @@ export default async function BreedFeedingPage({ params }: PageProps) {
     publishedAt: '2026-05-28T00:00:00Z',
     modifiedAt: '2026-05-28T00:00:00Z',
   })
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://dog.com/' },
-      { name: 'Breeds', url: 'https://dog.com/breeds' },
-      {
-        name: profile.breedName,
-        url: `https://dog.com/breeds/${profile.slug}`,
-      },
-      { name: 'Feeding', url: pageUrl },
-    ],
-  })
   const faqSchema = buildFAQSchema({ questions: profile.faqs })
-  const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const combined = combineSchemas(articleSchema, faqSchema)
 
   const adultCalRange = range(
     profile.caloricNeeds.adultRangeKcalPerDay,
