@@ -76,7 +76,7 @@ const MAGNETS: Record<string, MagnetContent> = {
         cta: { label: 'Take the quiz →', vendor: 'lemonade', sku: 'home' },
       },
       {
-        headline: 'Get a Pumpkin quote (our best-overall pick)',
+        headline: 'Get a Pumpkin quote (our overall editorial pick)',
         body: 'Pumpkin scored highest in our editorial review for comprehensive coverage and has no upper age limit at enrollment.',
         cta: { label: 'Get a Pumpkin quote →', vendor: 'pumpkin', sku: 'home' },
       },
