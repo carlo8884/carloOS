@@ -7,6 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -120,6 +121,33 @@ export default function DogCalorieCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Result next-step — shop foods matched to the calorie estimate.
+          One tasteful, disclosed editorial path after the result. The
+          comparison hub is where commercial /go food links live; we route
+          there rather than putting a buy-box on a free tool. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Next step
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              Have your dog&apos;s daily calorie target? Foods vary widely in calorie
+              density (roughly 270–500 kcal/cup), so the right pick makes hitting that
+              number easier. Compare formulas matched to your dog&apos;s calorie needs and
+              life stage.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+            <Link
+              href="/reviews/best-dry-dog-food"
+              className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Compare foods by calorie density →
+            </Link>
+          </div>
         </div>
       </section>
 
