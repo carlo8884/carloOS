@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -123,6 +125,45 @@ export default function HomeCookedVsCommercialPage() {
         <p>A balanced home-cooked diet essentially always requires a supplement to supply nutrients that whole-food ingredients cannot provide in the right amounts — calcium being the most critical, plus a vitamin-and-mineral source and often specific additions like taurine for cats. Generic human multivitamins are not adequate substitutes. The formulating nutritionist specifies the exact supplement and dose. See <a href="/supplements/multivitamins-for-pets">Multivitamins for Pets</a>.</p>
         <h2 id="justified">When It Is Justified</h2>
         <p>Home-cooking is justified when an animal will not eat or cannot tolerate suitable commercial diets, when a combination of medical conditions is not addressed by any commercial therapeutic diet, or when an owner is committed to it and willing to do it properly through a veterinary nutritionist. It is not justified as a casual swap from commercial food based on a recipe found online. Done right it is excellent; done casually it is a common cause of preventable nutritional disease. See <a href="/compare/fresh-vs-kibble">Fresh vs Kibble</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            The reliable default
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop complete, balanced commercial diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            For most households, a complete-and-balanced commercial diet is the dependable way to
+            meet nutrient requirements without the imbalance risk of an unsupervised home recipe.
+            Compare options with our independent <Link href="/brands">brand evaluations</Link>, then
+            search the category below and confirm the AAFCO complete-and-balanced statement for the
+            life stage. A genuinely needed home diet should be formulated by a board-certified
+            veterinary nutritionist, not assembled from a recipe online.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20balanced%20pet%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20dog%20cat%20food?s=compare-home-cooked-vs-commercial"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>

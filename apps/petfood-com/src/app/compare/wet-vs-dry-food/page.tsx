@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   buildArticleSchema,
@@ -8,6 +9,7 @@ import {
   EmailCapture,
   ArticleSourcesList,
   ArticleByline,
+  AffiliateDisclosure,
   StockImage
 } from '@carloOS/ui'
 
@@ -121,6 +123,43 @@ export default function WetVsDryFoodPage() {
         <p>Canned food is typically more palatable due to its aroma, texture, and higher fat and protein, which makes it valuable for sick, inappetent, or senior animals that need encouragement to eat, and for cats recovering from illness. Its hydration benefit reinforces this in animals that need more water. For a picky or convalescing animal, the palatability of wet food can be the deciding factor.</p>
         <h2 id="choosing">Choosing or Combining</h2>
         <p>Many owners successfully combine the two: kibble for cost and convenience, with canned food added for hydration, palatability, and satiety. A combination captures several of each format&apos;s advantages, provided total calories are counted across both. For most healthy animals either format, if complete and balanced, supports good health; the choice can be made on the individual&apos;s needs and the household&apos;s practicality. See <a href="/feeding/how-much-to-feed-a-cat">How Much to Feed a Cat</a>.</p>
+
+        <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-surface p-6">
+          <p className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Shopping for either format
+          </p>
+          <h2 className="font-display text-xl font-bold text-brand-dark mb-2">
+            Shop wet and dry complete diets
+          </h2>
+          <p className="text-sm text-brand-text-mid mb-4">
+            Both formats work when the food is complete and balanced for the life stage. Compare
+            picks with our independent <Link href="/brands">brand evaluations</Link>, then search the
+            category at a major retailer. The search links below surface complete wet and dry diets;
+            confirm the AAFCO statement and life-stage match on the specific product.
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="petfood-com" />
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href="/go/chewy-brand/complete%20wet%20and%20dry%20cat%20and%20dog%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md bg-brand-primary px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            >
+              Search complete diets on Chewy →
+            </a>
+            <a
+              href="/go/amazon-brand/complete%20balanced%20wet%20dry%20pet%20food?s=compare-wet-vs-dry-food"
+              rel="nofollow sponsored"
+              target="_blank"
+              className="inline-flex items-center rounded-md border border-brand-border px-4 py-2 text-sm font-semibold text-brand-dark no-underline hover:bg-brand-white"
+            >
+              Search on Amazon →
+            </a>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">
+            We earn a commission if you purchase through these links — no extra cost to you, and we never rank by commission.
+          </p>
+        </div>
 
         <ArticleSourcesList sources={SOURCES} />
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', marginTop: '24px' }}>
