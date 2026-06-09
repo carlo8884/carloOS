@@ -7,6 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -120,6 +121,34 @@ export default function DogAgeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+
+      {/* Result next-step — soft senior-care / cost-planning intent path.
+          A dog's human-age estimate naturally raises "what should I plan for?"
+          Insurance premiums are typically lowest while a dog is young; this is a financial-
+          readiness link, not a product pitch. Routes to the editorial
+          comparison hub. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Planning ahead
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              As dogs move into their mature and senior years, vet costs tend to climb.
+              Pet insurance is least expensive while a dog is young and healthy —
+              pre-existing conditions are universally excluded — so it&apos;s worth
+              understanding the options early.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+            <Link
+              href="/reviews/best-pet-insurance"
+              className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
+            >
+              Compare pet insurance →
+            </Link>
+          </div>
         </div>
       </section>
 

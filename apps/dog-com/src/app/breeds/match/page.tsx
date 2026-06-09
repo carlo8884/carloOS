@@ -7,6 +7,7 @@ import {
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
+  AffiliateDisclosure,
 } from '@carloOS/ui'
 import Link from 'next/link'
 import { BreedMatchWizard } from './wizard-client'
@@ -170,6 +171,38 @@ export default function BreedMatchPage() {
         <div className="mb-12 not-prose">
           <BreedMatchWizard />
         </div>
+
+        {/* Result next-step — once a breed is matched, the practical questions
+            are care and food. One tasteful, disclosed editorial path; each
+            breed profile carries its own breed-specific gear. */}
+        <section className="mb-12 not-prose">
+          <div className="rounded-xl border border-brand-border bg-brand-white p-5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+              Once you have a match
+            </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              The first practical decisions for any new dog are care and diet. Each
+              breed profile spells out grooming, exercise, and health priorities — and
+              a complete, life-stage-appropriate food is the foundation of long-term
+              health. Compare formulas, or read up on the breed before you commit.
+            </p>
+            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/reviews/best-dry-dog-food"
+                className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Compare dog foods →
+              </Link>
+              <Link
+                href="/breeds"
+                className="inline-block border border-brand-border text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
+              >
+                Browse breed care guides →
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Static persona index — SEO + AI crawl visibility */}
         <section className="mb-12">

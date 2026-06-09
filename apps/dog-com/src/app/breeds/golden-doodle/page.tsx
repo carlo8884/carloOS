@@ -26,6 +26,7 @@ export default function GoldendoodlePage() {
           { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },
           { label: 'Labradoodle vs Goldendoodle', href: '/compare/labradoodle-vs-golden-doodle' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
       </>}

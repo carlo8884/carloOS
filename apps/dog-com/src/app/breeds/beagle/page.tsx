@@ -29,6 +29,7 @@ export default function BeaglePage() {
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Beagle vs Basset Hound', href: '/compare/beagle-vs-basset-hound' },
         ]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-beagle" />
       </>}
