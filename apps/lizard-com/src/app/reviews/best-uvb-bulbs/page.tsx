@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,12 +32,7 @@ const PICKS = [
 
 const productSchema0 = buildProductSchema({ name: 'Arcadia T5 HO 12% Desert', description: 'T5 HO UVB bulb for Zone 4 desert reptiles, Solarmeter-tested.', url: 'https://arcadiareptile.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
 const productSchema1 = buildProductSchema({ name: 'Zoo Med T5 HO Reptisun 10.0', description: 'T5 HO UVB bulb for basking reptiles.', url: 'https://zoomed.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
-const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: 'Home', url: 'https://lizard.com/' },
-  { name: 'Reviews', url: 'https://lizard.com/reviews' },
-  { name: 'Best UVB Bulbs', url: 'https://lizard.com/reviews/best-uvb-bulbs' },
-])
-const allSchemas = combineSchemas(schema, breadcrumbSchema, productSchema0, productSchema1)
+const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 export default function BestUVBBulbsPage() {
   return (

@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  buildBreadcrumbSchema,
-  combineSchemas,
   SchemaScript,
   ArticleLayout,
   FAQAccordion,
@@ -20,14 +18,6 @@ export const metadata: Metadata = buildMetadata({
   title: 'Reptile Enclosure Size Calculator | Lizard.com',
   description: 'Calculate recommended minimum enclosure dimensions from adult body length and locomotor habit. Outputs L x W x H, floor footprint, and volume in gallons.',
   path: '/tools/enclosure-size-calculator',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://lizard.com/' },
-    { name: 'Tools', url: 'https://lizard.com/tools' },
-    { name: 'Enclosure Size Calculator', url: URL },
-  ],
 })
 
 const appSchema = {
@@ -58,7 +48,7 @@ const appSchema = {
   },
 }
 
-const schema = combineSchemas(breadcrumbSchema, appSchema)
+const schema = appSchema
 
 const FAQS = [
   {
