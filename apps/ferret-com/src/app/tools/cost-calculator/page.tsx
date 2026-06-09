@@ -107,6 +107,37 @@ export default function CostCalculatorPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
+          <div className="rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6 sm:p-7">
+            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Now that you have a number</p>
+            <h2 className="mt-2 font-display text-xl font-semibold text-brand-text-dark">
+              Turn the setup line into a shopping list
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
+              Most of the one-time figure above is the cage-and-setup category. The ferret starter
+              essentials list breaks that line into the specific items a new ferret needs on day one —
+              cage, bedding, litter, food and water, and a carrier — so you can buy the core well
+              instead of guessing.
+            </p>
+            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
+              That page includes affiliate links; we may earn a commission at no extra cost to you, and
+              we never accept payment for favorable placement.{' '}
+              <Link href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">
+                Disclosure
+              </Link>.
+            </p>
+            <Link
+              href="/ferret-starter-kit"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
+            >
+              See the ferret starter essentials
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">How to use this</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The calculator separates the three things people conflate when they ask what a ferret costs: the
