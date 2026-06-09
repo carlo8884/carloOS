@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide — 400+ Mutations, BEL | Lizard.com', description: 'Ball python morphs: the 15 foundational mutations that create 400+ combinations. Blue Eyed Leucistic combos, spider wobble controversy.', path: '/species/ball-python-morphs', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'lizard-com', title: 'Ball Python Morphs Guide', description: 'Foundational mutations, BEL combos, spider wobble, and pricing for ball python morphs.', url: 'https://lizard.com/species/ball-python-morphs', imageUrl: '', authorName: 'Lizard.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -52,6 +52,7 @@ export default function BallPythonMorphsPage() {
 
         <h2>Morph Pricing — Why It Varies</h2>
         <p>Morph pricing reflects supply and demand with a significant time component. When a new morph is first established (often through years of selecting and breeding toward a visible mutation), scarcity makes prices very high — $5,000-50,000+ for the first proven animals. As breeders work with the morph and produce more offspring, prices fall. Morphs established decades ago (Albino, Piebald, Axanthic) are now $100-300 in single-gene form. Recently produced combos with multiple recessive genes still command premium pricing because producing them requires years of careful breeding through heterozygous generations. Entry-level morphs (Pastel, Enchi, Spotnose single-gene) are now under $100-200 from most breeders.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Ball Python Morphs — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for ball python morphs care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

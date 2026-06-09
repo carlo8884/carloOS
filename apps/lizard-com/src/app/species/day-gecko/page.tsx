@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: 'Day Gecko Care Guide — Phelsuma Species, Vivarium | Lizard.com', description: 'Day geckos (Phelsuma) are vivid green display animals — they are not handling geckos. Giant day gecko, gold dust, and standing\'s guide.', path: '/species/day-gecko', type: 'article' })
@@ -52,6 +52,7 @@ export default function DayGeckoPage() {
 
         <h2>Egg Laying and Breeding</h2>
         <p>Phelsuma lay 1–2 hard-shelled eggs that are glued to a surface — typically a bamboo tube, cork bark, bromeliad base, or the vivarium glass — rather than buried in substrate (unlike most gecko species). Eggs are incubated at room temperature in the vivarium in most cases; they tolerate temperature variation well. Incubation: 45–90 days depending on species and temperature. Hatchlings are fully independent immediately. Remove hatchlings to a separate setup if breeding intentionally — adults may harass juveniles.</p>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Day Gecko — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse enclosures, UVB lighting, thermostats, and substrate sized for day gecko care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial inclusion above.</p>

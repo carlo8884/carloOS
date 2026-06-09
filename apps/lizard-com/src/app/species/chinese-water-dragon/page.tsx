@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'lizard-com', title: "Chinese Water Dragon Care Guide — Arboreal | Lizard.com", description: "Chinese water dragons need tall planted enclosures, high humidity, strong UVB, and a large water feature. Why snout-rub damage is the main welfare risk.", path: "/species/chinese-water-dragon", type: 'article' })
@@ -68,6 +68,7 @@ export default function SpeciesChineseWaterDragonPage() {
             <li>{"Baines, F. M., et al., Ferguson Zone UV-index guidance."}</li>
             <li>{"Reptiles Magazine, Physignathus cocincinus husbandry references."}</li>
           </ul>
+        <AffiliateDisclosure variant="inline" siteId="lizard-com" />
         <div style={{ background: 'var(--brand-surface, #1a1f2b)', border: '1px solid var(--brand-border, #2d3548)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #8a96ad)', marginBottom: '8px' }}>Chinese Water Dragon — Setup Equipment</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #8a96ad)', lineHeight: 1.55 }}>Browse tall arboreal enclosures, UVB, basking bulbs, foggers, thermostats, and substrate sized for Chinese water dragon care. Lizard.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
