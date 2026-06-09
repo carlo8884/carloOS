@@ -45,7 +45,7 @@ const QUESTIONS: {
     options: [
       { value: 'coverage', label: 'Maximum coverage', sub: 'I want everything included' },
       { value: 'flexibility', label: 'Plan flexibility', sub: 'I want to customize limits and deductibles' },
-      { value: 'budget', label: 'Lowest premium', sub: 'I want the cheapest defensible plan' },
+      { value: 'budget', label: 'Lower premium', sub: 'I want a budget-conscious, defensible plan' },
       { value: 'reputation', label: 'Track record', sub: 'I want a carrier with long operating history' },
     ],
   },
@@ -55,7 +55,7 @@ const QUESTIONS: {
     options: [
       { value: 'low', label: 'Under $30/mo' },
       { value: 'mid', label: '$30–$50/mo' },
-      { value: 'high', label: '$50+/mo, give me the best' },
+      { value: 'high', label: '$50+/mo, give me top-tier coverage' },
     ],
   },
 ]
@@ -127,7 +127,7 @@ function recommend(answers: Answers): {
     .filter(Boolean)
     .join(' ')
 
-  return { top, alternates, reasoning: reasoning || `${top.name} fits your profile best.` }
+  return { top, alternates, reasoning: reasoning || `${top.name} is a strong fit for your profile.` }
 }
 
 export default function QuizClient() {

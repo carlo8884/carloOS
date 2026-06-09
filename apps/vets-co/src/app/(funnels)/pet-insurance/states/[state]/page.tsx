@@ -30,8 +30,8 @@ export async function generateMetadata({
   if (!s) return {}
   return buildMetadata({
     siteId: 'vets-co',
-    title: `Pet Insurance in ${s.name} — Best Carriers by Breed | Vets.co`,
-    description: `Best pet insurance in ${s.name}. State regulatory context, premium expectations, and breed-by-breed carrier recommendations.`,
+    title: `Pet Insurance in ${s.name} — Carrier Options by Breed | Vets.co`,
+    description: `Pet insurance options in ${s.name}. State regulatory context, premium expectations, and breed-by-breed carrier comparisons.`,
     path: `/pet-insurance/states/${state}`,
     type: 'article',
   })
@@ -47,7 +47,7 @@ export default async function StateInsuranceHub({ params }: PageParams) {
   const schema = combineSchemas(
     buildArticleSchema({
       siteId: 'vets-co',
-      title: `Pet Insurance in ${s.name} — Best Carriers by Breed`,
+      title: `Pet Insurance in ${s.name} — Carrier Options by Breed`,
       description: `Pet insurance market context for ${s.name} with breed-by-breed carrier recommendations and state regulatory notes.`,
       url: `https://vets.co/pet-insurance/states/${state}`,
       imageUrl: '',
