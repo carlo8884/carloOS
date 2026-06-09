@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   Breadcrumb,
@@ -106,13 +105,6 @@ const faqSchema = buildFAQSchema({
   })),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferrets.com' },
-    { name: 'Find a Vet', url: 'https://ferrets.com/find-a-vet' },
-  ],
-})
-
 const itemListSchema = {
   '@context': 'https://schema.org', '@type': 'ItemList',
   name: 'Find a Ferret Vet by State',
@@ -125,7 +117,7 @@ const itemListSchema = {
   })),
 }
 
-const schema = combineSchemas(faqSchema, breadcrumbSchema, itemListSchema)
+const schema = combineSchemas(faqSchema, itemListSchema)
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
