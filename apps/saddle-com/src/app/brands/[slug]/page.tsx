@@ -17,7 +17,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -103,17 +102,9 @@ export default async function BrandPage({ params }: BrandPageProps) {
     description: brand.tagline,
   }
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://saddle.com/' },
-      { name: 'Brands', url: 'https://saddle.com/brands' },
-      { name: brand.name, url },
-    ],
-  })
-
   const faqSchema = buildFAQSchema({ questions: brand.faq })
 
-  const combinedSchema = combineSchemas(articleSchema, organizationSchema, breadcrumbSchema, faqSchema)
+  const combinedSchema = combineSchemas(articleSchema, organizationSchema, faqSchema)
 
   return (
     <>
