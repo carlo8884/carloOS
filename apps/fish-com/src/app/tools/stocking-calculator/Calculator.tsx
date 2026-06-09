@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
+import { ResultCTA } from '../_components/ResultCTA'
 
 type Filtration = 'under' | 'rated' | 'over' | 'heavy'
 type WaterType = 'fresh' | 'salt'
@@ -148,6 +149,20 @@ export default function StockingCalculator() {
               effectively halves capacity even with great filtration. Use this number as a ceiling and stock to 60–80% for stability.
             </>
           }
+        />
+      )}
+
+      {result && result.slimInches > 0 && (
+        <ResultCTA
+          heading="Track your bioload with a water test kit"
+          blurb={
+            <>
+              Stocking math is a ceiling, not a guarantee. As you add fish, a {waterType === 'salt' ? 'saltwater' : 'freshwater'} test kit confirms the tank is keeping up with the load before problems show.
+            </>
+          }
+          query={waterType === 'salt' ? 'saltwater aquarium test kit' : 'freshwater aquarium master test kit'}
+          cta="Browse test kits on Amazon"
+          source="tools-stocking"
         />
       )}
     </div>
