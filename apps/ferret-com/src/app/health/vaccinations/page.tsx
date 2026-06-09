@@ -40,7 +40,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -75,13 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Health', url: 'https://ferret.com/health/vaccinations' },
-    { name: 'Vaccination Schedule', url: 'https://ferret.com/health/vaccinations' },
-  ],
-})
 
 const FAQS = [
   {
@@ -117,7 +109,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, medSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
 export default function FerretVaccinationsPage() {
   return (
