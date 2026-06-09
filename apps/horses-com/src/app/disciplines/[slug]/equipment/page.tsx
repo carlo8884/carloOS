@@ -33,7 +33,6 @@ import { notFound } from 'next/navigation'
 import {
   buildMetadata,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   ArticleLayout,
@@ -116,19 +115,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://horses.com/' },
-      { name: 'Disciplines', url: 'https://horses.com/disciplines' },
-      {
-        name: data.disciplineName,
-        url: `https://horses.com/disciplines/${data.slug}`,
-      },
-      { name: 'Equipment', url },
-    ],
-  })
-
-  const combined = combineSchemas(articleSchema, breadcrumbSchema)
+  const combined = combineSchemas(articleSchema)
 
   return (
     <>

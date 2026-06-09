@@ -22,7 +22,6 @@ import {
   TableOfContents,
   FAQAccordion,
   buildArticleSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -49,16 +48,7 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-08T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://horses.com' },
-    { name: 'Racing', url: 'https://horses.com/racing' },
-    { name: 'Racing Roles', url: 'https://horses.com/racing/racing-roles' },
-    { name: 'Racing Officials & Stewards', url: 'https://horses.com/racing/racing-roles/racing-official' },
-  ],
-})
-
-const schema = combineSchemas(articleSchema, breadcrumbSchema)
+const schema = combineSchemas(articleSchema)
 
 const FAQS = [
   {

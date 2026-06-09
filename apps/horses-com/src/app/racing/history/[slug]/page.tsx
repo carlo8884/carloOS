@@ -21,7 +21,6 @@ import {
   FAQAccordion,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -78,16 +77,7 @@ export default function RacingHistorySpokePage({ params }: { params: { slug: str
     questions: spoke.faq.map((f) => ({ question: f.question, answer: f.answerText })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://horses.com' },
-      { name: 'Racing', url: 'https://horses.com/racing' },
-      { name: 'History', url: 'https://horses.com/racing/history' },
-      { name: spoke.title, url: `https://horses.com/racing/history/${spoke.slug}` },
-    ],
-  })
-
-  const schema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+  const schema = combineSchemas(articleSchema, faqSchema)
 
   const tocItems = [
     ...spoke.sections.map((s) => ({ label: s.heading, href: `#${s.id}` })),
