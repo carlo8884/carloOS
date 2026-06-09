@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -21,13 +21,6 @@ const schema = buildArticleSchema({
   modifiedAt: new Date().toISOString(),
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: 'Home', url: 'https://lizard.com/' },
-  { name: 'Reviews', url: 'https://lizard.com/reviews' },
-  { name: 'Best Reptile Terrariums', url: 'https://lizard.com/reviews/best-reptile-terrariums' },
-])
-const allSchemas = combineSchemas(schema, breadcrumbSchema)
-
 const PICKS = [
   { label: 'Best PVC', name: 'Zen Habitats 4×2×2', subtitle: 'Best overall for most species', href: '#zen' },
   { label: 'Best Custom', name: 'Animal Plastics T8', subtitle: 'Largest, most configurable', href: '#ap' },
@@ -38,7 +31,7 @@ const PICKS = [
 export default function BestTerrariumsPage() {
   return (
     <>
-      <SchemaScript schema={allSchemas} />
+      <SchemaScript schema={schema} />
       <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">
