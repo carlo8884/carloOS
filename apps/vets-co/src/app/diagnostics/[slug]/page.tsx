@@ -6,7 +6,6 @@ import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   ArticleLayout,
@@ -118,14 +117,7 @@ export default function DiagnosticPage({ params }: PageProps) {
     lastReviewed: '2026-05-30',
   })
   const faqSchema = buildFAQSchema({ questions: d.faqs })
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://vets.co' },
-      { name: 'Diagnostics', url: 'https://vets.co/diagnostics' },
-      { name: d.testName, url },
-    ],
-  })
-  const combined = combineSchemas(articleSchema, medSchema, faqSchema, breadcrumbSchema)
+  const combined = combineSchemas(articleSchema, medSchema, faqSchema)
 
   const breadcrumbs = [
     { name: 'Home', href: '/' },
