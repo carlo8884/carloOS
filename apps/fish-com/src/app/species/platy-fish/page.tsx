@@ -8,7 +8,6 @@ import { StockImage,
   SchemaScript,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   ArticleByline,
   DropCap,
@@ -43,14 +42,6 @@ const articleSchema = buildArticleSchema({
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2026-05-28T00:00:00Z',
-})
-
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://fish.com/' },
-    { name: 'Species', url: 'https://fish.com/species' },
-    { name: 'Platy Fish', url: 'https://fish.com/species/platy-fish' },
-  ],
 })
 
 const FAQS = [
@@ -102,7 +93,7 @@ const faqSchema = buildFAQSchema({
   questions: FAQS.map((f) => ({ question: f.question, answer: f.answerText })),
 })
 
-const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema)
+const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
 export default function PlatyPage() {
   return (

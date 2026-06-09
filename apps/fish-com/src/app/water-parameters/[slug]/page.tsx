@@ -24,7 +24,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   buildHowToSchema,
   ArticleLayout,
   TableOfContents,
@@ -193,10 +192,6 @@ export default async function ParameterPage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({ name: b.name, url: `https://fish.com${b.href}` })),
-  })
-
   // HowTo schema: emit only if the parameter has meaningful "lower" steps.
   const lowerSteps = param.howToLower.filter((s) => !s.toLowerCase().includes('not applicable'))
   const howToLowerSchema =
@@ -283,10 +278,6 @@ export default async function ParameterPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {howToLowerSchema && (
         <script
