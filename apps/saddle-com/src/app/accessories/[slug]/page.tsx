@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -87,17 +86,9 @@ export default async function AccessoryPage({ params }: AccessoryPageProps) {
     modifiedAt: '2026-05-29T00:00:00Z',
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: [
-      { name: 'Home', url: 'https://saddle.com/' },
-      { name: 'Accessories', url: 'https://saddle.com/accessories' },
-      { name: accessory.categoryName, url },
-    ],
-  })
-
   const faqSchema = buildFAQSchema({ questions: accessory.faqs })
 
-  const combinedSchema = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+  const combinedSchema = combineSchemas(articleSchema, faqSchema)
 
   // Other accessory categories for the "related guides" section.
   const relatedAccessories = ACCESSORY_CATEGORIES.filter((a) => a.slug !== accessory.slug).slice(0, 5)
