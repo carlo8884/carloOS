@@ -15,7 +15,6 @@ import {
 import {
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
@@ -41,13 +40,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-const breadcrumbSchema = buildBreadcrumbSchema({
-  items: [
-    { name: 'Home', url: 'https://ferret.com/' },
-    { name: 'Ferret Care', url: 'https://ferret.com/care' },
-    { name: 'Seasonal Shedding', url: 'https://ferret.com/care/seasonal-shedding' },
-  ],
-})
 
 const FAQS = [
   {
@@ -83,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(articleSchema, breadcrumbSchema, faqSchema)
+const combined = combineSchemas(articleSchema, faqSchema)
 
 const SOURCES = [
   {
