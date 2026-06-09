@@ -93,6 +93,45 @@ export default function ReadinessQuizPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
+          <div className="rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6 sm:p-7">
+            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Scored a strong fit?</p>
+            <h2 className="mt-2 font-display text-xl font-semibold text-brand-text-dark">
+              Get the day-one essentials ready
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
+              If your result points toward bringing a ferret home, the next practical step is having the
+              core setup in place before arrival. The ferret starter essentials list covers what a new
+              ferret genuinely needs on day one — cage, bedding, litter, food and water, and a carrier.
+              Still on the fence? The{' '}
+              <Link href="/ownership/cost-of-owning-a-ferret" className="text-brand-primary underline-offset-2 hover:underline">
+                cost guide
+              </Link>{' '}
+              and{' '}
+              <Link href="/ownership/adoption-vs-buying" className="text-brand-primary underline-offset-2 hover:underline">
+                adoption vs. buying
+              </Link>{' '}
+              are the better next reads.
+            </p>
+            <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
+              The essentials page includes affiliate links; we may earn a commission at no extra cost to
+              you, and we never accept payment for favorable placement.{' '}
+              <Link href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">
+                Disclosure
+              </Link>.
+            </p>
+            <Link
+              href="/ferret-starter-kit"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-brand-primary-dark"
+            >
+              See the ferret starter essentials
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
+        <div className="max-w-2xl">
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">What the quiz covers</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The ten questions address the factors that most commonly determine whether ferret ownership
