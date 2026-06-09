@@ -47,7 +47,7 @@ const MAGNETS: Record<string, MagnetContent> = {
     recommendations: [
       {
         headline: 'A pet insurance policy before symptoms appear',
-        body: 'Puppies are the cheapest time to enroll in pet insurance and the only time you can pre-empt hereditary exclusions. Lemonade Pet is our budget pick; Pumpkin is our best-overall.',
+        body: 'Puppyhood is the lowest-premium time to enroll in pet insurance and the best window to pre-empt hereditary exclusions before symptoms appear. Lemonade Pet is our budget-conscious option; Pumpkin is our overall editorial pick.',
         cta: { label: 'Compare pet insurance →', vendor: 'lemonade', sku: 'home' },
       },
       {
