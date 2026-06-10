@@ -25,7 +25,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   buildMedicalWebPageSchema,
   ArticleLayout,
   TableOfContents,
@@ -249,13 +248,6 @@ export default async function ConditionPage({ params }: PageProps) {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: `https://lizard.com${b.href}`,
-    })),
-  })
-
   return (
     <ArticleLayout
       siteId="lizard-com"
@@ -318,10 +310,6 @@ export default async function ConditionPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="carloOS-article">
         <ArticleByline siteName="Lizard.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />

@@ -4,7 +4,6 @@ import {
   buildMetadata,
   buildArticleSchema,
   buildFAQSchema,
-  buildBreadcrumbSchema,
   ArticleLayout,
   ArticleByline,
   TableOfContents,
@@ -253,10 +252,6 @@ export default function GlossaryHubPage() {
     })),
   })
 
-  const breadcrumbSchema = buildBreadcrumbSchema({
-    items: breadcrumbItems.map((b) => ({ name: b.name, url: `https://petfoods.com${b.href}` })),
-  })
-
   return (
     <ArticleLayout
       siteId="petfoods-com"
@@ -306,10 +301,6 @@ export default function GlossaryHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="carloOS-article">

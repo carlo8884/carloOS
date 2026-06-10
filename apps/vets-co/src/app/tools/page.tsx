@@ -4,8 +4,8 @@ import { buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, Stock
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Vets.co Tools — Pet Insurance Reimbursement Estimator | Vets.co',
-  description: 'Free veterinary-finance tools. Pet insurance reimbursement estimator (premium / deductible / reimbursement % / cap) for any carrier you can quote.',
+  title: 'Vets.co Tools — Pet Insurance Coverage Finder & Estimator | Vets.co',
+  description: 'Free veterinary-finance tools: a pet insurance coverage finder that filters carriers by priorities, plus a reimbursement estimator for any carrier quote.',
   path: '/tools',
 })
 
@@ -18,6 +18,12 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const TOOLS = [
+  {
+    href: '/tools/insurance-finder',
+    title: 'Pet Insurance Coverage Finder',
+    desc: 'Filter carriers by the coverage features you care about — exam fees, full dental, wellness, unlimited limits, 100% reimbursement — and compare options that may fit your priorities. No quotes, no rankings.',
+    tag: 'Finance',
+  },
   {
     href: '/tools/insurance-reimbursement-estimator',
     title: 'Pet Insurance Reimbursement Estimator',
@@ -61,7 +67,7 @@ export default function ToolsHub() {
             Veterinary-side tools, <span className="italic font-normal">for owners.</span>
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Free reference tools: a pet-insurance reimbursement estimator that models any carrier quote, plus the printable emergency triage card and the veterinary directory.
+            Free reference tools: a pet-insurance coverage finder that filters carriers by your priorities, a reimbursement estimator that models any carrier quote, plus the printable emergency triage card and the veterinary directory.
           </p>
         </div>
       </section>
@@ -74,7 +80,7 @@ export default function ToolsHub() {
         <div className="max-w-3xl mb-12">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s in the toolkit</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
-            Three references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>did this insurance policy actually pay what I expected</em>, <em>is this an ER right now or a same-day appointment</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
+            A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>which carriers even fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, <em>is this an ER right now or a same-day appointment</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
           </p>
           <p className="text-base text-brand-text-mid leading-relaxed">
             They&apos;re free, do not require a sign-up, and do not collect or sell personal data. The insurance estimator is a pure-browser calculation — your quote inputs never leave the page.
@@ -100,6 +106,9 @@ export default function ToolsHub() {
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">How each tool is built</h2>
           <div className="space-y-5 text-base text-brand-text-mid leading-relaxed">
+            <p>
+              <strong>The coverage finder</strong> is a filter-and-group tool, not a ranking wizard. Each coverage priority — exam fees covered, full dental, a wellness add-on, an unlimited annual-limit option, alternative or behavioral coverage, prescription food, a 100&#37; reimbursement option — maps to a published policy attribute in our carrier registry. Select the features you care about and the finder narrows the list to the carriers that publish them, grouped by how many of your priorities each one covers. It never scores carriers, picks a winner, or quotes a price; absent fields are simply omitted. It pairs with the reimbursement estimator: the finder answers <em>which carriers</em>, the estimator answers <em>what a policy would reimburse</em>.
+            </p>
             <p>
               <strong>The reimbursement estimator</strong> models the four levers that every consumer pet-insurance contract uses: the monthly premium, the annual deductible, the reimbursement percentage applied after the deductible is met, and the annual payout cap. For a given expected claim total, it computes the annual reimbursement, the total cost (premium minus reimbursement), and the net benefit vs. paying out of pocket. The math is the standard claims-side accounting — no carrier marketing, no &ldquo;estimated savings&rdquo; that double-counts. If the inputs match what your carrier actually wrote on the quote, the output matches what they will actually pay.
             </p>

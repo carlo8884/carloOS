@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +36,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored fresh-food picks rendered
+// on this page (QC §1.4 — editorial Review only, never AggregateRating; ratings
+// reflect the disclosed on-page editorial scores). ItemList captures the ranking.
+const farmersDogSchema = buildProductSchema({
+  name: "The Farmer's Dog",
+  description:
+    "Gently cooked, vet-formulated fresh dog food portioned to your dog's calorie needs; formulated to AAFCO profiles. Trade-offs: substantially higher cost per calorie than kibble and freezer space required.",
+  reviewBody:
+    "Direct-to-consumer fresh dog food, gently cooked from human-grade ingredients and portioned to calorie needs. Formulated to AAFCO profiles by a veterinary nutrition team. Premium cost per calorie and freezer space are the trade-offs.",
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.8,
+})
+const ollieSchema = buildProductSchema({
+  name: 'Ollie',
+  description:
+    'Direct-to-consumer fresh dog food with fresh-cooked and gently baked recipes, portioned by questionnaire and formulated to AAFCO profiles. Same fresh-category trade-offs: higher cost than kibble and storage logistics.',
+  reviewBody:
+    'Fresh and gently baked recipes, pre-portioned by profile questionnaire and formulated to AAFCO profiles. Confirm the AAFCO statement and life-stage match for the recipe chosen. Premium cost per calorie and storage logistics apply.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.3,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Fresh Food Options',
+  items: [
+    { name: "The Farmer's Dog", url: 'https://petfood.com/compare/fresh-vs-kibble#the-farmers-dog' },
+    { name: 'Ollie', url: 'https://petfood.com/compare/fresh-vs-kibble#ollie-fresh' },
+  ],
+})
+const pageSchema = combineSchemas(schema, itemListSchema, farmersDogSchema, ollieSchema)
 
 const SOURCES = [
     {
@@ -75,7 +108,7 @@ export default function FreshVsKibblePage() {
         { title: 'Wet vs Dry Food', href: '/compare/wet-vs-dry-food' },
         { title: 'Grain-Free vs Grain-Inclusive', href: '/compare/grain-free-vs-grain-inclusive' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

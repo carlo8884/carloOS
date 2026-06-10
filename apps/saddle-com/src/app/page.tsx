@@ -14,7 +14,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage , SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live tree-size estimator embedded on the homepage — a fit tool you use on
 // the first screens, not a link to one (premium gate 3).
 import { TreeSizeEstimator } from '../components/visual/TreeSizeEstimator'
@@ -228,9 +228,15 @@ const TRUST_CLAIMS: string[] = [
   'Used-market transparent',
 ]
 
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'saddle-com', name: 'Saddle.com', url: 'https://saddle.com' }),
+  buildWebSiteSchema({ siteId: 'saddle-com', name: 'Saddle.com', url: 'https://saddle.com' }),
+)
+
 export default function SaddleHomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
         {/* Refined leather-grain wash — three layered radial fields plus a

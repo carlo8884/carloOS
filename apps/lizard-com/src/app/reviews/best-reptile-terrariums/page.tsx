@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, Breadcrumb, AffiliateDisclosure} from '@carloOS/ui'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildItemListSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'lizard-com',
@@ -10,11 +10,13 @@ export const metadata: Metadata = buildMetadata({
   type: 'article',
 })
 
+const PAGE_URL = 'https://lizard.com/reviews/best-reptile-terrariums'
+
 const schema = buildArticleSchema({
   siteId: 'lizard-com',
   title: 'Best Reptile Terrariums 2025',
   description: 'Reptile terrariums compared and ranked — Zen Habitats, Animal Plastics, Exo Terra.',
-  url: 'https://lizard.com/reviews/best-reptile-terrariums',
+  url: PAGE_URL,
   imageUrl: '',
   authorName: 'Lizard.com Editorial',
   publishedAt: new Date().toISOString(),
@@ -28,10 +30,61 @@ const PICKS = [
   { label: 'Best Budget', name: 'Repti Zoo 40 Gal', subtitle: 'Starter glass terrarium', href: '#reptizoo' },
 ]
 
+// GEO: ItemList of the ranked picks + an editorial Product/Review per pick.
+// reviewRating maps each card's on-page disclosed editorial score (0–10 scale,
+// via ScoreMethodology); name + reviewBody are drawn only from the ReviewCard
+// content on this page. No aggregateRating, no fabricated specs (QC §1.4).
+const itemList = buildItemListSchema({
+  name: 'Best Reptile Terrariums 2025',
+  items: [
+    { name: 'Zen Habitats 4×2×2 Reptile Enclosure', url: `${PAGE_URL}#zen` },
+    { name: 'Animal Plastics T8', url: `${PAGE_URL}#ap` },
+    { name: 'Exo Terra 36×18×24', url: `${PAGE_URL}#exo` },
+    { name: 'REPTIZOO 40-Gallon Terrarium', url: `${PAGE_URL}#reptizoo` },
+  ],
+})
+
+const products = [
+  buildProductSchema({
+    name: 'Zen Habitats 4×2×2 Reptile Enclosure',
+    description: 'PVC · Flat-pack assembly · Front-opening · Best temperature retention',
+    url: `${PAGE_URL}#zen`,
+    ratingValue: 9.4,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'Our default recommendation for most terrestrial reptile species. PVC construction retains heat significantly better than glass, flat-pack shipping keeps prices lower, and front-opening doors reduce stress for the reptile.',
+  }),
+  buildProductSchema({
+    name: 'Animal Plastics T8',
+    description: 'HDPE plastic · Fully customizable · Maximum durability',
+    url: `${PAGE_URL}#ap`,
+    ratingValue: 9.1,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'The choice for keepers who need larger enclosures, custom configurations, or maximum durability. Nearly indestructible HDPE, easy to disinfect, and excellent heat retention; the tradeoff is a 6–10 week lead time and an industrial aesthetic.',
+  }),
+  buildProductSchema({
+    name: 'Exo Terra 36×18×24',
+    description: 'Front-opening glass · Full-screen top · Arboreal standard',
+    url: `${PAGE_URL}#exo`,
+    ratingValue: 8.8,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'The industry standard for arboreal species. Tall format prioritizes vertical space, the full-screen top allows UVB and heat from above, and the glass gives excellent visibility. Glass loses heat faster than PVC and it is not ideal for sustained high humidity.',
+  }),
+  buildProductSchema({
+    name: 'REPTIZOO 40-Gallon Terrarium',
+    description: 'Budget glass · Front-opening · Good starter option',
+    url: `${PAGE_URL}#reptizoo`,
+    ratingValue: 8.1,
+    reviewAuthorName: 'Lizard.com Editorial',
+    reviewBody: 'A functional front-opening glass terrarium well below Exo Terra pricing. Build quality is noticeably lower — less refined hinges and latches — but it works for starter setups; not our first recommendation for a committed long-term enclosure.',
+  }),
+]
+
+const combined = combineSchemas(schema, itemList, ...products)
+
 export default function BestTerrariumsPage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combined} />
       <div className="relative z-10 px-container-sm sm:px-container py-14"
         style={{ background: 'linear-gradient(160deg, #0D1A0D, #080C08)' }}>
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">

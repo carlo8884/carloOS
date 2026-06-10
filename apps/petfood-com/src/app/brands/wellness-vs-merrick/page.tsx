@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  buildItemListSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +36,36 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the two scored brands compared on this
+// page (QC §1.4 — editorial Review only, never AggregateRating; ratings mirror
+// the disclosed on-page editorial scores). ItemList captures the display order.
+const wellnessSchema = buildProductSchema({
+  name: 'Wellness',
+  description:
+    'Premium natural-positioned brand with named animal proteins early on the panel and grain-inclusive and grain-free lines, owned by a large pet-nutrition holding company. Evaluate the specific formula on its AAFCO substantiation pathway and ingredient panel.',
+  reviewBody:
+    'Premium natural-positioned brand, named-meat-forward, with grain-inclusive and grain-free lines under a large pet-nutrition holding company despite the artisan image. Judge the specific formula on its AAFCO substantiation and panel; grain-free formulas intersect the DCM question.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.2,
+})
+const merrickSchema = buildProductSchema({
+  name: 'Merrick',
+  description:
+    'Premium whole-food natural brand with recognizable produce and named meats, acquired by Nestle Purina, which can bring research and quality-control resources behind the natural branding. Judge the specific formula on its panel and AAFCO statement.',
+  reviewBody:
+    'Premium whole-food natural brand under Nestle Purina, which can bring research and quality-control resources behind the natural branding. Judge the specific formula on its panel and AAFCO statement; treat grain-free legume-heavy recipes with the DCM caution.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 8.2,
+})
+const itemListSchema = buildItemListSchema({
+  name: 'Wellness vs Merrick',
+  items: [
+    { name: 'Wellness', url: 'https://petfood.com/brands/wellness-vs-merrick#wellness-retail' },
+    { name: 'Merrick', url: 'https://petfood.com/brands/wellness-vs-merrick#merrick-retail' },
+  ],
+})
+const pageSchema = combineSchemas(schema, itemListSchema, wellnessSchema, merrickSchema)
 
 const SOURCES = [
     {
@@ -81,7 +114,7 @@ export default function WellnessVsMerrickPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   buildArticleSchema,
+  buildProductSchema,
+  combineSchemas,
   ArticleLayout,
   TableOfContents,
   RelatedLinks,
@@ -33,6 +35,20 @@ const schema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
+
+// Editorial Product/Review schema for the single scored pick on this page
+// (QC §1.4 — editorial Review only, never AggregateRating; the rating mirrors
+// the disclosed on-page editorial score).
+const productSchema = buildProductSchema({
+  name: 'Taste of the Wild',
+  description:
+    'Mid-priced grain-free line using novel proteins (bison, venison, fish) with legume- and potato-based carbohydrate, manufactured by Diamond Pet Foods. The legume-inclusive grain-free pattern intersects the FDA diet-associated DCM question — an open question, not a proven cause.',
+  reviewBody:
+    'Popular mid-priced grain-free line with novel proteins; the legume-inclusive formulation is also the pattern at the center of the FDA diet-associated DCM investigation, which remains an open question. Made by Diamond Pet Foods, whose record includes the major 2012 Salmonella recall. Worth a veterinary conversation for at-risk dogs.',
+  reviewAuthorName: 'PetFood.com Editorial',
+  ratingValue: 7.0,
+})
+const pageSchema = combineSchemas(schema, productSchema)
 
 const SOURCES = [
     {
@@ -81,7 +97,7 @@ export default function TasteOfTheWildEvaluationPage() {
         { title: 'Purina Pro Plan Evaluation', href: '/brands/purina-pro-plan-evaluation' },
         { title: 'Orijen vs Acana Comparison', href: '/brands/orijen-vs-acana-comparison' },
       ]}
-      schema={schema}
+      schema={pageSchema}
       sidebar={
         <>
           <TableOfContents

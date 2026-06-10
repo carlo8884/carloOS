@@ -63,7 +63,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Find an Oncologist', href: '/find-a-vet' },
-          { label: 'Best Pet Insurance 2025', href: '/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance 2026', href: '/reviews/best-pet-insurance' },
           { label: 'Emergency Signs Guide', href: '/health/emergency-signs' },
         ]} />
         <EmailCapture variant="sidebar" siteId="vets-co"

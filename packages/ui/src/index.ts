@@ -11,6 +11,7 @@ export {
   buildFAQSchema,
   buildBreadcrumbSchema,
   buildProductSchema,
+  buildItemListSchema,
 } from './components/SEOHead'
 
 // Layout

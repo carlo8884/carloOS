@@ -14,9 +14,11 @@
  *      real attributes (e.g. apartment penalizes Giant / Very High energy
  *      breeds; first-time owner favors firstTimeOwnerFriendly === true).
  *   2. Totals are summed across all answered questions.
- *   3. Match % = (breed score / top breed's score) * 95, clamped to [10, 99].
- *      The percentage is RELATIVE to the best-fit breed for the answer set —
- *      not an absolute suitability score.
+ *   3. Breeds are grouped into honest FIT TIERS — never a percentage. There is
+ *      no "best breed" or ranked winner: a breed either clearly lines up with
+ *      the answers ('may-fit') or lines up with caveats ('closer-look'). Tiers
+ *      come from raw-score bands relative to the strongest score for the answer
+ *      set, with an absolute floor so a weak ceiling never pads poor fits.
  *
  * Sources for owner-suitability defaults:
  *   - AKC breed standards + breed-selector guidance
@@ -441,21 +443,102 @@ function buildCaveat(breed: Breed, answers: Answers): string {
 // MAIN ENGINE
 // ─────────────────────────────────────────────
 
-export interface BreedRecommendation {
+// Honest fit tiers — NOT a ranked list, NOT a percentage.
+//   'may-fit'      — the breed's documented attributes clearly line up with the
+//                    answers. A genuine candidate to research further.
+//   'closer-look'  — a mixed fit: some attributes line up, but the caveat
+//                    matters. Worth considering with eyes open.
+export type FitTier = 'may-fit' | 'closer-look'
+
+/** A breed's documented health cross-links (per breeds.ts), capped for the
+ *  per-card link row. Falls back to the /health hub when none are recorded.
+ *  Every path is a real folder under /app/health (or its [slug] template). */
+export interface HealthLink {
+  label: string
+  href: string
+}
+
+export interface BreedFit {
   slug: string
   name: string
   group: string
-  matchPercent: number
+  tier: FitTier
   rawScore: number
   fitBullets: string[]
   caveat: string
   href: string
+  /** Breed-specific health reading; never a diagnosis or invented stat. */
+  healthLinks: HealthLink[]
+  /** Disclosed internal path to Dog.com's on-site pet-insurance comparison. */
+  insuranceHref: string
+}
+
+export interface BreedFitResults {
+  /** Clear positive fits. */
+  mayFit: BreedFit[]
+  /** Mixed fits — caveat is prominent. */
+  closerLook: BreedFit[]
+  /** True when nothing cleared the upper tier (no-strong-fit state). */
+  noStrongFit: boolean
 }
 
 // Total breeds the wizard can match against.
 export const MATCHABLE_BREED_COUNT = Breeds.length
 
-export function getBreedRecommendations(answers: Answers, topN = 3): BreedRecommendation[] {
+// Tier-classifier tuning. Derived by inspecting the raw-score distribution
+// across representative answer sets (apartment/low-time, rural/active,
+// kids, multi-dog, big-yard/active): the top raw score lands ~19–23 and the
+// scores compress near the ceiling, so a relative band off the top score gives
+// a stable 3–6 upper-tier breeds where a fixed absolute cut does not. The
+// ABS_FLOOR stops a weak ceiling (contradictory answers) from promoting
+// genuinely poor fits.
+const MAY_FIT_BAND = 4 // upper tier: score within 4 of the strongest score…
+const CLOSER_BAND = 9 // closer-look: within 9 of the strongest score…
+const ABS_FLOOR = 6 // …but never below a real positive raw score.
+const MAY_FIT_CAP = 6 // never pad past 6 in either tier.
+const CLOSER_CAP = 6
+
+/** Up to 3 breed-specific health reads; `/health` hub fallback when none. */
+function buildHealthLinks(breed: Breed): HealthLink[] {
+  const links = breed.commonHealthCrossLinks
+    .filter((href) => href.startsWith('/health/'))
+    .slice(0, 3)
+    .map((href) => ({ label: healthLabel(href), href }))
+  if (links.length > 0) return links
+  return [{ label: 'Dog health hub', href: '/health' }]
+}
+
+/** Turn `/health/dog-arthritis` into "Dog arthritis" for the link row. */
+function healthLabel(href: string): string {
+  const slug = href.replace(/^\/health\//, '').replace(/\/$/, '')
+  const words = slug.split('-').join(' ').trim()
+  return words.length > 0 ? words.charAt(0).toUpperCase() + words.slice(1) : 'Dog health'
+}
+
+function toBreedFit(breed: Breed, score: number, answers: Answers, tier: FitTier): BreedFit {
+  return {
+    slug: breed.slug,
+    name: breed.name,
+    group: breed.group,
+    tier,
+    rawScore: score,
+    fitBullets: buildFitBullets(breed, answers),
+    caveat: buildCaveat(breed, answers),
+    href: `/breeds/${breed.slug}`,
+    healthLinks: buildHealthLinks(breed),
+    insuranceHref: '/reviews/best-pet-insurance',
+  }
+}
+
+/**
+ * Group every breed into honest fit tiers for the given answers. No ranked
+ * winner, no percentage. Upper tier ('may-fit') is the cluster of breeds whose
+ * raw score sits within MAY_FIT_BAND of the strongest score (floored at
+ * ABS_FLOOR, capped at MAY_FIT_CAP); 'closer-look' is the next band of mixed
+ * fits. Breeds below the closer band are not surfaced — the tool never pads
+ * poor fits.
+ */
+export function getBreedFits(answers: Answers): BreedFitResults {
   const scored = Breeds.map((breed) => ({
     breed,
     score: scoreBreed(breed, answers),
@@ -464,22 +547,27 @@ export function getBreedRecommendations(answers: Answers, topN = 3): BreedRecomm
     return a.breed.name.localeCompare(b.breed.name)
   })
 
-  const topScore = scored[0]?.score ?? 1
-  const denom = Math.max(topScore, 1)
+  const topScore = scored[0]?.score ?? 0
+  const mayFitThreshold = Math.max(topScore - MAY_FIT_BAND, ABS_FLOOR)
+  const closerThreshold = Math.max(topScore - CLOSER_BAND, ABS_FLOOR)
 
-  return scored.slice(0, topN).map(({ breed, score }) => {
-    const pct = Math.max(10, Math.min(99, Math.round((score / denom) * 95)))
-    return {
-      slug: breed.slug,
-      name: breed.name,
-      group: breed.group,
-      matchPercent: pct,
-      rawScore: score,
-      fitBullets: buildFitBullets(breed, answers),
-      caveat: buildCaveat(breed, answers),
-      href: `/breeds/${breed.slug}`,
-    }
-  })
+  const mayFit = scored
+    .filter(({ score }) => score >= mayFitThreshold)
+    .slice(0, MAY_FIT_CAP)
+    .map(({ breed, score }) => toBreedFit(breed, score, answers, 'may-fit'))
+
+  const mayFitSlugs = new Set(mayFit.map((b) => b.slug))
+
+  const closerLook = scored
+    .filter(({ breed, score }) => score >= closerThreshold && !mayFitSlugs.has(breed.slug))
+    .slice(0, CLOSER_CAP)
+    .map(({ breed, score }) => toBreedFit(breed, score, answers, 'closer-look'))
+
+  return {
+    mayFit,
+    closerLook,
+    noStrongFit: mayFit.length === 0,
+  }
 }
 
 export function isComplete(answers: Answers): boolean {

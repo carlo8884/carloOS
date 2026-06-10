@@ -7,7 +7,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live UVB-distance tool embedded on the homepage — a calculator you use on
 // the first screens, not a link to one (premium gate 3).
 import { UvbDistanceCalculator } from '../components/visual/UvbDistanceCalculator'
@@ -19,6 +19,11 @@ export const metadata: Metadata = buildMetadata({
     'Husbandry built on published research: species profiles, UVB measurements, Ferguson zones, ARAV-aligned health, and tested-gear reviews for reptile keepers.',
   path: '/',
 })
+
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'lizard-com', name: 'Lizard.com', url: 'https://lizard.com' }),
+  buildWebSiteSchema({ siteId: 'lizard-com', name: 'Lizard.com', url: 'https://lizard.com' }),
+)
 
 // ── Inline SVG icon set — restrained line illustration, no emoji ──────────
 
@@ -233,6 +238,7 @@ const TRUST_CLAIMS = [
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ background: 'var(--brand-dark)' }}>
         {/* Moody CSS-only environmental wash. Two radial pools (lime accent

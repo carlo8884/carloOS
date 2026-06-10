@@ -3,7 +3,14 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-01 evening (Carlo polish-pivot — phase 5: launch-quality polish, not launch-imminent; do NOT push DNS or other launch-ops items at the top of any queue)
+**Last updated:** 2026-06-10 (COO launch-readiness work block — see "COO work block" below)
+
+> **COO launch-readiness work block (2026-06-10 — PR #364 omnibus):**
+> **4 product tools shipped + QA-verified** — Vets Insurance Coverage Finder (`/tools/insurance-finder`), Dog "Is this a dog emergency?" triage (`/tools/is-this-a-dog-emergency`), PetFood Compare Pet Foods (`/tools/compare-pet-foods`), Dog Breed Finder honesty refactor (killed `matchPercent`).
+> **GEO authority:** `llms.txt` ×6 launch candidates · homepage Org/WebSite schema ×10 sites · BreadcrumbList dedup ×5 templates · `ItemList`+editorial `Product`/`Review` schema ×9 review pages (no fake ratings, QC §1.4).
+> **Trust:** Dog first-person clinical-claim fix + `trust-guard` hardening · 5 carrier superlatives softened · Lizard/PetFoods/Ferrets dedup + noindex.
+> **All 6 audits** (trust · affiliate-leak 0/14 · no-wagering · GEO · mobile · orphan-link) clean or routed.
+> **Cohort-5 (Vets/Dog/Ferret/PetFood/Lizard) is now COO-clear.** Remaining gates: **Monetization** (Vets funnel-404, calc-CTAs, Ferret tools→starter-kit), **Visual** (imagery differentiation, Dog emoji→SVG, Lizard `/states` overflow), and the **deferred Carlo gates** (Impact.com activation, DNS, GA4) — now turnkey via `ops/handoffs/2026-06-09-coo-launch-execution-playbook.md`. See also the launch-readiness scorecard-v2, revenue-architecture, and acquirer-readiness handoffs (all 2026-06-09).
 
 ---
 
