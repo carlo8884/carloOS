@@ -11,7 +11,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage , SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 // Live body-condition-score tool embedded on the homepage so the first
 // screens are something you DO, not a link to a tool (premium gate 3).
 import { BodyConditionScoreCalculator } from '../components/visual/BodyConditionScoreCalculator'
@@ -257,9 +257,15 @@ const TRUST_CLAIMS = [
 
 // ── Page ───────────────────────────────────────────────────────────────────
 
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'horses-com', name: 'Horses.com', url: 'https://horses.com' }),
+  buildWebSiteSchema({ siteId: 'horses-com', name: 'Horses.com', url: 'https://horses.com' }),
+)
+
 export default function HomePage() {
   return (
     <>
+      <SchemaScript schema={homeSchema} />
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-brand-dark">
         {/* Hero photograph — image-first masthead. The manifest-managed hero

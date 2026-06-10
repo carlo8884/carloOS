@@ -9,7 +9,7 @@
 
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { buildMetadata, EmailCapture, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, StockImage , SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferrets-com',
@@ -86,6 +86,11 @@ const SECTIONS: SectionCard[] = [
   },
 ]
 
+const homeSchema = combineSchemas(
+  buildOrganizationSchema({ siteId: 'ferrets-com', name: 'Ferrets.com', url: 'https://ferrets.com' }),
+  buildWebSiteSchema({ siteId: 'ferrets-com', name: 'Ferrets.com', url: 'https://ferrets.com' }),
+)
+
 export default function HomePage() {
   const year = new Date().getFullYear()
 
@@ -97,6 +102,7 @@ export default function HomePage() {
         padding: '96px 24px 64px',
       }}
     >
+      <SchemaScript schema={homeSchema} />
       {/* ─── Masthead image ───────────────────────────────────────── */}
       <div
         style={{
