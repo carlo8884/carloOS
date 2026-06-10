@@ -19,6 +19,12 @@ export const metadata: Metadata = buildMetadata({
 
 const TOOLS = [
   {
+    href: '/tools/is-this-a-dog-emergency',
+    title: 'Is This a Dog Emergency?',
+    desc: 'Check the signs you are seeing against veterinary emergency-medicine criteria and get a conservative urgency read -- go now, same-day vet, or monitor closely. A triage aid to help you decide how urgently to seek care, not a diagnosis.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
     desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
